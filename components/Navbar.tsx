@@ -60,6 +60,9 @@ export default function Navbar() {
 
   const NAV_LINKS = [
     { href: '/', label: 'Home' },
+    { href: '/#optionals', label: 'Optionals' },
+    { href: '/#features', label: 'Features' },
+    { href: '/pricing', label: 'Pricing' },
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/prelims', label: 'Prelims' },
   ];
@@ -113,23 +116,47 @@ export default function Navbar() {
         {/* Right side: theme toggle + avatar */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
 
-          {/* Dark/Light toggle */}
+          {/* Dark/Light toggle — pill */}
           <button
             onClick={toggleTheme}
             title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             style={{
               background: 'var(--bg3)',
               border: '1px solid var(--border2)',
-              borderRadius: 8,
-              width: 36, height: 36,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              borderRadius: 999,
+              width: 64, height: 32,
+              display: 'flex', alignItems: 'center',
+              padding: '0 4px',
               cursor: 'pointer',
-              fontSize: '1rem',
-              transition: 'background 0.15s',
               flexShrink: 0,
+              position: 'relative',
+              transition: 'background 0.2s, border-color 0.2s',
             }}
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {/* Moon icon */}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', left: 8, opacity: theme === 'light' ? 0.3 : 0.85, transition: 'opacity 0.2s' }}>
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" fill="var(--text2)" />
+            </svg>
+            {/* Sun icon */}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', right: 8, opacity: theme === 'dark' ? 0.3 : 0.85, transition: 'opacity 0.2s' }}>
+              <circle cx="12" cy="12" r="5" fill="var(--text2)" />
+              <g stroke="var(--text2)" strokeWidth="2" strokeLinecap="round">
+                <line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </g>
+            </svg>
+            {/* Knob */}
+            <div style={{
+              width: 24, height: 24,
+              borderRadius: '50%',
+              background: 'var(--accent)',
+              boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
+              transform: theme === 'dark' ? 'translateX(0)' : 'translateX(32px)',
+              transition: 'transform 0.22s cubic-bezier(0.4,0,0.2,1)',
+              flexShrink: 0,
+            }} />
           </button>
 
           {/* Auth section */}
@@ -233,7 +260,10 @@ export default function Navbar() {
                     onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--bg3)')}
                     onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
                   >
-                    <span>🔄</span> Change Optional
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}>
+                      <path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/>
+                    </svg>
+                    Change Optional
                   </button>
 
                   {/* Sign out */}
@@ -255,7 +285,10 @@ export default function Navbar() {
                     onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--red-dim)')}
                     onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
                   >
-                    <span>👋</span> Sign out
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}>
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+                    </svg>
+                    Sign out
                   </button>
                 </div>
               )}

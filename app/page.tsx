@@ -556,6 +556,61 @@ export default function Home() {
           </div>
         </section>
 
+        {/* pricing teaser */}
+        <section className="pp-section" style={{ paddingTop: '3rem' }}>
+          <p className="pp-tag">Pricing</p>
+          <h2 className="pp-section-title">Transparent plans.<br />No surprises.</h2>
+          <p className="pp-section-sub">
+            Pay only for what you need — daily access or long-term. No auto-renewals.
+          </p>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1rem',
+            marginTop: '2rem',
+          }}>
+            {[
+              { label: 'Daily', price: '₹49', period: 'per day', color: '#2dd4bf', desc: 'Exam-day sprints' },
+              { label: '6 Months', price: '₹3,999', period: 'per 6 months', color: '#4361ee', desc: 'Focused Mains prep', popular: true },
+              { label: 'Yearly', price: '₹5,999', period: 'per year', color: '#e8b86d', desc: 'Full-year coverage' },
+            ].map((p) => (
+              <div key={p.label} style={{
+                background: p.popular ? 'rgba(67,97,238,0.07)' : 'var(--glass-bg)',
+                border: `1px solid ${p.popular ? 'rgba(67,97,238,0.22)' : 'var(--glass-border)'}`,
+                borderRadius: 16,
+                padding: '1.5rem',
+                display: 'flex', flexDirection: 'column', gap: 6,
+                transition: 'transform 0.2s',
+              }}>
+                <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: p.color }}>
+                  {p.label}
+                </span>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '2rem', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text)', lineHeight: 1 }}>
+                  {p.price}
+                </div>
+                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: 'var(--text3)' }}>{p.period}</div>
+                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', color: 'var(--text2)', marginTop: 4 }}>{p.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <Link href="/pricing" style={{
+              fontFamily: 'var(--font-ui)',
+              fontSize: '0.85rem', fontWeight: 600,
+              color: 'var(--accent)',
+              textDecoration: 'none',
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+            }}>
+              See full pricing details
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
+        </section>
+
         {/* cta */}
         <div className="pp-cta">
           <div className="pp-cta-glow" />
