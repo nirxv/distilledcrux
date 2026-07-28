@@ -351,6 +351,7 @@ export default async function OptionalPage(
         .op-tool-card:hover {
           transform: translateY(-3px);
           background: var(--bg3);
+          border-color: var(--op-color, var(--border2));
         }
         .op-tool-icon {
           width: 44px; height: 44px; border-radius: 10px;
@@ -424,6 +425,7 @@ export default async function OptionalPage(
         }
       `}</style>
 
+      <style>{`.op-tool-card:hover { border-color: ${opt.border} !important; }`}</style>
       <div className="op-wrap">
         {/* orbs */}
         <div className="op-orb1" style={{ background: `radial-gradient(circle, ${opt.glow} 0%, transparent 65%)` }} />
@@ -515,11 +517,7 @@ export default async function OptionalPage(
             <div className="op-section-title">Everything you need</div>
             <div className="op-tools-grid">
               {TOOLS.map((tool) => (
-                <Link key={tool.label} href={tool.href} className="op-tool-card"
-                  style={{ ['--hover-border' as string]: opt.border }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = opt.border; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; }}
-                >
+                <Link key={tool.label} href={tool.href} className="op-tool-card">
                   {tool.badge && (
                     <span
                       className="op-tool-badge"
