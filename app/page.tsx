@@ -11,25 +11,14 @@ export const metadata: Metadata = {
 
 const optionals = [
   {
-    id: 'history',
-    name: 'History',
-    sub: 'Paper I & II · Ancient to World History',
-    color: '#e8b86d',
-    dim: 'rgba(232,184,109,0.10)',
-    border: 'rgba(232,184,109,0.22)',
-    live: true,
-    count: '2,400+ students',
-    icon: '🏛️',
-  },
-  {
     id: 'sociology',
     name: 'Sociology',
     sub: 'Social Structure, Change & Thinkers',
     color: '#4361ee',
     dim: 'rgba(67,97,238,0.08)',
     border: 'rgba(67,97,238,0.18)',
-    live: false,
-    count: 'Coming soon',
+    live: true,
+    count: 'Now available',
     icon: '🧩',
   },
   {
@@ -39,8 +28,8 @@ const optionals = [
     color: '#2dd4bf',
     dim: 'rgba(45,212,191,0.08)',
     border: 'rgba(45,212,191,0.18)',
-    live: false,
-    count: 'Coming soon',
+    live: true,
+    count: 'Now available',
     icon: '🧬',
   },
   {
@@ -50,8 +39,8 @@ const optionals = [
     color: '#f87171',
     dim: 'rgba(248,113,113,0.08)',
     border: 'rgba(248,113,113,0.18)',
-    live: false,
-    count: 'Coming soon',
+    live: true,
+    count: 'Now available',
     icon: '⚖️',
   },
   {
@@ -61,8 +50,8 @@ const optionals = [
     color: '#4ade80',
     dim: 'rgba(74,222,128,0.08)',
     border: 'rgba(74,222,128,0.18)',
-    live: false,
-    count: 'Coming soon',
+    live: true,
+    count: 'Now available',
     icon: '🌍',
   },
   {
@@ -72,8 +61,8 @@ const optionals = [
     color: '#fb923c',
     dim: 'rgba(251,146,60,0.08)',
     border: 'rgba(251,146,60,0.18)',
-    live: false,
-    count: 'Coming soon',
+    live: true,
+    count: 'Now available',
     icon: '📋',
   },
 ];
@@ -119,7 +108,6 @@ const features = [
 
 const marqueeItems = [
   'AI Answer Evaluation',
-  'History Optional',
   'Sociology Optional',
   'Anthropology Optional',
   'PYQ Bank',
@@ -169,38 +157,6 @@ export default function Home() {
           animation: float 15s ease-in-out infinite;
         }
 
-        /* nav */
-        .pp-nav {
-          position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-          height: 62px; padding: 0 2rem;
-          display: flex; align-items: center; justify-content: space-between;
-          background: rgba(5,5,8,0.75);
-          backdrop-filter: blur(18px);
-          -webkit-backdrop-filter: blur(18px);
-          border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .pp-logo {
-          font-family: var(--font-body);
-          font-size: 1.25rem; font-weight: 700;
-          color: var(--text); text-decoration: none;
-          letter-spacing: -0.01em;
-        }
-        .pp-logo em { font-style: normal; color: var(--accent); }
-        .pp-navlinks { display: flex; gap: 2rem; align-items: center; }
-        .pp-navlink {
-          font-family: var(--font-ui);
-          font-size: 0.875rem; color: var(--text2);
-          text-decoration: none; transition: color 0.18s;
-        }
-        .pp-navlink:hover { color: var(--text); }
-        .pp-navcta {
-          font-family: var(--font-ui);
-          background: var(--accent); color: #fff;
-          padding: 8px 20px; border-radius: var(--radius-pill);
-          font-size: 0.875rem; font-weight: 600;
-          text-decoration: none; transition: opacity 0.18s, transform 0.18s;
-        }
-        .pp-navcta:hover { opacity: 0.88; transform: translateY(-1px); }
 
         /* hero */
         .pp-hero {
@@ -324,6 +280,19 @@ export default function Home() {
           box-shadow: 0 10px 40px rgba(0,0,0,0.35);
         }
         .pp-opt-card.soon { opacity: 0.52; pointer-events: none; }
+        .pp-history-card {
+          display: flex; align-items: center; justify-content: space-between;
+          margin-top: 1rem; padding: 1.25rem 1.5rem;
+          background: rgba(232,184,109,0.06);
+          border: 1px solid rgba(232,184,109,0.2);
+          border-radius: var(--radius-lg);
+          text-decoration: none; transition: all 0.2s; gap: 1rem;
+        }
+        .pp-history-card:hover {
+          background: rgba(232,184,109,0.11);
+          border-color: rgba(232,184,109,0.35);
+          transform: translateY(-2px);
+        }
         .pp-opt-icon { font-size: 1.8rem; margin-bottom: 0.9rem; display: block; }
         .pp-opt-name {
           font-family: var(--font-body);
@@ -424,7 +393,7 @@ export default function Home() {
           font-size: 0.8rem; color: var(--text3);
           text-decoration: none; transition: color 0.18s;
         }
-        .pp-footer-link:hover { color: var(--text2); }
+        .pp-footer-link:hover { color: var(--accent); }
         .pp-footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); }
 
         @media (max-width: 900px) {
@@ -432,7 +401,6 @@ export default function Home() {
           .pp-feat-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
-          .pp-navlinks { display: none; }
           .pp-opt-grid { grid-template-columns: 1fr 1fr; }
           .pp-feat-grid { grid-template-columns: 1fr; }
           .pp-cta { padding: 2.5rem 1.5rem; margin: 1rem; }
@@ -450,17 +418,6 @@ export default function Home() {
         <div className="orb orb-3" />
 
         {/* nav */}
-        <nav className="pp-nav">
-          <Link href="/" className="pp-logo">
-            Prep<em>Pandit</em>
-          </Link>
-          <div className="pp-navlinks hide-mobile">
-            <Link href="#optionals" className="pp-navlink">Optionals</Link>
-            <Link href="#features" className="pp-navlink">Features</Link>
-            <Link href="#pricing" className="pp-navlink">Pricing</Link>
-          </div>
-          <Link href="/login" className="pp-navcta">Start Free</Link>
-        </nav>
 
         {/* hero */}
         <section className="pp-hero">
@@ -535,6 +492,44 @@ export default function Home() {
               </Link>
             ))}
           </div>
+
+          {/* History — external card */}
+          <a
+            href="https://historyoptional.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pp-history-card"
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <span style={{ fontSize: '1.8rem' }}>🏛️</span>
+              <div>
+                <div style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '1.05rem', fontWeight: 700,
+                  color: '#e8b86d', marginBottom: 2,
+                }}>
+                  History Optional
+                </div>
+                <div style={{
+                  fontFamily: 'var(--font-ui)',
+                  fontSize: '0.78rem', color: 'var(--text3)',
+                }}>
+                  Paper I & II · Ancient to World History — hosted on a dedicated platform
+                </div>
+              </div>
+            </div>
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              fontFamily: 'var(--font-ui)',
+              fontSize: '0.8rem', fontWeight: 600,
+              color: '#e8b86d', whiteSpace: 'nowrap', flexShrink: 0,
+            }}>
+              Visit historyoptional.xyz
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M7 2l5 5-5 5" stroke="#e8b86d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </a>
         </section>
 
         {/* features */}

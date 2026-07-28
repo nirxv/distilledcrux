@@ -87,3 +87,21 @@ body {
 @media (max-width: 480px) {
   .grid-2-1col  { grid-template-columns: 1fr !important; }
 }
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  --bg:            #f8f8fc;
+  --bg2:           #ffffff;
+  --bg3:           #f0f0f6;
+  --bg4:           #e8e8f0;
+  --border:        rgba(0,0,0,0.07);
+  --border2:       rgba(0,0,0,0.11);
+  --border3:       rgba(0,0,0,0.18);
+  --text:          #0e0e1a;
+  --text2:         #4a4860;
+  --text3:         #8a88a0;
+  --glass-bg:      rgba(0,0,0,0.02);
+  --glass-bg2:     rgba(0,0,0,0.04);
+  --glass-border:  rgba(0,0,0,0.07);
+  --glass-border2: rgba(0,0,0,0.12);
+}

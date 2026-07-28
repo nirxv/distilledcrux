@@ -1,20 +1,20 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
 const optionals = [
-  { id: 'history',            label: 'History',             emoji: '🏛️', available: true  },
-  { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: false },
-  { id: 'anthropology',       label: 'Anthropology',        emoji: '🧬', available: false },
-  { id: 'geography',          label: 'Geography',           emoji: '🌍', available: false },
-  { id: 'political-science',  label: 'Political Science',   emoji: '⚖️', available: false },
-  { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: false },
+  { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: true },
+  { id: 'anthropology',       label: 'Anthropology',        emoji: '🧬', available: true },
+  { id: 'geography',          label: 'Geography',           emoji: '🌍', available: true },
+  { id: 'political-science',  label: 'Political Science',   emoji: '⚖️', available: true },
+  { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: true },
 ];
 
 export default function Onboarding() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -28,14 +28,15 @@ export default function Onboarding() {
       }
       setUser(firebaseUser);
 
-      // Check if already onboarded
+      // Check if already onboarded (skip if coming from "Change Optional")
       const token = await firebaseUser.getIdToken();
       const res = await fetch('/api/user-profile', {
         headers: { 'x-user-token': token },
       });
       if (res.ok) {
         const data = await res.json();
-        if (data.optional) {
+        const isChanging = new URLSearchParams(window.location.search).get('change') === '1';
+        if (data.optional && !isChanging) {
           router.push('/dashboard');
           return;
         }
@@ -150,15 +151,7 @@ export default function Onboarding() {
                 }}>
                   {opt.label}
                 </span>
-                {!opt.available && (
-                  <span style={{
-                    fontSize: '0.65rem', color: 'var(--text3)',
-                    fontFamily: 'var(--font-ui)',
-                    letterSpacing: '0.05em',
-                  }}>
-                    Coming soon
-                  </span>
-                )}
+
                 {isSelected && (
                   <div style={{
                     position: 'absolute', top: 8, right: 8,
