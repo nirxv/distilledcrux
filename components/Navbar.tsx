@@ -56,7 +56,10 @@ export default function Navbar() {
     router.push('/');
   };
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) => {
+    if (href.includes('#')) return false;
+    return pathname === href;
+  };
 
   const NAV_LINKS = [
     { href: '/', label: 'Home' },
@@ -97,17 +100,33 @@ export default function Navbar() {
         {/* Nav links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {NAV_LINKS.map((item) => (
-            <Link key={item.href} href={item.href} style={{
-              color: isActive(item.href) ? 'var(--text)' : 'var(--text3)',
-              textDecoration: 'none',
-              fontSize: '0.85rem',
-              fontFamily: 'var(--font-ui)',
-              fontWeight: isActive(item.href) ? 600 : 500,
-              padding: '0.4rem 0.75rem',
-              borderRadius: 8,
-              background: isActive(item.href) ? 'var(--bg3)' : 'transparent',
-              transition: 'color 0.15s, background 0.15s',
-            }}>
+            <Link
+              key={item.href}
+              href={item.href}
+              style={{
+                color: isActive(item.href) ? 'var(--text)' : 'var(--text3)',
+                textDecoration: 'none',
+                fontSize: '0.85rem',
+                fontFamily: 'var(--font-ui)',
+                fontWeight: isActive(item.href) ? 600 : 500,
+                padding: '0.4rem 0.75rem',
+                borderRadius: 8,
+                background: isActive(item.href) ? 'var(--bg3)' : 'transparent',
+                transition: 'color 0.15s, background 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                if (!isActive(item.href)) {
+                  e.currentTarget.style.color = 'var(--text)';
+                  e.currentTarget.style.background = 'var(--bg3)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!isActive(item.href)) {
+                  e.currentTarget.style.color = 'var(--text3)';
+                  e.currentTarget.style.background = 'transparent';
+                }
+              }}
+            >
               {item.label}
             </Link>
           ))}
