@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect, Suspense, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
   SUGGESTED_QUESTIONS,
@@ -101,10 +102,55 @@ function SourcePassages({ sources }: { sources: { book_title: string; content: s
 // ── Main chat component ───────────────────────────────────────
 function ChatContent() {
   const searchParams = useSearchParams();
-  const rawSubject = searchParams.get('subject') ?? 'sociology';
   const validSubjects: SubjectKey[] = ['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'];
-  const subject: SubjectKey = validSubjects.includes(rawSubject as SubjectKey) ? rawSubject as SubjectKey : 'sociology';
+  const rawSubject = searchParams.get('subject');
+  const [subject, setSubject] = useState<SubjectKey>(
+    validSubjects.includes(rawSubject as SubjectKey) ? rawSubject as SubjectKey : 'sociology'
+  );
+
+  // Auto-detect subject from user's saved optional if no ?subject= param
+  useEffect(() => {
+    if (rawSubject) return;
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      unsubscribe(); // only fire once
+      const t = user ? await user.getIdToken() : '';
+      fetch('/api/user-profile', {
+        headers: t ? { 'x-user-token': t } : {},
+      })
+        .then((r) => r.json())
+        .then((data) => {
+          if (data?.optional) {
+            // Map API values to SubjectKey
+            const optionalMap: Record<string, SubjectKey> = {
+              'sociology': 'sociology',
+              'anthropology': 'anthropology',
+              'geography': 'geography',
+              'political-science': 'polsci',
+              'public-administration': 'pub-admin',
+              'history': 'sociology', // fallback
+            };
+            const mapped = optionalMap[data.optional];
+            if (mapped) setSubject(mapped);
+          }
+        })
+        .catch(() => {});
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const subjectDisplay = SUBJECT_DISPLAY[subject];
+  // Update greeting when subject changes (e.g. after auto-detect)
+  // Re-set greeting when subject auto-detected
+  useEffect(() => {
+    setMessages([{
+      role: 'assistant',
+      content: initialTopic
+        ? `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**. You selected the topic: **${initialTopic}**. Let\'s dive in — what would you like to explore first?`
+        : `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**.\n\nI can help with:\n\n• **Concept explanations** — deep dives into any topic\n• **Answer structuring** — UPSC-style frameworks\n• **PYQ analysis** — model answers and key points\n• **Thinkers** — citing the right scholar in the right context\n• **Brainstorm mode** — essay plans and argument maps\n\nWhat would you like to explore?`,
+    }]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subject]);
+
+
   const initialTopic = searchParams.get('topic') || '';
   const initialQ = searchParams.get('q') || '';
   const langHi = searchParams.get('lang') === 'hi';
@@ -267,7 +313,7 @@ function ChatContent() {
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
         if (err.error === 'limit_reached') {
-          setMessages((prev) => [...prev, { role: 'assistant', content: 'You\'ve used your 3 free messages. Please sign in or upgrade to continue.' }]);
+          setMessages((prev) => [...prev, { role: 'assistant', content: '__LIMIT_REACHED__' }]);
           setLoading(false); return;
         }
         setMessages((prev) => [...prev, { role: 'assistant', content: 'Something went wrong. Please try again.' }]);
@@ -738,6 +784,22 @@ function ChatContent() {
                 <div className={msg.role === 'user' ? 'pp-bubble-user' : 'pp-bubble-ai'}>
                   {msg.role === 'user' ? (
                     <span>{msg.content}</span>
+                  ) : msg.content === '__LIMIT_REACHED__' ? (
+                    <div style={{ padding: '0.5rem 0' }}>
+                      <div style={{ fontWeight: 600, fontSize: '0.95rem', marginBottom: '0.4rem' }}>You&apos;ve used your 3 free messages.</div>
+                      <div style={{ fontSize: '0.83rem', color: 'var(--text3)', marginBottom: '1rem' }}>Upgrade to PrepPandit Pro for unlimited access to all subjects.</div>
+                      <a href="/pricing" style={{
+                        display: 'inline-block',
+                        background: 'var(--accent)',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        padding: '0.5rem 1.25rem',
+                        borderRadius: 8,
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        fontFamily: 'var(--font-ui)',
+                      }}>Upgrade to Pro →</a>
+                    </div>
                   ) : msg.content === '' ? (
                     <span style={{ opacity: 0.4, fontFamily: 'monospace', fontSize: '0.8rem' }}>●●●</span>
                   ) : loading && i === messages.length - 1 ? (

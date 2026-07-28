@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Navbar />
-        <main style={{ minHeight: '100vh', paddingTop: 60 }}>
+        <main style={{ minHeight: '100vh', paddingTop: 60 }} id="main-layout">
           {children}
         </main>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />

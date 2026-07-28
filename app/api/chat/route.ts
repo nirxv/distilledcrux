@@ -50,7 +50,7 @@ async function getBookContext(
   try {
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SECRET_KEY!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
     );
     const filter = bookTitle && bookTitle !== 'all' ? bookTitle : null;
 
@@ -254,7 +254,7 @@ export async function POST(req: NextRequest) {
 
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SECRET_KEY!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
   );
 
   const token = req.headers.get('x-user-token') ?? '';
@@ -575,7 +575,7 @@ export async function POST(req: NextRequest) {
           if (!isOwner && firebaseUid) {
             try {
               const { createClient: ccInc } = await import('@supabase/supabase-js');
-              const sbInc = ccInc(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SECRET_KEY!);
+              const sbInc = ccInc(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
               const { data: existing } = await sbInc
                 .from('usage_tracking')
                 .select('chat_count')
