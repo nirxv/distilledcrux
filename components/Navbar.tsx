@@ -243,7 +243,7 @@ export default function Navbar() {
 
                   {/* Change optional */}
                   <button
-                    onClick={() => { setDropdownOpen(false); router.push('/onboarding'); }}
+                    onClick={() => { setDropdownOpen(false); router.push('/onboarding?change=1'); }}
                     style={{
                       width: '100%', textAlign: 'left',
                       background: 'none',
