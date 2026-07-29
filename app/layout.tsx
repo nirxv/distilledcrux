@@ -16,11 +16,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://preppandit.com'),
-  title: { default: 'PrepPandit — UPSC Optional Preparation', template: '%s | PrepPandit' },
+  metadataBase: new URL('https://distilledcrux.com'),
+  title: { default: 'Distilled Crux — UPSC Optional Preparation', template: '%s | Distilled Crux' },
   description: 'AI answer evaluation, curated notes, PYQ practice and topper copies for every UPSC optional.',
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://preppandit.com' },
+  alternates: { canonical: 'https://distilledcrux.com' },
   icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
 };
 

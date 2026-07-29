@@ -107,7 +107,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="ct-info-label">Telegram Community</div>
-                  <div className="ct-info-value"><a href="https://t.me/preppandit" target="_blank" rel="noopener noreferrer">t.me/preppandit</a></div>
+                  <div className="ct-info-value"><a href="https://t.me/distilledcrux" target="_blank" rel="noopener noreferrer">t.me/distilledcrux</a></div>
                   <div className="ct-info-note">Join for updates, discussions & quick help</div>
                 </div>
               </div>

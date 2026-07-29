@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────
-//  PrepPandit — per-subject config
+//  Distilled Crux — per-subject config
 //  Used by: /api/chat (scope guard, thinker whitelist, RAG books)
 //           /chat    (suggested questions, greeting)
 // ─────────────────────────────────────────────────────────────

@@ -319,7 +319,7 @@ export default function Dashboard() {
               {stats.isPremium ? (
                 <div className="db-pro-badge">
                   <div>
-                    <div className="db-pro-name">PrepPandit Pro{stats.plan ? ` · ${stats.plan}` : ''}</div>
+                    <div className="db-pro-name">Distilled Crux Pro{stats.plan ? ` · ${stats.plan}` : ''}</div>
                     {expDate && <div className="db-pro-exp">Active until {expDate}</div>}
                   </div>
                   <span className="db-active-pill">Active</span>

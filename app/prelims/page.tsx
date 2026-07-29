@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'UPSC Prelims Preparation | PrepPandit',
+  title: 'UPSC Prelims Preparation | Distilled Crux',
   description:
     'Topic-wise MCQ practice, previous year papers with AI explanations, daily quizzes and performance analytics — built for UPSC Prelims.',
-  alternates: { canonical: 'https://preppandit.com/prelims' },
+  alternates: { canonical: 'https://distilledcrux.com/prelims' },
 };
 
 const subjects = [
@@ -360,8 +360,8 @@ export default function PrelimsPage() {
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'UPSC Prelims Preparation | PrepPandit',
-          url: 'https://preppandit.com/prelims',
+          name: 'UPSC Prelims Preparation | Distilled Crux',
+          url: 'https://distilledcrux.com/prelims',
           description: 'Topic-wise MCQs, PYPs with AI explanations, daily quiz and weakness radar for UPSC Prelims.',
         })}
       </Script>
@@ -487,7 +487,7 @@ export default function PrelimsPage() {
               <div className="pr-callout-title">Don&apos;t treat CSAT as an afterthought</div>
               <div className="pr-callout-body">
                 CSAT is qualifying but it has failed thousands of aspirants who assumed they&apos;d clear it easily.
-                PrepPandit includes a dedicated CSAT module — full-length sets, reading comprehension strategies,
+                Distilled Crux includes a dedicated CSAT module — full-length sets, reading comprehension strategies,
                 and timed drills — so Paper II is never a surprise.
               </div>
             </div>
@@ -535,7 +535,7 @@ export default function PrelimsPage() {
             <div className="pr-crosslink-left">
               <span style={{ fontSize: '1.5rem' }}>📖</span>
               <div>
-                <div className="pr-crosslink-name">PrepPandit — Optional Subjects</div>
+                <div className="pr-crosslink-name">Distilled Crux — Optional Subjects</div>
                 <div className="pr-crosslink-sub">Sociology, Anthropology, Political Science, Geography, Public Administration</div>
               </div>
             </div>
@@ -574,7 +574,7 @@ export default function PrelimsPage() {
             <Link href="/refund" className="pr-footer-link">Refund</Link>
             <Link href="/contact" className="pr-footer-link">Contact</Link>
           </div>
-          <span className="pr-footer-copy">© {new Date().getFullYear()} PrepPandit</span>
+          <span className="pr-footer-copy">© {new Date().getFullYear()} Distilled Crux</span>
         </footer>
 
       </div>

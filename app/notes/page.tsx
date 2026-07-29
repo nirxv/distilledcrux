@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { allNotes } from '@/lib/notes';
 
 export const metadata: Metadata = {
-  title: 'Optional Notes — UPSC Mains Preparation | PrepPandit',
+  title: 'Optional Notes — UPSC Mains Preparation | Distilled Crux',
   description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, Political Science, Geography and Public Administration. Topic-wise structured for Mains.',
-  alternates: { canonical: 'https://preppandit.com/notes' },
+  alternates: { canonical: 'https://distilledcrux.com/notes' },
 };
 
 const SUBJECTS = [
@@ -67,7 +67,7 @@ export default function NotesPage() {
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
       <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>
-        PrepPandit
+        Distilled Crux
       </div>
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem' }}>
         Notes

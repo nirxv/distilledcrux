@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — PrepPandit",
-  description: "Terms of Service for preppandit.com — rules governing use of our UPSC optional exam preparation platform.",
-  alternates: { canonical: "https://preppandit.com/terms" },
+  title: "Terms of Service — Distilled Crux",
+  description: "Terms of Service for distilledcrux.com — rules governing use of our UPSC optional exam preparation platform.",
+  alternates: { canonical: "https://distilledcrux.com/terms" },
 };
 
 const S = {
@@ -27,13 +27,13 @@ export default function TermsPage() {
         <span style={S.meta}>Last updated: 29 July 2026 · Effective: 29 July 2026</span>
 
         <p style={S.p}>
-          These Terms of Service govern your use of <strong style={S.strong}>preppandit.com</strong> operated
-          by the PrepPandit Team. By accessing or using the site you agree to be bound by these terms.
+          These Terms of Service govern your use of <strong style={S.strong}>distilledcrux.com</strong> operated
+          by the Distilled Crux Team. By accessing or using the site you agree to be bound by these terms.
         </p>
 
         <h2 style={S.h2}>1. Services</h2>
         <p style={S.p}>
-          PrepPandit provides UPSC optional exam preparation resources including structured notes,
+          Distilled Crux provides UPSC optional exam preparation resources including structured notes,
           previous year questions (PYQs), AI-powered answer evaluation, topper answer copies, and a
           premium subscription plan across multiple optionals including Sociology, Anthropology,
           Political Science, Geography, and Public Administration.
@@ -80,7 +80,7 @@ export default function TermsPage() {
         <h2 style={S.h2}>6. Intellectual Property</h2>
         <p style={S.p}>
           All content on this site — including notes, question banks, AI-generated evaluations,
-          and design — is owned by preppandit.com or its licensors. You may not copy,
+          and design — is owned by distilledcrux.com or its licensors. You may not copy,
           redistribute, or sell any content without written permission.
         </p>
 
@@ -102,7 +102,7 @@ export default function TermsPage() {
 
         <h2 style={S.h2}>9. Limitation of Liability</h2>
         <p style={S.p}>
-          To the maximum extent permitted by law, preppandit.com shall not be liable for
+          To the maximum extent permitted by law, distilledcrux.com shall not be liable for
           any indirect, incidental, or consequential damages arising from your use of the
           platform. Our total liability shall not exceed the amount you paid in the 30 days
           preceding the claim.
@@ -117,7 +117,7 @@ export default function TermsPage() {
         <h2 style={S.h2}>11. Contact</h2>
         <p style={S.p}>
           Questions about these terms? Contact us at:<br />
-          <strong style={S.strong}>PrepPandit Team</strong><br />
+          <strong style={S.strong}>Distilled Crux Team</strong><br />
           Email: <a href="mailto:" style={S.a}></a>
         </p>
       </div>

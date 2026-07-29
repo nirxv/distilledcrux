@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes } from '@/lib/notes';
 
 export const metadata: Metadata = {
-  title: 'Sociology Optional Notes — UPSC Mains Paper I & II | PrepPandit',
+  title: 'Sociology Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
   description: 'Comprehensive free notes for UPSC Sociology Optional covering all Paper I and Paper II topics — sociological thinkers, Indian society, social change and more.',
-  alternates: { canonical: 'https://preppandit.com/notes/sociology' },
+  alternates: { canonical: 'https://distilledcrux.com/notes/sociology' },
 };
 
 const COLOR = '#4361ee';

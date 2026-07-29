@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Refund Policy — PrepPandit",
-  description: "Refund Policy for preppandit.com premium subscriptions.",
-  alternates: { canonical: "https://preppandit.com/refund" },
+  title: "Refund Policy — Distilled Crux",
+  description: "Refund Policy for distilledcrux.com premium subscriptions.",
+  alternates: { canonical: "https://distilledcrux.com/refund" },
 };
 
 const S = {
@@ -28,7 +28,7 @@ export default function RefundPage() {
 
         <p style={S.p}>
           This Refund Policy applies to all premium subscription purchases made on{" "}
-          <strong style={S.strong}>preppandit.com</strong>.
+          <strong style={S.strong}>distilledcrux.com</strong>.
         </p>
 
         <h2 style={S.h2}>1. No-Refund Policy</h2>
@@ -78,7 +78,7 @@ export default function RefundPage() {
         <h2 style={S.h2}>5. Contact</h2>
         <p style={S.p}>
           For refund-related queries, reach us at:<br />
-          <strong style={S.strong}>PrepPandit Team</strong><br />
+          <strong style={S.strong}>Distilled Crux Team</strong><br />
           Email: <a href="mailto:" style={S.a}></a><br />
           Response time: within 5 business days
         </p>

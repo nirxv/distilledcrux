@@ -73,9 +73,9 @@ export async function generateMetadata({ params }: { params: Promise<{ optional:
   const opt = OPTIONALS[optional];
   if (!opt) return { title: 'Not Found' };
   return {
-    title: `${opt.full} — PrepPandit`,
+    title: `${opt.full} — Distilled Crux`,
     description: `AI-powered preparation for UPSC ${opt.full}. Notes, PYQs, answer evaluation and AI chat for ${opt.name}.`,
-    alternates: { canonical: `https://preppandit.com/${optional}` },
+    alternates: { canonical: `https://distilledcrux.com/${optional}` },
   };
 }
 

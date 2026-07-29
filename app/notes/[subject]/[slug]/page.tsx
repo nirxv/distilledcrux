@@ -20,9 +20,9 @@ export async function generateMetadata(
   if (!note) return {};
   const subjectLabel = subject.charAt(0).toUpperCase() + subject.slice(1);
   return {
-    title: `${note.title} — UPSC ${subjectLabel} Optional Notes | PrepPandit`,
+    title: `${note.title} — UPSC ${subjectLabel} Optional Notes | Distilled Crux`,
     description: `${note.description}. Detailed notes for UPSC ${subjectLabel} Optional, Paper ${note.paper} — ${note.section}.`,
-    alternates: { canonical: `https://preppandit.com/notes/${subject}/${slug}` },
+    alternates: { canonical: `https://distilledcrux.com/notes/${subject}/${slug}` },
   };
 }
 
@@ -60,12 +60,12 @@ export default async function NotePage(
     '@graph': [
       {
         '@type': 'Article',
-        '@id': `https://preppandit.com/notes/${subject}/${slug}#article`,
+        '@id': `https://distilledcrux.com/notes/${subject}/${slug}#article`,
         headline: `${note.title} — UPSC ${subject} Optional Notes`,
         description: note.description,
-        url: `https://preppandit.com/notes/${subject}/${slug}`,
-        isPartOf: { '@id': 'https://preppandit.com/#website' },
-        publisher: { '@type': 'Organization', name: 'PrepPandit', url: 'https://preppandit.com' },
+        url: `https://distilledcrux.com/notes/${subject}/${slug}`,
+        isPartOf: { '@id': 'https://distilledcrux.com/#website' },
+        publisher: { '@type': 'Organization', name: 'Distilled Crux', url: 'https://distilledcrux.com' },
         inLanguage: 'en-IN',
         educationalLevel: 'competitive-exam',
         learningResourceType: 'study notes',
@@ -73,10 +73,10 @@ export default async function NotePage(
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://preppandit.com' },
-          { '@type': 'ListItem', position: 2, name: 'Notes', item: 'https://preppandit.com/notes' },
-          { '@type': 'ListItem', position: 3, name: subject, item: `https://preppandit.com/notes/${subject}` },
-          { '@type': 'ListItem', position: 4, name: note.title, item: `https://preppandit.com/notes/${subject}/${slug}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://distilledcrux.com' },
+          { '@type': 'ListItem', position: 2, name: 'Notes', item: 'https://distilledcrux.com/notes' },
+          { '@type': 'ListItem', position: 3, name: subject, item: `https://distilledcrux.com/notes/${subject}` },
+          { '@type': 'ListItem', position: 4, name: note.title, item: `https://distilledcrux.com/notes/${subject}/${slug}` },
         ],
       },
     ],

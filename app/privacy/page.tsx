@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — PrepPandit",
-  description: "Privacy Policy for preppandit.com — how we collect, use, and protect your data.",
-  alternates: { canonical: "https://preppandit.com/privacy" },
+  title: "Privacy Policy — Distilled Crux",
+  description: "Privacy Policy for distilledcrux.com — how we collect, use, and protect your data.",
+  alternates: { canonical: "https://distilledcrux.com/privacy" },
 };
 
 const S = {
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <span style={S.meta}>Last updated: 29 July 2026 · Effective: 29 July 2026</span>
 
         <p style={S.p}>
-          This Privacy Policy describes how PrepPandit (<strong style={S.strong}>preppandit.com</strong>,
+          This Privacy Policy describes how Distilled Crux (<strong style={S.strong}>distilledcrux.com</strong>,
           &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects information when you use our website
           and services. By using the site you agree to this policy.
         </p>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
         <h2 style={S.h2}>7. Contact</h2>
         <p style={S.p}>
           For privacy-related queries or to exercise your data rights, contact us at:<br />
-          <strong style={S.strong}>PrepPandit Team</strong><br />
+          <strong style={S.strong}>Distilled Crux Team</strong><br />
           Email: <a href="mailto:" style={S.a}></a>
         </p>
 

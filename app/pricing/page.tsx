@@ -294,7 +294,7 @@ export default function PricingPage() {
         key: orderData.keyId,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: 'PrepPandit',
+        name: 'Distilled Crux',
         description: orderData.label,
         order_id: orderData.orderId,
         prefill: { email: user.email ?? '', name: user.displayName ?? '' },

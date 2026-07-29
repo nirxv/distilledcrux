@@ -787,7 +787,7 @@ function ChatContent() {
                   ) : msg.content === '__LIMIT_REACHED__' ? (
                     <div style={{ padding: '0.5rem 0' }}>
                       <div style={{ fontWeight: 600, fontSize: '0.95rem', marginBottom: '0.4rem' }}>You&apos;ve used your 3 free messages.</div>
-                      <div style={{ fontSize: '0.83rem', color: 'var(--text3)', marginBottom: '1rem' }}>Upgrade to PrepPandit Pro for unlimited access to all subjects.</div>
+                      <div style={{ fontSize: '0.83rem', color: 'var(--text3)', marginBottom: '1rem' }}>Upgrade to Distilled Crux Pro for unlimited access to all subjects.</div>
                       <a href="/pricing" style={{
                         display: 'inline-block',
                         background: 'var(--accent)',

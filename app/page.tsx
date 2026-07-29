@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'PrepPandit — UPSC Optional Preparation',
+  title: 'Distilled Crux — UPSC Optional Preparation',
   description:
     'AI answer evaluation, curated notes, 1500+ PYQs and real topper copies — built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
-  alternates: { canonical: 'https://preppandit.com' },
+  alternates: { canonical: 'https://distilledcrux.com' },
 };
 
 const optionals = [
@@ -296,8 +296,8 @@ export default function Home() {
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'PrepPandit — UPSC Optional Preparation',
-          url: 'https://preppandit.com',
+          name: 'Distilled Crux — UPSC Optional Preparation',
+          url: 'https://distilledcrux.com',
           description: 'AI answer evaluation, notes, PYQs for UPSC optionals',
         })}
       </Script>
@@ -404,7 +404,7 @@ export default function Home() {
               <h2 className="lp-section-h2">Everything you need.<br /><em>Nothing you don't.</em></h2>
             </div>
             <p className="lp-section-desc">
-              Every tool on PrepPandit exists for one reason — getting you more marks in your optional paper.
+              Every tool on Distilled Crux exists for one reason — getting you more marks in your optional paper.
             </p>
           </div>
           <div className="lp-tools-list">
@@ -481,7 +481,7 @@ export default function Home() {
             <Link href="/refund" className="lp-footer-link">Refund</Link>
             <Link href="/contact" className="lp-footer-link">Contact</Link>
           </div>
-          <span className="lp-footer-copy">© {new Date().getFullYear()} PrepPandit</span>
+          <span className="lp-footer-copy">© {new Date().getFullYear()} Distilled Crux</span>
         </footer>
 
       </div>
