@@ -90,14 +90,45 @@ export default function Navbar() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
 
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none' }}>
+        {/* Logo — animates between "Distilled Crux" and "DC." on scroll */}
+        <Link href="/" style={{ textDecoration: 'none', overflow: 'hidden' }}>
           <span style={{
             fontFamily: 'var(--font-display)',
             fontSize: '1.15rem', fontWeight: 700,
             color: 'var(--text)', letterSpacing: '-0.02em',
+            display: 'inline-flex', alignItems: 'baseline', gap: 0,
           }}>
-            Distilled<span style={{ color: 'var(--accent)' }}>Crux</span>
+            <span>D</span>
+            <span style={{
+              display: 'inline-block',
+              maxWidth: scrolled ? 0 : '120px',
+              opacity: scrolled ? 0 : 1,
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease',
+            }}>istilled</span>
+            <span style={{
+              display: 'inline-block',
+              maxWidth: scrolled ? 0 : '0.35em',
+              opacity: scrolled ? 0 : 1,
+              overflow: 'hidden',
+              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.2s ease',
+            }}>&nbsp;</span>
+            <span style={{ color: 'var(--accent)' }}>C</span>
+            <span style={{
+              color: 'var(--accent)',
+              display: 'inline-block',
+              maxWidth: scrolled ? 0 : '80px',
+              opacity: scrolled ? 0 : 1,
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease',
+            }}>rux</span>
+            <span style={{
+              color: 'var(--accent)',
+              opacity: scrolled ? 1 : 0,
+              transition: 'opacity 0.3s ease 0.1s',
+            }}>.</span>
           </span>
         </Link>
 
