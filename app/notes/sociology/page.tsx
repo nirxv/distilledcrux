@@ -69,15 +69,7 @@ export default function SociologyNotesPage() {
                       borderLeft: `3px solid ${COLOR}`,
                       display: 'flex', alignItems: 'flex-start', gap: '1rem',
                       transition: 'background 0.15s, border-color 0.15s',
-                    }}
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.background = 'var(--bg3)';
-                        el.style.borderLeftColor = COLOR;
-                      }}
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.background = 'var(--bg2)';
-                      }}
-                    >
+                    }}>
                       <span style={{
                         fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)',
                         background: 'var(--bg3)', border: '1px solid var(--border)',
