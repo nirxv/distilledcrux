@@ -281,6 +281,15 @@ const CSS = `
   .pr-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text3); margin-top: 0.75rem; }
   .pr-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
+  /* ── Daily quiz strip ── */
+  .pr-quiz-strip {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    padding: 1.1rem 1.75rem; margin-top: 1px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 12px;
+    text-decoration: none; transition: background 0.18s;
+  }
+  .pr-quiz-strip:hover { background: var(--bg2); }
+
   /* ── Mains crosslink ── */
   .pr-crosslink {
     display: flex; align-items: center; justify-content: space-between;
@@ -430,15 +439,7 @@ export default function PrelimsPage() {
           </div>
 
           {/* Daily quiz strip */}
-          <Link href="/prelims/quiz" style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem',
-            padding: '1.1rem 1.75rem', marginTop: '1px',
-            background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '12px',
-            textDecoration: 'none', transition: 'background 0.18s',
-          }}
-            onMouseEnter={e => (e.currentTarget.style.background = 'var(--bg2)')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'var(--bg)')}
-          >
+          <Link href="/prelims/quiz" className="pr-quiz-strip">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <span style={{ fontSize: '1.4rem' }}>⚡</span>
               <div>
