@@ -41,8 +41,9 @@ const CSS = `
   /* ── Header strip ── */
   .db-header {
     max-width: 1200px; margin: 0 auto;
-    padding: 100px 2rem 3rem;
+    padding: 100px 2rem 0;
     border-bottom: 1px solid var(--border);
+    padding-bottom: 3rem;
     animation: fadeUp 0.3s ease;
   }
   .db-kicker {
@@ -50,7 +51,7 @@ const CSS = `
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px;
   }
-  .db-kicker::before { content: \'\'; display: inline-block; width: 20px; height: 1px; background: var(--text3); }
+  .db-kicker::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--text3); }
   .db-h1 {
     font-family: var(--font-body);
     font-size: clamp(2.2rem, 5vw, 3.8rem);
@@ -67,7 +68,7 @@ const CSS = `
   .db-body {
     max-width: 1200px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 340px;
-    gap: 0;
+    gap: 0; 
     border-bottom: 1px solid var(--border);
   }
 
@@ -83,7 +84,7 @@ const CSS = `
     display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid var(--border);
   }
-  .db-tools-label::before { content: \'\'; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
+  .db-tools-label::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
   .db-tool-row {
     display: flex; align-items: flex-start; gap: 1.5rem;
     padding: 1.5rem 2rem;
@@ -129,7 +130,7 @@ const CSS = `
     letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;
   }
-  .db-sidebar-label::before { content: \'\'; display: inline-block; width: 14px; height: 1px; background: var(--text3); }
+  .db-sidebar-label::before { content: ''; display: inline-block; width: 14px; height: 1px; background: var(--text3); }
 
   /* Stat rows */
   .db-stat-list { display: flex; flex-direction: column; gap: 0; }
@@ -157,7 +158,7 @@ const CSS = `
   }
   .db-upgrade-btn:hover { opacity: 0.82; }
   .db-pro-badge {
-    display: flex; align-items: center; gap: 10px; justify-content: space-between;
+    display: flex; align-items: center; gap: 10px;
   }
   .db-pro-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: #e8b86d; }
   .db-pro-exp { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
@@ -177,7 +178,7 @@ const CSS = `
   .db-usage-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text2); }
   .db-usage-link {
     font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
-    color: var(--text); text-decoration: none;
+    color: var(--text); text-decoration: none; 
     display: flex; align-items: center; gap: 4px;
   }
   .db-usage-link:hover { opacity: 0.75; }
@@ -185,7 +186,7 @@ const CSS = `
   .db-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s ease; }
 
   /* Quick actions */
-  .db-actions { display: flex; flex-direction: column; gap: 0; }
+  .db-actions { display: flex; flex-direction: column; gap: 6px; }
   .db-action-link {
     font-family: var(--font-ui); font-size: 0.82rem; color: var(--text2);
     text-decoration: none; padding: 8px 0;
@@ -219,7 +220,7 @@ const CSS = `
   }
   @media (max-width: 580px) {
     .db-header { padding-top: 80px; }
-    .db-tool-row { padding: 1.25rem; }
+    .db-tool-row { padding: 1.25rem 1.25rem; }
     .db-tool-badge { top: 1.25rem; right: 1.25rem; }
     .db-footer-cta { padding: 2.5rem 1.25rem 4rem; }
   }
@@ -251,7 +252,7 @@ export default function Dashboard() {
 
   if (loading) return (
     <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <style>{\`@keyframes spin{to{transform:rotate(360deg)}}\`}</style>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
       <div style={{ width: 28, height: 28, borderRadius: '50%', border: '2px solid var(--border)', borderTopColor: 'var(--text)', animation: 'spin 0.7s linear infinite' }} />
     </div>
   );
@@ -277,7 +278,7 @@ export default function Dashboard() {
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="db-page">
 
-        {/* Header */}
+        {/* ── Header ── */}
         <div className="db-header">
           <div className="db-kicker">{optLabel} Optional · Dashboard</div>
           <h1 className="db-h1">
@@ -287,7 +288,7 @@ export default function Dashboard() {
           <p className="db-sub">Member since {joinDate} · {user?.email}</p>
         </div>
 
-        {/* Body: tools left, sidebar right */}
+        {/* ── Body: tools left, sidebar right ── */}
         <div className="db-body">
 
           {/* Tools */}
@@ -395,7 +396,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Footer CTA */}
+        {/* ── Footer CTA ── */}
         {!stats.isPremium && (
           <div className="db-footer-cta">
             <div>
