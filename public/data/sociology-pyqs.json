@@ -2,6 +2,24 @@
   {
     "year": "2013",
     "paper": "Paper I",
+    "section": "",
+    "question": "What are the features of M.N. Srinivas's concept of dominant caste ? How does it help in understanding today's reality ?",
+    "marks": 20,
+    "topic": "Caste System",
+    "id": 49
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "",
+    "question": "Write short note with a sociological perspective on the following : 'Is the caste system disintegrating in India?'",
+    "marks": 10,
+    "topic": "Caste System",
+    "id": 50
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
     "section": "Section A",
     "question": "\"Sociology emerged in Europe and flourished to begin with on social reformist orientation in the USA\" - Comment.",
     "marks": 10,
@@ -52,15 +70,6 @@
     "marks": 10,
     "topic": "Sociology as Science",
     "id": 6
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Analyse the salient features of historical materialism.",
-    "marks": 10,
-    "topic": "Sociological Thinkers",
-    "id": 7
   },
   {
     "year": "2013",
@@ -299,15 +308,6 @@
   {
     "year": "2013",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Examine the relevance of Parsonian Social System in the present society.",
-    "marks": 10,
-    "topic": "Sociological Thinkers",
-    "id": 34
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Critically analyse the contributions of G.H. Mead to ‘symbolic interactionism’.",
     "marks": 20,
@@ -335,47 +335,11 @@
   {
     "year": "2013",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Examine the emerging trends in marriage and family as a response to the charges in economic and social order.",
-    "marks": 20,
-    "topic": "Family and Marriage",
-    "id": 38
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Examine the role of pressure groups in parliamentary democracy?",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 39
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Evaluate how do civil society and democracy mutually reinforce each other.",
     "marks": 20,
     "topic": "Politics and Society",
     "id": 40
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Critically examine the role of civil society in democracy.",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 41
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Define social movement. Elucidate the role of reformist movements in social change. (150 words)",
-    "marks": 10,
-    "topic": "Social Movements",
-    "id": 42
   },
   {
     "year": "2013",
@@ -421,33 +385,6 @@
     "marks": 20,
     "topic": "Social Change",
     "id": 47
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Critically examine the cultural theories of social change with suitable examples.",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 48
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "",
-    "question": "What are the features of M.N. Srinivas's concept of dominant caste ? How does it help in understanding today's reality ?",
-    "marks": 20,
-    "topic": "Caste System",
-    "id": 49
-  },
-  {
-    "year": "2013",
-    "paper": "Paper I",
-    "section": "",
-    "question": "Write short note with a sociological perspective on the following : 'Is the caste system disintegrating in India?'",
-    "marks": 10,
-    "topic": "Caste System",
-    "id": 50
   },
   {
     "year": "2013",
@@ -507,10 +444,73 @@
     "year": "2013",
     "paper": "Paper I",
     "section": "Section B",
+    "question": "Examine the relevance of Parsonian Social System in the present society.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 34
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Examine the emerging trends in marriage and family as a response to the charges in economic and social order.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 38
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Define social movement. Elucidate the role of reformist movements in social change. (150 words)",
+    "marks": 10,
+    "topic": "Social Movements",
+    "id": 42
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the cultural theories of social change with suitable examples.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 48
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section B",
     "question": "Discuss the sociological aspects of movements for separate States. (200 words)",
     "marks": 15,
     "topic": "Social Movements in India",
     "id": 57
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Analyse the salient features of historical materialism.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 7
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Examine the role of pressure groups in parliamentary democracy?",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 39
+  },
+  {
+    "year": "2013",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Critically examine the role of civil society in democracy.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 41
   },
   {
     "year": "2013",
@@ -542,29 +542,11 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "With reference to their understanding of the Indian village, compare the perspectives of M.N. Srinivas and S.C. Dube.",
-    "marks": 30,
-    "topic": "Indian Villages",
-    "id": 61
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "Who are the elites ? Discuss their roles in bringing social transformation. Explain how social structural origins of political elites influence their political orientations.",
     "marks": 60,
     "topic": "Politics and Society",
     "id": 62
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note with a sociological perspective : Political elites and the democratic process.",
-    "marks": 12,
-    "topic": "Politics and Society",
-    "id": 63
   },
   {
     "year": "2013",
@@ -614,24 +596,6 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note on New rural elite and leadership.",
-    "marks": 20,
-    "topic": "Indian Villages",
-    "id": 69
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Regionalism.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 70
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "With increase in education and economic development is Indian society becoming more secular ?",
     "marks": 10,
@@ -668,24 +632,6 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Discuss the social base of political parties in India. What has been its impact on Indian democracy ?",
-    "marks": 60,
-    "topic": "Politics and Society",
-    "id": 75
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Pluralism and national unity.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 76
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "“The 73rd and the 74th constitutional amendments have motivated social mobilisation in rural India.” - Discuss.",
     "marks": 60,
@@ -700,15 +646,6 @@
     "marks": 60,
     "topic": "Politics and Society",
     "id": 78
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Reservation and Panchayat Raj institutions.",
-    "marks": 20,
-    "topic": "Weaker Sections",
-    "id": 79
   },
   {
     "year": "2013",
@@ -749,24 +686,6 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : National Unity.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 84
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Implications of emergence of regional political parties.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 85
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "Describe the socio-cultural background of the political elites of contemporary India. What has been the influence of the background on their political orientations?",
     "marks": 60,
@@ -785,24 +704,6 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Role of pressure groups in Indian politics.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 88
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Changing social origins of political elites in India.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 89
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "It is often alleged that the social situation in India is not conducive to the efficient functioning of a democratic polity. Comment.",
     "marks": 60,
@@ -817,33 +718,6 @@
     "marks": 60,
     "topic": "Indian Society",
     "id": 91
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Decentralisation of power and local development.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 92
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Panchayati Raj and rural leadership.",
-    "marks": 20,
-    "topic": "Indian Villages",
-    "id": 93
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Write short note : Pressure groups in Indian politics.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 94
   },
   {
     "year": "2013",
@@ -875,6 +749,231 @@
   {
     "year": "2013",
     "paper": "Paper II",
+    "section": "Section A",
+    "question": "Discuss the role of the State in restructuring the Indian society through various interventions.",
+    "marks": 60,
+    "topic": "Indian Society",
+    "id": 101
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Critically evaluate education as an instrument of social justice.",
+    "marks": 60,
+    "topic": "Education and Society",
+    "id": 106
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Discuss the salient features of right to education. (200 words)",
+    "marks": 15,
+    "topic": "Education and Society",
+    "id": 112
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Examine the impact of secularization on various religious communities in India.",
+    "marks": 30,
+    "topic": "Religion and Society",
+    "id": 115
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "How are the issues of ethnicity and nationalism related? Discuss in the context of the emergence of ethnonationalism in India.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 116
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Comment on the growing assertion of tribal autonomy in India.",
+    "marks": 10,
+    "topic": "Tribal Society",
+    "id": 117
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Bring out the main features of farmers’ movements in Modern India. (200 words)",
+    "marks": 20,
+    "topic": "Social Movements in India",
+    "id": 119
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Write short note on the following in not more than 150 words. Your answer should have a sociological perspective: Stages of the Women's movement in India.",
+    "marks": 15,
+    "topic": "Social Movements in India",
+    "id": 121
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Discuss the problems of working women in India. (200 words)",
+    "marks": 20,
+    "topic": "Weaker Sections",
+    "id": 122
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Analyse the role of communalism in undermining democracy in India. (200 words)",
+    "marks": 15,
+    "topic": "Politics and Society",
+    "id": 123
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Describe those social changes which have contributed to increase of violence against women. What are the emerging forms of violence against women ? Suggest suitable measures to contain this problem.",
+    "marks": 30,
+    "topic": "Weaker Sections",
+    "id": 124
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "With reference to their understanding of the Indian village, compare the perspectives of M.N. Srinivas and S.C. Dube.",
+    "marks": 30,
+    "topic": "Indian Villages",
+    "id": 61
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note with a sociological perspective : Political elites and the democratic process.",
+    "marks": 12,
+    "topic": "Politics and Society",
+    "id": 63
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note on New rural elite and leadership.",
+    "marks": 20,
+    "topic": "Indian Villages",
+    "id": 69
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Regionalism.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 70
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Discuss the social base of political parties in India. What has been its impact on Indian democracy ?",
+    "marks": 60,
+    "topic": "Politics and Society",
+    "id": 75
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Pluralism and national unity.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 76
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Reservation and Panchayat Raj institutions.",
+    "marks": 20,
+    "topic": "Weaker Sections",
+    "id": 79
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : National Unity.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 84
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Implications of emergence of regional political parties.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 85
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Role of pressure groups in Indian politics.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 88
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Changing social origins of political elites in India.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 89
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Decentralisation of power and local development.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 92
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Panchayati Raj and rural leadership.",
+    "marks": 20,
+    "topic": "Indian Villages",
+    "id": 93
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short note : Pressure groups in Indian politics.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 94
+  },
+  {
+    "year": "2013",
+    "paper": "Paper II",
     "section": "Section B",
     "question": "Write short note : Social responsibility of political elites.",
     "marks": 20,
@@ -898,15 +997,6 @@
     "marks": 20,
     "topic": "Politics and Society",
     "id": 100
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Discuss the role of the State in restructuring the Indian society through various interventions.",
-    "marks": 60,
-    "topic": "Indian Society",
-    "id": 101
   },
   {
     "year": "2013",
@@ -943,15 +1033,6 @@
     "marks": 20,
     "topic": "Education and Society",
     "id": 105
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Critically evaluate education as an instrument of social justice.",
-    "marks": 60,
-    "topic": "Education and Society",
-    "id": 106
   },
   {
     "year": "2013",
@@ -1001,15 +1082,6 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section A",
-    "question": "Discuss the salient features of right to education. (200 words)",
-    "marks": 15,
-    "topic": "Education and Society",
-    "id": 112
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
     "section": "Section B",
     "question": "Write short note with sociological perspective: Dalit empowerment.",
     "marks": 12,
@@ -1028,29 +1100,11 @@
   {
     "year": "2013",
     "paper": "Paper II",
-    "section": "Section A",
-    "question": "Examine the impact of secularization on various religious communities in India.",
-    "marks": 30,
-    "topic": "Religion and Society",
-    "id": 115
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "How are the issues of ethnicity and nationalism related? Discuss in the context of the emergence of ethnonationalism in India.",
+    "section": "Section B",
+    "question": "What is the Dalit Movement? Examine the issues highlighted by it. (200 words)",
     "marks": 20,
-    "topic": "Politics and Society",
-    "id": 116
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Comment on the growing assertion of tribal autonomy in India.",
-    "marks": 10,
-    "topic": "Tribal Society",
-    "id": 117
+    "topic": "Social Movements in India",
+    "id": 120
   },
   {
     "year": "2013",
@@ -1062,58 +1116,13 @@
     "id": 118
   },
   {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Bring out the main features of farmers’ movements in Modern India. (200 words)",
-    "marks": 20,
-    "topic": "Social Movements in India",
-    "id": 119
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "What is the Dalit Movement? Examine the issues highlighted by it. (200 words)",
-    "marks": 20,
-    "topic": "Social Movements in India",
-    "id": 120
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Write short note on the following in not more than 150 words. Your answer should have a sociological perspective: Stages of the Women's movement in India.",
-    "marks": 15,
-    "topic": "Social Movements in India",
-    "id": 121
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Discuss the problems of working women in India. (200 words)",
-    "marks": 20,
-    "topic": "Weaker Sections",
-    "id": 122
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Analyse the role of communalism in undermining democracy in India. (200 words)",
-    "marks": 15,
-    "topic": "Politics and Society",
-    "id": 123
-  },
-  {
-    "year": "2013",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Describe those social changes which have contributed to increase of violence against women. What are the emerging forms of violence against women ? Suggest suitable measures to contain this problem.",
-    "marks": 30,
-    "topic": "Weaker Sections",
-    "id": 124
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "",
+    "question": "How do caste and class come together in shaping the category of extreme poor ?",
+    "marks": 10,
+    "topic": "Social Stratification",
+    "id": 143
   },
   {
     "year": "2014",
@@ -1132,15 +1141,6 @@
     "marks": 20,
     "topic": "Sociology as Science",
     "id": 126
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Identify the similarities and differences between Marx’s theory of ‘alienation’ and Durkheim's theory of ‘anomie’.",
-    "marks": 20,
-    "topic": "Sociological Thinkers",
-    "id": 127
   },
   {
     "year": "2014",
@@ -1181,51 +1181,6 @@
   {
     "year": "2014",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "What do you understand by institutionalization of 'live-in - relationship' ?",
-    "marks": 10,
-    "topic": "Family and Marriage",
-    "id": 132
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "What do you understand by gender? How does it shape 'male identity'?",
-    "marks": 20,
-    "topic": "Family and Marriage",
-    "id": 133
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "According to Max Weber, 'class' and 'status' are two different dimensions of power. Discuss.",
-    "marks": 20,
-    "topic": "Sociological Thinkers",
-    "id": 134
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Discuss T. H. Marshall's views on citizenship. (in about 150 words)",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 135
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section D",
-    "question": "Distinguish between Political Parties and Pressure Groups. (150 words)",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 136
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "\"Power is not a zero-sum game\". Discuss with reference to Weber's and Parsons's views.",
     "marks": 20,
@@ -1244,47 +1199,11 @@
   {
     "year": "2014",
     "paper": "Paper I",
-    "section": "Section C",
-    "question": "What do you understand by social movement? How has the mobilization by Scheduled Castes helped them in constructing a new identity?",
-    "marks": 10,
-    "topic": "Social Movements in India",
-    "id": 139
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "How is religious revivalism different from communalism? Elaborate with suitable examples from the Indian context.",
     "marks": 20,
     "topic": "Religion and Society",
     "id": 140
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "How is the increasing use of technology changing the status of women in Indian society?",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 141
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Write a short essay on the Latin American Perspective of 'dependency'.",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 142
-  },
-  {
-    "year": "2014",
-    "paper": "Paper I",
-    "section": "",
-    "question": "How do caste and class come together in shaping the category of extreme poor ?",
-    "marks": 10,
-    "topic": "Social Stratification",
-    "id": 143
   },
   {
     "year": "2014",
@@ -1315,21 +1234,84 @@
   },
   {
     "year": "2014",
-    "paper": "Paper II",
+    "paper": "Paper I",
     "section": "Section B",
-    "question": "Write short answer of the following in about 150 words : In what way biographies could be used to study social life ?",
-    "marks": 10,
-    "topic": "Social Research Methods",
-    "id": 147
+    "question": "Identify the similarities and differences between Marx’s theory of ‘alienation’ and Durkheim's theory of ‘anomie’.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 127
   },
   {
     "year": "2014",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Write short notes with a sociological Perspective on the following in 150 words: G.S. Ghurye's Indological approach to understand society in India.",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What do you understand by institutionalization of 'live-in - relationship' ?",
     "marks": 10,
-    "topic": "Indian Society",
-    "id": 148
+    "topic": "Family and Marriage",
+    "id": 132
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What do you understand by gender? How does it shape 'male identity'?",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 133
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "According to Max Weber, 'class' and 'status' are two different dimensions of power. Discuss.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 134
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How is the increasing use of technology changing the status of women in Indian society?",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 141
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Write a short essay on the Latin American Perspective of 'dependency'.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 142
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Discuss T. H. Marshall's views on citizenship. (in about 150 words)",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 135
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "What do you understand by social movement? How has the mobilization by Scheduled Castes helped them in constructing a new identity?",
+    "marks": 10,
+    "topic": "Social Movements in India",
+    "id": 139
+  },
+  {
+    "year": "2014",
+    "paper": "Paper I",
+    "section": "Section D",
+    "question": "Distinguish between Political Parties and Pressure Groups. (150 words)",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 136
   },
   {
     "year": "2014",
@@ -1339,6 +1321,15 @@
     "marks": 10,
     "topic": "Caste System",
     "id": 149
+  },
+  {
+    "year": "2014",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Write short notes with a sociological Perspective on the following in 150 words: G.S. Ghurye's Indological approach to understand society in India.",
+    "marks": 10,
+    "topic": "Indian Society",
+    "id": 148
   },
   {
     "year": "2014",
@@ -1388,15 +1379,6 @@
   {
     "year": "2014",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Discuss the problems of religious minorities in India.",
-    "marks": 20,
-    "topic": "Religion and Society",
-    "id": 155
-  },
-  {
-    "year": "2014",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "What are the demographic projections for the ageing population (60+) for the next decade? What are the implications for formulating policy for them ?",
     "marks": 20,
@@ -1411,15 +1393,6 @@
     "marks": 20,
     "topic": "Social Movements in India",
     "id": 157
-  },
-  {
-    "year": "2014",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Discuss the ‘Chipko movement’ as an example of eco-feminism.",
-    "marks": 20,
-    "topic": "Social Movements in India",
-    "id": 158
   },
   {
     "year": "2014",
@@ -1442,6 +1415,42 @@
   {
     "year": "2014",
     "paper": "Paper II",
+    "section": "Section A",
+    "question": "Explain the inter-linkages between poverty, deprivation and inequality. (200 words)",
+    "marks": 10,
+    "topic": "Social Stratification",
+    "id": 162
+  },
+  {
+    "year": "2014",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Write short answer of the following in about 150 words : In what way biographies could be used to study social life ?",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 147
+  },
+  {
+    "year": "2014",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Discuss the problems of religious minorities in India.",
+    "marks": 20,
+    "topic": "Religion and Society",
+    "id": 155
+  },
+  {
+    "year": "2014",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Discuss the ‘Chipko movement’ as an example of eco-feminism.",
+    "marks": 20,
+    "topic": "Social Movements in India",
+    "id": 158
+  },
+  {
+    "year": "2014",
+    "paper": "Paper II",
     "section": "Section B",
     "question": "'Tribal conflicts based on ethnic differences often camouflage a struggle for political and economic advantage.' Substantiate with examples.",
     "marks": 20,
@@ -1449,13 +1458,31 @@
     "id": 161
   },
   {
-    "year": "2014",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Explain the inter-linkages between poverty, deprivation and inequality. (200 words)",
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "",
+    "question": "Write short note with a sociological perspective : Louis Dumont's perspective on caste system.",
     "marks": 10,
-    "topic": "Social Stratification",
-    "id": 162
+    "topic": "Sociological Thinkers",
+    "id": 179
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "",
+    "question": "Write short note with a sociological perspective : How far Srinivas's Sanskritization is modernizing force or traditionalizing force ?",
+    "marks": 10,
+    "topic": "Social Change",
+    "id": 180
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "",
+    "question": "Discuss B.R. Ambedkar as a wise democrat.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 181
   },
   {
     "year": "2015",
@@ -1487,15 +1514,6 @@
   {
     "year": "2015",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Examine the problems of maintaining objectivity and value neutrality in Social Science research ?",
-    "marks": 20,
-    "topic": "Social Research Methods",
-    "id": 166
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Why is random sampling said to have more reliability and validity in research ?",
     "marks": 20,
@@ -1510,51 +1528,6 @@
     "marks": 10,
     "topic": "Sociological Thinkers",
     "id": 168
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "The increasing importance of the tertiary sector has weakened the formal organization of work in recent times. Examine the statement.",
-    "marks": 20,
-    "topic": "Economy and Society",
-    "id": 169
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "\"Ideology is crucial for social transformation in a democracy.\" Discuss.",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 170
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Explain the conditions under which a collective action transforms into a social movement.",
-    "marks": 20,
-    "topic": "Social Movements",
-    "id": 171
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Caste ideology appears to have strengthened democracy. Comment.",
-    "marks": 10,
-    "topic": "Caste System",
-    "id": 172
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "\"Globalization involves deterritorialization.\" Examine with reference to the nation-state.",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 173
   },
   {
     "year": "2015",
@@ -1595,42 +1568,6 @@
   {
     "year": "2015",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Examine the dialectical relation between tradition and modernity in the study of social change.",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 178
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "",
-    "question": "Write short note with a sociological perspective : Louis Dumont's perspective on caste system.",
-    "marks": 10,
-    "topic": "Sociological Thinkers",
-    "id": 179
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "",
-    "question": "Write short note with a sociological perspective : How far Srinivas's Sanskritization is modernizing force or traditionalizing force ?",
-    "marks": 10,
-    "topic": "Social Change",
-    "id": 180
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
-    "section": "",
-    "question": "Discuss B.R. Ambedkar as a wise democrat.",
-    "marks": 20,
-    "topic": "Sociological Thinkers",
-    "id": 181
-  },
-  {
-    "year": "2015",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Bring out the relationship between social class and mortality.",
     "marks": 20,
@@ -1650,6 +1587,51 @@
     "year": "2015",
     "paper": "Paper I",
     "section": "Section B",
+    "question": "Examine the problems of maintaining objectivity and value neutrality in Social Science research ?",
+    "marks": 20,
+    "topic": "Social Research Methods",
+    "id": 166
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "The increasing importance of the tertiary sector has weakened the formal organization of work in recent times. Examine the statement.",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 169
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "\"Ideology is crucial for social transformation in a democracy.\" Discuss.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 170
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain the conditions under which a collective action transforms into a social movement.",
+    "marks": 20,
+    "topic": "Social Movements",
+    "id": 171
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Examine the dialectical relation between tradition and modernity in the study of social change.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 178
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section B",
     "question": "What are the distinct features of Islam as practised in India, and how have they changed over time?",
     "marks": 10,
     "topic": "Religion and Society",
@@ -1663,6 +1645,24 @@
     "marks": 20,
     "topic": "Religion and Society",
     "id": 185
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Caste ideology appears to have strengthened democracy. Comment.",
+    "marks": 10,
+    "topic": "Caste System",
+    "id": 172
+  },
+  {
+    "year": "2015",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "\"Globalization involves deterritorialization.\" Examine with reference to the nation-state.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 173
   },
   {
     "year": "2015",
@@ -1748,29 +1748,11 @@
   {
     "year": "2015",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "What are the major concerns of ethnic identity and religious identity in India?",
-    "marks": 20,
-    "topic": "Religion and Society",
-    "id": 195
-  },
-  {
-    "year": "2015",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "Discuss the impact of post-1970 feminist movement on Indian middle class.",
     "marks": 20,
     "topic": "Social Movements in India",
     "id": 196
-  },
-  {
-    "year": "2015",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Discuss the main features of farmers’ movements in independent India.",
-    "marks": 20,
-    "topic": "Social Movements in India",
-    "id": 197
   },
   {
     "year": "2015",
@@ -1789,6 +1771,33 @@
     "marks": 10,
     "topic": "Religion and Society",
     "id": 199
+  },
+  {
+    "year": "2015",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "What are the major concerns of ethnic identity and religious identity in India?",
+    "marks": 20,
+    "topic": "Religion and Society",
+    "id": 195
+  },
+  {
+    "year": "2015",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Discuss the main features of farmers’ movements in independent India.",
+    "marks": 20,
+    "topic": "Social Movements in India",
+    "id": 197
+  },
+  {
+    "year": "2016",
+    "paper": "Paper I",
+    "section": "",
+    "question": "How has B.R. Ambedkar identified the features of caste system ? How is it different from the mainstream treatment of the features ?",
+    "marks": 20,
+    "topic": "Caste System",
+    "id": 218
   },
   {
     "year": "2016",
@@ -1838,15 +1847,6 @@
   {
     "year": "2016",
     "paper": "Paper I",
-    "section": "Section C",
-    "question": "“Hypothesis is a statement of the relationship between two or more variables.” Elucidate by giving examples of poverty and illiteracy.",
-    "marks": 10,
-    "topic": "Social Research Methods",
-    "id": 205
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "“Participant observation is the most effective tool for collecting facts.” Comment.",
     "marks": 20,
@@ -1856,29 +1856,11 @@
   {
     "year": "2016",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Distinguish between family and household as sociological concepts.",
-    "marks": 10,
-    "topic": "Family and Marriage",
-    "id": 207
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Elucidate the basic premises of Davis and Moore's structural-functional theory of stratification. How far is it relevant in understanding contemporary Indian society?",
     "marks": 20,
     "topic": "Social Stratification",
     "id": 208
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Discuss the relationship between poverty and social exclusion.",
-    "marks": 10,
-    "topic": "Social Stratification",
-    "id": 209
   },
   {
     "year": "2016",
@@ -1897,15 +1879,6 @@
     "marks": 10,
     "topic": "Economy and Society",
     "id": 211
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Discuss the importance of 'power elite' in democracy.",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 212
   },
   {
     "year": "2016",
@@ -1946,24 +1919,6 @@
   {
     "year": "2016",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Social change can be brought about through development. Illustrate from the contemporary situation of India.",
-    "marks": 20,
-    "topic": "Social Change",
-    "id": 217
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
-    "section": "",
-    "question": "How has B.R. Ambedkar identified the features of caste system ? How is it different from the mainstream treatment of the features ?",
-    "marks": 20,
-    "topic": "Caste System",
-    "id": 218
-  },
-  {
-    "year": "2016",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "What accounts for the growth and consolidation of middle classes in modern India. Elucidate.",
     "marks": 10,
@@ -1992,6 +1947,42 @@
     "year": "2016",
     "paper": "Paper I",
     "section": "Section B",
+    "question": "Distinguish between family and household as sociological concepts.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 207
+  },
+  {
+    "year": "2016",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the relationship between poverty and social exclusion.",
+    "marks": 10,
+    "topic": "Social Stratification",
+    "id": 209
+  },
+  {
+    "year": "2016",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the importance of 'power elite' in democracy.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 212
+  },
+  {
+    "year": "2016",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Social change can be brought about through development. Illustrate from the contemporary situation of India.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 217
+  },
+  {
+    "year": "2016",
+    "paper": "Paper I",
+    "section": "Section B",
     "question": "Write short notes with a sociological Perspective : Significance of Village Studies in Indian Sociology.",
     "marks": 10,
     "topic": "Indian Villages",
@@ -1999,12 +1990,12 @@
   },
   {
     "year": "2016",
-    "paper": "Paper II",
-    "section": "Section A",
-    "question": "Write short notes with a sociological Perspective: Salient features of A.R. Desai's Marxist Sociology.",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "“Hypothesis is a statement of the relationship between two or more variables.” Elucidate by giving examples of poverty and illiteracy.",
     "marks": 10,
-    "topic": "Sociological Thinkers",
-    "id": 223
+    "topic": "Social Research Methods",
+    "id": 205
   },
   {
     "year": "2016",
@@ -2019,55 +2010,19 @@
     "year": "2016",
     "paper": "Paper II",
     "section": "Section A",
+    "question": "Write short notes with a sociological Perspective: Salient features of A.R. Desai's Marxist Sociology.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 223
+  },
+  {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section A",
     "question": "Examine the role of caste as a pressure-group in contemporary Indian politics.",
     "marks": 60,
     "topic": "Caste System",
     "id": 225
-  },
-  {
-    "year": "2016",
-    "paper": "Paper II",
-    "section": "Section C",
-    "question": "Analyse the major components of Land Reform Acts. Show their effectiveness in curbing rural inequality.",
-    "marks": 10,
-    "topic": "Agrarian Structure",
-    "id": 226
-  },
-  {
-    "year": "2016",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Comment on the increasing significance of caste in politics.",
-    "marks": 10,
-    "topic": "Caste System",
-    "id": 227
-  },
-  {
-    "year": "2016",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Elucidate the concepts of 'majoritarianism' and 'minoritarianism' in accentuating communal tensions in India.",
-    "marks": 20,
-    "topic": "Religion and Society",
-    "id": 228
-  },
-  {
-    "year": "2016",
-    "paper": "Paper II",
-    "section": "Section C",
-    "question": "Write short notes with a sociological perspective: Different forms of Dalit assertion.",
-    "marks": 10,
-    "topic": "Social Movements in India",
-    "id": 229
-  },
-  {
-    "year": "2016",
-    "paper": "Paper II",
-    "section": "Section C",
-    "question": "Discuss the various forms of environmental movements started in India.",
-    "marks": 10,
-    "topic": "Social Movements in India",
-    "id": 230
   },
   {
     "year": "2016",
@@ -2097,6 +2052,51 @@
     "id": 233
   },
   {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Comment on the increasing significance of caste in politics.",
+    "marks": 10,
+    "topic": "Caste System",
+    "id": 227
+  },
+  {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Elucidate the concepts of 'majoritarianism' and 'minoritarianism' in accentuating communal tensions in India.",
+    "marks": 20,
+    "topic": "Religion and Society",
+    "id": 228
+  },
+  {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section C",
+    "question": "Analyse the major components of Land Reform Acts. Show their effectiveness in curbing rural inequality.",
+    "marks": 10,
+    "topic": "Agrarian Structure",
+    "id": 226
+  },
+  {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section C",
+    "question": "Write short notes with a sociological perspective: Different forms of Dalit assertion.",
+    "marks": 10,
+    "topic": "Social Movements in India",
+    "id": 229
+  },
+  {
+    "year": "2016",
+    "paper": "Paper II",
+    "section": "Section C",
+    "question": "Discuss the various forms of environmental movements started in India.",
+    "marks": 10,
+    "topic": "Social Movements in India",
+    "id": 230
+  },
+  {
     "year": "2017",
     "paper": "Paper I",
     "section": "Section A",
@@ -2122,15 +2122,6 @@
     "marks": 10,
     "topic": "Sociology as Science",
     "id": 236
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Analyse Marxian conception of historical materialism as a critique of Hegelian dialectics.",
-    "marks": 20,
-    "topic": "Sociological Thinkers",
-    "id": 237
   },
   {
     "year": "2017",
@@ -2171,33 +2162,6 @@
   {
     "year": "2017",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Examine ‘patriarchal bargain’ as gendered division of work in contemporary India.",
-    "marks": 10,
-    "topic": "Family and Marriage",
-    "id": 242
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Discuss the regional variations of kinship system in Indian society.",
-    "marks": 20,
-    "topic": "Family and Marriage",
-    "id": 243
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "To what extent is patriarchy a cause for the problems of women ? Discuss.",
-    "marks": 10,
-    "topic": "Family and Marriage",
-    "id": 244
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "What is Weberian critique of Marxist notion of social stratification ?",
     "marks": 20,
@@ -2221,24 +2185,6 @@
     "marks": 10,
     "topic": "Economy and Society",
     "id": 247
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Discuss the changing interface between state and civil society in post-independent India.",
-    "marks": 10,
-    "topic": "Politics and Society",
-    "id": 248
-  },
-  {
-    "year": "2017",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "Examine the dynamics of pressure groups in multi-party political system.",
-    "marks": 20,
-    "topic": "Politics and Society",
-    "id": 249
   },
   {
     "year": "2017",
@@ -2271,6 +2217,51 @@
     "year": "2017",
     "paper": "Paper I",
     "section": "Section B",
+    "question": "Analyse Marxian conception of historical materialism as a critique of Hegelian dialectics.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 237
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Examine ‘patriarchal bargain’ as gendered division of work in contemporary India.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 242
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the regional variations of kinship system in Indian society.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 243
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "To what extent is patriarchy a cause for the problems of women ? Discuss.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 244
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the changing interface between state and civil society in post-independent India.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 248
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section B",
     "question": "Gritcally analyse the role of science and technology in bringing about social change.",
     "marks": 20,
     "topic": "Social Change",
@@ -2284,6 +2275,15 @@
     "marks": 20,
     "topic": "Tribal Society",
     "id": 254
+  },
+  {
+    "year": "2017",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Examine the dynamics of pressure groups in multi-party political system.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 249
   },
   {
     "year": "2017",
@@ -2369,24 +2369,6 @@
   {
     "year": "2017",
     "paper": "Paper II",
-    "section": "Section B",
-    "question": "Do you agree that the issue of child labour raises questions about and beyond the informal sector ? Give reasons.",
-    "marks": 10,
-    "topic": "Industry and Labour",
-    "id": 264
-  },
-  {
-    "year": "2017",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Despite gains from the women's movement and state policy of women empowerment, gender equality is far from achieved. Identify two major challenges that prevent this goal from being reached.",
-    "marks": 20,
-    "topic": "Social Movements in India",
-    "id": 265
-  },
-  {
-    "year": "2017",
-    "paper": "Paper II",
     "section": "Section A",
     "question": "Explain the issues relating to ethnicity and sub-ethnicity.",
     "marks": 20,
@@ -2401,6 +2383,24 @@
     "marks": 20,
     "topic": "Social Change",
     "id": 267
+  },
+  {
+    "year": "2017",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Do you agree that the issue of child labour raises questions about and beyond the informal sector ? Give reasons.",
+    "marks": 10,
+    "topic": "Industry and Labour",
+    "id": 264
+  },
+  {
+    "year": "2017",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Despite gains from the women's movement and state policy of women empowerment, gender equality is far from achieved. Identify two major challenges that prevent this goal from being reached.",
+    "marks": 20,
+    "topic": "Social Movements in India",
+    "id": 265
   },
   {
     "year": "2017",
@@ -2495,56 +2495,11 @@
   {
     "year": "2018",
     "paper": "Paper I",
-    "section": "Section B",
-    "question": "Distinguish between family and household with reference to the concept of development of the household.",
-    "marks": 20,
-    "topic": "Family and Marriage",
-    "id": 278
-  },
-  {
-    "year": "2018",
-    "paper": "Paper I",
-    "section": "Section C",
-    "question": "What, according to Pareto, are the basic characteristics of elites? Discuss.",
-    "marks": 10,
-    "topic": "Sociological Thinkers",
-    "id": 279
-  },
-  {
-    "year": "2018",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Schooling does not ensure upward mobility of all members of the society. Discuss with reference to class societies.",
-    "marks": 20,
-    "topic": "Education and Society",
-    "id": 280
-  },
-  {
-    "year": "2018",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Are all world religions patriarchal ? Substantiate your answer with examples.",
-    "marks": 20,
-    "topic": "Religion and Society",
-    "id": 281
-  },
-  {
-    "year": "2018",
-    "paper": "Paper I",
     "section": "Section A",
     "question": "Discuss the challenges thrown by religious revivalism to a secular nation-state.",
     "marks": 10,
     "topic": "Religion and Society",
     "id": 282
-  },
-  {
-    "year": "2018",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "What are sects ? Discuss their role in multi religious societies with empirical examples.",
-    "marks": 20,
-    "topic": "Religion and Society",
-    "id": 283
   },
   {
     "year": "2018",
@@ -2603,11 +2558,38 @@
   {
     "year": "2018",
     "paper": "Paper I",
-    "section": "Section C",
-    "question": "Assess the impact of ban on 'Triple Talak' on marriage and divorce among the Muslim community in India.",
-    "marks": 10,
+    "section": "Section B",
+    "question": "Distinguish between family and household with reference to the concept of development of the household.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 278
+  },
+  {
+    "year": "2018",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Schooling does not ensure upward mobility of all members of the society. Discuss with reference to class societies.",
+    "marks": 20,
+    "topic": "Education and Society",
+    "id": 280
+  },
+  {
+    "year": "2018",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Are all world religions patriarchal ? Substantiate your answer with examples.",
+    "marks": 20,
     "topic": "Religion and Society",
-    "id": 290
+    "id": 281
+  },
+  {
+    "year": "2018",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What are sects ? Discuss their role in multi religious societies with empirical examples.",
+    "marks": 20,
+    "topic": "Religion and Society",
+    "id": 283
   },
   {
     "year": "2018",
@@ -2617,6 +2599,24 @@
     "marks": 20,
     "topic": "Agrarian Structure",
     "id": 291
+  },
+  {
+    "year": "2018",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "What, according to Pareto, are the basic characteristics of elites? Discuss.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 279
+  },
+  {
+    "year": "2018",
+    "paper": "Paper I",
+    "section": "Section C",
+    "question": "Assess the impact of ban on 'Triple Talak' on marriage and divorce among the Muslim community in India.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 290
   },
   {
     "year": "2018",
@@ -2657,15 +2657,6 @@
   {
     "year": "2018",
     "paper": "Paper II",
-    "section": "Section C",
-    "question": "Write a note on Basic Services to Urban Poor (BSUP) and Integrated Housing and Slum Development (IHSD) programmes provided for the urban poor.",
-    "marks": 10,
-    "topic": "Industry and Labour",
-    "id": 296
-  },
-  {
-    "year": "2018",
-    "paper": "Paper II",
     "section": "Section B",
     "question": "Write a critical narrative on the concerns of religious minorities in India.",
     "marks": 20,
@@ -2691,6 +2682,15 @@
     "id": 299
   },
   {
+    "year": "2018",
+    "paper": "Paper II",
+    "section": "Section C",
+    "question": "Write a note on Basic Services to Urban Poor (BSUP) and Integrated Housing and Slum Development (IHSD) programmes provided for the urban poor.",
+    "marks": 10,
+    "topic": "Industry and Labour",
+    "id": 296
+  },
+  {
     "year": "2019",
     "paper": "Paper I",
     "section": "Section A",
@@ -2698,24 +2698,6 @@
     "marks": 10,
     "topic": "Sociological Thinkers",
     "id": 300
-  },
-  {
-    "year": "2019",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "What, according to Irawati Karve, are the major differences between North Indian and South Indian Kinship systems ?",
-    "marks": 10,
-    "topic": "Family and Marriage",
-    "id": 301
-  },
-  {
-    "year": "2019",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "In the light of judicial intervention on ‘Live-in relationships’, discuss the future of marriage and family in India.",
-    "marks": 20,
-    "topic": "Family and Marriage",
-    "id": 302
   },
   {
     "year": "2019",
@@ -2774,6 +2756,33 @@
   {
     "year": "2019",
     "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is 'reserve army of labour'? Present the position of feminist scholars on this.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 311
+  },
+  {
+    "year": "2019",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What, according to Irawati Karve, are the major differences between North Indian and South Indian Kinship systems ?",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 301
+  },
+  {
+    "year": "2019",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "In the light of judicial intervention on ‘Live-in relationships’, discuss the future of marriage and family in India.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 302
+  },
+  {
+    "year": "2019",
+    "paper": "Paper I",
     "section": "Section B",
     "question": "What is the difference between natural and social inequality ? Give examples from caste and class dimensions.",
     "marks": 10,
@@ -2792,11 +2801,11 @@
   {
     "year": "2019",
     "paper": "Paper I",
-    "section": "Section A",
-    "question": "What is 'reserve army of labour'? Present the position of feminist scholars on this.",
+    "section": "Section B",
+    "question": "Discuss the issues of access and exclusion in higher education in India.",
     "marks": 10,
-    "topic": "Economy and Society",
-    "id": 311
+    "topic": "Education and Society",
+    "id": 315
   },
   {
     "year": "2019",
@@ -2824,15 +2833,6 @@
     "marks": 10,
     "topic": "Politics and Society",
     "id": 314
-  },
-  {
-    "year": "2019",
-    "paper": "Paper I",
-    "section": "Section B",
-    "question": "Discuss the issues of access and exclusion in higher education in India.",
-    "marks": 10,
-    "topic": "Education and Society",
-    "id": 315
   },
   {
     "year": "2019",
@@ -2887,33 +2887,6 @@
     "marks": 10,
     "topic": "Social Stratification",
     "id": 321
-  },
-  {
-    "year": "2019",
-    "paper": "Paper II",
-    "section": "Section B",
-    "question": "Is industrial development in India a bane or a boon to agrarian class structure ? Substantiate your answer with suitable examples.",
-    "marks": 20,
-    "topic": "Agrarian Structure",
-    "id": 322
-  },
-  {
-    "year": "2019",
-    "paper": "Paper II",
-    "section": "Section E",
-    "question": "Elaborate urbanism as a way of life in India.",
-    "marks": 10,
-    "topic": "Industry and Labour",
-    "id": 323
-  },
-  {
-    "year": "2019",
-    "paper": "Paper II",
-    "section": "Section E",
-    "question": "Elucidate the concerns of growing urban displacement dynamism in India.",
-    "marks": 10,
-    "topic": "Industry and Labour",
-    "id": 324
   },
   {
     "year": "2019",
@@ -2973,6 +2946,15 @@
     "year": "2019",
     "paper": "Paper II",
     "section": "Section B",
+    "question": "Is industrial development in India a bane or a boon to agrarian class structure ? Substantiate your answer with suitable examples.",
+    "marks": 20,
+    "topic": "Agrarian Structure",
+    "id": 322
+  },
+  {
+    "year": "2019",
+    "paper": "Paper II",
+    "section": "Section B",
     "question": "Do you agree that social movements are caused by opportunity structures that are generated by media? Why?",
     "marks": 10,
     "topic": "Social Movements in India",
@@ -3004,6 +2986,510 @@
     "marks": 20,
     "topic": "Weaker Sections",
     "id": 334
+  },
+  {
+    "year": "2019",
+    "paper": "Paper II",
+    "section": "Section E",
+    "question": "Elaborate urbanism as a way of life in India.",
+    "marks": 10,
+    "topic": "Industry and Labour",
+    "id": 323
+  },
+  {
+    "year": "2019",
+    "paper": "Paper II",
+    "section": "Section E",
+    "question": "Elucidate the concerns of growing urban displacement dynamism in India.",
+    "marks": 10,
+    "topic": "Industry and Labour",
+    "id": 324
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "In the Context of globalization, has the scope of Sociology been changing in India? Comment.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 367
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "How did the Intellectual forces lead to the emergence of Sociology? Discuss.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 368
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Methodology is a system of rules, Principles and procedures, which forms scientific investigation. Comment.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 369
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Phenomenological perspectives in Sociology reject many of the assumption of positivism. Comment.",
+    "marks": 20,
+    "topic": "Sociology as Science",
+    "id": 370
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Is Sociology a value-free Science? Discuss.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 371
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Analyse the strengths and weakness of social survey method in social research.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 372
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Discuss the importance and source of hypothesis in social research.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 373
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Write short note: Mead's notion of self.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 374
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What are the reactions of R.K Merton to the functionalism of social anthropologists? Bring on the limitations of latent functions.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 375
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Analyse the relevance of 'Pattern Variables' in the study of Social change.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 376
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "'Ideal Types' of Max Weber are mental constructs; they do not correspond to the reality. Give your views.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 377
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What are the problems in observing social facts in Durkheim's views?",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 378
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically analyse Durkheim's views on elementary forms of religious life and role of religion. Also discuss the consequences of religious revivalism in contemporary society.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 379
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically assess the Marxian Theory of 'Alienation'.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 380
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How are Hierarchy and Exclusion the major impediments in the transformation of societies? Discuss.",
+    "marks": 20,
+    "topic": "Social Stratification",
+    "id": 381
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically assess social mobility in closed and open systems.",
+    "marks": 10,
+    "topic": "Social Mobility",
+    "id": 382
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Capitalism has brought increasing informalisation of work in society. Substantiate your answer.",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 383
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the new labour codes and their impact on formal and informal labour in India.",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 384
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "According to Mills, 'Elite's rule in institutional terms rather than psychological terms.' Comment.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 385
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Examine how social movements come to an end. Illustrate with examples.",
+    "marks": 10,
+    "topic": "Social Movements",
+    "id": 386
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "State the reasons for the various religious beliefs and practices in pre-modern societies.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 387
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What is the impact of gender division of labour on the development of society?",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 388
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the consequences of Across Region marriage on kinship system in modern Indian society.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 389
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Does the institution of marriage continue to be sacred in Indian society? Comment.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 390
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Is humanity at the mercy of Nature, Science, and Technology? Comment in the light of the pandemic situation.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 391
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Education is often viewed as an agency of social change. However, in reality it could also reinforce inequalities and conservatism. Discuss.",
+    "marks": 10,
+    "topic": "Education and Society",
+    "id": 392
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Technology has accelerated the process of development and dependency. Discuss.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 393
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How does Marx view social conflict as an essential element in social change?",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 394
+  },
+  {
+    "year": "2020",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "According to Durkheim, 'The major function of education is the transmission of society's norms and values.' Discuss.",
+    "marks": 20,
+    "topic": "Education and Society",
+    "id": 395
+  },
+  {
+    "year": "2020",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Elaborate A. R. Desai's perspective to the study of Indian society.",
+    "marks": 10,
+    "topic": "Indian Society",
+    "id": 396
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "From the viewpoint of growing importance of multidisciplinarity, how do you relate sociology to other social sciences?",
+    "marks": 20,
+    "topic": "Sociology as Science",
+    "id": 397
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Do you think ethnomethodology helps us in getting reliable and valid data? Justify your answer.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 398
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Discuss the challenges involved in collecting data through census method.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 399
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "How do qualitative and quantitative methods supplement each other in sociological enquiry?",
+    "marks": 20,
+    "topic": "Social Research Methods",
+    "id": 400
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "With suitable examples, explain how conformity and deviance coexist in a society as propounded by R.K. Merton.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 401
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Do you agree with Max Weber's idea that bureaucracy has the potential to become an iron cage? Justify your answer.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 402
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain whether Durkheim's theory of Division of Labour is relevant in the present-day context.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 403
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the dialectics involved in each mode of production as propounded by Karl Marx.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 404
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain the growing salience of ethnicity in the contemporary world with illustrations.",
+    "marks": 10,
+    "topic": "Social Stratification",
+    "id": 405
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain the emerging challenges in establishing gender equality in the informal sector.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 406
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How has the idea of 'Work from Home' forced us to redefine the formal and informal organization of work?",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 407
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Elucidate the main problems and challenges faced by the migrant labourers in the recent 'Lockdown period'.",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 408
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the relevance of Vilfredo Pareto's theory of Circulation of Elites in the present scenario.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 409
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Highlight the roles and function of civil society in a democratic system.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 410
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically compare the views of E.B. Tylor and Max Muller on Religion.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 411
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What is cult? Explain the growth of cults in the contemporary world.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 412
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Give your comments on the growth of religious revivalism in the present-day context.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 413
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain how the pattern of patriarchy is being altered in a family and at the workplace in the present context.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 414
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Is male authority absent in matrilineal society? Discuss.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 415
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the changing nature of kinship relations in the contemporary world.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 416
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Describe the role of Science & Technology in enabling us to face the challenges triggered by the COVID-19 pandemics.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 417
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the contribution of dependency theories in understanding the present global scenario.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 418
+  },
+  {
+    "year": "2021",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Explain how political parties and pressure groups are dialectically related to each other in terms of achieving their goals.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 419
+  },
+  {
+    "year": "2021",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Discuss in detail the major contribution of Prof. Yogendra Singh in theorizing India's modernization.",
+    "marks": 20,
+    "topic": "Indian Society",
+    "id": 420
   },
   {
     "year": "2022",
@@ -3292,5 +3778,581 @@
     "marks": 10,
     "topic": "Weaker Sections",
     "id": 366
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Sociology is the product of European enlightenment and renaissance. Critically examine this statement.",
+    "marks": 20,
+    "topic": "Sociology as Science",
+    "id": 421
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Discuss the nature of Sociology. Highlight its relationship with Social Anthropology.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 422
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Do you think 'objectivity' is an over-hyped idea in sociological research? Discuss the merits and demerits of non-positivist methods.",
+    "marks": 20,
+    "topic": "Social Research Methods",
+    "id": 423
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What do you understand by 'mixed method'? Discuss its strengths and limitations in social research.",
+    "marks": 20,
+    "topic": "Social Research Methods",
+    "id": 424
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "How do you view and assess the increasing trend of digital ethnography and use of visual culture in sociological research?",
+    "marks": 20,
+    "topic": "Social Research Methods",
+    "id": 425
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "How is 'power' different from 'authority'? Discuss various types of authorities as theorized by Max Weber.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 426
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Explain G.H. Mead's idea of development of 'self' through the 'generalised other'.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 427
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Describe various characteristics of a 'social fact'. How is rate of suicide a social fact according to Durkheim?",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 428
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Critically explain the salient features of 'alienation' as propounded by Karl Marx.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 429
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "Describe the main idea of Max Weber's book, The Protestant Ethic and the Spirit of Capitalism as a critique of Marxism.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 430
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How does a multicultural society accommodate diversities of all kinds — ethnic, linguistic and religious? Discuss its major challenges.",
+    "marks": 20,
+    "topic": "Social Stratification",
+    "id": 431
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What is social mobility? Critically examine the classification of 'closed' and 'open' models of social stratification.",
+    "marks": 10,
+    "topic": "Social Mobility",
+    "id": 432
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Describe the differing principles of work organization in feudal and capitalist societies.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 433
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically assess the impact of technological advancement and automation on the nature of work and employment.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 434
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Define the concept of 'gig' economy and discuss its impact on labour market and workers' social security net.",
+    "marks": 20,
+    "topic": "Economy and Society",
+    "id": 435
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the dimensions of power in the construction and maintenance of social hierarchies in a society.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 436
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Underline the role of social media in contemporary social movements and describe its challenges.",
+    "marks": 20,
+    "topic": "Social Movements",
+    "id": 437
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Democracy needs a vibrant culture of civil society in order to strengthen its foundation of citizenship. Comment.",
+    "marks": 10,
+    "topic": "Politics and Society",
+    "id": 438
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How do you understand the phenomena of the mushrooming of sects and cults in contemporary society? Discuss the factors responsible for the trend.",
+    "marks": 20,
+    "topic": "Religion and Society",
+    "id": 439
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Do modernization and secularization necessarily go together? Give your views.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 440
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss the concept of animism and differentiate it from naturism.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 441
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Modern families have not just become nuclear and neo-local, but also filiocentric. How do you explain this trend?",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 442
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What are the 'basic and irreducible' functions of the family as proposed by Talcott Parsons? Explain.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 443
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Marriage as an institution has undergone a radical transformation from 'ritual' to 'commercial' in its outlook. Explain the factors behind this change.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 444
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the World-Systems theory of Immanuel Wallerstein in terms of development and dependency of various nations.",
+    "marks": 10,
+    "topic": "Social Change",
+    "id": 445
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Discuss various theories of social change. Explain the limitations of unilinear theory of social change.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 446
+  },
+  {
+    "year": "2024",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically examine the roles of science and technology in social change. What is your opinion on their increasing trend in 'online' education and teaching?",
+    "marks": 10,
+    "topic": "Social Change",
+    "id": 447
+  },
+  {
+    "year": "2024",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Differentiate between 'Western' and 'Indological' perspectives on the study of Indian society. Bring out the major aspects of G. S. Ghurye's contribution to the 'Indological' approach.",
+    "marks": 20,
+    "topic": "Indian Society",
+    "id": 448
+  },
+  {
+    "year": "2024",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Highlight the major contributions of the reform movements in pre-independent India.",
+    "marks": 20,
+    "topic": "Indian Society",
+    "id": 449
+  },
+  {
+    "year": "2024",
+    "paper": "Paper II",
+    "section": "Section B",
+    "question": "Analyse the changing nature of caste as a status group.",
+    "marks": 10,
+    "topic": "Caste System",
+    "id": 450
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "In what way is the scope of sociology unique? Explain.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 451
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is the relationship (similarities and differences) between sociology and history in terms of their area of study and methodology? Discuss.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 452
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is common sense? How are common knowledge and sociology related to each other? Explain.",
+    "marks": 10,
+    "topic": "Sociology as Science",
+    "id": 453
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is science? Do you think that the methods used in natural sciences can be applied to sociology? Give reasons for your answer.",
+    "marks": 20,
+    "topic": "Sociology as Science",
+    "id": 454
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is positivism? Critically analyze the major arguments against it.",
+    "marks": 20,
+    "topic": "Sociology as Science",
+    "id": 455
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is sampling in the context of social research? Discuss different forms of sampling with their relative advantages and disadvantages.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 456
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is hypothesis? Critically evaluate the significance of hypothesis in social research.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 457
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What do you mean by reliability? Discuss the importance of reliability in social science research.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 458
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section A",
+    "question": "What is a variable in social research? What are their different types? Elaborate.",
+    "marks": 10,
+    "topic": "Social Research Methods",
+    "id": 459
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Highlight the main features of historical materialism as propounded by Marx. How far is this theory relevant in understanding contemporary societies? Explain.",
+    "marks": 20,
+    "topic": "Sociological Thinkers",
+    "id": 460
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How does Weber's Verstehen address the objectivity-subjectivity debate in sociology?",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 461
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Can Merton's reference group theory be relevant in understanding 'identity making' in digital world? Explain.",
+    "marks": 10,
+    "topic": "Sociological Thinkers",
+    "id": 462
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Does the structural-functionalist perspective on social stratification promote a status quo? Give reasons for your answer.",
+    "marks": 20,
+    "topic": "Social Stratification",
+    "id": 463
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Compare capability deprivation approach with that of social capital deprivation in understanding chronic poverty.",
+    "marks": 20,
+    "topic": "Social Stratification",
+    "id": 464
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Is the social stratification theory gender-blind? Elucidate.",
+    "marks": 10,
+    "topic": "Social Stratification",
+    "id": 465
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Do you think that the formal workspaces are free of gender bias? Argue your answer.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 466
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Critically analyze the sociological significance of informal sector in the economy of developing societies.",
+    "marks": 10,
+    "topic": "Economy and Society",
+    "id": 467
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What would you identify as the similarities and differences in the elite theories of Mosca, Michels and Pareto? Discuss their main/crucial issues.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 468
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Are pressure groups a threat to or a necessary element of democracy? Explain with suitable illustrations.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 469
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How do 'Civil Society Organizations' such as 'NGOs' and 'Self-Help Groups' contribute in bringing down/provide leverage for grassroots level social changes? Discuss.",
+    "marks": 20,
+    "topic": "Politics and Society",
+    "id": 470
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How can you assess the significance of social movements in the digital era? Explain.",
+    "marks": 10,
+    "topic": "Social Movements",
+    "id": 471
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "How do theories of Marx, Weber and Durkheim differ in understanding religion? Explain.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 472
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What is the nature of relationship between science and religion in modern society? Analyze with suitable examples.",
+    "marks": 10,
+    "topic": "Religion and Society",
+    "id": 473
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "Give an account of the recent trends of marriage in the Indian context. How are these different from traditional practices?",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 474
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What do you understand by gender-based domestic division of labour? Is it undergoing a change in the wake of increasing participation of women in formal employment? Clarify your answer with illustrations.",
+    "marks": 20,
+    "topic": "Family and Marriage",
+    "id": 475
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "In what way does queer kinship challenge the traditional kinship system? Substantiate by giving illustrations.",
+    "marks": 10,
+    "topic": "Family and Marriage",
+    "id": 476
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "What do you understand by sustainable development? Discuss the elements of sustainable development as proposed in the UNDP's Sustainable Development Goals Report-2015.",
+    "marks": 20,
+    "topic": "Social Change",
+    "id": 477
+  },
+  {
+    "year": "2025",
+    "paper": "Paper I",
+    "section": "Section B",
+    "question": "To what extent can education and skill development be an agent of social change? Critically discuss.",
+    "marks": 10,
+    "topic": "Education and Society",
+    "id": 478
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "How would you appropriate to characterise G. S. Ghurye as a practitioner of 'theoretical pluralism'?",
+    "marks": 10,
+    "topic": "Indian Society",
+    "id": 479
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "'Textual perspective is important in understanding of Indian Social System.' Discuss.",
+    "marks": 10,
+    "topic": "Indian Society",
+    "id": 480
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Do you think that new economic reforms of British rule have disrupted the old economic system of India? Substantiate your answer with suitable examples.",
+    "marks": 20,
+    "topic": "Indian Society",
+    "id": 481
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Do you think that in a society like India orthogenetic changes take place through differentiation? Elaborate your answer with suitable examples.",
+    "marks": 20,
+    "topic": "Indian Society",
+    "id": 482
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "According to you, which social reform movement has played the most effective role in uplifting the status of women? Explain.",
+    "marks": 10,
+    "topic": "Weaker Sections",
+    "id": 483
+  },
+  {
+    "year": "2025",
+    "paper": "Paper II",
+    "section": "Section A",
+    "question": "Justify that the Indian traditions are modernizing. Also discuss its contributing factors.",
+    "marks": 10,
+    "topic": "Indian Society",
+    "id": 484
   }
 ]
