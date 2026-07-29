@@ -144,7 +144,7 @@ const OPTIONALS: Record<string, {
   },
 };
 
-const TOOLS = [
+const BASE_TOOLS = [
   { icon: (color: string) => (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
@@ -172,12 +172,37 @@ const TOOLS = [
       <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
     </svg>
   ), label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+. Annotated so you know what worked and why.', href: '/toppers', badge: 'Premium' },
-  { icon: (color: string) => (
+];
+
+const MAP_TOOL = {
+  icon: (color: string) => (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>
-  ), label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.', href: '/mapping', badge: null },
+  ),
+  label: 'Map Practice',
+  desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.',
+  href: '/mapping',
+  badge: null,
+};
+
+const TEST_SERIES_TOOL = {
+  icon: (color: string) => (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 11l3 3L22 4"/>
+      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+    </svg>
+  ),
+  label: 'Test Series',
+  desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.',
+  href: '/tests',
+  badge: 'Premium',
+};
+
+const getTools = (optional: string) => [
+  ...BASE_TOOLS,
+  optional === 'geography' ? MAP_TOOL : TEST_SERIES_TOOL,
 ];
 
 /* ── generateStaticParams ────────────────────────────────────── */
@@ -516,7 +541,7 @@ export default async function OptionalPage(
             <div className="op-section-tag" style={{ color: opt.color }}>Your Tools</div>
             <div className="op-section-title">Everything you need</div>
             <div className="op-tools-grid">
-              {TOOLS.map((tool) => (
+              {getTools(optional).map((tool) => (
                 <Link key={tool.label} href={typeof tool.href === 'function' ? tool.href(optional) : tool.href} className="op-tool-card">
                   {tool.badge && (
                     <span
