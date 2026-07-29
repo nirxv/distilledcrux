@@ -27,16 +27,16 @@ const CSS = `
 .pyq-card-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
 .pyq-year{font-family:var(--font-mono);font-size:0.62rem;padding:2px 9px;border-radius:3px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.18);color:#60a5fa;}
 .pyq-year-empty{font-family:var(--font-mono);font-size:0.62rem;padding:2px 9px;border-radius:3px;background:var(--bg3);border:1px solid var(--border);color:var(--text3);}
-.pyq-paper{font-family:var(--font-mono);font-size:0.6rem;color:var(--text3);}
-.pyq-section{font-family:var(--font-mono);font-size:0.6rem;color:var(--text3);}
+.pyq-paper{font-family:var(--font-mono);font-size:0.6rem;color:var(--text2);}
+.pyq-section{font-family:var(--font-mono);font-size:0.6rem;color:var(--text2);}
 .pyq-marks{margin-left:auto;font-family:var(--font-mono);font-size:0.62rem;padding:2px 9px;border-radius:3px;}
 .m10{background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.15);color:#4ade80;}
 .m15{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.15);color:#fbbf24;}
 .m20{background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.15);color:#f87171;}
 .m0{background:#141414;border:1px solid #1e1e1e;color:#333;}
-.pyq-question{font-family:var(--font-body);font-size:0.93rem;color:var(--text2);line-height:1.7;margin-bottom:12px;}
+.pyq-question{font-family:var(--font-body);font-size:0.93rem;color:var(--text);line-height:1.7;margin-bottom:12px;}
 .pyq-card-bottom{display:flex;align-items:center;justify-content:space-between;}
-.pyq-topic{font-family:var(--font-mono);font-size:0.58rem;color:var(--text3);letter-spacing:0.04em;}
+.pyq-topic{font-family:var(--font-mono);font-size:0.58rem;color:var(--text2);letter-spacing:0.04em;}
 .pyq-attempt{padding:5px 14px;border-radius:4px;border:1px solid rgba(59,130,246,0.2);background:rgba(59,130,246,0.05);color:#60a5fa;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;cursor:pointer;transition:all 0.15s;}
 .pyq-attempt:hover{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.35);}
 .pyq-empty{text-align:center;padding:80px 20px;color:var(--text3);font-family:var(--font-ui);font-size:0.88rem;}
