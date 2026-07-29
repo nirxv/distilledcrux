@@ -15,7 +15,7 @@ const FEATURES = [
   { icon: '✍️', label: 'Evaluate Answer', href: '/evaluate', desc: 'AI feedback on structure, content & marks.', color: 'var(--accent)', badge: null },
   { icon: '🤖', label: 'AI Chat', href: '/chat', desc: 'Syllabus-aware answers for your optional.', color: '#a78bfa', badge: null },
   { icon: '📖', label: 'Notes', href: '/notes', desc: 'Exhaustive syllabus notes by paper and section.', color: '#34d399', badge: 'Free' },
-  { icon: '🗂️', label: 'PYQs', href: '/pyqs', desc: '1500+ previous year questions with filters.', color: '#f59e0b', badge: 'Free' },
+  { icon: '🗂️', label: 'PYQs', href: '/sociology/pyqs', desc: '1500+ previous year questions with filters.', color: '#f59e0b', badge: 'Free' },
   { icon: '🏆', label: 'Topper Copies', href: '/toppers', desc: 'Real topper answer sheets — see 300+ scores.', color: '#f87171', badge: 'Premium' },
 ];
 
@@ -250,7 +250,7 @@ export default function Dashboard() {
           {[
             { label: '💬 Ask AI', href: '/chat', primary: true },
             { label: '📝 Evaluate Answer', href: '/evaluate', primary: false },
-            { label: '🗂️ Browse PYQs', href: '/pyqs', primary: false },
+            { label: '🗂️ Browse PYQs', href: '/sociology/pyqs', primary: false },
             { label: '📖 Notes', href: '/notes', primary: false },
             { label: '⚙️ Change Optional', href: '/onboarding?change=1', primary: false },
           ].map((a) => (

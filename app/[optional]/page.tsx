@@ -166,7 +166,7 @@ const TOOLS = [
       <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
       <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
     </svg>
-  ), label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: '/pyqs', badge: 'Free' },
+  ), label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => `/${opt}/pyqs`, badge: 'Free' },
   { icon: (color: string) => (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
@@ -517,7 +517,7 @@ export default async function OptionalPage(
             <div className="op-section-title">Everything you need</div>
             <div className="op-tools-grid">
               {TOOLS.map((tool) => (
-                <Link key={tool.label} href={tool.href} className="op-tool-card">
+                <Link key={tool.label} href={typeof tool.href === 'function' ? tool.href(optional) : tool.href} className="op-tool-card">
                   {tool.badge && (
                     <span
                       className="op-tool-badge"
