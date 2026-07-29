@@ -70,12 +70,10 @@ export default function SociologyNotesPage() {
                       display: 'flex', alignItems: 'flex-start', gap: '1rem',
                       transition: 'background 0.15s, border-color 0.15s',
                     }}
-                      onMouseEnter={e => {
                         const el = e.currentTarget as HTMLElement;
                         el.style.background = 'var(--bg3)';
                         el.style.borderLeftColor = COLOR;
                       }}
-                      onMouseLeave={e => {
                         const el = e.currentTarget as HTMLElement;
                         el.style.background = 'var(--bg2)';
                       }}
