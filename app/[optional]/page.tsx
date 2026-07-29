@@ -54,7 +54,7 @@ const OPTIONALS: Record<string, {
 const BASE_TOOLS = [
   { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate', badge: null },
   { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains. Written to be read before the exam.', href: '/notes', badge: 'Free' },
+  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
   { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
   { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+. Annotated so you know what worked and why.', href: '/toppers', badge: 'Premium' },
 ];
