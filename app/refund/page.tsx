@@ -39,7 +39,7 @@ export default function RefundPage() {
         </p>
         <p style={S.p}>
           We strongly recommend using the <strong style={S.strong}>free plan</strong> to evaluate the platform
-          before subscribing. The free plan includes 3 free AI evaluations with no card required.
+          before subscribing. The free plan includes 3 free AI chats and 1 free AI evaluation with no card required.
         </p>
 
         <h2 style={S.h2}>2. Subscription Plans</h2>
