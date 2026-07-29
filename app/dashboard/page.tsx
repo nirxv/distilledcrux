@@ -11,12 +11,12 @@ const SUBJECT_LABEL: Record<string, string> = {
   'public-administration': 'Public Administration', history: 'History',
 };
 
-const FEATURES = [
-  { icon: '✍️', label: 'Evaluate Answer', href: '/evaluate', desc: 'AI feedback on structure, content & marks.', color: 'var(--accent)', badge: null },
-  { icon: '🤖', label: 'AI Chat', href: '/chat', desc: 'Syllabus-aware answers for your optional.', color: '#a78bfa', badge: null },
-  { icon: '📖', label: 'Notes', href: '/notes', desc: 'Exhaustive syllabus notes by paper and section.', color: '#34d399', badge: 'Free' },
-  { icon: '🗂️', label: 'PYQs', href: '/sociology/pyqs', desc: '1500+ previous year questions with filters.', color: '#f59e0b', badge: 'Free' },
-  { icon: '🏆', label: 'Topper Copies', href: '/toppers', desc: 'Real topper answer sheets — see 300+ scores.', color: '#f87171', badge: 'Premium' },
+const TOOLS = [
+  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — get marks, section-wise feedback and a model answer.', href: '/evaluate', badge: null },
+  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — structured answers with thinkers and exam-ready language.', href: '/chat', badge: null },
+  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free' },
+  { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: '/sociology/pyqs', badge: 'Free' },
+  { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+. See what actually works.', href: '/toppers', badge: 'Premium' },
 ];
 
 interface Stats {
@@ -30,102 +30,200 @@ interface Stats {
   lastActive: string | null;
 }
 
-function StatCard({ label, value, sub, color }: { label: string; value: string | number; sub?: string; color?: string }) {
-  return (
-    <div style={{
-      background: 'var(--bg2)', border: '1px solid var(--border)',
-      borderRadius: 14, padding: '1.25rem 1.5rem',
-      display: 'flex', flexDirection: 'column', gap: 4,
-    }}>
-      <div style={{ color: 'var(--text3)', fontSize: '0.7rem', fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{label}</div>
-      <div style={{ color: color ?? 'var(--text)', fontSize: '1.9rem', fontWeight: 700, fontFamily: 'var(--font-display)', lineHeight: 1.1 }}>{value}</div>
-      {sub && <div style={{ color: 'var(--text3)', fontSize: '0.75rem', fontFamily: 'var(--font-ui)' }}>{sub}</div>}
-    </div>
-  );
-}
+const CSS = `
+  @keyframes spin { to { transform: rotate(360deg) } }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
 
-function UsageBar({ used, max, isPremium }: { used: number; max: number; isPremium: boolean }) {
-  const pct = isPremium ? 100 : Math.min((used / max) * 100, 100);
-  const color = isPremium ? '#4ade80' : pct >= 100 ? '#f87171' : pct >= 66 ? '#f59e0b' : 'var(--accent)';
-  return (
-    <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-        <span style={{ color: 'var(--text2)', fontSize: '0.82rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-          {isPremium ? 'Unlimited chats' : `${used} / ${max} free chats used`}
-        </span>
-        {!isPremium && (
-          <Link href="/pricing" style={{
-            fontSize: '0.72rem', fontFamily: 'var(--font-ui)', fontWeight: 600,
-            color: 'var(--accent)', textDecoration: 'none',
-            background: 'rgba(67,97,238,0.08)', padding: '3px 10px', borderRadius: 20,
-            border: '1px solid rgba(67,97,238,0.2)'
-          }}>Upgrade →</Link>
-        )}
-      </div>
-      <div style={{ height: 6, borderRadius: 99, background: 'var(--bg3)', overflow: 'hidden' }}>
-        <div style={{
-          height: '100%', borderRadius: 99,
-          width: `${pct}%`,
-          background: color,
-          transition: 'width 0.6s ease',
-        }} />
-      </div>
-    </div>
-  );
-}
-
-function SubscriptionBadge({ isPremium, plan, expiresAt }: { isPremium: boolean; plan: string | null; expiresAt: string | null }) {
-  if (isPremium) {
-    const exp = expiresAt ? new Date(expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
-    return (
-      <div style={{
-        background: 'rgba(232,184,109,0.08)', border: '1px solid rgba(232,184,109,0.25)',
-        borderRadius: 12, padding: '1rem 1.25rem',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontSize: '1.3rem' }}>👑</span>
-          <div>
-            <div style={{ color: 'var(--gold, #e8b86d)', fontWeight: 700, fontSize: '0.9rem', fontFamily: 'var(--font-ui)' }}>
-              PrepPandit Pro {plan ? `· ${plan}` : ''}
-            </div>
-            {exp && <div style={{ color: 'var(--text3)', fontSize: '0.75rem', fontFamily: 'var(--font-ui)' }}>Active until {exp}</div>}
-          </div>
-        </div>
-        <div style={{
-          background: 'rgba(74,222,128,0.1)', color: '#4ade80',
-          border: '1px solid rgba(74,222,128,0.25)',
-          fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em',
-          padding: '3px 10px', borderRadius: 20, fontFamily: 'var(--font-ui)',
-          textTransform: 'uppercase'
-        }}>Active</div>
-      </div>
-    );
+  .db-page {
+    min-height: 100vh;
   }
-  return (
-    <div style={{
-      background: 'var(--bg2)', border: '1px solid var(--border)',
-      borderRadius: 12, padding: '1.25rem',
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
-      flexWrap: 'wrap',
-    }}>
-      <div>
-        <div style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.9rem', fontFamily: 'var(--font-ui)', marginBottom: 4 }}>
-          Free Plan
-        </div>
-        <div style={{ color: 'var(--text3)', fontSize: '0.78rem', fontFamily: 'var(--font-ui)' }}>
-          3 AI chats · Limited features
-        </div>
-      </div>
-      <Link href="/pricing" style={{
-        background: 'var(--accent)', color: '#fff', textDecoration: 'none',
-        padding: '0.5rem 1.25rem', borderRadius: 8,
-        fontSize: '0.85rem', fontFamily: 'var(--font-ui)', fontWeight: 600,
-        flexShrink: 0,
-      }}>Upgrade to Pro →</Link>
-    </div>
-  );
-}
+
+  /* ── Header strip ── */
+  .db-header {
+    max-width: 1200px; margin: 0 auto;
+    padding: 100px 2rem 3rem;
+    border-bottom: 1px solid var(--border);
+    animation: fadeUp 0.3s ease;
+  }
+  .db-kicker {
+    font-family: var(--font-ui); font-size: 0.65rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
+    margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px;
+  }
+  .db-kicker::before { content: \'\'; display: inline-block; width: 20px; height: 1px; background: var(--text3); }
+  .db-h1 {
+    font-family: var(--font-body);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .db-h1 em { font-style: italic; }
+  .db-sub {
+    font-family: var(--font-ui); font-size: 0.85rem;
+    color: var(--text3); margin-top: 0.5rem;
+  }
+
+  /* ── Two-col layout ── */
+  .db-body {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 340px;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Tools list (left col) ── */
+  .db-tools {
+    border-right: 1px solid var(--border);
+    animation: fadeUp 0.35s ease;
+  }
+  .db-tools-label {
+    padding: 2rem 2rem 1rem;
+    font-family: var(--font-ui); font-size: 0.62rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .db-tools-label::before { content: \'\'; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
+  .db-tool-row {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    background: var(--bg);
+    transition: background 0.15s;
+    position: relative;
+  }
+  .db-tool-row:last-child { border-bottom: none; }
+  .db-tool-row:hover { background: var(--bg2); }
+  .db-tool-num {
+    font-family: var(--font-mono); font-size: 0.62rem;
+    color: var(--text3); letter-spacing: 0.06em;
+    padding-top: 3px; flex-shrink: 0; width: 20px;
+  }
+  .db-tool-label {
+    font-family: var(--font-body); font-size: 0.92rem;
+    font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.01em;
+  }
+  .db-tool-desc {
+    font-family: var(--font-ui); font-size: 0.78rem;
+    color: var(--text3); line-height: 1.6;
+  }
+  .db-tool-badge {
+    position: absolute; top: 1.5rem; right: 2rem;
+    font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 4px;
+  }
+  .db-tool-badge.free { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.22); }
+  .db-tool-badge.premium { background: rgba(232,184,109,0.1); color: #e8b86d; border: 1px solid rgba(232,184,109,0.22); }
+
+  /* ── Sidebar (right col) ── */
+  .db-sidebar { animation: fadeUp 0.4s ease; }
+
+  .db-sidebar-section {
+    padding: 1.75rem 1.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .db-sidebar-label {
+    font-family: var(--font-ui); font-size: 0.6rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3);
+    margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;
+  }
+  .db-sidebar-label::before { content: \'\'; display: inline-block; width: 14px; height: 1px; background: var(--text3); }
+
+  /* Stat rows */
+  .db-stat-list { display: flex; flex-direction: column; gap: 0; }
+  .db-stat-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .db-stat-row:last-child { border-bottom: none; }
+  .db-stat-key { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); }
+  .db-stat-val { font-family: var(--font-body); font-size: 0.88rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+
+  /* Plan badge */
+  .db-plan-free {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .db-plan-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+  .db-plan-desc { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+  .db-upgrade-btn {
+    font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
+    background: var(--text); color: var(--bg);
+    padding: 8px 18px; border-radius: 6px;
+    text-decoration: none; transition: opacity 0.15s; flex-shrink: 0;
+  }
+  .db-upgrade-btn:hover { opacity: 0.82; }
+  .db-pro-badge {
+    display: flex; align-items: center; gap: 10px; justify-content: space-between;
+  }
+  .db-pro-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: #e8b86d; }
+  .db-pro-exp { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+  .db-active-pill {
+    font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    background: rgba(74,222,128,0.1); color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.22);
+    padding: 3px 9px; border-radius: 4px;
+  }
+
+  /* Usage bar */
+  .db-usage-label {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px;
+  }
+  .db-usage-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text2); }
+  .db-usage-link {
+    font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
+    color: var(--text); text-decoration: none;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .db-usage-link:hover { opacity: 0.75; }
+  .db-bar-track { height: 4px; border-radius: 99px; background: var(--border); overflow: hidden; }
+  .db-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s ease; }
+
+  /* Quick actions */
+  .db-actions { display: flex; flex-direction: column; gap: 0; }
+  .db-action-link {
+    font-family: var(--font-ui); font-size: 0.82rem; color: var(--text2);
+    text-decoration: none; padding: 8px 0;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.15s;
+  }
+  .db-action-link:last-child { border-bottom: none; }
+  .db-action-link:hover { color: var(--text); }
+  .db-action-arrow { color: var(--text3); font-size: 0.78rem; }
+
+  /* ── Footer CTA ── */
+  .db-footer-cta {
+    max-width: 1200px; margin: 0 auto;
+    padding: 3.5rem 2rem 5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.5s ease;
+  }
+  .db-footer-h2 {
+    font-family: var(--font-body); font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
+  }
+  .db-footer-h2 em { font-style: italic; }
+  .db-footer-sub { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text3); margin-top: 0.4rem; }
+
+  @media (max-width: 900px) {
+    .db-body { grid-template-columns: 1fr; }
+    .db-tools { border-right: none; }
+    .db-sidebar-section { padding: 1.5rem; }
+  }
+  @media (max-width: 580px) {
+    .db-header { padding-top: 80px; }
+    .db-tool-row { padding: 1.25rem; }
+    .db-tool-badge { top: 1.25rem; right: 1.25rem; }
+    .db-footer-cta { padding: 2.5rem 1.25rem 4rem; }
+  }
+`;
 
 export default function Dashboard() {
   const router = useRouter();
@@ -153,8 +251,8 @@ export default function Dashboard() {
 
   if (loading) return (
     <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, borderRadius: '50%', border: '2px solid var(--border2)', borderTopColor: 'var(--accent)', animation: 'spin 0.7s linear infinite' }} />
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+      <style>{\`@keyframes spin{to{transform:rotate(360deg)}}\`}</style>
+      <div style={{ width: 28, height: 28, borderRadius: '50%', border: '2px solid var(--border)', borderTopColor: 'var(--text)', animation: 'spin 0.7s linear infinite' }} />
     </div>
   );
 
@@ -162,152 +260,155 @@ export default function Dashboard() {
 
   const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || 'there';
   const hour = new Date().getHours();
-  const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const greeting = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : 'Evening';
   const optLabel = SUBJECT_LABEL[stats.optional ?? ''] ?? stats.optional ?? '';
-  const joinDate = stats.joinedAt ? new Date(stats.joinedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) : '—';
+  const joinDate = stats.joinedAt
+    ? new Date(stats.joinedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+    : '—';
+  const expDate = stats.expiresAt
+    ? new Date(stats.expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+    : null;
+
+  const usedPct = stats.isPremium ? 100 : Math.min((stats.chatCount / 3) * 100, 100);
+  const barColor = stats.isPremium ? '#4ade80' : usedPct >= 100 ? '#f87171' : usedPct >= 66 ? '#f59e0b' : 'var(--text)';
 
   return (
-    <div style={{ maxWidth: 1000, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
-      <style>{`
-        @keyframes spin{to{transform:rotate(360deg)}}
-        @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-        .feat-card{transition:border-color 0.15s,transform 0.15s,background 0.15s;}
-        .feat-card:hover{border-color:var(--border3)!important;transform:translateY(-2px);background:var(--bg3)!important;}
-        @media(max-width:640px){.feat-grid{grid-template-columns:1fr!important;}.stats-grid{grid-template-columns:1fr 1fr!important;}}
-      `}</style>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="db-page">
 
-      {/* Hero */}
-      <div style={{ marginBottom: '2rem', animation: 'fadeUp 0.35s ease' }}>
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 6,
-          background: 'rgba(67,97,238,0.08)', border: '1px solid rgba(67,97,238,0.18)',
-          color: 'var(--accent)', fontSize: '0.68rem', fontFamily: 'var(--font-ui)',
-          padding: '3px 12px', borderRadius: 20, marginBottom: '0.9rem',
-          letterSpacing: '0.08em', textTransform: 'uppercase',
-        }}>
-          <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block' }} />
-          {optLabel} Optional
+        {/* Header */}
+        <div className="db-header">
+          <div className="db-kicker">{optLabel} Optional · Dashboard</div>
+          <h1 className="db-h1">
+            {greeting},<br />
+            <em>{firstName}.</em>
+          </h1>
+          <p className="db-sub">Member since {joinDate} · {user?.email}</p>
         </div>
-        <h1 style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
-          fontWeight: 700, color: 'var(--text)',
-          letterSpacing: '-0.025em', lineHeight: 1.15, marginBottom: '0.4rem',
-        }}>
-          {greeting}, {firstName}.
-        </h1>
-        <p style={{ color: 'var(--text3)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>
-          Member since {joinDate} · {user?.email}
-        </p>
-      </div>
 
-      {/* Subscription status */}
-      <div style={{ marginBottom: '1.5rem', animation: 'fadeUp 0.4s ease' }}>
-        <SubscriptionBadge isPremium={stats.isPremium} plan={stats.plan} expiresAt={stats.expiresAt} />
-      </div>
+        {/* Body: tools left, sidebar right */}
+        <div className="db-body">
 
-      {/* Stats grid */}
-      <div className="stats-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '1rem', marginBottom: '1.5rem',
-        animation: 'fadeUp 0.42s ease',
-      }}>
-        <StatCard
-          label="AI Chats"
-          value={stats.isPremium ? '∞' : stats.chatCount}
-          sub={stats.isPremium ? 'Unlimited' : `of 3 free used`}
-          color={stats.chatCount >= 3 && !stats.isPremium ? '#f87171' : 'var(--accent)'}
-        />
-        <StatCard label="Days Active" value={stats.daysSinceJoin} sub="since joining" />
-        <StatCard label="Optional" value={optLabel.split(' ')[0]} sub={optLabel} />
-        <StatCard
-          label="Status"
-          value={stats.isPremium ? 'Pro' : 'Free'}
-          sub={stats.isPremium ? 'Premium access' : '3 chat limit'}
-          color={stats.isPremium ? '#4ade80' : 'var(--text3)'}
-        />
-      </div>
+          {/* Tools */}
+          <div className="db-tools">
+            <div className="db-tools-label">Your Tools</div>
+            {TOOLS.map((tool) => (
+              <Link key={tool.label} href={tool.href} className="db-tool-row">
+                <span className="db-tool-num">{tool.num}</span>
+                <div>
+                  <div className="db-tool-label">{tool.label}</div>
+                  <div className="db-tool-desc">{tool.desc}</div>
+                </div>
+                {tool.badge && (
+                  <span className={`db-tool-badge ${tool.badge === 'Free' ? 'free' : 'premium'}`}>
+                    {tool.badge}
+                  </span>
+                )}
+              </Link>
+            ))}
+          </div>
 
-      {/* Usage bar */}
-      {!stats.isPremium && (
-        <div style={{
-          background: 'var(--bg2)', border: '1px solid var(--border)',
-          borderRadius: 14, padding: '1.25rem 1.5rem',
-          marginBottom: '1.5rem', animation: 'fadeUp 0.44s ease',
-        }}>
-          <UsageBar used={stats.chatCount} max={3} isPremium={stats.isPremium} />
-        </div>
-      )}
+          {/* Sidebar */}
+          <div className="db-sidebar">
 
-      {/* Quick actions */}
-      <div style={{
-        background: 'var(--bg2)', border: '1px solid var(--border)',
-        borderRadius: 14, padding: '1.25rem 1.5rem',
-        marginBottom: '1.5rem', animation: 'fadeUp 0.46s ease',
-      }}>
-        <h2 style={{ fontFamily: 'var(--font-ui)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text3)', marginBottom: '1rem' }}>Quick Actions</h2>
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-          {[
-            { label: '💬 Ask AI', href: '/chat', primary: true },
-            { label: '📝 Evaluate Answer', href: '/evaluate', primary: false },
-            { label: '🗂️ Browse PYQs', href: '/sociology/pyqs', primary: false },
-            { label: '📖 Notes', href: '/notes', primary: false },
-            { label: '⚙️ Change Optional', href: '/onboarding?change=1', primary: false },
-          ].map((a) => (
-            <Link key={a.href} href={a.href} style={{
-              textDecoration: 'none',
-              background: a.primary ? 'var(--accent)' : 'var(--bg3)',
-              color: a.primary ? '#fff' : 'var(--text2)',
-              border: `1px solid ${a.primary ? 'transparent' : 'var(--border2)'}`,
-              padding: '0.5rem 1.1rem', borderRadius: 8,
-              fontSize: '0.83rem', fontFamily: 'var(--font-ui)', fontWeight: 500,
-            }}>{a.label}</Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Tools grid */}
-      <div style={{ marginBottom: '0.75rem', animation: 'fadeUp 0.48s ease' }}>
-        <h2 style={{ fontFamily: 'var(--font-ui)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text3)', marginBottom: '1rem' }}>Your Tools</h2>
-      </div>
-      <div className="feat-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1rem', animation: 'fadeUp 0.5s ease',
-      }}>
-        {FEATURES.map((f) => (
-          <Link key={f.href} href={f.href} style={{ textDecoration: 'none' }}>
-            <div className="feat-card" style={{
-              background: 'var(--bg2)', border: '1px solid var(--border)',
-              borderRadius: 14, padding: '1.5rem', height: '100%',
-              display: 'flex', flexDirection: 'column', gap: '0.75rem',
-              cursor: 'pointer', position: 'relative',
-            }}>
-              {f.badge && (
-                <span style={{
-                  position: 'absolute', top: 12, right: 12,
-                  fontSize: '0.6rem', fontFamily: 'var(--font-ui)', fontWeight: 700,
-                  letterSpacing: '0.06em', padding: '2px 7px', borderRadius: 10,
-                  background: f.badge === 'Premium' ? 'rgba(232,184,109,0.12)' : 'rgba(74,222,128,0.1)',
-                  color: f.badge === 'Premium' ? 'var(--gold, #e8b86d)' : '#4ade80',
-                  border: `1px solid ${f.badge === 'Premium' ? 'rgba(232,184,109,0.25)' : 'rgba(74,222,128,0.2)'}`,
-                }}>{f.badge}</span>
+            {/* Plan */}
+            <div className="db-sidebar-section">
+              <div className="db-sidebar-label">Plan</div>
+              {stats.isPremium ? (
+                <div className="db-pro-badge">
+                  <div>
+                    <div className="db-pro-name">PrepPandit Pro{stats.plan ? ` · ${stats.plan}` : ''}</div>
+                    {expDate && <div className="db-pro-exp">Active until {expDate}</div>}
+                  </div>
+                  <span className="db-active-pill">Active</span>
+                </div>
+              ) : (
+                <div className="db-plan-free">
+                  <div>
+                    <div className="db-plan-name">Free Plan</div>
+                    <div className="db-plan-desc">3 AI chats · Limited access</div>
+                  </div>
+                  <Link href="/pricing" className="db-upgrade-btn">Upgrade →</Link>
+                </div>
               )}
-              <div style={{
-                width: 44, height: 44, borderRadius: 12,
-                background: `color-mix(in srgb, ${f.color} 12%, transparent)`,
-                border: `1px solid color-mix(in srgb, ${f.color} 25%, transparent)`,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '1.3rem', flexShrink: 0,
-              }}>{f.icon}</div>
-              <div>
-                <div style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.95rem', fontFamily: 'var(--font-ui)', marginBottom: '0.3rem' }}>{f.label}</div>
-                <div style={{ color: 'var(--text3)', fontSize: '0.8rem', fontFamily: 'var(--font-ui)', lineHeight: 1.5 }}>{f.desc}</div>
-              </div>
-              <div style={{ marginTop: 'auto', color: f.color, fontSize: '0.78rem', fontFamily: 'var(--font-ui)', fontWeight: 500 }}>Open →</div>
             </div>
-          </Link>
-        ))}
+
+            {/* Usage */}
+            {!stats.isPremium && (
+              <div className="db-sidebar-section">
+                <div className="db-sidebar-label">AI Chat Usage</div>
+                <div className="db-usage-label">
+                  <span className="db-usage-text">{stats.chatCount} of 3 used</span>
+                  <Link href="/pricing" className="db-usage-link">Get unlimited →</Link>
+                </div>
+                <div className="db-bar-track">
+                  <div className="db-bar-fill" style={{ width: `${usedPct}%`, background: barColor }} />
+                </div>
+              </div>
+            )}
+
+            {/* Stats */}
+            <div className="db-sidebar-section">
+              <div className="db-sidebar-label">Account</div>
+              <div className="db-stat-list">
+                <div className="db-stat-row">
+                  <span className="db-stat-key">Optional</span>
+                  <span className="db-stat-val">{optLabel}</span>
+                </div>
+                <div className="db-stat-row">
+                  <span className="db-stat-key">Days active</span>
+                  <span className="db-stat-val">{stats.daysSinceJoin}</span>
+                </div>
+                <div className="db-stat-row">
+                  <span className="db-stat-key">AI chats</span>
+                  <span className="db-stat-val">{stats.isPremium ? '∞' : stats.chatCount}</span>
+                </div>
+                <div className="db-stat-row">
+                  <span className="db-stat-key">Status</span>
+                  <span className="db-stat-val" style={{ color: stats.isPremium ? '#4ade80' : 'var(--text3)' }}>
+                    {stats.isPremium ? 'Pro' : 'Free'}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick actions */}
+            <div className="db-sidebar-section">
+              <div className="db-sidebar-label">Quick Actions</div>
+              <div className="db-actions">
+                {[
+                  { label: 'Ask AI', href: '/chat' },
+                  { label: 'Evaluate an answer', href: '/evaluate' },
+                  { label: 'Browse PYQs', href: '/sociology/pyqs' },
+                  { label: 'Read notes', href: '/notes' },
+                  { label: 'Change optional', href: '/onboarding?change=1' },
+                ].map((a) => (
+                  <Link key={a.href} href={a.href} className="db-action-link">
+                    {a.label}
+                    <span className="db-action-arrow">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Footer CTA */}
+        {!stats.isPremium && (
+          <div className="db-footer-cta">
+            <div>
+              <h2 className="db-footer-h2">Ready to go<br /><em>unlimited?</em></h2>
+              <p className="db-footer-sub">Unlock all tools, unlimited AI chats, topper copies and more.</p>
+            </div>
+            <Link href="/pricing" className="db-upgrade-btn" style={{ fontSize: '0.88rem', padding: '11px 24px' }}>
+              See Plans →
+            </Link>
+          </div>
+        )}
+
       </div>
-    </div>
+    </>
   );
 }
