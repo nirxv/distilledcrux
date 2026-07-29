@@ -1,0 +1,36 @@
+// Note content for Sociology Optional
+// Format: slug → HTML string
+// Add content topic by topic as it becomes available
+
+export const sociologyNoteContent: Record<string, string> = {
+  'sociology-the-discipline': '',
+  'sociology-as-science': '',
+  'research-methods': '',
+  'karl-marx': '',
+  'emile-durkheim': '',
+  'max-weber': '',
+  'talcott-parsons': '',
+  'robert-merton': '',
+  'george-mead': '',
+  'stratification-mobility': '',
+  'works-economic-life': '',
+  'politics-and-society': '',
+  'religion-and-society': '',
+  'systems-of-kinship': '',
+  'social-change-modern-society': '',
+  'introducing-indian-society': '',
+  'colonial-rule-indian-society': '',
+  'rural-agrarian-structure': '',
+  'caste-system': '',
+  'tribal-communities': '',
+  'social-classes-india': '',
+  'kinship-systems-india': '',
+  'religion-society-india': '',
+  'visions-social-change-india': '',
+  'rural-agrarian-transformation': '',
+  'industrialization-urbanisation': '',
+  'politics-society-india': '',
+  'social-movements-india': '',
+  'population-dynamics': '',
+  'challenges-social-transformation': '',
+};

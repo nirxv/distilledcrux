@@ -1,0 +1,298 @@
+export type Note = {
+  slug: string;
+  title: string;
+  paper: 1 | 2;
+  section: string;
+  topic: number;
+  subtopics?: string[];
+  description: string;
+};
+
+// ── Paper I — Fundamentals of Sociology ──────────────────────
+
+export const paper1Notes: Note[] = [
+  {
+    slug: 'sociology-the-discipline',
+    title: 'Sociology: The Discipline',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 1,
+    description: 'Modernity and emergence of Sociology, scope and comparison with social sciences, sociology and common sense',
+    subtopics: ['Emergence of Sociology', 'Scope & Comparison with Social Sciences', 'Sociology and Common Sense'],
+  },
+  {
+    slug: 'sociology-as-science',
+    title: 'Sociology as a Science',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 2,
+    description: 'Scientific method and critique, positivism and its critique, fact-value-objectivity, non-positivist methodologies',
+    subtopics: ['Science & Scientific Method', 'Positivism & Its Critique', 'Fact, Value & Objectivity', 'Non-Positivist Methodologies'],
+  },
+  {
+    slug: 'research-methods',
+    title: 'Research Methods and Analysis',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 3,
+    description: 'Qualitative and quantitative methods, data collection techniques, variables, sampling, hypothesis, reliability and validity',
+    subtopics: ['Qualitative vs Quantitative Methods', 'Data Collection Techniques', 'Variables, Sampling & Hypothesis', 'Reliability & Validity'],
+  },
+  {
+    slug: 'karl-marx',
+    title: 'Karl Marx',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 4,
+    description: 'Historical materialism, mode of production, alienation, class struggle',
+    subtopics: ['Historical Materialism', 'Mode of Production', 'Alienation', 'Class Struggle', 'Base & Superstructure'],
+  },
+  {
+    slug: 'emile-durkheim',
+    title: 'Emile Durkheim',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 5,
+    description: 'Division of labour, social fact, suicide, religion and society',
+    subtopics: ['Division of Labour', 'Social Fact', 'Suicide (typology)', 'Religion & Society', 'Collective Conscience'],
+  },
+  {
+    slug: 'max-weber',
+    title: 'Max Weber',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 6,
+    description: 'Social action, ideal types, authority, bureaucracy, Protestant Ethic and the Spirit of Capitalism',
+    subtopics: ['Social Action', 'Ideal Types', 'Types of Authority', 'Bureaucracy', 'Protestant Ethic & Capitalism'],
+  },
+  {
+    slug: 'talcott-parsons',
+    title: 'Talcott Parsons',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 7,
+    description: 'Social system, pattern variables, AGIL framework, structural functionalism',
+    subtopics: ['Social System', 'Pattern Variables', 'AGIL Framework', 'Structural Functionalism'],
+  },
+  {
+    slug: 'robert-merton',
+    title: 'Robert K. Merton',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 8,
+    description: 'Latent and manifest functions, conformity and deviance, reference groups, middle-range theory',
+    subtopics: ['Manifest & Latent Functions', 'Conformity & Deviance', 'Reference Groups', 'Middle-Range Theory'],
+  },
+  {
+    slug: 'george-mead',
+    title: 'G.H. Mead',
+    paper: 1,
+    section: 'Sociological Thinkers',
+    topic: 9,
+    description: 'Self and identity, I and Me, symbolic interactionism, role of significant others',
+    subtopics: ['Self & Identity', 'I and Me', 'Symbolic Interactionism', 'Significant Others & Generalized Other'],
+  },
+  {
+    slug: 'stratification-mobility',
+    title: 'Stratification and Mobility',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 10,
+    description: 'Concepts of equality, inequality, hierarchy; theories of stratification; class, status, gender, ethnicity; social mobility types',
+    subtopics: ['Equality, Inequality & Hierarchy', 'Theories of Stratification', 'Class, Status, Gender & Ethnicity', 'Social Mobility — Types & Sources'],
+  },
+  {
+    slug: 'works-economic-life',
+    title: 'Works and Economic Life',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 11,
+    description: 'Social organisation of work across slave, feudal and industrial capitalist societies; formal and informal organisations; labour and society',
+    subtopics: ['Work in Slave & Feudal Societies', 'Industrial Capitalist Society', 'Formal & Informal Organisation of Work', 'Labour and Society'],
+  },
+  {
+    slug: 'politics-and-society',
+    title: 'Politics and Society',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 12,
+    description: 'Sociological theories of power, power elite, bureaucracy, nation-state, citizenship, democracy, social movements',
+    subtopics: ['Theories of Power', 'Power Elite, Bureaucracy & Pressure Groups', 'Nation, State, Citizenship & Democracy', 'Protest, Social Movements & Revolution'],
+  },
+  {
+    slug: 'religion-and-society',
+    title: 'Religion and Society',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 13,
+    description: 'Sociological theories of religion, types of religious practices, religion in modern society — secularisation, revivalism, fundamentalism',
+    subtopics: ['Sociological Theories of Religion', 'Types of Religious Practices', 'Religion & Science', 'Secularisation & Fundamentalism'],
+  },
+  {
+    slug: 'systems-of-kinship',
+    title: 'Systems of Kinship',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 14,
+    description: 'Family, household, marriage; types and forms of family; lineage and descent; patriarchy and sexual division of labour; contemporary trends',
+    subtopics: ['Family, Household & Marriage', 'Types & Forms of Family', 'Lineage & Descent', 'Patriarchy & Sexual Division of Labour', 'Contemporary Trends'],
+  },
+  {
+    slug: 'social-change-modern-society',
+    title: 'Social Change in Modern Society',
+    paper: 1,
+    section: 'Fundamentals of Sociology',
+    topic: 15,
+    description: 'Sociological theories of social change, development and dependency, agents of change, education, science and technology',
+    subtopics: ['Theories of Social Change', 'Development & Dependency', 'Agents of Social Change', 'Education & Social Change', 'Science, Technology & Change'],
+  },
+];
+
+// ── Paper II — Indian Society: Structure and Change ──────────
+
+export const paper2Notes: Note[] = [
+  {
+    slug: 'introducing-indian-society',
+    title: 'Introducing Indian Society',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 1,
+    description: 'Indology (Ghurye), structural functionalism (Srinivas), Marxist sociology (AR Desai) — three perspectives on studying Indian society',
+    subtopics: ['Indology — G.S. Ghurye', 'Structural Functionalism — M.N. Srinivas', 'Marxist Sociology — A.R. Desai'],
+  },
+  {
+    slug: 'colonial-rule-indian-society',
+    title: 'Impact of Colonial Rule on Indian Society',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 2,
+    description: 'Social background of nationalism, modernization of Indian tradition, colonial protests, social reforms',
+    subtopics: ['Social Background of Indian Nationalism', 'Modernization of Indian Tradition', 'Protests & Movements in Colonial Period', 'Social Reforms'],
+  },
+  {
+    slug: 'rural-agrarian-structure',
+    title: 'Rural and Agrarian Social Structure',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 3,
+    description: 'Idea of Indian village and village studies, agrarian social structure, land tenure system, land reforms',
+    subtopics: ['Idea of Indian Village', 'Village Studies', 'Evolution of Land Tenure System', 'Land Reforms'],
+  },
+  {
+    slug: 'caste-system',
+    title: 'Caste System',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 4,
+    description: 'Perspectives of Ghurye, Srinivas, Dumont and Beteille; features of caste; untouchability — forms and perspectives',
+    subtopics: ['Ghurye on Caste', 'Srinivas — Sanskritization & Dominant Caste', 'Louis Dumont — Homo Hierarchicus', 'Andre Beteille — Caste, Class & Power', 'Features of Caste System', 'Untouchability'],
+  },
+  {
+    slug: 'tribal-communities',
+    title: 'Tribal Communities in India',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 5,
+    description: 'Definitional problems, geographical spread, colonial policies and tribes, issues of integration and autonomy',
+    subtopics: ['Definitional Problems', 'Geographical Spread', 'Colonial Policies & Tribes', 'Integration vs Autonomy Debate'],
+  },
+  {
+    slug: 'social-classes-india',
+    title: 'Social Classes in India',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 6,
+    description: 'Agrarian class structure, industrial class structure, middle classes in India',
+    subtopics: ['Agrarian Class Structure', 'Industrial Class Structure', 'Middle Classes in India'],
+  },
+  {
+    slug: 'kinship-systems-india',
+    title: 'Systems of Kinship in India',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 7,
+    description: 'Lineage and descent in India, types of kinship systems, family and marriage, household dimensions',
+    subtopics: ['Lineage & Descent in India', 'Types of Kinship Systems', 'Family & Marriage in India', 'Household Dimensions of the Family'],
+  },
+  {
+    slug: 'religion-society-india',
+    title: 'Religion and Society in India',
+    paper: 2,
+    section: 'Indian Society: Structure',
+    topic: 8,
+    description: 'Religious communities in India, problems of religious minorities, patriarchy and sexual division of labour',
+    subtopics: ['Religious Communities in India', 'Problems of Religious Minorities', 'Patriarchy & Sexual Division of Labour'],
+  },
+  {
+    slug: 'visions-social-change-india',
+    title: 'Visions of Social Change in India',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 9,
+    description: 'Development planning and mixed economy, constitution and law as agents of change, education and social change',
+    subtopics: ['Development Planning & Mixed Economy', 'Constitution, Law & Social Change', 'Education & Social Change'],
+  },
+  {
+    slug: 'rural-agrarian-transformation',
+    title: 'Rural and Agrarian Transformation in India',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 10,
+    description: 'Rural development programmes, green revolution, changing production modes, rural labour, bondage and migration',
+    subtopics: ['Rural Development Programmes', 'Community Development Programme & Cooperatives', 'Green Revolution & Social Change', 'Changing Modes of Production', 'Rural Labour, Bondage & Migration'],
+  },
+  {
+    slug: 'industrialization-urbanisation',
+    title: 'Industrialization and Urbanisation in India',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 11,
+    description: 'Modern industry in India, urban settlements, working class, informal sector, child labour, slums and deprivation',
+    subtopics: ['Evolution of Modern Industry', 'Growth of Urban Settlements', 'Working Class — Structure & Mobilization', 'Informal Sector & Child Labour', 'Slums & Urban Deprivation'],
+  },
+  {
+    slug: 'politics-society-india',
+    title: 'Politics and Society in India',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 12,
+    description: 'Nation, democracy and citizenship, political parties and elite, regionalism and decentralization, secularization',
+    subtopics: ['Nation, Democracy & Citizenship', 'Political Parties, Pressure Groups & Elite', 'Regionalism & Decentralization', 'Secularization in India'],
+  },
+  {
+    slug: 'social-movements-india',
+    title: 'Social Movements in Modern India',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 13,
+    description: 'Peasant, women, backward classes and Dalit, environmental, and ethnicity and identity movements',
+    subtopics: ['Peasants & Farmers Movements', "Women's Movement", 'Backward Classes & Dalit Movement', 'Environmental Movements', 'Ethnicity & Identity Movements'],
+  },
+  {
+    slug: 'population-dynamics',
+    title: 'Population Dynamics',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 14,
+    description: 'Population size, growth, composition; birth, death, migration; population policy and family planning; emerging issues',
+    subtopics: ['Population Size, Growth & Composition', 'Components of Growth — Birth, Death, Migration', 'Population Policy & Family Planning', 'Emerging Issues — Ageing, Sex Ratio, Reproductive Health'],
+  },
+  {
+    slug: 'challenges-social-transformation',
+    title: 'Challenges of Social Transformation',
+    paper: 2,
+    section: 'Social Changes in India',
+    topic: 15,
+    description: 'Crisis of development, poverty and deprivation, violence against women, caste and ethnic conflicts, communalism, illiteracy',
+    subtopics: ['Crisis of Development — Displacement & Sustainability', 'Poverty, Deprivation & Inequalities', 'Violence Against Women', 'Caste Conflicts', 'Ethnic Conflicts, Communalism & Religious Revivalism', 'Illiteracy & Disparities in Education'],
+  },
+];
+
+export const allNotes: Note[] = [...paper1Notes, ...paper2Notes];
+
+export function getNoteBySlug(slug: string): Note | undefined {
+  return allNotes.find((n) => n.slug === slug);
+}
+
+export const paper1Sections = ['Fundamentals of Sociology', 'Sociological Thinkers'];
+export const paper2Sections = ['Indian Society: Structure', 'Social Changes in India'];
