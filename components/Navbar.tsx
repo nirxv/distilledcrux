@@ -11,7 +11,7 @@ export default function Navbar() {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navCollapsed, setNavCollapsed] = useState(false);
   const isChat = pathname === '/chat';
@@ -29,7 +29,7 @@ export default function Navbar() {
   // Load saved theme
   useEffect(() => {
     const saved = localStorage.getItem('theme') as 'dark' | 'light' | null;
-    const initial = saved ?? 'dark';
+    const initial = saved ?? 'light';
     setTheme(initial);
     document.documentElement.setAttribute('data-theme', initial);
   }, []);
