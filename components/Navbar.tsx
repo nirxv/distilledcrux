@@ -97,7 +97,7 @@ export default function Navbar() {
             fontSize: '1.15rem', fontWeight: 700,
             color: 'var(--text)', letterSpacing: '-0.02em',
           }}>
-            Prep<span style={{ color: 'var(--accent)' }}>Pandit</span>
+            Distilled<span style={{ color: 'var(--accent)' }}>Crux</span>
           </span>
         </Link>
 

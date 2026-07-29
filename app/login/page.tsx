@@ -88,7 +88,7 @@ export default function LoginPage() {
               fontSize: '1.6rem', fontWeight: 700,
               color: 'var(--text)', letterSpacing: '-0.02em',
             }}>
-              Prep<span style={{ color: 'var(--accent)' }}>Pandit</span>
+              Distilled<span style={{ color: 'var(--accent)' }}>Crux</span>
             </span>
           </a>
         </div>

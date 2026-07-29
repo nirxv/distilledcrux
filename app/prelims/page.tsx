@@ -567,7 +567,7 @@ export default function PrelimsPage() {
 
         {/* ── Footer ── */}
         <footer className="pr-footer">
-          <div className="pr-footer-logo">Prep<em>Pandit</em></div>
+          <div className="pr-footer-logo">Distilled<em>Crux</em></div>
           <div className="pr-footer-links">
             <Link href="/privacy" className="pr-footer-link">Privacy</Link>
             <Link href="/terms" className="pr-footer-link">Terms</Link>

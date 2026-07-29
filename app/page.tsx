@@ -474,7 +474,7 @@ export default function Home() {
         </div>
 
         <footer className="lp-footer">
-          <div className="lp-footer-logo">Prep<em>Pandit</em></div>
+          <div className="lp-footer-logo">Distilled<em>Crux</em></div>
           <div className="lp-footer-links">
             <Link href="/privacy" className="lp-footer-link">Privacy</Link>
             <Link href="/terms" className="lp-footer-link">Terms</Link>
