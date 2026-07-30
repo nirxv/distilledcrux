@@ -51,9 +51,7 @@ const CSS = `
     font-family: var(--font-ui); font-size: 0.65rem;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px;
-  }
-  .db-kicker::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--text3); }
-  .db-h1 {
+  }  .db-h1 {
     font-family: var(--font-body);
     font-size: clamp(2.2rem, 5vw, 3.8rem);
     font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; color: var(--text);
@@ -85,8 +83,6 @@ const CSS = `
     display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid var(--border);
   }
-  .db-tools-label::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
-
   /* Card grid */
   .db-tool-grid {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -146,8 +142,6 @@ const CSS = `
     letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;
   }
-  .db-sidebar-label::before { content: ''; display: inline-block; width: 14px; height: 1px; background: var(--text3); }
-
   /* Stat rows */
   .db-stat-list { display: flex; flex-direction: column; gap: 0; }
   .db-stat-row {

@@ -101,9 +101,7 @@ const CSS = `
     font-family: var(--font-ui); font-size: 0.68rem;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px;
-  }
-  .op-kicker::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--text3); }
-  .op-h1 {
+  }  .op-h1 {
     font-family: var(--font-body);
     font-size: clamp(2.8rem, 6vw, 4.8rem);
     font-weight: 700; line-height: 1.02;
@@ -155,9 +153,7 @@ const CSS = `
     font-family: var(--font-ui); font-size: 0.65rem;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
-  }
-  .op-section-label::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--text3); }
-  .op-section-h2 {
+  }  .op-section-h2 {
     font-family: var(--font-body); font-size: clamp(1.7rem, 2.8vw, 2.4rem);
     font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
   }

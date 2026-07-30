@@ -184,9 +184,7 @@ const CSS = `
   font-family: var(--font-ui); font-size: 0.62rem;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
   border-bottom: 1px solid var(--border);
-}
-.pr-faq-header::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
-.pr-faq-grid {
+}.pr-faq-grid {
   display: grid; grid-template-columns: 1fr 1fr;
 }
 .pr-faq-item {
