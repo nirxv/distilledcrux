@@ -191,6 +191,9 @@ function ChatContent() {
   const suggestedHi = SUGGESTED_QUESTIONS[subject]?.hi ?? [];
   const bookGroups = SUBJECT_BOOKS[subject] ?? [];
 
+  // Auth gate
+  const [authChecked, setAuthChecked] = useState(false);
+
   // Usage gate (simple — wired to Supabase usage_tracking same as history-optional)
   const [usageFree, setUsageFree] = useState<number | null>(null); // null = loading
   const [fingerprint, setFingerprint] = useState('');
@@ -201,16 +204,23 @@ function ChatContent() {
     // Get fingerprint from cookie/localStorage (set by middleware or FP lib)
     const fp = document.cookie.match(/fp=([^;]+)/)?.[1] ?? localStorage.getItem('fp') ?? '';
     setFingerprint(fp);
-    // Get token if logged in
-    auth.onAuthStateChanged(async (user) => {
+    // Auth check — redirect to login if not signed in
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      setAuthChecked(true);
       if (user) {
         const token = await user.getIdToken();
         setUserToken(token);
+      } else {
+        window.location.href = '/login?redirect=/chat';
       }
     });
     setUsageFree(0); // allow until server confirms limit
     setHistoryList(loadChatHistory());
+    return () => unsubscribe();
   }, []);
+
+  // Blank screen while Firebase resolves auth state
+  if (!authChecked) return null;
 
   useEffect(() => {
     const last = messages[messages.length - 1];
