@@ -336,7 +336,7 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
       `}</style>
 
       {/* ── Header ── */}
-      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 0, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)' }}>
+      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)' }}>
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
           <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
