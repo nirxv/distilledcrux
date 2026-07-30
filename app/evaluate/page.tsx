@@ -38,7 +38,19 @@ const OPTIONAL_LABEL: Record<string, string> = {
   history:                'History',
 }
 
+const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20MB for PDFs
 const MARKS_OPTIONS = ['10', '15', '20']
+
+// ── Auto-extract question from first image via API ───────────────────────────
+async function extractQuestion(file: File): Promise<string> {
+  try {
+    const fd = new FormData()
+    fd.append('file', file)
+    const res = await fetch('/api/extract-question', { method: 'POST', body: fd })
+    const data = await res.json()
+    return data.question ?? ''
+  } catch { return '' }
+}
 
 const CHECKPOINTS = [
   'Reading handwriting',
@@ -375,6 +387,7 @@ export default function EvaluatePage() {
   const [result, setResult]           = useState<Evaluation | null>(null)
   const [error, setError]             = useState<string | null>(null)
   const [limitReached, setLimitReached] = useState(false)
+  const [extractingQ, setExtractingQ] = useState(false)
   const inputRef                      = useRef<HTMLInputElement>(null)
   const timerRef                      = useRef<NodeJS.Timeout | null>(null)
 
@@ -408,14 +421,30 @@ export default function EvaluatePage() {
   }, [loading])
 
   const addFiles = useCallback((newFiles: File[]) => {
-    const valid = newFiles.filter(f => f.type.startsWith('image/') && f.size < 5 * 1024 * 1024)
+    const valid = newFiles.filter(f =>
+      (f.type.startsWith('image/') || f.type === 'application/pdf') && f.size < MAX_FILE_SIZE
+    )
     setFiles(prev => [...prev, ...valid].slice(0, 10))
     valid.forEach(f => {
-      const reader = new FileReader()
-      reader.onload = e => setPreviews(prev => [...prev, e.target?.result as string].slice(0, 10))
-      reader.readAsDataURL(f)
+      if (f.type === 'application/pdf') {
+        // Show a PDF placeholder preview
+        setPreviews(prev => [...prev, '__pdf__'].slice(0, 10))
+      } else {
+        const reader = new FileReader()
+        reader.onload = e => setPreviews(prev => [...prev, e.target?.result as string].slice(0, 10))
+        reader.readAsDataURL(f)
+      }
     })
-  }, [])
+    // Auto-extract question from first image
+    const firstImage = valid.find(f => f.type.startsWith('image/'))
+    if (firstImage) {
+      setExtractingQ(true)
+      extractQuestion(firstImage).then(q => {
+        if (q) setQuestion(q)
+        setExtractingQ(false)
+      }).catch(() => setExtractingQ(false))
+    }
+  }, []) // eslint-disable-line
 
   const removeFile = (i: number) => {
     setFiles(prev => prev.filter((_,idx) => idx !== i))
@@ -661,8 +690,8 @@ export default function EvaluatePage() {
                   </svg>
                 </div>
                 <div className="ev-upload-title">Drop images here or click to browse</div>
-                <div className="ev-upload-sub">JPG, PNG, WEBP — max 5MB each, up to 10 pages</div>
-                <input ref={inputRef} type="file" accept="image/*" multiple className="ev-upload-input"
+                <div className="ev-upload-sub">JPG, PNG, WEBP, PDF — max 20MB, up to 10 pages</div>
+                <input ref={inputRef} type="file" accept="image/*,application/pdf" multiple className="ev-upload-input"
                   onChange={e => addFiles(Array.from(e.target.files ?? []))} />
               </div>
 
@@ -670,7 +699,13 @@ export default function EvaluatePage() {
                 <div className="ev-previews">
                   {previews.map((src, i) => (
                     <div key={i} className="ev-preview-wrap">
-                      <img src={src} alt={`page ${i+1}`} className="ev-preview-thumb" />
+                      {src === '__pdf__'
+                ? <div className="ev-preview-thumb" style={{ display:'flex', alignItems:'center', justifyContent:'center', background:'var(--bg3)', fontSize:'0.65rem', color:'var(--text3)', fontFamily:'var(--font-ui)', flexDirection:'column', gap:3 }}>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.3"/><path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                    PDF
+                  </div>
+                : <img src={src} alt={`page ${i+1}`} className="ev-preview-thumb" />
+              }
                       <button className="ev-preview-rm" onClick={() => removeFile(i)}>×</button>
                     </div>
                   ))}
@@ -679,13 +714,21 @@ export default function EvaluatePage() {
 
               <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
                 <label className="ev-field-label">Question</label>
-                <textarea
-                  className="ev-textarea"
-                  placeholder="Paste the question exactly as it appears in the paper…"
-                  value={question}
-                  onChange={e => setQuestion(e.target.value)}
-                  maxLength={600}
-                />
+                <div style={{ position:'relative' }}>
+                  <textarea
+                    className="ev-textarea"
+                    placeholder={extractingQ ? 'Reading question from your answer sheet…' : 'Paste the question exactly as it appears in the paper…'}
+                    value={question}
+                    onChange={e => setQuestion(e.target.value)}
+                    maxLength={600}
+                    style={{ opacity: extractingQ ? 0.6 : 1 }}
+                  />
+                  {extractingQ && (
+                    <div style={{ position:'absolute', bottom:10, right:12, fontFamily:'var(--font-ui)', fontSize:'0.7rem', color:'var(--accent3)' }}>
+                      Reading…
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="ev-field">
