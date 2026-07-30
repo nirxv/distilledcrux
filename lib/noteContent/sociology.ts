@@ -619,10 +619,489 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
+  'max-weber': `
+<h2>Intellectual Background & Methodology</h2>
+
+<p>Max Weber (1864–1920) is often called the "bourgeois Marx" — similar intellectual preoccupations, radically different conclusions. Where Marx emphasised material conditions as the motor of history, Weber insisted that <strong>ideas, values, and meanings</strong> shape social structures just as powerfully as economics.</p>
+
+<p>Weber's central question: <em>Why did modern rational capitalism emerge only in the West?</em> His answer took him through social action, methodology, religion, authority, and bureaucracy.</p>
+
+<h3>Nomothetic vs Idiographic — Weber's Fusion</h3>
+<ul>
+  <li><strong>Nomothetic approach</strong> (macro/positivist) — seeks large-scale generalisations and universal laws. Durkheim's approach.</li>
+  <li><strong>Idiographic approach</strong> (micro/subjectivist) — focuses on particular cases, not generalisations. Pure history.</li>
+</ul>
+<p>Weber rejected both extremes. He developed a <strong>fusion</strong>: use general concepts (ideal types) to study particular individuals, events, and societies. Bring together interpretation of meaning (micro) and causal explanation of consequences (macro).</p>
+
+<h3>Weber vs Durkheim vs Marx</h3>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Marx</th>
+    <th>Durkheim</th>
+    <th>Weber</th>
+  </tr>
+  <tr>
+    <td>Driver of history</td>
+    <td>Material/economic forces</td>
+    <td>Social facts, collective conscience</td>
+    <td>Ideas, values, meanings + material conditions (multi-causal)</td>
+  </tr>
+  <tr>
+    <td>Method</td>
+    <td>Historical materialism</td>
+    <td>Positivism, comparative method</td>
+    <td>Verstehen, ideal types, probabilistic causality</td>
+  </tr>
+  <tr>
+    <td>Individual</td>
+    <td>Product of class position</td>
+    <td>Product of social facts</td>
+    <td>Conscious agent with subjective meanings</td>
+  </tr>
+  <tr>
+    <td>Subject matter</td>
+    <td>Class struggle</td>
+    <td>Social solidarity</td>
+    <td>Social action and its consequences</td>
+  </tr>
+</table>
+
+<h2>Verstehen (Interpretive Understanding)</h2>
+
+<p>Weber argued that <strong>people are not atoms</strong>. Unlike matter, they have consciousness — they interpret the meaning of a stimulus before responding. Natural science methods are therefore insufficient for social science.</p>
+
+<blockquote>"Sociology is a science which attempts the interpretive understanding of social action in order thereby to arrive at a causal explanation of its course and effects."</blockquote>
+
+<p><strong>Verstehen</strong> = empathetic understanding. The sociologist must put herself in the actor's place and imagine the world from the actor's perspective to understand the subjective meanings and motivations behind social action. Weber derived this from <em>Hermeneutics</em> — originally the interpretation of texts, extended by Weber and Dilthey to all human history and interaction.</p>
+
+<p>Verstehen operates at two levels:</p>
+<ul>
+  <li><strong>Individual level</strong> — understanding the meaning an individual actor attaches to their specific action. Appropriate for small-scale, micro theories (symbolic interactionism).</li>
+  <li><strong>Cultural level</strong> — interpreting a cultural context or historical period. Consistent with large-scale, macro theories (structural functionalism).</li>
+</ul>
+
+<h3>Objectivity in Social Sciences</h3>
+<ul>
+  <li><strong>Value relevance</strong> — Values necessarily enter into the selection of a research topic. The researcher must clarify these values at the outset. Transparency about value relevance enables objectivity.</li>
+  <li><strong>Value neutrality</strong> — When describing the values of others, the sociologist must neutrally record them without being affected by personal beliefs. Weber: the sociologist must "practice iron will" to remain value-neutral. E.g. when studying ritual cock-fights, do not ridicule them — understand the deep symbolic meaning (as Geertz did, calling it a "symbolic war over status").</li>
+  <li><strong>Ideal types</strong> — Since complete objectivity is impossible, use ideal types as methodological tools to standardise analysis and enable comparison.</li>
+  <li><strong>Causal probabilism</strong> — Causality in social science is probabilistic, not deterministic. Weber expressed causes as "probable factors", not necessary and sufficient conditions.</li>
+</ul>
+
+<h3>Limitations of Verstehen</h3>
+<ul>
+  <li>Nearly impossible to fully enter the shoes of someone from a different culture.</li>
+  <li>Lacks reliability — if Weber studied Protestant motives and found a link to capitalism, another researcher might find different results.</li>
+  <li>Crisis of representation — researcher often belongs to a "superior" culture, the researched to an "inferior" one, creating power imbalances in interpretation.</li>
+</ul>
+
+<h2>Ideal Type</h2>
+
+<blockquote>"An ideal type is a one-sided accentuation or mental construct of any social phenomenon, describing its essential features — a measuring rod to determine how real social phenomena are similar to or different from their pure form. In its conceptual purity, this mental construct cannot be found empirically anywhere in reality. It is a utopia."</blockquote>
+
+<p>Weber's dilemma: historians over-emphasise uniqueness (miss common patterns); sociologists over-generalise (miss unique features). Ideal types resolve this by providing a standard for comparison without claiming to be reality itself.</p>
+
+<h3>Key Features</h3>
+<ul>
+  <li>Not an average type or an actual type — an <em>approximate</em> type representing partial reality.</li>
+  <li><strong>Not normative</strong> — "ideal" does not mean desirable. There can be an ideal-type dictatorship, ideal-type whorehouse, ideal-type communism.</li>
+  <li>Acts as a <strong>measuring rod</strong> for comparative analysis — how does capitalism in the US today differ from 1815? How does Japanese capitalism differ from American?</li>
+  <li>Guides empirical research without substituting for it.</li>
+</ul>
+
+<h3>Two Types of Ideal Types</h3>
+<ul>
+  <li><strong>Historical Particular</strong> — Emerge in specific historical conditions; unique. E.g. capitalism in the Protestant West.</li>
+  <li><strong>Historical Universal</strong> — Found across various historical contexts. E.g. bureaucracy, feudalism.</li>
+</ul>
+
+<h2>Social Action</h2>
+
+<p>Weber's starting point is the <strong>individual actor</strong>, not social structures or collective forces. He rejected both Durkheim's social facts (which make individuals redundant) and Marx's class determinism (which reduces individuals to their economic position).</p>
+
+<blockquote>Social action = any action that is meaningful — to which the actor attaches a subjective meaning — and which takes into account the presence and behaviour of others.</blockquote>
+
+<p>Actions that are <strong>not</strong> social: purely reflex reactions; actions oriented only to inanimate objects; natural accidents (two cyclists colliding); imitation without conscious awareness.</p>
+
+<h3>Four Ideal Types of Social Action</h3>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>German Term</th>
+    <th>Basis</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><strong>Instrumentally Rational</strong></td>
+    <td>Zweckrational</td>
+    <td>Rational calculation of means and ends; efficiency; cost-benefit analysis</td>
+    <td>Student choosing a course for career gain; businessman firing workers and replacing with AI; political candidate using data analytics to maximise votes; retirement investment portfolio</td>
+  </tr>
+  <tr>
+    <td><strong>Value Rational</strong></td>
+    <td>Wertrational</td>
+    <td>Commitment to moral, ethical, or religious beliefs; the end pursued for its own sake regardless of consequences</td>
+    <td>Joining military to serve nation; quitting a job due to unethical instructions; playing cricket for charity; protesting injustice; group prayer</td>
+  </tr>
+  <tr>
+    <td><strong>Affective/Emotional</strong></td>
+    <td>Affektuell</td>
+    <td>Emotional state; uncontrolled or impulsive reaction</td>
+    <td>Expressing love or anger; crying at a funeral; celebrating a victory; unexpected emotional reaction to a film</td>
+  </tr>
+  <tr>
+    <td><strong>Traditional</strong></td>
+    <td>Traditional</td>
+    <td>Habit, custom, "the way it has always been done"</td>
+    <td>Going to mandir on a specific day; following caste customs; observing family rituals</td>
+  </tr>
+</table>
+
+<p>Weber acknowledged that in practice, most actions involve a <em>combination</em> of all four types. His classification provides a basis for understanding modernity's key trend: the progressive dominance of <strong>zweckrational</strong> (instrumentally rational) action — at the expense of tradition, values, and emotion. This shift is what Weber called <strong>rationalisation</strong>.</p>
+
+<h3>Significance of Social Action</h3>
+<p>When large numbers of people behave in similar ways, this produces large-scale social structures: bureaucracy, the state, capitalism, the nuclear family. Weber's micro-to-macro logic thus differs fundamentally from both Marx (class structures → behaviour) and Durkheim (social facts → behaviour).</p>
+
+<h2>Authority and Legitimate Domination</h2>
+<p><strong>Book:</strong> <em>Theory of Social and Economic Organizations</em> (1920)</p>
+
+<ul>
+  <li><strong>Power</strong> — The probability of a person or group exercising their will even against the resistance of others.</li>
+  <li><strong>Domination</strong> — The probability that specific commands will be obeyed by a given group.</li>
+  <li><strong>Authority (Legitimate Domination)</strong> — Domination that is accepted and considered rightful by subordinates. This is less costly than coercive or reward-based authority, as it requires no constant surveillance or material incentives.</li>
+</ul>
+
+<p>Weber identified three pure types of legitimate authority:</p>
+
+<h3>1. Traditional Authority</h3>
+<p>Obeyed due to the <strong>sanctity of age-old customs and traditions</strong>. The leader rules because "it has always been so."</p>
+
+<p><strong>Sub-types:</strong></p>
+<ul>
+  <li><strong>Gerontocracy</strong> — Rule by elders. E.g. Ancient Athenian democracy, village panchayat, caste councils.</li>
+  <li><strong>Patriarchalism</strong> — Authority of the father/husband/senior. The patriarch rules without a formal administrative staff.</li>
+  <li><strong>Patrimonialism</strong> — Extended version; the patriarch rules with the help of a personal administrative staff (traditional bureaucracy). All officials are personal loyalists, not servants of the nation. No separation between public and private ends. No systematic appointment or promotion. E.g. Mughal Empire, Ancient Egypt, medieval Catholic Church.</li>
+</ul>
+
+<p>Weber saw traditional authority as a barrier to formal rationality. Patrimonialism permits primitive capitalism but not the highly rational capitalism of the modern West.</p>
+
+<h3>2. Charismatic Authority</h3>
+<p>Obeyed due to the <strong>extraordinary personal qualities of the leader</strong> — real or perceived. Followers submit because of their belief in the leader's exceptional character.</p>
+
+<p>Examples: Prophet Muhammad, Guru Nanak, Jesus Christ (religious); Gandhi, Mandela, MLK (political); Steve Jobs (business); Osho, Sadhguru (spiritual).</p>
+
+<p>Features:</p>
+<ul>
+  <li>Most common in times of crisis — when permanent structures fail, people turn to a charismatic leader.</li>
+  <li>Revolutionary — charismatic leaders make their own rules and challenge conventional authority.</li>
+  <li>Inherently unstable — derives from an individual who may change, leave, or die.</li>
+  <li>May be a hero or a tyrant (Churchill vs Hitler).</li>
+</ul>
+
+<h4>Routinisation of Charisma</h4>
+<p>On the death of a charismatic leader, the group faces a "succession crisis." Charisma must be <strong>routinised</strong> — converted into either traditional authority or rational-legal authority — to survive. Weber calls charisma a transitory phenomenon.</p>
+<p>Example: A college music club founded by a charismatic leader either installs a friend (traditionalisation) or writes a constitution with rules (rationalisation).</p>
+
+<h3>3. Rational-Legal Authority</h3>
+<p>Obeyed due to <strong>belief in the legality of rationally established rules</strong>. Obedience is not to the person but to the <em>office</em> and the rules that define it.</p>
+
+<p>Features:</p>
+<ul>
+  <li>Most effective form for achieving organisational goals efficiently.</li>
+  <li>Authority rests on consciously enacted, rational norms.</li>
+  <li>Officials obey a duty of office, not personal loyalty.</li>
+  <li>Example: obeying a police officer not because of charisma or tradition, but because they hold a legally defined office.</li>
+</ul>
+
+<h3>Comparison of Authority Types</h3>
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Traditional</th>
+    <th>Charismatic</th>
+    <th>Rational-Legal</th>
+  </tr>
+  <tr>
+    <td>Basis of obedience</td>
+    <td>Sacred traditions, precedent</td>
+    <td>Leader's extraordinary personal qualities</td>
+    <td>Legality of rationally established rules</td>
+  </tr>
+  <tr>
+    <td>Stability</td>
+    <td>Stable but resistant to change</td>
+    <td>Unstable; temporary</td>
+    <td>Most stable in modern society</td>
+  </tr>
+  <tr>
+    <td>Historical context</td>
+    <td>Pre-modern societies</td>
+    <td>Times of crisis and transition</td>
+    <td>Modern industrial societies</td>
+  </tr>
+  <tr>
+    <td>Officials</td>
+    <td>Personal loyalists of ruler</td>
+    <td>Disciples of the leader</td>
+    <td>Appointed on merit; serve the office</td>
+  </tr>
+  <tr>
+    <td>Indian example</td>
+    <td>Mughal Empire, caste panchayat</td>
+    <td>Gandhi's independence movement</td>
+    <td>IAS/IPS, UPSC, judiciary</td>
+  </tr>
+</table>
+
+<p>All three forms coexist in real societies. Weber noted: "In Indian politics, we see rational-legal authority all over, but some elements of traditionalism and charisma remain." Modern state rules through a combination of rational-legal and charismatic legitimacy.</p>
+
+<h2>Rationality and Rationalisation</h2>
+
+<p>Weber identified four types of rationality:</p>
+<ul>
+  <li><strong>Practical rationality</strong> — Best way to achieve a desired end based on what is practical. Trans-civilisational (exists in all societies).</li>
+  <li><strong>Theoretical rationality</strong> — Understanding through abstract concepts; province of intellectuals.</li>
+  <li><strong>Substantive rationality</strong> — Choosing based on values and morality (what is right/wrong).</li>
+  <li><strong>Formal rationality</strong> — Matter-of-fact calculation of the most efficient means to accomplish a task. <em>Arose only in the West with industrialisation.</em></li>
+</ul>
+
+<p><strong>Rationalisation</strong> = the historical process by which formal rationality increasingly dominates all spheres of life, replacing tradition, emotion, and substantive values with cold calculation.</p>
+
+<h3>Characteristics of Rationalisation</h3>
+<ul>
+  <li><strong>Efficiency</strong> — maximum results in minimum time.</li>
+  <li><strong>Predictability</strong> — standardisation of product and process.</li>
+  <li><strong>Calculability</strong> — emphasis on quantity (statistics, scores, metrics).</li>
+  <li><strong>Non-human technology</strong> — machine-like actions replace human judgment.</li>
+</ul>
+
+<h3>McDonaldisation (George Ritzer)</h3>
+<p>Ritzer extended Weber's rationalisation thesis: the fast-food restaurant has replaced bureaucracy as the paradigm of rationalisation in contemporary society.</p>
+
+<table>
+  <tr>
+    <th>Principle</th>
+    <th>McDonald's example</th>
+    <th>Irrationality of rationality</th>
+  </tr>
+  <tr>
+    <td>Efficiency</td>
+    <td>Drive-through, QR payment, app delivery</td>
+    <td>Deskills workers; students rote-learn for MCQs instead of developing understanding</td>
+  </tr>
+  <tr>
+    <td>Calculability</td>
+    <td>Quality = quantity of food</td>
+    <td>Unhealthy, high-fat food; grades replace genuine learning</td>
+  </tr>
+  <tr>
+    <td>Predictability</td>
+    <td>Same burger everywhere in the world</td>
+    <td>Takes all flavour and personal connection out of the experience</td>
+  </tr>
+  <tr>
+    <td>Non-human technology</td>
+    <td>Deskilling; standardisation</td>
+    <td>Workers become cogs; creativity destroyed; easy to replace</td>
+  </tr>
+</table>
+
+<h3>Iron Cage of Rationality</h3>
+<p>Weber feared that excessive rationalisation would trap people in an <strong>"iron cage"</strong> — a dehumanised, bureaucratic society based on rational calculation, where:</p>
+<ul>
+  <li>Personal initiative and creativity are stifled.</li>
+  <li>Ethics, emotion, and tradition are pushed aside.</li>
+  <li>Individuals feel like cogs in a machine, following SOPs rather than exercising judgment.</li>
+  <li>Purpose and meaning erode — <em>disenchantment</em> of the world.</li>
+</ul>
+
+<p>Examples: doctors spending more time on paperwork than patients; teachers "teaching to the test"; tech companies where SOPs discourage creative engineering.</p>
+
+<h2>Bureaucracy</h2>
+
+<p>Bureaucracy is rational-legal authority applied to organisational management. Weber saw it as both the most efficient form of organisation and a potential threat to human freedom.</p>
+
+<h3>Characteristics of Ideal-Type Bureaucracy</h3>
+<ul>
+  <li><strong>High division of labour and specialisation</strong> — complex tasks broken into manageable parts; each official specialises.</li>
+  <li><strong>Merit-based recruitment</strong> — appointment based on technical knowledge, academic degrees, test results — not emotional considerations, family ties, or friendship.</li>
+  <li><strong>Strict separation of private and official ends</strong> — officials do not own the means of administration; cannot pass positions to family; no personal enrichment from office.</li>
+  <li><strong>Written rules</strong> — standardised and codified; available in manuals, handbooks, bylaws.</li>
+  <li><strong>Impersonal relations</strong> — clients treated as cases, not as persons. Ensures fairness but produces "specialists without spirit."</li>
+  <li><strong>No improvisation</strong> — officials cannot bend or play with rules.</li>
+  <li><strong>Hierarchy of authority</strong> — pyramid structure; top-down chain of command.</li>
+</ul>
+
+<h3>Disadvantages of Bureaucracy</h3>
+<ul>
+  <li><strong>Red tape</strong> — procrastination, delays, excessive paperwork.</li>
+  <li><strong>Oligarchy (Robert Michels — Iron Law of Oligarchy)</strong> — All large organisations inevitably become dominated by a small group of leaders. Even socialist parties with democratic ideology end up oligarchic in practice.</li>
+  <li><strong>Bureaucratic alienation</strong> — generates passive, rule-bound individuals unable to be creative or expressive. <em>Irrationality of rationality.</em></li>
+  <li><strong>Iron cage</strong> — see above.</li>
+  <li><strong>Goal displacement (R.K. Merton)</strong> — Bureaucrats engage in "bureaucratic ritualism" — so focused on following procedures that they lose sight of the actual goal. <em>Trained incapacity</em> (Veblen) — workers become so specialised they cannot handle unique problems.</li>
+  <li><strong>Peter Principle</strong> — People are promoted for performing well until they reach a level at which they can no longer perform. They hide behind the work of juniors.</li>
+  <li><strong>Bureaucracy's other face (Charles Page)</strong> — Every bureaucracy has an informal network (grapevine) that often works faster and more accurately than formal channels.</li>
+  <li><strong>Latif Chowdhury — Rent-Seeking Bureaucracy</strong> — In the third world, lower-level bureaucrats use their position for rent-seeking (bribery), converting public wealth into private gain.</li>
+  <li><strong>Alvin Gouldner</strong> — Increased bureaucratisation can actually decrease productivity (gypsum mine study). Degree of bureaucratisation varies inversely with efficiency of work.</li>
+</ul>
+
+<h3>Burns and Stalker — Mechanistic vs Organic Organisations</h3>
+<table>
+  <tr>
+    <th>Mechanistic</th>
+    <th>Organic</th>
+  </tr>
+  <tr>
+    <td>Formal rules, strict DOL, traditional hierarchy</td>
+    <td>Informal relationships, flexible rules, participatory decision-making</td>
+  </tr>
+  <tr>
+    <td>Efficient in stable environments</td>
+    <td>Efficient in dynamic, changing environments</td>
+  </tr>
+  <tr>
+    <td>E.g. Government ministries, universities</td>
+    <td>E.g. Start-ups, consulting firms, IAS coaching institutes</td>
+  </tr>
+</table>
+
+<h2>Protestant Ethic and the Spirit of Capitalism</h2>
+<p><strong>Book:</strong> <em>The Protestant Ethic and the Spirit of Capitalism</em> (1905)</p>
+
+<p>Weber's central research question: <strong>Why did rational capitalism develop first in Netherlands and England, and not elsewhere in Europe, China, India, or the Islamic world?</strong></p>
+
+<h3>Four Types of Capitalism</h3>
+<ul>
+  <li><strong>Traditional capitalism</strong> — Selling few luxury products to few clients at high prices (silk route merchants, Italian city-states).</li>
+  <li><strong>Pariah capitalism</strong> — Money-lending by Jews excluded from mainstream society.</li>
+  <li><strong>Booty capitalism</strong> — Acquiring wealth through war and plunder.</li>
+  <li><strong>Legal-rational industrial capitalism</strong> — Mass production, disciplined labour, rational calculation of profit, reinvestment of surplus. Uniquely Western and modern.</li>
+</ul>
+
+<h3>The Spirit of Capitalism</h3>
+<p>Weber defined it as: the state of mind involving the <em>unrelenting pursuit of profit by continuous, rational, efficient means</em> — not for consumption or pleasure, but as a duty and calling. The shift: from "working to live" → "living to work."</p>
+
+<p>Benjamin Franklin's words embody this spirit: <em>save time, save money, money begets money, earning wealth is a legitimate moral duty.</em></p>
+
+<h3>The Protestant (Calvinist) Connection</h3>
+<p>Calvinism and Puritanism gave this spirit its religious sanction through two key doctrines:</p>
+<ul>
+  <li><strong>Predestination</strong> — God has already decided who goes to heaven. No one knows whether they are saved. This creates enormous <em>salvation anxiety</em>.</li>
+  <li><strong>Calling (Beruf)</strong> — One's worldly occupation is a divine calling. Doing it diligently, methodically, and efficiently is a sign of being among the elect (the saved).</li>
+</ul>
+
+<p>The result: Calvinists worked <strong>hard, methodically, and frugally</strong> — not to enjoy wealth, but to convince themselves (and signal to God) that they were predestined for salvation. Spending on luxury was sinful. Profit was reinvested. This <strong>inner-worldly asceticism</strong> — disciplined, rational, systematic work in the world — was the psychological foundation of capitalism.</p>
+
+<p>Modern rational capitalism was therefore an <strong>unintended consequence</strong> of Protestant religiosity. Weber called this an "elective affinity" between Protestant ethics and the spirit of capitalism.</p>
+
+<h3>Why Capitalism Failed to Emerge in India, China, and the Islamic World</h3>
+<table>
+  <tr>
+    <th>Society</th>
+    <th>Barrier to Rational Capitalism</th>
+  </tr>
+  <tr>
+    <td>Hinduism</td>
+    <td>Other-worldly asceticism (moksha); caste system limits mobility; karma makes people fatalistic; material world is maya (illusion)</td>
+  </tr>
+  <tr>
+    <td>Confucian China</td>
+    <td>Emphasis on family loyalty and personal relationships over impersonal rational calculation</td>
+  </tr>
+  <tr>
+    <td>Islamic world</td>
+    <td>Prohibition on interest (riba); political instability; lack of adequate legal institutions</td>
+  </tr>
+</table>
+
+<h3>Secularisation</h3>
+<p>With the growing rationalisation of modern society, religion's power to drive behaviour has diminished. The work ethic remains, but its religious roots are gone. As Weber wrote: <em>"The Puritans wanted to work in a calling; we are forced to do so."</em> The iron cage of rational capitalism has replaced the theological compulsion that created it.</p>
+
+<h2>Marx and Weber — Comparison</h2>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Marx</th>
+    <th>Weber</th>
+  </tr>
+  <tr>
+    <td>Philosophical approach</td>
+    <td>Materialism — material conditions shape ideas</td>
+    <td>Idealism — ideas and values shape material conditions (multi-directional)</td>
+  </tr>
+  <tr>
+    <td>Subject matter of sociology</td>
+    <td>Class struggle over material interests</td>
+    <td>Social action and interpretive understanding</td>
+  </tr>
+  <tr>
+    <td>Defining feature of societies</td>
+    <td>Mode of production (how things are produced)</td>
+    <td>How people think about their world (tradition vs rationality)</td>
+  </tr>
+  <tr>
+    <td>Origin of capitalism</td>
+    <td>Material conditions (technology, factory system) were sufficient</td>
+    <td>Material conditions necessary but insufficient; Protestant religious ideas were also required</td>
+  </tr>
+  <tr>
+    <td>Definition of capitalism</td>
+    <td>Mode of production characterised by profit accumulation and class exploitation</td>
+    <td>A state of mind — an unrelenting pursuit of wealth as a religious duty; one form of rationalisation</td>
+  </tr>
+  <tr>
+    <td>Power and domination</td>
+    <td>Economic exploitation explains domination</td>
+    <td>Domination has multiple bases — tradition, charisma, and legal-rationality — not just economics</td>
+  </tr>
+  <tr>
+    <td>Future of capitalism</td>
+    <td>Revolution and communism</td>
+    <td>Increasing rationalisation and bureaucratisation; iron cage</td>
+  </tr>
+</table>
+
+<h2>Criticisms of Weber</h2>
+
+<h3>Critique of Protestant Ethic Thesis</h3>
+<ul>
+  <li><strong>Amintore Fanfani</strong> — Spirit of capitalism born in Italian merchant states under Catholicism, as a result of the Renaissance and Reformation — not Protestantism specifically.</li>
+  <li><strong>R.H. Tawney</strong> — Capitalist institutions (banking, long-distance credit) preceded the Reformation. "Capitalism was the cause and justification of the Protestant Ethic, not the effect."</li>
+  <li><strong>Kurt Samuelsson</strong> — The success of England and Holland lay in their geographic location on ocean trade routes, predating the Reformation by centuries.</li>
+  <li><strong>Milton Singer</strong> — Through "compartmentalisation," Indian industrialists in Madras kept business obligations and ritual obligations in separate compartments without conflict. Capitalism in India can develop within existing cultural norms.</li>
+  <li><strong>Meera Nanda</strong> — Hinduism has evolved: tele-gurus now present wealth as a sign of divine favour, enabling economic growth without abandoning Hindu identity.</li>
+  <li><strong>JPS Uberoi and Veena Das</strong> — Protestant-like values (prudence, rational use of money, methodical work) are present in Baniyas, Sindhis, Parsis, and Punjabis — across different religions. Protestant Ethic is not religion-specific.</li>
+  <li><strong>Unfalsifiable</strong> — Weber's theory cannot be tested with available historical evidence, lacks reliability, and cannot be falsified.</li>
+</ul>
+
+<h3>Critique of Verstehen and Social Action</h3>
+<ul>
+  <li>Lacks reliability — subjective interpretations cannot be replicated.</li>
+  <li>Near-impossible to enter the consciousness of someone from a radically different culture.</li>
+  <li>Neglects the structural constraints (class, gender, race) that shape and limit individual action.</li>
+  <li>Phenomenologists (Schutz) — Weber did not go far enough in exploring the taken-for-granted assumptions of everyday life.</li>
+</ul>
+
+<h3>Critique of Bureaucracy</h3>
+<ul>
+  <li>Weber's ideal-type bureaucracy is too rigid and static — does not account for the informal networks and adaptations that real organisations develop.</li>
+  <li>Does not adequately address power dynamics within bureaucracies.</li>
+  <li>His prediction of increasing bureaucratisation is confirmed, but his ambivalence about its consequences has proved justified — the iron cage is very real.</li>
+</ul>
+
+<h3>General Critiques</h3>
+<ul>
+  <li><strong>Eurocentrism</strong> — His comparative studies of China, India, and Islam have been criticised for misrepresenting non-Western religions and societies.</li>
+  <li><strong>Neglect of class and inequality</strong> — Weber's multi-causal framework, while richer than Marx, sometimes obscures systematic economic exploitation.</li>
+  <li><strong>Over-emphasis on ideas</strong> — Critics argue he swung too far in the opposite direction from Marx, underestimating material and structural forces.</li>
+</ul>
+
+`,
   'sociology-the-discipline': '',
   'sociology-as-science': '',
   'research-methods': '',
-  'max-weber': '',
   'talcott-parsons': '',
   'robert-merton': '',
   'george-mead': '',
