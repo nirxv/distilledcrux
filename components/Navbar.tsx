@@ -42,6 +42,13 @@ export default function Navbar() {
     document.documentElement.setAttribute('data-theme', initial);
   }, []);
 
+  // Scroll listener for logo collapse
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   // Close dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -77,6 +84,7 @@ export default function Navbar() {
     { href: '/#features', label: 'Features' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/dashboard', label: 'Dashboard' },
+    { href: '/evaluate', label: 'Evaluate' },
     { href: '/prelims', label: 'Prelims' },
   ];
 
@@ -98,46 +106,30 @@ export default function Navbar() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
 
-        {/* Logo — animates between "Distilled Crux" and "DC." on scroll */}
-        <Link href="/" style={{ textDecoration: 'none', overflow: 'hidden' }}>
+                                                {/* Logo */}
+        <Link href="/" style={{ textDecoration: 'none', flexShrink: 0, width: 160, display: 'inline-block', position: 'relative', height: '1.4em', verticalAlign: 'middle' }}>
+          {/* Expanded: "Distilled Crux" */}
           <span style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '1.15rem', fontWeight: 700,
-            color: 'var(--text)', letterSpacing: '-0.02em',
-            display: 'inline-flex', alignItems: 'baseline', gap: 0,
+            position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)',
+            fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 700,
+            letterSpacing: '-0.02em', whiteSpace: 'nowrap',
+            opacity: scrolled ? 0 : 1,
+            transition: 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)',
+            pointerEvents: scrolled ? 'none' : 'auto',
           }}>
-            <span>D</span>
-            <span style={{
-              display: 'inline-block',
-              maxWidth: scrolled ? 0 : '120px',
-              opacity: scrolled ? 0 : 1,
-              overflow: 'hidden',
-              whiteSpace: 'nowrap',
-              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease',
-            }}>istilled</span>
-            <span style={{
-              display: 'inline-block',
-              maxWidth: scrolled ? 0 : '0.35em',
-              opacity: scrolled ? 0 : 1,
-              overflow: 'hidden',
-              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.2s ease',
-            }}>&nbsp;</span>
-            <span style={{ color: 'var(--accent)' }}>C</span>
-            <span style={{
-              color: 'var(--accent)',
-              display: 'inline-block',
-              maxWidth: scrolled ? 0 : '80px',
-              opacity: scrolled ? 0 : 1,
-              overflow: 'hidden',
-              whiteSpace: 'nowrap',
-              transition: 'max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease',
-            }}>rux</span>
-            <span style={{
-              color: 'var(--accent)',
-              opacity: scrolled ? 1 : 0,
-              transition: 'opacity 0.3s ease 0.1s',
-            }}>.</span>
+            <span style={{ color: 'var(--text)' }}>Distilled </span>
+            <span style={{ color: 'var(--accent)' }}>Crux</span>
           </span>
+          {/* Collapsed: "dc." */}
+          <span style={{
+            position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)',
+            fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 700,
+            letterSpacing: '-0.02em', whiteSpace: 'nowrap',
+            color: 'var(--text)',
+            opacity: scrolled ? 1 : 0,
+            transition: 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)',
+            pointerEvents: scrolled ? 'auto' : 'none',
+          }}>dc.</span>
         </Link>
 
         {/* Nav links */}
