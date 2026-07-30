@@ -711,43 +711,52 @@ export default function EvaluatePage() {
                 </div>
               )}
 
-              <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
-                <label className="ev-field-label">Question</label>
-                <div style={{ position:'relative' }}>
-                  <textarea
-                    className="ev-textarea"
-                    placeholder={extractingQ ? 'Reading question from your answer sheet…' : 'Paste the question exactly as it appears in the paper…'}
-                    value={question}
-                    onChange={e => setQuestion(e.target.value)}
-                    maxLength={600}
-                    style={{ opacity: extractingQ ? 0.6 : 1 }}
-                  />
-                  {extractingQ && (
-                    <div style={{ position:'absolute', bottom:10, right:12, fontFamily:'var(--font-ui)', fontSize:'0.7rem', color:'var(--accent3)' }}>
-                      Reading…
-                    </div>
-                  )}
+              {files.length > 0 && (
+                <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
+                  <label className="ev-field-label">
+                    Question
+                    {extractingQ && <span style={{ marginLeft:8, fontFamily:'var(--font-ui)', fontSize:'0.68rem', color:'var(--accent3)', fontWeight:400, letterSpacing:'0.04em' }}>reading from sheet…</span>}
+                  </label>
+                  <div style={{ position:'relative' }}>
+                    <textarea
+                      className="ev-textarea"
+                      placeholder={extractingQ ? '' : 'Check the question — edit if needed…'}
+                      value={question}
+                      onChange={e => setQuestion(e.target.value)}
+                      maxLength={600}
+                      style={{ opacity: extractingQ ? 0.5 : 1 }}
+                    />
+                    {extractingQ && (
+                      <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:'var(--font-ui)', fontSize:'0.78rem', color:'var(--text3)' }}>
+                        Reading question from your sheet…
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              <div className="ev-field">
-                <label className="ev-field-label">Marks</label>
-                <div className="ev-marks-row">
-                  {MARKS_OPTIONS.map(m => (
-                    <div key={m} className={`ev-marks-cell${marks === m ? ' active' : ''}`} onClick={() => setMarks(m)}>
-                      {m}M
-                    </div>
-                  ))}
+              {files.length > 0 && (
+                <div className="ev-field">
+                  <label className="ev-field-label">Marks</label>
+                  <div className="ev-marks-row">
+                    {MARKS_OPTIONS.map(m => (
+                      <div key={m} className={`ev-marks-cell${marks === m ? ' active' : ''}`} onClick={() => setMarks(m)}>
+                        {m}M
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {error && <div className="ev-err">{error}</div>}
 
-              <div className="ev-submit-wrap">
-                <button className="ev-submit" onClick={handleSubmit} disabled={loading || profileLoading}>
-                  {profileLoading ? 'Loading…' : 'Evaluate answer →'}
-                </button>
-              </div>
+              {files.length > 0 && (
+                <div className="ev-submit-wrap">
+                  <button className="ev-submit" onClick={handleSubmit} disabled={loading || profileLoading || extractingQ}>
+                    {profileLoading ? 'Loading…' : extractingQ ? 'Reading question…' : 'Evaluate answer →'}
+                  </button>
+                </div>
+              )}
             </div>
 
             <div className="ev-sidebar">
