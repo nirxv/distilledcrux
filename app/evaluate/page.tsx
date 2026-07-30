@@ -129,7 +129,7 @@ const CSS = `
 }
 .ev-upload-title { font-family:var(--font-ui); font-size:0.88rem; color:var(--text2); margin-bottom:0.3rem; }
 .ev-upload-sub   { font-family:var(--font-ui); font-size:0.75rem; color:var(--text3); }
-.ev-upload-input { position:absolute; inset:0; opacity:0; cursor:pointer; }
+.ev-upload-input { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
 
 .ev-previews { display:flex; gap:0.5rem; flex-wrap:wrap; padding:0 2rem 1.5rem; }
 .ev-preview-wrap { position:relative; display:inline-block; }
@@ -682,7 +682,6 @@ export default function EvaluatePage() {
                 onDragOver={e => { e.preventDefault(); setDrag(true) }}
                 onDragLeave={() => setDrag(false)}
                 onDrop={onDrop}
-                onClick={() => inputRef.current?.click()}
               >
                 <div className="ev-upload-icon">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -690,9 +689,9 @@ export default function EvaluatePage() {
                   </svg>
                 </div>
                 <div className="ev-upload-title">Drop images here or click to browse</div>
-                <div className="ev-upload-sub">JPG, PNG, WEBP, PDF — max 20MB, up to 10 pages</div>
+                <div className="ev-upload-sub">JPG, PNG, WEBP or PDF — max 20MB, up to 10 pages</div>
                 <input ref={inputRef} type="file" accept="image/*,application/pdf" multiple className="ev-upload-input"
-                  onChange={e => addFiles(Array.from(e.target.files ?? []))} />
+                  onChange={e => { addFiles(Array.from(e.target.files ?? [])); e.target.value = '' }} />
               </div>
 
               {previews.length > 0 && (
@@ -769,8 +768,9 @@ export default function EvaluatePage() {
               <div className="ev-sidebar-block">
                 <div className="ev-sidebar-lbl">Tips</div>
                 <div className="ev-tip">
+                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF — up to 10 pages.<br/><br/>
                   <strong>Good lighting matters.</strong> Shoot in daylight, avoid shadows. Blurry images reduce accuracy.<br/><br/>
-                  <strong>Exact question text.</strong> The question wording determines what the AI checks — paste it precisely.
+                  <strong>Question auto-fills.</strong> We try to read the question from your sheet — check and edit if needed.
                 </div>
               </div>
 
