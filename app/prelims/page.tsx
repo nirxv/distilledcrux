@@ -63,14 +63,7 @@ const CSS = `
     display: flex;
     align-items: center;
     gap: 12px;
-  }
-  .pr-hero-kicker::before {
-    content: '';
-    display: inline-block;
-    width: 28px; height: 1px;
-    background: var(--text3);
-  }
-  .pr-hero-h1 {
+  }  .pr-hero-h1 {
     font-family: var(--font-body);
     font-size: clamp(3rem, 6.5vw, 5.2rem);
     font-weight: 700;
@@ -152,12 +145,7 @@ const CSS = `
     text-transform: uppercase; color: var(--text3);
     margin-bottom: 1rem;
     display: flex; align-items: center; gap: 10px;
-  }
-  .pr-section-label::before {
-    content: ''; display: inline-block;
-    width: 20px; height: 1px; background: var(--text3);
-  }
-  .pr-section-h2 {
+  }  .pr-section-h2 {
     font-family: var(--font-body);
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 700; letter-spacing: -0.03em;

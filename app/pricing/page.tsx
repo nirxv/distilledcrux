@@ -47,12 +47,7 @@ const CSS = `
   font-family: var(--font-ui); font-size: 0.65rem;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
   margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;
-}
-.pr-kicker::before {
-  content: ''; display: inline-block;
-  width: 20px; height: 1px; background: var(--text3);
-}
-.pr-h1 {
+}.pr-h1 {
   font-family: var(--font-body);
   font-size: clamp(2.4rem, 5.5vw, 4rem);
   font-weight: 700; letter-spacing: -0.035em; line-height: 1.02; color: var(--text);
