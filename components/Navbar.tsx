@@ -86,6 +86,7 @@ export default function Navbar() {
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/evaluate', label: 'Evaluate' },
     { href: '/prelims', label: 'Prelims' },
+    { href: '/chat', label: 'AI Chat', accent: true },
   ];
 
   return (
@@ -134,37 +135,74 @@ export default function Navbar() {
 
         {/* Nav links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-          {NAV_LINKS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              style={{
-                color: isActive(item.href) ? 'var(--text)' : 'var(--text3)',
-                textDecoration: 'none',
-                fontSize: '0.85rem',
-                fontFamily: 'var(--font-ui)',
-                fontWeight: isActive(item.href) ? 600 : 500,
-                padding: '0.4rem 0.75rem',
-                borderRadius: 8,
-                background: isActive(item.href) ? 'var(--bg3)' : 'transparent',
-                transition: 'color 0.15s, background 0.15s',
-              }}
-              onMouseEnter={(e) => {
-                if (!isActive(item.href)) {
-                  e.currentTarget.style.color = 'var(--text)';
-                  e.currentTarget.style.background = 'var(--bg3)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!isActive(item.href)) {
-                  e.currentTarget.style.color = 'var(--text3)';
-                  e.currentTarget.style.background = 'transparent';
-                }
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((item) => {
+            const active = isActive(item.href);
+            if (item.accent) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  style={{
+                    color: active ? '#fff' : 'var(--accent)',
+                    textDecoration: 'none',
+                    fontSize: '0.85rem',
+                    fontFamily: 'var(--font-ui)',
+                    fontWeight: 600,
+                    padding: '0.4rem 0.75rem',
+                    borderRadius: 8,
+                    background: active ? 'var(--accent)' : 'rgba(67,97,238,0.08)',
+                    border: '1px solid rgba(67,97,238,0.2)',
+                    transition: 'background 0.15s, color 0.15s',
+                    display: 'flex', alignItems: 'center', gap: 5,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--accent)';
+                    e.currentTarget.style.color = '#fff';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = active ? 'var(--accent)' : 'rgba(67,97,238,0.08)';
+                    e.currentTarget.style.color = active ? '#fff' : 'var(--accent)';
+                  }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  {item.label}
+                </Link>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{
+                  color: active ? 'var(--text)' : 'var(--text3)',
+                  textDecoration: 'none',
+                  fontSize: '0.85rem',
+                  fontFamily: 'var(--font-ui)',
+                  fontWeight: active ? 600 : 500,
+                  padding: '0.4rem 0.75rem',
+                  borderRadius: 8,
+                  background: active ? 'var(--bg3)' : 'transparent',
+                  transition: 'color 0.15s, background 0.15s',
+                }}
+                onMouseEnter={(e) => {
+                  if (!active) {
+                    e.currentTarget.style.color = 'var(--text)';
+                    e.currentTarget.style.background = 'var(--bg3)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!active) {
+                    e.currentTarget.style.color = 'var(--text3)';
+                    e.currentTarget.style.background = 'transparent';
+                  }
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right side: theme toggle + avatar */}
