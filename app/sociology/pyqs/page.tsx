@@ -122,7 +122,7 @@ export default function SociologyPYQsPage() {
             ) : (
               <div className="pyq-cards">
                 {filtered.map((q:any)=>(
-                  <div key={q.id} className="pyq-card">
+                  <div key={q.id} className="pyq-card" style={{cursor:'pointer'}} onClick={()=>router.push(`/sociology/pyqs/${q.id}`)}>
                     <div className="pyq-card-top">
                       {q.year ? <span className="pyq-year">{q.year}</span> : <span className="pyq-year-empty">—</span>}
                       {q.paper && <span className="pyq-paper">{q.paper}</span>}
@@ -132,7 +132,10 @@ export default function SociologyPYQsPage() {
                     <div className="pyq-question">{q.question}</div>
                     <div className="pyq-card-bottom">
                       <span className="pyq-topic">{q.topic}</span>
-                      <button className="pyq-attempt" onClick={()=>handleAttempt(q)}>Attempt →</button>
+                      <div style={{display:'flex',gap:'6px'}}>
+                        <button className="pyq-attempt" onClick={e=>{e.stopPropagation();handleAttempt(q)}}>Attempt →</button>
+                        <button className="pyq-attempt" style={{borderColor:'rgba(67,97,238,0.2)',background:'rgba(67,97,238,0.05)',color:'#818cf8'}} onClick={e=>{e.stopPropagation();router.push(`/sociology/pyqs/${q.id}`)}}>View →</button>
+                      </div>
                     </div>
                   </div>
                 ))}
