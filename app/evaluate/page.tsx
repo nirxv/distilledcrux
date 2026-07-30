@@ -711,52 +711,39 @@ export default function EvaluatePage() {
                 </div>
               )}
 
-              {files.length > 0 && (
-                <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
-                  <label className="ev-field-label">
-                    Question
-                    {extractingQ && <span style={{ marginLeft:8, fontFamily:'var(--font-ui)', fontSize:'0.68rem', color:'var(--accent3)', fontWeight:400, letterSpacing:'0.04em' }}>reading from sheet…</span>}
-                  </label>
-                  <div style={{ position:'relative' }}>
-                    <textarea
-                      className="ev-textarea"
-                      placeholder={extractingQ ? '' : 'Check the question — edit if needed…'}
-                      value={question}
-                      onChange={e => setQuestion(e.target.value)}
-                      maxLength={600}
-                      style={{ opacity: extractingQ ? 0.5 : 1 }}
-                    />
-                    {extractingQ && (
-                      <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', fontFamily:'var(--font-ui)', fontSize:'0.78rem', color:'var(--text3)' }}>
-                        Reading question from your sheet…
-                      </div>
-                    )}
-                  </div>
+              <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
+                <div style={{ display:'flex', alignItems:'center', gap:8, fontFamily:'var(--font-ui)', fontSize:'0.8rem', color:'var(--text3)', lineHeight:1.6 }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ flexShrink:0 }}>
+                    <circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeWidth="1.2"/>
+                    <path d="M7 6v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+                  </svg>
+                  {extractingQ
+                    ? <span style={{ color:'var(--accent3)' }}>Reading question from your answer sheet…</span>
+                    : files.length > 0
+                      ? <span>Question auto-extracted — <span style={{ color:'var(--text2)' }}>review before submitting.</span></span>
+                      : <span>Question will be auto-extracted from your answer sheet.</span>
+                  }
                 </div>
-              )}
+              </div>
 
-              {files.length > 0 && (
-                <div className="ev-field">
-                  <label className="ev-field-label">Marks</label>
-                  <div className="ev-marks-row">
-                    {MARKS_OPTIONS.map(m => (
-                      <div key={m} className={`ev-marks-cell${marks === m ? ' active' : ''}`} onClick={() => setMarks(m)}>
-                        {m}M
-                      </div>
-                    ))}
-                  </div>
+              <div className="ev-field">
+                <label className="ev-field-label">Marks</label>
+                <div className="ev-marks-row">
+                  {MARKS_OPTIONS.map(m => (
+                    <div key={m} className={`ev-marks-cell${marks === m ? ' active' : ''}`} onClick={() => setMarks(m)}>
+                      {m}M
+                    </div>
+                  ))}
                 </div>
-              )}
+              </div>
 
               {error && <div className="ev-err">{error}</div>}
 
-              {files.length > 0 && (
-                <div className="ev-submit-wrap">
-                  <button className="ev-submit" onClick={handleSubmit} disabled={loading || profileLoading || extractingQ}>
-                    {profileLoading ? 'Loading…' : extractingQ ? 'Reading question…' : 'Evaluate answer →'}
-                  </button>
-                </div>
-              )}
+              <div className="ev-submit-wrap">
+                <button className="ev-submit" onClick={handleSubmit} disabled={loading || profileLoading || extractingQ || files.length === 0}>
+                  {profileLoading ? 'Loading…' : extractingQ ? 'Reading question…' : 'Evaluate answer →'}
+                </button>
+              </div>
             </div>
 
             <div className="ev-sidebar">
