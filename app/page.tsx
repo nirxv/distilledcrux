@@ -444,8 +444,8 @@ export default function Home() {
                   </div>
                 )}
                 <div className="lp-price-plan">{p.label}</div>
-                <div className="lp-price-amount">{p.price}</div>
-                <div className="lp-price-period">{p.period}</div>
+                <div style={{ display:"flex", alignItems:"baseline", gap:6 }}><div className="lp-price-amount">{p.price}</div>
+                <div className="lp-price-period">{p.period}</div></div>
                 <div className="lp-price-desc">{p.desc}</div>
               </div>
             ))}
