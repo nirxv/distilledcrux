@@ -282,10 +282,346 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
+  'emile-durkheim': `
+<h2>Intellectual Background & General Features</h2>
+
+<p>Emile Durkheim (1858–1917) is regarded as the founder of academic sociology. He was primarily concerned with one question: <strong>how does society hold together?</strong> — especially in the face of modernisation, individualism, and the weakening of traditional bonds.</p>
+
+<h3>Four Pillars of Durkheim's Sociology</h3>
+<ul>
+  <li><strong>Positivism</strong> — Sociology should treat social facts as things and study them with the methods of natural science. Objective, empirical, value-free.</li>
+  <li><strong>Evolutionism</strong> — Society changes slowly and contains self-correcting mechanisms for strain and conflict.</li>
+  <li><strong>Organicism & Functionalism</strong> — Society is like a living organism; each institution (religion, family, law) performs a function for the whole. The whole (society) is greater than the sum of its parts.</li>
+  <li><strong>Moralism</strong> — Every society requires moral bonds — collective values and shared sentiments — to hold it together. Sociology must discover what these moral bonds are in modern society.</li>
+</ul>
+
+<h3>Historical Context</h3>
+<p>The French Revolution and industrialisation disrupted traditional social order. Durkheim observed rising crime, divorce, and suicide rates in industrial Europe. He termed the phase of unregulated desires, growing individualism, and weakened social integration as <strong>Anomie</strong> — and made it his life's work to find what would hold modern society together.</p>
+
+<h3>Durkheim on Human Nature: Homo Duplex</h3>
+<p>Man is simultaneously a <strong>self-centric individual</strong> and a <strong>moralist</strong>. In pre-modern society, moralism dominated; in modern society, egoism dominates. Sociology's task is to re-establish moral regulation without suppressing individuality.</p>
+
+<h2>Division of Labour in Society</h2>
+<p><strong>Book:</strong> <em>The Division of Labour in Society</em> (1893)</p>
+
+<p>Durkheim's central argument: solidarity exists in all societies, but the <em>type</em> of solidarity changes as society evolves from simple to complex.</p>
+
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Simple/Traditional Society</th>
+    <th>Complex/Industrial Society</th>
+  </tr>
+  <tr>
+    <td><strong>Division of Labour</strong></td>
+    <td>Simple; everyone does the same work</td>
+    <td>Complex; high specialisation</td>
+  </tr>
+  <tr>
+    <td><strong>Collective Consciousness</strong></td>
+    <td>Strong; single shared moral system</td>
+    <td>Weak; individual differences encouraged</td>
+  </tr>
+  <tr>
+    <td><strong>Type of Bond</strong></td>
+    <td>Mechanical Solidarity</td>
+    <td>Organic Solidarity</td>
+  </tr>
+  <tr>
+    <td><strong>Form of Law</strong></td>
+    <td>Repressive (harsh punishment)</td>
+    <td>Restitutive (restorative justice)</td>
+  </tr>
+  <tr>
+    <td><strong>Integration & Regulation</strong></td>
+    <td>High</td>
+    <td>Lower — prone to anomie</td>
+  </tr>
+  <tr>
+    <td><strong>Suicide Types</strong></td>
+    <td>Altruistic & Fatalistic</td>
+    <td>Egoistic & Anomic</td>
+  </tr>
+</table>
+
+<h3>Mechanical Solidarity</h3>
+<p>Social bonds based on <strong>likeness and shared moral values</strong>. Members share the same religion, eat together, work together. A person's first duty is to <em>resemble everybody else</em>. Society is held together by sameness and a powerful collective conscience. Any deviation from the collective norm is dealt with by repressive law (harsh punishment to reinforce common morality).</p>
+
+<h3>Organic Solidarity</h3>
+<p>Social bonds based on <strong>specialisation and interdependence</strong>. With industrialisation, people take on specialised roles — baker, engineer, doctor — and become mutually dependent. Solidarity is now rooted in <em>difference</em>, not likeness. Interactions are largely limited, impersonal, and instrumental: we rely on thousands of strangers for daily needs.</p>
+
+<blockquote>Global clothing chain, iPod production, food supply chains, medical systems — all demonstrate how division of labour ties individuals across the world in organic solidarity.</blockquote>
+
+<p>Law in organic solidarity is <strong>restitutive</strong> — it aims to restore balance, not punish. This reflects the reduced power of collective conscience and the increased importance of functional interdependence.</p>
+
+<h3>How Modernisation Creates Organic Solidarity</h3>
+<ul>
+  <li><strong>Population growth → material density</strong> → increased social interaction and competition.</li>
+  <li>Competition → mitigation through <strong>specialisation</strong> (complex DOL) — the "moral density" argument.</li>
+  <li>Occupational groups emerge as intermediary entities between the individual and larger society — providing belonging in impersonal modern society.</li>
+</ul>
+
+<h3>Anomie — The Dark Side of Modernity</h3>
+<p>Anomie = a state of moral disruption; social control over individuals becomes ineffective; society fails to regulate individual desires. If goals are not regulated, aspirations become unlimited and deviance results.</p>
+
+<h4>Types of Anomie</h4>
+<ul>
+  <li><strong>Acute Anomie</strong> — Sudden disruption during rapid change: economic slumps, booms, wars, epidemics, natural disasters. The Kobe earthquake (1995) led to increased suicides. Economic depression increases suicide rates (CDC data: US suicides rose 1928–1932 when unemployment hit 24%).</li>
+  <li><strong>Chronic Anomie</strong> — Bachelors experience limitless horizons; unrestrained passions create chronic disjunction between means and ends. Higher suicide rate than married men.</li>
+  <li><strong>Domestic Anomie</strong> — Breakdown of norms within the family: rapid shifts in gender roles, persistent family conflict, high divorce rates.</li>
+</ul>
+
+<h4>Abnormal Forms of Division of Labour (structural anomie)</h4>
+<ul>
+  <li><strong>Anomic DOL</strong> — Monotonous, machine-like work creates meaninglessness. Workers strike not from revolution but from a sense of purposelessness. (Brings Durkheim close to Marx's alienation — but Durkheim sees it as temporary aberration, not inherent contradiction.)</li>
+  <li><strong>Forced DOL</strong> — Occupations filled by ascribed status (caste, sex, bribery, nepotism) rather than merit. E.g. jajmani system studied by Henry Orenstein — creates organic solidarity but blinds us to exploitation of lower castes.</li>
+  <li><strong>Inadequately Coordinated DOL</strong> — Part-time, discouraged, or structurally unemployed workers unable to contribute fully.</li>
+</ul>
+
+<h4>Solution to Anomie</h4>
+<ul>
+  <li><strong>State</strong> — Can formally administer laws for national collectivity and regulate anomic tendencies.</li>
+  <li><strong>Occupational groups (professional associations)</strong> — Must participate in governance; counterbalance both egoistic individualism and oppressive bureaucracy; build "we-feeling" among workers.</li>
+  <li><strong>Moral education</strong> — Teaches discipline, attachment to social groups, and civic pride. History and religious education link individuals to society's past.</li>
+  <li><strong>Professional ethics</strong> — Corporations must promote moralistic individualism, replacing egoistic individualism.</li>
+</ul>
+
+<h4>Anomie vs Alienation</h4>
+<table>
+  <tr>
+    <th>Anomie (Durkheim)</th>
+    <th>Alienation (Marx)</th>
+  </tr>
+  <tr>
+    <td>A transitional phase of normlessness — too little regulation</td>
+    <td>Inherent feature of capitalism — too much regulation (of workers by owners)</td>
+  </tr>
+  <tr>
+    <td>Mass experience: the whole society is affected</td>
+    <td>Class experience: specific to the proletariat</td>
+  </tr>
+  <tr>
+    <td>Present in education, politics, family, work — all spheres</td>
+    <td>Present only in the economic sphere (production)</td>
+  </tr>
+  <tr>
+    <td>Solution: within the system — ethics, associations, moral education</td>
+    <td>Solution: revolution, abolition of private property</td>
+  </tr>
+  <tr>
+    <td>Abnormal; can be fixed; society is self-correcting</td>
+    <td>Normal under capitalism; can only end with its destruction</td>
+  </tr>
+</table>
+
+<h4>DOL Theories Compared</h4>
+<table>
+  <tr>
+    <th>Adam Smith</th>
+    <th>Karl Marx</th>
+    <th>Emile Durkheim</th>
+  </tr>
+  <tr>
+    <td>DOL = source of productivity and wealth</td>
+    <td>DOL = source of alienation and class conflict; imposed by capitalists on workers</td>
+    <td>DOL = source of solidarity/integration; but can produce anomie if abnormal</td>
+  </tr>
+  <tr>
+    <td>Normal DOL is naturally good</td>
+    <td>Normal DOL is itself exploitation ("division of labourers")</td>
+    <td>Normal DOL is positive; only abnormal forms are pathological</td>
+  </tr>
+  <tr>
+    <td>Focus on productivity</td>
+    <td>Focus on conflict and exploitation</td>
+    <td>Focus on cooperation and interdependence</td>
+  </tr>
+</table>
+
+<h2>Social Facts</h2>
+<p><strong>Book:</strong> <em>Rules of Sociological Method</em> (1895)</p>
+
+<blockquote>"Social facts are patterned ways of collective thinking, collective beliefs, and collective acting — external to individuals and coercive of actors."</blockquote>
+
+<p>Durkheim's analogy: You are inside a room. You have freedom, but the walls limit your actions. Social facts are like those walls — real, constraining, and external to you. Examples: language, religion, norms, values, caste, family structures, laws, ideologies.</p>
+
+<h3>Two Types of Social Facts</h3>
+<ul>
+  <li><strong>Non-Material Social Facts</strong> — Collective conscience, collective effervescence, social currents of integration/regulation. These are primary.</li>
+  <li><strong>Material Social Facts</strong> — Religion (as institution), law, architecture, population density. These are manifestations of non-material social facts. E.g. Suicide rate (material SF) is a manifestation of social currents of integration and regulation (non-material SF).</li>
+</ul>
+
+<h3>Features of Social Facts</h3>
+<ul>
+  <li><strong>Externality</strong> — Social facts exist outside the individual; learned through socialisation. E.g. nationalism comes into existence through collectivity and becomes external to individuals.</li>
+  <li><strong>Constraint/Coercive</strong> — If you resist them, you feel the pressure — social sanctions, peer disapproval, legal punishment.</li>
+  <li><strong>Generality</strong> — Found generally across society, not specific to one individual.</li>
+  <li><strong>Independence</strong> — Social facts have a reality <em>sui generis</em> (a kind of their own). Society is more than the sum of its parts — when individuals associate, wholly new phenomena emerge that cannot be found in any individual alone.</li>
+</ul>
+
+<h3>Rules of Sociological Method</h3>
+<ul>
+  <li><strong>Rule 1 — Observe SF as things:</strong> Rid yourself of prejudices. Do not call caste or religion illogical — treat them as objective facts to be observed. Build theory from observation (inductive).</li>
+  <li><strong>Rule 2 — Normal vs Pathological SF:</strong> Normal = generally encountered and inevitable. Pathological = deviation from the standard. Crime is actually <em>normal</em> — present in all societies, inevitable because not every member can be equally committed to collective sentiments. Without crime, there would be no Socrates, no Galileo, no Martin Luther King. Crime is "an anticipation of the morality of the future." The function of punishment is not to eliminate crime but to maintain collective sentiments at the right level of strength.</li>
+  <li><strong>Rule 3 — Classify societies:</strong> According to degree of organisation. Durkheim's bipolar model — mechanical (simplest) → organic (most complex).</li>
+  <li><strong>Rule 4 — Explain SFs:</strong> The cause of a social fact is always another social fact — never individual psychology. E.g. cause of suicide rates = social currents of integration and regulation, not individual mental states. Function of a SF = its contribution to social equilibrium.</li>
+  <li><strong>Rule 5 — Comparative Method:</strong> Since laboratory experiments are impossible in social science, use the "method of concomitant variation" — if variation in A coincides with variation in B, they are causally related. "Comparative sociology is not a particular branch of sociology; it is sociology itself."</li>
+</ul>
+
+<h2>Suicide</h2>
+<p><strong>Book:</strong> <em>Suicide: A Study in Sociology</em> (1897)</p>
+
+<p>Durkheim chose to study suicide — the most private, individual act — precisely to demonstrate that even such acts are shaped by social forces. He was not interested in why <em>an individual</em> commits suicide (that is psychology), but why <strong>suicide rates</strong> differ between groups, religions, nations, and across time.</p>
+
+<h3>Key Finding</h3>
+<p>Suicide rates are stable over time within societies. England: 67/million; France: 135/million; Denmark: 277/million — consistently. This stability proves that suicide rates are social facts, not random individual acts.</p>
+
+<h3>Social Integration and Regulation</h3>
+<p>Durkheim identified two social forces that govern suicide rates:</p>
+<ul>
+  <li><strong>Social Integration</strong> — The extent to which an individual feels accepted as a full member of a group. Higher integration = lower egoistic suicide.</li>
+  <li><strong>Social Regulation</strong> — The extent to which limitless individual desires are controlled by social norms. Higher regulation = lower anomic suicide.</li>
+</ul>
+
+<h3>Four Types of Suicide</h3>
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Level</th>
+    <th>Mechanism</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><strong>Altruistic</strong></td>
+    <td>High Integration</td>
+    <td>Individual so strongly integrated into group that they sacrifice themselves for the collective good</td>
+    <td>Islamic suicide bombers; Kamikaze pilots; Sati (Hindu widows); soldiers at borders</td>
+  </tr>
+  <tr>
+    <td><strong>Egoistic</strong></td>
+    <td>Low Integration</td>
+    <td>Individual feels like a social outcast; unable to find their place in society; excessive individuation</td>
+    <td>Elderly people; professionals who feel worthless; students who feel they are a burden; Protestants vs Catholics (Protestants emphasise individual salvation → less integration)</td>
+  </tr>
+  <tr>
+    <td><strong>Anomic</strong></td>
+    <td>Low Regulation</td>
+    <td>Sudden disruption of norms — economic boom or bust — leaves desires unregulated</td>
+    <td>US suicide rates rose during 1928–32 depression; suicides also increase during booms (sudden wealth tears people from familiar structures); post-Kobe earthquake suicides (1995)</td>
+  </tr>
+  <tr>
+    <td><strong>Fatalistic</strong></td>
+    <td>High Regulation</td>
+    <td>Excessive control over the individual by society or another person; suicide as escape from oppression</td>
+    <td>Slaves; those under extreme domestic control; highly constrained individuals</td>
+  </tr>
+</table>
+
+<h3>Suicide Rates and Social Groups</h3>
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Higher Suicide Rate</th>
+    <th>Lower Suicide Rate</th>
+  </tr>
+  <tr><td>Religion</td><td>Protestants (individual salvation)</td><td>Catholics (community, church)</td></tr>
+  <tr><td>Gender</td><td>Male</td><td>Female</td></tr>
+  <tr><td>Age</td><td>Aged</td><td>Young</td></tr>
+  <tr><td>Wealth</td><td>Rich (limitless goals)</td><td>Poor</td></tr>
+  <tr><td>Marital status</td><td>Single</td><td>Married</td></tr>
+  <tr><td>National context</td><td>Times of peace</td><td>Times of war (integration rises)</td></tr>
+</table>
+
+<h3>Durkheim's Method in Suicide Study</h3>
+<p>He applied positivist comparative methodology: collected official statistics, found correlations (Protestantism + high suicide), controlled for third variables through <strong>multivariate analysis</strong> (checked across nationalities and genders), and derived a law of human behaviour: <em>the greater the social integration, the lower the suicide rate.</em></p>
+
+<h2>Religion and Society</h2>
+<p><strong>Book:</strong> <em>Elementary Forms of Religious Life</em> (1912)</p>
+
+<p>Durkheim argued that religion is not about belief in the supernatural — it is a <strong>social experience with a social function</strong>. He studied Totemism among the Arunta tribe (Australian Aboriginals) as the simplest form of religion to reveal the essence of all religion.</p>
+
+<h3>Sacred and Profane</h3>
+<p>All religions divide the world into two categories:</p>
+<ul>
+  <li><strong>Sacred</strong> — Things set apart, forbidden, treated with awe and reverence. The totem (clan's emblem — usually an animal or plant) is sacred.</li>
+  <li><strong>Profane</strong> — Ordinary, everyday things.</li>
+</ul>
+<p>Religious practices and beliefs centre on the sacred and unite believers into a <strong>moral community (Church)</strong>.</p>
+
+<h3>The Real Object of Religious Worship</h3>
+<p>Durkheim's radical insight: when people worship God or a totem, they are actually <strong>worshipping society itself</strong>. The totem represents the clan's origins and shared identity — it is a collective representation. The power people feel in religious ritual is the power of society acting on the individual. <strong>God = Society idealised.</strong></p>
+
+<h3>Collective Effervescence</h3>
+<p>During religious rituals, people gather, chant, dance, and feel a shared emotional intensity. This creates <strong>collective effervescence</strong> — a heightened, shared emotional state that generates feelings of transcendence and solidarity. This is the social source of the sacred. E.g. political rallies, football matches, national days — all produce collective effervescence.</p>
+
+<h3>Functions of Religion</h3>
+<ul>
+  <li><strong>Social cohesion</strong> — Unites community around shared beliefs and rituals.</li>
+  <li><strong>Social control</strong> — Regulates behaviour through moral codes.</li>
+  <li><strong>Meaning</strong> — Provides framework for understanding the world and individual's place in it.</li>
+  <li><strong>Collective representations</strong> — Religious symbols (totems, flags) represent and reinforce collective identity.</li>
+</ul>
+
+<h3>Religion in Modern Society</h3>
+<p>As traditional religion declines, Durkheim argued that new forms of collective life would replace it — civic religion, nationalism, professional ethics. The "cult of the individual" in modern society itself functions like a religion — it is a collectively held belief in the sacredness of the individual. <em>"Old gods are dead, and new ones are not yet born."</em></p>
+
+<h2>Contribution of Durkheim to Sociology</h2>
+<ul>
+  <li><strong>Established sociology as a discipline</strong> — Differentiated it from philosophy and psychology through the concept of social facts.</li>
+  <li><strong>Positivist methodology</strong> — Demonstrated that social science could use empirical, comparative, statistical methods (Suicide study as the model).</li>
+  <li><strong>Concept of anomie</strong> — Foundational for understanding deviance, crime, and social pathology. Influenced Merton's strain theory.</li>
+  <li><strong>Foundation of structural functionalism</strong> — His focus on macro-level social facts and social functions directly shaped Parsons, Merton, and the entire functionalist tradition.</li>
+  <li><strong>Sociology of religion</strong> — Showed that religion is a social phenomenon with social functions, not merely supernatural belief.</li>
+  <li><strong>Education and morality</strong> — His writings on moral education influenced policy on civic education and national integration.</li>
+  <li><strong>Relevance in India</strong> — Ramachandra Guha: "The rash of suicides in Bangalore is a qualitatively new development. What we now await is an Indian Durkheim." His anomie framework explains farmer suicides, urban loneliness, and breakdown of traditional communities.</li>
+</ul>
+
+<h2>Criticisms of Durkheim</h2>
+
+<h3>Criticism of Social Facts</h3>
+<ul>
+  <li><strong>Max Weber</strong> — Social facts make the individual redundant and assumes passive reaction to external stimuli. To understand social facts, we must understand individual meaning and motive.</li>
+  <li><strong>Anthony Giddens</strong> (<em>New Rules of Sociological Method</em>) — Sociological method should focus on the negotiation between agents and structures, not commit mechanically to scientific method.</li>
+  <li><strong>Internal contradiction</strong> — Durkheim proposed to treat social facts as things, yet also treated the breakdown of norms as pathologies that could be "cured." He was both a positivist and a moralist.</li>
+</ul>
+
+<h3>Criticism of Division of Labour</h3>
+<ul>
+  <li><strong>Lukes</strong> — "Durkheim vastly understated the degree of interdependence in pre-industrial societies, constituted by ties of kinship, ritual participation, and political alliance."</li>
+  <li><strong>Michael Clarke</strong> — Durkheim lumped a vast variety of societies into just two groups (industrial and non-industrial).</li>
+  <li><strong>M.C. Kennedy</strong> — When we inspect abnormal forms globally, it is difficult to find one clear-cut case of the "normal" DOL. Normal DOL is the ideal of a moralistic sociologist, not of a sociologist of morals.</li>
+  <li><strong>Henry Orenstein</strong> — The Indian jajmani system creates organic solidarity between jajman (upper caste) and kamin (service caste) — but this solidarity blinds us to caste exploitation.</li>
+  <li><strong>Dumont</strong> — The Indian caste system is an example of organic solidarity, suggesting Durkheim's model is applicable but does not account for hierarchy.</li>
+</ul>
+
+<h3>Criticism of Suicide</h3>
+<ul>
+  <li><strong>J.D. Douglas</strong> — Suicide statistics are social constructions; they only tell us about coroners' decisions to label deaths as suicides. Qualitative case studies, not quantitative comparisons, are needed. Different cultures give suicide different meanings — Eskimo altruistic suicide vs. businessman's anomic suicide are fundamentally different acts.</li>
+  <li><strong>Atkinson</strong> — Coroners use a common-sense theory of suicide (documentary method). They look for suicide notes; drowning and hanging are more likely to be labelled suicide; road deaths are rarely so labelled. Statistics therefore reflect classification practices, not social facts.</li>
+  <li><strong>Gibbs & Martin</strong> — No adequate operational definition of social integration. Durkheim's reference to "suicidal currents" is unscientific — they cannot be observed or measured, making the theory unfalsifiable (pseudo-science).</li>
+  <li><strong>Types not mutually exclusive</strong> — A single suicide may combine egoistic, anomic, and other elements simultaneously.</li>
+</ul>
+
+<h3>Criticism of Religion</h3>
+<ul>
+  <li>He studied only one form of totemism (Arunta) — cannot generalise to all world religions.</li>
+  <li>Evans-Pritchard — The Arunta data he used was itself unreliable (based on secondary sources).</li>
+  <li>Marx — Religion is "the opium of the people" — an ideology that legitimises class exploitation. Durkheim's functional view ignores religion's role in reproducing social inequality.</li>
+  <li>Weber — Religion can be a force for social change (Protestant Ethic), not just social cohesion — contradicting Durkheim's purely integrative view.</li>
+</ul>
+
+<h3>General Criticisms</h3>
+<ul>
+  <li><strong>Conservative bias</strong> — Durkheim's focus on order, consensus, and solidarity led him to treat conflict and deviance as temporary "pathologies" rather than inherent features of social structure.</li>
+  <li><strong>Teleology</strong> — His functionalist explanations assume that institutions exist <em>because</em> they serve a function — but this cannot explain how or why they came to exist.</li>
+  <li><strong>Neglect of agency</strong> — Over-emphasis on social structures and collective forces at the expense of individual agency, creativity, and resistance.</li>
+  <li><strong>Post-Modernists</strong> — Reject Durkheim's search for universal laws of social behaviour as a grand narrative incompatible with the diversity and complexity of post-modern society.</li>
+</ul>
+
+`,
   'sociology-the-discipline': '',
   'sociology-as-science': '',
   'research-methods': '',
-  'emile-durkheim': '',
   'max-weber': '',
   'talcott-parsons': '',
   'robert-merton': '',
