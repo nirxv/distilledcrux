@@ -12,11 +12,12 @@ const SUBJECT_LABEL: Record<string, string> = {
 };
 
 const TOOLS = [
-  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — get marks, section-wise feedback and a model answer.', href: '/evaluate', badge: null },
-  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — structured answers with thinkers and exam-ready language.', href: '/chat', badge: null },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free' },
-  { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: '/sociology/pyqs', badge: 'Free' },
-  { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+. See what actually works.', href: '/toppers', badge: 'Premium' },
+  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
+  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
+  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
+  { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: '/sociology/pyqs', badge: 'Free', icon: 'pyq' },
+  { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+.', href: '/toppers', badge: 'Premium', icon: 'topper' },
+  { num: '06', label: 'Prelims Practice', desc: 'MCQs with UPSC-standard scoring — sharpen your Prelims game.', href: '/prelims', badge: 'Free', icon: 'prelims' },
 ];
 
 interface Stats {
@@ -85,38 +86,53 @@ const CSS = `
     border-bottom: 1px solid var(--border);
   }
   .db-tools-label::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--text3); }
-  .db-tool-row {
-    display: flex; align-items: flex-start; gap: 1.5rem;
-    padding: 1.5rem 2rem;
+
+  /* Card grid */
+  .db-tool-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+  .db-tool-card {
+    padding: 1.5rem;
     border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     text-decoration: none;
     background: var(--bg);
     transition: background 0.15s;
     position: relative;
+    display: flex; flex-direction: column; gap: 0.9rem;
   }
-  .db-tool-row:last-child { border-bottom: none; }
-  .db-tool-row:hover { background: var(--bg2); }
-  .db-tool-num {
-    font-family: var(--font-mono); font-size: 0.62rem;
-    color: var(--text3); letter-spacing: 0.06em;
-    padding-top: 3px; flex-shrink: 0; width: 20px;
+  .db-tool-card:nth-child(even) { border-right: none; }
+  .db-tool-card:nth-last-child(-n+2) { border-bottom: none; }
+  .db-tool-card:hover { background: var(--bg2); }
+  .db-tool-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--bg3); border: 1px solid var(--border2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text3); flex-shrink: 0;
   }
+  .db-tool-card:hover .db-tool-icon { color: var(--text2); border-color: var(--border3); }
   .db-tool-label {
-    font-family: var(--font-body); font-size: 0.92rem;
-    font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.01em;
+    font-family: var(--font-body); font-size: 0.9rem;
+    font-weight: 700; color: var(--text); margin-bottom: 0.2rem; letter-spacing: -0.01em;
   }
   .db-tool-desc {
-    font-family: var(--font-ui); font-size: 0.78rem;
+    font-family: var(--font-ui); font-size: 0.76rem;
     color: var(--text3); line-height: 1.6;
   }
   .db-tool-badge {
-    position: absolute; top: 1.5rem; right: 2rem;
+    position: absolute; top: 1.25rem; right: 1.25rem;
     font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
     letter-spacing: 0.08em; text-transform: uppercase;
     padding: 2px 8px; border-radius: 4px;
   }
   .db-tool-badge.free { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.22); }
   .db-tool-badge.premium { background: rgba(232,184,109,0.1); color: #e8b86d; border: 1px solid rgba(232,184,109,0.22); }
+  .db-tool-arrow {
+    margin-top: auto; font-family: var(--font-ui); font-size: 0.72rem;
+    color: var(--text3); transition: color 0.15s, gap 0.15s;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .db-tool-card:hover .db-tool-arrow { color: var(--text2); gap: 7px; }
 
   /* ── Sidebar (right col) ── */
   .db-sidebar { animation: fadeUp 0.4s ease; }
@@ -220,11 +236,61 @@ const CSS = `
   }
   @media (max-width: 580px) {
     .db-header { padding-top: 80px; }
-    .db-tool-row { padding: 1.25rem 1.25rem; }
-    .db-tool-badge { top: 1.25rem; right: 1.25rem; }
+    .db-tool-grid { grid-template-columns: 1fr; }
+    .db-tool-card { border-right: none !important; }
+    .db-tool-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+    .db-tool-card:last-child { border-bottom: none; }
     .db-footer-cta { padding: 2.5rem 1.25rem 4rem; }
   }
 `;
+
+function ToolIcon({ icon }: { icon: string }) {
+  switch (icon) {
+    case 'evaluate': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="2" y="2" width="14" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+    case 'chat': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M15 3H3a1 1 0 00-1 1v8a1 1 0 001 1h2.5l2.5 3 2.5-3H15a1 1 0 001-1V4a1 1 0 00-1-1z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+        <path d="M6 7.5h6M6 10.5h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    )
+    case 'notes': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="3" y="2" width="12" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M6 6h6M6 9h6M6 12h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    )
+    case 'pyq': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M9 5.5v.01M9 8c0-1 1.5-1.5 1.5-3a1.5 1.5 0 10-3 0" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+        <circle cx="9" cy="12.5" r="0.75" fill="currentColor"/>
+      </svg>
+    )
+    case 'topper': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2l1.8 3.6L15 6.3l-3 2.9.7 4.1L9 11.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L9 2z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+      </svg>
+    )
+    case 'prelims': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="2" y="3" width="14" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
+        <circle cx="5.5" cy="7" r="1" fill="currentColor"/>
+        <circle cx="5.5" cy="11" r="1" fill="currentColor"/>
+        <path d="M8 7h5M8 11h5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    )
+    default: return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.3"/>
+      </svg>
+    )
+  }
+}
 
 export default function Dashboard() {
   const router = useRouter();
@@ -294,20 +360,25 @@ export default function Dashboard() {
           {/* Tools */}
           <div className="db-tools">
             <div className="db-tools-label">Your Tools</div>
-            {TOOLS.map((tool) => (
-              <Link key={tool.label} href={tool.href} className="db-tool-row">
-                <span className="db-tool-num">{tool.num}</span>
-                <div>
-                  <div className="db-tool-label">{tool.label}</div>
-                  <div className="db-tool-desc">{tool.desc}</div>
-                </div>
-                {tool.badge && (
-                  <span className={`db-tool-badge ${tool.badge === 'Free' ? 'free' : 'premium'}`}>
-                    {tool.badge}
-                  </span>
-                )}
-              </Link>
-            ))}
+            <div className="db-tool-grid">
+              {TOOLS.map((tool) => (
+                <Link key={tool.label} href={tool.href} className="db-tool-card">
+                  {tool.badge && (
+                    <span className={`db-tool-badge ${tool.badge === 'Free' ? 'free' : 'premium'}`}>
+                      {tool.badge}
+                    </span>
+                  )}
+                  <div className="db-tool-icon">
+                    <ToolIcon icon={tool.icon} />
+                  </div>
+                  <div>
+                    <div className="db-tool-label">{tool.label}</div>
+                    <div className="db-tool-desc">{tool.desc}</div>
+                  </div>
+                  <div className="db-tool-arrow">Open →</div>
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Sidebar */}

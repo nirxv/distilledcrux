@@ -233,9 +233,9 @@ const CSS = `
     color: var(--text3); margin-bottom: 0.75rem;
   }
   .lp-price-amount {
-    font-family: var(--font-body); font-size: 2.25rem;
+    font-family: var(--font-body); font-size: 2rem;
     font-weight: 700; letter-spacing: -0.04em;
-    color: var(--text); line-height: 1; margin-bottom: 0.3rem;
+    color: var(--text); line-height: 1; margin-bottom: 0;
   }
   .lp-price-period { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-bottom: 1rem; }
   .lp-price-desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text2); line-height: 1.5; }
@@ -444,7 +444,7 @@ export default function Home() {
                   </div>
                 )}
                 <div className="lp-price-plan">{p.label}</div>
-                <div style={{ display:"flex", alignItems:"baseline", gap:6 }}><div className="lp-price-amount">{p.price}</div>
+                <div style={{ display:"flex", alignItems:"center", gap:8 }}><div className="lp-price-amount">{p.price}</div>
                 <div className="lp-price-period">{p.period}</div></div>
                 <div className="lp-price-desc">{p.desc}</div>
               </div>
