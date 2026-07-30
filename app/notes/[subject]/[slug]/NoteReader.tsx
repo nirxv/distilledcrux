@@ -6,6 +6,23 @@ import { auth, googleProvider } from '@/lib/firebase';
 import { onAuthStateChanged, signInWithPopup, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 
+// ── Scroll-direction hook ────────────────────────────────────
+function useScrollDirection() {
+  const [visible, setVisible] = useState(true);
+  const lastY = useRef(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y < 80) { setVisible(true); lastY.current = y; return; }
+      setVisible(y < lastY.current);
+      lastY.current = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return visible;
+}
+
 // ── Inject IDs into headings for TOC ────────────────────────
 function injectHeadingIds(html: string): string {
   let h2count = 0;
@@ -225,6 +242,7 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
   const note = getNoteBySlug(slug);
   const noteContentRef = useRef<HTMLDivElement>(null);
   const noteSearch = useNoteSearch(noteContentRef);
+  const headerVisible = useScrollDirection();
 
   const [highlights, setHighlights] = useState<Highlight[]>([]);
   const [selectedColor, setSelectedColor] = useState<'yellow'|'green'|'red'|'blue'>('yellow');
@@ -336,7 +354,7 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
       `}</style>
 
       {/* ── Header ── */}
-      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)' }}>
+      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: headerVisible ? 60 : -200, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)', transition: 'top 0.28s cubic-bezier(0.4,0,0.2,1)', opacity: headerVisible ? 1 : 0 }}>
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
           <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
