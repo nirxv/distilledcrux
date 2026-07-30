@@ -220,8 +220,7 @@ function ChatContent() {
   }, []);
 
   // Blank screen while Firebase resolves auth state
-  if (!authChecked) return null;
-
+  // (moved below all hooks to comply with Rules of Hooks)
   useEffect(() => {
     const last = messages[messages.length - 1];
     if (loading && last?.role === 'assistant') {
@@ -286,6 +285,9 @@ function ChatContent() {
     });
     if (id === chatId) startNewChat();
   }, [chatId, startNewChat]);
+
+  // All hooks above — safe to early-return now
+  if (!authChecked) return null;
 
   const sendMessage = async (text?: string) => {
     const q = text || input;
