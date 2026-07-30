@@ -2,10 +2,8 @@ export const maxDuration = 60;
 
 import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@/lib/supabase";
-import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
 
-// ── Legacy SYSTEM_PROMPT kept only as fallback reference — DO NOT USE DIRECTLY ──
-// All prompt assembly now goes through assemblePrompt() in lib/subjects/index.ts
+
 const SYSTEM_PROMPT = `You are a UPSC History Optional evaluator with deep knowledge of historiography, argument structure, evidence, and exam craft. Read the answer as it actually is.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -425,10 +423,9 @@ Total model answer length: 10M~200 words, 15M~300 words, 20M~400 words.`;
 
 
 
-const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB to accommodate PDFs
+const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const MAX_FILES = 10;
-const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
-const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, 'application/pdf'];
+const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
 
 export async function POST(req: NextRequest) {
   const token = req.headers.get("x-user-token") ?? "";
@@ -490,13 +487,6 @@ export async function POST(req: NextRequest) {
     const lang = (formData.get("lang") as string) || "en";
     const marks = formData.get("marks") as string;
     const extractedText = (formData.get("extractedText") as string) || "";
-    const subject = (formData.get("subject") as string) || "history";
-
-    // ── Resolve subject config + assemble final system prompt ──────────────
-    const subjectConfig = getSubjectConfig(subject);
-    // RAG context is empty string until the ragTask runs below.
-    // assemblePrompt() is called again after ragTask with the real ragContext.
-    const rosterStr = buildRosterString(subjectConfig.thinkerRoster);
 
     if (!question || !marks) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -511,31 +501,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Too many files (max ${MAX_FILES})` }, { status: 400 });
     for (const file of files) {
       if (file.size > MAX_FILE_SIZE)
-        return NextResponse.json({ error: "File too large (max 20MB)" }, { status: 400 });
+        return NextResponse.json({ error: "File too large (max 5MB each)" }, { status: 400 });
       if (!ALLOWED_TYPES.includes(file.type))
         return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
     }
 
-    // Build image contents — handle PDF by rasterizing to JPEG pages first
+    // Build image contents directly from uploaded files
     const imageContents: { type: "image_url"; image_url: { url: string } }[] = [];
     for (const imgFile of files) {
-      if (imgFile.type === 'application/pdf') {
-        // Rasterize PDF → JPEG pages
-        const { rasterizePdf } = await import('@/lib/rasterizePdf');
-        const pdfBuffer = Buffer.from(await imgFile.arrayBuffer());
-        const pages = await rasterizePdf(pdfBuffer, 150);
-        for (const page of pages.slice(0, MAX_FILES)) {
-          imageContents.push({ type: "image_url" as const, image_url: { url: `data:${page.mimeType};base64,${page.base64}` } });
-        }
-      } else {
-        const buffer = Buffer.from(await imgFile.arrayBuffer());
-        const base64 = buffer.toString("base64");
-        const mime = imgFile.type || "image/jpeg";
-        imageContents.push({ type: "image_url" as const, image_url: { url: `data:${mime};base64,${base64}` } });
-      }
+      const buffer = Buffer.from(await imgFile.arrayBuffer());
+      const base64 = buffer.toString("base64");
+      const mime = imgFile.type || "image/jpeg";
+      imageContents.push({ type: "image_url" as const, image_url: { url: `data:${mime};base64,${base64}` } });
     }
     if (imageContents.length === 0 && !extractedText) {
-      return NextResponse.json({ error: "No images or PDF provided" }, { status: 400 });
+      return NextResponse.json({ error: "No images provided" }, { status: 400 });
     }
 
     // ── Helper: Groq fetch with fallback key ─────────────────────
@@ -599,10 +579,10 @@ export async function POST(req: NextRequest) {
       const refRes = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: assemblePrompt(subjectConfig.systemPromptTemplate, rosterStr, "", subjectConfig.label, lang) },
+          { role: "system", content: SYSTEM_PROMPT + (lang === "hi" ? "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi." : "") },
           {
             role: "user",
-            content: `Generate a strong internal reference answer for this UPSC ${subjectConfig.label} question. This will be used only to calibrate evaluation — it will NOT be shown to the student.
+            content: `Generate a strong internal reference answer for this UPSC History Optional question. This will be used only to calibrate evaluation — it will NOT be shown to the student.
 
 Question: ${question} (${marks} marks)
 
@@ -721,25 +701,17 @@ Go page by page. Do not rush. Every word matters.`;
         })()
       : Promise.resolve(finalTranscript);
 
-    // RAG task — subject-aware: only runs when config.rag.enabled = true
+    // RAG task (always runs in parallel)
     const ragTask = (async () => {
-      if (!subjectConfig.rag?.enabled || !subjectConfig.rag.namespace) {
-        return ''; // RAG not yet set up for this subject
-      }
       try {
         const ragRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/rag-search`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            query: question,
-            namespace: subjectConfig.rag.namespace,
-            topK: subjectConfig.rag.topK,
-            scoreThreshold: subjectConfig.rag.scoreThreshold,
-          }),
+          body: JSON.stringify({ query: question }),
         });
         const ragData = await ragRes.json();
         const ctx = ragData.context || '';
-        if (ctx) console.log(`RAG context fetched [${subjectConfig.rag.namespace}], length:`, ctx.length);
+        if (ctx) console.log('RAG context fetched, length:', ctx.length);
         return ctx;
       } catch (ragErr) {
         console.log('RAG fetch failed (non-fatal):', ragErr);
@@ -749,15 +721,6 @@ Go page by page. Do not rush. Every word matters.`;
 
     // Run both in parallel — saves 3-5s
     const [ocrResult, ragContext] = await Promise.all([ocrTask, ragTask]);
-
-    // ── Assembled system prompt — uses real ragContext now ─────────────────
-    const ASSEMBLED_PROMPT = assemblePrompt(
-      subjectConfig.systemPromptTemplate,
-      rosterStr,
-      ragContext,
-      subjectConfig.label,
-      lang,
-    );
     if (ocrResult) finalTranscript = ocrResult;
 
         // ── PASS 1: Chain-of-thought reasoning ─────────────────────
@@ -766,7 +729,7 @@ Go page by page. Do not rush. Every word matters.`;
     const concMax  = marks === "10" ? "1.5" : marks === "15" ? "2" : "3";
     const presMax  = marks === "10" ? "1.5" : "3";
 
-    const cotPrompt = `Paper: ${subjectConfig.label} (UPSC Civil Services Mains)
+    const cotPrompt = `Paper: History Optional (UPSC Civil Services Mains)
 ${ragContext ? `REFERENCE MATERIAL FROM BOOKS:
 ${ragContext}
 
@@ -883,7 +846,7 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
     const cotHaikuRes = await anthropicClient.messages.create({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 2400,
-      system: ASSEMBLED_PROMPT,
+      system: SYSTEM_PROMPT + (lang === "hi" ? "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi." : ""),
       messages: [
         {
           role: "user",
@@ -922,14 +885,13 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
     const response = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: ASSEMBLED_PROMPT },
+          { role: "system", content: SYSTEM_PROMPT + (lang === "hi" ? "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi." : "") },
           { role: "user", content: cotPrompt },
           { role: "assistant", content: cotReasoning },
           { role: "user", content: jsonPrompt },
         ],
         temperature: 0.1,
         max_tokens: 2500,
-        response_format: { type: "json_object" },
     });
 
     let evaluation: Record<string, unknown> | null = null;
@@ -1065,12 +1027,11 @@ Be brutally specific. Name exactly which historians were missing. Quote exactly 
       const pass3Res = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: ASSEMBLED_PROMPT },
+          { role: "system", content: SYSTEM_PROMPT + (lang === "hi" ? "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi." : "") },
           { role: "user", content: pass3Prompt },
         ],
         temperature: 0.2,
         max_tokens: 2000,
-        response_format: { type: "json_object" },
       });
 
       if (pass3Res.ok) {
@@ -1114,13 +1075,12 @@ RULES:
           const pass4Res = await callWithFallback({
             model: "openai/gpt-oss-120b",
             messages: [
-              { role: "system", content: ASSEMBLED_PROMPT },
+              { role: "system", content: SYSTEM_PROMPT + (lang === "hi" ? "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi." : "") },
               { role: "user", content: pass4Prompt },
             ],
             temperature: 0.3,
             max_tokens: 4500,
-            response_format: { type: "json_object" },
-          });
+              });
 
           if (pass4Res.ok) {
             const pass4Data = await pass4Res.json();
