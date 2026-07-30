@@ -288,14 +288,12 @@ export async function POST(req: NextRequest) {
   // Usage check
   if (!isOwner && !isPremium) {
     let used = 0;
-    if (token) {
+    if (firebaseUid) {
       try {
-        const { adminAuth: auth2 } = await import('@/lib/firebaseAdmin');
-        const dec = await auth2.verifyIdToken(token);
         const { data: byUid } = await supabase
           .from('usage_tracking')
           .select('chat_count')
-          .eq('firebase_uid', dec.uid)
+          .eq('firebase_uid', firebaseUid)
           .single();
         used = Math.max(used, byUid?.chat_count ?? 0);
       } catch { /* ignore */ }

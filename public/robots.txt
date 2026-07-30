@@ -2,7 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /dashboard/
-Disallow: /(auth)/
+Disallow: /chat/
+Disallow: /onboarding/
 Disallow: /admin/
 
-Sitemap: https://preppandit.com/sitemap.xml
+Sitemap: https://distilledcrux.com/sitemap.xml

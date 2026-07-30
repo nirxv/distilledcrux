@@ -13,7 +13,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https:",
       "connect-src 'self' https://api.anthropic.com https://*.supabase.co https://www.google-analytics.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com",
-      "frame-src 'self' https://preppandit-9eb75.firebaseapp.com https://accounts.google.com",
+      "frame-src 'self' https://*.firebaseapp.com https://accounts.google.com",
       "base-uri 'self'",
       "form-action 'self'",
     ].join('; '),
