@@ -14,6 +14,7 @@ export default function Navbar() {
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navCollapsed, setNavCollapsed] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const isChat = pathname === '/chat';
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -24,6 +25,13 @@ export default function Navbar() {
       setLoading(false);
     });
     return () => unsubscribe();
+  }, []);
+
+  // Scroll listener
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Load saved theme
