@@ -1099,10 +1099,300 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
+  'talcott-parsons': `
+<h2>Intellectual Background</h2>
+
+<p>Talcott Parsons (1902–1979) dominated American sociology for nearly three decades. His central question — shared with Durkheim — was: <strong>"How is social order possible?"</strong> If individuals are self-interested and free-willing, what holds society together?</p>
+
+<p>Parsons' answer: <strong>value consensus</strong> — shared values internalised through socialisation. Society is held together not by force or material interest, but by a moral agreement on ultimate ends.</p>
+
+<h3>His Grand Project</h3>
+<p>Parsons attempted a synthesis of:</p>
+<ul>
+  <li><strong>Weber's action theory</strong> (micro — subjective meaning, voluntarism)</li>
+  <li><strong>Durkheim's structural functionalism</strong> (macro — social facts, collective values)</li>
+  <li><strong>Utilitarianism and Positivism</strong></li>
+</ul>
+<p>He called this the <strong>Voluntaristic Theory of Action</strong>. Micro and macro were not opposites — they were two levels of the same social system.</p>
+
+<h3>Parsons vs Weber vs Durkheim</h3>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Durkheim</th>
+    <th>Weber</th>
+    <th>Parsons</th>
+  </tr>
+  <tr>
+    <td>Starting point</td>
+    <td>Social facts (macro)</td>
+    <td>Social action (micro)</td>
+    <td>Both — Unit Act embedded in Social System</td>
+  </tr>
+  <tr>
+    <td>Source of order</td>
+    <td>Collective conscience, shared norms</td>
+    <td>Legitimate authority, ideal types</td>
+    <td>Value consensus + socialisation + AGIL</td>
+  </tr>
+  <tr>
+    <td>Individual</td>
+    <td>Constrained by social facts</td>
+    <td>Conscious agent with subjective meaning</td>
+    <td>Voluntaristic — free but normatively constrained</td>
+  </tr>
+  <tr>
+    <td>View of society</td>
+    <td>Organic analogy — each institution has function</td>
+    <td>No organic analogy — historical and comparative</td>
+    <td>Social system — interdependent subsystems in equilibrium</td>
+  </tr>
+</table>
+
+<h2>Voluntaristic Theory of Action</h2>
+<p><strong>Book:</strong> <em>The Structure of Social Action</em> (1937)</p>
+
+<p>The basic unit of sociological analysis for Parsons is the <strong>Unit Act</strong>. Every unit act contains four elements:</p>
+<ul>
+  <li><strong>An agent/actor</strong> — conscious, capable of choices.</li>
+  <li><strong>An end</strong> — a future state of affairs the actor is aiming at.</li>
+  <li><strong>A situation</strong> — consisting of conditions (things the actor cannot control) and means (things they can use/change).</li>
+  <li><strong>A normative orientation</strong> — norms and values that guide the selection of means and ends.</li>
+</ul>
+
+<p>Action is <strong>voluntaristic</strong> — the actor has real choices. But choices are constrained by: situational conditions (geography, resources, time, capability) and normative conditions (values, norms, shared cultural expectations).</p>
+
+<blockquote>"Society supplies ultimate values to social actors and provides actors with a normative set of rules for concrete behaviour."</blockquote>
+
+<p>Parsons differs from Weber: social action does not occur in isolation but always within a <strong>constellation of actions</strong> that together create and constitute the social system. Unit acts aggregated = social system.</p>
+
+<h3>How Parsons Builds on Earlier Thinkers</h3>
+<ul>
+  <li><strong>From Weber</strong> — Subjective meaning and verstehen: analysis "from the point of view of the actor."</li>
+  <li><strong>From Durkheim</strong> — Normative orientation: "actors work within a framework of values." Socialisation as the key mechanism of order.</li>
+  <li><strong>Departure</strong> — Parsons ignores Marxian conflict approaches entirely; prioritises consensus over contradiction.</li>
+</ul>
+
+<h2>Pattern Variables</h2>
+<p><strong>Book:</strong> <em>The Social System</em> (1951)</p>
+
+<p>In every social situation, the actor faces a <strong>dilemma of orientation</strong> — a binary choice between two opposed ways of orienting action. Parsons constructed five such dilemmas, called <strong>Pattern Variables (PV)</strong>.</p>
+
+<p>PVs serve as <strong>ideal types</strong> to classify: individual social action, role expectations within institutions, and the character of entire societies (traditional vs modern).</p>
+
+<table>
+  <tr>
+    <th>Dilemma</th>
+    <th>PV-A (Traditional/Expressive)</th>
+    <th>PV-B (Modern/Instrumental)</th>
+  </tr>
+  <tr>
+    <td><strong>Ascription vs Achievement</strong><br><em>(Range of treatment of actor)</em></td>
+    <td><strong>Ascription</strong> — define people by birth, sex, caste, race, age</td>
+    <td><strong>Achievement</strong> — define people by ability, qualifications, accomplishments</td>
+  </tr>
+  <tr>
+    <td><strong>Diffuseness vs Specificity</strong><br><em>(Range of obligations)</em></td>
+    <td><strong>Diffuseness</strong> — enter relationships to satisfy a wide range of needs (mother-child, close friends)</td>
+    <td><strong>Specificity</strong> — enter relationships to satisfy specific, limited needs (shopkeeper-customer, doctor-patient)</td>
+  </tr>
+  <tr>
+    <td><strong>Particularism vs Universalism</strong><br><em>(Range of standards)</em></td>
+    <td><strong>Particularism</strong> — apply different standards to different people based on personal relationship (teacher favouring own child)</td>
+    <td><strong>Universalism</strong> — apply same impersonal standards to everyone regardless of personal ties (bureaucracy, law)</td>
+  </tr>
+  <tr>
+    <td><strong>Affectivity vs Affective Neutrality</strong><br><em>(Range of emotion)</em></td>
+    <td><strong>Affectivity</strong> — seek immediate emotional gratification; prioritise love, warmth, pleasure</td>
+    <td><strong>Affective Neutrality</strong> — defer gratification; maintain emotional detachment in role performance (soldier, surgeon)</td>
+  </tr>
+  <tr>
+    <td><strong>Collective vs Self Orientation</strong><br><em>(Range of orientation)</em></td>
+    <td><strong>Collective Orientation</strong> — subordinate individual interest to group interest (altruism, wartime sacrifice)</td>
+    <td><strong>Self Orientation</strong> — prioritise individual interest, personal gain, competition</td>
+  </tr>
+</table>
+
+<h3>PVs Applied to Institutions</h3>
+<table>
+  <tr>
+    <th>Institution</th>
+    <th>Dominant PVs</th>
+  </tr>
+  <tr>
+    <td><strong>Family</strong></td>
+    <td>Affectivity, Diffuseness, Particularism, Ascription, Collective Orientation</td>
+  </tr>
+  <tr>
+    <td><strong>Bureaucracy / Economy</strong></td>
+    <td>Affective Neutrality, Specificity, Universalism, Achievement, Self Orientation</td>
+  </tr>
+  <tr>
+    <td><strong>Hospital (Doctor)</strong></td>
+    <td>Universalism (all patients equal), Specificity (limited role), Affective Neutrality (clinical detachment), Achievement (qualified), Collective Orientation (welfare of patient)</td>
+  </tr>
+</table>
+
+<h3>Significance of Pattern Variables</h3>
+<ul>
+  <li>PVs define the nature of <strong>role performance and role expectation</strong> in the social system.</li>
+  <li>They show the <strong>direction of social change</strong> — modernisation involves a shift from PV-A to PV-B.</li>
+  <li>They explain why the <strong>caste system</strong> impeded Indian development — ascription placed people in roles regardless of ability, preventing efficient filling of important positions.</li>
+  <li>Parsons accepted that PV-A will never fully disappear. The family retains expressive, affective, particularistic norms because children need emotional security for successful socialisation.</li>
+  <li><strong>Cognitive consonance with AGIL</strong>: Economy (A) → universalism, achievement, specificity, affective neutrality. Family (L) → particularism, ascription, diffuseness, affectivity.</li>
+</ul>
+
+<h2>Social System and AGIL</h2>
+<p><strong>Book:</strong> <em>The Social System</em> (1951); <em>Economy and Society</em> (1956)</p>
+
+<p>A <strong>social system</strong> = plurality of actors interacting according to shared cultural norms and meanings. Any unit — a family, a university, a market, a nation — can be a social system.</p>
+
+<p>Systems have three properties: interdependent parts, tendency toward order/equilibrium, and self-maintenance mechanisms.</p>
+
+<h3>Four Functional Prerequisites — AGIL</h3>
+<p>Every social system must fulfil four functional prerequisites to survive:</p>
+
+<table>
+  <tr>
+    <th>Function</th>
+    <th>What it addresses</th>
+    <th>Subsystem (Society)</th>
+    <th>Subsystem (Family)</th>
+  </tr>
+  <tr>
+    <td><strong>A — Adaptation</strong></td>
+    <td>Securing sufficient resources from the environment; producing goods and services for survival</td>
+    <td>Economy (agriculture, industry, services, firms)</td>
+    <td>Breadwinner earns income to support family</td>
+  </tr>
+  <tr>
+    <td><strong>G — Goal Attainment</strong></td>
+    <td>Setting and prioritising collective goals; mobilising actors and resources to achieve them</td>
+    <td>Political system (state, government, parties)</td>
+    <td>Parents set family goals — education, security, wellbeing</td>
+  </tr>
+  <tr>
+    <td><strong>I — Integration</strong></td>
+    <td>Coordinating and regulating relationships among subsystems; maintaining solidarity; resolving conflict</td>
+    <td>Societal community (law, courts, religion, media, education)</td>
+    <td>Family norms, rituals, celebrations that bind members</td>
+  </tr>
+  <tr>
+    <td><strong>L — Latency (Pattern Maintenance)</strong></td>
+    <td>Transmitting cultural values; managing internal tensions; socialising members into shared norms</td>
+    <td>Cultural system (family, school, religion — Fiduciary institutions)</td>
+    <td>Parents socialise children into values, love, emotional security</td>
+  </tr>
+</table>
+
+<h3>Functional Sectorisation — AGIL Within AGIL</h3>
+<p>Each subsystem itself has its own AGIL requirements. The economy (A) also has Adaptation (raw material procurement), Goal Attainment (profit), Integration (managing worker relations), and Latency (corporate culture and values). This nested quality is called <strong>Functional Sectorisation</strong>.</p>
+
+<blockquote>A tribal society also has AGIL: Adaptation (hunting), Goal Attainment (deciding migration), Integration (common rituals and rules), Latency (passing on hunting skills and beliefs to the young). Any social system that develops institutions capable of performing all four AGIL functions has an evolutionary advantage over rivals.</blockquote>
+
+<h3>Parsons on the Family</h3>
+<p>In traditional societies, the family performed all AGIL functions — it was producer, consumer, reproducer, socialiser, and political unit. As DOL developed, specialised institutions (economy, schools, courts) took over many functions. Parsons saw this as <strong>functional differentiation</strong> — not decline of the family but specialisation.</p>
+
+<p>The modern nuclear family retains two irreducible functions:</p>
+<ul>
+  <li><strong>Socialisation of children</strong> (L) — transmitting values and norms of society.</li>
+  <li><strong>Stabilisation of adult personalities</strong> (I) — providing emotional security, affection, and belonging to adults in an otherwise impersonal, achievement-oriented world.</li>
+</ul>
+
+<h2>Social Order, Equilibrium, and Social Change</h2>
+
+<h3>How Order is Achieved</h3>
+<p>Parsons' mechanism of order works at three levels:</p>
+<ul>
+  <li><strong>Socialisation</strong> — the primary mechanism. Children internalise society's values through family and school, becoming conformists by conviction, not coercion. <em>"Actors are usually passive recipients of socialisation."</em></li>
+  <li><strong>Social control</strong> — informal (gossip, snigger, ostracism) and formal (police, courts, prisons, mental institutions). These come into play when socialisation fails.</li>
+  <li><strong>Pattern Variables</strong> — guiding role expectations in each institutional sphere, ensuring actors behave appropriately in each context.</li>
+</ul>
+
+<h3>Moving Equilibrium</h3>
+<p>Parsons did not claim society is static. Change is constant, but it tends to be <strong>orderly and evolutionary</strong> — not revolutionary. When strain arises in one part of the system, other parts negotiate with it to reach a <strong>new equilibrium</strong>. This is called <strong>moving equilibrium</strong>.</p>
+
+<p>Sources of strain (factors that disturb equilibrium):</p>
+<ul>
+  <li>Changes in demographic character — migration, intermarriage, shifts in mortality/fertility.</li>
+  <li>Changes in the physical environment — resource depletion, climate change, soil exhaustion.</li>
+  <li>Technological change and new scientific knowledge.</li>
+  <li>New cultural configurations — new religious ideas, integration of religion with science.</li>
+</ul>
+
+<p>Example: Rising Naxalism (strain) → system responds with land reform (policy), education expansion (socialisation), and security forces (social control) → new equilibrium.</p>
+
+<h3>Cybernetic Hierarchy of Control</h3>
+<p>Parsons ordered the AGIL subsystems in a <strong>cybernetic hierarchy</strong>: L → I → G → A (from highest information to highest energy).</p>
+<ul>
+  <li><strong>L (Culture)</strong> — highest in information; regulates and defines all other subsystems. Values and norms set the direction of society.</li>
+  <li><strong>I (Societal community)</strong> — integrates subsystems according to cultural values.</li>
+  <li><strong>G (Polity)</strong> — sets goals within the value framework.</li>
+  <li><strong>A (Economy)</strong> — highest in energy; provides material resources; but takes direction from above.</li>
+</ul>
+<p>This is Parsons' answer to Marx: it is <em>culture and values</em> (L), not the economy (A), that ultimately drives social life. Culture "controls" the economy — the reverse of Marx's base-superstructure model.</p>
+
+<h3>Social Evolution</h3>
+<p>Parsons applied AGIL to social evolution. Societies evolve from simple to complex through:</p>
+<ul>
+  <li><strong>Differentiation</strong> — one unit splits into two, each more specialised. E.g. family → family + school (L differentiates).</li>
+  <li><strong>Adaptive upgrading</strong> — specialised units are more capable than the original. Each new equilibrium is more adaptive than the last.</li>
+  <li><strong>Inclusion</strong> — previously excluded groups are incorporated (e.g. universal suffrage, ending untouchability).</li>
+  <li><strong>Value generalisation</strong> — values become more abstract and inclusive to accommodate greater diversity.</li>
+</ul>
+
+<h2>Contribution of Parsons to Sociology</h2>
+<ul>
+  <li><strong>Grand theory</strong> — first truly systematic attempt to integrate micro (social action) and macro (social system) sociology.</li>
+  <li><strong>AGIL framework</strong> — a versatile analytical tool applied to any social system at any scale.</li>
+  <li><strong>Pattern variables</strong> — operationalised the study of social change and modernisation in comparative sociology.</li>
+  <li><strong>Professions sociology</strong> — Parsons pioneered the sociology of professions, showing how professionals (doctors, lawyers) navigate the tension between universalism and particularism.</li>
+  <li><strong>Family sociology</strong> — highlighted the irreducible functions of the nuclear family in modern society, influencing decades of family research.</li>
+  <li><strong>Structural functionalism</strong> — Parsons is its primary architect; influenced Merton, Smelser, Bellah, and the entire Chicago School tradition.</li>
+</ul>
+
+<h2>Criticisms of Parsons</h2>
+
+<h3>The Problem of Conflict</h3>
+<ul>
+  <li><strong>C. Wright Mills</strong> — Parsons produces "Grand Theory" so abstract it says nothing about real societies, real power, or real conflict. His system is an apology for the status quo. Parsons can't explain why some groups are systematically excluded from power.</li>
+  <li><strong>Ralf Dahrendorf</strong> — Parsons' model suffers from "Utopian" bias: it assumes integration, consensus, and stability. Real societies are characterised by conflict, coercion, and change. Dahrendorf proposed a conflict model as a corrective.</li>
+  <li><strong>Alvin Gouldner</strong> — Parsons' functionalism reflects the ideology of the American welfare state of the 1950s — consensus, managed change, integration. It ignores economic exploitation, racial exclusion, and gender oppression.</li>
+  <li><strong>Marx</strong> — Value consensus is a mystification. What appears to be shared values is in fact ruling-class ideology — false consciousness. The state and legal system serve class interests, not social integration.</li>
+</ul>
+
+<h3>The Problem of Order and Tautology</h3>
+<ul>
+  <li><strong>Teleology</strong> — Parsons explains institutions by their functions: "religion exists because it integrates society." But this cannot explain how or why religion came to exist. It assumes the result (integration) caused the institution — putting the cart before the horse.</li>
+  <li><strong>Tautology</strong> — "Society persists because its parts are functional" and "its parts are functional because society persists." Circular reasoning with no explanatory power.</li>
+  <li><strong>Conservative bias</strong> — By focusing on equilibrium and social order, Parsons treats existing inequalities and power structures as functional necessities. What appears as a social problem may actually be the system working as intended.</li>
+</ul>
+
+<h3>The Problem of the Individual</h3>
+<ul>
+  <li><strong>Wrong image of man (Dennis Wrong)</strong> — Parsons gives an "oversocialised concept of man." Individuals appear as passive products of socialisation — cultural dupes who simply internalise and reproduce whatever values they are given. This denies agency, creativity, resistance, and the capacity to negotiate, reinterpret, or reject social values.</li>
+  <li><strong>Symbolic Interactionists</strong> — People do not simply absorb values; they actively construct meaning in interaction. Parsons ignores the micro-level negotiation of social reality.</li>
+  <li><strong>Phenomenologists (Schutz)</strong> — Social life is constituted through actors' taken-for-granted assumptions and interpretive practices — not the abstract value systems Parsons describes.</li>
+</ul>
+
+<h3>The Problem of Change</h3>
+<ul>
+  <li>Parsons' model best explains continuity and order — it struggles to account for rapid, disruptive, or revolutionary change.</li>
+  <li>His theory of moving equilibrium assumes change is always system-preserving. Revolutionary change that dismantles existing structures (e.g. the French Revolution, decolonisation) does not fit the model.</li>
+  <li><strong>Neo-Marxists</strong> — Gramsci's hegemony, Althusser's ideological state apparatuses — offer richer accounts of how social order is actively produced and contested, not simply given by shared values.</li>
+</ul>
+
+<h3>Empirical Limitations</h3>
+<ul>
+  <li>AGIL cannot be falsified — any institution can be assigned to any AGIL box depending on interpretation.</li>
+  <li>Pattern variables are too rigid — in practice, social action rarely falls cleanly on one side of any PV binary.</li>
+  <li>His evolutionary theory was ethnocentric — equating "modern" with Western industrial society and treating non-Western societies as less developed.</li>
+</ul>
+
+`,
   'sociology-the-discipline': '',
   'sociology-as-science': '',
   'research-methods': '',
-  'talcott-parsons': '',
   'robert-merton': '',
   'george-mead': '',
   'stratification-mobility': '',
