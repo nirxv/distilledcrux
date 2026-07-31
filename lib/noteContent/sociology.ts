@@ -2002,7 +2002,406 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
-  'sociology-the-discipline': '',
+  'sociology-the-discipline': `
+<h2>What is Sociology?</h2>
+
+<p>Sociology is the systematic, scientific study of human society — its structures, institutions, processes, and the relationships between individuals and social groups. The word comes from the Latin <em>socius</em> (companion) and Greek <em>logos</em> (study/reason). It is the youngest of the social sciences, emerging in the 19th century as a response to the disruptions caused by the French Revolution and Industrial Revolution in Europe.</p>
+
+<blockquote>"Sociology emerged as a discipline to understand the challenges and social ills associated with modernity."</blockquote>
+
+<p>As August Comte — who coined the term — put it: sociology has a distinctive ability to discover laws of social life and to develop reforms to patch up problems within the system.</p>
+
+<h2>Emergence of Sociology: Social Changes in Europe</h2>
+
+<p>Sociology did not emerge in a vacuum. It was the product of a series of interconnected intellectual and material upheavals that transformed European society between the 14th and 19th centuries. These can be grouped into three intellectual currents and two material forces.</p>
+
+<h3>A. Intellectual Forces</h3>
+
+<h4>1. Renaissance (1400–1600) — Rebirth of Human-Centred Thought</h4>
+<p>For over a thousand years, the Catholic Church had told Europeans that their earthly lives were inconsequential — they should only worry about salvation. Medieval art, literature, and architecture were all centred on God, Jesus, and the Bible. This domination ended with the Renaissance.</p>
+
+<p>The Renaissance was a period of <strong>artistic, scientific, and cultural rebirth</strong> that shifted attention from God to humanity. It produced:</p>
+<ul>
+  <li><strong>Humanism</strong> — A philosophy that questioned Church teachings and emphasised the significance of human activity, learning, and self-betterment. Rights and responsibilities of individuals mattered more than spiritual destiny.</li>
+  <li><strong>Secularism</strong> — Living and creating laws based on human reason, not religious texts. For the first time, laws were written by humans for humans.</li>
+  <li><strong>Individualism</strong> — Scholars began developing their own ideas, independent of Church authority. Individual expression in art (Leonardo da Vinci's <em>Mona Lisa</em>, Michelangelo's <em>David</em>), anatomy, and literature was celebrated.</li>
+</ul>
+
+<table>
+  <tr>
+    <th>Middle Ages (Before Renaissance)</th>
+    <th>Renaissance (After Humanism)</th>
+  </tr>
+  <tr>
+    <td>Centred around God; restricted individual expression</td>
+    <td>Centred around the Individual; rebirth of individualism</td>
+  </tr>
+  <tr>
+    <td>Humans viewed as sinful; divine agency celebrated</td>
+    <td>Humans as rational beings; dignity of mankind restored</td>
+  </tr>
+  <tr>
+    <td>Art: religious themes — 2D, no emotion, no signature</td>
+    <td>Art: human anatomy, perspective, individuality, artist's signature</td>
+  </tr>
+  <tr>
+    <td>Knowledge from Church scripture (deductive)</td>
+    <td>Knowledge from observation and experiment (inductive — Francis Bacon)</td>
+  </tr>
+</table>
+
+<p>The <strong>Scientific Revolution</strong> emerged within the Renaissance. Nicholas Copernicus challenged the Church's geocentric theory; Galileo Galilei built a telescope to support heliocentrism (and was declared a heretic); Newton demonstrated the universal law of gravitation; Francis Bacon established the inductive, empirical method. Science was showing that the world did not work exactly as the Church explained — and this was foundational for sociology.</p>
+
+<blockquote>René Descartes found no evidence of the soul, emphasising the thinking aspect of human being: "I think, therefore I am." Evidence of thought proves the hypothesis of existence.</blockquote>
+
+<h4>2. Enlightenment (1700–1800) — The Age of Reason</h4>
+<p>An intellectual movement in which thinkers applied <strong>reason</strong> to fix anomalies in governance, economy, and science. Inspired by Newton and Galileo, Enlightenment philosophers believed that just as the universe was governed by natural laws, so was society — and these laws could be discovered by human reason.</p>
+
+<p>Key Enlightenment thinkers and their contributions:</p>
+<ul>
+  <li><strong>Thomas Hobbes</strong> (<em>Leviathan</em>) — Humans in nature are greedy and cruel; life is a state of constant warfare without a strong government. People enter a social contract to give up freedom in exchange for protection. Supported absolutism but rejected divine right.</li>
+  <li><strong>John Locke</strong> — Humans are reasonable and moral; natural rights of life, liberty, and property. People give government power through social contract; if government fails to protect rights, people have a right to revolt.</li>
+  <li><strong>Montesquieu</strong> — Human rights best protected by separation of power into three branches (executive, legislative, judicial). Each branch checks the others — prevents despotism. Influenced the US Constitution.</li>
+  <li><strong>Voltaire</strong> — Freedom of religion, speech, and separation of church and state. <em>"I do not agree with a word you say, but I will defend to the death your right to say it."</em> Religion exploited ignorance and superstition.</li>
+  <li><strong>Rousseau</strong> — Government should be run according to the General Will — always acting in the best interest of the people. Gave France the concept of democracy through <em>The Social Contract</em>.</li>
+  <li><strong>Adam Smith</strong> (<em>Wealth of Nations</em>, 1776) — Laissez-faire free market economy. Self-interested individuals operating in the market produce collective benefit through the "Invisible Hand." Foundation of classical economics and capitalism.</li>
+  <li><strong>Mary Wollstonecraft</strong> (<em>Vindication of the Rights of Woman</em>) — Demanded equal rights for women. Men who opposed the power of kings were hypocritical if they did not oppose men's power over women. Enlightenment must apply to both sexes.</li>
+</ul>
+
+<p>The Enlightenment culminated in the <strong>American Revolution (1776)</strong> and the <strong>French Revolution (1789)</strong>.</p>
+
+<h4>3. Counter-Enlightenment — Conservative Reaction</h4>
+<p>Louis de Bonald and Joseph de Maistre deplored the chaos caused by the French Revolution and yearned for a return to the peace and harmony of the Middle Ages. They emphasised: society has an existence of its own (beyond individuals); traditional institutions (monarchy, patriarchy, church, community) must be preserved; social order is primary.</p>
+
+<p>This conservative reaction provided the ideological basis for <strong>structural functionalism</strong> in sociology. Comte and Durkheim, both disturbed by social disorder, built on this conservative impulse while retaining Enlightenment empiricism.</p>
+
+<h3>B. Material Forces</h3>
+
+<h4>4. French Revolution (1789) — Political Transformation</h4>
+<p>Pre-revolutionary France was stratified into Estates: First Estate (clergy), Second Estate (nobility), Third Estate (commoners — 97% of population). The Third Estate bore all the taxes while the first two paid none. The Revolution overturned this:</p>
+
+<table>
+  <tr>
+    <th>Old French Society</th>
+    <th>New French Society</th>
+  </tr>
+  <tr>
+    <td>Centralisation of power (Absolutism)</td>
+    <td>Decentralisation of power (National Assembly)</td>
+  </tr>
+  <tr>
+    <td>Religion sacrosanct; Church controls culture</td>
+    <td>Secularism; Church subordinate to state</td>
+  </tr>
+  <tr>
+    <td>Nepotism in office appointments</td>
+    <td>Merit system; rational-legal authority</td>
+  </tr>
+  <tr>
+    <td>Feudalism and Estate system</td>
+    <td>Capitalism and Republic</td>
+  </tr>
+  <tr>
+    <td>No freedom for common people</td>
+    <td>Declaration of Rights of Man — liberty, equality, fraternity</td>
+  </tr>
+</table>
+
+<p>The Declaration of the Rights of Man applied to all people irrespective of class — establishing universal citizenship. The Revolution raised the fundamental questions that sociology would grapple with: What holds society together? What causes social change? How should authority be distributed? What is the basis of legitimate power?</p>
+
+<h4>5. Industrial Revolution (Post-1750s) — Economic Transformation</h4>
+<p>At least as important as the political revolution was the Industrial Revolution — a fundamental change in how goods were produced, from human labour to machines. Its consequences became the primary subject matter of sociology:</p>
+
+<ul>
+  <li><strong>Conditions of labour</strong> — Degradation of work; wrenching of work from protective guilds, villages, and families; child labour; long hours; unsafe conditions. Indian handicraftsmen ruined by influx of British machine-made goods.</li>
+  <li><strong>Transformation of property</strong> — Shift from land to capital; landlords replaced by capitalists.</li>
+  <li><strong>Urbanisation</strong> — New industrial cities became "repositories of misery and inhumanity" — traffic, pollution, poverty, overcrowded slums, bad sanitation, emotional deficit, blasé attitude, normlessness, rising crime.</li>
+  <li><strong>Factory system and bureaucracy</strong> — Mass migration, clockwork discipline, products of labour belonging to factory owners, machines dominating work.</li>
+</ul>
+
+<h3>Pre-cursors to Sociology</h3>
+<p>Three fields contributed methodology and theoretical perspective to early sociology:</p>
+<ul>
+  <li><strong>Philosophy of history</strong> — Society progresses through stages from simple to complex. Contributed the notion of development and progress.</li>
+  <li><strong>Biological theories of evolution</strong> — Darwin's ideas dominated early sociological thought. Society evolves like an organism; each part plays a specific function (Comte, Spencer, Durkheim all reflect this).</li>
+  <li><strong>Social surveys</strong> — Application of natural science methods to human affairs. Issues considered natural became social problems that could be studied and redressed through systematic data collection.</li>
+</ul>
+
+<h3>The Founding Figures' Response</h3>
+<ul>
+  <li><strong>Auguste Comte</strong> — Like a conservative, disturbed by anarchy. Argued that intellectual disorder causes social disorder. Only positivism — the scientific study of society — could bring order. Coined the term "sociology." Developed the Law of Three Stages: Theological → Metaphysical → Positive.</li>
+  <li><strong>Emile Durkheim</strong> — Like a conservative, hated social disorder. Industrial strikes, church-state discord, anti-Semitism, rising divorce and suicide rates weakened collective consciousness and caused social pathologies. Devoted his life to studying social order.</li>
+  <li><strong>Karl Marx</strong> — Radical. Concerned with growing economic inequality, exploitation of labour, and death of the creative individual through industrialisation. Work should be self-expression, but capitalism converts it into repression and alienation. Revolution by the working class is the only solution.</li>
+  <li><strong>Max Weber</strong> — Concerned with the rise of rationalisation, bureaucracy, and the "iron cage" of modernity; the role of ideas (Protestantism) in shaping material life; the loss of enchantment in a secular, scientific world.</li>
+</ul>
+
+<blockquote>Peter Wagner: Marx, Weber, and Durkheim all believed that modernity would lead to identical developments worldwide in society, economy, polity, and culture. S.N. Eisenstadt challenged this with his theory of Multiple Modernities — the idea that different societies modernise along different paths, not a single Western model.</blockquote>
+
+<h2>Modernity</h2>
+
+<p>Modernity is both the context that produced sociology and the primary object of sociological analysis. The two are two sides of the same coin.</p>
+
+<table>
+  <tr>
+    <th>Markers of Modernity</th>
+    <th>Unintended Consequences (Dark Side)</th>
+  </tr>
+  <tr>
+    <td><strong>Secularisation</strong> — loss of religious beliefs, institutions, and ideology</td>
+    <td>Fundamentalism, communal tensions, normlessness, materialism</td>
+  </tr>
+  <tr>
+    <td><strong>Nation-states</strong> — world made of separate societies each with a state; rational-legal authority</td>
+    <td>World Wars, hyper-nationalism, authoritarianism, intolerance</td>
+  </tr>
+  <tr>
+    <td><strong>Capitalism</strong> — industrialisation, mass production, economic growth</td>
+    <td>Inequality, alienation, degradation of work, slum formation, Neo-Colonialism</td>
+  </tr>
+  <tr>
+    <td><strong>Progress</strong> — surpassing what came before through wealth, knowledge, technology</td>
+    <td>Relative deprivation (envy: "why do we not have more?"); alienation from self and others</td>
+  </tr>
+  <tr>
+    <td><strong>Science</strong> — mastery over nature, equations replacing gods</td>
+    <td>Global warming, nuclear risk, genetic engineering risks, displacement of communities, marginalisation of non-Western knowledge (Ayurveda, Yoga)</td>
+  </tr>
+  <tr>
+    <td><strong>Individualism</strong> — achieved status over ascribed; freedom to choose identity, marriage, career</td>
+    <td>Suicide rates up to 10x higher in advanced societies; modern people are more likely to kill themselves when they fail</td>
+  </tr>
+  <tr>
+    <td><strong>Democracy</strong> — representation, rights, citizenship</td>
+    <td>Majoritarianism; hegemonic idea of democracy ranking some democracies as "flawed"</td>
+  </tr>
+</table>
+
+<h2>Sociological Imagination</h2>
+
+<p>C. Wright Mills (<em>The Sociological Imagination</em>, 1959) coined this concept. It is the ability to see the social context which shapes individual decision-making and suffering — moving from thinking in terms of individual problems to seeing the larger social structures that produce them.</p>
+
+<ul>
+  <li><strong>Personal trouble</strong> — Any individual suffering or choice concerning the individual.</li>
+  <li><strong>Public issue</strong> — Forces outside personal control affecting many; rooted in social structure.</li>
+</ul>
+
+<blockquote>"Sociological imagination is an awareness of the relationship between individual (Biography) and wider society (History)."</blockquote>
+
+<table>
+  <tr>
+    <th>Personal Trouble</th>
+    <th>Public Issue</th>
+    <th>Sociological Imagination</th>
+  </tr>
+  <tr>
+    <td>1 person's joblessness</td>
+    <td>Unemployment of millions</td>
+    <td>Corporate profit maximisation achieved by laying off employees, downsizing, transferring jobs to low-wage areas — a structural feature of capitalism</td>
+  </tr>
+  <tr>
+    <td>1 person's obesity</td>
+    <td>Obesity epidemic</td>
+    <td>Industrialisation of the food chain since the 1970s producing cheap, calorie-rich, processed food — not individual willpower failure</td>
+  </tr>
+  <tr>
+    <td>A couple's divorce</td>
+    <td>Rising divorce rates</td>
+    <td>Women's empowerment enabling economic independence; reduced dependence on marriage as a survival institution</td>
+  </tr>
+  <tr>
+    <td>1 person's COVID death</td>
+    <td>8 lakh+ deaths</td>
+    <td>Structural absence of health and social security for a section of society; poor working conditions without sanitation. Engels: "Social murder."</td>
+  </tr>
+  <tr>
+    <td>1 person's suicide</td>
+    <td>8 million suicides/year globally</td>
+    <td>Weakened social cohesion due to increased individualism in modern industrial society (Durkheim's egoistic suicide)</td>
+  </tr>
+  <tr>
+    <td>A woman working as housewife</td>
+    <td>Billions working as housewives — is it a "choice"?</td>
+    <td>Gender pay gap, domestic violence, female infanticide, lack of maternity leave — all rooted in patriarchal social structures</td>
+  </tr>
+</table>
+
+<p>Sociological imagination is a tool of <strong>emancipation</strong> — it allows us to identify and question various aspects of society and to change them, rather than passively living within them. Process is bidirectional: larger social forces shape individual lives; individual actions can also affect society.</p>
+
+<h2>Scope of Sociology — Two Schools</h2>
+
+<p>When sociology emerged, it faced the question: what should it study, and how is it different from disciplines already studying similar topics?</p>
+
+<h3>Synthetic School (French/British/American)</h3>
+<p>Comte, Durkheim, Morris Ginsberg — argued that sociology can study everything under the sun. It is the synthesis of all social sciences (<strong>Socio-centrism</strong>).</p>
+<ul>
+  <li><strong>Durkheim's 3 branches</strong> — Social Morphology (population, migration, territory); Social Physiology (economic, political, cultural organisation); General Sociology (theories explaining social life).</li>
+  <li><strong>Ginsberg's 4 branches</strong> — Social Morphology; Social Control (laws, customs, regulations); Social Processes (cooperation, competition, conflict); Social Pathology (poverty, crime, population problems).</li>
+</ul>
+
+<h3>Formalist School (German)</h3>
+<p>Tönnies, Simmel, Von Wiese, Weber — rejected Socio-centrism. Sociology should be <strong>limited</strong> in scope, dealing with problems not studied by any other social science.</p>
+<ul>
+  <li><strong>George Simmel</strong> — Sociology should study the <em>forms</em> of human interaction (conflict/cooperation, subordination/superordination, centralisation/decentralisation). A school, a factory, and a prison look different in content, but share the same sociological form (subordination). This is a uniquely sociological insight.</li>
+  <li><strong>Ferdinand Tönnies</strong> — Sociology should study societies based on the degree of intimacy. Two types: <em>Gemeinschaft</em> (community — based on "we") and <em>Gesellschaft</em> (association — based on "I"). Industrialisation moved society from community to association. E.g. from family to friends.</li>
+  <li><strong>Von Wiese</strong> — Sociology should study fundamental social processes: associative (cooperation, accommodation, assimilation) and disassociative (conflict, competition).</li>
+  <li><strong>Max Weber</strong> — Sociology should study <em>social action</em> only — meaningful action that takes into account the behaviour of others. Pure reflex actions and interactions with inanimate objects are excluded.</li>
+</ul>
+
+<h2>Comparison with Other Social Sciences</h2>
+
+<h3>Sociology and Psychology</h3>
+<table>
+  <tr>
+    <th>Psychology</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Studies internal states of mind — intelligence, memory, reflexes, hopes, fears (A.R. Radcliffe-Brown: "study of mental systems")</td>
+    <td>Studies individual in relation to external social forces — how personality is shaped by family, religion, culture, caste, class (Radcliffe-Brown: "study of social systems")</td>
+  </tr>
+  <tr>
+    <td>Traces personal troubles to personality type or mental pathology. Divorce → depression and frustration</td>
+    <td>Traces personal troubles to larger social structures. Divorce → women's empowerment weakening dependence on marriage</td>
+  </tr>
+  <tr>
+    <td>Suicide: why does this individual commit suicide?</td>
+    <td>Suicide: why do suicide rates vary across groups, religions, nations, and time?</td>
+  </tr>
+  <tr>
+    <td>Freud: personality shaped by biological drives (id, ego, superego)</td>
+    <td>Mead: self shaped by social interaction (I and Me). GH Mead: no self without interaction</td>
+  </tr>
+</table>
+<p>Gerth & Mills: the concept of <em>role</em> bridges the gap between sociology and psychology. Weber's social action theory, phenomenology, and ethnomethodology bring sociology close to psychology — a relationship of "give and take."</p>
+
+<h3>Sociology and History</h3>
+<table>
+  <tr>
+    <th>History</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Emphasises chronology of events and their description</td>
+    <td>Focuses on social history, models, and categories to explain historical events — <em>Historiography</em></td>
+  </tr>
+  <tr>
+    <td>Conventional history: history of kings and battles (narrative of a class)</td>
+    <td>Sociology gives narration of the masses; subaltern history (Ranajit Guha, Ambedkar, Phule)</td>
+  </tr>
+  <tr>
+    <td>Provides raw data and facts</td>
+    <td>Provides perspectives: Marxist interpretation (French Revolution as bourgeois revolution), Revisionist view (Alfred Cobban), Subaltern studies</td>
+  </tr>
+  <tr>
+    <td>Studies differences between events — how Russian Revolution differs from Chinese</td>
+    <td>Studies similarities — looks for patterns. Theda Skocpol: Chinese, Russian, and French revolutions all involved simultaneous state breakdown and peasant rebellion</td>
+  </tr>
+</table>
+<p><em>"What is sociology today is history for tomorrow; history is past sociology and sociology is present history."</em> — Charles Tilly. Philip Abrams: "Sociology is deeply historical by its very nature."</p>
+
+<h3>Sociology and Economics</h3>
+<table>
+  <tr>
+    <th>Economics</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Market as a self-regulating institution detached from society</td>
+    <td>Karl Polanyi — market is <em>embedded</em> in and must be understood as part of the larger social structure</td>
+  </tr>
+  <tr>
+    <td>Homo economicus — rational, self-interested, utility-maximising individual</td>
+    <td>Homo sociologicus — actors are social beings; preferences understood only within relational, institutional, and cultural contexts</td>
+  </tr>
+  <tr>
+    <td>Language is mathematics, modelling, and statistics (Law of Demand)</td>
+    <td>Language includes qualitative analysis. Veblen's conspicuous consumption and status goods clearly <em>violate</em> the Law of Demand</td>
+  </tr>
+  <tr>
+    <td>Productivity outside the home is central</td>
+    <td>Feminist economics: home is the primary unit. Without housework, men could not earn outside. Selma James: Campaign for Wage for Housework (1972)</td>
+  </tr>
+  <tr>
+    <td>Education as human capital investment — you pay, you get returns</td>
+    <td>Education as a social phenomenon — if it were purely an economic return, mass unemployment among graduates would be inexplicable</td>
+  </tr>
+</table>
+
+<h3>Sociology and Social Anthropology</h3>
+<table>
+  <tr>
+    <th>Social Anthropology</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Emerged to study pre-literate, non-modern, "primitive" societies — often seen as exotic, barbaric; used to justify Western superiority. E.g. Radcliffe-Brown on the Andamanese; Evans-Pritchard on the Nuer.</td>
+    <td>Emerged to explain the social issues of the Great Transformation — industrialisation, urbanisation, class conflict</td>
+  </tr>
+  <tr>
+    <td>Studies non-modern, simple societies as wholes</td>
+    <td>Studies modern, complex societies — often focused on specific parts: bureaucracy, religion, caste, or processes like social mobility</td>
+  </tr>
+  <tr>
+    <td>Characterised by long fieldwork and ethnographic research methods</td>
+    <td>Characterised by survey methods, quantitative data, statistics, questionnaires</td>
+  </tr>
+</table>
+<p>Today, the distinction has blurred. Anthropologists study state and globalisation; sociologists study rural and tribal societies. Frazer: <em>"Social anthropology is that branch of sociology which deals with primitive societies."</em> Radcliffe-Brown: social anthropology is a "comparative sociology." Ghurye: sociology must include anthropological courses on comparative culture and social institutions. Andre Beteille: <em>"When an Indian studies a 'tribal' village he is an anthropologist; when he studies a 'nontribal' village he is a sociologist."</em></p>
+
+<h2>Sociology and Common Sense</h2>
+
+<p>Many people claim that sociology is "just common sense." But as Comte argued, society must be studied scientifically to understand and solve its problems. Sociology systematically tests common-sense beliefs against evidence — and repeatedly debunks them.</p>
+
+<table>
+  <tr>
+    <th>Common Sense</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Based on naturalistic and individualistic experience. Sees events as personal troubles or personal choices</td>
+    <td>Sociological Imagination: apparently personal troubles are consequences of larger public issues and social structures. Simone de Beauvoir: "You are not born a woman; you become one."</td>
+  </tr>
+  <tr>
+    <td>Based on opinions, rumours, stereotypes, and superficial observation. Unreflective, biased, subjective</td>
+    <td>Rigorous data collection, classification, verifiability, statistical analysis, theory development, comparative method. Andre Beteille: two preoccupations — searching for interconnections and systematic use of comparison</td>
+  </tr>
+  <tr>
+    <td>Particular and localised — varies across time and culture. 200 years ago in the USA, slavery was "common sense"; today the opposite is.</td>
+    <td>Sociological knowledge is universally applicable (with exceptions). Structural functionalism, reference group theory are universally valid.</td>
+  </tr>
+  <tr>
+    <td>Cannot find patterns between different institutions. Can distinguish caste from race, but not find their similarities</td>
+    <td>Finds patterns across institutions. Oliver Cox: race is coloured caste. Goffman: boarding school, mental asylum, prison, and cults are all "total institutions."</td>
+  </tr>
+  <tr>
+    <td>Poverty caused by lack of education or sins of past life</td>
+    <td>Marx: poverty is the result of capitalists appropriating surplus value from workers</td>
+  </tr>
+  <tr>
+    <td>Housework is unpaid; workplace is paid — natural division</td>
+    <td>It is housework that enables capitalism to function. All social units are connected. This knowledge helps question the patriarchal system (Selma James, 1972)</td>
+  </tr>
+  <tr>
+    <td>Capitalism developed due to technological advancement</td>
+    <td>Weber: capitalism developed due to Protestant religious values — an empirical finding that defies common sense entirely</td>
+  </tr>
+  <tr>
+    <td>More developed countries have less crime</td>
+    <td>Data shows the USA has a higher crime rate than India; urban India higher than rural India</td>
+  </tr>
+  <tr>
+    <td>Browsing social media is leisure</td>
+    <td>Sociological research tells us it is unpaid labour — generating value for corporations without compensation</td>
+  </tr>
+</table>
+
+<p>What distinguishes sociology from common sense is <strong>not an exclusive subject matter</strong> but a <strong>different way of looking</strong> at the same phenomena. Sociology involves "defamiliarisation" — looking at society in new ways and realising "this is not the only way we could do things." Sociology <em>broaden horizons</em> (Zygmunt Bauman).</p>
+
+<p>However, Anthony Giddens notes that sociological knowledge also becomes part of common sense: <em>role model, vote bank, role conflict</em> — all sociological concepts now embedded in everyday language.</p>
+
+<p>And non-positivist sociology (Weber, phenomenology, ethnomethodology) goes further: <strong>common sense knowledge is itself important for building sociological theories</strong>. Unless we understand the subjective meanings behind social action, we cannot explain why people behave as they do. Weber's understanding of Protestant social action was the foundation of his entire theory of capitalism.</p>
+
+`,
   'sociology-as-science': '',
   'research-methods': '',
   'stratification-mobility': '',
