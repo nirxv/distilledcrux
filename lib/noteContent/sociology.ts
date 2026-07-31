@@ -1390,10 +1390,361 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
+  'robert-merton': `
+<h2>Intellectual Background</h2>
+
+<p>Robert K. Merton (1910–2003) was a student of Parsons at Harvard but moved in a distinctly different direction. He accepted structural functionalism as a framework but radically revised and refined it — making it empirically testable, politically more honest, and sociologically richer.</p>
+
+<p>Where Parsons built grand theory to explain everything, Merton insisted sociology must build carefully from the middle — <strong>middle-range theories</strong> grounded in empirical research. Where Parsons focused only on functions, Merton added dysfunctions. Where Parsons assumed consensus, Merton admitted conflict.</p>
+
+<blockquote>"Merton pushed structural functionalism to the left." — Nishant Sir</blockquote>
+
+<h3>Merton vs Parsons</h3>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Talcott Parsons</th>
+    <th>Robert K. Merton</th>
+  </tr>
+  <tr>
+    <td>Theoretical scope</td>
+    <td>Grand unified theory — explains all of social reality</td>
+    <td>Middle-range theories — limited, empirically testable propositions</td>
+  </tr>
+  <tr>
+    <td>Marx</td>
+    <td>Never read Marx (his own claim)</td>
+    <td>Read Marx; incorporated conflict and dysfunction into functionalism</td>
+  </tr>
+  <tr>
+    <td>Functions</td>
+    <td>Focused only on manifest (positive) functions</td>
+    <td>Analysed both manifest functions and latent functions; introduced dysfunctions</td>
+  </tr>
+  <tr>
+    <td>Level of analysis</td>
+    <td>Restricted to society as a whole</td>
+    <td>Analysis at multiple levels — society, institution, group, individual</td>
+  </tr>
+  <tr>
+    <td>Time and space</td>
+    <td>Universal, abstract — free from limitations of time and space</td>
+    <td>Located in time and space; deals with empirical reality</td>
+  </tr>
+  <tr>
+    <td>Social change</td>
+    <td>Change within and of the social system</td>
+    <td>Primarily change within the system; ignored changes of the system</td>
+  </tr>
+</table>
+
+<h2>Middle-Range Theory</h2>
+
+<p>Merton rejected both grand theorising (Parsons) and narrow empiricism. Sociology needed <strong>middle-range theories</strong> — limited sets of assumptions from which specific hypotheses are derived and tested through empirical research.</p>
+
+<p>Examples of Merton's own middle-range theories:</p>
+<ul>
+  <li>Relative deprivation and reference group theory</li>
+  <li>Strain theory of deviance</li>
+  <li>Manifest and latent functions</li>
+  <li>Role set theory</li>
+  <li>Self-fulfilling prophecy</li>
+</ul>
+
+<p>Merton's insistence on testability and empirical grounding transformed functionalism from a speculative philosophy of society into a research programme.</p>
+
+<h2>Critique of Functional Postulates</h2>
+<p><strong>Book:</strong> <em>Social Theory and Social Structure</em> (1968) — Essay: "Manifest and Latent Functions"</p>
+
+<p>Classical functionalists (Malinowski and Radcliffe-Brown) built their approach on three unexamined postulates. Merton challenged each one:</p>
+
+<table>
+  <tr>
+    <th>Postulate</th>
+    <th>Classical Claim</th>
+    <th>Merton's Critique</th>
+  </tr>
+  <tr>
+    <td><strong>Functional Unity</strong></td>
+    <td>All parts of society work together for the maintenance of society as a whole and for individuals within it</td>
+    <td>Parts of society must be analysed at multiple levels. There may be conflict between institutions, between groups, and between individuals. Religion — integrative in simple tribal societies — may become disintegrative in plural societies with competing religions. Functional unity is a <em>matter of degree</em> to be empirically determined, not assumed.</td>
+  </tr>
+  <tr>
+    <td><strong>Functional Indispensability</strong></td>
+    <td>Certain institutions (religion, family) are indispensable — no alternatives could work as well</td>
+    <td><em>Functions</em> are indispensable; <em>items</em> (specific institutions) are not. There are always functional alternatives. Childcare can be performed by crèches, day-cares, nannies, single fathers. Communism can serve as a functional alternative to religion. The Parsonian nuclear family model is not the only way to stabilise adult personalities — friends, roommates, professional counsellors, and same-sex couples can do the same.</td>
+  </tr>
+  <tr>
+    <td><strong>Functional Universality</strong></td>
+    <td>Every social and cultural form has positive functions</td>
+    <td>Not every structure, custom, or belief is positive. Parts of society should be analysed in terms of their <em>consequences</em> — which can be functional, dysfunctional, or non-functional. Slavery was functional for slave-owners; deeply dysfunctional for slaves. The value judgement that all parts of the system are positive must be removed.</td>
+  </tr>
+</table>
+
+<p>Merton's conclusion: all three postulates rely on non-empirical assertions. They are matters for investigation, not prior assumptions. The sociologist must empirically test each assertion, determine a net balance of functions and dysfunctions, and ask: <strong>functional or dysfunctional for whom?</strong></p>
+
+<h2>Manifest and Latent Functions</h2>
+
+<ul>
+  <li><strong>Manifest Functions</strong> — Conscious, intended, and recognised consequences of an action, institution, or social pattern that contribute to its adjustment or adaptation. These are the stated purposes.</li>
+  <li><strong>Latent Functions</strong> — Unintended and unrecognised consequences of any social pattern. Peter Berger calls this <em>debunking</em> — looking beyond stated facts to what is actually happening.</li>
+</ul>
+
+<p>Merton insists that social function refers to <strong>observable objective consequences</strong>, not subjective dispositions. The function of marriage is not "materialisation of love" — that is its manifest purpose. Its latent function is the stabilisation and continuation of society through regulated reproduction, property transmission, and socialisation of children.</p>
+
+<h3>Classic Examples</h3>
+<table>
+  <tr>
+    <th>Institution/Practice</th>
+    <th>Manifest Function</th>
+    <th>Latent Function</th>
+  </tr>
+  <tr>
+    <td>Hopi Rain Dance</td>
+    <td>Bring rain for crops</td>
+    <td>Reinforce group solidarity and collective identity in times of anxiety</td>
+  </tr>
+  <tr>
+    <td>Protestant Religion (Weber's insight)</td>
+    <td>Provide salvation, moral guidance, community</td>
+    <td>Development of capitalism through inner-worldly asceticism (unintended consequence)</td>
+  </tr>
+  <tr>
+    <td>Political Machines (US ward bosses)</td>
+    <td>Corrupt, patronage-based political organisation</td>
+    <td>Provided welfare services, jobs, and representation for immigrants excluded from formal institutions. Functioned for what formal structures could not deliver.</td>
+  </tr>
+  <tr>
+    <td>Education</td>
+    <td>Transfer knowledge, develop skills</td>
+    <td>Custodial care (keeps young people off labour market), social stratification, reproduction of inequality</td>
+  </tr>
+  <tr>
+    <td>Conspicuous Consumption (Veblen)</td>
+    <td>Purchase goods and services</td>
+    <td>Signal social status and class position; establish social distinctions</td>
+  </tr>
+  <tr>
+    <td>Crime</td>
+    <td>Violates norms; causes harm</td>
+    <td>Clarifies moral boundaries; reinforces collective sentiments; provides employment for police, lawyers, prison officers; can drive social change</td>
+  </tr>
+</table>
+
+<h3>Unanticipated Consequences and Dysfunctions</h3>
+<p>Latent functions are one type of unanticipated consequence. But not all unanticipated consequences are functional:</p>
+<ul>
+  <li><strong>Latent function</strong> — unanticipated, but functionally positive for the system.</li>
+  <li><strong>Social dysfunction</strong> — unanticipated consequences that disrupt the operation of the system, or are functional for some and dysfunctional for others.</li>
+  <li><strong>Non-functional consequences</strong> — neither functional nor dysfunctional; simply irrelevant to the system.</li>
+</ul>
+
+<h2>Conformity and Deviance — Strain Theory</h2>
+<p><strong>Paper:</strong> <em>"Social Structure and Anomie"</em> (1938)</p>
+
+<h3>Merton's Core Argument</h3>
+<p>Merton reinterpreted Durkheim's concept of anomie for American society. He argued that the social structure of the USA creates a fundamental <strong>structural strain</strong>:</p>
+<ul>
+  <li><strong>Culturally defined goals</strong> — Material success (wealth, status, the American Dream). These are equally shared among all members of society.</li>
+  <li><strong>Institutionally approved means</strong> — Education, hard work, talent. These are <em>not</em> equally distributed.</li>
+</ul>
+
+<p>When individuals feel pressure to achieve culturally defined goals but lack access to legitimate means, they experience <strong>strain/anomie</strong>. This disjunction between goals and means drives deviance — not individual pathology.</p>
+
+<blockquote>"It is not so much the individual's flaws that lead them to crime, but rather anomie in society — the combination of the pressure to be materially successful and the lack of legitimate opportunity to achieve that success."</blockquote>
+
+<h3>Five Modes of Adaptation</h3>
+<table>
+  <tr>
+    <th>Mode</th>
+    <th>Cultural Goals</th>
+    <th>Institutional Means</th>
+    <th>Description & Examples</th>
+  </tr>
+  <tr>
+    <td><strong>Conformity</strong></td>
+    <td>Accept</td>
+    <td>Accept</td>
+    <td>The only non-deviant adaptation. Pursues material success through education, hard work, talent. E.g. business executives, young professionals, UPSC aspirants.</td>
+  </tr>
+  <tr>
+    <td><strong>Innovation</strong></td>
+    <td>Accept</td>
+    <td>Reject</td>
+    <td>Accepts the goal but rejects legitimate means; finds alternative (usually illegal) routes. Most common deviant response. E.g. drug dealers, embezzlers, con artists, robbers, Al Capone. In India — LGBTs marginalised from formal economy engaging in sex work or begging.</td>
+  </tr>
+  <tr>
+    <td><strong>Ritualism</strong></td>
+    <td>Reject</td>
+    <td>Accept</td>
+    <td>Abandons the goal (no longer aspires to material success) but rigidly adheres to the approved means — "going through the motions." E.g. burnt-out bureaucrats following rules for their own sake; unmotivated teachers performing their role mechanically.</td>
+  </tr>
+  <tr>
+    <td><strong>Retreatism</strong></td>
+    <td>Reject</td>
+    <td>Reject</td>
+    <td>Drops out of society entirely — abandons both goals and means. E.g. drug addicts, alcoholics, vagabonds, hippies, sadhus, psychotics.</td>
+  </tr>
+  <tr>
+    <td><strong>Rebellion</strong></td>
+    <td>Reject/Replace</td>
+    <td>Reject/Replace</td>
+    <td>Rejects both the established goals and means, and substitutes new ones. Seeks systemic change, not personal adaptation. E.g. revolutionaries, terrorists, radical political movements, Naxalites.</td>
+  </tr>
+</table>
+
+<h3>Durkheim's Anomie vs Merton's Anomie</h3>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Durkheim</th>
+    <th>Merton</th>
+  </tr>
+  <tr>
+    <td>Cause</td>
+    <td>Failure of society to regulate unlimited desires; normlessness during rapid change</td>
+    <td>Disjunction between culturally defined goals and legitimate means to achieve them</td>
+  </tr>
+  <tr>
+    <td>Social context</td>
+    <td>Traditional French society — high aspirations were condemned</td>
+    <td>Modern American society — high aspirations are actively encouraged for all</td>
+  </tr>
+  <tr>
+    <td>Who is affected</td>
+    <td>Higher classes more exposed; anomie hits when norms dissolve</td>
+    <td>Lower classes most affected — they have goals but lack legitimate means</td>
+  </tr>
+  <tr>
+    <td>Type of anomie</td>
+    <td>Both acute (sudden crises) and chronic</td>
+    <td>Only chronic structural anomie — embedded in the social structure itself</td>
+  </tr>
+  <tr>
+    <td>Nature</td>
+    <td>Temporary — transitional phase when old norms break down</td>
+    <td>Structural — persists as long as disjunction between goals and means exists</td>
+  </tr>
+  <tr>
+    <td>Range of deviance explained</td>
+    <td>Explains part of social deviance (mainly suicide)</td>
+    <td>Explains a wide range of deviances through 5 modes of adaptation</td>
+  </tr>
+</table>
+
+<h3>Other Theories of Deviance</h3>
+<ul>
+  <li><strong>Biological (Lombroso)</strong> — Physical traits linked to criminality ("Born Criminal"). Physiological basis — now thoroughly discredited.</li>
+  <li><strong>Psychological</strong> — Deviance as product of personality traits, mental illness, or failures in psychological development.</li>
+  <li><strong>Social Disorganization (Chicago School)</strong> — Deviant behaviour more likely in communities with deteriorated neighbourhoods and inadequate social control — where family, schools, and justice system fail.</li>
+  <li><strong>Differential Association (Sutherland)</strong> — Criminal behaviour is learned in interaction; not inherited. Exposure to deviant acts through differential socialisation drives deviance. Sutherland also coined <em>white-collar crime</em> — crimes by persons of respectability in the course of their occupation.</li>
+  <li><strong>Labelling Theory (Becker)</strong> — Deviance is a matter of interpretation. "Deviance is not a property of the act but of the reaction of others." Killing in war = heroism; killing in peace = murder. <em>"One person's terrorist is another person's freedom fighter."</em></li>
+  <li><strong>Marxist Theory</strong> — Capitalism is criminogenic: it creates poverty and encourages getting wealth at any cost. The real criminals are employers paying starvation wages. Laws are made by the powerful to protect their interests (Laurie Taylor's critique of Merton).</li>
+  <li><strong>Cloward and Ohlin</strong> — Extended Merton: not everyone has equal access to <em>illegitimate</em> means either. Criminal careers require learning, trust-building, and networks. Three deviant subcultures: Criminal (stable criminal networks), Conflict (street gangs driven by frustration), Retreatist (double failures who resort to drugs).</li>
+</ul>
+
+<h2>Reference Groups</h2>
+
+<blockquote>"A Reference Group is a group we refer to in order to evaluate ourselves — our standing, achievements, and ambitions."</blockquote>
+
+<h3>Types of Reference Groups</h3>
+<ul>
+  <li><strong>Membership Group</strong> — A group one belongs to that serves as a reference point. E.g. family, school class, caste group.</li>
+  <li><strong>Non-Membership Group</strong> — A group one does not belong to but uses as a standard of comparison. E.g. toppers, celebrities, professionals one aspires to become.</li>
+  <li><strong>Positive Reference Group</strong> — A group one admires and seeks to emulate; adopts their values, lifestyle, aspirations.</li>
+  <li><strong>Negative Reference Group</strong> — A group one dislikes and rejects; its norms provoke the creation of <em>counter-norms</em>. E.g. colonisers were a negative reference group for nationalist movements — their behaviour prompted anti-colonial identity formation.</li>
+  <li><strong>Reference Individual</strong> — An individual (not a group) used as a role model. E.g. Sachin Tendulkar (not cricketers in general). Biographers and gossip journalists encourage identification with reference individuals by personalising their lives.</li>
+</ul>
+
+<h3>Relative Deprivation</h3>
+<p>Comparing oneself to a reference group generates <strong>relative deprivation</strong> — the perceived lack of resources, status, or rights compared to the reference group. This is not absolute poverty but a felt gap between one's actual situation and the reference group's situation.</p>
+
+<p>Examples: Farmers compare themselves to urban professionals; lower-caste groups compare themselves to upper-caste groups; rural youth compare themselves to urban peers on social media — all experiencing relative deprivation.</p>
+
+<h3>Anticipatory Socialisation</h3>
+<p>To close the gap of relative deprivation, individuals engage in <strong>anticipatory socialisation</strong> — adopting the values, lifestyle, language, and norms of a non-membership group one aspires to join.</p>
+
+<p>Functional conditions:</p>
+<ul>
+  <li><strong>Open social structure</strong> — Anticipatory socialisation is functional: it prepares the individual for upward mobility and acceptance in the aspired group.</li>
+  <li><strong>Closed social structure</strong> — Anticipatory socialisation is dysfunctional: the individual will never be accepted by the aspired group (caste system blocks entry), and simultaneously loses acceptance in their own group by adopting alien values. They become a <strong>marginal man</strong> — torn between two worlds, belonging to neither.</li>
+</ul>
+
+<p>In a closed system, individuals are less likely to choose non-membership reference groups — and therefore feel less deprived. Open systems create perpetual dissatisfaction by constantly exposing individuals to better-off groups.</p>
+
+<h3>Individual Selection of Reference Groups</h3>
+<p>An individual belongs to many groups (family, caste, political, religious). Not all are equally important reference points. People select different reference groups for different purposes:</p>
+<ul>
+  <li>For marriage decisions — family and caste group.</li>
+  <li>For political ideology — Gandhians.</li>
+  <li>For lifestyle and sexuality — liberal friends.</li>
+</ul>
+<p>This means the same individual may orient themselves by different reference groups in different spheres of life — not a single reference group determines all behaviour.</p>
+
+<h3>Significance of Reference Group Theory</h3>
+<ul>
+  <li>Explains relative deprivation — why individuals feel deprived even when absolute conditions improve.</li>
+  <li>Connects micro (individual comparison) with macro (social stratification and mobility).</li>
+  <li>Explains westernisation — colonised peoples adopting colonial reference groups.</li>
+  <li>Explains consumer behaviour, fashion change, career aspirations, academic performance.</li>
+  <li>Connects with Merton's strain theory: non-membership groups often represent the cultural goals; inability to achieve them creates strain.</li>
+</ul>
+
+<h2>Self-Fulfilling Prophecy</h2>
+
+<p>One of Merton's most elegant middle-range theories. A <strong>self-fulfilling prophecy</strong> is a false definition of a situation that evokes a new behaviour which makes the originally false conception become true.</p>
+
+<p>Classic example: If enough people believe a bank is going to fail (even if it is solvent), they will rush to withdraw deposits. This behaviour actually causes the bank to fail — the false belief creates the reality it predicted.</p>
+
+<p>Other examples:</p>
+<ul>
+  <li>A teacher believes a student is brilliant (even if test scores are average); treats them with more attention; student performs better — confirms the original belief.</li>
+  <li>Stereotyping minorities as less capable → fewer opportunities → poorer outcomes → "confirms" the stereotype.</li>
+  <li>Social stigma around mental illness → people hide symptoms → less treatment → worse outcomes → "confirms" stigma about mental illness being chronic.</li>
+</ul>
+
+<h2>Contribution to Sociology</h2>
+<ul>
+  <li><strong>Refined structural functionalism</strong> — made it empirically testable, politically honest, and conflict-aware.</li>
+  <li><strong>Middle-range theory</strong> — a methodological programme that bridges grand theory and raw empiricism. Still the dominant mode of sociological theorising.</li>
+  <li><strong>Manifest/latent distinction</strong> — revealed how institutions persist even when their stated purposes are not fulfilled; how unintended consequences shape social life.</li>
+  <li><strong>Strain theory</strong> — foundational for criminology and the sociology of deviance; explained crime rates structurally, not psychologically.</li>
+  <li><strong>Reference group theory</strong> — explained relative deprivation, anticipatory socialisation, and identity formation; applicable from consumer behaviour to political mobilisation.</li>
+  <li><strong>Self-fulfilling prophecy</strong> — widely used in social psychology, economics, and education research.</li>
+  <li><strong>Sociology of science</strong> — Merton developed the CUDOS norms of science (Communalism, Universalism, Disinterestedness, Organised Scepticism) — still used in science studies.</li>
+</ul>
+
+<h2>Criticisms</h2>
+
+<h3>Critique of Strain Theory</h3>
+<ul>
+  <li><strong>Cohen (Delinquent Boys)</strong> — Merton's theory focuses on individual adaptation to strain; doesn't explain why delinquency is a <em>group</em> phenomenon. Working-class boys lack legitimate means to achieve middle-class status goals → form delinquent subcultures that provide alternative status rewards (being feared on the street).</li>
+  <li><strong>Cloward and Ohlin</strong> — Not everyone has equal access to illegitimate means either. Criminal careers require learning, trust, and networks. Different types of blocked access produce different deviant subcultures.</li>
+  <li><strong>Laurie Taylor</strong> — Merton assumes a genuine value consensus; fails to ask <em>who defines</em> the cultural goals and the legitimate means. The whole game is rigged by the powerful. What Merton describes as value consensus is actually capitalist ideology serving bourgeois interests.</li>
+  <li><strong>Narrow scope</strong> — Strain theory mainly explains economically motivated crime; inadequate for violent crime, crime for pleasure, or vandalism.</li>
+  <li><strong>Different goals</strong> — The theory assumes a single system of cultural goals shared across society. In reality, people have diverse, culturally specific goals; the American Dream is not universal.</li>
+</ul>
+
+<h3>Critique of Reference Group Theory</h3>
+<ul>
+  <li><strong>Oversimplification</strong> — Reduces complex social behaviour to a linear model of comparison. In reality, self-evaluation is shaped by personal experience, cultural norms, and individual differences simultaneously.</li>
+  <li><strong>Limited cultural variation</strong> — Does not account adequately for how cultural context shapes who is chosen as a reference group. Collectivist cultures (India, China) differ fundamentally from individualist (Western) ones.</li>
+  <li><strong>Lack of predictive power</strong> — Theory does not specify when or how reference group comparisons will produce particular outcomes. More descriptive than predictive.</li>
+  <li><strong>Neglects group dynamics</strong> — Explains how the individual is influenced by the reference group, but ignores how the reference group itself is changed by the individual's entry into it.</li>
+  <li><strong>Ethnocentrism</strong> — Western, individualistic bias; may not apply to collectivist societies where group identity is primary.</li>
+</ul>
+
+<h3>General Critiques</h3>
+<ul>
+  <li>Despite revising Parsons, Merton still operates within a broadly consensus framework — dysfunctions are aberrations, not structural features of capitalism.</li>
+  <li>His middle-range theories remain relatively disconnected from each other; he never achieved the integrated framework he sought as an alternative to Parsons.</li>
+  <li>Feminist critics note that his theories — particularly on deviance and reference groups — are androcentric: based on male experiences and male-dominated institutions.</li>
+</ul>
+
+`,
   'sociology-the-discipline': '',
   'sociology-as-science': '',
   'research-methods': '',
-  'robert-merton': '',
   'george-mead': '',
   'stratification-mobility': '',
   'works-economic-life': '',
