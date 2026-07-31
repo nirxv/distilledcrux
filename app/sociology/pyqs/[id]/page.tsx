@@ -479,6 +479,29 @@ export default function PYQDetailPage() {
               </Link>
             </div>
 
+            {/* Topper's Copy */}
+            <div className="pd-sidebar-card">
+              <div className="pd-section-label">Topper&apos;s Copy</div>
+              <div style={{
+                border: '1px dashed var(--border)',
+                borderRadius: '8px',
+                padding: '1.25rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.5rem',
+                textAlign: 'center',
+              }}>
+                <span style={{ fontSize: '1.4rem' }}>🏆</span>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text)' }}>
+                  Coming Soon
+                </div>
+                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)', lineHeight: 1.6 }}>
+                  Topper&apos;s answer copies for this question will be added here. Check back soon.
+                </div>
+              </div>
+            </div>
+
             {/* Related questions */}
             {related.length > 0 && (
               <div className="pd-sidebar-card">
