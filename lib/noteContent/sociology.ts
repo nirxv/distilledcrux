@@ -2402,7 +2402,426 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>And non-positivist sociology (Weber, phenomenology, ethnomethodology) goes further: <strong>common sense knowledge is itself important for building sociological theories</strong>. Unless we understand the subjective meanings behind social action, we cannot explain why people behave as they do. Weber's understanding of Protestant social action was the foundation of his entire theory of capitalism.</p>
 
 `,
-  'sociology-as-science': '',
+  'sociology-as-science': `
+<h2>Is Sociology a Science?</h2>
+
+<p>The question of whether sociology is — or can be — a science lies at the heart of its methodological debates. The answer depends on what we mean by "science" and how we understand the nature of social reality. Three broad positions exist: positivism (sociology can and should be scientific), interpretivism/non-positivism (sociology requires different methods), and post-positivism (a middle ground).</p>
+
+<blockquote>"Sociology is the most scientific of all humanities, and the most humanistic of all sciences."</blockquote>
+
+<h2>What is Science?</h2>
+
+<p>Science is a body of knowledge that differs from religion, magic, and common sense by having six defining features:</p>
+
+<ul>
+  <li><strong>Testable (Falsifiable)</strong> — Scientific knowledge is closely tied to empiricism; it can be tested and potentially disproved. Science advances not by proving theories true, but by proving them false and revising them. Karl Popper: "If a scientific theory can be proven wrong, it is a strength, not a weakness." Examples: "All swans are white" — falsified by one black swan. Einstein's relativity — falsifiable if something exceeds the speed of light. Carbon dating can test the age of the Earth.</li>
+  <li><strong>Empirical</strong> — Rejects circumstantial, testimonial, and speculative evidence. Knowledge comes from observation and experiment, not revelation or tradition.</li>
+  <li><strong>Cumulative</strong> — Knowledge evolves and builds on previous knowledge. Galileo performed experiments to establish Copernicus's theory; Newton built on Kepler; Einstein reformulated Newton.</li>
+  <li><strong>Objective</strong> — Research should not be influenced by the personal values, opinions, or biases of the researcher. The researcher should be detached from the subject of study.</li>
+  <li><strong>Replicable</strong> — If findings cannot be reproduced by other scientists, the original findings were likely due to chance. Replicability ensures reliability.</li>
+  <li><strong>Theoretical</strong> — Based on logic and causal relationships; not merely descriptive but explanatory.</li>
+</ul>
+
+<h3>Merton's CUDOS — Norms of Scientific Communities</h3>
+<p>Robert K. Merton identified four norms that govern scientific communities — together called CUDOS:</p>
+<ul>
+  <li><strong>Communalism</strong> — Scientific results are the common property of the entire scientific community. Darwin did not patent the theory of evolution.</li>
+  <li><strong>Universalism</strong> — A scientist's personal characteristics (race, gender, nationality) are irrelevant to their ideas. Science must be evaluated on merit.</li>
+  <li><strong>Disinterestedness</strong> — Scientists should act for the benefit of the scientific community and society, not for personal gain.</li>
+  <li><strong>Organised Scepticism</strong> — Scientific claims must be exposed to critical scrutiny before being accepted. No claim is beyond question.</li>
+</ul>
+
+<h2>Scientific Method — Induction and Deduction</h2>
+
+<h3>Inductive Reasoning (Francis Bacon)</h3>
+<p>Moves from specific observations to general conclusions. Begins with specific real-world observations, trends, or social processes, and progresses analytically to develop generalisations and theories.</p>
+<ul>
+  <li>All observed swans are white → therefore, all swans are white (general law).</li>
+  <li>The sun has always risen in the east → the sun will rise in the east tomorrow.</li>
+</ul>
+<p><strong>Problem of induction</strong> — We make universal claims based on a finite number of observations. We tend to ignore data that does not support our hypothesis. There is always a possibility that new findings may conflict with a long-standing theory. We are essentially assuming the future will be like the past.</p>
+
+<h3>Hypothetico-Deductive Method (Karl Popper)</h3>
+<p>Since it is impossible to prove a theory true by induction, Popper proposed falsifiability as the criterion of science:</p>
+<ul>
+  <li>Start with a hypothesis/theory.</li>
+  <li>Collect data and perform experiments.</li>
+  <li>Check whether results match predictions of the hypothesis.</li>
+  <li>If predictions are not borne out → theory is falsified. If not falsified → theory survives for now.</li>
+</ul>
+
+<h3>Steps of the Scientific Method</h3>
+<ol>
+  <li>Select a topic and define the research problem.</li>
+  <li>Formulate a research question — e.g. Why do Dalits have lower levels of education?</li>
+  <li>Review existing literature — What research exists? What is the gap?</li>
+  <li>Formulate a hypothesis — conjectural statement about the relationship between variables. E.g. "Poverty is the reason for low educational levels among Dalits."</li>
+  <li>Perform experiment using appropriate methods (survey, interview, case study, participant observation).</li>
+  <li>Collect and test data — ensuring empiricism, objectivity, reliability, and validity.</li>
+  <li>Analyse results to draw conclusions, generalisations, and theories.</li>
+  <li>Publish results — so they can be verified by others; incorporated into social policy.</li>
+</ol>
+
+<h2>Critique of the Scientific Method in Sociology</h2>
+
+<p>The gap between the theory and practice of science reveals significant limitations when applied to social reality:</p>
+
+<ul>
+  <li><strong>Complexity of social data</strong> — Human behaviour is highly dynamic and unpredictable. It is difficult to generalise into universal cause-effect laws. No two people react to any event in exactly the same way.</li>
+  <li><strong>Plurality of causes and intermixture of effects</strong> — Multiple causes behind a single phenomenon; cause and effect are often difficult to distinguish. Why do we have poverty? Illiteracy, unemployment, poor welfare delivery, lack of schemes — are these causes or effects of poverty?</li>
+  <li><strong>Difficulty in measurement and quantification</strong> — You can calculate mass, gravity, and current, but can you quantify urbanisation, nationalism, or alienation?</li>
+  <li><strong>Subjectivity of researcher</strong> — Since subject and object of research are both human beings, the researcher's bias may distort collection, classification, and theorisation. An astronomer's gaze has no effect on a distant comet. But people react to being observed — they may become anxious, angry, or defensive.</li>
+  <li><strong>Absence of universal laws</strong> — The same laws of physics apply everywhere and at all times. But sociological patterns vary across time and place. What is true in one context may not hold in another.</li>
+</ul>
+
+<p>Therefore, to make the scientific method applicable to social reality, objectivity is complemented with <strong>inter-subjectivity and interpretation</strong>, and laboratory experiments are replaced with qualitative methods — interviews, questionnaires, and field observation.</p>
+
+<h2>Karl Popper — Falsifiability and Demarcation</h2>
+
+<p>Popper's central contribution: <strong>the demarcation principle</strong> — what distinguishes science from non-science is that scientific claims are <em>falsifiable</em> (could theoretically be proven wrong).</p>
+
+<ul>
+  <li>"All swans are white" → scientific, because one black swan falsifies it.</li>
+  <li>Astrological claims that stars affect personality → <em>not scientific</em> — no possible test can refute it.</li>
+  <li>Freud's id/ego/superego → <em>not scientific</em> — unfalsifiable. Whatever is observed can be interpreted as evidence in their favour.</li>
+  <li>Marx's claim that developed capitalist societies will experience communist revolution → scientific. The persistence of class inequality in Europe without revolution falsifies it. However, Marxists respond by claiming "false consciousness prevented the revolution" — this response is itself unfalsifiable, making Marxism <em>pseudo-scientific</em>.</li>
+</ul>
+
+<h2>Thomas Kuhn — Paradigms and Scientific Revolutions</h2>
+
+<p>Thomas Kuhn (<em>The Structure of Scientific Revolutions</em>, 1962) argued that science does not progress through smooth accumulation of knowledge. Instead, it proceeds through <strong>paradigm shifts</strong>.</p>
+
+<h3>Four Stages of Science</h3>
+<ul>
+  <li><strong>Pre-Science</strong> — No dominant perspective; multiple competing schools of thought.</li>
+  <li><strong>Normal Science</strong> — Scientists work within a dominant paradigm without questioning it, even in the face of conflicting evidence. This can make normal science conservative. A physics student would find no reason to entertain competing theories.</li>
+  <li><strong>Scientific Crisis</strong> — Arguments between defenders of the old paradigm and advocates of the new one intensify.</li>
+  <li><strong>Paradigm Shift / Scientific Revolution</strong> — Old paradigm is discarded; new one accepted. Examples: Aristotelian physics → Newtonian → Einstein's relativity; Lamarckism → Darwinian natural selection.</li>
+</ul>
+
+<p>What counts as the acceptable paradigm is decided by the scientific community — therefore, <strong>science is a social process</strong>. A sociology student is aware of multiple, competing, and incommensurable approaches — Marxist, Weberian, Durkheimian. Since no single paradigm is universally accepted, Kuhn calls sociology <em>pre-scientific</em>. It may become scientific only when all sociologists agree on a dominant paradigm.</p>
+
+<h2>Paul Feyerabend — Epistemological Anarchism</h2>
+
+<p>Feyerabend is regarded as the "worst enemy of the scientific method." His position: the notion of a universal scientific method is unrealistic.</p>
+<ul>
+  <li>Scientists actually proceed by intuition, mystical ideas, dream experience, hunches, myths, induction, and conjectural approaches. Scientists go by <strong>"anything goes."</strong></li>
+  <li>Kevin Durbar estimated that 30–40% of scientific discoveries were serendipitous: Newton and gravity, Nobel and blasting gelatin, Pasteur and the chicken cholera vaccine.</li>
+  <li>Therefore, science is just another ideology in society — like religion or magic. The dominance of science would be authoritarian and unjustified.</li>
+  <li>Demarcating science from pseudoscience is impossible since scientists themselves use any method available.</li>
+</ul>
+
+<h3>Heidegger and John Dewey</h3>
+<p>Science — in presenting its own "objective" view of human experience — has trumped all other forms of knowing (psychological, religious, philosophical). The result is a distorted, one-dimensional view of reality that excludes valid modes of understanding.</p>
+
+<h3>Feminist Critique of Science</h3>
+<ul>
+  <li>Objectivity does not exist — much scientific knowledge is <em>gendered knowledge</em>.</li>
+  <li>Freud's Oedipus Complex presents women as objects to be claimed — androcentric. Carl Jung corrected this with the Electra Complex.</li>
+  <li>Darwin argued evolution made man "superior" to woman. Spencer echoed this. Antoinette Brown Blackwell became the first published feminist critique of Darwin — calling his claims unscientific.</li>
+  <li>The narrative of "active sperm and passive egg" obscures the causal role of the egg in fertilisation — a scientific claim shaped by gender bias.</li>
+</ul>
+
+<h2>Major Theoretical Strands of Research Methodology</h2>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Macro Sociology (Positivism)</th>
+    <th>Micro Sociology (Non-Positivism)</th>
+  </tr>
+  <tr>
+    <td>Focus</td>
+    <td>How larger structures govern actors</td>
+    <td>How actors actively construct their social world</td>
+  </tr>
+  <tr>
+    <td>Theoretical traditions</td>
+    <td>Marxism, Structural Functionalism</td>
+    <td>Phenomenology, Symbolic Interactionism, Dramaturgy, Ethnomethodology</td>
+  </tr>
+  <tr>
+    <td>Methods</td>
+    <td>Quantitative — surveys, statistics, questionnaires</td>
+    <td>Qualitative — interviews, participant observation, ethnography</td>
+  </tr>
+</table>
+
+<h2>Positivism</h2>
+
+<h3>Auguste Comte (1798–1857) — Founder of Positivism</h3>
+<p>Positivism developed as a reaction to what Comte saw as the destructive effects of Enlightenment philosophy on French social order. He believed: just as the natural world is governed by universal laws, the social world is also governed by invariable laws. Sociology could discover these laws through science — and use them to predict and improve social life.</p>
+
+<h3>Law of Three Stages</h3>
+<p>Society as a whole develops through three mentally conceived stages:</p>
+<table>
+  <tr>
+    <th>Stage</th>
+    <th>Explanation of Phenomena</th>
+    <th>Form of Authority</th>
+  </tr>
+  <tr>
+    <td><strong>Theological</strong></td>
+    <td>Events explained by supernatural forces — gods, spirits, divine will</td>
+    <td>Church and monarchy</td>
+  </tr>
+  <tr>
+    <td><strong>Metaphysical</strong></td>
+    <td>Events explained by abstract forces — nature, human rights, social contract</td>
+    <td>Philosophers and lawyers</td>
+  </tr>
+  <tr>
+    <td><strong>Positive (Scientific)</strong></td>
+    <td>Events explained by observation, experiment, and rational analysis</td>
+    <td>Scientists and industrialists</td>
+  </tr>
+</table>
+
+<h3>Social Statics and Social Dynamics</h3>
+<ul>
+  <li><strong>Social Statics</strong> — Study of forces that maintain social order; laws of coexistence. How parts of society relate to each other and contribute to the maintenance of the system.</li>
+  <li><strong>Social Dynamics</strong> — Study of forces that lead to social change and breakdown of order; laws of succession. How society moves from one stage to the next.</li>
+</ul>
+
+<h3>Central Features of Positivism</h3>
+<ul>
+  <li><strong>Individual shaped by structure</strong> — Behaviour guided by structures: caste, religion, sexuality, custom, law, class position.</li>
+  <li><strong>Unity of method</strong> — Sociology is not methodologically different from natural science. The researcher observes neutrally, gathers empirical and quantitative data, excludes meanings and intentions.</li>
+  <li><strong>Focus of research</strong> — Pattern, correlation, causal relationship, and law of human behaviour. Human behaviour is observable, static, patterned, and therefore generalisable.</li>
+  <li><strong>Social transformation</strong> — Scientific knowledge used for social engineering: predict social hazards (poverty, unemployment, revolution) and intervene accordingly. E.g. Jan Dhan Yojana, MGNREGS, JAM Trinity.</li>
+</ul>
+
+<h3>Criticisms of Positivism</h3>
+<ul>
+  <li>Human behaviour is too complex to predict precisely. Planets and comets are non-thinking objects; people are not.</li>
+  <li>Presence of researcher affects the behaviour being studied. People who know they are observed become anxious, defensive, or performative.</li>
+  <li>Social patterns vary — what is true in one time or place may not hold in another. There are no universal sociological laws analogous to the laws of physics.</li>
+  <li>Sociologists cannot be 100% value-free. They live in the society they study — unlike chemists who remain outside their test tubes.</li>
+</ul>
+
+<h2>Post-Positivism</h2>
+
+<p>Post-positivism is not a rejection of the scientific method but a <strong>reformation of positivism</strong> to address its limitations. Key scholars: Kuhn and Popper.</p>
+
+<table>
+  <tr>
+    <th>Positivism</th>
+    <th>Post-Positivism</th>
+  </tr>
+  <tr>
+    <td>Social world can be studied in a fully objective and reliable manner</td>
+    <td>Social world cannot be studied in a fully objective way. Knowledge is tentative, provisional, and influenced by the researcher's social position, culture, and gender</td>
+  </tr>
+  <tr>
+    <td>Quantitative methods guarantee objectivity</td>
+    <td>Near-objectivity pursued by using multiple methods — triangulation</td>
+  </tr>
+  <tr>
+    <td>Uses verifiability approach</td>
+    <td>Rejects verifiability; proposes falsifiability (Popper)</td>
+  </tr>
+  <tr>
+    <td>Focus only on observable, measurable entities</td>
+    <td>Both quantitative and qualitative methods are valid</td>
+  </tr>
+  <tr>
+    <td>One law can explain the social world</td>
+    <td>Multiple, competing paradigms; social world cannot be fully studied objectively until one dominant paradigm emerges</td>
+  </tr>
+</table>
+
+<h2>Facts, Values, and Objectivity</h2>
+
+<p><strong>Objectivity</strong> refers to the scientist's personal neutrality in conducting research — research not influenced by personal opinions, beliefs, or experiences. Every science is expected to produce unbiased knowledge based on facts. Objectivity ensures reliability, validity, and credibility of research.</p>
+
+<h3>Were the Founding Fathers Truly Objective?</h3>
+<ul>
+  <li><strong>Durkheim</strong> — Proposed to treat social facts as things, yet simultaneously treated breakdown of norms as "pathologies" needing a "social physician." His recommendations (occupational associations, moral education) revealed his conservative values.</li>
+  <li><strong>Marx</strong> — Proclaimed his theory as objective and scientific, yet his critique of capitalism and celebration of communism as the ideal society were deeply value-laden.</li>
+</ul>
+
+<h3>Problems of Objectivity at Every Stage of Research</h3>
+<ul>
+  <li><strong>Choice of topic</strong> — Marxists reveal values by focusing on inequality; feminists by focusing on domestic violence. Weber: values enter at the stage of topic selection itself. This is called <em>value relevance</em>.</li>
+  <li><strong>Getting funded</strong> — If Cavitas funds research, the researcher must match findings with their interests.</li>
+  <li><strong>Choosing techniques</strong> — Selection of questions for questionnaires; some excluded, some included. These choices reflect the researcher's theoretical assumptions.</li>
+  <li><strong>Interpretation of data</strong> — Data does not speak for itself. The development of cults can be evidence for or against secularisation depending on the researcher's standpoint. Feminists find patriarchal oppression; Marxists find class exploitation.</li>
+  <li><strong>Recording findings</strong> — What is included in the final report is itself a value-laden choice.</li>
+</ul>
+
+<h3>Weber's Solution — Value Relevance and Value Neutrality</h3>
+<ul>
+  <li><strong>Value relevance</strong> — The selection of a research problem inevitably reflects the sociologist's values. This is unavoidable and should be acknowledged at the outset.</li>
+  <li><strong>Value neutrality</strong> — Once the topic is selected, the researcher has a duty to control personal feelings and opinions during investigation, data analysis, and publication. Detachment is a crucial element of science that sets it apart from politics. Politicians are committed to particular outcomes; scientists must maintain an open mind.</li>
+</ul>
+
+<h3>Challenges to the Possibility of Objectivity</h3>
+<ul>
+  <li><strong>Gouldner</strong> (<em>Anti-Minotaur: The Myth of Value-Free Sociology</em>) — Facts and values cannot be separated. Sociologists should be open about their values so others can judge the extent to which they influenced research. This is <em>Reflexive Sociology</em>.</li>
+  <li><strong>Gunnar Myrdal</strong> — Objectivity is an illusion. All research is guided by viewpoints, personal preferences, and the ideological position of the researcher.</li>
+  <li><strong>Howard Becker</strong> (<em>Whose Side Are We On?</em>) — It is impossible to study anything without personal and political beliefs. All knowledge is political; it is therefore impossible to be value-free. The question is not whether to take sides, but <em>whose side to take</em>. Becker argues sociology should side with the disadvantaged.</li>
+  <li><strong>David Marsland (New Right)</strong> — Sociology is not value-free; it is left-wing propaganda and indoctrinates Marxism. Many sociology textbooks ignore job satisfaction, focusing almost entirely on alienation, exploitation, and inequality.</li>
+  <li><strong>Gomm</strong> — The very idea of value-free sociology is unsociological. When a sociologist attempts to divorce themselves from their values to become a "professional sociologist," they are merely adopting another set of values — the values of the establishment.</li>
+</ul>
+
+<p><strong>Conclusion on objectivity</strong>: Following the logic of science does not guarantee objective or absolute truth. What science offers is a self-correcting approach to knowledge — so that in the long run, researchers stand a good chance of limiting their biases. Objectivity lies not in any one study but in the scientific process as it continues over time. Since our subject matter is a conscious being — not an atom — we cannot replicate the same objectivity in sociology as in natural science.</p>
+
+<h2>Non-Positivist Methodologies</h2>
+
+<p>Anti-positivism rejects the idea that actors are governed by structures or external stimuli. Instead, the social world is the <em>making</em> of actors who act upon structures by assigning different meanings in different contexts. We are not passive robots but conscious beings.</p>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Positivism</th>
+    <th>Non-Positivism (Interpretivism)</th>
+  </tr>
+  <tr>
+    <td>Individual and society</td>
+    <td>Society shapes individuals; governed by social laws (family, religion, caste, race)</td>
+    <td>Individuals act upon society — they are conscious beings who attach meanings and motives to external stimuli. Some conform to family pressure, others leave, others form live-in relationships, others stay single</td>
+  </tr>
+  <tr>
+    <td>Focus of research</td>
+    <td>Uncover the laws that govern human behaviour, as scientists have discovered laws of the physical world</td>
+    <td>Understand the meanings, motives, and intentions of the actor — why actors act as they do. Verstehen (empathetic understanding)</td>
+  </tr>
+  <tr>
+    <td>Methods</td>
+    <td>Scientific methods of natural science; quantitative; researcher remains detached</td>
+    <td>Non-scientific methods to see the world through the eyes of the actor; qualitative; close interaction with respondents</td>
+  </tr>
+  <tr>
+    <td>Key terms</td>
+    <td>Objective, separation between knower and known, data, causation, correlation, law</td>
+    <td>Value-neutral, empathetic understanding, individual motives and meanings, Verstehen</td>
+  </tr>
+</table>
+
+<h3>1. Max Weber — Interpretive Sociology (Verstehen)</h3>
+<p>Sociology should not model itself on natural sciences because the scientific method misses a vital part of the social world: the <strong>intentions and reasons of individuals</strong>.</p>
+<ul>
+  <li>As humans, we do not simply act — we act <em>for a reason</em>. We attach meanings to our actions which are not directly observable.</li>
+  <li>Different people in different situations interpret the social world differently. Sociologists can only describe reality from the viewpoint of those who create it.</li>
+  <li>The thoughts and feelings of subjects — which natural scientists dismiss because they are hard to measure — are the primary focus of interpretive sociology.</li>
+  <li>Example: Early humans did not react uniformly to fire. Some saw it as warmth; some as defence; some as a cooking tool. They acted upon fire in terms of the meanings they gave it. The sociologist must interpret the internal logic, not impose external logic.</li>
+  <li>Every structure (marriage, family, bureaucracy, religion, capitalism) is a product of action directed by certain meanings. Weber acknowledged structures but held they were created through individual actions.</li>
+</ul>
+
+<h3>2. Phenomenology (Alfred Schutz)</h3>
+<p>A phenomenological study attempts to understand participants' perspectives and views of social reality. Humans do not experience objective reality — they experience a <em>constructed</em> reality.</p>
+<ul>
+  <li><strong>No hard facts in the social world</strong> — Official statistics on COVID-19 mortality, crime, and suicide tell us nothing more than the decisions of officials to label certain cases as such. Decisions are based on common-sense assumptions (suicide note, record of mental illness).</li>
+  <li><strong>Indexicality</strong> — Meanings are fluid and context-specific. We interpret meanings differently according to context. The Centre's IT rules (2021) defining "unlawful" content are subject to interpretation — what seems unlawful may be an expression of free speech.</li>
+  <li><strong>Typification</strong> — We classify things into normal/abnormal, good/bad, moral/immoral, legal/illegal according to our cultures. This classification is subjective and depends on the opinions of the observer.</li>
+  <li><strong>Stock of common-sense knowledge (Intersubjectivity)</strong> — There is a commonsense pool (lifeworld). Some meanings are universally shared (rape and robbery are universally accepted as crime). Social order rests on this fragile shared stock of knowledge. Schutz: everyone has a unique biography, but this stock of common knowledge allows humans to believe there are regular and ordered patterns — when social order is in fact an illusion.</li>
+</ul>
+
+<h3>3. Ethnomethodology (Harold Garfinkel)</h3>
+<p>Ethnomethodology investigates how people make sense of everyday social activities and construct the appearance of social order.</p>
+<ul>
+  <li>Everyday behaviour rests on a number of taken-for-granted assumptions and socially constructed rules: how close to stand while talking, what clothes to wear in different settings, the appropriate tone of voice with friends vs. professors.</li>
+  <li><strong>Breaching experiments</strong> — Garfinkel disrupted normal social settings to reveal how desperately people try to restore "normalcy": going to a supermarket and haggling over prices (people assume you are illiterate or ill); acting at home as if you are a lodger; a boy acting feminine. These experiments demonstrate that actors are constantly involved in <em>constructing and maintaining</em> social order.</li>
+  <li>Social order is not objectively given but is made objective through repetitive performance of rules. Otherwise it is muddled and chaotic.</li>
+  <li><strong>Conclusion</strong>: The social world consists of nothing more than constructs, interpretations, and accounts of its members. Social order is therefore an <em>illusion</em> created in one's mind using commonsense procedures and culturally embedded assumptions. Sociology's subject matter should be the methods employed by members of society to construct their social world.</li>
+</ul>
+
+<h3>4. Symbolic Interactionism (GH Mead and Herbert Blumer)</h3>
+<p>Society is viewed as individuals making sense of the world through interaction and communication using shared symbols. (See full note on GH Mead for detailed treatment.)</p>
+<ul>
+  <li>Meanings are not fixed in objects but created, modified, and sustained through social interaction.</li>
+  <li>Coffee symbolises productivity, intimacy, status, or health — depending on context. The symbolic meaning overrides physical properties.</li>
+  <li>Rejects both societal determinism (Durkheim) and biological determinism (Freud). Actors actively construct and negotiate social reality.</li>
+</ul>
+
+<h3>5. Dramaturgy (Erving Goffman)</h3>
+<p>Goffman extended symbolic interactionism into a theatrical metaphor for everyday social life:</p>
+<ul>
+  <li>Humans want to control how others see them — they manage impressions. Life is "a dramatically enacted thing."</li>
+  <li><strong>Dramaturgical analysis</strong> — the study of social interaction in terms of theatrical performance.</li>
+  <li><strong>Front stage</strong> — carefully crafted presentation of self to others; manipulation of the audience.</li>
+  <li><strong>Back stage</strong> — where we practice impression management; the mask is dropped; the authentic self appears.</li>
+  <li>Status = a part in a play; Role = a script, supplying dialogue and action.</li>
+  <li><strong>Impression management</strong> — tools to make ourselves look more appealing on the front stage. The airline flight attendant's smile is not spontaneous warmth but an emotional script demanded by the employer (Hochschild's study — <em>emotion management</em>).</li>
+</ul>
+
+<h3>6. Critical Theory (Adorno and Horkheimer — Frankfurt School)</h3>
+<p>Dismisses science and positivism as ideological tools of domination.</p>
+<ul>
+  <li>Positivism holds that reality is "out there" and the researcher's task is to document it. Critical Sociology rejects this — assuming society exists as a "natural system" supports the status quo and implies society cannot be changed.</li>
+  <li>Adorno: Positivism is <em>pro-establishment</em>. We need a social science that emancipates people and empowers them to question established power.</li>
+  <li>Critical sociologists ask moral and political questions ("Should society exist in its present form?") rather than scientific questions ("How does society work?").</li>
+  <li><strong>Cultural Industry</strong> (Adorno and Horkheimer) — media, films, music, advertising — functions to secure the continuing ideological domination of capitalism. Instead of asking substantial questions and holding governments accountable, people gossip about celebrities and cultivate "false needs." We are transformed from critical, rational agents into mindless consumers. This is the "dialectic of enlightenment" — the dark irony that the Enlightenment's promise of liberation has produced new forms of domination.</li>
+</ul>
+
+<h3>7. Anthony Giddens — Double Hermeneutics</h3>
+<p>Hermeneutics = interpretation/understanding. Unlike natural science, social sciences involve <strong>double hermeneutics</strong>:</p>
+<ul>
+  <li>A woman bows down to her father, interpreting that elders must be respected (first interpretation — by the actor).</li>
+  <li>A sociologist then interprets this action through a feminist or functionalist lens (second interpretation — by the researcher).</li>
+  <li>In this double process of interpretation, objectivity is progressively lost. This makes sociology fundamentally different from natural science — and makes the claim to objectivity problematic.</li>
+</ul>
+
+<h2>Summary Cheat Sheet</h2>
+
+<table>
+  <tr>
+    <th>Approach</th>
+    <th>Key Scholar(s)</th>
+    <th>Core Claim</th>
+    <th>Method</th>
+  </tr>
+  <tr>
+    <td><strong>Positivism</strong></td>
+    <td>Auguste Comte, Durkheim, Marx (claimed)</td>
+    <td>Society can be studied objectively; discover laws of social behaviour</td>
+    <td>Quantitative, scientific</td>
+  </tr>
+  <tr>
+    <td><strong>Post-Positivism</strong></td>
+    <td>Popper, Kuhn</td>
+    <td>Scientific method is valid but must be reformed; knowledge is provisional and falsifiable, not verified</td>
+    <td>Quantitative + triangulation</td>
+  </tr>
+  <tr>
+    <td><strong>Interpretive Sociology</strong></td>
+    <td>Weber</td>
+    <td>Social action must be understood through its subjective meanings (Verstehen); not governed by external laws</td>
+    <td>Qualitative, interpretive</td>
+  </tr>
+  <tr>
+    <td><strong>Phenomenology</strong></td>
+    <td>Alfred Schutz</td>
+    <td>No objective social facts; meanings are fluid (indexicality); social order is an illusion built on shared commonsense assumptions</td>
+    <td>In-depth interpretive, focus on lifeworld</td>
+  </tr>
+  <tr>
+    <td><strong>Ethnomethodology</strong></td>
+    <td>Harold Garfinkel</td>
+    <td>Social order is constructed through actors' routine practices and commonsense rules; breaching reveals the fragility of social order</td>
+    <td>Breaching experiments, conversation analysis</td>
+  </tr>
+  <tr>
+    <td><strong>Symbolic Interactionism</strong></td>
+    <td>GH Mead, Herbert Blumer</td>
+    <td>Society is constituted through shared symbols and meanings negotiated in interaction; actors are active meaning-makers</td>
+    <td>Participant observation, ethnography</td>
+  </tr>
+  <tr>
+    <td><strong>Dramaturgy</strong></td>
+    <td>Erving Goffman</td>
+    <td>Social life is theatrical performance; actors manage impressions in front and back stages</td>
+    <td>Observation, micro-interactional analysis</td>
+  </tr>
+  <tr>
+    <td><strong>Critical Theory</strong></td>
+    <td>Adorno, Horkheimer</td>
+    <td>Positivism legitimises the status quo; science and cultural industry are tools of capitalist domination; sociology must emancipate</td>
+    <td>Normative, emancipatory</td>
+  </tr>
+</table>
+
+`,
   'research-methods': '',
   'stratification-mobility': '',
   'works-economic-life': '',
