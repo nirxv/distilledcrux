@@ -1742,10 +1742,269 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 `,
+  'george-mead': `
+<h2>Intellectual Background & Chicago School</h2>
+
+<p>George Herbert Mead (1863–1931) was a philosopher and social psychologist at the University of Chicago. He never published a book during his lifetime — his students compiled his lectures posthumously into <em>Mind, Self, and Society</em> (1934). His student Herbert Blumer later coined the term <strong>Symbolic Interactionism</strong> for Mead's theoretical framework.</p>
+
+<h3>Chicago School Context</h3>
+<p>The Chicago School in the 1920s developed a distinctly <strong>American sociology</strong> that differed fundamentally from European macro-traditions (Durkheim, Weber, Marx). Instead of comparative and historical methods, Chicago sociologists went into the field — conducting interviews and observations in immigrant neighbourhoods, slums, and street corners.</p>
+
+<ul>
+  <li><strong>Methodological inspiration</strong> — Max Weber's Verstehen; empathetic understanding of the actor's point of view.</li>
+  <li><strong>Focus</strong> — Micro level of everyday interactions (gender roles, race relations) as the building blocks of larger social phenomena (racial inequality, urban poverty).</li>
+  <li>Key members: Robert Park, W.I. Thomas, Charles Horton Cooley, Mead, Blumer.</li>
+</ul>
+
+<h3>Mead's Position in Social Theory</h3>
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Structural Functionalism (Parsons)</th>
+    <th>Symbolic Interactionism (Mead)</th>
+  </tr>
+  <tr>
+    <td>Level of analysis</td>
+    <td>Macro — social system, institutions</td>
+    <td>Micro — face-to-face interaction, self, meaning</td>
+  </tr>
+  <tr>
+    <td>Subject matter</td>
+    <td>Social facts, social structures, functions</td>
+    <td>Social acts, symbols, subjective meaning</td>
+  </tr>
+  <tr>
+    <td>View of individual</td>
+    <td>Product of socialisation and social facts</td>
+    <td>Active creator of meaning; self is both shaped by and shapes society</td>
+  </tr>
+  <tr>
+    <td>Source of order</td>
+    <td>Value consensus, shared norms</td>
+    <td>Shared meanings and symbols negotiated in interaction</td>
+  </tr>
+  <tr>
+    <td>Method</td>
+    <td>Scientific, quantitative, comparative</td>
+    <td>Interpretive, qualitative, ethnographic</td>
+  </tr>
+</table>
+
+<h3>Cooley's Looking-Glass Self (Precursor to Mead)</h3>
+<p>Charles Horton Cooley (<em>Human Nature and Social Order</em>, 1922) argued that the unique feature of human life is the ability to see ourselves through others' eyes. He called this the <strong>Looking-Glass Self</strong> — our self-concept emerges by imagining how we appear to others. Three stages:</p>
+<ol>
+  <li>We imagine how we appear to others.</li>
+  <li>We imagine how others judge that appearance.</li>
+  <li>We develop a self-feeling (pride, shame, confidence) based on the imagined judgment.</li>
+</ol>
+<p>Example: A student presents in class, imagines the teacher is disappointed (stage 2), feels bad about themselves (stage 3) — and may revise their self-image as "not smart." Mead built directly on Cooley but went further in specifying the mechanism of self-development.</p>
+
+<h2>Symbolic Interactionism</h2>
+
+<p>Symbolic Interactionism holds that <strong>society, self-identity, and social reality are produced and reproduced through interaction by means of symbols and our interpretation of those symbols.</strong></p>
+
+<h3>Basic Tenets</h3>
+<ul>
+  <li><strong>Capacity for thought</strong> — Unlike animals, humans are endowed with thought. This capacity is shaped by social interaction, not biology.</li>
+  <li><strong>Symbols are central</strong> — A symbol is anything to which we attach shared meaning: words, gestures, objects, institutions, beliefs, activities. The <em>symbolic meaning</em> of an object overrides its physical properties. Coffee can symbolise productivity, intimacy, status, or health — depending on context.</li>
+  <li><strong>Meaning is social</strong> — Meanings are created, modified, and sustained through social interaction. They are not fixed in objects. The unfurling of a national flag signifies patriotism; burning it means contempt — the same physical act carries entirely different meaning depending on social interpretation.</li>
+  <li><strong>Language is constitutive</strong> — For Mead, there is no mind without language, and language is itself a product of social interaction. Both our self and our mind are social products. "Living together" becomes "marriage" only through the exchange of symbols — ring, rituals, ceremony, wedding card.</li>
+  <li><strong>Shared meanings enable social life</strong> — Social life proceeds only if members of society largely share the meanings of symbols. Without this, meaningful communication would be impossible.</li>
+  <li><strong>Meanings are negotiated</strong> — In the course of interaction, meanings are constantly modified and contested. The same symbol (a wedding ring) can simultaneously mean commitment and loss of freedom.</li>
+  <li><strong>Rejects determinism</strong> — Symbolic interactionism rejects both societal determinism (Durkheim's social facts) and biological determinism (Freud's drives). Humans are active agents who interpret and modify meaning.</li>
+</ul>
+
+<h3>Applications of Symbolic Interactionism</h3>
+<ul>
+  <li><strong>Marriage</strong> — 100 years ago, marriage was a lifelong duty. By the 1940s, it became a relationship based on feelings; when feelings change, divorce is legitimate. Meaning of divorce shifted from "failure" to "freedom and new beginnings."</li>
+  <li><strong>Parenthood</strong> — Previously a religious blessing; today increasingly seen as expensive and burdensome — hence DINK families (Dual Income No Kids).</li>
+  <li><strong>Race and stigma</strong> — The meaning attached to skin colour or caste mark shapes interaction and self-concept. Symbolic meanings of race are socially constructed, not biological.</li>
+  <li><strong>Dramaturgy (Goffman)</strong> — Extended Mead: our self is ever-changing across social contexts through impression management. We present different selves on a first date, at a job interview, and in a poker game. Life is a performance on a social stage.</li>
+</ul>
+
+<h2>Mind, Self, and Society</h2>
+
+<h3>The Mind</h3>
+<p>For Mead, the mind is not a biological organ but a <strong>social process</strong>. Mind emerges when individuals take the role of others — imagining how they appear to others and how others interpret their actions. Without language and social interaction, mind as we know it would not exist.</p>
+
+<p>Mind requires:</p>
+<ul>
+  <li>The ability to use significant symbols (symbols with shared meaning).</li>
+  <li>The capacity for role-taking — mentally simulating the perspective of another.</li>
+  <li>Inner conversation — the ability to carry on an internal dialogue between the "I" and the "me."</li>
+</ul>
+
+<h3>The Self</h3>
+
+<blockquote>"The self is not there at birth — it develops through social experience."</blockquote>
+
+<p>Key features of Mead's self:</p>
+<ul>
+  <li>Self is <em>not</em> present at birth — it develops through social interaction. Without interaction (as in cases of isolated children), the body grows but no self emerges.</li>
+  <li>Social experience = exchange of symbols. People use words, gestures, objects, and expressions to create meanings. Humans respond not to what you <em>do</em> but to what you are <em>thinking</em>.</li>
+  <li>This requires <strong>role-taking</strong> — the process by which a person mentally assumes the role of another person or group to understand the world from their point of view.</li>
+  <li>By taking the role of the other, we become self-aware — we understand how others see us.</li>
+</ul>
+
+<h3>Three Stages of Self-Development</h3>
+
+<table>
+  <tr>
+    <th>Stage</th>
+    <th>Age</th>
+    <th>Key Feature</th>
+    <th>Role-Taking</th>
+  </tr>
+  <tr>
+    <td><strong>Preparatory Stage</strong></td>
+    <td>0–3 years</td>
+    <td>Infant can only imitate others' behaviour without understanding intentions. No awareness of self as distinct from environment.</td>
+    <td>Nonexistent — simple mimicry without understanding. No self yet formed.</td>
+  </tr>
+  <tr>
+    <td><strong>Play Stage</strong></td>
+    <td>3–6 years</td>
+    <td>Child learns language and symbols; begins pretending to take the role of specific people. Plays "mommy and daddy", "doctor and patient." When a girl plays with a doll as if she were its mother, she is internalising the mother's expectations and perspective.</td>
+    <td>Role-taking of <strong>Significant Others</strong> — specific important individuals (parents, grandparents, family pet, cartoon character). Child can distinguish self from other; self begins to form.</td>
+  </tr>
+  <tr>
+    <td><strong>Game Stage</strong></td>
+    <td>School years onwards</td>
+    <td>Child understands not just own position or significant others, but the position of <em>all</em> others simultaneously. Games have rules; playing cricket requires the batsman to imagine where every fielder and bowler is, and what they expect. Child grasps the overall structure of social expectations.</td>
+    <td>Role-taking of the <strong>Generalized Other</strong> — the awareness of the demands and expectations of society as a whole. Shapes behaviour through internalisation of what is and is not acceptable. Children learn different generalized others depending on race, class, gender, region, religion.</td>
+  </tr>
+</table>
+
+<p>As life progresses, the self continues to change with new social experiences and roles. As more women enter the paid labour force and men take on domestic responsibilities, expectations associated with motherhood and fatherhood change — and so does the self.</p>
+
+<h2>The "I" and the "Me" — Dialectical Nature of Self</h2>
+
+<p>Mead recognised the dialectical (dual) nature of self — the self as both <strong>subject</strong> and <strong>object</strong>:</p>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>"Me"</th>
+    <th>"I"</th>
+  </tr>
+  <tr>
+    <td>Nature</td>
+    <td>Object component of self — the socialised, conforming self</td>
+    <td>Subject component of self — the spontaneous, active, creative self</td>
+  </tr>
+  <tr>
+    <td>Orientation</td>
+    <td>Knows and follows the rules, expectations, and attitudes of others — the internalised social world</td>
+    <td>Questions, challenges, and innovates; less socialised; the source of individuality and rebellion</td>
+  </tr>
+  <tr>
+    <td>Historical context</td>
+    <td>Characteristic of traditional society; conformity dominates</td>
+    <td>Characteristic of modern society; individuality and autonomy valued</td>
+  </tr>
+  <tr>
+    <td>Social function</td>
+    <td>Social control = dominance of "Me" over "I"</td>
+    <td>Social change = "I" overrides or transforms the "Me"</td>
+  </tr>
+  <tr>
+    <td>Example</td>
+    <td>When expressing pain, the "Me" shapes how you express it — conditioned by who you are, where you are, who you are with</td>
+    <td>When you accidentally burn your hand, the immediate "I" reaction — shock, pulling away — precedes social conditioning</td>
+  </tr>
+</table>
+
+<h3>How "I" and "Me" Interact</h3>
+<ul>
+  <li>The first reaction to any situation comes from the <strong>"I"</strong> — spontaneous, uncensored.</li>
+  <li>Before acting, this reaction is channelled into socially acceptable forms by the <strong>"Me."</strong></li>
+  <li>When the "I" wants a piece of a friend's chocolate, the "Me" reflects on consequences before acting.</li>
+  <li>The "I" monitors and fine-tunes the "Me" constantly — even in ordinary social situations, not just extreme ones.</li>
+  <li>The two are inseparable. Their dynamic unity constitutes the full development of the individual. Social identity is always in flux — constantly emerging and dependent on social situations.</li>
+</ul>
+
+<h3>Why "I" and "Me" Matter</h3>
+<ul>
+  <li>They explain why socialisation does not produce total conformity — the "I" always introduces the possibility of deviation, creativity, and change.</li>
+  <li>Conformists are dominated by the "Me"; deviants are dominated by the "I."</li>
+  <li>No matter how powerfully society shapes us, we remain creative beings capable of reacting to and reshaping our world.</li>
+</ul>
+
+<h2>Significant Others and Generalized Other</h2>
+
+<ul>
+  <li><strong>Significant Others</strong> — People who are most important in a child's life and most influence their behaviour: parents, teachers, close friends. They provide the initial models for role-taking in the Play stage.</li>
+  <li><strong>Generalized Other</strong> — The internalised awareness of the expectations and norms of society as a whole. Achieved in the Game stage. It shapes behaviour by defining what is acceptable and unacceptable in different social situations. Different children internalise different generalized others depending on their social position — a Dalit child and a Brahmin child internalise very different social expectations.</li>
+</ul>
+
+<h2>Comparison: Mead and Other Thinkers</h2>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Freud</th>
+    <th>Piaget</th>
+    <th>Mead</th>
+  </tr>
+  <tr>
+    <td>Basis of self/personality</td>
+    <td>Biological drives (id, ego, superego)</td>
+    <td>Biological maturation — stages tied to cognitive development</td>
+    <td>Social experience — self is entirely a social product</td>
+  </tr>
+  <tr>
+    <td>Internal conflict</td>
+    <td>Id vs superego — constant combat; tension drives behaviour</td>
+    <td>N/A</td>
+    <td>"I" and "Me" cooperate; tension is productive, not destructive</td>
+  </tr>
+  <tr>
+    <td>Role of language</td>
+    <td>Secondary — primary drives are pre-linguistic</td>
+    <td>Language follows cognitive development</td>
+    <td>Language is constitutive — no mind without language</td>
+  </tr>
+  <tr>
+    <td>Individual vs society</td>
+    <td>Individual in conflict with civilisation</td>
+    <td>Individual develops through stages; society provides context</td>
+    <td>Individual and society are mutually constituted — no sharp divide</td>
+  </tr>
+</table>
+
+<h2>Contribution of Mead to Sociology</h2>
+<ul>
+  <li><strong>Founded Symbolic Interactionism</strong> — Opened a new theoretical tradition focused on meaning, symbols, and micro-level interaction as the basis of all social life.</li>
+  <li><strong>Theory of self-development</strong> — The most influential social (as opposed to biological) account of how the self emerges through social interaction; 3-stage model still taught in child development.</li>
+  <li><strong>"I" and "Me"</strong> — Explained simultaneously how individuals are shaped by society (Me) and how they can resist and change it (I). Resolved the agency-structure problem at the micro level.</li>
+  <li><strong>Role-taking and significant/generalized other</strong> — Provided precise mechanisms for how socialisation works — not through passive absorption but active imaginative engagement with others' perspectives.</li>
+  <li><strong>Foundation for later micro-sociology</strong> — Inspired Goffman's dramaturgy, Blumer's symbolic interactionism, Garfinkel's ethnomethodology, and conversation analysis.</li>
+  <li><strong>Bridge between psychology and sociology</strong> — Showed that the mind and self — traditionally studied by psychology — are fundamentally social phenomena, bringing them into sociological analysis.</li>
+</ul>
+
+<h2>Criticisms of Mead</h2>
+
+<h3>Critique of Symbolic Interactionism as a Whole</h3>
+<ul>
+  <li><strong>Gary Fine</strong> — Symbolic interactionism is: apolitical (supportive of the status quo), unscientific (little more than journalism), hostile to classical questions of macro-sociology, and astructural (fundamentally non-sociological). Its scope is limited and cannot address critical issues of power, inequality, or class.</li>
+  <li><strong>Macro-neglect</strong> — By focusing on micro-level face-to-face interaction, symbolic interactionism ignores the structural constraints (class, gender, race, capitalism) that shape and limit individual meaning-making. It cannot explain why some meanings dominate and others are suppressed.</li>
+  <li><strong>Ignores emotion</strong> — By emphasising cognitive role-taking and symbol use, Mead's framework downplays the role of raw emotion, desire, and affect in social action.</li>
+</ul>
+
+<h3>Critique of Mead's Theory of Self Specifically</h3>
+<ul>
+  <li><strong>Anne Kaspar</strong> — Mead's ideas about the social self may be more applicable to men than to women. Women are more likely to experience inherent conflicts between the meanings they derive from personal experience and those prescribed by culture — particularly in balancing family responsibilities and paid employment. The self Mead describes is implicitly gendered male.</li>
+  <li><strong>No biological element (vs Freud and Piaget)</strong> — Mead's view is completely social, allowing no biological element at all. Critics who side with Freud (drives rooted in the body) or Piaget (development tied to biological maturity) find this one-sided.</li>
+  <li><strong>Origin of "I" unspecified</strong> — Mead never explained where the "I" comes from. If the "Me" is formed through socialisation, what generates the spontaneous, creative "I"? This leaves a theoretical gap that Mead himself acknowledged.</li>
+  <li><strong>William James</strong> — Discussed multiple types of empirical selves (material, social, spiritual). Individuals may have multiple selves and show different sides to different groups — a complexity Mead's framework underestimates.</li>
+  <li><strong>Unfalsifiable</strong> — The "I" and "Me" are internal, unobservable processes. The theory cannot be empirically tested in any straightforward sense.</li>
+  <li><strong>Idealises communication</strong> — Assumes that symbols are generally shared and understood. In practice, meaning is contested, power-laden, and unequally distributed. Who has the power to define symbols is a political question Mead ignores.</li>
+</ul>
+
+`,
   'sociology-the-discipline': '',
   'sociology-as-science': '',
   'research-methods': '',
-  'george-mead': '',
   'stratification-mobility': '',
   'works-economic-life': '',
   'politics-and-society': '',
