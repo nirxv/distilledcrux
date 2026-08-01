@@ -3772,9 +3772,394 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The Varna model presents ritual hierarchy as permanent and static; the Jati model varies locally and accommodates these dynamics of mobility and change.</p>
 
 `,
+  'religion-and-society': `
+<h2>Definition and Scope</h2>
+
+<p>Sociologists are not interested in whether God exists or not. The emphasis in sociology is on how religions relate to wider society — how they shape society and are, in turn, shaped by it. Three ways of defining religion determine what conclusions a sociologist reaches:</p>
+
+<ul>
+  <li><strong>Functional definition</strong> — religion defined by what it does for the individual and society. Durkheim: "Religion is a unified system of beliefs and practices relative to sacred things which unite into a single moral community called a Church." Broad — includes Communism as a functional religion.</li>
+  <li><strong>Substantive definition</strong> — religion defined by its content: belief in supernatural beings or forces. Robertson (1970): "Religion refers to the existence of supernatural beings that have a governing effect on life." Narrow — excludes Buddhism, which does not worship a god.</li>
+  <li><strong>Interactionist definition</strong> — concentrates on how individual members of society define religion. Makes it virtually impossible to arrive at a general or universal definition.</li>
+</ul>
+
+<h2>Sociological Theories of Religion</h2>
+
+<h3>A. Functionalist Perspective</h3>
+
+<h4>Emile Durkheim — Elementary Forms of Religious Life (1915)</h4>
+<p>Durkheim studied the simplest form of society — the Arunta clan of Australian Aboriginals — to uncover the essence of all religion. Members of the clan gathered regularly to perform rituals around the <strong>Totem</strong> — an object (usually an animal or plant) that physically represents the collective beliefs, values, and identity of the social group. The totem is deemed sacred by the community.</p>
+
+<p>Durkheim observed that all societies divide the world into two distinct categories:</p>
+<ul>
+  <li><strong>Sacred</strong> — things deemed extraordinary, set apart, treated with awe and reverence; forbidden from ordinary use.</li>
+  <li><strong>Profane</strong> — the ordinary, mundane, everyday world; things with no special significance.</li>
+</ul>
+
+<p>Since the totem represents the clan's collective identity, when the Arunta worship the totem, they are in reality worshipping <strong>society itself</strong>. This is Durkheim's radical insight: God is society idealised. The power individuals feel in religious ritual is the power of society acting upon them through collective effervescence.</p>
+
+<p><strong>Functions of religion/rituals:</strong></p>
+<ul>
+  <li><strong>Social cohesion</strong> — shared rituals and beliefs bind people into a community of believers ("we Jews, we Christians, we Muslims, we Hindus"). Marriage rituals link bride and groom with a broader community that wishes them well.</li>
+  <li><strong>Social control/discipline</strong> — religion acts as an instrument of social control. In medieval Europe, monarchs claimed to rule by divine right — subjects obeyed, considering obedience God's will. Quranic requirements, Jain Panchvrata, Catholic confessions, Jewish Day of Atonement (Yom Kippur) — all enforce moral conformity.</li>
+  <li><strong>Cognitive function (meaning-making)</strong> — religion gives people a reason to see their lives as meaningful by framing them within a god's grand plan. It explains the inexplicable: why some are rich and others poor, why bad things happen to good people. It helps followers tolerate the terrible by assuring them there is a larger purpose.</li>
+</ul>
+
+<p>Durkheim believed that unlike evolutionary scholars who predicted religion's decline, religion continues in modern societies in new forms. Modern rituals (Independence Day, Republic Day, sports events) reaffirm societal values — Robert Bellah calls these <strong>civil religion</strong>.</p>
+
+<h4>Robert Bellah — Civil Religion in America</h4>
+<p>Civil religion consists of secular (non-religious) symbols and rituals that create social cohesion in the same way that traditional religious symbols do. Examples: waving the flag in public parades, singing the national anthem at sporting events, celebrating Thanksgiving (families gathering to give thanks), the Super Bowl as an annual sacred event. Political figures and royal deaths evoke collective feeling. Whatever the conception of the sacred may be, it remains universal and integrative in all societies.</p>
+
+<h4>Bronislaw Malinowski — Psychological Functions</h4>
+<p>Malinowski found in his study of Trobriand Islanders that religion and rituals perform psychological functions for individuals on two specific occasions:</p>
+<ul>
+  <li><strong>When outcomes are uncertain and unpredictable</strong> — lagoon fishing is safe and predictably successful, requiring no ritual. Ocean fishing is dangerous and uncertain — rituals give people a sense of control, ease tension, and reinforce group solidarity. The kula ring journey across tropical seas is similarly ritualised.</li>
+  <li><strong>At times of life crises</strong> — birth, puberty, marriage, and death bring disruptive changes. Rituals minimise these tensions and help people cope with emotional turmoil.</li>
+</ul>
+
+<h4>Talcott Parsons — Religion and Social System</h4>
+<ul>
+  <li>Religion, as part of the cultural system (L in AGIL), provides norms, values, and guidelines for human actions including economic action. Protestantism provides values like "time is money" and "work is worship" which shaped capitalism.</li>
+  <li>Religion helps address problems of an uncertain nature that disrupt social life — death, natural calamity, bad monsoon. It acts as a "tonic to self-confidence" and a mechanism for adjustment.</li>
+  <li>Overall, religion promotes order, stability, and continuity in society.</li>
+</ul>
+
+<h4>Evaluation of Functionalist Perspectives</h4>
+<ul>
+  <li>Emphasises positive functions but neglects negative aspects — religion as a source of oppression of women and the poor.</li>
+  <li>Ignores religion as a source of division and conflict. Where there is religious pluralism (India, the Middle East), it is difficult to see how religion can unite people.</li>
+  <li>Teleological — explains religion by its consequences (integration), not by its causes.</li>
+</ul>
+
+<h3>B. Marxist Perspective</h3>
+
+<blockquote>"Religion is the sigh of the oppressed creature, the sentiment of a heartless world and the soul of soulless conditions. It is the opium of the people." — Karl Marx</blockquote>
+
+<p>Unlike functionalism which argues religion is a unifying force, Marx argued that religion justifies inequality, serves the dominant group, and maintains the status quo by drugging the masses.</p>
+
+<p>Religion teaches that the existing social arrangement represents God's will:</p>
+<ul>
+  <li>In medieval Europe, Christian theologians decreed the divine right of kings — to disobey the king was to disobey God.</li>
+  <li>In Egypt, Pharaoh himself was believed to be God. In Japan, the emperor was declared divine.</li>
+  <li>In India, Ashoka was labelled <em>Devnampiyadasi</em> and Kanishka called himself <em>Devaputra</em> (son of god).</li>
+  <li>Hinduism supported the caste system by teaching that anyone who tried to change their caste would be reborn into a lower caste or as an animal.</li>
+</ul>
+
+<p>Religion makes a virtue out of suffering — promising the working class that things will be better in the hereafter. It is opium because it drugs the working class into accepting their lowly position in return for a better afterlife. It legitimises inequality as part of a divine plan and prevents working-class revolution.</p>
+
+<h4>Criticisms of the Marxist View</h4>
+<ul>
+  <li>Religion does not always prevent social change. Oppressed groups have used religion to <em>bring about</em> social change — the US civil rights movement, Gandhi's Satyagraha, Buddhist and Jain challenges to Brahmanical Hinduism.</li>
+  <li>The Marxist view cannot explain why religion appears universally in all societies — it must fulfil other individual and social needs beyond class legitimation.</li>
+</ul>
+
+<h4>Neo-Marxist View</h4>
+<p>Ernst Bloch argued that religion has a <strong>dual character</strong> — both conservative and potentially revolutionary:</p>
+<ul>
+  <li>Religion was used to maintain the caste system (conservative) but also inspired the Indian nationalist movement through Gandhi's principles of non-violence and self-renunciation (progressive).</li>
+  <li>Engels: religion inhibits change but can also encourage it — sometimes preaching liberation from slavery and misery.</li>
+  <li>Gramsci: the ruling class maintains cultural hegemony by presenting dominant ideology as common sense. Religious leaders can act as <strong>organic intellectuals</strong> to profess counter-hegemony. Examples: Martin Luther King in the US civil rights movement; Ambedkar on Buddha questioning the Vedas, caste system, and animal sacrifice and allowing Shudras and women into the Sangha; Brahmo Samaj, Arya Samaj, Ramakrishna Mission.</li>
+  <li>Otto Maduro: religion is independent of the economic system and does not always support the dominant class. In 19th-century Latin America, Catholic priests became increasingly critical of radical inequalities and acted as organic intellectuals supporting wealth redistribution.</li>
+</ul>
+
+<h3>C. Interactionist Perspective</h3>
+<ul>
+  <li><strong>Peter Berger</strong> — religion acts like a "sacred canopy" protecting believers from the dangers and uncertainties of the world. It answers the "big questions" about how the world was created and what happens after death.</li>
+  <li><strong>Robert Bellah</strong> — there could be 220 million American religions because to each of the 220 million Americans, religion is private and unique.</li>
+  <li><strong>Clifford Geertz</strong> — people need religion to deal with bafflement, suffering, and a sense of difficult ethical paradox. How can one explain that while an earthquake killed most people, a baby of a few months survived? Why did a non-smoker die of lung cancer?</li>
+</ul>
+
+<h3>D. Religious Market Theory (Stark and Bainbridge)</h3>
+<p>Stark and Bainbridge are highly critical of secularisation theory, which they see as Eurocentric. Their theory rests on two assumptions: people are naturally religious, so the need for religion remains constant; and the main factor contributing to religiosity is <em>supply</em>, not demand.</p>
+
+<p>Religion operates like a marketplace — religious organisations sell "compensators" (rewards promised in the afterlife such as a sexless or classless heaven) to compensate for hardship in life. Being rational, people weigh the costs and benefits of different religious options. Religious organisations that are unresponsive to the needs of members will decline.</p>
+
+<p>Unlike secularisation theory which sees a one-way process of continuous decline, Stark and Bainbridge see a <strong>perpetual cycle</strong> of religious decline, revival, and renewal. Society has become characterised by religious <em>pluralism</em> as people seek new sources of compensators.</p>
+
+<h4>Existential Security Theory (Norris and Inglehart)</h4>
+<p>Norris and Inglehart challenged the religious market theory by arguing it cannot explain variations in religiosity across different regions. Their counter-thesis: societies where people feel existentially secure have low demand for religion. Rich societies = low religiosity; poor societies = high religiosity. The USA — the richest country in the world — is the main anomaly, remaining highly religious despite its wealth.</p>
+
+<h3>E. Feminist Perspective</h3>
+<p>Feminists argue that the main function of religion is to maintain gender inequality and normalise patriarchal norms. Religion enforces male domination and legitimates female subordination.</p>
+
+<ul>
+  <li><strong>Simone de Beauvoir</strong> — like Marx's proletariat, religion gives women the false belief that they will be compensated for their sufferings and second-class status on earth by equality in heaven. Religion helps maintain the status quo of gender inequality.</li>
+  <li><strong>Jean Holm</strong> — comparative study of world religions shows divine figures and prophets in most religions are exclusively male. In Christianity, Adam was created in God's image; Eve was created from Adam's rib to serve him, committed original sin, and was responsible for humanity's expulsion from paradise. In China, Yang (masculine) is more important than Yin (feminine). In Buddhism, women can join the Sangha only with their husband's permission; monks are senior to nuns. In Islam, women are barred from mosques in some regions. In Hinduism and Catholicism, women cannot become priests.</li>
+</ul>
+
+<p>Religion is patriarchal in four ways:</p>
+<ul>
+  <li><strong>Religious organisations</strong> — male dominated; women excluded from priesthood.</li>
+  <li><strong>Places of worship</strong> — menstruation, pregnancy, and childbirth are considered polluting.</li>
+  <li><strong>Sacred texts</strong> — written and interpreted by men; anti-female stereotypes (Eve, Delilah).</li>
+  <li><strong>Religious laws and customs</strong> — women have fewer rights regarding dress code (veil as "mobile prison"), marriage, divorce, genital mutilation, punishments for adultery; Catholic ban on abortion; gender-biased inheritance laws.</li>
+</ul>
+
+<p><strong>Subhadra Mitra Channa</strong> — religion not only establishes hierarchy between men and women but also legitimises hierarchy <em>within</em> women. She calls this the "devi-dasi" dichotomy: "Devi" (upper-class/caste, asexual, chaste, devoted, domestic, married women) vs. "Dasi" (lower-class/caste, doing menial jobs, sexually promiscuous, body easily accessible).</p>
+
+<h4>Criticisms of Feminist Perspective</h4>
+<ul>
+  <li><strong>Karen Armstrong</strong> — women have not always been subordinate in religion. Early religions often placed women at the centre — earth mother goddesses, fertility cults, and female priesthood.</li>
+  <li><strong>El Saadawi</strong> — religion itself is not inherently patriarchal; it is the male domination of cultural institutions that has led to religion's role in maintaining gender inequality. The Quran states that both men and women should receive the same punishment for adultery — Arab culture circumvented this by allowing men to have multiple wives while prohibiting the same for women.</li>
+</ul>
+
+<h3>F. Postmodern Perspective</h3>
+<p>This perspective argues that religion is changing its form rather than declining.</p>
+
+<ul>
+  <li><strong>Grace Davie</strong> — religion has taken a more privatised form. Church-going has become a personal choice, not an obligation. People "believe without belonging." Conversely, some attend church out of habit or social convention — "belonging without believing."</li>
+  <li><strong>David Lyon</strong> (<em>Jesus in Disneyland</em>) — agrees with Davie that believing without belonging is increasingly visible. Religion has been "disembedded" from church buildings and relocated to television, the internet, Disneyland, movie theatres, WhatsApp, and mobile phone ringtones. Lyon argues society is experiencing "re-enchantment" — growth in unconventional religious beliefs, practices, and spirituality.</li>
+</ul>
+
+<h2>Religion and Science</h2>
+<p>The relationship between religion and science has been debated since the Enlightenment. Three positions exist:</p>
+
+<ul>
+  <li><strong>Conflict thesis (Andrew Dickson White)</strong> — religion and science are fundamentally incompatible. Science erodes religious beliefs by providing rational, evidence-based explanations for phenomena previously attributed to the supernatural. Galileo vs. the Church; Darwin vs. Creationism.</li>
+  <li><strong>Independence thesis</strong> — religion and science occupy separate, non-overlapping domains. Science deals with empirical facts about the natural world; religion addresses questions of ultimate meaning, morality, and purpose. Stephen Jay Gould: "Non-Overlapping Magisteria" (NOMA).</li>
+  <li><strong>Complementarity thesis</strong> — science and religion can reinforce each other. Weber: Protestantism's this-worldly asceticism encouraged systematic observation of nature. Many early scientists (Newton, Mendel) were deeply religious. Albert Einstein: "Science without religion is lame; religion without science is blind."</li>
+</ul>
+
+<p>In practice, modernisation has shifted many previously religious explanations to scientific ones — illness to medicine, weather to meteorology, agricultural success to agronomy. Weber called this the "disenchantment of the world." Yet science has not eliminated religion — it has changed its scope and character.</p>
+
+<h2>Types of Religious Practices</h2>
+
+<h3>Animism</h3>
+<p>EB Tylor believed Animism to be the earliest form of religion. Animism is the belief that spirits inhabit natural objects, forces of nature, and human beings — "everything is alive or conscious." Animism arose from early humans' intellectual need to explain conditions they could not understand: death, disease, dreaming, meeting dead ancestors in dreams, hearing one's own echo, seeing one's reflection, trance states, birth, puberty.</p>
+
+<p>Early humans concluded there were two souls: the <em>free soul</em> (which could leave the body and have experiences) and the <em>body soul</em> (whose permanent departure meant death). Spiritual beings were not under human control and therefore needed to be propitiated. Shamans, witchdoctors, and priests — seen as possessing unusual power — performed rituals to please them.</p>
+
+<p>Animism is not limited to pre-industrial societies. It remains relevant today: human rights, animal rights, tree worship (Chipko movement), river conservation (Narmada Bachao), living legal status for New Zealand's Whanganui River. Ecological movements are animist in nature. Quantum animism — finding energy (rather than soul) in everything and trying to protect it.</p>
+
+<table>
+  <tr>
+    <th>Animism</th>
+    <th>Polytheism</th>
+    <th>Monotheism</th>
+  </tr>
+  <tr>
+    <td>Spirits inhabit natural objects and living beings. Shamans mediate between humans and spirits. E.g. Santhals, Oraons, ancestor worship.</td>
+    <td>Many gods, each controlling a different sphere of life. E.g. Greek/Roman pantheon, Vedic religion, Hinduism. Gods have human-like personalities and conflicts.</td>
+    <td>Belief in one omniscient, omnipotent, omnipresent God. E.g. Christianity, Islam, Judaism, Sikhism. Stronger moral absolutism; more exclusive truth-claims.</td>
+  </tr>
+</table>
+
+<h3>Naturism (Max Muller)</h3>
+<p>Muller argued the earliest form of religion was worship of objects of nature — not a product of death and dreams but of people's personification of nature. Attitude of awe and reverence towards sun, moon, stars, storms, and animals developed because these were perceived as givers and takers of life. Naturism generally developed into idol worship and polytheism.</p>
+
+<h3>Magic, Religion, and Science (Malinowski)</h3>
+<p>Malinowski distinguished magic, religion, and science in his study of Trobrianders:</p>
+<ul>
+  <li><strong>Science</strong> — deals with empirical, technical knowledge. The Trobrianders had sophisticated knowledge of soil, fish behaviour, and canoe construction — they used "science" for routine, predictable tasks.</li>
+  <li><strong>Magic</strong> — used when knowledge (science) runs out; when outcomes are uncertain. When ocean fishing faced storms and unknown risks, magic filled the uncertainty gap.</li>
+  <li><strong>Religion</strong> — addresses the deeper crises of existence — birth, death, puberty, marriage — and the meaning of collective life.</li>
+</ul>
+
+<p>All three coexist in all societies. Malinowski rejected Tylor's evolutionary sequence (animism → polytheism → monotheism → science).</p>
+
+<h3>Church, Sect, and Cult</h3>
+<p>Sociologists use a typology to categorise religious organisations:</p>
+
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Church</th>
+    <th>Sect</th>
+    <th>Cult</th>
+  </tr>
+  <tr>
+    <td>Nature</td>
+    <td>Well-established, well-integrated into society</td>
+    <td>Small exclusive group that has branched from a church due to doctrinal differences</td>
+    <td>Deviant religious organisation with novel beliefs and practices; new world religion</td>
+  </tr>
+  <tr>
+    <td>Examples</td>
+    <td>Christianity, Islam, Judaism, Hinduism, Buddhism</td>
+    <td>Vaishnavism, Shaivism; Mahayana/Hinayana/Vajrayana in Buddhism; Shvetambar/Digambar in Jainism</td>
+    <td>ISKCON, Scientology, Osho, Transcendental Meditation</td>
+  </tr>
+  <tr>
+    <td>Leadership</td>
+    <td>Recognised clergy with training and authority</td>
+    <td>Recognised religious leaders; organised structure; codified practices</td>
+    <td>Charismatic self-appointed leader; authoritarian; not accountable</td>
+  </tr>
+  <tr>
+    <td>Truth claims</td>
+    <td>Claims unique monopoly on truth</td>
+    <td>Claims unique, legitimate truth (uniquely legitimate)</td>
+    <td>Open to beliefs of other organisations (pluralistically legitimate)</td>
+  </tr>
+  <tr>
+    <td>Membership</td>
+    <td>Born into; inclusive</td>
+    <td>Born into; closed — cannot join multiple sects</td>
+    <td>Like customers; highly open; can follow multiple cults; enter/exit freely</td>
+  </tr>
+  <tr>
+    <td>Commitment</td>
+    <td>Moderate</td>
+    <td>High</td>
+    <td>Low; individualised, loosely organised, tolerant, few demands</td>
+  </tr>
+  <tr>
+    <td>Lifespan</td>
+    <td>Long</td>
+    <td>Long</td>
+    <td>Comparatively short</td>
+  </tr>
+</table>
+
+<p>Weber: sects are a "theodicy of disprivilege" — women, debtors, slaves, and lower castes are given their privilege back by Buddhism and other sects that challenge established religious hierarchy.</p>
+
+<h3>New Religious Movements (NRMs) and the New Age</h3>
+<p>The term NRM is a more neutral alternative to "cult." Most NRMs involve hybrid belief systems combining ideas from different traditions: crystal healing, meditation, Feng shui, yoga, alternative medicine, psychic experiences, astrology, belief in UFOs, clairvoyance, and mysticism.</p>
+
+<p>Roy Wallis classifies NRMs into three types:</p>
+<ul>
+  <li><strong>World-affirming</strong> — do not reject the mainstream world; show people how to extract maximum from it by unlocking their potential. Like paid enlightenment or self-help therapy. Examples: Zen, Transcendental Meditation, ISKCON, Scientology.</li>
+  <li><strong>World-rejecting</strong> — see the outside world as inherently evil or corrupt; encourage followers to remove themselves and live in a commune. Often accused of brainwashing. Examples: Millenarian movements (People's Temple of Jim Jones; Heaven's Gate — both committed mass suicide).</li>
+  <li><strong>World-accommodating</strong> — more traditionally religious; members remain actively involved in mainstream society while seeking spiritual enrichment; more about helping members cope with ordinary life than maxing out spiritual growth.</li>
+</ul>
+
+<p>Paul Heelas — New Age Movements (NAMs) emerged in the 1980s when people became disillusioned with science and development (environmental disaster, nuclear risk, economic crises) and turned to spirituality within themselves. NAMs constitute a "spiritual supermarket" where individuals pick and mix various practices.</p>
+
+<p>Reasons for growth of NRMs and cults:</p>
+<ul>
+  <li>Marginality — cults arise among groups who are victims of inequality, racism, and deprivation, offering community and belonging.</li>
+  <li>Sense of belonging — provide strong community identity, adopting kinship terms to give recruits new identities.</li>
+  <li>Promise of salvation or personal transformation.</li>
+  <li>Authenticity in an "artificial" world — natural foods, community living, free sexuality.</li>
+  <li>Disillusionment with science — science could not provide answers to existential questions or solve problems it itself created.</li>
+  <li>Bryan Wilson — war, natural disaster, or economic collapse create fertile ground for cults.</li>
+  <li>Deprivation — physical, mental, economic, and addiction problems. Scientology promises levels of personal fulfilment to resolve such deprivation.</li>
+  <li>Flexibility and quick solutions — less commitment than mainstream churches; services tailored to individual identity.</li>
+</ul>
+
+<h2>Religion in Modern Society — Secularisation, Revivalism, and Fundamentalism</h2>
+
+<h3>Secularisation</h3>
+<p>All three classical sociologists forecast that religious beliefs would lose ground and decline with modernity:</p>
+<ul>
+  <li><strong>Comte</strong> — society would move through Theological → Metaphysical → Positive (scientific) stages. Religion would give way to science.</li>
+  <li><strong>Marx</strong> — material conditions, not religious ideology, drive history. As class consciousness develops, the need for religion's consolation would diminish.</li>
+  <li><strong>Weber</strong> — rationalisation would lead to progressive "disenchantment of the world." In modern society, technology, rationality, and bureaucracy would sweep away magic, myth, and tradition. When someone falls ill, they would seek a doctor rather than a priest. Protestantism carried within itself the seeds of secularisation.</li>
+  <li><strong>Durkheim</strong> — in traditional society, a common conception of the sacred made collective ties stronger. Since modern societies are heterogeneous, there cannot be a common conception of the sacred. Yet the sacred does not disappear — it takes new forms (civil religion).</li>
+</ul>
+
+<p><strong>Bryan Wilson</strong> defines secularisation as the process by which religious thinking, practices, and institutions lose social significance. He considered industrialisation the key factor. His observations: city-dwellers are less religious than rural people; men are less religious than women; working-age people are less religious than the young and old; classes connected with industrial production are less religious than traditional occupations; more industrialised countries are less religious than less industrialised ones.</p>
+
+<p><strong>Karel Dobbelaere</strong> — three levels of secularisation:</p>
+<ul>
+  <li><strong>Societal level (Macro)</strong> — decline of religion's influence on politics, education, law, medicine. All institutions now run on rational secular standards, not by reference to religion. Social differentiation of church from state.</li>
+  <li><strong>Religious organisational level (Meso)</strong> — religions modifying doctrines and practices in response to changing needs. Churches losing their core "hatching, matching, dispatching" services (christenings, weddings, funerals) to naming ceremonies, humanist weddings, and celebration-of-life parties (Terry Sanderson). Structural adaptation of religious bodies to secularised society.</li>
+  <li><strong>Personal level (Micro)</strong> — decline of collective beliefs among individuals; personal recomposition of belief. Head count of church participants.</li>
+</ul>
+
+<p><strong>David Martin</strong> (<em>A General Theory of Secularisation</em>) — rejected the ostensible universality of secularisation theory and showed through comparative study how it is modified by specific historical conditions in different countries:</p>
+<ul>
+  <li><strong>France</strong> — religion was seen as a negative force legitimising estate-based inequality. The French Revolution developed against clergy and warrior class. Today, strict separation exists between state and religion (laïcité).</li>
+  <li><strong>USA</strong> — religion played a positive role in the American Revolution, offering moral sanction for opposition to British rule. Religion became identified with positive social force. Hence the USA maintains remarkably high levels of church attendance, strong civil religion (Independence Day, Thanksgiving, Super Bowl), NRMs, and the motto "In God we trust."</li>
+  <li><strong>Latin America</strong> — Uruguay has high secularisation; Brazil is experiencing growth of NRMs (ISKCON, Brahma Kumaris) and Spiritism.</li>
+  <li><strong>Middle East</strong> — governments actively control religious life (prayer times, school curricula, media). Yet a "rise in nones" — those who do not identify with any faith — has been noted in Muslim-majority countries including Iraq, Tunisia, and Morocco.</li>
+  <li><strong>India</strong> — Gandhi's Satyagraha was grounded in religious principles (ahimsa, soul force). Post-independence India has equality of religions alongside state intervention in religious matters.</li>
+</ul>
+
+<h4>Causes of Secularisation</h4>
+<ul>
+  <li><strong>Rationalisation</strong> — modern science has made traditional beliefs less plausible and has given people greater control over their environment, making the idea of an omnipotent God less relevant.</li>
+  <li><strong>Structural differentiation</strong> — education, social welfare, and law, previously under religious influence, were gradually passed to state institutions.</li>
+  <li><strong>Industrialisation</strong> — broke up communities once held together by common religious beliefs. Modern fragmented industrial society is less conducive to shared sacred experience.</li>
+  <li><strong>Pluralism</strong> — Peter Berger (1969): the co-existence of numerous and conflicting religious groups undermines the "sacred canopy" — the unified, believable framework that religion provides. Crisis of credibility.</li>
+</ul>
+
+<h4>Criticisms of the Secularisation Thesis</h4>
+<ul>
+  <li><strong>Eurocentric</strong> — the thesis focuses on decline of religion in Europe but fails to explain its continuing vitality in America, the Middle East, and India. Peter Berger: secularisation hardly explains the explosion of radical Islam globally (including in Europe), or fundamentalist Christianity in Africa and Latin America.</li>
+  <li><strong>Not a universal process</strong> — belongs to a short, particular period of European history (Grace Davie). Religion has become privatised (private belief without public belonging) — "believing without belonging." The opposite is also observed — people attend church out of habit without strong belief: "belonging without believing."</li>
+  <li><strong>Re-sacralisation and spiritual revolution</strong> — growth in NRMs, cults, and individualist spirituality. Religion is not declining but changing form — from public to private, from outer to inner authority, from God to self-as-god, from institutional to spiritual.</li>
+  <li><strong>Resurgence of religious identities and conflict</strong> — Huntington's <em>Clash of Civilisations</em>: the post-cold war world has realigned along civilisational lines. Seven civilisations (Western, Chinese, Japanese, Islamic, Hindu, Latin American, African, Slavic) — their cultural and religious differences are the prime source of future conflict. Examples: US intervention in the Arab world, 9/11, Israel-Gaza conflict, ISIS vs. the West. Religion has not faded from macro structures universally; it persists strongly in meso and micro structures.</li>
+</ul>
+
+<h3>Religious Pluralism</h3>
+<p>Religious pluralism refers to the growth of diverse, fragmented, and new forms of religious organisations and beliefs in society. Migration and globalisation produce social fragmentation into a plurality of cultural and religious groups.</p>
+
+<p>Peter Berger: "Modernity does not necessarily produce secularity — rather it produces pluralism, which implies coexistence of different worldviews and value systems in the same society." In modern societies there is neither a steady one-way process of secularisation nor a pure religious revitalisation, but a growing diversity of belief systems and practices — <strong>pluralisation</strong>.</p>
+
+<p>Historical examples of pluralism: Ashoka's 7th Edict ("I wish all sects to cohabit throughout my kingdom"), Akbar's Ibadat Khana, Bhakti and Sufi movements.</p>
+
+<p>Impediments to pluralism: religious chauvinism (boundary maintenance), relative deprivation among minorities, core cultures identifying another culture as culprit, communal and ethnic conflicts.</p>
+
+<h3>Religious Revivalism</h3>
+<p>José Casanova identifies forms of religious revival: mass movements seeking to restore old order (Arya Samaj, Deoband movement), new religious movements (sects and cults), religious conversions, rise in church attendance, renewal of established churches, and fundamentalist revival.</p>
+
+<p>The question is whether secularisation necessarily accompanies modernisation, or whether there is a cyclical process between secularisation and religious revivalism. Different positions:</p>
+<ul>
+  <li>Durkheim — firm believer in religious revivalism: religion exists as long as human societies exist, merely assuming new forms.</li>
+  <li>Stark and Bainbridge — perpetual cycle of decline, revival, and renewal. Main contributing factor is supply — ample choice increases religiosity.</li>
+  <li>David Lyon — past five to six decades have experienced "re-enchantment" due to growth of unconventional beliefs.</li>
+  <li>Steve Bruce and Anthony Giddens — fundamentalism as a reaction to the morally corrupt nature of modernity. Fundamentalists abhor modern lifestyles — abortion, birth control, rights for women, gay rights.</li>
+  <li>Marx — ruling class revives religion to legitimise class inequalities.</li>
+  <li>Feminist — men revive religion to legitimise gender inequalities.</li>
+</ul>
+
+<h3>Fundamentalism</h3>
+<p>Fundamentalism is the assertion of an orthodox religious identity in response to the perceived moral corruption of modernity. Fundamentalists insist on a strict, literal interpretation of sacred texts and reject compromise with secular culture.</p>
+
+<ul>
+  <li>Steve Bruce and Anthony Giddens — fundamentalism is a defence mechanism against modernity's uncertainties. Modern societies erode traditional certainties about gender roles, family values, and religious authority. Fundamentalists respond by reaffirming absolute religious truth.</li>
+  <li>Bruce: fundamentalism is more likely to flourish where modernisation is rapid and threatens a group's power, identity, or lifestyle. Examples: Hindu nationalism (Hindutva), Islamic fundamentalism, Christian fundamentalism (Bible belt USA), Jewish ultra-orthodoxy.</li>
+  <li>Al Saadawi — male-dominated cultural institutions exploit religion to justify fundamentalism; fundamentalism itself is a product of patriarchal power, not of religion per se.</li>
+  <li>Stuart Hall — fundamentalism is often a response to cultural imperialism and colonialism. The assertion of "pure" religious identity against Western cultural domination.</li>
+</ul>
+
+<h2>Secularism in India</h2>
+
+<h3>Nehruvian Secularism</h3>
+<p>Based on secularisation of civil society: religion separated from public life and relegated to the private sphere. Public institutions (hospitals, state, universities, schools, courts, bureaucracy) operate on universalism — no discrimination on grounds of caste, religion, or theological persuasion. The state is impartial in religious matters; equal opportunities for all religions. Minority communities supported this model because they expected state impartiality in a Hindu-majority democracy.</p>
+
+<p>Challenges to Nehruvian secularism today: struggle for power among religious groups, communal identity becoming the basis for economic and political mobilisation, majoritarianism.</p>
+
+<h3>TN Madan — Critique of Indian Secularism</h3>
+<p>Madan argued secularism in South Asia is impossible, impracticable, and impotent. South Asian religions are "totalising" in character — driving all spheres of a follower's life (marriage, food behaviour, status, pattern of thinking, interpersonal relations). South Asian religions arrange sacred and secular in a hierarchical order, with economic and political domains subordinated to the religious domain. They are therefore incompatible with modern secularism.</p>
+
+<p>Moreover, secularisation of Indian society correlates with the rise of sectarian fundamentalism. Since secularism denies the significance of religion in social life, it may unintentionally cause fundamentalist reactions and fanaticism. Madan commends Gandhi for emphasising the inseparability of religion and politics (Ram Rajya).</p>
+
+<h3>Ashis Nandy — Two Forms of Secularism</h3>
+<ul>
+  <li><strong>Western secularism</strong> — strict separation of religion from politics, adopted by India's Westernised intellectuals. Sacred and secular are treated as opposite. Enables the state to "legitimately" intervene in religious communities (interventionist secularisation). Examples: Ayodhya verdict, CAA. Not compatible with home-grown concepts of tolerance and pluralism.</li>
+  <li><strong>Non-Western secularism</strong> — implies that the public sphere must have space for dialogue among religious traditions (tolerance and mutual respect). Compatible with Indian understanding of secularism. Ashoka, Akbar, and Gandhi derived religious tolerance not from Western secularism but from Buddhism, Islam, and Hinduism respectively. Sacred and secular are not opposites here — Nandy argues for recourse to non-Western secularism premised on historical religious tolerance.</li>
+</ul>
+
+<h3>Partha Chatterjee — Contradictions of Indian Secularism</h3>
+<p>Since its birth, Indian secularism has been mired in contradictions: separation (state keeping one arm's distance from religion), reformism (selectively intervening to reform religious practices), and selective intervention are contradictory to each other. The state: illegalised Hindu polygamy, introduced divorce, abolished child marriage, and recognised inter-caste marriages among Hindus — but has been non-interventionist with respect to Muslim personal laws. SCs are recognised among Hindus, Buddhists, Sikhs — but not among Christians and Muslims. Haj subsidy has been withdrawn but state funds continue for other pilgrimages (PRASAD scheme for Kashi, Ayodhya, Mathura; Kerala's Devaswom fund). Politics of interventionist secularisation is responsible for communalism and intolerance. The most contemporary challenge to Indian secularism is majoritarianism.</p>
+
+<h3>MN Srinivas — Against Secular Humanism</h3>
+<p>Srinivas rejected secular humanism on the grounds that it has weakened the hold of values on individuals to such an extent that corruption, materialism, consumerism, and mindless destruction of the earth have become commonplace. What India requires is a new Weltanschauung (worldview) which can renew faith in god or renew a moral order that is organic, harmonious, and holistic.</p>
+
+<h2>Religion as Agent of Status Quoism or Social Change</h2>
+
+<h3>Religion preserves and maintains the status quo:</h3>
+<ul>
+  <li>Functionalism — religion is conservative because it maintains social stability and prevents society from disintegrating. It is a mechanism of social control.</li>
+  <li>Marxism — religion is a conservative force because ideology prevents social change through promoting false class consciousness.</li>
+  <li>Feminism — religion is a conservative force because it acts as an ideology legitimating patriarchal power and maintaining women's subordination.</li>
+</ul>
+
+<h3>Religion promotes social change:</h3>
+<ul>
+  <li>Weber — Protestant Calvinist work ethic helped bring about the major social change of capitalism in northern Europe.</li>
+  <li>American civil rights movement — Black clergy gave moral legitimacy to activists; Martin Luther King's theology of non-violent resistance drew directly from the Sermon on the Mount.</li>
+  <li>India — Buddhism and Jainism challenged Brahmanical Hinduism's caste hierarchy. Brahmo Samaj, Arya Samaj, Prarthana Samaj, Theosophical Society, and Ramakrishna Mission eradicated social evils like sati, child marriage, polygamy, and infanticide and propagated widow remarriage.</li>
+  <li>Ambedkar — Buddha's questioning of the Vedas, caste system, and ritual animal sacrifice laid the foundation of a social revolution by allowing Shudras and women into the Sangha.</li>
+</ul>
+
+<p>Whether religion helps bring about or inhibit social change varies according to social and historical conditions. It is not inherently conservative or progressive — its character depends on who controls it, in what context, and for what purpose.</p>
+
+`,
   'works-economic-life': '',
   'politics-and-society': '',
-  'religion-and-society': '',
   'systems-of-kinship': '',
   'social-change-modern-society': '',
   'introducing-indian-society': '',
