@@ -3335,7 +3335,438 @@ export const sociologyNoteContent: Record<string, string> = {
 
 `,
   'stratification-mobility': '',
-  'works-economic-life': '',
+  'works-economic-life': `
+<h2>What is Work?</h2>
+
+<p>Work, in its broadest sociological sense, refers to any activity requiring the expenditure of mental or physical effort aimed at producing goods and services that cater to human needs. This includes both paid employment (direct payment like contract labour, or indirect payment like barter) and unpaid labour (domestic work, voluntary work, ritual obligations). Sociology, unlike economics, interprets work not merely in terms of monetary exchange but also in terms of social obligation, identity, power, and meaning.</p>
+
+<blockquote>"Labour is the unique gift of nature to man. Its imprints are visible in architecture, music, literature — the entirety of civilisation."</blockquote>
+
+<p>In traditional societies, work was governed by indirect payments, feudal obligations, and ritual duties. In modern capitalist societies, work is directly paid and commodified. Yet the sociological significance of work extends far beyond the pay cheque: it structures social relationships, confers identity, reproduces inequality, and is the terrain on which most political conflicts are fought.</p>
+
+<h3>Key Thinkers on the Nature of Work</h3>
+<ul>
+  <li><strong>Emile Durkheim</strong> — The organisation of work (division of labour) shapes the entire social structure. Traditional society has a simple division of labour based on mechanical solidarity (homogeneity, shared values, similar tasks). Modern society has a complex division of labour based on organic solidarity (interdependence, specialisation, complementarity).</li>
+  <li><strong>Karl Marx</strong> — Production is the "first historical act." Work is inherently central to human nature and should be a source of happiness and self-expression. When workers lose control over the product and process of their labour, alienation results. Marx classified societies by their modes of production: Primitive, Ancient (Slave), Feudal, Capitalist.</li>
+  <li><strong>Herbert Spencer</strong> — Division of labour is the criterion for social organisation. Simple societies have minimal occupational differentiation; modern societies have complex differentiation.</li>
+  <li><strong>Herbert Marcuse</strong> — Drawing on classical Biblical convention, work has been given a sorrowful character (Adam and Eve expelled from Eden to labour for survival). Protestant thought inverted this: work became a calling, giving it a purposeful, even hopeful feeling.</li>
+  <li><strong>Max Weber</strong> — Protestant ethic transformed the meaning of work from a curse into a vocation. Rational, disciplined labour became the hallmark of moral worth under Calvinism, creating the psychological conditions for capitalism.</li>
+  <li><strong>C.W. Mills</strong> — White-collar workers lead artificial lives, performing managed emotions ("the artificial smile") and selling not just skills but personality to the market. The professional man is enslaved to social conditions.</li>
+</ul>
+
+<h2>Social Organisation of Work in Different Societies</h2>
+
+<p>The social organisation of work refers to the patterning of productive activities, both technically (how tasks are divided and performed) and normatively (the stratification order, power relations, alienation, and social obligations that govern production). At the macro level, a broad distinction exists between traditional and modern societies:</p>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Traditional (Slave/Feudal)</th>
+    <th>Modern (Capitalist)</th>
+  </tr>
+  <tr>
+    <td>Nature of organisation</td>
+    <td>Simple, informal</td>
+    <td>Complex, formal</td>
+  </tr>
+  <tr>
+    <td>Basis of allocation</td>
+    <td>Ascription (birth, caste, heredity)</td>
+    <td>Achievement (merit, qualifications)</td>
+  </tr>
+  <tr>
+    <td>Orientation</td>
+    <td>Collective; affective relations</td>
+    <td>Individual; affectively neutral</td>
+  </tr>
+  <tr>
+    <td>Stratification</td>
+    <td>Interdependent: caste = status = power</td>
+    <td>Independent dimensions: class, status, power</td>
+  </tr>
+  <tr>
+    <td>Social roles</td>
+    <td>Few and simple (Durkheim: low moral density)</td>
+    <td>Many and complex</td>
+  </tr>
+  <tr>
+    <td>Social mobility</td>
+    <td>Low; closed systems</td>
+    <td>Higher; open systems</td>
+  </tr>
+  <tr>
+    <td>Degree of alienation</td>
+    <td>Lower</td>
+    <td>Higher (Marx: increases with each historical stage)</td>
+  </tr>
+</table>
+
+<p>At the micro level, work can also be studied in terms of the allocation, performance, and consequences of specific activities. In Marxian terms, both traditional and modern societies share the common feature of a dichotomy between haves and have-nots — an exploitative relationship that changes form but never disappears until communism.</p>
+
+<h3>A. Slave Society</h3>
+
+<p>Slavery is defined as "a system in which one is subject to the power of another contrary to nature." The slave is a possession, property, or commodity of the master — without freedom or choice of action. Aristotle described the slave as "property with a soul" and considered slavery natural and beneficial; John Locke distinguished <em>legitimate slavery</em> (captivity from a just war) from <em>illegitimate slavery</em> (authoritarian deprivation of natural rights); Marx identified slave society as the earliest form of class society, the starting point of private property and dialectical materialism.</p>
+
+<table>
+  <tr>
+    <th>Type of Slavery</th>
+    <th>Character</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Primitive</td>
+    <td>Losers of wars for resources forced into slavery; no payment, no rights, no trade</td>
+    <td>Dasa and Dayus in ancient India</td>
+  </tr>
+  <tr>
+    <td>Ancient</td>
+    <td>Slaves acquired by war and traded in markets; no payment, no rights</td>
+    <td>Slavery in ancient Rome</td>
+  </tr>
+  <tr>
+    <td>Medieval</td>
+    <td>Serfs and captive prisoners in perpetual debt to feudal lords; surrendered rights for sustenance</td>
+    <td>European serfdom</td>
+  </tr>
+  <tr>
+    <td>Modern</td>
+    <td>Intercontinental trade; Africans captured and transported to American colonies; "shanghaiing"</td>
+    <td>Atlantic slave trade; press-ganging into Royal Navy</td>
+  </tr>
+  <tr>
+    <td>Post-modern</td>
+    <td>Bonded labour, sex trafficking, forced child labour; legal framework bypassed</td>
+    <td>Gig economy platform-bondage; migrant worker exploitation</td>
+  </tr>
+</table>
+
+<p><strong>Organisation of work in slave society:</strong> Major economic activity was hunting, food gathering, and large-scale agriculture. The mode of production was ancient — production only for sustenance. Division of labour was low. Stratification was minimal (two groups: rulers and ruled). Religion dominated economic life. Family played an important role in production. Source of power was animated (human and animal labour). Alienation was relatively low in primitive slavery (workers enjoyed the fruits of production) but intensified in later forms.</p>
+
+<p><strong>Why slavery ended:</strong> Capitalism required cheap wage labour, not slave labour. Slave revolts (Spartacus, Haitian Revolution) empowered demands for rights. Population increase made slaves economically unviable. Technological innovation rendered slave labour redundant. Christianity's conceptions of charity and justice were incompatible with slavery. Slavery was abolished in Britain in 1833, in the USA in 1865.</p>
+
+<h3>B. Feudal Society</h3>
+
+<p>Feudalism is a social system in which people received land and protection from those of higher rank in exchange for labour and military service. The classical feudal triangle runs: King/Lord (protection, shelter, military service) — Vassals — Serfs (rent in kind, labour services). In India, examples include Zamindari, Jajmani relationships, and bonded labour in Tehri Garhwal, where a lower-caste labourer who borrows from a landowner becomes perpetually bonded.</p>
+
+<p>Marx and Engels emphasised the lords' exploitation of peasants as the essence of the feudal mode of production. Adam Smith described feudalism as a stage of social development marked by the absence of commerce and the use of semi-free labour to cultivate land.</p>
+
+<p><strong>Features of feudal social organisation:</strong></p>
+<ul>
+  <li>Agriculture was the dominant economic activity; land ownership was the source of power</li>
+  <li>Increased small-scale specialisation (carpenters, swordsmiths, goldsmiths) but simple overall division of labour</li>
+  <li>Hereditary classes — feuds and serfs, king and priests; social mobility was very low</li>
+  <li>Serfs had rights to protection from lords and to cultivate certain fields for their own subsistence</li>
+  <li>Theocracy dominated: the clergy class legitimised the socio-political structure; religion sanctified the existing hierarchy</li>
+  <li>Alienation was moderate — higher than ancient communism (because of new intermediaries) but less than capitalism</li>
+  <li>Interdependence: serfs provided goods and services; lords gave security</li>
+</ul>
+
+<p><strong>Jajmani System (feudalism in delivery of services):</strong> Each caste specialised in one kind of activity, bringing cooperation and interdependence. The Jajman (upper-caste patron) received hereditary services from lower-caste Kamin groups; in return Kamins received grain, protection, and social security. Robert Redfield noted the peasant was not expected to make profits; surplus was to be distributed among kin. Evans-Pritchard's study of the Nuer tribe (South Sudan) showed stereotypical role allocation to men in warfare, production, and ritual. Malinowski argued that labour is driven by the culture of society.</p>
+
+<p><strong>Transition from feudalism to capitalism:</strong> Productivity of the feudal economy could not sustain the growing population. The Enclosure Movement in Britain evicted serfs from land to supply factory labour. Population growth created demand for new economic opportunities. The Renaissance and Enlightenment challenged the authority of the Church. The Reformation and Protestant ethics (Weber) provided a new work ethic. Nation-states and parliamentary governance supported capitalist production. Rising mercantile classes demanded rights that challenged feudal hierarchy.</p>
+
+<h3>C. Industrial Capitalist Society</h3>
+
+<p>Capitalism is a market-centric economic system controlled by private owners for profit, based on commodification of labour, free markets, and the accumulation of capital. It emerged historically alongside industrialism but must be distinguished from it: industrialism is a specific technological process for mass production (factory system, inanimate sources of energy); capitalism is a broader ideological system that defines the relationship between people in production (private ownership, profit motive, free market).</p>
+
+<blockquote>"It is not industrialism itself but the exploitative relations of production under capitalism that constitute the real problem." — Marx</blockquote>
+
+<p><strong>Features of work organisation in capitalist society:</strong></p>
+<ul>
+  <li>Mass production in factories; inanimate sources of power replace human and animal power</li>
+  <li>Complex, highly diversified division of labour</li>
+  <li>Production for exchange and profit (commodities have exchange value, not just use value)</li>
+  <li>Competition, not cooperation, drives production</li>
+  <li>Alienation reaches its maximum — workers lose control over product, process, and self</li>
+  <li>High surplus production; the surplus is appropriated by capital</li>
+  <li>Money economy replaces barter; labour itself becomes a commodity</li>
+  <li>Occupational mobility is high; achievement-oriented, rational, secular values prevail</li>
+  <li>Work-life separation emerges — family is no longer a unit of economic production</li>
+  <li>New occupations arise: managers, consultants, accountants, legal advisors</li>
+</ul>
+
+<p><strong>Key thinkers on capitalism and work:</strong></p>
+<ul>
+  <li><strong>Marx</strong> — Commodification of labour; fetishism of commodities; alienation across four dimensions (from product, process, species-being, fellow workers); surplus value appropriated by capitalists.</li>
+  <li><strong>Durkheim</strong> — Complex division of labour creates organic solidarity but, without moral regulation, generates anomie. Solution: occupational associations, moral education, professional ethics codes.</li>
+  <li><strong>Weber</strong> — Capitalism is a market-oriented system; commodification of work is contractual; occupational diversification leads to job-oriented educational specialisation; rationalisation and bureaucratisation are capitalism's defining features.</li>
+  <li><strong>C.W. Mills (White Collar Alienation)</strong> — The market buys not just a worker's skills but their personality. Certain aspects of personality are valued; the worker has separated himself from his authentic self to pursue these aspects.</li>
+  <li><strong>Herbert Marcuse (One-Dimensional Man)</strong> — False needs and a false sense of happiness prevent the employed from recognising the genuine nature of their estrangement. Leisure becomes a recharging mechanism before the next day's work, not genuine freedom.</li>
+  <li><strong>Robert Blauner (Alienation and Freedom)</strong> — Alienation has four dimensions: degree of control workers have over their work; degree to which they are involved; degree of meaning and purpose in their work; degree to which they are socially integrated. Alienation varies by industry and type of production technology.</li>
+  <li><strong>Richard Sennett (Corrosion of Character)</strong> — Demand for social mobility, adaptability, and flexibility in modern capitalism contradicts long-term social bonds. People switch jobs for better pay; the previous generation sought stability even under exploitative conditions. This "corrosion" weakens social bonds and the capacity for sustained commitment.</li>
+</ul>
+
+<h3>D. Taylorism (Scientific Management)</h3>
+
+<p>Developed by Frederick Winslow Taylor in the early 20th century, Taylorism is a scientific production system that divides the manufacturing process into small, discrete steps, reducing the degree of skill required to perform each activity. Its prime aim was to increase productivity and efficiency in factories.</p>
+
+<p><strong>Key characteristics:</strong></p>
+<ul>
+  <li><strong>Process simplification</strong> — Complex processes are broken into smaller, manageable steps. Car manufacturing is divided into setting chassis, setting engine, adding transmission, finishing exterior.</li>
+  <li><strong>Skill reduction</strong> — Allocating simpler, narrower tasks to less-skilled (cheaper) workers reduces labour costs.</li>
+  <li><strong>Sequential arrangement</strong> — Tasks are arranged in a precise sequence; each worker performs their step and passes it on.</li>
+  <li><strong>Worker motivation through monetary incentives</strong> — Taylor believed in piece-rate wages to maintain worker productivity.</li>
+</ul>
+
+<p><strong>Significance:</strong> Taylorism broke processes into small steps, increasing employment prospects for low-skilled workers. It enabled mass production, economies of scale, and cheaper goods. It is the basis of almost all modern industrial processes and has been used by MNCs to outsource production globally (the Indian automobile industry assembles parts manufactured in China).</p>
+
+<p><strong>Critique (Harry Braverman, Labour and Monopoly Capital, 1974):</strong> Taylorism systematically deskills workers, removing their autonomy and craft knowledge and building them into technologies. Workers are coerced into servitude in a factory system. Braverman argued that the real purpose of scientific management was not efficiency for workers but control over workers by capital.</p>
+
+<h3>E. Fordism and Post-Fordism</h3>
+
+<p>Fordism refers to the system of mass production using assembly-line techniques pioneered by Henry Ford at the Ford Motor Company in the early 20th century. For Antonio Gramsci, Fordism represented a specific stage of economic development. It peaked in the post-WWII "Golden Age of Capitalism" but collapsed in the 1970s.</p>
+
+<p><strong>Characteristics of Fordism:</strong></p>
+<ul>
+  <li>Standardisation of product quality and worker skills at each level</li>
+  <li>Mass production through the assembly line, reducing per-unit cost</li>
+  <li>Mass markets — standardised goods for mass consumption; this distinguishes Fordism from craft production</li>
+  <li>Monopolistic competition — the market is dominated by a few large firms (Indian automobile market: Maruti, Mahindra)</li>
+  <li>Wage increases for workers to create mass consumers — Ford's famous $5 day wage gave workers the purchasing power to buy the cars they built</li>
+  <li>Heavy dependence on state intervention — for market regulation, incentives, and global market access</li>
+</ul>
+
+<p><strong>Critique (Braverman):</strong> Fordism intensifies alienation and money-centricity. It causes environmental degradation and labour exploitation. Workers in these conditions engage in repetitive, routinised, highly compartmentalised tasks that are quickly taught and easily replaced, devaluing labour and taking away workers' bargaining power.</p>
+
+<p><strong>Post-Fordism</strong> refers to the transition from standardised mass production to flexible specialisation. Key features include: customised production for niche markets rather than mass markets; flexible technology and multi-skilled workers; outsourcing and global supply chains; growth of the service sector; rise of temporary and part-time work.</p>
+
+<h3>F. McDonaldization (George Ritzer)</h3>
+
+<p>Ritzer identified the fast-food restaurant as the paradigm of contemporary rationalisation, replacing Weber's bureaucracy as the representative model of modern society.</p>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>In Production</th>
+    <th>Irrationality of Rationality</th>
+  </tr>
+  <tr>
+    <td><strong>Efficiency</strong></td>
+    <td>Interactive machines, QR code payment, drive-through, app-based delivery</td>
+    <td>Alienated workers; dehumanised customer experience</td>
+  </tr>
+  <tr>
+    <td><strong>Calculability</strong></td>
+    <td>Quantity equals quality; GPA measures intelligence</td>
+    <td>Loss of genuine quality; rote learning over creative thinking</td>
+  </tr>
+  <tr>
+    <td><strong>Predictability</strong></td>
+    <td>Same service and product everywhere; standardised syllabi and timetables</td>
+    <td>No elements of surprise; elements of surprise are eliminated</td>
+  </tr>
+  <tr>
+    <td><strong>Control via non-human technology</strong></td>
+    <td>Skills transferred from employees to machines (deskilling); standardisation</td>
+    <td>Workers easily replaceable; bargaining power destroyed</td>
+  </tr>
+</table>
+
+<h2>Formal and Informal Organisation of Work</h2>
+
+<h3>Formal Organisation</h3>
+
+<p>A formal organisation is a system of well-defined jobs, each with a definite measure of authority, responsibility, and accountability, governed by set rules and regulations — designed to enable the enterprise to work most effectively in accomplishing its goals. <strong>Formalisation</strong> is the rational organisation of work towards the achievement of social and institutional goals, with processes meticulously articulated in documents on a scientific, rational basis.</p>
+
+<p><strong>Key thinkers on formal organisation:</strong></p>
+<ul>
+  <li><strong>David Silverman</strong> — Formal organisations arise at an ascertainable point in time, not taken for granted. Patterns of social relations are designed to coordinate and control. Considerable attention is paid to planning changes in them.</li>
+  <li><strong>Meyer and Rowan</strong> — Formal organisations are systems of coordinated, controlled activities embedded in complex networks of technical relations. Modernity produces formal structures in highly institutional contexts; organisations incorporate practices defined by prevailing rationalised concepts of work.</li>
+  <li><strong>Weber</strong> — Bureaucracy is the formal organisation of work par excellence: rational, objective, rule-based, meritocratic, hierarchical. It is the purest expression of formal-legal authority.</li>
+  <li><strong>Arthur Lewis</strong> — His model of economic development assumed that traditional sectors would eventually be absorbed into the formal economy as industrial sectors grew.</li>
+</ul>
+
+<p><strong>Characteristics of formal organisation:</strong></p>
+<ul>
+  <li>Job-oriented: focuses more on jobs than on the people filling them</li>
+  <li>Delegation: work is delegated from top to lower levels through a scalar chain (DIG, IG, Sub-inspector, Constable)</li>
+  <li>Accounting: economic contribution of formal work is well-documented and accounted for (monthly pay-slips, audits)</li>
+  <li>Specialised division of labour: work is divided into smaller units and assigned by skill and ability</li>
+  <li>Departmentation: smaller units are regrouped into larger departments (Ministry of Finance: departments of revenue, expenditure, economic affairs, financial services, DIPAM)</li>
+  <li>Legal status: formal work is backed by legal provisions — EPF, minimum wage laws, labour codes</li>
+  <li>Formal authority: authority is linked to position in the hierarchy, not to personality</li>
+  <li>Coordination: linking activities of various departments to achieve unity of objectives</li>
+</ul>
+
+<p><strong>Limitations of formal organisation:</strong></p>
+<ul>
+  <li>Loss of initiative: excessive formalisation stifles innovation; Ritzer identifies this as the "irrationality of rationality" where men become cogs in the machine</li>
+  <li>Dissatisfaction: rigid chain of command reduces human warmth; Elton Mayo's Hawthorne studies highlighted the importance of social relationships for organisational success</li>
+  <li>Total Institutions (Foucault, Goffman): social and power structures of organisations can be oppressive; Gramsci on schools as sites of hegemony</li>
+</ul>
+
+<h3>Informal Organisation</h3>
+
+<p>An informal organisation consists of small units engaged in the production of goods and services without proper organisational structure, permanent workforce, or legal and social security protections. Workers are governed not by formal rules but by personal relations, trust, and the directions of employers. The Jajmani system in India is a classic example.</p>
+
+<p><strong>Scale of informal work:</strong> As per the ILO report "Women and Men in the Informal Economy" (2018), over two billion people — more than 61% of the world's employed population — work in the informal economy. Over 93% of informal employment is in emerging and developing countries. In India, more than 85% of the labour force is engaged in informal work.</p>
+
+<p><strong>Key thinkers:</strong></p>
+<ul>
+  <li><strong>Elton Mayo (Hawthorne Studies)</strong> — From his studies at Western Electric, Mayo found that employees have social and emotional needs alongside financial ones. Work satisfaction and performance depend not just on formal rules but on informal culture, personal relations, and social recognition. Informal culture plays an important role in job satisfaction and worker performance.</li>
+  <li><strong>Keith Hart</strong> — Characterised the informal sector by: low levels of skill and technology; easy entry; low paid employment; largely composed of immigrant labour.</li>
+  <li><strong>Peter Blau (The Dynamics of Bureaucracy, 1963)</strong> — Demonstrated the interdependent relation between formal and informal organisation. Informal structures exist inside formal organisations; when small informal organisations grow, they require formal rules. Alvin Gouldner: inside a mine, supervisors and workers share informal relations to overcome hazards, but in the wider industry they follow rule-bound hierarchical relationships.</li>
+  <li><strong>J.H. Boeke</strong> — Defined informality as a marginal activity providing income for the poor and a buffer during economic crises.</li>
+  <li><strong>Hernando De Soto</strong> — Viewed the informal sector as primarily negative: an impediment to socioeconomic development leading to economic stagnation.</li>
+  <li><strong>Martha Chen (Models of the Informal Economy)</strong>: Dualist — all economies have two sectors (formal and informal) that can coincide with rural/urban and agriculture/industry dichotomies; Structuralist — informal sector is necessary for the functioning of the formal sector (global capitalism's flexible specialisation deskills workers who enter the informal economy); Legalistic — informality flourishes because small entrepreneurs seek to avoid the costs of formal compliance; Voluntaristic — entrepreneur voluntarily chooses informal sector membership.</li>
+  <li><strong>Sharit Bhowmik</strong> — Two kinds: Informal Economy (street vendors, rickshaw pullers, home-based workers) and Informal Employment (casual and contract labourers within the formal economy).</li>
+</ul>
+
+<p><strong>Characteristics of informal work:</strong></p>
+<ul>
+  <li>Low skills and technology among workers producing at a small scale</li>
+  <li>Low pay — the reserve army of labour keeps wages suppressed</li>
+  <li>Off-the-records transactions — outside the tax net, allowing cost advantages</li>
+  <li>Unorganised — no formal structure; cannot be shown on an organisation chart</li>
+  <li>Changing roles — relationships among workers shift constantly</li>
+  <li>Absence of hierarchy — people communicate vertically, horizontally, and diagonally</li>
+  <li>Informal leadership — elected informally by group members; influences group activities</li>
+  <li>Informal communication — the grapevine operates alongside formal channels and often works faster</li>
+  <li>Feminisation of labour — women disproportionately occupy informal jobs; in India, over 95% of working women are classified as informal workers (ILO, 2018)</li>
+</ul>
+
+<p><strong>Feminisation of informal work:</strong> Arlie Hochschild's concept of <em>emotional labour</em> — women are believed to be more emotional and are employed in the service sector's market of emotions (air hostesses, call centre agents, receptionists, nurses, midwives). The glass-ceiling effect: only 17% of women occupy managerial positions. Women in informal sectors face stigma (sex work), lack of recognition, and are most vulnerable to wage theft. Naila Kabeer's study of Bangladeshi women in the garment industry showed the complex trade-offs between economic participation and exploitation.</p>
+
+<p><strong>Reasons for informality:</strong></p>
+<ul>
+  <li>Low literacy, education, and skills disqualify workers from formal employment</li>
+  <li>Slow economic growth limits formal job creation</li>
+  <li>Profit motive under capitalism — capitalists outsource to cheap, hire-and-fire informal labour to reduce costs</li>
+  <li>Globalisation — MNCs distribute supply chains to leverage cheap informal labour in developing countries (Nike apparel in Bangladesh and Vietnam)</li>
+  <li>Traditional societies promote informality (haircutting by the naayi/hajam community, agricultural family labour)</li>
+  <li>Unprecedented events — COVID-19 collapsed formal structures and pushed workers into informality</li>
+  <li>Policy vacuums in sectors like e-commerce and food delivery perpetuate informal work</li>
+</ul>
+
+<p><strong>Advantages of informal organisation:</strong> Flexibility without rigid organisational hierarchy; creativity in skills and new ideas without fear of dismissal; quick informal feedback between managers and workers; promotes values and cultural beliefs among workers; social satisfaction through interaction and recognition; better cordial relationships; psychological emotional security; promotes political participation of subaltern groups through SHGs.</p>
+
+<p><strong>Disadvantages:</strong> Prone to money laundering and unaccounted transactions; insecurity of tenure (employers can hire and fire at will); no social security (no PF, ESI, paid leaves); exploits workers who have no legal recourse; perpetuates gender inequality and the feminisation of poverty.</p>
+
+<h3>The Formal/Informal Continuum</h3>
+
+<p>The distinction between formal and informal is best understood across three levels:</p>
+<ul>
+  <li><strong>Macro level</strong> — Traditional work was informally organised; modern work tends toward formal organisation.</li>
+  <li><strong>Micro level</strong> — In informally organised work, formal structures eventually emerge (when small firms grow). Inside formal organisations, informal structures always exist (office friendships, grapevines, informal leadership).</li>
+  <li><strong>Process level</strong> — With time, formal organisation emerges from informal as a continuous historical process. The two are always co-present.</li>
+</ul>
+
+<h2>Labour and Society</h2>
+
+<p>A distinction must be made between <strong>worker</strong> and <strong>labourer</strong>: a worker has choices regarding their work; a labourer has no choice or very limited choices. Worker-employer relations are contractually defined; labour relations are governed by ritual obligation and informal power. In Marxian terms, both are exploited, but the labourer more severely.</p>
+
+<h3>Sociology of Labour: Major Perspectives</h3>
+
+<p><strong>Labour driven by culture (Malinowski):</strong> Labour is not driven by economic rationality alone but by the culture of society — norms, obligations, and social expectations shape what work is done, by whom, and for what purpose.</p>
+
+<p><strong>Durkheim:</strong> In simple societies, a simple division of labour produced mechanical solidarity based on similarity and collective consciousness. In modern societies, complex division of labour produces organic solidarity based on interdependence and complementarity. Labour, in the collective, drives integration. Utilitarians (Bentham, Mill) disagreed, emphasising that open markets give individuals complete freedom to pursue individual happiness — the collective good emerges from individual self-interest.</p>
+
+<p><strong>Parsons and Weber:</strong> One who labours well and performs their role receives social rewards. (Critique: this ignores unequal access to opportunities and the self-perpetuating tendencies of upper-class privilege.)</p>
+
+<p><strong>Marx:</strong> Labour is alienated in every society since the rise of private property. Liberals and utilitarians are rejected — labour is commodified, dehumanised, made a means rather than an end. The only solution is the abolition of private property and the end of the wage relation.</p>
+
+<p><strong>Lenin:</strong> Specialisation creates strata. Remove specialisation to remove hierarchy. American Leninists (Bowles and Gintis): Specialisation is a capitalist construct that leaves the individual hopeless because he cannot produce a complete thing using his labour alone.</p>
+
+<p><strong>C.W. Mills (White Collar):</strong> White-collar workers carry artificial smiles and lead artificial lives. Following the law gives an artificial feeling of being right. The professional man is enslaved to social conditions far more subtle than the chains of the proletarian.</p>
+
+<p><strong>Effect of religion on labour (Herbert Marcuse):</strong> Classical Biblical convention gave work a sorrowful, punitive character (Adam and Eve expelled from Eden to labour). Protestant thought inverted this — the Protestant must work to justify his election by God; work was given a hopeful, purposive feeling, transforming it into a vocation and a moral calling (Weber's Protestant Ethic).</p>
+
+<p><strong>Labour in socialism:</strong> Marx and Lenin envisioned labour as compatible, harmonious, and non-exploitative — labour would be free to determine where and how to work. Milovan Djilas, the Yugoslav dissident, contradicted this: even in socialist states, labour is exploited in the name of social wellbeing, with a new ruling class (the Party bureaucracy) appropriating the surplus. Lenin's famous distinction: "People in democracy are talking people; people in socialism are working people."</p>
+
+<h3>Hawthorne Studies and Human Relations (Elton Mayo)</h3>
+
+<p>The Hawthorne Studies (1924–1932) at Western Electric's plant near Chicago were initially designed to test whether changes in lighting affected worker productivity. The unexpected finding — that productivity improved regardless of lighting changes because workers knew they were being observed — became known as the <strong>Hawthorne Effect</strong>. Mayo concluded that social and emotional factors, not merely physical working conditions, determine worker performance. Informal groups, personal relations, and the feeling of being valued are as important as wages.</p>
+
+<p>This was the founding moment of the <strong>Human Relations School</strong>, which challenged Taylorist scientific management by asserting that social needs (recognition, belonging, informal leadership) must be addressed alongside economic incentives.</p>
+
+<h3>Trade Unions and Labour Power</h3>
+
+<p>Trade unions are formal associations of workers whose primary purpose is to protect and advance the economic and social interests of their members through collective bargaining, industrial action, and political representation. They emerged as a response to the power asymmetry between individual workers and employers under capitalism.</p>
+
+<p>In Almond and Powell's classification of pressure groups, trade unions are <strong>associational pressure groups</strong> — registered, organised groups formed to pursue specific goals (AITUC, INTUC, HMS, BMS in India). They function as a "party" in Weber's sense — organised to exercise collective power in the labour market and in the political sphere.</p>
+
+<p>Old Social Movements (like the labour movement) took the form of trade unions concerned with welfare of workers, job security, and control at work. They drew support primarily from the working class and were directed mainly at influencing state policy through centralised, bureaucratic organisation. New Social Movements (post-industrial) are distinct: they focus on post-material issues (environment, gender, sexuality) and draw from the middle classes, using decentralised networks.</p>
+
+<h3>Domestic Labour and Unpaid Work</h3>
+
+<p>Sociology of work is incomplete without recognising unpaid domestic labour. Feminist sociologists (Selma James, Ann Oakley, Christine Delphy) have argued that housework produces things of value — it reproduces the labour power that capitalism depends upon — yet it goes unaccounted, unrewarded, and unseen. Selma James ran the "Wages for Housework" campaign in 1972, demanding recognition of domestic labour as socially necessary and economically valuable work.</p>
+
+<p>Marx's argument about alienation extends to domestic work: women who perform domestic labour for no pay within a patriarchal family system are alienated from the products of their labour (the reproduced family), from the process (endless repetitive tasks), and from their own human potential.</p>
+
+<blockquote>"It is common sense that housework is unpaid and workplace is paid. Sociology helps in realising that it is only because of housework that capitalism is functioning. All units in society are connected." — Nishant Sir, LevelUp IAS</blockquote>
+
+<h2>Comparative Summary: Social Organisation of Work</h2>
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Primitive Society</th>
+    <th>Ancient (Slave)</th>
+    <th>Feudal</th>
+    <th>Modern Capitalist</th>
+  </tr>
+  <tr>
+    <td><strong>Major activity</strong></td>
+    <td>Hunting, gathering</td>
+    <td>Agriculture, mining</td>
+    <td>Agriculture</td>
+    <td>Industrial/factory production</td>
+  </tr>
+  <tr>
+    <td><strong>Source of power</strong></td>
+    <td>Tool ownership (communal)</td>
+    <td>Human and animal labour</td>
+    <td>Land ownership</td>
+    <td>Capital ownership</td>
+  </tr>
+  <tr>
+    <td><strong>Division of labour</strong></td>
+    <td>Minimal; uniform skill set</td>
+    <td>Simple; two classes</td>
+    <td>Simple; carpenters, goldsmiths, priests</td>
+    <td>Complex, highly diversified</td>
+  </tr>
+  <tr>
+    <td><strong>Basis of roles</strong></td>
+    <td>Ascriptive, community-based</td>
+    <td>Ascriptive, religiously sanctioned</td>
+    <td>Ascriptive, hereditary</td>
+    <td>Achievement-oriented, rational</td>
+  </tr>
+  <tr>
+    <td><strong>Alienation</strong></td>
+    <td>Least, almost absent</td>
+    <td>Moderate</td>
+    <td>Moderate</td>
+    <td>Maximum (Marx)</td>
+  </tr>
+  <tr>
+    <td><strong>Aim of work</strong></td>
+    <td>Sustenance</td>
+    <td>Sustenance and surplus</td>
+    <td>Sustenance and surplus for calamities</td>
+    <td>Maximum profit; sustenance, surplus, market focus</td>
+  </tr>
+  <tr>
+    <td><strong>Social mobility</strong></td>
+    <td>Rare; ascription-bound</td>
+    <td>Rare; ascription-bound</td>
+    <td>Rare; hereditary classes</td>
+    <td>Easy; achievement-oriented</td>
+  </tr>
+  <tr>
+    <td><strong>Gender roles</strong></td>
+    <td>Biologically influenced; relatively flexible</td>
+    <td>Culturally prescribed; restrictive</td>
+    <td>Rigid, culturally prescribed, discriminatory</td>
+    <td>Highly flexible; challenges cultural norms; constitutional and rational</td>
+  </tr>
+</table>
+
+<h2>Conclusion</h2>
+
+<p>The sociology of work and economic life reveals that no form of production is merely technical — every mode of organising work reflects and reproduces a specific set of social relations, power structures, and cultural norms. From the slave's total subordination to the formal-sector worker's contractual freedom, the transformation of work across history has been simultaneously a transformation of class relations, gender hierarchies, and moral frameworks. Inequality exists in every society; the sociology of economic life attempts to understand this inequality in terms of the exploitation of labour, the participation of workers in decision-making, and the social conditions — formal and informal — that shape what work means and who it serves.</p>
+`,
   'politics-and-society': '',
   'religion-and-society': '',
   'systems-of-kinship': '',
