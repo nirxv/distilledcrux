@@ -4158,8 +4158,553 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Whether religion helps bring about or inhibit social change varies according to social and historical conditions. It is not inherently conservative or progressive — its character depends on who controls it, in what context, and for what purpose.</p>
 
 `,
-  'works-economic-life': '',
-  'politics-and-society': '',
+  'works-economic-life': `
+<h2>What is Work?</h2>
+
+<p>Work, in its broadest sociological sense, refers to any activity requiring the expenditure of mental or physical effort aimed at producing goods and services that cater to human needs. This includes both paid employment (direct payment like contract labour, or indirect payment like barter) and unpaid labour (domestic work, voluntary work, ritual obligations). Sociology, unlike economics, interprets work not merely in terms of monetary exchange but also in terms of social obligation, identity, power, and meaning.</p>
+
+<blockquote>"Labour is the unique gift of nature to man. Its imprints are visible in architecture, music, literature — the entirety of civilisation."</blockquote>
+
+<p>In traditional societies, work was governed by indirect payments, feudal obligations, and ritual duties. In modern capitalist societies, work is directly paid and commodified. Yet the sociological significance of work extends far beyond the pay cheque: it structures social relationships, confers identity, reproduces inequality, and is the terrain on which most political conflicts are fought.</p>
+
+<h3>Key Thinkers on the Nature of Work</h3>
+<ul>
+  <li><strong>Emile Durkheim</strong> — The organisation of work (division of labour) shapes the entire social structure. Traditional society has a simple division of labour based on mechanical solidarity (homogeneity, shared values, similar tasks). Modern society has a complex division of labour based on organic solidarity (interdependence, specialisation, complementarity).</li>
+  <li><strong>Karl Marx</strong> — Production is the "first historical act." Work is inherently central to human nature and should be a source of happiness and self-expression. When workers lose control over the product and process of their labour, alienation results. Marx classified societies by their modes of production: Primitive, Ancient (Slave), Feudal, Capitalist.</li>
+  <li><strong>Herbert Spencer</strong> — Division of labour is the criterion for social organisation. Simple societies have minimal occupational differentiation; modern societies have complex differentiation.</li>
+  <li><strong>Herbert Marcuse</strong> — Drawing on classical Biblical convention, work has been given a sorrowful character (Adam and Eve expelled from Eden to labour for survival). Protestant thought inverted this: work became a calling, giving it a purposeful, even hopeful feeling.</li>
+  <li><strong>Max Weber</strong> — Protestant ethic transformed the meaning of work from a curse into a vocation. Rational, disciplined labour became the hallmark of moral worth under Calvinism, creating the psychological conditions for capitalism.</li>
+  <li><strong>C.W. Mills</strong> — White-collar workers lead artificial lives, performing managed emotions ("the artificial smile") and selling not just skills but personality to the market. The professional man is enslaved to social conditions.</li>
+</ul>
+
+<h2>Social Organisation of Work in Different Societies</h2>
+
+<p>The social organisation of work refers to the patterning of productive activities, both technically (how tasks are divided and performed) and normatively (the stratification order, power relations, alienation, and social obligations that govern production). A broad distinction exists between traditional and modern societies:</p>
+
+<table>
+  <tr><th>Dimension</th><th>Traditional (Slave/Feudal)</th><th>Modern (Capitalist)</th></tr>
+  <tr><td>Nature of organisation</td><td>Simple, informal</td><td>Complex, formal</td></tr>
+  <tr><td>Basis of allocation</td><td>Ascription (birth, caste, heredity)</td><td>Achievement (merit, qualifications)</td></tr>
+  <tr><td>Orientation</td><td>Collective; affective relations</td><td>Individual; affectively neutral</td></tr>
+  <tr><td>Social mobility</td><td>Low; closed systems</td><td>Higher; open systems</td></tr>
+  <tr><td>Degree of alienation</td><td>Lower</td><td>Higher (Marx: increases with each historical stage)</td></tr>
+</table>
+
+<h3>A. Slave Society</h3>
+
+<p>Slavery is defined as "a system in which one is subject to the power of another contrary to nature." The slave is a possession, property, or commodity of the master — without freedom or choice of action. Aristotle described the slave as "property with a soul" and considered slavery natural and beneficial. John Locke distinguished <em>legitimate slavery</em> (captivity from a just war) from <em>illegitimate slavery</em> (authoritarian deprivation of natural rights). Marx identified slave society as the earliest form of class society, the starting point of private property and dialectical materialism.</p>
+
+<table>
+  <tr><th>Type of Slavery</th><th>Character</th><th>Example</th></tr>
+  <tr><td>Primitive</td><td>Losers of wars for resources forced into slavery; no payment, no rights, no trade</td><td>Dasa and Dayus in ancient India</td></tr>
+  <tr><td>Ancient</td><td>Slaves acquired by war and traded in markets; no payment, no rights</td><td>Slavery in ancient Rome</td></tr>
+  <tr><td>Medieval</td><td>Serfs and captive prisoners in perpetual debt to feudal lords; surrendered rights for sustenance</td><td>European serfdom</td></tr>
+  <tr><td>Modern</td><td>Intercontinental trade; Africans captured and transported to American colonies</td><td>Atlantic slave trade; press-ganging into Royal Navy</td></tr>
+  <tr><td>Post-modern</td><td>Bonded labour, sex trafficking, forced child labour; legal framework bypassed</td><td>Migrant worker exploitation; gig economy platform-bondage</td></tr>
+</table>
+
+<p><strong>Organisation of work in slave society:</strong> Major economic activity was hunting, food gathering, and large-scale agriculture. Mode of production was ancient — production only for sustenance. Division of labour was low. Stratification was minimal (two groups: rulers and ruled). Religion dominated economic life. Family played an important role in production. Source of power was animated (human and animal labour). Alienation was relatively low in primitive slavery but intensified in later forms.</p>
+
+<p><strong>Why slavery ended:</strong> Capitalism required cheap wage labour, not slave labour. Slave revolts (Spartacus, Haitian Revolution) empowered demands for rights. Population increase made slaves economically unviable. Technological innovation rendered slave labour redundant. Christianity's conceptions of charity and justice were incompatible with slavery. Slavery was abolished in Britain in 1833, in the USA in 1865.</p>
+
+<h3>B. Feudal Society</h3>
+
+<p>Feudalism is a social system in which people received land and protection from those of higher rank in exchange for labour and military service. The classical feudal triangle runs: King/Lord (protection, shelter, military service) — Vassals — Serfs (rent in kind, labour services). In India, examples include Zamindari, Jajmani relationships, and bonded labour in Tehri Garhwal, where a lower-caste labourer who borrows from a landowner becomes perpetually bonded.</p>
+
+<p>Marx and Engels emphasised the lords' exploitation of peasants as the essence of the feudal mode of production. Adam Smith described feudalism as a stage of social development marked by the absence of commerce and the use of semi-free labour to cultivate land.</p>
+
+<p><strong>Features of feudal social organisation:</strong></p>
+<ul>
+  <li>Agriculture was the dominant economic activity; land ownership was the source of power</li>
+  <li>Increased small-scale specialisation (carpenters, swordsmiths, goldsmiths) but simple overall division of labour</li>
+  <li>Hereditary classes — lords and serfs; social mobility was very low</li>
+  <li>Serfs had rights to protection from lords and to cultivate certain fields for their own subsistence</li>
+  <li>Theocracy dominated: the clergy class legitimised the socio-political structure; religion sanctified the existing hierarchy</li>
+  <li>Alienation was moderate — higher than ancient communism (because of new intermediaries) but less than capitalism</li>
+</ul>
+
+<p><strong>Jajmani System (feudalism in delivery of services):</strong> Each caste specialised in one kind of activity, bringing cooperation and interdependence. The Jajman (upper-caste patron) received hereditary services from lower-caste Kamin groups; in return Kamins received grain, protection, and social security. Robert Redfield noted the peasant was not expected to make profits; surplus was to be distributed among kin. Malinowski argued that labour is driven by the culture of society.</p>
+
+<p><strong>Transition from feudalism to capitalism:</strong> Productivity of the feudal economy could not sustain the growing population. The Enclosure Movement in Britain evicted serfs from land to supply factory labour. The Reformation and Protestant ethics (Weber) provided a new work ethic. Rising mercantile classes demanded rights that challenged feudal hierarchy.</p>
+
+<h3>C. Industrial Capitalist Society</h3>
+
+<p>Capitalism is a market-centric economic system controlled by private owners for profit, based on commodification of labour, free markets, and the accumulation of capital. It must be distinguished from industrialism: industrialism is a specific technological process for mass production (factory system, inanimate sources of energy); capitalism is a broader ideological system defining the relationship between people in production (private ownership, profit motive, free market).</p>
+
+<blockquote>"It is not industrialism itself but the exploitative relations of production under capitalism that constitute the real problem." — Marx</blockquote>
+
+<p><strong>Features of work organisation in capitalist society:</strong></p>
+<ul>
+  <li>Mass production in factories; inanimate sources of power replace human and animal power</li>
+  <li>Complex, highly diversified division of labour</li>
+  <li>Production for exchange and profit — commodities have exchange value, not just use value</li>
+  <li>Competition, not cooperation, drives production</li>
+  <li>Alienation reaches its maximum — workers lose control over product, process, and self</li>
+  <li>Money economy replaces barter; labour itself becomes a commodity</li>
+  <li>Occupational mobility is high; achievement-oriented, rational, secular values prevail</li>
+  <li>Work-life separation emerges — family is no longer a unit of economic production</li>
+</ul>
+
+<p><strong>Key thinkers on capitalism and work:</strong></p>
+<ul>
+  <li><strong>Marx</strong> — Commodification of labour; alienation across four dimensions (from product, process, species-being, fellow workers); surplus value appropriated by capitalists.</li>
+  <li><strong>Durkheim</strong> — Complex division of labour creates organic solidarity but, without moral regulation, generates anomie. Solution: occupational associations, moral education, professional ethics codes.</li>
+  <li><strong>Weber</strong> — Capitalism is a market-oriented system; occupational diversification leads to job-oriented educational specialisation; rationalisation and bureaucratisation are capitalism's defining features.</li>
+  <li><strong>C.W. Mills (White Collar Alienation)</strong> — The market buys not just a worker's skills but their personality. The worker has separated himself from his authentic self to pursue the aspects of personality the market values.</li>
+  <li><strong>Herbert Marcuse (One-Dimensional Man)</strong> — False needs and a false sense of happiness prevent the employed from recognising the genuine nature of their estrangement. Leisure becomes a recharging mechanism before the next day's work, not genuine freedom.</li>
+  <li><strong>Robert Blauner (Alienation and Freedom)</strong> — Alienation has four dimensions: degree of control workers have over their work; degree to which they are involved; degree of meaning and purpose in their work; degree to which they are socially integrated. Alienation varies by industry and type of production technology.</li>
+  <li><strong>Richard Sennett (Corrosion of Character)</strong> — Demand for social mobility, adaptability, and flexibility in modern capitalism contradicts long-term social bonds. People switch jobs for better pay; the previous generation sought stability even under exploitative conditions. This "corrosion" weakens social bonds and the capacity for sustained commitment.</li>
+</ul>
+
+<h3>D. Taylorism (Scientific Management)</h3>
+
+<p>Developed by Frederick Winslow Taylor in the early 20th century, Taylorism is a scientific production system that divides the manufacturing process into small, discrete steps, reducing the degree of skill required to perform each activity. Its prime aim was to increase productivity and efficiency in factories.</p>
+
+<p><strong>Key characteristics:</strong></p>
+<ul>
+  <li><strong>Process simplification</strong> — Complex processes are broken into smaller, manageable steps (car manufacturing is divided into setting chassis, setting engine, adding transmission, finishing exterior)</li>
+  <li><strong>Skill reduction</strong> — Allocating simpler, narrower tasks to less-skilled (cheaper) workers reduces labour costs</li>
+  <li><strong>Sequential arrangement</strong> — Tasks are arranged in a precise sequence; each worker performs their step and passes it on</li>
+  <li><strong>Worker motivation through monetary incentives</strong> — Taylor believed in piece-rate wages to maintain worker productivity</li>
+</ul>
+
+<p><strong>Critique (Harry Braverman, Labour and Monopoly Capital, 1974):</strong> Taylorism systematically deskills workers, removing their autonomy and craft knowledge and building them into technologies. Workers are coerced into servitude in a factory system. The real purpose of scientific management was not efficiency for workers but control over workers by capital.</p>
+
+<h3>E. Fordism and Post-Fordism</h3>
+
+<p>Fordism refers to the system of mass production using assembly-line techniques pioneered by Henry Ford at the Ford Motor Company in the early 20th century. For Antonio Gramsci, Fordism represented a specific stage of economic development. It peaked in the post-WWII "Golden Age of Capitalism" but collapsed in the 1970s.</p>
+
+<p><strong>Characteristics of Fordism:</strong></p>
+<ul>
+  <li>Standardisation of product quality and worker skills at each level</li>
+  <li>Mass production through the assembly line, reducing per-unit cost</li>
+  <li>Mass markets — standardised goods for mass consumption</li>
+  <li>Monopolistic competition — market dominated by a few large firms (Indian automobile market: Maruti, Mahindra)</li>
+  <li>Wage increases for workers to create mass consumers — Ford's famous $5 day gave workers the purchasing power to buy the cars they built</li>
+  <li>Heavy dependence on state intervention for market regulation, incentives, and global market access</li>
+</ul>
+
+<p><strong>Post-Fordism</strong> refers to the transition from standardised mass production to flexible specialisation. Key features: customised production for niche markets; flexible technology and multi-skilled workers; outsourcing and global supply chains; growth of the service sector; rise of temporary and part-time work.</p>
+
+<h3>F. McDonaldization (George Ritzer)</h3>
+
+<p>Ritzer identified the fast-food restaurant as the paradigm of contemporary rationalisation, replacing Weber's bureaucracy as the representative model of modern society.</p>
+
+<table>
+  <tr><th>Dimension</th><th>In Production</th><th>Irrationality of Rationality</th></tr>
+  <tr><td><strong>Efficiency</strong></td><td>Interactive machines, QR code payment, drive-through, app-based delivery</td><td>Alienated workers; dehumanised customer experience</td></tr>
+  <tr><td><strong>Calculability</strong></td><td>Quantity equals quality; GPA measures intelligence</td><td>Loss of genuine quality; rote learning over creative thinking</td></tr>
+  <tr><td><strong>Predictability</strong></td><td>Same service and product everywhere; standardised syllabi</td><td>Elements of surprise eliminated; no room for creativity</td></tr>
+  <tr><td><strong>Control via non-human technology</strong></td><td>Skills transferred from employees to machines; standardisation</td><td>Workers easily replaceable; bargaining power destroyed</td></tr>
+</table>
+
+<h2>Formal and Informal Organisation of Work</h2>
+
+<h3>Formal Organisation</h3>
+
+<p>A formal organisation is a system of well-defined jobs, each with a definite measure of authority, responsibility, and accountability, governed by set rules and regulations — designed to enable the enterprise to work most effectively in accomplishing its goals. <strong>Formalisation</strong> is the rational organisation of work towards the achievement of social and institutional goals, with processes meticulously articulated in documents on a scientific, rational basis.</p>
+
+<p><strong>Key thinkers:</strong></p>
+<ul>
+  <li><strong>David Silverman</strong> — Formal organisations arise at an ascertainable point in time, not taken for granted. Patterns of social relations are designed to coordinate and control. Considerable attention is paid to planning changes in them.</li>
+  <li><strong>Meyer and Rowan</strong> — Formal organisations are systems of coordinated, controlled activities embedded in complex networks of technical relations. Modernity produces formal structures in highly institutional contexts.</li>
+  <li><strong>Weber</strong> — Bureaucracy is the formal organisation of work par excellence: rational, objective, rule-based, meritocratic, hierarchical. It is the purest expression of formal-legal authority.</li>
+</ul>
+
+<p><strong>Characteristics of formal organisation:</strong></p>
+<ul>
+  <li>Job-oriented: focuses more on jobs than on the people filling them</li>
+  <li>Delegation: work is delegated from top to lower levels through a scalar chain (DIG, IG, Sub-inspector, Constable)</li>
+  <li>Accounting: economic contribution of formal work is well-documented and accounted for (monthly pay-slips, audits)</li>
+  <li>Specialised division of labour: work is divided into smaller units and assigned by skill and ability</li>
+  <li>Departmentation: smaller units are regrouped into larger departments (Ministry of Finance: departments of revenue, expenditure, economic affairs, financial services)</li>
+  <li>Legal status: formal work is backed by legal provisions — EPF, minimum wage laws, labour codes</li>
+  <li>Formal authority: authority is linked to position in the hierarchy, not to personality</li>
+</ul>
+
+<p><strong>Limitations of formal organisation:</strong></p>
+<ul>
+  <li>Loss of initiative: excessive formalisation stifles innovation; Ritzer identifies this as the "irrationality of rationality" where men become cogs in the machine</li>
+  <li>Dissatisfaction: rigid chain of command reduces human warmth; Elton Mayo's Hawthorne studies highlighted the importance of social relationships for organisational success</li>
+  <li>Total Institutions (Foucault, Goffman): social and power structures of organisations can be oppressive; Gramsci on schools as sites of hegemony</li>
+</ul>
+
+<h3>Informal Organisation</h3>
+
+<p>An informal organisation consists of small units engaged in the production of goods and services without proper organisational structure, permanent workforce, or legal and social security protections. Workers are governed not by formal rules but by personal relations, trust, and the directions of employers. The Jajmani system in India is a classic example.</p>
+
+<p><strong>Scale of informal work:</strong> As per the ILO report "Women and Men in the Informal Economy" (2018), over two billion people — more than 61% of the world's employed population — work in the informal economy. Over 93% of informal employment is in emerging and developing countries. In India, more than 85% of the labour force is engaged in informal work.</p>
+
+<p><strong>Key thinkers:</strong></p>
+<ul>
+  <li><strong>Elton Mayo (Hawthorne Studies)</strong> — From his studies at Western Electric, Mayo found that employees have social and emotional needs alongside financial ones. Work satisfaction depends not just on formal rules but on informal culture, personal relations, and social recognition.</li>
+  <li><strong>Keith Hart</strong> — Characterised the informal sector by: low levels of skill and technology; easy entry; low paid employment; largely composed of immigrant labour.</li>
+  <li><strong>Peter Blau (The Dynamics of Bureaucracy, 1963)</strong> — Demonstrated the interdependent relation between formal and informal organisation. Informal structures exist inside formal organisations; when small informal organisations grow, they require formal rules.</li>
+  <li><strong>Martha Chen (Models of the Informal Economy)</strong> — Dualist (all economies have two sectors that can coincide with rural/urban dichotomies); Structuralist (informal sector is necessary for the functioning of the formal sector); Legalistic (informality flourishes because small entrepreneurs seek to avoid the costs of formal compliance); Voluntaristic (entrepreneur voluntarily chooses informal sector membership).</li>
+  <li><strong>Sharit Bhowmik</strong> — Two kinds: Informal Economy (street vendors, rickshaw pullers, home-based workers) and Informal Employment (casual and contract labourers within the formal economy).</li>
+</ul>
+
+<p><strong>Characteristics of informal work:</strong></p>
+<ul>
+  <li>Low skills and technology among workers producing at a small scale</li>
+  <li>Low pay — the reserve army of labour keeps wages suppressed</li>
+  <li>Off-the-records transactions — outside the tax net, allowing cost advantages</li>
+  <li>Unorganised — no formal structure; cannot be shown on an organisation chart</li>
+  <li>Absence of hierarchy — people communicate vertically, horizontally, and diagonally</li>
+  <li>Informal leadership — elected informally by group members; influences group activities</li>
+  <li>Feminisation of labour — women disproportionately occupy informal jobs; in India, over 95% of working women are classified as informal workers (ILO, 2018)</li>
+</ul>
+
+<p><strong>Feminisation of informal work:</strong> Arlie Hochschild's concept of <em>emotional labour</em> — women are believed to be more emotional and are employed in the service sector's market of emotions (air hostesses, call centre agents, receptionists, nurses). The glass-ceiling effect: only 17% of women occupy managerial positions. Women in informal sectors face stigma, lack of recognition, and are most vulnerable to wage theft. Naila Kabeer's study of Bangladeshi women in the garment industry showed the complex trade-offs between economic participation and exploitation.</p>
+
+<p><strong>Formal vs Informal Continuum:</strong> The distinction between formal and informal is best understood across three levels. At the macro level, traditional work was informally organised while modern work tends toward formal organisation. At the micro level, formal structures eventually emerge from informal ones (when small firms grow), and inside formal organisations, informal structures always exist (office friendships, grapevines, informal leadership). At the process level, with time, formal organisation emerges from informal as a continuous historical process — the two are always co-present.</p>
+
+<h2>Labour and Society</h2>
+
+<p>A distinction must be made between <strong>worker</strong> and <strong>labourer</strong>: a worker has choices regarding their work; a labourer has no choice or very limited choices. Worker-employer relations are contractually defined; labour relations are governed by ritual obligation and informal power. In Marxian terms, both are exploited, but the labourer more severely.</p>
+
+<h3>Major Perspectives</h3>
+
+<p><strong>Durkheim:</strong> In simple societies, a simple division of labour produced mechanical solidarity based on similarity and collective consciousness. In modern societies, complex division of labour produces organic solidarity based on interdependence and complementarity. Labour, in the collective, drives integration.</p>
+
+<p><strong>Marx:</strong> Labour is alienated in every society since the rise of private property. Labour is commodified, dehumanised, made a means rather than an end. The only solution is the abolition of private property and the end of the wage relation.</p>
+
+<p><strong>C.W. Mills (White Collar):</strong> White-collar workers carry artificial smiles and lead artificial lives. Following the law gives an artificial feeling of being right. The professional man is enslaved to social conditions far more subtle than the chains of the proletarian.</p>
+
+<p><strong>Labour in socialism (Milovan Djilas):</strong> Marx and Lenin envisioned labour as compatible, harmonious, and non-exploitative. But Djilas, the Yugoslav dissident, contradicted this: even in socialist states, labour is exploited in the name of social wellbeing, with a new ruling class (the Party bureaucracy) appropriating the surplus.</p>
+
+<h3>Hawthorne Studies and Human Relations (Elton Mayo)</h3>
+
+<p>The Hawthorne Studies (1924–1932) at Western Electric's plant near Chicago were initially designed to test whether changes in lighting affected worker productivity. The unexpected finding — that productivity improved regardless of lighting changes because workers knew they were being observed — became known as the <strong>Hawthorne Effect</strong>. Mayo concluded that social and emotional factors, not merely physical working conditions, determine worker performance. Informal groups, personal relations, and the feeling of being valued are as important as wages. This was the founding moment of the <strong>Human Relations School</strong>, which challenged Taylorist scientific management by asserting that social needs (recognition, belonging, informal leadership) must be addressed alongside economic incentives.</p>
+
+<h3>Trade Unions and Labour Power</h3>
+
+<p>Trade unions are formal associations of workers whose primary purpose is to protect and advance the economic and social interests of their members through collective bargaining, industrial action, and political representation. They emerged as a response to the power asymmetry between individual workers and employers under capitalism. In Almond and Powell's classification of pressure groups, trade unions are <strong>associational pressure groups</strong> — registered, organised groups formed to pursue specific goals (AITUC, INTUC, HMS, BMS in India).</p>
+
+<p>Old Social Movements (like the labour movement) took the form of trade unions concerned with welfare of workers, job security, and control at work. They drew support primarily from the working class and were directed mainly at influencing state policy through centralised, bureaucratic organisation. New Social Movements (post-industrial) are distinct: they focus on post-material issues (environment, gender, sexuality) and draw from the middle classes, using decentralised networks.</p>
+
+<h3>Domestic Labour and Unpaid Work</h3>
+
+<p>Feminist sociologists (Selma James, Ann Oakley, Christine Delphy) have argued that housework produces things of value — it reproduces the labour power that capitalism depends upon — yet it goes unaccounted, unrewarded, and unseen. Selma James ran the "Wages for Housework" campaign in 1972, demanding recognition of domestic labour as socially necessary and economically valuable work.</p>
+
+<blockquote>"It is common sense that housework is unpaid and workplace is paid. Sociology helps in realising that it is only because of housework that capitalism is functioning. All units in society are connected."</blockquote>
+
+<h2>Comparative Summary</h2>
+
+<table>
+  <tr><th>Parameter</th><th>Primitive</th><th>Slave</th><th>Feudal</th><th>Capitalist</th></tr>
+  <tr><td>Major activity</td><td>Hunting, gathering</td><td>Agriculture, mining</td><td>Agriculture</td><td>Industrial/factory production</td></tr>
+  <tr><td>Source of power</td><td>Tool ownership (communal)</td><td>Human and animal labour</td><td>Land ownership</td><td>Capital ownership</td></tr>
+  <tr><td>Division of labour</td><td>Minimal; uniform skill set</td><td>Simple; two classes</td><td>Simple; carpenters, goldsmiths</td><td>Complex, highly diversified</td></tr>
+  <tr><td>Basis of roles</td><td>Ascriptive, community-based</td><td>Ascriptive, religiously sanctioned</td><td>Ascriptive, hereditary</td><td>Achievement-oriented, rational</td></tr>
+  <tr><td>Alienation</td><td>Least, almost absent</td><td>Moderate</td><td>Moderate</td><td>Maximum (Marx)</td></tr>
+  <tr><td>Aim of work</td><td>Sustenance</td><td>Sustenance and surplus</td><td>Sustenance and surplus</td><td>Maximum profit; market focus</td></tr>
+  <tr><td>Social mobility</td><td>Rare; ascription-bound</td><td>Rare; ascription-bound</td><td>Rare; hereditary classes</td><td>Easy; achievement-oriented</td></tr>
+  <tr><td>Gender roles</td><td>Biologically influenced; relatively flexible</td><td>Culturally prescribed; restrictive</td><td>Rigid, discriminatory</td><td>Highly flexible; challenges cultural norms</td></tr>
+</table>
+`,
+  'politics-and-society': `
+<h2>Power: Definition and Nature</h2>
+
+<p>Power is one of the most central concepts in political sociology. At its most basic, power is the possession of control, authority, or influence over others — a relationship in which one actor can exert influence over the mind and actions of another.</p>
+
+<p><strong>Max Weber</strong> defined power as "the opportunity existing within a social relationship which permits one to carry out one's will even against resistance, regardless of the basis on which this opportunity rests." This definition emphasises the relational character of power and its independence from legitimacy — power can be exercised with or without consent.</p>
+
+<p><strong>Amos Hawley</strong> radicalised this insight: "Every social act is an exercise of power, every social relationship is a power equation, and every social group or system is an organisation of power." Power is not exceptional but omnipresent in social life.</p>
+
+<p><strong>Bases of Power:</strong> Wealth, Status, Knowledge, Charisma, Force (illegitimate — violence, coercion), and Authority (legitimate — traditional, charismatic, rational-legal).</p>
+
+<p><strong>Features of Power:</strong> It is a structural aspect of social reality. It operates reciprocally but usually not equally reciprocally. It manifests itself in a relational manner and appears as a process, not a fixed part of social structure. Power is inherent in social stratification and simultaneously becomes its basis.</p>
+
+<h3>Steven Lukes: Three Faces (Dimensions) of Power</h3>
+
+<p>Lukes argued that Weber's definition is narrow because it focuses only on observable conflict and decision-making. In <em>Power: A Radical View</em> (1974), Lukes proposed three dimensions:</p>
+
+<table>
+  <tr><th>Dimension</th><th>Mechanism</th><th>Example</th></tr>
+  <tr><td><strong>1st Face (Decision-Making)</strong></td><td>Power exercised in open, observable conflict over decisions. Who wins? Weber's focus.</td><td>Parliament voting on a budget; electoral outcomes</td></tr>
+  <tr><td><strong>2nd Face (Non-Decision-Making)</strong></td><td>Power exercised by preventing certain issues from reaching the agenda — setting limits on what preferences can even be expressed. Bachrach and Baratz.</td><td>Caste issues historically kept off political agenda in India; trade unions denied bargaining rights</td></tr>
+  <tr><td><strong>3rd Face (Shaping Desires)</strong></td><td>The most insidious: power that shapes people's preferences so they don't even know what they really want. False consciousness. People accept their own subordination.</td><td>Dominant ideology that justifies inequality as natural; advertising creating false needs; Gramsci's hegemony</td></tr>
+</table>
+
+<p>Lukes' critique of Weber: Weber focuses excessively on the first face only. Not all interest groups have equal power (e.g., refugees have no access to decision-making). Safe decisions are taken in disguise — the most important exercises of power leave no visible trace.</p>
+
+<h2>Theories of Power</h2>
+
+<h3>A. Elite Theory</h3>
+
+<p>Elite theory holds that only a minority possesses the talent, intelligence, ability, and leadership to occupy positions of power. This minority influences government decisions and gains dominant positions beyond what general elections can challenge — democracy, in this view, is a utopia.</p>
+
+<p><strong>Vilfredo Pareto (Circulation of Elites):</strong> Society's higher stratum comprises the economic-wealthy, political rulers, the most holy (religion), the most artistic (art), and the most virtuous (ethics). The governing elite is subdivided into two psychological types, adapted from Machiavelli:</p>
+<ul>
+  <li><strong>Foxes</strong> — have vitality and imagination; prefer materialistic goals and strategies of emotional appeal and fraud; replace lions who lack manipulative skills</li>
+  <li><strong>Lions</strong> — conservative elites who have residue of persistence (faith in ideology, group loyalty)</li>
+</ul>
+<p>Society degenerates when elites occupy status due to ascription rather than achievement. Elites circulate — foxes replace lions and vice versa in a continuous cycle. Critique: no method of measuring qualities; Parsons argues residues change with society; the difference between foxes and lions is merely a style of rule.</p>
+
+<p><strong>Gaetano Mosca (Class Theory of Power, <em>The Ruling Class</em>):</strong> Elite rule is a universal necessity and inevitability. All societies divide into a ruling class (subdivided into elites holding political power and property) and a ruled class (sub-elites: technocrats, managers, civil servants). Dominant interests are reflected in the ruling class who dominate structures and values. Mosca differs from Pareto: elites are restrained by various social factors; the ruled are not powerless in democracy.</p>
+
+<p><strong>Robert Michels (Iron Law of Oligarchy):</strong> Oligarchy is inevitable within democracy as it is part of technical and tactical necessity. The leadership class comes to dominate the power structure; it controls access to information, centralises power with little accountability. Any democratic attempt fails because the leadership class rewards loyalty. Elites are sustained by three principles in bureaucratic structures: need and specialisation, importance of psychological attributes, utilisation of facilities by old elites.</p>
+
+<p><strong>C.W. Mills (<em>The Power Elite</em>, 1956):</strong> Mills explained elite rule in institutional rather than psychological terms. He identified two kinds of elites: segmental (arts, music, science) and strategic (those who govern). Three institutions yield concentrated power in modern America: major corporations, the federal government, and the military. These institutional elites share the same lifestyle, family relationships, and perpetuate their rule through self-recruitment. They occupy <em>command posts</em> — key pivotal positions. However, unlike Pareto, Mills argued: elites have no moral or psychological superiority; elite rule is not inevitable; masses are not incompetent but are kept in a state of ignorance and powerlessness.</p>
+
+<p><strong>James Burnham (<em>The Managerial Revolution</em>):</strong> All power is in the hands of managers — a separation of operation and control has occurred. Capitalism is in decline; managers are the new elites.</p>
+
+<p><strong>T.B. Bottomore (<em>The Elites and Society</em>):</strong> Elites differ in industrial and developing societies. Society is moving towards egalitarianism; multiple elites are present in the developing world — dynastic, middle class, revolutionary intellectuals, colonial administrators, nationalist leaders.</p>
+
+<p><strong>Critique of Elite Theories:</strong> Power of public opinion is ignored. Karl Mannheim: in democracy, people remove leaders not working according to their wishes. Power changes moment to moment and issue to issue. David Riesman rejected Mills' theory, arguing there is so much diversity in the US in terms of thoughts and interests. Altruistic motives do exist. Robert Dahl in <em>Who Governs?</em> — found in New Haven, Connecticut, that power is dispersed (confirmed by Arnold Rose).</p>
+
+<h3>B. Pluralist Theory</h3>
+
+<p>Based on functionalism (Parsons) and classical pluralism, with emphasis on equilibrium, stability, and gradual change. Society is decentralised. Power is widely shared, diffused, fragmented, and derived from multiple resources. Diverse groups with conflicting interests ensure no single group plays a dominant role. Natural balance of power is preserved through bargaining and compromise.</p>
+
+<p><strong>Alexis de Tocqueville:</strong> Democracy becomes dysfunctional if dominated by one interest. The state is an "honest broker" mediating between competing groups.</p>
+
+<p><strong>Talcott Parsons (Variable Sum Conception):</strong> Criticised Weber's zero-sum conception of power. Power can decrease and increase — it is not constant. Modernity has raised the lifestyle of all (a positive-sum outcome). Power is a structural feature of society and a generalised facility or resource — a capacity to mobilise resources for the attainment of collective goals. Value consensus means goals are shared and power is used to further collective wellbeing. Western democracies are "deposits" of power — people can withdraw their deposit in the next election.</p>
+
+<p><strong>Critique of Pluralism:</strong> Not all interest groups have equal power. Certain groups (refugees, the very poor, the unorganised) are structurally excluded from pluralist bargaining. Safe decisions are taken in disguise (Lukes' 2nd and 3rd faces). Robert Dahl's own later work acknowledged inequalities in political resources.</p>
+
+<h3>C. Marxist and Neo-Marxist Theories</h3>
+
+<p><strong>Classical Marxism:</strong> Those who own the means of production (the haves) have power like elites. Power is coercive but accepted due to false consciousness. In the <em>Communist Manifesto</em>, the oppression of one class by another is political power in its essence. Power is pervasive — the dominant class exercises it in every field through dominant ideologies.</p>
+
+<p><strong>Antonio Gramsci (Hegemony):</strong> There is no simple economic determinism — there is reciprocity between infrastructure and superstructure. Hegemony is achieved not by force alone but by ideas (concessions, dual consciousness — ideas are not always directly derived from capitalist interests). The ruling class manipulates culture (beliefs, explanations, perceptions, values) so that the dominant ideology becomes accepted as common sense — beneficial for all rather than a fake social construct. Hegemony operates through state apparatus and through civil society institutions (schools, churches, media).</p>
+
+<p><strong>Louis Althusser:</strong> Distinguished two forms of state power. <em>Repressive State Apparatus</em> — ruling class controls government, courts, police, military; people submit due to fear of legal prosecution. <em>Ideological State Apparatus</em> — religion, schools, and families controlled through ideology; people submit due to fear of social ridicule.</p>
+
+<p><strong>Nicos Poulantzas (Relative Autonomy of the State):</strong> Emphasised importance of social structure over individual action. Class origin does not matter — class position does. The structure of society is capitalist; thus the state is by default capitalistic in nature. No need for capitalists to be physically present in the governing class — the state serves capitalist interests structurally. Relative autonomy: the state must diffuse protests and promote a myth of inclusiveness, and bourgeoisie are not free from internal divisions.</p>
+
+<p><strong>Ralph Miliband:</strong> State functions to serve capitalist interests due to similar social origins of members of state, government, and ruling-class elites (elite self-recruitment). The state becomes an agent of the wealthy, though direct intervention is not always needed (operates via the 3rd face of power — indoctrination).</p>
+
+<p><strong>Bob Jessop (The Future of the Capitalist State, Neo-Marxist):</strong> Post-Fordist specialised production means capitalists don't always run the state. The state has operational autonomy — capitalism cannot exist without non-capitalist institutions. Shift from the Keynesian Welfare State model to a <em>Schumpeterian Workfare Economy</em> (unemployed should seek work) and post-national model emphasising international competition in the knowledge economy.</p>
+
+<h3>D. Foucault: Power, Knowledge and Discourse</h3>
+
+<p>Foucault's conception of power radically departs from all previous theories. In <em>Power and Knowledge</em>, he argued that power is not concentrated in one place or in the hands of particular individuals. Power is found in all social relationships and is not just exercised by the state. Power is intimately linked with knowledge — they produce one another. Where there is power, there is resistance.</p>
+
+<p>Foucault does not think of power only in coercive terms. Paradoxically, he sees power as operating only when people retain some freedom — complete determination is not power but domination.</p>
+
+<p>In <em>Madness and Civilization</em>, Foucault showed that discourse is a practice that systematically forms the objects it speaks about — psychiatry created the category of "the mentally ill." Power is part of the discourse of psychiatry; it is not something held by individual psychiatrists.</p>
+
+<p>In <em>Discipline and Punish</em>, Foucault traced changes in punishment in the 18th–19th century. Punishment shifted from the body to the soul — intention changed to reform. People began to be judged for what they were, not just what they had done. This brought experts (psychiatrists, criminologists) into power relations, making discourses carry the power. He imagines the modern state as a <strong>Panopticon</strong> — a circular prison design where all prisoners can be watched from a central tower at any time. This pointing towards techniques of surveillance which encourage <em>self-discipline</em>: with the idea that humans have a soul that can be manipulated, the state tries to produce "Docile Bodies."</p>
+
+<h3>E. Michael Mann: Sources of Social Power</h3>
+
+<p>Mann argued that there has never been a truly isolated society — human behaviour is not exclusively caused by a particular territory. Power is the ability to pursue and attain goals through mastery of the environment.</p>
+
+<p>Power takes two forms: <strong>Distributive power</strong> (power over others — the ability of individuals to get others to help them achieve their own goals) and <strong>Collective power</strong> (exercised by social groups, by one nation over another).</p>
+
+<p>Two main ways power is exercised: <strong>Extensive power</strong> (ability to organise large numbers over far-flung territories in minimally stable cooperation — example: major religions) and <strong>Intensive power</strong> (ability to organise tightly and command high mobilisation or commitment — example: religious sects).</p>
+
+<p>Power can also be <strong>Authoritative</strong> (deliberate commands are issued and consciously followed, e.g., a football player following a referee) or <strong>Diffused</strong> (spreads spontaneously without commands being issued, e.g., a company going out of business not because commanded but because unable to compete).</p>
+
+<p>According to Mann, the four overall sources of social power are Economic, Ideological, Political, and Military (IEMP model). This approach is broader than Marx (who stressed economic power alone), broader than pluralism (which stresses ideological power in democracy), and broader than elite/state-centred theories (which emphasise political power) — Mann's model embraces all four, including military power.</p>
+
+<h2>Political Parties</h2>
+
+<p>Political parties are organisations driven by clear ideologies, which influence members to join and elect a common leader. This leader is defined by ideology and rule of law.</p>
+
+<ul>
+  <li><strong>Weber</strong> — A party is an organised group action intended to capture power; it is an ideal type present in every society.</li>
+  <li><strong>F.W. Riggs</strong> — Any organisation that nominates candidates to elections.</li>
+  <li><strong>T.B. Bottomore</strong> — Groups with divergent interests form political parties; they are a link between state and sectional interest, with the ultimate aim to capture power.</li>
+  <li><strong>Seymour Lipset</strong> — Parties compete with each other to gain office.</li>
+</ul>
+
+<p>In a democracy, parties represent popular opinion; they are obligated to fulfill supporters' interests or face electoral defeat (Parsons and Aron). They require support from various groups so cannot only represent sectional interest.</p>
+
+<p><strong>Forms of Political Party (Maurice Duverger):</strong> Mass Based (China, Cuba — mostly socialist or communist countries) and Cadre Based (in democracies — rank-based, hierarchical, division of responsibilities).</p>
+
+<p><strong>Robert Dahl's classification:</strong> Exterior parties (emerging from external influence, e.g., CPI in India due to CP China and Russia) and Interior parties (like the Communist Party of the USSR).</p>
+
+<p><strong>Party systems and their assessments:</strong></p>
+<table>
+  <tr><th>System</th><th>Advantages</th><th>Disadvantages</th></tr>
+  <tr><td>Uni-party (Duverger)</td><td>Political stability; strict adherence to public policy; glorification of nationalism</td><td>Voice of people not given due acknowledgement; authoritarian government (David Lane)</td></tr>
+  <tr><td>Bi-party (Harold Laski)</td><td>Autocracy checked; strong opposition; responsible government</td><td>Divides the nation (Robert Smith); in globalised world, parties follow similar policies</td></tr>
+  <tr><td>Multi-party</td><td>True democracy; suitable for multicultural society (Sudipta Kaviraj, Zoya Hassan on India)</td><td>Political confusion; instability; opportunistic politics; elite pluralist parties governed by elite leaders</td></tr>
+</table>
+
+<h2>Pressure Groups</h2>
+
+<p>Unlike political parties, interest groups do not aim to form government — they seek to influence political parties and state departments. When an interest group seeks governmental aid in achieving its own ends and succeeds in influencing governmental policy to its advantage, it becomes a pressure group.</p>
+
+<p><strong>Robert McKenzie's two types:</strong></p>
+<ul>
+  <li><strong>Protective groups</strong> — Defend the interests of a particular section of society (trade unions, CII). Zero-sum game.</li>
+  <li><strong>Promotional groups</strong> — Support a particular cause rather than guard the interests of a particular group (Greenpeace, PETA). Membership is larger and more open.</li>
+</ul>
+
+<p><strong>Gabriel Almond's structural classification:</strong></p>
+<ul>
+  <li><strong>Institutional interest groups</strong> — Within institutions like the army and business associations; formally organised professional persons, particularly bureaucracy</li>
+  <li><strong>Non-associational interest groups</strong> — Formed on the basis of religion, ethnic group, or kinship; common in developing societies (because stronger ascriptive identities)</li>
+  <li><strong>Associational interest groups</strong> — Formed by trade unions, businessmen, industrialists, or professional groups; articulation of interest is quite prominent; launch agitation if necessary</li>
+  <li><strong>Anomic interest groups</strong> — Form spontaneously (riots, militant demonstrations); no permanent structure; no organisation (terrorist organisations, criminal gangs)</li>
+</ul>
+
+<p>Insider groups have access to power; outsider groups operate outside power circles. Durkheim in <em>Professional Ethics and Civic Morals</em> called pressure groups a tool for associative democracy, holding people together and acting as effective checks on the individual in industrial society. Bernard Barber called them the "third sector of democracy." Dawes and Hughes believe pressure groups are a continuous mandate for government and that democracy cannot be conceived without them.</p>
+
+<h2>Democracy</h2>
+
+<p>Democracy entails direct participation of all in the political process. Gandhi: it is not a legal phenomenon but a spiritual one involving respect for each other and decentralisation of power. Abraham Lincoln: rule by the people, of the people, for the people.</p>
+
+<p><strong>Types of Democracy:</strong></p>
+<ul>
+  <li><strong>Participative</strong> — Direct participation via referendum, recall, plebiscite, initiative</li>
+  <li><strong>Representative</strong> — Agent-based (one who consults the electorate) or Delegate-based (one who acts on his own discretion while taking decisions). Bestows responsibility or power in the hands of a few to represent collective interest.</li>
+  <li><strong>Associative</strong> — Durkheim in <em>Professional Ethics and Civic Morals</em>: participation via voluntary organisations (socialist society), sensitise, check on bureaucracy, civic culture</li>
+</ul>
+
+<p><strong>Critique of democracy:</strong></p>
+<ul>
+  <li>Bottomore: Pluralist societies are undemocratic; democracy needs social and industrial democracy and equality of all</li>
+  <li>Marx: Communist societies are true democracies</li>
+  <li>Robert Michels: Iron law of oligarchy — in representative democracy, organisations develop a bureaucratic structure; few control the institutional landscape and suppress genuine people's participation. Dynasty rule, elite self-recruitment, catch-all parties (parties with divergent ideologies tend to become centrist after being voted in)</li>
+  <li>Alexis de Tocqueville: Tyranny of majority</li>
+  <li>Steven Lukes: 3rd face of power — state using its power to shape public opinion in its own favour</li>
+  <li>J.S. Mill: "If all mankind minus one were of one opinion, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person than he, if he had the power, would be justified in silencing mankind."</li>
+  <li>Episodic accountability — democracy limited to voting only; limited accountability mechanisms; illiteracy and ignorance of populace</li>
+</ul>
+
+<h2>The State</h2>
+
+<p>Weber's classic definition: the state is "a human community that successfully claims the monopoly over the legitimate use of physical force within a given territory." Other groups might resort to violence, but they are termed terrorists or hooligans. Thomas Hobbes: the state exercises sovereignty. Machiavelli: the state comprises institutions governing members within a territorial boundary; members confined in a boundary are deemed citizens and enjoy political, cultural, religious, social, and economic rights.</p>
+
+<p><strong>Contemporary problems for the state:</strong></p>
+<ul>
+  <li><strong>Territorial problem</strong> — posed by globalisation (transnational flows undermine territorial control)</li>
+  <li><strong>Institutional problem</strong> — posed by blurring of boundary between state and non-state private organisations, civil society, NGOs, voluntary organisations</li>
+</ul>
+
+<p><strong>Theories of the State:</strong></p>
+<ul>
+  <li><strong>Pluralist</strong> — State controlled by many parties and organisations, representing the interests of all; Lipset: institutionalisation of class-conflict through parties</li>
+  <li><strong>Elite</strong> — Mills: state represents elite interest; Michels: democracy is rule by oligarchic organisations through bureaucracy; elite interest not put to serious challenge</li>
+  <li><strong>Functionalist</strong> — Parsons: state needed to determine goals based on value consensus and to mobilise resources for their fulfilment</li>
+  <li><strong>Marxist</strong> — state committed to common interest of capitalists and staffed by ruling class; Westergaard and Risler: welfare state a myth — inequality still prevails; social security systems are merely concessions to suppress proletarian revolt</li>
+  <li><strong>Eric Nordlinger</strong> — state has genuine autonomy: Type 1 (state has different wishes from major groups and has resources and decision-making power), Type 2 (persuades opponents to change their mind; active role in manipulating public opinion), Type 3 (apathy of the public — leaves decision-making to the state)</li>
+  <li><strong>Theda Skocpol (Bringing the State Back In)</strong> — state can have its own goals (reinforce authority, political longevity). State capacity depends on reliable income (taxes from rich), no foreign debt, increase in human resources. When state capacity decreases, revolution occurs (Russian, French, Chinese revolutions)</li>
+</ul>
+
+<h2>Nation and Nationalism</h2>
+
+<p><strong>Nation</strong> (psychological) vs <strong>State</strong> (political) vs <strong>Country</strong> (geographical). A nation is a large group with common characteristics — language, traditions, customs, habitus, and ethnicity. It is more impersonal, abstract, and overtly political than an ethnic group; a cultural-political community that has become conscious of its autonomy, unity, and particular interests.</p>
+
+<p><strong>Joseph Stalin:</strong> A nation is not a racial or tribal but a historically constituted community, formed on the basis of a common language, territory, economic life, and psychological make-up manifested in a common culture.</p>
+
+<p><strong>Benedict Anderson:</strong> An "Imagined Community" — it is imagined because material conditions exist for imagining extended and shared connections, even though members will never likely meet. Paul James: "Abstract community" — objectively impersonal even if each individual experiences themselves as part of an embodied unity. Vance Packard: "A nation of strangers."</p>
+
+<p>Two types of nations: the <strong>civic nation</strong> (traced to the French Revolution — Liberty, Equality, Fraternity; Ernest Renan: a willingness to "live together") and the <strong>ethnic nation</strong> (exemplified by the German peoples — common ethnicity and culture as basis of political community).</p>
+
+<p><strong>Ernest Gellner's conditions of nationalism:</strong> Shared formal education system; cultural homogenisation and "social entropy" (natural decay of a social system); central monitoring of polity with extensive bureaucratic control; linguistic standardisation; national identification as abstract community; cultural similarity as basis for political legitimacy.</p>
+
+<p><strong>Eric Hobsbawm:</strong> Nationalist ideology represents a bourgeois construct — capitalism replaced traditional aristocracy and nationalism was the result of economic capital. <strong>Albert Cohen:</strong> Nationalism was the result of a reaction to colonialism in Third World nations. <strong>Andrew Pilkington:</strong> Otherisation — as globalisation grew, the idea that "we are different from others" also grew, eventually leading to nationalism flowing from elites to lower strata. Hybrid identities (one is English + British + European simultaneously). Hyphenated identities (minorities) need to be mainstreamed to form "inclusive nationalism."</p>
+
+<h2>Globalisation and the Nation-State</h2>
+
+<p>John Baylis and Steve Smith: globalisation is a process of increasing interconnection leading to a new era in politics (economic transformation — state has less control over national economy), electronic communication (no boundaries), global culture, homogeneity, cosmopolitan culture, global polity (UN, NGOs), and risk culture (AIDS, environment).</p>
+
+<p>However: globalisation is not new and is not reducing the power of the nation-state; it has impacted Western societies more where infrastructure is present; it has exploited the poor; global problems have emerged (terrorism, drug and weapon trade, money laundering); global institutions may not be subject to democratic control.</p>
+
+<p><strong>Leslie Sklair (Sociology of the Global System):</strong> Transnational practices include economic transnational corporations, political capitalist-inspired politicians, and cultural ideological consumerism. Globalisation has mostly negative impact: class polarisation and ecological unsustainability.</p>
+
+<p><strong>David Held and Anthony McGrew (Democracy and Cosmopolitan Order):</strong> Globalists (globalisation transforms economy, global politics, risk), Sceptics (nothing new about migration and international trade; people have maintained strong national identities), and Transformationalists (nothing new about globalisation; in future it might change direction or be reversed; globalisation is bringing diverse people together which can become a source of conflict).</p>
+
+<h2>Citizenship</h2>
+
+<p>A citizen is not merely one who lives in a nation-state — aliens also do that. A citizen is one who participates in the process of government in two ways: rights (demands on the state) and duties (demands by the state). Harold J. Laski: the state is known by the rights it maintains.</p>
+
+<p><strong>T.H. Marshall's Theory of Citizenship:</strong> Citizenship is a status enjoyed by a person who is a full member of a community. It has three components that developed historically in sequence:</p>
+<ul>
+  <li><strong>Civil citizenship</strong> — individual freedom institutionalised in law (18th century)</li>
+  <li><strong>Political citizenship</strong> — right to participate in exercise of political power and to hold public office (19th century)</li>
+  <li><strong>Social citizenship</strong> — right to participate in the appropriate standard of living (20th century welfare state)</li>
+</ul>
+<p>Marshall argued there is permanent tension between citizenship and the capitalist market: capitalism involves inequality while citizenship involves distribution of resources through rights.</p>
+
+<p><strong>Critique of Marshall:</strong> Only English experience — no comparative analysis. Expansionary analysis of citizenship without examining social processes that undermine it (gender differences, discrimination). It is not clear about the cause of the expansion of citizenship.</p>
+
+<p>Talcott Parsons: citizenship is a measure of modernisation because it is based on values of universalism and achievement. Citizenship is treated as an aspect of bourgeois liberalism and sometimes as an aspect of radical democratic politics. Globalisation is transcending regionalism and parochial nationalism to make us global citizens. Dual citizenship is a new phenomenon where connections are more based on convenience rather than love of the motherland.</p>
+
+<h2>Civil Society</h2>
+
+<p>Civil society is the community of citizens linked by common interests and collective identity. It manifests the will and interests of citizens and is the third sector of society after government and business. It limits the power of the state and ushers in true and vibrant democracy by enhancing participation.</p>
+
+<p><strong>Key thinkers:</strong></p>
+<ul>
+  <li><strong>J.S. Mill and Alexis de Tocqueville</strong> — Civil society is the domain of social association that checks excesses of the state (based on liberal democratic theory: rights-bearing individuals are free to pursue private associations with others)</li>
+  <li><strong>Hegel</strong> — Subordinated civil society to the state; thought of it as a mediating domain where the particular interests of individuals and the universal interest of the state can be reconciled to produce an ethical basis for modern society</li>
+  <li><strong>Gramsci</strong> — Civil society furthers dominant ideologies; it is a terrain of hegemonic struggle, not neutral</li>
+  <li><strong>Partha Chatterjee and Sudipta Kaviraj</strong> — Delineate western civil society from Indian; application of concepts of western civil society to India is wrong because the state in India is not as extensive as in the West</li>
+  <li><strong>Anthony Giddens</strong> — Groups falling outside both market and government can be termed civil society; voluntary groups, families, and civic associations can play vital roles in addressing community issues from crime to education; some elements of civil society seek radical transformations while others seek modest revisions or conformist reinforcement of established rules</li>
+  <li><strong>Jan Aart Scholte</strong> — Civil society enhances democracy through public education, giving voice to stakeholders (e.g., Singur farmers in West Bengal, unorganised labour), fuelling debate about governance (e.g., environmental issues), increasing transparency through public scrutiny, and fostering legitimacy through interaction between people and government</li>
+</ul>
+
+<p><strong>Caution (Scholte):</strong> Civil society can pursue anti-democratic goals, employ anti-democratic means, and produce anti-democratic consequences. Six parameters to judge the quality of an NGO: people's participation, cost effectiveness, institutional/environmental/financial sustainability, accountability, technical excellence, and equity concern for deprived groups and women.</p>
+
+<h2>Protest, Agitation, and Social Movements</h2>
+
+<h3>Definitions and Distinctions</h3>
+
+<p><strong>Collective action</strong> is a group of people engaged in some sort of interaction, within the group as well as with other groups, which creates a collective identity. It can be classified in terms of Duration, Ideology, Structure, Consequences, Objective, and Organisation (DISCOO). Individual Action → Social Action → Collective Action.</p>
+
+<p><strong>Protest</strong> is the process of opposition against any other person, group, issue, or society. <strong>Agitation</strong> is the activity of showing opposition to fulfil the purpose of protest. Both operate at manifest levels (verbal comments, expression of anger, disruptive activities, rioting) and latent levels (inaction, inefficient behaviour, distress, tension, disillusionment, alienation).</p>
+
+<p>When the same dissatisfaction is: spontaneous in start, sustained, non-institutional (outside the state), and organised to achieve certain objectives — it becomes a <strong>Social Movement</strong>. Example: a driver beaten after an accident is not a social movement (not sustained), but Sanskritisation by Rajvanshis is. Social movements are institutionalised through Leadership, Objective, and Ideology (LOI), which give longevity to the movement (e.g., Bhoodan Movement, Naxal Movement).</p>
+
+<p><strong>Ghanshyam Shah's testing criterion:</strong> "Compulsive Demand" is the hallmark of agitation (Salt Satyagraha, Anna Hazare's fast unto death). All social movements are collective actions but not all collective actions are social movements.</p>
+
+<p><strong>Anthony Giddens' definition:</strong> Social movements are "collective attempts to further a common interest or secure a common goal through action outside the sphere of established institutions." Giddens identifies four dimensions of modernity and corresponding social movements: Capitalism → Labour movements; Industrialism → Ecological movements; Surveillance → Free speech/democratic movements; Military Power → Peace movements.</p>
+
+<h3>Theories of Social Movements</h3>
+
+<p><strong>Herbert Blumer (Theory of Social Unrest):</strong> Social movements are motivated by dissatisfaction with some aspects of current society, which they seek to rectify outside formal party politics — trying to build a "new order of life." Types: active/outwardly directed (aiming to transform society, e.g., labour movement) and expressive (seeking to change individuals rather than society, e.g., religious revival movements).</p>
+
+<p><strong>Neil Smelser (Structural Strain/Value-Added Theory):</strong> Six conditions that must be present for a social movement to develop:</p>
+<ul>
+  <li><strong>Structural conduciveness</strong> — the environment must be social-movement friendly (environmental degradation creating conduciveness for ecological movements)</li>
+  <li><strong>Structural strain</strong> — social movements emerge in response to deprivation and inequality experienced by groups (LGBTs experiencing relative deprivation vis-à-vis heterosexuals)</li>
+  <li><strong>Growth and spread of a belief</strong> — forming a well-organised movement requires a clear statement of not just the problem but also its causes and solutions. If people are confused about why they are suffering, they will express dissatisfaction in an unorganised way through riots</li>
+  <li><strong>Precipitating factors</strong> — a specific event or incident sparks collective action: Arab Spring triggered by self-immolation of Mohamed Bouazizi; #MeToo gained momentum following allegations against entertainment figures</li>
+  <li><strong>Mobilisation of participants</strong> — once people share concern, they are ready to take action: distribute leaflets, stage rallies, build alliances. Social media and the internet have played significant roles</li>
+  <li><strong>Lack of social control</strong> — both too much or too little control can lead to development of social movements. Actions of media, police, courts, community leaders, and political officials can lead to success or failure</li>
+</ul>
+
+<p><strong>Resource Mobilisation Theory (McCarthy and Zald):</strong> Social movements develop when an organised group works towards generating resources. Resources include money, skill, property, equipment, media attention, supporters, and social media networks. Deprivation alone cannot be turned into a movement with just anger and resentment — it requires a proper organised group that can mobilise these resources.</p>
+
+<p><strong>Relative Deprivation Theory (Merton and Runciman):</strong> People who feel satisfied with their current condition are less likely to seek social change. People who are deprived of things deemed valuable in society (money, justice, status, privilege) join social movements. J-Curve Theory of Revolution (James Davies): revolution is a result of relative deprivation when periods of economic prosperity are suddenly reversed — expectations continue to rise while reality suddenly falls.</p>
+
+<p><strong>Political Opportunity Structure Theory (Charles Tilly and Doug McAdam):</strong> Three important components for formation of a social movement: insurgent consciousness (collective sense of injustice as motivation), organisational strength/leadership (sufficient resources — links to Resource Mobilisation Theory), and political opportunities (vulnerabilities of the existing political system due to formation of internal factions, support of organised opposition by elites, decline in effectiveness of repression, and increasing access to political participation).</p>
+
+<h3>Old Social Movements vs New Social Movements (NSMs)</h3>
+
+<table>
+  <tr><th></th><th>Old Social Movement</th><th>New Social Movement</th></tr>
+  <tr><td><strong>Time period</strong></td><td>Industrial</td><td>Post-industrial</td></tr>
+  <tr><td><strong>Sphere of influence</strong></td><td>Political and economic</td><td>Social and cultural</td></tr>
+  <tr><td><strong>Issues</strong></td><td>Materialist — challenge economic and political order. National struggles for independence; working class movements improving economic conditions</td><td>Post-materialist — animal rights, healthy lifestyle, quality of life, peace, clean environment, human rights, sexuality, consumer protection, social justice</td></tr>
+  <tr><td><strong>Form</strong></td><td>Trade unions; labour and peasant movements</td><td>Malala Foundation, MeToo, Anti-Apartheid, LGBT movement, Anti-Hijab movement, Amnesty International, Greenpeace, Black Lives Matter, Anti-Nuclear</td></tr>
+  <tr><td><strong>Social composition</strong></td><td>Lower middle or lower classes (depressed classes, workers, peasants)</td><td>Middle and upper middle classes — more affluent people tend to be more conservative on economic issues but more liberal on social issues (result of extensive education)</td></tr>
+  <tr><td><strong>Role of state</strong></td><td>Major target — mainly directed at influencing state policy</td><td>Oriented more towards civil society than the state</td></tr>
+  <tr><td><strong>Organisation</strong></td><td>Centralised and bureaucratic</td><td>Locally based, centred on small social groups, loosely held together by personal or informational networks (radios, newspapers, posters)</td></tr>
+  <tr><td><strong>Scope</strong></td><td>Regional/national</td><td>Global — draw international participants and rely on transnational networks</td></tr>
+</table>
+
+<p><strong>Habermas:</strong> NSMs advance new politics, whereas OSMs hovered around old politics. <strong>Giddens:</strong> NSMs are a response to globalisation — globalisation has resulted in risks that transcend national boundaries (pollution, rising ocean levels, oil spills, nuclear accidents); since the risks are global, people lose faith in governments and turn to NSMs as the most effective form of political participation. <strong>Pakulski and Waters:</strong> NSMs are an indicator of the fact that lifestyle and issues around it have become more important than economic issues.</p>
+
+<p><strong>Critique of NSM theory:</strong> Non-materialistic movements existed in the industrial era, and materialistic movements persist in the post-industrial economy. The women's movement, for example, focuses on many of the same issues — workplace conditions and pay — that have concerned labour organisations for decades.</p>
+
+<h3>Why Social Movements Decline</h3>
+
+<p>A social movement may decline for several reasons: when the goal is achieved and energy dissipates; when the movement is repressed by state authorities (frightening away participants, discouraging new recruits, imprisoning leaders); when factionalism develops and undermines unity; when the movement goes mainstream — becoming an accepted part of the system after realising some of its goals, so that it contributes to but no longer challenges the status quo. The US labor movement is now well-established; its leaders control vast sums of money and have more in common with the business tycoons they once opposed than with rank-and-file workers.</p>
+
+<h2>Revolution</h2>
+
+<p>A revolution is a forcible overthrow of a government or social order in favour of a new system — a fundamental change in political power or organisational structures that takes place in a relatively short period of time. Aristotle described two types: complete change from one constitution to another, and modification of an existing constitution. A sudden change in government brought about violently is often called a coup d'état or palace revolution. More broadly, revolution is a complete change of social structure where political change reflects one of its manifestations.</p>
+
+<p><strong>Marxian view:</strong> History of society is history of struggle between classes. Replacement of one mode of production by another is involved in a revolution. Althusser believed revolution would occur at the "weak link in the chain of capitalism" where social contradictions are most prominent. Fukuyama: democracy and economic capitalism constitute the true final revolution (<em>End of History</em>). Theda Skocpol: revolutions occur when state capacity weakens (Russian, French, Chinese revolutions).</p>
+`,
   'systems-of-kinship': '',
   'social-change-modern-society': '',
   'introducing-indian-society': '',
