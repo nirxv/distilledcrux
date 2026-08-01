@@ -2822,7 +2822,518 @@ export const sociologyNoteContent: Record<string, string> = {
 </table>
 
 `,
-  'research-methods': '',
+  'research-methods': `
+<h2>What is Research Methodology?</h2>
+
+<p>Research methodology refers to the theoretical and philosophical framework that guides the entire research process — the principles, concepts, and approaches used to conduct research, including the overall strategy and justification for choosing specific methods. Research <em>methods</em>, on the other hand, are the specific techniques, tools, and processes used to gather and analyse data within that methodology.</p>
+
+<p><strong>Epistemological foundations</strong>: Epistemology is the branch of philosophy that deals with sources of knowledge — how do we come to know about a thing or phenomenon? Our sources of knowledge could be tradition, authority, personal observation, or systematic research. Research methods are valued because they allow us to acquire knowledge without relying on tradition, authority, or personal bias.</p>
+
+<p>Since sociology claims to be a scientific discipline, it relies on empirical underpinnings. Both quantitative and qualitative studies are empirical in nature. Three broad approaches exist:</p>
+<ul>
+  <li><strong>Positivist approach</strong> — focuses on what people do (observable actions); uses quantitative methods.</li>
+  <li><strong>Interpretivist approach</strong> — focuses on what people think and mean (subjective experience); uses qualitative methods.</li>
+  <li><strong>Critical approach</strong> — exposes anomalies and aims for social transformation; used by Marxists and feminists.</li>
+</ul>
+
+<h2>Types of Data</h2>
+
+<h3>Quantitative vs Qualitative Data</h3>
+<table>
+  <tr>
+    <th>Quantitative / Numerical Data</th>
+    <th>Qualitative / Non-Numerical Data</th>
+  </tr>
+  <tr>
+    <td>Information represented numerically. E.g. birth rate, suicide rate, unemployment rate, sex ratio</td>
+    <td>Non-numerical information — experiences, statements, intentions, opinions. E.g. Goffman's observations on how patients experience a mental institution</td>
+  </tr>
+  <tr>
+    <td>Advertisement example: number of viewers of Shark Tank on Sony</td>
+    <td>Advertisement example: what the audience thinks of Shark Tank — opinions, sentiments, associations</td>
+  </tr>
+</table>
+
+<h3>Primary vs Secondary Data</h3>
+<table>
+  <tr>
+    <th>Primary Data</th>
+    <th>Secondary Data</th>
+  </tr>
+  <tr>
+    <td>Information collected directly by the researcher — through questionnaires, interviews, observations. Can be quantitative or qualitative.</td>
+    <td>Information which already exists and was compiled by others — official statistics, newspapers, reports, letters, diaries, previous sociological research.</td>
+  </tr>
+</table>
+
+<h3>Serendipity and the Hawthorne Effect</h3>
+<p>A <strong>serendipitous finding</strong> is something unanticipated at the start of research — a discovery outside the scope of the original question. Merton later called these "latent functions" or unanticipated consequences.</p>
+<p><strong>The Hawthorne Effect</strong> (1924, Western Electric Plant): Researchers expected that changing lighting would affect productivity. Surprisingly, productivity improved regardless of whether lighting was increased or decreased — simply because workers knew they were being observed. This is the Hawthorne Effect: people modify their behaviour when they know they are being studied. This is called the <strong>Heisenberg uncertainty principle</strong> in natural science — the act of observation affects the thing being observed. Solution: covert observation.</p>
+
+<h2>Positivism vs Interpretivism — Core Comparison</h2>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Positivism</th>
+    <th>Interpretivism</th>
+  </tr>
+  <tr>
+    <td>Nature of knowledge</td>
+    <td>A posteriori — derived from senses and experience</td>
+    <td>A priori — prior understanding shapes experience</td>
+  </tr>
+  <tr>
+    <td>Focus</td>
+    <td>What people do — observable actions</td>
+    <td>What people mean — subjective experience and interpretation</td>
+  </tr>
+  <tr>
+    <td>Social reality</td>
+    <td>Objective: social facts are external and coercive (Durkheim)</td>
+    <td>Subjective: reality is constructed by people in everyday life; no social facts</td>
+  </tr>
+  <tr>
+    <td>Human behaviour</td>
+    <td>Governed by social facts — measurable and generalisable</td>
+    <td>Governed by meanings attached by actors — must be understood through empathy (Verstehen)</td>
+  </tr>
+  <tr>
+    <td>Research design</td>
+    <td>Hypothetico-deductive model; concerned with reliability and objectivity</td>
+    <td>Build rapport with respondents; achieve Verstehen; concerned with validity</td>
+  </tr>
+  <tr>
+    <td>Methods preferred</td>
+    <td>Questionnaire, official statistics, structured interview</td>
+    <td>Participant observation, unstructured interview</td>
+  </tr>
+  <tr>
+    <td>Example on poverty</td>
+    <td>Racial minorities are statistically more likely to experience poverty in the USA</td>
+    <td>A Hispanic Black woman in California will explain her poverty differently from a Black man in Carolina — multiple subjective perspectives</td>
+  </tr>
+</table>
+
+<h3>Critical Approach</h3>
+<p>Unlike positivism and interpretivism, the critical approach conducts research to expose anomalies and promote social change:</p>
+<ul>
+  <li><strong>Feminist research</strong> — focuses on gender inequality and empowers women.</li>
+  <li><strong>Marxist research</strong> — focuses on class inequality and empowers the poor.</li>
+</ul>
+
+<h2>Quantitative Research Methods</h2>
+
+<h3>1. Structured/Formal Interviews</h3>
+<p>The researcher reads the same set of mainly closed questions in the same order from a questionnaire to each interviewee and records their responses. Same questions, same order = consistent and comparable results. Applicants are evaluated on a common rating scale. How is it different from questionnaire? A structured interview is essentially a questionnaire administered face-to-face.</p>
+
+<h3>2. Questionnaire</h3>
+<p>A series of written questions distributed by post, email, hand, or mass media. Two types of questions:</p>
+<ul>
+  <li><strong>Closed questions</strong> — respondents choose from a list (multiple choice). Produces quantitative data.</li>
+  <li><strong>Open questions</strong> — respondents answer in their own words. Produces qualitative data.</li>
+</ul>
+<p>Most questionnaires combine both. Common scales:</p>
+<ul>
+  <li><strong>Likert Scale</strong> — respondents indicate position on a continuum from "Not at all satisfied" to "Extremely satisfied."</li>
+  <li><strong>Bogardus Social Distance Scale</strong> — measures degrees of closeness or prejudice towards members of other social, ethnic, or racial groups. Bogardus asked US college students to indicate how closely they would interact with people from 30 different racial/ethnic categories — from accepting them into family through marriage (least social distance) to declaring them avoidable (most social distance).</li>
+</ul>
+
+<h3>3. Survey</h3>
+<p>A research method in which multiple individuals respond to questions on a questionnaire or in an interview at a large scale. Could take the form of questionnaire, interview, or telephone poll. One of the earliest sociologists to use survey methods was <strong>Karl Marx</strong> — in the 1880s he composed a 101-question survey, "Worker's Inquiry," sent to more than 25,000 French workers to determine the extent of their exploitation.</p>
+
+<h3>4. Official Statistics</h3>
+<p>Produced by governments and government agencies. Used by Durkheim in his study of suicide rates.</p>
+<ul>
+  <li><strong>Hard statistics</strong> — objective, cannot easily be manipulated. E.g. birth rates, marriage rates.</li>
+  <li><strong>Soft statistics</strong> — subjective, can be manipulated. E.g. crime rates, poverty, unemployment (governments can change measurement methods to show downward trends).</li>
+</ul>
+<p>Interpretivists are critical of official statistics — crime and suicide statistics tell us more about the values and priorities of the people who collect them than about actual reality (Atkinson, Douglas). Statistics are not value-free.</p>
+
+<h3>5. Laboratory / Controlled Experiment</h3>
+<p>Takes place in a closed environment where the researcher controls conditions. Involves experimental group (exposed to the independent variable) and control group (not exposed).</p>
+<p><strong>Bandura's Bobo Doll Experiment</strong> — Children who watched violent TV programmes were more aggressive than those who watched non-violent content — suggesting a correlation (and possibly causation) between watching violence and acting violently.</p>
+<p>Laboratory experiments are rare in sociology because they raise ethical issues and validity concerns. Alternatives: field experiments and comparative method.</p>
+
+<h3>6. Content Analysis</h3>
+<p>An objective research method used to identify patterns in recorded communication — books, newspapers, speeches, interviews, social media posts, photographs, films.</p>
+<ul>
+  <li><strong>Quantitative content analysis</strong> — counting and measuring the occurrence of specific words, phrases, or themes within texts.</li>
+  <li><strong>Qualitative content analysis</strong> — interpretative; understanding the underlying themes, meanings, and contexts within texts.</li>
+</ul>
+<p>Applications: media representation of gender (women portrayed as housewives; men as doctors and athletes), political campaigns (frequency of terms like "jobs" and "unemployment"), social media (Kosinski used Facebook profile analysis to infer IQ, sexuality, and political views from user "likes").</p>
+
+<h2>Qualitative Research Methods</h2>
+
+<h3>1. Semi-Structured / Unstructured Interviews</h3>
+<p>The researcher is free to explore topics in any order and phrase questions as they see fit. Different respondents may receive different questions depending on how the interview develops. Mix of closed and open-ended questions.</p>
+<p><strong>Arlie Hochschild</strong> used semi-structured interviews for <em>The Second Shift</em> — she interviewed 50 couples in dual-career marriages to study how women balanced paid work and domestic responsibilities, and the extent to which men shared household tasks.</p>
+<p><strong>Unstructured interviews</strong>: respondents talk freely about what matters to them. Produces the richest qualitative data but least reliable.</p>
+
+<h3>2. Focus Group Discussion (FGD)</h3>
+<p>A qualitative approach gathering people of similar background or interest to discuss a specific topic in depth. The researcher observes and notes the discussion. Used to understand group attitudes, explore solutions to problems, and gain in-depth views.</p>
+<p>Example: A laptop company gathers eight individuals from their target market for discussion. Moderator asks about size preferences and features. Group members debate what they do and do not like. Company uses output to design the product.</p>
+
+<h3>3. Grounded Theory (Glaser & Strauss)</h3>
+<p>A qualitative methodology focused on generating theory from data rather than testing pre-existing theories. The researcher enters with no preconceived hypothesis. Theory emerges from the data through:</p>
+<ul>
+  <li>Coding — identifying patterns and categories in data.</li>
+  <li>Constant comparison — continually comparing new data with emerging categories.</li>
+  <li>Theoretical sampling — collecting further data guided by emerging theory.</li>
+</ul>
+<p>Example: Studying workplace stress. Researcher interviews hundreds of employees. Pattern emerges: most cope through "seek social support." Further interviews reveal: formal support from supervisors vs. informal from peers. Most prefer informal. Theory: informal peer support is the preferred coping mechanism for workplace stress. Process is ongoing — theory refined with each round of data.</p>
+
+<h3>4. Historical Method</h3>
+<p>Takes a theme and traces its evolution over time through books, media, films, and historical accounts. Requires extensive secondary data gathered over long periods.</p>
+<p>Applications: Weber's Protestant Ethic, Marx's theory of communism, evolution of caste and untouchability in India, shifts in Indian policy from socialism to capitalism.</p>
+<p>Issues: Less precise than experiments; researchers depend on accumulated data gathered at another time and for another purpose; accuracy cannot be independently confirmed.</p>
+
+<h3>5. Case Study and Life History</h3>
+<p>A case study involves in-depth study of an individual, small group, or institution with an unusual condition or situation. Life History/Biographical method studies an individual's life in-depth using primary (letters, diaries, interviews, photos) and secondary (newspaper articles, existing biographies) sources.</p>
+<p>Applications:</p>
+<ul>
+  <li>Giving voice to minority groups — Dalits, women, tribals, the disabled.</li>
+  <li>Subaltern historians use this method to reconstruct histories of peasant movements.</li>
+  <li>Ann Oakley asked housewives to keep diary records of everyday feelings about housework and childcare.</li>
+  <li>Max Weber used diaries and Benjamin Franklin's life history to uncover Calvinist beliefs — which led to <em>The Protestant Ethic</em>.</li>
+</ul>
+
+<h3>6. Ethnography and Participant Observation</h3>
+<p>Ethnography: a qualitative research methodology in which a researcher participates in the daily activities, rituals, interactions, and events of a group to understand their culture and life routines. Malinowski: the central goal of ethnography is "to grasp the native's point of view." MN Srinivas: fieldwork has huge potential to clear perspectives and bring out a realistic view of Indian society.</p>
+
+<p><strong>Participant observation</strong> is the technique of data collection used in ethnography:</p>
+<ul>
+  <li>Researcher lives in the context for an extended period.</li>
+  <li>Learns and uses local language and dialect.</li>
+  <li>Actively participates in daily and extraordinary activities.</li>
+  <li>Uses everyday conversations as informal interviews.</li>
+  <li>Records observations in detailed field notes.</li>
+</ul>
+
+<h4>Classic Study — Street Corner Society (William Foote Whyte)</h4>
+<p>Whyte studied the "Cornerville gang" — Italian American men in Boston in the late 1930s–40s. He was not Italian but learned the language, lived with an Italian family, and infiltrated the gang by befriending the leader, Doc (who served as his informant). All other gang members did not know he was a researcher — this is <strong>covert participant observation</strong>. Finding: contrary to conventional wisdom, these urban gangs were not randomly disorganised; they were highly organised mini-societies with their own hierarchy, morality, norms, and sanctions.</p>
+
+<h4>Clifford Geertz on Balinese Cock-Fighting</h4>
+<p>Geertz observed the social dynamics of Balinese cockfighting and concluded that the cockfight is a "symbolic war" reflecting struggles for power, status, and prestige — not mere gambling. He called this <strong>thick description</strong> — a detailed, interpretive account that captures the full symbolic meaning of social acts.</p>
+
+<h4>Types of Participant Observation</h4>
+<table>
+  <tr>
+    <th>Overt (Open)</th>
+    <th>Covert (Hidden)</th>
+  </tr>
+  <tr>
+    <td>Group knows the researcher is present and studying them</td>
+    <td>Group does not know they are being researched (e.g. Whyte's gang study)</td>
+  </tr>
+  <tr>
+    <td>Lower ecological validity — Hawthorne effect</td>
+    <td>Higher ecological validity — people act naturally; but raises ethical concerns</td>
+  </tr>
+</table>
+
+<h4>Strengths of Participant Observation</h4>
+<ul>
+  <li>High validity — observes what people actually do in natural settings.</li>
+  <li>Less Hawthorne effect, especially in covert research.</li>
+  <li>Rapport — depth of engagement reveals things hidden to other methods.</li>
+  <li>Verstehen — sees the world through the eyes of the actors. Gandhi: "To help the poor, one must think like the poor."</li>
+  <li>Flexibility — unlike pre-set questionnaires; new situations can be followed up.</li>
+</ul>
+
+<h4>Challenges of Participant Observation</h4>
+<ul>
+  <li><strong>Gaining entry</strong> — researcher may need a sponsor (like Doc in Street Corner Society).</li>
+  <li><strong>Gatekeeping</strong> — elite leaders interfere; Srinivas noted the headman of Rampura kept him from meeting untouchables. Fieldworker who identifies with one group will arouse suspicion from others.</li>
+  <li><strong>Non-availability of roles</strong> — fieldwork in prison is difficult if the researcher cannot occupy warden or jailor role.</li>
+  <li><strong>Difficult to limit participation</strong> — situations arise beyond the researcher's control.</li>
+  <li><strong>Value neutrality</strong> — researcher's values inevitably influence data collection and interpretation.</li>
+  <li><strong>Credibility</strong> — we can never be sure whether it is the voice of the researcher or of the people being studied. Solution: dialogic method.</li>
+  <li><strong>Moral relativism</strong> — researcher may observe practices like polygyny, animal sacrifice, or infanticide. Moral relativism is condemned because it turns a blind eye to unethical practices.</li>
+  <li><strong>Reliability</strong> — virtually impossible to replicate; data reflects one observer's perspective.</li>
+</ul>
+
+<h3>7. Comparative Method</h3>
+<p>Involves analysing and comparing social phenomena across different times, groups, and societies. Major sociologists who used it: Marx (stages of history), Durkheim (suicide rates across nations and religious groups), Weber (capitalism across Europe, India, China), Skocpol (Chinese, Russian, and French revolutions), David Martin (secularisation).</p>
+
+<p>Durkheim's comparative approach:</p>
+<ul>
+  <li>Comparing different groups within one society (Catholic vs Protestant suicide rates in France).</li>
+  <li>Comparing different societies at the same time (Germany — Protestant; Spain — Catholic).</li>
+</ul>
+
+<p>Methodological issues:</p>
+<ul>
+  <li><strong>Reflexivity</strong> — Sociologists should explicitly state their national, ethnic, and theoretical locations at the start of research.</li>
+  <li><strong>Triadic analysis (Macfarlane)</strong> — Comparing only two societies (England and India, or "the West and the rest") inevitably implies one is superior. Beteille: Western scholars articulated most concepts in sociology on the basis of their own societies. Solution: compare three societies simultaneously to avoid binary bias.</li>
+</ul>
+
+<h2>Variables and Correlation</h2>
+
+<h3>Types of Variables</h3>
+<ul>
+  <li><strong>Quantitative variable</strong> — can be measured and given a numerical value (age, income, height).</li>
+  <li><strong>Qualitative variable</strong> — identified by category membership; either/or or yes/no (male/female, married/unmarried).</li>
+  <li><strong>Independent variable (IV)</strong> — the cause; the variable being changed or manipulated. E.g. smoking.</li>
+  <li><strong>Dependent variable (DV)</strong> — the effect; the variable being measured for change. E.g. cancer.</li>
+  <li><strong>Intervening variable</strong> — influences the relationship between IV and DV. E.g. rural development programmes may intervene in the poverty → hunger relationship; with a safety net, the poor may not experience hunger even when poor.</li>
+</ul>
+
+<h3>Operationalising Variables</h3>
+<p>Some variables are directly measurable (income, age, sex). Complex variables like <em>democracy</em>, <em>development</em>, or <em>socio-economic status</em> must be operationalised — broken into measurable indicators. E.g. the 2020 Democracy Index (EIU) places India at 53rd position based on five indicators: electoral process, functioning of government, political participation, political culture, and civil liberties.</p>
+
+<h3>Correlation</h3>
+<ul>
+  <li><strong>Positive correlation</strong> — both variables change in the same direction. E.g. better poverty alleviation → less hunger.</li>
+  <li><strong>Negative correlation</strong> — variables change in opposite directions. E.g. poverty alleviation programmes increase but number of poor also increases.</li>
+</ul>
+
+<h3>Correlation vs Causation</h3>
+<p>Correlation means two variables change together. Causation means one causes the other. Correlation does not imply causation.</p>
+<ul>
+  <li>Higher income and better health co-occur — but both are caused by higher education. Claiming income causes health is a <strong>spurious correlation</strong>.</li>
+  <li>Dense housing and delinquency co-occur — but both are caused by low income.</li>
+</ul>
+<p>Exposing spurious correlations requires <strong>control</strong> — holding all other variables constant to isolate the effect of one. Natural scientists can do this in labs; social scientists rarely can. Hence, sociologists often demonstrate only correlations, not causation.</p>
+
+<h2>Sampling Techniques</h2>
+
+<p>A <strong>sample</strong> is a subset of the research population from which data is collected. A good sample must be representative of the entire population — giving everyone an equal chance of selection. If not representative, findings cannot be generalised.</p>
+
+<h3>Random (Probability) Sampling</h3>
+<ul>
+  <li><strong>Simple Random Sampling (SRS)</strong> — every individual has an equal chance of selection. Use a random number generator from a numbered list of the population.</li>
+  <li><strong>Stratified Random Sampling</strong> — population divided into strata (groups: age, gender, religion), then random sampling within each stratum. Ensures each subgroup is proportionally represented. E.g. sampling voters by age group (18–30, 31–45, 46–60, 61+).</li>
+  <li><strong>Systematic Sampling</strong> — select every nth element from the list, starting at a random point. E.g. every 10th customer from a retail list.</li>
+</ul>
+
+<h3>Non-Random (Non-Probability / Biased) Sampling</h3>
+<ul>
+  <li><strong>Convenience sampling</strong> — interviews only those who are accessible and convenient. Easy and inexpensive but not representative. E.g. standing outside a coffee shop and interviewing passersby.</li>
+  <li><strong>Voluntary response sampling</strong> — participants self-select. E.g. television viewers calling in to express opinions. Biased towards those who feel strongly enough to respond.</li>
+  <li><strong>Purposive sampling</strong> — researcher uses judgment to select the most useful respondents for the research purpose. Common in qualitative research. E.g. selecting only first-generation college students to study their experiences.</li>
+  <li><strong>Snowball sampling</strong> — researcher accesses one group member, who introduces them to others. Used when the population is hard to access. E.g. researching homelessness — meet one homeless person, who connects you to others in their network.</li>
+  <li><strong>Quota sampling</strong> — researcher creates quotas matching population proportions (e.g. 40% female, 60% male) and fills each quota. Avoids skewed results without using randomisation.</li>
+</ul>
+
+<h2>Hypothesis</h2>
+
+<p>A hypothesis is a conjectural, testable statement about the relationship between two or more variables. E.g. "Poverty makes people commit crime" — variables are poverty (IV) and crime (DV).</p>
+
+<p>Characteristics of a good hypothesis: testable, measurable, precise, contains clearly defined variables.</p>
+
+<h3>Types</h3>
+<ul>
+  <li><strong>Simple hypothesis</strong> — two variables. E.g. smoking leads to cancer; gender affects income level.</li>
+  <li><strong>Complex hypothesis</strong> — more than two. E.g. smoking and drug use lead to both cancer and mental illness.</li>
+  <li><strong>Null hypothesis</strong> — states there is no relationship. E.g. plant growth is not affected by light colour; age has no effect on musical ability.</li>
+</ul>
+
+<h3>Sources of Hypothesis</h3>
+<ul>
+  <li>Researcher's prior experience</li>
+  <li>Review of existing literature</li>
+  <li>Findings of pilot study</li>
+  <li>Interaction with experts</li>
+  <li>Logical deduction from existing theory</li>
+</ul>
+
+<p>Dubin: "Hypothesis is the feature of the theoretical model closest to the 'things observable' that the theory is trying to model." Some sociologists begin research without a hypothesis — they collect views directly and reach conclusions inductively (grounded theory).</p>
+
+<h2>Triangulation</h2>
+
+<p>Triangulation = the combination of multiple research methods (both quantitative and qualitative) to assess the validity of research, develop a comprehensive understanding, and double-check results. Also called "cross-examination."</p>
+
+<h3>Types (Denzin)</h3>
+<ul>
+  <li><strong>Methods triangulation</strong> — using multiple data collection methods simultaneously (interviews + observation + field notes + photographs).</li>
+  <li><strong>Investigator triangulation</strong> — two or more researchers collect and analyse data independently to confirm findings.</li>
+  <li><strong>Theory triangulation</strong> — testing data against different theoretical frameworks (functionalist + Marxist + feminist).</li>
+  <li><strong>Data source triangulation</strong> — collecting data from different types of people (families, students, communities) to get multiple perspectives.</li>
+  <li><strong>Within-method triangulation</strong> — using multiple qualitative methods (interview + observation).</li>
+  <li><strong>Between-method triangulation</strong> — combining both qualitative and quantitative. E.g. qualitative interviews combined with analysis of survey data, electoral data, and public opinion polls.</li>
+</ul>
+
+<p>Example: Researching LGBT participation in mainstream society — both quantitative (rate of representation) and qualitative (opinions on underrepresentation) methods needed. Workplace satisfaction: surveys reveal low satisfaction; interviews reveal why.</p>
+
+<h2>Reliability and Validity</h2>
+
+<table>
+  <tr>
+    <th>Reliability</th>
+    <th>Validity</th>
+  </tr>
+  <tr>
+    <td>Presence of a stable and consistent outcome after repeated measurement. Does the instrument produce the same results each time?</td>
+    <td>The extent to which a research method accurately measures what it intends to measure. Is the instrument measuring the right thing?</td>
+  </tr>
+  <tr>
+    <td>E.g. If a person is interviewed 3 times and gives different answers each time, reliability of the interview is poor.</td>
+    <td>E.g. To measure class position: use annual earning and level of education — these are valid indicators.</td>
+  </tr>
+  <tr>
+    <td>Quantitative methods (experiments, structured questionnaires) tend to have high reliability — easy to replicate.</td>
+    <td>Qualitative methods (participant observation) tend to yield more valid data — in-depth, high rapport, empathetic.</td>
+  </tr>
+  <tr>
+    <td>A measurement can be reliable without being valid. E.g. an elephant weighing 170 lbs placed on a scale with a limit of 165 — consistently shows 165. Reliable but not valid.</td>
+    <td>If a measurement is valid, it is usually also reliable.</td>
+  </tr>
+</table>
+
+<h3>Types of Reliability</h3>
+<ul>
+  <li><strong>Test-Retest Reliability</strong> — same questionnaire given to same group at two different times. If answers are similar, the instrument is reliable.</li>
+  <li><strong>Parallel-Forms Reliability</strong> — same group assessed by different methods (questionnaire + interview + focus group). If findings are similar, the instrument has parallel-forms reliability.</li>
+  <li><strong>Inter-Rater Reliability</strong> — same phenomenon assessed by two different observers. If their assessments agree, inter-rater reliability is established.</li>
+</ul>
+
+<h3>Sources of Error in Research</h3>
+<ul>
+  <li><strong>Method error (systematic error)</strong> — caused by the researcher's actions or the testing environment: researcher's ideological bias, bad mood, unrepresentative sample, methods that are impossible to replicate (e.g. participant observation over many months).</li>
+  <li><strong>Trait error (random error)</strong> — caused by respondents: lying, forgetting, being in a hurry, misunderstanding questions, changing attitudes between polls.</li>
+  <li>Official statistics can hide reality or be politically biased. Categories in questionnaires can distort truth — unemployment statistics exclude students and those unable to work.</li>
+</ul>
+
+<h3>Reliability and Validity in Qualitative Research</h3>
+<p>Stenbacka: "The concept of reliability is invalid in qualitative research. What is suicide to one may be murder to another; what is sacred may be profane to someone else." Qualitative research should not be judged by quantitative criteria.</p>
+
+<p>Lincoln and Guba: Replace reliability/validity with four criteria for qualitative research quality:</p>
+
+<table>
+  <tr>
+    <th>Quantitative Criterion</th>
+    <th>Qualitative Equivalent (Lincoln & Guba)</th>
+    <th>Meaning</th>
+  </tr>
+  <tr>
+    <td>Internal Validity</td>
+    <td><strong>Credibility</strong></td>
+    <td>Achieved through prolonged engagement in the field and member checks — going back to respondents to confirm findings. Spending only one month in a school before exams produces a distorted picture.</td>
+  </tr>
+  <tr>
+    <td>External Validity</td>
+    <td><strong>Transferability</strong></td>
+    <td>Ability to make generalisations to other contexts.</td>
+  </tr>
+  <tr>
+    <td>Reliability</td>
+    <td><strong>Dependability</strong></td>
+    <td>Degree to which findings can be repeated and are consistent with data collected.</td>
+  </tr>
+  <tr>
+    <td>Objectivity</td>
+    <td><strong>Confirmability</strong></td>
+    <td>Whether the data collected and conclusions drawn would be confirmed/corroborated by others. Since full objectivity is impossible, qualitative researchers seek external verification.</td>
+  </tr>
+</table>
+
+<h2>Feminist Research Methods</h2>
+
+<p>What makes research feminist? A classic answer: research done by, for, and about women. Feminists argue that mainstream social science omits the manifold experiences and standpoint of women — producing incomplete and biased "male-stream knowledge."</p>
+
+<h3>Key Features</h3>
+<ul>
+  <li><strong>Priority of women's experiences</strong> — understands women's lives on their own terms, not through male frameworks.</li>
+  <li><strong>Preference for qualitative methods</strong> — quantitative methods concerned only with numbers, not emotions. Qualitative methods build rapport — they are two-way rather than one-way (male-controlled). Ann Oakley: unstructured interviews with women on the transition to motherhood. Claudia Goldin: won Nobel Prize for first comprehensive account of women's earnings and labour market participation — informs policymakers on the gender pay gap.</li>
+  <li><strong>Commitment to social change</strong> — research exposes and phases out gender inequality.</li>
+  <li><strong>Guided by feminist theory (intersectionality)</strong> — research addresses not just gender but also race, caste, class, sexuality — and how these intersect to create unique marginalising experiences.</li>
+  <li><strong>Transdisciplinary</strong> — brings together sociology, anthropology, psychology, political science, and literature to analyse complex issues like gender-based violence and reproductive rights.</li>
+  <li><strong>Special researcher-researched relationship</strong> — feminist researchers listen carefully to women informants; they pay close attention to how women think about their lives.</li>
+</ul>
+
+<h2>Research Design</h2>
+
+<p>Research design is the overall blueprint of research — consisting of the research aim, question, variables, sampling method, data collection and analysis methods, and limitations.</p>
+
+<h3>Types of Research Design</h3>
+<table>
+  <tr>
+    <th>Design</th>
+    <th>Purpose</th>
+    <th>Method</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td><strong>Exploratory</strong></td>
+    <td>Understanding a new or unexplored phenomenon; generating ideas or hypotheses</td>
+    <td>Qualitative — interviews, observations</td>
+    <td>Decline in sales: focus groups to explore changing consumer preferences; new disease: identifying common symptoms</td>
+  </tr>
+  <tr>
+    <td><strong>Explanatory</strong></td>
+    <td>Explaining cause-and-effect relationships between variables; testing hypotheses from exploratory research</td>
+    <td>Quantitative — statistical analysis</td>
+    <td>Longitudinal study of smokers vs. non-smokers to establish causation between smoking and lung cancer</td>
+  </tr>
+  <tr>
+    <td><strong>Descriptive</strong></td>
+    <td>Accurate representation of a population's characteristics; no variable manipulation</td>
+    <td>Survey, census, observation</td>
+    <td>Census (demographic trends), market research, environmental studies (air/water quality measurements)</td>
+  </tr>
+  <tr>
+    <td><strong>Experimental</strong></td>
+    <td>Testing effects of independent variable on dependent variable under controlled conditions</td>
+    <td>Laboratory or field experiment</td>
+    <td>Bandura's Bobo Doll Experiment</td>
+  </tr>
+  <tr>
+    <td><strong>Correlational</strong></td>
+    <td>Measuring degree of association between variables without manipulation</td>
+    <td>Statistical analysis</td>
+    <td>Relationship between social media use and loneliness in adolescents</td>
+  </tr>
+  <tr>
+    <td><strong>Cross-Sectional</strong></td>
+    <td>Data collected at a single point in time; examines characteristics or relationships at that moment</td>
+    <td>Survey at one time point</td>
+    <td>Social media usage across different age groups; perceptions of gender roles across generations</td>
+  </tr>
+  <tr>
+    <td><strong>Longitudinal</strong></td>
+    <td>Follows the same sample over an extended period; observes changes over time</td>
+    <td>Repeated measurements</td>
+    <td>Educational achievement tracked from school to adulthood; workplace career trajectories over years</td>
+  </tr>
+</table>
+
+<h2>Importance of Quantitative vs Qualitative Methods</h2>
+
+<table>
+  <tr>
+    <th>Quantitative Methods</th>
+    <th>Qualitative Methods</th>
+  </tr>
+  <tr>
+    <td>Objectivity — minimises bias through measurable data</td>
+    <td>In-depth understanding of experiences, meanings, and perspectives</td>
+  </tr>
+  <tr>
+    <td>Generalisability — statistical techniques generalise from sample to population</td>
+    <td>Participant perspectives — researcher immerses in the social world</td>
+  </tr>
+  <tr>
+    <td>Replicability — standardised procedures; others can verify results</td>
+    <td>Validity and trustworthiness — deeper insight into social reality</td>
+  </tr>
+  <tr>
+    <td>Identifying patterns, correlations, and causal relationships</td>
+    <td>Theory development — grounded theory emerges from data</td>
+  </tr>
+  <tr>
+    <td>Informed decision-making for policy and strategy</td>
+    <td>Social justice and advocacy — sheds light on marginalised experiences</td>
+  </tr>
+  <tr>
+    <td>Quantifies complex phenomena by breaking them into measurable components</td>
+    <td>Complementarity with quantitative research — triangulation</td>
+  </tr>
+</table>
+
+<blockquote>Kuhn: truth is relative and dependent on the paradigm through which one sees the world. The findings of any research depend on the method chosen by the researcher and the ideology of the researcher. In theory, quantitative and qualitative methods seem opposite; in practice, the best research uses both.</blockquote>
+
+`,
   'stratification-mobility': '',
   'works-economic-life': '',
   'politics-and-society': '',
