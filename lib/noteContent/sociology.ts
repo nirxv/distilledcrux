@@ -3334,7 +3334,444 @@ export const sociologyNoteContent: Record<string, string> = {
 <blockquote>Kuhn: truth is relative and dependent on the paradigm through which one sees the world. The findings of any research depend on the method chosen by the researcher and the ideology of the researcher. In theory, quantitative and qualitative methods seem opposite; in practice, the best research uses both.</blockquote>
 
 `,
-  'stratification-mobility': '',
+  'stratification-mobility': `
+<h2>Social Stratification — Definition and Significance</h2>
+
+<p>Social stratification refers to the division of society into layers (strata) of people who possess unequal shares of scarce resources — wealth, power, and prestige. In the classic children's book <em>Animal Farm</em>, George Orwell captures this tendency perfectly: the animals' motto shifts from "All animals are equal" to "All animals are more equal than others." No society has been entirely free of stratification.</p>
+
+<p><strong>Life chances</strong> are the level of opportunities, advantages or disadvantages people have in relation to education, health, employment, income, and housing. Life chances are not distributed equally — factors such as class, gender, age, and ethnicity all shape them. Stratification matters precisely because it determines life chances.</p>
+
+<h2>Theories of Social Stratification</h2>
+
+<h3>A. Functionalist Theory — Davis and Moore (1945)</h3>
+<p>Kingsley Davis and Wilbert Moore argued that social stratification is a universal and functionally necessary feature of society. Their argument rests on three premises:</p>
+
+<p>Modern societies have hundreds of positions of varying difficulty and importance. Some jobs (washing windows, answering telephones) can be done by almost anyone. Others (transplanting organs, designing next-generation computers) require rare talent, long training, and expertise. Since talent is scarce and training is costly, society must offer greater rewards to fill these critical positions and attract the best available candidates.</p>
+
+<p>The importance of a position can be assessed in two ways: the rarity of the skills required (the rarer the skill and longer the education, the greater the reward and functional importance — a doctor subsumes nurse skills but not vice versa) and the extent to which others depend on the position (managers are more important than routine staff because the latter depend on direction from the former).</p>
+
+<p>The result is <strong>role allocation</strong> — those who work hardest and are most talented get the best roles. Stratification is therefore:</p>
+<ul>
+  <li><strong>Inevitable</strong> — derives from shared values present in all societies.</li>
+  <li><strong>Unconscious</strong> — nobody consciously plans inequality; the functional requirements of society create it.</li>
+  <li><strong>Functional</strong> — creates interdependence and integrates groups, just as Durkheim's DOL creates solidarity.</li>
+</ul>
+
+<h3>B. Melvin Tumin — Critique of Davis and Moore (1953)</h3>
+<p>Tumin's <em>Principles of Stratification</em> systematically dismantled the Davis-Moore thesis:</p>
+
+<table>
+  <tr>
+    <th>Davis and Moore</th>
+    <th>Melvin Tumin</th>
+  </tr>
+  <tr>
+    <td>Some positions are more important than others; importance justified through rewards</td>
+    <td>How do we assess importance? Whether IAS is more important than a doctor is a matter of opinion. Labour force of unskilled workmen is as indispensable to the factory as engineers — pay differences reflect bargaining power, not usefulness.</td>
+  </tr>
+  <tr>
+    <td>Rewards (income, prestige, power, leisure) reflect contribution to society</td>
+    <td>Oprah Winfrey earns $230 million — more than the US President. A basketball player makes millions; a doctor who saves lives does not. Rewards are not proportional to social contribution.</td>
+  </tr>
+  <tr>
+    <td>Unequal rewards motivate talented individuals and allocate them to functionally important positions</td>
+    <td>Class, caste, racial, and sexist elements of stratification prevent development of individual talent. Social inequality rewards those from privileged backgrounds, not the most talented.</td>
+  </tr>
+  <tr>
+    <td>Stratification integrates society and is functional</td>
+    <td>Differential rewards encourage hostility, suspicion, and distrust. Stratification is a <em>divisive</em> rather than integrating force — may promote conflict and revolution. It is dysfunctional for those born in the lower strata.</td>
+  </tr>
+</table>
+
+<h3>C. Social Conflict Approach — Karl Marx</h3>
+<p>Marx identified class as the primary social strata, determined by one's relationship to the means of production. Two major classes exist in every capitalist society:</p>
+<ul>
+  <li><strong>Ruling class (bourgeoisie)</strong> — owns the means of production (land, capital, factories, machinery).</li>
+  <li><strong>Subject class (proletariat)</strong> — owns only labour power, which it is forced to sell to survive.</li>
+</ul>
+<p>The ruling class exploits the subject class by appropriating surplus value. Ruling class ideology becomes common sense — false consciousness — that prevents workers from recognising and revolting against their exploitation. Capitalism reproduces the class structure in each generation through inheritance. Marx predicted this oppression would eventually drive the working majority to overthrow capitalism in favour of socialism.</p>
+
+<p>On Davis-Moore's claim that unequal rewards motivate people: Marxists counter — why do we assume humanity is inherently selfish rather than social? Individual rewards are not the only way to motivate people. In communist society, people contribute by ability and receive by need, without material incentives.</p>
+
+<h3>D. Weberian Perspective — Three Dimensions of Stratification</h3>
+<p>Weber agreed with Marx that stratification causes conflict but rejected his one-dimensional economic model. Weber proposed three distinct, partially independent dimensions of inequality — the "3Ps":</p>
+
+<h4>1. Property (Class)</h4>
+<p>Class = a group of people sharing a similar market position, which determines their life chances. Market position means how much income one can earn — this affects class, which affects life chances and lifestyle. Weber, unlike Marx, saw class not as a binary (haves/have-nots) but as a continuum. His four ideal-type classes:</p>
+<ul>
+  <li><strong>Propertied upper class</strong> — can purchase expensive consumer goods, monopolise status privileges (education, connections) for their children; e.g. rentiers.</li>
+  <li><strong>White-collar professionals</strong> — good market position through shares and professional qualifications.</li>
+  <li><strong>Petty bourgeoisie</strong> — some property (small shop, self-employment).</li>
+  <li><strong>Manual working class</strong> — lack property and share ownership.</li>
+</ul>
+
+<h4>2. Prestige (Status Groups)</h4>
+<p>Prestige = the respect, honour, and esteem with which a person or position is regarded. Sources include occupation, wealth, lineage, lifestyle. A status group is a community of people who share a common lifestyle and are accorded a specific level of social honour regardless of their wealth.</p>
+
+<p>Features of status groups: members socialise and marry within the group; they practice <strong>social closure</strong> — safeguarding privileges by monopolising resources for their own group and denying access to outsiders (e.g. ban on inter-caste marriage). Weber noted that where there is little social mobility, status groups solidify into castes — the caste system of traditional Hindu India represents the most developed form of status group stratification.</p>
+
+<p>Modern examples of status groups: doctors and lawyers (shared educational and professional identity), tech industry professionals (Silicon Valley lifestyle and networks), social media influencers (following-based status). Margaret Stacey found three status groups within the working class itself: the "respectable working class," the "ordinary working class," and the "rough working class."</p>
+
+<h4>3. Power (Parties)</h4>
+<p>Parties = groups concerned with gaining political or social power to advance common interests. They may represent class interests, status-group interests, or both. Examples: political parties, trade unions, professional associations, ethnic organisations, religious institutions. Parties feature rational-legal organisation (constitution, officers, rules). People from the same class may belong to different parties — weakening class solidarity.</p>
+
+<h4>Relationship Between the Three Dimensions</h4>
+<p>The three dimensions are not necessarily correlated:</p>
+<ul>
+  <li>A criminal gangster may be wealthy but have no prestige.</li>
+  <li>A college professor may have high prestige but low income.</li>
+  <li>A local official may exercise great power yet have little wealth or social prestige.</li>
+  <li>Albert Einstein was offered the presidency of Israel — fame (status) generating power without political wealth.</li>
+  <li>Social media influencers have power to influence social life even without significant wealth.</li>
+</ul>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Marx</th>
+    <th>Weber</th>
+  </tr>
+  <tr>
+    <td>Primary basis of stratification</td>
+    <td>Always economic — ownership of means of production</td>
+    <td>Historically variable: prestige in ancient society, wealth in industrial society, power with rise of the bureaucratic state</td>
+  </tr>
+  <tr>
+    <td>Correlation of dimensions</td>
+    <td>Power and prestige necessarily follow class position</td>
+    <td>The three dimensions may or may not be correlated — multiple contradictory class locations possible</td>
+  </tr>
+  <tr>
+    <td>Class definition</td>
+    <td>Two classes: owners and non-owners of means of production</td>
+    <td>Many classes based on market position; continuum from high to low</td>
+  </tr>
+  <tr>
+    <td>Class as community</td>
+    <td>Class is a community — members share common interests and should develop common identity</td>
+    <td>Classes are not communities — members may not be aware of common situation. Only status groups are communities.</td>
+  </tr>
+  <tr>
+    <td>Middle class trajectory</td>
+    <td>Middle class depressed into proletariat; polarisation inevitable</td>
+    <td>White-collar middle class expands as capitalism develops — bureaucratic administration requires large administrative staff</td>
+  </tr>
+  <tr>
+    <td>Future of capitalism</td>
+    <td>Proletarian revolution inevitable</td>
+    <td>Overthrowing capitalism might reduce economic differences but would expand government and concentrate power in bureaucratic hands — no reason to expect revolution</td>
+  </tr>
+</table>
+
+<h3>E. Andre Beteille — Harmonic and Disharmonic Systems</h3>
+<p>Beteille argues that all social systems contain inequality — the difference lies in whether it is considered legitimate:</p>
+<ul>
+  <li><strong>Harmonic social system</strong> — the traditional caste system in India. Inequalities are present and considered legitimate through elaborate ritual rules; accepted as a natural condition.</li>
+  <li><strong>Disharmonic social system</strong> — contemporary Western societies. Inequalities exist in practice but are not supported by societal norms, which profess equality.</li>
+</ul>
+
+<p>Beteille's paradox: "The great paradox of the modern world is that everywhere men profess equality and practice inequality." This inconsistency produces social ferment — previously subordinate groups who accepted their condition now assert claims to social equality. In India, the constitutional declaration of equality has triggered demands from previously marginalised groups, producing new social conflicts.</p>
+
+<p>Beteille further distinguishes: <em>dispersed inequalities</em> (when the link between caste and class is broken) vs <em>cumulative inequalities</em> (when caste and class reinforce each other). <em>Traditional society</em> is characterised by hierarchical inequality; <em>modern society</em> by competitive inequality.</p>
+
+<h3>F. Dahrendorf — Authority Structure as Basis of Stratification</h3>
+<p>Dahrendorf argues that stratification lies neither in human nature nor in private property. It lies in the <strong>authority structure</strong> necessary for sustaining norms and sanctions. Authority relations are always relations of superordination and subordination — hence stratification. "Institutionalised power" based on norms creates inequality and hierarchy. Even if private property were abolished, authority structures would reproduce stratification.</p>
+
+<h2>Concepts: Equality, Inequality, Hierarchy, and Exclusion</h2>
+
+<h3>Equality and Inequality</h3>
+<p>Rousseau (<em>Discourse on Inequality</em>) identified two forms: <strong>natural inequality</strong> (age, health, bodily strength, mental abilities — small and relatively unimportant) and <strong>moral/political inequality</strong> (established by social consent — power, honour, wealth). Socially created inequality, not biological difference, provides the main basis of stratification.</p>
+
+<p>Two ideological positions on what equality means:</p>
+<ul>
+  <li><strong>Liberal ideology</strong> — equality of opportunity: absence of barriers to social mobility based on merit. Any achievement gap reflects differences in individual effort.</li>
+  <li><strong>Marxist/socialist ideology</strong> — equality of outcome: real equality requires distributive justice — equal distribution of economic resources. Abolition of private property ensures class equality.</li>
+</ul>
+
+<p>Beteille notes: "Equality of opportunity need not result in equality of outcome. In fact, it leads to inequality of reward and reproduction of inequality in another form." Cultural, social, and material capital children inherit from wealthy families gives them an upper hand — this is how inequality is reproduced through family and school.</p>
+
+<p>Ambedkar: the caste system is built on <strong>graded inequality</strong> — vertically ordered classes, not horizontal differentiation. The division of labour is accompanied by an unnatural division of labourers into unequal groups. The process of graded inequality involves fixity of occupations, graded wage structures (higher wages for Brahmins per unit of work, lower for Shudras), and forced immobility of labour. All groups have a grievance against those above them — but will not combine to challenge the system collectively.</p>
+
+<h3>Hierarchy</h3>
+<p>Hierarchy is a form of social inequality but differs from stratification: in stratification, groups are divided into privileged and disadvantaged communities; in hierarchy, posts/ranks are vertically divided in chains of command and obedience, with rights and responsibilities attached to the post, not the person. In principle, anyone holding the post gets the same privileges.</p>
+
+<p>Louis Dumont (<em>Homo Hierarchicus</em>) called the Hindu caste system a hierarchy because he believed Brahmin, Kshatriya, Vaishya, and Shudra are posts based on "purity and pollution," not communities. Most other sociologists, however, treat caste as social stratification.</p>
+
+<p>Dipankar Gupta (<em>Discrete Castes and Muddled Hierarchies</em>, EPW) challenges even Dumont's hierarchical model: while Brahmins are universally acknowledged as most superior in the Varna scheme, powerful Kshatriyas consider themselves most superior. Even among Brahmins there is no consensus — "Vatalia," a subcaste of Kumhars, is a "polluted Brahmin." The cultural scale of purity and pollution is understood differently in different contexts and refuses to acknowledge castes that reject low status and claim elevated origins.</p>
+
+<h3>Social Exclusion</h3>
+<p>Social exclusion refers to the ways in which individuals may become cut off from or prevented from full participation in the wider society. It is not accidental but systematic — the result of structural features of society.</p>
+
+<p>Veit Wilson's <strong>weak vs strong versions</strong>: the weak version (actor-based) focuses on including the excluded; the strong version (structural-based) focuses on exposing and challenging the processes through which powerful groups exclude others. Government policies differ fundamentally depending on which version is adopted — weak approach to school dropouts focuses on bringing children back to school; strong approach examines structural problems within the school system itself.</p>
+
+<p>Types of social exclusion:</p>
+<ul>
+  <li><strong>Exclusion from adequate income</strong> — BPL populations, informal workers, women in unpaid domestic labour.</li>
+  <li><strong>Exclusion from the labour market</strong> — unemployed, retired, disabled, domestic workers, students. Labour market exclusion risks wider social exclusion.</li>
+  <li><strong>Exclusion from basic services</strong> — electricity, water, transport, financial services; unelectrified and unbanked areas, slums, hilly regions.</li>
+  <li><strong>Exclusion from social relations</strong> — lack of civic engagement, alienation, isolation. Historically: Avarnas, debtors, women, slaves; today: victims of AIDS, leprosy, homosexuals, the physically handicapped.</li>
+  <li><strong>Voluntary exclusion</strong> — celebrities and the super-rich who disconnect from wider social life.</li>
+</ul>
+
+<p>Charles Tilly and Grusky use the term <strong>"opportunity hoarding"</strong> for situations where actors monopolise valuable positions or resources for people like themselves. These inequalities are "durable" and multigenerational — categorical pairs (caste, race, gender) become institutionalised over time. Murphy: professions socially close themselves — since it is socially acceptable to exclude an incompetent person from a job, educational background becomes a socially acceptable means of enacting unconscious biases about race, sex, or caste.</p>
+
+<h3>Poverty and Deprivation</h3>
+<p>Poverty is a socio-economic condition in which individuals are deprived of basic and essential necessities. Its causes are multidimensional:</p>
+<ul>
+  <li><strong>Culture of poverty (Oscar Lewis)</strong> — living in poverty creates its own culture, learned and transmitted across generations. The poor internalise values that make it difficult to escape. They make little use of institutions like banks, hospitals, museums. They become a separate part of society.</li>
+  <li><strong>Weber</strong> — religious dominance that discourages worldly achievement (e.g. Hindu other-worldly asceticism).</li>
+  <li><strong>Marx</strong> — concentration of wealth in the hands of a particular class through surplus value extraction.</li>
+  <li><strong>Feminisation of poverty</strong> — horizontal and vertical segregation of the workforce and absence of women from land ownership (Bina Agarwal) feminises poverty.</li>
+</ul>
+
+<p>Two types of poverty:</p>
+<ul>
+  <li><strong>Absolute poverty</strong> — inability to provide even basic necessities of life: food, clothing, shelter, medical care.</li>
+  <li><strong>Relative deprivation/poverty</strong> — measured relative to standards of life at a given time and place. In India, the poverty line has been revised from Rs. 20/month (1960) to Rs. 816/month in rural areas (Tendulkar Committee, 2011–12).</li>
+</ul>
+
+<p>Amartya Sen's <strong>Capability Approach</strong>: poverty is not material deprivation alone but deprivation of basic capabilities — the freedom to become what one wants to be. Development means expanding people's capabilities and freedom of choice. Anti-poverty programmes must focus not just on income but on education, healthcare, and capability enhancement. Kerala: moderately developed economy but achieved significant poverty reduction through education and healthcare expansion — per capita GDP does not directly determine well-being. This approach inspired the <strong>Human Development Index (HDI)</strong>, created by UNDP in 1990.</p>
+
+<h2>Dimensions of Stratification: Class, Status, Gender, Ethnicity, and Race</h2>
+
+<h3>Class</h3>
+<p>Three methods to determine class:</p>
+<ul>
+  <li><strong>Objective method</strong> — measure hard facts (income, occupation, education).</li>
+  <li><strong>Subjective method</strong> — ask people what class they identify with.</li>
+  <li><strong>Reputational method</strong> — ask what people think of others.</li>
+</ul>
+
+<p>Key class theorists beyond Marx and Weber:</p>
+<ul>
+  <li><strong>Eric Olin Wright</strong> — in post-industrial society, many top managers and supervisors occupy a <em>contradictory class location</em> — they may own shares (part-bourgeoisie) but also lose their livelihood at the will of the ruling class (part-proletariat). The categories of bourgeoisie and proletariat are too broad.</li>
+  <li><strong>Frank Parkin</strong> — class defined by strategy employed to control resources. Social closure = "the process of subordination whereby one group monopolises advantages by closing off opportunities to another group." Three classes with three strategies: dominant class (exclusionary closure), intermediate class (dual closure — both excluding those below and usurping those above), subordinate class (usurpationary closure — challenging elite monopoly). Examples: professional associations excluding the unqualified (exclusionary), skilled workers excluding the unskilled while challenging capitalists (dual closure), civil rights movements challenging white supremacy (usurpationary).</li>
+  <li><strong>Charles Murray</strong> — <em>Underclass</em>: long-term unemployed, dependent on state welfare, marginalised, socially excluded, uneducated, and work-shy. Marx called them the <em>Lumpenproletariat</em>. Murray: welfare payments encourage dependency and inadvertently trap people in poverty.</li>
+  <li><strong>Waters and Pakulski</strong> (<em>Death of Class</em>) — class as a form of stratification is declining. Society has shifted from an economic class society to a status society. Individuals define their social status through symbolic consumption — what they buy, listen to, and talk about defines their identity more than their class position. People vote less along class lines; leisure pursuits no longer signal class background.</li>
+</ul>
+
+<h4>New Middle Class in India</h4>
+<p>Banerjee and Duflo define the new middle class by consumption of $2/day. Features: high entrepreneurial spirit, drive both consumption and savings, underrepresented by lower castes (67% of new middle class are upper-caste Hindus). "Newness" is contested:</p>
+<ul>
+  <li>Das, Jeffrolet and Van der Veer — newness lies in greater social inclusivity, transcending caste barriers.</li>
+  <li>Fernandes, Fuller and Upadhyay — newness lies in employment in service sector (IT, BPO) post-LPG reforms, shifting from earlier public sector occupations.</li>
+  <li>They aspire to their own homes, English-medium schools for children, digital lifestyles; oppose inefficiency; tend to be politically aware and difficult to manage as a vote bank.</li>
+</ul>
+
+<h3>Gender as a Dimension of Stratification</h3>
+<p>Gender = the set of expectations and behaviours seen as natural to a sex. Sex is inherited (biological); gender is learned (social). Gender stratification refers to the unequal distribution of wealth, power, and privilege between men and women. Until the 1970s, only class stratification was analysed; gender was subsumed under the household head (male). Goldthorpe argued women should not be separately included in class analysis — they take the class of their father or husband. Feminists rejected this, treating men and women as separate classes.</p>
+
+<p>Margaret Mead studied three New Guinea societies showing gender roles are culturally constructed:</p>
+<ul>
+  <li><strong>Arapesh</strong> — both sexes cooperative, sensitive, child-rearing: what we call "feminine."</li>
+  <li><strong>Mundugumor</strong> — both sexes aggressive, warlike, headhunting: what we call "masculine."</li>
+  <li><strong>Tchambuli</strong> — gender reversed: men adorn themselves; women are dominant and rational.</li>
+</ul>
+
+<p>Ann Oakley: Australian Tasmanian aboriginal women were responsible for seal hunting and fishing; Mbuti Pygmy men and women share childcare equally; in China, former USSR, Cuba, and Israel, women serve in the armed forces. There are no natural male-female differences — only culturally constructed ones.</p>
+
+<h4>Glass Metaphors in Gender Stratification</h4>
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Meaning</th>
+  </tr>
+  <tr>
+    <td><strong>Glass Ceiling</strong></td>
+    <td>Invisible barrier preventing women from rising past a certain level in male-dominated organisations</td>
+  </tr>
+  <tr>
+    <td><strong>Glass Cliff</strong></td>
+    <td>Women more likely to be promoted to leadership roles during crises or downturns — when the risk of failure is highest</td>
+  </tr>
+  <tr>
+    <td><strong>Glass Escalator</strong></td>
+    <td>Invisible upward movement that puts men in positions of power even within female-dominated occupations (e.g. male teacher → principal faster than female teacher)</td>
+  </tr>
+  <tr>
+    <td><strong>Glass Wall</strong></td>
+    <td>Unlike glass ceiling (vertical), this restricts lateral mobility — boxes women into certain roles within a field (e.g. women in military cannot serve in combat)</td>
+  </tr>
+  <tr>
+    <td><strong>Glass Floor</strong></td>
+    <td>Invisible barriers limiting men's entry into traditionally female occupations (secretaries, receptionists, nursery teachers)</td>
+  </tr>
+</table>
+
+<h4>Gender Pay Gap</h4>
+<p>Causes: type of work women do (largely clerical and service); family responsibilities and dual burden (second shift at home — Arlie Hochschild); biological compulsions (pregnancy, childcare) reducing seniority; discrimination (bosses assume women's priority is marriage and children; glass ceiling); all men benefit from <strong>Patriarchal Dividend</strong> (Connell — advantage accruing to all men from the subordination of women).</p>
+
+<h4>Sylvia Walby — Six Structures of Patriarchy</h4>
+<p>Unlike earlier feminists who focused on a single cause, Walby identifies patriarchy as six intersecting structures. When patriarchy loosens grip in one area, it tightens in another:</p>
+<ul>
+  <li><strong>Economy</strong> — lower pay and status for women; discrimination; men dominate best-paid jobs.</li>
+  <li><strong>Family/domestic life</strong> — unequal housework and childcare; exploitation of women's unpaid labour; restrictions on widow remarriage; dowry; male-child preference.</li>
+  <li><strong>Mass media</strong> — women represented in narrow roles: sex objects, mothers, wives, girlfriends.</li>
+  <li><strong>Sexuality</strong> — sexual double standard: women with multiple partners condemned as "sluts"; men admired for virility.</li>
+  <li><strong>Violence</strong> — domestic violence, rape, and threat of violence used to control women.</li>
+  <li><strong>State</strong> — acts in men's interests in taxation and welfare; laws protecting women weakly enforced.</li>
+</ul>
+
+<p>Walby distinguishes <strong>private patriarchy</strong> (individual patriarch dominates women within the household, excluding them from the public sphere) from <strong>public patriarchy</strong> (women enter public life but are collectively exploited by men in general). "Women are no longer restricted to the domestic hearth, but have the whole society in which to roam and be exploited."</p>
+
+<p><strong>Patriarchal bargain</strong> (Lisa Wade): individual women's strategies to manipulate the patriarchal system to their advantage — conforming to patriarchal expectations because benefits of conformity exceed benefits of resistance. Examples: adopting an assertive demeanour in a male-dominated workplace; staying in a traditional marriage for financial security; silencing feminist views to protect career or relationships. The bargain leaves the system itself intact.</p>
+
+<h4>Raewyn Connell — Hierarchies Within Gender</h4>
+<p>Gender inequality does not just exist between men and women — there are hierarchies within each gender:</p>
+
+<p>Hierarchy of masculinity: <strong>Hegemonic masculinity</strong> (most valued — heterosexual, white, physically tough, emotionally suppressed, associated with authority and paid work; dominates all other masculinities and all femininities) → <strong>Complicit masculinity</strong> (neither fits hegemonic masculinity nor challenges it; reaps patriarchal dividend by complying) → <strong>Marginalized masculinity</strong> (excluded due to race, disability) → <strong>Subordinated masculinity</strong> (homosexual, effeminate, over-expressive).</p>
+
+<p>Hierarchy of femininity: <strong>Emphasized femininity</strong> (complements hegemonic masculinity — submissive, nurturing, empathetic; naturalised through fairy tales, advertisements, heroines) → <strong>Subordinated femininity</strong> (resistant feminists, lesbians, spinsters, midwives — reject emphasized femininity; their experiences are largely hidden from history).</p>
+
+<h3>Race as a Dimension of Stratification</h3>
+<p>Race appears to refer to biological characteristics (skin colour, hair texture, facial features) but is fundamentally a social construct. Human beings show such a mixture of physical characteristics that no "pure" races exist — there is more genetic variation within racial categories than between them.</p>
+
+<p>Race exists only because society classifies people into races — and these classifications vary dramatically across cultures. In the US, children of Black and White parents are always called Black (one-drop rule). In Brazil, the same child might be called "light-skinned Black" or even "White" — Brazil uses seven colour-based classifications. W.I. Thomas: "If you define something as real, it is real in its consequences." People act on racial perceptions and beliefs, not biological facts.</p>
+
+<h4>Forms of Racism</h4>
+<ul>
+  <li><strong>Prejudice and stereotypes</strong> — prejudgements about groups: "All Mexicans are lazy," "All Asians are good at IT," "Blacks are criminal minds." Push minorities into low-paying jobs and inferior schools.</li>
+  <li><strong>Microaggressions</strong> — small-scale racial insults in everyday interaction: "Where are you really from?" A white woman clutching her handbag as she passes Latino men; asking to touch a Black person's hair.</li>
+  <li><strong>Colour-blind racism / Laissez-faire racism</strong> (Eduardo Bonilla-Silva) — claiming not to see race is itself a new, more "civilised" form of racism. Privilege is invisible to the privileged. Evidence: high concentration of liquor stores in predominantly Black urban areas; high conviction rates against minorities; ethnic profiling at airports; environmental racism — minorities are disproportionately forced to live near landfills and hazardous waste dumps.</li>
+  <li><strong>Cultural appropriation</strong> — dominant group members adopting cultural elements from marginalised groups. Example: Hollywood "white-washing" — Emma Stone cast as Allison Ng in <em>Aloha</em> (2015).</li>
+  <li><strong>Institutional racism</strong> — racism embedded in society's institutions (schools, hospitals, banks, police, workplaces) independent of individual racist intent. Banks reject home mortgage applications from minorities at higher rates than whites even when income is controlled. Promotes racism without racists.</li>
+</ul>
+
+<h3>Ethnicity as a Dimension of Stratification</h3>
+<p>Ethnicity = identification with others on the basis of common ancestry, cultural heritage, language, religion, music, food, and customs. Unlike race (physical traits), ethnicity is cultural. Many people confuse the two — Jews are often called a "race" but are more properly an ethnic group, since it is their cultural characteristics (religion) that bind them. Jews in China have Chinese features; Swedish Jews are blue-eyed blonds.</p>
+
+<p>Ashley Doane identified four factors that heighten or reduce ethnic identity: relative size (ethnic minority = heightened identity), power (little political representation = heightened identity), appearance (looks different from majority = heightened identity), and discrimination (experiencing discrimination = heightened identity).</p>
+
+<p><strong>SL Sharma</strong>: contrary to modernisation theory's prediction that ethnic distinctions would weaken, modernisation has sharpened ethnic diversities, associations, mobilisations, and ethno-nationalism. Evidence from India: caste associations, linguistic reorganisation, Dravidian movement, Gorkhaland, Bodoland, Khalistan, Hindutva movement.</p>
+
+<h4>Race vs Ethnicity</h4>
+<table>
+  <tr>
+    <th>Race</th>
+    <th>Ethnicity</th>
+  </tr>
+  <tr>
+    <td>Refers to physical traits: skin, hair, facial structure</td>
+    <td>Refers to cultural traits: religion, nationality, language, customs, food</td>
+  </tr>
+  <tr>
+    <td>Inherited (biological in appearance)</td>
+    <td>Learned and maintained through festivals, religious gatherings, symbolic items</td>
+  </tr>
+  <tr>
+    <td>Individual belongs to one race (even if mixed)</td>
+    <td>Individual may belong to multiple ethnic groups — Jimi Hendrix was African American, White, and Cherokee</td>
+  </tr>
+  <tr>
+    <td>Often used to mark hierarchies and superiority/inferiority</td>
+    <td>Often used to celebrate diversity and promote cultural understanding</td>
+  </tr>
+</table>
+
+<h3>Intersectionality</h3>
+<p>P.H. Collins: intersectionality refers to the complex interweaving of diverse inequalities — race, class, gender, sexuality, disability, nationality — which together shape individual lives. No single social division is primary. The lives of white, heterosexual, working-class men are very different from those of Black, working-class, lesbian women. Only empirical research can reveal which identity is most important in specific socio-historical contexts. Black working-class women may be <em>multiply disadvantaged</em> — on the basis of colour, gender, and class simultaneously.</p>
+
+<h2>Open and Closed Systems of Stratification</h2>
+
+<p>Dipankar Gupta argues stratification consists of both hierarchy and difference. Some systems are open; some are closed:</p>
+<ul>
+  <li><strong>Open system</strong> — hierarchy is legitimised on quantifiable, meritocratic grounds (e.g. class — wealth is an objective criterion). Mobility is an accepted feature; it occurs at the level of individuals who move up, down, or laterally. Upward mobility for one person does not necessarily displace another.</li>
+  <li><strong>Closed system</strong> — differences based on race, caste, estate, gender are hierarchised without objective criterion. Mobility is at the level of groups, not individuals. When a group rises in rank, it necessarily displaces another group — Murray Milner: "Status hierarchies are zero-sum." Ideological wars must be waged by subordinate groups — feminism for gender, anti-Brahmanical movements for caste, civil rights for race.</li>
+</ul>
+
+<p>Open and closed systems are not discrete categories — they intertwine. In every open system, a point exists beyond which mobility is extremely difficult. In closed systems, modernisation and industrialisation have introduced openness.</p>
+
+<h2>Social Mobility</h2>
+
+<p>Social mobility refers to changes in social position with regard to occupation, prestige, income, wealth, power, and class. It is a key indicator of life chances. Pitirim Sorokin (<em>Social and Cultural Mobility</em>) was the first sociologist to study it systematically. He observed: no society is absolutely closed or completely open; no two societies allow the same degree of movement; the speed of change varies across time periods; the rate of change depends on the level of modernisation.</p>
+
+<h3>Factors Affecting Social Mobility</h3>
+<p>Individual factors: motivation, education, skills and training. Structural factors: migration (pull/push), industrialisation (achieved over ascribed status), urbanisation (opportunities beyond ascribed identity), legislation (RTE, property rights for women, zamindari abolition, reservation), modernisation (breaking caste-occupation link, dissolution of jajmani system). Anthony Giddens: when the rate of social mobility is high, class solidarity and cohesion will be low.</p>
+
+<h3>Types of Social Mobility</h3>
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Definition and Example</th>
+  </tr>
+  <tr>
+    <td><strong>Horizontal</strong></td>
+    <td>Movement between positions of similar prestige and income — no change in vertical position. E.g. An engineer switching to teaching engineering; inter-religious conversion; inter-state migration.</td>
+  </tr>
+  <tr>
+    <td><strong>Vertical (Upward)</strong></td>
+    <td>Movement to a higher position in the stratification system. E.g. A lower-caste person winning elections and becoming a Minister.</td>
+  </tr>
+  <tr>
+    <td><strong>Vertical (Downward) / Proletarianisation</strong></td>
+    <td>Non-manual middle class workers losing jobs or getting deskilled due to technology, becoming equivalent to working class.</td>
+  </tr>
+  <tr>
+    <td><strong>Embourgeoisement</strong></td>
+    <td>Working class becoming middle class in lifestyle and values as incomes increase (Clark Kerr). Goldthorpe's Luton study challenged this — affluent car workers had high wages but no middle-class attitudes, values, or job security.</td>
+  </tr>
+  <tr>
+    <td><strong>Intergenerational</strong></td>
+    <td>Mobility between parent and child generations — son in different class from father (Lipset and Bendix).</td>
+  </tr>
+  <tr>
+    <td><strong>Intragenerational</strong></td>
+    <td>Mobility within a person's own lifetime — from junior clerk to senior manager.</td>
+  </tr>
+  <tr>
+    <td><strong>Absolute</strong></td>
+    <td>Actual movement in income/class position compared to one's own previous position. E.g. Income rising from ₹30,000 to ₹3,00,000.</td>
+  </tr>
+  <tr>
+    <td><strong>Relative</strong></td>
+    <td>Movement compared to peers. Absolute upward mobility may co-exist with relative downward mobility if peers did even better.</td>
+  </tr>
+  <tr>
+    <td><strong>Structural</strong></td>
+    <td>Mobility produced by structural changes in society — technological change, demonetisation, pandemic, immigration. E.g. Invention of computers moved people from blue-collar to white-collar.</td>
+  </tr>
+  <tr>
+    <td><strong>Individual</strong></td>
+    <td>Mobility due to individual characteristics — race, ethnicity, gender, education, skills, determination. For women and ethnic minorities, individual mobility is often restricted.</td>
+  </tr>
+  <tr>
+    <td><strong>Long Range</strong></td>
+    <td>Movement from bottom strata to the top. E.g. Lower working class → upper middle class.</td>
+  </tr>
+  <tr>
+    <td><strong>Short Range</strong></td>
+    <td>Movement between adjacent strata. Glass's 1949 study found most British mobility was short-range intergenerational.</td>
+  </tr>
+</table>
+
+<h3>Theories on Social Mobility</h3>
+<ul>
+  <li><strong>Functionalist (Saunders)</strong> — UK is a meritocratic society; inequality reflects differences in effort and intelligence.</li>
+  <li><strong>Marxist (Goldthorpe)</strong> — Britain is not an absolutely open society; limited short-range mobility. Kellner and Wilby's <em>1:2:4 rule of relative hope</em>: whatever the chance of a working-class son entering the professional class, it is twice as much for an intermediate-class son and four times as much for an upper-class son. Elite self-recruitment reproduces the class structure.</li>
+  <li><strong>Weberian (Goldthorpe)</strong> — people are rational actors who calculate costs and benefits of mobility. A working-class family views service sector employment as success; a middle-class family views it as failure.</li>
+  <li><strong>Feminist</strong> — a woman's class was historically defined by the male she lived with. Feminist sociologists insisted on measuring women's own occupational class. UK government statistics switched to this approach in 2000.</li>
+</ul>
+
+<h3>Classic Mobility Studies</h3>
+<ul>
+  <li><strong>David Glass (1949)</strong> — surveyed 4,000 British males; found mostly short-range intergenerational mobility.</li>
+  <li><strong>Goldthorpe — Affluent Workers Study (Luton, 1963)</strong> — tested embourgeoisement thesis. Car workers had high wages but were not truly middle class: no bank accounts, no political knowledge, no job security, paid weekly not monthly. Only 2 of 80 were accepted as middle class by middle-class groups. Absolute upward mobility, but almost no relative upward mobility.</li>
+  <li><strong>Lockwood — Black Coated Worker (1958)</strong> — clerical workers saw themselves as middle class, never unionised. When educational qualifications and management trainees became important, clerical work was devalued. Demonstrated downward mobility alongside affluent workers' upward mobility — Britain as an open society with mobility in both directions.</li>
+  <li><strong>Oxford Study — Goldthorpe and Lockwood (1972)</strong> — 10,000 males; found higher rates of mobility than 1949 (half of sons in a different class from fathers; most movement was upward). But those born higher up had better chances — equality of opportunity not achieved (1:2:4 rule).</li>
+  <li><strong>Lipset and Bendix — Cross-National Study</strong> — analysed data from 9 industrialised societies (Britain, France, Germany, Sweden, Japan, Denmark, Italy, US). Total mobility across blue-collar/white-collar line was 30% in the US, 28–31% in others. No evidence the US is more open than European societies — all industrialised societies experience similar occupational changes producing upward mobility.</li>
+  <li><strong>IHDS Survey — India</strong> — intergenerational mobility is weaker for SC, ST, and OBC individuals and for those in rural areas. Combined with high poverty rates, very low rates of social mobility prevail among scheduled castes and scheduled tribes.</li>
+</ul>
+
+<h3>Social Mobility in the Caste System</h3>
+<p>Though caste is the classic example of a closed, ascription-based system, mobility has occurred within it:</p>
+<ul>
+  <li><strong>Sanskritisation (MN Srinivas)</strong> — whenever a caste achieved secular power, it tried to legitimise its status by adopting the customs, rituals, vegetarianism, and sacred texts of higher castes. E.g. Reddys (Andhra), Nairs (Kerala), and Marathas claimed Kshatriya status after acquiring political and economic power.</li>
+  <li><strong>Desanskritisation / De-ritualisation (DN Mazumdar)</strong> — higher castes adopting secular lifestyles and abandoning traditional ritual practices in the modern era.</li>
+</ul>
+
+<p>The Varna model presents ritual hierarchy as permanent and static; the Jati model varies locally and accommodates these dynamics of mobility and change.</p>
+
+`,
   'works-economic-life': '',
   'politics-and-society': '',
   'religion-and-society': '',
