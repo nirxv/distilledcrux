@@ -910,6 +910,344 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Gause's Rule (Competitive Exclusion Principle)</strong> states that two species occupying identical ecological niches cannot coexist indefinitely; one will eventually outcompete and exclude the other. Species that initially overlap in niche tend to diverge through niche differentiation, reducing competition and enabling coexistence. This principle is relevant to understanding the extinction of archaic hominins as anatomically modern humans expanded out of Africa.</p>
 `,
+
+  'biological-basis-of-life': `
+<h2>The Cell: Fundamental Unit of Life</h2>
+
+<p>The cell is the fundamental unit of life in all organisms. Some organisms consist of a single cell; complex multicellular organisms like humans are composed of as many as one trillion cells. A eukaryotic cell is a three-dimensional structure composed of carbohydrates, lipids, nucleic acids, and proteins, and contains membrane-bound organelles.</p>
+
+<h3>Structure of the Cell</h3>
+
+<p>The <strong>nucleus</strong> is a discrete unit surrounded by a nuclear membrane and contains the genetic material: DNA (deoxyribonucleic acid) and RNA (ribonucleic acid). The nucleus is the control centre of the cell.</p>
+
+<p>The <strong>cytoplasm</strong> is the gel-like substance surrounding the nucleus, containing organelles that carry out cellular functions including nutrient conversion, energy storage and release, waste elimination, and protein synthesis.</p>
+
+<p><strong>Ribosomes</strong> are roughly spherical organelles partly composed of RNA. They are the sites of protein synthesis and are essential to all living cells.</p>
+
+<p><strong>Mitochondria</strong> are oval organelles enclosed within folded membranes that produce energy for the cell. They contain their own distinct DNA, called mitochondrial DNA (mtDNA), organised differently from nuclear DNA. Mitochondria are the cell's energy engines.</p>
+
+<p>There are two basic types of cells. <strong>Somatic cells</strong> make up body tissues including muscles, bones, organs, skin, and brain. <strong>Gametes</strong> (sex cells) are involved exclusively in reproduction: egg cells produced in female ovaries and sperm cells developed in male testes. A gamete's sole function is to unite with a gamete from another individual to form a zygote, thereby transmitting genetic information from parents to offspring.</p>
+
+<h2>DNA: Structure and Function</h2>
+
+<p>DNA (deoxyribonucleic acid) is the very basis of life because it directs all cellular activities. DNA is made up of millions of nucleotides, each composed of a deoxyribose sugar, a phosphate group, and a nitrogenous base. Nucleotides are connected in strands via phosphodiester bonds forming a sugar-phosphate backbone, with bonds between the 3' carbon of one nucleotide and the 5' carbon of the next.</p>
+
+<p>Two strands run antiparallel (in opposite directions) and are held together throughout their length by hydrogen bonds between complementary bases: Cytosine bonds with Guanine, and Adenine bonds with Thymine. Together, the two strands form the double helix.</p>
+
+<h3>Mitochondrial DNA</h3>
+
+<p>Mitochondrial DNA (mtDNA) is a circular structure of about 16,600 base pairs. Each mitochondrion may contain several copies of its DNA, and each cell may contain hundreds or thousands of mitochondria. The D-loop and other non-coding regions of mtDNA evolve rapidly, making them highly variable and extremely useful for studying evolutionary patterns between closely related species and populations within species.</p>
+
+<p>Two critical features of mtDNA: First, unlike nuclear DNA, mtDNA undergoes no crossing-over between maternal and paternal copies. It is passed on clonally from generation to generation. Second, mtDNA is transmitted only through the mother, because an offspring's mtDNA comes from the mitochondria in the egg's cytoplasm. The sperm's mitochondria, concentrated in the tail, are not injected into the egg at fertilisation. If you are male, you are an mtDNA evolutionary dead end. The Y chromosome acts as the male equivalent: it undergoes minimal recombination and is passed on only through males, making it equally useful for tracing paternal lineages.</p>
+
+<h2>DNA Replication</h2>
+
+<p>Before a cell can divide, its DNA must replicate. The process is semi-conservative: each new DNA molecule consists of one original strand and one newly synthesised strand.</p>
+
+<h3>Initiation</h3>
+
+<p>Replication begins at the Origin of Replication (oriC). <strong>Helicase</strong> breaks the hydrogen bonds between complementary base pairs and unzips the double helix, creating a replication fork with a leading strand (3' to 5' direction) and a lagging strand (5' to 3' direction). <strong>SSB proteins</strong> (Single-Stranded DNA Binding Proteins) bind to the separated strands to prevent them from re-annealing. <strong>DNA Primase</strong> synthesises short RNA primers (~10 nucleotides) at the origin to provide a starting point for DNA synthesis.</p>
+
+<h3>Elongation</h3>
+
+<p><strong>DNA Polymerase III</strong> reads the template strand and adds complementary nucleotides in the 5' to 3' direction. On the leading strand, synthesis is continuous. On the lagging strand, synthesis is discontinuous, producing Okazaki fragments, each initiated by a new RNA primer. A sliding clamp protein holds the polymerase in position on the template. DNA Polymerase also proofreads the new strand to correct errors.</p>
+
+<h3>Termination</h3>
+
+<p><strong>Exonuclease</strong> removes the RNA primers. The resulting gaps are filled with complementary nucleotides. <strong>DNA Ligase</strong> seals the nicks between Okazaki fragments and joins the completed DNA into two continuous double strands, each of which then winds into a double helix.</p>
+
+<h2>Protein Synthesis</h2>
+
+<p>DNA also serves as the template for protein synthesis, a two-step process involving transcription (in the nucleus) and translation (in the cytoplasm). Proteins are the complex molecules that make up tissues and drive all cellular functions, from enzymes that catalyse biochemical reactions to antibodies that defend against disease to structural proteins of bone and muscle.</p>
+
+<p>Proteins are composed of amino acids. There are twenty different amino acids: nine are essential (must be obtained from diet) and eleven are non-essential (synthesised by the body). The sequence of amino acids in a protein determines its structure and function. This sequence is encoded in DNA as the genetic code.</p>
+
+<h3>Transcription</h3>
+
+<p>Transcription occurs in the nucleus. <strong>RNA Polymerase</strong> binds to the promoter region of a gene and unwinds the DNA. It reads one strand (the template strand) and builds a complementary strand of messenger RNA (mRNA), using the same base-pairing rules as DNA except that Uracil (U) replaces Thymine (T).</p>
+
+<p>Transcription proceeds in three stages: initiation (RNA polymerase binds to the promoter, signalling the DNA to unwind), elongation (RNA polymerase reads the template and builds the mRNA strand, with adenine in DNA bonding to uracil in RNA), and termination (RNA polymerase crosses a stop sequence and detaches from the DNA).</p>
+
+<p>After transcription, the mRNA is processed: introns (non-coding segments) are removed and exons (coding segments) are spliced together to form a mature mRNA molecule. Enhancers and silencers regulate the rate of transcription. The ability to produce different combinations of exons from a single gene (alternative splicing) allows the human genome's approximately 21,000 genes to produce over 90,000 different proteins.</p>
+
+<h3>Translation</h3>
+
+<p>Translation occurs at ribosomes in the cytoplasm. The mature mRNA attaches to a ribosome. Transfer RNA (tRNA) molecules carry specific amino acids to the ribosome. Each tRNA has an anticodon (a three-base sequence) complementary to a codon (a three-base sequence on the mRNA). When a codon is read, the appropriate tRNA delivers its amino acid. A peptide bond forms between adjacent amino acids, extending the growing polypeptide chain.</p>
+
+<p>Translation involves initiation (formation of the initiation complex at the AUG start codon, involving three initiation factors and a methionine-carrying tRNA), elongation (the ribosome moves along the mRNA in the 5' to 3' direction, reading codons and linking amino acids via peptide bonds, with the A, P, and E sites of the ribosome coordinating tRNA binding, peptide bond formation, and tRNA exit), and termination (one of three stop codons, UAA, UAG, or UGA, is reached; no tRNA recognises these; release factors bind and trigger release of the completed polypeptide and dissociation of the ribosome).</p>
+
+<h2>Chromosomes</h2>
+
+<p>Chromosomes are composed of DNA and proteins. During cell division, chromosomes become visible as two strands (sister chromatids) joined at the centromere, each chromatid being a complete DNA molecule replicated prior to division.</p>
+
+<p>There are two basic types of chromosomes. <strong>Autosomes</strong> carry genetic information governing all physical characteristics except primary sex determination. <strong>Sex chromosomes</strong> (X and Y) determine sex: females have two X chromosomes (XX), males have one X and one Y (XY). Normal human somatic cells have 22 pairs of autosomes and one pair of sex chromosomes, for a total of 46 chromosomes.</p>
+
+<h3>Chromosome Groups</h3>
+
+<p>Human chromosomes are classified into seven groups (A through G) based on size and centromere position: Group A (chromosomes 1 to 3, large with median centromeres), Group B (4 and 5, large with submedian centromeres), Group C (6 to 12 and X, medium with submedian centromeres), Group D (13 to 15, medium acrocentric), Group E (16 to 18, short with median or submedian centromeres), Group F (19 and 20, short with median centromeres), Group G (21, 22, and Y, very short acrocentric).</p>
+
+<h3>Centromere Position</h3>
+
+<p>Based on centromere position, chromosomes are classified as telocentric (centromere at the terminal position, one arm only), acrocentric (centromere near one end, very short short arm), submetacentric (centromere slightly off-centre, unequal arms), and metacentric (centromere at the middle, approximately equal arms).</p>
+
+<h3>Heterochromatin and Euchromatin</h3>
+
+<p><strong>Heterochromatin</strong> is tightly packed, condensed DNA that is transcriptionally inactive. Its compact organisation prevents access by transcription proteins and prevents crossing-over. Constitutive heterochromatin (telomeres, centromeres) is permanently condensed in all cells. Facultative heterochromatin contains genes that are selectively silenced through histone methylation or RNAi mechanisms. Heterochromatin protects DNA from endonuclease damage.</p>
+
+<p><strong>Euchromatin</strong> is loosely packed chromatin rich in active genes, covering approximately 90% of the human genome. The loose wrapping allows transcription factors and RNA polymerase access to the DNA. Active genes in euchromatin are transcribed into mRNA and translated into functional proteins. Housekeeping genes are a form of euchromatin.</p>
+
+<h2>Cell Division</h2>
+
+<h3>Mitosis</h3>
+
+<p>Mitosis is somatic cell division, first described by Fleming in 1879. It produces two genetically identical daughter cells, each with the same chromosome number and DNA content as the parent cell. Mitosis is essential for growth, tissue repair, and reproduction in organisms that reproduce asexually.</p>
+
+<p>Mitosis proceeds through four phases: <strong>Prophase</strong> (chromosomes condense; the mitotic spindle begins to form; nucleolus disappears; in late prophase, the nuclear envelope breaks down and spindle microtubules begin to capture chromosomes), <strong>Metaphase</strong> (all chromosomes align at the metaphase plate with their kinetochores attached to microtubules from opposite poles; the spindle checkpoint ensures all chromosomes are correctly attached before the cell proceeds), <strong>Anaphase</strong> (the protein glue holding sister chromatids is cleaved; chromatids are pulled to opposite poles; non-kinetochore microtubules elongate and push the poles apart), <strong>Telophase</strong> (chromosomes arrive at opposite poles; nuclear envelopes reform; nucleoli reappear; chromosomes decondense).</p>
+
+<p><strong>Cytokinesis</strong> (division of the cytoplasm into two new cells) overlaps with telophase. In animal cells, a contractile ring of actin filaments pinches the cell in two at the cleavage furrow.</p>
+
+<h3>Meiosis</h3>
+
+<p>Meiosis is the cell division that produces gametes (sex cells) with half the normal chromosome number. It takes a diploid cell (2n = 46 in humans) and produces four haploid cells (n = 23). When two haploid gametes unite at fertilisation, a diploid zygote (2n) is restored.</p>
+
+<p>Meiosis involves two rounds of division. In <strong>Meiosis I</strong>, homologous chromosomes pair up in Prophase I and undergo crossing over, in which homologous chromosomes exchange segments. This genetic recombination generates novel combinations of alleles and is a major source of genetic variation. In Metaphase I, homologue pairs (not individual chromosomes) align at the metaphase plate. In Anaphase I, homologues (not sister chromatids) are pulled to opposite poles. In Telophase I, the cell divides, producing two haploid cells each containing one chromosome from each homologous pair, but each chromosome still consisting of two chromatids.</p>
+
+<p>In <strong>Meiosis II</strong>, the two cells from Meiosis I divide again without prior DNA replication. Sister chromatids separate, producing four haploid cells each with single-chromatid chromosomes. In humans, these become sperm or egg cells.</p>
+
+<h2>Genes</h2>
+
+<p>A gene is a sequence of DNA bases specifying the order of amino acids in an entire protein, a portion of a protein, or any functional RNA product. The term was introduced by Johanssen in 1909. The human genome contains approximately 21,000 protein-coding genes, which together produce over 90,000 different proteins through alternative splicing. Protein-coding sequences constitute only about 2 to 3 percent of the entire human genome; the rest is non-coding DNA.</p>
+
+<p>Most genes consist of alternating exons (coding sequences that are expressed in protein synthesis) and introns (non-coding sequences that are initially transcribed and then spliced out). Different combinations of exons from the same gene can be joined to produce different proteins.</p>
+
+<p><strong>Structural genes</strong> encode proteins that form physical structures and carry out metabolic functions: hair proteins, haemoglobin, digestive enzymes. <strong>Regulatory genes</strong> control the expression of structural genes, turning them on or off at appropriate times during development and in specific cell types. Homeobox genes (Hox genes) are a critically important group of regulatory genes that direct early embryonic segmentation and determine the identity of body segments. Hox genes are highly conserved across all animals with bilateral symmetry, from worms to humans, indicating their ancient evolutionary origin and indispensability.</p>
+
+<h2>Mendelian Inheritance</h2>
+
+<p>Gregor Mendel's experiments on pea plants in the 1860s established the fundamental principles of hereditary transmission, which apply to a wide range of organisms including humans.</p>
+
+<h3>Mendel's Postulates</h3>
+
+<ul>
+  <li><strong>Particulate units of inheritance:</strong> Hereditary characteristics are controlled by discrete unit factors (genes) that exist in pairs in diploid organisms. Individuals receive one of each pair from each parent.</li>
+  <li><strong>Dominance:</strong> When an individual has two different alleles for a characteristic, only one is expressed (dominant) and the other is suppressed (recessive). In a heterozygote, the dominant allele masks the recessive.</li>
+  <li><strong>Law of Segregation:</strong> During gamete formation, the paired alleles separate randomly so that each sex cell receives one allele with equal probability. This reflects the separation of homologous chromosomes during meiosis I.</li>
+  <li><strong>Law of Independent Assortment:</strong> During gamete formation, segregating pairs of alleles assort independently of each other, producing gametes with all possible allele combinations. This reflects the random orientation of homologue pairs at Metaphase I. The law applies only to genes on different chromosomes (or on the same chromosome but far enough apart to undergo recombination frequently).</li>
+</ul>
+
+<h3>Extensions to Mendelian Inheritance</h3>
+
+<p><strong>Incomplete dominance:</strong> Neither allele is fully dominant; heterozygotes show an intermediate phenotype. Examples: pink flowers from crossing red and white (classic flower example); sickle-cell trait in AS individuals who produce both normal and sickle-shaped red blood cells; wavy hair from crossing curly and straight.</p>
+
+<p><strong>Codominance:</strong> Both alleles are fully expressed simultaneously in the heterozygote, producing a phenotype showing both traits equally. The ABO blood group system is the classic example: a person with both A and B alleles expresses both A and B antigens on their red blood cells, giving blood type AB.</p>
+
+<p><strong>Polygenic (multifactorial) inheritance:</strong> A trait is determined by more than one gene, each contributing to the phenotype. Polygenic traits typically show a continuous, bell-shaped distribution in populations. Examples include skin colour, height, body weight, eye colour, and hair colour. Environmental factors can also influence polygenic traits. All polygenic traits exhibit incomplete dominance, not complete dominance.</p>
+
+<p><strong>Pleiotropy:</strong> One gene influences two or more seemingly unrelated phenotypic traits. A pleiotropic gene codes for a product used by multiple cell types or targets. Phenylketonuria (PKU), caused by defects in the gene for phenylalanine hydroxylase on chromosome 12, affects both the nervous and integumentary systems simultaneously. Marfan syndrome, caused by a mutation in a single gene encoding a connective tissue protein, produces a set of seemingly unrelated symptoms: unusual height, thin extremities, lens dislocation, and aortic problems, all because connective tissue is widespread in the body.</p>
+
+<p><strong>Genetic linkage:</strong> Genes physically close to each other on the same chromosome tend to be inherited together because they are less likely to be separated by crossing-over during meiosis. Linkage is the most prominent exception to Mendel's Law of Independent Assortment. Complete linkage (no crossing-over, as in Drosophila males) means only parental combinations are observed in offspring. Incomplete linkage (some crossing-over) allows some recombinant combinations. The HLA loci on chromosome 6 (loci D, B, C, A in order) are closely linked and are nearly always inherited together as a haplotype.</p>
+
+<p><strong>Multiple alleles (genetic polymorphism):</strong> Many genes have more than two alleles in a population. The ABO blood group locus has three alleles (A, B, O). For a trait to qualify as a genetic polymorphism, it must occur in a frequency greater than 1 percent; below this, the trait is assumed to be maintained only by recurrent mutation without selection.</p>
+
+<h2>Chromosomal Mutations and Disorders</h2>
+
+<h3>Numerical Chromosomal Aberrations</h3>
+
+<p><strong>Aneuploidy</strong> is the condition in which an organism has gained or lost one or more individual chromosomes (not complete sets). It results from non-disjunction (failure of chromosome separation) during meiosis I or II.</p>
+
+<p><strong>Down Syndrome (Trisomy 21):</strong> An extra chromosome 21 (karyotype 47, XX/XY, +21), first described by John Langdon Down in 1866 and linked to chromosome 21 in 1959. Incidence is 1 in 800 live births, rising steeply with maternal age (1 in 350 at age 35, 1 in 25 at age 45). Features include flat face, round head, epicanthic folds, broad hands, mental disability, hypotonia, and characteristic dermatoglyphic patterns. Most cases result from non-disjunction at Meiosis I (75%).</p>
+
+<p><strong>Edwards Syndrome (Trisomy 18):</strong> Extra chromosome 18. Causes severe developmental disruption; most affected babies die before or shortly after birth. Features include low birth weight, abnormally shaped head, clenched fists, low-set ears, and multiple organ defects. Incidence increases with maternal age.</p>
+
+<p><strong>Patau's Syndrome (Trisomy 13):</strong> Extra chromosome 13. Affects approximately 1 in 5,000 births. Features include holoprosencephaly (brain not divided into two halves), cleft lip and palate, micropthalmia, polydactyly, and severe heart defects. Over 90% die in the first year.</p>
+
+<p><strong>Turner Syndrome (Monosomy X):</strong> Loss of one sex chromosome in females, karyotype 45,X. First described by Henry Turner in 1938. Features include short stature, primary hypogonadism (undeveloped ovaries), absence of secondary sexual characteristics, shield-shaped chest, webbed neck, lymphoedema at birth, horseshoe kidney, and sterility. Despite having only one active X chromosome (as normal females do), Turner syndrome individuals lack certain genes on the X chromosome required in double dose for normal female development. Diagnosis: absence of Barr body in females.</p>
+
+<p><strong>Klinefelter Syndrome (XXY):</strong> Extra X chromosome in males, karyotype 47,XXY. Described by Harry Klinefelter in 1942; linked to extra X in 1959. Incidence: 1 in 1,000 live male births. Features include hypogonadism, azoospermia (infertility), reduced body and facial hair, gynecomastia, long limb bones, and mild learning difficulties. Caused by non-disjunction producing an XX egg fertilised by a Y sperm (or an X egg fertilised by an XY sperm). Diagnosed by presence of Barr body in males (who should not have one).</p>
+
+<h3>Structural Chromosomal Aberrations</h3>
+
+<p>Structural aberrations result from chromosomal breakage and abnormal rejoining, changing the number or order of genes without necessarily changing the total number of chromosomes.</p>
+
+<p><strong>Deletions:</strong> Loss of a chromosomal segment. Terminal deletions (single break) or intercalary deletions (two breaks, loss of middle segment). Deletions causing loss of more than 2% of the genome are typically lethal. Cri-du-chat syndrome results from deletion of the short arm of chromosome 5 (5p deletion), producing a characteristic cat-like cry in infancy, microcephaly, mental retardation, downward-slanting eyes, and low birth weight. Incidence: 1 in 25,000 live births.</p>
+
+<p><strong>Duplications:</strong> Part of a chromosome is duplicated. Charcot-Marie-Tooth disorder results from duplication of the short arm of chromosome 17 (17p12), causing hereditary motor and sensory neuropathy with muscle weakness, foot deformities, and loss of touch sensation.</p>
+
+<p><strong>Translocations:</strong> Exchange of segments between non-homologous chromosomes. Reciprocal translocations exchange segments between two chromosomes and do not change chromosome number but may change size. Robertsonian translocations involve fusion of two acrocentric chromosomes (e.g., chromosomes 14 and 21), which can predispose offspring to Down syndrome.</p>
+
+<p><strong>Inversions:</strong> A chromosomal segment is inverted. Pericentric inversions include the centromere and can change arm lengths. Paracentric inversions do not include the centromere. Both change gene order but not chromosome number.</p>
+
+<p><strong>Isochromosomes:</strong> Abnormal chromosomes with two identical arms formed by transverse (rather than longitudinal) separation of the centromere. <strong>Ring chromosomes</strong> form when terminal regions are lost and the chromosome joins end to end.</p>
+
+<h3>Non-disjunction and Mosaicism</h3>
+
+<p>Non-disjunction is the failure of chromosome separation during mitosis or meiosis. Factors that increase its probability include advanced maternal age, increased time between ovulation and fertilisation, and exposure to mutagens including radiation. <strong>Mosaicism</strong> occurs when non-disjunction happens in an early embryonic mitotic division, producing two or more genetically distinct cell lines in a single individual. The degree of abnormality depends on how early non-disjunction occurred and which cell line predominates in critical tissues.</p>
+
+<h2>Methods of Studying Human Genetics</h2>
+
+<h3>Pedigree Analysis</h3>
+
+<p>Pedigree analysis studies the inheritance of traits in human families across generations. It reveals the mode of inheritance (autosomal dominant, autosomal recessive, X-linked dominant, X-linked recessive, Y-linked), estimates recurrence risks, and identifies carriers.</p>
+
+<p><strong>Autosomal dominant inheritance:</strong> The gene is on an autosome and expresses in single copy. The trait appears in every generation, affects both sexes equally, and affected individuals always have at least one affected parent. Normal children of affected individuals do not transmit the trait. Examples include Huntington's disease, Marfan syndrome, achondroplasia, and anonychia.</p>
+
+<p><strong>Autosomal recessive inheritance:</strong> Two copies of the recessive allele are required for expression. Carriers (heterozygotes) are phenotypically normal. The trait can skip generations. Consanguinity increases recurrence risk. Examples include cystic fibrosis, sickle-cell anaemia, Tay-Sachs disease, and alkaptonuria.</p>
+
+<p><strong>X-linked dominant inheritance:</strong> The dominant allele is on the X chromosome. Affected males pass the trait to all daughters but no sons. Affected females may show a less severe phenotype than affected males because males are hemizygous (only one X chromosome) with no compensating normal allele.</p>
+
+<p><strong>X-linked recessive inheritance:</strong> Males are predominantly affected because they are hemizygous. The trait is transmitted through carrier females. Affected males cannot pass the disorder to their sons (who receive the Y chromosome from their father). Affected males pass the gene to all daughters, who become carriers. Examples include haemophilia A and B, Duchenne muscular dystrophy, G6PD deficiency, and colour blindness.</p>
+
+<p><strong>Y-linked inheritance:</strong> Only males are affected. All sons of affected males are affected. Females are never affected. The only well-characterised Y-linked gene is SRY (sex-determining region Y), which encodes a transcription factor triggering male development.</p>
+
+<h3>Twin Studies</h3>
+
+<p><strong>Monozygotic (MZ) twins</strong> result from the splitting of a single zygote at an early stage. They share approximately 100% of their genes and are always the same sex. Any phenotypic differences between MZ twins are due to environmental or developmental (non-genetic) factors.</p>
+
+<p><strong>Dizygotic (DZ) twins</strong> result from the simultaneous fertilisation of two ova by two sperm. They share approximately 50% of their genes (the same as any pair of siblings) and may be of different sexes. MZ twins are born at a relatively stable rate of 3 to 4 per 1,000 births worldwide; DZ twin frequency varies widely (6 per 1,000 in Asia, up to 40 per 1,000 in parts of Africa) and increases with maternal age and genetic predisposition. Two genes near FSHB and SMAD3 have been identified as influencing DZ twinning rate.</p>
+
+<p>The classic twin design compares the similarity (concordance) of MZ and DZ twin pairs to estimate the contributions of three factors to a trait's variance:</p>
+<ul>
+  <li><strong>A</strong> (additive genetics / heritability): estimated as twice the difference between MZ and DZ correlations.</li>
+  <li><strong>C</strong> (shared/common environment): estimated as the MZ correlation minus heritability.</li>
+  <li><strong>E</strong> (unique/unshared environment): estimated as 1 minus the MZ correlation, since MZ twins raised together differ only due to unique experiences.</li>
+</ul>
+
+<p>Heritability is the proportion of phenotypic variance attributable to genetic differences in a particular population at a particular time. It does not describe the development of individuals nor differences between populations. ADHD has a heritability of approximately 80%; childhood delinquency approximately 20 to 40%.</p>
+
+<p>The <strong>co-twin control method</strong> gives a treatment to one twin while the other serves as control. Any difference after treatment is attributed to environment. Monozygotic twins reared apart are particularly valuable: differences between them reveal environmental influence, while similarities reveal genetic influence.</p>
+
+<p>Limitations of twin studies include the lack of generalisability to the general population, volunteer and recruitment biases, difficulty simultaneously estimating shared environment and gene-environment interaction, and the fact that monozygotic concordance for many conditions is well below 50%, indicating important environmental effects.</p>
+
+<h3>Cytogenetics</h3>
+
+<p>Cytogenetics is the study of chromosomes and their relationship to phenotypic characteristics. It identifies and correlates chromosomal abnormalities with clinical features through karyotype analysis.</p>
+
+<p>A karyotype is a picture of an individual's full chromosome complement arranged by size and shape, prepared from cells (typically peripheral blood lymphocytes) during mitotic metaphase. Chromosome banding techniques reveal characteristic patterns that allow individual chromosomes to be identified:</p>
+
+<ul>
+  <li><strong>G-banding (Giemsa banding):</strong> Most common technique. Chromosomes are treated with Trypsin (which denatures protein) then stained with Giemsa dye, producing a reproducible light-and-dark band pattern specific to each chromosome.</li>
+  <li><strong>Q-banding (Quinacrine banding):</strong> Produces a similar pattern to G-banding but requires ultraviolet fluorescent microscopy.</li>
+  <li><strong>R-banding (Reverse banding):</strong> Chromosomes are heat-denatured then Giemsa-stained, producing bands inverse to G-banding patterns.</li>
+  <li><strong>C-banding (Centromeric banding):</strong> Stains only the constitutive heterochromatin at centromeres and satellite regions.</li>
+  <li><strong>Spectral Karyotyping (SKY):</strong> A molecular cytogenetic technique using fluorescently labelled probes to simultaneously visualise all chromosome pairs in different colours, detecting complex translocations invisible to conventional banding.</li>
+</ul>
+
+<p><strong>Barr body analysis:</strong> The Barr body is the condensed, inactive X chromosome visible in female somatic cell nuclei. The number of Barr bodies is one less than the number of X chromosomes (normal females: one Barr body; Turner syndrome XO females: no Barr body; Klinefelter XXY males: one Barr body). Barr body testing was historically used for sex verification in Olympic athletics.</p>
+
+<h3>Biochemical Methods</h3>
+
+<p>Biochemical techniques are applied to DNA, RNA, and protein to determine gene activity and identify inherited differences. Chromatography and electrophoresis separate protein components to reveal inherited structural differences. More than 100 variants of human haemoglobin have been identified biochemically. Chemical tests identify metabolic disorders: urinalysis and blood analysis detect phenylketonuria, alkaptonuria, gout, and galactosaemia. Many proteins that show biochemical polymorphism serve as genetic markers: haptoglobin, ABO blood groups, HLA complex, transferrin, and G6PD.</p>
+
+<h3>Immunological Methods</h3>
+
+<p>Immunogenetics studies immune reactions as products of gene action. Antigens on cell surfaces (including RBC antigens constituting blood groups) are genetically determined and nearly as unique to an individual as fingerprints. Antibodies (immunoglobulins) are Y-shaped proteins produced by plasma cells, each specific to a particular antigen epitope. The five main antibody classes are IgA, IgD, IgE, IgG, and IgM, composed of two heavy and two light protein chains. Immunological techniques are used in blood group determination, blood transfusion compatibility, organ transplantation, Rh incompatibility detection, and disease association studies (HLA antigens on chromosome 6 correlate with predisposition to specific autoimmune diseases).</p>
+
+<h3>Recombinant DNA Technology</h3>
+
+<p>Recombinant DNA technique involves generating DNA fragments using restriction endonucleases (enzymes that cut DNA at specific sequences), incorporating these fragments into vectors (e.g., bacterial plasmids), introducing the vector into a host organism (typically E. coli), and selecting clones containing the target DNA sequence. Applications include analysis of gene structure (the beta-globin gene region on chromosome 11 was among the first studied), diagnosis of genetic disorders in adults and foetuses, and therapeutic protein production (including insulin produced by bacteria carrying the human insulin gene).</p>
+
+<p><strong>DNA Probes:</strong> Radioactively labelled synthetic DNA sequences that hybridise with complementary sequences in the genome. They identify mutations, study gene structure, and are used in DNA fingerprinting.</p>
+
+<p><strong>RFLP (Restriction Fragment Length Polymorphism):</strong> Individuals differ in DNA base sequences every approximately 200 base pairs. When cut with the same restriction enzyme, different individuals produce different-length fragments, detectable by gel electrophoresis. Used in genetic association studies and forensic identification.</p>
+
+<p><strong>VNTR (Variable Number Tandem Repeats):</strong> Hypervariable regions in which a 10 to 15 base-pair core sequence is repeated. The number and distribution of repeats varies between individuals and is inherited in Mendelian fashion. VNTRs are the basis of DNA fingerprinting.</p>
+
+<p><strong>PCR (Polymerase Chain Reaction):</strong> Developed by Kary Mullis in 1983 (Nobel Prize in Chemistry, 1993). PCR amplifies a specific DNA region millions of times from a tiny starting sample using repeated cycles of denaturation (separating strands at high temperature), annealing (allowing primers to bind to the target sequence at lower temperature), and extension (Taq polymerase synthesising new DNA at intermediate temperature). PCR is essential in forensic DNA profiling, prenatal genetic diagnosis, pathogen detection, and evolutionary studies. Modern sequencing-based approaches using PCR and microsatellites (short tandem repeats) have largely replaced Jeffreys' original RFLP fingerprinting.</p>
+
+<p><strong>CRISPR-Cas9:</strong> A genome editing tool derived from a bacterial immune defence system. Two components: the Cas9 enzyme ("molecular scissors" cutting both DNA strands at a specific location) and a guide RNA (gRNA, approximately 20 bases long, designed to direct Cas9 to the target sequence). Once Cas9 cuts, the cell's DNA repair machinery can be harnessed to insert, delete, or modify sequences. CRISPR-Cas9 is faster, cheaper, and more precise than previous genome editing techniques and has vast applications in medicine, agriculture, and basic research.</p>
+
+<h3>DNA Fingerprinting</h3>
+
+<p>DNA profiling (fingerprinting) determines an individual's unique DNA characteristics. Developed by British geneticist Alec Jeffreys in 1984 after he identified that minisatellite sequences (which do not code for genes) are repeated in patterns unique to each individual. The original procedure involved extracting and purifying DNA, cutting with restriction enzymes, separating fragments by gel electrophoresis, transferring to a nylon membrane (Southern blotting), hybridising with radioactive DNA probes, and exposing to X-ray film.</p>
+
+<p>Modern DNA fingerprinting uses PCR amplification of microsatellites (short tandem repeats, or STRs). Applications include criminal investigation, paternity testing, immigration determination, genealogical research, evolutionary studies, and species identification (DNA barcoding). Concerns include sample contamination, procedural errors, and erroneous result interpretation.</p>
+
+<h2>Population Genetics</h2>
+
+<h3>The Gene Pool and Allele Frequencies</h3>
+
+<p>A population is a group of interbreeding individuals sharing a common gene pool. The gene pool is the total set of all gene copies for all genes in the population. Allele frequency is the proportion of all alleles at a given locus that are of a particular type. Genotype frequency is the proportion of individuals with a given genotype.</p>
+
+<h3>Hardy-Weinberg Law</h3>
+
+<p>In 1908, Godfrey Hardy (English mathematician) and Wilhelm Weinberg (German obstetrician) independently derived the Hardy-Weinberg equilibrium principle: in an ideal population, allele frequencies and genotype frequencies remain constant from generation to generation. The equilibrium genotype frequencies for a locus with two alleles (frequency p for allele A and q for allele a, where p + q = 1) are: AA = p², Aa = 2pq, aa = q².</p>
+
+<p>The Hardy-Weinberg law is the cornerstone of population genetics because it provides a mathematical baseline from which to detect evolutionary change. A population in HW equilibrium is not evolving at that locus. Deviations from predicted frequencies indicate that one or more evolutionary forces are operating.</p>
+
+<p>Five conditions must all be met for HW equilibrium to hold: random mating, no mutation, no natural selection, no gene flow (migration), and a large population size (no genetic drift). These conditions define a theoretical ideal population; no real population satisfies all five simultaneously.</p>
+
+<h3>Mechanisms of Evolutionary Change (Deviations from HW)</h3>
+
+<p><strong>Mutation:</strong> The only source of new alleles in a population. Mutations are random, heritable changes in DNA sequence. Spontaneous mutations arise from DNA replication errors; induced mutations are caused by environmental mutagens (ionising radiation, UV light, certain chemicals). Point mutations may be synonymous (no amino acid change), nonsynonymous (amino acid change, potentially altering protein function), or nonsense (creating a premature stop codon). Frameshift mutations (insertions or deletions) alter the reading frame and typically abolish protein function. The human mutation rate is approximately one potentially significant new mutation per two live births. Mutations are the ultimate source of all genetic variation but occur too slowly to substantially change allele frequencies within a few generations. Together with migration and genetic drift, mutations alter gene frequencies without regard to adaptive advantage.</p>
+
+<p><strong>Natural Selection:</strong> The differential survival and reproduction of individuals with different heritable traits in response to environmental conditions. Natural selection is the only evolutionary force that consistently directs allele frequency change in adaptive directions. Three patterns:</p>
+
+<ul>
+  <li><strong>Stabilising selection:</strong> Extreme variants at both ends of the distribution are eliminated; intermediate phenotypes are favoured. The most common form of selection, it maintains the status quo. Human birth weight is a classic example.</li>
+  <li><strong>Directional selection:</strong> One extreme is favoured; the distribution shifts across generations. Industrial melanism in the peppered moth (Biston betularia) is the textbook case: before the Industrial Revolution, light-coloured moths were camouflaged on lichen-covered trees; coal pollution blackened trees and killed the lichen, making light moths easy prey for birds; dark (melanic) moths, previously rare, were now camouflaged and reproductively successful; by the 1950s, over 90% of peppered moths near industrial cities were melanic. With clean-air legislation, the light form is recovering, a case of directional selection reversing direction.</li>
+  <li><strong>Diversifying (disruptive) selection:</strong> Both extremes are favoured at the expense of intermediate forms; can theoretically drive speciation without geographic isolation.</li>
+</ul>
+
+<p><strong>Genetic Drift:</strong> Random changes in allele frequency due to chance, most significant in small populations. In a hurricane that kills 99% of a population randomly, the survivors' genotypes may not represent the original population's allele frequencies. Given enough time, drift can cause an allele to be lost or fixed (become the only allele in the population) purely by chance. The Dunkers, a small German religious sect that immigrated to Pennsylvania in 1719 with only 28 founders and maintained a small, endogamous population, show blood type frequencies that differ dramatically from both contemporary Germans and Americans, entirely attributable to genetic drift.</p>
+
+<p><strong>Founder Effect:</strong> A form of genetic drift occurring when a small subset of a large population colonises a new area. The founding population's allele frequencies, being a small and potentially unrepresentative sample, diverge from the source population. As the founding population grows, this divergence is amplified. Native Americans show nearly 100% type O blood in many populations, while their East Asian ancestors have much lower frequencies, reflecting the founder effect of the small initial colonisation of the Americas approximately 12,000 years ago. Ellis-van Creveld syndrome (dwarfism with polydactyly) is far more common among the Amish of Lancaster County than in the general population, traced to one or a few carriers among the small founding group.</p>
+
+<p>A <strong>genetic bottleneck</strong> is similar to a founder effect but involves a drastic, temporary reduction in population size followed by recovery. The reconstituted population has reduced genetic diversity compared to the pre-bottleneck population, as many alleles are lost during the reduction. Restoring diversity through mutation takes many generations.</p>
+
+<p><strong>Gene Flow (Migration):</strong> The transfer of alleles between populations through movement and interbreeding of individuals. Unlike mutation (which increases variation between populations) and drift (which differentiates populations), gene flow reduces genetic differences between populations. The degree of gene flow depends primarily on the accessibility of mates; geographically proximate populations exchange genes more freely. The gradual east-to-west gradient of blood type B frequency across Eurasia, first noted by Pompeo Candela in the 1940s, reflects gene flow associated with Mongol westward migrations between AD 500 and 1500. Studies of African American populations show European admixture rates ranging from approximately 4% in Charleston, South Carolina, to 26% in Detroit, predominantly through paternal gene flow from European males.</p>
+
+<p><strong>Non-random mating:</strong> Inbreeding (mating between related individuals) and assortative mating (mating between phenotypically similar individuals) both alter genotype frequencies without directly changing allele frequencies. Inbreeding increases homozygosity, which may expose recessive deleterious alleles. Inbreeding depression refers to the reduced fitness observed in highly inbred populations: lower fertility, smaller size, higher juvenile mortality, and increased incidence of genetic disease. European royal families who practiced close inbreeding showed high rates of haemophilia, transmitted through Queen Victoria. In positive assortative mating, similar phenotypes mate preferentially (e.g., by height, intelligence, skin colour); in negative assortative mating, dissimilar phenotypes are preferred.</p>
+
+<h3>Balanced Polymorphism and Heterozygote Advantage</h3>
+
+<p>A genetic polymorphism is balanced when natural selection maintains two or more alleles in a population at frequencies greater than 1% because heterozygotes have higher fitness than either homozygote. The sickle-cell anaemia gene (HbS) is the most thoroughly documented human example. In regions of endemic malaria, heterozygotes (HbA/HbS) have a survival advantage over both HbA/HbA homozygotes (who are highly susceptible to malaria) and HbS/HbS homozygotes (who develop severe anaemia and die young without treatment). The trade-off: AS carriers resist malaria but may pass the S allele to offspring. Frank Livingstone linked the high frequency of the sickle-cell gene in equatorial Africa to the agricultural practices of Bantu-speaking peoples who cleared forest, creating stagnant pools that bred malaria mosquitoes, thus dramatically expanding the selective advantage of the S allele.</p>
+
+<p>Other red blood cell polymorphisms show similar balanced selection in malarial environments: haemoglobin C, haemoglobin E, thalassaemias, and G6PD deficiency. Native Americans, who have never experienced malaria, show 100% normal alleles at these loci, strongly suggesting malaria was introduced to the Americas only after European contact.</p>
+
+<p>The CCR5-delta32 mutation on chromosome 3, present in 0 to 14% of European populations and absent elsewhere, provides near-complete resistance to HIV/AIDS in homozygotes and partial resistance in heterozygotes. Because AIDS is too recent to account for the spread of this allele, its elevated frequency in Europeans likely reflects historical selection by some other disease, possibly smallpox.</p>
+
+<p>Lactase persistence (continued production of the enzyme lactase after weaning) is controlled by a gene on chromosome 2. Most mammals cease lactase production after weaning, developing lactose intolerance. Lactase persistence is highest in northern European and some East African populations where dairy farming has been practised for thousands of years, and very low in populations without a dairy tradition. This represents directional selection driven by a cultural practice: lactase-persistent individuals in dairy-farming societies could exploit milk as a calorie source, giving them a reproductive advantage.</p>
+
+<h2>Genetic Screening and Counselling</h2>
+
+<h3>Genetic Screening</h3>
+
+<p>Genetic screening identifies changes in chromosomes, genes, or proteins to confirm or rule out suspected genetic conditions or assess the risk of developing or transmitting genetic disorders. Three main methods are molecular genetic tests (studying single genes or short DNA sequences for mutations), chromosomal genetic tests (analysing whole chromosomes or long DNA regions for large changes such as trisomies), and biochemical genetic tests (measuring protein amounts or activity levels to detect abnormalities reflecting DNA changes).</p>
+
+<p>Types of genetic testing include newborn screening (identifying treatable conditions at birth, e.g., phenylketonuria and congenital hypothyroidism), diagnostic testing (confirming or excluding a specific genetic condition at any age), carrier testing (identifying heterozygotes for recessive disorders who are personally unaffected), prenatal testing (detecting chromosomal and genetic changes before birth, using amniocentesis or chorionic villus sampling, CVS), preimplantation genetic diagnosis (screening embryos from in vitro fertilisation before implantation), and predictive or presymptomatic testing (identifying mutations predisposing to late-onset conditions such as Huntington's disease, hereditary cancers, or haemochromatosis).</p>
+
+<h3>Genetic Counselling</h3>
+
+<p>The term was coined by Sheldon Reed in 1947. Genetic counselling is the process of helping individuals and families understand and adapt to the medical, psychological, and familial implications of genetic contributions to disease. It involves collecting and interpreting family and medical history, risk assessment, education about genetic testing options and their implications, informed consent, and psychosocial assessment and support.</p>
+
+<p>The process includes evaluating family history and medical records, ordering appropriate genetic tests, interpreting results, helping individuals and families reach informed decisions about reproductive, medical, and life choices, reducing anxiety, identifying psychosocial support needs, and increasing understanding of inheritance patterns, recurrence risks, and disease management options.</p>
+
+<p>Genetic counselling is especially recommended when standard prenatal screening reveals abnormal results, when either parent or a close relative has a known or suspected inherited condition, after recurrent miscarriages or infant deaths, when the mother will be 35 or older at delivery, and when either parent has had significant exposure to radiation, teratogenic medications, or infectious agents.</p>
+
+<h2>Lethal Genes and Genetic Load</h2>
+
+<h3>Lethal Genes</h3>
+
+<p>Many genes are essential for survival. Alleles that render such genes non-functional may be lethal. <strong>Recessive lethal alleles</strong> are fatal only in the homozygous condition; heterozygotes may be normal or show mild effects. Examples: brachydactyly (short fingers in heterozygotes; lethal skeletal defects in homozygotes), sickle-cell anaemia (lethal in SS homozygotes without treatment), Tay-Sachs disease (fatal by age 4 in homozygotes), cystic fibrosis (fatal by approximately age 30 in homozygotes), congenital ichthyosis.</p>
+
+<p><strong>Dominant lethal alleles</strong> are fatal even in one copy. They are rarely maintained in populations because affected individuals die before reproducing. Exception: Huntington's disease, a dominant neurodegenerative disorder that does not manifest until 40 to 50 years of age (after most people have already reproduced), allowing the allele to persist in the gene pool for generations. <strong>Conditional lethal alleles</strong> are fatal only under specific environmental conditions (e.g., favism, in which a G6PD-deficient individual who eats fava beans or takes sulfa drugs develops haemolytic anaemia). <strong>Gametic lethal alleles</strong> render gametes incapable of fertilisation (meiotic drive).</p>
+
+<h3>Genetic Load</h3>
+
+<p>Genetic load (defined by J.F. Crow) is the proportion by which the fitness of the average genotype in a population is reduced relative to the best genotype. Types of genetic load include: incompatibility load (when certain genotypes cannot survive in the environment of specific other genotypes, e.g., Rh incompatibility causing erythroblastosis foetalis), mutational load (load due to deleterious mutations, e.g., haemophilia A from spontaneous mutation of the factor VIII gene on the X chromosome), segregation load (from breaking down of favourable gene correlations and linkages), inbreeding load (increased homozygosity from consanguineous mating increasing expression of deleterious recessives), and migrational load (from matings between individuals adapted to different environments producing less fit offspring).</p>
+
+<p>Contrary to early intuition, some genetic load may be necessary for population health: it causes thinning of phenotypically weak individuals, maintaining population size within the carrying capacity of the environment. Social factors (poverty, lack of sanitation, endogamy) can intensify genetic load by concentrating deleterious alleles in subpopulations.</p>
+
+<h2>Genomic Imprinting</h2>
+
+<p>Genomic imprinting is the epigenetic phenomenon by which a gene's expression depends on which parent contributed the allele, not just which allele is present. Only one of the two parental copies is active in cells: some genes are expressed only when inherited from the father (paternally active), others only when inherited from the mother (maternally active).</p>
+
+<p>Imprinting is achieved through DNA methylation: methyl groups are attached to specific DNA segments during gamete formation, silencing the imprinted allele. Imprinted genes tend to cluster on chromosomes 11 (short arm) and 15 (long arm) in humans.</p>
+
+<p>Imprinting disorders arise when both copies of a chromosome segment are inherited from the same parent (uniparental disomy, UPD) or when the imprinting pattern itself is disrupted. <strong>Prader-Willi syndrome</strong> (characterised by hypotonia, obesity, hypogonadism, and mild intellectual disability) results from loss of paternally active genes on chromosome 15q. <strong>Angelman syndrome</strong> (characterised by epilepsy, tremors, severely impaired speech, and a perpetually happy demeanour) results from loss of maternally active genes in the same chromosome 15q region. The same deletion produces different diseases depending on its parental origin, demonstrating the biological significance of imprinting. <strong>Beckwith-Wiedemann syndrome</strong> (accelerated growth, macroglossia, risk of embryonal tumours) is associated with abnormalities of imprinted genes on chromosome 11p.</p>
+
+<p>The conflict theory of imprinting (Haig, 1992) proposes that genomic imprinting evolved in mammals due to a conflict of evolutionary interest between maternal and paternal genomes. Paternal genes benefit maximally from the growth of the current offspring; maternal genes must balance current against future offspring and thus favour restraining nutrient allocation to the current foetus. Paternally expressed genes (e.g., IGF2) tend to promote foetal growth; maternally expressed genes (e.g., IGF2R) tend to restrain it. Alternative theories propose that imprinting evolved to prevent parthenogenesis (development from unfertilised eggs) in mammals, since viable parthenogenetic offspring are impossible when some essential genes require paternal contribution.</p>
+`,
 };
 
 
