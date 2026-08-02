@@ -4705,8 +4705,403 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Marxian view:</strong> History of society is history of struggle between classes. Replacement of one mode of production by another is involved in a revolution. Althusser believed revolution would occur at the "weak link in the chain of capitalism" where social contradictions are most prominent. Fukuyama: democracy and economic capitalism constitute the true final revolution (<em>End of History</em>). Theda Skocpol: revolutions occur when state capacity weakens (Russian, French, Chinese revolutions).</p>
 `,
-  'systems-of-kinship': '',
-  'social-change-modern-society': '',
+  'systems-of-kinship': `
+<h2>What is Kinship?</h2>
+
+<p>Kinship refers to ties that are socially recognised, majorly originating from biological relationships. It is the trait of persons recognised by the relationship — either through blood (consanguinity) or marriage (affinity). Kinship plays a crucial role in the formation and maintenance of social structure and social system. Critically, social recognition is more important than biological fact: even when the biological fact is absent, social relations can exist (adopted children); and even when biological fact is present but not socially recognised, a child is called illegitimate.</p>
+
+<p>Kinship relations are classified along generational lines:</p>
+<ul>
+  <li><strong>Primary Lineals</strong> — Father-Son (direct one-generation link)</li>
+  <li><strong>Secondary Lineals</strong> — Grandfather-Grandson (two-generation link)</li>
+  <li><strong>Tertiary Lineals</strong> — Great Grandfather-Great Grandson</li>
+</ul>
+
+<h2>Family: Definitions and Types</h2>
+
+<p><strong>G.P. Murdoch</strong> defines the family as a group in which both relations of affinity and consanguinity (or adoption) are found. He studied 250 societies and argued the elementary family is found universally, with four defining characteristics: common residence; economic coordination; reproduction with socially approved sexual relations between adults of both sexes; and socialising children born to or adopted by the adults.</p>
+
+<p><strong>Exception to Murdoch's universality claim (Colliers, 1997):</strong> The Na of China have no fixed co-resident husband-wife pair — men visit women's households at night and have no domestic role. Zambian families in Africa also deviate significantly. Murdoch's family is therefore not truly universal.</p>
+
+<p><strong>Anthony Giddens</strong> offers a simplified definition: a family is a group of persons directly linked by kin connections, adult members of which assume responsibility for caring for children. He emphasises commitment over traditional structural features, and argues that in contemporary society "forever love" has transformed into "love till further notice" — what he calls "plastic love."</p>
+
+<h3>Types of Family</h3>
+<table>
+  <tr><th>Type</th><th>Description</th></tr>
+  <tr><td><strong>Conjugal / Companionate</strong></td><td>Deliberately avoid having children — also called DINK (Double Income No Kids)</td></tr>
+  <tr><td><strong>Nuclear</strong></td><td>Children born out of monogamous families; the standard modern form</td></tr>
+  <tr><td><strong>Compound</strong></td><td>Children born from polygamous families</td></tr>
+  <tr><td><strong>Lineally Extended</strong></td><td>Three or more generations under one roof</td></tr>
+  <tr><td><strong>Laterally Extended</strong></td><td>Two or more couples of the same generation</td></tr>
+  <tr><td><strong>Extended Joint (Henry Maine)</strong></td><td>Property held jointly; the classic Indian joint family</td></tr>
+  <tr><td><strong>Reconstituted</strong></td><td>Spouses live with children of both previous and current marriages</td></tr>
+  <tr><td><strong>Single-Parent (Rapaport)</strong></td><td>One adult cares for children alone</td></tr>
+  <tr><td><strong>Dual-Career (Mowrer)</strong></td><td>Both partners work full-time outside the home</td></tr>
+  <tr><td><strong>Homosexual Parents' Family</strong></td><td>Same-sex parents raising children</td></tr>
+  <tr><td><strong>Commune Living</strong></td><td>Groups of unrelated people sharing resources and child-rearing</td></tr>
+</table>
+
+<p>Families can also be classified by: descent (patrilineal, matrilineal, bilateral — e.g. Nairs of Malabar and Khasis of Meghalaya are matrilineal); residence (matrilocal, patrilocal, neolocal, duolocal, avunculocal); authority (patriarchy, matriarchy, filiocentric); and name (patronymic, metronymic).</p>
+
+<h2>Functions of Family</h2>
+
+<p><strong>Murdoch (Social Structure)</strong> identifies four functions: economic, reproduction control, regulating sexual relations, and socialising children.</p>
+
+<p><strong>Talcott Parsons</strong> identifies two basic functions that no other institution can replace: primary socialisation of children and stabilisation of adult personality. He argues that industrialisation led to the nucleation of the family because: specialised skills are now required; tasks are less labour-intensive; geographical and social mobility is high; universalistic values conflict with the particularistic values of extended family networks.</p>
+
+<p><strong>Ronald Fletcher</strong> describes the multifunctional family in which basic functions persist but other functions are being reinvented rather than simply lost.</p>
+
+<p><strong>Functions for the individual:</strong> physical, emotional, psychological, and economic security; legitimate means of sexual gratification; entertainment; readymade status; and initial socialisation.</p>
+
+<p><strong>Functions for society:</strong> reproduction (providing members); cultural transmission; mechanism of social control; unit of economic production.</p>
+
+<h3>Critiques and Dysfunctions of Family</h3>
+<ul>
+  <li><strong>Marx / David Cooper (<em>Death of Family</em>)</strong> — Family assures conformity, making individuals submit to exploitation. Family is an ideological conditioning device in an exploitative society.</li>
+  <li><strong>R.D. Laing (<em>Politics of Family</em>)</strong> — Studies schizophrenic children and concludes the disorder is caused by the excessive expectations of parents.</li>
+  <li><strong>Edmund Leach (<em>A Runaway World</em>)</strong> — Family members expect too much of each other, producing emotional stress and conflict.</li>
+  <li><strong>Feminist critique</strong> — Family legitimises the exploitation of women: household work goes unnoticed; family legitimises sexual abuse and domestic violence. Murray Strauss: "Marriage provides a hitting licence."</li>
+  <li><strong>Jordan Peterson</strong> — Families can fail to prepare children for the harsh realities of the world, making them vulnerable to bullying.</li>
+</ul>
+
+<h2>Family in India</h2>
+
+<p><strong>Indological View:</strong> David Mandelbaum considers the joint family one of three distinguishing characteristics of Indian society (alongside the caste system and the village). Henry Maine and O. Mailey studied the traditional Indian joint family and termed it patriarchal. Irawati Karve noted the prevalence of the idea of one roof, one kitchen, one property, one deity — while acknowledging differences across Dravidian, tribal, lower-caste, and non-Hindu families.</p>
+
+<p><strong>AM Shah's Household Dimension:</strong> Shah argued that the proper unit of study should be the household, assessed along four dimensions: commensal (eating together), co-resident (living together), coparcenary (sharing property), and co-ritual (sharing religious practices). His field studies found two types: simple and compound.</p>
+
+<p><strong>Pauline Kolenda:</strong> Nuclear family is becoming more prevalent, but average household size is increasing due to declining death rates and greater longevity. Households have lifecycles: fission → fusion → fission. Stem family exists (parents reside with one married child). Rural household size is larger than urban; regional differences persist — North India has larger joint families than South India.</p>
+
+<p>IP Desai (studying Mahua, Gujarat) and KM Kapadia found half of families are still joint. RP Mukherjee concluded Indian families are still functionally joint. Shah, Kolenda and others broke the myth of joint family disintegration in India.</p>
+
+<p><strong>Contemporary trends in India:</strong> Marriage still an important milestone; caste is still active but class is becoming more important; live-in relationships increasing in urban areas; divorce rate rising; joint family has retained sentimental value; girl's choice is increasingly considered; elderly confined to rituals; rise of filiocentric families and the "six-pocket syndrome" (grandparents and parents lavishing resources on a single child).</p>
+
+<h2>Marriage</h2>
+
+<p>Marriage is the social institution that gives sexuality social recognition — the institutionalising of sexual relations into a framework of rights and obligations. A minimal sociological definition: a social arrangement in which individuals and groups acquire certain rights over each other — kinship rights (sexual rights, generician) and domestic rights (household cooperation).</p>
+
+<h3>Types of Marriage</h3>
+<table>
+  <tr><th>Type</th><th>Description</th><th>Notes</th></tr>
+  <tr><td><strong>Classical Monogamy</strong></td><td>Marriage is sacred; the bond is not dissolved; women have no right to divorce or remarry</td><td>Traditional Hindu and Catholic contexts</td></tr>
+  <tr><td><strong>Serial Monogamy</strong></td><td>Marriage as a contract; remarriage possible but only one spouse at a time</td><td>Dominant form in modern Western societies</td></tr>
+  <tr><td><strong>Polygyny</strong></td><td>One man, multiple wives; rights shared by women; more prevalent; outcome of patriarchy</td><td>Allowed in Islam (up to 4 wives)</td></tr>
+  <tr><td><strong>Polyandry</strong></td><td>One woman, multiple husbands; fraternal polyandry — co-husbands are brothers (e.g. Pandavas)</td><td>Re-emerging in Punjab, Haryana, UP due to shortage of women</td></tr>
+  <tr><td><strong>Levirate</strong></td><td>Upon death of husband, woman marries husband's younger brother</td><td>Common in several communities</td></tr>
+  <tr><td><strong>Sororate</strong></td><td>Upon death of wife, man marries wife's younger sister</td><td>e.g. Mopola Muslims</td></tr>
+  <tr><td><strong>Cross-Cousin Marriage</strong></td><td>Marriage between children of mother's brother or father's sister</td><td>Common in South India; prohibited in North India among Hindus</td></tr>
+  <tr><td><strong>Parallel-Cousin Marriage</strong></td><td>Marriage between children of mother's sister or father's brother</td><td>Prohibited in Hinduism; allowed in Islam</td></tr>
+</table>
+
+<h3>Functions of Marriage</h3>
+<ul>
+  <li>Biological — regulates sexual urges</li>
+  <li>Social — provides framework for procreation</li>
+  <li>Cultural — transmits values across generations</li>
+  <li>Economic — governs inheritance</li>
+  <li>Psychological — provides emotional expression and bonding</li>
+  <li>In India: marriage is also a Dharma — a moral and religious duty</li>
+</ul>
+
+<h2>Lineage and Descent</h2>
+
+<p><strong>Descent</strong> is the principle whereby a child is socially affiliated with the group of his or her parents. <strong>Lineage</strong> refers to a kin group in which members have a common ancestor whose identity is known — it is the principle upon which inheritance is based. Family is the smallest descent group compared to lineage.</p>
+
+<h3>Types of Descent</h3>
+
+<p><strong>Unilineal Descent (one line recognised):</strong></p>
+<ul>
+  <li><strong>Patrilineal Descent</strong> — male line (most prevalent worldwide)</li>
+  <li><strong>Matrilineal Descent</strong> — female line (Nayars of Kerala, Khasis of Meghalaya)</li>
+</ul>
+
+<p><strong>Why patrilineal descent is more prevalent (Robin Fox):</strong> Every kin group must fulfil four conditions: men are needed to impregnate women; women are needed to bear and rear children; enough men are needed for food and property management when women are pregnant; incest must be avoided. The patrilineal system is the easier solution — own group's women are sent out; other group's women are received for mating and kept subordinate so as not to threaten group unity. Patriliny and patriarchy thus went hand in hand historically.</p>
+
+<p><strong>The Matrilineal Puzzle:</strong> In matrilineal systems, own group's males are sent out; other group's males are received. Since incoming (affinal) men have lesser group unity, problems arise during childbearing and rearing. Solutions: the Na of China and the Nayars of Kerala practise "visiting husbands" — the biological father has no social role; the mother's brother (maternal uncle) acquires a crucial role in child-rearing and inheritance.</p>
+
+<p><strong>Other Descent Types:</strong></p>
+<ul>
+  <li><strong>Bilateral Descent</strong> — both sides recognised equally and symmetrically; rising with birth control, reduced muscular labour requirements, and technology equalising men and women's work</li>
+  <li><strong>Double Unilineal Descent</strong> — both sides recognised but unequally; one line governs movable property, the other immovable property (Yako of Nigeria)</li>
+  <li><strong>Ambilineal Descent</strong> — individual can choose which line to affiliate with (Samoa — Margaret Mead's study)</li>
+  <li><strong>Parallel Descent</strong> — sons inherit from father, daughters from mother (Saha tribe)</li>
+</ul>
+
+<h3>Descent Groups</h3>
+<ul>
+  <li><strong>Agnates</strong> — kin connected from father's side; form Patrilineal Descent Groups</li>
+  <li><strong>Uterines</strong> — kin connected from mother's side; form Matrilineal Descent Groups</li>
+  <li><strong>Clans</strong> — unilineal descent groups subdivided into lineages; exogamous (one cannot marry within one's clan since the clan traces descent from a common ancestor)</li>
+  <li><strong>Lineages</strong> — subgroups within clans tracing descent from a known real ancestor; help determine claims over immovable property and subcaste identity</li>
+  <li><strong>Kindred</strong> — bilateral kin groups; rising in modern industrial societies</li>
+</ul>
+
+<h3>Functions of Descent Groups (in simple societies)</h3>
+<ul>
+  <li>Marriage regulation — rules of exogamy govern who may marry whom</li>
+  <li>Economic cooperation — loans, land held in common</li>
+  <li>Agricultural cooperation during sowing and harvesting</li>
+  <li>Religious practices — clan deities (Kul devatas); solidarity during death</li>
+  <li>Political cohesion and dispute resolution by lineage heads (panchayats)</li>
+  <li>Legacy — good name commanded by the group</li>
+</ul>
+
+<p>In modern industrial societies, descent groups are giving way to kindred groups, which remain active in celebrations, mourning, loans, babysitting, and providing networks for business and job opportunities.</p>
+
+<h2>Patriarchy and Sexual Division of Labour</h2>
+
+<p>Patriarchy refers to the condition in which men achieve and maintain social, cultural, and economic dominance over women — both within and outside the family. The term was introduced by Weber (originally meaning rule by the father or male head), but now means authority and dominance of males over various aspects of existence in both public and private spheres. The <strong>Sexual Division of Labour (SDOL)</strong> is the segregation of work based on gender, where men are mostly given public roles and women are mostly given private (domestic) roles.</p>
+
+<h3>Theories Explaining SDOL</h3>
+
+<p><strong>Sociobiological (Biological):</strong> Men have stronger spacio-visual skills; women have developed linguistic skills — different brains produce different talents. Critique: no conclusive evidence exists for this claim.</p>
+
+<p><strong>Sociobiological (Evolutionary — Robin Fox):</strong> SDOL is the result of millions of years of adaptation. Men: hunters; women: childbearing and rearing. Differences in body types mean men are more suited for outside, muscular tasks.</p>
+
+<p><strong>Functional (Murdoch):</strong> SDOL is the most convenient way of organising tasks (based on study of 250 societies). Parsons: women are more expressive and do adult personality stabilisation. Delinquency studies: delinquency results from lack of motherly support.</p>
+
+<p><strong>Feminist Critique:</strong></p>
+<ul>
+  <li><strong>Jessie Bernard</strong> — criticises Parsons: the family serves male personality stabilisation, not gender-neutral adult personality stabilisation</li>
+  <li><strong>Ann Oakley</strong> — criticises Murdoch: incorrect to say women are unsuitable for public tasks (India: construction site workers are mainly women; Pygmies: no post-natal dependence on men; Israel: large participation of women in the army). SDOL is socially created.</li>
+  <li><strong>Margaret Mead (<em>Sex and Temperament in Three Primitive Societies</em>)</strong> — Study on tribes of Papua New Guinea found both men and women doing equally stern tasks with similar personalities, sometimes with home-loving men — a society exactly opposite to the West, proving SDOL is culturally variable. Critique (Deborah Gewertz, 1981): found evidence men dominated women, controlled their produce, and made all important political decisions. Mead used subjective descriptions.</li>
+  <li><strong>Shulamith Firestone (<em>Dialectics of Sex</em>)</strong> — Sexual inequality is the most fundamental inequality; criticises Marx for overlooking it. Because of SDOL, women are confined to the domestic sphere where their work is not valued (it doesn't fetch profits). Even when women work outside, they still work at home — double exploitation. The labour market has two segments: primary (high income, promotions, prestige — dominated by men) and secondary (low income, unstable, part-time, low status — confined to women). Firestone argued technology could eventually free women from biological reproduction.</li>
+</ul>
+
+<h3>Sylvia Walby: Theorising Patriarchy</h3>
+<p>Six structures of patriarchy:</p>
+<ul>
+  <li>Different emoluments — women receive lower wages for equivalent work (public patriarchy)</li>
+  <li>Beauty ideals defined from the male point of view, even inflicting painful procedures on women</li>
+  <li>Male control over female sexuality — virginity and chastity as female virtues</li>
+  <li>Women as primary source of domestic labour — unpaid and unrecognised</li>
+  <li>Violence: private, public, workplace, mental, and physical</li>
+</ul>
+
+<h3>Indian Legal Milestones</h3>
+<ul>
+  <li>1937 — widows gained the right to seek claim in husband's property</li>
+  <li>1956 — daughters became equal co-heirs with sons (but daughters had to seek the right; sons were natural heirs)</li>
+  <li>2006 — both daughters and sons are natural heirs of property</li>
+</ul>
+<p>Strong filial ties often prevent women from dragging brothers to court despite the legal equality. Key dimensions of contemporary patriarchy: private vs. public sphere distinction; paid vs. unpaid (domestic) work; unequal salaries for the same work; gender-typing of jobs (pink-collar work); glass ceilings for women contrasted with glass elevators for men (Karuna Ahmad).</p>
+
+<h2>Contemporary Trends in Kinship</h2>
+<ul>
+  <li>Diversity in family forms is growing — no single dominant model</li>
+  <li>Marriage is losing appeal; rising divorces and separations; sanctity of marriage declining; law has made divorce easier; stigma of divorce vanishing</li>
+  <li>Giddens: "forever love" changing into "love till further notice" — plastic love</li>
+  <li>Colin Bell: modified or dispersed extended family — common residence may not exist but kinship ties are maintained via internet, telephone, and air travel (frequency less but quality more)</li>
+  <li>William Goode: achieved status and individualism are rising, working against familial norms and conventional role bargains</li>
+  <li>Bade Thorne: "cereal packet image" problem — the monolithic image of the ideal family obscures the reality of a plurality of family forms</li>
+  <li>Elizabeth Roberts and Wilmott and Young: industrialisation actually led to growth of the extended family through shared childcare and mutual help — a direct counter to Parsons</li>
+  <li>Shah and Kolenda demolished the myth of joint family disintegration in India</li>
+</ul>
+`,
+  'social-change-modern-society': `
+<h2>What is Social Change?</h2>
+
+<p>Social change is a universal phenomenon — every society changes, though not at the same pace or in the same direction. Social change refers to change in social structure, social functions, and social relationships. It can be analysed across multiple dimensions: within family, religion, gender, political institutions, and the economy. Sociology itself is a child of social change — it emerged to make sense of the dramatic transformations of the Industrial Revolution and Enlightenment.</p>
+
+<blockquote>"The history of all hitherto existing society is the history of class struggles." — Marx and Engels, The Communist Manifesto</blockquote>
+
+<p><strong>Causes of Social Change:</strong> Economic and technological factors (Marx, Ogburn); cultural and ideational factors (Weber, Sorokin); demographic factors (Malthus, Durkheim); conflict (Marx); diffusion of ideas and technology across societies; environmental and ecological factors; wars and external shocks; social movements and collective action.</p>
+
+<h2>Sociological Theories of Social Change</h2>
+
+<h3>A. Evolutionary and Linear Theories</h3>
+
+<p>Evolutionary theories hold that society evolves in a single, progressive, universal direction — from simple to complex, from lower to higher forms. They were the dominant framework in 19th-century sociology.</p>
+
+<table>
+  <tr><th>Thinker</th><th>Stages of Evolution</th><th>Key Text</th></tr>
+  <tr><td><strong>August Comte</strong></td><td>Theological → Metaphysical → Positive (Scientific)</td><td><em>Positive Philosophy</em></td></tr>
+  <tr><td><strong>Edward Tylor</strong></td><td>Savagery → Barbarism → Civilisation</td><td><em>Primitive Culture</em></td></tr>
+  <tr><td><strong>L.H. Morgan</strong></td><td>Seven technological stages from savagery to civilisation</td><td><em>Ancient Society</em></td></tr>
+  <tr><td><strong>Herbert Spencer</strong></td><td>Simple Society → Compound → Doubly Compound → Trebly Compound</td><td><em>Principles of Sociology</em></td></tr>
+  <tr><td><strong>Emile Durkheim</strong></td><td>Mechanical Solidarity → Organic Solidarity</td><td><em>Division of Labour in Society</em></td></tr>
+  <tr><td><strong>Karl Marx</strong></td><td>Primitive Communism → Ancient Slavery → Feudalism → Capitalism → Communism</td><td><em>Capital; German Ideology</em></td></tr>
+  <tr><td><strong>Hobhouse</strong></td><td>Pre-literate → Proto-science (ancient East) → Stage of reflection (5th cent BC, China and India) → Critical and systematic thought (Greece) → Modern scientific thought (16th century onward)</td><td></td></tr>
+</table>
+
+<p><strong>Herbert Spencer's organismic analogy:</strong> Adopted Darwinian evolution for society — progressive increase in size, followed by increase in differentiation and integration. The higher the differentiation and integration, the higher the evolutionary stage. Applied social Darwinism — "survival of the fittest" — to societies. These theories considered Europe the most advanced civilisation, an assumption that collapsed after Europe fought the most savage wars of history in WW1 and WW2.</p>
+
+<p><strong>Critique of Unilinear Evolutionary Theories:</strong></p>
+<ul>
+  <li>Value bias — ethnocentrism; Eurocentrism</li>
+  <li>Armchair theorisation — based on secondhand data, not fieldwork</li>
+  <li>Macro theories with no consideration of cultural variations</li>
+  <li>Cannot explain the decline of societies</li>
+  <li>Ignores external factors of change</li>
+  <li>Stages of evolution are not fixed in reality — leapfrogging is possible</li>
+  <li>There can be no final stage; evolutionary schemes are always value-laden</li>
+  <li>May explain long-term trends but not change on a smaller scale</li>
+</ul>
+
+<h3>B. Neo-Evolutionary Theories</h3>
+
+<p>Neo-evolutionary theories emerged to overcome the limitations of classical evolutionism — avoiding value judgements, acknowledging multilinearity, and providing empirical grounding.</p>
+
+<p><strong>Talcott Parsons:</strong> Based on the biological theory of evolution; the key process is adaptive upgrading — increasing capacity for adaptation. Two basic processes drive evolution: differentiation (society becomes more complex with specialised structures) and integration (new mechanisms emerge to coordinate differentiated parts). Five stages based on differentiation and integration (PAHSM): Primitive societies (Australian aborigines); Archaic societies (Mesopotamia, Egyptian empires); Historical societies (China, India); Seed-bed societies (Israel, Greece); Modern societies (US, USSR, Europe, Japan).</p>
+
+<p><strong>Gordon Childe:</strong> Model based on the development of material culture, supported by archaeological evidence.</p>
+
+<p><strong>Leslie White (Energy Theory of Change):</strong> The amount of energy harnessed is an index of the level of social development. Energy is both the cause and the effect of the process of social transformation.</p>
+
+<p><strong>Lenski and Lenski:</strong> Some changes are cyclic and unpatterned, but an evolutionary process of cumulative change is the predominant pattern. Cumulative changes happen through innovation (new variations emerge) and selection (which variation survives). These processes occur at two levels: individual society and world system. They portray the course of evolution as progressive — moving toward greater freedom, justice, equality, and happiness.</p>
+
+<h3>C. Cyclical Theories</h3>
+
+<p>Cyclical theories hold that societies revolve in cycles rather than progressing in a straight line. Change is repetitive — societies rise, peak, decline, and fall, then the cycle begins again.</p>
+
+<p><strong>Oswald Spengler (<em>The Decline of the West</em>):</strong> Every civilisation follows an organic cycle — birth, growth, decay, death — which is inevitable. Cited the Roman civilisation as the model; his theory closely resembles the ancient Hindu theory of Yugas.</p>
+
+<p><strong>Vilfredo Pareto:</strong> Focus on political changes, particularly elites. History is the circulation of elites. Elites are two types — Lions (conservative, use force) and Foxes (manipulative, use cunning) — who keep circulating, each replacing the other when they fail.</p>
+
+<p><strong>Pitirim Sorokin (Very systematic cyclical theory):</strong> Classified cultures into three distinct types based on their mode of perceiving reality:</p>
+<ul>
+  <li><strong>Ideational culture</strong> — places importance on spiritualism and mysticism; reality is perceived through spiritual insight</li>
+  <li><strong>Sensate culture</strong> — places importance on science and the senses; reality is perceived through empirical observation</li>
+  <li><strong>Idealist culture</strong> — an ideal combination of the above two</li>
+</ul>
+<p>These three types succeed one another in cycles. Two key principles: the main thrust for change comes from within the system itself, and there is a definite limit to change in any given direction — once a culture reaches its limit, it reverses direction.</p>
+
+<h3>D. Conflict Theory of Social Change (Marx)</h3>
+
+<p>For Marx, class struggle is the motor of social change. Five stages of historical materialism correspond to five modes of production: Primitive Communism → Ancient Slavery → Feudalism → Capitalism → Communism. Each transition is driven by the contradiction between the forces of production (technology, labour power) and the relations of production (who owns what). When these contradictions reach a critical point, conflict erupts and the old order is overthrown. Economic determinism: the material base (economic structure) determines the superstructure (politics, law, religion, culture).</p>
+
+<p>Weber agreed that conflict can be productive and drives change, but rejected economic determinism. For Weber, cultural forces (particularly religious ideas like the Protestant ethic) can independently drive social change — the spirit of capitalism was born not from economics but from Calvinist theology.</p>
+
+<h3>E. Diffusionist Theory</h3>
+
+<p>Developed by Robert Redfield, M. Singer, and McKim Marriott. The source of change is outside the society — change begins through cultural contact. Cultural contact can lead to: assimilation (America — the melting pot); acculturation (India — Westernisation); or rejection (many tribal communities). Diffusionism challenges the evolutionary assumption that every society must discover things independently — most cultural traits spread through contact, not independent invention.</p>
+
+<h3>F. Mal-Integration Theory</h3>
+
+<p>Associated with Neil Smelser and R.K. Merton. Over time, dysfunctions and incompatibilities accumulate within the social system, causing structural strain. This structural strain produces collective mobilisation and social movements, which eventually produce social change. This theory bridges structural functionalism and conflict theory.</p>
+
+<h3>G. Cultural Lag Theory (Ogburn and Nimkoff)</h3>
+
+<p>Culture is divided into two parts: material culture (technology and other material goods) and non-material culture (values, beliefs, religion, family, education — also called "adaptive culture"). Non-material culture changes more slowly than material culture. The gap between them — cultural lag — produces social problems. Example: reproductive technology has advanced faster than social norms around surrogacy and parenthood.</p>
+
+<p>Critique by Y. Singh: this theory is not applicable in India because of the non-existence of indigenous material culture like technology — India absorbed Western technology rather than developing it domestically, creating a different kind of lag.</p>
+
+<h3>H. Modernisation Theory</h3>
+
+<p>Associated with Daniel Lerner, Marion Levy, Wilbert Moore, and David McClelland. Modernisation theory holds that certain broad patterns emerge as societies modernise — regardless of starting point: agriculture gives way to industry; traditional healthcare is replaced by Western medicine; primitive agriculture is replaced by technical agriculture; family transitions from extended to nuclear. The pattern is universal and unilinear.</p>
+
+<p>Critique: Broad patterns are not visible in Afro-Asian nations. Most Middle Eastern nations have industrialised without becoming democratic. The theory is culturally biased toward Western models of development.</p>
+
+<h3>I. Convergence Theory</h3>
+
+<p>Associated with Clark Kerr, Dunlop, and Harbison. Because of similar stimuli — science and technology, industrialisation, secularism, modern education — modernising societies acquire uniform features. They tend to converge on similar lines irrespective of their starting points: communist societies eventually come to resemble capitalist ones and vice versa as they industrialise.</p>
+
+<p>Critique (shared with modernisation theory): too simplistic; Western bias (value-loaded); ignores the persistence of cultural diversity.</p>
+
+<h3>J. World Systems Theory (Immanuel Wallerstein)</h3>
+
+<p>Wallerstein explains social change from a global and historical perspective. He categorises economies into: Core (developed countries — high-end technology and manufacturing); Semi-Periphery (middle-income countries that serve as buffers); Periphery (underdeveloped countries — suppliers of raw materials and cheap labour). The modern world system (post-WW2) is neo-imperialist in nature. Core countries develop high-end products that keep periphery countries dependent. This is perpetuated by MNCs, the IMF, the World Bank, and by elites living in periphery countries who benefit from the arrangement.</p>
+
+<h3>K. Dependency Theory</h3>
+
+<p>Developed in the late 1950s under the guidance of Raul Prebisch of the UN Economic Commission for Latin America. Prebisch's observation: economic growth in advanced industrialised countries did not lead to growth in poorer countries — instead it often produced serious economic problems there. His explanation: poor countries export primary commodities; rich countries manufacture products from those commodities and sell them back at higher prices. The value added by manufacturing always exceeds the value of primary inputs — so poorer countries can never earn enough from exports to pay for imports.</p>
+
+<p><strong>Andre Gunder Frank:</strong> Underdevelopment is not a transitional stage but a permanent condition produced by the relationship between centre and periphery — the "development of underdevelopment." The capitalist system enforces a rigid international division of labour. Dependent states supply cheap minerals, agricultural commodities, and labour, and serve as repositories for surplus capital and obsolescent technologies.</p>
+
+<p><strong>Samir Amin:</strong> Distinguished between auto-centric (self-generating) accumulation in the core and extraverted accumulation in the periphery. The periphery suffers three distortions: a bias toward export activities absorbing major capital; a bias toward tertiary activities; and a bias toward light industrial branches. His solution: peripheral countries must "delink" from the global system — compelling it to adjust to their needs rather than unilaterally adjusting to the core's needs.</p>
+
+<p><strong>Lenin (<em>Imperialism: The Highest Stage of Capitalism</em>):</strong> Imperialism is moribund capitalism — it results in exploitation of colonial peoples; produces war between nations through competition for markets and territories; and ultimately brings about the end of capitalism itself through the arming of workers in national wars that become class wars.</p>
+
+<p><strong>Core propositions of dependency theory:</strong> Underdevelopment is fundamentally different from un-development (unused resources). Poorer countries are not "behind" — they were coercively integrated into the European economic system as producers of raw materials, denied the opportunity to develop independently. Dependency is maintained not just by powerful states but also by elites within dependent states whose private interests coincide with those of dominant states.</p>
+
+<p><strong>Critique of dependency theories:</strong> Few empirical examples; newly industrialised countries of South-East Asia do not fit the core-periphery model. The categories "developed" and "underdeveloped" are overly homogenising — India, Brazil, and Mexico are very different from each other. Ties with MNCs can serve as means of technology transfer. The theories do not reflect changed contemporary conditions (rich nations are now closing borders to trade). There is an inability to think beyond the state as primary agent of development.</p>
+
+<h2>Education and Social Change</h2>
+
+<p>Education helps in changing the basic outlook of a person towards society. It changes established patterns of social relationships, attitudes, and values — and through these, the structure of society itself.</p>
+
+<h3>Objectives of Education</h3>
+<ul>
+  <li>Pursuit of self-knowledge and knowledge of the universe</li>
+  <li>Building bridges between past and future</li>
+  <li>Accelerating human progress; developing critical thinking and tolerance for diverse ideas</li>
+  <li>Integral growth of personality — intelligence, skill, creativity</li>
+  <li>Development of both the individual and society; generating harmony and peace</li>
+  <li>Creating favourable attitudes to skill acquisition and upgradation</li>
+  <li>Bringing change in gender equality</li>
+</ul>
+
+<h3>Sociological Perspectives on Education</h3>
+
+<p><strong>Functionalist view:</strong> Education serves several functions for society — socialisation (Durkheim: "schools are socialization agencies that teach children how to get along with others and prepare them for adult economic roles"); social integration; social placement (upward mobility); cultural innovation. Latent functions include childcare, peer relationship formation, and keeping school-age youth out of the full-time labour force.</p>
+
+<p><strong>Conflict view (Bourdieu, Gramsci, Althusser):</strong> Education promotes social inequality through the use of tracking, standardised testing, and the "hidden curriculum" — a set of values and beliefs that support the status quo and the existing social hierarchy. Pierre Bourdieu: like economic capital, cultural capital (cultural taste, knowledge, patterns of speech, clothing, etiquette) is difficult and time-consuming to acquire, and the education system rewards those who already possess it — reproducing class privilege. Gramsci: the majoritarian state's ideological hegemony may be transferred to pupils through the school system. Althusser: education functions as an Ideological State Apparatus — propagating the dominant class's ideology.</p>
+
+<p><strong>Symbolic Interactionist view:</strong> Focuses on social interaction in the classroom and playground. Studies show playground activities reinforce gender-role socialisation (girls tend to play more cooperative games; boys play more competitive sports — Thorne, 1993). Labelling theory in action: low standardised test scores or poor class performance lead to a student being labelled as a low achiever — a label that is difficult to shake off, creating a self-fulfilling prophecy (Merton). Credentialism: emphasis on certificates and degrees as symbols of achievement and competence, enabling labelling and status allocation.</p>
+
+<p><strong>Critical perspectives on Indian education:</strong></p>
+<ul>
+  <li><strong>Karuna Ahmad (1974)</strong> — Formal education can bring "ideational" change (transformation of knowledge, attitudes, and values), but its effectiveness in bringing about structural changes is extremely limited because of the linkages between educational practices and vested interests of the status quo. Structural changes are more likely to be brought in by politico-economic factors.</li>
+  <li><strong>A.R. Desai</strong> — Education has not been purposively geared after independence to obtain the desired changes. Policies and funding have failed to attain the goals of social mobility and equality.</li>
+  <li><strong>Pierre Bourdieu</strong> — Cultural reproduction benefits only the top classes. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</li>
+  <li><strong>Tawney (Tadpole Theory)</strong> — Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind.</li>
+  <li><strong>Sachidanand Sinha</strong> — "Dalit Elites" — reservation and education produce a small elite that escapes its class without transforming the class as a whole.</li>
+</ul>
+
+<p><strong>Educational divides in India:</strong> Caste-related divide; gender (girls are undereducated and undernourished, leading to poor academic outcomes); class divide; religion (Sachar Committee, Ranganath Mishra Committee — Muslims denied entry in some schools); taboo-based exclusion (children of HIV patients, sex workers).</p>
+
+<p><strong>PESTEL analysis of changes education brings:</strong> Political change (values for democracy, rights, duties); economic change (more employment, less burden on agriculture); social change (literacy, health awareness, decreased superstition); environmental change (awareness for conservation — Chipko movement); technological change (improved access to education, better communication media); ideological change (anti-superstition movements in Maharashtra).</p>
+
+<h3>New Education Policy 2020</h3>
+
+<p>India's third education policy (after 1968 and 1986), released in 2020 after a 34-year gap. Based on the DS Kothari Commission of 1964 and aligned with SDG4 of the 2030 Agenda — "inclusive and equitable quality education and lifelong learning opportunities for all."</p>
+
+<p><strong>Key structural changes:</strong> Replaces the 10+2 structure with a 5+3+3+4 structure, incorporating children from age 3 into the formal education system (Early Childhood Care and Education). The four stages are: Foundational (3-8 years), Preparatory (8-11 years), Middle (11-14 years), Secondary (14-18 years).</p>
+
+<p><strong>Key reforms:</strong></p>
+<ul>
+  <li>Foundational Literacy and Numeracy mission — every child to attain basic reading and arithmetic by Grade 3</li>
+  <li>Teaching in mother tongue / regional language up to at least Class 5 (preferably Grade 8)</li>
+  <li>Three-language formula to continue; Sanskrit offered at all levels; coding introduced in Middle Stage</li>
+  <li>Board exams for Grades 10 and 12 retained but reformed to eliminate coaching dependency; students can take board exams on up to two occasions per year</li>
+  <li>Assessment shifts from summative to formative; 360-degree holistic progress cards including self-assessment, peer assessment, and teacher assessment</li>
+  <li>Elimination of rigid science-commerce-arts stream separation — students can combine history and physics in Class 11 and 12</li>
+  <li>Multiple entry and exit points in higher education (certificate after 1 year, diploma after 2, bachelor's after 3, bachelor's with research after 4)</li>
+  <li>Academic Bank of Credit for digitally storing and transferring academic credits</li>
+  <li>GER in higher education to increase from 26.3% (2018-19) to 50% by 2035</li>
+  <li>National Research Foundation (NRF) to fund and facilitate quality research</li>
+  <li>Single overarching body for higher education — Higher Education Commission of India (HECI)</li>
+  <li>Public investment in education to increase to 6% of GDP</li>
+  <li>By 2025, at least 50% of learners to have exposure to vocational education</li>
+</ul>
+
+<p><strong>Critique of NEP 2020:</strong> Increased emphasis on mother tongue may impede the progress of marginalised sections by restricting their access to English and thus to employment. Phasing out college affiliations in 15 years may lead to corporatisation of education. Overwhelming reliance on online education is problematic — only 9.85% of government schools have a functional computer (UDISE+). Primary reasons for dropping out (child marriage, child labour) remain unaddressed. No clarity on whether the 6% GDP figure refers to public funds or includes private investment. Digital divide will deepen for rural and poor communities lacking internet access.</p>
+
+<h2>Science, Technology and Social Change</h2>
+
+<p>Science and technology are central drivers of change in modern society. Key debates:</p>
+
+<p><strong>Technological Determinism:</strong> Technology is the autonomous, primary cause of social change. Changes in technology inevitably reshape social organisation, culture, and values. Ogburn's Cultural Lag theory is in this tradition. Marshall McLuhan: "The medium is the message" — technological changes in communication fundamentally transform social consciousness.</p>
+
+<p><strong>Social Shaping of Technology:</strong> Technology is not autonomous — it is shaped by social, political, and economic interests. Who funds research determines what gets invented. Feminist critique: technology has been developed mainly by men, reflecting masculine values and often reinforcing gender inequality (reproductive technologies, surveillance technologies).</p>
+
+<p><strong>Postmodernist critique of science (Lyotard):</strong> Science is just another metanarrative, not privileged over other forms of knowledge. Modern science is increasingly abstract (quantum mechanics, chaos theory) and funded by vested interests. The credibility of "value-free" science is itself a social construction that legitimises powerful interests.</p>
+
+<h2>Globalisation and Social Change</h2>
+
+<p>Globalisation refers to the process of increasing interconnection between societies across the world in which distant events have increasing effects on local life and vice versa (Giddens). It operates across multiple dimensions: economic (integration of markets, MNCs, WTO); political (rise of international institutions — UN, World Bank, IMF); cultural (spread of global consumer culture, McDonaldization); communicational (internet, social media, electronic networks); and ecological (global environmental risks, climate change).</p>
+
+<p><strong>Three positions on globalisation (Held and McGrew):</strong></p>
+<ul>
+  <li><strong>Globalists / Hyperglobalists</strong> — globalisation transforms the economy and global politics fundamentally; the nation-state is declining; a new global order is emerging</li>
+  <li><strong>Sceptics</strong> — nothing is fundamentally new; international trade and migration have existed for centuries; people maintain strong national identities; the state remains central</li>
+  <li><strong>Transformationalists</strong> — globalisation is real but its trajectory is uncertain; it may change direction or be reversed; it is bringing diverse people together, which can become a source of both cooperation and conflict</li>
+</ul>
+
+<p><strong>Leslie Sklair (Sociology of the Global System):</strong> Transnational practices include: economic (transnational corporations), political (capitalist-inspired politicians), and cultural-ideological (consumerism spread globally). Globalisation has mostly negative impacts: class polarisation and ecological unsustainability.</p>
+
+<p><strong>Impact on social change:</strong> Globalisation accelerates the pace of social change; spreads Western values, consumer culture, and democratic norms globally; creates new forms of inequality (digital divide, global class polarisation); undermines traditional cultures and produces identity anxieties that fuel nationalism, religious revivalism, and fundamentalism; and generates new collective risks (environmental crises, pandemics, financial contagion) that require collective responses beyond the nation-state.</p>
+`,
   'introducing-indian-society': '',
   'colonial-rule-indian-society': '',
   'rural-agrarian-structure': '',
