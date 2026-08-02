@@ -1248,6 +1248,304 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The conflict theory of imprinting (Haig, 1992) proposes that genomic imprinting evolved in mammals due to a conflict of evolutionary interest between maternal and paternal genomes. Paternal genes benefit maximally from the growth of the current offspring; maternal genes must balance current against future offspring and thus favour restraining nutrient allocation to the current foetus. Paternally expressed genes (e.g., IGF2) tend to promote foetal growth; maternally expressed genes (e.g., IGF2R) tend to restrain it. Alternative theories propose that imprinting evolved to prevent parthenogenesis (development from unfertilised eggs) in mammals, since viable parthenogenetic offspring are impossible when some essential genes require paternal contribution.</p>
 `,
+  'human-genetics': `
+<h2>Chromosomes: Structure and Organisation</h2>
+
+<p>Chromosomes are composed of a DNA molecule and proteins. During normal cell function they appear as long, stringy, decondensed structures. During the early stages of cell division they become visible as two strands joined at a constricted area called the <strong>centromere</strong>; the two strands exist because the DNA has already replicated, so one is an exact copy of the other.</p>
+
+<p>Human somatic cells contain 46 chromosomes in 23 pairs. Until 1956 the number was incorrectly believed to be 48. There are two categories of chromosome:</p>
+
+<ul>
+  <li><strong>Autosomes (22 pairs):</strong> Carry genetic information governing all physical characteristics except primary sex determination.</li>
+  <li><strong>Sex chromosomes / Allosomes (1 pair):</strong> Females have two X chromosomes (XX); males have one X and one Y (XY). The Y chromosome directly determines maleness; the X functions more like an autosome because it influences many non-sex traits.</li>
+</ul>
+
+<p>Each gamete (ovum or sperm) contains only 23 chromosomes — one of each pair — so that fertilisation restores the diploid number of 46. Abnormal numbers of autosomes are nearly always fatal at or soon after conception. Abnormal numbers of sex chromosomes are usually not fatal but may result in sterility and other consequences. Structural or numerical alterations of chromosomes collectively are called <strong>chromosomal aberrations</strong>, and the cluster of symptoms they produce is called a <strong>syndrome</strong>.</p>
+
+<h3>Classification of Chromosomes (Denver System)</h3>
+
+<p>Chromosomes are classified from Group A to G based on overall morphology, size, and centromere position:</p>
+
+<ul>
+  <li>Group A (1–3): Large, approximately median centromeres.</li>
+  <li>Group B (4–5): Large, submedian centromeres.</li>
+  <li>Group C (6–12 and X): Medium, submedian centromeres.</li>
+  <li>Group D (13–15): Medium acrocentric; chromosomes 13 and 14 have satellites on short arms.</li>
+  <li>Group E (16–18): Short, approximately median or submedian centromeres.</li>
+  <li>Group F (19–20): Short, approximately median centromeres.</li>
+  <li>Group G (21, 22, Y): Very short acrocentric.</li>
+</ul>
+
+<h3>Euchromatin and Heterochromatin</h3>
+
+<p><strong>Euchromatin</strong> is the loosely packed, gene-rich region of the chromosome. It is transcriptionally active and covers approximately 90% of the human genome. Active genes in euchromatin are transcribed to mRNA and subsequently encoded into functional proteins. Housekeeping genes are a form of euchromatin.</p>
+
+<p><strong>Heterochromatin</strong> is tightly packed, intensely stained, and transcriptionally inactive. Its compact structure prevents endonuclease damage and blocks access to gene expression proteins. It has two subtypes:</p>
+<ul>
+  <li><strong>Facultative heterochromatin:</strong> Contains inactive genes silenced through histone methylation or siRNA (RNAi); not a permanent feature of every cell nucleus.</li>
+  <li><strong>Constitutive heterochromatin:</strong> Contains structurally functional elements like telomeres and centromeres; a permanent feature of every cell nucleus and contains no coding genes.</li>
+</ul>
+
+<h2>Cell Division: Mitosis and Meiosis</h2>
+
+<h3>Mitosis</h3>
+
+<p>Mitosis, first described by Fleming in 1879, is somatic cell division producing two genetically identical daughter cells, each with the same chromosome number and DNA content as the parent cell. It is essential for growth, development, tissue repair, and asexual reproduction.</p>
+
+<p>The process proceeds through four sequential phases:</p>
+<ul>
+  <li><strong>Prophase:</strong> Chromosomes condense; the mitotic spindle begins to form from centrosomes; the nucleolus disappears; in late prophase (prometaphase) the nuclear envelope breaks down and spindle microtubules begin capturing chromosomes.</li>
+  <li><strong>Metaphase:</strong> All chromosomes align at the metaphase plate, each attached to microtubules from opposite spindle poles at its kinetochores. The spindle checkpoint ensures correct attachment before division proceeds.</li>
+  <li><strong>Anaphase:</strong> The protein glue holding sister chromatids together is broken down; chromatids separate and are pulled to opposite poles by microtubule motor proteins; the cell elongates.</li>
+  <li><strong>Telophase and Cytokinesis:</strong> Two new nuclei form around each chromosome set; nuclear membranes and nucleoli reappear; chromosomes decondense. In animal cells, cytokinesis occurs by constriction of an actin band (cleavage furrow); in plant cells, a cell plate forms between the two daughter nuclei.</li>
+</ul>
+
+<h3>Meiosis</h3>
+
+<p>Meiosis is the specialised cell division used to produce gametes (sperm and eggs). It reduces the chromosome number by half, from diploid (2n = 46) to haploid (n = 23), and introduces genetic variation through crossing over. When two haploid gametes fuse at fertilisation, the diploid number is restored.</p>
+
+<p>Meiosis proceeds through two sequential rounds of division:</p>
+
+<p><strong>Meiosis I (Reduction Division):</strong></p>
+<ul>
+  <li><strong>Prophase I:</strong> Chromosomes condense; homologous chromosomes pair and align precisely along their full length. <strong>Crossing over</strong> occurs: homologues exchange segments of DNA at points called chiasmata, assisted by the synaptonemal complex. This is the key source of genetic recombination.</li>
+  <li><strong>Metaphase I:</strong> Homologous pairs (bivalents) line up at the metaphase plate; each chromosome attaches to microtubules from only one pole; the orientation of each pair is random (independent assortment).</li>
+  <li><strong>Anaphase I:</strong> Homologous chromosomes are pulled to opposite poles; sister chromatids remain attached.</li>
+  <li><strong>Telophase I and Cytokinesis:</strong> Two haploid daughter cells form, each containing one chromosome from each homologous pair (still as joined sister chromatids).</li>
+</ul>
+
+<p><strong>Meiosis II (Division without DNA replication):</strong></p>
+<ul>
+  <li>Each of the two cells from Meiosis I divides again through prophase II, metaphase II, anaphase II, and telophase II.</li>
+  <li>Sister chromatids are separated in anaphase II.</li>
+  <li>The final result is four haploid cells, each with a unique genetic composition.</li>
+</ul>
+
+<h2>Mendelian Inheritance</h2>
+
+<p>Gregor Mendel's experiments with pea plants established the foundational principles of heredity. His four postulates are:</p>
+
+<ul>
+  <li>Hereditary characteristics are controlled by particulate unit factors (genes) that exist in pairs in diploid organisms.</li>
+  <li>When an individual has two different unit factors (alleles) for a characteristic, only one is expressed in the phenotype — the expressed allele is <strong>dominant</strong>, the unexpressed allele is <strong>recessive</strong>.</li>
+  <li><strong>Law of Segregation:</strong> During gamete formation, paired unit factors separate randomly, so each sex cell receives one allele with equal probability. This reflects chromosome segregation during meiosis.</li>
+  <li><strong>Law of Independent Assortment:</strong> During gamete formation, segregating pairs of unit factors assort independently of each other — the segregation of one chromosome pair does not influence another. This holds when genes are on different chromosomes.</li>
+</ul>
+
+<h3>Mendelian Traits in Humans</h3>
+
+<p>Mendelian traits (also called discrete traits) are controlled by alleles at a single genetic locus. The most comprehensive listing — Online Mendelian Inheritance in Man (OMIM) — currently includes more than 20,000 human characteristics inherited on Mendelian principles. Most Mendelian traits are biochemical rather than visibly morphological, and many genetic disorders result from harmful alleles inherited in Mendelian fashion.</p>
+
+<h3>ABO Blood Group: A Classic Mendelian Example</h3>
+
+<p>The ABO blood group system is governed by three alleles (A, B, and O) at the ABO locus on chromosome 9. These alleles code for antigens on the surface of red blood cells:</p>
+
+<ul>
+  <li>Only antigen A present: blood type A.</li>
+  <li>Only antigen B present: blood type B.</li>
+  <li>Both antigens present: blood type AB.</li>
+  <li>Neither antigen present: blood type O.</li>
+</ul>
+
+<p>The O allele is recessive to both A and B. Blood type A results from genotype AA or AO; blood type B from BB or BO. Blood type AB is a case of <strong>codominance</strong>: both A and B alleles are expressed simultaneously since neither is dominant to the other. Blood type O requires the homozygous genotype OO.</p>
+
+<h2>Modes of Inheritance</h2>
+
+<h3>Autosomal Dominant Inheritance</h3>
+<p>The responsible gene is on an autosome and expresses the trait even in a single copy (heterozygous state). Characteristic features:</p>
+<ul>
+  <li>The trait can appear in either sex.</li>
+  <li>The trait does not skip generations.</li>
+  <li>An affected person always has at least one affected parent.</li>
+  <li>Normal children of affected individuals do not transmit the trait.</li>
+</ul>
+<p>Examples: Anonymchia (absent nails), chin fissure, mid-digital hair, dimples, Marfan syndrome.</p>
+
+<h3>Autosomal Recessive Inheritance</h3>
+<p>The gene must be in the homozygous state (double dose) for the trait to manifest. Heterozygotes are called carriers and appear phenotypically normal. Characteristic features:</p>
+<ul>
+  <li>The trait can appear in either sex.</li>
+  <li>The trait can skip generations.</li>
+  <li>Parents of an affected individual are usually heterozygous carriers or have the trait.</li>
+  <li>Consanguinity among parents increases the risk of the disorder appearing.</li>
+</ul>
+<p>Examples: Albinism, alkaptonuria, sickle cell anaemia (in terms of its disease state), phenylketonuria.</p>
+
+<h3>X-linked Inheritance</h3>
+<p>Genes located on the X chromosome show characteristic inheritance patterns. X-linked recessive traits affect males more frequently because males have only one X chromosome (hemizygous) — a single copy of a recessive allele on the X is sufficient to express the trait. Females need two copies to be affected but can be carriers. X-linked dominant traits affect females more frequently as they have two X chromosomes, both of which can carry the allele.</p>
+<p>Classic example: Haemophilia in European royal families, traced to a carrier mutation in Queen Victoria, spread across more than twenty royal family members within a century.</p>
+
+<h2>Exceptions to Mendelian Inheritance</h2>
+
+<h3>Codominance</h3>
+<p>Both alleles in a heterozygote are fully expressed, each producing its own phenotype. Neither allele is dominant over the other. The ABO AB blood type is the standard human example.</p>
+
+<h3>Incomplete Dominance</h3>
+<p>The dominant allele does not completely suppress the recessive allele. Heterozygotes display an intermediate phenotype — a blend of the two parental phenotypes. Example: carriers of the sickle cell allele (one normal, one sickle) produce both normal and sickled red blood cells — intermediate expression. In plants, red × white crosses can produce pink offspring.</p>
+
+<h3>Polygenic (Multifactorial) Inheritance</h3>
+<p>Many traits are determined by more than one gene (polygenes). These genes have equal influence and their alleles have an additive effect. Polygenic traits exhibit incomplete dominance rather than the clear dominant/recessive patterns of single-gene traits. Environmental factors can also influence polygenic traits. Polygenic traits show a bell-shaped (normal) distribution in a population — most individuals fall in the average range, with extremes at either end. Human examples include skin colour (at least 3 genes; amount of melanin determines darkness), eye colour (up to 16 genes; determined by melanin in the iris; key genes on chromosome 15 — OCA2 and HERC2), height, hair colour, body shape, and weight.</p>
+
+<h3>Genetic Linkage</h3>
+<p>Genes that are physically close together on the same chromosome tend to be inherited together — they do not assort independently. This is the chief exception to Mendel's Law of Independent Assortment. The closer two genes are on a chromosome, the lower the chance of recombination between them through crossing over, and the more likely they are to be inherited together. Genes on different chromosomes assort independently. Types of linkage:</p>
+<ul>
+  <li><strong>Complete linkage:</strong> No crossing over occurs; only parental combinations appear (example: Drosophila male).</li>
+  <li><strong>Incomplete linkage:</strong> Some crossing over occurs; recombinant types appear alongside parental types.</li>
+  <li><strong>Coupling (cis) linkage:</strong> Dominant genes linked with each other (or recessive with recessive).</li>
+  <li><strong>Repulsion (trans) linkage:</strong> Dominant genes linked with recessive genes.</li>
+  <li><strong>Autosomal linkage:</strong> Linked genes on autosomes.</li>
+  <li><strong>Allosomal (X-linked) linkage:</strong> Linked genes on sex chromosomes.</li>
+</ul>
+<p>The HLA (Human Leukocyte Antigen) region on chromosome 6 carries the major histocompatibility complex. Loci A, B, C, and D are tightly linked and nearly always inherited together as a haplotype.</p>
+
+<h3>Pleiotropy</h3>
+<p>One gene influences two or more seemingly unrelated phenotypic traits. A mutation in a pleiotropic gene can simultaneously affect multiple traits. Examples:</p>
+<ul>
+  <li><strong>Phenylketonuria (PKU):</strong> A defect in a single gene on chromosome 12 (coding for phenylalanine hydroxylase) causes dangerous accumulation of phenylalanine, affecting the nervous system, skin pigmentation, and other systems.</li>
+  <li><strong>Marfan syndrome:</strong> A single gene mutation reducing fibrillin protein production causes unusually tall stature, thin fingers and toes, lens dislocation, and aortic abnormalities — seemingly unrelated traits all tracing to one gene.</li>
+</ul>
+
+<h3>Multiple Alleles and Genetic Polymorphism</h3>
+<p>A gene locus may have more than two alternative alleles (multiple alleles). Polymorphism is the occurrence of more than one form (morph) in a population such that the rarest cannot be maintained by recurrent mutation alone. For a trait to be classified as polymorphic, it must occur at a frequency greater than 1% in the population; below this threshold it is assumed to arise from mutation alone, with no selection maintaining it.</p>
+
+<p>Genetic polymorphism is expressed at multiple levels:</p>
+<ul>
+  <li><strong>Cell surface (antigenic):</strong> Blood group antigens (ABO, Rh) on red blood cells; HLA antigens on tissue cells (extraordinarily polymorphic — no two individuals except identical twins share the same HLA system).</li>
+  <li><strong>Chromosomal (functional):</strong> Chromosomal rearrangements including insertional elements, transposons, deletions, inversions, and translocations.</li>
+  <li><strong>Gene products (protein):</strong> Protein variants identified by electrophoresis and amino acid sequencing. Haemoglobin sequencing has revealed hundreds of variants. Isoenzymes (e.g., lactic dehydrogenase, which appears in 5 forms within a single individual) are another example.</li>
+</ul>
+
+<h3>Balanced Polymorphism and Heterozygote Advantage</h3>
+<p>Genetic polymorphisms are balanced when natural selection favours heterozygotes over both homozygotes. A stable equilibrium is maintained — both alleles persist at substantial frequencies. The classic human example is the sickle cell allele of the β-globin gene:</p>
+<ul>
+  <li>Homozygous for sickle cell allele (SS): develop sickle cell disease, usually fatal without intensive medical care.</li>
+  <li>Heterozygous (HbS/HbA): red blood cells are functional and resistant to the malaria parasite — these individuals survive malaria better than those with only the normal allele.</li>
+  <li>Homozygous normal (HbA/HbA): susceptible to malaria.</li>
+</ul>
+<p>In malaria-endemic regions, the sickle cell allele is maintained by balancing selection because heterozygotes have a reproductive advantage. This is called heterozygote advantage.</p>
+
+<h2>Rh Blood Group System</h2>
+
+<p>The Rh blood group system was discovered by Karl Landsteiner and A.S. Wiener in 1940, using rhesus monkey blood in the initial tests. Unlike ABO (which involves one chromosome pair with one set of alleles), the Rh system involves three pairs of alleles (C/c, D/d, E/e) located at three loci on chromosome 1. The most important is the D antigen (RhD), which causes the most severe immune reaction. Every genotype with DD or Dd is Rh positive (about 85% of the US population); every genotype with dd is Rh negative.</p>
+
+<p>Rh incompatibility during pregnancy is medically significant. When an Rh-negative mother carries an Rh-positive foetus, foetal blood entering the mother's circulation (usually during delivery) stimulates her immune system to produce anti-Rh antibodies. In subsequent pregnancies with Rh-positive foetuses, these antibodies cross the placenta and attack the foetal red blood cells, causing <strong>erythroblastosis foetalis</strong> (haemolytic disease of the newborn), which can be fatal. Prevention is by vaccinating the mother with Rh immunoglobulin after delivery of the first Rh-positive child to destroy foetal blood cells before the immune system produces antibodies.</p>
+
+<p>The highest frequency of Rh negativity is among the Basques of the Pyrenees (25–35%) and the Imazighen (Berbers) of Africa and Bedouins of the Sinai Peninsula (18–30%).</p>
+
+<h2>Pedigree Analysis</h2>
+
+<p>Pedigree analysis is the method used to study inheritance in humans, where controlled crosses are impossible. It examines the presence or absence of a trait across generations within a family, tracking its relationship among parents, offspring, and siblings. Pedigrees are used to determine the mode of inheritance of a disease or trait, predict the probability of occurrence among offspring, and provide a basis for genetic counselling. The technique is also valuable for species with long generation times.</p>
+
+<h2>Lethal Genes</h2>
+
+<p>Many genes are essential for survival. Alleles that make such genes non-functional may be impossible to recover in living, homozygous organisms — these are lethal alleles. First discovered by Lucien Cuénot in 1905 while studying coat colour in mice (the yellow agouti allele), where homozygous yellow mice were never obtained because homozygosity was lethal in the embryo. Types:</p>
+<ul>
+  <li><strong>Recessive lethal:</strong> Fatal only in the homozygous state; heterozygotes may display a diseased phenotype or appear normal carriers.</li>
+  <li><strong>Dominant lethal:</strong> Fatal even in the heterozygous state (one copy is sufficient to kill).</li>
+</ul>
+
+<h2>Population Genetics: Evolutionary Forces</h2>
+
+<p>Population genetics studies the distribution and change of allele frequencies in populations over time. A <strong>Mendelian population</strong> is a group of interbreeding individuals sharing a common gene pool. The <strong>gene pool</strong> is the total set of gene copies for all genes in a population; greater diversity in the gene pool means better ability to adapt to environmental change through natural selection.</p>
+
+<h3>Hardy-Weinberg Law</h3>
+
+<p>Formulated independently in 1908 by Godfrey Hardy (English mathematician) and Wilhelm Weinberg (German obstetrician), the Hardy-Weinberg law of equilibrium states that in a population meeting all ideal conditions, allele and genotype frequencies remain constant from generation to generation after one generation of random mating.</p>
+
+<p>The ideal conditions required are:</p>
+<ul>
+  <li>Large population size (no genetic drift).</li>
+  <li>Random mating (no assortative mating or inbreeding).</li>
+  <li>No new mutations.</li>
+  <li>No natural selection (all genotypes equally fertile and viable).</li>
+  <li>No gene flow (no migration in or out).</li>
+</ul>
+
+<p>The Hardy-Weinberg equation is: if the frequency of allele A = p, and of allele a = q, then p + q = 1, and the expected genotype frequencies are p² (AA) + 2pq (Aa) + q² (aa) = 1. This is considered the cornerstone of population genetics because it provides a mathematical baseline against which actual populations can be compared. If observed genotype frequencies deviate from Hardy-Weinberg predictions, the population is evolving at that locus.</p>
+
+<h3>Factors Disturbing Hardy-Weinberg Equilibrium (Evolutionary Forces)</h3>
+
+<h4>Mutation</h4>
+<p>Mutation is the only source of genuinely new genetic variation in a population — it is the only mechanism that can introduce alleles that were not previously present. During DNA replication, copying errors or environmental damage can alter the sequence of bases. Types of mutations:</p>
+<ul>
+  <li><strong>Point mutation (synonymous):</strong> Changes the DNA triplet but the altered codon still codes for the same amino acid — no change in the resulting protein.</li>
+  <li><strong>Point mutation (nonsynonymous):</strong> The altered codon codes for a different amino acid, potentially altering protein structure and function. Classic example: a mutation on chromosome 11 converts the GAG codon (glutamic acid) to GTG (valine) in the beta-globin gene, causing sickle cell anaemia.</li>
+  <li><strong>Frameshift mutation:</strong> Insertion or deletion of base pairs shifts the reading frame, disrupting all codons downstream — usually produces a non-functional protein.</li>
+  <li><strong>Transposable elements:</strong> Genes that can copy themselves to different positions in the genome, potentially disrupting other genes.</li>
+  <li><strong>Chromosomal mutations:</strong> Large rearrangements including translocations, inversions, duplications, deletions, trisomies (extra chromosome, e.g., Down syndrome — trisomy 21; Klinefelter syndrome — XXY in males), and monosomies (missing chromosome).</li>
+</ul>
+<p>Mutations are classified as spontaneous (no known cause, generally DNA copying errors) or induced (caused by mutagens such as ionising radiation like X-rays or toxic chemicals). The human mutation rate is approximately one new potentially significant mutation every other person born. Mutations in gametes are the ones with evolutionary consequences.</p>
+
+<h4>Natural Selection</h4>
+<p>Natural selection is the non-random, differential survival and reproduction of individuals based on heritable traits. Those variations that increase an organism's chances of survival and reproduction are preserved and multiplied across generations. Selection may act through differences in survival, fertility, mating success, developmental rate, or any other life-cycle aspect. Three types:</p>
+<ul>
+  <li><strong>Stabilising selection:</strong> Eliminates extreme variants from both ends of the frequency distribution; maintains the existing average. The most common form of natural selection. Example: human birth weight — very low and very high birth weights both have higher infant mortality.</li>
+  <li><strong>Directional selection:</strong> Favours individuals at one end of the distribution, shifting the population mean in that direction over generations. Example: increase in human brain size through hominin evolution; industrial melanism (selection for darker moths on pollution-darkened trees).</li>
+  <li><strong>Diversifying (disruptive) selection:</strong> Favours individuals at both extremes simultaneously, creating two distinct phenotypic groups. Can lead to the formation of distinct populations.</li>
+</ul>
+<p>Two notable case studies of natural selection in living human populations:</p>
+<ul>
+  <li><strong>CCR5-Δ32 mutation:</strong> A 32-base-pair deletion in the CCR5 gene on chromosome 3 confers partial resistance to HIV in heterozygotes and near-complete resistance to AIDS in homozygotes. The mutation occurs at 0–14% frequency in European populations but is absent elsewhere. Its initial rise was probably due to selection by another disease such as smallpox.</li>
+  <li><strong>Lactase persistence:</strong> Most mammals shut down lactase enzyme production after weaning. Populations engaged in dairy farming gained a nutritional advantage from being able to digest lactose throughout their lives. Natural selection has favoured the lactase persistence allele in dairy-farming populations — highest in northern Europe, moderate in southern Europe and the Middle East, very low in African and Asian populations.</li>
+  <li><strong>Skin colour:</strong> Melanin concentration in skin is inversely related to distance from the equator. Pigmented skin acts as a protective barrier against UV radiation, making darker skin advantageous in high-UV equatorial environments. Lighter skin at higher latitudes allows greater UV penetration for vitamin D synthesis.</li>
+</ul>
+
+<h4>Genetic Drift</h4>
+<p>Genetic drift is the random change in allele frequencies over time due to chance events rather than natural selection. It has the greatest effect in small populations. Unlike mutation, selection, and gene flow, genetic drift is entirely random — it can fix or eliminate alleles without regard to their adaptive value.</p>
+
+<p>The classic example is the <strong>Dunkers</strong>, a small religious sect that emigrated from Germany to Pennsylvania in 1719 with only 28 members. Because the breeding population remained small and endogamous, blood type frequencies diverged dramatically from both German and American populations over generations — simply due to chance.</p>
+
+<p>Two special forms of genetic drift:</p>
+<ul>
+  <li><strong>Founder effect:</strong> Occurs when a small group breaks off from a larger population and establishes a new, reproductively isolated population. The founders' gene pool is not representative of the parent population. As the founding population grows, the divergence is amplified. Example: Native Americans, descended from a small founding group of East Asian migrants around 12,000 ybp, show very high frequencies of type O blood (sometimes 100%), while East Asian populations have among the lowest frequencies globally.</li>
+  <li><strong>Genetic bottleneck:</strong> A large population undergoes a drastic reduction in size, then expands again. Alleles present only at low frequency may be lost entirely, and the rebounded population has greatly reduced genetic diversity. Example: the southern elephant seal was hunted to near-extinction; the recovered population now has low genetic diversity. Among the Pingelapese people of Micronesia, a typhoon in 1780 reduced the population to about 19 survivors, creating a severe bottleneck; as a result, 4–10% of the current population is born with a rare form of colour blindness (achromatopsia), compared to 1 in 20,000–50,000 in most populations.</li>
+</ul>
+
+<h4>Gene Flow (Migration)</h4>
+<p>Gene flow is the transfer of alleles across population boundaries through the movement and interbreeding of individuals. It is distinct from migration: migration is the movement of people, while gene flow only occurs when migrants interbreed with the receiving population. Gene flow generally reduces genetic differences between populations and increases genetic variation within populations that receive migrants.</p>
+
+<p>Key characteristics:</p>
+<ul>
+  <li>The less the physical distance between populations, the greater the chance of gene flow.</li>
+  <li>Endogamous societies (inbreeding within the group) have relatively little genetic diversity; exogamous societies have relatively high genetic diversity.</li>
+  <li>The B blood group allele shows a clinal decrease in frequency from East Asia to far western Europe, suggesting gene flow as Mongol populations migrated westward from AD 500 to 1500.</li>
+  <li>Gene flow studies of African American populations using the Duffy blood group allele (largely absent in Africa but common in European populations) showed European admixture ranging from 4% in Charleston, SC to 26% in Detroit.</li>
+</ul>
+
+<h4>Non-random Mating: Inbreeding and Consanguinity</h4>
+
+<p>Hardy-Weinberg equilibrium assumes random mating. Deviations occur in two directions:</p>
+<ul>
+  <li><strong>Inbreeding:</strong> Mating between closely related individuals more frequently than expected by chance. Increases homozygosity at the expense of heterozygosity.</li>
+  <li><strong>Outbreeding:</strong> Mating between less closely related individuals than expected by chance.</li>
+</ul>
+
+<p><strong>Assortative mating</strong> is another deviation. Positive assortative mating: individuals choose mates resembling themselves in traits such as intelligence, height, skin colour, or musical talent. Negative assortative mating: individuals choose mates phenotypically dissimilar to themselves.</p>
+
+<p><strong>Consanguinity</strong> refers specifically to marriages between blood relatives sharing at least one common ancestor no more remote than a great-great grandparent. All human cultures have rules prohibiting sexual contact between close kin — the incest taboo — which is universal but culturally variable in scope. The most common form of consanguinity worldwide is cousin marriage. In south India, particularly Andhra Pradesh, uncle-niece unions and cross-cousin marriages are practised among certain castes. First-cousin marriages make up close to 10% of marriages in some parts of India. In many populations of Asia and Africa, 20–50% of all unions are consanguineous.</p>
+
+<p><strong>Reasons consanguineous marriages are culturally favoured:</strong> Sociological studies indicate they reinforce marital stability (shared social network before and after marriage), improve wives' relationships with in-laws, facilitate family property transmission, and strengthen family solidarity. Premarital negotiations are easier and less costly. In low-population or endogamous communities, mate choice may simply be limited.</p>
+
+<p><strong>Inbreeding depression:</strong> The primary genetic consequence of sustained inbreeding is an increase in homozygosity, which increases the chance of harmful recessive alleles being expressed. Animal breeders consistently observe that inbreeding reduces fertility, viability, and overall fitness — a phenomenon called inbreeding depression. Studies in Japan, France, Sweden, and the United States showed increased frequencies of infant mortality, physical diseases, and mental disorders among children of first-cousin mating. The haemophilia that spread through European royal families, originating in Queen Victoria's X-linked carrier status and transmitted through consanguineous unions, is a classic historical example.</p>
+
+<p>However, some amount of inbreeding can be beneficial by allowing the expression of recessive genes with positive effects (the reason Charles Darwin, himself a first-cousin marriage product, is sometimes cited). The net effect depends on whether the homozygotes formed carry advantageous or disadvantageous alleles.</p>
+
+<p><strong>Consanguinity and health parameters:</strong> Compared to non-consanguineous unions, first-cousin marriages show slightly higher fertility rates, similar abortion rates, slightly higher stillbirth and infant mortality rates, and an estimated 2–3% additional frequency of birth defects. They increase the expression of autosomal recessive disorders because offspring inherit identical copies of recessive alleles from a shared ancestor. First cousins share approximately 12.5% of their genes; their offspring are expected to be homozygous at about 6.25% of gene loci.</p>
+
+<p>In populations with high consanguinity rates and common haemoglobinopathies (thalassemia, sickle cell anaemia), community premarital screening programs for carrier detection are active in Jordan, Saudi Arabia, Iran, Iraq, Bahrain, and Turkey, with significant success in reducing the birth prevalence of these disorders.</p>
+
+<h2>Key Genetic Concepts Summary</h2>
+
+<ul>
+  <li><strong>Allele frequency:</strong> The proportion of a particular allele among all copies of that gene in the population. If all alleles at a locus are A, frequency = 1.0; if half are A and half are a, each has frequency 0.5.</li>
+  <li><strong>Genotype frequency:</strong> The fraction of individuals in a population with a specific genotype (e.g., AA, Aa, aa).</li>
+  <li><strong>Phenotype frequency:</strong> The fraction of individuals displaying a specific phenotype.</li>
+  <li><strong>Genetic load:</strong> The reduction in the average fitness of a population due to the presence of deleterious alleles maintained in the gene pool.</li>
+  <li><strong>Isolate:</strong> A group totally separated from other groups, reproductively unstratified, so all individuals share the same gene pool. Prolonged isolation causes increasing divergence in gene frequencies between the isolate and neighbouring populations.</li>
+  <li><strong>Mitochondrial DNA (mtDNA):</strong> Inherited exclusively through the maternal line; does not undergo recombination and thus acts genetically like a single gene. Used by Rebecca Cann to trace all modern human mitochondrial lineages to a common ancestor approximately 200,000 years ago in Africa — the "Mitochondrial Eve" hypothesis. Y-chromosome analysis, similarly non-recombining, independently supports African origin with a common paternal ancestor around 100,000 years ago.</li>
+</ul>
+`,
 };
+
 
 
