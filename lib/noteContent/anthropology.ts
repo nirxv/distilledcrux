@@ -172,4 +172,146 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>New methods may permit different kinds of testing not previously possible — as when DNA analysis allowed primatologists to test hypotheses about infanticide that could not previously be confirmed by observation alone. This is a strength, not a weakness, of scientific inquiry.</p>
 `,
+  'branches-of-anthropology': `
+<h2>Overview: The Four Branches</h2>
+
+<p>Anthropology is divided into four main branches, though these are not totally exclusive of each other. The underlying fact that humans evolve as cultured beings who live in society connects all four subfields. Some anthropologists also consider linguistics and archaeology as subfields of cultural anthropology rather than independent branches, and applied anthropology is sometimes counted as a fifth subfield — a method more than a discipline.</p>
+
+<ul>
+  <li>Physical / Biological Anthropology</li>
+  <li>Social / Cultural Anthropology</li>
+  <li>Archaeological Anthropology</li>
+  <li>Linguistic Anthropology</li>
+</ul>
+
+<p>The interplay between biology and culture is what ties all branches together. Biological evolution produced the capacity for culture — intelligence had to evolve before learned traditions such as tool use could flourish. But culture can also influence biology. This two-way relationship is studied under <strong>biocultural anthropology</strong>.</p>
+
+<h2>1. Physical / Biological Anthropology</h2>
+
+<p>Physical anthropology is the study of human biology within the framework of evolution, with emphasis on the interaction between biology and culture. <em>Physical anthropology</em> is the original term, reflecting early interests in describing human physical variation. The term <em>biological anthropology</em> reflects the later shift to more biologically oriented topics such as genetics, evolutionary biology, nutrition, physiological adaptation, and growth and development. This shift occurred largely because of advances in genetics and molecular biology since the late 1950s. Both terms are used interchangeably today.</p>
+
+<h3>Major Subfields of Physical Anthropology</h3>
+
+<h4>Palaeoanthropology</h4>
+<p>The study of anatomical and behavioural human evolution as revealed in the fossil record. Thousands of fossilised remains of early primates, including human ancestors, span at least 7 million years of human prehistory. The ultimate goal is to identify the various early human and humanlike species, establish a chronological sequence of relationships among them, and gain insights into their adaptation and behaviour — to arrive at a clear picture of how and when modern humans came into being.</p>
+
+<h4>Human Variation</h4>
+<p>Early physical anthropologists invested enormous effort in measuring, describing, and explaining visible differences among human populations, focusing particularly on skin colour, body proportions, and head and face shape. Today the concern is with human variation because of its possible adaptive significance — identifying the factors that have produced not only visible physical variation but genetic variation as well. Many traits that typify certain populations evolved as biological adaptations to local environmental conditions such as sunlight, altitude, or infectious disease. Examining biological variation between populations provides information about the mechanisms of genetic change in groups over time.</p>
+
+<h4>Primatology</h4>
+<p>The study of the living nonhuman primates. Given the evolutionary focus of physical anthropology and the fact that humans are themselves primates, primatology has become increasingly important since the late 1950s. Identifying the underlying factors related to social behaviour, communication, infant care, and reproductive behaviour in nonhuman primates helps develop an understanding of the natural forces that shaped modern human behaviour. Nonhuman primates are also studied in their own right: the majority of primate species are today threatened or seriously endangered.</p>
+
+<h4>Genetics and Molecular Anthropology</h4>
+<p>Genetics is crucial for physical anthropologists because evolutionary processes cannot be understood without knowing how traits are inherited. Modern physical anthropology would not exist as an evolutionary science without advances in genetic mechanisms. Molecular anthropologists use cutting-edge technologies to investigate evolutionary relationships between human populations as well as between humans and nonhuman primates, examining similarities and differences in DNA sequences between individuals, populations, and species. By extracting DNA from certain fossils, these researchers have also contributed to understanding evolutionary relationships between extinct and living species.</p>
+
+<h4>Osteology</h4>
+<p>The study of the skeleton. Before genetic and molecular techniques became widespread, osteology was the only way anthropologists could study human ancestors. A thorough knowledge of skeletal structure and function remains critical to interpreting fossil material. Many osteologists specialise in measuring skeletal elements, essential for identifying stature and growth patterns in archaeological populations.</p>
+
+<h4>Bioarchaeology</h4>
+<p>In the last few decades, the study of human skeletal remains from archaeological sites has come to be called bioarchaeology. It examines growth patterns, disease, trauma, and diet in past populations, providing a window into the lived experience of people in the past.</p>
+
+<h4>Paleopathology</h4>
+<p>A major component of bioarchaeology, paleopathology is the study of disease and trauma in ancient skeletal populations. Paleopathologists investigate the prevalence of trauma, certain infectious diseases (such as syphilis and tuberculosis), nutritional deficiencies, and numerous other conditions that leave evidence in bone. This research yields information regarding the history of disease processes and is of interest to scientists in biomedical fields as well.</p>
+
+<h4>Forensic Anthropology</h4>
+<p>Directly related to osteology and paleopathology, forensic anthropology is the application of anthropological (usually osteological and sometimes archaeological) techniques to legal issues. Forensic anthropologists help identify skeletal remains in mass disasters or other situations in which a human body has been found. Public awareness of this subfield has grown considerably due to its portrayal in popular media.</p>
+
+<h4>Nutritional Anthropology</h4>
+<p>Studies the relationships between various dietary components, cultural practices, physiology, and aspects of health and disease. Investigations of human fertility, growth, and development are closely related. These fields are fundamental to studies of adaptation in modern human populations and can also provide insights into hominin evolution.</p>
+
+<h4>Anatomy</h4>
+<p>Bones and teeth are intimately linked to the soft tissues that surround and act on them. A thorough knowledge of soft tissue anatomy is essential to understanding biomechanical relationships involved in movement — relationships important in assessing the structure and function of limbs and other components of fossilised remains. Several physical anthropologists hold positions in anatomy departments at universities and medical schools.</p>
+
+<h3>Physical Anthropology and the Scientific Method</h3>
+
+<p>Physical anthropology applies the scientific method rigorously. A question is identified and the existing literature reviewed. One or more tentative hypotheses are proposed based on preliminary research and observations. A research design is developed to test the hypothesis through data collection. Hypothesis testing is the core of the scientific method and is based on the potential to <strong>falsify</strong> the hypothesis — falsification indicates the hypothesis may need refinement, not that it is entirely untrue. If a hypothesis stands up to repeated testing, it may become part of a theory. New methods may permit different kinds of testing not previously possible, and this is a strength, not a weakness, of scientific research.</p>
+
+<h2>2. Social / Cultural Anthropology</h2>
+
+<p>Cultural, or social, anthropology is the study of patterns of belief and behaviour found in modern and historical cultures. Its origins lie in the nineteenth century, when travel and exploration brought Europeans into contact with various cultures in Africa, Asia, and the New World. This encounter led early anthropologists to study and record lifestyles that were becoming extinct, producing descriptive ethnographies covering religion, ritual, myth and the use of symbols, diet, technology, gender roles, and child-rearing practices.</p>
+
+<p>Ethnographic accounts formed the basis for comparative studies of numerous cultures. By examining similarities and differences among cultures, cultural anthropologists formulated hypotheses regarding fundamental aspects of human behaviour. The method most characteristic of this branch is <strong>long-term participant observation</strong>: living within a community over an extended period and observing social life from within.</p>
+
+<h3>Shift in Focus over the Twentieth Century</h3>
+
+<p>The focus of cultural anthropology shifted significantly during the twentieth century. Cultural anthropologists still work in remote areas, but increasingly they turned their attention toward their own cultures and the people around them. Ethnographic techniques came to be applied to the study of diverse subcultures and their interactions in contemporary metropolitan areas, giving rise to <strong>urban anthropology</strong>. Contemporary cultural anthropologists study topics such as the welfare of refugees, resettlement, and cultural integration — bringing the cross-cultural lens to bear on the present-day world.</p>
+
+<h3>Key Topics in Social/Cultural Anthropology</h3>
+
+<ul>
+  <li>Kinship, marriage and family organisation</li>
+  <li>Economic systems — production, distribution, consumption</li>
+  <li>Political organisation — power, authority, law, conflict resolution</li>
+  <li>Religion, ritual, myth and symbolism</li>
+  <li>Gender, identity and social stratification</li>
+  <li>Cultural change, globalisation and postcolonialism</li>
+</ul>
+
+<h3>The Centrality of Holism and Comparison</h3>
+
+<p>Two aspects characterise the anthropological approach in this branch. <strong>Holism</strong> means observing a society as a whole — seeing how politics fits together with kinship, economics with religion — because no institution can be fully understood in isolation. <strong>Comparison</strong> means examining each society in relation to others, finding similarities and differences and accounting for them. Comparison may involve isolated cases, regional clusters, or global cross-cultural surveys.</p>
+
+<h2>3. Archaeological Anthropology</h2>
+
+<p>Archaeology is the study of earlier cultures by anthropologists who specialise in the scientific recovery, analysis, and interpretation of the material remains of past societies. Archaeologists obtain information from artifacts and structures left behind by earlier cultures — tools, structures, art, eating implements, fragments of writing, and so on — which provide information about religion, social structure, and many other important aspects of a society.</p>
+
+<p>Unlike popular representations of archaeology as a search for treasures, archaeological sites are excavated to gain information about <strong>human behaviour</strong>. Patterns of behaviour are reflected in the dispersal of human settlements across a landscape and in the distribution of cultural remains within them.</p>
+
+<h3>Scope of Archaeological Research</h3>
+
+<p>Archaeological research may focus on specific localities or peoples, attempting to identify aspects of social organisation, subsistence techniques, or factors that led to the collapse of a civilisation. Alternatively, inquiry may reflect interest in broader issues relating to human culture in general, such as the development of agriculture or the rise of cities. The time depth covered by archaeology is unmatched by any other social science — it spans the entire human past, from the earliest stone tools to the recent historical period.</p>
+
+<h3>Relationship with Physical Anthropology</h3>
+
+<p>Archaeology and physical anthropology intersect in <strong>bioarchaeology</strong>, which studies skeletal remains from archaeological contexts, and in <strong>geoarchaeology</strong>, which integrates geology and archaeology to understand depositional contexts and past environments. Dating methods derived from earth sciences — stratigraphy, potassium-argon dating, radiocarbon dating — underpin the chronological framework within which archaeological findings are interpreted.</p>
+
+<h2>4. Linguistic Anthropology</h2>
+
+<p>Linguistic anthropology is the branch of anthropology that studies human languages, investigating their structure, history, and relation to social and cultural contexts. While it shares data, theories, and methods with the general discipline of linguistics, it differs in including distinctly anthropological questions: How does language influence or reflect culture? How does language use differ among distinct members of a society?</p>
+
+<p>Because the spontaneous acquisition and use of language is a uniquely human characteristic, it is an important topic for linguistic anthropologists, who study the process of language acquisition in infants alongside specialists from other fields. Insights into this process have implications for understanding the development of language in human evolution.</p>
+
+<p>In its early years, linguistic anthropology emphasised the documentation of languages of cultures under ethnographic study — particularly those threatened by colonisation, forced assimilation, or population decimation. When Europeans began colonising the world five centuries ago, an estimated 12,000 distinct languages existed; by the early 1900s, many had already disappeared or were on the brink of extinction. This trend continues: predictions suggest that nearly half of the world's remaining approximately 6,000 languages will become extinct over the next century.</p>
+
+<h3>Four Branches of Linguistic Anthropology</h3>
+
+<h4>Historical Linguistics</h4>
+<p>Historical linguistics deals with the emergence of language in general and how specific languages have diverged over time. By comparing contemporary languages, historical linguists have been able to identify language families and trace the ancestry of modern languages to earlier parent languages. They examine relationships between earlier and later forms of the same language and study interrelationships among older languages. A well-known example: the word for "father" in Germanic languages always begins with an <em>f</em> or <em>v</em> sound (Dutch <em>Vader</em>, German <em>Vater</em>), while in Romance languages it always begins with <em>p</em> (French <em>père</em>, Spanish/Italian <em>padre</em>) — both derived from the original Indo-European <em>p'ter</em>. Even modern languages are constantly transforming, adding new words, dropping others, or changing meanings.</p>
+
+<h4>Descriptive Linguistics</h4>
+<p>Descriptive linguistics is the study of sound systems, grammatical systems, and the meanings attached to words in specific languages. Every culture has a distinctive language with its own logical structure and rules. The task of the descriptive linguist is to compile dictionaries and grammar books for previously unwritten languages — recording, describing, and analysing all features of a language to provide deeper understanding of its structure and unique linguistic repertoire.</p>
+
+<p>Key concepts within descriptive linguistics include:</p>
+
+<ul>
+  <li><strong>Phonetics and Phonology:</strong> Phonetics is the systematic identification and description of the distinctive sounds in a language. Phonology is the study of language sounds. Linguists identify <em>phonemes</em> — the smallest units of sound that make a difference in meaning — through the minimal-pair test (comparing word pairs that differ in only one sound, such as <em>bit</em> and <em>pit</em>).</li>
+  <li><strong>Morphology:</strong> The study of the patterns or rules of word formation, including verb tense, pluralisation, and compound words. The basic unit is the <em>morpheme</em> — the smallest unit of sound that carries meaning.</li>
+  <li><strong>Syntax and Grammar:</strong> Syntax is the patterns or rules by which morphemes or words are arranged into phrases and sentences. Grammar consists of all observations about a language's morphemes and syntax combined.</li>
+</ul>
+
+<h4>Ethnolinguistics (Cultural Linguistics)</h4>
+<p>Ethnolinguistics, also known as cultural linguistics, examines the relationship between language and culture. In any language, cultural aspects that are emphasised are reflected in vocabulary. The Aymara of the Bolivian highlands, who depend on the potato as their major food source, have over 200 words for this vegetable — reflecting the many varieties they grow and the many ways they preserve and prepare it.</p>
+
+<p>The central theoretical concept of ethnolinguistics is <strong>linguistic relativity</strong>, associated with the <strong>Sapir-Whorf Hypothesis</strong> — the idea that each language provides particular grooves of linguistic expression that predispose speakers to perceive the world in a certain way. Edward Sapir and his student Benjamin Whorf, working in the 1930s, argued that language is more than a vehicle for communication: it actually establishes mental categories that predispose people to see things in a certain way.</p>
+
+<p>Whorf's research on Hopi, a North American Indian language spoken in Arizona, revealed that Hopi differs from English not only in vocabulary but also in grammatical categories. Hopi speakers use numbers for counting things that have physical existence but do not apply numbers in the same way to abstractions like time. Hopi verbs also express tense differently — rather than marking past, present, and future with suffixes, Hopi requires additional words to indicate whether an event is completed, ongoing, or expected. Whorf concluded that the structure of the language one habitually uses influences how one understands one's environment.</p>
+
+<p>A creative empirical test of the Sapir-Whorf hypothesis was conducted by Joseph Casagrande (1960), who compared Navajo-speaking children with bilingual Navajo-English-speaking children on sorting tasks. Because Navajo verb forms require speakers to categorise objects by shape, the monolingual Navajo children showed significantly greater tendency to categorise by shape than the bilingual children — a result consistent with the hypothesis.</p>
+
+<p>The main criticism of the Sapir-Whorf hypothesis is the problem of causation. Sapir and Whorf were linguistic determinists who posited that language determines culture. Critics have argued that language simply reflects rather than determines culture. Today, most scholars agree that language does influence perception in certain limited ways, but cannot be said to force or prevent people from thinking in particular ways. The hypothesis remains a hypothesis rather than a widely accepted fact, but it has valuably focused attention on the relationship between language, thought, and culture.</p>
+
+<h4>Sociolinguistics</h4>
+<p>Sociolinguistics examines the relationship between language and social relations. Sociolinguists investigate how social class influences the dialect a person speaks, and how people use different forms of a language depending on the social situation — the words and grammatical structures a college student uses with a roommate differ significantly from the style used in a job interview. Sociolinguists are also interested in <strong>dialects</strong> — varying forms of a language that reflect particular regions, occupations, or social classes and are similar enough to be mutually intelligible.</p>
+
+<p>Language and gender is a major sociolinguistic topic, including research on gendered speech patterns, which vary across social and cultural settings. Applied sociolinguists work with educators to plan strategies for teaching a second language, serve as consultants to government and educational leaders on language policy, and help minority communities whose languages are endangered.</p>
+
+<h2>Applied Anthropology: The Fifth Subfield</h2>
+
+<p>Applied anthropology is sometimes considered a fifth subfield — more a method than a discipline. It involves using anthropological knowledge and methods to address real-world problems: development projects, health interventions, legal cases, policy design, conflict resolution, and organisational management. Applied anthropology insists on the importance of local knowledge, community participation, and cultural sensitivity in any intervention. It draws on all four main branches depending on the problem at hand.</p>
+
+<h2>Interrelations Between the Branches</h2>
+
+<p>The four branches are not watertight compartments. Bioarchaeology sits at the intersection of physical anthropology and archaeology. Palaeoanthropology requires both fossil evidence (physical anthropology) and archaeological context (stone tools, site distribution). Linguistic data can reconstruct past population movements, linking linguistic anthropology to archaeological and physical anthropology. The culture-and-personality school linked cultural anthropology to psychology. Applied anthropology draws on all branches. The unity of the discipline lies in its commitment to a cross-cultural, holistic, and comparative understanding of the human species across space and time.</p>
+`,
 };
+
