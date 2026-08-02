@@ -584,6 +584,110 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>~200,000 ya to present:</strong> Homo sapiens sapiens — evolved in Africa; dispersed globally; Upper Palaeolithic culture (Cro-Magnon, Grimaldi, Chancelade); cave art; symbolic behaviour; full linguistic capacity.</li>
 </ul>
 `,
+
+  'branches-of-anthropology': `
+<h2>The Four-Field Framework</h2>
+
+<p>Anthropology is conventionally divided into four major branches or subfields, each of which addresses a distinct dimension of human existence. These four fields are physical or biological anthropology, social or cultural anthropology, archaeological anthropology, and linguistic anthropology. Together they constitute what American anthropology in particular has called the <strong>four-field approach</strong>, a commitment to studying the human species as a whole — biologically, culturally, historically and linguistically — rather than in disciplinary fragments.</p>
+
+<p>The logic of the four-field approach rests on the recognition that no single dimension of human life can be fully understood in isolation. Language shapes culture; biology constrains and is constrained by culture; cultural practices leave traces in the archaeological record; the fossil record of human evolution illuminates the biological foundations of cultural capacity. The branches are therefore not simply parallel fields — they are deeply interrelated.</p>
+
+<p>Some anthropologists treat applied anthropology as a fifth subfield, though it is more accurately understood as a method and orientation that cuts across all four fields rather than a discipline in itself. Similarly, some schools place linguistics and archaeology as subfields within cultural anthropology rather than treating them as independent branches.</p>
+
+<h2>Physical / Biological Anthropology</h2>
+
+<p>Physical anthropology is the study of human biology within the framework of evolution, with an emphasis on the interaction between biology and culture. The term <em>physical anthropology</em> reflects the original focus on describing and measuring visible human physical variation. The term <em>biological anthropology</em> reflects the shift, from the mid-twentieth century onward, toward genetics, evolutionary biology, physiology and molecular techniques. Both terms are used interchangeably today.</p>
+
+<p>The central concern of physical anthropology is to understand how the human species came to be, how it varies biologically across and within populations, and how biology and culture interact in shaping human life. It is an evolutionary science: every question it poses is framed within the theory of evolution by natural selection.</p>
+
+<h3>Palaeoanthropology</h3>
+
+<p>Palaeoanthropology is the study of human anatomical and behavioural evolution as revealed in the fossil record. Thousands of fossilised remains of early primates and hominins now kept in research collections span at least 7 million years of human prehistory. The ultimate goal of palaeoanthropological research is to identify the various early human and humanlike species, establish a chronological sequence of relationships among them, and gain insights into their adaptation and behaviour.</p>
+
+<h3>Primatology</h3>
+
+<p>Primatology is the study of living non-human primates — the order to which humans belong. Because non-human primates are our closest living relatives, understanding the factors shaping their social behaviour, communication, infant care and reproductive behaviour helps illuminate the natural forces that shaped many aspects of modern human behaviour. Primates are also studied in their own right: the majority of primate species are today threatened or endangered, and scientific study is essential for designing conservation policies.</p>
+
+<h3>Human Genetics and Molecular Anthropology</h3>
+
+<p>Genetics is foundational to physical anthropology because evolutionary processes operate through heritable variation. Molecular anthropologists use DNA analysis to trace evolutionary relationships between human populations and between humans and other primates. By examining similarities and differences in DNA sequences, they reconstruct population histories, migration routes and the timing of evolutionary divergences. Ancient DNA extracted from fossil remains has extended this work into deep evolutionary time.</p>
+
+<h3>Osteology and Bioarchaeology</h3>
+
+<p>Osteology is the study of the skeleton. Before molecular techniques became available, skeletal analysis was the primary means of studying human ancestors and past populations. A thorough knowledge of skeletal structure remains essential to the interpretation of fossil material. Many osteologists specialise in measuring skeletal elements to identify stature, growth patterns and health indicators in archaeological populations. The study of human skeletal remains from archaeological sites has come to be called <strong>bioarchaeology</strong> — it examines patterns of growth, disease, trauma, diet and activity in past peoples as reconstructed from bone.</p>
+
+<h3>Paleopathology</h3>
+
+<p>Paleopathology is the study of disease and trauma in ancient skeletal populations. Paleopathologists investigate the prevalence of trauma, infectious diseases such as tuberculosis and syphilis, nutritional deficiencies, and other conditions that leave traces in bone. This research reveals a great deal about the lives of individuals and populations in the past and illuminates the long-term history of disease processes.</p>
+
+<h3>Forensic Anthropology</h3>
+
+<p>Forensic anthropology applies osteological and sometimes archaeological techniques to legal contexts. Forensic anthropologists help identify skeletal remains in mass disasters, war crimes investigations, and situations in which decomposed or fragmentary human remains have been found. The field draws on knowledge of skeletal anatomy, growth and development, population variation and taphonomy (the study of how bodies decompose and are preserved).</p>
+
+<h3>Nutritional Anthropology</h3>
+
+<p>Nutritional anthropology studies the relationships between dietary components, cultural practices, physiology, and health and disease. It examines human fertility, growth and development in relation to nutrition, and provides insights relevant both to adaptation in living populations and to reconstructing diet in past ones.</p>
+
+<h3>Human Variation</h3>
+
+<p>The study of biological diversity among human populations is a longstanding concern of physical anthropology. Today, physical anthropologists are interested in human variation because of its possible adaptive significance. Many traits that characterise particular populations evolved as biological adaptations to local environmental conditions such as solar radiation, altitude, infectious disease load, and diet. Examining biological variation between populations reveals the mechanisms of genetic change in groups over time.</p>
+
+<h3>Anatomy</h3>
+
+<p>Physical anthropologists with expertise in anatomy study the biomechanical relationships between skeletal and soft tissue structures. This knowledge is essential for interpreting fossilised remains — understanding how an extinct hominin moved, for example, requires detailed knowledge of bone and muscle relationships.</p>
+
+<h2>Social / Cultural Anthropology</h2>
+
+<p>Social or cultural anthropology is the study of patterns of belief and behaviour found in living and historically known human cultures. The terms <em>social anthropology</em> (preferred in Britain and Commonwealth traditions) and <em>cultural anthropology</em> (preferred in North America) refer to essentially the same field, with some differences in theoretical emphasis. Social anthropologists tend to focus on social structures and institutions; cultural anthropologists tend to focus on shared meanings, symbols and worldviews.</p>
+
+<p>The origins of cultural anthropology lie in the nineteenth-century encounter between European travellers, administrators and scholars and the diverse peoples of Africa, Asia, the Americas and Oceania. Early anthropologists documented lifestyles that were in rapid transformation or extinction under colonial pressure. These descriptive ethnographies covered religion, ritual, myth, kinship, technology, gender roles and child-rearing, and formed the empirical basis for comparative theorising about human behaviour.</p>
+
+<p>The defining method of social and cultural anthropology is <strong>ethnography</strong> — long-term, direct participation in the daily life of a community, combined with systematic observation and interviewing. Malinowski's fieldwork in the Trobriand Islands established participant observation as the gold standard of anthropological method. The ethnographer learns the language, lives with the people, and attempts to understand the world from the inside — from the perspective of those being studied.</p>
+
+<p>The focus of cultural anthropology shifted considerably over the twentieth century. Cultural anthropologists still work in remote communities, but increasingly they study urban settings, diaspora communities, transnational corporations, scientific laboratories, digital cultures and their own societies. The discipline has moved from studying the exotic Other to examining the familiar in an ethnographic light.</p>
+
+<p>Core topics in social and cultural anthropology include kinship, marriage and family; economic organisation and exchange; political organisation, power and authority; religion, ritual and symbolism; language and cognition; gender and sexuality; social stratification; and cultural change, globalisation and postcolonialism.</p>
+
+<h2>Archaeological Anthropology</h2>
+
+<p>Archaeological anthropology is the study of past human cultures through the systematic recovery, analysis and interpretation of their material remains. Archaeologists obtain information from artifacts, structures, ecofacts (biological remains such as plant seeds and animal bones), and the spatial patterns of these materials at sites. Unlike popular representations, archaeology is not about retrieving treasures but about reconstructing past human behaviour from physical traces.</p>
+
+<p>Archaeological research aims to understand social organisation, subsistence strategies, trade networks, technological change, the rise of cities and states, the collapse of civilisations, and the long-term history of human adaptation to different environments. It may focus on specific localities or peoples, or address broader cross-cultural questions about patterns in human history.</p>
+
+<p>Patterns of behaviour are reflected in the dispersal of human settlements across a landscape and in the distribution of cultural remains within sites. For example, the spatial relationship between hearths, food refuse, and sleeping areas within a site can reveal household organisation; the distribution of prestige goods across a region can illuminate trade and social hierarchy.</p>
+
+<p>Archaeology complements palaeoanthropology: the fossil record provides evidence of biological evolution, while the archaeological record provides evidence of cultural evolution. Together they trace the emergence and development of the distinctively human capacity for cumulative culture.</p>
+
+<h2>Linguistic Anthropology</h2>
+
+<p>Linguistic anthropology is the study of human language — its origins, diversity, structure, social variation, and relationship to culture and cognition. Because the spontaneous acquisition and use of complex language is a uniquely human characteristic, language occupies a central place in the anthropological study of what it means to be human.</p>
+
+<p>Linguistic anthropologists study language acquisition in infants, the structural diversity of the world's approximately 7,000 languages, the processes by which languages change and spread or disappear, and the social contexts in which language is used. By examining structural similarities between contemporary languages, they identify language families and trace past relationships between human populations — linguistic evidence is a major source for reconstructing prehistoric population movements.</p>
+
+<p>The relationship between language and culture has been a central theoretical concern. The <strong>Sapir-Whorf hypothesis</strong> (or principle of linguistic relativity) proposes that the language one speaks shapes the way one perceives and categorises reality — that speakers of different languages inhabit somewhat different cognitive worlds. While strong versions of this hypothesis have been questioned, research continues to show that language influences certain cognitive processes.</p>
+
+<p>Sociolinguistics examines how language varies with social factors such as class, gender, ethnicity, age, and context. Linguistic anthropologists study code-switching, language ideology, the politics of language in colonial and postcolonial settings, and the documentation of endangered languages.</p>
+
+<h2>Applied Anthropology</h2>
+
+<p>Applied anthropology involves the use of anthropological knowledge, theory and methods to address real-world problems. It is not a separate subfield so much as an orientation that can be brought to bear within any of the four main branches. Applied physical anthropologists work in forensic contexts, nutritional health programmes, and ergonomics. Applied archaeologists work in cultural resource management and heritage preservation. Applied linguistic anthropologists work on language documentation and revitalisation. Applied social and cultural anthropologists work in international development, health systems, education, law, conflict resolution, organisational management and policy design.</p>
+
+<p>The core contribution of applied anthropology is insistence on the importance of local knowledge, cultural context, community participation and cross-cultural sensitivity in any intervention. Problems that appear technical often have deep cultural dimensions that technical approaches alone cannot address.</p>
+
+<h2>Interrelations Between the Branches</h2>
+
+<p>The four branches are not hermetically sealed from one another. Several hybrid subfields span the traditional boundaries:</p>
+
+<ul>
+  <li><strong>Biocultural anthropology</strong> integrates biological and cultural approaches, recognising that biology and culture are not opposed but mutually constitutive. Cultural practices shape biological outcomes (diet affects skeletal morphology; stress affects physiology); biology shapes cultural possibilities (cognitive architecture enables but also constrains cultural forms).</li>
+  <li><strong>Ethnoarchaeology</strong> uses the study of living communities as an interpretive framework for understanding material remains from the past. Observations of how contemporary hunter-gatherers use and discard tools, for instance, help archaeologists interpret stone tool assemblages.</li>
+  <li><strong>Palaeoanthropology</strong> integrates fossil evidence (physical anthropology) with archaeological evidence of tool use and other cultural behaviour to reconstruct the behaviour of extinct hominin species.</li>
+  <li><strong>Linguistic palaeontology</strong> uses comparative linguistics to reconstruct vocabulary in ancestral languages, providing evidence about the environment, technology and social organisation of prehistoric peoples.</li>
+  <li><strong>Medical anthropology</strong> bridges physical and social anthropology, studying health, illness and healing as simultaneously biological and cultural phenomena.</li>
+</ul>
+
+<p>The overarching commitment of the four-field approach is holism: the insistence that to understand the human condition, one must attend to its biological, cultural, historical and communicative dimensions together, not in isolation.</p>
+`,
 };
 
 
