@@ -5784,7 +5784,271 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Census data (2001): rural India comprised 72% of total population; around one-fourth of total national income; nearly half of India's working population. The agrarian sector thus remains central to India's social structure despite decades of industrial and service sector growth.</p>
 `,
-  'caste-system': '',
+  'caste-system': `
+<h2>Introduction — Caste as India's Most Distinctive Social Institution</h2>
+
+<p>The caste system is the most complex, persistent, and sociologically significant form of social stratification found anywhere in the world. It combines ritual hierarchy with occupational specialisation, hereditary membership, endogamy, and a comprehensive ideology of purity and pollution into a single, interlocking system. While discrimination based on caste is constitutionally prohibited in India, caste continues to structure social relations, political mobilisation, marriage markets, and economic opportunity in both rural and urban India.</p>
+
+<p>Unlike class (which is achieved and fluid) or race (which is phenotypically visible), caste is an ascribed, hereditary, and ritually sanctioned form of stratification unique to the Indian subcontinent — though Oliver Cox has compared it to race, and BR Ambedkar has argued it is more oppressive than either class or race.</p>
+
+<h2>Features of the Caste System</h2>
+
+<p>GS Ghurye identified six defining features of caste in his foundational text <em>Caste and Race in India</em> (1932), still widely used as the starting point for caste analysis:</p>
+
+<h3>1. Segmental Division of Society</h3>
+<p>Society is divided into a number of segments (castes) each of which is a well-developed social group. Membership is determined by birth and is hereditary. The individual belongs to the caste of their parents and cannot leave or change it. Each caste is a self-sufficient unit with its own norms, customs, traditions, and occupational specialisation. Social solidarity within the caste is strong; solidarity between castes is weak.</p>
+
+<h3>2. Hierarchical Division</h3>
+<p>Castes are not merely different — they are ranked in a hierarchical order from highest to lowest. The Brahmin traditionally occupies the apex of the ritual hierarchy; the "untouchable" castes are at the bottom, outside the four-varna scheme. This hierarchy is based primarily on the principle of ritual purity and pollution, not on economic wealth or political power. Weber: caste is the most developed form of status group stratification.</p>
+
+<h3>3. Restrictions on Feeding and Social Intercourse</h3>
+<p>Each caste has elaborate rules about with whom its members may share food and water. There are restrictions on <em>pakka</em> (cooked in ghee) and <em>kaccha</em> (cooked in water) food. Generally, a higher caste can accept pakka food from a lower caste but not kaccha food. These restrictions regulate social interaction and physically demarcate caste boundaries.</p>
+
+<h3>4. Civil and Religious Disabilities and Privileges of Different Sections</h3>
+<p>Upper castes enjoy extensive privileges — exclusive access to temples, sacred texts, elite occupations, and higher education. Lower castes suffer severe disabilities — exclusion from temples, wells, schools, and public spaces. Untouchable castes historically were not allowed to walk on public roads used by upper castes, to draw water from upper-caste wells, or to enter temples. These disabilities were enforced not just by social custom but by physical violence.</p>
+
+<h3>5. Lack of Unrestricted Choice of Occupation</h3>
+<p>Each caste has traditionally been associated with a specific hereditary occupation. Brahmins were priests and scholars; Kshatriyas were warriors and rulers; Vaishyas were merchants and traders; Shudras performed service and agricultural labour; "untouchable" castes handled ritually polluting tasks (leather work, sweeping, carrying of the dead). The Jajmani system institutionalised this occupational link through hereditary service relationships between castes in a village.</p>
+
+<h3>6. Endogamy</h3>
+<p>Endogamy is the most distinctive and persistent feature of the caste system. Members must marry within their own caste (and subcaste/gotra). Marrying outside the caste (hypergamy) is tolerated in some contexts but hypogamy (a woman marrying a man of lower caste) is strictly prohibited. Endogamy maintains caste purity, controls property transmission, and preserves the distinctiveness of each caste as a social unit. Today endogamy remains the most prevalent feature of caste even as other restrictions have weakened.</p>
+
+<h2>Varna and Jati — The Two Levels of Caste</h2>
+
+<p>A crucial distinction must be made between <strong>Varna</strong> and <strong>Jati</strong>:</p>
+
+<table>
+  <tr>
+    <th>Varna</th>
+    <th>Jati</th>
+  </tr>
+  <tr>
+    <td>Four-fold textual classification — Brahmin, Kshatriya, Vaishya, Shudra</td>
+    <td>Thousands of actual hereditary groups found in practice</td>
+  </tr>
+  <tr>
+    <td>Pan-Indian, universal, unchanging — based on sacred texts</td>
+    <td>Local, regional, variable — a product of specific historical and ecological conditions</td>
+  </tr>
+  <tr>
+    <td>Ritual hierarchy is fixed and permanent</td>
+    <td>Hierarchy varies locally and changes over time through political and economic shifts</td>
+  </tr>
+  <tr>
+    <td>Brahmin always at the top; Shudra always at the bottom</td>
+    <td>Local ranking of jatis is contested — powerful jatis may claim higher Varna status than others acknowledge</td>
+  </tr>
+  <tr>
+    <td>A theoretical and textual construct</td>
+    <td>The actual lived reality of caste in villages and towns</td>
+  </tr>
+</table>
+
+<p>MN Srinivas: "The Varna model of caste presents ritual hierarchy as a permanent and static feature of Indian society, but the Jati model of caste varies locally." Dipankar Gupta similarly notes that the caste system as it operates in practice does not match the neat textual Varna hierarchy — powerful jatis contest their ranking and may refuse to acknowledge the supremacy of those textually above them.</p>
+
+<h2>Sociological Perspectives on Caste</h2>
+
+<h3>A. GS Ghurye — Indological Perspective</h3>
+<p>GS Ghurye (1893–1983) is considered the father of Indian sociology. His approach was <strong>Indological</strong> — he used ancient Sanskrit texts (Vedas, Dharmashastra, Arthashastra) as primary sources for understanding Indian social institutions. His book <em>Caste and Race in India</em> (1932) remains the most comprehensive sociological analysis of caste.</p>
+
+<p>Key aspects of Ghurye's perspective:</p>
+<ul>
+  <li><strong>Textual origin</strong> — the caste system has its genesis in the Vedic period. The Purusha Sukta hymn of the Rigveda presents the four Varnas as emerging from the cosmic body of Purusha: Brahmin from the mouth, Kshatriya from the arms, Vaishya from the thighs, Shudra from the feet.</li>
+  <li><strong>Racial theory of caste origin</strong> — Ghurye accepted HH Risley's racial theory: caste originated from the encounter between Aryan invaders (light-skinned) and the Dravidian and tribal populations they conquered. The Aryans used caste hierarchy to maintain racial purity — Brahmin castes show the highest proportion of "Aryan" physical characteristics. This theory is widely contested by later scholars.</li>
+  <li><strong>Six features of caste</strong> — as outlined above (segmental division, hierarchy, restrictions on feeding and social intercourse, civil and religious disabilities, lack of occupational choice, endogamy).</li>
+  <li><strong>Brahminic civilisation</strong> — Ghurye emphasised the centrality of Brahminic culture and its gradual spread across the subcontinent through Sanskritisation. He saw caste as rooted in and sustained by Brahminic Hindu ideology.</li>
+  <li><strong>Critique of Indology</strong> — MN Srinivas critiqued Ghurye for studying India through books rather than through fieldwork. Indology gives a Brahminic, textual view that misses the actual workings of caste at the village level. Subaltern historians criticise Ghurye's approach as ignoring the perspective of lower castes and untouchables.</li>
+</ul>
+
+<h3>B. MN Srinivas — Structural Functionalism and Village-Level Analysis</h3>
+<p>MN Srinivas (1916–1999) brought fieldwork-based social anthropology to the study of Indian society. His studies of the Coorgs (Karnataka) and later Rampura village (Mysore) established the village as the key unit for studying caste in practice.</p>
+
+<h4>Dominant Caste</h4>
+<p>Srinivas coined the concept of the <strong>dominant caste</strong> to capture the actual distribution of power in Indian villages — which did not always correspond to the Varna hierarchy. A caste is dominant when it is numerically strong, economically powerful (owns land), and has high ritual status. In practice, dominance often depends on landholding and numerical strength more than ritual position.</p>
+
+<p>The dominant caste controls the local economy (through land), local politics (through vote banks), and social life (through control of temples, water sources, and marriage decisions). Examples: Vokkaligas in parts of Karnataka, Reddys and Kammas in Andhra Pradesh, Patidars in Gujarat, Jats in Punjab and Haryana, Marathas in Maharashtra.</p>
+
+<p>Dominant caste concept shows: ritual hierarchy (Varna) and secular power do not always coincide. A numerically large, landowning Shudra caste can exercise more power over a small Brahmin community than the ritual hierarchy suggests.</p>
+
+<h4>Sanskritisation</h4>
+<p>Srinivas's most famous concept — <strong>Sanskritisation</strong> — refers to the process by which a low or middle Hindu caste, or tribal or other group, changes its customs, ritual, ideology, and way of life in the direction of a high, and frequently twice-born caste.</p>
+
+<p>The process typically involves: giving up meat-eating and alcohol; adopting vegetarianism (the Brahmin dietary code); wearing the sacred thread; adopting stricter purdah for women; performing Vedic rituals; claiming a higher Varna status in the Varna scheme. The reference group in Sanskritisation is a specific caste in the local area, not Brahmins in the abstract.</p>
+
+<p>Sanskritisation as a form of social mobility: it enables positional change within the caste hierarchy but does not change the structure of the hierarchy itself. The low caste rises; the hierarchy remains intact. Srinivas called this "mobility within the system" rather than "mobility of the system."</p>
+
+<p>Limitations of Sanskritisation:</p>
+<ul>
+  <li>It is a group phenomenon, not individual — an entire jati Sanskritises together. Individual mobility is not possible.</li>
+  <li>Positional change only — the hierarchy is not challenged or transformed.</li>
+  <li>Cannot account for the upward mobility of castes that have rejected Brahminic culture — Dalit Buddhist movements, self-respect movements.</li>
+  <li>It reinforces Brahminic values as the standard of prestige — thereby perpetuating the ideological dominance of upper castes.</li>
+  <li>According to Dumont, Sanskritisation is absent in the true caste system because mobility is not supposed to occur.</li>
+  <li>M.N. Srinivas himself acknowledged: Sanskritisation can be seen as the "internalisation of Brahmanism by the lower castes," reinforcing rather than challenging the system.</li>
+</ul>
+
+<h4>Westernisation</h4>
+<p>Srinivas also developed the concept of Westernisation — the changes brought about in Indian society and culture through more than 150 years of British rule. Unlike Sanskritisation (which involves moving up within the traditional hierarchy), Westernisation involves adopting Western cultural values: secular thought, humanitarianism, rationalism, individualism, democracy. It has produced a new elite that challenges the traditional caste hierarchy from outside the system. Westernisation and Sanskritisation both produce social change but in different directions.</p>
+
+<h3>C. Louis Dumont — Homo Hierarchicus</h3>
+<p>Louis Dumont's <em>Homo Hierarchicus: The Caste System and its Implications</em> (1966) is the most ambitious and controversial structural analysis of caste. Dumont approached caste as an anthropologist trained in the French structuralist tradition.</p>
+
+<p>Dumont's central argument: the caste system is not merely a system of stratification but an ideology — a complete, coherent, and internally consistent worldview based on the opposition between <strong>purity and pollution</strong>. The pure is superior to the impure; this single principle organises the entire social hierarchy of Indian society.</p>
+
+<p>Key features of Dumont's analysis:</p>
+<ul>
+  <li><strong>Holism vs individualism</strong> — Western society is built on individualism (the individual as primary); Indian caste society is built on holism (the whole, the social order, is primary). The individual in caste society exists only in relation to the whole — their place in the hierarchy defines them. Dumont called the ideal typical Indian caste person <em>Homo Hierarchicus</em>.</li>
+  <li><strong>Purity and pollution</strong> — the foundational principle of caste hierarchy. The Brahmin is pure because he is a vegetarian, does not handle death or bodily waste, performs purifying rituals. The untouchable is polluted because they handle leather, bodily waste, carrion, and the dead. Pollution is contagious through contact.</li>
+  <li><strong>Separation of status and power</strong> — Dumont argued that in the caste system, the Brahmin has highest ritual status but no direct political power (which belongs to the Kshatriya). This is a fundamental feature: the purity hierarchy and the power hierarchy are different and operate independently.</li>
+  <li><strong>Caste as hierarchy, not stratification</strong> — Dumont insisted that other sociologists (including Beteille) wrongly interpreted caste as a form of social stratification. Stratification implies comparison of individuals along a scale of rank; caste hierarchy is about the ordering of roles and functions within a system, not the comparison of individuals. Castes are not ranked individuals but interdependent parts of a whole.</li>
+  <li><strong>No mobility in principle</strong> — in Dumont's reading, the caste system does not allow for social mobility. Srinivas's Sanskritisation is an empirical exception that Dumont saw as historically late and ideologically secondary.</li>
+</ul>
+
+<h4>Critiques of Dumont</h4>
+<ul>
+  <li><strong>Andre Beteille</strong> — Dumont vastly overemphasises the role of ideology (purity/pollution) and underestimates the role of power, economics, and conflict in maintaining caste. The caste system is a system of social stratification, not just an ideology.</li>
+  <li><strong>Dipankar Gupta</strong> (<em>Interrogating Caste</em>) — Dumont's model presents caste hierarchy as consensual and internally consistent. In practice, castes do not accept their assigned position in the Varna hierarchy — they contest it. "While there is agreement over hierarchy, there is no agreement over ranking." Brahmins are universally acknowledged as most superior in the Varna scheme, but powerful Kshatriyas consider themselves more important; even among Brahmins there is no consensus.</li>
+  <li><strong>BR Ambedkar</strong> — purity and pollution are instruments of oppression, not a coherent cultural worldview. The Brahmin invented the ideology of purity to justify exploitation and prevent the lower castes from accessing education, wealth, and power.</li>
+  <li><strong>Feminist critique</strong> — purity ideology is also used to control women's bodies and sexuality. Women's "pollution" during menstruation and childbirth is used to exclude them from rituals, temples, and domestic spaces.</li>
+  <li><strong>Subaltern scholars</strong> — Dumont's account is derived primarily from Brahminic texts and ignores the non-Brahminic traditions that have always challenged the caste hierarchy.</li>
+</ul>
+
+<h3>D. Andre Beteille — Caste, Class, and Power</h3>
+<p>Andre Beteille's study of the village of Sripuram in Tanjore district (published as <em>Caste, Class and Power</em>, 1965) is a landmark empirical study that challenged both Dumont's ideological approach and Srinivas's Dominant Caste framework.</p>
+
+<p>Beteille's key findings:</p>
+<ul>
+  <li><strong>Three systems of stratification coexist</strong> — in Sripuram, caste (ritual hierarchy), class (economic position), and power (political authority) are analytically distinct and do not always coincide. A change in one does not necessarily produce a change in another.</li>
+  <li><strong>Cumulative vs dispersed inequality</strong> — in the past, Brahmins of Sripuram were also the dominant landowners and the politically powerful — caste, class, and power were "cumulative" (reinforcing each other). Post-independence land reforms and democratic politics have "dispersed" inequality — non-Brahmins have gained political power and economic resources, even while Brahmins retain ritual status.</li>
+  <li><strong>Caste as a form of social stratification</strong> — Beteille directly contradicted Dumont by insisting that caste should be understood as social stratification, not just as ideology. Caste groups have unequal shares of scarce resources (income, property, education, political power).</li>
+  <li><strong>Caste vs race comparison</strong> — Beteille and Dipankar Gupta distinguish caste from race: Brahminic supremacy was always questioned from within (Buddhism, Jainism, Bhakti, Sikhism) while white supremacy was rarely challenged from within the dominant group. Caste is more internally differentiated (sub-castes within castes) and allows more internal mobility than race. Dalit sociologists counter that both are grounded in social justifications of inequality and both function as forms of discrimination.</li>
+  <li><strong>Sripuram's caste map</strong> — Beteille's detailed analysis revealed that even within the Brahmin community of Sripuram, there were at least four levels of segmentation: political divisions (Brahmins vs Non-Brahmins), occupational divisions (Mirasdar Brahmins/landowners vs temple priests vs panchangakkarans), doctrinal divisions (Smartha/Iyer vs Shri Vaishnava/Iyengar), and marital divisions (multiple sub-castes within each doctrinal group). This confirmed that the caste system is far more complex than the simple Varna scheme suggests.</li>
+</ul>
+
+<h2>The Jajmani System</h2>
+
+<p>The Jajmani system was the economic dimension of the caste system at the village level. Each caste in a village had a hereditary service relationship with other castes: the Brahmin priest performed religious rituals; the carpenter made agricultural implements; the washerman cleaned clothes; the cobbler made and repaired shoes; the barber cut hair; the sweeper cleaned the village — all for the dominant farming caste (the <em>jajman</em>) in exchange for a fixed share of the harvest.</p>
+
+<p>Perspectives on the Jajmani system:</p>
+<ul>
+  <li><strong>WH Wiser</strong> — the first to describe it systematically. Saw it as a form of mutual exchange — each caste served others and received payment in kind. Characterised it as "Hindu jajmani system."</li>
+  <li><strong>Functionalist view</strong> — the Jajmani system created organic solidarity (as in Durkheim's sense) between interdependent castes; it provided economic security and social stability in traditional village India.</li>
+  <li><strong>Henry Orenstein</strong> — the Jajmani system creates a form of organic solidarity between Jajman (upper caste) and Kamin (service caste) — but this solidarity blinds us to the exploitation of lower castes embedded in the relationship. The service castes are paid far less than the market value of their labour.</li>
+  <li><strong>Marxist view</strong> — the Jajmani system is "feudalism in delivery of services by lower castes for the safety and livelihood of the dominant caste." It binds the lower castes to the village and to the dominant caste through debt, custom, and the absence of alternative economic opportunities.</li>
+  <li><strong>Contemporary decline</strong> — the Jajmani system has largely broken down with commercialisation of agriculture, urbanisation, new occupational opportunities, and the advent of the market economy. When the link between caste and occupation breaks down, the Jajmani system withers away. Recognition of caste and occupation is the last to go.</li>
+</ul>
+
+<h2>Caste and Class — Relationship and Overlap</h2>
+
+<table>
+  <tr>
+    <th>Caste</th>
+    <th>Class</th>
+  </tr>
+  <tr>
+    <td>Ascribed — determined by birth</td>
+    <td>Achieved — determined by education, income, occupation</td>
+  </tr>
+  <tr>
+    <td>Closed — endogamy prevents mixing</td>
+    <td>Open — individual mobility between classes is possible</td>
+  </tr>
+  <tr>
+    <td>Based on ritual hierarchy — purity and pollution</td>
+    <td>Based on economic resources — market position</td>
+  </tr>
+  <tr>
+    <td>Common identity and solidarity within each caste</td>
+    <td>Class consciousness varies — often weak</td>
+  </tr>
+  <tr>
+    <td>Local — varies by region and village</td>
+    <td>Universal — the same criteria apply everywhere</td>
+  </tr>
+</table>
+
+<p>Beteille: in traditional Indian society, caste and class were cumulative (upper castes were also propertied classes). Post-independence, they have been dispersed — lower castes have gained political and economic power while upper castes have retained ritual status. Yet caste and class still significantly overlap: in India today, the poorest quintile of the population is disproportionately populated by Scheduled Castes and Scheduled Tribes.</p>
+
+<p>Oliver Cox argued that caste is equivalent to "coloured" race in the American South — both are forms of social stratification based on descent, both enforced through violence and social exclusion, and both serve to maintain a cheap labour supply for the dominant group. Beteille and Gupta contested this, arguing caste is historically more complex and internally differentiated than race.</p>
+
+<h2>Untouchability — Forms, Persistence, and Legal Framework</h2>
+
+<h3>What is Untouchability?</h3>
+<p>Untouchability refers to the practice of social exclusion, discrimination, and stigmatisation of the lowest castes (historically called "untouchables" or "achhuts") based on the belief that their very presence, touch, or shadow is polluting to members of higher castes. It is the most extreme and degrading expression of the caste system's purity-pollution ideology.</p>
+
+<p>Untouchable castes were historically assigned the most ritually polluting tasks: removing human waste (manual scavenging), disposing of animal carcasses, working with leather, sweeping public spaces, washing clothes. Their labour was essential to village life; their persons were considered defiling.</p>
+
+<h3>Forms of Untouchability</h3>
+<ul>
+  <li><strong>Physical untouchability</strong> — prohibition on touch; untouchables required to maintain physical distance from upper castes; prohibition on entering upper-caste homes.</li>
+  <li><strong>Spatial untouchability</strong> — untouchable settlements (Dalit bastis) located outside the main village; separate streets and public spaces; geographic segregation in rural India persists today.</li>
+  <li><strong>Temple entry prohibition</strong> — banned from entering caste Hindu temples. The Temple Entry Proclamation by the Travancore Maharaja (1936) and similar campaigns in Tamil Nadu were landmark moments. Dr Ambedkar led the Kalaram Temple Satyagraha (Nasik, 1930).</li>
+  <li><strong>Restrictions on water sources</strong> — untouchables barred from using wells used by upper castes; Ambedkar led the Mahad Satyagraha (1927) demanding the right to use the public Chavdar Tank.</li>
+  <li><strong>Educational exclusion</strong> — prohibited from attending same schools; forced to sit separately; denied access to the ears of the Brahmin teacher (Ekalavya myth). Jyotiba Phule established the first school for untouchable children in Pune (1848).</li>
+  <li><strong>Occupational stigmatisation</strong> — forced into hereditary "unclean" occupations; manual scavenging (carrying human waste on the head) persists in India despite legal prohibition.</li>
+  <li><strong>Social untouchability</strong> — prohibition on wearing shoes in the presence of upper castes; lower sitting posture; separate utensils in tea stalls; prohibition on upper-caste food.</li>
+  <li><strong>Symbolic untouchability</strong> — untouchables required to tie a broom to their waist and a pot around their neck while walking in the street so that their footprints and shadow could not pollute the ground or the air.</li>
+</ul>
+
+<h3>Legal Framework Against Untouchability</h3>
+<ul>
+  <li><strong>Article 17 of the Constitution</strong> — "Untouchability is abolished and its practice in any form is forbidden." This is a fundamental right enforceable against both the state and private individuals.</li>
+  <li><strong>The Untouchability (Offences) Act, 1955</strong> — later strengthened and renamed the <strong>Protection of Civil Rights Act, 1955</strong> — criminalised the practice of untouchability.</li>
+  <li><strong>Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 (SC/ST Act)</strong> — provides for stricter punishment for atrocities against SC and ST members including violence, sexual assault, social boycott, and forced labour.</li>
+  <li><strong>The Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013</strong> — prohibits manual scavenging and provides for rehabilitation of those engaged in it.</li>
+</ul>
+
+<h3>Persistence of Untouchability</h3>
+<p>Despite legal prohibitions, untouchability persists in various forms:</p>
+<ul>
+  <li>Caste-based discrimination in education (separate seating, separate mid-day meal plates), employment, housing, and marriage.</li>
+  <li>Violence against Dalits — atrocities including killing, rape, arson, and social boycott — continue to be reported. National Crime Records Bureau data shows consistent registration of crimes under the SC/ST Act.</li>
+  <li>Manual scavenging — despite legal prohibition, hundreds of thousands of Dalits (mostly women) continue to be employed as manual scavengers in rural India and in cleaning sewer lines in cities.</li>
+  <li>Caste-based discrimination in urban India — discrimination in housing (landlords refusing to rent to Dalits), in the workplace, and in social spaces.</li>
+  <li>The "hidden apartheid" — untouchability in rural India is often invisible to urban observers and to the state. Field studies by Sukhadeo Thorat and others have documented persistent discrimination in village water sources, temples, barber shops, and tea stalls.</li>
+</ul>
+
+<h2>BR Ambedkar — Annihilation of Caste</h2>
+
+<p>No thinker has engaged more radically, more systematically, and more personally with the question of caste than BR Ambedkar (1891–1956). Born into the Mahar (untouchable) caste of Maharashtra, Ambedkar experienced caste discrimination personally from childhood. He became the most educated Indian of his generation (PhD from Columbia, DSc from London) and devoted his intellectual and political life to the destruction of the caste system.</p>
+
+<p>Key aspects of Ambedkar's analysis:</p>
+<ul>
+  <li><strong>Annihilation of Caste (1936)</strong> — Ambedkar's most powerful text, written as a presidential address to the Jat Pat Todak Mandal (a caste reform organisation that then refused to have him speak because of his radical views). Ambedkar argued that caste cannot be reformed — it must be annihilated. Reform (Sanskritisation, occupational change, inter-dining) leaves the ideological foundation intact. Only the destruction of the religious sanction for caste (the shastras and the smritis) can end it. "The caste system is not merely a division of labour. It is also a division of labourers."</li>
+  <li><strong>Graded inequality</strong> — Ambedkar identified graded inequality as caste's most insidious feature. The system does not simply divide into two groups (oppressor/oppressed) as in Marx. Instead, every caste is above some and below others — producing a vertical ladder of exploitation where each group has a grievance against those above but will not unite with those below to overthrow the system.</li>
+  <li><strong>Racial theory</strong> — Ambedkar, like Ghurye, partially accepted the racial theory of caste origins — arguing that Dalits are the original inhabitants of India (Nagas/Dravidians) subjugated by the Aryan invaders. This argument was meant to invert the caste hierarchy — the Dalits are "the original Indians" whose culture and civilisation preceded Brahminic Hinduism.</li>
+  <li><strong>Buddhist conversion (1956)</strong> — Ambedkar's most dramatic act. He led a mass conversion of approximately 600,000 Dalits to Buddhism at Nagpur on 14 October 1956, six weeks before his death. His reasoning: Hinduism cannot be reformed from within; Buddhism provides an egalitarian, non-hierarchical, rationalist alternative. Buddhism's founding was itself a protest against Brahminic hierarchy — the Buddha rejected the Vedas, the caste system, and ritual animal sacrifice, and opened the Sangha to all, including women and Shudras.</li>
+  <li><strong>Caste as totalising system</strong> — Ambedkar argued that caste is not merely an economic or social institution; it is a total system that controls every aspect of life — marriage, food, occupation, residence, education, and death. It cannot be compared to class (which is open) or race (which lacks the Brahminic textual sanction that makes caste morally legitimate).</li>
+</ul>
+
+<h2>Caste in Contemporary India — Change and Continuity</h2>
+
+<h3>Forces Challenging Caste</h3>
+<ul>
+  <li><strong>Urbanisation</strong> — urban anonymity weakens caste surveillance; diverse residential patterns; market-based relationships transcend caste.</li>
+  <li><strong>Industrialisation</strong> — factory work and the labour market judge workers by productivity, not birth.</li>
+  <li><strong>Education</strong> — exposure to universalistic values and diverse social networks.</li>
+  <li><strong>Democracy</strong> — one person one vote gives numerical majority to lower castes; political mobilisation has produced Dalit and OBC political parties (BSP, RJD, SP) that have challenged upper-caste dominance.</li>
+  <li><strong>Reservation policy</strong> — reservations in education, government employment, and legislatures for SCs (15%), STs (7.5%), and OBCs (27%) have opened new avenues of upward mobility and created a Dalit and OBC middle class.</li>
+  <li><strong>Legal reform</strong> — constitutional prohibition of untouchability, SC/ST Atrocities Act, abolition of child labour, land reform legislation.</li>
+  <li><strong>Mandal Commission</strong> — the V.P. Singh government's implementation of the Mandal Commission recommendations (1990) — extending reservation to OBCs in central government employment — was a landmark moment that reshaped Indian politics along caste lines.</li>
+</ul>
+
+<h3>Persistence of Caste</h3>
+<ul>
+  <li>Endogamy — inter-caste marriages remain rare even in urban areas; most Indians continue to marry within their caste. The matrimonial columns of Indian newspapers and matrimonial websites explicitly sort by caste.</li>
+  <li>Caste-based politics — political parties mobilise caste identities; vote banks are organised on caste lines; caste census data (proposed) is a political battleground.</li>
+  <li>Caste-based violence — honour killings for inter-caste marriages; attacks on Dalits who build pucca houses, ride horses, or fail to follow traditional codes of deference.</li>
+  <li>Economic inequality — SC and ST households disproportionately represented among the poorest income quintiles; upper-caste households overrepresented among the wealthiest.</li>
+  <li>New forms of caste discrimination — discrimination in urban housing, employment (studies have shown that identical CVs with upper-caste names receive more job interview calls than CVs with Dalit-caste names), and access to credit.</li>
+</ul>
+
+<h3>Caste and Democracy — A Complex Relationship</h3>
+<p>Rajni Kothari (<em>Caste in Indian Politics</em>): in Indian democracy, caste and politics interact in a complex dialectical way. Caste has entered politics (caste groups use democratic politics to advance their collective interests) and politics has entered caste (the competition for votes has changed caste relations — castes that were traditionally deferential have become assertive). The result is what Kothari calls the "politicisation of caste" and the "casteisation of politics."</p>
+
+<p>Christophe Jaffrelot: reservation policy has produced a "silent revolution" — the rise of the Other Backward Classes as a politically assertive and electorally dominant force in North India. The dominance of upper-caste Brahmins and Baniyas in Congress politics has been replaced by OBC-dominated regional parties. This is social change from below — without a revolution.</p>
+
+`,
   'tribal-communities': '',
   'social-classes-india': '',
   'kinship-systems-india': '',
