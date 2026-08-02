@@ -1,28 +1,28 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/polsci';
+import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/geography';
 
 export const metadata: Metadata = {
-  title: 'Political Science Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Political Science & IR Optional — political theory, Indian polity, comparative politics and international relations.',
-  alternates: { canonical: 'https://distilledcrux.com/notes/polsci' },
+  title: 'Geography Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC Geography Optional — physical geography, human geography, Indian geography, regional planning and more.',
+  alternates: { canonical: 'https://distilledcrux.com/notes/geography' },
 };
 
-const COLOR = '#f87171';
-const COLOR_BG = 'rgba(248,113,113,0.09)';
-const COLOR_BORDER = 'rgba(248,113,113,0.25)';
+const COLOR = '#4ade80';
+const COLOR_BG = 'rgba(74,222,128,0.09)';
+const COLOR_BORDER = 'rgba(74,222,128,0.25)';
 
-export default function PolsciNotesPage() {
+export default function GeographyNotesPage() {
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
       <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
         <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
         <span>·</span>
-        <span>Political Science</span>
+        <span>Geography</span>
       </div>
 
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
-        Political Science & IR Optional
+        Geography Optional
       </h1>
       <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '3rem' }}>
         {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants
@@ -32,7 +32,7 @@ export default function PolsciNotesPage() {
       <div style={{ marginBottom: '3rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
           <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: COLOR, background: COLOR_BG, border: `1px solid ${COLOR_BORDER}`, padding: '3px 10px', borderRadius: 4 }}>Paper I</span>
-          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Political Theory & Indian Government and Politics</span>
+          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Physical Geography & Human Geography</span>
         </div>
         {paper1Sections.map((section) => {
           const notes = paper1Notes.filter(n => n.section === section);
@@ -42,7 +42,7 @@ export default function PolsciNotesPage() {
               <div style={{ fontSize: '0.7rem', fontFamily: 'var(--font-ui)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '0.75rem' }}>{section}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                 {notes.map(note => (
-                  <Link key={note.slug} href={`/notes/polsci/${note.slug}`} style={{ textDecoration: 'none' }}>
+                  <Link key={note.slug} href={`/notes/geography/${note.slug}`} style={{ textDecoration: 'none' }}>
                     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: `3px solid ${COLOR}`, display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
                       <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg3)', border: '1px solid var(--border)', padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px' }}>{String(note.topic).padStart(2, '0')}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
@@ -69,7 +69,7 @@ export default function PolsciNotesPage() {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
           <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: COLOR, background: COLOR_BG, border: `1px solid ${COLOR_BORDER}`, padding: '3px 10px', borderRadius: 4 }}>Paper II</span>
-          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Comparative Politics & International Relations</span>
+          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Geography of India</span>
         </div>
         {paper2Sections.map((section) => {
           const notes = paper2Notes.filter(n => n.section === section);
@@ -79,7 +79,7 @@ export default function PolsciNotesPage() {
               <div style={{ fontSize: '0.7rem', fontFamily: 'var(--font-ui)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: '0.75rem' }}>{section}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                 {notes.map(note => (
-                  <Link key={note.slug} href={`/notes/polsci/${note.slug}`} style={{ textDecoration: 'none' }}>
+                  <Link key={note.slug} href={`/notes/geography/${note.slug}`} style={{ textDecoration: 'none' }}>
                     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: `3px solid ${COLOR}`, display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
                       <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg3)', border: '1px solid var(--border)', padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px' }}>{String(note.topic).padStart(2, '0')}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
