@@ -1775,3 +1775,200 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 
 
+
+  'human-growth-development': `
+<h2>Growth vs Development: Core Distinction</h2>
+
+<p>Physical anthropology has long studied human biological variation across populations, and a crucial part of that inquiry is understanding the processes of growth and development that produce inter- and intra-population diversity. Though often used interchangeably in lay discourse, <strong>growth</strong> and <strong>development</strong> are distinct processes.</p>
+
+<p><strong>Growth</strong> refers to quantitative increase in the size of the body as a whole or of specific parts. It involves three cellular mechanisms (Malina et al., 2004): <em>hyperplasia</em> (increase in cell number through cell division), <em>hypertrophy</em> (increase in cell size, especially evident in muscular growth), and <em>accretion</em> (increase in intercellular substances, such as collagen fibres that bind cells in complex networks). Growth is measurable directly in centimetres or kilograms, does not continue throughout life, and ceases with the attainment of maturity.</p>
+
+<p><strong>Development</strong> is the broader concept: the progressional change — quantitative or qualitative — from an undifferentiated or immature state to a highly organized, specialized, and mature state (Bogin, 2002). It has two contexts: in the <em>biological context</em>, it refers to cellular differentiation and specialization of pluripotent embryonic stem cells into different tissues, organs, and functional units, regulated by gene activation or repression interacting with hormones and nutrition. In the <em>behavioural context</em>, it includes social, cognitive, and emotional development (acquisition of language, abstract thinking, self-awareness) and motor skills development (postural control to coordinated movement). Unlike growth, development is progressive and continues throughout life into senescence. Functional and behavioural changes acquired during development are difficult to measure directly, unlike physical growth.</p>
+
+<h2>Principles of Growth and Development</h2>
+
+<p>Human growth and development proceed according to systematic, genetically pre-programmed principles rather than randomly.</p>
+
+<p><strong>Cephalocaudal and Proximodistal Development:</strong> Physical and motor development follow two distinct spatial patterns. Cephalocaudal development proceeds from head to toe — in an embryo the head constitutes approximately half the total body length, but by birth this is reduced to about one-third as limbs and trunk grow faster. The infant gains voluntary control of head and shoulders before lower limbs. Proximodistal development proceeds from the centre of the body outward to the periphery — infants acquire control over neck and trunk muscles before coordination of hands and fingers.</p>
+
+<p><strong>Development Proceeds from General to Specific:</strong> Initially infant movements are generalized, undirected, and reflexive — waving arms, moving the whole body. Over time, specific responses emerge: the infant grasps an object with the whole hand before learning to use thumb and forefinger, moving from large muscle to refined small muscle movements.</p>
+
+<p><strong>Development is a Continuous, Sequential Process:</strong> Development proceeds from conception to death following a predictable sequence in which each phase lays the foundation for the next. A child learns to hold its head, sit without support, stand by holding furniture, and then walk. Each set of skills becomes the basis for further mastery.</p>
+
+<p><strong>Development Proceeds at Different Rates:</strong> Though each child follows a general pattern, the rate of reaching developmental stages varies by individual, and by age and sex. From birth to early adulthood, stature and weight show rapid gain in infancy and early childhood, steady gain in middle childhood, rapid gain in adolescence, and slow increase until growth ceases at adult stature. During early adolescence, girls are taller and heavier than boys due to their earlier growth spurt, but as boys undergo their later adolescent spurt they catch up and eventually surpass girls.</p>
+
+<p><strong>Development is an Interrelated Genetic, Environmental, and Behavioural Process:</strong> Genes determine the potential for optimal development, but this potential is realized through interaction with the sociocultural and physical environment. Maturation (the sequential development of cognitive and motor skills over time) interacts with the child's learning experiences. A child who receives insufficient love and attention may fail to grow and develop to potential. Abstract thinking and social behaviour develop according to the peer and family environment.</p>
+
+<h2>Patterns of Human Growth: Growth Curves</h2>
+
+<p>When measurements of an individual taken at specific intervals are plotted against time, they produce growth curves. A <em>distance curve</em> represents the total amount of growth achieved at successive time periods (e.g., height attained at each age). A <em>velocity curve</em> represents the rate of change in a measurement over time (height gained per year).</p>
+
+<p>Scammon (1930) identified four distinct types of growth curves corresponding to different tissues:</p>
+
+<p><strong>General Curve:</strong> Describes growth of the body as a whole and most organ systems — skeleton, respiratory, digestive, urinary, and circulatory. It follows a sigmoid (S-shaped) pattern with four phases: rapid growth in infancy and early childhood; steady constant growth in middle childhood; rapid growth during adolescence; slow and eventual cessation of growth in the third decade. A mid-childhood growth spurt is also sometimes observed, but is not universal.</p>
+
+<p><strong>Neural Curve:</strong> Characterizes growth of the brain, nervous system, and associated structures — eyes, upper face, and parts of the skull. These tissues grow rapidly in early postnatal life, attaining approximately 95% of total adult size by age 7 years. After 7, neural tissue shows slow steady gain with only a slight spurt during adolescence. This early completion explains why head circumference is used as a proxy for brain growth in infant health monitoring.</p>
+
+<p><strong>Reproductive Curve:</strong> Illustrates growth of primary sexual characteristics (ovaries, uterus, testes, seminal vesicles) and secondary sexual characteristics (breast, larynx, pubic hair). These tissues show slight growth in infancy, a latent period during childhood with minimal change, and then rapid growth and maturation during adolescence.</p>
+
+<p><strong>Lymphoid Curve:</strong> The lymphatic system (thymus, tonsils, spleen, lymph nodes) develops immunological capacities and shows rapid growth until early adolescence, reaching values exceeding adult size. It then declines — likely due to the activities of sex hormones during puberty. This overshoot-and-decline is unique among tissues.</p>
+
+<h2>Methods of Studying Human Growth</h2>
+
+<p>Three methodological approaches exist for studying growth.</p>
+
+<p><strong>Longitudinal Method:</strong> The same subjects are measured repeatedly from year to year. This allows analysis of individual rates of growth and the timing of specific developmental events. A birth-to-maturity study may take 20 years. Examples include the Fels Longitudinal Study, the Berkeley Growth Study, and the Harvard School of Public Health Growth Study (all initiated 1927–1932). Principal drawbacks: the time required, the relatively small number of subjects that can be followed, the cost, and the need for sustained cooperation from subjects. It requires the highest accuracy in data collection.</p>
+
+<p><strong>Cross-Sectional Method:</strong> Subjects of different ages are measured at a single point in time, each subject measured only once. Provides a general description of age-related growth changes and can be completed quickly on large samples. Useful for constructing population standards (height-weight standards). Limitations: tells us nothing about individual growth increments from year to year; since it mixes data of early, average, and late-maturing children, the resulting mean velocity curve underestimates the actual velocity of growth for all children during the adolescent spurt.</p>
+
+<p><strong>Sequential (Mixed Longitudinal) Method:</strong> Designed to overcome the drawbacks of the other two. People in a cross-sectional sample are tested more than once and the results analysed to determine differences that show up over time for different groups. This provides more realistic assessment than either cross-sectional or longitudinal methods alone.</p>
+
+<h2>Stages of Growth: The Human Life Cycle</h2>
+
+<p>The human life cycle is uniquely differentiated among mammals, with more clearly demarcated phases than other species. These phases are marked by biological transitions.</p>
+
+<h3>Prenatal Stage</h3>
+
+<p>Begins at conception (fertilization of egg by sperm) and passes through three trimesters:</p>
+
+<p><strong>Embryonic Stage / First Trimester (conception to 8th week):</strong> Cells divide repeatedly as the embryo moves through the fallopian tube and embeds in the uterine wall. By 5 weeks, development of brain, spinal cord, and heart is underway. By 6 weeks, the heart is pumping the embryo's own blood and all four chambers are present. By 7–8 weeks, the cerebral hemispheres are visible, fingers begin forming. The embryo measures less than ¼ inch head to rump.</p>
+
+<p><strong>Early Foetal Stage / Second Trimester (9th–24th week):</strong> By 10 weeks, kidneys begin producing urine, intermittent breathing motions begin, approximately 4,000 of the 4,500 adult body parts are present — this 10-week foetus weighs about 1/10th of an ounce. By 12 weeks, fingerprints begin forming. By 22 weeks, the sense of hearing functions and the cochlea reaches adult size. The 24-week foetus weighs about 1¼ pounds.</p>
+
+<p><strong>Late Foetal Stage / Third Trimester (25th week to birth):</strong> Lungs produce surfactant necessary for breathing after birth. By 37 weeks, the foetus has a firm hand grip. Labour is initiated by the foetus around 40 weeks. At full-term birth, newborns typically weigh 6–9 pounds and measure 18–21 inches.</p>
+
+<h3>Neonatal Period</h3>
+
+<p>The 28 days post-birth, characterized by rapid growth and adaptation to extra-uterine life. The newborn now relies on its own circulatory, digestive, and excretory systems. Inadequate growth during prenatal life increases vulnerability in this period, contributing to neonatal mortality.</p>
+
+<h3>Infancy (Birth to approximately 4 years)</h3>
+
+<p>Infancy is defined as the period during which nursing takes place, typically lasting about 4 years in humans. The first year is characterized by the most rapid postnatal physical growth. A normal baby doubles its birth weight in 6 months and triples it in a year. The brain grows more rapidly during infancy than any other tissue — by end of the second year, the brain has reached 75% of its adult weight. Bones begin to harden; fontanelles (soft parts of newborn skull) begin to calcify — the small posterior one by 3 months, the larger anterior one by up to 18 months. Emergence of deciduous dentition allows transition from breast feeding to weaning foods. Deciduous teeth erupt approximately one month earlier in boys than girls. Rapid motor skills development is directed toward upright posture and independent locomotion.</p>
+
+<h3>Childhood</h3>
+
+<p><strong>Early Childhood:</strong> The rate of growth decreases relative to infancy. Constraints of immature dentition, small digestive system, and rapid brain growth necessitate specially prepared foods. Neurological development enhances psychomotor skills; by end of this phase, the child comprehends language alongside social, physical, and cultural norms. Boys are taller than girls with respect to physical growth at this stage.</p>
+
+<p><strong>Middle Childhood:</strong> The most stable growth period, characterized by differential rates of growth in different body parts. By age 7, children walk efficiently like adults. Replacement of milk teeth by permanent teeth is almost complete (except second molars).</p>
+
+<p><strong>Late Childhood:</strong> Influenced by the initial activity of sex hormones — a pre-pubertal stage in which linear rapid growth takes place, marking the beginning of the adolescent growth spurt. Sexual dimorphism in body size and proportion becomes evident.</p>
+
+<h3>Adolescence</h3>
+
+<p>Adolescence is signalled by the onset of puberty — defined as the physical transformation of a child into an adult. It involves: sexual maturation, increases in height and weight, completion of skeletal growth with marked increase in skeletal mass, and changes in body composition. The succession of these events is consistent among adolescents, but the age of onset, duration, and tempo vary greatly between individuals.</p>
+
+<p>The beginning of the adolescent phase is marked by a rapid acceleration in the growth velocity of virtually all skeletal tissues — the <strong>adolescent growth spurt</strong>. The growth rate reaches a maximum called <strong>Peak Height Velocity (PHV)</strong> and then gradually declines. The rise to PHV is relatively slower than the decline after it. Age at PHV is an important maturity indicator.</p>
+
+<p><strong>Sex differences in the growth spurt:</strong> Girls enter puberty approximately 2 years earlier than boys. Girls attain PHV between ages 11.5–12.5 years. Boys gain their adolescent growth spurt on average between 12.5 and 15.5 years, with PHV between ages 13.5–14.5 years. During early adolescence, girls are therefore taller and heavier than boys; as boys attain their later, larger spurt, they catch up and eventually surpass girls.</p>
+
+<p>Adolescence is also characterized by: completion of permanent teeth eruption (except the third molar, which erupts between 17–25 years); development of secondary sexual traits including sex-specific alterations to fat and muscle distribution; and psychological and behavioural changes related to sexual and social maturation.</p>
+
+<p><strong>Indian data:</strong> A study by Kant et al. found that puberty sets in early among Indian boys but full maturation takes longer than among Western boys; the median age for development of pubertal signs in Jabalpur boys was 14 years. The onset of puberty is found later in tribal boys. Age of menarche varies considerably by socioeconomic and nutritional status as well as genetic component. A.M. Tripathi's study found the lowest age of menarche in Delhi girls (11.20 years), followed by Calcutta (12.50) and UP (12.80); the highest was in Gujarat (14.80 years).</p>
+
+<h3>Adulthood / Maturity</h3>
+
+<p>Adulthood is the time of peak physical capacity. The body reaches full height by the late teens; physical strength increases into the late 20s and early 30s. The attainment of adult stature and sexual maturation signal the transition from adolescence to adulthood. Growth in height stops when the long bones lose their ability to increase in length through a process called <strong>epiphyseal union</strong>, where the growing end of the bone (epiphysis) fuses with the shaft (diaphysis) under stimulation of gonadal hormones. Children without functional gonads do stop growing eventually, indicating that reduced sensitivity to growth stimuli in the growth plate region also plays a role. The most striking feature of adulthood is its stability or homeostasis — resistance to pathological influences such as infection and physiological stress.</p>
+
+<h3>Senescence</h3>
+
+<p>Senescence, also called negative or declining growth, encompasses the structural and functional involution of organs — a progressive, irreversible process affecting most organs that leads to gradual decline in all activities of the individual. Ageing is a continuous process throughout the lifespan, but the rate of organ weakening increases with advancing age. Specific senescent changes include: decreased stature due to compression of vertebral discs after age 60; memory loss and diminished reasoning ability; increased mineralization leading to brittle bones susceptible to fracture; decreased water content of tissues; weakened immune system; muscle deterioration; loosening of teeth. The pattern of activity from birth to death follows approximately a parabolic path — progressive changes in youth, regressive ones in old age, though the latter are not a simple reversal but the emergence of new qualities.</p>
+
+<h2>Factors Influencing Human Growth and Development</h2>
+
+<h3>Genetic Factors</h3>
+<p>Genes determine the potential for optimal growth. Genetic predisposition is evident in that body height, timing of puberty, and other growth parameters cluster in families. Heredity contributes to longevity as well — if family members have lived beyond 96 years, the individual is likely to do so regardless of some lifestyle deviations. The pattern of human growth is ultimately inscribed in the inherited developmental programme, and evolution of morphological characters is the consequence of alterations in inherited growth patterns.</p>
+
+<h3>Hormonal Factors</h3>
+<p>The endocrine system exerts pervasive control over growth. Growth hormone (GH) from the anterior pituitary is the primary driver of postnatal linear growth. Thyroid hormones are essential for normal skeletal maturation and brain development — hypothyroidism in infancy causes cretinism. Gonadal hormones (oestrogen and testosterone) drive the adolescent growth spurt and epiphyseal fusion. Insulin-like Growth Factor-1 (IGF-1) mediates many of GH's effects on bone and cartilage. Insulin is required for normal foetal growth. Cortisol in excess (Cushing syndrome) inhibits growth. Turner syndrome girls lack normal oestrogen production and show a characteristic absence of the adolescent growth spurt, being on average 20 cm shorter than adult women without the syndrome.</p>
+
+<h3>Nutritional Factors</h3>
+<p>Adequate nutrition is essential throughout the growth period. Protein and energy deficiency impairs linear growth and weight gain (stunting and wasting). Specific micronutrients — iron, zinc, iodine, vitamin D, calcium — have critical roles at different stages. The relationship between nutrition and growth is particularly critical during the first 1,000 days (conception to 2 years), where deficits may be irreversible. Nutritional status also influences the timing of puberty — the age of menarche varies considerably by socioeconomic and nutritional status.</p>
+
+<h3>Environmental and Socioeconomic Factors</h3>
+<p>Socioeconomic status (SES) is consistently associated with growth outcomes across populations — children from higher SES families tend to be taller. Urbanization, access to healthcare, hygiene, and infectious disease burden all mediate growth. High-altitude environments pose a specific challenge: chronic hypoxia reduces birth weight and may affect long-term growth, though populations living at altitude for many generations show adaptive responses.</p>
+
+<h3>Psychosocial Factors</h3>
+<p>Psychological stress and deprivation can impair growth. Children suffering neglect and emotional deprivation may exhibit psychosocial short stature (deprivation dwarfism) despite adequate nutrition. Absence of the father from the home since childhood, high-conflict family relations, and other stress-inducing situations have been documented as correlates of earlier menarche, mediated by effects on the hypothalamic-pituitary axis.</p>
+
+<h2>Chronological Age vs Biological Age</h2>
+
+<p>Chronological age is the actual number of years, months, and days a person has lived since birth. Biological age (also called physiological age) represents biological status of maturity — how old a person seems in terms of bodily function relative to calendar age. A person of chronological age 65 who maintains a healthy, active lifestyle may have a biological age of 55. Biological age is influenced by lifestyle (exercise, diet, stress, sleep, alcohol and tobacco use), heredity, and habitat/geographical environment. Biological age is assessed through biomarkers — recordable molecular or cellular events — such as telomere length, epigenetic clocks, and bone age (skeletal maturation).</p>
+
+<h2>Somatotyping</h2>
+
+<p>Somatotyping is the quantified description of present morphological conformation or physique. Three major systems have been proposed:</p>
+
+<p><strong>Viola's Method (1921):</strong> An Italian physician classified biotypes into Longytype (long limbs relative to trunk, large thorax relative to abdomen), Brachitype (reverse — short limbs, massive and robust body), Normatype (intermediate proportions), and Mixed type (disproportionate build). This method was subjective and the four indices often disagreed, placing the same individual in different categories. No longer used.</p>
+
+<p><strong>Kretschmer's Method:</strong> A German psychiatrist who relied on anthroposcopic (visual) inspection, identifying four types: Pyknic (broad, round, fat, stocky), Athletic (heavily muscled, large thorax and shoulders, narrow hips), Leptosomic/Asthenic (long, thin, linear), and Dysplastic (incompatible mixture of different types). Criticized for assuming discrete types, limited sampling, scanty measurements, lack of indices, failure to account for age and sex, and subjectivity. Now entirely outdated.</p>
+
+<p><strong>Sheldon's Method (1940):</strong> William H. Sheldon introduced the term 'somatotype' and defined it as "quantification of three primary components determining the morphological structure of an individual, expressed as a series of three numerals." The three components are Endomorphy (relative fatness — soft, round body), Mesomorphy (musculoskeletal robustness — bony, muscular, rectangular), and Ectomorphy (relative linearity — thin, linear). Each component is rated on a 7-point scale, with the somatotype expressed as three numerals (sum 9–12). Criticized because somatotype changes with age and nutrition; the system was developed on white males of limited age range and ignores environmental influences on physique.</p>
+
+<p><strong>Heath-Carter Method:</strong> Heath (1963) modified Sheldon's system by: opening the rating scales beyond the 7-point limit (beginning theoretically at zero, with no arbitrary end point); eliminating the restriction of sums to 9–12; constructing logical linear relationships between somatotype rating and height-weight ratios; and adopting a single table suitable for both sexes at all ages. Heath and Carter combined photoscopic and anthropometric procedures. In practice, the anthropometric form is primary (more objective, photographs are difficult and costly). Endomorphy is derived from sum of three skinfolds (triceps, subscapular, supraspinale); Mesomorphy from biepicondylar breadths and corrected circumferences adjusted for stature; Ectomorphy from height divided by cube root of weight. Advantages: objective, applicable to both sexes, measures present somatotype.</p>
+
+<h2>Theories of Ageing</h2>
+
+<p>No single theory adequately explains ageing; multiple mechanisms operate simultaneously.</p>
+
+<h3>Cellular Theories</h3>
+
+<p><strong>Hayflick Limit / Genetic Blueprint Theory:</strong> Leonard Hayflick demonstrated that normal human cells can divide approximately 40–60 times before reaching a limit (the Hayflick limit), after which they undergo programmed cell death (apoptosis). Cell division ceases when telomeres shorten to a critical length. Hayflick concluded that senescence is due to loss of cell functions that occurs before cells reach their maximum division point. Longer-lived species have a greater number of possible cell divisions.</p>
+
+<p><strong>Free Radical Theory:</strong> Free radicals — particularly reactive oxygen species — produced by enzymatic reactions in aerobic cells cause cumulative damage to cellular components, producing age pigments (lipofuscin) from reactions with unsaturated lipids. Lester Packer and James Smith provided supporting evidence: addition of vitamin E (a natural antioxidant) to human embryonic cells in culture doubled the number of cell divisions possible.</p>
+
+<p><strong>Error Theories:</strong> Errors in DNA replication accumulate with age, impairing cellular function. The <em>Error Catastrophe Theory</em> (Leslie Orgel) proposes that certain types of errors — such as a mutation in the DNA polymerase gene — produce enzymes that commit further errors in replication, leading to cascading "error catastrophe." Separately, M.S. Kanungo's <em>Missing Factors Theory</em> proposes that senescence results not from specific ageing genes but from the depletion of maintenance factors during reproductive life, causing non-functioning of genes necessary for sustaining adulthood.</p>
+
+<h3>Extracellular Theories</h3>
+
+<p><strong>Collagen Theory:</strong> Collagen (three polypeptide chains in a super helix, stabilized by non-covalent bonds) constitutes a large part of extracellular matrix. With age, the chains become further stabilized by covalent bonds, making collagen progressively insoluble and impeding the movement of nutrients and waste in and out of cells.</p>
+
+<p><strong>Immunological Theory:</strong> The efficiency of the immune system declines with age. The amount of antibodies produced by aged rats is one-fifth that produced by young rats. Reduced immune surveillance increases susceptibility to infections and cancers.</p>
+
+<p><strong>Disposable Soma Theory:</strong> First proposed by Kirkwood (1977) as an evolutionary explanation for senescence. It posits a trade-off between reproductive fitness and longevity: organisms must divide limited energy between reproduction and maintaining somatic (body) tissues. Investing more in reproduction leaves less for somatic maintenance, leading to eventual senescent decline and death. This is an evolutionary, not a cellular, explanation.</p>
+
+<h3>Social Theories of Ageing</h3>
+
+<p><strong>Disengagement Theory</strong> (Cumming and Henry, 1961): Ageing is an inevitable mutual withdrawal resulting in decreased interaction between the ageing person and others in their social system. The theory holds it is natural and acceptable for older adults to withdraw from society. Criticized because it does not explain the large number of older people who remain fully engaged.</p>
+
+<p><strong>Activity Theory</strong> (Havighurst et al., 1953): The need to remain involved in activities continues into older life, though the meaning and focus change. Older people have the same wants, needs, and motivations as their middle-life counterparts; they transition from some activities to others (from child-rearing to pets or volunteering) rather than reducing activity overall.</p>
+
+<p><strong>Social Clock Theory:</strong> Major life changes are expected to occur at certain times in a person's life. Society's expectations about when these milestones should occur (marriage, children, retirement) constitute a social clock. Those who accomplish expected tasks on schedule are considered well-adjusted; those ahead or behind schedule are viewed accordingly. Social clock timelines have become increasingly flexible as social roles for men and women have changed.</p>
+
+<p><strong>Cultural Theories of Ageing:</strong> Human beings seek meaning in life, particularly significant in later life. Older people who receive emotional support from family and close relatives are more likely to find a sense of meaning than those with less developed social support systems.</p>
+
+<h2>Secular Trend in Human Growth</h2>
+
+<p>A secular trend in growth refers to changes in the growth characteristics of a population over successive generations. These trends can be positive (increase in height, earlier maturation), negative (decrease in some trait), or neutral. The most documented secular trend is the progressive increase in height and the decline in age at menarche observed in many populations across the 19th and 20th centuries, attributed primarily to improvements in nutrition, reduction in infectious disease burden, and improved living standards. A notable microevolutionary example: the average age of menarche in women has been declining and varies among different populations — it appeared earlier in wealthier, better-nourished populations and has converged across populations as living standards improved globally.</p>
+
+<h2>Relevance of Menarche, Menopause, and Other Bio-Events to Fertility</h2>
+
+<h3>Menstruation and the Menstrual Cycle</h3>
+
+<p>Menstruation is a function of the uterus established at puberty as a result of ovarian activity. It consists of the periodic discharge of blood, mucin, and epithelial cells approximately every 28 days, lasting 3–5 days (volume 90–200 ml). Menstruation ceases during pregnancy and is often not re-established until lactation is completed. Its purpose is to prepare and then clear the endometrium to receive a fertilized ovum. The cycle has four phases: secretory/pre-menstrual phase (~14 days before the period); menstruation (3–5 days); stage of repair (from 3rd–4th day); growth phase (4th day onward to next secretory phase), regulated by FSH and LH from the pituitary and oestrogen and progesterone from the ovary.</p>
+
+<h3>Menarche</h3>
+
+<p>Menarche is the first menstrual cycle in female humans. From social and medical perspectives it is the central event of female puberty, signalling the possibility of fertility. It is the culmination of a series of physiological and anatomic processes including: attainment of sufficient body mass (typically 17% body fat); secretion of oestrogen and progesterone by ovaries in response to pituitary hormones; growth and vascularization of the uterus; oestrogen-stimulated height growth, breast growth, increase in regional adipose tissue, and endometrial growth.</p>
+
+<p>Age at menarche varies significantly by geographical region, race, ethnicity, socioeconomic status, nutritional status, and genetic factors. The worldwide median is estimated at approximately 13–14 years; the average is about 12.5 years in the USA, 12.72 in Canada, and 12.9 in the UK. In India, A.M. Tripathi's study found the lowest age in Delhi (11.20 years) and the highest in Gujarat (14.80 years).</p>
+
+<p><strong>Menarche and fertility:</strong> Menarche does not signal that ovulation has occurred. In post-menarcheal girls, approximately 80% of cycles are anovulatory in the first year. Regular ovulation is indicated by predictable, consistent intervals between menses. Continuing ovulation typically requires a body fat content of at least 22% (the anthropological concept of <em>nubility</em>).</p>
+
+<p><strong>Factors causing earlier menarche:</strong> Child obesity; absence of father from home since childhood (increases stress, affecting the hypothalamus); high-conflict family relations; being a singleton child; exposure to sex hormones; being non-breast-fed; lack of childhood exercise. Early menarche can cause short adult stature (bones mature quickly and stop growing earlier) and social and emotional problems.</p>
+
+<p><strong>Factors associated with later menarche:</strong> Larger family size; warmer, more positive relationship with biological father; low-stress family environment; having several older siblings.</p>
+
+<h3>Menopause</h3>
+
+<p>Menopause (also called the climacteric) is the permanent cessation of menstrual periods, after which the woman is no longer able to bear children. It typically occurs between 49 and 52 years of age; medically defined as having occurred when a woman has not had vaginal bleeding for a year. <em>Perimenopause</em> describes the transition years before and after the final period, during which periods become irregular and FSH levels have increased. It has two phases: premenopause (the year leading up to the last menses) and postmenopause (for women with no periods in the last 12 months).</p>
+
+<p><strong>Effects of menopause:</strong> Skeletal effects include back pain, joint pain, and gradually developing osteopenia and risk of osteoporosis. Skin and soft tissue effects include breast atrophy, decreased skin elasticity, and skin thinning. Psychological effects include depression and anxiety, fatigue, irritability, memory loss, mood disturbance, insomnia, sense of loss of fertility, empty nest syndrome, and role change (from parent to grandparent). Sexual effects include painful intercourse due to vaginal dryness and decreased libido.</p>
+
+<p><strong>Physiological mechanism:</strong> At the physiological level, menopause results from a decrease in the ovaries' production of oestrogen and progesterone. At the time of menarche all eggs have already been produced, matured, and stored in the ovaries. With increasing age, stored eggs have been exposed longer to X-rays, UV, and environmental pollutants, increasing the risk of chromosomal errors in offspring — this provides one rationale for the cessation of female reproductive capacity.</p>
+
+<p><strong>Evolutionary rationale for menopause:</strong> Two major adaptive hypotheses exist. The <em>Mother Hypothesis</em> proposes that menopause was selected because, given the extended development period of human offspring and high costs of reproduction, mothers gain reproductive fitness by redirecting effort from new offspring (with low survival chances when the mother is old) to existing children (with higher survival chances). The <em>Grandmother Hypothesis</em> proposes that menopause was selected because post-reproductive women who feed and care for grandchildren and adult nursing daughters enhance grandchild survival. Since infants' brains consume 60% of all calories in the first year of life, a dependable food supply from foraging grandmothers is crucial — especially since hunters contribute less than half the food budget in most hunter-gatherer societies. Selection operates most powerfully during times of famine or privation.</p>
+
+<h3>Fertility and Fecundity</h3>
+
+<p>Fecundity is the biological capacity of a man, woman, or couple to participate in reproduction (a physiological concept). Fertility is the actual reproductive performance — whether applied to an individual or a group — measured by live births and influenced by social, cultural, psychological, and economic factors, not just biology. Fertility is measured by indicators such as the crude birth rate, or rates relating births to women of childbearing age (the Total Fertility Rate). Natural fertility exists in the absence of deliberate birth control; controlled fertility involves deliberate use of contraception.</p>
+`,
