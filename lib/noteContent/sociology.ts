@@ -5574,7 +5574,216 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>AR Desai (<em>Social Background of Indian Nationalism</em>, 1948) — from a Marxist perspective — argued that Indian nationalism was essentially a bourgeois phenomenon. The Indian capitalist class, which had grown within the colonial economy, supported independence because it sought to control the domestic market free from British competition. The Congress represented primarily the interests of this emerging Indian bourgeoisie, though it mobilised wider social support through Gandhian ideology.</p>
 
 `,
-  'rural-agrarian-structure': '',
+  'rural-agrarian-structure': `
+<h2>The Idea of the Indian Village</h2>
+
+<p>The village has been the primary social unit of Indian civilisation for millennia. Even in the Vedic period, settlement was classified into three hierarchical categories: <em>Pur</em> (elite urban settlement, governed by a king), <em>Gram</em> (common village, commoners paying taxes to the king for protection), and <em>Van</em> (jungle, tribal habitat). Kautilya's Arthashastra specifies that the appointed leader of a Gram paid taxes to the Pur's king. In later Puranic texts, between the 7th and 12th century, historical accounts record four village types based on caste composition: one caste, one village; one caste, many villages; many castes, one village; many castes, many villages. The interlinkage between caste and village was thus deeply established before Islam and Christianity introduced multi-ethnic and multireligious dimensions.</p>
+
+<h3>Colonial View of the Village</h3>
+
+<p>The British colonial administration produced the first systematic study of the Indian village, though it was filtered through ethnocentric assumptions. Sir Henry Maine argued that Indian villages had no historical parallel in the West — they were self-sufficient, little republics that remained constant while rulers came and went. Metcalfe and Munro endorsed this view. Colonial scholars developed an ethnocentric (Eurocentric, WH Sumner) understanding: despite poverty, backwardness, orthodoxy, commitment to classical religion, diseases, and natural disasters, people of India refused to change — they were thus the "white man's burden" to be modernised.</p>
+
+<p>The anti-colonial response (O'Malley, Grigson) argued that early colonial scholars had a preconceived notion of Indian villages — they failed to observe the vibrant village life: the struggle for power in villages; how economic conflicts were resolved; caste and culture operating to integrate diverse groups.</p>
+
+<p>Karl Marx's analysis: He gave the Asiatic Mode of Production (AMP) — Indian primitive communism with common labour and shared fruit, but with taxes to kings. He believed the political and economic autonomy of India was being demolished by the British land tenure system, transforming a classless India into feudal and then capitalistic relations.</p>
+
+<h3>Contemporary View</h3>
+
+<p>Andre Beteille: "The village was not merely a place where people lived; it had a design in which were reflected the basic values of Indian civilisation." The general features of Indian villages identified by village studies can be recalled through the mnemonic SUDIR:</p>
+<ul>
+  <li><strong>S</strong>elf-sufficiency busted (Beteille, AM Shah, MN Srinivas — challenged empirically)</li>
+  <li><strong>U</strong>nity present — despite diversity, the village maintained social cohesion</li>
+  <li><strong>D</strong>iversity — inside and outside the village (SC Dubey)</li>
+  <li><strong>I</strong>dentity — the village is an important source of identity to its residents (MNS)</li>
+  <li><strong>R</strong>eciprocity — the Jajmani system (WH Wiser); though hierarchical, the underlying spirit was interdependence among different caste groups</li>
+</ul>
+
+<h2>Social Structure of the Village: Caste, Class, and Gender</h2>
+
+<h3>Caste in the Village</h3>
+
+<p>While caste was the concrete structure guiding social relationships in the Indian village, hierarchy was its ideology. SC Dube found that Hindus all over India accepted the varna classification. DN Majumdar observed that caste divisions determined and decided all social relations — most scholars saw caste as a closed system (caste equals a closed system; varna does not equal caste). However, MN Srinivas argued that at the local level, caste was "radically different from that expressed in the varna scheme" — mutual rank was uncertain and mobility was possible within caste.</p>
+
+<p>SC Dube's six factors determining status differentiation in the village community of Shamirpet:</p>
+<ul>
+  <li>Religion and caste (traditional-ascriptive basis)</li>
+  <li>Land ownership (economic basis)</li>
+  <li>Wealth (economic basis)</li>
+  <li>Position in government service and village organisation (legal-rational basis)</li>
+  <li>Age (traditional basis)</li>
+  <li>Distinctive personality traits (charismatic basis)</li>
+</ul>
+
+<p>Srinivas's key insight on Sanskritisation: attempts to claim higher ritual status were not simple — ritual and lifestyle imitation alone was insufficient. The group had first to negotiate secular status (land, wealth, government service) before achieving ritual recognition. Secular mobility preceded ritual mobility.</p>
+
+<h3>Land and Class</h3>
+
+<p>Land relations reflected the same patterns of hierarchy present in the caste system. MN Srinivas identified a "twin hierarchy" — caste hierarchy and land hierarchy largely overlapping but not always identical. Oscar Lewis highlighted the primacy of land over all other factors in determining social hierarchy in the village. The Jajmani system bound different castes in enduring and pervasive relationships centred on land-based obligations.</p>
+
+<h3>Gender in the Village</h3>
+
+<p>Village studies were not completely "gender blind" but had major limitations: most data was collected from male informants; most anthropologists were male and could not access the "private" life of village people (Lila Dubey). Adrian C. Mayer noted that the village well provided a meeting place for all women of non-Harijan castes — a space for sociality and gossip unavailable through formal channels. SC Dube: after caste, gender was the most important factor governing the division of labour in the village — masculine and feminine pursuits were clearly distinguished. MN Srinivas: male work was valued above female work; men had near-complete control over women's sexuality; polygyny and concubinage were both evidence of this dominance.</p>
+
+<h3>Dipankar Gupta's Contrarian View</h3>
+
+<p>Dipankar Gupta (EPW, 2005) presents a starkly different picture of Indian villages: "The village is shrinking as a sociological reality, though it still exists as space. Nowhere else does one find the level of hopeless disenchantment as one does in the rural regions of India. In urban slums there is squalor, there is filth and crime, but there is hope and the excitement that tomorrow might be quite different from today. Rarely would a villager today want to be a farmer if given an opportunity elsewhere. The joint family is disappearing, the rural caste hierarchy is losing its tenacity, and the much romanticised harmony of village life is now exposed for the sham it perhaps always was."</p>
+
+<p>BR Ambedkar's analysis was even more radical: the village was a cesspool of degradation, corruption, and worse. Village India was able to carry on only because there was little option for most people outside the confines of the rural space.</p>
+
+<h2>Village Studies: Approaches and Debates</h2>
+
+<p>After independence, village studies gained momentum for two reasons: the need to plan and implement rural development programmes; and the methodological affinity between participant observation (developed by Western anthropologists studying tribal communities) and the study of Indian village life.</p>
+
+<h3>Major Sociological Approaches to Village Study</h3>
+
+<table>
+  <tr><th>Scholar</th><th>Approach</th><th>Key Study</th></tr>
+  <tr><td>MN Srinivas</td><td>Structural-Functional</td><td>Rampura village, Mysore — Dominant Caste, Sanskritisation</td></tr>
+  <tr><td>SC Dubey</td><td>Interdisciplinary</td><td>Shamirpet village — status differentiation</td></tr>
+  <tr><td>McKim Marriott</td><td>Culturology (Rural-Urban Continuum)</td><td>Kishangarhi — Universalisation and Parochialization</td></tr>
+  <tr><td>Andre Beteille</td><td>Weberian (power, class, status)</td><td>Sripuram, Tanjore — stratification: caste, class, power</td></tr>
+  <tr><td>FG Bailey</td><td>Political Anthropology</td><td>Bisipara, Orissa — power and politics</td></tr>
+  <tr><td>Kathleen Gough</td><td>Marxist</td><td>Kumbapeti — class structure</td></tr>
+  <tr><td>AM Shah</td><td>Family and Kinship</td><td>Jahanabad, Gujarat</td></tr>
+  <tr><td>TN Madan</td><td>Ritual Studies</td><td>Rituals of Kashmiri Pandits</td></tr>
+  <tr><td>Adrian Mayer</td><td>Multiple Dominances</td><td>Ramkheri village — Jats (economic), Rajputs (political), Brahmins (ritual)</td></tr>
+</table>
+
+<p>MN Srinivas, the pioneer of village studies in India, cautioned that sociologists should not consider the village as a microscopic unit of macroscopic Indian society — reality is vast, unorganised, and chaotic, and cannot be comprehensively studied through villages alone. Milton Singer and McKim Marriott's concepts of Universalisation and Parochialization showed the interlinkage between the village and the larger social world, coining the term "Indianisation of Modernisation" to describe how modernity is absorbed and transformed by Indian cultural patterns rather than replacing them.</p>
+
+<h3>Critiques of Village Studies</h3>
+<ul>
+  <li>Upper caste gatekeeping — Beteille was not allowed to freely interact with lower castes</li>
+  <li>Gender barrier — Lila Dubey showed that women's lives remained largely inaccessible to male researchers</li>
+  <li>Louis Dumont — criticised MNS for studying both caste and village; village studies overshadow the primary source of inequality (caste). Counter by Beteille: village studies help us know the truth without personal bias</li>
+  <li>Y. Singh — studied 6 villages in UP; studying the history of change is necessary to understand reality comprehensively; village studies are incomplete in themselves</li>
+  <li>Marxists (AR Desai, RK Mukherjee) — village studies take you away from the empirical truth of socio-economic genesis; urban centres where class contradictions are most visible should be the unit of study; the village is the land of small farmers, petty traders, and wage labourers exploited by bourgeoisie living in urban centres</li>
+</ul>
+
+<h2>Land Tenure System</h2>
+
+<p>A land tenure system identifies the ownership of land and the relationship of the owner with the cultivator — the terms and conditions under which land is leased to the tiller. In the Vedic period, state ownership was limited and common ownership of land prevailed. In the Muslim period, assessment of land revenue was more systematised. Under British rule, the system of assessment and collection varied according to states and administrative convenience.</p>
+
+<table>
+  <tr><th>System</th><th>Region</th><th>Introduced</th><th>Nature</th></tr>
+  <tr><td><strong>Ryotwari</strong></td><td>Madras, Bombay, Assam, TN, MP, Gujarat, Maharashtra</td><td>Sir Thomas Munroe, 1820</td><td>Direct settlement with individual cultivators (ryots); occupant is tenant of state; revenue assessed as rent; 20-30 year settlements; eviction for non-payment</td></tr>
+  <tr><td><strong>Mahalwari</strong></td><td>Punjab, UP, Central India</td><td>19th century</td><td>Joint village ownership; villages called mahals; co-sharer selected for 5% commission; 30-40 year settlements</td></tr>
+  <tr><td><strong>Zamindari (Permanent Settlement)</strong></td><td>Bengal, Bihar, Orissa</td><td>Lord Cornwallis, 1793</td><td>Landlords/intermediaries as permanent, hereditary owners; revenue collecting officers of Mughals (not original owners) became zamindars; state to get 10/11 of rent; zamindars sub-let, creating long chain of middlemen</td></tr>
+</table>
+
+<h2>Peasant Society</h2>
+
+<p>Daniel Thorner's definition: a peasant (kisan) is a person who cultivates land primarily for subsistence. Robert Redfield in <em>Peasant Society and Culture</em> (1956) identified three key features of peasant culture: highly reverent attitude towards land; agriculture as the noblest, ideal, best occupation; industrious attitude giving dignity to labour.</p>
+
+<p>Important features of peasant society: family as the primary unit of social organisation (generally joint — the whole family works); land as the main source of livelihood; distinct culture and daily schedule (different from landed aristocracy). Peasant culture is one of obedience and subordination — the peasant is in de-facto possession of land but not the owner; the aristocracy politically awakened denies peasantry its rights.</p>
+
+<p>Sorokin: rate of social mobility in peasant society is relatively poor. AR Desai: the Indian National Movement started as a peasant movement; the Jajmani system is a crucial feature of peasant society. Orthodox and traditional peasantry produced only for self-sustenance; land was sacred; reluctance to migrate; belief in old techniques; economically poor; highly influenced by tradition and religion.</p>
+
+<h2>Land Reforms and Their Social Consequences</h2>
+
+<p>Land reforms were the major policy for rural development after independence, designed to break the old feudal socio-economic structure of rural India and provide impetus to the modernisation of agricultural production.</p>
+
+<h3>Objectives</h3>
+<p>Equality, efficiency, effectiveness, economy — improving distribution of ownership; agricultural modernisation; modernising irrigation; introducing HYV seeds, pesticides, fertilisers; and improving land use.</p>
+
+<h3>Steps Taken</h3>
+<ul>
+  <li>Abolition of intermediaries (zamindars, jagirdars, inamdars)</li>
+  <li>Tenancy reforms: fixity of tenure; rent regularisation; ownership rights for tenants</li>
+  <li>Land ceilings — ceiling on landholding to redistribute surplus land</li>
+  <li>Agrarian reorganisation</li>
+  <li>Cooperativisation of agriculture</li>
+</ul>
+
+<h3>Outcomes</h3>
+<ul>
+  <li>Abolition of intermediaries brought 20 million tenants into direct contact with the state</li>
+  <li>6 million hectares of fallow land distributed to landless and marginal farmers</li>
+  <li>7.7 million tenants given ownership rights</li>
+</ul>
+
+<h3>Social Consequences of Land Reforms</h3>
+<ul>
+  <li>Shift in occupation of lower castes — freed from hereditary service obligations</li>
+  <li>Decline in migration as some tenants gained security</li>
+  <li>Generation of conflict due to legislation — Naxalism (Bihar, UP), labour movements (AP)</li>
+  <li>Eviction of landless labourers — landlords resumed land to avoid ceiling</li>
+  <li>Shortage of manual labour at sowing and harvesting time in Punjab and Haryana</li>
+  <li>Increase in absentee landlordism</li>
+  <li>Forest restoration policies did not address adversities of tribal communities</li>
+  <li>Land reforms used in politics and as cover for terrorism</li>
+  <li>Families nuclearised to evade land ceiling legislation</li>
+  <li>Stratification shifted from caste-based to class-based</li>
+  <li>Increased social mobility but poor tenants could not benefit (could not afford to pay compensation to zamindars for ownership rights)</li>
+</ul>
+
+<h3>Emerging Agrarian Class Structure (PC Joshi)</h3>
+
+<p>Post-independence trends summarised by PC Joshi: decline of feudalistic and customary tenancy, replaced by more insecure and exploitative lease arrangements; increased importance of commercial tenancy; rise of owner-farmers. The emergence of commercial peasants led to two important socio-economic consequences: increased production and productivity of agriculture; and accentuated class conflicts in villages.</p>
+
+<p>The impact of land reforms was uneven — dependent on the size of holdings. Rich tenants who could pay compensation to zamindars elevated themselves to owner-farmers. Poorer tenants, forced to borrow, often lost tenurial security and became a "non-owning proletariat" — with increased insecurity, obligations, and subordination.</p>
+
+<h2>Green Revolution and Its Social Consequences</h2>
+
+<p>The Green Revolution refers to the large-scale increase in agricultural production in a short span of time (1966/67 to 1970/71, primarily wheat in Punjab) as a result of the application of High-Yielding Variety (HYV) seeds, chemical fertilisers, pesticides, and machinery. With the advent of the Green Revolution, focus shifted from land redistribution to optimising production.</p>
+
+<h3>Social Consequences</h3>
+
+<p>Bhalla and Chadha's study of 3 villages in Ludhiana found: caste system undergoing changes (disappearance of untouchability, middle class improving, upper class adjusting); Jajmani system declining (work for payment replacing payment in foodgrains); traditional hereditary privileges weakening. On the whole: peasants transforming into farmers (peasants produce for self-sufficiency; farmers produce for surplus and market).</p>
+
+<table>
+  <tr><th>Positive Effects</th><th>Negative Effects</th></tr>
+  <tr><td>Increased food grain production; India became self-sufficient in food</td><td>Increased disparity — big farmers (more than 10 acres) benefitted, small farmers marginalised</td></tr>
+  <tr><td>Growth of rural middle class in Green Revolution states</td><td>Small farmers' previously leased land reclaimed by landlords — became landless labourers</td></tr>
+  <tr><td>Weakening of jajmani ties — more commercialised agrarian relations</td><td>Large-scale eviction of tenants; leased area halved in 20 years</td></tr>
+  <tr><td>New employment in non-farm activities; growth of market towns</td><td>HYV seeds costly; farmers preferring skilled labour — unskilled daily workers displaced</td></tr>
+  <tr><td>Decline of untouchability in some areas (shared labour relations)</td><td>Labour movements for higher wages in Kerala, TN, AP</td></tr>
+  <tr><td></td><td>Increased conspicuous consumption of rich farmers; relative deprivation of sharecroppers; consumerism spreading; Vidarbha suicide crisis (copying GR methods without GR infrastructure)</td></tr>
+</table>
+
+<p>The Green Revolution was termed "Seeds of Disaster" by critics for its limited geographical reach and harmful social, economic, environmental, and health effects.</p>
+
+<h2>Changing Mode of Production in Indian Agriculture</h2>
+
+<p>Indian agricultural MoP has gone through several transitions: Jajmani (pre-colonial); Zamindari/Mahalwari/Ryotwari (colonial); post-independence land reforms and Green Revolution; and now the post-LPG phase.</p>
+
+<h3>Post-LPG Phase Transformations</h3>
+<ul>
+  <li><strong>Circulation of labour</strong> — Agriculture commercialised; growth of seasonal migrant agricultural labour. Jan Breman calls them <em>Footloose Labour</em> — they live in poor conditions, moving from harvest to harvest across states</li>
+  <li><strong>Feminisation of agricultural labour</strong> — Men move to cities for non-farm work; women left behind to do agricultural labour; women's labour is also systematically cheaper</li>
+  <li><strong>WTO participation (Dr. K. Somasekhara)</strong> — Opening of Indian markets for imports; imported fruits common; Indian farmers not as adequately supported as European and American ones through subsidies</li>
+  <li><strong>Contract farming</strong> — Though assured returns, increased insecurity through dependency on companies; loss of indigenous knowledge; diversion from food-grain production to elite export crops (cut flowers, exotic vegetables)</li>
+  <li><strong>Multinationalisation of agriculture</strong> — From selling seeds to marketing produce; government agents replaced by profit-driven agents of companies; terminating seeds increasing dependency</li>
+  <li><strong>Farmer suicides</strong> — Relatively new phenomenon; mainly marginal farmers trying to increase production using GR methods by borrowing; failing leads to heavy debt and suicide; increasing dowry demands, health and education costs; lack of mobilisation making agriculturists unable to influence policies</li>
+</ul>
+
+<h3>Farmer Suicides (P. Sainath's Analysis)</h3>
+
+<p>P. Sainath identifies a triple crisis: Ecological Crisis (HYV seeds, chemicals depleting soil and water) + Economic Crisis (indebtedness, falling output prices, rising input costs) + Social Crisis (dowry, social obligations, loss of dignity) = Suicide. Vandana Shiva and Utsa Patnaik have similarly documented negative growth in agriculture in recent decades.</p>
+
+<p>Dr. Somasekhara on globalisation: world trade will become oligopolistic; increased cost of production will lead to decreased returns; development is not gender neutral (because women have lower access to credit, receive lower wages, and are more vulnerable to agricultural distress); decrease in welfare-oriented state activities.</p>
+
+<h2>Jajmani System</h2>
+
+<p>The Jajmani system was the traditional system of reciprocal, hereditary service relations between caste groups in the Indian village. The Jajman (patron, usually upper-caste landholder) received hereditary services from Kamin groups (service castes — carpenters, potters, washermen, barbers, etc.) in exchange for grain, protection, and social security. WH Wiser (American sociologist) noted the "elasticity" in Jajmani relations — the system had some flexibility in practice. The system bound different castes in what MNS called "enduring and pervasive relationships."</p>
+
+<p>The Jajmani system has been declining since the colonial period — monetisation of the rural economy converted hereditary service obligations into cash transactions. The Green Revolution accelerated this process. Bhalla and Chadha's studies confirm that the Jajmani system is giving way to commercial labour markets in Green Revolution areas.</p>
+
+<h2>Impact of Westernisation, Migration, and Urbanisation on Rural Society</h2>
+
+<table>
+  <tr><th>Process</th><th>Findings</th></tr>
+  <tr><td><strong>Westernisation (MN Srinivas, Y. Singh)</strong></td><td>Rise of middle class in villages; homogenisation of cultural identity; new lifestyle aspirations</td></tr>
+  <tr><td><strong>Migration (McKim Marriott, Kathleen Gough, AM Shah, Lancy Lobo)</strong></td><td>IP Desai: traditional joint families replaced by functional joint families; Harold Gould, Beteille: caste ties weakening, class ties becoming important; Karuna Ahmad: women's status improved but clustered in low-status jobs; Ashish Nandy: urbanisation has helped caste mobility; MSA Rao: remittances from cities increased prestige back home; EA Ross: rural people becoming consumerists</td></tr>
+  <tr><td><strong>Urbanisation (SC Dubey, MSA Rao)</strong></td><td>Feudalistic tenancy declining; commercial tenancy rising; rise of owner-farmers; growth of a rural capitalist class</td></tr>
+</table>
+
+<h2>Contemporary Agrarian Issues</h2>
+
+<p>New dimensions of village and agrarian study have emerged beyond the traditional focus on caste, land, and kinship: social movements (Narmada Bachao Andolan, farmers' protests); political dynamics (voting behaviour, caste chemistry — AJGR, KHAM, MY coalitions); gender profile (Tulsi Patel on gender discrimination; Amita Baviskar on resistance to governmental policies, changing food habits); demographic studies; MNREGAS and rights-based approaches (Jean Dreze, Ritika Khera). Dipankar Gupta on caste in elections (2000): caste in elections produces, reproduces, and perpetuates caste consciousness — though friendship, leadership, and local issues also matter.</p>
+
+<p>Census data (2001): rural India comprised 72% of total population; around one-fourth of total national income; nearly half of India's working population. The agrarian sector thus remains central to India's social structure despite decades of industrial and service sector growth.</p>
+`,
   'caste-system': '',
   'tribal-communities': '',
   'social-classes-india': '',
