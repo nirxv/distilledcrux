@@ -313,7 +313,7 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The four branches are not watertight compartments. Bioarchaeology sits at the intersection of physical anthropology and archaeology. Palaeoanthropology requires both fossil evidence (physical anthropology) and archaeological context (stone tools, site distribution). Linguistic data can reconstruct past population movements, linking linguistic anthropology to archaeological and physical anthropology. The culture-and-personality school linked cultural anthropology to psychology. Applied anthropology draws on all branches. The unity of the discipline lies in its commitment to a cross-cultural, holistic, and comparative understanding of the human species across space and time.</p>
 `,
-  'biological-cultural-evolution-hominization': `
+  'human-evolution': `
 <h2>Hominization: The Concept</h2>
 
 <p>Hominization is the evolutionary transformation of hominoids into hominids. The term covers all structural and behavioural changes that occurred in the hominid line since the divergence from the last common hominoid ancestor shared with any living ape — changes that finally led to the emergence of modern humans. Each stage of hominid organic evolution was accompanied by major advances in cultural evolution. Paralleling biological evolution was the development of cultural technologies that allowed early humans to become increasingly successful at acquiring food and surviving predators.</p>
