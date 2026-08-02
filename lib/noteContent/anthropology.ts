@@ -688,6 +688,228 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The overarching commitment of the four-field approach is holism: the insistence that to understand the human condition, one must attend to its biological, cultural, historical and communicative dimensions together, not in isolation.</p>
 `,
+
+  'human-evolution': `
+<h2>Organic Evolution: The Framework</h2>
+
+<p>Organic evolution is the change in the inherited characteristics of biological populations over successive generations. It is the central organising principle of all biological sciences, including physical anthropology. Every question physical anthropology asks about human origins, variation, and adaptation is framed within evolutionary theory.</p>
+
+<p>Evolution operates on populations, not individuals. Individuals do not evolve; populations do. What changes over generations is the frequency of heritable traits within a population. The raw material of evolution is genetic variation, which arises through mutation and recombination. The direction of evolutionary change is shaped by natural selection, genetic drift, gene flow, and other forces.</p>
+
+<h2>Theories of Organic Evolution</h2>
+
+<h3>Lamarckism: Inheritance of Acquired Characters</h3>
+
+<p>Jean-Baptiste Lamarck, a French naturalist, proposed the first systematic theory of evolution in his <em>Philosophie Zoologique</em> (1809). Lamarckism rests on four propositions:</p>
+
+<ul>
+  <li>Living organisms and their component parts tend to increase in size over time.</li>
+  <li>New organs arise from new needs: a new need produces new movements, and new movements produce new organs.</li>
+  <li>Use strengthens and develops an organ; disuse causes it to degenerate and disappear.</li>
+  <li>Modifications acquired by an organism during its lifetime are inherited by its offspring.</li>
+</ul>
+
+<p>Lamarck's genuine insight was recognising the relationship between organism and environment as the driver of change. His fundamental error was believing that evolutionary change could occur during an individual's lifetime and be transmitted to offspring. Experimental evidence has conclusively refuted the inheritance of acquired characters. Lamarck did not distinguish between germplasm (reproductive cells that transmit hereditary information) and somatoplasm (body cells that do not).</p>
+
+<p>The theory nonetheless has historical significance: it was the first serious attempt to explain organic diversity through a natural, rather than supernatural, mechanism.</p>
+
+<h3>Darwinism: Natural Selection</h3>
+
+<p>Charles Darwin, in <em>On the Origin of Species</em> (1859), proposed the theory of evolution by natural selection. The theory rests on five observations and inferences:</p>
+
+<ul>
+  <li><strong>Universal variation:</strong> Within any population, individuals vary in heritable traits. Darwin did not understand the mechanism of this variation but accepted it as an observable fact.</li>
+  <li><strong>Geometric rate of reproduction:</strong> All species have the potential to multiply at a geometric rate, producing far more offspring than can survive.</li>
+  <li><strong>Struggle for existence:</strong> Because resources are limited and reproduction is prolific, individuals compete for food, space, and mates. Most offspring perish before reproducing.</li>
+  <li><strong>Survival of the fittest:</strong> Individuals with heritable variations that give them an advantage in their environment are more likely to survive and reproduce. "Fitness" in the Darwinian sense means reproductive success, not physical strength.</li>
+  <li><strong>Inheritance of variation:</strong> Surviving individuals pass their advantageous variations to offspring. Over many generations, advantageous variants become more common and populations change.</li>
+</ul>
+
+<p>Criticisms of classical Darwinism include its inability to explain the origin of new variations, its neglect of mutation and genetic drift, the inapplicability of geometric increase to human populations with stabilised growth, and the erroneous theory of pangenesis Darwin proposed to explain inheritance.</p>
+
+<h3>Neo-Darwinism: The Modern Evolutionary Synthesis</h3>
+
+<p>The Modern Evolutionary Synthesis, developed primarily in the 1930s and 1940s, integrated Darwin's theory of natural selection with Mendelian genetics and mathematical population genetics. Key contributors included Thomas Hunt Morgan, R.A. Fisher, J.B.S. Haldane, Sewall Wright, Theodosius Dobzhansky, Ernst Mayr, and George Gaylord Simpson.</p>
+
+<p>The synthesis established that:</p>
+
+<ul>
+  <li>Genetic variation in populations arises through mutation and recombination.</li>
+  <li>Evolution consists primarily of changes in the frequencies of alleles between generations as a result of natural selection operating on phenotypic variation.</li>
+  <li>Speciation is a gradual process occurring as populations become reproductively isolated and diverge genetically.</li>
+  <li>Natural selection, genetic drift, mutation, and gene flow are the mechanisms of evolutionary change.</li>
+</ul>
+
+<p>Neo-Darwinism thus connected the units of evolution (genes) with the mechanism of evolution (natural selection), unifying two previously separate research traditions.</p>
+
+<h2>Microevolution and Macroevolution</h2>
+
+<p><strong>Microevolution</strong> is change in gene frequency within a population over relatively short periods of time, observable across a few generations. It operates through natural selection, genetic drift, mutation, gene flow, and recombination. Examples include the evolution of pesticide resistance in pest populations, the shift in beak size among Galapagos finches, and the changing frequency of the sickle-cell allele in malarial environments.</p>
+
+<p><strong>Macroevolution</strong> refers to evolutionary changes significant enough to produce new species or higher taxonomic groups over geological time. It encompasses the grand trends of the fossil record: the origin of mammals, the radiation of flowering plants, the emergence of the hominid lineage. Macroevolution results from the accumulation of microevolutionary changes over millions of years, though punctuated equilibrium theory suggests the tempo is not always gradual.</p>
+
+<h3>Gradualism and Punctuated Equilibrium</h3>
+
+<p><strong>Gradualism</strong>, the view Darwin held, posits that evolutionary change is slow, steady, and continuous: small variations accumulate over long periods until populations diverge significantly. Change is constant but imperceptible within a human lifespan.</p>
+
+<p><strong>Punctuated equilibrium</strong>, proposed by Niles Eldredge and Stephen Jay Gould, holds that species remain relatively stable for long periods (stasis) and then undergo rapid, dramatic change in short bursts, often triggered by major environmental disruptions or mutations of large effect. The fossil record, which shows many species persisting unchanged for millions of years and then being replaced by quite different forms, is taken as supporting evidence for punctuated equilibrium. Many species appear to have evolved through a combination of both patterns.</p>
+
+<h2>The Order Primates</h2>
+
+<p>Primates are the taxonomic order to which humans belong. There are approximately 200 to 300 living primate species, with an evolutionary history spanning more than 55 million years. Primates cannot be defined by a single distinguishing trait; they are characterised by a suite of tendencies that, taken together, reflect their adaptation primarily to arboreal life.</p>
+
+<h3>Characteristics of Primates</h3>
+
+<p>In limbs and locomotion, primates show a tendency toward erect upper-body posture; a generalised limb structure permitting multiple forms of locomotion; prehensile hands and often feet; retention of five digits; opposable or divergent thumbs and big toes; nails instead of claws (with some exceptions among prosimians); and sensitive tactile pads on the digits.</p>
+
+<p>In diet and dentition, primates tend toward omnivory and a generalised dentition not specialised for processing a single food type. They eat a wide range of fruits, leaves, seeds, insects, and sometimes meat.</p>
+
+<p>In the senses and brain, primates rely heavily on vision, with colour vision in diurnal species, stereoscopic (three-dimensional) depth perception through forward-facing eyes and binocular visual fields, and a reduced sense of smell relative to other mammals. The brain is large relative to body size, with an expanded neocortex, particularly in the visual and association areas.</p>
+
+<p>In life history, primates have longer gestation periods, fewer offspring per birth (usually one), extended periods of infant and juvenile dependency, delayed sexual maturity, and longer lifespans than comparably sized non-primate mammals. This life history pattern reflects greater investment in each offspring and a greater role for learning.</p>
+
+<p>In behaviour, primates tend to be diurnal (with nocturnal exceptions among prosimians and some others), to live in social groups, and to rely heavily on learned rather than purely instinctive behaviour.</p>
+
+<h3>LeGros Clark's Ten Evolutionary Trends</h3>
+
+<p>Sir Wilfred E. LeGros Clark identified ten evolutionary trends that together characterise the primate order, grouped around three areas: limbs and extremities, head (eyes, brain, dentition), and life cycle (reproduction, growth, longevity). These are trends, not fixed characteristics, expressed to varying degrees across primate taxa:</p>
+
+<ul>
+  <li>Preservation of a generalised limb structure including pentadactyly (five digits) and retention of the clavicle.</li>
+  <li>Enhanced free mobility of the digits, particularly the thumb and big toe, for grasping.</li>
+  <li>Replacement of claws by flattened nails, with development of sensitive tactile pads on the digits.</li>
+  <li>Progressive shortening of the snout or muzzle.</li>
+  <li>Elaboration and perfection of the visual apparatus, with development of binocular vision.</li>
+  <li>Reduction of the olfactory apparatus.</li>
+  <li>Loss of certain elements of the primitive mammalian dentition and preservation of a simple cusp pattern on molar teeth.</li>
+  <li>Progressive expansion and elaboration of the brain, primarily of the cerebral cortex.</li>
+  <li>Progressive improvement of gestational processes for nourishing the foetus before birth.</li>
+  <li>Prolongation of postnatal life periods, with extended dependency and associated learning.</li>
+</ul>
+
+<h3>Primate Taxonomy</h3>
+
+<p>The order Primates is traditionally divided into two suborders. <strong>Prosimii</strong> (prosimians) are the most primitive living primates, including lemurs, lorises, galagos, and tarsiers. About half are nocturnal, with large eyes adapted for low-light vision. Prosimians have prehensile hands but limited thumb opposability, and some possess grooming claws. <strong>Anthropoidea</strong> includes monkeys, apes, and humans, all generally diurnal with fully developed colour vision and stereoscopic sight.</p>
+
+<p>Anthropoids are further divided into two infraorders. <strong>Platyrrhini</strong> (New World monkeys) inhabit southern Mexico, Central and South America, are almost exclusively arboreal, have broad flat noses with widely spaced nostrils, and a dental formula of 2.1.3.3. Some have prehensile tails. <strong>Catarrhini</strong> (Old World primates) include the monkeys, apes, and humans of Africa, Asia, and Europe. They have narrower noses with downward-facing nostrils, a dental formula of 2.1.2.3, no prehensile tails, and fully opposable thumbs.</p>
+
+<p>Old World catarrhines are divided into Cercopithecoidea (Old World monkeys) and Hominoidea (apes and humans). Hominoids are generally larger, tailless, possess larger and more complex brains, and have anatomical modifications of the shoulder for suspensory climbing. The family Hominidae includes all living and extinct habitually bipedal primates.</p>
+
+<h2>Hominid Evolution: The Fossil Record</h2>
+
+<h3>Early Hominoids: Dryopithecus and Ramapithecus</h3>
+
+<p>Approximately 15 million years ago, primates of the genera <em>Dryopithecus</em> and <em>Ramapithecus</em> inhabited Africa and Asia. Dryopithecus was more ape-like; Ramapithecus showed more human-like dental features and is considered more closely related to the hominid line. Both were the forerunners of the hominids.</p>
+
+<h3>Australopithecines</h3>
+
+<p>The australopithecines were the first clearly bipedal hominids, appearing in Africa approximately 4 to 5 million years ago. <em>Australopithecus africanus</em> had a brain capacity of approximately 500 cc, within the range of the apes, but its jaw and teeth were more human-like. It stood no taller than about 4 feet but walked upright. Evidence suggests australopithecines hunted with stone weapons but primarily ate fruits.</p>
+
+<p>The australopithecines are significant because they demonstrate that <strong>bipedalism preceded significant brain enlargement</strong> in human evolution. The evolutionary sequence was: upright posture first, large brain second. This overturned earlier assumptions that intelligence was the prerequisite for bipedal locomotion and tool use.</p>
+
+<h3>Homo habilis: The Handy Man</h3>
+
+<p><em>Homo habilis</em> appeared approximately 2.5 to 2 million years ago, evolving from the australopithecines. Key characteristics: brain capacity of 650 to 800 cc (larger than australopithecines); habitual bipedalism; and most crucially, the systematic manufacture and use of stone tools (the Oldowan industry). Homo habilis probably did not eat meat regularly. The existence of stone tools 2 million years ago associated with Homo habilis bones is indisputable evidence that tool use and tool making developed before the dramatic enlargement of the hominin brain. Culture preceded, and may have driven, brain expansion.</p>
+
+<h3>Homo erectus</h3>
+
+<p><em>Homo erectus</em> appeared approximately 1.5 million years ago, with a brain capacity of 800 to 1200 cc. Fossils of Java Man and Peking Man belong to this species. Homo erectus was the first hominin to expand beyond tropical Africa into the temperate zones of Asia and Europe. Key cultural achievements include:</p>
+
+<ul>
+  <li>More sophisticated stone tool technology (Acheulean industry, including hand axes).</li>
+  <li>Control and use of fire, evidenced by radioisotope-dated hearths in caves. Fire enabled cooking, warmth, protection from predators, light, and probably facilitated the development of social organisation and spoken language.</li>
+  <li>Increased meat consumption and large animal scavenging and hunting.</li>
+</ul>
+
+<p>The cultural development of Homo erectus initiated a new phase of human evolution in which natural selection was increasingly modified by cultural inventions. When Homo erectus moved into temperate environments, culture (caves, fire, clothing) provided solutions to environmental challenges that would otherwise have required biological adaptation. The human species was becoming a cultural animal.</p>
+
+<h3>Archaic Homo Sapiens and Neanderthals</h3>
+
+<p>Homo erectus was eventually replaced by <em>Homo sapiens</em>. Several subspecies of archaic Homo sapiens existed. The Neanderthals (<em>Homo sapiens neanderthalensis</em>) lived in the Near East and central Asia between approximately 10,000 and 40,000 years ago, with a brain size of approximately 1400 cc (comparable to modern humans). Neanderthals were large-brained game hunters who used hides for clothing and buried their dead, indicating some form of symbolic or ritual behaviour. Evidence suggests Neanderthal vocal anatomy may have been less capable than modern humans of producing the full range of modern speech sounds.</p>
+
+<h3>Anatomically Modern Homo Sapiens: Cro-Magnon</h3>
+
+<p>The oldest remains of <em>Homo sapiens sapiens</em> (Cro-Magnon people) appear approximately 35,000 years ago, having probably evolved from Neanderthal populations. They had large brains and lived as hunter-gatherers in cooperative bands. They built shelters, used hides for clothing, and buried their dead. Cro-Magnon people are responsible for the cave paintings and other art found at sites such as Lascaux in France, evidence of fully developed symbolic thought and cultural life.</p>
+
+<h2>Biological Factors in Human Evolution: The Hominization Process</h2>
+
+<p>Hominization is the evolutionary transformation of hominoids into hominids — the process of becoming human. It encompasses all the structural and behavioural changes that occurred in the hominin lineage since divergence from the last common ancestor shared with living apes.</p>
+
+<h3>Erect Posture and Bipedal Locomotion</h3>
+
+<p>The most fundamental distinguishing feature of hominins is habitual, striding bipedalism. Of approximately 4,000 living mammal species, only humans are habitual striding bipeds. Walking upright is anatomically complex and extremely rare among mammals. The shift to bipedalism required extensive skeletal remodelling:</p>
+
+<p><strong>The vertebral column</strong> acquired an S-shaped curve (adding secondary cervical and lumbar curvatures to the primary C-curve of quadrupeds), bringing the centre of gravity over the feet. Lower lumbar vertebrae enlarged to absorb compressive forces. The sacrum broadened to transfer body weight through the pelvis. The foramen magnum shifted forward and underneath the skull, allowing the head to balance on the vertical vertebral column without heavy neck musculature.</p>
+
+<p><strong>The pelvis</strong> became basin-shaped with a shortened, broadened ilium. This repositioned the gluteal muscles to the side of the body, enabling them to stabilise the trunk over the single supporting foot during walking. The same shortening narrowed the birth canal, creating the obstetric dilemma.</p>
+
+<p><strong>The lower limb</strong> was extensively remodelled: the femur angled inward from hip to knee, placing the foot directly under the centre of gravity; the knee joint enlarged; the foot became a stable platform with a non-opposable big toe and an arch to absorb and spring off the ground; the big toe aligned with the other toes for push-off.</p>
+
+<p><strong>The arm</strong> was freed from locomotion. Through hominin evolution, arm length shortened relative to trunk, and the hand became increasingly capable of fine manipulation, including the precision grip essential for tool making.</p>
+
+<h3>Why Bipedalism? Adaptive Models</h3>
+
+<p>Several models have been proposed for the adaptive advantage of bipedalism. These are not mutually exclusive and all may have contributed:</p>
+
+<ul>
+  <li><strong>Carrying model:</strong> Freeing the hands from locomotion allowed food, children, and tools to be transported, a significant advantage when food was found in open areas and needed to be brought to safer locations.</li>
+  <li><strong>Vigilance model:</strong> Elevating the head improved the ability to detect predators and food across open savanna landscapes.</li>
+  <li><strong>Heat dissipation model:</strong> Vertical orientation reduces the body surface exposed to intense equatorial sun and places more of the body in cooling air currents; this may also explain the relative hairlessness of modern humans, which allows sweat to evaporate efficiently.</li>
+  <li><strong>Energy efficiency model:</strong> Although bipedal running is slower than quadrupedal galloping, bipedal walking is more energetically efficient than knuckle-walking in chimpanzees. In ancestral hominins, this efficiency would have been advantageous when ranging over large territories in search of food.</li>
+  <li><strong>Foraging model:</strong> Upright stance facilitates reaching food items on bushes and low trees.</li>
+  <li><strong>Display model:</strong> Upright posture during dominance confrontations conveys size and may have been important in social competition and mate selection.</li>
+</ul>
+
+<p>Bipedalism also carried costs: increased exposure to predators in open terrain; vulnerability when carrying loads (back problems, slipped discs); increased circulatory burden (varicose veins); and debilitation from foot injury. Bipedalism is an evolutionary trade-off, not an unqualified advantage.</p>
+
+<h3>Remodelling of the Face and Teeth</h3>
+
+<p>The dramatic increase in brain size from australopithecines onward created strong adaptive pressure to shorten the face and reduce its projection, because the skull could not keep expanding in every direction given the constraints of the birth canal. Specific modifications include: reduction of brow ridges; vertical forehead; prominent chin; flat face with projecting nose; shortened and arched nasal cavity and palate; shortened and thickened tongue; reduction of tooth size; and recession of the jaw. These changes also facilitated the expansion of the range and speed of vocal sounds, which would have been essential for the development of speech and language.</p>
+
+<h3>Expansion and Development of the Brain</h3>
+
+<p>Brain size increased dramatically through hominin evolution. Australopithecines had brains of approximately 450 to 550 cc; Homo habilis 650 to 800 cc; Homo erectus 800 to 1200 cc; modern Homo sapiens approximately 1350 cc. This increase was disproportionate to overall body size increase.</p>
+
+<p>The most probable reason is that an increase in the number and complexity of neural connections made possible new kinds of mental operations: abstract thought, language, planning, and the cumulative transmission of culture. The brain did not simply grow larger; its internal organisation became more complex, particularly in the prefrontal cortex and the language areas. This cognitive elaboration was both a cause and a consequence of cultural development.</p>
+
+<h2>Cultural Factors in Human Evolution</h2>
+
+<p>Each stage of hominin biological evolution was accompanied by major advances in cultural evolution. Culture and biology co-evolved in the hominin lineage, each driving and enabling the other.</p>
+
+<h3>Tool Use and Manufacture</h3>
+
+<p>The earliest evidence of stone tool manufacture dates to approximately 2 million years ago, associated with Homo habilis (Oldowan industry). This predates the dramatic enlargement of the hominin brain, overturning the old assumption that a large brain was a prerequisite for tool use. Rather, tool use may have created selection pressure for the neural mechanisms needed to manufacture and use tools more effectively. The elaborate brain of Homo sapiens may be as much a consequence of culture as its cause.</p>
+
+<p>The hand anatomy of <em>Australopithecus afarensis</em> already showed a precision grip superior to that of chimpanzees, though inferior to that of Homo. As hominins spent more time on the ground than in trees, the hand increasingly took on manipulative rather than locomotor functions.</p>
+
+<h3>New Subsistence Patterns</h3>
+
+<p>Australopithecines and early hominins were primarily wild food collectors and occasional scavengers of meat and eggs. By the time of Homo erectus, small game hunting and large animal carcass scavenging were becoming much more common. The development of food production (agriculture and animal domestication) approximately 10,000 years ago transformed subsistence patterns entirely, enabling population growth on a scale impossible for hunter-gatherers.</p>
+
+<h3>Occupation of New Environments</h3>
+
+<p>Homo erectus was the first hominin to expand beyond tropical and subtropical environments into the temperate zones of Asia and Europe, at least 500,000 years ago. This was made possible by cultural inventions (fire, clothing, shelter) rather than biological adaptation. Culture thus enabled hominins to remain, in biological terms, essentially tropical animals while colonising cold-winter environments. This decoupling of biological adaptation from environmental change is one of the most distinctive features of human evolution.</p>
+
+<h2>Mosaic Evolution</h2>
+
+<p>Evolutionary change does not occur simultaneously in all parts of the body or at the same rate in all systems. <strong>Mosaic evolution</strong> refers to the phenomenon in which different characters or organ systems evolve at different rates in the same lineage. In human evolution, this is clearly illustrated: bipedal locomotion evolved early, while brain size and skull morphology remained relatively unchanged for millions of years; later, both brain and skull evolved rapidly. The pelvis adapted for bipedalism long before the dramatic cranial expansion of the Homo lineage. The phenomenon suggests that natural selection acts differently on different structures and functions, depending on which adaptation confers the greatest reproductive advantage at a given time.</p>
+
+<h2>Adaptive Radiation</h2>
+
+<p>Adaptive radiation is the rapid diversification of an ancestral species into multiple new forms, particularly when environmental change makes new resources available, eliminates competing species, or opens new ecological niches. The prototypical example is Darwin's finches on the Galapagos Islands, which diversified from a single ancestral species into multiple species with different beak morphologies adapted to different food sources. Among primates, adaptive radiation is exemplified by the diversification of basal mammalian stock in the Paleogene into forms adapted to running, leaping, climbing, swimming, and flying, and by the diversification of primate species across the ecological spectrum from forest canopy to savanna ground.</p>
+
+<h2>Other Evolutionary Concepts</h2>
+
+<p><strong>Convergent evolution</strong> is the independent evolution of similar traits in unrelated lineages as a result of adaptation to similar environments or ecological niches. Examples include the evolution of wings in insects, pterosaurs, birds, and bats independently; the camera-like eye evolving independently in vertebrates and cephalopod molluscs; and the similar streamlined body shapes of fish and cetaceans.</p>
+
+<p><strong>Parallel evolution</strong> is similar to convergence but occurs in related lineages that share a common ancestral form: both lineages undergo similar evolutionary changes independently, maintaining their similarities. Old World and New World monkeys provide a primate example; the independent loss of the tail in humans, great apes, and gibbons is another.</p>
+
+<p><strong>Dollo's Rule</strong> (irreversibility of evolution) states that a complex structure, once lost through evolution, is not regained in its original form, because the probability of the precise reverse sequence of mutations is negligibly small. Exceptions have been documented for simpler traits.</p>
+
+<p><strong>Cope's Rule</strong> is the generalisation that animal lineages tend over time toward larger body size. Body size increase confers advantages in prey capture, predator escape, reproductive success, heat retention, and longevity. However, the rule has many exceptions (reduction in size is also common) and reflects an increase in variance rather than a directional force.</p>
+
+<p><strong>Gause's Rule (Competitive Exclusion Principle)</strong> states that two species occupying identical ecological niches cannot coexist indefinitely; one will eventually outcompete and exclude the other. Species that initially overlap in niche tend to diverge through niche differentiation, reducing competition and enabling coexistence. This principle is relevant to understanding the extinction of archaic hominins as anatomically modern humans expanded out of Africa.</p>
+`,
 };
 
 
