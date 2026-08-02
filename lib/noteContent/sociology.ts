@@ -5102,7 +5102,241 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Impact on social change:</strong> Globalisation accelerates the pace of social change; spreads Western values, consumer culture, and democratic norms globally; creates new forms of inequality (digital divide, global class polarisation); undermines traditional cultures and produces identity anxieties that fuel nationalism, religious revivalism, and fundamentalism; and generates new collective risks (environmental crises, pandemics, financial contagion) that require collective responses beyond the nation-state.</p>
 `,
-  'introducing-indian-society': '',
+  'introducing-indian-society': `
+<h2>Perspectives on the Study of Indian Society</h2>
+
+<p>Indian society is unique in its scale, antiquity, complexity, and diversity — yet it exhibits remarkable continuities across millennia. Three dominant perspectives have structured its sociological study: the Indological (book view), the Structural-Functional (field view), and the Marxist (historical-materialist). Each emerges from different epistemological assumptions and leads to different conclusions about Indian society's nature and trajectory.</p>
+
+<h2>A. Indology (G.S. Ghurye)</h2>
+
+<p>Indology is the academic study of the history, cultures, languages, and literature of the Indian subcontinent. The Indological approach rests on two assumptions: that Indian society and culture are historically unique, and that this contextual specificity can be grasped better through ancient texts — epics, religious manuscripts, Vedas, Shastras — than through Western analytical frameworks. Therefore, Indologists use classical literature to study Indian social institutions.</p>
+
+<p>The approach is associated with S.V. Ketkar, B.N. Seal, B.K. Sarkar, G.S. Ghurye, Louis Dumont, K.M. Kapadia, P.H. Prabhu, and Irawati Karve. Sir William Jones established the Asiatic Society of Bengal in 1787 and introduced the study of Sanskrit and Indology to the West. The emphasis is on understanding society rather than reforming it.</p>
+
+<h3>G.S. Ghurye — Doyen of Indian Sociology</h3>
+
+<p>G.S. Ghurye is called the "doyen of Indian sociology." MN Srinivas said of him: "Nothing disguises the fact that Ghurye was a giant." Three aspects of his contribution stand out: his own role in promoting sociology (32 books, new theoretical perspectives, research on diverse topics, nationalist orientation); his institution-building (Bombay University Sociology Department, Indian Sociological Society 1952, its mouthpiece <em>Sociological Bulletin</em>); and the galaxy of sociologists he mentored — MN Srinivas, Irawati Karve, AR Desai, KM Kapadia, IP Desai, MSA Rao.</p>
+
+<p>Ghurye completed his doctoral thesis under WHR Rivers on "Caste and Race in India." His approach is distinctive for:</p>
+<ul>
+  <li><strong>Sanskrit and vernacular texts</strong> — used Sanskrit texts exclusively alongside vernacular literature (Bankim Chandra Chatterjee, Marathi works)</li>
+  <li><strong>Diffusionist method</strong> — influenced by Rivers, used diffusion to understand the evolution of caste and cultural synthesis</li>
+  <li><strong>Methodological pluralism</strong> — disciplined eclecticism; used field surveys ("Sex Habits of Middle-Class People in Bombay," "Mahadev Kolis"), historical and comparative methods</li>
+  <li><strong>Theoretical pluralism</strong> — both inductive and deductive; flexible approach born of faith in intellectual freedom</li>
+</ul>
+
+<p>Ghurye's central concern was exploring the long unification and synthesising process through which Indian society passed to arrive at its present level — the process of cultural unity through the ages.</p>
+
+<h3>Six Broad Areas of Ghurye's Work</h3>
+
+<p><strong>1. Caste (Attributional Approach):</strong> Book — <em>Caste and Race in India</em>. Studied caste from historical, comparative, and integrative perspectives. Combined historical texts with fieldwork and cultural perspective. Six structural features of the caste system:</p>
+<ul>
+  <li>Segmental division</li>
+  <li>Hierarchy</li>
+  <li>Lack of choice of occupation</li>
+  <li>Privileges and prohibitions (Kacha food, Pakka food, raw food — food hierarchies)</li>
+  <li>Commensality restrictions</li>
+  <li>Restrictions on marriage</li>
+</ul>
+<p>Ghurye laid particular stress on endogamy as the most important feature — caste hierarchy is maintained through endogamy. Emphasised two points: kin and caste networks in India had parallels in some other societies; and kinship and caste served historically as integrative frameworks.</p>
+
+<p><strong>2. Tribe:</strong> Argued that tribal isolation is futile and that most tribes have already been Hinduised after a long period of contact. He called tribes "backward caste Hindus" whose backwardness was due to their imperfect integration into Hindu society (Santhals, Bhils, Gonds). This led to a fierce debate between Ghurye and Verrier Elwin — Elwin (<em>Loss of Nerve</em>) argued tribals should be allowed to live in isolation, while Ghurye argued for assimilation. Ghurye highlighted the positives of assimilation: tribes gave up liquor drinking, received education, and improved agriculture under Hindu influence. In later works on north-eastern tribes, Ghurye documented secessionist trends and warned they would damage national unity.</p>
+
+<p><strong>3. Kinship, Family and Marriage:</strong> The relationship between caste and kinship is very close because exogamy/endogamy is largely based on kinship (real or imaginary), and the effective unit of caste — the sub-caste — is largely constituted of kinsmen. Three types of marriage restrictions shape the caste-kinship relationship: endogamy, exogamy (divided into spinda/prohibited degrees of kin, and sept/gotra exogamy), and hypergamy.</p>
+
+<p><strong>4. Culture, Civilisation and Cities:</strong> During colonial times, the growth of metropolitan centres altered Indian life. Colonial powers inverted the previous pattern — towns and cities were no longer outlets for agricultural produce and handicrafts; they became major manufacturing centres using rural areas for raw materials and selling industrial products. Metropolitan economy emerged to dominate the village economy.</p>
+
+<p><strong>5. Civilisation and Culture:</strong> Ghurye distinguished between independent growth of culture and growth by diffusion, favouring a synthesis. He believed in acculturation — the best of one's own culture plus the best of others — and considered acculturation more relevant than diffusion in understanding Indian civilisation. Caste was developed by Brahmins and spread to other sections through this acculturation process.</p>
+
+<p><strong>6. Religion:</strong> Religion is at the centre of the total cultural heritage of man. It moulds and directs human behaviour in society. Wrote six books on religion including <em>Indian Sadhus</em> (1953), <em>Gods and Men</em> (1962), <em>Religious Consciousness</em> (1965). The <em>Indian Sadhus</em> study highlighted the paradoxical nature of renunciation: a sadhu is supposed to be detached from all castes and social conventions, yet since Shankaracharya, Hindu society has been guided by sadhus. Indian sadhus acted as arbiters of religious disputes, patronised learning, and even defended religion against external attacks.</p>
+
+<p>Ghurye identified five sources of danger for national unity: the Scheduled Castes, Scheduled Tribes, Backward Classes, Muslims as a religious minority, and linguistic minorities. He believed cultural unity in India was largely a result of Brahminical endeavour — all major institutions of Hindu society originated among the Brahmins and were gradually accepted by other sections.</p>
+
+<h3>Critique of Ghurye and Indology</h3>
+<ul>
+  <li>Brahminical point of view — presents caste from the perspective of the twice-born</li>
+  <li>On tribe — "integration" and "assimilation" are value-loaded concepts; Elwin's counter-argument remains powerful</li>
+  <li>Armchair theorisation — characterising SC/ST/OBC/Muslims as threats is unacceptable; they widely participated in the Indian National Movement</li>
+  <li>Indology does not account for present-day contemporary changes highlighted by field studies (e.g., dominant caste, Sanskritisation)</li>
+  <li>Different Indologists give contradictory explanations (colonial vs. nationalist Indologists)</li>
+  <li>Religious texts present a value-ideal; reality was often different (fact vs. value)</li>
+  <li>Mainly considers Hindu culture as the culture of India — ignores Buddhism, Islam, tribal traditions, subaltern groups</li>
+  <li>Ignores tribal history and subaltern voices</li>
+</ul>
+
+<h3>Contemporary Indologists</h3>
+<ul>
+  <li><strong>Wendy Doniger</strong> — American Indologist; <em>The Hindus: An Alternative History</em></li>
+  <li><strong>DP Mukherjee</strong> — Marxian perspective on Indology (Marxology); <em>Dialects of Indian History</em></li>
+  <li><strong>Johannes Bronkhorst</strong> — History of Indian thought; interaction between Brahmanism, Buddhism, and Jainism; <em>Greater Magadha</em> (2007)</li>
+  <li><strong>Arthur Llewellyn Basham</strong> — <em>The Wonder That Was India</em>; the most widely used introduction to Indian civilisation; gauged the global impact of Swami Vivekananda</li>
+  <li><strong>Ram Sharan Sharma</strong> — Focused on early Indian social structure, material and economic life, state formation; applied historical materialism to unravel class formation in the Vedic period and age of the Buddha</li>
+</ul>
+
+<h2>B. Structural-Functionalism (M.N. Srinivas)</h2>
+
+<p>The structural-functional perspective studies particular functions performed by institutions for the maintenance of the social structure. It tries to explain social forms in terms of their contributions to social cohesion. The perspective focuses on the "ordering" and "patterning" of the social world, asking: how did various institutions originate? How does each part relate to the whole? It treats change as a slow, cumulative process of adjustment.</p>
+
+<p>A.R. Radcliffe-Brown: "The total social structure of a society, together with the totality of social usages, constitutes a functional unity — a condition in which all parts work together with sufficient degree of harmony, without producing persisting conflicts which can neither be resolved nor regulated." Key followers in India: MN Srinivas, SC Dube, McKim Marriott, IP Desai, DN Majumdar.</p>
+
+<h3>M.N. Srinivas</h3>
+
+<p>MN Srinivas is credited with initiating a new line of structural-functional analysis in Indian sociological and social anthropological research. His key methodological contribution was inductivism — initiating the tradition of basing macro-sociological generalisations on micro-anthropological insights. He moved from western textbooks and indigenous sacred texts to "direct observation, field study and field experience."</p>
+
+<p>His field study of the Coorgs between 1940-42 revealed functional unity by explaining the interaction in ritual contexts of different castes (Brahmins as priests, Kaniyas as astrologers, Bannas and Panikas as low castes). He observed worship of rivers (Ganga, Kaveri in Coorg) as sites of inter-caste interaction.</p>
+
+<h3>Five Areas of Srinivas's Work</h3>
+
+<p><strong>1. Social Change — Brahminization, Sanskritisation, Westernisation, Secularisation:</strong></p>
+<ul>
+  <li><strong>Brahminization</strong> — imitation of life-ways and ritual practices of Brahmins by lower-caste Hindus; the starting concept, later generalised to Sanskritisation</li>
+  <li><strong>Sanskritisation</strong> — "the process by which a low caste or tribe or other group takes over the customs, rituals, beliefs, ideology and style of life of a high and, in particular, a twice-born (dwija) caste. The Sanskritisation of a group has usually the effect of improving its position in the local caste hierarchy." It is a case of anticipatory socialisation — generally intergenerational, followed by secular mobility. When the entire group gets mobility, it is associated with dominant caste status.</li>
+  <li><strong>Westernisation</strong> — "changes brought about in Indian society and culture as a result of over 150 years of British rule, the term subsuming changes occurring at different levels — technology, institutions, ideology and values." Primary westernisation: direct contact with the West. Secondary: those westernised through contact with other westernised Indians. Tertiary: further removed. Srinivas called modernity "Westernisation" because "modernity is a value-loaded concept" — he preferred an empirically neutral term.</li>
+  <li><strong>Secularisation</strong> — growing separation of religious concerns from everyday social life</li>
+</ul>
+
+<p><strong>2. Religion and Society:</strong> Coorgs study led to Brahminization concept. Later field studies of caste and religion (1952, 1959, 1962, 1966) highlighted not only structural-functional aspects but also the dynamics of the caste system in rural settings. Hinduism was being spread by Sanskritisation; Srinivas was not fascinated by Hinduism in holistic form but looked for it in the caste system.</p>
+
+<p><strong>3. Study of Village:</strong> Srinivas considers the village as the microcosm of Indian society and civilisation. The village retains the traditional composition of India's social reality. Rampura (Mysore) village study gave him the concept of "dominant caste," contained in <em>The Remembered Village</em> (1976).</p>
+
+<p><strong>4. Caste:</strong> Srinivas views caste as a segmentary system. Every caste is divided into sub-castes with the following characteristics (keyword: SOPCP): Segmentary — the unit of endogamy; Occupation — members follow a common occupation; Pollution and purity rules; Commensality restrictions; Panchayat — members governed by the same authoritative body. He showed how castes are interdependent in villages and discussed Westernisation and modernisation as viable paradigms of change.</p>
+
+<p><strong>5. Dominant Caste:</strong> First proposed in his early papers on Rampura village. In Rampura, Brahmin priests hold high ritual status while peasants hold land and thus considerable power over Brahmins despite lower ritual status. Six attributes of a dominant caste: sizeable amount of arable land; strength of numbers; high place in local hierarchy; western education; jobs in administration; urban sources of income. Most important three: numerical strength, economic power through land ownership, and political power.</p>
+
+<h3>Critique of MN Srinivas and Structural-Functionalism</h3>
+<ul>
+  <li><strong>Yoginder Singh</strong> — Srinivas's structural-functionalism is a manifestation of objective idealism (preconceived notion that India changes slowly); in fact, India changes rapidly</li>
+  <li><strong>Maitri Chowdhary</strong> — conservative; cannot understand changes experienced by Indian social institutions under globalisation and feminist movements</li>
+  <li><strong>Anand Chakravarti</strong> — silent on class, factional politics, and different kinds of political manipulation</li>
+  <li><strong>Gail Omvedt</strong> — reflection of Brahminic ideology, not value-neutral sociology; caste as a product of culture shared by all Indians is unacceptable; does not explain why Dalits couldn't become dominant caste despite having numbers</li>
+  <li><strong>Ghanshyam Shah</strong> — dominant caste is nothing but class mobilisation</li>
+  <li><strong>Yogesh Atal (Multiple Dominances)</strong> — dominant castes have different meanings at different levels: at village level a family dominates; at state level a caste dominates; at national level various dominant castes coexist — MNS does not define where dominance operates</li>
+  <li><strong>RK Mukherjee</strong> — in contemporary capitalist India, urban areas make the structure of society; villages are mere recipients</li>
+  <li>Upper-caste bias — his conception of Indian traditions is Hinduised; construction of Sanskritisation and dominant caste puts him closer to Hindutva ideology of cultural nationalism</li>
+  <li>Standard structural-functional critique: status-quoist; teleological; ignores conflict; tendency to generalise (empirical anarchism)</li>
+  <li>Does not explain mobility experienced by non-Hindu communities</li>
+  <li>Gujarat KHAM and MY coalitions show subaltern groups overcoming dominant castes in ways his framework cannot explain (Dipankar Gupta)</li>
+</ul>
+
+<h2>C. Marxist Sociology (A.R. Desai)</h2>
+
+<p>The Marxist perspective provides an alternative vision to both Indology and structural-functionalism. Radcliffe-Brown distinguished history from sociology (history as ideographic — dealing with individual facts; sociology as nomothetic — dealing with generalisations). Marxists reject this: history is the lifeline of society; society is the subject matter of history. They are complementary and interdependent. Key Indian Marxists: DP Mukherjee (Marxological), RK Mukherjee (city studies), IP Desai, AR Desai.</p>
+
+<p>Marxist approach: societies develop through dialectics. Indological perspective gives only history; structural-functionalism discusses only the present. The Marxist view studies the process of development and evolution through history. Social institutions must be understood through dialectics and economics.</p>
+
+<h3>A.R. Desai</h3>
+
+<p>Desai rejects the uniqueness of Indian culture. He considers that Indian history should be interpreted from an economic perspective to understand the birth, growth, and rise of Indian society.</p>
+
+<p><strong>On the Birth of Caste:</strong> Aryan invasion destroyed the primitive mode of production; indigenous peoples were subjected to separate residence — this was the beginning of caste. Aryans thought themselves superior and called themselves Brahmin. Different indigenous tribes got names from the totems they worshipped; their occupations were rigidified by Brahmins. Texts were written by the dominant caste to rigidify stratification — e.g., the Rigveda's Purusha Sukta (Brahmin from head, Kshatriya from shoulders, Vaishya from legs, Shudra from feet) — cultural reproduction in Bourdieusian terms.</p>
+
+<p><strong>On Buddhism and Jainism:</strong> Mainstream scholars see them as progressive anti-Brahminical movements for egalitarianism. Desai argues B&J simply offered some space for expression of existing dominant culture, sought patronage from the ruling class, and ultimately made Hinduism stronger — Buddha was absorbed as one of Vishnu's avatars.</p>
+
+<p><strong>On Classes in India:</strong> Two classes — Masters and Service. The service class was morally and socially bound to offer services to the master class; this relationship is a dialectical economic relation comparable to slavery in the West.</p>
+
+<p><strong>On Feudalism in India:</strong> Indian feudalism was largely different from European feudalism. In Europe, feudalism came from below — minor chieftains and feudal lords collectively determined kingship. In India, feudalism came from above — by emperors or by the British. Common people had no ownership of the land they tilled; rent was in the form of taxes and labour services. Therefore, masses lost political, social, and economic freedom.</p>
+
+<p><strong>On Colonial Capitalism:</strong> Colonialism brought railways, roadways, different tenure systems, bureaucracy, legal courts, police, and cash transactions — thus initiating a capitalistic mode of production. Machines were produced; cottage industries shut down; peasants lost rights over agricultural land and were forced to grow cash crops and indigo.</p>
+
+<p><strong>On the Revolt of 1857:</strong> A clash between rising capitalism and declining feudalism, represented by different feudal communities. Not a spontaneous nationalist uprising but a structural conflict between two modes of production.</p>
+
+<p><strong>On the Indian National Movement (5 Phases, 1800-1940):</strong></p>
+<ul>
+  <li><strong>Phase 1 (1800-1850)</strong> — Introduction of British rule: large body of tax collectors, middlemen, police, disinterested bureaucracy, and cash transactions suppressed peasants. Rise of intelligentsia through modern education (Raja Ram Mohan Roy); narrow social base of nationalism; beginning of social reform movements (Arya Samaj, Brahmo Samaj)</li>
+  <li><strong>Phase 2 (1850-1888)</strong> — Consolidation of colonial infrastructure; railways, ports, telephony; destruction of indigenous industries; rise of mass poverty, debt trap, forced eviction; peasants supported by dethroned feudal lords led to 1857 — a war between declining feudalism and rising capitalism</li>
+  <li><strong>Phase 3 (1888-1905)</strong> — Rise of Indian bourgeoisie (12 Indian industrialists; 80% of trusts were British-origin); Indian industrialists organised protests to protect class interest; funded and patronised Indian middle class to organise against British; rise of Congress and acceleration of Indian nationalism</li>
+  <li><strong>Phase 4 (1905-1920)</strong> — Landless peasantry mobilised by leaders with socialist inclinations; rise of Kisan Sabha movements in the countryside uniting peasants of different languages and regions</li>
+  <li><strong>Phase 5 (1920-1940)</strong> — Gandhi bridged the gap between different classes: thesis (Indian bourgeoisie) + antithesis (Indian proletariat) = synthesis (both together). Articulated concerns of peasants while supporting concessions to Indian industrialists and asking zamindars to support INC. Therefore, bourgeois interests got glorified in the INC agenda and have been so ever since</li>
+</ul>
+<p>Desai's conclusion: "The so-called national leaders like Gandhi and Nehru adopted policies not to wipe out class inequality; rather they preferred to glorify nation in the minds of all in order to receive support from the hungry and speechless masses in India, so as to transfer power from external colonisers to internal colonisers." Democracy came to India without democratic participation, without economic freedom, without political freedom.</p>
+
+<p><strong>On Contemporary Policies:</strong> Desai is sceptical of new policies as they profess false consciousness. Government policies like land reforms and reservations are conscious designs by the dominant group to glorify segmentation amongst the culturally, politically, and economically deprived sections — preventing true class consciousness and polarisation.</p>
+
+<p><strong>Seven Broad Contemporary Ideas (AR Desai's critique of independent India):</strong> Constitution — bourgeois and capitalistic; slogan of socialism is a hoax. State — preaching science while popularising religious philosophies (naming India "Bharat," Dharma Chakra as national symbol). Culture — idealistic and religious-mystical philosophies enforced by ruling bourgeoisie. Development — weak Indian capitalist society cannot resolve economic, political, social, educational, cultural problems. Crisis — present society will deepen economic, political, social, cultural crises. Capitalism — cannot liquidate mass poverty, unemployment, illiteracy, caste, and feudal institutions. Socialism — only socialism can end the crisis by changing the constitution and removing private property.</p>
+
+<h3>Critique of AR Desai and Marxist Sociology</h3>
+<ul>
+  <li><strong>Andre Beteille</strong> — exaggeration of economic history to fit Marxist theory; peasant movements across the country are signs of democracy; development is happening</li>
+  <li><strong>Y. Singh</strong> — Marxian theory never looks for alternatives to social change; highly sceptical of everything (government policies, mass media, popular movements)</li>
+  <li><strong>Gail Omvedt</strong> — Marxian theory sees only two polarised classes; in India, the degree of inequality experienced by different groups is not equal — Dalits are immensely suppressed, the worst victims; cannot simply classify India into two polar classes</li>
+  <li><strong>Jyoti Basu</strong> — Biggest folly of Marxist studies in India is to ignore caste and religion; treating caste as class is invalid in India</li>
+  <li>Urban areas are witnessing large swathes of middle class, contrary to Marxist predictions (Dahrendorf's critique of class polarisation)</li>
+  <li>Lack of empirical data; more ideology than reality</li>
+</ul>
+
+<h3>Other Marxist Approaches to Indian Society</h3>
+<ul>
+  <li><strong>Ranjit Guha's Subaltern Sociology</strong> — History of India should be rewritten from a mass perspective, not a government's perspective. Empirical evidence shows how subaltern groups (tribal movements, caste movements, peasant movements) exhibited resistance across different parts of the country at different times</li>
+  <li><strong>Anand Chakravarti's Hegemonistic Domination</strong> — Against class domination. The "under-class" (people subjected to various forms of deprivation) needs support from urban intelligentsia to rise and acquire human rights and economic and political rights</li>
+  <li><strong>Ashok Rudra and Pranab Bardhan</strong> — Follow Althusser's theory of Ideological State Apparatus (focusing on the genesis of inequality rather than tracking its history)</li>
+  <li><strong>Pradeep Sarkar</strong> — LPG era = neo-colonialism (for explaining poverty and marginalisation in India)</li>
+</ul>
+
+<h2>D. Modernisation of Indian Tradition</h2>
+
+<p>Modernity is ADAPCO (Parsons's pattern variables): Achievement over Ascription; Specificity over Diffusion; Affective Neutrality over Affectivity; Universalism over Particularism; Individual Orientation over Collective Orientation. The broader process is rationalisation — a societal process bringing social change in norms, ethos, values, culture, structure, and function of society (Weber: rooted in Renaissance, rise of democracy, growth of nation-states, expansion of markets).</p>
+
+<h3>Perspectives on Modernisation in India</h3>
+
+<p><strong>Nationalist View (Ghurye, Mukherjee, RN Sharma):</strong> Modernity is an effective instrument for development. Sceptical of colonial attempts. A synthesis should exist between tradition and modernity. Gandhi: "While rejecting pure modernity, man in India should be open to diverse thoughts without compromising his essential Indianness." Vivekananda: "Synthesis between western materialism and Indian spiritualism." Arya Samaj: English and Sanskrit both taught in schools — judicious mixture. Conclusion: Indian process of modernisation is unique and specific; tradition and modernity co-exist.</p>
+
+<p><strong>Marxist View (DP Mukherjee):</strong> Modernity in India was accelerated during British rule — modern trade, education, liberal thinking, growth of Indian middle class. But Indian modernity is different from the West's (which came through industrialisation) — India got modernity without industrialism. Middle class in India engaged in transforming politics but was confused because modes of production were not emerging. AR Desai: Modernity is a colonial construct that destroyed weavers, handicrafts, village industries, and independent guilds. It serves the segmentary interests of class rather than the collective interest of the masses.</p>
+
+<p><strong>MN Srinivas:</strong> Both orthogenetic (Sanskritisation) and heterogenetic (Westernisation) change operate. Calls modernity "Westernisation" because "modernity" is a value-loaded term. Extended by Rudolf and Rudolf: in India, change can come without violence — caste coexists with democracy (caste with its numbers gets elected). Both Westernisation and Sanskritisation are means of social mobility.</p>
+
+<p><strong>Gunnar Myrdal:</strong> There is a distinction between modernity in the West and Asia. In the West, modernity comes through: Normative (ideas come first) → Instrumental (institutions follow). In Asia (India), only the instrumental dimension is present — institutions come without prior normative transformation. Nehru: "Modernity in India should come through social institutions."</p>
+
+<p><strong>Louis Dumont (Cognitive Theory):</strong> India is a classic example of hierarchy where modernity is not acceptable in absolute form. Various traditional institutions — Brahmanical supremacy, commitment to task-based occupation, social distance between castes — stand in the way of modernity. Distinction between <em>Homo Hierarchicus</em> (the hierarchical man of traditional India) and <em>Homo Equalis</em> (the equal man of modernity).</p>
+
+<p>Critique by <strong>Andre Beteille:</strong> Change is derived by both internal and external motivations. Indian culture was never a central, uniform culture — it was different at different places, under different dynasties (Jainism and Buddhism introduced at different places; then Mughals; then British). Cultural contradictions at different times led to cultural amendments and modernity. Public and private spheres both underwent amendment. People's adaptability is really high.</p>
+
+<p><strong>Y. Singh (Modernisation of Indian Tradition, most famous book):</strong> Contradicts all approaches on three grounds — precision, objectivity, and integration. Explains modernisation through three perspectives: theoretical (Little Tradition), macroscopic (heterogenetic change), microscopic (orthogenetic change).</p>
+
+<p>Singh borrows Singer's framework of Little Tradition and Great Tradition to explain:</p>
+<ul>
+  <li><strong>Orthogenetic change</strong> (micro to macro) — Buddhism, Jainism, Bhakti movement introduced changes at the micro level and slowly expanded to macro level</li>
+  <li><strong>Heterogenetic change</strong> — from outside sources, affecting macro institutions in polity and economy (PESTEL change). Rise of Islam in India led to conflict between two great traditions; paradoxically, it led to change in Islam (caste appearing within Islam; South-East Asian Islam becoming milder due to Buddhist influence). It culminated in the partition of two nations.</li>
+</ul>
+
+<p>PESTEL modernity leads to value modernity (individualism, achievement, rationality, secularism, liberty). Y. Singh: different people adopt change differently according to their needs; different places are impacted differently by modern forces. People adopt modernity selectively depending on their needs and expertise. Also identifies "Traditionalisation of Modernity" — even in present times, traditions are helped by western innovations (Sanskar channel on cable TV, matrimonial websites with caste filters, temples offering e-darshana, kundli software).</p>
+
+<p>Critique by <strong>JPS Oberoi</strong> — Indian modernity and European modernity come from the same principles (rejecting religion); the Dalit movement can be compared with the Protestant movement. Y. Singh's selective modernisation thesis is questioned.</p>
+
+<h3>Little Tradition and Great Tradition (Robert Redfield; used in India by McKim Marriott)</h3>
+
+<table>
+  <tr><th>Little Tradition</th><th>Great Tradition</th></tr>
+  <tr><td>Folks and peasants</td><td>Elite or literate few</td></tr>
+  <tr><td>Illiterates</td><td>Literates</td></tr>
+  <tr><td>Local version of textual knowledge</td><td>Textual or "Shastriya"</td></tr>
+  <tr><td>Moulds roles according to local settings</td><td>Decides role of caste system, education, priests</td></tr>
+  <tr><td>Local versions of epics with local examples</td><td>Ramayana, Mahabharata as major sources</td></tr>
+  <tr><td>Popular/folk culture</td><td>High/classical culture</td></tr>
+  <tr><td>Not scrutinised</td><td>Open to scrutiny</td></tr>
+</table>
+
+<p><strong>Parachialisation</strong> — elements of Great Tradition circulate down to Little Tradition; a new local tradition emerges. Examples: veil adopted by Rajputs from Islam; Go-vardhan (cow protector) becoming Gobar Dhan (cow dung). Holi's transformation to Hola-Mohalla in Punjab.</p>
+
+<p><strong>Universalisation</strong> — elements of Little Tradition that become part of Great Tradition. Examples: Rakshabandhan (from Saluno festival in UP); Chhath Pooja of Bihar celebrated in Delhi; Ganesh Mahotsav of Mumbai celebrated across India; Lohri of Punjab spreading nationally.</p>
+
+<p>Contemporary continuum: because of globalisation, migration, and IT — globalisation is becoming glocalisation.</p>
+
+<h2>E. Protests, Social Reforms, and Indian Nationalism</h2>
+
+<p>Social movements in India were not only protests and dissent but also reform and reactionary (socio-religious and freedom movements). MSA Rao: the underlying cause is relative deprivation. Ghanshyam Shah and TK Oommen: protests are an ongoing process of change.</p>
+
+<p>Significant protests during colonial rule were due to: policies of expansion; exploitation; interference; land reform policies causing relative deprivation; alienation and discontent.</p>
+
+<p>Types of protest: Tribal protests (Sanyasi, Santhal, Ho, Khasi, Munda, PagalPanthi revolts); Agrarian unrest (Indigo revolt, Deccan riots, Pabna, Champaran, Kheda).</p>
+
+<p>Characteristics of colonial-era protests: localised; directed against local zamindars and landholders; never directly challenged British rule directly; MSA Rao compares social reform programmes to the Protestant movement for two reasons — they restored cultural pride and confidence, and they unified people and exposed the exploitative nature of British rule.</p>
+
+<p>AR Desai: without social reforms, the rise of the freedom movement wouldn't have been possible. Y. Singh: social reforms played an important role in transforming traditional India into modern India. TN Madan: social reforms "Indianised modernity." Spontaneous protests were later supplemented by organised protests with the emergence of organised leadership. These movements encompassed not only economic but also social, political, and ideological aspects (Swadeshi and boycott movement, Home Rule League, NCM, CDM, culminating in the Quit India Movement).</p>
+
+<p><strong>Colonial Hangover:</strong> The British colonial rule ended in 1947 but the colonial hangover continues. MNS (Westernisation): changes in food habits and dressing; giving up superstitious rituals like child marriage and sati; increased avenues for social mobility. But westernisation is seen more as imitation of external culture than adoption of modern values like democracy and equality.</p>
+
+<p>Manifestations of colonial hangover: primacy of English language (missionary schools most sought after); parliamentary procedures following British conventions; government offices caught in bureaucracy and strict hierarchy; Western food and dress considered superior; obsession with fair skin; forest laws, Indian Police Act, IPC largely based on British rule ethics aimed at controlling local population; post-independence land reforms not fully successful; class stratification replacing Indian stratification systems. However, globalisation ensures that values and institutions from across the world are now being shared — many phenomena like consumerist culture are not entirely colonial hangovers but effects of contemporary Western culture more broadly.</p>
+`,
   'colonial-rule-indian-society': '',
   'rural-agrarian-structure': '',
   'caste-system': '',
