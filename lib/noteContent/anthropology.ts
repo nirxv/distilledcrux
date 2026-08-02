@@ -1770,11 +1770,6 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>Craig Venter and Francis Collins (2000):</strong> Human genome mapping revealed that the types of genetic variation across the human species do not support the notion of genetically defined races.</li>
 </ul>
 `,
-};
-
-
-
-
 
   'human-growth-development': `
 <h2>Growth vs Development: Core Distinction</h2>
@@ -1972,3 +1967,4 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Fecundity is the biological capacity of a man, woman, or couple to participate in reproduction (a physiological concept). Fertility is the actual reproductive performance — whether applied to an individual or a group — measured by live births and influenced by social, cultural, psychological, and economic factors, not just biology. Fertility is measured by indicators such as the crude birth rate, or rates relating births to women of childbearing age (the Total Fertility Rate). Natural fertility exists in the absence of deliberate birth control; controlled fertility involves deliberate use of contraception.</p>
 `,
+};
