@@ -3566,4 +3566,194 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Cognitive anthropology was criticised by Keesing for being unable to move beyond the analysis of artificially simplified and often trivial semantic domains (colour categories, folk taxonomies), without being able to elucidate their relevance to understanding culture as a whole. Questions remain about whether results reflect how individuals actually organise and perceive society or whether they are manufactured by investigators. Universal agreement on how to access culture in the mind has yet to emerge.</p>
 `
+
+  'culture-language-communication': `
+<h2>Language as a Human Universal</h2>
+
+<p>Language is the most distinctively human of all cultural institutions. Every known human society, past and present, possesses a fully developed, complex language. No other species comes close to the generative, symbolic, and combinatorial power of human language. Even profoundly isolated individuals who are never taught a language develop rudimentary sign systems, demonstrating that the capacity for language is innate to the human species, even if specific languages are entirely learned and culturally transmitted.</p>
+
+<p>For cultural anthropology, the study of language is important for two interconnected reasons. First, practical: an anthropologist doing fieldwork must communicate with the people being studied, and language is the primary medium of that communication. Second, theoretical: language and culture are deeply interdependent. Understanding a culture requires understanding its language; understanding a language reveals the structure of the culture that uses it.</p>
+
+<h2>Linguistic Anthropology: Definition and Scope</h2>
+
+<p>Linguistic anthropology is the branch of anthropology that studies human languages: their structure, history, social variation, and relationship to culture and cognition. While it shares data, theories, and methods with the broader discipline of linguistics, linguistic anthropology is distinguished by its distinctively anthropological questions: How does language influence or reflect culture? How does language use vary among different members of a society? How are power, identity, and social structure encoded in language?</p>
+
+<p>In its early years, linguistic anthropology emphasised the documentation of languages belonging to cultures under ethnographic study, particularly those threatened by colonisation, forced assimilation, and population decimation. When European colonisation began approximately five centuries ago, an estimated 12,000 distinct languages existed. Today approximately 7,000 languages remain, and nearly half are considered endangered.</p>
+
+<h2>Four Branches of Linguistic Anthropology</h2>
+
+<h3>Historical Linguistics</h3>
+
+<p>Historical linguistics deals with the emergence of language in general and with how specific languages have changed and diverged over time. By comparing contemporary languages, historical linguists identify language families and reconstruct proto-languages. 19th-century linguists working with European languages demonstrated systematic sound correspondences between related languages derived from a common ancestor. English, for example, belongs to the Indo-European language family alongside Latin, Sanskrit, Ancient Greek, and approximately 136 other languages.</p>
+
+<p>Sound correspondences follow regular rules. The word for "father" in Germanic languages (Dutch vader, German Vater, Gothic fadar) always begins with f or v, while in Romance languages (French père, Spanish padre, Italian padre, Latin pater) it begins with p. The original Indo-European word was p'ter; the Romance languages preserved the older pronunciation while the Germanic languages shifted it. These systematic correspondences allow historical linguists to reconstruct aspects of languages spoken thousands of years before written records existed.</p>
+
+<p>Historical linguists also study living languages, which are constantly changing: adding new words, dropping others, and shifting meanings. Languages that were once mutually intelligible diverge over centuries of geographic separation, creating language families with multiple distinct branches.</p>
+
+<h3>Descriptive Linguistics</h3>
+
+<p>Descriptive linguistics studies the sound systems, grammatical systems, and semantic structures of specific languages. Every language has its own logical structure and its own rules for combining sounds and words into meaningful communication. The task of the descriptive linguist is to record, describe, and analyse a language in its entirety — to compile grammars and dictionaries for previously unstudied languages and to document the structural diversity of human speech.</p>
+
+<p><strong>Phonology</strong> is the study of the sound system of a language. Every language uses a subset of the total range of sounds the human vocal tract can produce. Phonetics is the systematic identification and description of all sounds found in a language. Linguists identify <em>phonemes</em> — the smallest units of sound that make a difference in meaning — through the minimal-pair test: finding two words that are identical except for a single sound (e.g., "bit" and "pit" in English). The substitution of one sound for the other changes the meaning, confirming that the two sounds are distinct phonemes. English has 44 phonemes despite having only 26 letters. Sounds that are phonemically distinct in one language may be non-distinct in another: the l and r sounds that are distinct phonemes in English are not distinct in Japanese, which is why Japanese speakers commonly have difficulty distinguishing them.</p>
+
+<p><strong>Morphology</strong> is the study of patterns of word formation: the rules governing how morphemes — the smallest units of sound that carry meaning — are combined to create words. Morphemes may be free (standing alone as words, like "cow") or bound (attached to other morphemes to modify meaning, like the plural "-s" in "cows" or the past tense "-ed" in "walked").</p>
+
+<p><strong>Syntax</strong> is the study of the rules by which morphemes and words are arranged into phrases and sentences. The grammar of a language consists of its phonological, morphological, and syntactic rules together. Different languages have radically different syntactic rules: English uses subject-verb-object order; Japanese typically uses subject-object-verb; Arabic may use verb-subject-object.</p>
+
+<h3>Ethnolinguistics (Cultural Linguistics)</h3>
+
+<p>Ethnolinguistics examines the relationship between language and culture. Languages reflect cultural priorities through their vocabularies: culturally important domains are typically represented by rich, differentiated vocabularies, while culturally marginal domains have sparse vocabularies.</p>
+
+<p>The Nuer pastoralists of Sudan have an elaborate vocabulary for describing cattle: ten major colour terms, multiple marking patterns, and horn configurations yield potentially hundreds of distinct ways to describe individual animals. Standard American English has an elaborate vocabulary for technological products, occupational specialisations, and automobile models — reflecting the cultural emphasis on technology and occupation in American society. Aymara Indians of the Bolivian highlands have over 200 words for potato, reflecting the central importance of the many varieties of potato in their subsistence and cuisine.</p>
+
+<p>The concept of <strong>cultural emphasis</strong> — the idea that vocabulary size and specialisation reflect culturally important domains — is a general principle: any language's lexicon provides a map of what matters most in that culture.</p>
+
+<p>Language also reflects and encodes cultural values. English has over 150 compound words beginning with "self" (self-reliant, self-made, self-determination), reflecting the deep individualism of mainstream American culture. Languages that emphasise group identity and social harmony tend to have elaborate systems of honorifics (differential speech forms for addressing people of different social rank), reflecting the cultural importance of social hierarchy and relational propriety. Japanese has multiple levels of speech register tied to social relationships; Korean has an elaborate honorific system; Javanese has distinct speech levels (krama and ngoko) used depending on the relative social status of speaker and addressee.</p>
+
+<h3>Sociolinguistics</h3>
+
+<p>Sociolinguistics examines the relationship between language and social factors: class, gender, ethnicity, age, power, and situational context. Its central question is: how does social structure shape language use, and how does language use shape social relations?</p>
+
+<p><strong>Dialects</strong> are variants of a language defined by regional, occupational, or social class differences but still mutually intelligible. The famous aphorism attributed to Max Weinreich states that "a language is a dialect with an army and a navy" — whether a variety of speech is called a language or a dialect is often a political rather than a purely linguistic determination. Chinese "Mandarin" and "Cantonese" are linguistically as different as Spanish and Italian, yet they are called dialects of a single language; Norwegian and Swedish are linguistically as similar as British and American English, yet they are called separate languages.</p>
+
+<p><strong>Code switching</strong> is the practice of changing from one language or dialect to another depending on the social context and interlocutor. Most speakers of more than one language or dialect code-switch constantly and often unconsciously: speaking more formally at work, more colloquially with peers, differently to elders. Code switching is a social skill that marks both linguistic competence and social sophistication.</p>
+
+<p><strong>Language and gender</strong>: Research in many societies shows systematic differences in the speech of men and women. Women in many contexts use more hedges ("kind of," "sort of," "I think"), more tag questions, more polite forms, and more standard prestige forms of language than men. Deborah Tannen's work shows that men and women often have different communicative goals in conversation: men tend to use talk to establish status and give information; women tend to use talk to build rapport and demonstrate empathy. These differences are culturally variable and cannot be treated as universals.</p>
+
+<p><strong>Language and power</strong>: Who speaks and who is silent in any given context reflects and reinforces social power. In courtrooms, lawyers speak most; judges speak rarely but hold the most power; juries are mostly silent but have the decisive authority. In many traditional societies, certain kinds of speech are monopolised by elders, ritual specialists, or political leaders. The control of prestigious language varieties — standard national languages, literary registers, technical vocabularies — is a form of symbolic capital that gives access to social resources.</p>
+
+<h2>The Sapir-Whorf Hypothesis: Language, Thought, and Culture</h2>
+
+<p>The relationship between language and thought is one of the most debated questions in linguistic anthropology and cognitive science. The dominant theoretical framework for examining this relationship is the Sapir-Whorf hypothesis, also called the principle of linguistic relativity.</p>
+
+<h3>Background and Formulation</h3>
+
+<p>Edward Sapir (1884–1939), a student of Franz Boas and one of the founders of American linguistic anthropology, argued that language was not merely a tool for expressing thought but actually structured the way speakers of different languages perceive and categorise reality. His student Benjamin Lee Whorf (1897–1941), an insurance engineer who became a linguist by vocation, developed and radicalised Sapir's insight through his research on Native American languages, particularly Hopi.</p>
+
+<p>Sapir stated: "The real world is to a large extent unconsciously built up on the language habits of the group. No two languages are ever sufficiently similar to be considered as representing the same social reality. The worlds in which different societies live are distinct worlds, not merely the same world with different labels attached."</p>
+
+<p>The Sapir-Whorf hypothesis, in its strong (determinist) form, holds that language determines thought: the structure of the language one speaks determines the categories through which one perceives, remembers, and reasons about reality, making thoughts not expressible in one's language literally unavailable or extremely difficult. This strong form is called <strong>linguistic determinism</strong>.</p>
+
+<p>In its weak (relativist) form, the hypothesis holds that language influences thought: different languages predispose speakers to attend to and categorise experience in somewhat different ways, without absolutely preventing any thoughts. This is called <strong>linguistic relativity</strong>.</p>
+
+<h3>Whorf's Research on Hopi</h3>
+
+<p>Whorf's most celebrated contribution was his analysis of the Hopi language of Arizona. He observed that Hopi verbs express temporal relations differently from Indo-European languages: rather than marking past, present, and future (as English does with tense morphology), Hopi requires additional words to indicate whether an event is completed, ongoing, or expected. Hopi also does not apply number words to abstract durations ("three weeks," "five hours") the way English does. From these observations, Whorf concluded that Hopi speakers structure their experience of time and process differently from English speakers, and that Hopi therefore constitutes evidence that different languages embody fundamentally different "world-views."</p>
+
+<p>Whorf also studied the relationship between language categories and behaviour in industrial settings, famously arguing that the label "empty gasoline drums" (rather than "dangerous vapour-containing drums") led workers to smoke near them, thus causing fires — a case of language categories influencing behaviour with real-world consequences.</p>
+
+<h3>Evidence and Experiments</h3>
+
+<p>The most methodologically rigorous test of the Sapir-Whorf hypothesis involves controlling all social and cultural variables and isolating language as the independent variable. Joseph Casagrande's (1960) study of Navajo-speaking children was a landmark. Navajo requires speakers to choose verb forms depending on the shape of the object being discussed: different verbs are used for long rigid objects, long flexible objects, flat flexible objects, and so on. Casagrande found that Navajo-speaking children who spoke only Navajo were significantly more likely than bilingual Navajo-English children to categorise objects by shape rather than colour, suggesting that the grammatical requirement to attend to shape in Navajo predisposed speakers to perceive shape as a salient dimension of categorisation.</p>
+
+<p>Berlin and Kay's cross-cultural research on colour terms (1969) found that while different languages divide the colour spectrum differently, there is a universal hierarchy in which colour terms are added: languages with only two colour terms distinguish dark/cold from light/warm; languages with three terms add red; languages with four add yellow or green; and so on. The categories of colour perception are not entirely arbitrary but are constrained by universal features of the human visual system. This finding was taken as evidence against the strong Whorfian view that language entirely determines colour perception.</p>
+
+<p>More recent experimental work by researchers including Lera Boroditsky has found more subtle evidence for linguistic influence on cognition. Russian speakers, who have obligatory grammatical categories distinguishing light blue (goluboy) from dark blue (siniy), are faster at discriminating between shades of blue that cross this boundary than within it. Mandarin speakers, whose language uses spatial metaphors to represent time vertically (earlier events are "up," later ones are "down"), perform differently on some temporal reasoning tasks than English speakers, who primarily represent time horizontally. These effects are real but modest, supporting the weak relativist rather than strong determinist form of the hypothesis.</p>
+
+<h3>Criticisms and the Current Consensus</h3>
+
+<p>The strong form of the Sapir-Whorf hypothesis has been largely rejected. Noam Chomsky's research from the 1950s onward argued for a universal grammar underlying all human languages: a set of abstract structural principles innate to the human species and universal across all languages. If all humans share the same deep linguistic structure, language cannot be as radically different a determinant of thought as the strong Whorfian view implies.</p>
+
+<p>Practical considerations also argue against strong determinism: people successfully translate ideas between languages, bilinguals switch between languages without evident cognitive disruption, and individuals can express ideas in metaphors or neologisms when their language lacks a word for a concept.</p>
+
+<p>The current consensus is that language influences some aspects of cognition in modest, demonstrable ways — particularly in the domains of colour perception, spatial reasoning, temporal reasoning, and counting — without determining the limits of what can be thought. As one formulation puts it: language provides a set of lenses that highlight certain perceptions and de-emphasise others, without creating absolute cognitive barriers.</p>
+
+<h2>Non-Verbal Communication</h2>
+
+<p>Communication is not limited to language. A substantial proportion of the meaning conveyed in any face-to-face interaction is transmitted through non-verbal channels: facial expressions, gestures, body posture, eye contact, touch, spatial proximity, and silence. Non-verbal communication is learned, culturally variable, and essential to the full interpretation of verbal messages.</p>
+
+<h3>Gestures</h3>
+
+<p>Gestures are the most extensively studied form of non-verbal communication. Some gestures are iconic (mimicking the shape or action of what they represent: a mime of eating to indicate hunger), some are indexical (pointing to objects or directions), and some are symbolic (culturally conventional signs with no physical resemblance to their meaning, like the thumbs-up or the OK sign).</p>
+
+<p>Symbolic gestures are highly culturally variable and can cause serious misunderstanding across cultural boundaries. The "A-OK" gesture (thumb and forefinger forming a circle) signals approval in the United States, means "money" in Japan, means "zero" or "worthless" in France, and carries an obscene meaning in parts of South America and the Middle East. Nodding the head to indicate agreement and shaking it to indicate disagreement — conventions so ingrained for most Americans and Europeans as to seem natural — are not universal: in parts of the Middle East and South Asia, lateral head movement signals agreement, and vertical movement signals disagreement or may have other meanings.</p>
+
+<h3>Facial Expressions</h3>
+
+<p>Paul Ekman's cross-cultural research identified six basic facial expressions — happiness, sadness, anger, fear, surprise, and disgust — that are recognised consistently across cultures with no prior exposure to Western media, suggesting they have a universal biological basis. However, <strong>display rules</strong> — cultural norms governing when and how these emotions may be expressed — vary enormously across cultures. Japanese individuals in formal contexts suppress visible expressions of negative emotion more than Americans, not because they feel less but because their cultural display rules require greater emotional control in public.</p>
+
+<h3>Proxemics</h3>
+
+<p>Proxemics, the study of how people use space in communication, was developed by Edward Hall. Different cultures have different norms for appropriate interpersonal distance in different social contexts. Hall identified four zones in American middle-class culture: intimate distance (0 to 18 inches, for close physical contact and whispered communication), personal distance (18 inches to 4 feet, for conversation between acquaintances), social distance (4 to 12 feet, for impersonal business), and public distance (12 feet or more, for formal settings and public addresses). These zones vary cross-culturally: people from Arab and Mediterranean cultures typically stand closer during conversation than northern Europeans or Americans, and violations of expected proximity produce discomfort, attraction, or perceived aggression depending on context.</p>
+
+<h3>Haptics (Touch)</h3>
+
+<p>Touch is perhaps the most personal and intimate channel of non-verbal communication. Every culture defines who may touch whom, on what parts of the body, and in what circumstances. High-touch cultures (many Arab, Latin American, southern European, and Jewish communities) involve more physical contact in everyday interaction; low-touch cultures (northern European, East Asian) involve less. Cross-cultural touch misunderstandings can have serious social and political consequences.</p>
+
+<h3>Silence</h3>
+
+<p>Silence is itself a form of communication whose meaning is culturally defined. In many Western contexts, conversational silence is uncomfortable and is quickly filled; in many East Asian, Native American, and Nordic contexts, silence in conversation is comfortable and signals respect, thoughtfulness, or emphasis. In some hierarchical contexts, silence marks the highest authority: the most powerful figure in a courtroom is typically the one who speaks least but carries most weight.</p>
+
+<h3>Clothing, Appearance, and Body Modification</h3>
+
+<p>Clothing, hairstyles, and body modification send culturally coded messages about gender, age, social class, occupation, religion, marital status, and political affiliation. The colour-coding of infant clothing (blue for boys, pink for girls in many Western contexts), the use of specific colours for mourning (black in many Western and East Asian contexts, white in Hindu and some other South Asian contexts), and the use of head coverings (marking gender, class, or religious affiliation in different contexts) all illustrate how appearance communicates identity and social position in culturally specific ways.</p>
+
+<h2>Origins of Human Language</h2>
+
+<p>How and when human language evolved is one of the most contested questions in evolutionary anthropology. Language leaves no fossil record: the soft tissues of the vocal tract do not preserve, and there are no material artefacts directly associated with speech. Researchers must rely on indirect evidence: the morphology of fossil vocal tracts, the anatomy and neurology of the brain as visible in endocasts, the complexity of stone tool technologies (which may indicate cognitive capacities relevant to language), and comparative studies of primate communication.</p>
+
+<h3>Anatomical Prerequisites</h3>
+
+<p>Human speech requires a descended larynx — lower in the throat than in other primates — which creates the large pharynx needed for the production of the full range of vowels and consonants used in human language. This anatomical configuration has a cost: unlike other mammals, humans cannot breathe and swallow simultaneously, making choking a uniquely human hazard. The descended larynx is present in modern humans and is inferred from the basicranial flexion visible in fossil skulls. Evidence of laryngeal descent has been identified in some Neanderthal skulls, suggesting they too may have had some capacity for complex vocalisation, though perhaps not the full range of modern human speech sounds.</p>
+
+<p>Key brain structures for language — Broca's area (involved in speech production and grammatical processing) and Wernicke's area (involved in language comprehension) — leave detectable impressions in endocasts. Broca's area may be detectable in Homo habilis endocasts from approximately 2 million years ago, suggesting a neural basis for rudimentary language or at least complex vocalisation was present early in the genus Homo.</p>
+
+<h3>Theories of Language Origin</h3>
+
+<p>Five historical theories for the origin of language are commonly discussed, with colourful nicknames coined by the linguist Otto Jespersen:</p>
+
+<ul>
+  <li><strong>Bow-wow theory:</strong> Language began as imitation of natural sounds (onomatopoeia). Problem: relatively few words in any language are onomatopoeic, and even these vary across languages (a dog's bark is rendered as "woof" in English, "ouaf" in French, "wang wang" in Chinese), suggesting they are as conventionalised as any other words.</li>
+  <li><strong>Ding-dong theory:</strong> Originally associated with Plato and Pythagoras, this proposes an innate correspondence between sounds and the essential qualities of objects. Problem: there is no convincing evidence of any systematic natural connection between sound and meaning across languages.</li>
+  <li><strong>La-la theory:</strong> Proposed by Jespersen himself, this suggests language evolved from sounds associated with love, play, and song. Problem: it fails to explain how the emotional and expressive functions of proto-music became the propositional, referential function of language.</li>
+  <li><strong>Pooh-pooh theory:</strong> Language evolved from emotional interjections — involuntary cries of pain, surprise, or pleasure. Problem: interjections make up a tiny fraction of vocabulary in any language, and even these are culturally variable.</li>
+  <li><strong>Yo-he-ho theory:</strong> Language evolved from rhythmic grunts associated with coordinated physical labour. Problem: while it might account for some prosodic features of language, it doesn't explain the origin of referential, symbolic vocabulary.</li>
+</ul>
+
+<p>More recent and well-supported hypotheses include the gestural origin hypothesis (language evolved gradually from manual gesture, consistent with the overlap of neural systems for hand control and speech production, and with the observation that sign languages are fully equivalent in complexity and communicative power to spoken languages) and the social bonding hypothesis (language evolved as a form of "social grooming" that allowed larger social groups to maintain cohesion beyond what physical grooming could achieve in groups larger than approximately 150 individuals — Dunbar's number).</p>
+
+<h3>Genetic Evidence</h3>
+
+<p>The FOXP2 gene, sometimes called the "language gene," was identified in 2001 as crucial for the fine motor control of speech articulation. Mutations in FOXP2 produce severe speech and language impairment. The human version of FOXP2 differs from the chimpanzee version at two amino acid positions, and these changes appear to have been subject to positive selection in the human lineage. Neanderthals possessed the same human form of FOXP2, suggesting they too had the genetic prerequisites for speech, though whether they had language in the modern sense remains debated. FOXP2 is not a language gene in any simple sense — it is expressed in many tissues and has multiple functions — but it illustrates that language has a genetic basis that is specifically human.</p>
+
+<h2>Endangered Languages</h2>
+
+<p>Of approximately 7,000 languages currently spoken in the world, nearly half are considered endangered. An endangered language is one at risk of falling out of use as its speakers shift to dominant languages and transmit only the dominant language to their children. When the last fluent speaker of a language dies without having passed it on, the language is extinct.</p>
+
+<p>UNESCO classifies languages as vulnerable (some children learn the language but only in restricted domains), definitely endangered (children no longer learn the language as a mother tongue at home), severely endangered (speakers are grandparental generation; parents do not transmit it to children), critically endangered (youngest speakers are grandparents; language is no longer used for daily interaction), and dormant or extinct (no speakers remain).</p>
+
+<p>India has one of the highest rates of language endangerment in the world: 197 languages are estimated to be in various stages of endangerment. The People's Linguistic Survey of India recorded over 780 languages as still spoken in India, of which several dozen have fewer than 100 speakers. Majhi, spoken in Sikkim, reportedly had only four speakers remaining, all from the same family. Birhor has been classified by UNESCO as critically endangered, with approximately 2,000 speakers. Asur, Korwa, Dimasa, Koro (Arunachal Pradesh), and Sidi (Gujarat) are among the languages identified as near extinction.</p>
+
+<h3>Causes of Language Endangerment</h3>
+
+<p>Language loss is driven by political, economic, and social pressures that make the dominant language more valuable to speakers. The specific causes include: formal schooling conducted exclusively in a dominant language, which teaches children that their heritage language is irrelevant to economic advancement; urbanisation and migration that removes speakers from the community context in which the language is used; negative social stigma attached to heritage language use; the suppression of indigenous languages through colonial and post-colonial state policies; and the death of elder speakers who are the last repositories of full fluency and specialised traditional knowledge encoded in the language.</p>
+
+<p>A particularly damaging policy, practised in Canada, the United States, and Australia among other countries through much of the 19th and 20th centuries, was the forced placement of indigenous children in residential or boarding schools where they were forbidden to speak their languages and subjected to punishment for doing so. The intergenerational transmission of language — the single most critical factor in language survival — was systematically severed.</p>
+
+<h3>Consequences of Language Loss</h3>
+
+<p>When a language dies, it takes with it a unique way of categorising and interpreting the world, an accumulated body of ecological and practical knowledge encoded in its vocabulary and structure, an oral literary tradition — songs, stories, myths, genealogies, ritual texts — that may have no written record, and a dimension of cultural identity for its speakers. Cherokee, for example, has no word for "goodbye" but has words for emotions and experiences without equivalents in English. Languages of forest-dwelling peoples often contain detailed vocabularies for every plant, animal, insect, and ecological relationship in their environment, constituting an irreplaceable record of biodiversity knowledge accumulated over thousands of years of careful observation.</p>
+
+<h3>Language Documentation and Revitalisation</h3>
+
+<p>The response of the linguistic anthropology community to language endangerment is primarily documentary: recording languages through audio and video recordings, producing dictionaries, grammars, and transcribed texts, and working with community members to archive cultural knowledge. The Endangered Languages Project, the Endangered Archives Programme, and the Rosetta Project are among the major international initiatives in this area.</p>
+
+<p>Language revitalisation — efforts to increase the number of speakers of an endangered language — is more complex and contested. Successful revitalisation requires community motivation and investment, integration of the language into formal education, creation of new speakers through immersion programmes, and the development of domains of use (media, government, commerce) in which the revitalised language functions. Hebrew is the only case of a language revived from dormancy to become a full-scale national language with native speakers; Maori in New Zealand and Welsh in Wales are examples of successful partial revitalisation in which the number of fluent speakers has stabilised or increased through sustained community and government effort.</p>
+
+<p>The Government of India's scheme for the "Protection and Preservation of Endangered Languages of India" operates through the Central Institute of Indian Languages (CIIL), Mysore, documenting and archiving mother tongues spoken by fewer than 10,000 people.</p>
+
+<h2>Language and Cognition: Key Concepts</h2>
+
+<h3>Phonology and Morphology</h3>
+
+<p>Phonology examines the sound systems of languages: which sounds are phonemically distinct (change meaning), how sounds are organised into syllables and words, and how they change in different phonological environments (phonological processes such as assimilation, deletion, and vowel harmony). Morphology examines how morphemes are combined to create words and how grammatical categories such as number, tense, aspect, gender, and case are encoded morphologically or analytically.</p>
+
+<h3>Emic and Etic Perspectives</h3>
+
+<p>The distinction between <strong>emic</strong> and <strong>etic</strong> analysis derives from linguistics. <em>Phonemics</em> studies sound distinctions that are meaningful within a particular language; <em>phonetics</em> studies sound distinctions that are physically distinct regardless of whether they are meaningful in any particular language. Kenneth Pike extended this distinction to anthropology more broadly: an <strong>emic</strong> analysis describes a cultural phenomenon in terms meaningful to its participants — from the inside; an <strong>etic</strong> analysis describes it in terms of an external, cross-culturally applicable framework — from the outside. Both are necessary and complementary: emic analysis reveals the cultural meaning of a practice for those who perform it; etic analysis allows cross-cultural comparison.</p>
+
+<h3>Glottochronology</h3>
+
+<p>Glottochronology is a technique developed by Morris Swadesh in the 1950s for estimating the date at which two related languages diverged from a common ancestor, based on the rate at which basic vocabulary (a core list of fundamental words — body parts, pronouns, numbers, basic natural phenomena — resistant to borrowing from other languages) is replaced over time. Swadesh estimated that approximately 80 to 85% of core vocabulary is retained over a period of 1,000 years. By comparing the proportion of shared core vocabulary between two related languages, glottochronology provides an estimate of their time of divergence. The technique is controversial and now largely replaced by computational phylogenetic methods derived from evolutionary biology, which model language change with more sophisticated probabilistic algorithms and produce dated family trees for language families.</p>
+`,
 };
