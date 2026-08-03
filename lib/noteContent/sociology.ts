@@ -6214,7 +6214,192 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Lack of voice and representation in contemporary political circles</li>
 </ul>
 `,
-  'social-classes-india': '',
+  'social-classes-india': `
+<h2>Introduction — Class in the Indian Context</h2>
+
+<p>The study of social classes in India presents a unique analytical challenge: the coexistence of a traditional caste-based hierarchical system with a modern class structure rooted in capitalism, colonial transformation, and post-independence development policy. Caste and class do not map neatly onto each other — yet they are deeply intertwined. Upper castes disproportionately occupy higher class positions; lower castes and Adivasis are disproportionately concentrated in the poorest strata. Understanding Indian social classes therefore requires understanding both the colonial legacy and the post-independence trajectory of agrarian change, industrialisation, and the emergence of a new middle class.</p>
+
+<p>AR Desai's <em>Social Background of Indian Nationalism</em> (1948) is the foundational Marxist analysis of Indian class structure. Desai argued that Indian society moved from a pre-capitalist mode of production (feudalism) to a capitalist mode under British colonialism, but this transition was incomplete and distorted — creating a dependent, semi-feudal capitalism that persisted well into the independence period.</p>
+
+<h2>Agrarian Class Structure</h2>
+
+<h3>Colonial Transformation of Agrarian Classes</h3>
+<p>Before British colonialism, Indian agrarian society was organised around overlapping rights in land: the king, the local chief, the village headman, and the actual cultivator all held customary claims to different portions of the agricultural produce. British colonial land revenue settlements replaced this with a system of clear private property rights — creating new agrarian classes and destroying old ones.</p>
+
+<p>The Permanent Settlement (Bengal, 1793) created a new class of <strong>zamindars</strong> with hereditary ownership of land. The Ryotwari Settlement (Bombay and Madras) created individual peasant proprietors directly responsible to the colonial state. Both systems commodified land, opened it to market transactions, and set in motion processes of land concentration and peasant dispossession that defined agrarian class relations into the 20th century.</p>
+
+<h3>Daniel Thorner's Framework — Three Classes</h3>
+<p>Daniel Thorner (along with Alice Thorner) provided the most influential empirical classification of India's agrarian class structure based on field research in the 1950s. He identified three main agrarian classes corresponding to different relationships to land:</p>
+
+<table>
+  <tr>
+    <th>Class</th>
+    <th>Thorner's Term</th>
+    <th>Characteristics</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><strong>Landlords / Big Landowners</strong></td>
+    <td>Maliks</td>
+    <td>Own large tracts of land; do not cultivate personally; live on rental income; control local political and social life; often moneylenders as well</td>
+    <td>Zamindars, Jagirdars, Inamdars, big ryots in Andhra and Tamil Nadu</td>
+  </tr>
+  <tr>
+    <td><strong>Peasant Cultivators</strong></td>
+    <td>Kisans</td>
+    <td>Own or hold sufficient land to support family through their own and family labour; may hire some labour in peak seasons; economically self-sufficient but not wealthy</td>
+    <td>Middle peasants, owner-cultivators in Punjab, Jats, Patidars, Vokkaligas</td>
+  </tr>
+  <tr>
+    <td><strong>Agricultural Labourers</strong></td>
+    <td>Mazdoors</td>
+    <td>Own little or no land; dependent on wages from working on others' land; most economically vulnerable class; often belong to scheduled castes</td>
+    <td>Halis in Gujarat, Palapalayam labourers in Tamil Nadu; chamar and musahar agricultural labourers in Bihar and UP</td>
+  </tr>
+</table>
+
+<h3>More Detailed Agrarian Class Schema</h3>
+<p>Most Marxist and agrarian sociologists have used a more refined classification:</p>
+
+<ul>
+  <li><strong>Big landlords / Absentee landowners</strong> — own very large land holdings; do not cultivate themselves; depend on rent and labour exploitation; declining since zamindari abolition (1950s) but persist in disguised forms.</li>
+  <li><strong>Rich peasants / Capitalist farmers</strong> — own more land than the family can cultivate; hire permanent and seasonal labour; sell significant surplus in the market; invest in improved seeds, fertilisers, and machinery. Post-Green Revolution, this class expanded significantly. They are the beneficiaries of agricultural subsidies, minimum support prices, and rural credit. Examples: Jat farmers in Punjab and Haryana, Patidar farmers in Gujarat.</li>
+  <li><strong>Middle peasants</strong> — own enough land for subsistence and small surplus; cultivate primarily with family labour; occasionally hire labour at peak seasons; sell some produce but also buy some goods. Most vulnerable to price fluctuations. Numerically the largest group historically.</li>
+  <li><strong>Small and marginal farmers</strong> — own very small plots (below 1 hectare); output insufficient for subsistence; supplement farming income with wage labour; deeply indebted. Account for over 85% of India's farm households in terms of numbers but hold only about 45% of cultivated land.</li>
+  <li><strong>Agricultural labourers / Rural proletariat</strong> — own no land or negligible land; entirely dependent on wages for work on others' land; most deprived class in rural India; disproportionately from Scheduled Caste communities; historically subject to various forms of attached and bonded labour.</li>
+  <li><strong>Attached / Bonded labourers</strong> — historically widespread form of unfree labour in which a worker is bound to a specific landlord, often through debt bondage. The Bonded Labour System (Abolition) Act (1976) prohibited it legally, but studies (including by the National Commission on Rural Labour) have found persistent bonded labour in agricultural and brick kiln sectors.</li>
+</ul>
+
+<h3>Green Revolution and Agrarian Class Differentiation</h3>
+<p>The Green Revolution of the 1960s-70s — the introduction of high-yielding variety (HYV) seeds, chemical fertilisers, pesticides, and irrigation — had profoundly differentiated effects on Indian agrarian classes:</p>
+
+<ul>
+  <li><strong>Rich peasants and capitalist farmers benefited most</strong> — they had the capital to invest in seeds, fertilisers, and irrigation; they had the land to make the new technology economically viable; they had political connections to access subsidies and credit. The Green Revolution turned sections of the peasantry in Punjab, Haryana, and Western UP into capitalist farmers integrated into national and global agricultural markets.</li>
+  <li><strong>Middle and small peasants were partially incorporated</strong> — access to HYV seeds and fertilisers increased yields but also increased costs and indebtedness. Many small and marginal farmers who could not sustain the new costs were pushed into debt and land loss.</li>
+  <li><strong>Agricultural labourers gained little</strong> — while agricultural wages rose in some Green Revolution areas, mechanisation (tractors replacing bullocks; combine harvesters replacing manual reapers) reduced employment opportunities. In areas where mechanisation advanced, agricultural labourers faced declining demand for their labour.</li>
+  <li><strong>Regional unevenness</strong> — the Green Revolution was concentrated in irrigated areas of Punjab, Haryana, and Western UP. In rain-dependent areas (most of Eastern India, Deccan plateau, dryland farming regions), neither the technology nor the class transformation it generated arrived.</li>
+</ul>
+
+<p>Utsa Patnaik's research on agrarian class differentiation showed that the Green Revolution intensified class polarisation in agriculture: rich farmers became richer and more market-integrated; poor peasants and agricultural labourers became more marginalised. Patnaik also documented the phenomenon of "distress diversification" — poor peasants increasingly supplementing agriculture with non-farm wage labour not because of improved opportunities but because of declining viability of small farm agriculture.</p>
+
+<h3>Post-1991 Agrarian Crisis and New Patterns</h3>
+<p>Post-liberalisation agricultural policy — reduction in public investment in agriculture, dismantling of price supports, import competition — produced a severe agrarian crisis particularly for middle and small peasants:</p>
+
+<ul>
+  <li><strong>Farmer suicides</strong> — rising input costs (seeds, fertilisers, pesticides), declining output prices, debt, and crop failure have driven farmer suicides, concentrated in Maharashtra, Karnataka, Andhra Pradesh, and Madhya Pradesh. P. Sainath's journalism has documented this crisis extensively. NCRB data shows over 300,000 farmer suicides between 1995 and 2020.</li>
+  <li><strong>Contract farming</strong> — large agribusiness companies entering into production contracts with farmers, often integrating them into commodity chains as dependent suppliers rather than independent producers. Raises questions about agrarian class relations — are contract farmers becoming rural proletarians in disguised form?</li>
+  <li><strong>Land dispossession for infrastructure</strong> — Special Economic Zones, mining, dams, and urban expansion have led to large-scale land acquisition from peasant and tribal communities, pushing small farmers and Adivasis off agricultural land.</li>
+</ul>
+
+<h2>Industrial Class Structure</h2>
+
+<h3>Colonial Origins of Indian Industrial Classes</h3>
+<p>British colonialism created the conditions for the emergence of Indian industrial classes while simultaneously limiting their development. The colonial economy was organised to serve British industrial interests — India as a source of raw materials and a market for British manufactured goods.</p>
+
+<p>Yet within this constrained framework, indigenous Indian capitalist groups emerged: the <strong>Marwari trading communities</strong> of Rajasthan moved into industry, becoming the most important Indian business group (Birlas, Bangurs); the <strong>Parsi community</strong> (Tatas) was the first to industrialise on a large scale in the 19th century; the <strong>Bania/Vaishya communities</strong> used commercial capital accumulated in trade to enter manufacturing.</p>
+
+<p>AR Desai's analysis: Indian capitalism developed in a distorted form under colonialism — lacking domestic demand (because colonial policies drained the purchasing power of the masses), dependent on British technology and capital goods, and subordinated to British imperial interests. This produced what Desai called a "comprador bourgeoisie" — a section that collaborated with British capital rather than challenging it — alongside a "national bourgeoisie" that had objective interests in industrial protection and independence.</p>
+
+<h3>Classes in the Industrial Sector</h3>
+
+<h4>Industrial Bourgeoisie / Capitalist Class</h4>
+<p>The Indian industrial capitalist class can be divided into several segments:</p>
+
+<ul>
+  <li><strong>Big bourgeoisie / Monopoly capital</strong> — large industrial houses (Tata, Birla, Ambani, Adani, Godrej, Mahindra, Bajaj, Munjal) that dominate key sectors of the economy. These are the closest equivalent to what Marx called the bourgeoisie — they own the means of production on a large scale and employ wage labour. Post-liberalisation, they have benefited most from market deregulation, privatisation, and globalisation.</li>
+  <li><strong>Medium and small capitalists</strong> — own medium-sized enterprises; compete with big capital and with each other; dependent on institutional credit, government contracts, and market conditions. More vulnerable to economic shocks than big capital.</li>
+  <li><strong>Petty bourgeoisie</strong> — small traders, workshop owners, self-employed artisans. Occupy an intermediate class position — own means of production but do not employ large numbers of wage workers; often work alongside family members and a few hired workers. Eric Olin Wright's concept of "contradictory class location" applies — they are simultaneously exploiters (of their workers) and exploited (by big capital and the market).</li>
+</ul>
+
+<h4>Industrial Working Class / Proletariat</h4>
+<p>The industrial working class emerged with the development of factory production in the late 19th century — textile mills in Bombay and Ahmedabad, jute mills in Calcutta, coal mines in Bengal and Bihar, railways across India. Its social composition was complex from the outset:</p>
+
+<ul>
+  <li>Workers were recruited primarily from peasant and lower-caste backgrounds, often through contractors (Sardars/Mukaddams) from specific villages or communities, creating lasting connections between rural origin, caste identity, and industrial employment.</li>
+  <li>The labour movement in India — from the Bombay Mill Hands Association (1890), the All India Trade Union Congress (1920, led by Bal Gangadhar Tilak and later Lala Lajpat Rai), through post-independence unionisation — reflects both the class interests of workers and the caste and community identities that cut across class solidarity.</li>
+  <li>The formal industrial working class was small relative to the total workforce — even at India's peak of industrial employment, formal sector manufacturing never absorbed more than 10-15% of the workforce.</li>
+</ul>
+
+<p>Post-liberalisation changes in the industrial working class:</p>
+<ul>
+  <li><strong>Informalisation</strong> — the shift from formal, permanent, unionised employment to informal, contract, and casual employment. Subcontracting to smaller units allows big capital to avoid labour regulations. Studies show that even in formal sector establishments, the share of contract workers has risen dramatically since the 1990s.</li>
+  <li><strong>Deindustrialisation in traditional sectors</strong> — decline of the textile mill industry (Bombay's mills closed from the 1980s onwards after the failed 1982 strike), jute mills, and small-scale manufacturing. The Bombay closure created a new class of <em>ex-mill workers</em> — displaced industrial workers who could not re-enter formal employment and moved into the informal economy.</li>
+  <li><strong>New industries and new workers</strong> — growth of export manufacturing zones (garments, electronics assembly) employing predominantly young women workers on temporary contracts; growth of the delivery gig economy (Zomato, Swiggy, Ola, Uber drivers) creating a new precarious class of platform workers.</li>
+</ul>
+
+<h4>Informal Sector and the Working Poor</h4>
+<p>India's most characteristic feature is the enormous <strong>informal economy</strong> — accounting for over 90% of employment. The informal sector includes small-scale manufacturing, construction, domestic service, street vending, home-based work, and casual agricultural labour. Workers in this sector lack job security, social security benefits, minimum wage enforcement, and union representation.</p>
+
+<p>Jan Breman's long-term fieldwork in Gujarat (<em>Footloose Labour</em>, 1996) documented the lives of circular migrants — poor rural workers from South Gujarat who circulate between seasonal agricultural work, brick kilns, construction sites, and other informal employment. These workers constitute India's largest but least visible class — the "footloose labour" that holds up the economy while being excluded from its benefits and protections.</p>
+
+<p>Sanyal and Bhattacharya's concept of <strong>"accumulation without proletarianisation"</strong>: Indian capitalism expands without absorbing the surplus labour force into formal employment. Capital extracts resources (Niyamgiri bauxite, Jharkhand coal, Chhattisgarh iron ore) without employing the local population as workers. The displaced population is pushed into the "need economy" — subsisting on informal, marginal activities without formal proletarianisation.</p>
+
+<h2>Middle Classes in India</h2>
+
+<h3>Colonial Origins of the Indian Middle Class</h3>
+<p>The Indian middle class was a colonial creation. The introduction of English education (Macaulay's Minute on Education, 1835), the expansion of colonial administration, and the development of legal, medical, and educational professions created a new class of English-educated professionals who occupied positions between the colonial rulers and the masses — translators, clerks, lawyers, teachers, journalists, and colonial administrators.</p>
+
+<p>This colonial middle class became the leading social force of the nationalist movement — providing its ideological leadership (Gandhi, Nehru, Ambedkar, Bose), its organisational core (the Congress Party), and its reading public (newspapers, journals, literary societies). As AR Desai argued, Indian nationalism was essentially a middle-class phenomenon.</p>
+
+<h3>Post-Independence Middle Class</h3>
+<p>After independence, the Nehruvian state's emphasis on planned development, public sector expansion, and higher education created a large public sector middle class: IAS and IPS officers, PSU managers, academics, engineers, and doctors employed in government institutions. This class benefited from state-funded education, job security, and state subsidies — and was characterised by a statist ideology that saw government employment and public institutions as the natural path of middle-class aspiration.</p>
+
+<h3>The New Middle Class — Post-LPG (1991)</h3>
+<p>The liberalisation, privatisation, and globalisation (LPG) reforms of 1991 created a qualitatively new middle class distinct from the earlier public-sector middle class:</p>
+
+<h4>Definition</h4>
+<p><strong>Abhijeet Banerjee and Esther Duflo</strong> define the new middle class economically: those who spend between $2–$10 per day. This is a consumption-based definition — more of an economic than a sociological definition. By this measure, approximately 50% of India's population was in the new middle class in 2011-12.</p>
+
+<h4>Social Composition</h4>
+<p>The new middle class is dominated by upper-caste Hindus. In 2011-12, when approximately 50% of India was in the new middle class, 67% of those were from upper-caste Hindu communities. Lower castes and religious minorities are underrepresented. The OBC communities have entered the new middle class but in smaller proportions than their population share.</p>
+
+<h4>What is "New" About the New Middle Class?</h4>
+<p>Three perspectives on the "newness" of the new Indian middle class:</p>
+
+<ul>
+  <li><strong>Das, Jeffrolet, and Van der Veer</strong> — the newness lies in greater social inclusivity. The new middle class has, to a limited but real extent, transcended traditional caste barriers. Middle-class identity in the corporate sector and consumer culture is more universalistic than the traditional caste-based middle class.</li>
+  <li><strong>Fernandes, Fuller, and Upadhyay</strong> — the newness lies in its employment in the post-liberalisation service sector, primarily IT, BPO (Business Process Outsourcing), financial services, and retail. The new middle class is defined by its shift from earlier public sector occupations (government service, teaching, banking) to private sector IT, management, and knowledge economy employment.</li>
+  <li><strong>Sociological perspective</strong> — the new middle class is new in its consumption patterns, aspirations, and political sensibilities rather than merely in its income. It defines itself through lifestyle choices — English medium education, international travel, branded consumption, urban residence, digital connectivity — rather than through caste or community identity.</li>
+</ul>
+
+<h4>Features of the New Middle Class</h4>
+<ul>
+  <li><strong>High entrepreneurial spirit</strong> — Banerjee and Duflo note a strong startup culture and disposition toward entrepreneurship. Many new middle-class households combine a salaried primary earner with self-employment or small business activity.</li>
+  <li><strong>Drives consumption and savings simultaneously</strong> — the new middle class both fuels domestic consumption (home appliances, automobiles, education, healthcare, travel) and sustains household savings. This dual role makes it central to both demand and capital formation in the Indian economy.</li>
+  <li><strong>Aspiration for English-medium education</strong> — parents invest heavily in English-medium schooling because they see English proficiency as the key to professional success. English education is seen as a social escalator out of the constraints of local language and caste identity.</li>
+  <li><strong>Home ownership as a goal</strong> — owning one's own home (flat) in a middle-class residential area is the central material aspiration. The real estate boom in Indian cities is largely driven by the new middle class's housing demand.</li>
+  <li><strong>Preference for simple, transparent governance</strong> — the new middle class is hostile to corruption, bureaucratic inefficiency, and political patronage. This sensibility drove the Anna Hazare anti-corruption movement (2011), support for Arvind Kejriwal's AAP, and later Narendra Modi's electoral appeal to the "aspirational India."</li>
+  <li><strong>Difficult to manage as a vote bank</strong> — educated and relatively well-informed, this class does not respond to traditional vote bank appeals based on caste or community. It shifts political allegiance based on performance and governance quality.</li>
+  <li><strong>Y Singh's insight</strong> — in his Chanukhera village study, Singh found that what poor and lower-middle-class rural aspirants wanted most was not poverty alleviation handouts but connectivity — roads and electricity that would link them to markets and opportunities. This aspiration for inclusion in the mainstream economy is a defining feature of the new middle class sensibility even among those at its lower end.</li>
+</ul>
+
+<h3>The Middle Class and Political Ideology</h3>
+<ul>
+  <li><strong>Conservative tendency</strong> — the middle class tends toward conservatism in social matters while demanding reform in governance and the economy. It supports economic liberalisation and market freedoms but is often hostile to redistributive policies that require higher taxation.</li>
+  <li><strong>Nationalism</strong> — Hindu middle-class nationalism has been a significant political force. The RSS and its affiliates drew extensively on the educated Hindu middle class as their social base. The BJP's rise to dominance reflects partly the alignment of Hindu nationalist politics with new middle-class aspirations.</li>
+  <li><strong>Civil society activism</strong> — RTI (Right to Information) activism, environmental movements, consumer rights movements, and anti-corruption campaigns have all drawn heavily on the educated middle class.</li>
+  <li><strong>The "creamy layer" controversy</strong> — the Supreme Court's doctrine (Indra Sawhney case, 1992) that the "creamy layer" (the better-off among OBCs) should be excluded from reservation benefits reflects the middle class's ambivalence about affirmative action — supporting equality of opportunity in principle while resisting policies that appear to disadvantage their own children.</li>
+</ul>
+
+<h3>Dalit and OBC Middle Classes — New Entrants</h3>
+<p>Reservation policy has produced a new Dalit middle class employed in government service and public sector enterprises — what Sachidanand Sinha has called "Harijan elites" and what critics sometimes call the "creamy layer." This class occupies an intermediate and ambiguous position: they have achieved middle-class status in terms of income and education, but continue to face caste discrimination in social life, residential neighbourhoods, and marriage markets.</p>
+
+<p>SD Badgaiyyan extended this analysis to tribal elites who have used reservation and education to enter the government service middle class while remaining connected to and advocating for their tribal communities. The emergence of Dalit and tribal middle classes has significant political implications — they have produced new political entrepreneurs (Kanshi Ram and Mayawati for Dalits; leaders of Jharkhand and Chhattisgarh for tribals) who mobilise their communities' numbers into political power.</p>
+
+<h2>Caste and Class — Intersection in India</h2>
+
+<p>The relationship between caste and class in India is one of the most important and contested questions in Indian sociology. Several positions have been advanced:</p>
+
+<ul>
+  <li><strong>Caste is primary (cultural approach)</strong> — Louis Dumont and his followers argue that caste is the fundamental organising principle of Indian society, and class is secondary. Economic relations are embedded in and structured by caste relations, not the other way around.</li>
+  <li><strong>Class is primary (Marxist approach)</strong> — AR Desai and other Marxist sociologists argue that economic class relations (particularly those generated by colonialism and capitalism) are primary, and caste is a form of ideology that legitimises class exploitation. The ruling classes use caste ideology to divide the exploited classes and prevent class solidarity.</li>
+  <li><strong>Cumulative hierarchy to dispersed hierarchy (Beteille's approach)</strong> — Beteille argues that in the past, caste and class were cumulative (upper castes were also the propertied classes). Post-independence, they have become dispersed — lower castes have gained political power while upper castes retain cultural capital. This is an ongoing and contested process.</li>
+  <li><strong>Intersectionality</strong> — the most productive approach recognises that caste and class interact in complex ways that vary by region, sector, and historical period. The SC agricultural labourer in Bihar occupies a very different structural position from the OBC small entrepreneur in Tamil Nadu, even if both are "lower class." Gender adds another dimension — Dalit women face the triple burden of caste, class, and gender discrimination simultaneously.</li>
+</ul>
+
+<p>The IHDS (India Human Development Survey) data consistently shows strong correlation between caste position and economic class: SC and ST households are systematically overrepresented in the lowest income quintiles and underrepresented in the highest. Intergenerational income mobility is significantly lower for SC and ST individuals than for upper-caste individuals with similar education levels — indicating that caste discrimination operates independently of class position.</p>
+
+`,
   'kinship-systems-india': '',
   'religion-society-india': '',
   'visions-social-change-india': '',
