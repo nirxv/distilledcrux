@@ -2470,5 +2470,184 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The Purum are an Old Kuki tribe of Manipur, speaking a Tibeto-Burman language. The primary source is Tarak Chandra Das, <em>The Purums</em> (1945). Purum society consists of politically autonomous territorial segments linked by common patrilineal kinship ties and also through affinal ties. The five clans (Marrim, Makan, Kheyang, Thao, Parpa) are exogamous, and their main function is to regulate marriage. Marital residence is patrilocal after a mandatory three-year bride service. The prescribed marriage is with the mother's brother's daughter (MBD); marriage with the father's sister's daughter (FZD) is subject to a strict proscriptive taboo. Kinship terminology conforms to the marriage rules — parallel cousins and FZD are classed with sisters. For each male, kin groups are divided into three categories: his own (or his father's) kin group; his mother's kin group (from which his wife is chosen); and his sister's husband's kin group. Unrelated persons address one another by terminologically fixed terms based on the marital relationship between their respective kin groups. The Purum system has been extensively analysed as an example of generalised asymmetric exchange and prescriptive alliance.</p>
 `,
+  'economic-organization': `
+<h2>Meaning and Scope of Economic Anthropology</h2>
+
+<p>Economic anthropology is a subfield of cultural anthropology concerned with the study of human economic systems across different cultures, in their full social and cultural contexts. It takes the best of economics and anthropology to investigate economic behaviour as it is lived and practised.</p>
+
+<ul>
+  <li>Piddington: aims to gather information about economic human nature, study the processes and results of economic contacts, and study primitive economic institutions in their elementary form.</li>
+  <li>Firth (1939): Economic anthropology deals primarily with the economics of social relatives.</li>
+  <li>Nash (1966): analyses economic life as a subsystem of society.</li>
+  <li>Beals and Hoijer (1971): studies the production of goods and services and their distribution and consumption as these are institutionalised in socio-cultural subsystems.</li>
+  <li>Plattner (1989): studies economic behaviour as thoroughly embedded in socio-cultural aspects.</li>
+</ul>
+
+<p>The scope of economic anthropology was initially restricted (1920–1950) to the economic study of primitive life. It has since expanded to cover primitives, peasants, and modern societies. Its branches include: Anthropology of subsistence systems, Anthropology of economic history, Anthropology of primitive economies, Anthropology of peasant economies, Urban anthropology, Anthropology of entrepreneurship, Business anthropology, Anthropology of economic development, and Anthropology of economic holism.</p>
+
+<p>Contemporary relevance: economic anthropologists engage with globalisation, transnationalism, development, and economic institutions including stock markets, multinational corporations, and healthcare. Their interests have shifted from categorising economic behaviour to examining outcomes and processes in diverse settings — including boardrooms and stock markets.</p>
+
+<h2>The Formalist vs Substantivist Debate</h2>
+
+<p>The most fundamental theoretical controversy in economic anthropology is the debate between formalists and substantivists over whether Western economic theory can be applied to non-Western economies.</p>
+
+<h3>The Formalist Position</h3>
+
+<p>Formalists argue that the principles of formal economics — scarcity, rational choice, maximisation of utility, marginal utility, supply and demand — are universal and can be applied to all human economies, regardless of cultural context. Key formalists:</p>
+<ul>
+  <li><strong>Raymond Firth (1929):</strong> The economics of primitive societies may be studied using standard economic analysis. People everywhere make rational choices between means and ends under conditions of scarcity.</li>
+  <li><strong>Herskovits (1942):</strong> The Economic Life of Primitive Peoples — applied formal economic concepts such as capital, labour, and trade to non-Western societies.</li>
+  <li><strong>Burlings (1962):</strong> Maximisation models apply universally because people everywhere make choices and can be described as maximising something.</li>
+</ul>
+<p>The formalist position holds that the difference between primitive and modern economies is one of degree and complexity, not of kind.</p>
+
+<h3>The Substantivist Position</h3>
+
+<p>Substantivists argue that the formal economy of Western market capitalism is a historically specific institution, not a universal human trait. The economy in non-Western societies is not a separate sphere governed by supply-and-demand logic; it is embedded in social relations, kinship, religion, and politics. Key substantivists:</p>
+<ul>
+  <li><strong>Malinowski (1922):</strong> Demonstrated through the Kula ring that exchange among the Trobrianders was a social act embedded in reciprocal obligations, prestige, and political relationships — not a transmission of useful objects motivated by economic gain. His four foundational points: (1) primitive man is not purely rational and utilitarian — social convention shapes economic behaviour; (2) Australian Aborigines had genuine economic organisation; (3) savages had highly organised and systematic forms of labour; (4) trade and exchange among primitive communities were regular, elaborate, and complex.</li>
+  <li><strong>Karl Polanyi (1957):</strong> The crucial term is <em>embeddedness</em>. In pre-capitalist societies, economic processes are embedded in and subordinated to politics, religion, and social relations. Only in modern market capitalism has the economy become "disembedded" — a self-regulating market governed by price signals. Polanyi identified three principles governing economic integration across societies: reciprocity (associated with symmetrical social structures), redistribution (associated with centricity — centralised political authority), and exchange (associated with market trade). In his view, applying Western economic concepts to non-market societies distorts rather than clarifies their logic.</li>
+  <li><strong>George Dalton (1962):</strong> Formalised Polanyi's framework and argued that formal economic analysis is applicable only to market-integrated economies. Where markets are absent or peripheral, formal economic tools are inapplicable.</li>
+  <li><strong>Marshall Sahlins (1960s, Stone Age Economics, 1972):</strong> Argued that hunter-gatherers are the "original affluent society" — not because they have much, but because they want little. Their mode of consumption is characterised by minimalism — few and finite demands, adequately satisfied. This directly challenged the formalist assumption that scarcity is universal and that humans everywhere maximise to satisfy unlimited wants.</li>
+  <li><strong>Paul Bohannan (1963):</strong> The concept of <em>spheres of exchange</em> — among the Tiv of Nigeria, goods are divided into ranked categories (subsistence goods, prestige goods, rights over people), and exchange is normally confined within a sphere; exchange across spheres is morally charged. This further illustrates that the economy is embedded in the social and moral order, not a free market.</li>
+</ul>
+
+<h3>Resolution</h3>
+<p>The debate has never been definitively resolved. Most contemporary economic anthropologists draw on both traditions. Formalist tools (rational choice, maximisation) may describe behaviour in some contexts, but substantivist insight about embeddedness — that economic life cannot be abstracted from social and cultural context — is now widely accepted as a general principle. The debate retains importance as a methodological and theoretical issue, particularly in studying indigenous economies affected by globalisation.</p>
+
+<h2>Key Components of an Economic System</h2>
+
+<p>Every economic system involves three core components: production, distribution and exchange, and consumption.</p>
+
+<h2>Production: Modes of Subsistence</h2>
+
+<p>Production is the process by which human beings transform natural resources into consumable goods. It may be divided into food collection (hunting, fishing, gathering) and food production (horticulture, pastoralism, intensive agriculture).</p>
+
+<h3>Hunting and Gathering (Foraging)</h3>
+
+<p>Hunter-gatherers acquire food by collecting wild plants and hunting or fishing wild animals without significant domestication. This mode supported humanity for more than 90% of our existence as a species. Today, only approximately 250,000 people worldwide live predominantly as foragers, found in marginal areas — arctic tundra, tropical rainforests, and deserts. Examples: Pygmies and Pygmoid tribes (Africa), Chenchu, Paliya, Irula, Panyan, Kadars (South India), Onge and Jarawa (Andaman Islands), Kariera and Kulin (Australia), Sirocco (Bolivia), Ojibwa and Inuit (North America).</p>
+
+<p>A critical contemporary problem is the <strong>resource curse</strong>: foraging territories often contain high-demand natural resources (oil, diamonds, gold), leading to conversion of foraging land to mines, plantations, or tourist sites, displacing foragers from their homeland.</p>
+
+<p>Characteristics of foraging economies:</p>
+<ul>
+  <li>Nomadism or semi-nomadism; seasonal movement following food and water.</li>
+  <li>Lowest population density of all subsistence types.</li>
+  <li>Small self-sufficient local groups of 25–30 individuals.</li>
+  <li>Simple technology: digging stick, collection basket, nets, bags. Few tools because nomadic life cannot accommodate heavy capital.</li>
+  <li>Division of labour by sex and age only; no full-time craft specialisation or regional specialisation. In many societies men hunt, women gather roots and tubers.</li>
+  <li>Land ownership by group, not individual; collecting and hunting zones are marked by convention.</li>
+  <li>Generally characterised by plenty (wide variety of wild foods) and rarely by food shortage — "forest to mouth existence".</li>
+  <li>Virtually no surplus and no trade — exchange within the band through generalised reciprocity.</li>
+  <li>Informal political leadership; sociopolitical organisation is almost always democratic.</li>
+  <li>Sahlins's "original affluent society": foragers work fewer hours than farmers, rest more, and have leisure time — affluence through limited wants rather than unlimited production.</li>
+</ul>
+
+<h3>Pastoralism</h3>
+
+<p>Pastoralism is a mode of livelihood based on domesticated animal herds. Herds provide 50% or more of the diet (primarily milk and milk products, with occasional meat). Practiced historically in the Middle East, Africa, Europe, and Central Asia where rainfall is limited. The six major herd animals are sheep, goats, cattle, horses, donkeys, and camels; more regionally restricted are yaks (Asia), reindeer (sub-Arctic), and llamas (highland South America).</p>
+
+<p>Pastoralism coexists with horticulture and agriculture historically — animals were first domesticated at roughly the same time as plants were cultivated. Pastoralists typically form trade links with farmers or horticulturalists, exchanging milk, hides, and animal products for food grains and manufactured goods.</p>
+
+<p>Examples: Nuer, Dinka, and Masai (Africa); Chukchee (Russian Siberia); Bakarwals (high-altitude Himalayas — take sheep to alpine meadows above the treeline), Gaddi, Toda (India).</p>
+
+<p>Characteristics:</p>
+<ul>
+  <li>Nomadism, semi-nomadism, or transhumance (seasonal movement between pastures). Move when grazing is exhausted; territory must be large.</li>
+  <li>Low population density; small communities.</li>
+  <li>Technology includes milking equipment, leather straps, bells, tents/yurts; several tools and utensils.</li>
+  <li>Land ownership governed by rules over watering places and grazing land.</li>
+  <li>Division of labour by age, sex, and some specialisation. Herding is typically men's work; women process dairy products. Some specialisation (branding, trimming horns).</li>
+  <li>Most important property is animals, followed by housing and domestic goods. Animal inheritance typically through males, sometimes through females (as among Navajo).</li>
+  <li>Characterised by food plenty but frequent shortages; pastoralists are often partially dependent on agricultural neighbours for plant foods.</li>
+  <li>Some surplus and trade (meat, wool, dairy, hides).</li>
+  <li>Part-time or full-time political leadership; raiding and warfare are frequent, stimulating the growth of political authority.</li>
+  <li>Pastoralism in India context: Bakarwals of Pir-Panjal/Himalayas; Toda of Nilgiris (pastoral community with distinct buffalo-centered culture and economy).</li>
+</ul>
+
+<h3>Horticulture</h3>
+
+<p>Horticulture is a mode of livelihood based on cultivating domesticated plants in gardens using hand tools — digging sticks, hoes, spades. It does not involve irrigation, fertilisation, or permanently cultivated fields. Average plot size under one acre; 2.5 acres can support a family of five to eight for a year. Discovered approximately 10,000 years ago — initially by women, who specialised in collecting wild plants and applied that knowledge to intentional cultivation.</p>
+
+<p>Two main forms: <strong>shifting cultivation (swidden/slash-and-burn)</strong>, which is the most common; and <strong>tree-crop horticulture</strong> (coconut, banana plantations).</p>
+
+<p>Examples: Hopi, Zuni (North America); Yanomami (South America); Muria, Gond, Rengma Naga, Ao Naga, Abor (India); found across sub-Saharan Africa, Southeast Asia, Pacific, Central and South America.</p>
+
+<p>Characteristics:</p>
+<ul>
+  <li>Semi-sedentary; move only after soil exhaustion from shifting cultivation.</li>
+  <li>Moderate population density; small to moderate self-sufficient groups.</li>
+  <li>Simple hand tools; rain is the sole water source; no fertilisation.</li>
+  <li>Division of labour by age and sex; women's contribution to subsistence is greater than men's in most horticultural societies. Notable exceptions: Iroquois women cultivated maize and controlled its distribution (determining whether the men would go to war); Yanomami men clear fields and tend crops.</li>
+  <li>Children work more in horticultural societies than any other mode (Whiting and Whiting 1975).</li>
+  <li>Land ownership by community or kin group; use rights important.</li>
+  <li>Food plenty with infrequent shortages; production of some surplus enables social inequality.</li>
+  <li>Part-time political leadership; lineage heads, tribal chiefs, shamans may hold status.</li>
+</ul>
+
+<h4>Shifting Cultivation (Swidden)</h4>
+<p>Vegetation is cut and burned (slash-and-burn); seeds are sown with a digging stick; land is cultivated for a few years until soil fertility declines, then abandoned to fallow while cultivators move on. After sufficient fallow (originally decades, now often only years due to land pressure), the same plot is recultivated. Named differently across India: jhum (Northeast India), podu/dabi/koman/bringa (Odisha), deppa (Bastar), kumari (Western Ghats), penda (southeastern Rajasthan, Maria and Matra tribes), bewar/dahia (Madhya Pradesh). Globally prevalent in Sumatra, North Burma, Borneo, New Guinea, and sub-Saharan Africa. Began in the Neolithic period approximately 8,000–10,000 years ago.</p>
+
+<h3>Settled Agriculture (Intensive Agriculture)</h3>
+
+<p>Agriculture cultivates fields permanently using plowing, irrigation, and fertiliser. It is an intensive strategy — the same land is used repeatedly without losing fertility through inputs of labour, fertiliser, and water control. Emerged around 12,000 years ago in the Middle East. Animal-drawn plow: approximately 8,000 years ago. Now practiced worldwide.</p>
+
+<p>The key distinction from horticulture is that agriculture does not require a fallow period. Intermediate forms exist — e.g., sectorial fallowing (Papua New Guinea, West Africa, highland Mexico), where plots are planted for 2–3 years, fallowed for 3–5 years, then recultivated in cycles.</p>
+
+<p>Examples: Baiga, Bhil, Bhuriya, Ho, Lepcha, Oraon (India).</p>
+
+<p>Characteristics:</p>
+<ul>
+  <li>Sedentary; permanent villages, towns, and cities possible.</li>
+  <li>Can support the highest population density of any subsistence mode.</li>
+  <li>Complex technology: animal-drawn plough, harness, levellers, sickles, irrigation systems.</li>
+  <li>Complex division of labour; high degree of craft specialisation. Women contribute less to subsistence than in horticultural societies.</li>
+  <li>Land ownership both individual and communal; inheritance by lineage, clan, or phratry.</li>
+  <li>Wide individual differences in wealth; economic inequality common.</li>
+  <li>Full-time political leadership; wealth follows power.</li>
+  <li>Frequent food shortages due to unreliable rainfall and drought; significant dependence on trade.</li>
+</ul>
+
+<h2>Distribution and Exchange: Three Principles</h2>
+
+<p>Distribution determines the proportion of total output an individual receives; exchange determines the specific products into which that share is converted. Anthropologists classify exchange into three major principles:</p>
+
+<h3>Reciprocity</h3>
+
+<p>Reciprocity is the direct movement of goods and services between two parties without a price mechanism, ranging from pure gift giving to equal exchange to cheating. Marshall Sahlins arranged forms of reciprocity along a continuum by degree of balance:</p>
+
+<p><strong>Generalised reciprocity</strong> involves giving without expectation of any immediate or stipulated return. Value is not calculated; time of repayment is not specified. Occurs among close kin — parents and children, siblings, close friends. Characteristic of hunter-gatherers, where band mates share food and are generous with possessions. The most common exchange mode in foraging societies.</p>
+
+<p><strong>Balanced (symmetrical) reciprocity</strong> involves giving with expectation of a fair and tangible return of approximately equal value within a specified time. Practised among equals who are not closely related. Functions as social security and promotes egalitarian distribution of wealth. Can become competitive: affluent individuals may use feasts and costly gifts to enhance social status. Examples: among relatives in many parts of India, valuable gifts and monetary contributions at a relative's daughter's wedding, with the expectation of reciprocation when one's own daughter marries; the Maring of Papua New Guinea through pig feasts (Roy Rappaport); Trobriand Island Wasi exchange (coastal fish for interior yams, formalised rates, no haggling).</p>
+
+<p>The <strong>Kula ring</strong> is the most celebrated example of balanced reciprocity. Described by Malinowski (1922), this ceremonial exchange system spans eighteen island communities of the Massim archipelago, involving thousands of participants. Men of influence travel by elaborately carved dugout canoes (6–7.5 metres) across open waters to exchange two types of prestige items: red shell-disc necklaces (soulava/souvlava) circulated clockwise, and white shell armbands (mwali) circulated counterclockwise. These items have no monetary value and cannot be converted into consumer goods; they are solely for display and the accumulation of prestige. Kula shells accumulate the histories of their travels and the names of those who have held them. A man's prestige depends on receiving and passing on the finest items; keeping them out of circulation invites sorcery. No haggling is allowed; formal transfer is the rule; the time-lapse between gift and counter-gift expresses trust. Malinowski argued that kula demonstrates the economy embedded in social relations — the many interactions it encompasses (prestige, political influence, trade, gift-giving) form one organic whole. The kula also reinforces peace among trading islands: Trobrianders are reluctant to attack their kula partners. The Urigubu system is a complementary Trobriand institution in which men cultivate yams not for themselves but as gifts to the households of their married-out daughters and sisters, who publicly display them in yam houses.</p>
+
+<p><strong>Negative reciprocity</strong> involves exchange where each party attempts to profit at the other's expense. Practised against strangers and enemies. Ranges from hard bargaining and barter to theft. Among the Navajo, deceiving foreign tribes in trade is considered morally acceptable. Silent trade (dumb barter) is a specialised form: one group deposits goods at a customary spot, withdraws, and the other group leaves its goods in return without any direct contact. Examples: Veddah of Sri Lanka (wild honey exchanged for metal tools with Sinhalese), Mbuti foragers of the African equatorial forest (leave game and honey; neighbouring villagers leave crops in return). Silent trade functions where distrust is high, where a common language is lacking, or where status differences make direct verbal communication impossible.</p>
+
+<h3>Redistribution</h3>
+
+<p>Redistribution is a pooling transaction in which goods are collected from members of a group by a central authority and redistributed among the group. Unlike reciprocity (between two parties), redistribution is a collective action requiring a social centre. It is associated with groups headed by a chief or other central authority. In simpler societies without formal chiefs, the "big man" plays an analogous role. In modern market economies, redistribution occurs through taxation and welfare provision.</p>
+
+<p>The <strong>potlatch</strong> of the Northwest Coast of North America (named from the Chinook word patshatl, "gift") is the classic case. A chief publicly gives away large quantities of food, sea otter furs, dried salmon, blankets, and other valuables while making boastful speeches about his generosity and greatness. Other chiefs become indebted to him; his prestige rises. In the future, when his village faces shortages, he receives at others' potlatches. In extreme displays, chiefs destroy precious possessions — a practice intensified after European contact brought new trade wealth in the second half of the 19th century. The potlatch is ecologically adaptive: coastal villages alternately face periods of scarcity and abundance and rely on alliances for long-term survival; the potlatch redistributes surplus strategically. It is an example of a <strong>prestige economy</strong>: wealth is accumulated expressly to be given away for status, contrasting with conspicuous consumption in industrial societies where goods are amassed and withheld. The potlatch also functions as a <strong>levelling mechanism</strong> — compelling prosperous community members to give away goods, host public feasts, or otherwise demonstrate generosity so that no one permanently accumulates significantly more wealth than anyone else. Greater wealth brings greater social pressure to spend; demonstrated altruism increases social standing and prevents disruptive envy.</p>
+
+<h3>Market Exchange</h3>
+
+<p>Market exchange involves buying and selling of goods, labour, land, rentals, and credit using an intermediary token of common exchange value (money). Four requirements: a medium of exchange (money), prices (rates at which goods exchange for money), supply-and-demand price determination, and predominantly private property ownership. In contemporary life, significant market transactions occur on the internet — a market exists without a designated physical place. In rural and tribal India, weekly <em>haats</em> (markets) serve as social institutions combining economic transactions with friendship renewal, gossip exchange, marriage arrangement, and cultural significance. The reliance on market exchange and money is increasing globally through commercialisation and integration into wider economies.</p>
+
+<h2>Consumption</h2>
+
+<p>Consumption refers to both the intake (eating or using things) and the output (spending resources to obtain things). Two contrasting modes anchor a consumption continuum:</p>
+<ul>
+  <li><strong>Minimalism:</strong> few and finite consumer demands, adequately and sustainably met. Characteristic of foragers; also found among horticulturalists and pastoralists. Sahlins's "original affluent society" is built on this premise.</li>
+  <li><strong>Consumerism:</strong> infinite demands that can never be fully satisfied. The distinguishing feature of industrial and informatics cultures. Drives colonialism, globalisation, and expansionism. Globalisation is spreading consumerism globally, threatening indigenous economic systems.</li>
+</ul>
+
+<h2>Globalisation and Indigenous Economic Systems</h2>
+
+<p>Globalisation integrates indigenous economies into world markets, creating complex transformations. On one hand it provides access to new goods, technologies, income sources, and markets. On the other hand it disrupts traditional subsistence patterns, displaces communities from land and resources (the resource curse), generates dependency on external markets and cash economies, erodes indigenous knowledge systems (particularly in agriculture — longstanding agricultural traditions are being displaced by externally introduced methods), and creates economic inequalities not previously present in egalitarian communities.</p>
+
+<p>Economic anthropologists engage with these processes through participatory approaches — working with communities to understand the terms on which they engage with globalisation and supporting their ability to negotiate these terms on their own behalf. The tools forged in the analysis of tribal and peasant economies are now applied to studying global institutions such as stock markets and multinational corporations.</p>
+`,
 };
+
 
