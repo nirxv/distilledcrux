@@ -6400,7 +6400,89 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The IHDS (India Human Development Survey) data consistently shows strong correlation between caste position and economic class: SC and ST households are systematically overrepresented in the lowest income quintiles and underrepresented in the highest. Intergenerational income mobility is significantly lower for SC and ST individuals than for upper-caste individuals with similar education levels — indicating that caste discrimination operates independently of class position.</p>
 
 `,
-  'kinship-systems-india': '',
+  'kinship-systems-india': `
+<h2>Lineage and Descent in India</h2>
+
+<p>Lineage is the principle upon which inheritance is determined — whether property, name, and social membership pass through the father's line (patrilineage), the mother's line (matrilineage), or both. It refers to a kin group whose members trace descent from a common ancestor whose identity is known. In a patriarchal society, daughters are typically not part of the father's lineage group — they are transferred to the husband's lineage at marriage.</p>
+
+<p>Descent is the principle whereby a child is socially affiliated with the group of their parents. Classical anthropologists divide lineage systems into unilineal systems (patrilineal or matrilineal) and non-unilineal systems where multiple forms of relationships coexist.</p>
+
+<h3>Thinkers on Lineage and Descent in India</h3>
+
+<p>Ghurye, taking an Indological perspective, emphasised the role of descent in defining marriage, family, and kinship in India. In northern India, one cannot marry within the extended kinship group — marriage is governed by rules prohibiting unions for five to seven generations. Ghurye also identified <em>gotra</em> and <em>charna</em> as exogamous groups that bring dispersed people together. These kin categories of Indo-European cultures systematised rank and status — derived from rishis who were the real or eponymous founders of each gotra. Descent through mythic saintly figures thus became the basis of ritual hierarchy across Brahminical communities.</p>
+
+<p>Gail Omvedt takes this further: caste is an expanded descent system. The rules of caste endogamy and gotra exogamy together constitute a system of descent regulation that reproduces caste hierarchy across generations.</p>
+
+<p>Andre Beteille observes that kinship in India is so strong that voting is driven by kinship rather than merit — the primary source of political recruitment is the kinship group. The democratic political system in India is thus engaged in social and cultural reproduction. Krishna Kumar makes the same point for economic life: kinship in India is so intensive that behind every corrupt man there is an ambitious family. Industrial recruitment takes place largely on kinship rather than merit. Both conclude that with modernity, kinship and descent in India have not changed significantly — making it essential to study kinship under social transformation.</p>
+
+<p>The role of descent and kinship is not limited to private spheres like marriage and family. It defines occupation (jati and hereditary work), political activities (caste-based mobilisation), industrial recruitment (nepotism), and access to resources. The sociology of Indian kinship cannot be separated from the sociology of caste, class, and power.</p>
+
+<h2>Types of Kinship Systems: Irawati Karve's Four Zones</h2>
+
+<p>Irawati Karve, in <em>Kinship Organisation in India</em>, mapped India's kinship diversity by identifying four distinct kinship zones — North, South, Central, and East — each with different rules of marriage, residence, descent, and kin reckoning. These zones demonstrate that there is no single "Indian kinship system" — the variation is structural and systematic.</p>
+
+<h3>North Indian Kinship System</h3>
+
+<p>The North Indian zone covers the Hindi heartland, Rajasthan, Punjab, Haryana, and also Odisha, Bihar, and West Bengal. The cardinal feature is rigid separation of patrikins and matrikins. The father's brother is clearly distinguished from the father's sister's husband; older and younger father's brothers are distinguished with differential terms of address and respect.</p>
+
+<p>The rules of marriage are highly exhaustive. A man cannot receive a woman from any group to which he has offered a woman within the preceding five to seven generations. He cannot receive a woman from his mother's natal group, his mother's mother's group, his father's mother's group, or from his own village. This creates an elaborate system of inter-village bride exchange — marriage is an inter-village matter extending kinship alliances over a wide geographic area.</p>
+
+<p>The residential system is virilocal (patrilocal) — the married couple resides with or near the husband's parents, involving ongoing presentational obligations by the bride's family. Veena Das, analysing Punjabi kinship, observes that the father-son relationship takes precedence over the husband-wife relationship. The natural sexual relationship between husband and wife is subdued to the socially established father-son relationship — glorifying patriarchy and keeping the conjugal bond secondary to patrilineal descent.</p>
+
+<h3>South Indian Kinship System</h3>
+
+<p>The South Indian zone covers Tamil Nadu, Karnataka, Andhra Pradesh, Kerala, and parts of Maharashtra and Odisha. The contrast with North India is sharp. There is no rigid distinction between patrilineal and matrilineal kins — specific patrilineal kins are equated with specific matrilineal kins, creating a symmetrical kinship terminology.</p>
+
+<p>The most striking feature is the preference for cross-cousin marriage and uncle-niece marriage. The father's brother is equivalent to the mother's sister's husband — their children, parallel cousins from a Northern perspective, are here actual marriage candidates. The equation between father's sister's group and mother's brother's group means kinship terms extend love downward and respect upward, cutting across generational lines — father is treated like an elder brother, younger brother like a son.</p>
+
+<p>Exogamy is not as exhaustive as in North India. The husband-wife relationship is not subordinated to the father-son relationship — conjugal bonds are stronger and more equal. The hostility that characterises in-law relations in North India is weaker in South India because the bride is often a known relative rather than a stranger from a distant village.</p>
+
+<h3>Central Indian Kinship System</h3>
+
+<p>The Central zone covers Gujarat, Maharashtra, and Madhya Pradesh — a mixture of North and South Indian elements. Among Rajputs, marriage is governed by the status of the girl's family with no strict caste bar. The Marathas have thirty-two divisions with primary, secondary, and tertiary levels governing intermarriage. Among the Kumbis of Gujarat, a man cannot marry within one generation on his father's side or three generations on his mother's side. In Rajasthan, Akshaya Tritiya sees mass marriages across age groups with relaxed norms.</p>
+
+<h3>Eastern Indian Kinship System</h3>
+
+<p>The Eastern zone includes tribal communities — the Mundas of Odisha, the Manipuris, the Nagas, Kukis, and Khasis of the Northeast. The Mundas have six exogamous clans associated with totemic symbols (bamboo, lizards, teak, crocodiles). Sons receive the patrilineal grandfather's name and daughters the patrilineal grandmother's name. Divorce is relatively common among the Mundas.</p>
+
+<p>The Khasis of Meghalaya are matrilineal — the youngest daughter inherits property from her mother, and the status of men in the Khasi system is analogous to the status of women in North Indian systems: they marry out and their children belong to the mother's clan. This reversal illustrates that the arrangements of any kinship zone are cultural constructs, not natural necessities.</p>
+
+<p>These four zones collectively speak to India's pluralism. India's unity does not lie in a uniform kinship system but in the coexistence of radically different residential systems, property relations, gender statuses, and marriage rules. The kinship zone a person inhabits determines the entitlements they possess.</p>
+
+<h2>Family and Marriage in India</h2>
+
+<p>The study of the Indian family has been dominated by the debate between the joint family and the nuclear family — especially charged after independence when modernisation theorists predicted the inevitable decline of the joint family under industrialisation and urbanisation.</p>
+
+<p>David Mandelbaum considers the joint family one of the three distinguishing characteristics of Indian society (alongside caste and village). Henry Maine and O. Mailey studied it and termed it patriarchal — resting on common property holdings and the absolute authority of the Karta. GS Ghurye argued the joint family is a product of Indian culture with universal presence across caste, religion, and region. PN Prabhu added that association with the joint family is based on moralism — when moralism converts to individualism under modernity, the joint family converts to the nuclear. Irawati Karve described it as encompassing three to four generations through common kitchen, residence, rituals, and obligations to the Karta — a product of culture that economic transformations alone cannot dismantle.</p>
+
+<p>Yogendra Singh's <em>Modernisation of Indian Tradition</em> identified structural changes in urban India suggesting the joint family is weakening: inter-caste marriages, love marriages, nuclear family formation, occupational mobility, women's empowerment, and structural breakdown of joint household arrangements. Yet MN Srinivas and SC Dube found higher castes tend to maintain the joint family while lower castes tend toward nuclear arrangements — and that joint family formation is driven by economic logic (resource pooling) rather than purely cultural logic.</p>
+
+<p>Alan Rose's study in Bangalore found 70% of families maintained either structural or functional jointness or both. MS Gore's study of Agarwals in Delhi found the mother-son relationship precedes the husband-wife relationship. TN Madan emphasised that even where residential separation occurs, the "Money Order Economy" — remittances from migrant workers — maintains functional jointness. Shah and Kolenda's combined evidence demolished the myth of joint family disintegration in India.</p>
+
+<p>Marriage in India simultaneously changes and displays remarkable continuities. Marriage remains an important institution all are expected to enter. Choices available to women are few — marriage and motherhood are still taken as ultimate goals. Arranged marriages remain preferred, though semi-arranged marriages (individual choice with parental consent) are increasingly common in urban upper-middle-class settings. Inter-caste marriages are being conditionally tolerated, but Hindu-Muslim and Hindu-Christian marriages remain largely taboo.</p>
+
+<h2>Household Dimensions of the Family</h2>
+
+<p>AM Shah's landmark book <em>The Household Dimension of the Family in India</em> shifted the analytical unit from "family" (a cultural concept) to "household" (an empirically observable unit of coresidence and economic cooperation). Shah's fundamental question was whether joint households are disintegrating. His finding: the proportion of joint households is actually higher today because rising population makes separate housing costly, migration for employment is temporary, and bigger households split into smaller residential units while maintaining strong emotional ties. What is splitting is joint household co-residence, not the joint family itself.</p>
+
+<p>Shah proposed studying the household along four dimensions: commensal (eating together), co-resident (living together), coparcenary (sharing property), and co-ritual (sharing religious practices). He identified two types: simple (nuclear core) and compound (two or more parents sharing a household).</p>
+
+<p>Pauline Kolenda confirmed that even after modernity, joint households and joint families still exist. The average household size is increasing because death rates have fallen and longevity has increased. Households have lifecycles: fission (joint household splits after children marry), fusion (remarriage or return of children), fission again. The stem family — where parents reside with one married child while others set up separate households — is a very common transitional form. Rural households are larger than urban. Regional differences persist: North India has larger joint families than South India.</p>
+
+<p>Contemporary trends are moving the analytical focus from family to household. With global migration, married women in countries like the Philippines and India are living in households with friends or alone while their families remain in the home country. In urban households, friendships carry more practical importance than kinship ties — individual liberty, sexual freedom, and limited liability characterise these new forms. Scandinavian census data gives more importance to household than family. This trend of household study replacing family study parallels friendship study replacing kinship study as the primary mode of voluntary social bonding.</p>
+
+<h2>Patriarchy, Entitlements, and Sexual Division of Labour</h2>
+
+<p>An entitlement is a form of individual right driven by culture, rules of law, and social norms. Modernist theory predicts entitlements extended equally to all sections — gender no longer a criterion. Parsons argued industrialisation, urbanisation, migration, and occupational mobility have empowered women and reduced the gender gap. In India this would mean conjugal relationship taking precedence over kinship obligations; irrespective of gender, every child inheriting property from parents; childbirth linked to mutual agreement between spouses.</p>
+
+<p>But reality contradicts this optimism. Hinduism historically emphasised sexual purity — requiring child marriage, treating premarital sex as immoral, viewing male children as necessary for a woman's fulfilment, treating divorce as evil and widowhood as a catastrophe. Culture defines sexuality, reproduction, and the division of labour in ways laws alone cannot easily override.</p>
+
+<p>Indira Jai Singh observed that all Indian laws of entitlement are based on patriarchy rather than gender equality — the Hindu Marriage Act allows divorce on grounds of adultery, but adultery must be proved in court. Rape survivors must recreate the experience of violation repeatedly in the legal process to get justice. Inheritance rights over parental property were extended to women only in 2005 through the Hindu Succession Amendment.</p>
+
+<p>Tulsi Patel's fieldwork shows women consider it sinful to prohibit their husbands from sexual access, leading to unwanted pregnancies. Women lose their lives during childbirth; even in poor health they accept patriarchal convention — forgetting their entitlements. Women's wages are less than half of men's despite doing twice the work in factories. For these women, family is "a paradise in a hopeless world" — where marriage, childbirth, and motherhood are made to seem like they make a woman's life complete. Feminist movements are not rebellions against patriarchy — they are asking for equality, for recognition of entitlements that exist in law but not in social practice.
+
+The sexual division of labour in India is continuously reproduced through the kinship system. The kinship zone a person inhabits determines their entitlements. A Khasi woman has matrilineal property rights; a North Indian woman's inheritance rights were legally equalised with men's only in 2005. The four kinship zones thus create structurally different entitlement landscapes for women — complicating any unified account of gender in India.</p>
+`,
   'religion-society-india': '',
   'visions-social-change-india': '',
   'rural-agrarian-transformation': '',
