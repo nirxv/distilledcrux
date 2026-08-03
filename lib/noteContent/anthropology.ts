@@ -3954,5 +3954,149 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Phenomenology is a philosophical tradition, originating with Husserl and developed by Heidegger and Merleau-Ponty, that has been adopted as a research approach in anthropology. It focuses on the lived experience of individuals — understanding how people experience and give meaning to phenomena in their world from the first-person perspective. In anthropological fieldwork, a phenomenological approach requires the researcher to "bracket" (temporarily set aside) her own assumptions and cultural frameworks and attempt to understand the world as it is experienced by the people being studied. It privileges embodied experience — how the body perceives, moves through, and makes sense of the world — over abstract cognitive categories. Phenomenological anthropology has been influential in the anthropology of illness, sensory anthropology, and the study of religious experience.</p>
 `,
+  'applications-of-anthropology': `
+<h2>Nature and Scope of Applied Anthropology</h2>
+
+<p>Applied anthropology uses anthropological methods, theories, concepts, and insights to help public institutions or private enterprises deal with practical, real-world problems. It is sometimes viewed as a fifth subfield, but all applied anthropologists are trained in one or more of the traditional four fields — in this sense it cuts across all subfields. Anthropologists are valuable to governments, agencies, and organisations because they are trained to do two things very well: to observe, record, and analyse human behaviour in diverse settings; and to understand the cultural assumptions, values, and beliefs that underlie that behaviour.</p>
+
+<h2>Early History of Applied Anthropology</h2>
+
+<p>Franz Boas, having experienced anti-Semitism in Germany, developed a lifelong commitment to combating racism. From 1910 to 1913, he applied anthropometry to disprove the assumption that cranial shape was a factor of race: measuring the heads of Jewish immigrants in New York City ghettos (dolichocephalic Mediterranean race) and their American-born children (brachycephalic Alpine race), he found the children had effectively "changed race" within one generation. He attributed this to differences in diet during growth — not to race — thereby demolishing the assumption of fixed racial types.</p>
+
+<p>In Europe, anthropologists routinely served colonial administrations: Dutch anthropologists provided ethnographic data on Indonesia; Northcote Thomas administered the British colony in Nigeria using anthropological knowledge; Radcliffe-Brown served as director of education on Tonga. In the 1930s, Evans-Pritchard worked for the Anglo-Egyptian Sudan government, spending time among the Nuer to determine why they did not consider it necessary to uphold their treaty with the British.</p>
+
+<h3>Project Camelot (1964)</h3>
+<p>In December 1964, the US Army and Department of Defense announced a programme employing anthropological fieldworkers for 3 to 4 years. Its objectives were to develop a systems model to predict social changes that could develop into political movements threatening the US in third-world nations, and to identify means to prevent civil wars, insurgency, and counterinsurgency. Project Camelot represents one of the most controversial moments in applied anthropology — mobilising fieldwork methods for military and political surveillance, raising fundamental ethical questions about whose interests anthropological knowledge should serve.</p>
+
+<p>Also in the 1960s, medical anthropologists working with the Foré tribe of New Guinea traced the origins of a deadly neurological disease, kuru, to cannibalism by using traditional qualitative techniques such as life histories.</p>
+
+<h2>Major Fields of Applied Anthropology</h2>
+
+<h3>Development Anthropology</h3>
+<p>Development anthropologists apply expertise to the solution of practical human problems in developing countries, working as full-time employees and consultants for agencies including USAID, the Rockefeller and Ford Foundations, the World Bank, and the United Nations Development Program. Their primary role is to provide policymakers with knowledge of local-level ecological and cultural conditions so that development projects avoid unanticipated problems, adapt to local needs, and minimise negative impacts on communities.</p>
+
+<h3>Educational Anthropology</h3>
+<p>Educational anthropologists advise in bilingual education, conduct detailed observations of classroom interactions, train personnel in multicultural issues, and adapt teaching styles to local customs. As modern nations become more culturally diverse through immigration, an increasingly important role is helping professional educators understand the learning styles and behaviour of children from various ethnic and national backgrounds. Those trained in both linguistic and cultural anthropology are especially suited to this work.</p>
+
+<h3>Corporate Anthropology</h3>
+<p>Private companies employ cultural anthropologists full time or as consultants. As international trade agreements remove barriers to trade, people of different cultural heritages increasingly conduct business together. Companies hire anthropologists to advise executives and staff on how to speak and act when conducting business in other countries. Corporate anthropologists also observe how employees interact with one another, analyse how workers understand technology, and study how management styles affect worker performance.</p>
+
+<h3>Medical Anthropology</h3>
+<p>Medical anthropology is a rapidly growing field. Medical anthropologists (trained in both biological and cultural anthropology) investigate complex interactions among human health, nutrition, social environment, and cultural beliefs and practices. Those with training in human biology and physiology study disease transmission patterns and how groups adapt to diseases like malaria and sleeping sickness. Because transmission of viruses and bacteria is strongly influenced by diet, sanitation, and sexual habits, medical anthropologists often work alongside epidemiologists to identify cultural practices affecting the spread of disease. They also study how communities perceive the causes and symptoms of disease, healing practices, and the role of traditional healers, thereby helping hospitals and agencies deliver health care services more effectively. Linguistic anthropologists contribute to medical anthropology through research on the role of language in health care delivery.</p>
+
+<h3>Applied Anthropology across the Four Fields</h3>
+<ul>
+  <li>Archaeologists are employed in Cultural Resource Management (CRM), assessing the presence of archaeological remains before construction projects such as roads and buildings can proceed.</li>
+  <li>Biological anthropologists work as forensic anthropologists in criminal investigations identifying skeletal remains, and in non-human primate conservation protecting habitats and survival.</li>
+  <li>Linguistic anthropologists consult with educational institutions on improving standardised tests for bilingual populations and conduct policy research for governments.</li>
+  <li>Cultural anthropologists improve policies and programmes in education, health care, business, poverty reduction, and conflict prevention.</li>
+</ul>
+
+<h2>Forensic Anthropology</h2>
+
+<p>Forensic anthropology is the applied application of physical anthropological knowledge — especially expertise in the human skeleton — to legal contexts. Forensic anthropologists assist medical examiners in the analysis of skeletal remains in investigations of murder, suicide, and accidental death; their results are used in criminal and civil court cases. They also work for international organisations and governments to identify victims of natural disasters, human rights violations, and genocide. Forensic anthropologists played a major role in identifying individuals from mass graves in Argentina, Guatemala, Rwanda, and Bosnia, and in identifying the remains of servicemen missing in action in Vietnam.</p>
+
+<h3>Tasks of the Forensic Anthropologist</h3>
+
+<h4>Sex Determination</h4>
+<p>The sex of an adult skeleton can be determined with fair accuracy due to secondary sexual characteristics and sexual dimorphism. The pelvis shows the greatest sex differences: the rate of successful sex determination from the pelvis alone is estimated at 96%; from the skull alone, 80%. Male skulls tend to be larger and more rugged, with a large supraorbital ridge, long and broad mastoid processes, and a rugged nuchal region. Female skulls are more gracile. The mandible also shows differences: males tend to have broad "squarish" chins; females have more V-shaped chins. Sex determination from children's skeletal material is very difficult or impossible because secondary sexual characteristics have not yet developed.</p>
+
+<h4>Age Determination</h4>
+<p>Age estimation from skeletal material is more accurate for children than adults.</p>
+
+<p>From teeth: Dental development is one of the best age indicators. Up to age 6, children have only deciduous teeth. From age 6 to 13, varying combinations of deciduous and permanent teeth coexist. After age 13, only permanent teeth are present, with the third molar usually erupting around age 17. X-rays of the maxilla and mandible show unerupted teeth and allow accurate age determination. Root formation of permanent teeth gives a good indication up to age 25. In adults, wear, deterioration, and type of dental restoration serve as gross indicators.</p>
+
+<p>From skull sutures: The fontanels close in infancy — the posterior fontanel by the end of the first year, the anterior fontanel by the end of the second year. Suture closure provides age estimates in adults: the sagittal suture closes between 30 and 40 years; coronal sutures may begin fusing by age 24 and average closure between 30 and 40 years; lambdoid sutures normally close between 30 and 40 years.</p>
+
+<h4>Population Affinity ("Racial" Identification)</h4>
+<p>In forensic practice, "racial" identification is understood as an estimate of population affinity rather than a biological race assignment (since race is a social, not biological, concept). Different populations do differ statistically in some anatomical and genetic characteristics, and forensic anthropologists can often estimate the ancestry of a specimen. Forensic analysis uses a three-population model (Negroid, Mongoloid, Caucasoid) as a practical framework:</p>
+
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Negroid</th><th>Mongoloid</th><th>Caucasoid</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Nasal Index</td><td>Greater than 0.53</td><td>0.48–0.53</td><td>Less than 0.48</td></tr>
+    <tr><td>Nasal Spine</td><td>Very small</td><td>Slightly prominent</td><td>More prominent</td></tr>
+    <tr><td>Prognathism</td><td>Prominent</td><td>Variable</td><td>Straight</td></tr>
+    <tr><td>Orbital opening</td><td>Rectangular</td><td>Rounded</td><td>Rounded</td></tr>
+    <tr><td>Skull length</td><td>Long</td><td>Long</td><td>Short</td></tr>
+    <tr><td>Skull breadth</td><td>Narrow</td><td>Broad</td><td>Broad</td></tr>
+    <tr><td>Skull height</td><td>Low</td><td>Middle</td><td>High</td></tr>
+  </tbody>
+</table>
+
+<h4>Other Determinations</h4>
+<p>Stature is reconstructed using regression formulas derived from analysis of skeletal collections. Limb asymmetry can indicate handedness. Malnutrition, disease, and cultural modification (head-shape modification, tooth filing) can be identified from skeletal material. Cause of death, especially from trauma, can be determined by examining wound patterns — different weapons (guns, knives, blunt instruments) leave distinctive marks on bone. The forensic anthropologist may also provide a reconstruction of what the person looked like in life and estimate the time since death.</p>
+
+<h3>Personal Identification: Fingerprints</h3>
+
+<p>Fingerprints are the tiny ridges, whorls, and valley patterns on the tip of each finger, formed from pressure on developing fingers in the womb. No two individuals have been found with identical fingerprints — there is approximately a 1 in 64 billion chance of a match. Fingerprints are even more unique than DNA: identical twins may share DNA but not fingerprints. The study and classification of fingerprints is called <strong>dactyloscopy</strong>.</p>
+
+<p>Three basic fingerprint patterns: loops (beginning on one side, curving around, and exiting the other side; radial loops slope toward the thumb, ulnar loops toward the little finger); whorls (circular or spiral patterns); arches (sloping upward then downward like narrow mountains).</p>
+
+<p>Two types of prints in criminal investigation: visible prints (made on impressionable surfaces like blood or clay); latent prints (made from sweat and oils, not visible to the naked eye but revealed using dark powder, lasers, or other light sources and lifted with tape or special photographs).</p>
+
+<h3>Disputed Paternity</h3>
+
+<p>The question of disputed paternity may arise in cases of illegitimacy, posthumous birth, suppositious child, nullity of marriage, divorce, property inheritance, guardianship, or maintenance disputes.</p>
+
+<p>Four approaches to resolving disputed paternity:</p>
+<ul>
+  <li><strong>Morphological approach:</strong> Comparing physical traits between the child and alleged parent — figure, skin colour, nose form, eyes, stature, hair, deformities. Mendelian traits such as ear lobe attachment (attached ear lobe is recessive; free ear lobe is dominant) and tongue rolling (rolling is dominant) are also used. Morphological tests are not conclusive.</li>
+  <li><strong>Serological approach (ABO blood group):</strong> Discovered by Landsteiner in 1900. Blood group typing can exclude paternity but cannot affirmatively establish it. If the child's blood group is impossible given the blood groups of the alleged father and mother, non-paternity is established. The ABO system has three alleles (A, B, O) at one locus. Genotype-phenotype relationships: AA or AO = type A; BB or BO = type B; AB = type AB; OO = type O. Example: if both parents are type O (OO), the child can only be type O — any other blood type establishes non-paternity.</li>
+  <li><strong>Immunological approach (HLA typing):</strong> Human Leukocyte Antigen system developed by Dr. Paul Terasaki at UCLA in 1964 (originally to minimise transplant rejection). HLA types are relatively rare, and sharing a high percentage of HLA type combinations supports paternity. Advantage over blood typing: greater discriminating power. Limitation: high exclusion rates are possible from multiple testing, and costs and diminishing returns make excessive testing impractical.</li>
+  <li><strong>DNA typing:</strong> Developed by Alec Jeffreys in 1987. DNA is unique to each individual (the genetic "blueprint"). Two main techniques:
+    <ul>
+      <li><em>Variable Number Tandem Repeats (VNTR):</em> Short tandem sequences of 10–100 base pairs that are repeated; the number of repeats varies between individuals. Each variant acts as an inherited allele for personal and parental identification. Multilocus DNA fingerprinting using VNTRs provides great information, somatic stability, and Mendelian inheritance. It is virtually impossible for two unrelated individuals to share identical VNTR patterns.</li>
+      <li><em>Short Tandem Repeats (STR):</em> Short arrays of 2–6 base pair tandem repeats. Widely used in forensics since 1993. Dependent on PCR (polymerase chain reaction), which confers much greater sensitivity, allowing use of very small or degraded samples. Does not consume much time; is the standard technique in current forensic casework.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Facial Reconstruction</h3>
+
+<p>Facial reconstruction encompasses methods that attempt to determine whether a skull can be matched to a particular face — combining osteological science with sculptural art. The science provides measurements and understanding of the relationship between the face and the underlying skull; art transforms that data into a recognisable face.</p>
+
+<p>Three-dimensional (direct) reconstruction: Clay or wax is built up over the actual skull or a cast, guided by tissue depth markers placed at specific anatomical points. Tissue thickness data (collected from cadavers, differentiated by sex and ancestry) are used to place markers at the correct depths. The sculptor then models clay to the surface of the markers and adds hair, glasses, or other props to aid recognition. Contemporary reconstructions use high-resolution 3D computer imaging. Famous examples include reconstructions of Lucy (2.2 million-year-old Australopithecus afarensis) and the Tyrolean Ice Man.</p>
+
+<p>Two-dimensional reconstruction: The skull is photographed at a 1:1 ratio from front and profile views, enlarged to life size, and an artist sketches tissue over the photographs using transparent vellum sheets and tissue-depth markers as guides.</p>
+
+<p>Craniofacial superimposition: A photographic image of the skull is superimposed on an ante mortem photograph of the person. Used to assess whether a skull could belong to a known missing individual. All forensic facial reconstruction methods should be used alongside other corroborating evidence — none should be used alone to establish identity.</p>
+
+<h2>Kinanthropometry</h2>
+
+<p>Kinanthropometry combines three Greek words: <em>kinein</em> (to move), <em>anthropos</em> (man), and <em>metrein</em> (to measure). It refers to the quantitative interface between human structure and function. Ross et al. (1978) defined it as the application of body measurements to the study of human size, shape, proportion, composition, maturation, and gross functions to help understand human movement in relation to growth, exercise, performance, and nutrition. The International Society for the Advancement of Kinanthropometry (IASK) defined it as "scientific specialisation dealing with the measurement of humans in a variety of morphological perspectives, its application to movement and those factors which influence movement."</p>
+
+<p>Kinanthropometry is closely associated with physical education, sports science and medicine, human biology, science of growth, physical anthropology, gerontology, ergonometry, and other disciplines. The term anthropometry was first coined by Quetelet (1871); Martin published the foundational text <em>Lehrbuch der Anthropologie</em> in 1928.</p>
+
+<h3>Application in Sports Science</h3>
+
+<p>Kinanthropometric characteristics of athletes are of fundamental importance for individual development and peak performance. Since most kinanthropometric characteristics are almost exclusively genetically determined (length and breadth measurements cannot be changed with training), athletes must possess characteristics suited to their sport from the outset. This makes kinanthropometry the principal tool for talent identification and athlete selection.</p>
+
+<p>Key kinanthropometric measures: weight, height, diameters, circumferences, and skinfolds. Body composition (especially body fat percentage) is an important determinant of performance: excess body fat is detrimental in most sports, while fat-free body mass (especially muscle mass) is generally associated with better performance. In endurance events, extra fat increases the cost of running without providing extra energy. In strength events, lean body mass is a better predictor of performance than fat mass.</p>
+
+<p>Morehouse and Rasch classification of physique for sports selection:</p>
+<ul>
+  <li>Tall-Heavy: Wrestling</li>
+  <li>Tall-Medium: Boxing</li>
+  <li>Tall-Light: Sprinting and Jumping</li>
+  <li>Medium-Heavy: Throwing</li>
+  <li>Medium-Medium: Long-distance swimming</li>
+  <li>Medium-Light: Hockey, Football</li>
+  <li>Short-Heavy: Weight lifting</li>
+  <li>Short-Medium: Gymnastics</li>
+  <li>Short-Light: Skating</li>
+</ul>
+
+<p>Physiological rationale: Skaters must be short (low centre of gravity) and light (high activity level). Gymnasts need short stature for balance plus muscle development. Sprinters and jumpers need tall stature with relatively long limbs and short trunks (greater trunk length increases wind friction and fatigues leg muscles earlier). Weight lifters must have shorter stature because taller individuals must lift weights to a greater height against gravity — champion weight lifters tend to have shorter limb height relative to trunk height. Throwers are significantly taller and heavier with longer upper and lower extremities.</p>
+
+<p>Aerobic vs anaerobic power: Those applying great sudden force (weight lifters) require high aerobic power and high lung capacity. Those playing sustained games (long-distance runners) require high anaerobic power and high levels of blood alkali. The American Journal of Human Genetics has reported specific genes for running: Alpha-Actin 3 for short-distance running; Alpha-Actin 2 for long-distance running.</p>
+
+<h3>Kinanthropometry in Defence and Ergonomics</h3>
+
+<p>Three factors collectively determine the quality of the man-machine relationship: efficiency, safety, and comfort. Designs that do not account for human variability lead to poor job performance, low job satisfaction, wasted time, and increased morbidity. Physical anthropologists were first involved in designing defence equipment during World War II — improving the fit of gun turrets, aircraft cockpits, and other equipment significantly improved pilot efficiency and reduced costs. Since then, anthropometric research has played a significant role in engineering design across many domains: jet-fighter ejection seats, keyboard and automobile seating layouts, computer input device dimensions, and analysis of human posture in zero gravity based on Skylab experiences. Designing any product considering human variability requires collaboration among three groups: users, anthropologists, and manufacturers — and the anthropologist's role is crucial wherever equipment efficiency depends on human variability.</p>
+`,
 };
+
 
