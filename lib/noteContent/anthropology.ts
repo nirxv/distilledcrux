@@ -3756,7 +3756,7 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Glottochronology is a technique developed by Morris Swadesh in the 1950s for estimating the date at which two related languages diverged from a common ancestor, based on the rate at which basic vocabulary (a core list of fundamental words — body parts, pronouns, numbers, basic natural phenomena — resistant to borrowing from other languages) is replaced over time. Swadesh estimated that approximately 80 to 85% of core vocabulary is retained over a period of 1,000 years. By comparing the proportion of shared core vocabulary between two related languages, glottochronology provides an estimate of their time of divergence. The technique is controversial and now largely replaced by computational phylogenetic methods derived from evolutionary biology, which model language change with more sophisticated probabilistic algorithms and produce dated family trees for language families.</p>
 `,
-  'research-methods-in-anthropology': `
+  'research-methods-anthropology': `
 <h2>Technique, Method, and Methodology: Distinctions</h2>
 
 <p>Research is a careful investigation or inquiry, especially through search for new facts in any branch of knowledge.</p>
