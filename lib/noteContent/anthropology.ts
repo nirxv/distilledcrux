@@ -2047,4 +2047,193 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Today, most anthropologists accept that cultures do change in patterned ways but reject the idea that all cultures must pass through identical stages or that change is always progressive. Cultural change is better understood as adaptive and historical — shaped by specific environmental conditions, historical encounters, and internal dynamics — than as driven by a single universal law of progress.</p>
 `,
+
+  'nature-of-society': `
+<h2>Concept of Society</h2>
+
+<p>Society is one of the most fundamental yet contested concepts in social science. In its broadest sense, society refers to a group of people who share a common territory, interact with each other on a regular basis, and are bound together by a common culture, common institutions, and a sense of shared identity. While culture refers to the shared ideas, values, and practices of a group, society refers to the organised system of social relationships and institutions through which people interact.</p>
+
+<p>Several classical definitions illuminate different dimensions of the concept:</p>
+
+<ul>
+  <li><strong>Auguste Comte</strong> saw society as an organic whole composed of interdependent parts, each contributing to the maintenance of the whole, and insisted that it must be studied scientifically (positivism).</li>
+  <li><strong>Herbert Spencer</strong> drew an explicit analogy between society and a biological organism, arguing that society, like an organism, is composed of differentiated parts performing specialised functions and that its evolution follows a universal principle of increasing complexity and differentiation.</li>
+  <li><strong>Emile Durkheim</strong> defined society as a reality sui generis — a reality of its own kind, irreducible to the sum of the individuals who compose it. For Durkheim, society exercises a coercive power over individuals through social facts: ways of acting, thinking, and feeling external to the individual yet constraining upon them. The collective conscience — the totality of shared beliefs and feelings in a society — was, for Durkheim, the foundation of social life.</li>
+  <li><strong>Max Weber</strong> approached society from an interpretive (verstehende) perspective, arguing that social life consists of meaningful social action — action oriented to the behaviour of others. Society, in this view, is constituted through the ongoing meaningful interactions of individual actors rather than being a pre-given whole that acts upon individuals.</li>
+  <li><strong>Radcliffe-Brown</strong> defined social structure as the network of social relations connecting human beings in a particular community: the arrangement of persons in institutionally defined positions and roles.</li>
+  <li><strong>Talcott Parsons</strong> conceived of society as a social system that maintains itself through four functional imperatives: adaptation (adjusting to the environment), goal attainment (pursuing collective goals), integration (coordinating the parts), and latency or pattern maintenance (sustaining cultural values across generations) — the AGIL scheme.</li>
+</ul>
+
+<h2>Society and Social Structure</h2>
+
+<p>Social structure refers to the patterned, organised arrangements of social relationships, positions, roles, groups, and institutions that persist through time and give society its characteristic shape. The concept was central to structural-functionalist anthropology (Radcliffe-Brown, Evans-Pritchard) and to structural sociology (Durkheim).</p>
+
+<p>A.R. Radcliffe-Brown defined social structure as the network of social relations connecting human beings in a given community. He distinguished between the actual social structure (the specific network of relations at a given moment, which constantly changes as people are born, die, marry, and migrate) and the structural form (the general pattern that persists through these particular changes — the form that a student returning to a village after ten years would still recognise even though specific individuals have changed).</p>
+
+<p>Elements of social structure in Radcliffe-Brown's framework include:</p>
+
+<ul>
+  <li>Social groups of all kinds — families, clans, villages, associations, and states.</li>
+  <li>The internal structure of groups — the specific relational arrangements within them (e.g., a family consists of husband, wife, children, each in specific relations to the others).</li>
+  <li>The arrangement of groups and individuals into social classes and categories — based on sex, age, economic position, caste, or occupational specialisation.</li>
+  <li>Social distinctions based on differential rights, duties, and authority.</li>
+  <li>Dyadic relationships between individuals (e.g., master and servant, patron and client).</li>
+  <li>The ongoing processes of social interaction — cooperation, conflict, competition, accommodation — through which social structure is enacted and reproduced.</li>
+</ul>
+
+<h2>Community and Association</h2>
+
+<p>A fundamental distinction in sociological thought is between <strong>community</strong> (Gemeinschaft) and <strong>association</strong> (Gesellschaft), introduced by Ferdinand Tönnies in 1887.</p>
+
+<p><strong>Community (Gemeinschaft)</strong> denotes a form of social relationship based on natural will, personal bonds, shared sentiment, tradition, and a sense of belonging. It is characteristic of small-scale, face-to-face groups in which relationships are valued for their own sake — the family, the village, the neighbourhood, the religious congregation. In community, the whole person participates in relationships; ties are diffuse, enduring, and emotionally charged. Social control operates through shared values and the pressure of communal opinion rather than through formal law.</p>
+
+<p><strong>Association (Gesellschaft)</strong> denotes a form of social relationship based on rational will, contractual obligation, and calculated self-interest. It is characteristic of large-scale, urban, industrial societies in which relationships are specialised, temporary, and oriented toward specific ends — the corporation, the state, the trade union. In association, only a segment of the person participates in any given relationship; ties are specific, impersonal, and limited in duration. Social control operates through formal legal codes and bureaucratic regulation rather than through communal sentiment.</p>
+
+<p>Tönnies saw the historical transition from pre-modern to modern society as a transition from community to association as the dominant form of social life. He did not idealise community uncritically, but he was concerned about the loss of organic solidarity and personal warmth in the impersonal world of industrial capitalism.</p>
+
+<p>Durkheim addressed the same transition through his distinction between mechanical solidarity (typical of traditional societies, in which solidarity rests on the similarity of members — shared beliefs, values, and ways of life — and collective conscience is strong and penal law dominant) and organic solidarity (typical of modern industrial societies, in which solidarity rests on the interdependence produced by the division of labour — individuals are differentiated and need each other precisely because of their differences — and restitutive law dominates).</p>
+
+<h2>Norms and Institutions</h2>
+
+<h3>Norms</h3>
+
+<p>Norms are the shared rules or standards that govern behaviour in specific situations. They specify what people should and should not do, think, or feel in a given context. Norms are enforced through social sanctions — positive sanctions (rewards, praise, prestige) for conformity and negative sanctions (ridicule, ostracism, legal punishment) for deviance.</p>
+
+<p>Norms are conventionally classified by their relative importance:</p>
+
+<ul>
+  <li><strong>Folkways</strong> are relatively minor norms whose violation causes mild disapproval or social awkwardness — norms of table manners, greeting conventions, dress codes, and everyday courtesy. William Graham Sumner coined the term in 1906.</li>
+  <li><strong>Mores</strong> (singular: mos) are norms felt to be essential to the welfare of the group and whose violation is regarded as a serious moral offence. Incest, murder, desecration of sacred objects, and betrayal of the group are governed by mores. Violations trigger intense collective condemnation.</li>
+  <li><strong>Taboos</strong> are the strongest form of social prohibition — norms surrounding objects, actions, or categories that are regarded as so sacred or dangerous that even contact with them is forbidden. Many food taboos (e.g., prohibitions on eating pork among Muslims and Jews, or beef among Hindus) and the incest taboo are examples.</li>
+  <li><strong>Laws</strong> are formally codified norms backed by the coercive authority of the state. Unlike folkways and mores, which are enforced informally through community pressure, laws are enforced by specialised legal institutions — police, courts, prisons.</li>
+</ul>
+
+<h3>Institutions</h3>
+
+<p>Social institutions are organised systems of social relationships, norms, and roles that serve basic social functions and persist over time independently of the specific individuals who occupy positions within them. The major social institutions include the family, the economy, the political system (the state), education, religion, and medicine (health care).</p>
+
+<p>Several theoretical approaches to social institutions exist:</p>
+
+<ul>
+  <li><strong>Functionalist approach:</strong> Institutions exist because they fulfil necessary functions for the maintenance of society. The family provides biological reproduction, socialisation of children, and emotional support. Religion provides a system of ultimate meaning, social solidarity, and moral regulation. Each institution contributes to the functioning of the social whole.</li>
+  <li><strong>Conflict approach:</strong> Institutions reflect and reinforce the interests of dominant groups. Formal education, for example, transmits not only knowledge but the values and dispositions (habitus) of dominant classes, reproducing class inequality across generations. Religion, in Marx's analysis, is the opium of the people — a form of false consciousness that reconciles the oppressed to their condition by promising other-worldly compensation.</li>
+  <li><strong>Interpretive approach:</strong> Institutions are systems of shared meanings and definitions of reality. They are sustained by the ongoing interpretive activities of social actors who define situations, negotiate meanings, and maintain the appearance of objective social facts through everyday interaction.</li>
+  <li><strong>Malinowski's approach:</strong> Each institution has a charter (the system of values for which the institution exists), personnel (the organised group of participants), norms (the rules governing behaviour), material apparatus (the physical resources used), activities (what people actually do), and a function (the contribution the institution makes to the satisfaction of needs). Every institution is simultaneously biological, cultural, psychological, and social.</li>
+</ul>
+
+<h2>Role, Status, and Social Group</h2>
+
+<h3>Status</h3>
+
+<p>Status is a socially defined position in a group or society. The concept was systematically introduced by Ralph Linton in <em>The Study of Man</em> (1936). A status is not a person but a position — a slot in the social structure that carries with it certain rights and obligations. The same individual may occupy many different statuses simultaneously: a woman may simultaneously be a daughter, a mother, a doctor, and a citizen, each status carrying different expectations and obligations.</p>
+
+<p>Linton distinguished two types of status:</p>
+
+<ul>
+  <li><strong>Ascribed status</strong> is assigned to individuals regardless of their own efforts or wishes, on the basis of characteristics attributed to them at birth or at particular stages of life: sex, age, caste, race, and family of origin. Ascribed statuses are typically fixed and involuntary.</li>
+  <li><strong>Achieved status</strong> is acquired through individual effort, talent, and performance: occupational position, educational qualification, wealth, and athletic success. Modern industrial societies are characterised by a greater emphasis on achieved than ascribed status, though ascribed characteristics continue to shape access to achieved positions.</li>
+</ul>
+
+<p>A <strong>master status</strong> is a status that overrides all others in determining a person's social identity — one that most people in a given society assign priority to when categorising an individual. In many societies, gender, ethnicity, and caste function as master statuses, shaping how an individual is perceived across all contexts regardless of their other attributes.</p>
+
+<h3>Role</h3>
+
+<p>A role is the set of behaviours, obligations, and expectations associated with a particular status. If status is the position, role is what the occupant of the position does. A status is occupied; a role is performed or played. Roles are normatively defined — society specifies what a person occupying a given status should do, how they should behave, and what others can legitimately expect of them.</p>
+
+<p><strong>Role conflict</strong> occurs when an individual occupies two or more statuses that carry incompatible expectations. A working mother may face conflicting demands from her role as an employee (expected to work long hours, be available for meetings) and her role as a mother (expected to be present for children). Role conflict is a structural feature of complex societies in which individuals occupy many different statuses simultaneously.</p>
+
+<p><strong>Role strain</strong> occurs within a single role when the expectations associated with it are themselves contradictory or incompatible — as when a police officer is expected to be simultaneously a firm enforcer of the law and a compassionate community helper.</p>
+
+<p>Erving Goffman's dramaturgical approach treats social interaction as a kind of theatrical performance in which individuals present themselves to others and manage the impressions others form of them. Roles are scripts that actors perform on the stage of social life, adjusting their performance to the audience and the setting. <strong>Front stage</strong> behaviour is the public performance; <strong>back stage</strong> is what happens out of the audience's view, where actors can relax, rehearse, and depart from the official performance.</p>
+
+<h3>Social Group</h3>
+
+<p>A social group is a collection of two or more individuals who interact with one another, share a common identity, and have a sense of solidarity or belonging. Not every collection of people constitutes a social group: a crowd of strangers waiting at a bus stop is a social aggregate, not a group. A statistical category (all left-handed people) is not a group either. What makes a collection a group is ongoing interaction, mutual awareness, and a shared sense of membership.</p>
+
+<p><strong>Primary groups</strong> (coined by Charles Horton Cooley) are small, face-to-face groups characterised by close, personal, enduring relationships. The family, the peer group, and the circle of close friends are primary groups. Primary groups are the most important agents of socialisation and the locus of our deepest emotional ties.</p>
+
+<p><strong>Secondary groups</strong> are larger, more impersonal groups organised around specific purposes or goals. The school, the workplace, the political party, and the professional association are secondary groups. Relationships in secondary groups are typically segmental, temporary, and governed by formal rules rather than personal affection.</p>
+
+<p><strong>In-groups</strong> and <strong>out-groups</strong>: Every group defines itself partly by contrast with other groups. An in-group is the group with which an individual identifies ("we"); an out-group is any group perceived as different or alien ("they"). In-group solidarity is typically accompanied by out-group hostility or at least indifference — a phenomenon William Graham Sumner called ethnocentrism.</p>
+
+<p><strong>Reference groups</strong> are groups to which individuals orient their behaviour and attitudes even if they are not actual members. A working-class student at an elite university may use the norms and values of that university's student body as a reference group, evaluating her own behaviour by its standards even before she is fully accepted as a member.</p>
+
+<h2>Types of Societies: Band, Tribe, Chiefdom, and State</h2>
+
+<p>Anthropological classifications of societies by political organisation provide a comparative framework for understanding the full range of human social forms. Morton Fried and Elman Service offered influential typologies, with Service's four-stage scheme (band, tribe, chiefdom, state) being the most widely used pedagogically.</p>
+
+<h3>Band</h3>
+
+<p>Bands are the simplest and historically oldest form of human social organisation. They are small (typically 20 to 60 people), nomadic or semi-nomadic groups characterised by hunting and gathering subsistence. Bands are acephalous (headless) — they have no formal leaders or chiefs; leadership is situational and personal, exercised through persuasion rather than coercion. Decision-making is by consensus. Property is held collectively or individually but not accumulated as private wealth. Inequality is minimal — bands are typically egalitarian. Kinship and marriage are the primary organising principles. The Ju/'hoansi (San) of southern Africa, the Hadza of Tanzania, and the Andamanese are examples.</p>
+
+<h3>Tribe</h3>
+
+<p>Tribes are larger than bands (typically hundreds to a few thousand people) and are associated with horticulture (small-scale, non-intensive cultivation using hand tools) or pastoralism. Tribes have mechanisms for integrating multiple local groups — clans, lineages, age grades, warrior associations, or ritual sodalities — but typically lack a central political authority with the power to enforce decisions. The "big man" system in Melanesia (where influential individuals acquire followers through competitive generosity rather than inherited authority) is a characteristic tribal form. Tribes are generally more sedentary than bands and have greater social differentiation but remain essentially egalitarian in their lack of formalised ranking. The Nuer of South Sudan and the Yanomami of Amazonia are examples.</p>
+
+<h3>Chiefdom</h3>
+
+<p>Chiefdoms are ranked societies with a central political authority (the chief) whose position is typically hereditary and whose power derives from control over redistribution of resources rather than direct coercive force. In a chiefdom, not all lineages are equal — some are permanently ranked higher than others by their genealogical proximity to the chiefly lineage. Chiefdoms are associated with more intensive agriculture, larger populations (thousands to tens of thousands), craft specialisation, and long-distance trade. The chief's redistribution function — collecting surplus goods and redistributing them at ceremonies and feasts — creates economic integration and reinforces political authority. Classic chiefdoms include the Hawaiian Islands before European contact, the Zulu before the 19th-century wars, and many Polynesian societies.</p>
+
+<h3>State</h3>
+
+<p>States are the most complex and hierarchically differentiated form of political organisation. A state has a centralised government with a monopoly on the legitimate use of force (Weber's definition of the state) over a defined territory. States are stratified — they have permanent class divisions based on differential access to resources, not merely ranking. States are associated with intensive agriculture (capable of generating large, reliable surpluses), dense populations (tens of thousands to millions), urban centres, complex occupational specialisation, writing, long-distance trade, and formal legal codes backed by specialised coercive institutions (police, armies, courts, prisons). The earliest states arose in the ancient Near East (Mesopotamia), Egypt, the Indus Valley, China, Mesoamerica, and the Andes, between approximately 5,500 and 3,000 years ago.</p>
+
+<p>Morton Fried offered an alternative framework distinguishing egalitarian societies (no ranked positions, equal access to resources), ranked societies (some permanent positions of valued status but no differential access to basic resources), stratified societies (unequal access to basic resources), and state societies (with institutionalised social stratification and specialised coercive institutions). Fried's framework emphasises differential access to resources (stratification) as the key analytical dimension rather than political complexity alone.</p>
+
+<h2>Concepts of Power, Authority, and Legitimacy</h2>
+
+<p>Political organisation involves the management of power — the capacity to compel obedience or to affect the behaviour of others. Max Weber's typology of authority remains foundational.</p>
+
+<p><strong>Power</strong> is the ability to impose one's will on others, with or without their consent. Raw power is coercion.</p>
+
+<p><strong>Authority</strong> is legitimate power — power that is recognised as rightful by those who are subject to it. Without legitimacy, power must rely on constant coercion; with legitimacy, compliance is largely voluntary, which makes governance far more efficient. Weber distinguished three pure types of legitimate authority:</p>
+
+<ul>
+  <li><strong>Traditional authority</strong> rests on the sanctity of age-old traditions and the status of those who exercise authority under them. The leader is obeyed because "it has always been this way." Monarchies, tribal chieftainships, and patriarchal family authority are examples. The authority is personal but not arbitrary — it is constrained by tradition.</li>
+  <li><strong>Charismatic authority</strong> rests on the extraordinary personal qualities of a leader — the heroism, saintliness, or prophetic vision that inspires devotion and trust. Charismatic leaders arise in times of crisis or social upheaval and derive their authority not from tradition or law but from their followers' belief in their special gifts. Napoleon, Gandhi, and religious prophets are examples. Charismatic authority is inherently unstable because it depends on the personal qualities of a specific individual and must eventually be routinised (institutionalised) to survive the leader.</li>
+  <li><strong>Legal-rational authority</strong> rests on belief in the validity of formally enacted rules and the right of those elevated to authority under those rules to give commands. The modern bureaucratic state is the paradigm case: officials are obeyed because they occupy formally defined positions, not because of personal qualities or tradition. Authority is attached to the office, not the person; it is bounded by formal rules; officials are appointed on the basis of technical qualification rather than birth.</li>
+</ul>
+
+<h2>Social Control</h2>
+
+<p>Social control refers to the mechanisms through which societies ensure conformity to norms and maintain social order. Without some degree of social control, coordinated social life would be impossible. Social control operates at multiple levels and through multiple mechanisms.</p>
+
+<p><strong>Informal social control</strong> operates through the everyday social interactions that reward conformity and punish deviance — through gossip, ridicule, ostracism, praise, and expressions of approval or disapproval. It is most effective in small, face-to-face communities where people interact repeatedly and reputations matter. Most social control in all societies, including modern ones, is informal.</p>
+
+<p><strong>Formal social control</strong> operates through specialised institutions — legal codes, courts, police, and prisons — explicitly empowered to enforce norms. Formal social control is characteristic of complex, stratified societies where informal mechanisms alone are insufficient to maintain order across large, anonymous populations.</p>
+
+<p>Michel Foucault's analysis of discipline and surveillance added a crucial dimension: modern social control operates not primarily through overt coercion but through the internalisation of norms and the awareness of constant potential surveillance. The Panopticon — a prison designed so that inmates can always be observed without knowing whether they are being watched at any given moment — is Foucault's metaphor for modern disciplinary society, in which people regulate their own behaviour because they have internalised the gaze of authority.</p>
+
+<h2>Law and Legal Anthropology</h2>
+
+<p>Law refers to the system of formal, explicit rules backed by the coercive authority of a specialised institution. But legal anthropology has demonstrated that every human society has some system for regulating behaviour and resolving disputes, even societies without state-level political organisation and without anything recognisable as Western law.</p>
+
+<p>Bronislaw Malinowski challenged the assumption that law was absent in "primitive" societies, arguing in <em>Crime and Custom in Savage Society</em> (1926) that the Trobrianders maintained social order not through external coercive enforcement but through a system of reciprocal obligations — a network of mutual rights and duties embedded in social relationships, maintained by the expectation of reciprocity and the social consequences of defection. Malinowski's contribution was to show that binding obligation and regularity of conduct are not dependent on formalised legal institutions.</p>
+
+<p>E.A. Hoebel defined law as a social norm that is felt to be obligatory by those who recognise it and whose violation is countered by actual or threatened application of force by an individual or group possessing the socially recognised privilege of so acting.</p>
+
+<p>Paul Bohannan distinguished between rules and laws, arguing that law arises when a dispute moves out of one institutional sphere and is adjudicated by another — specifically, by a specialised legal institution. In societies without courts, dispute resolution remains embedded in kinship, religious, or community institutions rather than being handled by a separate legal apparatus.</p>
+
+<p>Cross-cultural mechanisms of dispute resolution include self-help (the aggrieved party acts directly against the offender), negotiation (parties settle directly), mediation (a neutral third party facilitates settlement), arbitration (a neutral third party imposes a settlement), and adjudication (a formal authority applies law to determine an outcome). The specific mechanism dominant in any society reflects its level of political complexity, its social structure, and its cultural values.</p>
+
+<h2>Conflict Resolution</h2>
+
+<p>All societies experience conflicts — over resources, territory, honour, marriage partners, and authority. All societies also have mechanisms for managing or resolving these conflicts. Unresolved conflicts threaten social cohesion and can destroy communities; hence, conflict resolution is a universal cultural concern.</p>
+
+<p>In acephalous (stateless) societies, conflict resolution relies primarily on kinship-based mechanisms. The Nuer of South Sudan use the leopard-skin chief — a ritual specialist with no coercive authority who mediates between feuding lineages, facilitating the payment of compensation (cattle) to end blood feuds. The institution has no formal power but is effective because it provides a face-saving mechanism that allows both parties to step back from escalating violence without loss of honour.</p>
+
+<p>Gluckman's "peace in the feud" analysis of African societies showed that overlapping social ties — when individuals who are enemies in one context are allies in another — actually prevent feuds from escalating into unlimited warfare. The cross-cutting ties of kinship, affinity, and shared ritual affiliation create structural pressure toward compromise.</p>
+
+<p>Avoidance is another conflict resolution mechanism: potential disputants simply avoid each other, preventing confrontation. Among the Mbuti of the Congolese forest, community fission — the splitting of a band into separate groups — is a classic conflict resolution strategy; groups that cannot get along simply separate.</p>
+
+<p>Religious and ritual mechanisms also serve conflict resolution functions. Oath-taking, oracles, ordeals, and rituals of reconciliation — in which contesting parties affirm their renewed commitment to a shared moral order — draw on sacred authority to legitimate and stabilise settlements that might otherwise be contested.</p>
+
+<h2>Social Stratification</h2>
+
+<p>Social stratification refers to the structured inequality of entire categories of people, who have differential access to the rewards that a society offers — wealth, power, prestige, and life chances. Stratification is systemic rather than individual: it is built into the organisation of society itself, not merely a consequence of individual differences in talent or effort.</p>
+
+<p>Three dimensions of stratification are commonly distinguished following Weber: class (economic position — differential access to the means of production and the market), status (social honour or prestige — differential ranking by community opinion), and party (power — capacity to influence collective decisions). These three dimensions do not always coincide: a nouveau riche individual may have class without status; a fallen aristocrat may retain status without class.</p>
+
+<p>Systems of stratification vary in their degree of openness — the extent to which individuals can move between strata through their own efforts. <strong>Closed systems</strong> are those in which position is ascribed at birth and movement between strata is prohibited or extremely difficult (e.g., the Hindu caste system, the estate system of feudal Europe, the racial caste system of apartheid South Africa). <strong>Open systems</strong> are those in which achieved characteristics matter and social mobility is structurally possible, though in practice it may be severely constrained (e.g., the class systems of modern capitalist societies).</p>
+`,
 };
