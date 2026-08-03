@@ -6049,7 +6049,171 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Christophe Jaffrelot: reservation policy has produced a "silent revolution" — the rise of the Other Backward Classes as a politically assertive and electorally dominant force in North India. The dominance of upper-caste Brahmins and Baniyas in Congress politics has been replaced by OBC-dominated regional parties. This is social change from below — without a revolution.</p>
 
 `,
-  'tribal-communities': '',
+  'tribal-communities': `
+<h2>Definitional Problems</h2>
+
+<p>Arthur Wilke noted: "For years ambiguity has stalked India's official portrait of tribal people." Sociologists, anthropologists, and social workers are still not on the same wavelength about the definition of a tribe. The term "tribe" is used loosely to describe over 700 communities notified under Article 342 of the Constitution — communities that constitute about 8% of India's population spread across about 15% of its geographic area.</p>
+
+<h3>Why Traditional Definitions Fail</h3>
+
+<table>
+  <tr><th>Traditional Criterion</th><th>Empirical Problem</th></tr>
+  <tr><td>Living in forests</td><td>Dublas of Surat and many others live in fertile plains, not forests</td></tr>
+  <tr><td>Primitive religion (animism)</td><td>Continuum from tribal gods to Hinduised tribes to those converted to Christianity or Islam</td></tr>
+  <tr><td>Geographic isolation</td><td>Hundreds of tribes — Bhils, Santhals, Irulas — are not living in isolation</td></tr>
+  <tr><td>Primitive economic system</td><td>Many peasant groups live by equally primitive economic systems without being classified as tribal</td></tr>
+  <tr><td>Economic backwardness</td><td>Many tribes (Khasi, Gond, Bhil) are more economically specialised than non-tribal neighbours</td></tr>
+  <tr><td>Common language or dialect</td><td>True in Assam and Central India but not for many Western and Southern Indian tribes</td></tr>
+  <tr><td>Political organisation</td><td>Some tribes have no single chief or even a tribal panchayat</td></tr>
+  <tr><td>Joint ownership of property</td><td>Among the Hos, exclusive joint ownership is not practised</td></tr>
+</table>
+
+<p>Why definitions broke down further: dynamics of tribes have changed; tremendous population increase and migration; welfare policies have disrupted traditional patterns. DN Majumdar: except for Eastern India, ethnic strains have crisscrossed throughout the subcontinent.</p>
+
+<h3>The Tribe-Caste Continuum</h3>
+
+<p>FG Bailey suggests the definition of tribe should be seen as a continuum with tribe at one end and caste at the other:</p>
+<ul>
+  <li><strong>Srikanth</strong> — tribals; semi-tribals; acultural tribes; assimilated tribes</li>
+  <li><strong>Ghurye</strong> — Hinduised tribes; partially Hinduised tribes; hill sections</li>
+  <li><strong>DN Majumdar</strong> — primitive tribes; tribes with some degree of association; Hinduised tribes</li>
+  <li><strong>Verrier Elwin</strong> — most primitive; individualistic; detribalised; tribal aristocrats</li>
+</ul>
+<p>Even Beteille concedes: "There is no satisfactory way to define a tribe. It can only be explained through a continuum."</p>
+
+<h3>Ministry of Tribal Affairs: Official Criteria</h3>
+<p>Primitive traits; distinctive culture; geographic isolation; shyness from the general population; backwardness. Mnemonic: <strong>RIPPELD</strong> — Religion; Isolation; Political organisation; Property; Living place; Economy; Dialects.</p>
+
+<h2>Geographical Spread</h2>
+<ul>
+  <li><strong>North-Northeast Zone</strong> — Ladakh, Himachal Pradesh, Uttarakhand, Sikkim, and seven Northeast states</li>
+  <li><strong>Central Zone</strong> — West Bengal, Odisha, Bihar/Jharkhand, southern UP, southern Rajasthan, Gujarat, MP, Maharashtra</li>
+  <li><strong>Southern Zone</strong> — AP, Tamil Nadu, Karnataka, Kerala, Andaman and Nicobar Islands</li>
+</ul>
+<p>Major tribes: Gonds (4 million+); Bhils (4 million+); Santhals (3 million+). Mostly patrilineal, but Garos matrilineal. Religions vary: Nagas/Mizos/Santhals — Christianity; Bhutias/Lepchas — Buddhism; Bhils — Hinduism. Occupations: food gathering, forestry, jhum cultivation, wage labour.</p>
+
+<h2>Colonial Policies and Their Impact</h2>
+
+<p>Mnemonic <strong>CAFE</strong>: Christian Missionaries; Administrative policies; Forest policies; Exclusion.</p>
+
+<h3>Administrative Policies (Three Phases)</h3>
+
+<p><strong>Phase 1 (1782–1827):</strong> Paharias of Rajmahal Hills revolted against Hindu zamindars. Administrator Cleveland created special tribal administration giving jurisdiction to local elders — failed due to corruption.</p>
+
+<p><strong>Phase 2 (1855–1919):</strong> Santhal Rebellion (1855) led to a separate Santhal district. Queen's Proclamation (1858) — right to own culture. 1861 Act — special tribal administration. 1870 Act — Scheduled Tracts created. 1919 Act — Backward Tracts introduced (only law modification) alongside Scheduled Tracts (exclusive administration).</p>
+
+<p><strong>Phase 3 (1919–1947):</strong> GOI Act 1935 — Partially Excluded Areas (Governor sought advice) and Wholly Excluded Areas (Governor's discretion). British feared tribals joining the freedom movement. In practice, isolation was compromised by extractive interests in mineral-rich tribal regions.</p>
+
+<h3>Forest Policies</h3>
+
+<ul>
+  <li>Lord Dalhousie declared teak state property; restricted Minor Forest Produce collection</li>
+  <li>1855 — formal forest policy; 1865 — restrained local customs</li>
+  <li><strong>1878 Forest Act</strong> — Reserve, Protected, and Village forests; restricted tribal ownership; beginning of community alienation from forests</li>
+  <li>Five successive Acts (1901–1927) transferred forests from common property to state property</li>
+  <li><strong>1952 National Forest Policy</strong> — national interest paramount; Adivasis treated as "enemies of the forests"; traditional rights abolished</li>
+  <li><strong>1988 Forest Policy</strong> — people-oriented objectives; still retained exclusive state ownership</li>
+  <li><strong>Forest Rights Act 2006</strong> — corrects historic injustice; three types of rights: user rights (MFP), ownership rights (4 hectares/family), control rights (communal land). Gram Sabha consent mandatory for forest land diversion. IPR on traditional knowledge recognised.</li>
+</ul>
+
+<h3>Christian Missionaries</h3>
+<p>Contributed schools and hospitals in remote areas. Main ideology was assimilation into Christianity — disrupting traditional cultural practices. Contributed to high literacy in the Northeast (Nagaland, Mizoram, Arunachal Pradesh among most literate states).</p>
+
+<h2>Issues of Integration and Autonomy</h2>
+
+<p><strong>Assimilationists</strong> — tribes should be absorbed into larger Indian society; uniform administration; colonial baggage labels should go.</p>
+<p><strong>Liberals</strong> — integration with autonomy; respect for plurality; self-governing rights alongside mainstream participation.</p>
+
+<h3>Nehru's Panchsheel (CLTOR)</h3>
+<ul>
+  <li><strong>C</strong>ulture — encourage tribal arts; do not impose anything on them</li>
+  <li><strong>L</strong>and rights — tribal rights in land and forest must be respected</li>
+  <li><strong>T</strong>eam — train their own people for administration; avoid too many outsiders</li>
+  <li><strong>O</strong>ver-administration — do not overwhelm with schemes; work through their own institutions</li>
+  <li><strong>R</strong>esults — judge not by statistics or money but by quality of human character evolved</li>
+</ul>
+
+<p>BN Majumdar proposed "Limited Assimilation" — absorbing useful tribal practices while preserving autonomy. UN Dhebar Commission (1960) endorsed integration policy. The singular success of NEFA (now Arunachal Pradesh) — implemented under Verrier Elwin's guidance — resulted in the only Northeast state not convulsed with militancy, and certain tribes achieving 100% literacy. Elwin: "Integration can only take place on the basis of equality: moral and political equality."</p>
+
+<h2>Constitutional Safeguards</h2>
+
+<table>
+  <tr><th>Provision</th><th>Content</th></tr>
+  <tr><td><strong>Article 15(4)</strong></td><td>Special provisions for educational advancement of STs</td></tr>
+  <tr><td><strong>Article 46</strong></td><td>State to promote educational and economic interests of STs; protect from exploitation</td></tr>
+  <tr><td><strong>Articles 330 and 332</strong></td><td>Reserved seats for STs in Lok Sabha and State Assemblies</td></tr>
+  <tr><td><strong>Article 339(1)</strong></td><td>President may appoint Commission on welfare of STs</td></tr>
+  <tr><td><strong>Article 342</strong></td><td>President notifies Scheduled Tribes in consultation with Governor</td></tr>
+  <tr><td><strong>Fifth Schedule</strong></td><td>Administration of Scheduled Areas; Tribal Advisory Councils</td></tr>
+  <tr><td><strong>Sixth Schedule</strong></td><td>Autonomous District Councils for Northeast tribal areas</td></tr>
+  <tr><td><strong>PESA (1996)</strong></td><td>Gram Sabha empowered for land acquisition consent, MFP management, dispute resolution in Scheduled Areas</td></tr>
+</table>
+
+<h2>Problems of Tribal Communities</h2>
+
+<p><strong>Displacement:</strong> Walter Fernandes estimates 60 million+ displaced by development since independence — disproportionately tribal. Big dams (Sardar Sarovar, Hirakud, Tehri), mining, wildlife sanctuaries, linear projects. Rehabilitation woefully inadequate. Narmada Bachao Andolan (Medha Patkar) is the most prominent resistance movement.</p>
+
+<p><strong>Forest and land alienation:</strong> Despite FRA 2006, implementation inadequate. Forest departments continue filing encroachment cases. Mining leases allocated over tribal objections. Colonial legacy of treating tribals as encroachers on ancestral lands persists.</p>
+
+<p><strong>Naxalism:</strong> The Red Corridor (Chhattisgarh, Jharkhand, Odisha, AP) is the epicentre of Naxalite insurgency — drawing support from landlessness, displacement, denial of forest rights, and caste violence. State's "Operation Green Hunt" criticised for treating a socio-economic problem as a law and order problem.</p>
+
+<p><strong>Poor development indicators:</strong> Literacy 59% for STs vs 73% national average (Census 2011); highest dropout rates; significantly higher infant and maternal mortality; 75 PVTGs (Particularly Vulnerable Tribal Groups) showing population stagnation.</p>
+
+<p><strong>Cultural erosion:</strong> Tribal identity carries social stigma. Traditional knowledge and arts commodified (Madhubani, Warli, Gond art) with little community benefit. Liquor proliferation breaking traditional cultural controls.</p>
+
+<p><strong>Elite capture:</strong> A small educated tribal elite corners the bulk of reservation benefits while the most marginalised tribals in remote areas receive little — the creamy layer problem.</p>
+
+<p><strong>Lack of voice:</strong> Despite reserved constituencies, tribal representation is mediated through mainstream parties. Gram Sabhas under PESA remain weak — poorly funded, dominated by local elites.</p>
+
+<h2>Tribal Movements</h2>
+
+<p>Three broad forms of tribal response: coexistence (Meena and Bhils in Rajasthan); absorption into dominant group (Khond and Oraon through Hinduisation); secession seeking political independence (Nagas, Mizos — led to separate states).</p>
+
+<p><strong>Colonial-era revolts:</strong> Santhal Hul (1855-56) — Sidhu and Kanhu against zamindars; led eventually to Santhal Pargana. Munda Ulgulan (1899-1900) — Birsa Munda's millenarian movement; Birsa died in custody; led to Chhota Nagpur Tenancy Act (1908). Khasi Rising (1829-33) — U Tirot Sing resisted British annexation.</p>
+
+<p><strong>Post-independence movements:</strong> Naga movement (NNC; Nagaland statehood 1963; insurgency continued); Mizo movement (Laldenga; peace accord 1986; Mizoram statehood); Jharkhand movement (separate state 2000; Chhattisgarh also created); Narmada Bachao Andolan; forest rights movements demanding FRA 2006 implementation.</p>
+
+<h2>Government Schemes and Institutions</h2>
+
+<table>
+  <tr><th>Scheme/Institution</th><th>Purpose</th></tr>
+  <tr><td><strong>Ministry of Tribal Affairs (MoTA)</strong></td><td>Policy, planning, coordination, central sponsored schemes</td></tr>
+  <tr><td><strong>Tribal Sub Plan (TSP)</strong></td><td>Earmarked funds across ministries for ST development: skill development, horticulture, dairy, fisheries, education, sports, culture</td></tr>
+  <tr><td><strong>NSTFDC</strong></td><td>Credit and interest subvention for tribal self-employment</td></tr>
+  <tr><td><strong>TRIFED</strong></td><td>Marketing of MFP; value chain development; Tribes India outlets</td></tr>
+  <tr><td><strong>MSP for MFP</strong></td><td>Minimum Support Price for 87 Minor Forest Produce items; prevents trader exploitation</td></tr>
+  <tr><td><strong>PVTGs</strong></td><td>Special assistance for 75 most vulnerable tribal groups</td></tr>
+  <tr><td><strong>Eklavya Model Residential Schools (EMRS)</strong></td><td>Quality residential education for tribal children; one per block with 50%+ ST population</td></tr>
+  <tr><td><strong>Van Bandhu Kalyan Yojana</strong></td><td>Outcome-based convergence of all schemes; 14 thematic areas</td></tr>
+  <tr><td><strong>District Mineral Foundation</strong></td><td>Mining royalties spent on welfare of mining-affected communities</td></tr>
+  <tr><td><strong>NCST</strong></td><td>Investigates safeguards, recommends policy changes</td></tr>
+</table>
+
+<h2>Virginius Xaxa Committee Recommendations (2014)</h2>
+<ul>
+  <li>Gram Sabha to be empowered even for linear acquisitions traversing tribal land</li>
+  <li>Acquired but unused lands to be returned to original tribal owners</li>
+  <li>Tribal cooperatives to get priority in mining leases in scheduled areas</li>
+  <li>No large dams in areas inhabited by PVTGs</li>
+  <li>Naxalite-related killings to be probed by independent judicial enquiries</li>
+  <li>Strict enforcement of PESA and Forest Rights Act</li>
+  <li>Dedicated tribal health system with community health workers from within communities</li>
+</ul>
+
+<h2>Challenges in Tribal Development</h2>
+<ul>
+  <li>Historical colonial exploitation — forest and land alienation still not fully reversed</li>
+  <li>Displacement with inadequate rehabilitation</li>
+  <li>Physical remoteness — poor infrastructure and last-mile connectivity</li>
+  <li>Language barriers — teaching in non-tribal languages creates educational exclusion</li>
+  <li>Weakening tribal research institutes — poor funding, lack of tribal researchers</li>
+  <li>Inefficient TSP fund utilisation — siphoned to non-tribal projects</li>
+  <li>Security issues — Naxalism conflates genuine tribal grievance with insurgency</li>
+  <li>Elite capture of reservation benefits</li>
+  <li>Environmental degradation affecting tribal livelihoods and health</li>
+  <li>Lack of voice and representation in contemporary political circles</li>
+</ul>
+`,
   'social-classes-india': '',
   'kinship-systems-india': '',
   'religion-society-india': '',
