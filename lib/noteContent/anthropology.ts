@@ -3565,7 +3565,7 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Harold Conklin's pioneering work on the Hanunoo of the Philippines demonstrated that they distinguished 1,625 types of plants in their lands, of which 93 percent were culturally significant — transforming our understanding of the diversity and value of tropical rainforests and of indigenous botanical knowledge. His study of Hanunoo colour categories showed that they did not segment the colour spectrum in the same way as Western colour terms: their complex system could be reduced to four terms associated with lightness/darkness and wetness/dryness, demonstrating the need to distinguish between universal sensory reception and culturally specific perceptual categorisation.</p>
 
 <p>Cognitive anthropology was criticised by Keesing for being unable to move beyond the analysis of artificially simplified and often trivial semantic domains (colour categories, folk taxonomies), without being able to elucidate their relevance to understanding culture as a whole. Questions remain about whether results reflect how individuals actually organise and perceive society or whether they are manufactured by investigators. Universal agreement on how to access culture in the mind has yet to emerge.</p>
-`
+`,
 
   'culture-language-communication': `
 <h2>Language as a Human Universal</h2>
