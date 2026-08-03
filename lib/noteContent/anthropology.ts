@@ -2236,4 +2236,239 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Systems of stratification vary in their degree of openness — the extent to which individuals can move between strata through their own efforts. <strong>Closed systems</strong> are those in which position is ascribed at birth and movement between strata is prohibited or extremely difficult (e.g., the Hindu caste system, the estate system of feudal Europe, the racial caste system of apartheid South Africa). <strong>Open systems</strong> are those in which achieved characteristics matter and social mobility is structurally possible, though in practice it may be severely constrained (e.g., the class systems of modern capitalist societies).</p>
 `,
+  'marriage-family-kinship': `
+<h2>Marriage: Definitions and Universality</h2>
+
+<p>Marriage is a cross-culturally universal institution, though its forms and rules vary enormously. As a social institution, marriage performs biological, economic, social, and educational functions simultaneously.</p>
+
+<p>Marriage serves four core functions. Biologically, it organises sexual activity, validates reproduction, and establishes the legitimacy of children. Economically, it creates a unit for the division of labour between sexes and the pooling of resources. Socially, it generates new kinsmen — a spouse's relatives are added to one's own kin group — and assigns parental responsibility for socialising the next generation. Educationally, it transmits culture across generations by transforming young adults into responsible parents.</p>
+
+<h2>Forms of Marriage</h2>
+
+<h3>Monogamy</h3>
+<p>Marriage between one man and one woman at a time. The most widespread form in the contemporary world, but not necessarily the most preferred cross-culturally. Serial monogamy — remarriage after divorce or widowhood — is distinct from lifelong monogamy.</p>
+
+<h3>Polygyny</h3>
+<p>One man married to two or more women simultaneously. The most common form of plural marriage across cultures. Factors favouring polygyny include high bride wealth, differential sex ratios, and the high economic contribution of women to subsistence. Found widely in Africa, the Middle East, and parts of South and Southeast Asia.</p>
+
+<h3>Polyandry</h3>
+<p>One woman married to two or more men simultaneously. Rare globally. Of two types:</p>
+<ul>
+  <li><strong>Fraternal polyandry (adelphic):</strong> A woman marries two or more brothers. Found among the Toda of the Nilgiri Hills (South India), the Jaunsari of Uttarakhand, and in Tibet. Among the Jaunsari, the primary cause documented by researchers is economic — fraternal polyandry prevents subdivision of family land. Among the Toda, there was a severe female shortage (ratio roughly 5:2), which also contributed.</li>
+  <li><strong>Non-fraternal polyandry:</strong> A woman marries two or more unrelated men. Rare, found among a few groups in South Asia.</li>
+</ul>
+
+<h3>Polygyandry (Group Marriage)</h3>
+<p>Two or more men married simultaneously to two or more women. Theoretically possible but not consistently documented as a stable institution in any society. Karnataka, Andhra Pradesh, Tamil Nadu, and some castes of Malabar have been reported to have both polygyny and polyandry. Technically, three forms of marriage exist: monogamous, polygamous, and polygyandrous.</p>
+
+<h2>Rules Governing Marriage: Proscriptive, Prescriptive, and Preferential</h2>
+
+<h3>Proscriptive Rules</h3>
+<p>Proscriptive rules prohibit marriage with certain categories of kin. The most universal proscription is the <strong>incest taboo</strong> — the prohibition of sexual intercourse or marriage between specified close relatives. In all known societies, mother-son, father-daughter, and brother-sister sexual relations are prohibited. The scope of the taboo beyond the nuclear family varies culturally.</p>
+
+<h4>Theories Explaining the Incest Taboo</h4>
+
+<p><strong>Childhood Familiarity Theory (Westermarck):</strong> People closely associated in early childhood develop sexual aversion toward one another and would therefore avoid marriage. Supported by studies of Israeli kibbutzim children (raised together, rarely marry each other) and Shim-pua marriages in Taiwan (girls adopted as infants and raised as future daughters-in-law show lower marital success). Limitation: does not explain why explicit taboos are needed if disinterest is natural.</p>
+
+<p><strong>Psychoanalytic Theory (Freud):</strong> The incest taboo is a reaction against unconscious, unacceptable desires — the son is attracted to his mother (Oedipus complex), the daughter to her father (Electra complex). The taboo suppresses and channels these unconscious impulses. Limitation: explains only parent-child incest, not sibling incest; and does not explain why a cultural rule is needed for impulses that are repressed anyway.</p>
+
+<p><strong>Family Disruption Theory (Malinowski):</strong> Sexual competition among family members would create rivalry and tension that would prevent the family from functioning as an effective social unit. The incest taboo is imposed to keep the family intact. Limitation: does not explain why adult sibling marriage cannot be permitted once children are grown; and brother-sister marriages did exist among ancient Egyptian royalty (Cleopatra married two of her brothers) for religious and property reasons.</p>
+
+<p><strong>Cooperation Theory (Tylor, White, Lévi-Strauss):</strong> The incest taboo forces individuals to marry outside the family group, creating alliances between families and thus holding communities together. Tylor framed the choice as "marry out or be killed out." Limitation: does not explain why all marriages within the family must be prohibited — some out-marriages could have been required while others within the family were permitted; and does not explain the sexual aspect of the taboo.</p>
+
+<p><strong>Inbreeding Theory:</strong> Inbreeding increases the probability of offspring inheriting harmful recessive genes. William Durham's cross-cultural survey found that biological harm to offspring from incest was mentioned in 50% of ethnographic reports, suggesting widespread recognition of this harm. Limitation: requires people to have known the genetic consequences, a sophisticated understanding that earlier populations may not have had.</p>
+
+<p>When unilineal descent is strongly developed, the parent not belonging to one's own descent group is not considered a relative in the formal sense — with strict patrilineality, the mother is technically an affine (in-law), not a blood relative. Thus, incest prohibitions in unilineal systems may cover different genealogical positions than in bilateral systems.</p>
+
+<h3>Prescriptive Rules: Endogamy and Exogamy</h3>
+
+<p><strong>Exogamy</strong> is the rule requiring marriage outside one's own group — clan, lineage, village, or moiety. Exogamy is closely linked to the incest taboo: if kin groups are exogamous, members must seek spouses from other groups, creating alliances. Most unilineal descent groups are exogamous.</p>
+
+<p><strong>Endogamy</strong> is the rule requiring marriage within one's own group — caste, community, religious group, or tribe. Caste endogamy in India is the most studied form. Endogamy reinforces group boundaries, maintains social stratification, and keeps property within the group.</p>
+
+<p><strong>Hypergamy</strong> is a system where a woman marries upward — a man gets his daughter married to a person of the same or higher social status. In Hindu society this is called Anuloma. It is practised to retain the social status and prestige of the family.</p>
+
+<p><strong>Hypogamy</strong> is the reverse — a woman marrying downward into a lower caste. In Hindu society this is called Pratiloma. It is generally prohibited in the traditional Hindu caste system, as it is believed to cause ritual pollution.</p>
+
+<h3>Preferential Rules: Cousin Marriage, Levirate, Sororate</h3>
+
+<h4>Cousin Marriages</h4>
+
+<p><strong>Cross-cousin marriage</strong> is marriage between a man and either his mother's brother's daughter (MBD) or his father's sister's daughter (FZD). This is the most common form of preferential marriage among tribal communities in India. Marriage with MBD is more common. Practised by Garos, Khasis, Kukis, Karbis, Nagas, Gonds, Oraons, Baigas, and many tribes of Northeast India, as well as in Melanesia, Sri Lanka, Australia, and Polynesia.</p>
+<ul>
+  <li><strong>Symmetrical (bilateral):</strong> Both MBD and FZD are acceptable as spouses. Found among the Dravidians and tribes of Assam.</li>
+  <li><strong>Asymmetrical (unilateral):</strong> Only one type is prescribed. Matrilateral (MBD): more common. Patrilateral (FZD): found among the Trobriand Islanders of Melanesia. The Murngins of Australia and the Miwok of California practice asymmetrical cross-cousin marriage.</li>
+</ul>
+<p>Cross-cousin marriage is functionally significant because it acts as a balance against a high bride price — the bride price paid by one family is eventually returned when a daughter from the same family marries back into the original family.</p>
+
+<p><strong>Parallel-cousin marriage</strong> is marriage between a man and either his father's brother's daughter (FBD) or his mother's sister's daughter (MZD). Less common than cross-cousin marriage and prohibited in most societies where cross-cousin marriage is allowed. Found among Semitic Arabs, Muslims of India, the Riangs of Tripura, and the Bedouins of Arabia. The Bedouins practice this form as it keeps males within the band for purposes of defence. In most societies, parallel cousins are treated like siblings — a joking relationship prevails with cross-cousins (because marriage is possible), while a respect relationship prevails with parallel cousins (because the incest taboo applies).</p>
+
+<h4>Levirate</h4>
+<p>From the Latin <em>levir</em> (husband's brother): a widow marries her deceased husband's brother. Common in patrilineal societies where the brother inherits not only the status and property of the deceased but also the obligation to care for the widow and her children. Practised by the Biblical Hebrews, Incas, Muslims of India, Kukis, Lushais, Nagas, Karbis, and Veddas.</p>
+<ul>
+  <li><strong>Junior levirate:</strong> Widow marries the younger brother of the deceased. More common.</li>
+  <li><strong>Senior levirate:</strong> Widow marries the elder brother. Found among the Bhumij, Hos, Panions, Kirghiz, Turks, and Mongoloids.</li>
+</ul>
+<p>The levirate is regarded more as a duty than a right — the nearest male relative is obliged to care for the widow and her children, and the children of the new couple may be socially regarded as the children of the dead man.</p>
+
+<h4>Sororate</h4>
+<p>From the Latin <em>soror</em> (sister): a widower marries his deceased wife's sister. Practised by Hindus, Muslims, and many Indian tribes, and found virtually among every tribe of North America outside the Pueblo area.</p>
+<ul>
+  <li><strong>Senior sororate:</strong> Widower marries the elder sister of the deceased wife. Limited in distribution.</li>
+  <li><strong>Junior sororate:</strong> Widower marries the younger sister. More common globally.</li>
+</ul>
+
+<h2>Marriage Payments</h2>
+
+<p><strong>Bride price (bride wealth):</strong> A gift of money or goods from the groom or his kin to the bride's kin. The most common form of economic transaction at marriage globally — 44% of societies with marriage transactions practice it. Especially common in Africa and Oceania. Payment can be in livestock, food, or increasingly money. Among the Nandi, bride price consists of five to seven cattle, sheep and goats, cowrie shells, and cash. Societies with bride price tend to be horticultural, lack social stratification, and are those where women contribute substantially to subsistence. Subanun of the Philippines have an exceptionally high bride price — several times the groom's annual income plus three to five years of bride service.</p>
+
+<p><strong>Bride service:</strong> The groom works for the bride's family, either before or after marriage. Varies in duration from months to years. Among North Alaskan Eskimos, the boy works for in-laws after marriage is arranged. May substitute for bride price when the groom cannot pay.</p>
+
+<p><strong>Exchange of females:</strong> Two families exchange women directly. Found among the Tiv of Nigeria and the Yanomami of Brazil. Common in egalitarian horticultural societies where women contribute more to economic activities.</p>
+
+<p><strong>Gift exchange:</strong> Both kin groups exchange gifts of roughly equal value. Found among the Andaman Islanders, where the parents of the couple cease direct communication and exchange food and gifts through a third party until the marriage is completed.</p>
+
+<p><strong>Dowry:</strong> A transfer of goods or money from the bride's family to the bride, the groom, or the couple. Common in medieval and Renaissance Europe and still practised in parts of Eastern Europe, southern Italy and France, and parts of India. Associated with societies where women contribute little to subsistence, where social stratification is high, and where polygyny is restricted. The size of the dowry historically determined the desirability of the daughter.</p>
+
+<p><strong>Indirect dowry:</strong> The groom's family provides goods that go first to the bride's father, who passes most of them to the bride. Because goods originate from the groom's side but ultimately go to the bride, this is called indirect dowry.</p>
+
+<h2>Ways of Acquiring Mates in Tribal Societies</h2>
+
+<p>Tribal marriages in India are treated more as social and civil contracts than religious sacraments, and involve a variety of methods for acquiring spouses:</p>
+
+<ul>
+  <li><strong>Probationary marriage:</strong> The youth lives in his potential spouse's house for weeks or months. If both agree, marriage follows; otherwise the boy pays compensation. Practised by the Kuki tribe of Arunachal Pradesh.</li>
+  <li><strong>Marriage by capture:</strong> Either ceremonial or forceful. Often occurs when parents refuse consent or bride price cannot be paid. Ceremonial capture may involve smearing vermillion on the girl's forehead (as among the Birhor). Practised by the Kondha, Juang, Bhuinya, Kharia, Birhor, Nagas.</li>
+  <li><strong>Marriage by trial:</strong> A young man demonstrates courage in assigned competition and earns the right to choose a bride. Practised by the Bhils.</li>
+  <li><strong>Marriage by purchase (bride price):</strong> Groom's family pays the girl's family in cash or kind before marriage. Found among Kondh, Juang, Ho, Munda, and Rengma Nagas.</li>
+  <li><strong>Marriage by service:</strong> When the groom cannot afford bride price, he works in the prospective father-in-law's household for a fixed period, equalising the debt. Practised by Gond and Baiga.</li>
+  <li><strong>Marriage by exchange:</strong> Two families exchange daughters, bypassing bride price. Found among Kondh, Saora, Juang, Bhuiyan, Santal.</li>
+  <li><strong>Marriage by elopement:</strong> The couple flees when parents refuse consent. Bride price is avoided. The couple may later be accepted back. Found among Juang, Santal, Bhuinya, Kondha, Saora.</li>
+  <li><strong>Marriage by intrusion:</strong> The reverse of capture — a girl forces herself into a reluctant man's household and endures humiliation until accepted. Found among Juang, Kondh, Bhuiyan, Birhor, and Ho tribes of Chhattisgarh.</li>
+  <li><strong>Inheritance of widow:</strong> A man inherits his deceased father's widow (other than his own mother) as a customary obligation, thereby also inheriting the family property. Practised by Sema Nagas, Santal, Bhuinyan, Juang, and Kondh.</li>
+</ul>
+
+<h2>Divorce in Tribal Societies</h2>
+
+<p>Divorce is practised in tribal communities but is not arbitrary — recognised grounds include incompatibility, adultery, disease, barrenness, impotency, laziness, economic incapacity, and mistreatment. Since tribes do not regard marriage as a religious sacrament, divorce procedure is relatively simple — typically decided by the tribal council in a public setting. Both husband and wife may initiate divorce. If a wife deserts or commits adultery, she must arrange return of the bride price. Grounds vary by tribe: Gonds permit divorce for infidelity, carelessness, barrenness, and quarrelsomeness; Khasis permit it for adultery, barrenness, and incompatibility; Kharia allows it for infidelity, sterility, laziness, and the wife's refusal to cohabit.</p>
+
+<h2>Family</h2>
+
+<h3>Definitions</h3>
+<ul>
+  <li>Maclver: A group defined by a sexual relationship sufficiently precise and enduring to provide for the procreation and upbringing of children.</li>
+  <li>Nimkoff: A more or less durable association of husband and wife, with or without children, or of a man or woman alone with children.</li>
+  <li>Burgess and Locke: A group of persons united by ties of marriage, blood or adoption, constituting a single household, interacting in their respective roles of husband and wife, father and mother, son and daughter, brother and sister, creating a common culture.</li>
+</ul>
+
+<h3>Characteristics of Family</h3>
+<p>Every family involves: a marital relationship; stable satisfaction of sexual needs; procreation and rearing of children; a system of nomenclature and descent reckoning; economic provision for members; and a common habitation.</p>
+
+<h3>Is the Family Universal?</h3>
+<p>George Peter Murdock (1949), in <em>Social Structure</em>, examined 250 societies from foragers to industrialised states and concluded that some form of the nuclear family — husband, wife, and children living together, cooperating economically, and maintaining a socially approved sexual relationship — existed in every society.</p>
+
+<p>This universality claim was challenged by Kathleen Gough's (1959) study of the <strong>Nayar</strong> of Kerala. Nayar girls were ritually married before puberty in the <em>tali rite</em>; after this the tali husband had no obligations except to receive mourning at his death. After puberty, a Nayar woman took multiple visiting or <em>sandbanham</em> husbands — warrior men who visited at night and left by morning. Either party could end the relationship at will. Sandbanham husbands had no obligation to maintain the wife or children; economic cooperation occurred among a group of brothers and sisters, not between spouses. When a woman became pregnant, it was essential that a man of appropriate caste declare paternity (by paying a fee to the midwife) but biological paternity was irrelevant. In Nayar society, those who maintained a sexually approved relationship did not live together or cooperate economically — so by Murdock's own definition, no family existed. Either Murdock's definition is too narrow, or the family is not universal.</p>
+
+<p>Additionally, matrifocal families (female-headed households without adult males) are documented in significant proportions of Black Caribbean, Central American, and US communities. Gay and lesbian households further challenge Murdock's requirement for adults of both sexes. Yanina Sheeran argues that the female-carer core — not the nuclear family — is the most basic family unit. Diana Gittins concludes that relationships are universal and so is some form of co-residence, but the specific form of the family is not.</p>
+
+<h3>Types of Family</h3>
+
+<p><strong>Nuclear family:</strong> Husband, wife, and their unmarried children. The simplest family unit. Most prominent in industrial and post-industrial societies with high geographic mobility.</p>
+
+<p><strong>Extended/joint family:</strong> Two or more nuclear families joined by blood ties — typically parents and their married sons and daughters-in-law, sharing a common residence, hearth, and property. A joint family has an ancestral property and members are bound by mutual obligations. Found extensively in South Asia. In Karnataka, Andhra Pradesh, Tamil Nadu, and among some castes of Malabar, the patrilineal and patrilocal joint family dominates; in the northern zone similar structures predominate.</p>
+
+<p><strong>Matrifocal family:</strong> A household centred on a mother and her children, without a consistently present male. Most common where male employment requires long absences or where marriage is unstable.</p>
+
+<h2>Kinship</h2>
+
+<h3>Definitions and Meaning</h3>
+<ul>
+  <li>Lévi-Strauss: Kinship and its related notions are at the same time prior and exterior to biological relations to which we tend to reduce them.</li>
+  <li>Radcliffe-Brown (1952): Kinship terms are like signposts to interpersonal conduct or etiquette, with the implication of appropriate reciprocal rights, duties, privileges, and obligations.</li>
+  <li>Robin Fox: The study of kinship is the study of what man does with these basic facts of life — mating, gestation, parenthood, socialisation, siblingship.</li>
+  <li>J. Beattie: Kinship is not a set of genealogical relationships; it is a set of social relationships.</li>
+  <li>MacLennan: Kinship terms are merely forms of salutation and not related to actual blood ties.</li>
+</ul>
+
+<p><strong>Consanguinity</strong> is kinship through shared ancestry — biological kin. <strong>Affinity</strong> is kinship through marriage. In some societies, fictive kin (godparents, adoptees) are treated as consanguines. Consanguineous kinship is universal; the scope of who counts as a consanguine varies culturally.</p>
+
+<h3>Kinship Diagrams and Genealogies</h3>
+<p>Anthropologists construct kinship diagrams from the perspective of <em>ego</em> — a schematic showing all kin relations of a particular individual using standardised symbols. A genealogy, by contrast, begins with the earliest traceable ancestor and works downward. When Robin Fox attempted to use ego-centred diagrams among Tory Islanders, they preferred the genealogical approach, so he followed their preference — illustrating that methodological choice must sometimes defer to cultural preference.</p>
+
+<h2>Descent: Principles and Types</h2>
+
+<p>Descent denotes the relationship bonding a child to its mother or father, through which name, status, heritage, and group membership are transmitted. Descent is primarily a social convention rather than strictly a biological relationship — adoptees, for example, may acquire the descent status of the adopting group.</p>
+
+<h3>Unilineal Descent</h3>
+<p>Descent traced exclusively through one parental line. The child is automatically assigned at birth to the mother's or father's descent group only.</p>
+
+<h4>Patrilineal Descent (Agnatic)</h4>
+<p>The more widespread of the two. Descent traced through the male line. Brothers and sisters belong to the father's descent group; a woman belongs to her father's descent group but her children belong to her husband's. Authority over children rests with the father or his elder brother. Patrilineal kinship organisation is found in many cultures and often endures through radical political change — as among the Han Chinese, where the patrilineal extended family remained the basic economic unit despite communist transformation after 1949 (with exceptions such as the Mosuo of Yunnan). Among the Yoruba of West Nigeria, the social order is organised through patrilineages called <em>Idilies</em>, headed by the eldest male who exercises both religious and political authority.</p>
+
+<h4>Matrilineal Descent</h4>
+<p>Descent traced through the female line. Brothers and sisters belong to the mother's descent group; a man belongs to the same descent group as his mother, but his own children belong to his wife's descent group. Matrilineal descent does not automatically confer authority on women — political power tends to reside with a woman's brother, not her husband (the avunculate). The husband in a matrilineal household lacks domestic authority; the wife's brother distributes goods, organises work, settles disputes, and administers inheritance. Property and status pass from a man to his sister's son rather than to his own son. Marital ties are consequently more easily severed in matrilineal societies than in patrilineal ones. Matrilineal systems are typically found in horticultural societies where women perform much of the productive work. The Mosuo of Yunnan, China, are a well-known matrilineal case — property passes through the female line, women head households, and women make business decisions, yet political power tends to rest with males.</p>
+
+<h4>Unilineal Descent Groups</h4>
+<ul>
+  <li><strong>Lineage:</strong> A unilineal kinship group descended from a common ancestor who lived four to six generations ago, in which relationships among members can be exactly stated in genealogical terms.</li>
+  <li><strong>Clan:</strong> An extended unilineal kinship group often consisting of several lineages, whose members claim common descent from a remote ancestor who is usually legendary or mythological. Members cannot always trace the exact genealogical link.</li>
+  <li><strong>Moiety:</strong> A society divided into two halves, each a descent group. In societies with dual organisation, the moieties are exogamous — members of each half must marry into the other.</li>
+  <li><strong>Phratry:</strong> A grouping of two or more clans claiming common descent.</li>
+</ul>
+
+<h3>Parallel Descent</h3>
+<p>Extremely rare. Males reckon descent through the male line; females reckon through the female line simultaneously. Reported by Jane Safer (1975) among the Saha of the Santa Marta Mountains, Colombia. Because only one society has been documented with this principle, it is rarely discussed in anthropological literature.</p>
+
+<h3>Non-Unilineal (Cognatic) Descent</h3>
+
+<p><strong>Double (bilineal) descent:</strong> Descent is reckoned both patrilineally and matrilineally for different social purposes. Very rare. Membership in the patrilineage governs some rights and obligations; membership in the matrilineage governs others. The Toda of the Nilgiri Hills are the most cited Indian example of double descent.</p>
+
+<p><strong>Bilateral kinship:</strong> Many societies reckon kinship equally through both parents without forming exclusive descent groups. Bilateral means two-sided — relatives on both the mother's and father's sides are equally significant or equally insignificant. Kinship reckoning is horizontal (moving outward from close to distant relatives) rather than vertical (upward through ancestors). The relevant bilateral unit is the <em>kindred</em> — the set of relatives recognised by a particular ego, centred on ego rather than on a common ancestor. Because kindreds are ego-centred, they overlap and do not form corporate groups in the way lineages do. The bilateral kindred is the dominant kinship form in Western industrial societies.</p>
+
+<h2>Kinship Terminology: Six Systems</h2>
+
+<p>Morgan first distinguished classificatory systems (one term designates multiple genealogical positions) from descriptive systems (each kin has a distinct term). Rivers linked terminology to marriage practices — even after the practices vanish, the terms persist, allowing reconstruction of past customs. Kroeber saw kinship terms as linguistic categories. Radcliffe-Brown argued that kinship terminology is a key to unlocking social structure — in simple societies, kinship is the basis of organisation, so the terminology reveals the structure. Murdock identified six major global systems:</p>
+
+<h3>Hawaiian (Generational) Terminology</h3>
+<p>Distinguishes only between sex and generation. Siblings and cousins are classified alike under one or two terms distinguished only by sex. No distinction between lineal and collateral relatives, nor between cross and parallel cousins. All members of the parental generation on both sides are merged under a small number of terms. Classificatory in nature. Reflects the absence of strong unilineal descent. Found among Hawaiian Polynesians; in North India, siblings are called Bhai/Didi — an equivalent pattern.</p>
+
+<h3>Eskimo (Lineal) Terminology</h3>
+<p>Used by Euro-Americans and food-foraging peoples including the Inuit. Has both classificatory and descriptive elements. Provides distinct terms for nuclear family members (mother, father, brother, sister) while lumping all other relatives into a few large categories. Father is distinguished from father's brother; both father's brother and mother's brother are called "uncle." All cousins regardless of type or gender are lumped as "cousin." Found in bilateral societies where the kindred is the dominant kin group and the nuclear family is functionally independent. Reflects the social reality of modern North American families who are independent and not closely involved with extended relatives on a daily basis.</p>
+
+<h3>Omaha Terminology</h3>
+<p>Found in patrilineal societies. Father and father's brother are named by the same term. Mother and mother's sister are named by the same term. All male members of mother's patrilineage (mother's brother, and his son) are lumped under the same term regardless of generation. All female members of mother's patrilineage are similarly lumped. Ego refers to male parallel cousins as brothers and female parallel cousins as sisters. Relatives on the father's patrilineal side are distinguished by generation, while those on the mother's patrilineal side are lumped across generations. Example: among the Sumi Naga of Nagaland, mother's brother and mother's brother's son are both called <em>ingu</em>.</p>
+
+<h3>Crow Terminology</h3>
+<p>The mirror image of Omaha, associated with matrilineal descent. Individuals in one's mother's matrilineal group are differentiated by generation; individuals in one's father's matrilineal group are lumped across generations. Father's sister and father's sister's daughter are called by the same term. Father's father's brother and father's sister's son (all males of father's matrilineal group) are called by the same term. Parallel cousins are referred to by the same terms as brothers and sisters. Found among Crow Indians of North America.</p>
+
+<h3>Iroquois Terminology</h3>
+<p>Father and father's brother are called by the same term; mother and mother's sister are called by the same term. Father's sister and mother's brother are given separate, distinct terms. Parallel cousins (children of mother's sister or father's brother) are called by the same terms as brothers and sisters. Cross cousins (children of mother's brother or father's sister) are designated by distinct terms that set them apart from all other kin. Cross cousins are often preferred or prescribed as spouses, as marriage to them reaffirms alliances between related lineages. Widespread globally — used in rural Chinese societies; in India, used by the Ao Naga of Nagaland (parallel cousins: oti/oya; cross-cousins: amo/oku).</p>
+
+<h3>Sudanese (Descriptive) Terminology</h3>
+<p>The most descriptive of all six systems. Provides a different term for each genealogical position. Siblings are fully differentiated from cousins, and every uncle, aunt, and cousin relationship has its own term. The North Indian kinship terminology is the most cited example: father's elder brother = tau, father's elder brother's wife = tai, father's younger brother = chacha, father's younger brother's wife = chachi — each specific position in the kinship universe has its own label.</p>
+
+<h2>Descent Theory vs. Alliance Theory</h2>
+
+<h3>Descent Theory (Radcliffe-Brown, Fortes)</h3>
+<p>Kinship is primarily understood through descent links — the transmission of property, office, ritual complex, and rights and obligations across generations through male or female lines. The lineage is a corporate group that holds property and organises labour. Radcliffe-Brown drew a clear distinction between kin (relatives by descent) and affines (relatives through marriage), frequently using the phrase "kinship and marriage" to signal that marriage was external to kinship proper. He distinguished agnates (descent through males only) from cognates (descent through both males and females). Fortes portrayed Tallensi society in Northern Ghana as entirely organised around the patrilineage — every act of worship, marriage arrangement, labour allocation, or judicial authority was determined by a man's position in his patrilineage. He further distinguished <strong>filiation</strong> (being the legitimate child of one's parents, bilateral) from <strong>descent</strong> (a politico-jural matter determining group membership and jural status). In descent theory, marriage was ephemeral — an arrangement between individuals rather than a structural principle.</p>
+
+<h3>Alliance Theory (Lévi-Strauss)</h3>
+<p>In <em>The Elementary Structures of Kinship</em> (1949), Lévi-Strauss brought marriage to the centre of kinship analysis, in explicit opposition to descent theory. For Lévi-Strauss, the incest taboo is the cornerstone of human society — the pre-social social fact that explains and generates social structure. The prohibition of incest is not merely negative (I do not marry my sister) but positive: I give my sister to another man, and his sister comes to me. This exchange creates a federation between groups. The function of marriage is not merely procreative but structural — it builds enduring chains of relationship between groups, who become respectively wife-givers and wife-takers.</p>
+
+<p>Lévi-Strauss distinguished two structural models of exchange:</p>
+
+<p><strong>Elementary structures</strong> are systems in which the kinship nomenclature itself provides easy determination of the pool of consanguines and affines — a positive rule specifies whom one should marry (prescribed marriage). They are closed systems of exchange. Cross-cousin marriage is the most elementary form of exchange.</p>
+
+<ul>
+  <li><strong>Restricted exchange (symmetric):</strong> A direct transaction between two groups. Wife-givers are also wife-takers. Typically involves bilateral cross-cousin marriage (both MBD and FZD acceptable). Found in societies with dual organisation (moieties). Because of the symmetric exchange, Ego's maternal cross-cousin and paternal cross-cousin are the same person (bua becomes mami).</li>
+  <li><strong>Generalised exchange (asymmetric):</strong> Three or more groups exchange in a cycle — Group A gives women to B, B gives to C, C gives back to A. Asymmetric because wife-givers and wife-takers are different groups. Found among the Kachin of Burma (ideally a cycle of five groups) and the Purum of Manipur (five clans: Marrim, Makan, Kheyang, Thao, Parpa — each can give women only to specified groups and receive only from others). Prescribed marriage is with mother's brother's daughter; marriage with father's sister's daughter is strictly prohibited.</li>
+</ul>
+
+<p><strong>Complex structures</strong> define only the circle of prohibited relatives (consanguines) and leave the positive choice of spouse to other mechanisms — economic, emotional, or demographic. An open system. Modern Western societies are complex structures.</p>
+
+<h2>Purum Kinship: A Case Study</h2>
+
+<p>The Purum are an Old Kuki tribe of Manipur, speaking a Tibeto-Burman language. The primary source is Tarak Chandra Das, <em>The Purums</em> (1945). Purum society consists of politically autonomous territorial segments linked by common patrilineal kinship ties and also through affinal ties. The five clans (Marrim, Makan, Kheyang, Thao, Parpa) are exogamous, and their main function is to regulate marriage. Marital residence is patrilocal after a mandatory three-year bride service. The prescribed marriage is with the mother's brother's daughter (MBD); marriage with the father's sister's daughter (FZD) is subject to a strict proscriptive taboo. Kinship terminology conforms to the marriage rules — parallel cousins and FZD are classed with sisters. For each male, kin groups are divided into three categories: his own (or his father's) kin group; his mother's kin group (from which his wife is chosen); and his sister's husband's kin group. Unrelated persons address one another by terminologically fixed terms based on the marital relationship between their respective kin groups. The Purum system has been extensively analysed as an example of generalised asymmetric exchange and prescriptive alliance.</p>
+`,
 };
+
