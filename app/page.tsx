@@ -21,14 +21,12 @@ const tools = [
   { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01' },
   { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains — written to be read before the exam.', num: '02' },
   { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03' },
-  { label: 'Topper Answer Copies', desc: 'Real answer sheets from 140+ scorers, annotated so you know exactly what worked and why.', num: '04' },
-  { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '05' },
-  { label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated — the part most aspirants ignore.', num: '06' },
+  { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04' },
 ];
 
 const marqueeItems = [
   'AI Answer Evaluation', 'Sociology Optional', 'Anthropology Optional', 'PYQ Bank',
-  'Topper Copies', 'Syllabus Notes', 'Map Practice', 'Political Science', 'Geography Optional', 'Public Administration',
+  'Syllabus Notes', 'AI Chat', 'Political Science', 'Geography Optional', 'Public Administration',
 ];
 
 const CSS = `
