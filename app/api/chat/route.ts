@@ -424,7 +424,7 @@ export async function POST(req: NextRequest) {
               model: 'claude-haiku-4-5-20251001',
               max_tokens: maxTokens,
               system: systemPrompt,
-              messages: builtMessages,
+              messages: builtMessages as any,
             });
             for await (const chunk of anthropicStream) {
               if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
