@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { allNotes as socioNotes } from '@/lib/notes';
+import { allNotes as socioNotes } from '@/lib/notes/sociology';
 import { allAnthroNotes } from '@/lib/notes/anthropology';
 import { allNotes as polsciNotes } from '@/lib/notes/polsci';
 import { allNotes as geoNotes } from '@/lib/notes/geography';
