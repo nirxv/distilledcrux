@@ -6649,73 +6649,53 @@ The sexual division of labour in India is continuously reproduced through the ki
   'visions-social-change-india': `
 <h2>Introduction: What Are Visions of Social Change?</h2>
 
-<p>At the time of independence, India inherited a colonial economy, a deeply unequal social structure, mass illiteracy, endemic poverty, and a political system where democratic rights had never been exercised at scale. The founding leaders faced a fundamental question: which path of development should independent India follow? The competing answers to this question — from Gandhi's Sarvodaya to Nehru's socialist planning, from Ambedkar's constitutional rights-based approach to various Marxist alternatives — constitute what sociologists call "Visions of Social Change." These are organised, ideologically grounded frameworks for transforming Indian society from its colonial and feudal inheritance toward justice, equality, and modernity.</p>
-
-<p>Three concrete arenas through which these visions were operationalised are: development planning and the mixed economy; constitution, law, and social change; and education as an instrument of change.</p>
+<p>At independence, India inherited a colonial economy, a deeply unequal social structure, mass illiteracy, endemic poverty, and a political system where democratic rights had never been exercised at scale. The founding leaders faced a fundamental question: which path of development should independent India follow? The competing answers — from Gandhi's Sarvodaya to Nehru's socialist planning, from Ambedkar's constitutional rights-based approach to various Marxist alternatives — constitute what sociologists call "visions of social change." Three concrete arenas through which these visions were operationalised are: development planning and the mixed economy; constitution, law, and social change; and education as an instrument of transformation.</p>
 
 <h2>A. Debates on the Development Model at Independence</h2>
 
-<p>India at independence faced three broad options for organising its economy and society:</p>
-<ul>
-  <li>Capitalism with minimal state control</li>
-  <li>Socialism with state guidance and planning</li>
-  <li>Sarvodaya — a Gandhian path based on village self-sufficiency, distrust of centralised state power, and moral rather than institutional transformation</li>
-</ul>
-
-<p>The immediate crisis context — partition violence, refugee inflows, loss of fertile agricultural land to Pakistan and Bangladesh, and the threat of famine — foreclosed extended theoretical debate and pushed India toward pragmatic choices.</p>
+<p>India at independence faced three broad options for organising its economy and society: capitalism with minimal state control; socialism with state guidance and planning; and Sarvodaya — a Gandhian path based on village self-sufficiency, distrust of centralised state power, and moral rather than institutional transformation. The immediate crisis context — partition violence, refugee inflows, loss of fertile agricultural land to Pakistan and Bangladesh — foreclosed extended theoretical debate and pushed India toward pragmatic choices.</p>
 
 <h3>Gandhian Vision of Social Change</h3>
 
-<p>Gandhi's vision of social change was rooted in three foundational principles: Sarvodaya (welfare of all, not just the majority), Gram Swaraj (village self-rule as the basic unit of democracy), and Trusteeship (the wealthy should act as trustees of society's resources, not owners with unlimited rights).</p>
+<p>Gandhi's vision rested on three foundational principles: Sarvodaya (welfare of all), Gram Swaraj (village self-rule as the basic unit of democracy), and Trusteeship (the wealthy should act as trustees of society's resources, not unlimited owners).</p>
 
-<p>Gandhi rejected both Western capitalism and Soviet socialism. Capitalism concentrated economic power and destroyed village communities. Soviet socialism concentrated political power and was coercive. Gandhi's alternative was an India of self-sufficient villages — each producing most of its own needs through local crafts and cooperative labour, connected loosely into a decentralised federation rather than a centralised nation-state. The Khadi movement and the campaign against mill-produced cloth were practical expressions of this vision — not mere nationalism but a deliberate economic argument for village industry against industrial capitalism.</p>
+<p>Gandhi rejected both Western capitalism and Soviet socialism. Capitalism concentrated economic power and destroyed village communities. Soviet socialism concentrated political power and was coercive. Gandhi's alternative was an India of self-sufficient villages — connected loosely into a decentralised federation rather than a centralised nation-state. The Khadi movement and the campaign against mill-produced cloth were practical expressions — not mere nationalism but a deliberate economic argument for village industry against industrial capitalism.</p>
 
-<p>Gandhi's approach to social change was gradualist and moral rather than structural and coercive. Change must come from within — from persuasion, example, and satyagraha (truth-force), not from state power. This is why he emphasised Constructive Programme (education, sanitation, cottage industries, Hindu-Muslim unity, untouchability removal) alongside political agitation. Gandhi inclined toward socialism but distrusted the state — a combination that makes his vision genuinely difficult to categorise within conventional Left-Right frameworks.</p>
+<p>Gandhi's approach to social change was gradualist and moral rather than structural and coercive. Change must come from within — from persuasion, example, and satyagraha — not from state power. This is why he emphasised Constructive Programme (education, sanitation, cottage industries, Hindu-Muslim unity, untouchability removal) alongside political agitation. Gandhi inclined toward socialism but distrusted the state — a combination that makes his vision genuinely difficult to categorise within conventional Left-Right frameworks.</p>
 
-<p><strong>Sociological assessment of the Gandhian vision:</strong> AR Desai criticised Gandhi for prioritising national unity over class struggle — deliberately constructing an ideology that served the interests of the Indian bourgeoisie by appealing to the masses on non-class terms. Nehru considered village self-sufficiency romantic and impractical in a world of modern industry. Ambedkar was more hostile: for him, the village was a site of caste oppression, not a community of harmony, and Gandhi's romantic village ideal perpetuated the conditions of Dalit subordination. Feminists also noted that Gandhi's village ideal entrenched the sexual division of labour — keeping women in domestic and craft roles.</p>
+<p><strong>Sociological assessment:</strong> AR Desai criticised Gandhi for prioritising national unity over class struggle — deliberately constructing an ideology that served the interests of the Indian bourgeoisie while appealing to the masses on non-class terms. Ambedkar was more hostile: the village was a site of caste oppression, not harmony, and Gandhi's romantic village ideal perpetuated the conditions of Dalit subordination. Feminists noted that Gandhi's village ideal entrenched the sexual division of labour — keeping women in domestic and craft roles.</p>
 
 <h3>Nehruvian Vision: Socialist Planning and Mixed Economy</h3>
 
-<p>Jawaharlal Nehru, inspired by Fabian socialism and the Soviet example of rapid industrialisation through central planning, chose a different path. India adopted a model of:</p>
-<ul>
-  <li>A mixed economy with both public and private sectors, with the state controlling the "commanding heights" (steel, heavy industry, energy, railways)</li>
-  <li>Centralised five-year planning through the Planning Commission (established 1950)</li>
-  <li>Import substitution industrialisation — producing domestically what was previously imported, to reduce dependency</li>
-  <li>Non-alignment externally, keeping India out of Cold War blocs and enabling access to both Soviet and Western technology and aid</li>
-</ul>
-
-<p>Nehru's model rested on Harold Laski's concept of a mixed economy and his own belief that like Russia, India needed to rapidly develop heavy industries that were capital-intensive. The "temples of modern India" — the great dams, the steel plants, the IITs — were expressions of this vision. State-led modernisation would simultaneously produce economic development and social transformation, dissolving feudal structures through urbanisation and industrialisation.</p>
+<p>Nehru, inspired by Fabian socialism and the Soviet example, chose a mixed economy with both public and private sectors — with the state controlling the "commanding heights" (steel, heavy industry, energy, railways); centralised five-year planning through the Planning Commission (established 1950); import substitution industrialisation; and non-alignment externally. The "temples of modern India" — great dams, steel plants, IITs — expressed this vision. State-led modernisation would simultaneously produce economic development and social transformation, dissolving feudal structures through urbanisation and industrialisation.</p>
 
 <p>The Nehruvian development model unfolded in phases:</p>
 <ul>
   <li><strong>First phase (1950s-60s)</strong> — Welfare model, broad spectrum planning, five-year plans building infrastructure and heavy industry</li>
-  <li><strong>Second phase (after 1970)</strong> — Integrated and area-specific focus; Green Revolution technology concentrated in Punjab/Haryana; central-state-district-block-village planning cascade</li>
+  <li><strong>Second phase (after 1970)</strong> — Integrated and area-specific focus; Green Revolution technology concentrated in selected regions; central-state-district-block-village planning cascade</li>
   <li><strong>Third phase (post-1991)</strong> — Decentralised, indicative, and participative planning; declining role of Planning Commission (abolished 2014, replaced by NITI Aayog); rising importance of NGOs and community involvement; right-based approach (MNREGA, RTI, RTE) replacing role-based approach</li>
 </ul>
 
-<p><strong>Sociological critique:</strong> AR Desai argued that Nehruvian planning glorified the nation to conceal class interests — socialist slogans masked the reality that development benefited the Indian bourgeoisie while displacing tribals, evicting peasants, and exploiting workers. The "Hindu Rate of Growth" (approximately 3.5% annually until the 1980s) confirmed that while the "temples of modern India" were built, mass poverty persisted. The "License-Quota-Permit Raj" created rent-seeking opportunities for industrialists who could use state connections to insulate themselves from competition — producing crony capitalism rather than socialism. Critics from the right (Keith Dans) argued that government control and the licence raj slowed employment generation. Critics from the left argued that Nehru's vision never seriously challenged the agrarian class structure.</p>
+<p><strong>Sociological critique:</strong> AR Desai argued that Nehruvian planning glorified the nation to conceal class interests — socialist slogans masked the reality that development benefited the Indian bourgeoisie while displacing tribals and exploiting workers. The "Hindu Rate of Growth" (approximately 3.5% annually until the 1980s) confirmed that while the temples of modern India were built, mass poverty persisted. The "License-Quota-Permit Raj" created rent-seeking opportunities for industrialists who could use state connections — producing crony capitalism rather than socialism. Sudipto Kaviraj adds that slow employment growth led to increased poverty even as industrialisation advanced.</p>
 
 <h3>Ambedkar's Vision: Constitutional Rights and Social Democracy</h3>
 
-<p>For BR Ambedkar, the fundamental precondition for any social change in India was the annihilation of caste. No economic model — capitalist or socialist — could produce genuine equality without first destroying the social hierarchy of caste. Ambedkar's vision of social change operated through three instruments:</p>
-
+<p>For Ambedkar, the fundamental precondition for any social change was the annihilation of caste. No economic model — capitalist or socialist — could produce genuine equality without first destroying the social hierarchy of caste. His vision operated through three instruments:</p>
 <ul>
-  <li><strong>Constitutional rights</strong> — the Constitution would establish legal equality, abolish untouchability, prohibit discrimination, and create reservations for SCs and STs in education and government employment. Ambedkar chaired the Drafting Committee and inserted these provisions despite fierce resistance.</li>
-  <li><strong>Education</strong> — Ambedkar constantly emphasised: "Educate, Agitate, Organise." Education was the primary instrument of social emancipation for Dalits — it provided the knowledge and credentials to escape the occupational determination of caste.</li>
-  <li><strong>Buddhism (Navayana)</strong> — Conversion to an egalitarian religion was a spiritual and social repudiation of caste hierarchy. Buddhism provided an alternative community and ethical framework independent of Brahminical Hinduism.</li>
+  <li><strong>Constitutional rights</strong> — the Constitution would establish legal equality, abolish untouchability, prohibit discrimination, and create reservations for SCs and STs. Ambedkar chaired the Drafting Committee and inserted these provisions despite fierce resistance.</li>
+  <li><strong>Education</strong> — "Educate, Agitate, Organise." Education was the primary instrument of social emancipation for Dalits — providing the knowledge and credentials to escape occupational determination by caste.</li>
+  <li><strong>Buddhism (Navayana)</strong> — Conversion to an egalitarian religion was a spiritual and social repudiation of caste hierarchy. His Navayana Buddhism was a this-worldly ethic of human dignity rather than traditional metaphysics.</li>
 </ul>
 
-<p>Ambedkar rejected Gandhi's village ideal as a utopia for upper castes. He was equally suspicious of Marxism, arguing that the Marxist emphasis on class ignored the deeper, more intractable oppression of caste — which could not be dissolved simply by ending private property. He insisted that India needed social democracy before political democracy could be meaningful: "Political democracy cannot last unless there lies at the base of it social democracy."</p>
-
-<h3>Marxist Visions</h3>
-
-<p>Various Marxist traditions offered their own competing visions. AR Desai argued that only socialism — abolition of private property, comprehensive land redistribution, workers' control of means of production — could end India's deepening class inequality. DP Mukherjee (Marxological approach) sought a synthesis between India's own historical-cultural traditions and Marxist analysis. Gail Omvedt argued that a Marxism that ignored caste and gender was incomplete — her "anti-caste Marxism" sought to integrate Dalit and feminist perspectives into class analysis.</p>
-
-<p>The Naxalite movement (emerging from Naxalbari, West Bengal, 1967) represented the most radical Marxist vision — that parliamentary democracy was a bourgeois sham and that armed peasant uprising was the only path to genuine change. Several generations of Naxalite movements have operated in India's Red Corridor (Chhattisgarh, Jharkhand, Odisha, Andhra Pradesh), generating ongoing state violence alongside genuine articulation of tribal and agrarian grievances.</p>
+<p>Ambedkar rejected Gandhi's village ideal as a utopia for upper castes. He was equally suspicious of Marxism, arguing that the emphasis on class ignored the deeper, more intractable oppression of caste — which could not be dissolved simply by ending private property. He insisted: "Political democracy cannot last unless there lies at the base of it social democracy."</p>
 
 <h3>Lohia's Socialist Vision</h3>
 
-<p>Ram Manohar Lohia articulated a distinctive Indian socialism that diverged from both Nehruvian state socialism and Marxist class determinism. Lohia identified seven revolutions as necessary simultaneously: against foreign domination; against Brahmin-Bania domination; against gender hierarchy; against racial discrimination; against private ownership; for economic equality; and for democracy. His key contribution was insisting on the inseparability of caste and class — you cannot end class exploitation without ending caste hierarchy, and vice versa. Lohia's call for extending reservations to OBCs (Other Backward Classes) anticipated the Mandal Commission recommendations by decades. His influence lives on in the Socialist tradition of parties like the Samajwadi Party and the Janata Dal.</p>
+<p>Ram Manohar Lohia articulated a distinctive Indian socialism that diverged from both Nehruvian state socialism and Marxist class determinism. Lohia identified seven simultaneous revolutions as necessary: against foreign domination; against Brahmin-Bania domination; against gender hierarchy; against racial discrimination; against private ownership; for economic equality; and for democracy. His key contribution was insisting on the inseparability of caste and class — you cannot end class exploitation without ending caste hierarchy. Lohia's call for extending reservations to OBCs anticipated the Mandal Commission recommendations by decades.</p>
+
+<h3>Marxist Visions</h3>
+
+<p>AR Desai argued only socialism — abolition of private property, comprehensive land redistribution, workers' control of means of production — could end India's deepening class inequality. The Naxalite movement (emerging from Naxalbari, West Bengal, 1967) represented the most radical Marxist vision — that parliamentary democracy was a bourgeois sham and that armed peasant uprising was the only path. Gail Omvedt's "anti-caste Marxism" sought to integrate Dalit and feminist perspectives into class analysis, arguing that a Marxism ignoring caste and gender was incomplete.</p>
 
 <h2>B. Constitution, Law, and Social Change</h2>
 
@@ -6725,57 +6705,42 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>The Constitution attempts social change through three mechanisms:</p>
 
-<p><strong>Fundamental Rights (Part III)</strong> — Articles 14-18 guarantee equality before the law, prohibit discrimination on grounds of religion, race, caste, sex or place of birth, prohibit untouchability, and abolish titles. Articles 19-22 guarantee freedoms. Articles 23-24 abolish forced labour and child labour. Articles 25-30 guarantee religious freedom and protect minority rights. Article 32 provides the "heart and soul of the Constitution" — the right to constitutional remedies.</p>
+<p><strong>Fundamental Rights (Part III)</strong> — Articles 14-18 guarantee equality before law, prohibit discrimination on grounds of religion, race, caste, sex, or place of birth, prohibit untouchability, and abolish titles. Articles 23-24 abolish forced labour and child labour. Articles 25-30 guarantee religious freedom and protect minority rights. Article 32 provides the right to constitutional remedies — what Ambedkar called "the heart and soul of the Constitution."</p>
 
-<p><strong>Directive Principles of State Policy (Part IV)</strong> — Non-justiciable but morally binding guidelines for the state: equal pay for equal work (Article 39(d)); right to work, education, and public assistance (Article 41); free and compulsory education for children (Article 45); living wage for workers (Article 43); equal justice and free legal aid (Article 39A); equal participation of women in public life. The DPSPs represent the socialist and Gandhian commitments of the founding generation — the social and economic rights that could not yet be fully enforced but set the direction of travel.</p>
+<p><strong>Directive Principles of State Policy (Part IV)</strong> — Non-justiciable but morally binding guidelines: equal pay for equal work (Article 39(d)); right to work, education, and public assistance (Article 41); free and compulsory education for children (Article 45); living wage for workers (Article 43); equal justice and free legal aid (Article 39A). The DPSPs represent the socialist and Gandhian commitments that could not yet be fully enforced but set the direction of travel.</p>
 
-<p><strong>Affirmative Action</strong> — Reservations for SCs and STs in educational institutions (Article 15(4)) and government employment (Article 16(4)), extended to OBCs by the Mandal Commission recommendations (V.P. Singh government, 1990). The 73rd and 74th Constitutional Amendments (1992) created reservations for women in Panchayati Raj Institutions — one-third of all seats reserved, rising to one-half in several states.</p>
+<p><strong>Affirmative Action</strong> — Reservations for SCs and STs in educational institutions (Article 15(4)) and government employment (Article 16(4)), extended to OBCs by the Mandal Commission recommendations (V.P. Singh government, 1990). The 73rd and 74th Constitutional Amendments (1992) created reservations for women in Panchayati Raj Institutions — one-third of all seats, rising to one-half in several states.</p>
 
 <p>Rajeev Bhargava argues the Constitution is expected to check the tyranny of a majoritarian democratic state and protect vulnerable groups — it is a transformative document, not merely a codification of existing power relations.</p>
 
 <h3>Y. Singh: Three Functions of Law</h3>
 
-<p>Y. Singh argues that the legal system has been an important source of modernisation in India. He identifies three functions:</p>
+<p>Y. Singh argues the legal system has been an important source of modernisation in India. He identifies three functions:</p>
 <ul>
-  <li><strong>Indicator of change</strong> — law reflects and ratifies social changes that have already occurred (the Hindu Succession Amendment of 2005 extended daughters' inheritance rights, ratifying a social shift already underway in some communities)</li>
-  <li><strong>Initiator of change</strong> — law precedes and drives social change; legal reforms create new possibilities that eventually shift social norms (the abolition of untouchability under Article 17 did not immediately eliminate the practice but provided the legal foundation for its eventual erosion)</li>
-  <li><strong>Integrator of change</strong> — law provides the common framework within which a complex, heterogeneous society can negotiate change without fragmenting (personal laws codified; Hindu Code Bills; Special Marriage Act enabling inter-religious marriage)</li>
+  <li><strong>Indicator of change</strong> — law reflects and ratifies social changes already occurring (Hindu Succession Amendment of 2005 extended daughters' inheritance rights, ratifying a shift already underway in some communities)</li>
+  <li><strong>Initiator of change</strong> — law precedes and drives social change; legal reforms create new possibilities that eventually shift social norms (abolition of untouchability under Article 17 did not immediately eliminate the practice but provided the legal foundation for its erosion)</li>
+  <li><strong>Integrator of change</strong> — law provides the common framework within which a complex, heterogeneous society can negotiate change without fragmenting (Personal laws codified; Special Marriage Act enabling inter-religious marriage)</li>
 </ul>
 
 <h3>Limits of Legal Change</h3>
 
-<p>Andre Beteille identifies the central paradox: while law determines the direction in which society should go, the social structure determines the direction in which society actually goes. Law gives theory; social structure gives reality. Laws abolishing dowry (Dowry Prohibition Act, 1961) have been systematically evaded; laws mandating equal wages for equal work (Equal Remuneration Act, 1976) have not eliminated gender pay gaps; laws prohibiting manual scavenging have not eliminated the practice.</p>
+<p>Andre Beteille identifies the central paradox: while law determines the direction in which society should go, the social structure determines the direction in which society actually goes. Law gives theory; social structure gives reality. Laws abolishing dowry (1961) have been systematically evaded; laws mandating equal wages (Equal Remuneration Act, 1976) have not eliminated gender pay gaps; laws prohibiting manual scavenging have not eliminated the practice.</p>
 
-<p>Upendra Baxi argues that law alone is insufficient — civil society and social movements are necessary to make law effective. The Right to Information Act (2005) became transformative not because it was enacted but because civil society organisations and individual activists systematically used it, generated jurisprudence around it, and fought attempts to dilute it.</p>
+<p>Upendra Baxi argues that law alone is insufficient — civil society and social movements are necessary to make law effective. The Right to Information Act (2005) became transformative not because it was enacted but because civil society organisations and individual activists systematically used it, generated jurisprudence, and fought attempts to dilute it.</p>
 
-<p>Key laws as instruments of social change: Hindu Marriage Act (1955) — allows divorce and prohibits child marriage; Hindu Succession Act (1956, amended 2005) — women's inheritance rights; Dowry Prohibition Act (1961); Abolition of Untouchability Act (1955); SC/ST Prevention of Atrocities Act (1989); Protection of Women from Domestic Violence Act (2005); Protection of Children from Sexual Offences Act (2012); Right to Education Act (2009).</p>
+<p>Key laws as instruments of social change: Hindu Marriage Act (1955); Hindu Succession Act (1956, amended 2005); Dowry Prohibition Act (1961); SC/ST Prevention of Atrocities Act (1989); Protection of Women from Domestic Violence Act (2005); Right to Education Act (2009); Forest Rights Act (2006).</p>
 
 <h2>C. Education and Social Change</h2>
 
 <p>Brown argued: "Education helps in changing the basic outlook of a person towards society. Education changes the established patterns of social relationships, attitudes and values of a person and also the structure of society."</p>
 
-<h3>Objectives of Education for Social Change</h3>
-<ul>
-  <li>Pursuit of self-knowledge and knowledge of the universe</li>
-  <li>Building bridges between past and future</li>
-  <li>Accelerating the process of human progress</li>
-  <li>Integral growth of personality — intelligence, skill, creativity</li>
-  <li>Development of both individual and society; generating harmony and peace</li>
-  <li>Creating favourable attitudes to skill acquisition and upgradation</li>
-  <li>Bringing change in gender equality</li>
-</ul>
-
-<h3>Education in the Colonial Period and Its Critique</h3>
-
-<p>Colonial education was designed to produce clerks and subordinate administrators, not to generate independent thinkers or challenge the colonial order. Macaulay's Minute (1835) explicitly aimed at creating "a class of persons Indian in blood and colour but English in tastes, in opinions, in morals and in intellect." Education was never aimed at making people masters of technology, fighting injustice, or building collective capacity for self-governance. Christian missionary education focused partly on conversion and partly on literacy — with genuinely transformative effects in tribal and Dalit communities while also disrupting traditional cultures.</p>
-
 <h3>Changes Education Brings: PESTEL Analysis</h3>
 
 <table>
   <tr><th>Domain</th><th>Change Brought by Education</th></tr>
-  <tr><td><strong>Political</strong></td><td>Values for democracy, equitable rights, duties of citizenship; civic participation</td></tr>
-  <tr><td><strong>Economic</strong></td><td>More employment opportunities, less burden on agriculture, more SMEs, skill development</td></tr>
-  <tr><td><strong>Social</strong></td><td>Literacy, awareness for health and sanitation, decrease in superstitious beliefs</td></tr>
+  <tr><td><strong>Political</strong></td><td>Values for democracy, equitable rights, duties of citizenship, civic participation</td></tr>
+  <tr><td><strong>Economic</strong></td><td>More employment, less burden on agriculture, more SMEs, skill development</td></tr>
+  <tr><td><strong>Social</strong></td><td>Literacy, health and sanitation awareness, decrease in superstitious beliefs</td></tr>
   <tr><td><strong>Technological</strong></td><td>Defence capacity, communication skills, science literacy</td></tr>
   <tr><td><strong>Environmental</strong></td><td>Environmental awareness; movements like Chipko; ecological education</td></tr>
   <tr><td><strong>Ideological</strong></td><td>Anti-superstition movements (Maharashtra), progressive values, feminist consciousness</td></tr>
@@ -6785,55 +6750,45 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p><strong>Karuna Ahmad (1974)</strong> — Formal education can play a vital role in "ideational" change through transformation of knowledge, attitudes, and values. But its effectiveness in bringing about structural changes is extremely limited — because of the linkages between existing educational practices and the vested interests of the status quo.</p>
 
-<p><strong>AR Desai</strong> — After independence, education has not been purposively geared to obtain the desired changes. Policies and funding have failed to attain goals of social mobility and equality. Education of SC, ST, and women has failed to uplift their status; unemployment and underemployment of educated youth persist. Education plays both a conservative (reproducing existing hierarchy) and potentially radical role.</p>
+<p><strong>AR Desai</strong> — After independence, education has not been purposively geared to obtain the desired changes. Policies and funding have failed to attain goals of social mobility and equality. Education of SC, ST, and women has failed to uplift their status; unemployment and underemployment of educated youth persist.</p>
 
 <p><strong>Karl Mannheim</strong> — Education needs to be critical, not merely reproductive. It should equip students to challenge existing power structures rather than adjust to them.</p>
 
 <p><strong>Steve Lukes</strong> — The third face of power (shaping preferences and desires) is promoted through education — the dominant class uses the education system to make its ideology appear as common sense.</p>
 
-<p><strong>Pierre Bourdieu (Cultural Reproduction)</strong> — Like economic capital, cultural capital (taste, knowledge, speech patterns, manners) is difficult and time-consuming to acquire, and the education system rewards those who already possess it. Reproducing class privilege generation after generation. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</p>
+<p><strong>Pierre Bourdieu (Cultural Reproduction)</strong> — Like economic capital, cultural capital (taste, knowledge, speech patterns) is difficult to acquire, and the education system rewards those who already possess it — reproducing class privilege generation after generation. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</p>
 
-<p><strong>Tawney (Tadpole Theory)</strong> — Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. The meritocracy serves to legitimate inequality by attributing success to individual talent rather than structural advantage. This produces Dalit Elites (Sachidanand Sinha) and Tribal Elites (SD Badgaiyyan) — a small educated class that escapes its community's condition without transforming it.</p>
+<p><strong>Tawney (Tadpole Theory)</strong> — Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. This produces Dalit Elites (Sachidanand Sinha) and Tribal Elites (SD Badgaiyyan) — a small educated class that escapes its community's condition without transforming it.</p>
 
 <p><strong>Althusser</strong> — Education functions as an Ideological State Apparatus — it produces workers who accept their place in the class hierarchy as natural and deserved. Gramsci: schools are sites of hegemonic struggle where the ruling class's worldview is transmitted as common sense.</p>
 
 <h3>Education Deprivations in India</h3>
 <ul>
-  <li>Caste-related exclusion — Dalit children still face discrimination in school; separate seating, separate mid-day meal lines, teacher indifference documented across states</li>
-  <li>Gender — girls are undereducated and undernourished, producing poor academic outcomes; dropout rates highest at transition points (secondary, higher secondary)</li>
-  <li>Class — quality private education is unaffordable for the poor; government schools suffer from teacher absenteeism, infrastructure deficit (ASER reports consistently show learning deficits)</li>
-  <li>Taboo-based exclusion — children of HIV parents, sex workers, Devadasis denied entry or socially excluded</li>
-  <li>Religious — Sachar Committee, Ranganath Mishra Committee documented that Muslim children were denied entry in some schools in Ahmedabad; madrasa education without integration into mainstream impedes mobility</li>
-  <li>Tribal — remote location, lack of schools, language barrier (teaching in non-tribal languages), seasonal migration disrupting schooling</li>
+  <li>Caste-related exclusion — Dalit children face discrimination; separate seating, teacher indifference documented across states</li>
+  <li>Gender — girls are undereducated and undernourished; dropout rates highest at secondary transition points</li>
+  <li>Class — quality private education is unaffordable for the poor; government schools suffer from teacher absenteeism and infrastructure deficit (ASER reports)</li>
+  <li>Taboo-based exclusion — children of HIV parents, sex workers denied entry or socially excluded</li>
+  <li>Religious — Sachar Committee, Ranganath Mishra Committee documented Muslim children denied entry in some schools in Ahmedabad; madrasa education without mainstream integration impedes mobility</li>
+  <li>Tribal — remote location, language barrier, seasonal migration disrupting schooling</li>
 </ul>
 
-<h3>New Education Policy 2020: Education as a Vision of Social Change</h3>
+<h3>New Education Policy 2020</h3>
 
-<p>India's third education policy (after 1968 and 1986), NEP 2020 attempts to align education with the vision of social change. Key structural reform: replacing 10+2 with 5+3+3+4 (Foundational, Preparatory, Middle, Secondary) — bringing children from age 3 into the formal education system. Teaching in mother tongue/regional language up to Class 5. Foundational Literacy and Numeracy mission — every child to achieve basic reading and arithmetic by Grade 3. Multiple entry-exit in higher education. Elimination of rigid arts-science-commerce streams. Academic Bank of Credit. GER in higher education to reach 50% by 2035. Public investment to 6% of GDP.</p>
+<p>India's third education policy (after 1968 and 1986), NEP 2020 replaces 10+2 with a 5+3+3+4 structure — bringing children from age 3 into the formal system. Key reforms: teaching in mother tongue up to Class 5; Foundational Literacy and Numeracy mission (basic reading/arithmetic by Grade 3); multiple entry-exit in higher education; elimination of rigid arts-science-commerce streams; Academic Bank of Credit; GER in higher education to 50% by 2035; public investment to 6% of GDP.</p>
 
-<p><strong>Critique:</strong> Emphasis on mother tongue may impede access to English and thus employment for marginalised sections. Phasing out college affiliations risks corporatisation. Only 9.85% of government schools have functional computers (UDISE+) — online education emphasis deepens digital divide. Primary causes of dropout (child marriage, child labour, poverty) remain unaddressed. The 6% GDP figure's ambiguity (public or total) is a policy weakness.</p>
+<p><strong>Critique:</strong> Mother tongue emphasis may impede English access and thus employment for marginalised sections. Phasing out college affiliations risks corporatisation. Only 9.85% of government schools have functional computers (UDISE+) — online education emphasis deepens digital divide. Primary causes of dropout (child marriage, child labour, poverty) remain unaddressed.</p>
 
 <h2>D. Development Planning: Evolution and Challenges</h2>
 
-<p>India's development planning has evolved significantly from the Nehruvian model of five-year plans and state direction toward a more decentralised, right-based, and participatory approach.</p>
+<p>India's development planning has evolved from the Nehruvian model of five-year plans and state direction toward a more decentralised, right-based, and participatory approach — from imperative planning (state decides, citizens implement) to indicative planning (state sets direction, market and civil society respond). The right-based approach reached its peak expression in MNREGA (2005), which legally guarantees 100 days of employment per rural household per year, making the state liable if it cannot provide work. RTI (2005), RTE (2009), and the National Food Security Act (2013) extended the rights framework to information, education, and food.</p>
 
-<p>The shift can be summarised: from imperative planning (state decides, citizens implement) to indicative planning (state sets direction, market and civil society respond); from welfare model (the state provides) to rights-based model (citizens claim entitlements). The right-based approach reached its peak expression in MNREGA (2005) — which legally guarantees 100 days of employment per rural household per year, making the state liable if it cannot provide work. RTI (2005), RTE (2009), and the National Food Security Act (2013) extended the rights framework to information, education, and food.</p>
+<p>Current challenges: devolution of funds, functions, and functionaries to local bodies remains incomplete despite 73rd and 74th Amendment intent; stagnant agriculture (50%+ of workforce producing less than 20% of GDP); persisting rural-urban development gap; rising inequality (Gini coefficient worsened since liberalisation; Oxfam India Inequality Reports show top 10% capturing disproportionate share of income growth); demographic dividend requiring massive investment in education, skill, and employment generation.</p>
 
-<h3>Current Challenges</h3>
-<ul>
-  <li>Devolution of funds, functions, and functionaries to local bodies (73rd and 74th Amendment intent not fully realised)</li>
-  <li>Stagnant agriculture — structural transformation incomplete; 50%+ of workforce in agriculture producing less than 20% of GDP</li>
-  <li>Rural-urban development indicator gap persisting despite decades of rural development programmes</li>
-  <li>Inclusion — scheduled castes, scheduled tribes, and religious minorities still disproportionately excluded from development gains</li>
-  <li>Rising inequality — India's Gini coefficient has worsened since liberalisation; Oxfam India Inequality Report consistently finds the top 10% capturing disproportionate share of income growth</li>
-  <li>Demographic dividend — India's large young population can either be a dividend (with adequate education, skill, and employment) or a demographic disaster (with inadequate investment)</li>
-</ul>
+<h2>A Synthesis: Visions and Realities</h2>
 
-<h2>Constitution, Law, Education: A Synthesis</h2>
+<p>Y. Singh's insight that the legal system is an important source of modernisation applies equally to education and planned development. Constitution, education, and planned development represent the operationalisation of India's founding vision of social change. But all three face the same fundamental constraint that Andre Beteille identifies: law, education, and planning determine the direction in which society should go; the social structure — caste hierarchy, class inequality, patriarchy, communalism — determines the direction in which it actually goes.</p>
 
-<p>Y. Singh's insight that the legal system is an important source of modernisation in India applies equally to education and planning. These three instruments — constitution, education, and planned development — represent the operationalisation of India's founding vision of social change. But all three face the same fundamental constraint that Andre Beteille identifies: law, education, and planning determine the direction in which society should go; the social structure (caste hierarchy, class inequality, patriarchy, communalism) determines the direction in which it actually goes.</p>
-
-<p>The resolution, as Upendra Baxi suggests, requires civil society and social movements to make constitutional rights, educational opportunity, and planned development actually reach those for whom they were intended. The history of independent India is the history of the gap between these visions and their realisation — a gap that generates the social movements, protests, and political mobilisations that are the subject of the next section of India's sociology.</p>
+<p>The resolution, as Upendra Baxi suggests, requires civil society and social movements to make constitutional rights, educational opportunity, and planned development actually reach those for whom they were intended. The history of independent India is the history of the gap between these visions and their realisation — a gap that generates the social movements, protests, and political mobilisations that constitute the lived dynamics of Indian social change.</p>
 `,
   'rural-agrarian-transformation': '',
   'industrialization-urbanisation': '',
