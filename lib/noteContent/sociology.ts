@@ -6983,7 +6983,219 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>Vandana Shiva and the Navdanya movement advocate a return to traditional seed varieties, organic farming, and agroecological principles. Some state governments (Andhra Pradesh's "Zero Budget Natural Farming," Sikkim's organic farming model) have experimented with low-input sustainable agriculture. The challenge is transitioning millions of small farmers without destroying their livelihoods in the process.</p>
 
 `,
-  'industrialization-urbanisation': '',
+  'industrialization-urbanisation': `
+<h2>Industrialisation in India: Historical Overview</h2>
+
+<p>Industrialisation refers to the process of developing industries in a country or region on a wide scale. In India, it did not emerge organically from an internal accumulation of capital as it did in Britain — it was shaped, distorted, and ultimately accelerated by the colonial encounter, then redirected after independence through state-led planning.</p>
+
+<h3>Colonial Phase: Distorted Industrialisation</h3>
+
+<p>The British introduced industrial production in India primarily to serve their own extractive interests — cotton mills, jute mills, and railways were built to process raw materials for export rather than to develop an internal market. The destruction of indigenous cottage industries (Dacca muslin, Surat weaving, Bengal silk) through differential tariff policy was a form of forced deindustrialisation that preceded any substantial reindustrialisation. The first significant Indian-owned industries emerged in Bombay (cotton textiles, 1850s) and Bengal (jute, 1860s), driven partly by the Swadeshi movement and partly by the First World War creating demand for Indian industrial output when British imports declined.</p>
+
+<p>AR Desai's analysis: colonialism introduced a capitalistic mode of production without its accompanying social transformations. Railways and roadways created infrastructure, bureaucracy and legal courts created governance, and cash transactions penetrated rural areas — but the surplus was extracted rather than reinvested in Indian industrial development.</p>
+
+<h3>Post-Independence: State-Led Industrialisation</h3>
+
+<p>After independence, Nehru's vision of rapid industrialisation through state-led planning shaped India's development strategy. Key features:</p>
+<ul>
+  <li>Mixed economy — public sector controlling "commanding heights" (steel, energy, railways, heavy machinery) while private sector developed consumer goods</li>
+  <li>Import Substitution Industrialisation (ISI) — producing domestically what was previously imported</li>
+  <li>Industrial Policy Resolution (1956) — classified industries into Schedule A (state monopoly), Schedule B (state and private), and Schedule C (private sector)</li>
+  <li>Large industrial complexes — Bhilai, Bokaro, Rourkela steel plants; BHEL, NTPC, ONGC, HAL as major public sector undertakings</li>
+  <li>Industrial townships emerged — Bhilai, Jamshedpur, Bokaro, Durgapur — with planned worker housing, schools, and hospitals</li>
+</ul>
+
+<p>The industrial policy was critiqued for creating a "Licence-Quota-Permit Raj" that insulated established firms from competition and generated rent-seeking, and for concentrating industrial development in selected regions while leaving large parts of the country industrially underdeveloped.</p>
+
+<h3>Post-LPG Phase: Liberalisation and the New Economy</h3>
+
+<p>The 1991 economic reforms (Liberalisation, Privatisation, Globalisation) fundamentally changed the character of Indian industrialisation. Key transformations:</p>
+<ul>
+  <li>Dismantling of the licence raj; delicensing of most industries</li>
+  <li>Opening to foreign direct investment (FDI) and multinational corporations</li>
+  <li>Shift from heavy industry to services — IT, business process outsourcing, finance, telecommunications</li>
+  <li>Rise of Special Economic Zones (SEZs) generating controversy over land acquisition and labour rights</li>
+  <li>Growth of informal sector as large formal enterprises outsourced to smaller units and contract workers</li>
+  <li>Informalisation of the industrial workforce — increased casual, contract, and part-time employment reducing job security</li>
+</ul>
+
+<h2>Working Class in India</h2>
+
+<p>In Marxian terminology, the working class consists of "those who sell their labour" in class-based societies — the proletariat. But the working class in India is a complex, contradictory, and constantly changing entity whose composition, size, and character changes over time.</p>
+
+<p>Two counter views exist on the trajectory of the working class: one argues it is expanding (as students, teachers, blue-collar and white-collar workers, salaried employees all comprise the working class in a broad sense); the other argues it is disappearing (as automation displaces blue-collar industrial jobs). Holmstrom offers a middle ground: "People commonly refer to industrial workers and sometimes other kinds of wage earners and self-employed workers as working class."</p>
+
+<h3>Phases of Working Class Development</h3>
+<ul>
+  <li><strong>Worker's phase (1850–1880)</strong> — Modern industry established; first factory workers emerged in Bombay cotton mills and Bengal jute mills</li>
+  <li><strong>Philanthropic phase (1890s–1915)</strong> — Heavy industries expanded; working class grew; agriculture deteriorated; Shashipada Banerjee in Bengal started welfare activities in 1870s; LM Lokhande active in Bombay; 'Bharat Shramjivi' monthly magazine started in 1874; 'Deenbandhu' published by Lokhande</li>
+  <li><strong>Trade union phase (1915–1947)</strong> — ILU formed in 1919; AITUC in 1920; at independence, four main trade unions: AITUC, INTUC, HMS, UTUC</li>
+</ul>
+
+<p>Pre-independence working class was geographically localised, highly exploited, mostly unskilled without formal education, and at the bottom of the social pyramid. Mobilisation before independence relied on welfare organisations and early trade unions. Post-LPG mobilisation has moved toward recognition of problems in the unorganised sector, social security measures, microfinance initiatives, and right to education.</p>
+
+<h3>Nature and Structure of the Working Class Today</h3>
+
+<p>On the basis of wages, there are four types of workers in India (Holmstrom, Dev Nathan):</p>
+
+<table>
+  <tr><th>Type</th><th>Character</th><th>Sector</th></tr>
+  <tr><td><strong>Type 1</strong></td><td>Permanent employees of large factory sector; get family wage (sufficient to maintain worker and family); highest job security</td><td>Public sector; petrochemicals, pharmaceuticals, chemicals, engineering</td></tr>
+  <tr><td><strong>Type 2</strong></td><td>Permanent but do not get a family wage; wages insufficient for family</td><td>Older industries — cotton and jute textiles, sugar, paper; tea plantations</td></tr>
+  <tr><td><strong>Type 3</strong></td><td>Contract and casual labourers; bottom of the wage scale; considerable extra-economic coercion and personal bondage; lack of civil rights</td><td>Industry, construction, brick-making, casual work</td></tr>
+  <tr><td><strong>Type 4</strong></td><td>Reserve army of labour — petty commodity production, petty trading, hawking, rag-picking; informal sector workers at bare subsistence</td><td>Informal economy</td></tr>
+</table>
+
+<p>Not only is there wage differential among the working class, there is also variation in working conditions. Better-paid labour has greater job security. Workers at the lower end of the wage scale face not only insecurity but also considerable extra-economic coercion and personal bondage — a form of modern unfreedom coexisting with formal legal equality. The situation worsens further for women workers — they are prohibited from working in steel plants on safety grounds but are not prohibited from being employed on the same site as contract labour.</p>
+
+<h3>Social Background of the Indian Working Class</h3>
+
+<p>The Indian working class came from diverse social backgrounds in which primordial identities — caste, ethnicity, religion, and language — played very important roles. The Ahmedabad study (1973) found that where jobs were secured through introduction by other workers, the introducer was a blood relation in 35% of cases, belonged to the same caste in 44% of cases, and belonged to the same native place in 12% of cases. Friends helped in only 7% of cases. Kinship ties not only play a significant role in securing employment but also in placement on the wage scale.</p>
+
+<p>Five studies of Pune, Kota, Bombay, Ahmedabad, and Bangalore covering large numbers of industries found that 61% of workers were upper-caste Hindus (Sharma, 1970). In higher income jobs, upper castes dominate; Dalits and Adivasis have preponderance in low-wage jobs. The middle castes are concentrated in middle to bottom ranges. Even in the public sector, the representation of backward castes, SCs, and STs is not proportional to their population. Caste-based division of labour is followed in Class III and IV government and public sector jobs — sweeper jobs are reserved for Dalits; hard physical labour in coal mines and coke ovens is mainly done by Dalits and Adivasis.</p>
+
+<p>Deshpande (1979) shows this results from "pre-labour market characteristics" such as education and land holdings — those with more land and education ended up in higher wage sectors, while depressed conditions of Adivasis and Dalits ensured supply of labour who can be made to work at mere subsistence level (Nathan, 1987). Caste thus ensures cheap labour for different jobs by not paying more than necessary — keeping lower sections in lower strata of the working class while giving upper castes privilege in the labour market. Caste is not only a matter of marriage and residence but more so a continuing pool of social relations for the supply of various kinds of labour for the capitalist mode of production.</p>
+
+<h2>Types of Cities in India</h2>
+
+<p>Indian cities can be classified by the dominant economic function they serve:</p>
+<ul>
+  <li><strong>Industrial towns</strong> — Mumbai (textiles, finance, port), Bhilai, Bokaro (steel)</li>
+  <li><strong>Commercial towns</strong> — Kolkata, Surat, Ahmedabad</li>
+  <li><strong>Mining towns</strong> — Raniganj, Jharia (coal)</li>
+  <li><strong>Garrison/Cantonment towns</strong> — Ambala, Jalandhar, Pune (Cantonment)</li>
+  <li><strong>Education towns</strong> — Roorkee, Aligarh, Pune (university city)</li>
+  <li><strong>Tourist towns</strong> — Nainital, Mussoorie, Shimla</li>
+</ul>
+
+<h2>Urbanisation in India</h2>
+
+<p>Urbanisation refers to the process of increasing concentration of population in urban areas and the accompanying transformation of economic, social, and cultural life. Almost all contemporary social problems have been associated with the process of urbanisation — crime, mental illness, broken family life, poor housing, poverty, unemployment, class conflict, racial and ethnic conflict, drug addiction, and pollution are often grouped under "the urban crisis." But to describe cities only in terms of their problems is akin to describing human beings in terms of their diseases.</p>
+
+<p>Indian cities have played an important role in breaking away from tradition-bound social practices. It is from cities that most of the modernisation processes radiate outward. Political and social reform movements have largely originated in cities and then spread.</p>
+
+<h3>Louis Wirth's Urbanism as a Way of Life</h3>
+
+<p>Louis Wirth defined the city as "a relatively large, dense, and permanent settlement of heterogeneous individuals." For Wirth, the city is not merely a point where great numbers are concentrated into limited space — it is also a complex heterogeneity in almost every characteristic in which human beings can differ. Wirth identified three key variables producing the urban way of life: size (large population increases the range of individual variation but weakens bonds of kinship and neighbourhood); density (intensifies differentiation, specialisation, and competition); and heterogeneity (blends diverse racial and ethnic groups into new cultural aggregates, producing a world of strangers). The city, by virtue of its focal position in capitalist civilisation, "has attracted within its confines the racial and ethnic stocks of all the world and has more or less amalgamated them and blended their traits into a new aggregate of hybrids."</p>
+
+<h3>Theories of Urbanisation</h3>
+
+<p><strong>Modernisation Theory (Parsons, Lerner)</strong> — Urbanisation is a correlate of modernisation. The shift from traditional to modern society involves urbanisation alongside industrialisation, commercialisation, and democratisation. Cities are centres of diffusion from which modernity radiates outward into rural areas.</p>
+
+<p><strong>Dependency Theory (Castells, Harvey)</strong> — Urbanisation in developing countries is driven by the needs of global capital rather than internal development. Cities in the periphery (Mumbai, Delhi, São Paulo, Lagos) are centres of capital accumulation and labour exploitation rather than wellbeing. Urban poverty and slums are products of uneven development produced by capitalism, not failures of modernisation.</p>
+
+<p><strong>MSA Rao (Indian perspective)</strong> — Urbanisation in India should be understood in relation to its specific social structure — caste, kinship, and village identities continue to shape urban social life. The concept of "mohalla culture" captures how city dwellers from the same regional or caste background cluster together, maintaining primary group solidarity in an otherwise impersonal urban environment. Remittances from urban migrants maintain functional jointness of families back in villages.</p>
+
+<h3>Impact of Urbanisation on the Environment</h3>
+
+<table>
+  <tr><th>Dimension</th><th>Impact</th></tr>
+  <tr><td><strong>Physical Environment</strong></td><td>Air quality deterioration; water quality decline; solid waste generation; noise pollution</td></tr>
+  <tr><td><strong>Social Environment</strong></td><td>Growth of slums; increase in crime; anomie and social isolation; breakdown of community ties</td></tr>
+  <tr><td><strong>Environmental Infrastructure</strong></td><td>Housing and amenities deficit; energy infrastructure strain; transport congestion</td></tr>
+</table>
+
+<h2>Slums and Deprivation in Urban Areas</h2>
+
+<h3>Definitions</h3>
+
+<p>A slum is defined by the Government of India as any area that is dilapidated, overcrowded, with faulty arrangement of buildings, and lacking in ventilation, light, or sanitation facilities — or any combination of these factors detrimental to safety, health, and morals. The new definition (Pranab Sen Committee) includes even small clusters of 20-25 households in contiguous areas exhibiting slum-like characteristics such as little or no access to basic civic amenities. Earlier the threshold was 60 households. India's urban slum population was estimated at 75.2 million in 2001 and was expected to cross 100 million by 2017.</p>
+
+<p>Sociologically, slums are sub-standard, haphazard housing systems with low sanitation, high crime rates, apathy, social isolation, and anonymity. Wirth argued slums are a way of life which is predominantly unhygienic. Oscar Lewis identified a "culture of poverty" — a set of values, attitudes, and behaviours transmitted across generations that prevents people from striving to change their lives and perpetuates poor conditions. Trilok Singh noted that slums put pressure on urban infrastructure and generate an inherent sense of both relative and absolute deprivation when compared to prosperous neighbours.</p>
+
+<h3>Causes of Slum Formation</h3>
+<ul>
+  <li>Original slums formed through land squatting by rural migrants seeking urban employment</li>
+  <li>Slums created when the erstwhile middle class moved away, leaving older housing to deteriorate</li>
+  <li>Slums created around sources of employment that offer low remuneration — proximity to work overrides quality of housing</li>
+  <li>TB Ramachandran: Indian cities are fundamentally unplanned, with land use patterns developing organically around economic activities without adequate housing infrastructure</li>
+  <li>MSA Rao: mohalla culture — migrants cluster with kin and caste fellows, producing dense slum settlements with high social solidarity but poor physical conditions</li>
+  <li>Demographic dynamism: expansionist modernity and declining agriculture push rural surplus population into cities without commensurate housing supply</li>
+</ul>
+
+<h3>Functions of Slums</h3>
+
+<p>Despite their physical degradation, slums perform important social functions:</p>
+<ul>
+  <li>Labour supply — slums house the labour force essential for industrial, construction, and service sectors</li>
+  <li>Small industries — home-based and cottage industries producing for both local and export markets (Dharavi, Mumbai is a famous example)</li>
+  <li>Housing for low-income migrants — the only affordable shelter option for new urban arrivals</li>
+  <li>School for newcomers of urban life — slum communities orient migrants to urban norms, skills, and opportunities</li>
+  <li>Place for anonymity — escape from village social controls enables social experimentation and individual freedom</li>
+</ul>
+
+<h3>Deprivation in Slums</h3>
+<ul>
+  <li><strong>Economic</strong> — inadequate housing, power cuts, costly transport, unsafe water, absence of drainage</li>
+  <li><strong>Environmental</strong> — pollution, garbage accumulation, lack of green space, flood vulnerability</li>
+  <li><strong>Social</strong> — social exclusion, poverty trap, poor education access, high disease burden, alcoholism, domestic violence, communal riots</li>
+</ul>
+
+<h3>Approaches to Slum Eradication</h3>
+
+<table>
+  <tr><th>Approach</th><th>Core Argument</th><th>Critique</th></tr>
+  <tr><td><strong>Marxist</strong></td><td>Slum is a conscious creation of the political and economic dominant class; need to give entire population similar homes</td><td>Does not address immediate practical needs; oversimplifies market mechanisms</td></tr>
+  <tr><td><strong>Welfarist</strong></td><td>Tear down slums, remake them (Rajiv Awas Yojana)</td><td>Geeta Diwan Verma: remade houses are sub-let by residents and pave way for corruption; Wirth: need is to change culture, not just houses</td></tr>
+  <tr><td><strong>Community Development</strong></td><td>Identify local leaders, change way of life and occupation; enable self-help</td><td>Kalpana Sharma found in Dharavi that CDA is successful in the long term; most effective but slow</td></tr>
+  <tr><td><strong>Humanitarian</strong></td><td>Give people assurance of tenure; they'll develop good practices themselves</td><td>Assumes causality runs from security to improvement; may not work without complementary support</td></tr>
+  <tr><td><strong>Modernisation</strong></td><td>Slums are temporary; with modernity, slum dwellers will become landowners</td><td>Ignores structural causes; empirically refuted by persistence of slums in highly developed cities</td></tr>
+  <tr><td><strong>Supreme Court directive</strong></td><td>Approach shall be slum-dweller oriented, not slum oriented</td><td>Rights-based framework; emphasises dignity over demolition</td></tr>
+</table>
+
+<h3>Government Schemes for Urban Poverty and Housing</h3>
+<ul>
+  <li><strong>Pradhan Mantri Awas Yojana (PMAY)</strong> — "Housing for All" by 2022; affordable housing through credit-linked subsidy scheme</li>
+  <li><strong>Smart Cities Mission</strong> — 100 cities selected for infrastructure upgrade, digital governance, and economic growth</li>
+  <li><strong>JNNURM (Jawaharlal Nehru National Urban Renewal Mission)</strong> — reform-linked urban infrastructure investment</li>
+  <li><strong>PURA (Providing Urban Amenities to Rural Areas)</strong> — rural reconstruction to reduce pressure on urban migration</li>
+  <li><strong>Decentralisation of Urban governance</strong> — 74th Constitutional Amendment; Urban Local Bodies empowered to address local urban problems</li>
+</ul>
+
+<h2>Urban Poverty</h2>
+
+<p>Urban poverty makes poverty more visible — particularly in industrial towns and cities where large numbers of labouring poor are found in and out of ill-paid and insecure employment. Poverty and overcrowding are the two most visible features of the industrial slum. Segregation and exclusion were governed by caste in India just as they were governed by race elsewhere, but poverty plays a large role. Social disability and economic disadvantage go hand in hand.</p>
+
+<p>Andre Beteille: income and expenditure are important, but other factors — security of livelihood, disconnection from family and community, overcrowding, sanitation and health — are equally significant. Individuals and families may suffer from a chronic sense of loss and deprivation even where there is an increase in average earnings — this is social and cultural dislocation, not merely economic deprivation. Poverty studies remain incomplete unless they account for this sense of loss. The new settlements that emerge in rapidly urbanising areas often have a makeshift character, with laxity in rules governing conduct — and women and children become victims of new forms of social abuse.</p>
+
+<h2>Regionalism in India</h2>
+
+<p>Regionalism refers to situating approach and sentiment toward a particular region — an ideology and political movement seeking to advance the causes of regions. It is found to have connections with cultural patterns that exist as part of the dominant culture. It plays a role both within the nation (internal self-determination) and at the international level. It can be a form of resistance against the imposition of a particular cultural ideology threatening national integration, or it can be a force for unity — bringing regional grievances to national attention and reinforcing unity in diversity.</p>
+
+<h3>Regionalism in India: Historical Background</h3>
+
+<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were recognised on the basis of language. By the 1960s, provinces settled within redrawn linguistic boundaries: Bombay divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast — Manipur, Tripura, and Meghalaya formed in the late 1970s; NEFA granted statehood as Arunachal Pradesh in 1987. The restive Nagas and Mizos were granted statehood only after violent encounters: Nagaland in 1963 (insurgency continues); Mizoram after 1986 Laldenga accord.</p>
+
+<h3>Factors Causing Regionalism</h3>
+<ul>
+  <li><strong>Relative deprivation</strong> — if people of a particular region feel more deprived than others in distribution of resources and infrastructure, regional affiliation emerges (e.g. GNLF movement in Darjeeling — perceived as most underdeveloped compared to southern West Bengal; growing regional inequalities post-LPG with coastal regions benefiting more from private investment)</li>
+  <li><strong>Language and culture</strong> — identity based on language, once politicised, plays important role in region formation; Edward Sapir: language plays vital role in creation and determination of a region; anti-Hindi imposition movements in South India</li>
+  <li><strong>Unequal access to political power</strong> — local elites complain of "reverse" discrimination as elites from other regions corner financial grants and lucrative portfolios</li>
+  <li><strong>Reaction against cultural imposition</strong> — Assam anti-foreigner movement to preserve Assamese culture; South resisting Hindi imposition as northern dominance</li>
+  <li><strong>Administrative neglect</strong> — continuous neglect by ruling parties; "sons of soil" theory promoted to advance interests of neglected groups; demand for decentralisation; demand to bifurcate unilingual states</li>
+  <li><strong>Elite power ambitions</strong> — regional parties (DMK, AIADMK, Akali Dal, Telugu Desam, AGP) have encouraged regionalism to capture power</li>
+  <li><strong>Modernisation and mass participation interaction</strong> — various groups failing to identify group interests with national interests</li>
+  <li><strong>Aspirations of backward areas</strong> — local political leaders fed the idea that central government deliberately maintains regional imbalances</li>
+</ul>
+
+<h3>Son of the Soil Theory</h3>
+
+<p>The "son of the soil" theory emerges from competition for jobs between migrant and local educated middle-class youth. This theory works mostly in cities, because outsiders also get opportunities for education and employment there. Major involvement of people is due to rising aspirations combined with the economy's failure to create enough employment opportunities. It is essentially a nativist claim that locals have priority rights over employment and resources in their region — politically powerful but sociologically problematic in a country where the Constitution guarantees freedom of movement and the right to work anywhere.</p>
+
+<h3>Outcomes of Regionalist Movements</h3>
+<ul>
+  <li>Regional identity, culture, and geographical differences now appear to be better recognised as a valid basis for administrative division and political representation</li>
+  <li>Separate statehood movements are no longer stigmatised as parochial and antinational as in the past</li>
+  <li>New states are now proposed on grounds of good governance and development rather than language alone (Jharkhand, Uttarakhand, Chhattisgarh — formed 2000)</li>
+  <li>Dialect communities have asked for their own territorial homelands (Bundelkhand, Ruhelkhand, Mithilanchal)</li>
+</ul>
+
+<p>SR Maheshwari (quoting Rasheeduddin Khan) suggests the criterion for recognising a region should be "maximum homogeneity within and maximum identity without" — established across ten counts including language/dialect, social composition, ethnic features, demographic features, geographic contiguity, cultural patterns, economic life, historical antecedents, political background, and psychological group identity.</p>
+
+<p>Ashok Behuria argues the Indian federation has temperamentally behaved as a "union" and not a "federation." Leadership must adopt federal principles and gradually devolve powers — especially financial powers — to units if it is to contain ethnocultural assertions. Regionalism is a dynamic, pragmatic concept that seldom sustains itself on one single factor. The problem begins when regional interests are politicised for ulterior political motives — such unhealthy sub-regional patriotism can be cancerous and disruptive, as seen in separatist demands in J&K and by ULFA in Assam.</p>
+
+<p>A Kumar argues that the underlying principle in various accommodations of identity in India has remained internal self-determination — which has served to weaken the bases of political secessionism while not defeating the principle of self-determination itself. Creation of "dependent" states alone will not improve conditions; a genuinely developed, re-federalised system of governance is needed.</p>
+`,
   'politics-society-india': '',
   'social-movements-india': '',
   'population-dynamics': '',
