@@ -6640,5 +6640,189 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Conditions: chronic poverty, illiteracy, unemployment, substandard living, and the social stigma of the "criminal" label. Children beg for food rather than attending school. Human rights violations are pervasive. The Renke Commission (2008) and the Idate Commission (2017) studied their situation and recommended special welfare policies. The DNT population continues to face identity crisis due to absence of statutory documents — many lack ration cards, birth certificates, and other identity documents.</p>
 `,
+  'ethnicity-ethnic-conflicts': `
+<h2>Defining Ethnicity</h2>
+
+<p>Ethnicity is a dynamic process whereby a group of people or community regroups itself as an adaptive strategy in response to specific demands of situations. While ethnic attributes serve as static categories for classification, ethnicity itself is an active process involving the mobilisation of group identity for collective action in pursuit of group interests.</p>
+
+<p>K.S. Singh and Sandra Wallman (1988) define ethnicity as increasingly denoting people with a distinctive set of bio-cultural and bio-social characteristics. Ethnic difference is the recognition of contrast between "us" and "them." In their view, ethnicity is an excellent tool for identifying the aspirations of a community, delineating its boundaries, and preserving its identity.</p>
+
+<p>Urmila Phadnis, writing about ethnicity and nation-building in Sri Lanka, clarifies that ethnic identity is a significant but not sufficient requisite for evoking ethnicity. It is the mobilisation and manipulation of group identity and interest by the leadership that leads to ethnicity. Ethnicity is used both as an ideology and as a device to wrest greater concessions and shares in the power structure.</p>
+
+<h2>Ethnic Group: Definition and Features</h2>
+
+<p>An ethnic group is a social group or category of the population that, in a larger society, is set apart and bound together by common ties of race, language, nationality, or culture. Ethnic diversity is one form of social complexity found in most contemporary societies. Historically it is the legacy of conquests, colonial importation of peoples for labour and skills, industrialisation-driven migration, and political or religious persecutions.</p>
+
+<p>Hutchinson and Smith, closely followed by M.E. Brown, identify six characteristic features of an ethnic group:</p>
+<ul>
+  <li>A common proper name, to identify and express the "essence" of the community.</li>
+  <li>A myth of common ancestry that includes the idea of common origin in time and place and gives the ethnic group a sense of fictive kinship.</li>
+  <li>Shared historical memories, including heroes, events, and their commemoration.</li>
+  <li>One or more elements of common culture, which normally includes religion, customs, and language.</li>
+  <li>A link with a homeland, not necessarily through physical occupation (as with diaspora peoples).</li>
+  <li>A sense of solidarity on the part of at least some sections of the ethnic population.</li>
+</ul>
+
+<h2>Characteristics of Ethnicity</h2>
+<ul>
+  <li>Ethnicity relates to ascriptive identities like caste, language, religion, and region.</li>
+  <li>Inequality in the sharing of power between two ethnic groups results in conflict.</li>
+  <li>Ethnicity is socially mobilised and territorially confined.</li>
+  <li>It has a numerically sufficient population and is a pool of symbols depicting distinctiveness.</li>
+  <li>It has a reference group in relation to which a sense of relative deprivation, real or imagined, is aggregated.</li>
+  <li>Being left out of the developmental process or being a victim of uneven development causes ethnicity to generate ethnic movements.</li>
+  <li>Ethnicity is manifested in Indian politics not merely due to grassroot discontent but also as a creation of vested political interest.</li>
+  <li>Ethnic groups that use ethnicity to make demands in the political arena for alteration in status, economic well-being, and access to resources are engaged in a form of interest group politics.</li>
+</ul>
+
+<h2>Latent and Manifest Identities</h2>
+
+<p>With plurality of identities, it is important to appreciate that all identities of individuals or groups cannot be noticeable at one time. Among various identities, only one becomes manifest or apparent at a given point of time while the rest remain subsurface or latent. Exactly which identity becomes manifest at a specific moment depends on the nature of the immediate boundary delineation. It is through the interplay of latent and manifest identities that ethnicity expresses itself as a dynamic process.</p>
+
+<p>Whether an individual identifies as a Hindu Rajput or a Bihari depends largely on existing conditions and felt needs of the moment. A person exercises their identity in order to determine what response is most appropriate at the given situation, thus contributing to the overall dynamics of the process. The people of Punjab, for instance, shifted their preoccupation from linguistic identity (demand for autonomy based on language in the 1960s) to regional identity (conflict with the Centre in the 1970s) to religious identity (demand for Khalistan in the 1980s) and back to national identity within two to three decades.</p>
+
+<h2>Ethnic Boundary: Fredrik Barth</h2>
+
+<p>Fredrik Barth's concept of ethnic boundary is foundational to the anthropological study of ethnicity. An ethnic boundary refers to a social boundary that does not always correspond to a territorial boundary. The individual defines oneself through ethnic identity, while the ethnic boundary defines the social limit of the ethnic group.</p>
+
+<p>A dichotomisation of "others" as strangers or members of another ethnic group has two implications: recognition of one's own social boundaries (in-group and out-group), and the limitation of common understanding and mutual interest. People outside the boundary are not expected to share common understanding and interest. Barth stressed that ethnic identities are maintained through boundary maintenance processes, not through cultural content per se. Ethnic groups persist not because they are internally homogeneous but because their members actively maintain distinctions from outsiders.</p>
+
+<p>Ethnocentrism, as William G. Sumner described, is the tendency of individuals to treat their own group as the centre of their lives and to rate all other groups with reference to their own. Social categorisation theory (H. Tajfel 1981; J.C. Turner 1982) holds that every social group attempts to achieve an identity in contradiction to the out-group. Identity is the process by which an individual is bound to their social group and realises their social self.</p>
+
+<h2>Types of Ethnic Groups: Eriksen's Classification</h2>
+
+<p>Thomas Hylland Eriksen distinguishes between the following types of ethnic groups:</p>
+<ul>
+  <li><strong>Modern migrants:</strong> Groups of recent immigrants and their descendants, usually concentrated in towns and cities. They may face racism and challenges in maintaining identity under cultural change, but are unlikely to organise for separate statehood.</li>
+  <li><strong>Indigenous people:</strong> Original inhabitants of a territory, politically relatively powerless and only partly integrated into dominant nation-states.</li>
+  <li><strong>Proto-nations / Ethno-nationalist movements:</strong> Minority ethnic groups actively seeking an independent state. Examples include Tamils, Kurds, and Palestinians. They share many features with nations but do not control their own territory.</li>
+  <li><strong>Ethnic groups in plural societies:</strong> Groups seen as culturally distinctive within colonially created states, where ethnic diversity was enhanced by migration organised or encouraged by colonial powers.</li>
+  <li><strong>Post-slavery minorities:</strong> Minority ethnic groups who are descendants of slaves, particularly those of African origin in the Americas.</li>
+</ul>
+
+<h2>Theoretical Approaches to Ethnicity</h2>
+
+<h3>Primordial Approach (Clifford Geertz, Edward Shils)</h3>
+<p>Primordialists view ethnicity as innate, fixed, and permanent. Primordial attachment is seen as a basic feature of social life and a natural and inevitable phenomenon in human groups. Humans always divide the world into groups of insiders and outsiders and maintain an emotional and intuitive bond with members of their own group.</p>
+
+<p>Clifford Geertz holds that primordial attachment means something "given": "The social existence is, born and given with certain degree of coerciveness. In such attachments culture is inevitably involved. The social existence is given with contiguity and kin connection. The idea of 'givenness' stems from being born into a particular religious community, speaking a particular language, or even a dialect of a language, and following particular social practices. These congruities of blood, speech, custom, and so on, are seen to be inevitable."</p>
+
+<p>The primordial school thus looks at ethnic bonds as ancient, natural, emotional, and given. Ethnicity is considered static and naturalistic. The major problem with primordialists is that they fail to explain why different kinds of identities emerge at different points in time, why some identities decay or change, and why some ethnic groups fight while others cooperate. They do not account for the dynamic character of identity or the formation of new identities.</p>
+
+<h3>Instrumentalist Approach (Abner Cohen, Paul Brass)</h3>
+<p>Instrumentalists view ethnicity as socially and politically constructed over time. Ethnicity is a necessary instrument for achieving certain goals. They treat ethnicity as a social, political, and cultural resource for different interest groups. Since ethnicity is a construction, ethnic boundaries become flexible and change over time.</p>
+
+<p>Paul Brass argues that cultural forms, values, and practices of ethnic groups become political resources for elites in competition for political power and economic advantage. They become symbols and referents for group identification, called up in order to create a political identity. These symbols can be shifted to adjust to political circumstances and limitations imposed by state authorities. Brass thus argues that ethnicity is constructed by group elites whose main motive is to access state resources, both political and economic.</p>
+
+<p>The major criticism of instrumentalists is that they do not explain how ethnicity is socio-politically constructed and what internal force within ethnicity enables people to be mobilised on ethnic grounds to the extent that they are ready to die for their culture and ethnic origin.</p>
+
+<h3>Constructivist Approach (Wieland)</h3>
+<p>Wieland criticises both previous approaches. Against primordialists: ethnic groups cannot be considered natural or ethnic identity as fixed because this assumption leaves unexplained why some ethnic groups decay, some reappear, some merge, why new identities form, why some ethnic characteristics matter more than others, and why some groups fight while others cooperate.</p>
+
+<p>Wieland argues that ethnicity is a modern invention. In the formation of ethnic groups, selective cultural materials are used to generate cohesive force. Some primordial traits are employed to form ethnicity, making it dependent on primordialism at its origin, but it then influences society independently of that primordial origin. Constructivists argue that members of an ethnic group feel a strong cohesion to in-group members, and ethnic activists can mobilise their group to commit violence by convincing them they are under threat from another ethnic group. If one group believes another is better off, they may perceive the out-group as a threat to their identity, which can be sufficient to trigger violence.</p>
+
+<p>The current scholarly consensus is that an ethnic group is essentially a social group when it is mobilised for collective action in pursuit of group interest. The idea that ethnicity is culturally predetermined with primordial loyalties is largely discounted.</p>
+
+<h3>Institutional / Situational Approach</h3>
+<p>The second school of thought on ethnic conflict argues that existence of ethnic differences alone is not sufficient to explain conflict. The root causes of ethnic conflict are not ethnic per se but rather institutional, political, and economic. Ethnicity is a device used by the elite of an ethnic group to unify, organise, and mobilise populations to achieve larger goals. Those goals are mostly political: self-governance, autonomy, access to resources and power, respect for the group's identity and culture, and minority rights. Ethnic conflicts are thus not fundamentally different from political conflicts over competing interests.</p>
+
+<h2>Hamza Alavi and Dipankar Gupta: Indian Perspectives</h2>
+
+<p>Hamza Alavi, writing on the politics of ethnicity in India and Pakistan, holds that the boundaries of ethnic categories are not objectively pre-given. Whenever there is change of interest or situation, realignment occurs. A so-called objective criterion like religion can be abandoned in favour of another like region or language. The ethnic community is not simply a politically mobilised condition of a pre-existing set of people described as an ethnic category. The ethnic categorisation itself is dependent in some way on the very emergence of the community. Both ethnic category and ethnic community are simultaneously constituted in a single movement.</p>
+
+<p>Dipankar Gupta argues that the manifestation of ethnicity in Indian politics is not so much an outcome of popular grassroot passions as it is a creation of vested political interests. He applies the notion of "conspiracy" to ethnic politics in India to draw attention to the deliberate and calculated manner in which such politics is fashioned. He justifies this approach by asking why, from the variety of ethnic identities that abound in one society, only certain ethnic dyads are politically activated, and that too very selectively at certain points of time.</p>
+
+<h2>Ethnic Conflict: Nature and Causes</h2>
+
+<p>In popular usage, "ethnic conflict" is associated with violence: riots, pogroms, genocide, or war. However, from the Gandhian perspective and in scientific vocabulary, conflict is a neutral category and a part of normal political life. Ethnic conflict is a regular feature of any plural society, whether governed by democratic or authoritarian systems. In plural societies, ethnic groups often compete for the same goals: power, resources, recognition, or territory. In democratic systems, these conflicts generally get channelled and resolved through negotiations in parliaments, assemblies, and bureaucracies or through strikes and nonviolent demonstrations. Only on rare occasions do they end in ethnic violence. In authoritarian systems, coercion and violence are more widely accepted as legitimate means for resolving political conflict.</p>
+
+<h3>Michael Edward Brown's Framework: Underlying and Proximate Causes</h3>
+
+<p>Brown distinguishes between underlying causes and proximate causes of ethnic conflict.</p>
+
+<p>Underlying causes include four factors:</p>
+<ul>
+  <li><strong>Structural factors:</strong> Weak states, intra-state security concerns, ethnic geography (intermixed vs. concentrated populations).</li>
+  <li><strong>Political factors:</strong> Discriminatory political institutions, exclusionary national ideologies, intergroup politics, elite politics.</li>
+  <li><strong>Economic and social factors:</strong> Economic problems, discriminatory economic systems, modernisation and urbanisation leading to displacement and cultural anxiety.</li>
+  <li><strong>Cultural and perceptual factors:</strong> Patterns of cultural discrimination, problematic group histories, negative group perceptions, and the security dilemma at the group level.</li>
+</ul>
+
+<p>Proximate causes embrace four levels of conflict triggers:</p>
+<ul>
+  <li>Internal mass-level factors ("bad domestic problems").</li>
+  <li>External mass-level factors ("bad neighbourhoods").</li>
+  <li>External elite-level factors ("bad neighbours").</li>
+  <li>Internal elite-level factors ("bad leaders").</li>
+</ul>
+
+<p>According to Brown, both underlying and proximate causes must be present for ethnic conflict to evolve.</p>
+
+<h2>Ethnic Conflicts in India</h2>
+
+<p>After independence, India embarked on a massive project of nation-building amidst enormous ethnic diversity spanning caste, religion, tribe, language, and region. The founding fathers adopted a two-fold strategy: a Constitution providing for a democratic and federal set-up based on secularism, liberty, and equality; and the recognition of diversities as central to the nation through "composite nationalism" emphasising unity in diversity and allowing each group to maintain its distinct identity without merging into a homogeneous culture.</p>
+
+<p>The stability of post-independence India has depended on the balance between national unity and the demands of ethnic groups. A distinctive feature of the Indian case is the fluidity of ethnic identity, where people readily shift preoccupations from one identity to another in response to changing circumstances. This fluidity has generally prevented social tensions from hardening into prolonged and intractable conflicts that might tear democratic institutions apart.</p>
+
+<h3>Manifestations of Ethnic Conflict in India</h3>
+
+<p>The challenges posed by ethnic groups in India have taken four main forms:</p>
+<ul>
+  <li>Autonomy movements</li>
+  <li>Secessionist movements</li>
+  <li>Insurgency</li>
+  <li>Violent conflicts on the basis of identity markers such as language, religion, tribe, and caste</li>
+</ul>
+
+<p>The first three are also called self-determination movements and have occurred where there is a rough correlation between ethnic identity and territory.</p>
+
+<h3>Features of Ethnic Conflicts in India</h3>
+<ul>
+  <li>Ethnic conflicts are a consequence of organised communal bodies. For conflict to become a public issue, organised bodies backed by political parties generally come to the fore, leading to the institutionalisation of communal bodies.</li>
+  <li>Whatever the manifest cause (language, region, religion), the latent cause is not rooted in cultural disparity. Conflicting economic and political interests form the basis. Tensions arise when a minority group feels deprived of equal position in the economic or political sphere and uses primary ties to motivate and activate their group against the dominant group.</li>
+  <li>Allegiance and group loyalty depend on the principle of mutual interest. During the 1972 Assam riots, Bengali Muslims who shared cultural similarities with Bengali Hindus did not side with them but supported the Assamese in exchange for security of their land.</li>
+</ul>
+
+<h3>Linguistic Reorganisation of States</h3>
+
+<p>The demand for creation of states on the basis of language emerged soon after independence. The Telugu-speaking population of the Madras Presidency and adjoining regions demanded a separate state. Similar demands from other language groups led the Central government to set up the States Reorganisation Commission, which created linguistically distinct states in the mid-1950s. Subsequently, ethnicity has been the dominant factor in the internal reorganisation of the Indian Union: Punjab and Haryana were created in 1966; Assam was divided into seven states in 1972; in 2000 three new states were carved out: Uttaranchal (now Uttarakhand) from Uttar Pradesh, Jharkhand from Bihar, and Chhattisgarh from Madhya Pradesh.</p>
+
+<h3>Northeast: Secessionist and Autonomy Movements</h3>
+
+<p>In the Northeast, ethnic communities had very little contact with India during the colonial period. When India became independent, the entry of the modern Indian state created tensions and fears that their ethnic way of life would be lost. Groups have waged protracted violent struggles for secession. In the early 1950s, a section of the Nagas declared independence. The Naga National Council and the National Socialist Council of Nagaland launched an armed struggle for a sovereign Nagaland. Negotiations from the mid-1990s led to a landmark agreement in 2015 between the Indian government and the NSCN. Besides secessionist movements, the region has seen autonomy movements leading to the carving out of Meghalaya, Mizoram, and Arunachal Pradesh from Assam. The demands of Bodos, Karbis, and Dimasas have been addressed through District Councils and Autonomy Councils rather than further state creation.</p>
+
+<h3>Religious Conflicts: Hindu-Muslim and Hindu-Sikh</h3>
+
+<p>The genesis of Hindu-Muslim religious conflicts is often attributed to the advent of Muslims to India, but this is erroneous: communalism as a socio-political form is a modern phenomenon. Pre-colonial tensions were accentuated by the British introduction of electoral politics and the divide-and-rule policy, creating competitiveness and hostility between communities that later materialised in the Muslim League and the formation of Pakistan.</p>
+
+<p>The Moradabad riots of 1980, during the Id-ul-Zuha festival, are among the most notable examples of Hindu-Muslim conflict: a pig was released near the prayer gathering at the Idgah, leading to violent confrontations in which over 400 people lost their lives. Economic tensions between Hindu traders and Muslim artisans, coupled with political manipulation, have repeatedly fueled such conflicts.</p>
+
+<p>The Hindu-Sikh conflict illustrates the communal politics of the secular centre. In the 1980 Punjab elections, Indira Gandhi took the help of Sant Jarnail Singh Bhindranwale to mobilise Sikh voters, inadvertently enabling religious leaders to act independently of political leadership. With Sikh diaspora support, Bhindranwale rallied a large number of youth and demanded a separate Sikh homeland: Khalistan. The resulting chain of events included large-scale militant violence, Operation Blue Star, the assassination of Indira Gandhi, and anti-Sikh riots of 1984 in which thousands lost their lives. The Punjab problem must also be viewed as a political rivalry between the Congress at the Centre and the Akali Dal in Punjab. The Akalis demanded religious, economic, and political autonomy: a share in river water, hydro-electric power, control over Chandigarh, and the Abohar and Fazilka areas. The conflict also reflected the divide between a Sikh community predominantly rural and agricultural and a Hindu community predominantly urban and commercial, whose elites found communal mobilisation served their interests.</p>
+
+<h3>Language Conflict: Assam</h3>
+
+<p>Riots broke out in Assam in 1972 between immigrant Bengali Hindus and the local Assamese population when the Assamese demanded withdrawal of the option of answering in Bengali. This must be understood within the economic structure of Assam: Bengali Muslims from Bangladesh dominated tea gardens and agriculture; Marwaris monopolised trade; Bengali Hindus from West Bengal dominated administrative services. The Assamese were unable to compete in banking (dominated by Marwaris), were less qualified for administrative jobs (dominated by Bengali Hindus), and were unwilling to work at estate wages. Independence strengthened an Assamese middle class that saw Bengali Hindus as an obstacle to economic advancement. The Assamese middle class reacted through assertive regional identity to claim their due share in economic development.</p>
+
+<h2>Regionalism</h2>
+
+<p>Region is interpreted on the basis of geography, culture, language, and historical construction. Citizens of a nation-state demand recognition for a separate region due to marginalisation, alienation from the larger state, lack of access to resources, and absence of dignity. There are at least three main forms of regionalism: economic, political, and strategic. Regionalism can be a form of resistance against the imposition of a particular cultural ideology linked to the integration of a nation.</p>
+
+<p>Two significant factors drive the emergence of regionalism. First, the existence of relative deprivation: if people from a particular region feel more deprived than others in the distribution of resources and infrastructure, regional affiliation emerges. The Gorkha Nationalist Liberation Forum (GNLF) started its movement in Darjeeling precisely because the GNLF viewed Darjeeling as the most underdeveloped region compared to the southern part of West Bengal. Second, the issue of language and culture: every individual's identity is based on language and culture which, once politicised, play an important role in the formation of regional demands. According to Edward Sapir, language plays a vital role in the creation and determination of a region.</p>
+
+<h3>Jharkhand Movement: A Case Study</h3>
+
+<p>The Jharkhand Movement is a major example of the politics of ethnicity driven by regional identity. Its sustenance came from growing discontent among tribals over land alienation, exploitation, and political neglect. The Jagirdari system in the 18th century turned tribals into mere tenants exploited shamelessly by non-tribals. A series of tribal uprisings occurred between 1789 and 1900. Christian Missionaries entered in the mid-19th century, making available education and increasing employment opportunities. Educated tribal Christians formed the Chhota Nagpur Unnati Samaj (CNUS) in 1928. The turning point came when Orissa was carved out of Bihar in 1936. The Adibasi Sabha (1938), successor to CNUS, under Jaipal Singh's leadership first demanded a separate tribal province.</p>
+
+<p>The demand for Jharkhand was subsequently championed by the Jharkhand Mukti Morcha. The region is extraordinarily mineral-rich: iron ore, coal, copper ore, mica, bauxite, graphite, limestone, and uranium. Jharkhand state was formed on 15 November 2000, the birth anniversary of tribal hero Birsa Munda. The principal arguments for statehood were the large concentration of tribals in a physically distinct region; the total difference in mental make-up, language, culture, and values from non-tribals; the sense that welfare and development provided to tribals was a pittance compared to the mineral wealth and forest resources extracted from the region; and the fear of losing tribal identity as a minority surrounded by non-tribals. The changing definition of "diku" (outsider-enemy) over time reflects the dynamic and contextual nature of ethnic identity: originally referring to zamindars and their employees, then to upper-caste non-tribals, and now to people from North Bihar.</p>
+
+<h2>Pseudo-Tribalism</h2>
+
+<p>Pseudo-tribalism refers to a phenomenon in which individuals or communities claim tribal identity not on the basis of genuine tribal origin and culture but instrumentally, in order to benefit from the constitutional provisions and reservations available to Scheduled Tribes. This includes both false claims by non-tribal individuals to ST status, and the political inflation of tribal identity beyond its genuine social basis. Pseudo-tribalism is a direct product of the gap between the social content of tribal identity and the administrative category of Scheduled Tribe. Because ST status confers access to reservations in employment and education, legislative constituencies, land protections, and welfare schemes, it has become a resource that non-tribal or partially-acculturated communities seek to claim.</p>
+
+<p>Manifestations include: communities that are substantially integrated into the Hindu caste system seeking ST status by emphasising residual cultural markers; non-tribal communities seeking inclusion in ST lists for electoral advantage; and tribal members who have fully urbanised and assimilated retaining ST status without the material vulnerability that the category was designed to address. The Lokur Committee (1965) criteria for ST recognition (primitive traits, distinct culture, geographical isolation, shyness of contact, and backwardness) have been criticised as both outdated and difficult to apply objectively, creating space for manipulation.</p>
+
+<p>Pseudo-tribalism raises important questions about the relationship between cultural identity and political entitlement, the purpose of protective discrimination, and the dangers of bureaucratically fixing fluid social identities.</p>
+`,
 };
+
 
