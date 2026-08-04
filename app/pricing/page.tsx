@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { auth } from '@/lib/firebase';
 
 const plans = [
@@ -282,6 +282,17 @@ declare global {
 export default function PricingPage() {
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [rzpReady, setRzpReady] = useState(false);
+
+  // Preload Razorpay checkout script on mount so it's ready before user clicks
+  useEffect(() => {
+    if (window.Razorpay) { setRzpReady(true); return; }
+    const s = document.createElement('script');
+    s.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    s.onload = () => setRzpReady(true);
+    s.onerror = () => setError('Payment gateway failed to load. Try disabling your adblocker or use a different browser.');
+    document.body.appendChild(s);
+  }, []);
 
   const handlePurchase = async (planId: string) => {
     setError(null);
@@ -297,16 +308,6 @@ export default function PricingPage() {
       });
       const orderData = await orderRes.json();
       if (!orderRes.ok) throw new Error(orderData.error ?? 'Order creation failed');
-
-      if (!window.Razorpay) {
-        await new Promise<void>((resolve, reject) => {
-          const s = document.createElement('script');
-          s.src = 'https://checkout.razorpay.com/v1/checkout.js';
-          s.onload = () => resolve();
-          s.onerror = () => reject(new Error('Razorpay failed to load'));
-          document.body.appendChild(s);
-        });
-      }
 
       const rzp = new window.Razorpay({
         key: orderData.keyId,
@@ -428,11 +429,11 @@ export default function PricingPage() {
 
                     <button
                       onClick={() => handlePurchase(plan.id)}
-                      disabled={!!loading}
+                      disabled={!!loading || !rzpReady}
                       className={isFeatured ? 'pr-btn' : 'pr-btn pr-btn-outline'}
                       style={isFeatured ? { background: plan.color, color: '#fff' } : isYearly ? { borderColor: 'rgba(232,184,109,0.3)', color: '#e8b86d' } : undefined}
                     >
-                      {isLoading ? 'Opening checkout…' : 'Get started →'}
+                      {isLoading ? 'Opening checkout…' : !rzpReady ? 'Loading…' : 'Get started →'}
                     </button>
                   </div>
                 </div>

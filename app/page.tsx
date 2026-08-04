@@ -318,7 +318,6 @@ export default function Home() {
               {[
                 { val: '1500+', label: 'PYQs' },
                 { val: '5', label: 'Optionals' },
-                { val: '140+', label: 'Topper scores' },
               ].map(s => (
                 <div key={s.label}>
                   <div className="lp-hero-stat-val">{s.val}</div>
