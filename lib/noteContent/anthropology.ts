@@ -4999,7 +4999,181 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>NFHS-5 (2019–21) key findings: TFR 2.0 (replacement level); IMR 35.2 per 1,000 live births; MMR 97 per 100,000 live births (SRS 2018–20); under-5 mortality rate 42 per 1,000 live births; full immunisation coverage 76.4%; institutional births 88.6%; total unmet need for family planning 9.4%.</p>
 `,
+  'traditional-indian-social-system': `
+<h2>Overview: Pillars of the Traditional Indian Social System</h2>
+
+<p>The traditional Indian social system rests on a set of interlocking normative frameworks — Varna, Ashrama, Purushartha, Karma, and Rina — collectively expressed through the concept of Varnashrama Dharma. These frameworks provided a complete theory of social organisation, life-cycle conduct, material and spiritual goals, and cosmic obligation. They were elaborated in the Vedas, Upanishads, Dharmasastras, and the great epics, and shaped the lived realities of Indian communities for millennia.</p>
+
+<h2>Varna System</h2>
+
+<p>The first reference to the Varna system appears in the Purush Sukta (Rigveda, Book 10, Hymn 90), where the different sections of society are regarded as limbs of the great cosmic self. Varna (Sanskrit: "colour") is the organised division of human society into four functional groups based on the occupations they pursue and the qualities (gunas) they embody.</p>
+
+<h3>The Four Varnas</h3>
+<ul>
+  <li><strong>Brahmins:</strong> Priests, teachers, and scholars — entitled to study the Vedas, perform rites and rituals for themselves and for others, and obliged to observe the sacraments. They occupy the top of the ritual hierarchy. As the dharmasastras put it: "A Brahmana may remain without a King, but a king should not be without a Brahmana." The purohit (family priest) was considered "half the soul of the Kshatriya." Brahmins were traditionally prohibited from earning wealth, living instead on dana (gifts) given by the other varnas — thus freeing them to devote their lives to spiritual pursuit.</li>
+  <li><strong>Kshatriyas:</strong> Warriors and rulers — commanded by tradition to protect the people, give gifts to Brahmins, offer sacrifices to gods, and dispense justice. They occupy the second position in the hierarchy. Brahmins and Kshatriyas were closely interdependent: in matters of Dharma, in vocations and professions, education, marriage, and statecraft.</li>
+  <li><strong>Vaishyas:</strong> Merchants, traders, and agriculturalists — entitled to lending money and trade-related activities. Third position.</li>
+  <li><strong>Shudras:</strong> Artisans, labourers, and workers — their only dharma was to serve the other three varnas. Fourth and lowest position in the ritual hierarchy.</li>
+</ul>
+
+<p>Outside the proper varna system, at the very bottom, are the Untouchables — those whose occupations (lifting dead animals, sweeping, carrying garbage) were considered to involve ritual pollution. A high-caste person was required to undergo elaborate purification after touching such a person. Members of the three upper varnas are referred to as <em>dwija</em> (twice-born) because they undergo a ceremony (Upanayana) entailing spiritual rebirth.</p>
+
+<h3>Properties of the Varna System</h3>
+<p>The varna system had a principle of functional differentiation: what is dharma for one section may be adharma for another. For example, absolute non-violence (including refraining from animal sacrifice) is considered dharma for Brahmins but unworthy of a Kshatriya warrior. The ultimate common goal underlying all differences is advancement in spiritual life based on Sanatana dharma.</p>
+
+<p>Importantly, varna was theoretically not a closed hereditary system. Dharmasastras described provisions for both upward and downward social mobility: <em>Jatyutkara</em> (uplift — when a lower varna changed into a higher varna) and <em>Jatyapakarsa</em> (degeneration — when a higher varna descended into a lower). Such changes could occur through consistently following the vocation of another varna for five to six generations and through inter-varna marriage for a similar period. Anuloma marriages (male of higher varna + female of lower) and pratiloma marriages (the reverse) were recognised, though the latter were disapproved.</p>
+
+<h3>Varna vs Jati vs Caste</h3>
+<p>It is crucial to distinguish these three levels of the Indian social hierarchy, which are often confused:</p>
+<ul>
+  <li><strong>Varna</strong> is text-based — it appears in Sanskrit scriptures and provides an abstract four-fold Pan-Indian hierarchy. It does not exist on the social plain in the same form as jati. Scholars point out that the varna order is more consistent (four categories, universal) but more abstract.</li>
+  <li><strong>Jati</strong> is the real operating unit of the Indian social system. M.N. Srinivas wrote that "the real unit of the caste system is not one of the four varnas but the jati, which is a small endogamous group practising a traditional occupation and enjoying a certain amount of cultural, ritual and judicial autonomy." There are thousands of jatis in India, all representing a hereditary occupation or craft, with long-standing commitments to other jatis within a region and a special place in the local ritual hierarchy. Jatis are highly localised — they do not have Pan-Indian impact. Practical function of the varna system is mainly to make it possible for the members of local jatis to locate themselves in relation to jatis in other parts of the country.</li>
+  <li><strong>Caste</strong> is the colonial-administrative translation of jati, introduced through the census operations of the British. Bernard S. Cohn argued that the colonial census, rather than passively recording caste, actively manufactured and objectified it. G.S. Ghurye — perhaps the first scholar to critique the caste census — noted that it led to proliferation of caste associations and reinvigoration of caste identity. The connotation of jati in indigenous traditions is far from uniform and not equivalent to caste as understood through colonial administrative categories.</li>
+</ul>
+
+<h3>Ghurye's Six Features of the Caste System</h3>
+<p>G.S. Ghurye (1950) identified six main features of the caste system: segmental division of society; hierarchy; endogamy; association with a hereditary occupation; restrictions on food and social intercourse; and civil and religious disabilities and privileges enjoyed by different sections of society.</p>
+
+<h3>Gotra</h3>
+<p>Gotra refers to the structural form of the patrilineal clan within the jati. Exogamy of the endogamous group is defined through the gotra — one must not marry within the same gotra. It is the most important principle regulating marriage within the jati.</p>
+
+<h3>Dominant Caste (M.N. Srinivas)</h3>
+<p>Every region has its own dominant jati, as the concept of jati is highly localised. According to Srinivas, the dominant jati is determined by four criteria: largest land-holding; numerical preponderance (highest in number); most literate and economically prosperous; first to make use of English education and new occupations. If all four conditions are satisfied, the jati is the dominant one of the locality.</p>
+
+<h2>Ashrama System: The Four Stages of Life</h2>
+
+<p>The Ashrama system recognises four stages (ashramas) in a human being's life cycle. Hindu sages held that any scheme of social organisation must take account of human beings from two aspects: as social beings who must be trained and developed to achieve the ultimate goal of existence; and as individuals with natural endowments, dispositions, and attitudes. The ashrama scheme addresses the first aspect; varna addresses the second.</p>
+
+<p>The word ashrama is derived from the Sanskrit root <em>srama</em> (to exert oneself). Ashramas are regarded as resting places during one's journey towards final liberation. Each ashrama is a stage in which an individual trains himself for a certain period and qualifies himself for the next. Vyasa remarked in the Mahabharata that the four stages of life form a ladder of four steps leading to Brahmana (the region of Brahma). Hindu thought also recognises four factors that influence man's life and conduct: desa (regional environment), kala (time/historical context), srama (nurture and development), and guna (natural inherent psycho-biological equipment).</p>
+
+<h3>Brahmacharya Ashrama (Student Stage)</h3>
+<p>The first stage of life. A boy enters through the Upanayana ceremony (<em>thread ceremony</em>), through which he is said to be reborn (dwija). Age of initiation differs by varna: Brahmin at 8, Kshatriya at 10, Vaishya at 12. Shudra children were traditionally not allowed this initiation or formal education. After initiation, education begins at the residence of the teacher (Gurukula). The student learns the Vedas, which contain the cultural traditions of the Aryans. He is required to maintain strict discipline, observe complete celibacy, restrain his senses, and lead a hard life of austerity, service to the teacher, and reverence. The stage is completed by approximately age 25. The life of the brahmacharya is a life of discipline and balanced development of personality.</p>
+
+<h3>Grihastha Ashrama (Householder Stage)</h3>
+<p>On returning home from the gurukula, the student is entitled to marry and lead the life of a householder. Hindu law books prescribed that the householder should marry a woman of equal caste who had not been previously married, who did not belong to the same gotra, and who was younger than him. As a householder, he must work to increase family wealth, pay the religious debts (Rinas) owed to his father, ancestors, rishis, and other beings, care for parents, grandparents, children, and wife, honour guests, and help the poor. The Dharmasastras prescribed three duties for the householder: Nitya karma (daily duties), Naimittika karma (duties on specific occasions), and Kamya karma (desired duties plus varna-specific duties). The householder pursues Artha (second Purushartha) and Kama (third Purushartha) in the manner prescribed by Dharma (first Purushartha) and prepares for Moksha (fourth Purushartha). The Grihastha Ashrama is considered the most important because it supports all other ashramas — the householder's gifts sustain the Brahmin teachers and ascetics.</p>
+
+<h3>Vanaprastha Ashrama (Forest-Dweller/Retired Stage)</h3>
+<p>During this stage a person is expected to move away from worldly matters and prepare for the spiritual journey toward Moksha. He delegates his duties to his children, leaves family and possessions behind, and moves to a secluded hermitage or forest. He lives like an ascetic — wearing simple garments (cloth, skin, or bark), wearing hair in braids, remaining chaste, restraining speech and senses, subsisting on wild roots, fruits, and vegetables, honouring guests at the hermitage, giving gifts but not receiving them, bathing three times a day, promising safety to all beings, and sleeping on the ground. These practices aim at controlling the mind, overcoming passions, and developing detachment from sense objects in preparation for the more rigorous life of the sanyasi.</p>
+
+<h3>Sanyasa Ashrama (Ascetic/Renouncer Stage)</h3>
+<p>The final phase of human life, devoted entirely to the pursuit of Moksha (final liberation). The ascetic wears a single garment or grass cover, sleeps on bare ground, subdues the organs of sensation and action, renounces all sensual gratification, fixes the mind in meditation on the Supreme Spirit, and is wholly indifferent to pleasure and pain. He shall not wander within sight of village cattle, shall not wear any visible mark of his order, and shall not follow any visible rule of conduct (the rules are entirely internalised). The Vashista Sutras provide the canonical description of this stage.</p>
+
+<h2>Varnashrama Dharma</h2>
+
+<p>Varnashrama Dharma is the integration of the varna system with the four ashramas. When varna (the division of society into four functional groups) is intertwined with ashrama (the four stages of life), the result is Varnashrama Dharma — varna in different ashramas. The Varnashrama is a natural, organised division of society that provides a structure allowing people to work according to their natural tendencies and to organise society so that everyone, regardless of position, makes spiritual advancement. The philosophy holds that people can only work together cooperatively if there is a central spiritual focus. Varnashrama Dharma is different from the caste system in that it contains no element of racial prejudice — it is grounded in duty, temperament, and spiritual goal rather than birth-based exclusion.</p>
+
+<h2>Purushartha: The Four Aims of Human Life</h2>
+
+<p>The term derives from two Sanskrit roots: <em>purusha</em> (human being) and <em>artha</em> (purpose/objective). Purushartha = "object of human pursuit" or "purpose of human beings." Purushartha and Ashrama Vyavastha are closely linked — they run parallel to each other. Just as there are four Ashramas, there are four Purusharthas: Dharma, Artha, Kama, and Moksha. Purushartha is the basis on which the life of a man rotates — an amalgam of this-worldliness that coordinates the activities of a man for the realisation of spirituality as well as for the maintenance of daily life.</p>
+
+<p>P.N. Prabhu: "The theory of Purusharthas concerns itself with the understanding, justification, management and conduct of affairs of the individual's life in relation to the group in and through the Ashramas." K.M. Kapadia: "According to this theory there are four Purusharthas or aims of life — Dharma, Artha, Kama and Moksha. The theory of Purushartha seeks to coordinate material desires and spiritual life. It comprehends life as a whole, its hopes and aspirations, its acquisitions and enjoyment, its sublimation and spiritualisation."</p>
+
+<h3>Dharma</h3>
+<p>Derived from the Sanskrit root <em>dhri</em> (to hold together, to preserve). Dharma is the principle that preserves all that is created and maintains the stability of society. It is the force that protects man from all dangers. On the cosmic scale, Dharma is the law or rules that created the Universe from chaos. On the individual level, it is one's true purpose in life and the ethical basis of conduct. K.M. Kapadia: Dharma provides a link between Artha and Kama — it teaches that Kama and Artha are means and not ends. If a person devotes all his energies to the satisfaction of basic urges, life becomes dangerous; some force is required to regulate and control mankind. Dharma provides direction to the acquisitive and emotional drives in man, bringing harmony between temporal interest and spiritual freedom. The Bhagavad Gita: "The greatest dereliction of Dharma is to desert the helpless in their time of need."</p>
+
+<h3>Artha</h3>
+<p>Artha means the economic and material aspects of life. Zimmer: it includes "the whole range of tangible objects that can be possessed, enjoyed and lost and which are required in daily life for the upkeep of a household, raising of a family, income and discharge of religious duties." P.N. Prabhu: Artha refers to all the means necessary for acquiring worldly prosperity — wealth or power. K.M. Kapadia: Artha refers to the acquisitive instinct in man and signifies acquisition and enjoyment of wealth. Old Hindu thinkers allowed the pursuit of wealth as a legitimate action. Artha is also necessary because it enables the maintenance of household and the performance of Dharma as a householder. A man cannot unfold his spirituality when economically starved. However, worldly success must not violate the moral responsibility of Dharma or the journey toward Moksha.</p>
+
+<h3>Kama</h3>
+<p>Kama refers to all desires for the enjoyment and satisfaction of the senses, including sex and the drives to which man is prone. P.N. Prabhu: Kama includes the "native impulses, instincts and desires of man; his natural mental tendencies." K.M. Kapadia: Kama refers to the instinctive and emotional life of man and provides for the satisfaction of his sex drives and aesthetic urges. Kama as the satisfaction of instinctive life is recognised as one of the aims of marriage, alongside Dharma and procreation. Hindu thinkers argued that satisfaction of basic desires is necessary — their suppression would be a great hindrance to salvation. The theory of Purushartha does not prohibit physical pleasure; on the contrary, Kama is prescribed for the development of inner and outer life. Dharma, Artha, and Kama in harmonious combination form the <em>Trivarga</em> — the well-being of man depends on their harmonious blending. Right kinds of pleasure lead toward Dharma and help fulfil it with passion; excessive Kama leads to overindulgence, addiction, sloth, and greed.</p>
+
+<h3>Moksha</h3>
+<p>The ultimate end of life is to attain Moksha — liberation, emancipation, freedom from the cycle of death and rebirth, freedom from ignorance, self-realisation, and consciousness of the Oneness of the Supreme Soul. Kapadia: Moksha represents the end of life, the realisation of an inner spirituality in man. Some thinkers believe Moksha is the most important Purushartha and the remaining three are only means toward it. Vedanta: liberation comes to those who know Brahman as that which is the origin and end of all things, the universal principle behind everything that exists, the consciousness that pervades everything. Such realisation comes from self-knowledge and self-discipline. Moksha is self-discipline that becomes so perfect it is unconscious, second nature — a state of bliss. The Purusharthas are the blueprint for human fulfilment: working with them helps create a satisfyingly balanced, meaningful life at the deepest and most holistic level.</p>
+
+<h2>Rina: The Doctrine of Obligations</h2>
+
+<p>According to the Dharmasastras, every Hindu carries obligations or debts (<em>rinas</em>) towards gods, parents, teachers/saints, and fellow human beings. These obligations are the basis of Hindu social conduct. Man who fails to carry out any rina during the first three ashramas is not entitled to try to attain Moksha — Manu says he who seeks Moksha without fulfilling his duties in the first three ashramas will sink low.</p>
+
+<p>The four Rinas:</p>
+<ul>
+  <li><strong>Pitri Rina (obligations towards parents):</strong> Discharged by having children (to continue the family line), treating children with love and guidance, and honouring parents throughout life. Parents endure great difficulty in bringing up children; the children are equally expected not to forget this.</li>
+  <li><strong>Rishi Rina (obligations towards teachers and saints):</strong> Teachers and saints are the makers and unmakers of life and can mould the future course of action. All respect must be shown to Rishis and teachers who have given one knowledge and guidance.</li>
+  <li><strong>Deva Rina (obligations towards gods and goddesses):</strong> Discharged by studying the Vedas properly and performing yajnas (sacrifices) as prescribed by Dharma. The gods are supposed to have given birth to the person and will receive him after death.</li>
+  <li><strong>Manusha Rina (obligations towards guests and fellow human beings):</strong> The obligation to honour guests (atithi devo bhava — the guest is God), to help the poor and needy, and to maintain social harmony.</li>
+</ul>
+
+<p>The obligations are discharged through a three-fold method: studying the Vedas (discharges Rishi Rina); begetting children in accordance with Dharma (discharges Pitri Rina); performing all duties as a Grihastha (discharges Deva Rina and Manusha Rina).</p>
+
+<h2>Karma: The Doctrine of Action</h2>
+
+<p>The doctrine of Karma is the ethical background of Indian social organisation. First propounded under the Upanishads, it became the meeting point of Hinduism, Buddhism, and Jainism. The word Karma derives from the Sanskrit root <em>kra</em> — all kinds of actions, classified into three categories: physical, mental, and verbal. When Karma is performed according to the rules of Dharma, it becomes duty.</p>
+
+<h3>Core Principle: Karmaphal</h3>
+<p>The theory of <em>karmaphal</em> holds that every action generates definite results. These results affect and influence the course of future life — what we sow, so shall we reap. Through good deeds (punya) man attains Moksha or nirvana; bad deeds (papa) prevent him from Moksha. As Jadunath Sinha remarked: "Merit and demerit are agencies which nurture in course of time and bear fruits either in this life or in future life. They are predisposing courses of happiness and misery. There is no escape from the consequences of actions." The result of one's actions (karmaphala) may even be transferred to others — son, grandsons, or the entire group — so that even famines and pestilences are attributed to the evil deeds of the king.</p>
+
+<h3>Five Elements of the Karma Doctrine</h3>
+<ul>
+  <li><strong>Definite result:</strong> Every physical, mental, or ethical activity has a definite result — every action has a reaction.</li>
+  <li><strong>Indestructibility:</strong> The results of karma can never be destroyed. The present life is the result of punishments and rewards of past life. No one can escape the effects of their own actions.</li>
+  <li><strong>Immortality of consequences:</strong> Since each action has a definite result, man can neither escape from it nor achieve results without performing the action.</li>
+  <li><strong>Continuity:</strong> The cycle of karma is infinite and unlimited. Even when there is an annihilation of the Universe, karma continues to exist as seeds, ready for the next creation.</li>
+  <li><strong>Immortality of the soul:</strong> The soul is immortal and indestructible. When the body perishes, the soul enters another body. The soul accumulates karma over cycles of birth and rebirth — bound to a wheel of successive rebirths, reaping the fruits of past karma and perpetually sowing new seeds, perpetuating its bondage until Moksha is achieved.</li>
+</ul>
+
+<h3>Karma as Social Control</h3>
+<p>The doctrine of karma operated as a powerful mechanism of social control in traditional Indian society. The belief that one's present position is the result of past karma, and that good conduct in this life determines the conditions of the next, motivated conformity to social norms without the need for external coercion. It made the existing social order — including caste hierarchy — appear as the natural and just outcome of past moral choices. Dr. P.N. Prabhu: according to Hindu viewpoint, the birth of each man takes place so that he may remove the effects of the bad actions of his earlier life and may attain salvation.</p>
+
+<h2>The Jajmani System</h2>
+
+<p>The jajmani system is the system of exchange of goods and services between members of different castes in the traditional Indian village. It is the traditional jati-based division of labour in Indian villages in which lower castes performed various functions for upper castes and received grain in return. The system constitutes a set of traditional rules about the exchange of products and services between members of different castes — each caste has specific obligations to others. The jajmani system is a system of economic, social, and ritual ties among different caste groups in a village that bound them together.</p>
+
+<h3>Terminology</h3>
+<p>Two terms predominate in North Indian villages: <em>Jajman</em> (patron) and <em>Kamin</em> (client). The term "jajman" derives from the Sanskrit "yajamana" — "he who has a sacrifice performed." Terms vary across India: in Karnataka and parts of South India, the system is known as <em>Aya</em> or <em>Malnad</em> system. The word <em>kamin</em> itself means "lowly or inferior" — a reflection of the power differential embedded in the terminology.</p>
+
+<h3>Key Definitions</h3>
+<ul>
+  <li>Harold Gould: Jajmani system is an inter-familial, inter-caste relationship pertaining to the patterning of superordinate-subordinate relations between patrons and suppliers of services.</li>
+  <li>Yogendra Singh: a system governed by relationship based on reciprocity in inter-caste relations in villages.</li>
+  <li>Ram Ahuja: the durable relation between a landowning family and the landless families that supply them with goods and services.</li>
+  <li>Louis Dumont (<em>Homo Hierarchicus</em>): the system corresponding to the prestations and counter-prestations by which the castes as a whole are bound together in the village — the basic form of the division of labour in traditional India.</li>
+  <li>W.H. Wiser: the first anthropologist to provide a full description of the system, studying a village in the Hindi region. He coined the term "Jajmani System" to denote the client-patron dyadic relation, tracing its origins to the laws of Manu. His assumptions were later refuted by a political scientist who argued in 1993 (in "Inventing Village Tradition: The Late 19th Century Origins of the Jajmani System") that the system was of relatively recent origin and essentially a feature of the Gangetic plain, emerging only in the latter half of the 19th century through two converging forces: growing partition of zamindari/bhaiyacharya villages into individual holdings, and mounting pressure on landholders to offer incentives to village artisans to retain their services.</li>
+</ul>
+
+<h3>Characteristics of the Jajmani System</h3>
+<ul>
+  <li><strong>Permanent relationships:</strong> The jajmani system ensures the availability of certain essential services to farmers permanently. A village functions as a relatively self-sufficient unit; if any kamin leaves the village, he provides a substitute. Gould observes that jajman-kameen networks are not confined to a single village but radiate into the "local culture" because no village has a full quota of service castes and must utilise appropriate families from nearby villages.</li>
+  <li><strong>Hereditary:</strong> Rights to jajmani jobs are considered proprietary and pass from father to son. In case of brothers' separation, rights are split among them. Jajmani rights pass to a son-in-law if there is no son. Rights are not equally distributed: an ironsmith may serve 30 families, while another serves 10. With increase in male members, jajmani rights are split, reducing clients per person.</li>
+  <li><strong>Payment in kind (not cash):</strong> Kamins are paid in grains (wheat, rice) rather than cash. The relationship between jajman and kamin is not purely economic — it is human. The jajman is anxious about the welfare of the kamin and furnishes goods the kamin needs most. Oscar Lewis's study of Rampur village documented specific payments: carpenter and ironsmith received 1 maund of food grain per year for repairs; sweeper received 2 meals per day plus grain at harvest; shoemaker received 1/20 of produce. Kamins preferred payment in kind as it was sufficient for their needs. In recent decades there is a tendency to substitute cash payment.</li>
+  <li><strong>Peace and contentment:</strong> According to Wiser, a significant feature is the peace and contentment the system provides — kamins feel a sense of security, free from the worry of finding employment, knowing their tasks in advance. However, this is not universally rosy — there are many instances of exploitation where kamins are given too little for their services.</li>
+  <li><strong>Variable scope of work:</strong> Different kamins serve different numbers of families and may serve more than one village. S.S. Nehru studied 54 North Indian villages and found that shoemakers were present in only 18; potters in 30%; shopkeepers in 16%; Brahmins, barbers, ironsmiths, and telis were each present in 40% of the villages. Not every type of kamin is found in every village; in the absence of a particular kamin, residents either perform the task themselves or travel to a neighbouring village.</li>
+</ul>
+
+<h3>Is the Jajmani System Exploitative?</h3>
+<p>There is no agreement among anthropologists on the exploitative nature of the jajmani system.</p>
+
+<p><strong>Exploitative view:</strong> Thomas Beidelman and Barnouw hold that the system is basically exploitative — rich landowning castes benefit disproportionately while servicing castes are underpaid and often forced into servicing their jajmans. Beidelman explicitly equates the jajman with "exploiter" and characterises the system as "feudal." Oscar Lewis's study of Rampur village found that whereas in the past it was based on personal relationships, it has now become an instrument of exploitation of kamin by jajman.</p>
+
+<p><strong>Non-exploitative view:</strong> Pauline Kolenda, Harold Gould, and David Pocock disagree. Gould emphasises that the system does not rest upon a simple dichotomy between rich and poor — it arises from a religious dichotomy between pure and impure. It is the mutual wish of jajman and kamin to observe certain rituals and a way of life necessitating avoidance of impurity. The system cannot be exploitative where the jajman and specialist are of approximately equal status, or where the specialist providing the service is better off than the client. Gould further notes that the jajmani system binds families in a manner comparable to kinship ties — establishing a particularistic set of relationships that affords assurance of indefinite durability, stable provision of essential services, and observance of host of kin-like diffuse obligations. Both jajman and kamin bring infringements to the notice of caste councils, which mediate.</p>
+
+<h3>Decline of the Jajmani System</h3>
+<p>The jajmani system has been on the decline ever since the rural economy underwent changes introduced by the British. Factors responsible for its weakening:</p>
+<ul>
+  <li>Monetisation of the economy</li>
+  <li>Emergence of commercial attitudes</li>
+  <li>Establishment of banks and cooperative institutions in rural areas</li>
+  <li>Integration of rural markets through transport and government market assistance programmes</li>
+  <li>Migration of occupational groups to urban centres in search of better economic opportunities</li>
+  <li>Availability of factory-made goods in the countryside</li>
+  <li>Political awareness and organisation among backward classes and scheduled castes</li>
+  <li>Weakening of the association between castes and occupations</li>
+</ul>
+
+<p>E.B. Harper studied Totagadal village in Karnataka and showed how the jajmani system there involves two types of economic transactions: the traditional jajmani system and the Malnad system (between jajmanis and artisans, characterised by cash payment). Harper argues the jajmani system is disintegrating into the Malnad type of economic relations. K. Eswaran (1962), studying Shivapura in Karnataka (<em>Tradition and Economy in Village India</em>), describes the exchange system as <em>Aya</em> — unmeasured and unconditional gifts reflecting the motive of sharing one's possessions with others — with leadership and headship automatically assigned to the jajman.</p>
+
+<h2>The Indian Village as a Social Unit</h2>
+
+<p>The traditional Indian village was the primary locus of social life. Indian anthropologists and sociologists have emphasised the village as a social institution with distinctive characteristics: relative self-sufficiency, face-to-face social relations, caste hierarchy operationalised through jajmani, collective rituals and festivals, and governance through panchayats. The village was not merely an economic unit but the arena within which varna, jati, ashrama, karma, and jajmani all operated together as an integrated system. The jajmani system, Srinivas's dominant caste concept, and McKim Marriott's studies of village religion (in particular the distinction between Little Tradition and Great Tradition) were all developed through intensive fieldwork in Indian villages.</p>
+
+<h2>Little Tradition and Great Tradition</h2>
+
+<p>Robert Redfield introduced the distinction between the Little Tradition (the tradition of the majority — the non-literate, village-level culture of peasants and tribal peoples, transmitted orally, locally variable) and the Great Tradition (the tradition of the minority — the literate, Sanskrit-based, textually recorded culture of Brahmin scholars and priests, Pan-Indian in its reach). Redfield applied this concept to India along with McKim Marriott, who studied Kishan Garhi village in Uttar Pradesh.</p>
+
+<p>In India, these traditions are not sharply separated. The Great Tradition provides the conceptual framework (Varna, Ashrama, Purushartha, Karma) while the Little Tradition operationalises these frameworks in locally specific, diverse, and syncretic ways. Marriott described the process by which elements move between the two levels: <em>universalisation</em> (elements of Little Tradition are refined and absorbed into the Great Tradition) and <em>parochialization</em> (elements of the Great Tradition are localised and transformed as they descend into Little Tradition). Milton Singer further developed this concept through his study of cultural performances in Madras, where classical Sanskrit dance and music serve as a medium of communication between the two levels.</p>
+
+<p>M.N. Srinivas used related concepts of <em>Sanskritisation</em> (lower castes adopting the ritual practices, customs, and ideology of upper castes, especially the twice-born varnas, as a means of upward social mobility) and <em>Westernisation</em> (adoption of Western norms, technologies, and institutions) to describe processes of cultural change in Indian society, both of which are mediated by the interface between Little and Great Traditions.</p>
+`,
 };
+
 
 
 
