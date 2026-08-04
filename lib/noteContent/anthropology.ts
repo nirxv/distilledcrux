@@ -4759,7 +4759,248 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Despite these limitations, ethnoarchaeology remains an indispensable component of archaeological method in India. The extraordinary diversity of Indian communities and the depth of ethnographic documentation accumulated over more than a century of anthropological research in the subcontinent make India uniquely positioned to continue making major contributions to the global programme of ethnoarchaeological research.</p>
 `,
+  'demographic-profile-india': `
+<h2>Scope of Demography</h2>
+
+<p>Demography is the science of populations. Demographers investigate three main demographic processes: birth, migration, and aging (including death). Kingsley Davis (1949) called demography the "essential basis for understanding human society." Its four functions are: knowing the population of a particular area; ascertaining which factors influence it; explaining factors relating to population change; and studying population trends on the basis of these three factors.</p>
+
+<h2>India's Population: Key Demographic Data</h2>
+
+<p>India is the world's most populous country, having surpassed China in 2023. Census 2011 recorded a population of 1.21 billion; current estimates place it above 1.44 billion. The population density averages approximately 382 persons per sq km (Census 2011), with enormous variation — from Uttar Pradesh in the high-density Gangetic plains to Arunachal Pradesh in the sparsely settled Northeast.</p>
+
+<h3>Population Growth Trends</h3>
+<p>India's population growth follows the classic pattern predicted by demographic transition theory. The decadal growth rate peaked in the 1970s and has been declining since: 24.66% (1961–71) → 23.87% (1971–81) → 23.56% (1981–91) → 21.54% (1991–2001) → 17.64% (2001–11). The declining rate reflects falling fertility, improved healthcare, and urbanisation, though absolute numbers added per decade remain large.</p>
+
+<h3>Sex Ratio</h3>
+<p>Census 2011: overall sex ratio 943 females per 1,000 males — an improvement from 933 in 2001. Child sex ratio (0–6 years): 919 females per 1,000 males in 2011, down from 927 in 2001, reflecting persistence of son-preference and sex-selective practices. Kerala consistently has the highest sex ratio (1,084 females per 1,000 males); Haryana the lowest (879). NFHS-5 (2019–21) places the sex ratio at birth at 929 females per 1,000 males — still concerning but improved from earlier surveys.</p>
+
+<h3>Literacy</h3>
+<p>Census 2011: overall literacy rate 74.04% — 82.14% male, 65.46% female. Kerala (93.91%) leads all states; Bihar (63.82%) trails. Female literacy has improved faster than male literacy since Independence, though the gender gap persists. Literacy is a key determinant of fertility: Kingsley Davis demonstrated a negative correlation between literacy and fertility, confirmed in Central Indian studies (illiterate wives: mean fertility 4.7; primary education 4.3; high school and above 3.2).</p>
+
+<h3>Urbanisation</h3>
+<p>Urban population: 31.16% of total (Census 2011), up from 27.81% in 2001. India is undergoing rapid urbanisation driven by industrial growth and rural-to-urban migration. In 2011 census it was confirmed that the rural Total Fertility Rate (TFR) remains higher than urban TFR — urbanisation reduces fertility through expanded education, economic opportunities for women, higher cost of child-rearing, and weakened community pronatalist norms.</p>
+
+<h2>Linguistic Profile of India</h2>
+
+<p>India is one of the most linguistically diverse countries in the world. The Constitution of India recognises 22 languages in the Eighth Schedule. The People's Linguistic Survey of India (2013, editor: G.N. Devy) identified 780 living languages. The Census of India recognises languages spoken by more than 10,000 speakers; after the 1971 census, this threshold was applied to reduce the list. Indian languages are classified into four major families:</p>
+
+<ul>
+  <li><strong>Indo-European (Indo-Aryan branch):</strong> Spoken by approximately 75% of Indians. Includes Hindi (largest speaker base), Bengali, Marathi, Gujarati, Punjabi, Odia, Assamese, Sindhi, Sanskrit, Urdu, Kashmiri, Nepali, Konkani, Dogri, Maithili, Bodo, and Santali. These descended from Sanskrit and Prakrit through centuries of phonological, morphological, and lexical change.</li>
+  <li><strong>Dravidian:</strong> Spoken by approximately 20% of Indians, concentrated in the south. Four major literary languages: Tamil, Telugu, Kannada, Malayalam. Other Dravidian languages include Tulu, Gondi, Kurukh (Oraon), Kolami, and Brahui (spoken in Baluchistan — the only major Dravidian language north of the Deccan). Dravidian languages have no demonstrated connection to any other language family.</li>
+  <li><strong>Austro-Asiatic (Munda subfamily):</strong> Spoken by tribal communities mostly in Jharkhand, Odisha, West Bengal, and Chhattisgarh. Major languages: Santali (the most widely spoken Munda language, with approximately 7.6 million speakers), Mundari, Ho, Kurukh (sometimes classified as Dravidian), Khasi, Nicobarese. The Austroasiatic family connects Indian tribes to Southeast Asian populations — further evidence of ancient migration routes.</li>
+  <li><strong>Sino-Tibetan (Tibeto-Burman subfamily):</strong> Spoken by approximately 1% of Indians, mainly in the Himalayan states, Northeast India, and Assam. Includes Manipuri (Meitei), Bodo, Garo, Mizo (Lushai), Naga languages, Tibetan, Lepcha, and Ladakhi. Languages of this family predominate in Arunachal Pradesh (over 50 distinct languages), Nagaland, Mizoram, and Manipur.</li>
+</ul>
+
+<p>Additionally, Andamanese languages (spoken by indigenous Andaman Islanders — Great Andamanese, Onge, Jarawa, Sentinelese) form a language isolate unrelated to any other known language family. The Nihali language of Maharashtra is also a probable isolate. Burushaski (spoken in Gilgit-Baltistan) is another isolate with speakers in the Indian diaspora from that region.</p>
+
+<h3>Linguistic Diversity and the Census</h3>
+<p>Bernard S. Cohn argued that the colonial Indian census, rather than passively recording linguistic and caste identities, actively shaped and manufactured them. G.S. Ghurye, who was perhaps the first to critique the caste census, noted that one obvious result was the proliferation of caste associations and the objectifying of previously fluid identities. The census created a political incentive for communities to project distinct identities, leading to linguistic and community mobilisation.</p>
+
+<h2>Religious Profile of India</h2>
+
+<p>India is constitutionally secular but enormously religiously diverse. Census 2011 data on religious composition:</p>
+
+<ul>
+  <li>Hindus: 79.80% (966.3 million)</li>
+  <li>Muslims: 14.23% (172.2 million) — the world's second-largest Muslim population</li>
+  <li>Christians: 2.30% (27.8 million)</li>
+  <li>Sikhs: 1.72% (20.8 million)</li>
+  <li>Buddhists: 0.70% (8.4 million)</li>
+  <li>Jains: 0.37% (4.5 million)</li>
+  <li>Others (including tribal religions): 0.66%</li>
+  <li>Minorities total: approximately 19.3% of the population (as per Ministry of Minority Affairs definition covering Muslims, Christians, Sikhs, Buddhists, Jains, and Zoroastrians/Parsis)</li>
+</ul>
+
+<h3>Religious Groups and Demographic Indicators (NFHS and NSSO Data)</h3>
+
+<p>Literacy (NSSO 2017–18): Jains 90%+ (highest); Christians 84.5%; national average 77.7%; Muslims 74.7% (below national average); Sachar Committee report noted only approximately 4% of Muslims hold graduate-level degrees or higher.</p>
+
+<p>Economic status (NSSO): Jains have the lowest poverty rates and highest average monthly incomes, followed by Sikhs and Christians. Muslims have the highest urban poverty incidence (approximately 31%) and higher unemployment rates, particularly in urban areas. Muslim women's work participation rate (WPR) approximately 15% — significantly below national female average WPR of approximately 25%.</p>
+
+<p>Health (NFHS): Muslims show slightly higher infant and under-five mortality rates due to poverty, overcrowding, and healthcare access constraints. Jains and Sikhs have some of the lowest infant mortality rates. Christians generally have lower mortality rates, partly due to better access to missionary and community health services. Buddhists' mortality rates are similar to Hindus but vary regionally. Lifestyle diseases (diabetes, hypertension) are high among Jains, Sikhs, and Christians — linked to higher income and sedentary lifestyles. Muslims and Buddhists show higher rates of infectious diseases including tuberculosis, linked to lower socioeconomic conditions. NFHS data indicates Muslims and Buddhists are more likely to live in overcrowded conditions.</p>
+
+<h2>Tribal Population of India</h2>
+
+<p>India has the largest Scheduled Tribe (ST) population in the world. Census 2011: STs constitute 8.6% of India's total population — approximately 104.3 million people. The Planning Commission has specified annual ST-proportional allocation of 8.6% for tribal welfare schemes under the Tribal Sub-Plan mechanism. The ST population is extraordinarily diverse — according to the Ministry of Tribal Affairs, there are approximately 705 recognised Scheduled Tribe communities (varied across states).</p>
+
+<h3>Geographical Distribution of Tribes</h3>
+<p>The tribal population is concentrated in three broad zones:</p>
+<ul>
+  <li><strong>Central India (Jharkhand, Chhattisgarh, Odisha, MP, Maharashtra, Gujarat, Rajasthan):</strong> The largest tribal belt. Jharkhand has the highest absolute tribal population; Mizoram (94.4%) and Nagaland (86.5%) have the highest tribal share of state population.</li>
+  <li><strong>Northeast India (Arunachal Pradesh, Nagaland, Manipur, Mizoram, Meghalaya, Tripura, Assam):</strong> Most northeastern states have tribal majorities. Arunachal Pradesh has over 25 scheduled tribes; Nagaland over 16 Naga tribes.</li>
+  <li><strong>South India (Andhra Pradesh, Telangana, Karnataka, Tamil Nadu, Kerala):</strong> Less numerous but important. The Nilgiri Hills (Todas, Irulas, Kotas, Kurumbas, Badagas) constitute one of the most studied tribal clusters.</li>
+</ul>
+
+<h3>Racial Composition of Indian Tribes</h3>
+<p>Indian anthropologists recognise multiple racial strains among tribal communities (based on Guha's classification):</p>
+<ul>
+  <li><strong>Negrito:</strong> The oldest racial element; extremely short stature, dark skin, woolly or frizzly hair. Found among Kadars, Irulas, Pulayans, and primitive tribes of Wayanad (Kerala).</li>
+  <li><strong>Proto-Australoid:</strong> Dolichocephalic, platyrrhine, wavy or curly hair, dark brown skin. The most widespread tribal racial type in India. Found among Bhils, Gonds, Oraons, Santals, Kondhs, Chenchus, Baiga, and many other central Indian tribes.</li>
+  <li><strong>Mongoloid:</strong> Palaeo-Mongoloid (long-headed and broad-headed subtypes) found among Naga, Lepcha, Mizo, Garo, Khasi, and Northeast tribes. Tibeto-Mongoloid types in Bhutan and Sikkim regions.</li>
+  <li><strong>Mediterranean (Palaeo-Mediterranean):</strong> A minor element among some southern tribal groups.</li>
+</ul>
+
+<h3>Demographic Characteristics of Tribal Populations</h3>
+<p>Tribal communities generally show distinct demographic patterns compared to the general population. Their growth rates have varied considerably: some scheduled tribes have grown faster than the national average, while the most vulnerable — the Particularly Vulnerable Tribal Groups (PVTGs) — have declining or stagnant populations.</p>
+
+<p>PVTGs (formerly known as Primitive Tribal Groups): 75 communities designated by the Government of India as particularly vulnerable due to pre-agricultural levels of technology, stagnant or declining population, extremely low literacy, and subsistence-level economy. Examples include Sentinelese and Onge (Andaman Islands), Jarwa, Great Andamanese, Birhors (Jharkhand), Chenchu (Andhra Pradesh), Hill Korwa, Abujhmaria (Chhattisgarh), Saura (Odisha), Toda (Tamil Nadu), Cholanaickan (Kerala).</p>
+
+<h2>Fecundity and Fertility: Core Concepts</h2>
+
+<h3>Definitions</h3>
+<p>Fecundity is the biological capacity of a man, woman, or couple to reproduce — the physiological potential for having children. Fertility is the actual reproductive performance — the number of live births that occur. Fecundity is biological; fertility is determined by social, cultural, psychological, and economic factors. A woman may be highly fecund but have zero fertility due to contraception, abstinence, or widowhood.</p>
+
+<p>Natural fertility is fertility in the absence of deliberate birth control. Controlled fertility involves deliberate use of birth control measures.</p>
+
+<h3>Measures of Fertility</h3>
+<ul>
+  <li><strong>Crude Birth Rate (CBR):</strong> Total births per 1,000 mid-year population per year. CBR = (B/P) × 1000. Affected by income, employment, urbanity, diet, occupation, migration, cultural changes, and even death rate.</li>
+  <li><strong>General Fertility Rate (GFR):</strong> Births per 1,000 women of reproductive age (15–49 years). GFR = (B/W) × 1000. More precise than CBR as it restricts the denominator to women at risk.</li>
+  <li><strong>Age-Specific Fertility Rate (ASFR):</strong> Births to women of each age group per 1,000 women of that age group. ASFR = (Bx/Wx) × 1000. Standard age groups: 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49.</li>
+  <li><strong>Total Fertility Rate (TFR):</strong> The sum of ASFRs for each age group multiplied by the age interval (5 years), divided by 1,000. Represents the average number of children a woman would have if she experienced current ASFRs throughout her reproductive life with no mortality. TFR = Σ(ASFR × 5)/1000.</li>
+</ul>
+
+<p>India's TFR has fallen dramatically: approximately 5.9 (1951) → 4.5 (1981) → 3.4 (1991) → 2.9 (2001) → 2.4 (2011) → 2.0 (NFHS-5, 2019–21) — now at or below replacement-level fertility. Rural TFR (2.1) remains above urban TFR (1.6) according to NFHS-5.</p>
+
+<h3>Bio-Events and Their Relevance to Fertility</h3>
+
+<h4>Menarche</h4>
+<p>Menarche is the first menstrual cycle in females. It signals the possibility of fertility. Achieved when body fat reaches approximately 17%. Mean age worldwide: approximately 12.5–14 years, with later onset in Asian populations. A.M. Tripathi's study of Indian girls found the lowest age at menarche in Delhi (11.20 years) and the highest in Gujarat (14.80 years). Menarche does not immediately signal ovulation — approximately 80% of cycles in post-menarchial girls are anovulatory in the first year. Regular ovulation requires body fat content of at least 22% (condition called nubility).</p>
+
+<p>Early menarche correlates with: child obesity; absence of biological father from home; high family conflict; low birth weight; singleton birth; prenatal preeclampsia; exposure to tobacco smoke; lack of exercise; exposure to exogenous oestrogens. Late menarche correlates with: larger family size; warmer father-daughter relationships; low-stress family environment; having elder siblings. The age at first birth is a key demographic determinant — higher median age at first birth is an indicator of lower fertility.</p>
+
+<h4>Menopause</h4>
+<p>Menopause typically occurs between 49 and 52 years of age. Defined as the absence of menstrual bleeding for 12 consecutive months (no pregnancy or lactation). Perimenopause is the transition period: menses become irregular and FSH levels increase until periods cease completely. Menopause occurs earlier in tobacco smokers.</p>
+
+<p>Physical effects: skeletal (back pain, joint pain, osteopenia, risk of osteoporosis), skin (breast atrophy, reduced elasticity, drying), cardiovascular (increased risk after oestrogen decline). Psychological effects: depression, anxiety, fatigue, irritability, memory loss, mood disturbance, insomnia, sense of loss of fertility, "empty nest syndrome," role change.</p>
+
+<p>Evolutionary explanations for menopause in humans:</p>
+<ul>
+  <li><strong>Mother Hypothesis:</strong> Post-reproductive women redirect investment from new offspring (with low survival chance) to existing children with a higher survival chance — improving overall reproductive fitness.</li>
+  <li><strong>Grandmother Hypothesis:</strong> Post-reproductive women feed and care for grandchildren, particularly when babies require glucose-intensive brain development. Hunter-gatherers supply less than half their food budget from hunting, so foraging grandmothers contribute substantially to grandchildren's survival.</li>
+  <li><strong>Non-adaptive Hypothesis:</strong> The high cost of female investment in offspring leads to earlier physiological deterioration in the female reproductive system — reproductive lifespan optimised but limited.</li>
+</ul>
+
+<h3>Lactational Infecundability</h3>
+<p>Breastfeeding delays the resumption of normal ovarian cycles by disrupting pulsatile release of GnRH from the hypothalamus (and therefore LH from the pituitary). Suckling intensity directly correlates with duration of the post-birth amenorrhea period. Studies of !Kung women (Botswana) and Gainj women (Papua New Guinea) show that very frequent, short suckling bouts (approximately 3 minutes, 40–50 times per day) correlate with amenorrhea of up to two years postpartum.</p>
+
+<h3>Biological Factors Affecting Fertility (Davis and Blake Framework)</h3>
+<p>Davis and Blake identified eight "intermediate variables" through which social factors affect fertility:</p>
+<ul>
+  <li>Proportion married</li>
+  <li>Contraception</li>
+  <li>Induced abortion</li>
+  <li>Lactational infecundability</li>
+  <li>Frequency of sexual intercourse</li>
+  <li>Sterility (azoospermia, low sperm count in males; amenorrhea, blocked fallopian tubes in females)</li>
+  <li>Spontaneous intrauterine mortality (from blood group incompatibilities, chromosomal changes, maternal medication)</li>
+  <li>Duration of the fertile period (generally 15–49 years)</li>
+</ul>
+
+<h3>Socio-Economic and Cultural Factors Affecting Fertility</h3>
+<ul>
+  <li>Age at marriage: later marriage reduces overall fertility.</li>
+  <li>Widowhood, separation, divorce: absence of a partner affects fertility.</li>
+  <li>Post-partum abstinence: practised among some Northeast tribes.</li>
+  <li>Celibacy: reduces fertility in the population.</li>
+  <li>Joint family system: fertility higher in joint families (more hands for childcare).</li>
+  <li>Urbanisation: reduces fertility rate through elevated cost of children and expanded female economic opportunities.</li>
+  <li>Literacy: negative correlation with fertility (Davis, confirmed in Central India).</li>
+  <li>Status of women: lower status increases fertility — women are viewed as producers of children; inability to assert bodily autonomy leads to repeated pregnancies.</li>
+  <li>Religion: almost every religion is pronatalist; minority groups tend to have higher fertility.</li>
+  <li>Economic status: economically secure households tend to have lower fertility (Leibenstein's benefit-cost ratio theory — in rich societies children are seen as high-cost, low-benefit).</li>
+  <li>Desire for sons: ensures parents' welfare in old age and perpetuates the family name — a major pronatalist driver in India.</li>
+  <li>Concern for care in old age: the Mysore Study showed 82–86% of rural couples and 68% of urban couples considered this an important reason for having a large family.</li>
+  <li>Community pattern: in traditional societies, fear of community criticism prevents deviation from high-fertility norms.</li>
+</ul>
+
+<h2>Mortality: Concepts and Measures</h2>
+
+<p>Mortality is the frequency of death in a population — a fundamental component of population change alongside births and migration. Structure of a population is determined by four main components: birth, mortality, immigration, and emigration. Mortality and morbidity together are key indicators of health status.</p>
+
+<h3>Measures of Mortality</h3>
+<ul>
+  <li><strong>Crude Death Rate (CDR):</strong> Deaths per 1,000 mid-year population. CDR = (Total deaths / total mid-year population) × 1,000.</li>
+  <li><strong>Age-Specific Death Rate:</strong> Deaths per 1,000 persons of a specific age per year. Used by insurance companies to calculate life insurance premiums.</li>
+  <li><strong>Life Expectancy at Birth:</strong> Average number of years a newborn would live if prevailing age-specific mortality rates remained constant throughout life (UN Human Development Report definition). India's life expectancy has risen from approximately 32 years (1947) to approximately 70 years (NFHS-5: males 68, females 71).</li>
+  <li><strong>Survivorship Curve:</strong> The fraction of a starting cohort still alive at each successive age.</li>
+  <li><strong>Cause-Specific Mortality Rate:</strong> Deaths from a specific cause per 1,000 population. Essential for understanding epidemic trends and designing health programs.</li>
+  <li><strong>Infant Mortality Rate (IMR):</strong> Deaths of children under one year per 1,000 live births. India's IMR has declined from approximately 147 (1960) to 35 (SRS 2019) to 28 (SRS 2021) — but remains higher than China (6) and Sri Lanka (7).</li>
+  <li><strong>Maternal Mortality Ratio (MMR):</strong> Deaths of women during pregnancy or within 42 days of termination per 100,000 live births (WHO definition). India's MMR: 254 (2004–06) → 130 (2014–16) → 103 (SRS 2017–19) → 97 (SRS 2018–20). Major causes: haemorrhage, sepsis, eclampsia, obstructed labour, unsafe abortion. Indirect causes: malaria, anaemia, HIV/AIDS, cardiovascular disease.</li>
+  <li><strong>Child Mortality Rate (Under-5 Mortality Rate):</strong> Deaths of children under 5 per 1,000 live births. India: 42 (NFHS-5, 2019–21).</li>
+  <li><strong>Prenatal Mortality Rate:</strong> Sum of neonatal deaths and foetal deaths per 1,000 births per year.</li>
+</ul>
+
+<h3>Factors Affecting Mortality</h3>
+<ul>
+  <li>Medical facilities and healthcare quality</li>
+  <li>Nutritional levels</li>
+  <li>Living standards</li>
+  <li>Access to clean drinking water</li>
+  <li>Hygiene levels</li>
+  <li>Levels of infectious disease</li>
+  <li>Prevalence of violence, crime, or war</li>
+  <li>Inbreeding and genetic load</li>
+  <li>Poverty</li>
+</ul>
+
+<h3>Uses of Mortality Studies</h3>
+<p>Population forecasting; public health infrastructure planning; policy making (assessing a country's epidemiological transition trajectory); social description (summary measures of population health including life expectancy and IMR); epidemiological studies (linking risk factors and disease); life insurance premium determination (mortality tables → cost estimation by age group); child healthcare planning.</p>
+
+<h2>Demographic Theories</h2>
+
+<h3>Malthusian Theory</h3>
+<p>Thomas Robert Malthus (1766–1834), <em>Essay on the Principle of Population</em> (1798): human populations grow exponentially (1, 2, 4, 8, 16...) while food production grows arithmetically (1, 2, 3, 4, 5...). On a hypothetical world population of 1 billion at the start of the 19th century, Malthus projected a potential 256 billion within 200 years versus means of subsistence for only 9 billion — making a catastrophe inevitable without population control.</p>
+
+<p>Two types of checks on population growth:</p>
+<ul>
+  <li><strong>Preventive checks (applied by man):</strong> Late marriage and self-restraint during married life — reduce birth rate.</li>
+  <li><strong>Positive checks (applied by nature):</strong> Insubstantial occupations, hard labour, extreme poverty, bad nursing of children, common diseases, wars, plagues, and famines — increase death rate.</li>
+</ul>
+
+<p>Criticisms: Population in Western Europe did not increase as rapidly as predicted and production increased enormously through technology; Malthus underestimated the role of modern preventive checks (contraceptives, family planning); Karl Marx argued starvation was caused by unequal distribution of wealth by capitalists, not by population growth; the law of diminishing returns has been repeatedly postponed by technological advance. Despite criticism, Malthus's ideas shaped public policy, highlighted urgency of balancing population and subsistence, and redirected economic thinking toward the dynamics of population in context of human welfare.</p>
+
+<h3>Thomas Doubleday's Diet Theory</h3>
+<p>Thomas Doubleday, an English social philosopher, proposed that population increase is in inverse ratio to food supply — when food supply is greater, population increase is less. He divided society into three groups:</p>
+<ul>
+  <li>Those in affluence, well-supplied with luxuries: low fertility.</li>
+  <li>Those in moderate circumstances: moderate fertility.</li>
+  <li>Those in scarcity and want: high fertility (positive correlation between poverty and reproduction).</li>
+</ul>
+<p>Doubleday's theory anticipated later research on the relationship between socioeconomic status and fertility, and on the demographic transition.</p>
+
+<h3>Arsène Dumont's Social Capillarity Theory</h3>
+<p>French sociologist Dumont: "the development of number in a nation is in inverse ratio to the development of individual." Population increase declines as individuals rise in social class. He compared social mobility to physical capillarity — as gravity controls the physical world, capillarity controls the social order. Three population principles corresponding to stages of social development:</p>
+<ul>
+  <li>Preventive stage: Malthusian theory applies; humans reproduce like animals in geometric progression.</li>
+  <li>Intermediate stage: population proportions itself automatically to food supply.</li>
+  <li>Modern civilised stage: social capillarity operates — individuals desire higher economic and social status, which requires a small family; fertility falls as income and ambition rise; urbanisation further reduces fertility.</li>
+</ul>
+
+<h3>Demographic Transition Theory (DTT)</h3>
+<p>Foreshadowed by Thompson (1929), created in its classical form by Notestein (1945). Places broad emphasis on social and economic modernisation as the driver of demographic change. C.P. Blacker divided populations into five types: high stationary, early expanding, late expanding, low stationary, and diminishing — corresponding to DTT stages. Four phases:</p>
+
+<ul>
+  <li><strong>Stage 1 (High Stationary):</strong> High and fluctuating birth and death rates that almost neutralise each other; rural, agricultural, subsistence economies; primitive sanitation; absence of medical facilities; poverty; social beliefs keep birth rate high; zero or near-zero population growth.</li>
+  <li><strong>Stage 2 (Early Expanding / Population Explosion):</strong> Death rate falling (due to improved agriculture, transport, education, healthcare) while birth rate remains high; population grows at an exceptional rate; this is the "population explosion" stage. India was in this stage roughly from the 1920s to the 1970s.</li>
+  <li><strong>Stage 3 (Late Expanding):</strong> Birth rate begins to decline more rapidly than death rate as a result of economic development, changed social attitudes, and expanded family planning; population continues to grow but at a diminishing rate. India entered this stage in the 1980s–90s.</li>
+  <li><strong>Stage 4 (Low Stationary):</strong> Both birth and death rates at low levels, approximately equal; population stationary at low level. Western European countries, Japan, and parts of urban India approach this stage.</li>
+</ul>
+
+<p>India's current demographic position: India completed its fertility transition at the national level (TFR ~2.0 as of NFHS-5), though regional variation persists — southern and western states have lower TFRs than northern states like Uttar Pradesh and Bihar. India is expected to benefit from the demographic dividend (a bulge of working-age population relative to dependents) through approximately 2055.</p>
+
+<p>Criticisms of DTT: based primarily on the European and American experience; not predictive in terms of timing; stages are not inevitable (Thailand moved directly from Stage 2 to Stage 3 without a prolonged intermediate); does not provide a timeframe for developing country transitions; ignores migration; does not explain why some countries stall in Stage 2.</p>
+
+<h2>Demographic Dividend and Population Challenges</h2>
+
+<p>India's median age is approximately 29 years — one of the youngest large populations in the world. Approximately 67% of India's population (2021 estimate) is in the working-age group (15–64 years), while the dependency ratio has been declining. This demographic dividend — the economic growth potential from a relatively large working-age population — is estimated to persist until approximately 2055 before India enters an aging phase. Realising this dividend requires massive investment in education, health, skill development, and employment generation.</p>
+
+<p>Major population challenges in India: high population growth in some states (especially UP, Bihar, MP, Rajasthan, Jharkhand) despite national TFR reaching replacement level; declining child sex ratio (929 females per 1,000 males at birth, NFHS-5); large interstate variation in demographic indicators; rural-urban disparities in healthcare access; high MMR and IMR in some states; malnutrition (NFHS-5: 35.5% of children under 5 are stunted, 19.3% wasted, 32.1% underweight); and internal migration creating pressure on urban infrastructure.</p>
+
+<p>NFHS-5 (2019–21) key findings: TFR 2.0 (replacement level); IMR 35.2 per 1,000 live births; MMR 97 per 100,000 live births (SRS 2018–20); under-5 mortality rate 42 per 1,000 live births; full immunisation coverage 76.4%; institutional births 88.6%; total unmet need for family planning 9.4%.</p>
+`,
 };
+
 
 
 
