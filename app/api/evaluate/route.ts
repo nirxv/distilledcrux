@@ -928,7 +928,7 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
           { role: "user", content: jsonPrompt },
         ],
         temperature: 0.1,
-        max_tokens: 2500,
+        max_tokens: 4000,
         response_format: { type: "json_object" },
     });
 
