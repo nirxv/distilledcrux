@@ -388,7 +388,7 @@ export async function POST(req: NextRequest) {
             // PDF mode → Haiku (supports document input)
             const Anthropic = (await import('@anthropic-ai/sdk')).default;
             const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-            const msgsCopy = messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content }));
+            const msgsCopy = messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content as any })) as any[];
             const firstUserIdx = msgsCopy.findIndex((m: { role: string }) => m.role === 'user');
             if (firstUserIdx !== -1) {
               msgsCopy[firstUserIdx] = {
