@@ -20,6 +20,7 @@ const SUBJECTS = [
     color: '#4361ee',
     icon: '🧩',
     count: socioNotes.length,
+    comingSoon: false,
   },
   {
     slug: 'anthropology',
@@ -28,6 +29,7 @@ const SUBJECTS = [
     color: '#2dd4bf',
     icon: '🧬',
     count: allAnthroNotes.length,
+    comingSoon: false,
   },
   {
     slug: 'polsci',
@@ -36,6 +38,7 @@ const SUBJECTS = [
     color: '#f87171',
     icon: '⚖️',
     count: polsciNotes.length,
+    comingSoon: true,
   },
   {
     slug: 'geography',
@@ -44,6 +47,7 @@ const SUBJECTS = [
     color: '#4ade80',
     icon: '🌍',
     count: geoNotes.length,
+    comingSoon: true,
   },
   {
     slug: 'pub-admin',
@@ -52,6 +56,7 @@ const SUBJECTS = [
     color: '#fb923c',
     icon: '📋',
     count: pubAdminNotes.length,
+    comingSoon: true,
   },
 ];
 
@@ -69,29 +74,42 @@ export default function NotesPage() {
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
-        {SUBJECTS.map(({ slug, name, sub, color, icon, count }) => (
-          <Link key={slug} href={`/notes/${slug}`} style={{ textDecoration: 'none' }}>
+        {SUBJECTS.map(({ slug, name, sub, color, icon, count, comingSoon }) => {
+          const card = (
             <div style={{
-              background: 'var(--bg2)',
+              background: comingSoon ? 'var(--bg)' : 'var(--bg2)',
               border: '1px solid var(--border2)',
               borderRadius: 10,
               padding: '1.5rem',
-              borderLeft: `3px solid ${color}`,
+              borderLeft: `3px solid ${comingSoon ? 'var(--border2)' : color}`,
               transition: 'background 0.15s, border-color 0.15s',
-              cursor: 'pointer',
+              cursor: comingSoon ? 'default' : 'pointer',
               position: 'relative' as const,
+              opacity: comingSoon ? 0.55 : 1,
             }}>
+              {comingSoon && (
+                <span style={{
+                  position: 'absolute' as const, top: '0.85rem', right: '0.85rem',
+                  fontSize: '0.6rem', fontFamily: 'var(--font-ui)', fontWeight: 700,
+                  textTransform: 'uppercase', letterSpacing: '0.1em',
+                  color: 'var(--text3)', background: 'var(--bg2)',
+                  border: '1px solid var(--border)', padding: '2px 7px', borderRadius: 4,
+                }}>Coming Soon</span>
+              )}
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <span style={{ fontSize: '1.1rem' }}>{icon}</span>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 700, color: 'var(--text)' }}>{name}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 700, color: comingSoon ? 'var(--text3)' : 'var(--text)' }}>{name}</div>
               </div>
               <div style={{ color: 'var(--text3)', fontSize: '0.8rem', marginBottom: '0.75rem' }}>{sub}</div>
-              <div style={{ color: color, fontSize: '0.78rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-                {count} topics →
+              <div style={{ color: comingSoon ? 'var(--text3)' : color, fontSize: '0.78rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+                {comingSoon ? 'Notes in progress' : `${count} topics →`}
               </div>
             </div>
-          </Link>
-        ))}
+          );
+          return comingSoon
+            ? <div key={slug}>{card}</div>
+            : <Link key={slug} href={`/notes/${slug}`} style={{ textDecoration: 'none' }}>{card}</Link>;
+        })}
       </div>
     </div>
   );
