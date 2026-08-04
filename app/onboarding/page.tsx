@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -12,7 +12,7 @@ const optionals = [
   { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: true },
 ];
 
-export default function Onboarding() {
+function OnboardingInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
@@ -214,5 +214,13 @@ export default function Onboarding() {
 
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>
+  );
+}
+
+export default function Onboarding() {
+  return (
+    <Suspense>
+      <OnboardingInner />
+    </Suspense>
   );
 }
