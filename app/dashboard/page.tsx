@@ -16,8 +16,6 @@ const TOOLS = [
   { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
   { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
   { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: '/sociology/pyqs', badge: 'Free', icon: 'pyq' },
-  { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+.', href: '/toppers', badge: 'Premium', icon: 'topper' },
-  { num: '06', label: 'Prelims Practice', desc: 'MCQs with UPSC-standard scoring — sharpen your Prelims game.', href: '/prelims', badge: 'Free', icon: 'prelims' },
 ];
 
 interface Stats {
