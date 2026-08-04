@@ -569,8 +569,8 @@ export async function POST(req: NextRequest) {
           // Append sources delimiter
           send('\n__SOURCES__' + JSON.stringify(ragSources));
 
-          // Increment usage
-          if (!isOwner && firebaseUid) {
+          // Increment usage (track everyone including owner)
+          if (firebaseUid) {
             try {
               const { createClient: ccInc } = await import('@supabase/supabase-js');
               const sbInc = ccInc(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
@@ -581,12 +581,10 @@ export async function POST(req: NextRequest) {
                 .single();
               const newCount = (existing?.chat_count ?? 0) + 1;
               await sbInc.from('usage_tracking')
-                .update({ chat_count: newCount, updated_at: new Date().toISOString() })
-                .eq('firebase_uid', firebaseUid);
-              if (fingerprint) {
-                await sbInc.from('usage_tracking')
-                  .upsert({ fingerprint, firebase_uid: firebaseUid, chat_count: newCount }, { onConflict: 'fingerprint' });
-              }
+                .upsert(
+                  { firebase_uid: firebaseUid, fingerprint: fingerprint ?? '', chat_count: newCount, updated_at: new Date().toISOString() },
+                  { onConflict: 'firebase_uid' }
+                );
             } catch (incErr) {
               console.log('chat_count increment failed', incErr);
             }

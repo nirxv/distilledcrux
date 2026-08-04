@@ -1144,8 +1144,8 @@ RULES:
       console.log("Pass 3 error (non-fatal):", p3err);
     }
 
-    // Increment eval_count for all users (except owner) after successful evaluation
-    if (!isOwner && token) {
+    // Increment eval_count for all users after successful evaluation
+    if (token) {
       try {
         const { verifyFirebaseToken: vftInc } = await import("@/lib/verifyFirebaseToken");
         const userInc = await vftInc(token);
@@ -1163,13 +1163,10 @@ RULES:
           const newCount = (existingUsage?.eval_count ?? 0) + 1;
           await supabaseInc
             .from("usage_tracking")
-            .update({ eval_count: newCount, updated_at: new Date().toISOString() }).eq("firebase_uid", userInc.uid);
-          // Also update FP row so device-based abuse is blocked on new accounts
-          if (fingerprint) {
-            await supabaseInc
-              .from("usage_tracking")
-              .upsert({ fingerprint, eval_count: newCount }, { onConflict: "fingerprint" });
-          }
+            .upsert(
+              { firebase_uid: userInc.uid, fingerprint: fingerprint ?? '', eval_count: newCount, updated_at: new Date().toISOString() },
+              { onConflict: "firebase_uid" }
+            );
         }
       } catch (incErr) {
         console.log("eval_count increment failed", incErr);
