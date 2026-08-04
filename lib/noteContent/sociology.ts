@@ -7196,7 +7196,143 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>A Kumar argues that the underlying principle in various accommodations of identity in India has remained internal self-determination — which has served to weaken the bases of political secessionism while not defeating the principle of self-determination itself. Creation of "dependent" states alone will not improve conditions; a genuinely developed, re-federalised system of governance is needed.</p>
 `,
-  'politics-society-india': '',
+  'politics-society-india': `
+<h2>Introduction: Politics and Society in India</h2>
+
+<p>The relationship between politics and society in India is unique in world history. No other country of comparable scale attempted to graft universal adult franchise onto a society still structured by caste, patriarchy, illiteracy, and mass poverty in a single constitutional moment. The sociological study of politics in India therefore asks not whether democracy is formally present but how it actually works — which social forces it empowers, which it excludes, how it is being transformed by caste mobilisation, regionalism, religious nationalism, and economic liberalisation.</p>
+
+<h2>Caste and Democracy: The Central Paradox</h2>
+
+<p>The relationship between caste and democracy in India has been the most debated question in the sociology of Indian politics. Two opposing predictions were made at independence: modernisation theorists predicted that industrialisation, urbanisation, and formal legal equality would dissolve caste; Marxists predicted class would replace caste as the primary axis of political mobilisation. Both predictions turned out to be wrong.</p>
+
+<p>Rajni Kothari, in <em>Politics in India</em> (1970), made the most influential sociological argument. He distinguished two directions of influence. Caste enters politics ("politicisation of caste") — caste groups mobilise as political units to compete for power, benefits, and representation. Democracy simultaneously enters caste ("democratisation of caste") — within each caste group, old hierarchies are challenged as ordinary members demand voice, accountability, and equal shares. The result is not the dissolution of caste but its transformation into a modern vehicle of democratic competition. Caste does not weaken democracy — it shapes and mediates democracy's operation.</p>
+
+<p>Kothari observes that in a plural society like India, with cleavages and divisions on both horizontal and vertical lines, Western models of political development are often inadequate. He searches for a model to understand the complex nature of Indian polity by analysing "kinds of political parties and interest groups," "social and national integration," and the "infrastructure of society." He shows that the response of traditional society to modernisation in India retained a secular element because of India's cultural unity — traditional identities were not simply swept away but became the building blocks of modern competitive politics.</p>
+
+<p>Dipankar Gupta disagrees with the standard view of caste in politics. He argues that caste in elections produces, reproduces, and perpetuates caste consciousness — not some secular group interest. Rather than making political choices that reflect the "real interests" of caste communities, electoral mobilisation reinforces the very category of caste identity as the primary frame of political life. Friendship, leadership quality, and local issues also matter — but caste provides the structural foundation within which these operate.</p>
+
+<h2>The Congress System (Rajni Kothari)</h2>
+
+<p>Kothari introduced the concept of the "Congress system" to describe India's distinctive party system in the first two decades after independence. It was not a one-party system in the sense of a monopoly on power but a system of one-party dominance in which competing parts played dissimilar roles. The Congress functioned as a party of consensus — representing the historical synthesis of the nationalist movement. Other parties were parties of pressure, functioning on the margin of this consensus.</p>
+
+<p>The internal structure of the Congress system rested on factionalism. Political competition was internalised — competing interests and social groups battled within the Congress rather than across party lines. This produced vertical "faction chains" linking national, state, district, and local levels. Structurally, the system displayed two features: plurality within the dominant party (making it more representative and sustaining internal competition) and the capacity to absorb movements from outside (preventing other parties from gaining strength). The Congress concentrated resources, controlled patronage, and made mobilisation a function of political participation rather than bureaucratic control.</p>
+
+<p>The opposition's role in the Congress system was to constantly pressurise, criticise, and censure — posing a latent threat that if the ruling group strayed too far from public opinion, it would be displaced. This threat ensured the mobility and life of the Congress's internal power structure. Kothari warned that the delicate balance on which the Congress system's legitimacy rested could be rudely disturbed, allowing a more authoritarian system to emerge — a prediction that seemed to come true with the Emergency (1975-77) and was confirmed again in different ways by subsequent political developments.</p>
+
+<p>Ramachandra Guha's critique of Kothari: The bulk of Kothari's analysis was devoted to the then-dominant Congress party. His judgement — "because the Congress managed to be in power continuously and there was no united or effective threat to its authority, the country's political process gained incomparable advantages of continuity and unity" — was valid for its time. His prediction that Congress would retain widespread local presence even when not in power at the state level proved accurate for several decades but eventually failed as the third party system displaced Congress dominance.</p>
+
+<h2>India's Electoral Party Systems: A Historical Overview</h2>
+
+<p>India's electoral history from 1952 to the present can be divided into four broad party systems, each with distinct characteristics (following Yogendra Yadav's framework):</p>
+
+<h3>First Party System (1952-1967): Congress Dominance</h3>
+
+<p>Between 1952 and 1967, the Congress Party dominated Indian politics at both the centre and across most states. As the party primarily responsible for independence and home to the most respected nationalist leaders, the Congress benefited from widespread popular appeal. Opposition forces were badly fragmented, limiting their ability to mount a serious campaign. The most salient social category for politics was <em>jati</em> (discrete caste groups within umbrella varna categories) — highly embedded in local context.</p>
+
+<h3>Second Party System (1967-1989): Growing Opposition at State Level</h3>
+
+<p>The year 1967 was a critical inflection point. The Congress retained its grip on the Centre but its hold on state capitals began to fade. New expressions of caste and regional identities chipped away at the party's monopoly of subnational politics. Jati-level identities retained importance, but political parties worked to build state-wide alliances of individual jatis to construct minimum winning coalitions. The Emergency (1975-77) demonstrated the fragility of democratic consensus; the 1977 Janata wave showed the Congress could be defeated.</p>
+
+<h3>Third Party System (1989-2014): Coalition Politics</h3>
+
+<p>Congress dominance ended in 1989, which marked the start of coalition governance in New Delhi. Three powerful forces disrupted Indian politics — "Mandal, Masjid, and Market."</p>
+
+<p>The Mandal Commission (1980, implemented 1990 under V.P. Singh) recommended quotas for OBCs in higher education and civil services. This catalysed what Yogendra Yadav called a "second democratic upsurge" — the catapulting of traditionally disadvantaged groups into political power. Caste-based parties representing Dalit and OBC interests (BSP, SP, JD-U, RJD) firmly entrenched themselves. The social composition of the representative class changed — the combined share of OBC and SC legislators superseded that of upper-caste and intermediate castes in northern Hindi belt states for the first time.</p>
+
+<p>The demolition of the Babri Masjid (1992) and the BJP's rise from two seats in 1984 to the only national alternative to Congress by 1999 reflected the power of Hindu nationalist mobilisation. The economic liberalisation of 1991 transformed the market, creating new middle-class constituencies and shifting political discourse toward development and economic management.</p>
+
+<p>Six defining attributes of the third party system: absence of a central pole in national politics; era of political fragmentation (370 parties contested in 2009); markedly more competitive elections with lower victory margins; highly federalised political system (state-level outcomes directly influencing national verdicts); subdued national voter turnout compared to rising state-level turnout; and a clear change in the social composition of the representative class with OBC and Dalit ascendance.</p>
+
+<h3>Fourth Party System (2014-present): BJP Dominance</h3>
+
+<p>The BJP's victory in 2014 represented a structural break. Suhas Palshikar characterised BJP under Modi as a classic example of a hegemonic political party — one combining ideological hegemony with electoral dominance. Three elements constitute the BJP's nationalist narrative: selective deployment of Hindutva in parts of the country where it consolidates the electoral base; a muscular territorial nationalism centred on sovereignty and resentment toward liberal elites; and pro-business developmentalism alongside a welfarist image. In 2014, the BJP won India's first single-party majority in the Lok Sabha since 1984. In 2019, they repeated this feat with an even larger majority and the first time male and female voter turnout reached virtual parity.</p>
+
+<p>The BJP's three pillars of dominance: ideology (Hindutva nationalism plus new developmentalism saturating political space); organisation and financial prowess (panna pramukh system — party workers assigned to individual pages of voter rolls; twenty-to-one financial advantage over Congress); and charismatic leadership (both 2014 and 2019 elections functioned as referenda on Modi's personal leadership, presidentialising a parliamentary election).</p>
+
+<p>The decline of Congress after 2014 shifted the umbrella caste categories (OBC, Dalit) that had defined third party system politics back toward jati-level alliances — but with a new twist. The BJP broke wedges between dominant jatis and subordinate groupings within the OBC and Dalit umbrella, incorporating new social groups (Dalits, Adivasis, many OBC communities) into a Hindu nationalist coalition that transcended traditional upper-caste-only Hindutva.</p>
+
+<h2>Regionalism and the Politics of Identity</h2>
+
+<p>Regionalism in India is both a product of state-formation and a challenge to it. It refers to ideological and political movements seeking to advance the interests of particular regions — a process of "othering" for outsiders that simultaneously represents a "return to self" for natives.</p>
+
+<h3>Historical Background</h3>
+
+<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were reorganised on the basis of language. Bombay was divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab was trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast. The states of Manipur, Tripura, and Meghalaya were formed in the late 1970s. NEFA was granted statehood as Arunachal Pradesh in 1987. The Nagas and Mizos achieved statehood only after violent encounters with the Indian state: Nagaland in 1963 (insurgency continues today), Mizoram after the 1986 accord with Laldenga. The 2021 violent clashes between Assam and Mizoram forces demonstrated that even settled state boundaries remain contested.</p>
+
+<h3>Factors Producing Regionalism</h3>
+
+<p>Relative deprivation is the most important factor constructing the argument for regionalism. If people of a particular region feel more deprived than others in terms of distribution of resources and infrastructure, regional affiliation emerges. The Gorkha National Liberation Front (GNLF) movement in Darjeeling reflects a clear case where the region's perception of underdevelopment relative to southern West Bengal generated a regionalist movement. Growing regional inequalities in income and consumption in the post-reforms period have accentuated perceptions of neglect — coastal regions and developed regions have benefited far more from private investment than peripheral, conflict-affected, or infrastructure-poor regions.</p>
+
+<p>Language and culture constitute the second significant factor. Every individual's identity is rooted in language and culture — and once politicised, these become powerful forces in region formation. Edward Sapir argued that language plays a vital role in the creation and determination of a region. The resistance of southern states to the imposition of Hindi as the sole official language reflects linguistic-cultural identity generating political regionalisation.</p>
+
+<p>Other factors include: unequal access to political power (local elites complaining of reverse discrimination as elites from other regions corner financial grants and portfolios); administrative neglect by ruling parties; elite power ambitions (DMK, AIADMK, Akali Dal, Telugu Desam, Asom Gana Parishad encouraging regionalism to capture power); failure of national politics to absorb diverse group interests; and the son of the soil theory — competition for employment between migrants and local educated middle-class youth generating nativist movements in cities.</p>
+
+<h3>Outcomes and Criteria for Recognising Regions</h3>
+
+<p>Regionalist movements have produced several important outcomes: regional identity, culture, and geographical differences are now better recognised as valid bases for administrative division; separate statehood movements are no longer automatically stigmatised as antinational; new states (Jharkhand, Uttarakhand, Chhattisgarh, 2000) have been formed on grounds of good governance and development rather than language alone; dialect communities have asked for territorial homelands (Bundelkhand, Ruhelkhand, Mithilanchal).</p>
+
+<p>SR Maheshwari (quoting Rasheeduddin Khan) proposes that the criterion for recognising a region should be "maximum homogeneity within and maximum identity without" — established across ten counts: language/dialect; social composition (jatis); ethnic features; demo-geographic features; geographic contiguity; cultural patterns; economic life; historical antecedents; political background; and psychological group identity and felt consciousness.</p>
+
+<p>A Kumar argues that the underlying principle in India's accommodations of regional identity has remained internal self-determination — which has served to weaken the bases of political secessionism without defeating the principle of self-determination itself. Ashok Behuria argues the Indian federation has temperamentally behaved as a "union" and not a "federation" — leadership must adopt federal principles and gradually devolve financial powers to units to contain ethnocultural assertions. Creation of "dependent" states without genuine devolution of powers will not improve conditions.</p>
+
+<h2>Political Parties in India</h2>
+
+<p>A political party is an institution consisting of leaders, followers, policies, and programmes whose principal purpose is to capture power. Political parties provide the crucial connection between social processes and policy-makers — they link individuals, state, and society; influence debates on issues affecting various social groups; and educate people while formulating public opinion.</p>
+
+<h3>Classification of Parties</h3>
+
+<p>The Election Commission classifies parties into national parties (requiring at least 2% of Lok Sabha seats from at least three states, or 6% of votes with at least four Lok Sabha seats, or recognition as a state party in four or more states), state parties (parties meeting EC's state-level criteria), and registered/unrecognised parties (more than 2000 registered). In 2020, India had seven national parties: INC, BJP, BSP, CPI, CPI(M), NCP, and AITC.</p>
+
+<p>Regional parties are central to India's multi-party democracy. Between 1996 and 2014, roughly 50% of votes went to the two national parties and 50% to hundreds of regional players. In 2019, the regional party vote share plummeted to 43.2% as BJP's pan-Indian expansion absorbed constituencies previously held by regional parties.</p>
+
+<h2>Decentralisation and Panchayati Raj</h2>
+
+<p>The 73rd Constitutional Amendment (1992) created a three-tier Panchayati Raj structure — gram panchayat, panchayat samiti, zila parishad — with constitutional status, reserved seats for women (one-third), SCs, STs, and OBCs, and mandatory elections every five years. The 74th Amendment did the same for urban local bodies (nagar panchayats, municipal councils, municipal corporations).</p>
+
+<p>The sociological significance of Panchayati Raj extends beyond administration. For the first time, women from the most disadvantaged communities could hold elected office. Studies show that female sarpanchs, despite initial resistance, have changed the priorities of local government — toward water, schools, health centres, and roads rather than prestige projects. Devolution of funds, functions, and functionaries (the "3Fs") however remains incomplete across most states — panchayats have constitutional legitimacy but limited financial resources and administrative capacity.</p>
+
+<h2>Secularism, Communalism, and the Politics of Religion</h2>
+
+<p>The Indian Constitution established India as a secular state — not in the Western sense of a wall of separation between state and religion, but in what Rajeev Bhargava calls a model of "principled distance." The state maintains an equal, if not always identical, relationship with all religions rather than distancing itself from all. It can intervene in religious practices that violate fundamental rights (sati, untouchability, child marriage) while also funding and protecting religious institutions of all communities.</p>
+
+<p>TN Madan argues that secularism is a minority viewpoint in India — of Hindu elites who have internalised Enlightenment values but who represent neither the majority of Hindus nor Muslim, Christian, or Sikh communities for whom religion is not separable from public life. For Madan, secularism in India is therefore "an impossible project." Ashis Nandy similarly argues that Western secularism cannot solve Indian communalism — it requires privatising religion in societies where religion is inseparably public. Partha Chatterjee and Amartya Sen respond that however imperfectly realised, the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
+
+<p>Communalism has been the central threat to India's secular polity. Bipin Chandra identifies three stages: liberal communalism (common religious interests, compatible secular interests); communal communalism (different but coexisting secular interests); and extreme communalism (fundamentally antagonistic secular interests, the logic of the Two-Nation Theory). Colonial divide-and-rule policy, separate electorates (Morley-Minto 1909), the trauma of Partition, political mobilisation of religious grievances, and the growth of Hindu nationalism have all contributed to communal politics in independent India.</p>
+
+<h2>Caste Associations and Their Sociological Significance</h2>
+
+<p>Caste associations are formal organisations of caste groups that emerged in colonial India when print capitalism, modern education, and census enumeration gave caste communities new tools to claim rights, resources, and recognition. Lloyd Rudolph and Susanne Rudolph (<em>The Modernity of Tradition</em>) identified caste associations as the mechanism through which traditional caste identities were transformed into modern interest groups compatible with democratic competition. They described dominant agricultural castes like the Marathas, Patidars, Jats, Reddys, Lingayats, Yadavs, and Kapus as "bullock capitalists" — politically organised, economically progressive farmers who used caste associations to articulate demands for land rights, irrigation, price supports, and educational reservations.</p>
+
+<p>Rajni Kothari argued that caste associations do more good than bad — they fight for educational opportunities, welfare resources, and political representation for their communities. They are a form of associative democracy (in Durkheim's sense) — groups holding people together and providing intermediate institutions between the individual and the state. The negative assessment of caste associations as "communal" or "fissiparous" is ideologically loaded; the same organisational logic governs trade unions, professional associations, and ethnic lobbies in other democracies.</p>
+
+<h2>Gender and Politics</h2>
+
+<p>The Constitution guarantees equal political rights to women, but the political sphere has been among the most resistant to gender equality. The representation of women in the Lok Sabha has remained chronically low — hovering between 10-15% in most elections. The Women's Reservation Bill (demanding 33% reservation in Parliament and state legislatures) was passed as the Nari Shakti Vandan Adhiniyam in 2023, with implementation linked to delimitation after the next census.</p>
+
+<p>The 73rd Amendment's one-third reservation for women in Panchayati Raj has been the most transformative intervention. Raghabendra Chattopadhyay and Esther Duflo's randomised study found that villages headed by women invested more in drinking water, roads, and primary school infrastructure than villages headed by men. The study confirmed that women leaders have different policy priorities and that reservation is necessary to realise them — because without structural change, existing political networks and gatekeeping exclude women candidates systematically.</p>
+
+<p>Feminist sociologists distinguish between women's participation in politics (being present as voters and candidates) and feminist transformation of politics (changing the substantive agenda to include women's concerns — reproductive rights, domestic violence, equal wages, child care). While the former has grown significantly, the latter remains limited. Politics continues to be organised around men's issues, men's networks, and men's leadership styles.</p>
+
+<h2>Dalit Politics and the Question of Representation</h2>
+
+<p>Dalit political assertion represents one of the most significant developments in independent India's political life. BR Ambedkar's vision — constitutional rights plus education plus organised political power — has found partial institutional expression through reservation in legislatures and government employment, the rise of Dalit political parties (Republican Party of India, Bahujan Samaj Party), and the social movements (Dalit Panthers, BAMCEF) that have challenged Brahminical cultural hegemony.</p>
+
+<p>The BSP's rise under Kanshi Ram and Mayawati, particularly the "social engineering" coalition strategy that brought Dalits, OBCs, Muslims, and upper castes together in UP in 2007, represented a new high-water mark of Dalit political power. But the BSP's subsequent decline and the BJP's success in drawing Dalit voters (through welfare schemes, symbolic recognition, and co-optation of Dalit icons like Ambedkar) illustrates the complexity of Dalit political choices in a context where vote banks are fluid and economic aspiration competes with social dignity as the primary electoral driver.</p>
+
+<p>Subaltern Studies scholars (Ranjit Guha, Partha Chatterjee) argue that Dalit political consciousness cannot be captured through the frameworks of elite politics — it has its own autonomous modes of organisation, resistance, and aspiration that mainstream party politics regularly domesticates and co-opts. Upendra Baxi: Dalit rights claims are not merely political demands but legal and moral claims that challenge the foundational legitimacy of the social order.</p>
+
+<h2>OBC Politics and the Mandal Commission</h2>
+
+<p>The Mandal Commission (1980, chaired by BP Mandal) recommended 27% reservation for Other Backward Classes (OBCs) in central government jobs and educational institutions, in addition to the existing 22.5% for SCs and STs. The report gathered dust for a decade before V.P. Singh's government implemented it in 1990. The anti-Mandal agitation — dominated by upper-caste students — and the pro-Mandal counter-mobilisation fundamentally restructured Indian politics. The three forces of "Mandal, Masjid, and Market" that disrupted the third party system all had their roots in this period.</p>
+
+<p>The Mandal Commission represented the sociological recognition that OBCs — a population constituting over 50% of India's citizens — had been systematically excluded from state employment and educational opportunity despite formal democratic equality. Its implementation produced the "second democratic upsurge" (Yogendra Yadav) — the entry of OBC communities into the representative class in numbers commensurate with their population weight. This transformation continues to reshape Indian politics as OBC leaders and parties dominate state and national politics across the Hindi belt and increasingly beyond it.</p>
+
+<h2>Federalism, Centre-State Relations, and Fiscal Autonomy</h2>
+
+<p>India's Constitution establishes a federal system but with a strong unitary bias — the Centre retains powers to impose President's Rule, to create and dissolve states, and to override state legislation through the Concurrent List. The trend since the 1990s has been toward greater de facto federalism as coalition politics at the centre made regional parties indispensable partners and gave them leverage to demand greater state autonomy.</p>
+
+<p>The 14th Finance Commission (2015) recommended increasing the states' share of central taxes from 32% to 42% — the largest transfer in Indian fiscal history. GST (implemented 2017) created a new federal tax architecture but also centralised revenue in ways that reduced state fiscal autonomy. The abolition of the Planning Commission (2014) and its replacement by NITI Aayog removed the institutional mechanism for Centre-state dialogue on development planning, shifting decisions further toward the Centre even as formal devolution increased.</p>
+`,
   'social-movements-india': '',
   'population-dynamics': '',
   'challenges-social-transformation': '',
