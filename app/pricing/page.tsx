@@ -7,19 +7,44 @@ const plans = [
     id: 'daily', label: 'Daily', price: 49, period: 'per day', tag: null,
     desc: 'Perfect for exam-day sprints and last-minute revision.',
     color: '#2dd4bf',
-    features: ['Full platform access for 24 hours','AI Answer Evaluation (unlimited)','AI Chat — ask anything','PYQ Bank access','Syllabus-Mapped Notes','Topper Answer Copies','Map Practice'],
+    features: [
+      { label: 'Full platform access for 24 hours' },
+      { label: 'AI Answer Evaluation (unlimited)' },
+      { label: 'AI Chat — ask anything' },
+      { label: 'PYQ Bank access' },
+      { label: 'Syllabus-Mapped Notes' },
+      { label: 'Topper Answer Copies', future: true },
+    ],
   },
   {
     id: 'sixmonth', label: '6 Months', price: 3999, period: 'per 6 months', tag: 'Most Popular',
     desc: 'Best for focused preparation cycles leading up to Mains.',
     color: '#4361ee',
-    features: ['Full platform access for 6 months','AI Answer Evaluation (unlimited)','AI Chat — ask anything','PYQ Bank — 1500+ questions','Syllabus-Mapped Notes','Topper Answer Copies','Map Practice','Performance analytics'],
+    features: [
+      { label: 'Full platform access for 6 months' },
+      { label: 'AI Answer Evaluation (unlimited)' },
+      { label: 'AI Chat — ask anything' },
+      { label: 'PYQ Bank — 1500+ questions' },
+      { label: 'Syllabus-Mapped Notes' },
+      { label: 'Topper Answer Copies', future: true },
+      { label: 'Performance analytics' },
+    ],
   },
   {
     id: 'yearly', label: 'Yearly', price: 5999, period: 'per year', tag: 'Best Value',
     desc: 'Full-year coverage — from Prelims to Mains interview prep.',
     color: '#e8b86d',
-    features: ['Full platform access for 12 months','AI Answer Evaluation (unlimited)','AI Chat — ask anything','PYQ Bank — 1500+ questions','Syllabus-Mapped Notes','Topper Answer Copies','Map Practice','Performance analytics','Priority support','Early access to new features'],
+    features: [
+      { label: 'Full platform access for 12 months' },
+      { label: 'AI Answer Evaluation (unlimited)' },
+      { label: 'AI Chat — ask anything' },
+      { label: 'PYQ Bank — 1500+ questions' },
+      { label: 'Syllabus-Mapped Notes' },
+      { label: 'Topper Answer Copies', future: true },
+      { label: 'Performance analytics' },
+      { label: 'Priority support' },
+      { label: 'Early access to new features' },
+    ],
   },
 ];
 
@@ -380,8 +405,23 @@ export default function PricingPage() {
 
                     <ul className="pr-features">
                       {plan.features.map((f) => (
-                        <li key={f} className="pr-feature">
-                          <CheckIcon color={plan.color} />{f}
+                        <li key={f.label} className="pr-feature" style={f.future ? { opacity: 0.45 } : undefined}>
+                          <CheckIcon color={f.future ? 'var(--text3)' : plan.color} />{f.label}
+                          {f.future && (
+                            <span style={{
+                              marginLeft: '6px',
+                              fontSize: '0.6rem',
+                              fontFamily: 'var(--font-ui)',
+                              fontWeight: 700,
+                              letterSpacing: '0.08em',
+                              textTransform: 'uppercase',
+                              color: 'var(--text3)',
+                              border: '1px solid var(--border)',
+                              borderRadius: '4px',
+                              padding: '1px 6px',
+                              verticalAlign: 'middle',
+                            }}>Soon</span>
+                          )}
                         </li>
                       ))}
                     </ul>
