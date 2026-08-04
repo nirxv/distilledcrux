@@ -526,7 +526,7 @@ export default function PYQDetailPage() {
                 ['Marks', `${pyq.marks}M`],
                 ['Topic', pyq.topic],
                 pyq.section ? ['Section', pyq.section] : null,
-              ].filter(Boolean).map(([k, v]) => (
+              ].filter((x): x is string[] => Array.isArray(x)).map(([k, v]) => (
                 <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '5px 0', borderBottom: '1px solid var(--border)', gap: '1rem' }}>
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--text3)', flexShrink: 0 }}>{k}</span>
                   <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: 'var(--text2)', textAlign: 'right' }}>{v}</span>

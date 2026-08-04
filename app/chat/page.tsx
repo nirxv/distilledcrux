@@ -371,7 +371,7 @@ function ChatContent() {
   function linkifyCitations(html: string, sourcesCount: number): string {
     if (!sourcesCount) return html;
     return html.replace(/\b(Sources?)\s*#?\s*(\d+(?:\s*(?:,|and|&)\s*\d+)*)\b/gi, (match, _label, numList) => {
-      const nums = Array.from(numList.matchAll(/\d+/g)).map((m: RegExpMatchArray) => parseInt(m[0], 10));
+      const nums = Array.from(numList.matchAll(/\d+/g)).map((m) => parseInt(m[0], 10));
       const valid = nums.filter((n) => n >= 1 && n <= sourcesCount);
       if (valid.length === 0) return match;
       return `<span class="pp-citation" data-citation="${valid.join(',')}">${match}</span>`;
