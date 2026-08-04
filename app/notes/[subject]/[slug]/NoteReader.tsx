@@ -2,6 +2,11 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { allNotes, getNoteBySlug } from '@/lib/notes';
+import { allAnthroNotes } from '@/lib/notes/anthropology';
+import { allNotes as allSocNotes } from '@/lib/notes/sociology';
+import { allNotes as allPolNotes } from '@/lib/notes/polsci';
+import { allNotes as allGeoNotes } from '@/lib/notes/geography';
+import { allNotes as allPANotes } from '@/lib/notes/pub-admin';
 import { auth, googleProvider } from '@/lib/firebase';
 import { onAuthStateChanged, signInWithPopup, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
@@ -253,10 +258,16 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
 
-  const allN = allNotes;
-  const idx  = allN.findIndex(n => n.slug === slug);
-  const prev = idx > 0 ? allN[idx - 1] : null;
-  const next = idx < allN.length - 1 ? allN[idx + 1] : null;
+  const subjectNotes: { slug: string; title: string }[] =
+    subject === 'anthropology' ? allAnthroNotes :
+    subject === 'sociology'    ? allSocNotes :
+    subject === 'polsci'       ? allPolNotes :
+    subject === 'geography'    ? allGeoNotes :
+    subject === 'pub-admin'    ? allPANotes :
+    allNotes;
+  const idx  = subjectNotes.findIndex(n => n.slug === slug);
+  const prev = idx > 0 ? subjectNotes[idx - 1] : null;
+  const next = idx < subjectNotes.length - 1 ? subjectNotes[idx + 1] : null;
 
   const processedContent = injectHeadingIds(initialContent);
 
