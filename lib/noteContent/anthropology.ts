@@ -5686,7 +5686,6 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p><strong>Caste and its transformations:</strong> Srinivas's Sanskritisation, Dumont's hierarchy, André Béteille's comparative-historical account of equality and inequality, and the Dalit intellectual tradition's critique of Brahmanical sociology together constitute the richest body of comparative sociological writing on caste in the world.</p>
 `,
 
-}`,
   'indian-village': `
 <h2>The Indian Village: Why It Matters</h2>
 
