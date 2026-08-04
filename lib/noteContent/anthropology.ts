@@ -6350,4 +6350,191 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>The Xaxa Committee's framework locates tribal problems not in the social or cultural characteristics of tribals — as earlier colonial and development discourses implied — but in the structural conditions of a development paradigm that systematically appropriates tribal land, forests, and water while excluding tribal communities from the benefits. The solution lies not in tribal assimilation into mainstream development but in a transformation of the development model itself toward one that respects tribal rights, identity, and priorities as its foundation.</p>
 `,
 
+
+  'developmental-projects-tribal-displacement': `
+<h2>Introduction: Development and Displacement in India</h2>
+
+<p>Since independence, India has pursued an ambitious programme of planned economic development centred on large infrastructure projects: river valley dams, steel plants, mines, thermal and nuclear power stations, highways, and more recently Special Economic Zones (SEZs). These projects have generated substantial economic output and infrastructure, but have also displaced millions of people from their land, forests, and traditional livelihoods. Tribal communities (Adivasis) have borne a disproportionate share of this displacement burden, despite constituting only approximately 8 to 9 percent of India's total population.</p>
+
+<p>Walter Fernandes, a leading scholar of displacement in India, estimated that between 1947 and 2004, approximately 60 million people were displaced by development projects, of whom Scheduled Tribes constituted 40 to 50 percent despite being less than 10 percent of the population. This disproportionality reflects the geographic coincidence between tribal habitats and the natural resources that large development projects seek to exploit: rivers suitable for dams, mineral deposits, forest land suitable for industrial agriculture or wildlife reserves.</p>
+
+<h2>Historical Background: Colonial Roots of Displacement</h2>
+
+<p>The systematic displacement of tribal communities from their territories did not begin with post-independence development projects. It was rooted in the colonial period, particularly in British forest and land policies that progressively dispossessed tribal communities of their customary rights over forests and land.</p>
+
+<p>The Indian Forest Act of 1865 and its successor legislation, the Indian Forest Act of 1878, reserved large tracts of forest land for state control, criminalising the traditional practices of tribal communities: shifting cultivation (jhum), collection of forest produce, grazing, and hunting. Tribal communities who had lived in and managed these forests for generations were reclassified as encroachers on government land. The Forest Policy of 1894 explicitly prioritised commercial exploitation of forest resources over the subsistence needs of forest-dwelling communities.</p>
+
+<p>The Bengal Land Settlement and Permanent Settlement of 1793 introduced private property in land under zamindari ownership in areas previously characterised by communal tribal land tenure. Tribal communities found that land they had cultivated for generations was now legally owned by zamindars to whom they owed rent. Inability to pay rent led to debt, mortgage, and eventual land alienation. The colonial period thus established the structural conditions — forest reservation, private property in land, debt bondage, and legal systems alien to tribal custom — that made tribal communities particularly vulnerable to dispossession and displacement in the post-independence period.</p>
+
+<h2>Development Projects and Their Impact on Tribal Communities</h2>
+
+<h3>River Valley Dams</h3>
+
+<p>The large river valley dam was the signature development project of the Nehruvian era. Jawaharlal Nehru famously called dams the "temples of modern India," reflecting the faith placed in large-scale infrastructure as the engine of national development. However, large dams submerge river valleys — precisely the fertile, well-watered lands where tribal and other communities have traditionally settled and farmed — displacing their inhabitants while delivering the water and electricity primarily to distant urban and industrial centres.</p>
+
+<p>The Hirakud Dam on the Mahanadi river in Odisha (completed 1957) displaced approximately 150,000 people, of whom a substantial proportion were tribal communities. The Bhakra-Nangal Dam on the Sutlej in Himachal Pradesh displaced approximately 36,000 people. The Pong Dam on the Beas in Himachal Pradesh displaced approximately 150,000 people, primarily from the Kangra valley. The Ukai Dam on the Tapti in Gujarat displaced approximately 52,000 people.</p>
+
+<p>The Sardar Sarovar Dam on the Narmada river in Gujarat became the most thoroughly documented and politically contested case of dam-induced displacement in Indian history. The Narmada Bachao Andolan (NBA), led by Medha Patkar and supported by writers and activists including Arundhati Roy, mounted a sustained national and international campaign against the dam from the late 1980s onward, bringing the question of displacement and rehabilitation into mainstream public discourse for the first time. The dam was projected to displace approximately 320,000 people (the actual number is contested and has been estimated higher by activists), of whom a substantial proportion were tribal communities in Madhya Pradesh and Maharashtra. The NBA's campaign led to a review by the World Bank (which ultimately withdrew funding in 1993) and prolonged legal battles in the Supreme Court of India.</p>
+
+<p>The Upper Indravati Hydroelectric Project in Odisha displaced approximately 25,000 tribal people, primarily Bondas and Kondhs. The Indira Sagar Dam (Narmada Sagar) displaced approximately 250,000 people from the upper Narmada valley. The Omkareshwar Dam displaced an additional 35,000 people from the same river system.</p>
+
+<h3>Mining Projects</h3>
+
+<p>India's mineral wealth is concentrated overwhelmingly in the tribal belt of central and eastern India, encompassing Jharkhand, Odisha, Chhattisgarh, Madhya Pradesh, Andhra Pradesh, and parts of Maharashtra. The Chota Nagpur plateau and the Eastern Ghats are among the most densely mineralised regions in Asia, with deposits of iron ore, coal, bauxite, manganese, limestone, and other minerals. This geographic coincidence between mineral wealth and tribal habitats has made mining a major source of tribal displacement.</p>
+
+<p>The Bailadila iron ore mines in Bastar, Chhattisgarh (operated by NMDC) displaced Gond communities from their agricultural lands and forests. The POSCO steel plant proposed for Odisha (eventually cancelled after prolonged protests) would have displaced thousands of tribal families from the coastal Paradip region. The Vedanta Aluminium refinery at Lanjigarh, Odisha, and the proposed bauxite mining on the Niyamgiri hills (sacred to the Dongria Kondh tribe) generated sustained protests in which the Dongria Kondh asserted their rights over their forest and sacred mountain under the Forest Rights Act 2006. In 2013, gram sabhas (village assemblies) of the Dongria Kondh unanimously rejected the mining proposal, a landmark instance of tribal communities exercising rights under the Forest Rights Act.</p>
+
+<p>The coal mines of Jharkhand, operated by Coal India Limited and various private companies, have displaced tribal communities across the Dhanbad, Bokaro, and Ramgarh districts. The Jharia coalfield alone has displaced thousands of Santhals, Mundas, and other tribal communities, with ongoing displacement associated with underground mine fires and surface subsidence.</p>
+
+<h3>Industrial and Urban Projects</h3>
+
+<p>Large industrial plants and urban expansion have also displaced tribal communities. The Jamshedpur (Tata) steel plant displaced Munda and Santhali communities in what is now Jharkhand. The Bhilai Steel Plant in Chhattisgarh displaced communities from the Durg and Rajnandgaon districts. Rourkela Steel Plant in Odisha displaced approximately 30,000 people, largely from Oraon and Munda communities.</p>
+
+<p>The expansion of cities such as Raipur, Ranchi, and Bhubaneswar has absorbed tribal peri-urban land, displacing communities who have typically received inadequate compensation and been unable to integrate into the urban economy.</p>
+
+<h3>Wildlife Conservation and Protected Areas</h3>
+
+<p>The establishment of national parks, tiger reserves, and wildlife sanctuaries has been a significant but often overlooked source of tribal displacement. India has approximately 104 national parks and 551 wildlife sanctuaries, many of which overlap with tribal habitats. The Wildlife Protection Act 1972 and its amendments, combined with the Project Tiger programme (launched 1973) and its successor, the National Tiger Conservation Authority, have led to the relocation of tribal communities from core zones of tiger reserves, often with inadequate compensation and rehabilitation.</p>
+
+<p>The Achanakmar Tiger Reserve in Chhattisgarh displaced Baiga families, a PVTG (Particularly Vulnerable Tribal Group) with deep ancestral ties to the forest. The Simlipal National Park in Odisha displaced Mankidia families, another PVTG. The Kattunayak and Cholanaickan communities of Kerala's Nilambur forests have faced restrictions on their forest access due to wildlife conservation regulations. The Mudumalai Wildlife Sanctuary in Tamil Nadu displaced Kattunayak families from their ancestral habitat.</p>
+
+<p>The tension between wildlife conservation and tribal rights was partially addressed by the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act 2006, which affirmed the rights of forest-dwelling communities over forest land and resources and required that relocation from critical wildlife habitats could only proceed after gram sabha consent, alternative land and resettlement, and a coexistence study by an expert committee.</p>
+
+<h3>Defence and Security Projects</h3>
+
+<p>Military installations, firing ranges, and security infrastructure have also displaced tribal communities, particularly in border regions. The Pokhran nuclear test site in Rajasthan displaced pastoral communities. Artillery firing ranges in tribal areas of Central India have restricted access to land and forests. The strategic road construction programme in the northeastern tribal states has involved land acquisition from tribal communities, sometimes under central government authority rather than state land acquisition law.</p>
+
+<h3>Special Economic Zones</h3>
+
+<p>After 2005, the rapid proliferation of Special Economic Zones (SEZs) created a new wave of tribal displacement. The SEZ Act 2005 facilitated land acquisition for private industrial development on a large scale, often using state power to acquire agricultural and tribal land at below-market prices and transfer it to private corporations. Tribal communities in Odisha, Andhra Pradesh, and Maharashtra resisted SEZ land acquisition, most prominently in the anti-POSCO agitation in Jagatsinghpur, Odisha, and in protests against SEZs in the Kalinganagar region.</p>
+
+<h2>Problems of Rehabilitation</h2>
+
+<h3>The Gap between Policy and Implementation</h3>
+
+<p>The problem of rehabilitation following development-induced displacement is not primarily a policy gap but an implementation gap. India has had rehabilitation policies since the 1940s, and these policies have progressively improved in their stated ambitions. Yet empirical studies consistently show that rehabilitation targets are not met, that displaced communities are rarely restored to their pre-displacement levels of livelihood and social cohesion, and that Scheduled Tribe communities fare worse in rehabilitation than non-tribal communities.</p>
+
+<h3>Land-for-Land Principle</h3>
+
+<p>The most fundamental principle of rehabilitation for tribal communities is land-for-land: displaced agricultural communities should receive equivalent agricultural land in their new location, not merely financial compensation. This principle is recognised in the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013 (LARR Act), which replaced the colonial-era Land Acquisition Act of 1894. However, implementation of the land-for-land principle has been extremely poor: in practice, project authorities argue that equivalent agricultural land is unavailable, and displaced families receive financial compensation that is quickly depleted and fails to provide sustainable livelihoods.</p>
+
+<p>Tribal communities displaced from forested lands face a particularly acute problem: their livelihoods depend not merely on agricultural land but on access to forests for timber, fuel, non-timber forest produce, grazing, water, and medicinal plants. Financial compensation and agricultural land elsewhere cannot substitute for the multidimensional livelihood system of forest-dependent communities.</p>
+
+<h3>Involuntary Displacement and Loss of Common Property</h3>
+
+<p>A distinctive feature of tribal displacement is the loss of common property resources — forests, pastures, water bodies, and community grazing lands — that are not owned by individual households and therefore receive no compensation under standard land acquisition frameworks. For tribal communities, these common property resources are often more important than privately owned agricultural land: they provide food security through forest produce collection, fuel for cooking and heating, medicinal plants, and dry-season fodder for livestock.</p>
+
+<p>Walter Fernandes and others have argued that the loss of common property resources is systematically underestimated and undercompensated in development displacement, making official displacement figures severe undercounts of the actual burden borne by affected communities.</p>
+
+<h3>Delays and Inadequate Compensation</h3>
+
+<p>Studies across multiple project sites have documented similar patterns: land acquisition proceeds rapidly while resettlement infrastructure (housing, agricultural land, schools, health facilities) is built slowly or not at all. Families are displaced into temporary accommodation that becomes permanent. Financial compensation is calculated at below-market values, is paid in instalments over years, and is consumed by immediate needs before it can be invested productively. Legal challenges to compensation assessments take decades to resolve in Indian courts. The result is that displaced families suffer a prolonged period of economic crisis and social disruption that many never recover from.</p>
+
+<h3>Loss of Social Capital and Cultural Identity</h3>
+
+<p>Tribal communities are characterised by strong social bonds rooted in kinship, lineage, and shared territorial identity. Displacement disrupts these bonds in ways that financial compensation cannot address. When an entire village is relocated together, some degree of social cohesion may be preserved. But in practice, families from multiple villages are typically relocated to different resettlement colonies, breaking up existing social networks. In forest-dependent communities, the sacred geography of the original habitat — ancestral graves, sacred groves, ritual sites, and boundary markers — is lost forever.</p>
+
+<p>Languages, knowledge systems, ritual practices, and cultural institutions that evolved in specific habitats become progressively less viable in resettlement colonies. The Baiga, the Birhor, the Dongria Kondh, and other communities carry specialist ecological knowledge — of forest ecology, plant pharmacology, animal behaviour, and climate prediction — that has no relevance and no transmission mechanism in the resettlement context, and is therefore lost within a generation.</p>
+
+<h3>Psychological and Health Consequences</h3>
+
+<p>Studies of displaced tribal communities have documented elevated rates of depression, anxiety, alcoholism, family violence, suicide, and related conditions following displacement. The loss of land, livelihood, and community is experienced as a profound personal and collective trauma. The adjustment to radically different ecological and social conditions — from forested uplands to agricultural plains, from forest-based food systems to market-dependent food purchases, from communal life to isolated nuclear households in resettlement colonies — requires a level of social and economic flexibility that many communities, especially the most vulnerable (PVTGs, elderly, and women), cannot achieve.</p>
+
+<p>Malnutrition has been documented as a significant consequence of displacement in PVTG communities. The Baiga displaced from the Achanakmar Tiger Reserve experienced a sharp deterioration in nutritional status as access to forest foods that had supplemented agricultural production was lost. Average life expectancy and family size declined in the relocated colony, as documented in studies cited in parliamentary debates on PVTG welfare.</p>
+
+<h2>Forest Policy and Tribal Rights</h2>
+
+<h3>Historical Evolution of Forest Policy</h3>
+
+<p>British forest policy (Forest Acts of 1865 and 1878, Forest Policy of 1894) established the principle that forests are state property to be managed primarily for commercial timber production, with tribal communities' rights subordinated to or extinguished by state interest. Post-independence forest policy maintained this framework: the National Forest Policy 1952 explicitly subordinated the forest rights of local communities to the national interest in timber production and catchment protection.</p>
+
+<p>The Forest Conservation Act 1980 was primarily directed at preventing diversion of forest land for non-forest purposes (agriculture, industry, infrastructure), but its administration gave forest bureaucrats authority to regularise or challenge the presence of communities in forests, and its provisions were often applied against tribal communities with historical occupation of forest land rather than against the more powerful interests (mining companies, hydropower projects, urban developers) that the Act was ostensibly intended to control.</p>
+
+<h3>The Forest Rights Act 2006</h3>
+
+<p>The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act 2006 represents the most significant legislative recognition of tribal forest rights in Indian history. It was enacted following decades of activism by tribal rights organisations and the recognition, acknowledged in the Act's preamble, that the historical process of forest reservation had been carried out without recognising tribal rights and had created a "historical injustice" to tribal communities.</p>
+
+<p>The Act recognises and vests the following rights in individuals and communities:</p>
+
+<ul>
+  <li>Individual forest rights: right to cultivate and own forest land that has been occupied before December 13, 2005.</li>
+  <li>Community forest rights: rights to access, use, and manage community forest resources including non-timber forest produce collection, grazing, fishing, and water bodies.</li>
+  <li>Community forest management rights: the right of gram sabhas to protect, manage, and conserve community forests.</li>
+  <li>Habitat rights for particularly vulnerable tribal groups: recognising the relationship of PVTGs to their traditional habitat.</li>
+  <li>Right of resettlement: the right to be resettled in cases of displacement, and prior informed consent of gram sabhas before relocation.</li>
+</ul>
+
+<p>Implementation of the Forest Rights Act has been severely hampered. By 2022, the central government reported that over 4.4 million claims had been filed, of which only approximately 2.2 million had been approved and titles distributed. The rejection rate (approximately 50 percent at the national level, and higher in some states) has been criticised by tribal rights organisations as reflecting hostility to the Act's provisions by forest bureaucracies and state governments.</p>
+
+<p>A 2019 Supreme Court order initially directed state governments to evict forest-dwelling families whose claims had been rejected, before a subsequent order stayed evictions pending review of the rejection process. The episode highlighted the vulnerability of tribal communities to eviction and the incompleteness of the Forest Rights Act's implementation.</p>
+
+<h3>PESA and the Fifth Schedule</h3>
+
+<p>The Panchayats (Extension to Scheduled Areas) Act 1996 (PESA) extended the Panchayati Raj system to Scheduled Areas (areas with significant tribal populations under the Fifth Schedule of the Constitution), with specific provisions recognising the authority of gram sabhas over local resources including land, forests, water, and minor minerals. PESA gives gram sabhas the authority to approve or reject land acquisition, resettlement, and rehabilitation plans in their areas, and to manage natural resources in accordance with their traditions and customs.</p>
+
+<p>In practice, PESA provisions have often been ignored or bypassed by state governments and project authorities, who have acquired tribal land for development projects without the mandatory consultation and consent of gram sabhas. Studies in Jharkhand, Odisha, and Chhattisgarh have documented numerous cases of land acquisition proceeding without PESA compliance.</p>
+
+<h2>Impact of Urbanization and Industrialization on Tribal Populations</h2>
+
+<h3>Migration and Proletarianisation</h3>
+
+<p>Development-induced displacement drives tribal communities into the urban and industrial labour force, typically at its lowest levels. Displaced tribal families who cannot access agricultural livelihoods in their new locations become casual labourers in urban construction, domestic service, brick kilns, quarries, and similar sectors. This proletarianisation is marked by loss of employment security, extreme poverty, lack of legal protection (as much employment is in the informal sector), and vulnerability to debt bondage and bonded labour.</p>
+
+<p>The tea plantation economy of Assam illustrates one of the earliest and most extensively documented cases of tribal proletarianisation. From the mid-19th century, the British recruited tribal labourers from Jharkhand, Odisha, and the Central Provinces as indentured labour for the Assam tea gardens. Santhals, Mundas, Oraons, and Gonds were transported over thousands of kilometres, settled in plantation labour lines, and subjected to the Workman's Breach of Contract Act (known as the Coolie Act) which made desertion from plantation service a criminal offence. Their descendants, the "tea tribes" of Assam, remain among the most marginalised communities in India, many still employed in the tea gardens at statutory minimum wages.</p>
+
+<h3>The Adivasi Labour Reserve in Mining and Industry</h3>
+
+<p>The mineral belt of central India — Jharkhand, Odisha, Chhattisgarh, and Madhya Pradesh — has generated a pattern in which tribal communities are displaced from their land by mining and industrial projects, then re-employed as unskilled casual labour in those same projects or in related sectors, at wages that bear no relation to the value of the resources extracted from their ancestral territories. This pattern has been described by scholars including B.D. Sharma and K.S. Singh as a form of internal colonialism in which the tribal communities bear the costs of development while the benefits flow primarily to non-tribal urban and industrial interests.</p>
+
+<h3>Circular Migration</h3>
+
+<p>Tribal communities with inadequate access to agricultural land or forest resources have increasingly entered into patterns of circular or seasonal migration, moving to urban centres for work during the agricultural off-season and returning to their villages for the kharif harvest. The Bhils of Rajasthan and Madhya Pradesh, the Gonds of Chhattisgarh, and the Santhals of Jharkhand are among the communities most extensively engaged in circular migration to brick kilns, construction sites, and agricultural labour markets in Gujarat, Maharashtra, and Punjab. This migration is characterised by its involuntary character: it is driven by the inability to sustain livelihoods in the tribal homeland, not by choice or aspiration.</p>
+
+<p>Circular migrants from tribal communities are vulnerable to exploitation by labour contractors (sardars or thekedars) who advance loans against wages, binding families into debt bondage relationships that perpetuate across seasons and sometimes across generations. Child labour is prevalent in many circular migration circuits, as entire family units including children participate in brick kiln and sugarcane cutting work.</p>
+
+<h2>Constitutional and Legal Safeguards</h2>
+
+<h3>Fifth Schedule and Sixth Schedule</h3>
+
+<p>The Constitution of India provides specific protections for tribal communities through the Fifth Schedule (applicable to tribal areas in most states) and the Sixth Schedule (applicable to tribal areas in the northeastern states of Assam, Meghalaya, Tripura, and Mizoram). The Fifth Schedule requires the Governor of each state with Scheduled Areas to report annually to the President on the administration of those areas, and establishes a Tribes Advisory Council in each state with Scheduled Areas. The Governor has specific powers to modify or annul laws applying to Scheduled Areas.</p>
+
+<p>Despite these provisions, the Fifth Schedule has been assessed by numerous official and academic studies as inadequately protective of tribal rights. The Dilip Singh Bhuria Committee (1995) and the Bhuria Commission recommended significant strengthening of Fifth Schedule protections and gram sabha powers, many of which were incorporated in PESA 1996.</p>
+
+<h3>Land Transfer Regulations</h3>
+
+<p>Most states with significant tribal populations have enacted legislation restricting the transfer of land from tribal to non-tribal persons. The Chotanagpur Tenancy Act (Jharkhand) and the Santhal Parganas Tenancy Act (Jharkhand) have historical roots in colonial legislation protecting tribal land rights. The Andhra Pradesh Scheduled Areas Land Transfer Regulation 1959 (and its successors in Telangana) restricts land transfers in Scheduled Areas. Similar legislation exists in Rajasthan, Madhya Pradesh, Chhattisgarh, and Odisha.</p>
+
+<p>These protections have been progressively weakened through administrative practices, legal interpretations, and amendments that create exceptions for development projects. The use of eminent domain (compulsory acquisition) powers allows the state to acquire tribal land for development projects regardless of tribal land transfer restrictions, bypassing the protections intended to prevent alienation.</p>
+
+<h3>Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013</h3>
+
+<p>The LARR Act 2013 replaced the Land Acquisition Act 1894 and significantly strengthened the procedural and substantive protections for persons affected by land acquisition. Its key provisions include: mandatory Social Impact Assessment (SIA) for all acquisitions; compensation at four times the market value in rural areas and twice in urban areas; free consent of 80 percent of affected families for private projects and 70 percent for public-private partnership projects; mandatory Rehabilitation and Resettlement (R&amp;R) entitlements covering housing, employment, and livelihood support; and specific additional protections for Scheduled Castes and Scheduled Tribes including land-for-land compensation and prior consultation with gram sabhas.</p>
+
+<p>However, many state governments obtained parliamentary approval to amend these provisions through state-specific legislation, exempting categories of projects from the consent requirement and SIA, significantly weakening the Act's protections in practice.</p>
+
+<h2>Role of NGOs and Civil Society in Tribal Development</h2>
+
+<p>Non-governmental organisations have played a significant role in both resisting displacement of tribal communities and facilitating rehabilitation and livelihood development in post-displacement contexts.</p>
+
+<p>The Narmada Bachao Andolan, led by Medha Patkar, combined legal challenges, public campaigns, hunger strikes, and community organisation to contest Sardar Sarovar Dam displacement, bringing international attention to the issue and contributing to the World Bank's withdrawal from the project. The movement's decade-long struggle established a template for community-based resistance to development-induced displacement that has influenced subsequent movements across India.</p>
+
+<p>The Dongria Kondh communities' resistance to Vedanta bauxite mining on the Niyamgiri hills, supported by the NGO Survival International and domestic organisations, and culminating in the legally unprecedented exercise of gram sabha rights under the Forest Rights Act, represents a landmark case of tribal communities successfully asserting their rights under the existing legal framework.</p>
+
+<p>Development organisations working with displaced tribal communities have documented the importance of legal aid, community paralegal training, and support for gram sabha processes in helping communities navigate land acquisition proceedings and claim rehabilitation entitlements. Organisations including the Centre for Policy Research's Accountability Initiative and various state-level tribal rights organisations have documented implementation gaps in the LARR Act and Forest Rights Act, contributing to policy advocacy for better implementation.</p>
+
+<h2>Recommendations and Way Forward</h2>
+
+<p>Scholars, government committees, and tribal rights organisations have made overlapping recommendations for reducing the displacement burden on tribal communities and improving the quality of rehabilitation when displacement is unavoidable:</p>
+
+<ul>
+  <li>Strict implementation of Free, Prior and Informed Consent (FPIC) of gram sabhas as a legal prerequisite for land acquisition in tribal areas, consistent with ILO Convention 169 on Indigenous and Tribal Peoples, which India has not yet ratified.</li>
+  <li>Complete and rapid implementation of the Forest Rights Act, with independent review of rejected claims and strong action against state governments and forest bureaucracies that fail to implement the Act in good faith.</li>
+  <li>Revival of PESA implementation through capacity building of gram sabhas, mandatory training of district collectors and sub-divisional magistrates in PESA provisions, and strong action against procedural violations.</li>
+  <li>Land-for-land compensation as a mandatory rather than aspirational standard in tribal areas, with multi-year verification of resettlement quality before project completion is declared.</li>
+  <li>Independent social audit of rehabilitation programmes by committees including tribal community representatives, academic experts, and civil society organisations.</li>
+  <li>A national register of displaced persons, distinguishing tribal and non-tribal displaced communities, tracking rehabilitation status and outcomes across project life cycles.</li>
+  <li>Recognition of the rights of Particularly Vulnerable Tribal Groups (PVTGs) to their traditional habitat as a legally enforceable right, with a moratorium on displacement of PVTGs pending comprehensive habitat rights documentation.</li>
+  <li>Criminal accountability for project authorities who acquire land or displace communities in violation of LARR Act, Forest Rights Act, or PESA provisions.</li>
+</ul>
+`,
 };
