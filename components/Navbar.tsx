@@ -97,9 +97,7 @@ export default function Navbar() {
         .nav-mobile-overlay {
           display: none;
           position: fixed; inset: 0; z-index: 99;
-          background: rgba(0,0,0,0.5);
-          backdrop-filter: blur(4px);
-          -webkit-backdrop-filter: blur(4px);
+          background: rgba(0,0,0,0.55);
         }
         .nav-mobile-drawer {
           position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
@@ -381,7 +379,7 @@ export default function Navbar() {
               style={{
                 background: 'none', border: '1px solid var(--border2)',
                 borderRadius: 8, width: 38, height: 38, padding: 0,
-                display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                 gap: 5, cursor: 'pointer', flexShrink: 0,
                 transition: 'background 0.15s',
               }}
