@@ -238,16 +238,46 @@ const CSS = `
   .op-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
   @media (max-width: 900px) {
-    .op-hero { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 100px; }
+    .op-hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 100px; }
     .op-right-desc { max-width: 100%; }
-    .op-section-header { grid-template-columns: 1fr; }
+    .op-section-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
     .op-syllabus-grid { grid-template-columns: 1fr; }
     .op-tools-list { grid-template-columns: 1fr; }
     .op-cta { grid-template-columns: 1fr; }
     .op-cta-right { flex-direction: row; flex-wrap: wrap; }
   }
-  @media (max-width: 580px) {
-    .op-stat-row { gap: 1.5rem; }
+  @media (max-width: 640px) {
+    .op-hero { padding:88px 1.25rem 2.5rem; gap:1.5rem; }
+    .op-h1 { font-size:clamp(2.4rem,11vw,3.2rem); }
+    .op-kicker { font-size:0.62rem; letter-spacing:0.14em; }
+    .op-breadcrumb { font-size:0.68rem; margin-bottom:1.5rem; }
+    .op-right-desc { font-size:0.88rem; line-height:1.75; margin-bottom:2rem; }
+    .op-actions { gap:0.85rem; }
+    .op-btn-primary { padding:11px 22px; font-size:0.85rem; }
+    .op-stat-row { gap:1.75rem; margin-top:2rem; padding-top:1.5rem; }
+    .op-stat-val { font-size:1.5rem; }
+    .op-stat-label { font-size:0.68rem; }
+
+    .op-section { padding:2.5rem 1.25rem; }
+    .op-section-label { font-size:0.6rem; }
+    .op-section-h2 { font-size:clamp(1.4rem,7vw,2rem); }
+    .op-section-desc { font-size:0.85rem; }
+
+    .op-paper-cell { padding:1.25rem; }
+    .op-paper-text { font-size:0.82rem; }
+    .op-highlight-row { padding:0.85rem 1.25rem; gap:1rem; }
+    .op-highlight-text { font-size:0.8rem; }
+
+    .op-tool-row { padding:1.25rem; gap:1rem; }
+    .op-tool-label { font-size:0.88rem; }
+    .op-tool-desc { font-size:0.76rem; }
+    .op-tool-badge { top:1.25rem; right:1.25rem; }
+
+    .op-cta { padding:2.5rem 1.25rem 3.5rem; gap:1.5rem; }
+    .op-cta-h2 { font-size:clamp(1.5rem,8vw,2.2rem); }
+    .op-cta-sub { font-size:0.82rem; }
+    .op-cta-right { flex-direction:column; width:100%; gap:0.65rem; }
+    .op-btn-primary { text-align:center; display:block; }
   }
 `;
 

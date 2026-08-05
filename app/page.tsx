@@ -163,6 +163,7 @@ const CSS = `
     font-family: var(--font-ui); font-size: 0.75rem;
     color: var(--text3); line-height: 1.5; margin-bottom: 1.25rem; flex: 1;
   }
+  .lp-opt-card-body { display: flex; flex-direction: column; flex: 1; }
   .lp-opt-card-arrow {
     font-family: var(--font-ui); font-size: 0.72rem;
     font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
@@ -256,21 +257,91 @@ const CSS = `
   .lp-footer-link:hover { color: var(--text); }
   .lp-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3); }
 
+  /* ── Tablet ── */
   @media (max-width: 900px) {
-    .lp-hero { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 120px; }
+    .lp-hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-top: 100px;
+      padding-bottom: 3rem;
+    }
     .lp-hero-desc { max-width: 100%; }
-    .lp-section-header { grid-template-columns: 1fr; }
+    .lp-section-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2.5rem; }
     .lp-opt-grid { grid-template-columns: repeat(2, 1fr); }
     .lp-tools-list { grid-template-columns: 1fr; }
     .lp-pricing-row { grid-template-columns: 1fr; }
-    .lp-cta { grid-template-columns: 1fr; }
+    .lp-cta { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem 5rem; }
     .lp-cta-right { flex-direction: row; flex-wrap: wrap; }
   }
-  @media (max-width: 580px) {
+
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    /* Hero: tighter, full-bleed feel */
+    .lp-hero {
+      padding: 88px 1.25rem 2.5rem;
+      gap: 1.5rem;
+    }
+    .lp-hero-kicker { font-size: 0.62rem; letter-spacing: 0.14em; gap: 8px; }
+    .lp-hero-h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); margin-bottom: 1.25rem; }
+    .lp-hero-desc { font-size: 0.9rem; line-height: 1.75; margin-bottom: 2rem; }
+    .lp-hero-actions { gap: 0.85rem; }
+    .lp-btn-primary { padding: 11px 22px; font-size: 0.85rem; }
+    .lp-btn-ghost { font-size: 0.82rem; }
+    .lp-hero-stat-row { gap: 2rem; margin-top: 2.5rem; padding-top: 1.5rem; }
+    .lp-hero-stat-val { font-size: 1.5rem; }
+    .lp-hero-stat-label { font-size: 0.68rem; }
+
+    /* Marquee: faster on narrow screens */
+    .lp-marquee-wrap { padding: 8px 0; }
+    .lp-marquee-text { font-size: 0.72rem; }
+
+    /* Sections */
+    .lp-section { padding: 3rem 1.25rem; }
+    .lp-section-label { font-size: 0.6rem; }
+    .lp-section-h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+    .lp-section-desc { font-size: 0.85rem; line-height: 1.7; }
+
+    /* Optionals: single column */
     .lp-opt-grid { grid-template-columns: 1fr; }
-    .lp-hero-stat-row { gap: 1.5rem; }
-    .lp-footer { flex-direction: column; text-align: center; }
-    .lp-footer-links { justify-content: center; }
+    .lp-opt-card { padding: 1.25rem 1.25rem; flex-direction: row; align-items: center; gap: 1rem; }
+    .lp-opt-card-icon { font-size: 1.5rem; margin-bottom: 0; flex-shrink: 0; }
+    .lp-opt-card-name { font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .lp-opt-card-sub { font-size: 0.72rem; margin-bottom: 0; flex: none; }
+    .lp-opt-card-body { flex: 1; }
+    .lp-opt-card-arrow { margin-top: 0; font-size: 0.7rem; }
+
+    /* History card */
+    .lp-history-card { padding: 1rem 1.25rem; }
+    .lp-history-name { font-size: 0.9rem; }
+    .lp-history-sub { font-size: 0.7rem; }
+    .lp-history-link { font-size: 0.72rem; }
+
+    /* Tools: full width, more compact */
+    .lp-tool-item { padding: 1.25rem 1.25rem; gap: 1rem; }
+    .lp-tool-num { font-size: 0.6rem; width: 20px; }
+    .lp-tool-label { font-size: 0.88rem; }
+    .lp-tool-desc { font-size: 0.77rem; line-height: 1.6; }
+
+    /* Pricing: compact cells */
+    .lp-price-cell { padding: 1.5rem 1.25rem; }
+    .lp-price-amount { font-size: 1.75rem; }
+    .lp-price-plan { font-size: 0.62rem; }
+    .lp-price-desc { font-size: 0.78rem; }
+
+    /* CTA */
+    .lp-cta { padding: 3rem 1.25rem 4rem; gap: 1.5rem; }
+    .lp-cta-h2 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
+    .lp-cta-sub { font-size: 0.82rem; }
+    .lp-cta-right { flex-direction: column; gap: 0.65rem; width: 100%; }
+    .lp-cta-right .lp-btn-primary { text-align: center; width: 100%; display: block; padding: 14px; }
+    .lp-cta-right .lp-btn-ghost { justify-content: center; }
+
+    /* Footer */
+    .lp-footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; gap: 0.85rem; }
+    .lp-footer-links { justify-content: center; gap: 1.25rem; }
+    .lp-footer-link { font-size: 0.75rem; }
+    .lp-footer-copy { font-size: 0.7rem; }
+    .lp-footer-logo { font-size: 0.72rem; }
   }
 `;
 
@@ -353,13 +424,15 @@ export default function Home() {
             {optionals.map((opt) => (
               <Link key={opt.id} href={"/" + opt.id} className="lp-opt-card">
                 <span className="lp-opt-card-icon">{opt.icon}</span>
-                <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
-                <div className="lp-opt-card-sub">{opt.sub}</div>
-                <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
-                  Explore
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div className="lp-opt-card-body">
+                  <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
+                  <div className="lp-opt-card-sub">{opt.sub}</div>
+                  <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
+                    Explore
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
               </Link>
             ))}

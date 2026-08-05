@@ -94,7 +94,7 @@ export default function LoginPage() {
         </div>
 
         {/* Glass card */}
-        <div style={{
+        <div className="login-card" style={{
           background: 'var(--glass-bg2)',
           border: '1px solid var(--glass-border2)',
           borderRadius: 20,
@@ -121,6 +121,7 @@ export default function LoginPage() {
 
           {/* Google button */}
           <button
+            className="login-google-btn"
             onClick={handleGoogleSignIn}
             disabled={signingIn}
             style={{
@@ -186,7 +187,7 @@ export default function LoginPage() {
           }}>
             What you get
           </p>
-          <div style={{
+          <div className="login-features-grid" style={{
             display: 'grid', gridTemplateColumns: '1fr 1fr',
             gap: '0.5rem',
           }}>
@@ -230,6 +231,11 @@ export default function LoginPage() {
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50%       { transform: translateY(-14px); }
+        }
+        @media (max-width: 640px) {
+          .login-card { padding: 1.75rem 1.25rem !important; border-radius: 14px !important; }
+          .login-google-btn { padding: 0.85rem 1rem !important; font-size: 0.9rem !important; }
+          .login-features-grid { grid-template-columns: 1fr !important; }
         }
         .orb {
           position: absolute; border-radius: 50%;

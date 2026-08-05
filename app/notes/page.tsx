@@ -62,7 +62,14 @@ const SUBJECTS = [
 
 export default function NotesPage() {
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
+    <div className="notes-page-wrap" style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
+      <style>{`
+        @media (max-width: 640px) {
+          .notes-page-wrap { padding: 1.5rem 1.25rem 4rem !important; padding-top: 88px !important; }
+          .notes-page-wrap h1 { font-size: 1.6rem !important; }
+          .notes-subject-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
       <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>
         Distilled Crux
       </div>
@@ -73,7 +80,7 @@ export default function NotesPage() {
         Topic-wise structured notes · Paper I & II · Free for all aspirants
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
+      <div className="notes-subject-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
         {SUBJECTS.map(({ slug, name, sub, color, icon, count, comingSoon }) => {
           const card = (
             <div style={{

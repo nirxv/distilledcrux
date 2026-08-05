@@ -262,6 +262,34 @@ const CSS = `
   .pr-faq-item:last-child { border-bottom: none; }
   .pr-cta { flex-direction: column; align-items: flex-start; }
 }
+@media(max-width:640px){
+  .pr-header { padding:88px 1.25rem 2.5rem; }
+  .pr-h1 { font-size:clamp(2rem,10vw,3rem); }
+  .pr-tagline { font-size:0.85rem; }
+  .pr-kicker { font-size:0.6rem; }
+
+  .pr-grid-wrap { padding:2rem 1.25rem; }
+  .pr-card-body { padding:1.5rem 1.25rem; }
+  .pr-card-amount { font-size:2.4rem; }
+  .pr-card-currency { font-size:1rem; }
+  .pr-card-label { font-size:0.65rem; }
+  .pr-card-desc { font-size:0.8rem; }
+  .pr-feature { font-size:0.78rem; }
+  .pr-btn { padding:0.85rem; font-size:0.88rem; }
+
+  .pr-faq-header { padding:1.25rem; }
+  .pr-faq-item { padding:1.25rem; }
+  .pr-faq-q { font-size:0.85rem; }
+  .pr-faq-a { font-size:0.76rem; }
+
+  .pr-cta { padding:2rem 1.25rem; }
+  .pr-cta-h2 { font-size:clamp(1.3rem,7vw,1.8rem); }
+  .pr-cta-sub { font-size:0.8rem; }
+  .pr-cta-actions { width:100%; flex-direction:column; }
+  .pr-cta-link { text-align:center; padding:0.85rem; }
+
+  .pr-error { padding:0 1.25rem 1rem; }
+}
 `;
 
 function CheckIcon({ color }: { color: string }) {

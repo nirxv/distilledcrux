@@ -316,6 +316,48 @@ const CSS = `
   .ev-feedback-grid { grid-template-columns:1fr; }
   .ev-fb-col.weaknesses { border-left:none; border-top:1px solid var(--border); }
 }
+@media(max-width:640px){
+  .ev-header { padding:88px 1.25rem 2rem; }
+  .ev-h1 { font-size:clamp(1.9rem,9vw,2.6rem); margin-bottom:0.5rem; }
+  .ev-tagline { font-size:0.82rem; }
+  .ev-kicker { font-size:0.6rem; }
+
+  .ev-section-label { padding:1.25rem 1.25rem 1rem; }
+  .ev-upload-zone { margin:1.25rem; padding:1.5rem 1rem; }
+  .ev-previews { padding:0 1.25rem 1.25rem; }
+  .ev-field { padding:0 1.25rem 1.25rem; }
+  .ev-submit-wrap { padding:1.25rem 1.25rem 1.75rem; }
+  .ev-err { margin:0 1.25rem 0.75rem; }
+
+  .ev-marks-row { width:100%; }
+  .ev-marks-cell { flex:1; text-align:center; padding:0.65rem 0.5rem; }
+
+  .ev-sidebar-block { padding:1.25rem; }
+
+  .ev-loading { padding:3rem 1.25rem; }
+  .ev-loading-title { font-size:1.3rem; }
+
+  .ev-result-section { padding:1.25rem; }
+  .ev-result-lbl { font-size:0.6rem; margin-bottom:0.75rem; }
+  .ev-fb-col-label { padding:0.5rem 0.85rem; }
+  .ev-fb-items { padding:0.6rem 0.85rem; }
+  .ev-fb-item { font-size:0.76rem; }
+  .ev-overall { font-size:0.82rem; }
+  .ev-suggestion { font-size:0.78rem; padding:0.5rem 0.75rem; }
+  .ev-thinker { padding:0.75rem 1rem; }
+  .ev-thinker-name { font-size:0.8rem; }
+  .ev-ma-text { font-size:0.8rem; }
+  .ev-ma-body-item { font-size:0.8rem; }
+
+  .ev-score-block { padding:1.25rem; }
+  .ev-score-big { font-size:2.8rem; }
+  .ev-score-lbl { padding:1.25rem 1.25rem 0.6rem; }
+  .ev-ss-row { padding:0.65rem 1.25rem; font-size:0.78rem; }
+  .ev-score-actions { padding:1.25rem; }
+  .ev-btn-ghost { padding:0.65rem; font-size:0.8rem; }
+
+  .ev-upgrade { margin:1.25rem; padding:1rem 1.25rem; }
+}
 `
 
 function scoreColor(pct: number) {

@@ -226,13 +226,29 @@ const CSS = `
     .db-tools { border-right: none; }
     .db-sidebar-section { padding: 1.5rem; }
   }
-  @media (max-width: 580px) {
-    .db-header { padding-top: 80px; }
+  @media (max-width: 640px) {
+    .db-header { padding:88px 1.25rem 2rem; padding-bottom:2rem; }
+    .db-h1 { font-size:clamp(1.9rem,9vw,2.6rem); }
+    .db-kicker { font-size:0.6rem; }
+    .db-sub { font-size:0.8rem; }
+
+    .db-tools-label { padding:1.25rem 1.25rem 0.85rem; }
+
     .db-tool-grid { grid-template-columns: 1fr; }
-    .db-tool-card { border-right: none !important; }
+    .db-tool-card { border-right: none !important; padding:1.25rem; }
     .db-tool-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
     .db-tool-card:last-child { border-bottom: none; }
-    .db-footer-cta { padding: 2.5rem 1.25rem 4rem; }
+    .db-tool-label { font-size:0.88rem; }
+    .db-tool-desc { font-size:0.74rem; }
+    .db-tool-badge { top:1rem; right:1rem; }
+
+    .db-sidebar-section { padding:1.25rem; }
+
+    .db-footer-cta { padding:2.5rem 1.25rem 4rem; }
+    .db-footer-h2 { font-size:clamp(1.5rem,7vw,2rem); }
+    .db-footer-sub { font-size:0.82rem; }
+    .db-footer-actions { flex-direction:column; gap:0.65rem; }
+    .db-footer-btn { text-align:center; }
   }
 `;
 
