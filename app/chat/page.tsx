@@ -201,8 +201,13 @@ function ChatContent() {
   const [isPremium, setIsPremium] = useState(false);
 
   useEffect(() => {
-    // Get fingerprint from cookie/localStorage (set by middleware or FP lib)
-    const fp = document.cookie.match(/fp=([^;]+)/)?.[1] ?? localStorage.getItem('fp') ?? '';
+    // Get or generate fingerprint
+    let fp = document.cookie.match(/fp=([^;]+)/)?.[1] ?? localStorage.getItem('fp') ?? '';
+    if (!fp) {
+      fp = crypto.randomUUID();
+      localStorage.setItem('fp', fp);
+      document.cookie = `fp=${fp}; path=/; max-age=31536000; SameSite=Lax`;
+    }
     setFingerprint(fp);
     // Auth check — redirect to login if not signed in
     const unsubscribe = auth.onAuthStateChanged(async (user) => {

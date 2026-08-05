@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const geographyConfig: SubjectConfig = {
   id: 'geography',
   label: 'Geography Optional',
+  thinkerTerm: 'geographer',
 
   thinkerRoster: [
     // ── Physical Geography ──

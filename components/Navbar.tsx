@@ -107,29 +107,29 @@ export default function Navbar() {
       }}>
 
                                                 {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', flexShrink: 0, width: 160, display: 'inline-block', position: 'relative', height: '1.4em', verticalAlign: 'middle' }}>
+        <Link href="/" style={{ textDecoration: 'none', flexShrink: 0, width: 200, display: 'inline-block', position: 'relative', height: '1.4em', verticalAlign: 'middle' }}>
           {/* Expanded: "Distilled Crux" */}
           <span style={{
             position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)',
-            fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 700,
-            letterSpacing: '-0.02em', whiteSpace: 'nowrap',
+            fontFamily: 'var(--font-monument)', fontSize: '0.95rem', fontWeight: 900,
+            letterSpacing: '0.06em', whiteSpace: 'nowrap',
+            color: 'var(--text)',
             opacity: scrolled ? 0 : 1,
             transition: 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)',
             pointerEvents: scrolled ? 'none' : 'auto',
           }}>
-            <span style={{ color: 'var(--text)' }}>Distilled </span>
-            <span style={{ color: 'var(--accent)' }}>Crux</span>
+            DISTILLEDCRUX.COM
           </span>
           {/* Collapsed: "dc." */}
           <span style={{
             position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)',
-            fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 700,
-            letterSpacing: '-0.02em', whiteSpace: 'nowrap',
+            fontFamily: 'var(--font-monument)', fontSize: '0.95rem', fontWeight: 900,
+            letterSpacing: '0.06em', whiteSpace: 'nowrap',
             color: 'var(--text)',
             opacity: scrolled ? 1 : 0,
             transition: 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)',
             pointerEvents: scrolled ? 'auto' : 'none',
-          }}>dc.</span>
+          }}>DC.</span>
         </Link>
 
         {/* Nav links */}
@@ -142,25 +142,25 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   style={{
-                    color: active ? '#fff' : 'var(--accent)',
+                    color: active ? 'var(--bg)' : 'var(--text)',
                     textDecoration: 'none',
                     fontSize: '0.85rem',
                     fontFamily: 'var(--font-ui)',
                     fontWeight: 600,
                     padding: '0.4rem 0.75rem',
                     borderRadius: 8,
-                    background: active ? 'var(--accent)' : 'rgba(67,97,238,0.08)',
-                    border: '1px solid rgba(67,97,238,0.2)',
+                    background: active ? 'var(--text)' : 'var(--bg3)',
+                    border: '1px solid var(--border2)',
                     transition: 'background 0.15s, color 0.15s',
                     display: 'flex', alignItems: 'center', gap: 5,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'var(--accent)';
-                    e.currentTarget.style.color = '#fff';
+                    e.currentTarget.style.background = 'var(--text)';
+                    e.currentTarget.style.color = 'var(--bg)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = active ? 'var(--accent)' : 'rgba(67,97,238,0.08)';
-                    e.currentTarget.style.color = active ? '#fff' : 'var(--accent)';
+                    e.currentTarget.style.background = active ? 'var(--text)' : 'var(--bg3)';
+                    e.currentTarget.style.color = active ? 'var(--bg)' : 'var(--text)';
                   }}
                 >
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -242,7 +242,7 @@ export default function Navbar() {
             <div style={{
               width: 24, height: 24,
               borderRadius: '50%',
-              background: 'var(--accent)',
+              background: 'var(--text)',
               boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
               transform: theme === 'dark' ? 'translateX(0)' : 'translateX(32px)',
               transition: 'transform 0.22s cubic-bezier(0.4,0,0.2,1)',
@@ -281,9 +281,9 @@ export default function Navbar() {
                   <span style={{
                     width: 32, height: 32,
                     borderRadius: '50%',
-                    background: 'var(--accent)',
+                    background: 'var(--text)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: '#fff',
+                    color: 'var(--bg)',
                     fontSize: '0.8rem',
                     fontFamily: 'var(--font-ui)',
                     fontWeight: 700,
@@ -386,8 +386,8 @@ export default function Navbar() {
             </div>
           ) : (
             <Link href="/login" style={{
-              background: 'var(--accent)',
-              color: '#fff',
+              background: 'var(--text)',
+              color: 'var(--bg)',
               textDecoration: 'none',
               padding: '0.4rem 1rem',
               borderRadius: 8,

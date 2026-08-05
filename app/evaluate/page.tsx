@@ -461,9 +461,12 @@ export default function EvaluatePage() {
       const token = await user.getIdToken()
 
       // Map onboarding ID → subjects registry ID
-      const subjectId = optionalId
-        ? (OPTIONAL_ID_MAP[optionalId] ?? optionalId)
-        : 'sociology'
+      if (!optionalId) {
+        setError('Could not detect your optional subject. Please complete onboarding or refresh.')
+        setLoading(false)
+        return
+      }
+      const subjectId = OPTIONAL_ID_MAP[optionalId] ?? optionalId
 
       const fd = new FormData()
       files.forEach(f => fd.append('files', f))

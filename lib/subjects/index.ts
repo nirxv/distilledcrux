@@ -21,6 +21,10 @@ export interface SubjectConfig {
   id: string
   label: string        // Full display name e.g. "History Optional"
 
+  // Term used in CoT rubric bands for "named expert" — e.g. "historian", "thinker", "anthropologist"
+  // Used in STRONG/WEAK/NONE band descriptions in the evaluate route.
+  thinkerTerm: string
+
   // Prompt template — use {{THINKER_ROSTER}} and {{RAG_CONTEXT}} as placeholders.
   // assemblePrompt() injects them at runtime.
   systemPromptTemplate: string

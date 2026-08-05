@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const sociologyConfig: SubjectConfig = {
   id: 'sociology',
   label: 'Sociology Optional',
+  thinkerTerm: 'thinker',
 
   thinkerRoster: [
     // ── Classical Sociology ──

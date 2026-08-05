@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const pubAdminConfig: SubjectConfig = {
   id: 'pub-admin',
   label: 'Public Administration Optional',
+  thinkerTerm: 'theorist/commission',
 
   thinkerRoster: [
     // ── Classical / Foundational ──

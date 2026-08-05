@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const polsciConfig: SubjectConfig = {
   id: 'polsci',
   label: 'Political Science & IR Optional',
+  thinkerTerm: 'thinker',
 
   thinkerRoster: [
     // ── Political Theory — Classical ──

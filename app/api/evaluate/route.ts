@@ -607,11 +607,11 @@ export async function POST(req: NextRequest) {
 Question: ${question} (${marks} marks)
 
 Write a complete model answer as flowing prose:
-- Introduction (2-3 sentences): Opens with a historiographical debate, names at least one modern historian with their specific thesis, previews the argument.
-- Body (${refBulletCount} points): Each point must have a named modern historian + their specific argument + specific evidence (inscription/text/policy/date) + analytical link to the question.
-- Conclusion (2-3 sentences): Takes a clear historiographical position, resolves the intro tension, no new material.
+- Introduction (2-3 sentences): Opens with a theoretical/conceptual debate relevant to this subject, names at least one modern ${subjectConfig.thinkerTerm} with their specific thesis, previews the argument.
+- Body (${refBulletCount} points): Each point must have a named modern ${subjectConfig.thinkerTerm} + their specific argument + specific evidence (text/concept/case/policy) + analytical link to the question.
+- Conclusion (2-3 sentences): Takes a clear theoretical position, resolves the intro tension, no new material.
 
-Target ~${marks === "10" ? "200" : marks === "15" ? "300" : "400"} words. Be specific — name real historians with real arguments. No generic statements.`,
+Target ~${marks === "10" ? "200" : marks === "15" ? "300" : "400"} words. Be specific — name real thinkers with real arguments from ${subjectConfig.label}. No generic statements.`,
           },
         ],
         temperature: 0.3,
@@ -632,7 +632,7 @@ Target ~${marks === "10" ? "200" : marks === "15" ? "300" : "400"} words. Be spe
     // ── PASS 0 + RAG: Run OCR and RAG fetch in parallel ──────────
     let finalTranscript = extractedText;
 
-    const ocrPrompt = `You are the world's most precise handwriting transcription engine, built specifically for UPSC History Optional answer sheets. Your ONLY function is letter-perfect transcription. A student's evaluation depends entirely on the accuracy of your reading — a single misread word can cause wrong marks, wrong feedback, and wrong historian attribution. Errors are unacceptable.
+    const ocrPrompt = `You are the world's most precise handwriting transcription engine, built specifically for UPSC ${subjectConfig.label} answer sheets. Your ONLY function is letter-perfect transcription. A student's evaluation depends entirely on the accuracy of your reading — a single misread word can cause wrong marks, wrong feedback, and wrong ${subjectConfig.thinkerTerm} attribution. Errors are unacceptable.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ABSOLUTE TRANSCRIPTION RULES
@@ -644,17 +644,17 @@ Do not skip, summarise, paraphrase, or compress anything. Every word on every li
 RULE 2 — GO SLOW. READ CHARACTER BY CHARACTER IF NEEDED.
 Do not skim. For each word: look at every letter individually, consider the full word context, then commit. Rushing causes errors. Take your time on every single word.
 
-RULE 3 — HISTORIAN NAMES ARE SACRED. NEVER GET THEM WRONG.
-Historian names are the most critical part of this evaluation. Read them with extreme care.
+RULE 3 — THINKER NAMES ARE SACRED. NEVER GET THEM WRONG.
+Thinker/scholar names are the most critical part of this evaluation. Read them with extreme care.
 Known names that may appear — read these exactly:
-Romila Thapar, R.S. Sharma, Irfan Habib, U.N. Ghoshal, Burton Stein, D.D. Kosambi, B.D. Chattopadhyaya, Satish Chandra, Upinder Singh, Shereen Ratnagar, Possehl, Kenoyer, Fairservis, Shaffer, K.A.R. Kennedy, Uma Chakravarti, R.P. Kangle, Thomas Trautmann, Hermann Kulke, D.C. Sircar, Sheldon Pollock, Noboru Karashima, K.A. Nilakanta Sastri, David Ludden, Phillip Wagoner, David Lorenzen, Peter Hardy, Mohammed Habib, Peter Jackson, K.A. Nizami, Simon Digby, Muzaffar Alam, J.F. Richards, M. Athar Ali, Jadunath Sarkar, Ranajit Guha, Ayesha Jalal, Mushirul Hasan, Gyanendra Pandey, Urvashi Butalia, Bipan Chandra, Anil Seal, Sumit Sarkar, Shahid Amin, Judith Brown, Partha Chatterjee, Lata Mani, Eric Stokes, Bernard Cohn, Utsa Patnaik, E.P. Thompson, Hobsbawm, Max Weber, Lefebvre, Soboul, Furet, Fischer, Fitzpatrick, Gaddis, Fanon, Frederick Cooper, C.A. Bayly, André Wink, Frank Perlin, Bandyopadhyay.
+${subjectConfig.thinkerRoster.map(t => t.name).join(', ')}.
 If you see a name that resembles one of these, read it carefully and transcribe it exactly as written — do not auto-correct to the known spelling unless you are certain.
 
 RULE 4 — DATES, NUMBERS, AND YEARS: TRANSCRIBE EXACTLY.
 Do not round, approximate, or guess dates. If you see "1857" write "1857". If you cannot read a digit clearly, write [illegible digit].
 
 RULE 5 — TECHNICAL TERMS: TRANSCRIBE EXACTLY AS WRITTEN.
-Terms like: iqta, mansabdari, jagirdari, zabti, dahsala, batai, kankut, saptanga, rajamandala, shadgunya, adhyaksha, gahapati, nayankara, tinai, akam, puram, sama, pargana, sarkar — transcribe these exactly as the student wrote them, even if misspelled.
+Subject-specific terms may appear — transcribe these exactly as the student wrote them, even if misspelled. Do not auto-correct spellings.
 
 RULE 6 — UNCERTAIN WORDS: USE THE RIGHT FLAG.
 - If you are 90%+ confident: transcribe normally.
@@ -672,13 +672,13 @@ RULE 7 — PRESERVE ALL STRUCTURE EXACTLY.
 - Diagram, flowchart, map sketch, or labelled box/arrow drawing → [DRAWING: brief description of what it shows, e.g. "box labelled 'Vedic Corpus' with arrows to four sub-boxes: Samhita, Brahmana, Aranyaka, Upanishad"]. Transcribe any text written inside or alongside the drawing as part of the description. Do not skip drawings — they can earn presentation/structure credit.
 
 RULE 8 — DO NOT EVALUATE, INTERPRET, OR COMMENT.
-You are a transcription machine. Do not add "[good point]" or "[historian cited correctly]" or any commentary whatsoever. Pure text output only.
+You are a transcription machine. Do not add "[good point]" or "[${subjectConfig.thinkerTerm} cited correctly]" or any commentary whatsoever. Pure text output only.
 
 RULE 9 — DO NOT SKIP LINES EVEN IF THEY SEEM REPETITIVE OR UNIMPORTANT.
-Every line matters. A line you skip might contain the one historian name the evaluator needs.
+Every line matters. A line you skip might contain the one ${subjectConfig.thinkerTerm} name the evaluator needs.
 
 RULE 10 — AFTER TRANSCRIBING, DO A MENTAL PASS-CHECK.
-Before outputting, ask yourself: Did I get every word? Did I read every historian name carefully? Did I flag uncertainties properly? Only then output.
+Before outputting, ask yourself: Did I get every word? Did I read every ${subjectConfig.thinkerTerm} name carefully? Did I flag uncertainties properly? Only then output.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NOW TRANSCRIBE: ${imageContents.length} PAGE(S)
@@ -779,7 +779,7 @@ ${finalTranscript
   : "The images show the student's handwritten answer sheet (" + imageContents.length + " page" + (imageContents.length > 1 ? "s" : "") + "). Read ALL pages carefully before evaluating."}
 
 ${referenceAnswer ? `REFERENCE ANSWER (for calibration only — not shown to student):
-The following is what a strong answer to this question looks like. Use it to calibrate your evaluation — judge the student's answer against this standard when assessing which body points are STRONG, WEAK, or NONE, and whether the introduction and conclusion meet the historiographical bar.
+The following is what a strong answer to this question looks like. Use it to calibrate your evaluation — judge the student's answer against this standard when assessing which body points are STRONG, WEAK, or NONE, and whether the introduction and conclusion meet the theoretical/analytical bar.
 
 ${referenceAnswer}
 
@@ -787,47 +787,47 @@ ${referenceAnswer}
 Work through this RIGID RUBRIC — check each box YES or NO and assign marks exactly as the band says. Do not deviate from the bands.
 
 == STEP 1: READING ==
-First, identify the EXACT boundary of each section by quoting where it starts: where does the introduction end and the body begin, where does the body end and the conclusion begin? A historian or claim that appears in the conclusion's text belongs ONLY to the conclusion's evaluation — never copy it into the introduction's evaluation, even if it would have made the introduction stronger. Same rule for body vs intro/conclusion.
-Write one sentence each for: intro (quote its actual opening text), each body point (list historian named + argument if any, quoting the body text), conclusion (quote its actual closing text). Double-check: does the historian/claim you attributed to "intro" actually appear in the intro's quoted text, not in the body or conclusion? If a historian only appears in the conclusion, do NOT mention them when evaluating the introduction.
+First, identify the EXACT boundary of each section by quoting where it starts: where does the introduction end and the body begin, where does the body end and the conclusion begin? A ${subjectConfig.thinkerTerm} or claim that appears in the conclusion's text belongs ONLY to the conclusion's evaluation — never copy it into the introduction's evaluation, even if it would have made the introduction stronger. Same rule for body vs intro/conclusion.
+Write one sentence each for: intro (quote its actual opening text), each body point (list ${subjectConfig.thinkerTerm} named + argument if any, quoting the body text), conclusion (quote its actual closing text). Double-check: does the ${subjectConfig.thinkerTerm}/claim you attributed to "intro" actually appear in the intro's quoted text, not in the body or conclusion? If a ${subjectConfig.thinkerTerm} only appears in the conclusion, do NOT mention them when evaluating the introduction.
 
 == STEP 1B: FACTUAL VERIFICATION ==
-List every specific factual claim the student makes — this includes dates/years/centuries/named events/movements (e.g. "Shramana movements, 400-500 BC") AND substantive historical claims about what a person, group, or institution actually did or believed (e.g. "Buddha abolished the caste system", "Akbar banned Sati", "the Mauryas controlled all of South India"). For each one, check it against what you actually know:
+List every specific factual claim the student makes — this includes dates/years/named events/movements AND substantive claims about what a person, group, institution, or theoretical school actually argued or did. For each one, check it against what you actually know:
 - If the claim is correct → write "VERIFIED: [claim]"
-- If the claim is wrong, overstated, or conflates two different things → write "FACTUAL ERROR: student wrote '[claim]', correct is '[correction]'" — this will be flagged as [FACTUAL ERROR] in the relevant section's weaknesses, even if it doesn't change the band. Common overstatement pattern: student says a figure "abolished/ended/destroyed" something when historians agree they only "challenged/critiqued/undermined" it without changing the underlying social reality — this counts as a factual error, not just a nuance gap.
+- If the claim is wrong, overstated, or conflates two different things → write "FACTUAL ERROR: student wrote '[claim]', correct is '[correction]'" — this will be flagged as [FACTUAL ERROR] in the relevant section's weaknesses, even if it doesn't change the band. Common overstatement pattern: student says a ${subjectConfig.thinkerTerm} "proved/abolished/ended" something when the scholarly consensus is they only "challenged/critiqued/qualified" it — this counts as a factual error, not just a nuance gap.
 - If you are not fully certain either way → write "UNCERTAIN: do not flag" — never invent a correction you are not sure of.
-Separately, note if the student presents a one-sided historiographical claim (e.g. "the Upanishads were a complete break from X") without acknowledging that serious historians dispute or qualify it (e.g. continuity-vs-rupture, evolution-vs-revolution debates). If so, note it as a missed nuance — this belongs in suggestions, not as a factual error.
+Separately, note if the student presents a one-sided theoretical claim without acknowledging that serious ${subjectConfig.thinkerTerm}s dispute or qualify it. If so, note it as a missed nuance — this belongs in suggestions, not as a factual error.
 
 == STEP 2: WORD COUNT ==
 Skip question text at top. Count answer body words only. Write the exact number.
 
 == STEP 3: INTRODUCTION (max ${introMax}M) — pick EXACTLY ONE band, no decimals allowed ==
-Reminder: religious/philosophical concepts (Madhyamika Marg, Ashtangika Marg, Nirvana, Dharma, Karma, Moksha, Atman, Brahman, Varna, etc.) are NOT historians — using these terms alone does not satisfy "names a historian."
-BAND 0M (ONLY): definition opener, no intro, only generic context, no historian at all — award exactly 0
-BAND ${marks === "10" ? "0.5" : "1"}M (ONLY): mentions historical context OR names a primary source (Kautilya, Ashoka, Megasthenes) but NO modern historian named — OR names a modern historian but gives NO specific thesis/argument — award exactly ${marks === "10" ? "0.5" : "1"}
-BAND ${introMax}M (ONLY): names a MODERN historian (Romila Thapar / R.S. Sharma / Irfan Habib / U.N. Ghoshal / Kosambi / B.D. Chattopadhyaya etc.) AND states their SPECIFIC thesis AND frames a historiographical debate AND previews the argument — ALL FOUR required — award exactly ${introMax}
-IMPORTANT: Simply naming a historian without their specific thesis = BAND 1M only, NOT full marks.
+Reminder: abstract concepts and terms from the subject domain are NOT ${subjectConfig.thinkerTerm}s/scholars — using these terms alone does not satisfy "names a ${subjectConfig.thinkerTerm}."
+BAND 0M (ONLY): definition opener, no intro, only generic context, no ${subjectConfig.thinkerTerm} at all — award exactly 0
+BAND ${marks === "10" ? "0.5" : "1"}M (ONLY): mentions subject context OR names a primary/foundational source but NO modern ${subjectConfig.thinkerTerm} named — OR names a modern ${subjectConfig.thinkerTerm} but gives NO specific thesis/argument — award exactly ${marks === "10" ? "0.5" : "1"}
+BAND ${introMax}M (ONLY): names a MODERN thinker (${subjectConfig.thinkerRoster.slice(0, 4).map(t => t.name).join(' / ')} etc.) AND states their SPECIFIC thesis AND frames a theoretical/conceptual debate AND previews the argument — ALL FOUR required — award exactly ${introMax}
+IMPORTANT: Simply naming a ${subjectConfig.thinkerTerm} without their specific thesis = BAND 1M only, NOT full marks.
 RULE: You MUST pick one of the three values above.
 → INTRO BAND CHOSEN: [write mark]
 
 == STEP 4: BODY (max ${bodyMax}M) — count then pick band ==
 DEFINITIONS — be extremely strict:
-- STRONG: modern historian named (Romila Thapar, R.S. Sharma, Irfan Habib, U.N. Ghoshal, Burton Stein, Kosambi, B.D. Chattopadhyaya, Satish Chandra etc.) WITH their specific argument clearly stated. "R.S. Sharma argues..." counts. "R.S. Sharma has written about this" does NOT count.
-- WEAK: modern historian named but their argument is vague, absent, or just their name dropped without context.
-- NONE: no modern historian. Primary sources (Kautilya, Arthashastra, Megasthenes, Ashoka's edicts, Ain-i-Akbari) do NOT count as modern historians — they are evidence, not historiography. Buddhist/religious/philosophical CONCEPTS (Madhyamika Marg, Ashtangika Marg, Nirvana, Dharma, Karma, Moksha, Atman, Brahman) are NOT historians and do NOT count as STRONG or WEAK — a body point using only these concepts with no historian's name attached is NONE.
+- STRONG: modern thinker named (${subjectConfig.thinkerRoster.slice(0, 5).map(t => t.name).join(', ')} etc.) WITH their specific argument clearly stated. "[${subjectConfig.thinkerTerm}] argues..." counts. "[${subjectConfig.thinkerTerm}] has written about this" does NOT count.
+- WEAK: modern ${subjectConfig.thinkerTerm} named but their argument is vague, absent, or just their name dropped without context.
+- NONE: no ${subjectConfig.thinkerTerm}. Foundational texts and abstract theoretical concepts alone do NOT count as thinkers — they are evidence/frameworks, not scholarly argument — a body point using only these with no ${subjectConfig.thinkerTerm} named is NONE. A body point using only concepts with no ${subjectConfig.thinkerTerm}'s name attached is NONE.
 
-For each body point write: STRONG / WEAK / NONE — and if you mark WEAK or STRONG, you MUST quote the exact historian's name from the text right next to your tag (e.g. "WEAK — historian named: 'Romila Thapar'"). If you cannot quote a specific historian's name for a point, it is NONE, not WEAK.
-Tally: STRONG=__ WEAK=__ NONE=__ — sanity check: STRONG+WEAK count must equal the number of distinct historian names you actually quoted above. If it doesn't match, recount.
+For each body point write: STRONG / WEAK / NONE — and if you mark WEAK or STRONG, you MUST quote the exact thinker's name from the text right next to your tag (e.g. "WEAK — ${subjectConfig.thinkerTerm} named: '${subjectConfig.thinkerRoster[0]?.name ?? 'Durkheim'}'"). If you cannot quote a specific thinker's name for a point, it is NONE, not WEAK.
+Tally: STRONG=__ WEAK=__ NONE=__ — sanity check: STRONG+WEAK count must equal the number of distinct ${subjectConfig.thinkerTerm} names you actually quoted above. If it doesn't match, recount.
 
-${marks === "10" ? `BAND 1M (ONLY): 0 strong, 0 weak — purely narrative, no historians at all — award exactly 1
-BAND 2M (ONLY): 0 strong, 1-2 weak — historian names dropped without arguments — award exactly 2
+${marks === "10" ? `BAND 1M (ONLY): 0 strong, 0 weak — purely narrative, no ${subjectConfig.thinkerTerm}s at all — award exactly 1
+BAND 2M (ONLY): 0 strong, 1-2 weak — ${subjectConfig.thinkerTerm} names dropped without arguments — award exactly 2
 BAND 3M (ONLY): 1 strong point only — award exactly 3
 BAND 4M (ONLY): 2 strong points — award exactly 4
-BAND 5.5M (ONLY): 3+ strong points, all dimensions covered — award exactly 5.5` : marks === "15" ? `BAND 2M (ONLY): 0 strong, 0 weak — purely descriptive, no historians at all — award exactly 2
-BAND 3.5M (ONLY): 0 strong, 1-3 weak — historian names without arguments — award exactly 3.5
+BAND 5.5M (ONLY): 3+ strong points, all dimensions covered — award exactly 5.5` : marks === "15" ? `BAND 2M (ONLY): 0 strong, 0 weak — purely descriptive, no ${subjectConfig.thinkerTerm}s at all — award exactly 2
+BAND 3.5M (ONLY): 0 strong, 1-3 weak — ${subjectConfig.thinkerTerm} names without arguments — award exactly 3.5
 BAND 5M (ONLY): 1 strong point only — award exactly 5
 BAND 6.5M (ONLY): 2 strong points — award exactly 6.5
-BAND 8M (ONLY): 3+ strong points with multi-dimensional coverage — award exactly 8` : `BAND 3M (ONLY): 0 strong, 0 weak — purely narrative, no historians at all — award exactly 3
-BAND 5M (ONLY): 0 strong, 1-3 weak — historian names without arguments — award exactly 5
+BAND 8M (ONLY): 3+ strong points with multi-dimensional coverage — award exactly 8` : `BAND 3M (ONLY): 0 strong, 0 weak — purely narrative, no ${subjectConfig.thinkerTerm}s at all — award exactly 3
+BAND 5M (ONLY): 0 strong, 1-3 weak — ${subjectConfig.thinkerTerm} names without arguments — award exactly 5
 BAND 7M (ONLY): 1 strong point only — award exactly 7
 BAND 8.5M (ONLY): 2 strong points — award exactly 8.5
 BAND 9.5M (ONLY): 3-4 strong points — award exactly 9.5
@@ -854,10 +854,10 @@ INTRO + BODY + CONCLUSION + PRESENTATION = TOTAL
 
 == STEP 8: SELF-AUDIT — re-examine your own STEP 3-7 decisions before finalizing ==
 Go back through what you just wrote above and check each box honestly:
-[ ] For every name I counted as STRONG or WEAK in body/intro/conclusion, is it an actual modern historian (a real person who writes history/historiography) — NOT a religious/philosophical concept, NOT a primary source, NOT a king/emperor/ruler, NOT a text/book title misread as a person?
-[ ] For every historian I credited to the introduction's evaluation, do they actually appear in the introduction's own text (not the body or conclusion)? Same check for body and conclusion — a historian named only in the conclusion must NOT be credited when scoring the introduction, and vice versa. If I cross-attributed a historian to the wrong section, fix that section's band now.
-[ ] Did I quote the exact historian name next to every STRONG/WEAK tag, as instructed? If any tag has no quoted name, change it to NONE now.
-[ ] Does my STRONG+WEAK tally actually match the count of distinct historian names I quoted? If not, recount and fix the tally now.
+[ ] For every name I counted as STRONG or WEAK in body/intro/conclusion, is it an actual modern ${subjectConfig.thinkerTerm} (a real person who writes in this field) — NOT an abstract concept, NOT a primary source text, NOT a historical figure/ruler, NOT a text/book title misread as a person?
+[ ] For every ${subjectConfig.thinkerTerm} I credited to the introduction's evaluation, do they actually appear in the introduction's own text (not the body or conclusion)? Same check for body and conclusion — a ${subjectConfig.thinkerTerm} named only in the conclusion must NOT be credited when scoring the introduction, and vice versa. If I cross-attributed a ${subjectConfig.thinkerTerm} to the wrong section, fix that section's band now.
+[ ] Did I quote the exact ${subjectConfig.thinkerTerm} name next to every STRONG/WEAK tag, as instructed? If any tag has no quoted name, change it to NONE now.
+[ ] Does my STRONG+WEAK tally actually match the count of distinct ${subjectConfig.thinkerTerm} names I quoted? If not, recount and fix the tally now.
 [ ] Did I pick a band that is NOT in the allowed list for this section? If so, snap to the nearest allowed band — never award an in-between value.
 [ ] Did my STEP 1B factual-error findings actually get reflected in the presentation factual-error checkbox? If STEP 1B found any FACTUAL ERROR, the presentation checkbox for "no significant factual errors" must be NO.
 [ ] Is my final TOTAL exactly equal to INTRO + BODY + CONCLUSION + PRESENTATION as I scored them above? Recompute it now to be sure.
@@ -1016,7 +1016,7 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
     eval_.marks_out_of = marksNum;
 
     // ── PASS 3: Rich qualitative feedback ────────────────────────
-    const pass3Prompt = `You are a UPSC History Optional expert examiner. A student has written the following answer.
+    const pass3Prompt = `You are a UPSC ${subjectConfig.label} expert examiner. A student has written the following answer.
 
 Question: ${question} (${marks} marks)
 
@@ -1031,35 +1031,35 @@ The structured evaluation already concluded:
 - Total: ${eval_.marks}/${eval_.marks_out_of}
 
 ${ragContext ? `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERIFIED BOOK PASSAGES (from uploaded historiography):
+VERIFIED BOOK PASSAGES (from uploaded ${subjectConfig.label} texts):
 ${ragContext}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CRITICAL CITATION RULE — READ BEFORE GENERATING historians_to_cite:
-You may ONLY cite a historian in the historians_to_cite field if:
+CRITICAL CITATION RULE — READ BEFORE GENERATING thinkers_to_cite:
+You may ONLY cite a ${subjectConfig.thinkerTerm} in the thinkers_to_cite field if:
 1. Their name appears in the VERIFIED BOOK PASSAGES above, OR
 2. The student cited them in their answer (to give feedback on that citation).
 
-DO NOT invent historian arguments from memory. DO NOT cite historians not present in the book passages above.
-If the book passages contain no historian for this topic, return an empty historians_to_cite array — that is honest and correct.
-A fabricated historian citation is worse than no citation — it actively misleads the student.` : `NOTE: No book passages available for this question. Return empty historians_to_cite array. Do not invent historian arguments from memory.`}
+DO NOT invent ${subjectConfig.thinkerTerm} arguments from memory. DO NOT cite ${subjectConfig.thinkerTerm}s not present in the book passages above.
+If the book passages contain no ${subjectConfig.thinkerTerm} for this topic, return an empty thinkers_to_cite array — that is honest and correct.
+A fabricated citation is worse than no citation — it actively misleads the student.` : `NOTE: No book passages available for this question. Return empty thinkers_to_cite array. Do not invent ${subjectConfig.thinkerTerm} arguments from memory.`}
 
 Now write RICH, SPECIFIC qualitative feedback grounded only in the verified book passages above.
 
 Return ONLY a JSON object with these exact fields:
 {
-  "overall_feedback": "3-4 sentences only. Sentence 1: the one thing the student genuinely got right — quote their exact words. Sentence 2: the single most important gap — name the specific historian and argument that was missing and why it mattered. Sentence 3: one concrete thing to do differently next time — name the exact historian, their exact argument, and where it should appear. No generic advice. NEVER mention marks, numbers, scores, bands, or any suggestion of what score a change would produce.",
+  "overall_feedback": "3-4 sentences only. Sentence 1: the one thing the student genuinely got right — quote their exact words. Sentence 2: the single most important gap — name the specific ${subjectConfig.thinkerTerm} and argument that was missing and why it mattered. Sentence 3: one concrete thing to do differently next time — name the exact ${subjectConfig.thinkerTerm}, their exact argument, and where it should appear. No generic advice. NEVER mention marks, numbers, scores, bands, or any suggestion of what score a change would produce.",
   "body": {
     "strengths": ["specific strength 1 referencing exactly what student wrote", "specific strength 2 if any"],
-    "weaknesses": ["[missed demand]: exactly what was missed and which historian fills this gap", "[too descriptive]: where student listed facts without arguing — quote the specific part", "[needs historian]: which specific historian with which specific argument was needed here"],
-    "suggestions": ["Specific historian name + their exact argument that must appear for THIS question — ONLY from verified book passages", "Specific structural suggestion for THIS answer"]
+    "weaknesses": ["[missed demand]: exactly what was missed and which ${subjectConfig.thinkerTerm} fills this gap", "[too descriptive]: where student listed facts without arguing — quote the specific part", "[needs ${subjectConfig.thinkerTerm}]: which specific ${subjectConfig.thinkerTerm} with which specific argument was needed here"],
+    "suggestions": ["Specific ${subjectConfig.thinkerTerm} name + their exact argument that must appear for THIS question — ONLY from verified book passages", "Specific structural suggestion for THIS answer"]
   },
-  "historians_to_cite": [
+  "thinkers_to_cite": [
     { "name": "Full Name — ONLY from verified book passages above", "argument": "Their EXACT argument as it appears in the book passage — quote or closely paraphrase" }
   ]
 }
 
-Be brutally specific. Name exactly which historians were missing. Quote exactly which part of the answer was weak. No generic advice like "cite more historians" — say WHICH historian and WHAT argument. All historian citations must come from the verified book passages only.`;
+Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were missing. Quote exactly which part of the answer was weak. No generic advice like "cite more thinkers" — say WHICH ${subjectConfig.thinkerTerm} and WHAT argument. All citations must come from the verified book passages only.`;
 
     try {
       const pass3Res = await callWithFallback({
@@ -1082,33 +1082,33 @@ Be brutally specific. Name exactly which historians were missing. Quote exactly 
         // Merge Pass 3 rich feedback into evaluation
         if (pass3.overall_feedback) evaluation.overall_feedback = pass3.overall_feedback;
         if (pass3.body) evaluation.body = pass3.body;
-        if (pass3.historians_to_cite?.length) evaluation.historians_to_cite = pass3.historians_to_cite;
+        if (pass3.thinkers_to_cite?.length) evaluation.thinkers_to_cite = pass3.thinkers_to_cite;
         console.log("Pass 3 feedback merged successfully");
 
         // ── PASS 4: Rich model answer ─────────────────────────────
         const bulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
-        const pass4Prompt = `Write a model answer for this UPSC History Optional question.
+        const pass4Prompt = `Write a model answer for this UPSC ${subjectConfig.label} question.
 
 Question: ${question} (${marks} marks)
 
 Return ONLY a JSON object:
 {
   "model_answer": {
-    "introduction": "2-3 sentences. MUST open with a historiographical debate — name at least one historian with their specific thesis. Preview the argument. Never start with a definition or date.",
+    "introduction": "2-3 sentences. MUST open with a theoretical/conceptual debate — name at least one ${subjectConfig.thinkerTerm} with their specific thesis. Preview the argument. Never start with a definition.",
     "body": [
-      "Bullet 1: Bold theme heading — specific evidence (inscription/text/policy) — named historian + their exact argument — analytical sentence linking to the question. Minimum 4 sentences.",
+      "Bullet 1: Bold theme heading — specific evidence/concept/case — named ${subjectConfig.thinkerTerm} + their exact argument — analytical sentence linking to the question. Minimum 4 sentences.",
       "Bullet 2: same structure",
       "... ${bulletCount} bullets total"
     ],
-    "conclusion": "2-3 sentences that: (1) resolve the specific historiographical tension from the intro by name — affirm, qualify or reject a named historian's position based on the evidence presented in the body, (2) synthesise the 2-3 strongest body threads into one overarching argument, (3) end with a statement of historical significance tied to THIS question specifically. No new material, no generic summary."
+    "conclusion": "2-3 sentences that: (1) resolve the specific theoretical tension from the intro by name — affirm, qualify or reject a named ${subjectConfig.thinkerTerm}'s position based on the evidence presented in the body, (2) synthesise the 2-3 strongest body threads into one overarching argument, (3) end with a statement of significance tied to THIS question specifically. No new material, no generic summary."
   }
 }
 
 RULES:
-- Every bullet MUST name a specific modern historian (Romila Thapar, R.S. Sharma, Irfan Habib, U.N. Ghoshal, Burton Stein, Kosambi, Upinder Singh, etc.) with their specific argument
-- Every bullet MUST cite specific evidence: name the text, inscription, policy, or event
+- Every bullet MUST name a specific modern thinker (${subjectConfig.thinkerRoster.slice(0, 5).map(t => t.name).join(', ')}, etc.) with their specific argument
+- Every bullet MUST cite specific evidence: name the concept, work, empirical case, or theoretical framework
 - No bullet under 4 sentences. Write as much as needed — do not cut short for word count.
-- Use your full historiographical knowledge from your training`;
+- Use your full knowledge of ${subjectConfig.label} from your training`;
 
         try {
           const pass4Res = await callWithFallback({

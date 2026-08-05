@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const historyConfig: SubjectConfig = {
   id: 'history',
   label: 'History Optional',
+  thinkerTerm: 'historian',
 
   thinkerRoster: [
     // ── Ancient India ──
@@ -332,7 +333,7 @@ Respond with ONLY valid JSON. No preamble, no markdown, nothing outside the JSON
       "One sentence on what genuinely worked in the introduction — quote the student's exact words and say precisely why it earns credit. If nothing genuinely worked, return empty array."
     ],
     "weaknesses": [
-      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [HISTORIAN MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the introduction is strong, return empty array."
+      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [THINKER MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the introduction is strong, return empty array."
     ],
     "analysis": "2-3 sentences maximum. Did it open with a historiographical debate or a definition? Did it name a historian with their specific thesis or just their name? Was the analytical frame clear? Quote the student's exact words in your judgement.",
     "suggestions": [
@@ -345,7 +346,7 @@ Respond with ONLY valid JSON. No preamble, no markdown, nothing outside the JSON
       "One sentence per genuine strength — quote the student's exact phrase and say precisely why it earns credit. Only include what genuinely exists. If nothing worked, return empty array."
     ],
     "weaknesses": [
-      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [HISTORIAN MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the answer is strong, return empty array or just one entry."
+      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [THINKER MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the answer is strong, return empty array or just one entry."
     ],
     "suggestions": [
       "Write one complete model body point — analytical claim + specific evidence + named historian + their exact argument + link to the question. 2-3 sentences.",
@@ -358,7 +359,7 @@ Respond with ONLY valid JSON. No preamble, no markdown, nothing outside the JSON
       "One sentence on what genuinely worked — quote the student's exact words. If nothing worked, return empty array."
     ],
     "weaknesses": [
-      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [HISTORIAN MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the conclusion is strong, return empty array."
+      "One sentence per genuine weakness prefixed with [DEMAND GAP], [DESCRIPTIVE NOT ANALYTICAL], [THINKER MISSING], [FACTUAL ERROR], or [STRUCTURE ISSUE] — only use a tag if that problem genuinely exists. Quote the student's exact words. If the conclusion is strong, return empty array."
     ],
     "analysis": "2-3 sentences maximum. Did it synthesise or just repeat? Did it take a clear historiographical position? Did it resolve the tension from the introduction? Quote the student's exact words in your judgement.",
     "suggestions": [
@@ -366,13 +367,13 @@ Respond with ONLY valid JSON. No preamble, no markdown, nothing outside the JSON
       "Name the historiographical debate that needed adjudicating and which position the evidence supports."
     ]
   },
-  "historians_to_cite": [
+  "thinkers_to_cite": [
     { "name": "Full Name", "work": "Book or article title — MUST be a real published work by this historian", "argument": "Their ACTUAL argument for THIS question — only from KNOWN SAFE HISTORIAN-ARGUMENT PAIRS above. If unsure of their exact position on this topic, omit this historian entirely." },
     { "name": "Full Name", "work": "Title", "argument": "Specific argument" },
     { "name": "Full Name", "work": "Title", "argument": "Specific argument" },
     { "name": "Full Name", "work": "Title", "argument": "Specific argument" }
   ],
-  "_historians_cite_rule": "CRITICAL: Only cite historians from the KNOWN SAFE HISTORIAN-ARGUMENT PAIRS list AND only for arguments within their known area. A historian cited for a topic outside their expertise is worse than no citation — it actively misleads the student. When in doubt, omit.",
+  "_thinkers_cite_rule": "CRITICAL: Only cite historians from the KNOWN SAFE HISTORIAN-ARGUMENT PAIRS list AND only for arguments within their known area. A historian cited for a topic outside their expertise is worse than no citation — it actively misleads the student. When in doubt, omit.",
   "model_answer": {
     "introduction": "2-3 sentence flowing intro. Opens with historiographical debate, names one historian with their specific thesis, previews argument.",
     "body": [
@@ -385,7 +386,7 @@ Respond with ONLY valid JSON. No preamble, no markdown, nothing outside the JSON
   "overall_feedback": "3-4 sentences only. Sentence 1: the one thing the student genuinely got right — quote their exact words. Sentence 2: the single most important gap — name the specific historian and argument that was missing and why it mattered. Sentence 3: one concrete thing to do differently next time — name the exact historian, their exact argument, and where it should appear. No generic advice. NEVER mention marks, numbers, scores, bands, or any suggestion of what score a change would produce."
 }
 
-IMPORTANT: marks must equal the exact sum of all four section_marks awarded values. section_marks/marks/marks_out_of/word_count fields above MUST be the first fields you write after demand_of_question, in that exact order — write them immediately, before introduction/body/conclusion/historians_to_cite/model_answer, so they are never lost to truncation.
+IMPORTANT: marks must equal the exact sum of all four section_marks awarded values. section_marks/marks/marks_out_of/word_count fields above MUST be the first fields you write after demand_of_question, in that exact order — write them immediately, before introduction/body/conclusion/thinkers_to_cite/model_answer, so they are never lost to truncation.
 
 WORD COUNT INSTRUCTIONS — READ CAREFULLY:
 The student writes the question at the top of their answer sheet before writing the answer.

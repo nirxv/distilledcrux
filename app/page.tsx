@@ -250,8 +250,7 @@ const CSS = `
     padding: 1.75rem 2rem; display: flex; justify-content: space-between;
     align-items: center; flex-wrap: wrap; gap: 1rem;
   }
-  .lp-footer-logo { font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; color: var(--text); }
-  .lp-footer-logo em { font-style: normal; color: var(--accent); }
+  .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
   .lp-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
   .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); text-decoration: none; transition: color 0.15s; }
   .lp-footer-link:hover { color: var(--text); }
@@ -459,14 +458,14 @@ export default function Home() {
         </div>
 
         <footer className="lp-footer">
-          <div className="lp-footer-logo">Distilled<em>Crux</em></div>
+          <div className="lp-footer-logo">DISTILLEDCRUX.COM</div>
           <div className="lp-footer-links">
             <Link href="/privacy" className="lp-footer-link">Privacy</Link>
             <Link href="/terms" className="lp-footer-link">Terms</Link>
             <Link href="/refund" className="lp-footer-link">Refund</Link>
             <Link href="/contact" className="lp-footer-link">Contact</Link>
           </div>
-          <span className="lp-footer-copy">© {new Date().getFullYear()} Distilled Crux</span>
+          <span className="lp-footer-copy">© {new Date().getFullYear()} distilledcrux.com</span>
         </footer>
 
       </div>

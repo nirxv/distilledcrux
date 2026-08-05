@@ -9,6 +9,7 @@ import { SubjectConfig } from './index'
 export const anthropologyConfig: SubjectConfig = {
   id: 'anthropology',
   label: 'Anthropology Optional',
+  thinkerTerm: 'anthropologist',
 
   thinkerRoster: [
     // ── Founders / Classical ──
