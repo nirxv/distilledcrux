@@ -7,7 +7,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 
 const SUBJECT_LABEL: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology',
-  geography: 'Geography', 'political-science': 'Political Science',
+  geography: 'Geography', 'political-science': 'PSIR',
   'public-administration': 'Public Administration', history: 'History',
 };
 

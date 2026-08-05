@@ -8,7 +8,7 @@ import { allNotes as pubAdminNotes } from '@/lib/notes/pub-admin';
 
 export const metadata: Metadata = {
   title: 'Optional Notes — UPSC Mains Preparation | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, Political Science, Geography and Public Administration. Topic-wise structured for Mains.',
+  description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, PSIR, Geography and Public Administration. Topic-wise structured for Mains.',
   alternates: { canonical: 'https://distilledcrux.com/notes' },
 };
 
@@ -33,7 +33,7 @@ const SUBJECTS = [
   },
   {
     slug: 'polsci',
-    name: 'Political Science',
+    name: 'PSIR',
     sub: 'Theory · IR · Comparative Politics',
     color: '#f87171',
     icon: '⚖️',

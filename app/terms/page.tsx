@@ -36,7 +36,7 @@ export default function TermsPage() {
           Distilled Crux provides UPSC optional exam preparation resources including structured notes,
           previous year questions (PYQs), AI-powered answer evaluation, topper answer copies, and a
           premium subscription plan across multiple optionals including Sociology, Anthropology,
-          Political Science, Geography, and Public Administration.
+          PSIR, Geography, and Public Administration.
         </p>
 
         <h2 style={S.h2}>2. Eligibility</h2>

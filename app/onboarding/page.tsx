@@ -8,7 +8,7 @@ const optionals = [
   { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: true },
   { id: 'anthropology',       label: 'Anthropology',        emoji: '🧬', available: true },
   { id: 'geography',          label: 'Geography',           emoji: '🌍', available: true },
-  { id: 'political-science',  label: 'Political Science',   emoji: '⚖️', available: true },
+  { id: 'political-science',  label: 'PSIR',   emoji: '⚖️', available: true },
   { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: true },
 ];
 

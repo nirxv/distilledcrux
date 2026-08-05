@@ -33,7 +33,7 @@ const OPTIONAL_LABEL: Record<string, string> = {
   sociology:              'Sociology',
   anthropology:           'Anthropology',
   geography:              'Geography',
-  'political-science':    'Political Science',
+  'political-science':    'PSIR',
   'public-administration':'Public Administration',
   history:                'History',
 }

@@ -524,7 +524,7 @@ export default function PrelimsPage() {
               <span style={{ fontSize: '1.5rem' }}>📖</span>
               <div>
                 <div className="pr-crosslink-name">Distilled Crux — Optional Subjects</div>
-                <div className="pr-crosslink-sub">Sociology, Anthropology, Political Science, Geography, Public Administration</div>
+                <div className="pr-crosslink-sub">Sociology, Anthropology, PSIR, Geography, Public Administration</div>
               </div>
             </div>
             <div className="pr-crosslink-arrow">

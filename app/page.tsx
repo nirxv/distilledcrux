@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const optionals = [
   { id: 'sociology',    name: 'Sociology',            sub: 'Social Structure, Change & Thinkers',       color: '#4361ee', dim: 'rgba(67,97,238,0.07)',  border: 'rgba(67,97,238,0.18)',  live: true,  icon: '🧩' },
   { id: 'anthropology', name: 'Anthropology',          sub: 'Physical, Social & Applied Anthropology',   color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.18)', live: true,  icon: '🧬' },
-  { id: 'polsci',       name: 'Political Science',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
+  { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
   { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true,  icon: '🌍' },
   { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true,  icon: '📋' },
 ];
@@ -26,7 +26,7 @@ const tools = [
 
 const marqueeItems = [
   'AI Answer Evaluation', 'Sociology Optional', 'Anthropology Optional', 'PYQ Bank',
-  'Syllabus Notes', 'AI Chat', 'Political Science', 'Geography Optional', 'Public Administration',
+  'Syllabus Notes', 'AI Chat', 'PSIR', 'Geography Optional', 'Public Administration',
 ];
 
 const CSS = `

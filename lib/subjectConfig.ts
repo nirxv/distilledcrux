@@ -260,7 +260,7 @@ export const SUGGESTED_QUESTIONS: Record<SubjectKey, { en: string[]; hi: string[
 export const SUBJECT_DISPLAY: Record<SubjectKey, string> = {
   sociology: 'Sociology',
   anthropology: 'Anthropology',
-  polsci: 'Political Science & IR',
+  polsci: 'PSIR',
   geography: 'Geography',
   'pub-admin': 'Public Administration',
 };
@@ -319,8 +319,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Core Theory',
       books: [
-        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PolSci Paper I' },
-        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PolSci Paper II' },
+        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I' },
+        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II' },
         { value: 'Heywood — Political Theory', label: 'Heywood — Political Theory' },
         { value: 'Heywood — Politics', label: 'Heywood — Politics' },
       ],

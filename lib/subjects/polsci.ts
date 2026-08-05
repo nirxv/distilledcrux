@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // lib/subjects/polsci.ts
-// Political Science & IR Optional — subject config
+// PSIR (Political Science & IR) Optional — subject config
 // RAG: null until books uploaded
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -8,7 +8,7 @@ import { SubjectConfig } from './index'
 
 export const polsciConfig: SubjectConfig = {
   id: 'polsci',
-  label: 'Political Science & IR Optional',
+  label: 'PSIR — Political Science & IR Optional',
   thinkerTerm: 'thinker',
 
   thinkerRoster: [

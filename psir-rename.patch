@@ -1,0 +1,209 @@
+diff --git a/app/[optional]/page.tsx b/app/[optional]/page.tsx
+index fccf36d..8026961 100644
+--- a/app/[optional]/page.tsx
++++ b/app/[optional]/page.tsx
+@@ -26,7 +26,7 @@ const OPTIONALS: Record<string, {
+     highlights: ['Biological & physical anthropology — evolution, genetics, primatology', 'Archaeological anthropology — fossil evidence, tools, culture', 'Social & cultural anthropology — kinship, marriage, religion', 'Tribal India — scheduled tribes, problems, development policy', 'Applied anthropology — development, forensics, ethnobotany'],
+   },
+   polsci: {
+-    name: 'Political Science', full: 'Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
++    name: 'PSIR', full: 'PSIR — Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
+     color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)', icon: '⚖️',
+     paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
+     paper2: 'Comparative Politics & International Relations',
+diff --git a/app/dashboard/page.tsx b/app/dashboard/page.tsx
+index 17723e2..d057e09 100644
+--- a/app/dashboard/page.tsx
++++ b/app/dashboard/page.tsx
+@@ -7,7 +7,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
+ 
+ const SUBJECT_LABEL: Record<string, string> = {
+   sociology: 'Sociology', anthropology: 'Anthropology',
+-  geography: 'Geography', 'political-science': 'Political Science',
++  geography: 'Geography', 'political-science': 'PSIR',
+   'public-administration': 'Public Administration', history: 'History',
+ };
+ 
+diff --git a/app/evaluate/page.tsx b/app/evaluate/page.tsx
+index 4e59e95..197e396 100644
+--- a/app/evaluate/page.tsx
++++ b/app/evaluate/page.tsx
+@@ -33,7 +33,7 @@ const OPTIONAL_LABEL: Record<string, string> = {
+   sociology:              'Sociology',
+   anthropology:           'Anthropology',
+   geography:              'Geography',
+-  'political-science':    'Political Science',
++  'political-science':    'PSIR',
+   'public-administration':'Public Administration',
+   history:                'History',
+ }
+diff --git a/app/notes/page.tsx b/app/notes/page.tsx
+index 7969a67..b30ce7d 100644
+--- a/app/notes/page.tsx
++++ b/app/notes/page.tsx
+@@ -8,7 +8,7 @@ import { allNotes as pubAdminNotes } from '@/lib/notes/pub-admin';
+ 
+ export const metadata: Metadata = {
+   title: 'Optional Notes — UPSC Mains Preparation | Distilled Crux',
+-  description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, Political Science, Geography and Public Administration. Topic-wise structured for Mains.',
++  description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, PSIR, Geography and Public Administration. Topic-wise structured for Mains.',
+   alternates: { canonical: 'https://distilledcrux.com/notes' },
+ };
+ 
+@@ -33,7 +33,7 @@ const SUBJECTS = [
+   },
+   {
+     slug: 'polsci',
+-    name: 'Political Science',
++    name: 'PSIR',
+     sub: 'Theory · IR · Comparative Politics',
+     color: '#f87171',
+     icon: '⚖️',
+diff --git a/app/notes/polsci/page.tsx b/app/notes/polsci/page.tsx
+index cba517b..4665db8 100644
+--- a/app/notes/polsci/page.tsx
++++ b/app/notes/polsci/page.tsx
+@@ -3,8 +3,8 @@ import Link from 'next/link';
+ import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/polsci';
+ 
+ export const metadata: Metadata = {
+-  title: 'Political Science Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
+-  description: 'Comprehensive free notes for UPSC Political Science & IR Optional — political theory, Indian polity, comparative politics and international relations.',
++  title: 'PSIR Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
++  description: 'Comprehensive free notes for UPSC PSIR Optional — political theory, Indian polity, comparative politics and international relations.',
+   alternates: { canonical: 'https://distilledcrux.com/notes/polsci' },
+ };
+ 
+@@ -18,11 +18,11 @@ export default function PolsciNotesPage() {
+       <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+         <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
+         <span>·</span>
+-        <span>Political Science</span>
++        <span>PSIR</span>
+       </div>
+ 
+       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
+-        Political Science & IR Optional
++        PSIR — Political Science & IR Optional
+       </h1>
+       <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '3rem' }}>
+         {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants
+diff --git a/app/onboarding/page.tsx b/app/onboarding/page.tsx
+index 914db9d..b7623fc 100644
+--- a/app/onboarding/page.tsx
++++ b/app/onboarding/page.tsx
+@@ -8,7 +8,7 @@ const optionals = [
+   { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: true },
+   { id: 'anthropology',       label: 'Anthropology',        emoji: '🧬', available: true },
+   { id: 'geography',          label: 'Geography',           emoji: '🌍', available: true },
+-  { id: 'political-science',  label: 'Political Science',   emoji: '⚖️', available: true },
++  { id: 'political-science',  label: 'PSIR',   emoji: '⚖️', available: true },
+   { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: true },
+ ];
+ 
+diff --git a/app/page.tsx b/app/page.tsx
+index a8b259a..4890d09 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -12,7 +12,7 @@ export const metadata: Metadata = {
+ const optionals = [
+   { id: 'sociology',    name: 'Sociology',            sub: 'Social Structure, Change & Thinkers',       color: '#4361ee', dim: 'rgba(67,97,238,0.07)',  border: 'rgba(67,97,238,0.18)',  live: true,  icon: '🧩' },
+   { id: 'anthropology', name: 'Anthropology',          sub: 'Physical, Social & Applied Anthropology',   color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.18)', live: true,  icon: '🧬' },
+-  { id: 'polsci',       name: 'Political Science',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
++  { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
+   { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true,  icon: '🌍' },
+   { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true,  icon: '📋' },
+ ];
+@@ -26,7 +26,7 @@ const tools = [
+ 
+ const marqueeItems = [
+   'AI Answer Evaluation', 'Sociology Optional', 'Anthropology Optional', 'PYQ Bank',
+-  'Syllabus Notes', 'AI Chat', 'Political Science', 'Geography Optional', 'Public Administration',
++  'Syllabus Notes', 'AI Chat', 'PSIR', 'Geography Optional', 'Public Administration',
+ ];
+ 
+ const CSS = `
+diff --git a/app/prelims/page.tsx b/app/prelims/page.tsx
+index fccd0f4..ead1caf 100644
+--- a/app/prelims/page.tsx
++++ b/app/prelims/page.tsx
+@@ -524,7 +524,7 @@ export default function PrelimsPage() {
+               <span style={{ fontSize: '1.5rem' }}>📖</span>
+               <div>
+                 <div className="pr-crosslink-name">Distilled Crux — Optional Subjects</div>
+-                <div className="pr-crosslink-sub">Sociology, Anthropology, Political Science, Geography, Public Administration</div>
++                <div className="pr-crosslink-sub">Sociology, Anthropology, PSIR, Geography, Public Administration</div>
+               </div>
+             </div>
+             <div className="pr-crosslink-arrow">
+diff --git a/app/pricing/page.tsx b/app/pricing/page.tsx
+index c9c917b..bb5bb0f 100644
+--- a/app/pricing/page.tsx
++++ b/app/pricing/page.tsx
+@@ -51,7 +51,7 @@ const plans = [
+ const faqs = [
+   { q: 'Is there a free tier?', a: 'Yes — 3 free AI chats, no card required.' },
+   { q: 'Can I switch plans?', a: 'After your current plan expires you can pick any plan. Plans are non-auto-renewing.' },
+-  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, Political Science, Geography, Public Administration — and History at historyoptional.xyz.' },
++  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, Public Administration — and History at historyoptional.xyz.' },
+   { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking — via Razorpay.' },
+   { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages — contact us within 7 days.' },
+ ];
+diff --git a/app/terms/page.tsx b/app/terms/page.tsx
+index f02071f..19ee815 100644
+--- a/app/terms/page.tsx
++++ b/app/terms/page.tsx
+@@ -36,7 +36,7 @@ export default function TermsPage() {
+           Distilled Crux provides UPSC optional exam preparation resources including structured notes,
+           previous year questions (PYQs), AI-powered answer evaluation, topper answer copies, and a
+           premium subscription plan across multiple optionals including Sociology, Anthropology,
+-          Political Science, Geography, and Public Administration.
++          PSIR, Geography, and Public Administration.
+         </p>
+ 
+         <h2 style={S.h2}>2. Eligibility</h2>
+diff --git a/lib/subjectConfig.ts b/lib/subjectConfig.ts
+index 9e91c74..d26aa6e 100644
+--- a/lib/subjectConfig.ts
++++ b/lib/subjectConfig.ts
+@@ -260,7 +260,7 @@ export const SUGGESTED_QUESTIONS: Record<SubjectKey, { en: string[]; hi: string[
+ export const SUBJECT_DISPLAY: Record<SubjectKey, string> = {
+   sociology: 'Sociology',
+   anthropology: 'Anthropology',
+-  polsci: 'Political Science & IR',
++  polsci: 'PSIR',
+   geography: 'Geography',
+   'pub-admin': 'Public Administration',
+ };
+@@ -319,8 +319,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value:
+     {
+       group: 'Core Theory',
+       books: [
+-        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PolSci Paper I' },
+-        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PolSci Paper II' },
++        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I' },
++        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II' },
+         { value: 'Heywood — Political Theory', label: 'Heywood — Political Theory' },
+         { value: 'Heywood — Politics', label: 'Heywood — Politics' },
+       ],
+diff --git a/lib/subjects/polsci.ts b/lib/subjects/polsci.ts
+index b74023e..afc56df 100644
+--- a/lib/subjects/polsci.ts
++++ b/lib/subjects/polsci.ts
+@@ -1,6 +1,6 @@
+ // ─────────────────────────────────────────────────────────────────────────────
+ // lib/subjects/polsci.ts
+-// Political Science & IR Optional — subject config
++// PSIR (Political Science & IR) Optional — subject config
+ // RAG: null until books uploaded
+ // ─────────────────────────────────────────────────────────────────────────────
+ 
+@@ -8,7 +8,7 @@ import { SubjectConfig } from './index'
+ 
+ export const polsciConfig: SubjectConfig = {
+   id: 'polsci',
+-  label: 'Political Science & IR Optional',
++  label: 'PSIR — Political Science & IR Optional',
+   thinkerTerm: 'thinker',
+ 
+   thinkerRoster: [

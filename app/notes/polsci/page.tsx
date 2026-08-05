@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/polsci';
 
 export const metadata: Metadata = {
-  title: 'Political Science Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Political Science & IR Optional — political theory, Indian polity, comparative politics and international relations.',
+  title: 'PSIR Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC PSIR Optional — political theory, Indian polity, comparative politics and international relations.',
   alternates: { canonical: 'https://distilledcrux.com/notes/polsci' },
 };
 
@@ -18,11 +18,11 @@ export default function PolsciNotesPage() {
       <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
         <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
         <span>·</span>
-        <span>Political Science</span>
+        <span>PSIR</span>
       </div>
 
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
-        Political Science & IR Optional
+        PSIR — Political Science & IR Optional
       </h1>
       <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '3rem' }}>
         {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants

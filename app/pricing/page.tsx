@@ -51,7 +51,7 @@ const plans = [
 const faqs = [
   { q: 'Is there a free tier?', a: 'Yes — 3 free AI chats, no card required.' },
   { q: 'Can I switch plans?', a: 'After your current plan expires you can pick any plan. Plans are non-auto-renewing.' },
-  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, Political Science, Geography, Public Administration — and History at historyoptional.xyz.' },
+  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, Public Administration — and History at historyoptional.xyz.' },
   { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking — via Razorpay.' },
   { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages — contact us within 7 days.' },
 ];

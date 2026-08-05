@@ -26,7 +26,7 @@ const OPTIONALS: Record<string, {
     highlights: ['Biological & physical anthropology — evolution, genetics, primatology', 'Archaeological anthropology — fossil evidence, tools, culture', 'Social & cultural anthropology — kinship, marriage, religion', 'Tribal India — scheduled tribes, problems, development policy', 'Applied anthropology — development, forensics, ethnobotany'],
   },
   polsci: {
-    name: 'Political Science', full: 'Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
+    name: 'PSIR', full: 'PSIR — Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
     color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)', icon: '⚖️',
     paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
     paper2: 'Comparative Politics & International Relations',
