@@ -9,11 +9,11 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Key Intellectual Influences</h3>
 <ul>
- <li><strong>Hegel</strong> Dialectical method (thesis → antithesis → synthesis). But Hegel was an <em>idealist</em>: he believed ideas drive history. Marx rejected this.</li>
- <li><strong>Feuerbach</strong> Materialism. Showed that God is a projection of human wishes. Marx extended this beyond religion to the entire social world.</li>
- <li><strong>Adam Smith & Ricardo</strong> Classical political economy; labour theory of value.</li>
- <li><strong>Darwin</strong> Evolutionary model of social change.</li>
- <li><strong>Saint-Simon</strong> Vision of a cooperative society; influenced Marx's communist ideal.</li>
+ <li><strong>Hegel</strong>: Dialectical method (thesis → antithesis → synthesis). But Hegel was an <em>idealist</em>: he believed ideas drive history. Marx rejected this.</li>
+ <li><strong>Feuerbach</strong>: Materialism. Showed that God is a projection of human wishes. Marx extended this beyond religion to the entire social world.</li>
+ <li><strong>Adam Smith & Ricardo</strong>: Classical political economy; labour theory of value.</li>
+ <li><strong>Darwin</strong>: Evolutionary model of social change.</li>
+ <li><strong>Saint-Simon</strong>: Vision of a cooperative society; influenced Marx's communist ideal.</li>
 </ul>
 
 <p>Marx's unique contribution: he took <strong>Hegel's dialectics</strong> + <strong>Feuerbach's materialism</strong> and fused them into <strong>Dialectical Materialism</strong> the idea that material (economic) contradictions drive historical change, not ideas.</p>
@@ -41,8 +41,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Base and Superstructure</h3>
 <p>Every society has two layers:</p>
 <ul>
- <li><strong>Economic Base (Infrastructure)</strong> Forces of Production (FoP) + Relations of Production (RoP). This is the foundation.</li>
- <li><strong>Superstructure</strong> Religion, law, state, family, education, media, morality. These emerge from the base and in turn help maintain it.</li>
+ <li><strong>Economic Base (Infrastructure)</strong>: Forces of Production (FoP) + Relations of Production (RoP). This is the foundation.</li>
+ <li><strong>Superstructure</strong>: Religion, law, state, family, education, media, morality. These emerge from the base and in turn help maintain it.</li>
 </ul>
 
 <p>The economic base <em>shapes</em> the superstructure. The superstructure <em>legitimises</em> the base. E.g., in slave society, religion justified the master's ownership of slaves ("servants, obey your masters").</p>
@@ -158,14 +158,14 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Class in Itself vs Class for Itself</h3>
 <ul>
- <li><strong>Class in Itself</strong> Defined by objective criteria (common economic position). Workers share the same conditions but have no awareness of it.</li>
- <li><strong>Class for Itself</strong> Workers develop <em>class consciousness</em>, recognise their shared exploitation, and organise collectively for emancipation. This is the politically active, revolutionary class.</li>
+ <li><strong>Class in Itself</strong>: Defined by objective criteria (common economic position). Workers share the same conditions but have no awareness of it.</li>
+ <li><strong>Class for Itself</strong>: Workers develop <em>class consciousness</em>, recognise their shared exploitation, and organise collectively for emancipation. This is the politically active, revolutionary class.</li>
 </ul>
 
 <h3>False Consciousness vs True Consciousness</h3>
 <ul>
- <li><strong>False consciousness</strong> Workers accept the ideology of the ruling class; do not see the structural roots of their exploitation. E.g., blaming individual failure rather than capitalism.</li>
- <li><strong>True consciousness</strong> Workers recognise the system itself as exploitative and develop solidarity energised by an emancipatory ideology.</li>
+ <li><strong>False consciousness</strong>: Workers accept the ideology of the ruling class; do not see the structural roots of their exploitation. E.g., blaming individual failure rather than capitalism.</li>
+ <li><strong>True consciousness</strong>: Workers recognise the system itself as exploitative and develop solidarity energised by an emancipatory ideology.</li>
 </ul>
 
 <h3>Class Polarisation</h3>
@@ -192,10 +192,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Four Types of Alienation (Proletarian)</h3>
 <ul>
- <li><strong>1. Alienation from Species-Being (Human Essence)</strong> The worker's creative potential is subjugated to the demands of the capitalist. Instead of working freely and creatively (dancer, craftsman, fisherman), the worker is condemned to repetitive, mechanical tasks that express nothing of their humanity.</li>
- <li><strong>2. Alienation from the Product of Labour</strong> Products belong to the capitalist. The worker cannot afford to buy the TV he manufactures. His product confronts him as something alien, something that enslaves him. Marx calls this <em>fetishism of commodities</em> objects acquire a power and life of their own, independent of the humans who made them.</li>
- <li><strong>3. Alienation from the Productive Process</strong> Division of labour reduces workers to simple, endlessly repeated motions. Work is no longer meaningful; it becomes mere suffering. The only thing the worker cares about is the pay-cheque. "He feels himself only when he is not working."</li>
- <li><strong>4. Alienation from Fellow Workers</strong> The factory system isolates workers. Sociability which was naturally part of collective production disappears. Workers feel no solidarity, no shared identity, no loyalty to each other or to what they produce. They are completely individualised.</li>
+ <li><strong>1. Alienation from Species-Being (Human Essence)</strong>: The worker's creative potential is subjugated to the demands of the capitalist. Instead of working freely and creatively (dancer, craftsman, fisherman), the worker is condemned to repetitive, mechanical tasks that express nothing of their humanity.</li>
+ <li><strong>2. Alienation from the Product of Labour</strong>: Products belong to the capitalist. The worker cannot afford to buy the TV he manufactures. His product confronts him as something alien, something that enslaves him. Marx calls this <em>fetishism of commodities</em> objects acquire a power and life of their own, independent of the humans who made them.</li>
+ <li><strong>3. Alienation from the Productive Process</strong>: Division of labour reduces workers to simple, endlessly repeated motions. Work is no longer meaningful; it becomes mere suffering. The only thing the worker cares about is the pay-cheque. "He feels himself only when he is not working."</li>
+ <li><strong>4. Alienation from Fellow Workers</strong>: The factory system isolates workers. Sociability which was naturally part of collective production disappears. Workers feel no solidarity, no shared identity, no loyalty to each other or to what they produce. They are completely individualised.</li>
 </ul>
 
 <h3>Alienation Across Modes of Production</h3>
@@ -234,43 +234,43 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Inherent Contradictions of Capitalism</h2>
 <ul>
- <li><strong>Profit over human needs</strong> Production for exchange value, not use value. Leads to overproduction and underconsumption.</li>
- <li><strong>Surplus value exploitation</strong> Workers produce more value than they receive in wages. The difference (surplus value) is appropriated by capitalists.</li>
- <li><strong>Falling rate of profit</strong> As machinery replaces labour (rise in organic composition of capital), surplus value decreases. Only living labour creates value, not machines.</li>
- <li><strong>Reserve army of labour</strong> Mechanisation creates unemployment, expanding the industrial reserve army. This depresses wages further and causes periodic economic crises.</li>
- <li><strong>Class polarisation</strong> Rich get richer; poor get poorer. Intermediate classes absorbed into two poles.</li>
+ <li><strong>Profit over human needs</strong>: Production for exchange value, not use value. Leads to overproduction and underconsumption.</li>
+ <li><strong>Surplus value exploitation</strong>: Workers produce more value than they receive in wages. The difference (surplus value) is appropriated by capitalists.</li>
+ <li><strong>Falling rate of profit</strong>: As machinery replaces labour (rise in organic composition of capital), surplus value decreases. Only living labour creates value, not machines.</li>
+ <li><strong>Reserve army of labour</strong>: Mechanisation creates unemployment, expanding the industrial reserve army. This depresses wages further and causes periodic economic crises.</li>
+ <li><strong>Class polarisation</strong>: Rich get richer; poor get poorer. Intermediate classes absorbed into two poles.</li>
 </ul>
 
 <h2>Contribution of Marx to Sociology</h2>
 <ul>
- <li><strong>New theoretical framework</strong> Historical materialism as a radical perspective; challenged idealist and functionalist views of society.</li>
- <li><strong>New concepts</strong> FoP, RoP, MoP, alienation, class in itself/for itself, dialectical materialism, surplus value, fetishism of commodities, false consciousness, lumpen proletariat.</li>
- <li><strong>Methodology</strong> Marxian historical materialism used as a method to study global stratification (e.g., Wallerstein's World System Theory).</li>
- <li><strong>New fields</strong> Inspired industrial sociology, feminist sociology (Engels on family), dependency theory, critical theory (Frankfurt School).</li>
- <li><strong>Emancipatory concern</strong> Introduced the idea that sociology should not merely describe but actively work to change unjust social structures. This "emancipatory concern" is reflected in welfare states and labour rights globally.</li>
+ <li><strong>New theoretical framework</strong>: Historical materialism as a radical perspective; challenged idealist and functionalist views of society.</li>
+ <li><strong>New concepts</strong>: FoP, RoP, MoP, alienation, class in itself/for itself, dialectical materialism, surplus value, fetishism of commodities, false consciousness, lumpen proletariat.</li>
+ <li><strong>Methodology</strong>: Marxian historical materialism used as a method to study global stratification (e.g., Wallerstein's World System Theory).</li>
+ <li><strong>New fields</strong>: Inspired industrial sociology, feminist sociology (Engels on family), dependency theory, critical theory (Frankfurt School).</li>
+ <li><strong>Emancipatory concern</strong>: Introduced the idea that sociology should not merely describe but actively work to change unjust social structures. This "emancipatory concern" is reflected in welfare states and labour rights globally.</li>
 </ul>
 
 <h2>Criticisms of Marx</h2>
 
 <h3>Criticism of Historical Materialism</h3>
 <ul>
- <li><strong>Economic determinism</strong> Marx over-emphasises the economic base. Critics note that religion, law, and state can independently drive social change (e.g., welfare state acting for the have-nots, not just for capitalists). Weber argued that ideas (Protestant Ethic) can drive economic change.</li>
- <li><strong>Asiatic Mode of Production</strong> Marx himself acknowledged a separate evolutionary path for Eastern societies, which weakens his universal theory.</li>
- <li><strong>Failed prediction</strong> Communism has not arrived; socialist societies have moved towards capitalism. Frank Parkin found classes exist within socialist societies.</li>
+ <li><strong>Economic determinism</strong>: Marx over-emphasises the economic base. Critics note that religion, law, and state can independently drive social change (e.g., welfare state acting for the have-nots, not just for capitalists). Weber argued that ideas (Protestant Ethic) can drive economic change.</li>
+ <li><strong>Asiatic Mode of Production</strong>: Marx himself acknowledged a separate evolutionary path for Eastern societies, which weakens his universal theory.</li>
+ <li><strong>Failed prediction</strong>: Communism has not arrived; socialist societies have moved towards capitalism. Frank Parkin found classes exist within socialist societies.</li>
  <li><strong>Karl Popper</strong> (<em>Poverty of Historicism</em>) There are no discoverable historical laws. Extrapolation from trends is the weakest form of prediction. Marx's theory is unfalsifiable.</li>
- <li><strong>Anthony Giddens</strong> There exists no necessary overall mechanism of social change, no universal motor of history such as class conflict.</li>
- <li><strong>Francis Fukuyama</strong> Liberal democracy, not communism, proved to be the endpoint of history.</li>
+ <li><strong>Anthony Giddens</strong>: There exists no necessary overall mechanism of social change, no universal motor of history such as class conflict.</li>
+ <li><strong>Francis Fukuyama</strong>: Liberal democracy, not communism, proved to be the endpoint of history.</li>
 </ul>
 
 <h3>Criticism of Class Conflict</h3>
 <ul>
- <li><strong>Max Weber</strong> Distribution of power and authority (not just economics) can be the basis of conflict. Sectional interests include status and political power, not just class. Social conflict can also be based on ethnicity, religion, and status groups.</li>
- <li><strong>Laclau & Mouffe</strong> With increasing social complexity, antagonism arises through gender, ethnicity, sexual orientation, age not just class. Revolutionary struggle is not inevitable; discourse must be created and mobilised.</li>
- <li><strong>Frankfurt School (Adorno, Horkheimer)</strong> The cultural industry (media, entertainment, advertising) pacifies the masses through "pseudo-individuality" and shallow pleasure, preventing revolutionary consciousness. Marx underestimated the power of culture.</li>
- <li><strong>Jürgen Habermas</strong> Late capitalism has become welfare-centric. Economic crises now transform into <em>legitimation crises</em> political questions of authority rather than class revolution.</li>
- <li><strong>Reductionism</strong> Reduces all social phenomena to economic factors; ignores the autonomy of culture, religion, and politics.</li>
- <li><strong>Over-emphasis on conflict</strong> Ignores consensus, cooperation, and social cohesion as sources of social order (Durkheim, Parsons).</li>
- <li><strong>Post-Modernists</strong> Reject the possibility of grand, generalised theories. Marx's metanarrative fails to account for the qualitative transformation of post-modern society.</li>
+ <li><strong>Max Weber</strong>: Distribution of power and authority (not just economics) can be the basis of conflict. Sectional interests include status and political power, not just class. Social conflict can also be based on ethnicity, religion, and status groups.</li>
+ <li><strong>Laclau & Mouffe</strong>: With increasing social complexity, antagonism arises through gender, ethnicity, sexual orientation, age not just class. Revolutionary struggle is not inevitable; discourse must be created and mobilised.</li>
+ <li><strong>Frankfurt School (Adorno, Horkheimer)</strong>: The cultural industry (media, entertainment, advertising) pacifies the masses through "pseudo-individuality" and shallow pleasure, preventing revolutionary consciousness. Marx underestimated the power of culture.</li>
+ <li><strong>Jürgen Habermas</strong>: Late capitalism has become welfare-centric. Economic crises now transform into <em>legitimation crises</em> political questions of authority rather than class revolution.</li>
+ <li><strong>Reductionism</strong>: Reduces all social phenomena to economic factors; ignores the autonomy of culture, religion, and politics.</li>
+ <li><strong>Over-emphasis on conflict</strong>: Ignores consensus, cooperation, and social cohesion as sources of social order (Durkheim, Parsons).</li>
+ <li><strong>Post-Modernists</strong>: Reject the possibility of grand, generalised theories. Marx's metanarrative fails to account for the qualitative transformation of post-modern society.</li>
 </ul>
 
 <h4>Marx's Own Appreciation of Capitalism</h4>
@@ -289,10 +289,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Four Pillars of Durkheim's Sociology</h3>
 <ul>
- <li><strong>Positivism</strong> Sociology should treat social facts as things and study them with the methods of natural science. Objective, empirical, value-free.</li>
- <li><strong>Evolutionism</strong> Society changes slowly and contains self-correcting mechanisms for strain and conflict.</li>
- <li><strong>Organicism & Functionalism</strong> Society is like a living organism; each institution (religion, family, law) performs a function for the whole. The whole (society) is greater than the sum of its parts.</li>
- <li><strong>Moralism</strong> Every society requires moral bonds collective values and shared sentiments to hold it together. Sociology must discover what these moral bonds are in modern society.</li>
+ <li><strong>Positivism</strong>: Sociology should treat social facts as things and study them with the methods of natural science. Objective, empirical, value-free.</li>
+ <li><strong>Evolutionism</strong>: Society changes slowly and contains self-correcting mechanisms for strain and conflict.</li>
+ <li><strong>Organicism & Functionalism</strong>: Society is like a living organism; each institution (religion, family, law) performs a function for the whole. The whole (society) is greater than the sum of its parts.</li>
+ <li><strong>Moralism</strong>: Every society requires moral bonds collective values and shared sentiments to hold it together. Sociology must discover what these moral bonds are in modern society.</li>
 </ul>
 
 <h3>Historical Context</h3>
@@ -366,24 +366,24 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h4>Types of Anomie</h4>
 <ul>
- <li><strong>Acute Anomie</strong> Sudden disruption during rapid change: economic slumps, booms, wars, epidemics, natural disasters. The Kobe earthquake (1995) led to increased suicides. Economic depression increases suicide rates (CDC data: US suicides rose 1928-1932 when unemployment hit 24%).</li>
- <li><strong>Chronic Anomie</strong> Bachelors experience limitless horizons; unrestrained passions create chronic disjunction between means and ends. Higher suicide rate than married men.</li>
- <li><strong>Domestic Anomie</strong> Breakdown of norms within the family: rapid shifts in gender roles, persistent family conflict, high divorce rates.</li>
+ <li><strong>Acute Anomie</strong>: Sudden disruption during rapid change: economic slumps, booms, wars, epidemics, natural disasters. The Kobe earthquake (1995) led to increased suicides. Economic depression increases suicide rates (CDC data: US suicides rose 1928-1932 when unemployment hit 24%).</li>
+ <li><strong>Chronic Anomie</strong>: Bachelors experience limitless horizons; unrestrained passions create chronic disjunction between means and ends. Higher suicide rate than married men.</li>
+ <li><strong>Domestic Anomie</strong>: Breakdown of norms within the family: rapid shifts in gender roles, persistent family conflict, high divorce rates.</li>
 </ul>
 
 <h4>Abnormal Forms of Division of Labour (structural anomie)</h4>
 <ul>
- <li><strong>Anomic DOL</strong> Monotonous, machine-like work creates meaninglessness. Workers strike not from revolution but from a sense of purposelessness. (Brings Durkheim close to Marx's alienation but Durkheim sees it as temporary aberration, not inherent contradiction.)</li>
- <li><strong>Forced DOL</strong> Occupations filled by ascribed status (caste, sex, bribery, nepotism) rather than merit. E.g. jajmani system studied by Henry Orenstein creates organic solidarity but blinds us to exploitation of lower castes.</li>
- <li><strong>Inadequately Coordinated DOL</strong> Part-time, discouraged, or structurally unemployed workers unable to contribute fully.</li>
+ <li><strong>Anomic DOL</strong>: Monotonous, machine-like work creates meaninglessness. Workers strike not from revolution but from a sense of purposelessness. (Brings Durkheim close to Marx's alienation but Durkheim sees it as temporary aberration, not inherent contradiction.)</li>
+ <li><strong>Forced DOL</strong>: Occupations filled by ascribed status (caste, sex, bribery, nepotism) rather than merit. E.g. jajmani system studied by Henry Orenstein creates organic solidarity but blinds us to exploitation of lower castes.</li>
+ <li><strong>Inadequately Coordinated DOL</strong>: Part-time, discouraged, or structurally unemployed workers unable to contribute fully.</li>
 </ul>
 
 <h4>Solution to Anomie</h4>
 <ul>
- <li><strong>State</strong> Can formally administer laws for national collectivity and regulate anomic tendencies.</li>
- <li><strong>Occupational groups (professional associations)</strong> Must participate in governance; counterbalance both egoistic individualism and oppressive bureaucracy; build "we-feeling" among workers.</li>
- <li><strong>Moral education</strong> Teaches discipline, attachment to social groups, and civic pride. History and religious education link individuals to society's past.</li>
- <li><strong>Professional ethics</strong> Corporations must promote moralistic individualism, replacing egoistic individualism.</li>
+ <li><strong>State</strong>: Can formally administer laws for national collectivity and regulate anomic tendencies.</li>
+ <li><strong>Occupational groups (professional associations)</strong>: Must participate in governance; counterbalance both egoistic individualism and oppressive bureaucracy; build "we-feeling" among workers.</li>
+ <li><strong>Moral education</strong>: Teaches discipline, attachment to social groups, and civic pride. History and religious education link individuals to society's past.</li>
+ <li><strong>Professional ethics</strong>: Corporations must promote moralistic individualism, replacing egoistic individualism.</li>
 </ul>
 
 <h4>Anomie vs Alienation</h4>
@@ -447,25 +447,25 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Two Types of Social Facts</h3>
 <ul>
- <li><strong>Non-Material Social Facts</strong> Collective conscience, collective effervescence, social currents of integration/regulation. These are primary.</li>
- <li><strong>Material Social Facts</strong> Religion (as institution), law, architecture, population density. These are manifestations of non-material social facts. E.g. Suicide rate (material SF) is a manifestation of social currents of integration and regulation (non-material SF).</li>
+ <li><strong>Non-Material Social Facts</strong>: Collective conscience, collective effervescence, social currents of integration/regulation. These are primary.</li>
+ <li><strong>Material Social Facts</strong>: Religion (as institution), law, architecture, population density. These are manifestations of non-material social facts. E.g. Suicide rate (material SF) is a manifestation of social currents of integration and regulation (non-material SF).</li>
 </ul>
 
 <h3>Features of Social Facts</h3>
 <ul>
- <li><strong>Externality</strong> Social facts exist outside the individual; learned through socialisation. E.g. nationalism comes into existence through collectivity and becomes external to individuals.</li>
- <li><strong>Constraint/Coercive</strong> If you resist them, you feel the pressure social sanctions, peer disapproval, legal punishment.</li>
- <li><strong>Generality</strong> Found generally across society, not specific to one individual.</li>
- <li><strong>Independence</strong> Social facts have a reality <em>sui generis</em> (a kind of their own). Society is more than the sum of its parts when individuals associate, wholly new phenomena emerge that cannot be found in any individual alone.</li>
+ <li><strong>Externality</strong>: Social facts exist outside the individual; learned through socialisation. E.g. nationalism comes into existence through collectivity and becomes external to individuals.</li>
+ <li><strong>Constraint/Coercive</strong>: If you resist them, you feel the pressure social sanctions, peer disapproval, legal punishment.</li>
+ <li><strong>Generality</strong>: Found generally across society, not specific to one individual.</li>
+ <li><strong>Independence</strong>: Social facts have a reality <em>sui generis</em> (a kind of their own). Society is more than the sum of its parts when individuals associate, wholly new phenomena emerge that cannot be found in any individual alone.</li>
 </ul>
 
 <h3>Rules of Sociological Method</h3>
 <ul>
- <li><strong>Rule 1 Observe SF as things:</strong> Rid yourself of prejudices. Do not call caste or religion illogical treat them as objective facts to be observed. Build theory from observation (inductive).</li>
- <li><strong>Rule 2 Normal vs Pathological SF:</strong> Normal = generally encountered and inevitable. Pathological = deviation from the standard. Crime is actually <em>normal</em> present in all societies, inevitable because not every member can be equally committed to collective sentiments. Without crime, there would be no Socrates, no Galileo, no Martin Luther King. Crime is "an anticipation of the morality of the future." The function of punishment is not to eliminate crime but to maintain collective sentiments at the right level of strength.</li>
- <li><strong>Rule 3 Classify societies:</strong> According to degree of organisation. Durkheim's bipolar model mechanical (simplest) → organic (most complex).</li>
- <li><strong>Rule 4 Explain SFs:</strong> The cause of a social fact is always another social fact never individual psychology. E.g. cause of suicide rates = social currents of integration and regulation, not individual mental states. Function of a SF = its contribution to social equilibrium.</li>
- <li><strong>Rule 5 Comparative Method:</strong> Since laboratory experiments are impossible in social science, use the "method of concomitant variation" if variation in A coincides with variation in B, they are causally related. "Comparative sociology is not a particular branch of sociology; it is sociology itself."</li>
+ <li><strong>Rule 1 Observe SF as things:</strong>: Rid yourself of prejudices. Do not call caste or religion illogical treat them as objective facts to be observed. Build theory from observation (inductive).</li>
+ <li><strong>Rule 2 Normal vs Pathological SF:</strong>: Normal = generally encountered and inevitable. Pathological = deviation from the standard. Crime is actually <em>normal</em> present in all societies, inevitable because not every member can be equally committed to collective sentiments. Without crime, there would be no Socrates, no Galileo, no Martin Luther King. Crime is "an anticipation of the morality of the future." The function of punishment is not to eliminate crime but to maintain collective sentiments at the right level of strength.</li>
+ <li><strong>Rule 3 Classify societies:</strong>: According to degree of organisation. Durkheim's bipolar model mechanical (simplest) → organic (most complex).</li>
+ <li><strong>Rule 4 Explain SFs:</strong>: The cause of a social fact is always another social fact never individual psychology. E.g. cause of suicide rates = social currents of integration and regulation, not individual mental states. Function of a SF = its contribution to social equilibrium.</li>
+ <li><strong>Rule 5 Comparative Method:</strong>: Since laboratory experiments are impossible in social science, use the "method of concomitant variation" if variation in A coincides with variation in B, they are causally related. "Comparative sociology is not a particular branch of sociology; it is sociology itself."</li>
 </ul>
 
 <h2>Suicide</h2>
@@ -479,8 +479,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Social Integration and Regulation</h3>
 <p>Durkheim identified two social forces that govern suicide rates:</p>
 <ul>
- <li><strong>Social Integration</strong> The extent to which an individual feels accepted as a full member of a group. Higher integration = lower egoistic suicide.</li>
- <li><strong>Social Regulation</strong> The extent to which limitless individual desires are controlled by social norms. Higher regulation = lower anomic suicide.</li>
+ <li><strong>Social Integration</strong>: The extent to which an individual feels accepted as a full member of a group. Higher integration = lower egoistic suicide.</li>
+ <li><strong>Social Regulation</strong>: The extent to which limitless individual desires are controlled by social norms. Higher regulation = lower anomic suicide.</li>
 </ul>
 
 <h3>Four Types of Suicide</h3>
@@ -543,8 +543,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Sacred and Profane</h3>
 <p>All religions divide the world into two categories:</p>
 <ul>
- <li><strong>Sacred</strong> Things set apart, forbidden, treated with awe and reverence. The totem (clan's emblem usually an animal or plant) is sacred.</li>
- <li><strong>Profane</strong> Ordinary, everyday things.</li>
+ <li><strong>Sacred</strong>: Things set apart, forbidden, treated with awe and reverence. The totem (clan's emblem usually an animal or plant) is sacred.</li>
+ <li><strong>Profane</strong>: Ordinary, everyday things.</li>
 </ul>
 <p>Religious practices and beliefs centre on the sacred and unite believers into a <strong>moral community (Church)</strong>.</p>
 
@@ -556,10 +556,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Functions of Religion</h3>
 <ul>
- <li><strong>Social cohesion</strong> Unites community around shared beliefs and rituals.</li>
- <li><strong>Social control</strong> Regulates behaviour through moral codes.</li>
- <li><strong>Meaning</strong> Provides framework for understanding the world and individual's place in it.</li>
- <li><strong>Collective representations</strong> Religious symbols (totems, flags) represent and reinforce collective identity.</li>
+ <li><strong>Social cohesion</strong>: Unites community around shared beliefs and rituals.</li>
+ <li><strong>Social control</strong>: Regulates behaviour through moral codes.</li>
+ <li><strong>Meaning</strong>: Provides framework for understanding the world and individual's place in it.</li>
+ <li><strong>Collective representations</strong>: Religious symbols (totems, flags) represent and reinforce collective identity.</li>
 </ul>
 
 <h3>Religion in Modern Society</h3>
@@ -567,39 +567,39 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Contribution of Durkheim to Sociology</h2>
 <ul>
- <li><strong>Established sociology as a discipline</strong> Differentiated it from philosophy and psychology through the concept of social facts.</li>
- <li><strong>Positivist methodology</strong> Demonstrated that social science could use empirical, comparative, statistical methods (Suicide study as the model).</li>
- <li><strong>Concept of anomie</strong> Foundational for understanding deviance, crime, and social pathology. Influenced Merton's strain theory.</li>
- <li><strong>Foundation of structural functionalism</strong> His focus on macro-level social facts and social functions directly shaped Parsons, Merton, and the entire functionalist tradition.</li>
- <li><strong>Sociology of religion</strong> Showed that religion is a social phenomenon with social functions, not merely supernatural belief.</li>
- <li><strong>Education and morality</strong> His writings on moral education influenced policy on civic education and national integration.</li>
- <li><strong>Relevance in India</strong> Ramachandra Guha: "The rash of suicides in Bangalore is a qualitatively new development. What we now await is an Indian Durkheim." His anomie framework explains farmer suicides, urban loneliness, and breakdown of traditional communities.</li>
+ <li><strong>Established sociology as a discipline</strong>: Differentiated it from philosophy and psychology through the concept of social facts.</li>
+ <li><strong>Positivist methodology</strong>: Demonstrated that social science could use empirical, comparative, statistical methods (Suicide study as the model).</li>
+ <li><strong>Concept of anomie</strong>: Foundational for understanding deviance, crime, and social pathology. Influenced Merton's strain theory.</li>
+ <li><strong>Foundation of structural functionalism</strong>: His focus on macro-level social facts and social functions directly shaped Parsons, Merton, and the entire functionalist tradition.</li>
+ <li><strong>Sociology of religion</strong>: Showed that religion is a social phenomenon with social functions, not merely supernatural belief.</li>
+ <li><strong>Education and morality</strong>: His writings on moral education influenced policy on civic education and national integration.</li>
+ <li><strong>Relevance in India</strong>: Ramachandra Guha: "The rash of suicides in Bangalore is a qualitatively new development. What we now await is an Indian Durkheim." His anomie framework explains farmer suicides, urban loneliness, and breakdown of traditional communities.</li>
 </ul>
 
 <h2>Criticisms of Durkheim</h2>
 
 <h3>Criticism of Social Facts</h3>
 <ul>
- <li><strong>Max Weber</strong> Social facts make the individual redundant and assumes passive reaction to external stimuli. To understand social facts, we must understand individual meaning and motive.</li>
+ <li><strong>Max Weber</strong>: Social facts make the individual redundant and assumes passive reaction to external stimuli. To understand social facts, we must understand individual meaning and motive.</li>
  <li><strong>Anthony Giddens</strong> (<em>New Rules of Sociological Method</em>) Sociological method should focus on the negotiation between agents and structures, not commit mechanically to scientific method.</li>
- <li><strong>Internal contradiction</strong> Durkheim proposed to treat social facts as things, yet also treated the breakdown of norms as pathologies that could be "cured." He was both a positivist and a moralist.</li>
+ <li><strong>Internal contradiction</strong>: Durkheim proposed to treat social facts as things, yet also treated the breakdown of norms as pathologies that could be "cured." He was both a positivist and a moralist.</li>
 </ul>
 
 <h3>Criticism of Division of Labour</h3>
 <ul>
  <li><strong>Lukes</strong> "Durkheim vastly understated the degree of interdependence in pre-industrial societies, constituted by ties of kinship, ritual participation, and political alliance."</li>
- <li><strong>Michael Clarke</strong> Durkheim lumped a vast variety of societies into just two groups (industrial and non-industrial).</li>
- <li><strong>M.C. Kennedy</strong> When we inspect abnormal forms globally, it is difficult to find one clear-cut case of the "normal" DOL. Normal DOL is the ideal of a moralistic sociologist, not of a sociologist of morals.</li>
- <li><strong>Henry Orenstein</strong> The Indian jajmani system creates organic solidarity between jajman (upper caste) and kamin (service caste) but this solidarity blinds us to caste exploitation.</li>
- <li><strong>Dumont</strong> The Indian caste system is an example of organic solidarity, suggesting Durkheim's model is applicable but does not account for hierarchy.</li>
+ <li><strong>Michael Clarke</strong>: Durkheim lumped a vast variety of societies into just two groups (industrial and non-industrial).</li>
+ <li><strong>M.C. Kennedy</strong>: When we inspect abnormal forms globally, it is difficult to find one clear-cut case of the "normal" DOL. Normal DOL is the ideal of a moralistic sociologist, not of a sociologist of morals.</li>
+ <li><strong>Henry Orenstein</strong>: The Indian jajmani system creates organic solidarity between jajman (upper caste) and kamin (service caste) but this solidarity blinds us to caste exploitation.</li>
+ <li><strong>Dumont</strong>: The Indian caste system is an example of organic solidarity, suggesting Durkheim's model is applicable but does not account for hierarchy.</li>
 </ul>
 
 <h3>Criticism of Suicide</h3>
 <ul>
- <li><strong>J.D. Douglas</strong> Suicide statistics are social constructions; they only tell us about coroners' decisions to label deaths as suicides. Qualitative case studies, not quantitative comparisons, are needed. Different cultures give suicide different meanings Eskimo altruistic suicide vs. businessman's anomic suicide are fundamentally different acts.</li>
- <li><strong>Atkinson</strong> Coroners use a common-sense theory of suicide (documentary method). They look for suicide notes; drowning and hanging are more likely to be labelled suicide; road deaths are rarely so labelled. Statistics therefore reflect classification practices, not social facts.</li>
- <li><strong>Gibbs & Martin</strong> No adequate operational definition of social integration. Durkheim's reference to "suicidal currents" is unscientific they cannot be observed or measured, making the theory unfalsifiable (pseudo-science).</li>
- <li><strong>Types not mutually exclusive</strong> A single suicide may combine egoistic, anomic, and other elements simultaneously.</li>
+ <li><strong>J.D. Douglas</strong>: Suicide statistics are social constructions; they only tell us about coroners' decisions to label deaths as suicides. Qualitative case studies, not quantitative comparisons, are needed. Different cultures give suicide different meanings Eskimo altruistic suicide vs. businessman's anomic suicide are fundamentally different acts.</li>
+ <li><strong>Atkinson</strong>: Coroners use a common-sense theory of suicide (documentary method). They look for suicide notes; drowning and hanging are more likely to be labelled suicide; road deaths are rarely so labelled. Statistics therefore reflect classification practices, not social facts.</li>
+ <li><strong>Gibbs & Martin</strong>: No adequate operational definition of social integration. Durkheim's reference to "suicidal currents" is unscientific they cannot be observed or measured, making the theory unfalsifiable (pseudo-science).</li>
+ <li><strong>Types not mutually exclusive</strong>: A single suicide may combine egoistic, anomic, and other elements simultaneously.</li>
 </ul>
 
 <h3>Criticism of Religion</h3>
@@ -612,10 +612,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>General Criticisms</h3>
 <ul>
- <li><strong>Conservative bias</strong> Durkheim's focus on order, consensus, and solidarity led him to treat conflict and deviance as temporary "pathologies" rather than inherent features of social structure.</li>
- <li><strong>Teleology</strong> His functionalist explanations assume that institutions exist <em>because</em> they serve a function but this cannot explain how or why they came to exist.</li>
- <li><strong>Neglect of agency</strong> Over-emphasis on social structures and collective forces at the expense of individual agency, creativity, and resistance.</li>
- <li><strong>Post-Modernists</strong> Reject Durkheim's search for universal laws of social behaviour as a grand narrative incompatible with the diversity and complexity of post-modern society.</li>
+ <li><strong>Conservative bias</strong>: Durkheim's focus on order, consensus, and solidarity led him to treat conflict and deviance as temporary "pathologies" rather than inherent features of social structure.</li>
+ <li><strong>Teleology</strong>: His functionalist explanations assume that institutions exist <em>because</em> they serve a function but this cannot explain how or why they came to exist.</li>
+ <li><strong>Neglect of agency</strong>: Over-emphasis on social structures and collective forces at the expense of individual agency, creativity, and resistance.</li>
+ <li><strong>Post-Modernists</strong>: Reject Durkheim's search for universal laws of social behaviour as a grand narrative incompatible with the diversity and complexity of post-modern society.</li>
 </ul>
 
 `,
@@ -683,10 +683,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Objectivity in Social Sciences</h3>
 <ul>
- <li><strong>Value relevance</strong> Values necessarily enter into the selection of a research topic. The researcher must clarify these values at the outset. Transparency about value relevance enables objectivity.</li>
- <li><strong>Value neutrality</strong> When describing the values of others, the sociologist must neutrally record them without being affected by personal beliefs. Weber: the sociologist must "practice iron will" to remain value-neutral. E.g. when studying ritual cock-fights, do not ridicule them understand the deep symbolic meaning (as Geertz did, calling it a "symbolic war over status").</li>
- <li><strong>Ideal types</strong> Since complete objectivity is impossible, use ideal types as methodological tools to standardise analysis and enable comparison.</li>
- <li><strong>Causal probabilism</strong> Causality in social science is probabilistic, not deterministic. Weber expressed causes as "probable factors", not necessary and sufficient conditions.</li>
+ <li><strong>Value relevance</strong>: Values necessarily enter into the selection of a research topic. The researcher must clarify these values at the outset. Transparency about value relevance enables objectivity.</li>
+ <li><strong>Value neutrality</strong>: When describing the values of others, the sociologist must neutrally record them without being affected by personal beliefs. Weber: the sociologist must "practice iron will" to remain value-neutral. E.g. when studying ritual cock-fights, do not ridicule them understand the deep symbolic meaning (as Geertz did, calling it a "symbolic war over status").</li>
+ <li><strong>Ideal types</strong>: Since complete objectivity is impossible, use ideal types as methodological tools to standardise analysis and enable comparison.</li>
+ <li><strong>Causal probabilism</strong>: Causality in social science is probabilistic, not deterministic. Weber expressed causes as "probable factors", not necessary and sufficient conditions.</li>
 </ul>
 
 <h3>Limitations of Verstehen</h3>
@@ -712,8 +712,8 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Two Types of Ideal Types</h3>
 <ul>
- <li><strong>Historical Particular</strong> Emerge in specific historical conditions; unique. E.g. capitalism in the Protestant West.</li>
- <li><strong>Historical Universal</strong> Found across various historical contexts. E.g. bureaucracy, feudalism.</li>
+ <li><strong>Historical Particular</strong>: Emerge in specific historical conditions; unique. E.g. capitalism in the Protestant West.</li>
+ <li><strong>Historical Universal</strong>: Found across various historical contexts. E.g. bureaucracy, feudalism.</li>
 </ul>
 
 <h2>Social Action</h2>
@@ -768,9 +768,9 @@ export const sociologyNoteContent: Record<string, string> = {
 <p><strong>Book:</strong> <em>Theory of Social and Economic Organizations</em> (1920)</p>
 
 <ul>
- <li><strong>Power</strong> The probability of a person or group exercising their will even against the resistance of others.</li>
- <li><strong>Domination</strong> The probability that specific commands will be obeyed by a given group.</li>
- <li><strong>Authority (Legitimate Domination)</strong> Domination that is accepted and considered rightful by subordinates. This is less costly than coercive or reward-based authority, as it requires no constant surveillance or material incentives.</li>
+ <li><strong>Power</strong>: The probability of a person or group exercising their will even against the resistance of others.</li>
+ <li><strong>Domination</strong>: The probability that specific commands will be obeyed by a given group.</li>
+ <li><strong>Authority (Legitimate Domination)</strong>: Domination that is accepted and considered rightful by subordinates. This is less costly than coercive or reward-based authority, as it requires no constant surveillance or material incentives.</li>
 </ul>
 
 <p>Weber identified three pure types of legitimate authority:</p>
@@ -780,9 +780,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Sub-types:</strong></p>
 <ul>
- <li><strong>Gerontocracy</strong> Rule by elders. E.g. Ancient Athenian democracy, village panchayat, caste councils.</li>
- <li><strong>Patriarchalism</strong> Authority of the father/husband/senior. The patriarch rules without a formal administrative staff.</li>
- <li><strong>Patrimonialism</strong> Extended version; the patriarch rules with the help of a personal administrative staff (traditional bureaucracy). All officials are personal loyalists, not servants of the nation. No separation between public and private ends. No systematic appointment or promotion. E.g. Mughal Empire, Ancient Egypt, medieval Catholic Church.</li>
+ <li><strong>Gerontocracy</strong>: Rule by elders. E.g. Ancient Athenian democracy, village panchayat, caste councils.</li>
+ <li><strong>Patriarchalism</strong>: Authority of the father/husband/senior. The patriarch rules without a formal administrative staff.</li>
+ <li><strong>Patrimonialism</strong>: Extended version; the patriarch rules with the help of a personal administrative staff (traditional bureaucracy). All officials are personal loyalists, not servants of the nation. No separation between public and private ends. No systematic appointment or promotion. E.g. Mughal Empire, Ancient Egypt, medieval Catholic Church.</li>
 </ul>
 
 <p>Weber saw traditional authority as a barrier to formal rationality. Patrimonialism permits primitive capitalism but not the highly rational capitalism of the modern West.</p>
@@ -861,10 +861,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Weber identified four types of rationality:</p>
 <ul>
- <li><strong>Practical rationality</strong> Best way to achieve a desired end based on what is practical. Trans-civilisational (exists in all societies).</li>
- <li><strong>Theoretical rationality</strong> Understanding through abstract concepts; province of intellectuals.</li>
- <li><strong>Substantive rationality</strong> Choosing based on values and morality (what is right/wrong).</li>
- <li><strong>Formal rationality</strong> Matter-of-fact calculation of the most efficient means to accomplish a task. <em>Arose only in the West with industrialisation.</em></li>
+ <li><strong>Practical rationality</strong>: Best way to achieve a desired end based on what is practical. Trans-civilisational (exists in all societies).</li>
+ <li><strong>Theoretical rationality</strong>: Understanding through abstract concepts; province of intellectuals.</li>
+ <li><strong>Substantive rationality</strong>: Choosing based on values and morality (what is right/wrong).</li>
+ <li><strong>Formal rationality</strong>: Matter-of-fact calculation of the most efficient means to accomplish a task. <em>Arose only in the West with industrialisation.</em></li>
 </ul>
 
 <p><strong>Rationalisation</strong> = the historical process by which formal rationality increasingly dominates all spheres of life, replacing tradition, emotion, and substantive values with cold calculation.</p>
@@ -937,14 +937,14 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Disadvantages of Bureaucracy</h3>
 <ul>
  <li><strong>Red tape</strong> procrastination, delays, excessive paperwork.</li>
- <li><strong>Oligarchy (Robert Michels Iron Law of Oligarchy)</strong> All large organisations inevitably become dominated by a small group of leaders. Even socialist parties with democratic ideology end up oligarchic in practice.</li>
+ <li><strong>Oligarchy (Robert Michels Iron Law of Oligarchy)</strong>: All large organisations inevitably become dominated by a small group of leaders. Even socialist parties with democratic ideology end up oligarchic in practice.</li>
  <li><strong>Bureaucratic alienation</strong> generates passive, rule-bound individuals unable to be creative or expressive. <em>Irrationality of rationality.</em></li>
  <li><strong>Iron cage</strong> see above.</li>
- <li><strong>Goal displacement (R.K. Merton)</strong> Bureaucrats engage in "bureaucratic ritualism" so focused on following procedures that they lose sight of the actual goal. <em>Trained incapacity</em> (Veblen) workers become so specialised they cannot handle unique problems.</li>
- <li><strong>Peter Principle</strong> People are promoted for performing well until they reach a level at which they can no longer perform. They hide behind the work of juniors.</li>
- <li><strong>Bureaucracy's other face (Charles Page)</strong> Every bureaucracy has an informal network (grapevine) that often works faster and more accurately than formal channels.</li>
- <li><strong>Latif Chowdhury Rent-Seeking Bureaucracy</strong> In the third world, lower-level bureaucrats use their position for rent-seeking (bribery), converting public wealth into private gain.</li>
- <li><strong>Alvin Gouldner</strong> Increased bureaucratisation can actually decrease productivity (gypsum mine study). Degree of bureaucratisation varies inversely with efficiency of work.</li>
+ <li><strong>Goal displacement (R.K. Merton)</strong>: Bureaucrats engage in "bureaucratic ritualism" so focused on following procedures that they lose sight of the actual goal. <em>Trained incapacity</em> (Veblen) workers become so specialised they cannot handle unique problems.</li>
+ <li><strong>Peter Principle</strong>: People are promoted for performing well until they reach a level at which they can no longer perform. They hide behind the work of juniors.</li>
+ <li><strong>Bureaucracy's other face (Charles Page)</strong>: Every bureaucracy has an informal network (grapevine) that often works faster and more accurately than formal channels.</li>
+ <li><strong>Latif Chowdhury Rent-Seeking Bureaucracy</strong>: In the third world, lower-level bureaucrats use their position for rent-seeking (bribery), converting public wealth into private gain.</li>
+ <li><strong>Alvin Gouldner</strong>: Increased bureaucratisation can actually decrease productivity (gypsum mine study). Degree of bureaucratisation varies inversely with efficiency of work.</li>
 </ul>
 
 <h3>Burns and Stalker Mechanistic vs Organic Organisations</h3>
@@ -974,10 +974,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Four Types of Capitalism</h3>
 <ul>
- <li><strong>Traditional capitalism</strong> Selling few luxury products to few clients at high prices (silk route merchants, Italian city-states).</li>
- <li><strong>Pariah capitalism</strong> Money-lending by Jews excluded from mainstream society.</li>
- <li><strong>Booty capitalism</strong> Acquiring wealth through war and plunder.</li>
- <li><strong>Legal-rational industrial capitalism</strong> Mass production, disciplined labour, rational calculation of profit, reinvestment of surplus. Uniquely Western and modern.</li>
+ <li><strong>Traditional capitalism</strong>: Selling few luxury products to few clients at high prices (silk route merchants, Italian city-states).</li>
+ <li><strong>Pariah capitalism</strong>: Money-lending by Jews excluded from mainstream society.</li>
+ <li><strong>Booty capitalism</strong>: Acquiring wealth through war and plunder.</li>
+ <li><strong>Legal-rational industrial capitalism</strong>: Mass production, disciplined labour, rational calculation of profit, reinvestment of surplus. Uniquely Western and modern.</li>
 </ul>
 
 <h3>The Spirit of Capitalism</h3>
@@ -988,8 +988,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>The Protestant (Calvinist) Connection</h3>
 <p>Calvinism and Puritanism gave this spirit its religious sanction through two key doctrines:</p>
 <ul>
- <li><strong>Predestination</strong> God has already decided who goes to heaven. No one knows whether they are saved. This creates enormous <em>salvation anxiety</em>.</li>
- <li><strong>Calling (Beruf)</strong> One's worldly occupation is a divine calling. Doing it diligently, methodically, and efficiently is a sign of being among the elect (the saved).</li>
+ <li><strong>Predestination</strong>: God has already decided who goes to heaven. No one knows whether they are saved. This creates enormous <em>salvation anxiety</em>.</li>
+ <li><strong>Calling (Beruf)</strong>: One's worldly occupation is a divine calling. Doing it diligently, methodically, and efficiently is a sign of being among the elect (the saved).</li>
 </ul>
 
 <p>The result: Calvinists worked <strong>hard, methodically, and frugally</strong> not to enjoy wealth, but to convince themselves (and signal to God) that they were predestined for salvation. Spending on luxury was sinful. Profit was reinvested. This <strong>inner-worldly asceticism</strong> disciplined, rational, systematic work in the world was the psychological foundation of capitalism.</p>
@@ -1067,13 +1067,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Critique of Protestant Ethic Thesis</h3>
 <ul>
- <li><strong>Amintore Fanfani</strong> Spirit of capitalism born in Italian merchant states under Catholicism, as a result of the Renaissance and Reformation not Protestantism specifically.</li>
- <li><strong>R.H. Tawney</strong> Capitalist institutions (banking, long-distance credit) preceded the Reformation. "Capitalism was the cause and justification of the Protestant Ethic, not the effect."</li>
- <li><strong>Kurt Samuelsson</strong> The success of England and Holland lay in their geographic location on ocean trade routes, predating the Reformation by centuries.</li>
- <li><strong>Milton Singer</strong> Through "compartmentalisation," Indian industrialists in Madras kept business obligations and ritual obligations in separate compartments without conflict. Capitalism in India can develop within existing cultural norms.</li>
- <li><strong>Meera Nanda</strong> Hinduism has evolved: tele-gurus now present wealth as a sign of divine favour, enabling economic growth without abandoning Hindu identity.</li>
- <li><strong>JPS Uberoi and Veena Das</strong> Protestant-like values (prudence, rational use of money, methodical work) are present in Baniyas, Sindhis, Parsis, and Punjabis across different religions. Protestant Ethic is not religion-specific.</li>
- <li><strong>Unfalsifiable</strong> Weber's theory cannot be tested with available historical evidence, lacks reliability, and cannot be falsified.</li>
+ <li><strong>Amintore Fanfani</strong>: Spirit of capitalism born in Italian merchant states under Catholicism, as a result of the Renaissance and Reformation not Protestantism specifically.</li>
+ <li><strong>R.H. Tawney</strong>: Capitalist institutions (banking, long-distance credit) preceded the Reformation. "Capitalism was the cause and justification of the Protestant Ethic, not the effect."</li>
+ <li><strong>Kurt Samuelsson</strong>: The success of England and Holland lay in their geographic location on ocean trade routes, predating the Reformation by centuries.</li>
+ <li><strong>Milton Singer</strong>: Through "compartmentalisation," Indian industrialists in Madras kept business obligations and ritual obligations in separate compartments without conflict. Capitalism in India can develop within existing cultural norms.</li>
+ <li><strong>Meera Nanda</strong>: Hinduism has evolved: tele-gurus now present wealth as a sign of divine favour, enabling economic growth without abandoning Hindu identity.</li>
+ <li><strong>JPS Uberoi and Veena Das</strong>: Protestant-like values (prudence, rational use of money, methodical work) are present in Baniyas, Sindhis, Parsis, and Punjabis across different religions. Protestant Ethic is not religion-specific.</li>
+ <li><strong>Unfalsifiable</strong>: Weber's theory cannot be tested with available historical evidence, lacks reliability, and cannot be falsified.</li>
 </ul>
 
 <h3>Critique of Verstehen and Social Action</h3>
@@ -1093,9 +1093,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>General Critiques</h3>
 <ul>
- <li><strong>Eurocentrism</strong> His comparative studies of China, India, and Islam have been criticised for misrepresenting non-Western religions and societies.</li>
- <li><strong>Neglect of class and inequality</strong> Weber's multi-causal framework, while richer than Marx, sometimes obscures systematic economic exploitation.</li>
- <li><strong>Over-emphasis on ideas</strong> Critics argue he swung too far in the opposite direction from Marx, underestimating material and structural forces.</li>
+ <li><strong>Eurocentrism</strong>: His comparative studies of China, India, and Islam have been criticised for misrepresenting non-Western religions and societies.</li>
+ <li><strong>Neglect of class and inequality</strong>: Weber's multi-causal framework, while richer than Marx, sometimes obscures systematic economic exploitation.</li>
+ <li><strong>Over-emphasis on ideas</strong>: Critics argue he swung too far in the opposite direction from Marx, underestimating material and structural forces.</li>
 </ul>
 
 `,
@@ -1168,9 +1168,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>How Parsons Builds on Earlier Thinkers</h3>
 <ul>
- <li><strong>From Weber</strong> Subjective meaning and verstehen: analysis "from the point of view of the actor."</li>
- <li><strong>From Durkheim</strong> Normative orientation: "actors work within a framework of values." Socialisation as the key mechanism of order.</li>
- <li><strong>Departure</strong> Parsons ignores Marxian conflict approaches entirely; prioritises consensus over contradiction.</li>
+ <li><strong>From Weber</strong>: Subjective meaning and verstehen: analysis "from the point of view of the actor."</li>
+ <li><strong>From Durkheim</strong>: Normative orientation: "actors work within a framework of values." Socialisation as the key mechanism of order.</li>
+ <li><strong>Departure</strong>: Parsons ignores Marxian conflict approaches entirely; prioritises consensus over contradiction.</li>
 </ul>
 
 <h2>Pattern Variables</h2>
@@ -1346,40 +1346,40 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Grand theory</strong> first truly systematic attempt to integrate micro (social action) and macro (social system) sociology.</li>
  <li><strong>AGIL framework</strong> a versatile analytical tool applied to any social system at any scale.</li>
  <li><strong>Pattern variables</strong> operationalised the study of social change and modernisation in comparative sociology.</li>
- <li><strong>Professions sociology</strong> Parsons pioneered the sociology of professions, showing how professionals (doctors, lawyers) navigate the tension between universalism and particularism.</li>
+ <li><strong>Professions sociology</strong>: Parsons pioneered the sociology of professions, showing how professionals (doctors, lawyers) navigate the tension between universalism and particularism.</li>
  <li><strong>Family sociology</strong> highlighted the irreducible functions of the nuclear family in modern society, influencing decades of family research.</li>
- <li><strong>Structural functionalism</strong> Parsons is its primary architect; influenced Merton, Smelser, Bellah, and the entire Chicago School tradition.</li>
+ <li><strong>Structural functionalism</strong>: Parsons is its primary architect; influenced Merton, Smelser, Bellah, and the entire Chicago School tradition.</li>
 </ul>
 
 <h2>Criticisms of Parsons</h2>
 
 <h3>The Problem of Conflict</h3>
 <ul>
- <li><strong>C. Wright Mills</strong> Parsons produces "Grand Theory" so abstract it says nothing about real societies, real power, or real conflict. His system is an apology for the status quo. Parsons can't explain why some groups are systematically excluded from power.</li>
- <li><strong>Ralf Dahrendorf</strong> Parsons' model suffers from "Utopian" bias: it assumes integration, consensus, and stability. Real societies are characterised by conflict, coercion, and change. Dahrendorf proposed a conflict model as a corrective.</li>
- <li><strong>Alvin Gouldner</strong> Parsons' functionalism reflects the ideology of the American welfare state of the 1950s consensus, managed change, integration. It ignores economic exploitation, racial exclusion, and gender oppression.</li>
- <li><strong>Marx</strong> Value consensus is a mystification. What appears to be shared values is in fact ruling-class ideology false consciousness. The state and legal system serve class interests, not social integration.</li>
+ <li><strong>C. Wright Mills</strong>: Parsons produces "Grand Theory" so abstract it says nothing about real societies, real power, or real conflict. His system is an apology for the status quo. Parsons can't explain why some groups are systematically excluded from power.</li>
+ <li><strong>Ralf Dahrendorf</strong>: Parsons' model suffers from "Utopian" bias: it assumes integration, consensus, and stability. Real societies are characterised by conflict, coercion, and change. Dahrendorf proposed a conflict model as a corrective.</li>
+ <li><strong>Alvin Gouldner</strong>: Parsons' functionalism reflects the ideology of the American welfare state of the 1950s consensus, managed change, integration. It ignores economic exploitation, racial exclusion, and gender oppression.</li>
+ <li><strong>Marx</strong>: Value consensus is a mystification. What appears to be shared values is in fact ruling-class ideology false consciousness. The state and legal system serve class interests, not social integration.</li>
 </ul>
 
 <h3>The Problem of Order and Tautology</h3>
 <ul>
- <li><strong>Teleology</strong> Parsons explains institutions by their functions: "religion exists because it integrates society." But this cannot explain how or why religion came to exist. It assumes the result (integration) caused the institution putting the cart before the horse.</li>
+ <li><strong>Teleology</strong>: Parsons explains institutions by their functions: "religion exists because it integrates society." But this cannot explain how or why religion came to exist. It assumes the result (integration) caused the institution putting the cart before the horse.</li>
  <li><strong>Tautology</strong> "Society persists because its parts are functional" and "its parts are functional because society persists." Circular reasoning with no explanatory power.</li>
- <li><strong>Conservative bias</strong> By focusing on equilibrium and social order, Parsons treats existing inequalities and power structures as functional necessities. What appears as a social problem may actually be the system working as intended.</li>
+ <li><strong>Conservative bias</strong>: By focusing on equilibrium and social order, Parsons treats existing inequalities and power structures as functional necessities. What appears as a social problem may actually be the system working as intended.</li>
 </ul>
 
 <h3>The Problem of the Individual</h3>
 <ul>
- <li><strong>Wrong image of man (Dennis Wrong)</strong> Parsons gives an "oversocialised concept of man." Individuals appear as passive products of socialisation cultural dupes who simply internalise and reproduce whatever values they are given. This denies agency, creativity, resistance, and the capacity to negotiate, reinterpret, or reject social values.</li>
- <li><strong>Symbolic Interactionists</strong> People do not simply absorb values; they actively construct meaning in interaction. Parsons ignores the micro-level negotiation of social reality.</li>
- <li><strong>Phenomenologists (Schutz)</strong> Social life is constituted through actors' taken-for-granted assumptions and interpretive practices not the abstract value systems Parsons describes.</li>
+ <li><strong>Wrong image of man (Dennis Wrong)</strong>: Parsons gives an "oversocialised concept of man." Individuals appear as passive products of socialisation cultural dupes who simply internalise and reproduce whatever values they are given. This denies agency, creativity, resistance, and the capacity to negotiate, reinterpret, or reject social values.</li>
+ <li><strong>Symbolic Interactionists</strong>: People do not simply absorb values; they actively construct meaning in interaction. Parsons ignores the micro-level negotiation of social reality.</li>
+ <li><strong>Phenomenologists (Schutz)</strong>: Social life is constituted through actors' taken-for-granted assumptions and interpretive practices not the abstract value systems Parsons describes.</li>
 </ul>
 
 <h3>The Problem of Change</h3>
 <ul>
  <li>Parsons' model best explains continuity and order it struggles to account for rapid, disruptive, or revolutionary change.</li>
  <li>His theory of moving equilibrium assumes change is always system-preserving. Revolutionary change that dismantles existing structures (e.g. the French Revolution, decolonisation) does not fit the model.</li>
- <li><strong>Neo-Marxists</strong> Gramsci's hegemony, Althusser's ideological state apparatuses offer richer accounts of how social order is actively produced and contested, not simply given by shared values.</li>
+ <li><strong>Neo-Marxists</strong>: Gramsci's hegemony, Althusser's ideological state apparatuses offer richer accounts of how social order is actively produced and contested, not simply given by shared values.</li>
 </ul>
 
 <h3>Empirical Limitations</h3>
@@ -1486,8 +1486,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h2>Manifest and Latent Functions</h2>
 
 <ul>
- <li><strong>Manifest Functions</strong> Conscious, intended, and recognised consequences of an action, institution, or social pattern that contribute to its adjustment or adaptation. These are the stated purposes.</li>
- <li><strong>Latent Functions</strong> Unintended and unrecognised consequences of any social pattern. Peter Berger calls this <em>debunking</em> looking beyond stated facts to what is actually happening.</li>
+ <li><strong>Manifest Functions</strong>: Conscious, intended, and recognised consequences of an action, institution, or social pattern that contribute to its adjustment or adaptation. These are the stated purposes.</li>
+ <li><strong>Latent Functions</strong>: Unintended and unrecognised consequences of any social pattern. Peter Berger calls this <em>debunking</em> looking beyond stated facts to what is actually happening.</li>
 </ul>
 
 <p>Merton insists that social function refers to <strong>observable objective consequences</strong>, not subjective dispositions. The function of marriage is not "materialisation of love" that is its manifest purpose. Its latent function is the stabilisation and continuation of society through regulated reproduction, property transmission, and socialisation of children.</p>
@@ -1545,8 +1545,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Merton's Core Argument</h3>
 <p>Merton reinterpreted Durkheim's concept of anomie for American society. He argued that the social structure of the USA creates a fundamental <strong>structural strain</strong>:</p>
 <ul>
- <li><strong>Culturally defined goals</strong> Material success (wealth, status, the American Dream). These are equally shared among all members of society.</li>
- <li><strong>Institutionally approved means</strong> Education, hard work, talent. These are <em>not</em> equally distributed.</li>
+ <li><strong>Culturally defined goals</strong>: Material success (wealth, status, the American Dream). These are equally shared among all members of society.</li>
+ <li><strong>Institutionally approved means</strong>: Education, hard work, talent. These are <em>not</em> equally distributed.</li>
 </ul>
 
 <p>When individuals feel pressure to achieve culturally defined goals but lack access to legitimate means, they experience <strong>strain/anomie</strong>. This disjunction between goals and means drives deviance not individual pathology.</p>
@@ -1634,13 +1634,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Other Theories of Deviance</h3>
 <ul>
- <li><strong>Biological (Lombroso)</strong> Physical traits linked to criminality ("Born Criminal"). Physiological basis now thoroughly discredited.</li>
- <li><strong>Psychological</strong> Deviance as product of personality traits, mental illness, or failures in psychological development.</li>
- <li><strong>Social Disorganization (Chicago School)</strong> Deviant behaviour more likely in communities with deteriorated neighbourhoods and inadequate social control where family, schools, and justice system fail.</li>
- <li><strong>Differential Association (Sutherland)</strong> Criminal behaviour is learned in interaction; not inherited. Exposure to deviant acts through differential socialisation drives deviance. Sutherland also coined <em>white-collar crime</em> crimes by persons of respectability in the course of their occupation.</li>
- <li><strong>Labelling Theory (Becker)</strong> Deviance is a matter of interpretation. "Deviance is not a property of the act but of the reaction of others." Killing in war = heroism; killing in peace = murder. <em>"One person's terrorist is another person's freedom fighter."</em></li>
- <li><strong>Marxist Theory</strong> Capitalism is criminogenic: it creates poverty and encourages getting wealth at any cost. The real criminals are employers paying starvation wages. Laws are made by the powerful to protect their interests (Laurie Taylor's critique of Merton).</li>
- <li><strong>Cloward and Ohlin</strong> Extended Merton: not everyone has equal access to <em>illegitimate</em> means either. Criminal careers require learning, trust-building, and networks. Three deviant subcultures: Criminal (stable criminal networks), Conflict (street gangs driven by frustration), Retreatist (double failures who resort to drugs).</li>
+ <li><strong>Biological (Lombroso)</strong>: Physical traits linked to criminality ("Born Criminal"). Physiological basis now thoroughly discredited.</li>
+ <li><strong>Psychological</strong>: Deviance as product of personality traits, mental illness, or failures in psychological development.</li>
+ <li><strong>Social Disorganization (Chicago School)</strong>: Deviant behaviour more likely in communities with deteriorated neighbourhoods and inadequate social control where family, schools, and justice system fail.</li>
+ <li><strong>Differential Association (Sutherland)</strong>: Criminal behaviour is learned in interaction; not inherited. Exposure to deviant acts through differential socialisation drives deviance. Sutherland also coined <em>white-collar crime</em> crimes by persons of respectability in the course of their occupation.</li>
+ <li><strong>Labelling Theory (Becker)</strong>: Deviance is a matter of interpretation. "Deviance is not a property of the act but of the reaction of others." Killing in war = heroism; killing in peace = murder. <em>"One person's terrorist is another person's freedom fighter."</em></li>
+ <li><strong>Marxist Theory</strong>: Capitalism is criminogenic: it creates poverty and encourages getting wealth at any cost. The real criminals are employers paying starvation wages. Laws are made by the powerful to protect their interests (Laurie Taylor's critique of Merton).</li>
+ <li><strong>Cloward and Ohlin</strong>: Extended Merton: not everyone has equal access to <em>illegitimate</em> means either. Criminal careers require learning, trust-building, and networks. Three deviant subcultures: Criminal (stable criminal networks), Conflict (street gangs driven by frustration), Retreatist (double failures who resort to drugs).</li>
 </ul>
 
 <h2>Reference Groups</h2>
@@ -1649,11 +1649,11 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Types of Reference Groups</h3>
 <ul>
- <li><strong>Membership Group</strong> A group one belongs to that serves as a reference point. E.g. family, school class, caste group.</li>
- <li><strong>Non-Membership Group</strong> A group one does not belong to but uses as a standard of comparison. E.g. toppers, celebrities, professionals one aspires to become.</li>
- <li><strong>Positive Reference Group</strong> A group one admires and seeks to emulate; adopts their values, lifestyle, aspirations.</li>
- <li><strong>Negative Reference Group</strong> A group one dislikes and rejects; its norms provoke the creation of <em>counter-norms</em>. E.g. colonisers were a negative reference group for nationalist movements their behaviour prompted anti-colonial identity formation.</li>
- <li><strong>Reference Individual</strong> An individual (not a group) used as a role model. E.g. Sachin Tendulkar (not cricketers in general). Biographers and gossip journalists encourage identification with reference individuals by personalising their lives.</li>
+ <li><strong>Membership Group</strong>: A group one belongs to that serves as a reference point. E.g. family, school class, caste group.</li>
+ <li><strong>Non-Membership Group</strong>: A group one does not belong to but uses as a standard of comparison. E.g. toppers, celebrities, professionals one aspires to become.</li>
+ <li><strong>Positive Reference Group</strong>: A group one admires and seeks to emulate; adopts their values, lifestyle, aspirations.</li>
+ <li><strong>Negative Reference Group</strong>: A group one dislikes and rejects; its norms provoke the creation of <em>counter-norms</em>. E.g. colonisers were a negative reference group for nationalist movements their behaviour prompted anti-colonial identity formation.</li>
+ <li><strong>Reference Individual</strong>: An individual (not a group) used as a role model. E.g. Sachin Tendulkar (not cricketers in general). Biographers and gossip journalists encourage identification with reference individuals by personalising their lives.</li>
 </ul>
 
 <h3>Relative Deprivation</h3>
@@ -1666,8 +1666,8 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Functional conditions:</p>
 <ul>
- <li><strong>Open social structure</strong> Anticipatory socialisation is functional: it prepares the individual for upward mobility and acceptance in the aspired group.</li>
- <li><strong>Closed social structure</strong> Anticipatory socialisation is dysfunctional: the individual will never be accepted by the aspired group (caste system blocks entry), and simultaneously loses acceptance in their own group by adopting alien values. They become a <strong>marginal man</strong> torn between two worlds, belonging to neither.</li>
+ <li><strong>Open social structure</strong>: Anticipatory socialisation is functional: it prepares the individual for upward mobility and acceptance in the aspired group.</li>
+ <li><strong>Closed social structure</strong>: Anticipatory socialisation is dysfunctional: the individual will never be accepted by the aspired group (caste system blocks entry), and simultaneously loses acceptance in their own group by adopting alien values. They become a <strong>marginal man</strong> torn between two worlds, belonging to neither.</li>
 </ul>
 
 <p>In a closed system, individuals are less likely to choose non-membership reference groups and therefore feel less deprived. Open systems create perpetual dissatisfaction by constantly exposing individuals to better-off groups.</p>
@@ -1711,27 +1711,27 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Strain theory</strong> foundational for criminology and the sociology of deviance; explained crime rates structurally, not psychologically.</li>
  <li><strong>Reference group theory</strong> explained relative deprivation, anticipatory socialisation, and identity formation; applicable from consumer behaviour to political mobilisation.</li>
  <li><strong>Self-fulfilling prophecy</strong> widely used in social psychology, economics, and education research.</li>
- <li><strong>Sociology of science</strong> Merton developed the CUDOS norms of science (Communalism, Universalism, Disinterestedness, Organised Scepticism) still used in science studies.</li>
+ <li><strong>Sociology of science</strong>: Merton developed the CUDOS norms of science (Communalism, Universalism, Disinterestedness, Organised Scepticism) still used in science studies.</li>
 </ul>
 
 <h2>Criticisms</h2>
 
 <h3>Critique of Strain Theory</h3>
 <ul>
- <li><strong>Cohen (Delinquent Boys)</strong> Merton's theory focuses on individual adaptation to strain; doesn't explain why delinquency is a <em>group</em> phenomenon. Working-class boys lack legitimate means to achieve middle-class status goals → form delinquent subcultures that provide alternative status rewards (being feared on the street).</li>
- <li><strong>Cloward and Ohlin</strong> Not everyone has equal access to illegitimate means either. Criminal careers require learning, trust, and networks. Different types of blocked access produce different deviant subcultures.</li>
- <li><strong>Laurie Taylor</strong> Merton assumes a genuine value consensus; fails to ask <em>who defines</em> the cultural goals and the legitimate means. The whole game is rigged by the powerful. What Merton describes as value consensus is actually capitalist ideology serving bourgeois interests.</li>
- <li><strong>Narrow scope</strong> Strain theory mainly explains economically motivated crime; inadequate for violent crime, crime for pleasure, or vandalism.</li>
- <li><strong>Different goals</strong> The theory assumes a single system of cultural goals shared across society. In reality, people have diverse, culturally specific goals; the American Dream is not universal.</li>
+ <li><strong>Cohen (Delinquent Boys)</strong>: Merton's theory focuses on individual adaptation to strain; doesn't explain why delinquency is a <em>group</em> phenomenon. Working-class boys lack legitimate means to achieve middle-class status goals → form delinquent subcultures that provide alternative status rewards (being feared on the street).</li>
+ <li><strong>Cloward and Ohlin</strong>: Not everyone has equal access to illegitimate means either. Criminal careers require learning, trust, and networks. Different types of blocked access produce different deviant subcultures.</li>
+ <li><strong>Laurie Taylor</strong>: Merton assumes a genuine value consensus; fails to ask <em>who defines</em> the cultural goals and the legitimate means. The whole game is rigged by the powerful. What Merton describes as value consensus is actually capitalist ideology serving bourgeois interests.</li>
+ <li><strong>Narrow scope</strong>: Strain theory mainly explains economically motivated crime; inadequate for violent crime, crime for pleasure, or vandalism.</li>
+ <li><strong>Different goals</strong>: The theory assumes a single system of cultural goals shared across society. In reality, people have diverse, culturally specific goals; the American Dream is not universal.</li>
 </ul>
 
 <h3>Critique of Reference Group Theory</h3>
 <ul>
- <li><strong>Oversimplification</strong> Reduces complex social behaviour to a linear model of comparison. In reality, self-evaluation is shaped by personal experience, cultural norms, and individual differences simultaneously.</li>
- <li><strong>Limited cultural variation</strong> Does not account adequately for how cultural context shapes who is chosen as a reference group. Collectivist cultures (India, China) differ fundamentally from individualist (Western) ones.</li>
- <li><strong>Lack of predictive power</strong> Theory does not specify when or how reference group comparisons will produce particular outcomes. More descriptive than predictive.</li>
- <li><strong>Neglects group dynamics</strong> Explains how the individual is influenced by the reference group, but ignores how the reference group itself is changed by the individual's entry into it.</li>
- <li><strong>Ethnocentrism</strong> Western, individualistic bias; may not apply to collectivist societies where group identity is primary.</li>
+ <li><strong>Oversimplification</strong>: Reduces complex social behaviour to a linear model of comparison. In reality, self-evaluation is shaped by personal experience, cultural norms, and individual differences simultaneously.</li>
+ <li><strong>Limited cultural variation</strong>: Does not account adequately for how cultural context shapes who is chosen as a reference group. Collectivist cultures (India, China) differ fundamentally from individualist (Western) ones.</li>
+ <li><strong>Lack of predictive power</strong>: Theory does not specify when or how reference group comparisons will produce particular outcomes. More descriptive than predictive.</li>
+ <li><strong>Neglects group dynamics</strong>: Explains how the individual is influenced by the reference group, but ignores how the reference group itself is changed by the individual's entry into it.</li>
+ <li><strong>Ethnocentrism</strong>: Western, individualistic bias; may not apply to collectivist societies where group identity is primary.</li>
 </ul>
 
 <h3>General Critiques</h3>
@@ -1751,8 +1751,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The Chicago School in the 1920s developed a distinctly <strong>American sociology</strong> that differed fundamentally from European macro-traditions (Durkheim, Weber, Marx). Instead of comparative and historical methods, Chicago sociologists went into the field conducting interviews and observations in immigrant neighbourhoods, slums, and street corners.</p>
 
 <ul>
- <li><strong>Methodological inspiration</strong> Max Weber's Verstehen; empathetic understanding of the actor's point of view.</li>
- <li><strong>Focus</strong> Micro level of everyday interactions (gender roles, race relations) as the building blocks of larger social phenomena (racial inequality, urban poverty).</li>
+ <li><strong>Methodological inspiration</strong>: Max Weber's Verstehen; empathetic understanding of the actor's point of view.</li>
+ <li><strong>Focus</strong>: Micro level of everyday interactions (gender roles, race relations) as the building blocks of larger social phenomena (racial inequality, urban poverty).</li>
  <li>Key members: Robert Park, W.I. Thomas, Charles Horton Cooley, Mead, Blumer.</li>
 </ul>
 
@@ -1805,21 +1805,21 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Basic Tenets</h3>
 <ul>
- <li><strong>Capacity for thought</strong> Unlike animals, humans are endowed with thought. This capacity is shaped by social interaction, not biology.</li>
- <li><strong>Symbols are central</strong> A symbol is anything to which we attach shared meaning: words, gestures, objects, institutions, beliefs, activities. The <em>symbolic meaning</em> of an object overrides its physical properties. Coffee can symbolise productivity, intimacy, status, or health depending on context.</li>
- <li><strong>Meaning is social</strong> Meanings are created, modified, and sustained through social interaction. They are not fixed in objects. The unfurling of a national flag signifies patriotism; burning it means contempt the same physical act carries entirely different meaning depending on social interpretation.</li>
- <li><strong>Language is constitutive</strong> For Mead, there is no mind without language, and language is itself a product of social interaction. Both our self and our mind are social products. "Living together" becomes "marriage" only through the exchange of symbols ring, rituals, ceremony, wedding card.</li>
- <li><strong>Shared meanings enable social life</strong> Social life proceeds only if members of society largely share the meanings of symbols. Without this, meaningful communication would be impossible.</li>
- <li><strong>Meanings are negotiated</strong> In the course of interaction, meanings are constantly modified and contested. The same symbol (a wedding ring) can simultaneously mean commitment and loss of freedom.</li>
- <li><strong>Rejects determinism</strong> Symbolic interactionism rejects both societal determinism (Durkheim's social facts) and biological determinism (Freud's drives). Humans are active agents who interpret and modify meaning.</li>
+ <li><strong>Capacity for thought</strong>: Unlike animals, humans are endowed with thought. This capacity is shaped by social interaction, not biology.</li>
+ <li><strong>Symbols are central</strong>: A symbol is anything to which we attach shared meaning: words, gestures, objects, institutions, beliefs, activities. The <em>symbolic meaning</em> of an object overrides its physical properties. Coffee can symbolise productivity, intimacy, status, or health depending on context.</li>
+ <li><strong>Meaning is social</strong>: Meanings are created, modified, and sustained through social interaction. They are not fixed in objects. The unfurling of a national flag signifies patriotism; burning it means contempt the same physical act carries entirely different meaning depending on social interpretation.</li>
+ <li><strong>Language is constitutive</strong>: For Mead, there is no mind without language, and language is itself a product of social interaction. Both our self and our mind are social products. "Living together" becomes "marriage" only through the exchange of symbols ring, rituals, ceremony, wedding card.</li>
+ <li><strong>Shared meanings enable social life</strong>: Social life proceeds only if members of society largely share the meanings of symbols. Without this, meaningful communication would be impossible.</li>
+ <li><strong>Meanings are negotiated</strong>: In the course of interaction, meanings are constantly modified and contested. The same symbol (a wedding ring) can simultaneously mean commitment and loss of freedom.</li>
+ <li><strong>Rejects determinism</strong>: Symbolic interactionism rejects both societal determinism (Durkheim's social facts) and biological determinism (Freud's drives). Humans are active agents who interpret and modify meaning.</li>
 </ul>
 
 <h3>Applications of Symbolic Interactionism</h3>
 <ul>
  <li><strong>Marriage</strong> 100 years ago, marriage was a lifelong duty. By the 1940s, it became a relationship based on feelings; when feelings change, divorce is legitimate. Meaning of divorce shifted from "failure" to "freedom and new beginnings."</li>
- <li><strong>Parenthood</strong> Previously a religious blessing; today increasingly seen as expensive and burdensome hence DINK families (Dual Income No Kids).</li>
- <li><strong>Race and stigma</strong> The meaning attached to skin colour or caste mark shapes interaction and self-concept. Symbolic meanings of race are socially constructed, not biological.</li>
- <li><strong>Dramaturgy (Goffman)</strong> Extended Mead: our self is ever-changing across social contexts through impression management. We present different selves on a first date, at a job interview, and in a poker game. Life is a performance on a social stage.</li>
+ <li><strong>Parenthood</strong>: Previously a religious blessing; today increasingly seen as expensive and burdensome hence DINK families (Dual Income No Kids).</li>
+ <li><strong>Race and stigma</strong>: The meaning attached to skin colour or caste mark shapes interaction and self-concept. Symbolic meanings of race are socially constructed, not biological.</li>
+ <li><strong>Dramaturgy (Goffman)</strong>: Extended Mead: our self is ever-changing across social contexts through impression management. We present different selves on a first date, at a job interview, and in a poker game. Life is a performance on a social stage.</li>
 </ul>
 
 <h2>Mind, Self, and Society</h2>
@@ -1933,8 +1933,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h2>Significant Others and Generalized Other</h2>
 
 <ul>
- <li><strong>Significant Others</strong> People who are most important in a child's life and most influence their behaviour: parents, teachers, close friends. They provide the initial models for role-taking in the Play stage.</li>
- <li><strong>Generalized Other</strong> The internalised awareness of the expectations and norms of society as a whole. Achieved in the Game stage. It shapes behaviour by defining what is acceptable and unacceptable in different social situations. Different children internalise different generalized others depending on their social position a Dalit child and a Brahmin child internalise very different social expectations.</li>
+ <li><strong>Significant Others</strong>: People who are most important in a child's life and most influence their behaviour: parents, teachers, close friends. They provide the initial models for role-taking in the Play stage.</li>
+ <li><strong>Generalized Other</strong>: The internalised awareness of the expectations and norms of society as a whole. Achieved in the Game stage. It shapes behaviour by defining what is acceptable and unacceptable in different social situations. Different children internalise different generalized others depending on their social position a Dalit child and a Brahmin child internalise very different social expectations.</li>
 </ul>
 
 <h2>Comparison: Mead and Other Thinkers</h2>
@@ -1974,31 +1974,31 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Contribution of Mead to Sociology</h2>
 <ul>
- <li><strong>Founded Symbolic Interactionism</strong> Opened a new theoretical tradition focused on meaning, symbols, and micro-level interaction as the basis of all social life.</li>
- <li><strong>Theory of self-development</strong> The most influential social (as opposed to biological) account of how the self emerges through social interaction; 3-stage model still taught in child development.</li>
+ <li><strong>Founded Symbolic Interactionism</strong>: Opened a new theoretical tradition focused on meaning, symbols, and micro-level interaction as the basis of all social life.</li>
+ <li><strong>Theory of self-development</strong>: The most influential social (as opposed to biological) account of how the self emerges through social interaction; 3-stage model still taught in child development.</li>
  <li><strong>"I" and "Me"</strong> Explained simultaneously how individuals are shaped by society (Me) and how they can resist and change it (I). Resolved the agency-structure problem at the micro level.</li>
- <li><strong>Role-taking and significant/generalized other</strong> Provided precise mechanisms for how socialisation works not through passive absorption but active imaginative engagement with others' perspectives.</li>
- <li><strong>Foundation for later micro-sociology</strong> Inspired Goffman's dramaturgy, Blumer's symbolic interactionism, Garfinkel's ethnomethodology, and conversation analysis.</li>
- <li><strong>Bridge between psychology and sociology</strong> Showed that the mind and self traditionally studied by psychology are fundamentally social phenomena, bringing them into sociological analysis.</li>
+ <li><strong>Role-taking and significant/generalized other</strong>: Provided precise mechanisms for how socialisation works not through passive absorption but active imaginative engagement with others' perspectives.</li>
+ <li><strong>Foundation for later micro-sociology</strong>: Inspired Goffman's dramaturgy, Blumer's symbolic interactionism, Garfinkel's ethnomethodology, and conversation analysis.</li>
+ <li><strong>Bridge between psychology and sociology</strong>: Showed that the mind and self traditionally studied by psychology are fundamentally social phenomena, bringing them into sociological analysis.</li>
 </ul>
 
 <h2>Criticisms of Mead</h2>
 
 <h3>Critique of Symbolic Interactionism as a Whole</h3>
 <ul>
- <li><strong>Gary Fine</strong> Symbolic interactionism is: apolitical (supportive of the status quo), unscientific (little more than journalism), hostile to classical questions of macro-sociology, and astructural (fundamentally non-sociological). Its scope is limited and cannot address critical issues of power, inequality, or class.</li>
- <li><strong>Macro-neglect</strong> By focusing on micro-level face-to-face interaction, symbolic interactionism ignores the structural constraints (class, gender, race, capitalism) that shape and limit individual meaning-making. It cannot explain why some meanings dominate and others are suppressed.</li>
- <li><strong>Ignores emotion</strong> By emphasising cognitive role-taking and symbol use, Mead's framework downplays the role of raw emotion, desire, and affect in social action.</li>
+ <li><strong>Gary Fine</strong>: Symbolic interactionism is: apolitical (supportive of the status quo), unscientific (little more than journalism), hostile to classical questions of macro-sociology, and astructural (fundamentally non-sociological). Its scope is limited and cannot address critical issues of power, inequality, or class.</li>
+ <li><strong>Macro-neglect</strong>: By focusing on micro-level face-to-face interaction, symbolic interactionism ignores the structural constraints (class, gender, race, capitalism) that shape and limit individual meaning-making. It cannot explain why some meanings dominate and others are suppressed.</li>
+ <li><strong>Ignores emotion</strong>: By emphasising cognitive role-taking and symbol use, Mead's framework downplays the role of raw emotion, desire, and affect in social action.</li>
 </ul>
 
 <h3>Critique of Mead's Theory of Self Specifically</h3>
 <ul>
- <li><strong>Anne Kaspar</strong> Mead's ideas about the social self may be more applicable to men than to women. Women are more likely to experience inherent conflicts between the meanings they derive from personal experience and those prescribed by culture particularly in balancing family responsibilities and paid employment. The self Mead describes is implicitly gendered male.</li>
- <li><strong>No biological element (vs Freud and Piaget)</strong> Mead's view is completely social, allowing no biological element at all. Critics who side with Freud (drives rooted in the body) or Piaget (development tied to biological maturity) find this one-sided.</li>
- <li><strong>Origin of "I" unspecified</strong> Mead never explained where the "I" comes from. If the "Me" is formed through socialisation, what generates the spontaneous, creative "I"? This leaves a theoretical gap that Mead himself acknowledged.</li>
- <li><strong>William James</strong> Discussed multiple types of empirical selves (material, social, spiritual). Individuals may have multiple selves and show different sides to different groups a complexity Mead's framework underestimates.</li>
- <li><strong>Unfalsifiable</strong> The "I" and "Me" are internal, unobservable processes. The theory cannot be empirically tested in any straightforward sense.</li>
- <li><strong>Idealises communication</strong> Assumes that symbols are generally shared and understood. In practice, meaning is contested, power-laden, and unequally distributed. Who has the power to define symbols is a political question Mead ignores.</li>
+ <li><strong>Anne Kaspar</strong>: Mead's ideas about the social self may be more applicable to men than to women. Women are more likely to experience inherent conflicts between the meanings they derive from personal experience and those prescribed by culture particularly in balancing family responsibilities and paid employment. The self Mead describes is implicitly gendered male.</li>
+ <li><strong>No biological element (vs Freud and Piaget)</strong>: Mead's view is completely social, allowing no biological element at all. Critics who side with Freud (drives rooted in the body) or Piaget (development tied to biological maturity) find this one-sided.</li>
+ <li><strong>Origin of "I" unspecified</strong>: Mead never explained where the "I" comes from. If the "Me" is formed through socialisation, what generates the spontaneous, creative "I"? This leaves a theoretical gap that Mead himself acknowledged.</li>
+ <li><strong>William James</strong>: Discussed multiple types of empirical selves (material, social, spiritual). Individuals may have multiple selves and show different sides to different groups a complexity Mead's framework underestimates.</li>
+ <li><strong>Unfalsifiable</strong>: The "I" and "Me" are internal, unobservable processes. The theory cannot be empirically tested in any straightforward sense.</li>
+ <li><strong>Idealises communication</strong>: Assumes that symbols are generally shared and understood. In practice, meaning is contested, power-laden, and unequally distributed. Who has the power to define symbols is a political question Mead ignores.</li>
 </ul>
 
 `,
@@ -2022,9 +2022,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>The Renaissance was a period of <strong>artistic, scientific, and cultural rebirth</strong> that shifted attention from God to humanity. It produced:</p>
 <ul>
- <li><strong>Humanism</strong> A philosophy that questioned Church teachings and emphasised the significance of human activity, learning, and self-betterment. Rights and responsibilities of individuals mattered more than spiritual destiny.</li>
- <li><strong>Secularism</strong> Living and creating laws based on human reason, not religious texts. For the first time, laws were written by humans for humans.</li>
- <li><strong>Individualism</strong> Scholars began developing their own ideas, independent of Church authority. Individual expression in art (Leonardo da Vinci's <em>Mona Lisa</em>, Michelangelo's <em>David</em>), anatomy, and literature was celebrated.</li>
+ <li><strong>Humanism</strong>: A philosophy that questioned Church teachings and emphasised the significance of human activity, learning, and self-betterment. Rights and responsibilities of individuals mattered more than spiritual destiny.</li>
+ <li><strong>Secularism</strong>: Living and creating laws based on human reason, not religious texts. For the first time, laws were written by humans for humans.</li>
+ <li><strong>Individualism</strong>: Scholars began developing their own ideas, independent of Church authority. Individual expression in art (Leonardo da Vinci's <em>Mona Lisa</em>, Michelangelo's <em>David</em>), anatomy, and literature was celebrated.</li>
 </ul>
 
 <table>
@@ -2060,10 +2060,10 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Key Enlightenment thinkers and their contributions:</p>
 <ul>
  <li><strong>Thomas Hobbes</strong> (<em>Leviathan</em>) Humans in nature are greedy and cruel; life is a state of constant warfare without a strong government. People enter a social contract to give up freedom in exchange for protection. Supported absolutism but rejected divine right.</li>
- <li><strong>John Locke</strong> Humans are reasonable and moral; natural rights of life, liberty, and property. People give government power through social contract; if government fails to protect rights, people have a right to revolt.</li>
- <li><strong>Montesquieu</strong> Human rights best protected by separation of power into three branches (executive, legislative, judicial). Each branch checks the others prevents despotism. Influenced the US Constitution.</li>
- <li><strong>Voltaire</strong> Freedom of religion, speech, and separation of church and state. <em>"I do not agree with a word you say, but I will defend to the death your right to say it."</em> Religion exploited ignorance and superstition.</li>
- <li><strong>Rousseau</strong> Government should be run according to the General Will always acting in the best interest of the people. Gave France the concept of democracy through <em>The Social Contract</em>.</li>
+ <li><strong>John Locke</strong>: Humans are reasonable and moral; natural rights of life, liberty, and property. People give government power through social contract; if government fails to protect rights, people have a right to revolt.</li>
+ <li><strong>Montesquieu</strong>: Human rights best protected by separation of power into three branches (executive, legislative, judicial). Each branch checks the others prevents despotism. Influenced the US Constitution.</li>
+ <li><strong>Voltaire</strong>: Freedom of religion, speech, and separation of church and state. <em>"I do not agree with a word you say, but I will defend to the death your right to say it."</em> Religion exploited ignorance and superstition.</li>
+ <li><strong>Rousseau</strong>: Government should be run according to the General Will always acting in the best interest of the people. Gave France the concept of democracy through <em>The Social Contract</em>.</li>
  <li><strong>Adam Smith</strong> (<em>Wealth of Nations</em>, 1776) Laissez-faire free market economy. Self-interested individuals operating in the market produce collective benefit through the "Invisible Hand." Foundation of classical economics and capitalism.</li>
  <li><strong>Mary Wollstonecraft</strong> (<em>Vindication of the Rights of Woman</em>) Demanded equal rights for women. Men who opposed the power of kings were hypocritical if they did not oppose men's power over women. Enlightenment must apply to both sexes.</li>
 </ul>
@@ -2113,26 +2113,26 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>At least as important as the political revolution was the Industrial Revolution a fundamental change in how goods were produced, from human labour to machines. Its consequences became the primary subject matter of sociology:</p>
 
 <ul>
- <li><strong>Conditions of labour</strong> Degradation of work; wrenching of work from protective guilds, villages, and families; child labour; long hours; unsafe conditions. Indian handicraftsmen ruined by influx of British machine-made goods.</li>
- <li><strong>Transformation of property</strong> Shift from land to capital; landlords replaced by capitalists.</li>
- <li><strong>Urbanisation</strong> New industrial cities became "repositories of misery and inhumanity" traffic, pollution, poverty, overcrowded slums, bad sanitation, emotional deficit, blasé attitude, normlessness, rising crime.</li>
- <li><strong>Factory system and bureaucracy</strong> Mass migration, clockwork discipline, products of labour belonging to factory owners, machines dominating work.</li>
+ <li><strong>Conditions of labour</strong>: Degradation of work; wrenching of work from protective guilds, villages, and families; child labour; long hours; unsafe conditions. Indian handicraftsmen ruined by influx of British machine-made goods.</li>
+ <li><strong>Transformation of property</strong>: Shift from land to capital; landlords replaced by capitalists.</li>
+ <li><strong>Urbanisation</strong>: New industrial cities became "repositories of misery and inhumanity" traffic, pollution, poverty, overcrowded slums, bad sanitation, emotional deficit, blasé attitude, normlessness, rising crime.</li>
+ <li><strong>Factory system and bureaucracy</strong>: Mass migration, clockwork discipline, products of labour belonging to factory owners, machines dominating work.</li>
 </ul>
 
 <h3>Pre-cursors to Sociology</h3>
 <p>Three fields contributed methodology and theoretical perspective to early sociology:</p>
 <ul>
- <li><strong>Philosophy of history</strong> Society progresses through stages from simple to complex. Contributed the notion of development and progress.</li>
- <li><strong>Biological theories of evolution</strong> Darwin's ideas dominated early sociological thought. Society evolves like an organism; each part plays a specific function (Comte, Spencer, Durkheim all reflect this).</li>
- <li><strong>Social surveys</strong> Application of natural science methods to human affairs. Issues considered natural became social problems that could be studied and redressed through systematic data collection.</li>
+ <li><strong>Philosophy of history</strong>: Society progresses through stages from simple to complex. Contributed the notion of development and progress.</li>
+ <li><strong>Biological theories of evolution</strong>: Darwin's ideas dominated early sociological thought. Society evolves like an organism; each part plays a specific function (Comte, Spencer, Durkheim all reflect this).</li>
+ <li><strong>Social surveys</strong>: Application of natural science methods to human affairs. Issues considered natural became social problems that could be studied and redressed through systematic data collection.</li>
 </ul>
 
 <h3>The Founding Figures' Response</h3>
 <ul>
- <li><strong>Auguste Comte</strong> Like a conservative, disturbed by anarchy. Argued that intellectual disorder causes social disorder. Only positivism the scientific study of society could bring order. Coined the term "sociology." Developed the Law of Three Stages: Theological → Metaphysical → Positive.</li>
- <li><strong>Emile Durkheim</strong> Like a conservative, hated social disorder. Industrial strikes, church-state discord, anti-Semitism, rising divorce and suicide rates weakened collective consciousness and caused social pathologies. Devoted his life to studying social order.</li>
- <li><strong>Karl Marx</strong> Radical. Concerned with growing economic inequality, exploitation of labour, and death of the creative individual through industrialisation. Work should be self-expression, but capitalism converts it into repression and alienation. Revolution by the working class is the only solution.</li>
- <li><strong>Max Weber</strong> Concerned with the rise of rationalisation, bureaucracy, and the "iron cage" of modernity; the role of ideas (Protestantism) in shaping material life; the loss of enchantment in a secular, scientific world.</li>
+ <li><strong>Auguste Comte</strong>: Like a conservative, disturbed by anarchy. Argued that intellectual disorder causes social disorder. Only positivism the scientific study of society could bring order. Coined the term "sociology." Developed the Law of Three Stages: Theological → Metaphysical → Positive.</li>
+ <li><strong>Emile Durkheim</strong>: Like a conservative, hated social disorder. Industrial strikes, church-state discord, anti-Semitism, rising divorce and suicide rates weakened collective consciousness and caused social pathologies. Devoted his life to studying social order.</li>
+ <li><strong>Karl Marx</strong>: Radical. Concerned with growing economic inequality, exploitation of labour, and death of the creative individual through industrialisation. Work should be self-expression, but capitalism converts it into repression and alienation. Revolution by the working class is the only solution.</li>
+ <li><strong>Max Weber</strong>: Concerned with the rise of rationalisation, bureaucracy, and the "iron cage" of modernity; the role of ideas (Protestantism) in shaping material life; the loss of enchantment in a secular, scientific world.</li>
 </ul>
 
 <blockquote>Peter Wagner: Marx, Weber, and Durkheim all believed that modernity would lead to identical developments worldwide in society, economy, polity, and culture. S.N. Eisenstadt challenged this with his theory of Multiple Modernities the idea that different societies modernise along different paths, not a single Western model.</blockquote>
@@ -2181,8 +2181,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>C. Wright Mills (<em>The Sociological Imagination</em>, 1959) coined this concept. It is the ability to see the social context which shapes individual decision-making and suffering moving from thinking in terms of individual problems to seeing the larger social structures that produce them.</p>
 
 <ul>
- <li><strong>Personal trouble</strong> Any individual suffering or choice concerning the individual.</li>
- <li><strong>Public issue</strong> Forces outside personal control affecting many; rooted in social structure.</li>
+ <li><strong>Personal trouble</strong>: Any individual suffering or choice concerning the individual.</li>
+ <li><strong>Public issue</strong>: Forces outside personal control affecting many; rooted in social structure.</li>
 </ul>
 
 <blockquote>"Sociological imagination is an awareness of the relationship between individual (Biography) and wider society (History)."</blockquote>
@@ -2234,17 +2234,17 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Synthetic School (French/British/American)</h3>
 <p>Comte, Durkheim, Morris Ginsberg argued that sociology can study everything under the sun. It is the synthesis of all social sciences (<strong>Socio-centrism</strong>).</p>
 <ul>
- <li><strong>Durkheim's 3 branches</strong> Social Morphology (population, migration, territory); Social Physiology (economic, political, cultural organisation); General Sociology (theories explaining social life).</li>
- <li><strong>Ginsberg's 4 branches</strong> Social Morphology; Social Control (laws, customs, regulations); Social Processes (cooperation, competition, conflict); Social Pathology (poverty, crime, population problems).</li>
+ <li><strong>Durkheim's 3 branches</strong>: Social Morphology (population, migration, territory); Social Physiology (economic, political, cultural organisation); General Sociology (theories explaining social life).</li>
+ <li><strong>Ginsberg's 4 branches</strong>: Social Morphology; Social Control (laws, customs, regulations); Social Processes (cooperation, competition, conflict); Social Pathology (poverty, crime, population problems).</li>
 </ul>
 
 <h3>Formalist School (German)</h3>
 <p>Tönnies, Simmel, Von Wiese, Weber rejected Socio-centrism. Sociology should be <strong>limited</strong> in scope, dealing with problems not studied by any other social science.</p>
 <ul>
- <li><strong>George Simmel</strong> Sociology should study the <em>forms</em> of human interaction (conflict/cooperation, subordination/superordination, centralisation/decentralisation). A school, a factory, and a prison look different in content, but share the same sociological form (subordination). This is a uniquely sociological insight.</li>
- <li><strong>Ferdinand Tönnies</strong> Sociology should study societies based on the degree of intimacy. Two types: <em>Gemeinschaft</em> (community based on "we") and <em>Gesellschaft</em> (association based on "I"). Industrialisation moved society from community to association. E.g. from family to friends.</li>
- <li><strong>Von Wiese</strong> Sociology should study fundamental social processes: associative (cooperation, accommodation, assimilation) and disassociative (conflict, competition).</li>
- <li><strong>Max Weber</strong> Sociology should study <em>social action</em> only meaningful action that takes into account the behaviour of others. Pure reflex actions and interactions with inanimate objects are excluded.</li>
+ <li><strong>George Simmel</strong>: Sociology should study the <em>forms</em> of human interaction (conflict/cooperation, subordination/superordination, centralisation/decentralisation). A school, a factory, and a prison look different in content, but share the same sociological form (subordination). This is a uniquely sociological insight.</li>
+ <li><strong>Ferdinand Tönnies</strong>: Sociology should study societies based on the degree of intimacy. Two types: <em>Gemeinschaft</em> (community based on "we") and <em>Gesellschaft</em> (association based on "I"). Industrialisation moved society from community to association. E.g. from family to friends.</li>
+ <li><strong>Von Wiese</strong>: Sociology should study fundamental social processes: associative (cooperation, accommodation, assimilation) and disassociative (conflict, competition).</li>
+ <li><strong>Max Weber</strong>: Sociology should study <em>social action</em> only meaningful action that takes into account the behaviour of others. Pure reflex actions and interactions with inanimate objects are excluded.</li>
 </ul>
 
 <h2>Comparison with Other Social Sciences</h2>
@@ -2414,21 +2414,21 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Science is a body of knowledge that differs from religion, magic, and common sense by having six defining features:</p>
 
 <ul>
- <li><strong>Testable (Falsifiable)</strong> Scientific knowledge is closely tied to empiricism; it can be tested and potentially disproved. Science advances not by proving theories true, but by proving them false and revising them. Karl Popper: "If a scientific theory can be proven wrong, it is a strength, not a weakness." Examples: "All swans are white" falsified by one black swan. Einstein's relativity falsifiable if something exceeds the speed of light. Carbon dating can test the age of the Earth.</li>
- <li><strong>Empirical</strong> Rejects circumstantial, testimonial, and speculative evidence. Knowledge comes from observation and experiment, not revelation or tradition.</li>
- <li><strong>Cumulative</strong> Knowledge evolves and builds on previous knowledge. Galileo performed experiments to establish Copernicus's theory; Newton built on Kepler; Einstein reformulated Newton.</li>
- <li><strong>Objective</strong> Research should not be influenced by the personal values, opinions, or biases of the researcher. The researcher should be detached from the subject of study.</li>
- <li><strong>Replicable</strong> If findings cannot be reproduced by other scientists, the original findings were likely due to chance. Replicability ensures reliability.</li>
- <li><strong>Theoretical</strong> Based on logic and causal relationships; not merely descriptive but explanatory.</li>
+ <li><strong>Testable (Falsifiable)</strong>: Scientific knowledge is closely tied to empiricism; it can be tested and potentially disproved. Science advances not by proving theories true, but by proving them false and revising them. Karl Popper: "If a scientific theory can be proven wrong, it is a strength, not a weakness." Examples: "All swans are white" falsified by one black swan. Einstein's relativity falsifiable if something exceeds the speed of light. Carbon dating can test the age of the Earth.</li>
+ <li><strong>Empirical</strong>: Rejects circumstantial, testimonial, and speculative evidence. Knowledge comes from observation and experiment, not revelation or tradition.</li>
+ <li><strong>Cumulative</strong>: Knowledge evolves and builds on previous knowledge. Galileo performed experiments to establish Copernicus's theory; Newton built on Kepler; Einstein reformulated Newton.</li>
+ <li><strong>Objective</strong>: Research should not be influenced by the personal values, opinions, or biases of the researcher. The researcher should be detached from the subject of study.</li>
+ <li><strong>Replicable</strong>: If findings cannot be reproduced by other scientists, the original findings were likely due to chance. Replicability ensures reliability.</li>
+ <li><strong>Theoretical</strong>: Based on logic and causal relationships; not merely descriptive but explanatory.</li>
 </ul>
 
 <h3>Merton's CUDOS Norms of Scientific Communities</h3>
 <p>Robert K. Merton identified four norms that govern scientific communities together called CUDOS:</p>
 <ul>
- <li><strong>Communalism</strong> Scientific results are the common property of the entire scientific community. Darwin did not patent the theory of evolution.</li>
- <li><strong>Universalism</strong> A scientist's personal characteristics (race, gender, nationality) are irrelevant to their ideas. Science must be evaluated on merit.</li>
- <li><strong>Disinterestedness</strong> Scientists should act for the benefit of the scientific community and society, not for personal gain.</li>
- <li><strong>Organised Scepticism</strong> Scientific claims must be exposed to critical scrutiny before being accepted. No claim is beyond question.</li>
+ <li><strong>Communalism</strong>: Scientific results are the common property of the entire scientific community. Darwin did not patent the theory of evolution.</li>
+ <li><strong>Universalism</strong>: A scientist's personal characteristics (race, gender, nationality) are irrelevant to their ideas. Science must be evaluated on merit.</li>
+ <li><strong>Disinterestedness</strong>: Scientists should act for the benefit of the scientific community and society, not for personal gain.</li>
+ <li><strong>Organised Scepticism</strong>: Scientific claims must be exposed to critical scrutiny before being accepted. No claim is beyond question.</li>
 </ul>
 
 <h2>Scientific Method Induction and Deduction</h2>
@@ -2439,7 +2439,7 @@ export const sociologyNoteContent: Record<string, string> = {
  <li>All observed swans are white → therefore, all swans are white (general law).</li>
  <li>The sun has always risen in the east → the sun will rise in the east tomorrow.</li>
 </ul>
-<p><strong>Problem of induction</strong> We make universal claims based on a finite number of observations. We tend to ignore data that does not support our hypothesis. There is always a possibility that new findings may conflict with a long-standing theory. We are essentially assuming the future will be like the past.</p>
+<p><strong>Problem of induction</strong>: We make universal claims based on a finite number of observations. We tend to ignore data that does not support our hypothesis. There is always a possibility that new findings may conflict with a long-standing theory. We are essentially assuming the future will be like the past.</p>
 
 <h3>Hypothetico-Deductive Method (Karl Popper)</h3>
 <p>Since it is impossible to prove a theory true by induction, Popper proposed falsifiability as the criterion of science:</p>
@@ -2467,11 +2467,11 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The gap between the theory and practice of science reveals significant limitations when applied to social reality:</p>
 
 <ul>
- <li><strong>Complexity of social data</strong> Human behaviour is highly dynamic and unpredictable. It is difficult to generalise into universal cause-effect laws. No two people react to any event in exactly the same way.</li>
- <li><strong>Plurality of causes and intermixture of effects</strong> Multiple causes behind a single phenomenon; cause and effect are often difficult to distinguish. Why do we have poverty? Illiteracy, unemployment, poor welfare delivery, lack of schemes are these causes or effects of poverty?</li>
- <li><strong>Difficulty in measurement and quantification</strong> You can calculate mass, gravity, and current, but can you quantify urbanisation, nationalism, or alienation?</li>
- <li><strong>Subjectivity of researcher</strong> Since subject and object of research are both human beings, the researcher's bias may distort collection, classification, and theorisation. An astronomer's gaze has no effect on a distant comet. But people react to being observed they may become anxious, angry, or defensive.</li>
- <li><strong>Absence of universal laws</strong> The same laws of physics apply everywhere and at all times. But sociological patterns vary across time and place. What is true in one context may not hold in another.</li>
+ <li><strong>Complexity of social data</strong>: Human behaviour is highly dynamic and unpredictable. It is difficult to generalise into universal cause-effect laws. No two people react to any event in exactly the same way.</li>
+ <li><strong>Plurality of causes and intermixture of effects</strong>: Multiple causes behind a single phenomenon; cause and effect are often difficult to distinguish. Why do we have poverty? Illiteracy, unemployment, poor welfare delivery, lack of schemes are these causes or effects of poverty?</li>
+ <li><strong>Difficulty in measurement and quantification</strong>: You can calculate mass, gravity, and current, but can you quantify urbanisation, nationalism, or alienation?</li>
+ <li><strong>Subjectivity of researcher</strong>: Since subject and object of research are both human beings, the researcher's bias may distort collection, classification, and theorisation. An astronomer's gaze has no effect on a distant comet. But people react to being observed they may become anxious, angry, or defensive.</li>
+ <li><strong>Absence of universal laws</strong>: The same laws of physics apply everywhere and at all times. But sociological patterns vary across time and place. What is true in one context may not hold in another.</li>
 </ul>
 
 <p>Therefore, to make the scientific method applicable to social reality, objectivity is complemented with <strong>inter-subjectivity and interpretation</strong>, and laboratory experiments are replaced with qualitative methods interviews, questionnaires, and field observation.</p>
@@ -2493,10 +2493,10 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Four Stages of Science</h3>
 <ul>
- <li><strong>Pre-Science</strong> No dominant perspective; multiple competing schools of thought.</li>
- <li><strong>Normal Science</strong> Scientists work within a dominant paradigm without questioning it, even in the face of conflicting evidence. This can make normal science conservative. A physics student would find no reason to entertain competing theories.</li>
- <li><strong>Scientific Crisis</strong> Arguments between defenders of the old paradigm and advocates of the new one intensify.</li>
- <li><strong>Paradigm Shift / Scientific Revolution</strong> Old paradigm is discarded; new one accepted. Examples: Aristotelian physics → Newtonian → Einstein's relativity; Lamarckism → Darwinian natural selection.</li>
+ <li><strong>Pre-Science</strong>: No dominant perspective; multiple competing schools of thought.</li>
+ <li><strong>Normal Science</strong>: Scientists work within a dominant paradigm without questioning it, even in the face of conflicting evidence. This can make normal science conservative. A physics student would find no reason to entertain competing theories.</li>
+ <li><strong>Scientific Crisis</strong>: Arguments between defenders of the old paradigm and advocates of the new one intensify.</li>
+ <li><strong>Paradigm Shift / Scientific Revolution</strong>: Old paradigm is discarded; new one accepted. Examples: Aristotelian physics → Newtonian → Einstein's relativity; Lamarckism → Darwinian natural selection.</li>
 </ul>
 
 <p>What counts as the acceptable paradigm is decided by the scientific community therefore, <strong>science is a social process</strong>. A sociology student is aware of multiple, competing, and incommensurable approaches Marxist, Weberian, Durkheimian. Since no single paradigm is universally accepted, Kuhn calls sociology <em>pre-scientific</em>. It may become scientific only when all sociologists agree on a dominant paradigm.</p>
@@ -2579,16 +2579,16 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Social Statics and Social Dynamics</h3>
 <ul>
- <li><strong>Social Statics</strong> Study of forces that maintain social order; laws of coexistence. How parts of society relate to each other and contribute to the maintenance of the system.</li>
- <li><strong>Social Dynamics</strong> Study of forces that lead to social change and breakdown of order; laws of succession. How society moves from one stage to the next.</li>
+ <li><strong>Social Statics</strong>: Study of forces that maintain social order; laws of coexistence. How parts of society relate to each other and contribute to the maintenance of the system.</li>
+ <li><strong>Social Dynamics</strong>: Study of forces that lead to social change and breakdown of order; laws of succession. How society moves from one stage to the next.</li>
 </ul>
 
 <h3>Central Features of Positivism</h3>
 <ul>
- <li><strong>Individual shaped by structure</strong> Behaviour guided by structures: caste, religion, sexuality, custom, law, class position.</li>
- <li><strong>Unity of method</strong> Sociology is not methodologically different from natural science. The researcher observes neutrally, gathers empirical and quantitative data, excludes meanings and intentions.</li>
- <li><strong>Focus of research</strong> Pattern, correlation, causal relationship, and law of human behaviour. Human behaviour is observable, static, patterned, and therefore generalisable.</li>
- <li><strong>Social transformation</strong> Scientific knowledge used for social engineering: predict social hazards (poverty, unemployment, revolution) and intervene accordingly. E.g. Jan Dhan Yojana, MGNREGS, JAM Trinity.</li>
+ <li><strong>Individual shaped by structure</strong>: Behaviour guided by structures: caste, religion, sexuality, custom, law, class position.</li>
+ <li><strong>Unity of method</strong>: Sociology is not methodologically different from natural science. The researcher observes neutrally, gathers empirical and quantitative data, excludes meanings and intentions.</li>
+ <li><strong>Focus of research</strong>: Pattern, correlation, causal relationship, and law of human behaviour. Human behaviour is observable, static, patterned, and therefore generalisable.</li>
+ <li><strong>Social transformation</strong>: Scientific knowledge used for social engineering: predict social hazards (poverty, unemployment, revolution) and intervene accordingly. E.g. Jan Dhan Yojana, MGNREGS, JAM Trinity.</li>
 </ul>
 
 <h3>Criticisms of Positivism</h3>
@@ -2636,32 +2636,32 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Were the Founding Fathers Truly Objective?</h3>
 <ul>
- <li><strong>Durkheim</strong> Proposed to treat social facts as things, yet simultaneously treated breakdown of norms as "pathologies" needing a "social physician." His recommendations (occupational associations, moral education) revealed his conservative values.</li>
- <li><strong>Marx</strong> Proclaimed his theory as objective and scientific, yet his critique of capitalism and celebration of communism as the ideal society were deeply value-laden.</li>
+ <li><strong>Durkheim</strong>: Proposed to treat social facts as things, yet simultaneously treated breakdown of norms as "pathologies" needing a "social physician." His recommendations (occupational associations, moral education) revealed his conservative values.</li>
+ <li><strong>Marx</strong>: Proclaimed his theory as objective and scientific, yet his critique of capitalism and celebration of communism as the ideal society were deeply value-laden.</li>
 </ul>
 
 <h3>Problems of Objectivity at Every Stage of Research</h3>
 <ul>
- <li><strong>Choice of topic</strong> Marxists reveal values by focusing on inequality; feminists by focusing on domestic violence. Weber: values enter at the stage of topic selection itself. This is called <em>value relevance</em>.</li>
- <li><strong>Getting funded</strong> If Cavitas funds research, the researcher must match findings with their interests.</li>
- <li><strong>Choosing techniques</strong> Selection of questions for questionnaires; some excluded, some included. These choices reflect the researcher's theoretical assumptions.</li>
- <li><strong>Interpretation of data</strong> Data does not speak for itself. The development of cults can be evidence for or against secularisation depending on the researcher's standpoint. Feminists find patriarchal oppression; Marxists find class exploitation.</li>
- <li><strong>Recording findings</strong> What is included in the final report is itself a value-laden choice.</li>
+ <li><strong>Choice of topic</strong>: Marxists reveal values by focusing on inequality; feminists by focusing on domestic violence. Weber: values enter at the stage of topic selection itself. This is called <em>value relevance</em>.</li>
+ <li><strong>Getting funded</strong>: If Cavitas funds research, the researcher must match findings with their interests.</li>
+ <li><strong>Choosing techniques</strong>: Selection of questions for questionnaires; some excluded, some included. These choices reflect the researcher's theoretical assumptions.</li>
+ <li><strong>Interpretation of data</strong>: Data does not speak for itself. The development of cults can be evidence for or against secularisation depending on the researcher's standpoint. Feminists find patriarchal oppression; Marxists find class exploitation.</li>
+ <li><strong>Recording findings</strong>: What is included in the final report is itself a value-laden choice.</li>
 </ul>
 
 <h3>Weber's Solution Value Relevance and Value Neutrality</h3>
 <ul>
- <li><strong>Value relevance</strong> The selection of a research problem inevitably reflects the sociologist's values. This is unavoidable and should be acknowledged at the outset.</li>
- <li><strong>Value neutrality</strong> Once the topic is selected, the researcher has a duty to control personal feelings and opinions during investigation, data analysis, and publication. Detachment is a crucial element of science that sets it apart from politics. Politicians are committed to particular outcomes; scientists must maintain an open mind.</li>
+ <li><strong>Value relevance</strong>: The selection of a research problem inevitably reflects the sociologist's values. This is unavoidable and should be acknowledged at the outset.</li>
+ <li><strong>Value neutrality</strong>: Once the topic is selected, the researcher has a duty to control personal feelings and opinions during investigation, data analysis, and publication. Detachment is a crucial element of science that sets it apart from politics. Politicians are committed to particular outcomes; scientists must maintain an open mind.</li>
 </ul>
 
 <h3>Challenges to the Possibility of Objectivity</h3>
 <ul>
  <li><strong>Gouldner</strong> (<em>Anti-Minotaur: The Myth of Value-Free Sociology</em>) Facts and values cannot be separated. Sociologists should be open about their values so others can judge the extent to which they influenced research. This is <em>Reflexive Sociology</em>.</li>
- <li><strong>Gunnar Myrdal</strong> Objectivity is an illusion. All research is guided by viewpoints, personal preferences, and the ideological position of the researcher.</li>
+ <li><strong>Gunnar Myrdal</strong>: Objectivity is an illusion. All research is guided by viewpoints, personal preferences, and the ideological position of the researcher.</li>
  <li><strong>Howard Becker</strong> (<em>Whose Side Are We On?</em>) It is impossible to study anything without personal and political beliefs. All knowledge is political; it is therefore impossible to be value-free. The question is not whether to take sides, but <em>whose side to take</em>. Becker argues sociology should side with the disadvantaged.</li>
- <li><strong>David Marsland (New Right)</strong> Sociology is not value-free; it is left-wing propaganda and indoctrinates Marxism. Many sociology textbooks ignore job satisfaction, focusing almost entirely on alienation, exploitation, and inequality.</li>
- <li><strong>Gomm</strong> The very idea of value-free sociology is unsociological. When a sociologist attempts to divorce themselves from their values to become a "professional sociologist," they are merely adopting another set of values the values of the establishment.</li>
+ <li><strong>David Marsland (New Right)</strong>: Sociology is not value-free; it is left-wing propaganda and indoctrinates Marxism. Many sociology textbooks ignore job satisfaction, focusing almost entirely on alienation, exploitation, and inequality.</li>
+ <li><strong>Gomm</strong>: The very idea of value-free sociology is unsociological. When a sociologist attempts to divorce themselves from their values to become a "professional sociologist," they are merely adopting another set of values the values of the establishment.</li>
 </ul>
 
 <p><strong>Conclusion on objectivity</strong>: Following the logic of science does not guarantee objective or absolute truth. What science offers is a self-correcting approach to knowledge so that in the long run, researchers stand a good chance of limiting their biases. Objectivity lies not in any one study but in the scientific process as it continues over time. Since our subject matter is a conscious being not an atom we cannot replicate the same objectivity in sociology as in natural science.</p>
@@ -2711,17 +2711,17 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>2. Phenomenology (Alfred Schutz)</h3>
 <p>A phenomenological study attempts to understand participants' perspectives and views of social reality. Humans do not experience objective reality they experience a <em>constructed</em> reality.</p>
 <ul>
- <li><strong>No hard facts in the social world</strong> Official statistics on COVID-19 mortality, crime, and suicide tell us nothing more than the decisions of officials to label certain cases as such. Decisions are based on common-sense assumptions (suicide note, record of mental illness).</li>
- <li><strong>Indexicality</strong> Meanings are fluid and context-specific. We interpret meanings differently according to context. The Centre's IT rules (2021) defining "unlawful" content are subject to interpretation what seems unlawful may be an expression of free speech.</li>
- <li><strong>Typification</strong> We classify things into normal/abnormal, good/bad, moral/immoral, legal/illegal according to our cultures. This classification is subjective and depends on the opinions of the observer.</li>
- <li><strong>Stock of common-sense knowledge (Intersubjectivity)</strong> There is a commonsense pool (lifeworld). Some meanings are universally shared (rape and robbery are universally accepted as crime). Social order rests on this fragile shared stock of knowledge. Schutz: everyone has a unique biography, but this stock of common knowledge allows humans to believe there are regular and ordered patterns when social order is in fact an illusion.</li>
+ <li><strong>No hard facts in the social world</strong>: Official statistics on COVID-19 mortality, crime, and suicide tell us nothing more than the decisions of officials to label certain cases as such. Decisions are based on common-sense assumptions (suicide note, record of mental illness).</li>
+ <li><strong>Indexicality</strong>: Meanings are fluid and context-specific. We interpret meanings differently according to context. The Centre's IT rules (2021) defining "unlawful" content are subject to interpretation what seems unlawful may be an expression of free speech.</li>
+ <li><strong>Typification</strong>: We classify things into normal/abnormal, good/bad, moral/immoral, legal/illegal according to our cultures. This classification is subjective and depends on the opinions of the observer.</li>
+ <li><strong>Stock of common-sense knowledge (Intersubjectivity)</strong>: There is a commonsense pool (lifeworld). Some meanings are universally shared (rape and robbery are universally accepted as crime). Social order rests on this fragile shared stock of knowledge. Schutz: everyone has a unique biography, but this stock of common knowledge allows humans to believe there are regular and ordered patterns when social order is in fact an illusion.</li>
 </ul>
 
 <h3>3. Ethnomethodology (Harold Garfinkel)</h3>
 <p>Ethnomethodology investigates how people make sense of everyday social activities and construct the appearance of social order.</p>
 <ul>
  <li>Everyday behaviour rests on a number of taken-for-granted assumptions and socially constructed rules: how close to stand while talking, what clothes to wear in different settings, the appropriate tone of voice with friends vs. professors.</li>
- <li><strong>Breaching experiments</strong> Garfinkel disrupted normal social settings to reveal how desperately people try to restore "normalcy": going to a supermarket and haggling over prices (people assume you are illiterate or ill); acting at home as if you are a lodger; a boy acting feminine. These experiments demonstrate that actors are constantly involved in <em>constructing and maintaining</em> social order.</li>
+ <li><strong>Breaching experiments</strong>: Garfinkel disrupted normal social settings to reveal how desperately people try to restore "normalcy": going to a supermarket and haggling over prices (people assume you are illiterate or ill); acting at home as if you are a lodger; a boy acting feminine. These experiments demonstrate that actors are constantly involved in <em>constructing and maintaining</em> social order.</li>
  <li>Social order is not objectively given but is made objective through repetitive performance of rules. Otherwise it is muddled and chaotic.</li>
  <li><strong>Conclusion</strong>: The social world consists of nothing more than constructs, interpretations, and accounts of its members. Social order is therefore an <em>illusion</em> created in one's mind using commonsense procedures and culturally embedded assumptions. Sociology's subject matter should be the methods employed by members of society to construct their social world.</li>
 </ul>
@@ -2952,7 +2952,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>5. Laboratory / Controlled Experiment</h3>
 <p>Takes place in a closed environment where the researcher controls conditions. Involves experimental group (exposed to the independent variable) and control group (not exposed).</p>
-<p><strong>Bandura's Bobo Doll Experiment</strong> Children who watched violent TV programmes were more aggressive than those who watched non-violent content suggesting a correlation (and possibly causation) between watching violence and acting violently.</p>
+<p><strong>Bandura's Bobo Doll Experiment</strong>: Children who watched violent TV programmes were more aggressive than those who watched non-violent content suggesting a correlation (and possibly causation) between watching violence and acting violently.</p>
 <p>Laboratory experiments are rare in sociology because they raise ethical issues and validity concerns. Alternatives: field experiments and comparative method.</p>
 
 <h3>6. Content Analysis</h3>
@@ -3064,8 +3064,8 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Methodological issues:</p>
 <ul>
- <li><strong>Reflexivity</strong> Sociologists should explicitly state their national, ethnic, and theoretical locations at the start of research.</li>
- <li><strong>Triadic analysis (Macfarlane)</strong> Comparing only two societies (England and India, or "the West and the rest") inevitably implies one is superior. Beteille: Western scholars articulated most concepts in sociology on the basis of their own societies. Solution: compare three societies simultaneously to avoid binary bias.</li>
+ <li><strong>Reflexivity</strong>: Sociologists should explicitly state their national, ethnic, and theoretical locations at the start of research.</li>
+ <li><strong>Triadic analysis (Macfarlane)</strong>: Comparing only two societies (England and India, or "the West and the rest") inevitably implies one is superior. Beteille: Western scholars articulated most concepts in sociology on the basis of their own societies. Solution: compare three societies simultaneously to avoid binary bias.</li>
 </ul>
 
 <h2>Variables and Correlation</h2>
@@ -3506,7 +3506,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Types of social exclusion:</p>
 <ul>
- <li><strong>Exclusion from adequate income</strong> BPL populations, informal workers, women in unpaid domestic labour.</li>
+ <li><strong>Exclusion from adequate income</strong>: BPL populations, informal workers, women in unpaid domestic labour.</li>
  <li><strong>Exclusion from the labour market</strong> unemployed, retired, disabled, domestic workers, students. Labour market exclusion risks wider social exclusion.</li>
  <li><strong>Exclusion from basic services</strong> electricity, water, transport, financial services; unelectrified and unbanked areas, slums, hilly regions.</li>
  <li><strong>Exclusion from social relations</strong> lack of civic engagement, alienation, isolation. Historically: Avarnas, debtors, women, slaves; today: victims of AIDS, leprosy, homosexuals, the physically handicapped.</li>
@@ -3746,8 +3746,8 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Theories on Social Mobility</h3>
 <ul>
- <li><strong>Functionalist (Saunders)</strong> UK is a meritocratic society; inequality reflects differences in effort and intelligence.</li>
- <li><strong>Marxist (Goldthorpe)</strong> Britain is not an absolutely open society; limited short-range mobility. Kellner and Wilby's <em>1:2:4 rule of relative hope</em>: whatever the chance of a working-class son entering the professional class, it is twice as much for an intermediate-class son and four times as much for an upper-class son. Elite self-recruitment reproduces the class structure.</li>
+ <li><strong>Functionalist (Saunders)</strong>: UK is a meritocratic society; inequality reflects differences in effort and intelligence.</li>
+ <li><strong>Marxist (Goldthorpe)</strong>: Britain is not an absolutely open society; limited short-range mobility. Kellner and Wilby's <em>1:2:4 rule of relative hope</em>: whatever the chance of a working-class son entering the professional class, it is twice as much for an intermediate-class son and four times as much for an upper-class son. Elite self-recruitment reproduces the class structure.</li>
  <li><strong>Weberian (Goldthorpe)</strong> people are rational actors who calculate costs and benefits of mobility. A working-class family views service sector employment as success; a middle-class family views it as failure.</li>
  <li><strong>Feminist</strong> a woman's class was historically defined by the male she lived with. Feminist sociologists insisted on measuring women's own occupational class. UK government statistics switched to this approach in 2000.</li>
 </ul>
@@ -4061,9 +4061,9 @@ export const sociologyNoteContent: Record<string, string> = {
 <ul>
  <li><strong>France</strong> religion was seen as a negative force legitimising estate-based inequality. The French Revolution developed against clergy and warrior class. Today, strict separation exists between state and religion (laïcité).</li>
  <li><strong>USA</strong> religion played a positive role in the American Revolution, offering moral sanction for opposition to British rule. Religion became identified with positive social force. Hence the USA maintains remarkably high levels of church attendance, strong civil religion (Independence Day, Thanksgiving, Super Bowl), NRMs, and the motto "In God we trust."</li>
- <li><strong>Latin America</strong> Uruguay has high secularisation; Brazil is experiencing growth of NRMs (ISKCON, Brahma Kumaris) and Spiritism.</li>
+ <li><strong>Latin America</strong>: Uruguay has high secularisation; Brazil is experiencing growth of NRMs (ISKCON, Brahma Kumaris) and Spiritism.</li>
  <li><strong>Middle East</strong> governments actively control religious life (prayer times, school curricula, media). Yet a "rise in nones" those who do not identify with any faith has been noted in Muslim-majority countries including Iraq, Tunisia, and Morocco.</li>
- <li><strong>India</strong> Gandhi's Satyagraha was grounded in religious principles (ahimsa, soul force). Post-independence India has equality of religions alongside state intervention in religious matters.</li>
+ <li><strong>India</strong>: Gandhi's Satyagraha was grounded in religious principles (ahimsa, soul force). Post-independence India has equality of religions alongside state intervention in religious matters.</li>
 </ul>
 
 <h4>Causes of Secularisation</h4>
@@ -4071,7 +4071,7 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Rationalisation</strong> modern science has made traditional beliefs less plausible and has given people greater control over their environment, making the idea of an omnipotent God less relevant.</li>
  <li><strong>Structural differentiation</strong> education, social welfare, and law, previously under religious influence, were gradually passed to state institutions.</li>
  <li><strong>Industrialisation</strong> broke up communities once held together by common religious beliefs. Modern fragmented industrial society is less conducive to shared sacred experience.</li>
- <li><strong>Pluralism</strong> Peter Berger (1969): the co-existence of numerous and conflicting religious groups undermines the "sacred canopy" the unified, believable framework that religion provides. Crisis of credibility.</li>
+ <li><strong>Pluralism</strong>: Peter Berger (1969): the co-existence of numerous and conflicting religious groups undermines the "sacred canopy" the unified, believable framework that religion provides. Crisis of credibility.</li>
 </ul>
 
 <h4>Criticisms of the Secularisation Thesis</h4>
@@ -4079,7 +4079,7 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Eurocentric</strong> the thesis focuses on decline of religion in Europe but fails to explain its continuing vitality in America, the Middle East, and India. Peter Berger: secularisation hardly explains the explosion of radical Islam globally (including in Europe), or fundamentalist Christianity in Africa and Latin America.</li>
  <li><strong>Not a universal process</strong> belongs to a short, particular period of European history (Grace Davie). Religion has become privatised (private belief without public belonging) "believing without belonging." The opposite is also observed people attend church out of habit without strong belief: "belonging without believing."</li>
  <li><strong>Re-sacralisation and spiritual revolution</strong> growth in NRMs, cults, and individualist spirituality. Religion is not declining but changing form from public to private, from outer to inner authority, from God to self-as-god, from institutional to spiritual.</li>
- <li><strong>Resurgence of religious identities and conflict</strong> Huntington's <em>Clash of Civilisations</em>: the post-cold war world has realigned along civilisational lines. Seven civilisations (Western, Chinese, Japanese, Islamic, Hindu, Latin American, African, Slavic) their cultural and religious differences are the prime source of future conflict. Examples: US intervention in the Arab world, 9/11, Israel-Gaza conflict, ISIS vs. the West. Religion has not faded from macro structures universally; it persists strongly in meso and micro structures.</li>
+ <li><strong>Resurgence of religious identities and conflict</strong>: Huntington's <em>Clash of Civilisations</em>: the post-cold war world has realigned along civilisational lines. Seven civilisations (Western, Chinese, Japanese, Islamic, Hindu, Latin American, African, Slavic) their cultural and religious differences are the prime source of future conflict. Examples: US intervention in the Arab world, 9/11, Israel-Gaza conflict, ISIS vs. the West. Religion has not faded from macro structures universally; it persists strongly in meso and micro structures.</li>
 </ul>
 
 <h3>Religious Pluralism</h3>
@@ -4169,12 +4169,12 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Key Thinkers on the Nature of Work</h3>
 <ul>
- <li><strong>Emile Durkheim</strong> The organisation of work (division of labour) shapes the entire social structure. Traditional society has a simple division of labour based on mechanical solidarity (homogeneity, shared values, similar tasks). Modern society has a complex division of labour based on organic solidarity (interdependence, specialisation, complementarity).</li>
- <li><strong>Karl Marx</strong> Production is the "first historical act." Work is inherently central to human nature and should be a source of happiness and self-expression. When workers lose control over the product and process of their labour, alienation results. Marx classified societies by their modes of production: Primitive, Ancient (Slave), Feudal, Capitalist.</li>
- <li><strong>Herbert Spencer</strong> Division of labour is the criterion for social organisation. Simple societies have minimal occupational differentiation; modern societies have complex differentiation.</li>
- <li><strong>Herbert Marcuse</strong> Drawing on classical Biblical convention, work has been given a sorrowful character (Adam and Eve expelled from Eden to labour for survival). Protestant thought inverted this: work became a calling, giving it a purposeful, even hopeful feeling.</li>
- <li><strong>Max Weber</strong> Protestant ethic transformed the meaning of work from a curse into a vocation. Rational, disciplined labour became the hallmark of moral worth under Calvinism, creating the psychological conditions for capitalism.</li>
- <li><strong>C.W. Mills</strong> White-collar workers lead artificial lives, performing managed emotions ("the artificial smile") and selling not just skills but personality to the market. The professional man is enslaved to social conditions.</li>
+ <li><strong>Emile Durkheim</strong>: The organisation of work (division of labour) shapes the entire social structure. Traditional society has a simple division of labour based on mechanical solidarity (homogeneity, shared values, similar tasks). Modern society has a complex division of labour based on organic solidarity (interdependence, specialisation, complementarity).</li>
+ <li><strong>Karl Marx</strong>: Production is the "first historical act." Work is inherently central to human nature and should be a source of happiness and self-expression. When workers lose control over the product and process of their labour, alienation results. Marx classified societies by their modes of production: Primitive, Ancient (Slave), Feudal, Capitalist.</li>
+ <li><strong>Herbert Spencer</strong>: Division of labour is the criterion for social organisation. Simple societies have minimal occupational differentiation; modern societies have complex differentiation.</li>
+ <li><strong>Herbert Marcuse</strong>: Drawing on classical Biblical convention, work has been given a sorrowful character (Adam and Eve expelled from Eden to labour for survival). Protestant thought inverted this: work became a calling, giving it a purposeful, even hopeful feeling.</li>
+ <li><strong>Max Weber</strong>: Protestant ethic transformed the meaning of work from a curse into a vocation. Rational, disciplined labour became the hallmark of moral worth under Calvinism, creating the psychological conditions for capitalism.</li>
+ <li><strong>C.W. Mills</strong>: White-collar workers lead artificial lives, performing managed emotions ("the artificial smile") and selling not just skills but personality to the market. The professional man is enslaved to social conditions.</li>
 </ul>
 
 <h2>Social Organisation of Work in Different Societies</h2>
@@ -4203,9 +4203,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <tr><td>Post-modern</td><td>Bonded labour, sex trafficking, forced child labour; legal framework bypassed</td><td>Migrant worker exploitation; gig economy platform-bondage</td></tr>
 </table>
 
-<p><strong>Organisation of work in slave society:</strong> Major economic activity was hunting, food gathering, and large-scale agriculture. Mode of production was ancient production only for sustenance. Division of labour was low. Stratification was minimal (two groups: rulers and ruled). Religion dominated economic life. Family played an important role in production. Source of power was animated (human and animal labour). Alienation was relatively low in primitive slavery but intensified in later forms.</p>
+<p><strong>Organisation of work in slave society:</strong>: Major economic activity was hunting, food gathering, and large-scale agriculture. Mode of production was ancient production only for sustenance. Division of labour was low. Stratification was minimal (two groups: rulers and ruled). Religion dominated economic life. Family played an important role in production. Source of power was animated (human and animal labour). Alienation was relatively low in primitive slavery but intensified in later forms.</p>
 
-<p><strong>Why slavery ended:</strong> Capitalism required cheap wage labour, not slave labour. Slave revolts (Spartacus, Haitian Revolution) empowered demands for rights. Population increase made slaves economically unviable. Technological innovation rendered slave labour redundant. Christianity's conceptions of charity and justice were incompatible with slavery. Slavery was abolished in Britain in 1833, in the USA in 1865.</p>
+<p><strong>Why slavery ended:</strong>: Capitalism required cheap wage labour, not slave labour. Slave revolts (Spartacus, Haitian Revolution) empowered demands for rights. Population increase made slaves economically unviable. Technological innovation rendered slave labour redundant. Christianity's conceptions of charity and justice were incompatible with slavery. Slavery was abolished in Britain in 1833, in the USA in 1865.</p>
 
 <h3>B. Feudal Society</h3>
 
@@ -4223,9 +4223,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <li>Alienation was moderate higher than ancient communism (because of new intermediaries) but less than capitalism</li>
 </ul>
 
-<p><strong>Jajmani System (feudalism in delivery of services):</strong> Each caste specialised in one kind of activity, bringing cooperation and interdependence. The Jajman (upper-caste patron) received hereditary services from lower-caste Kamin groups; in return Kamins received grain, protection, and social security. Robert Redfield noted the peasant was not expected to make profits; surplus was to be distributed among kin. Malinowski argued that labour is driven by the culture of society.</p>
+<p><strong>Jajmani System (feudalism in delivery of services):</strong>: Each caste specialised in one kind of activity, bringing cooperation and interdependence. The Jajman (upper-caste patron) received hereditary services from lower-caste Kamin groups; in return Kamins received grain, protection, and social security. Robert Redfield noted the peasant was not expected to make profits; surplus was to be distributed among kin. Malinowski argued that labour is driven by the culture of society.</p>
 
-<p><strong>Transition from feudalism to capitalism:</strong> Productivity of the feudal economy could not sustain the growing population. The Enclosure Movement in Britain evicted serfs from land to supply factory labour. The Reformation and Protestant ethics (Weber) provided a new work ethic. Rising mercantile classes demanded rights that challenged feudal hierarchy.</p>
+<p><strong>Transition from feudalism to capitalism:</strong>: Productivity of the feudal economy could not sustain the growing population. The Enclosure Movement in Britain evicted serfs from land to supply factory labour. The Reformation and Protestant ethics (Weber) provided a new work ethic. Rising mercantile classes demanded rights that challenged feudal hierarchy.</p>
 
 <h3>C. Industrial Capitalist Society</h3>
 
@@ -4247,13 +4247,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Key thinkers on capitalism and work:</strong></p>
 <ul>
- <li><strong>Marx</strong> Commodification of labour; alienation across four dimensions (from product, process, species-being, fellow workers); surplus value appropriated by capitalists.</li>
- <li><strong>Durkheim</strong> Complex division of labour creates organic solidarity but, without moral regulation, generates anomie. Solution: occupational associations, moral education, professional ethics codes.</li>
- <li><strong>Weber</strong> Capitalism is a market-oriented system; occupational diversification leads to job-oriented educational specialisation; rationalisation and bureaucratisation are capitalism's defining features.</li>
- <li><strong>C.W. Mills (White Collar Alienation)</strong> The market buys not just a worker's skills but their personality. The worker has separated himself from his authentic self to pursue the aspects of personality the market values.</li>
- <li><strong>Herbert Marcuse (One-Dimensional Man)</strong> False needs and a false sense of happiness prevent the employed from recognising the genuine nature of their estrangement. Leisure becomes a recharging mechanism before the next day's work, not genuine freedom.</li>
- <li><strong>Robert Blauner (Alienation and Freedom)</strong> Alienation has four dimensions: degree of control workers have over their work; degree to which they are involved; degree of meaning and purpose in their work; degree to which they are socially integrated. Alienation varies by industry and type of production technology.</li>
- <li><strong>Richard Sennett (Corrosion of Character)</strong> Demand for social mobility, adaptability, and flexibility in modern capitalism contradicts long-term social bonds. People switch jobs for better pay; the previous generation sought stability even under exploitative conditions. This "corrosion" weakens social bonds and the capacity for sustained commitment.</li>
+ <li><strong>Marx</strong>: Commodification of labour; alienation across four dimensions (from product, process, species-being, fellow workers); surplus value appropriated by capitalists.</li>
+ <li><strong>Durkheim</strong>: Complex division of labour creates organic solidarity but, without moral regulation, generates anomie. Solution: occupational associations, moral education, professional ethics codes.</li>
+ <li><strong>Weber</strong>: Capitalism is a market-oriented system; occupational diversification leads to job-oriented educational specialisation; rationalisation and bureaucratisation are capitalism's defining features.</li>
+ <li><strong>C.W. Mills (White Collar Alienation)</strong>: The market buys not just a worker's skills but their personality. The worker has separated himself from his authentic self to pursue the aspects of personality the market values.</li>
+ <li><strong>Herbert Marcuse (One-Dimensional Man)</strong>: False needs and a false sense of happiness prevent the employed from recognising the genuine nature of their estrangement. Leisure becomes a recharging mechanism before the next day's work, not genuine freedom.</li>
+ <li><strong>Robert Blauner (Alienation and Freedom)</strong>: Alienation has four dimensions: degree of control workers have over their work; degree to which they are involved; degree of meaning and purpose in their work; degree to which they are socially integrated. Alienation varies by industry and type of production technology.</li>
+ <li><strong>Richard Sennett (Corrosion of Character)</strong>: Demand for social mobility, adaptability, and flexibility in modern capitalism contradicts long-term social bonds. People switch jobs for better pay; the previous generation sought stability even under exploitative conditions. This "corrosion" weakens social bonds and the capacity for sustained commitment.</li>
 </ul>
 
 <h3>D. Taylorism (Scientific Management)</h3>
@@ -4262,13 +4262,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Key characteristics:</strong></p>
 <ul>
- <li><strong>Process simplification</strong> Complex processes are broken into smaller, manageable steps (car manufacturing is divided into setting chassis, setting engine, adding transmission, finishing exterior)</li>
- <li><strong>Skill reduction</strong> Allocating simpler, narrower tasks to less-skilled (cheaper) workers reduces labour costs</li>
- <li><strong>Sequential arrangement</strong> Tasks are arranged in a precise sequence; each worker performs their step and passes it on</li>
- <li><strong>Worker motivation through monetary incentives</strong> Taylor believed in piece-rate wages to maintain worker productivity</li>
+ <li><strong>Process simplification</strong>: Complex processes are broken into smaller, manageable steps (car manufacturing is divided into setting chassis, setting engine, adding transmission, finishing exterior)</li>
+ <li><strong>Skill reduction</strong>: Allocating simpler, narrower tasks to less-skilled (cheaper) workers reduces labour costs</li>
+ <li><strong>Sequential arrangement</strong>: Tasks are arranged in a precise sequence; each worker performs their step and passes it on</li>
+ <li><strong>Worker motivation through monetary incentives</strong>: Taylor believed in piece-rate wages to maintain worker productivity</li>
 </ul>
 
-<p><strong>Critique (Harry Braverman, Labour and Monopoly Capital, 1974):</strong> Taylorism systematically deskills workers, removing their autonomy and craft knowledge and building them into technologies. Workers are coerced into servitude in a factory system. The real purpose of scientific management was not efficiency for workers but control over workers by capital.</p>
+<p><strong>Critique (Harry Braverman, Labour and Monopoly Capital, 1974):</strong>: Taylorism systematically deskills workers, removing their autonomy and craft knowledge and building them into technologies. Workers are coerced into servitude in a factory system. The real purpose of scientific management was not efficiency for workers but control over workers by capital.</p>
 
 <h3>E. Fordism and Post-Fordism</h3>
 
@@ -4306,9 +4306,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Key thinkers:</strong></p>
 <ul>
- <li><strong>David Silverman</strong> Formal organisations arise at an ascertainable point in time, not taken for granted. Patterns of social relations are designed to coordinate and control. Considerable attention is paid to planning changes in them.</li>
- <li><strong>Meyer and Rowan</strong> Formal organisations are systems of coordinated, controlled activities embedded in complex networks of technical relations. Modernity produces formal structures in highly institutional contexts.</li>
- <li><strong>Weber</strong> Bureaucracy is the formal organisation of work par excellence: rational, objective, rule-based, meritocratic, hierarchical. It is the purest expression of formal-legal authority.</li>
+ <li><strong>David Silverman</strong>: Formal organisations arise at an ascertainable point in time, not taken for granted. Patterns of social relations are designed to coordinate and control. Considerable attention is paid to planning changes in them.</li>
+ <li><strong>Meyer and Rowan</strong>: Formal organisations are systems of coordinated, controlled activities embedded in complex networks of technical relations. Modernity produces formal structures in highly institutional contexts.</li>
+ <li><strong>Weber</strong>: Bureaucracy is the formal organisation of work par excellence: rational, objective, rule-based, meritocratic, hierarchical. It is the purest expression of formal-legal authority.</li>
 </ul>
 
 <p><strong>Characteristics of formal organisation:</strong></p>
@@ -4333,15 +4333,15 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>An informal organisation consists of small units engaged in the production of goods and services without proper organisational structure, permanent workforce, or legal and social security protections. Workers are governed not by formal rules but by personal relations, trust, and the directions of employers. The Jajmani system in India is a classic example.</p>
 
-<p><strong>Scale of informal work:</strong> As per the ILO report "Women and Men in the Informal Economy" (2018), over two billion people more than 61% of the world's employed population work in the informal economy. Over 93% of informal employment is in emerging and developing countries. In India, more than 85% of the labour force is engaged in informal work.</p>
+<p><strong>Scale of informal work:</strong>: As per the ILO report "Women and Men in the Informal Economy" (2018), over two billion people more than 61% of the world's employed population work in the informal economy. Over 93% of informal employment is in emerging and developing countries. In India, more than 85% of the labour force is engaged in informal work.</p>
 
 <p><strong>Key thinkers:</strong></p>
 <ul>
- <li><strong>Elton Mayo (Hawthorne Studies)</strong> From his studies at Western Electric, Mayo found that employees have social and emotional needs alongside financial ones. Work satisfaction depends not just on formal rules but on informal culture, personal relations, and social recognition.</li>
- <li><strong>Keith Hart</strong> Characterised the informal sector by: low levels of skill and technology; easy entry; low paid employment; largely composed of immigrant labour.</li>
- <li><strong>Peter Blau (The Dynamics of Bureaucracy, 1963)</strong> Demonstrated the interdependent relation between formal and informal organisation. Informal structures exist inside formal organisations; when small informal organisations grow, they require formal rules.</li>
- <li><strong>Martha Chen (Models of the Informal Economy)</strong> Dualist (all economies have two sectors that can coincide with rural/urban dichotomies); Structuralist (informal sector is necessary for the functioning of the formal sector); Legalistic (informality flourishes because small entrepreneurs seek to avoid the costs of formal compliance); Voluntaristic (entrepreneur voluntarily chooses informal sector membership).</li>
- <li><strong>Sharit Bhowmik</strong> Two kinds: Informal Economy (street vendors, rickshaw pullers, home-based workers) and Informal Employment (casual and contract labourers within the formal economy).</li>
+ <li><strong>Elton Mayo (Hawthorne Studies)</strong>: From his studies at Western Electric, Mayo found that employees have social and emotional needs alongside financial ones. Work satisfaction depends not just on formal rules but on informal culture, personal relations, and social recognition.</li>
+ <li><strong>Keith Hart</strong>: Characterised the informal sector by: low levels of skill and technology; easy entry; low paid employment; largely composed of immigrant labour.</li>
+ <li><strong>Peter Blau (The Dynamics of Bureaucracy, 1963)</strong>: Demonstrated the interdependent relation between formal and informal organisation. Informal structures exist inside formal organisations; when small informal organisations grow, they require formal rules.</li>
+ <li><strong>Martha Chen (Models of the Informal Economy)</strong>: Dualist (all economies have two sectors that can coincide with rural/urban dichotomies); Structuralist (informal sector is necessary for the functioning of the formal sector); Legalistic (informality flourishes because small entrepreneurs seek to avoid the costs of formal compliance); Voluntaristic (entrepreneur voluntarily chooses informal sector membership).</li>
+ <li><strong>Sharit Bhowmik</strong>: Two kinds: Informal Economy (street vendors, rickshaw pullers, home-based workers) and Informal Employment (casual and contract labourers within the formal economy).</li>
 </ul>
 
 <p><strong>Characteristics of informal work:</strong></p>
@@ -4355,9 +4355,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <li>Feminisation of labour women disproportionately occupy informal jobs; in India, over 95% of working women are classified as informal workers (ILO, 2018)</li>
 </ul>
 
-<p><strong>Feminisation of informal work:</strong> Arlie Hochschild's concept of <em>emotional labour</em> women are believed to be more emotional and are employed in the service sector's market of emotions (air hostesses, call centre agents, receptionists, nurses). The glass-ceiling effect: only 17% of women occupy managerial positions. Women in informal sectors face stigma, lack of recognition, and are most vulnerable to wage theft. Naila Kabeer's study of Bangladeshi women in the garment industry showed the complex trade-offs between economic participation and exploitation.</p>
+<p><strong>Feminisation of informal work:</strong>: Arlie Hochschild's concept of <em>emotional labour</em> women are believed to be more emotional and are employed in the service sector's market of emotions (air hostesses, call centre agents, receptionists, nurses). The glass-ceiling effect: only 17% of women occupy managerial positions. Women in informal sectors face stigma, lack of recognition, and are most vulnerable to wage theft. Naila Kabeer's study of Bangladeshi women in the garment industry showed the complex trade-offs between economic participation and exploitation.</p>
 
-<p><strong>Formal vs Informal Continuum:</strong> The distinction between formal and informal is best understood across three levels. At the macro level, traditional work was informally organised while modern work tends toward formal organisation. At the micro level, formal structures eventually emerge from informal ones (when small firms grow), and inside formal organisations, informal structures always exist (office friendships, grapevines, informal leadership). At the process level, with time, formal organisation emerges from informal as a continuous historical process the two are always co-present.</p>
+<p><strong>Formal vs Informal Continuum:</strong>: The distinction between formal and informal is best understood across three levels. At the macro level, traditional work was informally organised while modern work tends toward formal organisation. At the micro level, formal structures eventually emerge from informal ones (when small firms grow), and inside formal organisations, informal structures always exist (office friendships, grapevines, informal leadership). At the process level, with time, formal organisation emerges from informal as a continuous historical process the two are always co-present.</p>
 
 <h2>Labour and Society</h2>
 
@@ -4365,13 +4365,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Major Perspectives</h3>
 
-<p><strong>Durkheim:</strong> In simple societies, a simple division of labour produced mechanical solidarity based on similarity and collective consciousness. In modern societies, complex division of labour produces organic solidarity based on interdependence and complementarity. Labour, in the collective, drives integration.</p>
+<p><strong>Durkheim:</strong>: In simple societies, a simple division of labour produced mechanical solidarity based on similarity and collective consciousness. In modern societies, complex division of labour produces organic solidarity based on interdependence and complementarity. Labour, in the collective, drives integration.</p>
 
-<p><strong>Marx:</strong> Labour is alienated in every society since the rise of private property. Labour is commodified, dehumanised, made a means rather than an end. The only solution is the abolition of private property and the end of the wage relation.</p>
+<p><strong>Marx:</strong>: Labour is alienated in every society since the rise of private property. Labour is commodified, dehumanised, made a means rather than an end. The only solution is the abolition of private property and the end of the wage relation.</p>
 
-<p><strong>C.W. Mills (White Collar):</strong> White-collar workers carry artificial smiles and lead artificial lives. Following the law gives an artificial feeling of being right. The professional man is enslaved to social conditions far more subtle than the chains of the proletarian.</p>
+<p><strong>C.W. Mills (White Collar):</strong>: White-collar workers carry artificial smiles and lead artificial lives. Following the law gives an artificial feeling of being right. The professional man is enslaved to social conditions far more subtle than the chains of the proletarian.</p>
 
-<p><strong>Labour in socialism (Milovan Djilas):</strong> Marx and Lenin envisioned labour as compatible, harmonious, and non-exploitative. But Djilas, the Yugoslav dissident, contradicted this: even in socialist states, labour is exploited in the name of social wellbeing, with a new ruling class (the Party bureaucracy) appropriating the surplus.</p>
+<p><strong>Labour in socialism (Milovan Djilas):</strong>: Marx and Lenin envisioned labour as compatible, harmonious, and non-exploitative. But Djilas, the Yugoslav dissident, contradicted this: even in socialist states, labour is exploited in the name of social wellbeing, with a new ruling class (the Party bureaucracy) appropriating the surplus.</p>
 
 <h3>Hawthorne Studies and Human Relations (Elton Mayo)</h3>
 
@@ -4412,9 +4412,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Amos Hawley</strong> radicalised this insight: "Every social act is an exercise of power, every social relationship is a power equation, and every social group or system is an organisation of power." Power is not exceptional but omnipresent in social life.</p>
 
-<p><strong>Bases of Power:</strong> Wealth, Status, Knowledge, Charisma, Force (illegitimate violence, coercion), and Authority (legitimate traditional, charismatic, rational-legal).</p>
+<p><strong>Bases of Power:</strong>: Wealth, Status, Knowledge, Charisma, Force (illegitimate violence, coercion), and Authority (legitimate traditional, charismatic, rational-legal).</p>
 
-<p><strong>Features of Power:</strong> It is a structural aspect of social reality. It operates reciprocally but usually not equally reciprocally. It manifests itself in a relational manner and appears as a process, not a fixed part of social structure. Power is inherent in social stratification and simultaneously becomes its basis.</p>
+<p><strong>Features of Power:</strong>: It is a structural aspect of social reality. It operates reciprocally but usually not equally reciprocally. It manifests itself in a relational manner and appears as a process, not a fixed part of social structure. Power is inherent in social stratification and simultaneously becomes its basis.</p>
 
 <h3>Steven Lukes: Three Faces (Dimensions) of Power</h3>
 
@@ -4435,48 +4435,48 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Elite theory holds that only a minority possesses the talent, intelligence, ability, and leadership to occupy positions of power. This minority influences government decisions and gains dominant positions beyond what general elections can challenge democracy, in this view, is a utopia.</p>
 
-<p><strong>Vilfredo Pareto (Circulation of Elites):</strong> Society's higher stratum comprises the economic-wealthy, political rulers, the most holy (religion), the most artistic (art), and the most virtuous (ethics). The governing elite is subdivided into two psychological types, adapted from Machiavelli:</p>
+<p><strong>Vilfredo Pareto (Circulation of Elites):</strong>: Society's higher stratum comprises the economic-wealthy, political rulers, the most holy (religion), the most artistic (art), and the most virtuous (ethics). The governing elite is subdivided into two psychological types, adapted from Machiavelli:</p>
 <ul>
  <li><strong>Foxes</strong> have vitality and imagination; prefer materialistic goals and strategies of emotional appeal and fraud; replace lions who lack manipulative skills</li>
  <li><strong>Lions</strong> conservative elites who have residue of persistence (faith in ideology, group loyalty)</li>
 </ul>
 <p>Society degenerates when elites occupy status due to ascription rather than achievement. Elites circulate foxes replace lions and vice versa in a continuous cycle. Critique: no method of measuring qualities; Parsons argues residues change with society; the difference between foxes and lions is merely a style of rule.</p>
 
-<p><strong>Gaetano Mosca (Class Theory of Power, <em>The Ruling Class</em>):</strong> Elite rule is a universal necessity and inevitability. All societies divide into a ruling class (subdivided into elites holding political power and property) and a ruled class (sub-elites: technocrats, managers, civil servants). Dominant interests are reflected in the ruling class who dominate structures and values. Mosca differs from Pareto: elites are restrained by various social factors; the ruled are not powerless in democracy.</p>
+<p><strong>Gaetano Mosca (Class Theory of Power, <em>The Ruling Class</em>):</strong>: Elite rule is a universal necessity and inevitability. All societies divide into a ruling class (subdivided into elites holding political power and property) and a ruled class (sub-elites: technocrats, managers, civil servants). Dominant interests are reflected in the ruling class who dominate structures and values. Mosca differs from Pareto: elites are restrained by various social factors; the ruled are not powerless in democracy.</p>
 
-<p><strong>Robert Michels (Iron Law of Oligarchy):</strong> Oligarchy is inevitable within democracy as it is part of technical and tactical necessity. The leadership class comes to dominate the power structure; it controls access to information, centralises power with little accountability. Any democratic attempt fails because the leadership class rewards loyalty. Elites are sustained by three principles in bureaucratic structures: need and specialisation, importance of psychological attributes, utilisation of facilities by old elites.</p>
+<p><strong>Robert Michels (Iron Law of Oligarchy):</strong>: Oligarchy is inevitable within democracy as it is part of technical and tactical necessity. The leadership class comes to dominate the power structure; it controls access to information, centralises power with little accountability. Any democratic attempt fails because the leadership class rewards loyalty. Elites are sustained by three principles in bureaucratic structures: need and specialisation, importance of psychological attributes, utilisation of facilities by old elites.</p>
 
-<p><strong>C.W. Mills (<em>The Power Elite</em>, 1956):</strong> Mills explained elite rule in institutional rather than psychological terms. He identified two kinds of elites: segmental (arts, music, science) and strategic (those who govern). Three institutions yield concentrated power in modern America: major corporations, the federal government, and the military. These institutional elites share the same lifestyle, family relationships, and perpetuate their rule through self-recruitment. They occupy <em>command posts</em> key pivotal positions. However, unlike Pareto, Mills argued: elites have no moral or psychological superiority; elite rule is not inevitable; masses are not incompetent but are kept in a state of ignorance and powerlessness.</p>
+<p><strong>C.W. Mills (<em>The Power Elite</em>, 1956):</strong>: Mills explained elite rule in institutional rather than psychological terms. He identified two kinds of elites: segmental (arts, music, science) and strategic (those who govern). Three institutions yield concentrated power in modern America: major corporations, the federal government, and the military. These institutional elites share the same lifestyle, family relationships, and perpetuate their rule through self-recruitment. They occupy <em>command posts</em> key pivotal positions. However, unlike Pareto, Mills argued: elites have no moral or psychological superiority; elite rule is not inevitable; masses are not incompetent but are kept in a state of ignorance and powerlessness.</p>
 
-<p><strong>James Burnham (<em>The Managerial Revolution</em>):</strong> All power is in the hands of managers a separation of operation and control has occurred. Capitalism is in decline; managers are the new elites.</p>
+<p><strong>James Burnham (<em>The Managerial Revolution</em>):</strong>: All power is in the hands of managers a separation of operation and control has occurred. Capitalism is in decline; managers are the new elites.</p>
 
-<p><strong>T.B. Bottomore (<em>The Elites and Society</em>):</strong> Elites differ in industrial and developing societies. Society is moving towards egalitarianism; multiple elites are present in the developing world dynastic, middle class, revolutionary intellectuals, colonial administrators, nationalist leaders.</p>
+<p><strong>T.B. Bottomore (<em>The Elites and Society</em>):</strong>: Elites differ in industrial and developing societies. Society is moving towards egalitarianism; multiple elites are present in the developing world dynastic, middle class, revolutionary intellectuals, colonial administrators, nationalist leaders.</p>
 
-<p><strong>Critique of Elite Theories:</strong> Power of public opinion is ignored. Karl Mannheim: in democracy, people remove leaders not working according to their wishes. Power changes moment to moment and issue to issue. David Riesman rejected Mills' theory, arguing there is so much diversity in the US in terms of thoughts and interests. Altruistic motives do exist. Robert Dahl in <em>Who Governs?</em> found in New Haven, Connecticut, that power is dispersed (confirmed by Arnold Rose).</p>
+<p><strong>Critique of Elite Theories:</strong>: Power of public opinion is ignored. Karl Mannheim: in democracy, people remove leaders not working according to their wishes. Power changes moment to moment and issue to issue. David Riesman rejected Mills' theory, arguing there is so much diversity in the US in terms of thoughts and interests. Altruistic motives do exist. Robert Dahl in <em>Who Governs?</em> found in New Haven, Connecticut, that power is dispersed (confirmed by Arnold Rose).</p>
 
 <h3>B. Pluralist Theory</h3>
 
 <p>Based on functionalism (Parsons) and classical pluralism, with emphasis on equilibrium, stability, and gradual change. Society is decentralised. Power is widely shared, diffused, fragmented, and derived from multiple resources. Diverse groups with conflicting interests ensure no single group plays a dominant role. Natural balance of power is preserved through bargaining and compromise.</p>
 
-<p><strong>Alexis de Tocqueville:</strong> Democracy becomes dysfunctional if dominated by one interest. The state is an "honest broker" mediating between competing groups.</p>
+<p><strong>Alexis de Tocqueville:</strong>: Democracy becomes dysfunctional if dominated by one interest. The state is an "honest broker" mediating between competing groups.</p>
 
-<p><strong>Talcott Parsons (Variable Sum Conception):</strong> Criticised Weber's zero-sum conception of power. Power can decrease and increase it is not constant. Modernity has raised the lifestyle of all (a positive-sum outcome). Power is a structural feature of society and a generalised facility or resource a capacity to mobilise resources for the attainment of collective goals. Value consensus means goals are shared and power is used to further collective wellbeing. Western democracies are "deposits" of power people can withdraw their deposit in the next election.</p>
+<p><strong>Talcott Parsons (Variable Sum Conception):</strong>: Criticised Weber's zero-sum conception of power. Power can decrease and increase it is not constant. Modernity has raised the lifestyle of all (a positive-sum outcome). Power is a structural feature of society and a generalised facility or resource a capacity to mobilise resources for the attainment of collective goals. Value consensus means goals are shared and power is used to further collective wellbeing. Western democracies are "deposits" of power people can withdraw their deposit in the next election.</p>
 
-<p><strong>Critique of Pluralism:</strong> Not all interest groups have equal power. Certain groups (refugees, the very poor, the unorganised) are structurally excluded from pluralist bargaining. Safe decisions are taken in disguise (Lukes' 2nd and 3rd faces). Robert Dahl's own later work acknowledged inequalities in political resources.</p>
+<p><strong>Critique of Pluralism:</strong>: Not all interest groups have equal power. Certain groups (refugees, the very poor, the unorganised) are structurally excluded from pluralist bargaining. Safe decisions are taken in disguise (Lukes' 2nd and 3rd faces). Robert Dahl's own later work acknowledged inequalities in political resources.</p>
 
 <h3>C. Marxist and Neo-Marxist Theories</h3>
 
-<p><strong>Classical Marxism:</strong> Those who own the means of production (the haves) have power like elites. Power is coercive but accepted due to false consciousness. In the <em>Communist Manifesto</em>, the oppression of one class by another is political power in its essence. Power is pervasive the dominant class exercises it in every field through dominant ideologies.</p>
+<p><strong>Classical Marxism:</strong>: Those who own the means of production (the haves) have power like elites. Power is coercive but accepted due to false consciousness. In the <em>Communist Manifesto</em>, the oppression of one class by another is political power in its essence. Power is pervasive the dominant class exercises it in every field through dominant ideologies.</p>
 
-<p><strong>Antonio Gramsci (Hegemony):</strong> There is no simple economic determinism there is reciprocity between infrastructure and superstructure. Hegemony is achieved not by force alone but by ideas (concessions, dual consciousness ideas are not always directly derived from capitalist interests). The ruling class manipulates culture (beliefs, explanations, perceptions, values) so that the dominant ideology becomes accepted as common sense beneficial for all rather than a fake social construct. Hegemony operates through state apparatus and through civil society institutions (schools, churches, media).</p>
+<p><strong>Antonio Gramsci (Hegemony):</strong>: There is no simple economic determinism there is reciprocity between infrastructure and superstructure. Hegemony is achieved not by force alone but by ideas (concessions, dual consciousness ideas are not always directly derived from capitalist interests). The ruling class manipulates culture (beliefs, explanations, perceptions, values) so that the dominant ideology becomes accepted as common sense beneficial for all rather than a fake social construct. Hegemony operates through state apparatus and through civil society institutions (schools, churches, media).</p>
 
-<p><strong>Louis Althusser:</strong> Distinguished two forms of state power. <em>Repressive State Apparatus</em> ruling class controls government, courts, police, military; people submit due to fear of legal prosecution. <em>Ideological State Apparatus</em> religion, schools, and families controlled through ideology; people submit due to fear of social ridicule.</p>
+<p><strong>Louis Althusser:</strong>: Distinguished two forms of state power. <em>Repressive State Apparatus</em> ruling class controls government, courts, police, military; people submit due to fear of legal prosecution. <em>Ideological State Apparatus</em> religion, schools, and families controlled through ideology; people submit due to fear of social ridicule.</p>
 
-<p><strong>Nicos Poulantzas (Relative Autonomy of the State):</strong> Emphasised importance of social structure over individual action. Class origin does not matter class position does. The structure of society is capitalist; thus the state is by default capitalistic in nature. No need for capitalists to be physically present in the governing class the state serves capitalist interests structurally. Relative autonomy: the state must diffuse protests and promote a myth of inclusiveness, and bourgeoisie are not free from internal divisions.</p>
+<p><strong>Nicos Poulantzas (Relative Autonomy of the State):</strong>: Emphasised importance of social structure over individual action. Class origin does not matter class position does. The structure of society is capitalist; thus the state is by default capitalistic in nature. No need for capitalists to be physically present in the governing class the state serves capitalist interests structurally. Relative autonomy: the state must diffuse protests and promote a myth of inclusiveness, and bourgeoisie are not free from internal divisions.</p>
 
-<p><strong>Ralph Miliband:</strong> State functions to serve capitalist interests due to similar social origins of members of state, government, and ruling-class elites (elite self-recruitment). The state becomes an agent of the wealthy, though direct intervention is not always needed (operates via the 3rd face of power indoctrination).</p>
+<p><strong>Ralph Miliband:</strong>: State functions to serve capitalist interests due to similar social origins of members of state, government, and ruling-class elites (elite self-recruitment). The state becomes an agent of the wealthy, though direct intervention is not always needed (operates via the 3rd face of power indoctrination).</p>
 
-<p><strong>Bob Jessop (The Future of the Capitalist State, Neo-Marxist):</strong> Post-Fordist specialised production means capitalists don't always run the state. The state has operational autonomy capitalism cannot exist without non-capitalist institutions. Shift from the Keynesian Welfare State model to a <em>Schumpeterian Workfare Economy</em> (unemployed should seek work) and post-national model emphasising international competition in the knowledge economy.</p>
+<p><strong>Bob Jessop (The Future of the Capitalist State, Neo-Marxist):</strong>: Post-Fordist specialised production means capitalists don't always run the state. The state has operational autonomy capitalism cannot exist without non-capitalist institutions. Shift from the Keynesian Welfare State model to a <em>Schumpeterian Workfare Economy</em> (unemployed should seek work) and post-national model emphasising international competition in the knowledge economy.</p>
 
 <h3>D. Foucault: Power, Knowledge and Discourse</h3>
 
@@ -4505,17 +4505,17 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Political parties are organisations driven by clear ideologies, which influence members to join and elect a common leader. This leader is defined by ideology and rule of law.</p>
 
 <ul>
- <li><strong>Weber</strong> A party is an organised group action intended to capture power; it is an ideal type present in every society.</li>
- <li><strong>F.W. Riggs</strong> Any organisation that nominates candidates to elections.</li>
- <li><strong>T.B. Bottomore</strong> Groups with divergent interests form political parties; they are a link between state and sectional interest, with the ultimate aim to capture power.</li>
- <li><strong>Seymour Lipset</strong> Parties compete with each other to gain office.</li>
+ <li><strong>Weber</strong>: A party is an organised group action intended to capture power; it is an ideal type present in every society.</li>
+ <li><strong>F.W. Riggs</strong>: Any organisation that nominates candidates to elections.</li>
+ <li><strong>T.B. Bottomore</strong>: Groups with divergent interests form political parties; they are a link between state and sectional interest, with the ultimate aim to capture power.</li>
+ <li><strong>Seymour Lipset</strong>: Parties compete with each other to gain office.</li>
 </ul>
 
 <p>In a democracy, parties represent popular opinion; they are obligated to fulfill supporters' interests or face electoral defeat (Parsons and Aron). They require support from various groups so cannot only represent sectional interest.</p>
 
-<p><strong>Forms of Political Party (Maurice Duverger):</strong> Mass Based (China, Cuba mostly socialist or communist countries) and Cadre Based (in democracies rank-based, hierarchical, division of responsibilities).</p>
+<p><strong>Forms of Political Party (Maurice Duverger):</strong>: Mass Based (China, Cuba mostly socialist or communist countries) and Cadre Based (in democracies rank-based, hierarchical, division of responsibilities).</p>
 
-<p><strong>Robert Dahl's classification:</strong> Exterior parties (emerging from external influence, e.g., CPI in India due to CP China and Russia) and Interior parties (like the Communist Party of the USSR).</p>
+<p><strong>Robert Dahl's classification:</strong>: Exterior parties (emerging from external influence, e.g., CPI in India due to CP China and Russia) and Interior parties (like the Communist Party of the USSR).</p>
 
 <p><strong>Party systems and their assessments:</strong></p>
 <table>
@@ -4531,16 +4531,16 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Robert McKenzie's two types:</strong></p>
 <ul>
- <li><strong>Protective groups</strong> Defend the interests of a particular section of society (trade unions, CII). Zero-sum game.</li>
- <li><strong>Promotional groups</strong> Support a particular cause rather than guard the interests of a particular group (Greenpeace, PETA). Membership is larger and more open.</li>
+ <li><strong>Protective groups</strong>: Defend the interests of a particular section of society (trade unions, CII). Zero-sum game.</li>
+ <li><strong>Promotional groups</strong>: Support a particular cause rather than guard the interests of a particular group (Greenpeace, PETA). Membership is larger and more open.</li>
 </ul>
 
 <p><strong>Gabriel Almond's structural classification:</strong></p>
 <ul>
- <li><strong>Institutional interest groups</strong> Within institutions like the army and business associations; formally organised professional persons, particularly bureaucracy</li>
- <li><strong>Non-associational interest groups</strong> Formed on the basis of religion, ethnic group, or kinship; common in developing societies (because stronger ascriptive identities)</li>
- <li><strong>Associational interest groups</strong> Formed by trade unions, businessmen, industrialists, or professional groups; articulation of interest is quite prominent; launch agitation if necessary</li>
- <li><strong>Anomic interest groups</strong> Form spontaneously (riots, militant demonstrations); no permanent structure; no organisation (terrorist organisations, criminal gangs)</li>
+ <li><strong>Institutional interest groups</strong>: Within institutions like the army and business associations; formally organised professional persons, particularly bureaucracy</li>
+ <li><strong>Non-associational interest groups</strong>: Formed on the basis of religion, ethnic group, or kinship; common in developing societies (because stronger ascriptive identities)</li>
+ <li><strong>Associational interest groups</strong>: Formed by trade unions, businessmen, industrialists, or professional groups; articulation of interest is quite prominent; launch agitation if necessary</li>
+ <li><strong>Anomic interest groups</strong>: Form spontaneously (riots, militant demonstrations); no permanent structure; no organisation (terrorist organisations, criminal gangs)</li>
 </ul>
 
 <p>Insider groups have access to power; outsider groups operate outside power circles. Durkheim in <em>Professional Ethics and Civic Morals</em> called pressure groups a tool for associative democracy, holding people together and acting as effective checks on the individual in industrial society. Bernard Barber called them the "third sector of democracy." Dawes and Hughes believe pressure groups are a continuous mandate for government and that democracy cannot be conceived without them.</p>
@@ -4551,9 +4551,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Types of Democracy:</strong></p>
 <ul>
- <li><strong>Participative</strong> Direct participation via referendum, recall, plebiscite, initiative</li>
- <li><strong>Representative</strong> Agent-based (one who consults the electorate) or Delegate-based (one who acts on his own discretion while taking decisions). Bestows responsibility or power in the hands of a few to represent collective interest.</li>
- <li><strong>Associative</strong> Durkheim in <em>Professional Ethics and Civic Morals</em>: participation via voluntary organisations (socialist society), sensitise, check on bureaucracy, civic culture</li>
+ <li><strong>Participative</strong>: Direct participation via referendum, recall, plebiscite, initiative</li>
+ <li><strong>Representative</strong>: Agent-based (one who consults the electorate) or Delegate-based (one who acts on his own discretion while taking decisions). Bestows responsibility or power in the hands of a few to represent collective interest.</li>
+ <li><strong>Associative</strong>: Durkheim in <em>Professional Ethics and Civic Morals</em>: participation via voluntary organisations (socialist society), sensitise, check on bureaucracy, civic culture</li>
 </ul>
 
 <p><strong>Critique of democracy:</strong></p>
@@ -4579,9 +4579,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Theories of the State:</strong></p>
 <ul>
- <li><strong>Pluralist</strong> State controlled by many parties and organisations, representing the interests of all; Lipset: institutionalisation of class-conflict through parties</li>
- <li><strong>Elite</strong> Mills: state represents elite interest; Michels: democracy is rule by oligarchic organisations through bureaucracy; elite interest not put to serious challenge</li>
- <li><strong>Functionalist</strong> Parsons: state needed to determine goals based on value consensus and to mobilise resources for their fulfilment</li>
+ <li><strong>Pluralist</strong>: State controlled by many parties and organisations, representing the interests of all; Lipset: institutionalisation of class-conflict through parties</li>
+ <li><strong>Elite</strong>: Mills: state represents elite interest; Michels: democracy is rule by oligarchic organisations through bureaucracy; elite interest not put to serious challenge</li>
+ <li><strong>Functionalist</strong>: Parsons: state needed to determine goals based on value consensus and to mobilise resources for their fulfilment</li>
  <li><strong>Marxist</strong> state committed to common interest of capitalists and staffed by ruling class; Westergaard and Risler: welfare state a myth inequality still prevails; social security systems are merely concessions to suppress proletarian revolt</li>
  <li><strong>Eric Nordlinger</strong> state has genuine autonomy: Type 1 (state has different wishes from major groups and has resources and decision-making power), Type 2 (persuades opponents to change their mind; active role in manipulating public opinion), Type 3 (apathy of the public leaves decision-making to the state)</li>
  <li><strong>Theda Skocpol (Bringing the State Back In)</strong> state can have its own goals (reinforce authority, political longevity). State capacity depends on reliable income (taxes from rich), no foreign debt, increase in human resources. When state capacity decreases, revolution occurs (Russian, French, Chinese revolutions)</li>
@@ -4591,15 +4591,15 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Nation</strong> (psychological) vs <strong>State</strong> (political) vs <strong>Country</strong> (geographical). A nation is a large group with common characteristics language, traditions, customs, habitus, and ethnicity. It is more impersonal, abstract, and overtly political than an ethnic group; a cultural-political community that has become conscious of its autonomy, unity, and particular interests.</p>
 
-<p><strong>Joseph Stalin:</strong> A nation is not a racial or tribal but a historically constituted community, formed on the basis of a common language, territory, economic life, and psychological make-up manifested in a common culture.</p>
+<p><strong>Joseph Stalin:</strong>: A nation is not a racial or tribal but a historically constituted community, formed on the basis of a common language, territory, economic life, and psychological make-up manifested in a common culture.</p>
 
-<p><strong>Benedict Anderson:</strong> An "Imagined Community" it is imagined because material conditions exist for imagining extended and shared connections, even though members will never likely meet. Paul James: "Abstract community" objectively impersonal even if each individual experiences themselves as part of an embodied unity. Vance Packard: "A nation of strangers."</p>
+<p><strong>Benedict Anderson:</strong>: An "Imagined Community" it is imagined because material conditions exist for imagining extended and shared connections, even though members will never likely meet. Paul James: "Abstract community" objectively impersonal even if each individual experiences themselves as part of an embodied unity. Vance Packard: "A nation of strangers."</p>
 
 <p>Two types of nations: the <strong>civic nation</strong> (traced to the French Revolution Liberty, Equality, Fraternity; Ernest Renan: a willingness to "live together") and the <strong>ethnic nation</strong> (exemplified by the German peoples common ethnicity and culture as basis of political community).</p>
 
-<p><strong>Ernest Gellner's conditions of nationalism:</strong> Shared formal education system; cultural homogenisation and "social entropy" (natural decay of a social system); central monitoring of polity with extensive bureaucratic control; linguistic standardisation; national identification as abstract community; cultural similarity as basis for political legitimacy.</p>
+<p><strong>Ernest Gellner's conditions of nationalism:</strong>: Shared formal education system; cultural homogenisation and "social entropy" (natural decay of a social system); central monitoring of polity with extensive bureaucratic control; linguistic standardisation; national identification as abstract community; cultural similarity as basis for political legitimacy.</p>
 
-<p><strong>Eric Hobsbawm:</strong> Nationalist ideology represents a bourgeois construct capitalism replaced traditional aristocracy and nationalism was the result of economic capital. <strong>Albert Cohen:</strong> Nationalism was the result of a reaction to colonialism in Third World nations. <strong>Andrew Pilkington:</strong> Otherisation as globalisation grew, the idea that "we are different from others" also grew, eventually leading to nationalism flowing from elites to lower strata. Hybrid identities (one is English + British + European simultaneously). Hyphenated identities (minorities) need to be mainstreamed to form "inclusive nationalism."</p>
+<p><strong>Eric Hobsbawm:</strong>: Nationalist ideology represents a bourgeois construct capitalism replaced traditional aristocracy and nationalism was the result of economic capital. <strong>Albert Cohen:</strong>: Nationalism was the result of a reaction to colonialism in Third World nations. <strong>Andrew Pilkington:</strong>: Otherisation as globalisation grew, the idea that "we are different from others" also grew, eventually leading to nationalism flowing from elites to lower strata. Hybrid identities (one is English + British + European simultaneously). Hyphenated identities (minorities) need to be mainstreamed to form "inclusive nationalism."</p>
 
 <h2>Globalisation and the Nation-State</h2>
 
@@ -4607,15 +4607,15 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>However: globalisation is not new and is not reducing the power of the nation-state; it has impacted Western societies more where infrastructure is present; it has exploited the poor; global problems have emerged (terrorism, drug and weapon trade, money laundering); global institutions may not be subject to democratic control.</p>
 
-<p><strong>Leslie Sklair (Sociology of the Global System):</strong> Transnational practices include economic transnational corporations, political capitalist-inspired politicians, and cultural ideological consumerism. Globalisation has mostly negative impact: class polarisation and ecological unsustainability.</p>
+<p><strong>Leslie Sklair (Sociology of the Global System):</strong>: Transnational practices include economic transnational corporations, political capitalist-inspired politicians, and cultural ideological consumerism. Globalisation has mostly negative impact: class polarisation and ecological unsustainability.</p>
 
-<p><strong>David Held and Anthony McGrew (Democracy and Cosmopolitan Order):</strong> Globalists (globalisation transforms economy, global politics, risk), Sceptics (nothing new about migration and international trade; people have maintained strong national identities), and Transformationalists (nothing new about globalisation; in future it might change direction or be reversed; globalisation is bringing diverse people together which can become a source of conflict).</p>
+<p><strong>David Held and Anthony McGrew (Democracy and Cosmopolitan Order):</strong>: Globalists (globalisation transforms economy, global politics, risk), Sceptics (nothing new about migration and international trade; people have maintained strong national identities), and Transformationalists (nothing new about globalisation; in future it might change direction or be reversed; globalisation is bringing diverse people together which can become a source of conflict).</p>
 
 <h2>Citizenship</h2>
 
 <p>A citizen is not merely one who lives in a nation-state aliens also do that. A citizen is one who participates in the process of government in two ways: rights (demands on the state) and duties (demands by the state). Harold J. Laski: the state is known by the rights it maintains.</p>
 
-<p><strong>T.H. Marshall's Theory of Citizenship:</strong> Citizenship is a status enjoyed by a person who is a full member of a community. It has three components that developed historically in sequence:</p>
+<p><strong>T.H. Marshall's Theory of Citizenship:</strong>: Citizenship is a status enjoyed by a person who is a full member of a community. It has three components that developed historically in sequence:</p>
 <ul>
  <li><strong>Civil citizenship</strong> individual freedom institutionalised in law (18th century)</li>
  <li><strong>Political citizenship</strong> right to participate in exercise of political power and to hold public office (19th century)</li>
@@ -4623,7 +4623,7 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 <p>Marshall argued there is permanent tension between citizenship and the capitalist market: capitalism involves inequality while citizenship involves distribution of resources through rights.</p>
 
-<p><strong>Critique of Marshall:</strong> Only English experience no comparative analysis. Expansionary analysis of citizenship without examining social processes that undermine it (gender differences, discrimination). It is not clear about the cause of the expansion of citizenship.</p>
+<p><strong>Critique of Marshall:</strong>: Only English experience no comparative analysis. Expansionary analysis of citizenship without examining social processes that undermine it (gender differences, discrimination). It is not clear about the cause of the expansion of citizenship.</p>
 
 <p>Talcott Parsons: citizenship is a measure of modernisation because it is based on values of universalism and achievement. Citizenship is treated as an aspect of bourgeois liberalism and sometimes as an aspect of radical democratic politics. Globalisation is transcending regionalism and parochial nationalism to make us global citizens. Dual citizenship is a new phenomenon where connections are more based on convenience rather than love of the motherland.</p>
 
@@ -4633,15 +4633,15 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Key thinkers:</strong></p>
 <ul>
- <li><strong>J.S. Mill and Alexis de Tocqueville</strong> Civil society is the domain of social association that checks excesses of the state (based on liberal democratic theory: rights-bearing individuals are free to pursue private associations with others)</li>
- <li><strong>Hegel</strong> Subordinated civil society to the state; thought of it as a mediating domain where the particular interests of individuals and the universal interest of the state can be reconciled to produce an ethical basis for modern society</li>
- <li><strong>Gramsci</strong> Civil society furthers dominant ideologies; it is a terrain of hegemonic struggle, not neutral</li>
- <li><strong>Partha Chatterjee and Sudipta Kaviraj</strong> Delineate western civil society from Indian; application of concepts of western civil society to India is wrong because the state in India is not as extensive as in the West</li>
- <li><strong>Anthony Giddens</strong> Groups falling outside both market and government can be termed civil society; voluntary groups, families, and civic associations can play vital roles in addressing community issues from crime to education; some elements of civil society seek radical transformations while others seek modest revisions or conformist reinforcement of established rules</li>
- <li><strong>Jan Aart Scholte</strong> Civil society enhances democracy through public education, giving voice to stakeholders (e.g., Singur farmers in West Bengal, unorganised labour), fuelling debate about governance (e.g., environmental issues), increasing transparency through public scrutiny, and fostering legitimacy through interaction between people and government</li>
+ <li><strong>J.S. Mill and Alexis de Tocqueville</strong>: Civil society is the domain of social association that checks excesses of the state (based on liberal democratic theory: rights-bearing individuals are free to pursue private associations with others)</li>
+ <li><strong>Hegel</strong>: Subordinated civil society to the state; thought of it as a mediating domain where the particular interests of individuals and the universal interest of the state can be reconciled to produce an ethical basis for modern society</li>
+ <li><strong>Gramsci</strong>: Civil society furthers dominant ideologies; it is a terrain of hegemonic struggle, not neutral</li>
+ <li><strong>Partha Chatterjee and Sudipta Kaviraj</strong>: Delineate western civil society from Indian; application of concepts of western civil society to India is wrong because the state in India is not as extensive as in the West</li>
+ <li><strong>Anthony Giddens</strong>: Groups falling outside both market and government can be termed civil society; voluntary groups, families, and civic associations can play vital roles in addressing community issues from crime to education; some elements of civil society seek radical transformations while others seek modest revisions or conformist reinforcement of established rules</li>
+ <li><strong>Jan Aart Scholte</strong>: Civil society enhances democracy through public education, giving voice to stakeholders (e.g., Singur farmers in West Bengal, unorganised labour), fuelling debate about governance (e.g., environmental issues), increasing transparency through public scrutiny, and fostering legitimacy through interaction between people and government</li>
 </ul>
 
-<p><strong>Caution (Scholte):</strong> Civil society can pursue anti-democratic goals, employ anti-democratic means, and produce anti-democratic consequences. Six parameters to judge the quality of an NGO: people's participation, cost effectiveness, institutional/environmental/financial sustainability, accountability, technical excellence, and equity concern for deprived groups and women.</p>
+<p><strong>Caution (Scholte):</strong>: Civil society can pursue anti-democratic goals, employ anti-democratic means, and produce anti-democratic consequences. Six parameters to judge the quality of an NGO: people's participation, cost effectiveness, institutional/environmental/financial sustainability, accountability, technical excellence, and equity concern for deprived groups and women.</p>
 
 <h2>Protest, Agitation, and Social Movements</h2>
 
@@ -4655,13 +4655,13 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Ghanshyam Shah's testing criterion:</strong> "Compulsive Demand" is the hallmark of agitation (Salt Satyagraha, Anna Hazare's fast unto death). All social movements are collective actions but not all collective actions are social movements.</p>
 
-<p><strong>Anthony Giddens' definition:</strong> Social movements are "collective attempts to further a common interest or secure a common goal through action outside the sphere of established institutions." Giddens identifies four dimensions of modernity and corresponding social movements: Capitalism → Labour movements; Industrialism → Ecological movements; Surveillance → Free speech/democratic movements; Military Power → Peace movements.</p>
+<p><strong>Anthony Giddens' definition:</strong>: Social movements are "collective attempts to further a common interest or secure a common goal through action outside the sphere of established institutions." Giddens identifies four dimensions of modernity and corresponding social movements: Capitalism → Labour movements; Industrialism → Ecological movements; Surveillance → Free speech/democratic movements; Military Power → Peace movements.</p>
 
 <h3>Theories of Social Movements</h3>
 
-<p><strong>Herbert Blumer (Theory of Social Unrest):</strong> Social movements are motivated by dissatisfaction with some aspects of current society, which they seek to rectify outside formal party politics trying to build a "new order of life." Types: active/outwardly directed (aiming to transform society, e.g., labour movement) and expressive (seeking to change individuals rather than society, e.g., religious revival movements).</p>
+<p><strong>Herbert Blumer (Theory of Social Unrest):</strong>: Social movements are motivated by dissatisfaction with some aspects of current society, which they seek to rectify outside formal party politics trying to build a "new order of life." Types: active/outwardly directed (aiming to transform society, e.g., labour movement) and expressive (seeking to change individuals rather than society, e.g., religious revival movements).</p>
 
-<p><strong>Neil Smelser (Structural Strain/Value-Added Theory):</strong> Six conditions that must be present for a social movement to develop:</p>
+<p><strong>Neil Smelser (Structural Strain/Value-Added Theory):</strong>: Six conditions that must be present for a social movement to develop:</p>
 <ul>
  <li><strong>Structural conduciveness</strong> the environment must be social-movement friendly (environmental degradation creating conduciveness for ecological movements)</li>
  <li><strong>Structural strain</strong> social movements emerge in response to deprivation and inequality experienced by groups (LGBTs experiencing relative deprivation vis-à-vis heterosexuals)</li>
@@ -4671,11 +4671,11 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Lack of social control</strong> both too much or too little control can lead to development of social movements. Actions of media, police, courts, community leaders, and political officials can lead to success or failure</li>
 </ul>
 
-<p><strong>Resource Mobilisation Theory (McCarthy and Zald):</strong> Social movements develop when an organised group works towards generating resources. Resources include money, skill, property, equipment, media attention, supporters, and social media networks. Deprivation alone cannot be turned into a movement with just anger and resentment it requires a proper organised group that can mobilise these resources.</p>
+<p><strong>Resource Mobilisation Theory (McCarthy and Zald):</strong>: Social movements develop when an organised group works towards generating resources. Resources include money, skill, property, equipment, media attention, supporters, and social media networks. Deprivation alone cannot be turned into a movement with just anger and resentment it requires a proper organised group that can mobilise these resources.</p>
 
-<p><strong>Relative Deprivation Theory (Merton and Runciman):</strong> People who feel satisfied with their current condition are less likely to seek social change. People who are deprived of things deemed valuable in society (money, justice, status, privilege) join social movements. J-Curve Theory of Revolution (James Davies): revolution is a result of relative deprivation when periods of economic prosperity are suddenly reversed expectations continue to rise while reality suddenly falls.</p>
+<p><strong>Relative Deprivation Theory (Merton and Runciman):</strong>: People who feel satisfied with their current condition are less likely to seek social change. People who are deprived of things deemed valuable in society (money, justice, status, privilege) join social movements. J-Curve Theory of Revolution (James Davies): revolution is a result of relative deprivation when periods of economic prosperity are suddenly reversed expectations continue to rise while reality suddenly falls.</p>
 
-<p><strong>Political Opportunity Structure Theory (Charles Tilly and Doug McAdam):</strong> Three important components for formation of a social movement: insurgent consciousness (collective sense of injustice as motivation), organisational strength/leadership (sufficient resources links to Resource Mobilisation Theory), and political opportunities (vulnerabilities of the existing political system due to formation of internal factions, support of organised opposition by elites, decline in effectiveness of repression, and increasing access to political participation).</p>
+<p><strong>Political Opportunity Structure Theory (Charles Tilly and Doug McAdam):</strong>: Three important components for formation of a social movement: insurgent consciousness (collective sense of injustice as motivation), organisational strength/leadership (sufficient resources links to Resource Mobilisation Theory), and political opportunities (vulnerabilities of the existing political system due to formation of internal factions, support of organised opposition by elites, decline in effectiveness of repression, and increasing access to political participation).</p>
 
 <h3>Old Social Movements vs New Social Movements (NSMs)</h3>
 
@@ -4691,9 +4691,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <tr><td><strong>Scope</strong></td><td>Regional/national</td><td>Global draw international participants and rely on transnational networks</td></tr>
 </table>
 
-<p><strong>Habermas:</strong> NSMs advance new politics, whereas OSMs hovered around old politics. <strong>Giddens:</strong> NSMs are a response to globalisation globalisation has resulted in risks that transcend national boundaries (pollution, rising ocean levels, oil spills, nuclear accidents); since the risks are global, people lose faith in governments and turn to NSMs as the most effective form of political participation. <strong>Pakulski and Waters:</strong> NSMs are an indicator of the fact that lifestyle and issues around it have become more important than economic issues.</p>
+<p><strong>Habermas:</strong>: NSMs advance new politics, whereas OSMs hovered around old politics. <strong>Giddens:</strong>: NSMs are a response to globalisation globalisation has resulted in risks that transcend national boundaries (pollution, rising ocean levels, oil spills, nuclear accidents); since the risks are global, people lose faith in governments and turn to NSMs as the most effective form of political participation. <strong>Pakulski and Waters:</strong>: NSMs are an indicator of the fact that lifestyle and issues around it have become more important than economic issues.</p>
 
-<p><strong>Critique of NSM theory:</strong> Non-materialistic movements existed in the industrial era, and materialistic movements persist in the post-industrial economy. The women's movement, for example, focuses on many of the same issues workplace conditions and pay that have concerned labour organisations for decades.</p>
+<p><strong>Critique of NSM theory:</strong>: Non-materialistic movements existed in the industrial era, and materialistic movements persist in the post-industrial economy. The women's movement, for example, focuses on many of the same issues workplace conditions and pay that have concerned labour organisations for decades.</p>
 
 <h3>Why Social Movements Decline</h3>
 
@@ -4703,7 +4703,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>A revolution is a forcible overthrow of a government or social order in favour of a new system a fundamental change in political power or organisational structures that takes place in a relatively short period of time. Aristotle described two types: complete change from one constitution to another, and modification of an existing constitution. A sudden change in government brought about violently is often called a coup d'état or palace revolution. More broadly, revolution is a complete change of social structure where political change reflects one of its manifestations.</p>
 
-<p><strong>Marxian view:</strong> History of society is history of struggle between classes. Replacement of one mode of production by another is involved in a revolution. Althusser believed revolution would occur at the "weak link in the chain of capitalism" where social contradictions are most prominent. Fukuyama: democracy and economic capitalism constitute the true final revolution (<em>End of History</em>). Theda Skocpol: revolutions occur when state capacity weakens (Russian, French, Chinese revolutions).</p>
+<p><strong>Marxian view:</strong>: History of society is history of struggle between classes. Replacement of one mode of production by another is involved in a revolution. Althusser believed revolution would occur at the "weak link in the chain of capitalism" where social contradictions are most prominent. Fukuyama: democracy and economic capitalism constitute the true final revolution (<em>End of History</em>). Theda Skocpol: revolutions occur when state capacity weakens (Russian, French, Chinese revolutions).</p>
 `,
  'systems-of-kinship': `
 <h2>What is Kinship?</h2>
@@ -4712,16 +4712,16 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Kinship relations are classified along generational lines:</p>
 <ul>
- <li><strong>Primary Lineals</strong> Father-Son (direct one-generation link)</li>
- <li><strong>Secondary Lineals</strong> Grandfather-Grandson (two-generation link)</li>
- <li><strong>Tertiary Lineals</strong> Great Grandfather-Great Grandson</li>
+ <li><strong>Primary Lineals</strong>: Father-Son (direct one-generation link)</li>
+ <li><strong>Secondary Lineals</strong>: Grandfather-Grandson (two-generation link)</li>
+ <li><strong>Tertiary Lineals</strong>: Great Grandfather-Great Grandson</li>
 </ul>
 
 <h2>Family: Definitions and Types</h2>
 
 <p><strong>G.P. Murdoch</strong> defines the family as a group in which both relations of affinity and consanguinity (or adoption) are found. He studied 250 societies and argued the elementary family is found universally, with four defining characteristics: common residence; economic coordination; reproduction with socially approved sexual relations between adults of both sexes; and socialising children born to or adopted by the adults.</p>
 
-<p><strong>Exception to Murdoch's universality claim (Colliers, 1997):</strong> The Na of China have no fixed co-resident husband-wife pair men visit women's households at night and have no domestic role. Zambian families in Africa also deviate significantly. Murdoch's family is therefore not truly universal.</p>
+<p><strong>Exception to Murdoch's universality claim (Colliers, 1997):</strong>: The Na of China have no fixed co-resident husband-wife pair men visit women's households at night and have no domestic role. Zambian families in Africa also deviate significantly. Murdoch's family is therefore not truly universal.</p>
 
 <p><strong>Anthony Giddens</strong> offers a simplified definition: a family is a group of persons directly linked by kin connections, adult members of which assume responsibility for caring for children. He emphasises commitment over traditional structural features, and argues that in contemporary society "forever love" has transformed into "love till further notice" what he calls "plastic love."</p>
 
@@ -4757,24 +4757,24 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Critiques and Dysfunctions of Family</h3>
 <ul>
- <li><strong>Marx / David Cooper (<em>Death of Family</em>)</strong> Family assures conformity, making individuals submit to exploitation. Family is an ideological conditioning device in an exploitative society.</li>
- <li><strong>R.D. Laing (<em>Politics of Family</em>)</strong> Studies schizophrenic children and concludes the disorder is caused by the excessive expectations of parents.</li>
- <li><strong>Edmund Leach (<em>A Runaway World</em>)</strong> Family members expect too much of each other, producing emotional stress and conflict.</li>
- <li><strong>Feminist critique</strong> Family legitimises the exploitation of women: household work goes unnoticed; family legitimises sexual abuse and domestic violence. Murray Strauss: "Marriage provides a hitting licence."</li>
- <li><strong>Jordan Peterson</strong> Families can fail to prepare children for the harsh realities of the world, making them vulnerable to bullying.</li>
+ <li><strong>Marx / David Cooper (<em>Death of Family</em>)</strong>: Family assures conformity, making individuals submit to exploitation. Family is an ideological conditioning device in an exploitative society.</li>
+ <li><strong>R.D. Laing (<em>Politics of Family</em>)</strong>: Studies schizophrenic children and concludes the disorder is caused by the excessive expectations of parents.</li>
+ <li><strong>Edmund Leach (<em>A Runaway World</em>)</strong>: Family members expect too much of each other, producing emotional stress and conflict.</li>
+ <li><strong>Feminist critique</strong>: Family legitimises the exploitation of women: household work goes unnoticed; family legitimises sexual abuse and domestic violence. Murray Strauss: "Marriage provides a hitting licence."</li>
+ <li><strong>Jordan Peterson</strong>: Families can fail to prepare children for the harsh realities of the world, making them vulnerable to bullying.</li>
 </ul>
 
 <h2>Family in India</h2>
 
-<p><strong>Indological View:</strong> David Mandelbaum considers the joint family one of three distinguishing characteristics of Indian society (alongside the caste system and the village). Henry Maine and O. Mailey studied the traditional Indian joint family and termed it patriarchal. Irawati Karve noted the prevalence of the idea of one roof, one kitchen, one property, one deity while acknowledging differences across Dravidian, tribal, lower-caste, and non-Hindu families.</p>
+<p><strong>Indological View:</strong>: David Mandelbaum considers the joint family one of three distinguishing characteristics of Indian society (alongside the caste system and the village). Henry Maine and O. Mailey studied the traditional Indian joint family and termed it patriarchal. Irawati Karve noted the prevalence of the idea of one roof, one kitchen, one property, one deity while acknowledging differences across Dravidian, tribal, lower-caste, and non-Hindu families.</p>
 
-<p><strong>AM Shah's Household Dimension:</strong> Shah argued that the proper unit of study should be the household, assessed along four dimensions: commensal (eating together), co-resident (living together), coparcenary (sharing property), and co-ritual (sharing religious practices). His field studies found two types: simple and compound.</p>
+<p><strong>AM Shah's Household Dimension:</strong>: Shah argued that the proper unit of study should be the household, assessed along four dimensions: commensal (eating together), co-resident (living together), coparcenary (sharing property), and co-ritual (sharing religious practices). His field studies found two types: simple and compound.</p>
 
-<p><strong>Pauline Kolenda:</strong> Nuclear family is becoming more prevalent, but average household size is increasing due to declining death rates and greater longevity. Households have lifecycles: fission → fusion → fission. Stem family exists (parents reside with one married child). Rural household size is larger than urban; regional differences persist North India has larger joint families than South India.</p>
+<p><strong>Pauline Kolenda:</strong>: Nuclear family is becoming more prevalent, but average household size is increasing due to declining death rates and greater longevity. Households have lifecycles: fission → fusion → fission. Stem family exists (parents reside with one married child). Rural household size is larger than urban; regional differences persist North India has larger joint families than South India.</p>
 
 <p>IP Desai (studying Mahua, Gujarat) and KM Kapadia found half of families are still joint. RP Mukherjee concluded Indian families are still functionally joint. Shah, Kolenda and others broke the myth of joint family disintegration in India.</p>
 
-<p><strong>Contemporary trends in India:</strong> Marriage still an important milestone; caste is still active but class is becoming more important; live-in relationships increasing in urban areas; divorce rate rising; joint family has retained sentimental value; girl's choice is increasingly considered; elderly confined to rituals; rise of filiocentric families and the "six-pocket syndrome" (grandparents and parents lavishing resources on a single child).</p>
+<p><strong>Contemporary trends in India:</strong>: Marriage still an important milestone; caste is still active but class is becoming more important; live-in relationships increasing in urban areas; divorce rate rising; joint family has retained sentimental value; girl's choice is increasingly considered; elderly confined to rituals; rise of filiocentric families and the "six-pocket syndrome" (grandparents and parents lavishing resources on a single child).</p>
 
 <h2>Marriage</h2>
 
@@ -4815,9 +4815,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Matrilineal Descent</strong> female line (Nayars of Kerala, Khasis of Meghalaya)</li>
 </ul>
 
-<p><strong>Why patrilineal descent is more prevalent (Robin Fox):</strong> Every kin group must fulfil four conditions: men are needed to impregnate women; women are needed to bear and rear children; enough men are needed for food and property management when women are pregnant; incest must be avoided. The patrilineal system is the easier solution own group's women are sent out; other group's women are received for mating and kept subordinate so as not to threaten group unity. Patriliny and patriarchy thus went hand in hand historically.</p>
+<p><strong>Why patrilineal descent is more prevalent (Robin Fox):</strong>: Every kin group must fulfil four conditions: men are needed to impregnate women; women are needed to bear and rear children; enough men are needed for food and property management when women are pregnant; incest must be avoided. The patrilineal system is the easier solution own group's women are sent out; other group's women are received for mating and kept subordinate so as not to threaten group unity. Patriliny and patriarchy thus went hand in hand historically.</p>
 
-<p><strong>The Matrilineal Puzzle:</strong> In matrilineal systems, own group's males are sent out; other group's males are received. Since incoming (affinal) men have lesser group unity, problems arise during childbearing and rearing. Solutions: the Na of China and the Nayars of Kerala practise "visiting husbands" the biological father has no social role; the mother's brother (maternal uncle) acquires a crucial role in child-rearing and inheritance.</p>
+<p><strong>The Matrilineal Puzzle:</strong>: In matrilineal systems, own group's males are sent out; other group's males are received. Since incoming (affinal) men have lesser group unity, problems arise during childbearing and rearing. Solutions: the Na of China and the Nayars of Kerala practise "visiting husbands" the biological father has no social role; the mother's brother (maternal uncle) acquires a crucial role in child-rearing and inheritance.</p>
 
 <p><strong>Other Descent Types:</strong></p>
 <ul>
@@ -4854,18 +4854,18 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Theories Explaining SDOL</h3>
 
-<p><strong>Sociobiological (Biological):</strong> Men have stronger spacio-visual skills; women have developed linguistic skills different brains produce different talents. Critique: no conclusive evidence exists for this claim.</p>
+<p><strong>Sociobiological (Biological):</strong>: Men have stronger spacio-visual skills; women have developed linguistic skills different brains produce different talents. Critique: no conclusive evidence exists for this claim.</p>
 
-<p><strong>Sociobiological (Evolutionary Robin Fox):</strong> SDOL is the result of millions of years of adaptation. Men: hunters; women: childbearing and rearing. Differences in body types mean men are more suited for outside, muscular tasks.</p>
+<p><strong>Sociobiological (Evolutionary Robin Fox):</strong>: SDOL is the result of millions of years of adaptation. Men: hunters; women: childbearing and rearing. Differences in body types mean men are more suited for outside, muscular tasks.</p>
 
-<p><strong>Functional (Murdoch):</strong> SDOL is the most convenient way of organising tasks (based on study of 250 societies). Parsons: women are more expressive and do adult personality stabilisation. Delinquency studies: delinquency results from lack of motherly support.</p>
+<p><strong>Functional (Murdoch):</strong>: SDOL is the most convenient way of organising tasks (based on study of 250 societies). Parsons: women are more expressive and do adult personality stabilisation. Delinquency studies: delinquency results from lack of motherly support.</p>
 
 <p><strong>Feminist Critique:</strong></p>
 <ul>
  <li><strong>Jessie Bernard</strong> criticises Parsons: the family serves male personality stabilisation, not gender-neutral adult personality stabilisation</li>
  <li><strong>Ann Oakley</strong> criticises Murdoch: incorrect to say women are unsuitable for public tasks (India: construction site workers are mainly women; Pygmies: no post-natal dependence on men; Israel: large participation of women in the army). SDOL is socially created.</li>
- <li><strong>Margaret Mead (<em>Sex and Temperament in Three Primitive Societies</em>)</strong> Study on tribes of Papua New Guinea found both men and women doing equally stern tasks with similar personalities, sometimes with home-loving men a society exactly opposite to the West, proving SDOL is culturally variable. Critique (Deborah Gewertz, 1981): found evidence men dominated women, controlled their produce, and made all important political decisions. Mead used subjective descriptions.</li>
- <li><strong>Shulamith Firestone (<em>Dialectics of Sex</em>)</strong> Sexual inequality is the most fundamental inequality; criticises Marx for overlooking it. Because of SDOL, women are confined to the domestic sphere where their work is not valued (it doesn't fetch profits). Even when women work outside, they still work at home double exploitation. The labour market has two segments: primary (high income, promotions, prestige dominated by men) and secondary (low income, unstable, part-time, low status confined to women). Firestone argued technology could eventually free women from biological reproduction.</li>
+ <li><strong>Margaret Mead (<em>Sex and Temperament in Three Primitive Societies</em>)</strong>: Study on tribes of Papua New Guinea found both men and women doing equally stern tasks with similar personalities, sometimes with home-loving men a society exactly opposite to the West, proving SDOL is culturally variable. Critique (Deborah Gewertz, 1981): found evidence men dominated women, controlled their produce, and made all important political decisions. Mead used subjective descriptions.</li>
+ <li><strong>Shulamith Firestone (<em>Dialectics of Sex</em>)</strong>: Sexual inequality is the most fundamental inequality; criticises Marx for overlooking it. Because of SDOL, women are confined to the domestic sphere where their work is not valued (it doesn't fetch profits). Even when women work outside, they still work at home double exploitation. The labour market has two segments: primary (high income, promotions, prestige dominated by men) and secondary (low income, unstable, part-time, low status confined to women). Firestone argued technology could eventually free women from biological reproduction.</li>
 </ul>
 
 <h3>Sylvia Walby: Theorising Patriarchy</h3>
@@ -4905,7 +4905,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <blockquote>"The history of all hitherto existing society is the history of class struggles." Marx and Engels, The Communist Manifesto</blockquote>
 
-<p><strong>Causes of Social Change:</strong> Economic and technological factors (Marx, Ogburn); cultural and ideational factors (Weber, Sorokin); demographic factors (Malthus, Durkheim); conflict (Marx); diffusion of ideas and technology across societies; environmental and ecological factors; wars and external shocks; social movements and collective action.</p>
+<p><strong>Causes of Social Change:</strong>: Economic and technological factors (Marx, Ogburn); cultural and ideational factors (Weber, Sorokin); demographic factors (Malthus, Durkheim); conflict (Marx); diffusion of ideas and technology across societies; environmental and ecological factors; wars and external shocks; social movements and collective action.</p>
 
 <h2>Sociological Theories of Social Change</h2>
 
@@ -4924,7 +4924,7 @@ export const sociologyNoteContent: Record<string, string> = {
  <tr><td><strong>Hobhouse</strong></td><td>Pre-literate → Proto-science (ancient East) → Stage of reflection (5th cent BC, China and India) → Critical and systematic thought (Greece) → Modern scientific thought (16th century onward)</td><td></td></tr>
 </table>
 
-<p><strong>Herbert Spencer's organismic analogy:</strong> Adopted Darwinian evolution for society progressive increase in size, followed by increase in differentiation and integration. The higher the differentiation and integration, the higher the evolutionary stage. Applied social Darwinism "survival of the fittest" to societies. These theories considered Europe the most advanced civilisation, an assumption that collapsed after Europe fought the most savage wars of history in WW1 and WW2.</p>
+<p><strong>Herbert Spencer's organismic analogy:</strong>: Adopted Darwinian evolution for society progressive increase in size, followed by increase in differentiation and integration. The higher the differentiation and integration, the higher the evolutionary stage. Applied social Darwinism "survival of the fittest" to societies. These theories considered Europe the most advanced civilisation, an assumption that collapsed after Europe fought the most savage wars of history in WW1 and WW2.</p>
 
 <p><strong>Critique of Unilinear Evolutionary Theories:</strong></p>
 <ul>
@@ -4942,23 +4942,23 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Neo-evolutionary theories emerged to overcome the limitations of classical evolutionism avoiding value judgements, acknowledging multilinearity, and providing empirical grounding.</p>
 
-<p><strong>Talcott Parsons:</strong> Based on the biological theory of evolution; the key process is adaptive upgrading increasing capacity for adaptation. Two basic processes drive evolution: differentiation (society becomes more complex with specialised structures) and integration (new mechanisms emerge to coordinate differentiated parts). Five stages based on differentiation and integration (PAHSM): Primitive societies (Australian aborigines); Archaic societies (Mesopotamia, Egyptian empires); Historical societies (China, India); Seed-bed societies (Israel, Greece); Modern societies (US, USSR, Europe, Japan).</p>
+<p><strong>Talcott Parsons:</strong>: Based on the biological theory of evolution; the key process is adaptive upgrading increasing capacity for adaptation. Two basic processes drive evolution: differentiation (society becomes more complex with specialised structures) and integration (new mechanisms emerge to coordinate differentiated parts). Five stages based on differentiation and integration (PAHSM): Primitive societies (Australian aborigines); Archaic societies (Mesopotamia, Egyptian empires); Historical societies (China, India); Seed-bed societies (Israel, Greece); Modern societies (US, USSR, Europe, Japan).</p>
 
-<p><strong>Gordon Childe:</strong> Model based on the development of material culture, supported by archaeological evidence.</p>
+<p><strong>Gordon Childe:</strong>: Model based on the development of material culture, supported by archaeological evidence.</p>
 
-<p><strong>Leslie White (Energy Theory of Change):</strong> The amount of energy harnessed is an index of the level of social development. Energy is both the cause and the effect of the process of social transformation.</p>
+<p><strong>Leslie White (Energy Theory of Change):</strong>: The amount of energy harnessed is an index of the level of social development. Energy is both the cause and the effect of the process of social transformation.</p>
 
-<p><strong>Lenski and Lenski:</strong> Some changes are cyclic and unpatterned, but an evolutionary process of cumulative change is the predominant pattern. Cumulative changes happen through innovation (new variations emerge) and selection (which variation survives). These processes occur at two levels: individual society and world system. They portray the course of evolution as progressive moving toward greater freedom, justice, equality, and happiness.</p>
+<p><strong>Lenski and Lenski:</strong>: Some changes are cyclic and unpatterned, but an evolutionary process of cumulative change is the predominant pattern. Cumulative changes happen through innovation (new variations emerge) and selection (which variation survives). These processes occur at two levels: individual society and world system. They portray the course of evolution as progressive moving toward greater freedom, justice, equality, and happiness.</p>
 
 <h3>C. Cyclical Theories</h3>
 
 <p>Cyclical theories hold that societies revolve in cycles rather than progressing in a straight line. Change is repetitive societies rise, peak, decline, and fall, then the cycle begins again.</p>
 
-<p><strong>Oswald Spengler (<em>The Decline of the West</em>):</strong> Every civilisation follows an organic cycle birth, growth, decay, death which is inevitable. Cited the Roman civilisation as the model; his theory closely resembles the ancient Hindu theory of Yugas.</p>
+<p><strong>Oswald Spengler (<em>The Decline of the West</em>):</strong>: Every civilisation follows an organic cycle birth, growth, decay, death which is inevitable. Cited the Roman civilisation as the model; his theory closely resembles the ancient Hindu theory of Yugas.</p>
 
-<p><strong>Vilfredo Pareto:</strong> Focus on political changes, particularly elites. History is the circulation of elites. Elites are two types Lions (conservative, use force) and Foxes (manipulative, use cunning) who keep circulating, each replacing the other when they fail.</p>
+<p><strong>Vilfredo Pareto:</strong>: Focus on political changes, particularly elites. History is the circulation of elites. Elites are two types Lions (conservative, use force) and Foxes (manipulative, use cunning) who keep circulating, each replacing the other when they fail.</p>
 
-<p><strong>Pitirim Sorokin (Very systematic cyclical theory):</strong> Classified cultures into three distinct types based on their mode of perceiving reality:</p>
+<p><strong>Pitirim Sorokin (Very systematic cyclical theory):</strong>: Classified cultures into three distinct types based on their mode of perceiving reality:</p>
 <ul>
  <li><strong>Ideational culture</strong> places importance on spiritualism and mysticism; reality is perceived through spiritual insight</li>
  <li><strong>Sensate culture</strong> places importance on science and the senses; reality is perceived through empirical observation</li>
@@ -5006,15 +5006,15 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Developed in the late 1950s under the guidance of Raul Prebisch of the UN Economic Commission for Latin America. Prebisch's observation: economic growth in advanced industrialised countries did not lead to growth in poorer countries instead it often produced serious economic problems there. His explanation: poor countries export primary commodities; rich countries manufacture products from those commodities and sell them back at higher prices. The value added by manufacturing always exceeds the value of primary inputs so poorer countries can never earn enough from exports to pay for imports.</p>
 
-<p><strong>Andre Gunder Frank:</strong> Underdevelopment is not a transitional stage but a permanent condition produced by the relationship between centre and periphery the "development of underdevelopment." The capitalist system enforces a rigid international division of labour. Dependent states supply cheap minerals, agricultural commodities, and labour, and serve as repositories for surplus capital and obsolescent technologies.</p>
+<p><strong>Andre Gunder Frank:</strong>: Underdevelopment is not a transitional stage but a permanent condition produced by the relationship between centre and periphery the "development of underdevelopment." The capitalist system enforces a rigid international division of labour. Dependent states supply cheap minerals, agricultural commodities, and labour, and serve as repositories for surplus capital and obsolescent technologies.</p>
 
-<p><strong>Samir Amin:</strong> Distinguished between auto-centric (self-generating) accumulation in the core and extraverted accumulation in the periphery. The periphery suffers three distortions: a bias toward export activities absorbing major capital; a bias toward tertiary activities; and a bias toward light industrial branches. His solution: peripheral countries must "delink" from the global system compelling it to adjust to their needs rather than unilaterally adjusting to the core's needs.</p>
+<p><strong>Samir Amin:</strong>: Distinguished between auto-centric (self-generating) accumulation in the core and extraverted accumulation in the periphery. The periphery suffers three distortions: a bias toward export activities absorbing major capital; a bias toward tertiary activities; and a bias toward light industrial branches. His solution: peripheral countries must "delink" from the global system compelling it to adjust to their needs rather than unilaterally adjusting to the core's needs.</p>
 
-<p><strong>Lenin (<em>Imperialism: The Highest Stage of Capitalism</em>):</strong> Imperialism is moribund capitalism it results in exploitation of colonial peoples; produces war between nations through competition for markets and territories; and ultimately brings about the end of capitalism itself through the arming of workers in national wars that become class wars.</p>
+<p><strong>Lenin (<em>Imperialism: The Highest Stage of Capitalism</em>):</strong>: Imperialism is moribund capitalism it results in exploitation of colonial peoples; produces war between nations through competition for markets and territories; and ultimately brings about the end of capitalism itself through the arming of workers in national wars that become class wars.</p>
 
-<p><strong>Core propositions of dependency theory:</strong> Underdevelopment is fundamentally different from un-development (unused resources). Poorer countries are not "behind" they were coercively integrated into the European economic system as producers of raw materials, denied the opportunity to develop independently. Dependency is maintained not just by powerful states but also by elites within dependent states whose private interests coincide with those of dominant states.</p>
+<p><strong>Core propositions of dependency theory:</strong>: Underdevelopment is fundamentally different from un-development (unused resources). Poorer countries are not "behind" they were coercively integrated into the European economic system as producers of raw materials, denied the opportunity to develop independently. Dependency is maintained not just by powerful states but also by elites within dependent states whose private interests coincide with those of dominant states.</p>
 
-<p><strong>Critique of dependency theories:</strong> Few empirical examples; newly industrialised countries of South-East Asia do not fit the core-periphery model. The categories "developed" and "underdeveloped" are overly homogenising India, Brazil, and Mexico are very different from each other. Ties with MNCs can serve as means of technology transfer. The theories do not reflect changed contemporary conditions (rich nations are now closing borders to trade). There is an inability to think beyond the state as primary agent of development.</p>
+<p><strong>Critique of dependency theories:</strong>: Few empirical examples; newly industrialised countries of South-East Asia do not fit the core-periphery model. The categories "developed" and "underdeveloped" are overly homogenising India, Brazil, and Mexico are very different from each other. Ties with MNCs can serve as means of technology transfer. The theories do not reflect changed contemporary conditions (rich nations are now closing borders to trade). There is an inability to think beyond the state as primary agent of development.</p>
 
 <h2>Education and Social Change</h2>
 
@@ -5033,30 +5033,30 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Sociological Perspectives on Education</h3>
 
-<p><strong>Functionalist view:</strong> Education serves several functions for society socialisation (Durkheim: "schools are socialization agencies that teach children how to get along with others and prepare them for adult economic roles"); social integration; social placement (upward mobility); cultural innovation. Latent functions include childcare, peer relationship formation, and keeping school-age youth out of the full-time labour force.</p>
+<p><strong>Functionalist view:</strong>: Education serves several functions for society socialisation (Durkheim: "schools are socialization agencies that teach children how to get along with others and prepare them for adult economic roles"); social integration; social placement (upward mobility); cultural innovation. Latent functions include childcare, peer relationship formation, and keeping school-age youth out of the full-time labour force.</p>
 
-<p><strong>Conflict view (Bourdieu, Gramsci, Althusser):</strong> Education promotes social inequality through the use of tracking, standardised testing, and the "hidden curriculum" a set of values and beliefs that support the status quo and the existing social hierarchy. Pierre Bourdieu: like economic capital, cultural capital (cultural taste, knowledge, patterns of speech, clothing, etiquette) is difficult and time-consuming to acquire, and the education system rewards those who already possess it reproducing class privilege. Gramsci: the majoritarian state's ideological hegemony may be transferred to pupils through the school system. Althusser: education functions as an Ideological State Apparatus propagating the dominant class's ideology.</p>
+<p><strong>Conflict view (Bourdieu, Gramsci, Althusser):</strong>: Education promotes social inequality through the use of tracking, standardised testing, and the "hidden curriculum" a set of values and beliefs that support the status quo and the existing social hierarchy. Pierre Bourdieu: like economic capital, cultural capital (cultural taste, knowledge, patterns of speech, clothing, etiquette) is difficult and time-consuming to acquire, and the education system rewards those who already possess it reproducing class privilege. Gramsci: the majoritarian state's ideological hegemony may be transferred to pupils through the school system. Althusser: education functions as an Ideological State Apparatus propagating the dominant class's ideology.</p>
 
-<p><strong>Symbolic Interactionist view:</strong> Focuses on social interaction in the classroom and playground. Studies show playground activities reinforce gender-role socialisation (girls tend to play more cooperative games; boys play more competitive sports Thorne, 1993). Labelling theory in action: low standardised test scores or poor class performance lead to a student being labelled as a low achiever a label that is difficult to shake off, creating a self-fulfilling prophecy (Merton). Credentialism: emphasis on certificates and degrees as symbols of achievement and competence, enabling labelling and status allocation.</p>
+<p><strong>Symbolic Interactionist view:</strong>: Focuses on social interaction in the classroom and playground. Studies show playground activities reinforce gender-role socialisation (girls tend to play more cooperative games; boys play more competitive sports Thorne, 1993). Labelling theory in action: low standardised test scores or poor class performance lead to a student being labelled as a low achiever a label that is difficult to shake off, creating a self-fulfilling prophecy (Merton). Credentialism: emphasis on certificates and degrees as symbols of achievement and competence, enabling labelling and status allocation.</p>
 
 <p><strong>Critical perspectives on Indian education:</strong></p>
 <ul>
- <li><strong>Karuna Ahmad (1974)</strong> Formal education can bring "ideational" change (transformation of knowledge, attitudes, and values), but its effectiveness in bringing about structural changes is extremely limited because of the linkages between educational practices and vested interests of the status quo. Structural changes are more likely to be brought in by politico-economic factors.</li>
- <li><strong>A.R. Desai</strong> Education has not been purposively geared after independence to obtain the desired changes. Policies and funding have failed to attain the goals of social mobility and equality.</li>
- <li><strong>Pierre Bourdieu</strong> Cultural reproduction benefits only the top classes. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</li>
- <li><strong>Tawney (Tadpole Theory)</strong> Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind.</li>
+ <li><strong>Karuna Ahmad (1974)</strong>: Formal education can bring "ideational" change (transformation of knowledge, attitudes, and values), but its effectiveness in bringing about structural changes is extremely limited because of the linkages between educational practices and vested interests of the status quo. Structural changes are more likely to be brought in by politico-economic factors.</li>
+ <li><strong>A.R. Desai</strong>: Education has not been purposively geared after independence to obtain the desired changes. Policies and funding have failed to attain the goals of social mobility and equality.</li>
+ <li><strong>Pierre Bourdieu</strong>: Cultural reproduction benefits only the top classes. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</li>
+ <li><strong>Tawney (Tadpole Theory)</strong>: Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind.</li>
  <li><strong>Sachidanand Sinha</strong> "Dalit Elites" reservation and education produce a small elite that escapes its class without transforming the class as a whole.</li>
 </ul>
 
-<p><strong>Educational divides in India:</strong> Caste-related divide; gender (girls are undereducated and undernourished, leading to poor academic outcomes); class divide; religion (Sachar Committee, Ranganath Mishra Committee Muslims denied entry in some schools); taboo-based exclusion (children of HIV patients, sex workers).</p>
+<p><strong>Educational divides in India:</strong>: Caste-related divide; gender (girls are undereducated and undernourished, leading to poor academic outcomes); class divide; religion (Sachar Committee, Ranganath Mishra Committee Muslims denied entry in some schools); taboo-based exclusion (children of HIV patients, sex workers).</p>
 
-<p><strong>PESTEL analysis of changes education brings:</strong> Political change (values for democracy, rights, duties); economic change (more employment, less burden on agriculture); social change (literacy, health awareness, decreased superstition); environmental change (awareness for conservation Chipko movement); technological change (improved access to education, better communication media); ideological change (anti-superstition movements in Maharashtra).</p>
+<p><strong>PESTEL analysis of changes education brings:</strong>: Political change (values for democracy, rights, duties); economic change (more employment, less burden on agriculture); social change (literacy, health awareness, decreased superstition); environmental change (awareness for conservation Chipko movement); technological change (improved access to education, better communication media); ideological change (anti-superstition movements in Maharashtra).</p>
 
 <h3>New Education Policy 2020</h3>
 
 <p>India's third education policy (after 1968 and 1986), released in 2020 after a 34-year gap. Based on the DS Kothari Commission of 1964 and aligned with SDG4 of the 2030 Agenda "inclusive and equitable quality education and lifelong learning opportunities for all."</p>
 
-<p><strong>Key structural changes:</strong> Replaces the 10+2 structure with a 5+3+3+4 structure, incorporating children from age 3 into the formal education system (Early Childhood Care and Education). The four stages are: Foundational (3-8 years), Preparatory (8-11 years), Middle (11-14 years), Secondary (14-18 years).</p>
+<p><strong>Key structural changes:</strong>: Replaces the 10+2 structure with a 5+3+3+4 structure, incorporating children from age 3 into the formal education system (Early Childhood Care and Education). The four stages are: Foundational (3-8 years), Preparatory (8-11 years), Middle (11-14 years), Secondary (14-18 years).</p>
 
 <p><strong>Key reforms:</strong></p>
 <ul>
@@ -5075,17 +5075,17 @@ export const sociologyNoteContent: Record<string, string> = {
  <li>By 2025, at least 50% of learners to have exposure to vocational education</li>
 </ul>
 
-<p><strong>Critique of NEP 2020:</strong> Increased emphasis on mother tongue may impede the progress of marginalised sections by restricting their access to English and thus to employment. Phasing out college affiliations in 15 years may lead to corporatisation of education. Overwhelming reliance on online education is problematic only 9.85% of government schools have a functional computer (UDISE+). Primary reasons for dropping out (child marriage, child labour) remain unaddressed. No clarity on whether the 6% GDP figure refers to public funds or includes private investment. Digital divide will deepen for rural and poor communities lacking internet access.</p>
+<p><strong>Critique of NEP 2020:</strong>: Increased emphasis on mother tongue may impede the progress of marginalised sections by restricting their access to English and thus to employment. Phasing out college affiliations in 15 years may lead to corporatisation of education. Overwhelming reliance on online education is problematic only 9.85% of government schools have a functional computer (UDISE+). Primary reasons for dropping out (child marriage, child labour) remain unaddressed. No clarity on whether the 6% GDP figure refers to public funds or includes private investment. Digital divide will deepen for rural and poor communities lacking internet access.</p>
 
 <h2>Science, Technology and Social Change</h2>
 
 <p>Science and technology are central drivers of change in modern society. Key debates:</p>
 
-<p><strong>Technological Determinism:</strong> Technology is the autonomous, primary cause of social change. Changes in technology inevitably reshape social organisation, culture, and values. Ogburn's Cultural Lag theory is in this tradition. Marshall McLuhan: "The medium is the message" technological changes in communication fundamentally transform social consciousness.</p>
+<p><strong>Technological Determinism:</strong>: Technology is the autonomous, primary cause of social change. Changes in technology inevitably reshape social organisation, culture, and values. Ogburn's Cultural Lag theory is in this tradition. Marshall McLuhan: "The medium is the message" technological changes in communication fundamentally transform social consciousness.</p>
 
-<p><strong>Social Shaping of Technology:</strong> Technology is not autonomous it is shaped by social, political, and economic interests. Who funds research determines what gets invented. Feminist critique: technology has been developed mainly by men, reflecting masculine values and often reinforcing gender inequality (reproductive technologies, surveillance technologies).</p>
+<p><strong>Social Shaping of Technology:</strong>: Technology is not autonomous it is shaped by social, political, and economic interests. Who funds research determines what gets invented. Feminist critique: technology has been developed mainly by men, reflecting masculine values and often reinforcing gender inequality (reproductive technologies, surveillance technologies).</p>
 
-<p><strong>Postmodernist critique of science (Lyotard):</strong> Science is just another metanarrative, not privileged over other forms of knowledge. Modern science is increasingly abstract (quantum mechanics, chaos theory) and funded by vested interests. The credibility of "value-free" science is itself a social construction that legitimises powerful interests.</p>
+<p><strong>Postmodernist critique of science (Lyotard):</strong>: Science is just another metanarrative, not privileged over other forms of knowledge. Modern science is increasingly abstract (quantum mechanics, chaos theory) and funded by vested interests. The credibility of "value-free" science is itself a social construction that legitimises powerful interests.</p>
 
 <h2>Globalisation and Social Change</h2>
 
@@ -5098,9 +5098,9 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Transformationalists</strong> globalisation is real but its trajectory is uncertain; it may change direction or be reversed; it is bringing diverse people together, which can become a source of both cooperation and conflict</li>
 </ul>
 
-<p><strong>Leslie Sklair (Sociology of the Global System):</strong> Transnational practices include: economic (transnational corporations), political (capitalist-inspired politicians), and cultural-ideological (consumerism spread globally). Globalisation has mostly negative impacts: class polarisation and ecological unsustainability.</p>
+<p><strong>Leslie Sklair (Sociology of the Global System):</strong>: Transnational practices include: economic (transnational corporations), political (capitalist-inspired politicians), and cultural-ideological (consumerism spread globally). Globalisation has mostly negative impacts: class polarisation and ecological unsustainability.</p>
 
-<p><strong>Impact on social change:</strong> Globalisation accelerates the pace of social change; spreads Western values, consumer culture, and democratic norms globally; creates new forms of inequality (digital divide, global class polarisation); undermines traditional cultures and produces identity anxieties that fuel nationalism, religious revivalism, and fundamentalism; and generates new collective risks (environmental crises, pandemics, financial contagion) that require collective responses beyond the nation-state.</p>
+<p><strong>Impact on social change:</strong>: Globalisation accelerates the pace of social change; spreads Western values, consumer culture, and democratic norms globally; creates new forms of inequality (digital divide, global class polarisation); undermines traditional cultures and produces identity anxieties that fuel nationalism, religious revivalism, and fundamentalism; and generates new collective risks (environmental crises, pandemics, financial contagion) that require collective responses beyond the nation-state.</p>
 `,
  'introducing-indian-society': `
 <h2>Perspectives on the Study of Indian Society</h2>
@@ -5129,7 +5129,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Six Broad Areas of Ghurye's Work</h3>
 
-<p><strong>1. Caste (Attributional Approach):</strong> Book <em>Caste and Race in India</em>. Studied caste from historical, comparative, and integrative perspectives. Combined historical texts with fieldwork and cultural perspective. Six structural features of the caste system:</p>
+<p><strong>1. Caste (Attributional Approach):</strong>: Book <em>Caste and Race in India</em>. Studied caste from historical, comparative, and integrative perspectives. Combined historical texts with fieldwork and cultural perspective. Six structural features of the caste system:</p>
 <ul>
  <li>Segmental division</li>
  <li>Hierarchy</li>
@@ -5140,15 +5140,15 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 <p>Ghurye laid particular stress on endogamy as the most important feature caste hierarchy is maintained through endogamy. Emphasised two points: kin and caste networks in India had parallels in some other societies; and kinship and caste served historically as integrative frameworks.</p>
 
-<p><strong>2. Tribe:</strong> Argued that tribal isolation is futile and that most tribes have already been Hinduised after a long period of contact. He called tribes "backward caste Hindus" whose backwardness was due to their imperfect integration into Hindu society (Santhals, Bhils, Gonds). This led to a fierce debate between Ghurye and Verrier Elwin Elwin (<em>Loss of Nerve</em>) argued tribals should be allowed to live in isolation, while Ghurye argued for assimilation. Ghurye highlighted the positives of assimilation: tribes gave up liquor drinking, received education, and improved agriculture under Hindu influence. In later works on north-eastern tribes, Ghurye documented secessionist trends and warned they would damage national unity.</p>
+<p><strong>2. Tribe:</strong>: Argued that tribal isolation is futile and that most tribes have already been Hinduised after a long period of contact. He called tribes "backward caste Hindus" whose backwardness was due to their imperfect integration into Hindu society (Santhals, Bhils, Gonds). This led to a fierce debate between Ghurye and Verrier Elwin Elwin (<em>Loss of Nerve</em>) argued tribals should be allowed to live in isolation, while Ghurye argued for assimilation. Ghurye highlighted the positives of assimilation: tribes gave up liquor drinking, received education, and improved agriculture under Hindu influence. In later works on north-eastern tribes, Ghurye documented secessionist trends and warned they would damage national unity.</p>
 
-<p><strong>3. Kinship, Family and Marriage:</strong> The relationship between caste and kinship is very close because exogamy/endogamy is largely based on kinship (real or imaginary), and the effective unit of caste the sub-caste is largely constituted of kinsmen. Three types of marriage restrictions shape the caste-kinship relationship: endogamy, exogamy (divided into spinda/prohibited degrees of kin, and sept/gotra exogamy), and hypergamy.</p>
+<p><strong>3. Kinship, Family and Marriage:</strong>: The relationship between caste and kinship is very close because exogamy/endogamy is largely based on kinship (real or imaginary), and the effective unit of caste the sub-caste is largely constituted of kinsmen. Three types of marriage restrictions shape the caste-kinship relationship: endogamy, exogamy (divided into spinda/prohibited degrees of kin, and sept/gotra exogamy), and hypergamy.</p>
 
-<p><strong>4. Culture, Civilisation and Cities:</strong> During colonial times, the growth of metropolitan centres altered Indian life. Colonial powers inverted the previous pattern towns and cities were no longer outlets for agricultural produce and handicrafts; they became major manufacturing centres using rural areas for raw materials and selling industrial products. Metropolitan economy emerged to dominate the village economy.</p>
+<p><strong>4. Culture, Civilisation and Cities:</strong>: During colonial times, the growth of metropolitan centres altered Indian life. Colonial powers inverted the previous pattern towns and cities were no longer outlets for agricultural produce and handicrafts; they became major manufacturing centres using rural areas for raw materials and selling industrial products. Metropolitan economy emerged to dominate the village economy.</p>
 
-<p><strong>5. Civilisation and Culture:</strong> Ghurye distinguished between independent growth of culture and growth by diffusion, favouring a synthesis. He believed in acculturation the best of one's own culture plus the best of others and considered acculturation more relevant than diffusion in understanding Indian civilisation. Caste was developed by Brahmins and spread to other sections through this acculturation process.</p>
+<p><strong>5. Civilisation and Culture:</strong>: Ghurye distinguished between independent growth of culture and growth by diffusion, favouring a synthesis. He believed in acculturation the best of one's own culture plus the best of others and considered acculturation more relevant than diffusion in understanding Indian civilisation. Caste was developed by Brahmins and spread to other sections through this acculturation process.</p>
 
-<p><strong>6. Religion:</strong> Religion is at the centre of the total cultural heritage of man. It moulds and directs human behaviour in society. Wrote six books on religion including <em>Indian Sadhus</em> (1953), <em>Gods and Men</em> (1962), <em>Religious Consciousness</em> (1965). The <em>Indian Sadhus</em> study highlighted the paradoxical nature of renunciation: a sadhu is supposed to be detached from all castes and social conventions, yet since Shankaracharya, Hindu society has been guided by sadhus. Indian sadhus acted as arbiters of religious disputes, patronised learning, and even defended religion against external attacks.</p>
+<p><strong>6. Religion:</strong>: Religion is at the centre of the total cultural heritage of man. It moulds and directs human behaviour in society. Wrote six books on religion including <em>Indian Sadhus</em> (1953), <em>Gods and Men</em> (1962), <em>Religious Consciousness</em> (1965). The <em>Indian Sadhus</em> study highlighted the paradoxical nature of renunciation: a sadhu is supposed to be detached from all castes and social conventions, yet since Shankaracharya, Hindu society has been guided by sadhus. Indian sadhus acted as arbiters of religious disputes, patronised learning, and even defended religion against external attacks.</p>
 
 <p>Ghurye identified five sources of danger for national unity: the Scheduled Castes, Scheduled Tribes, Backward Classes, Muslims as a religious minority, and linguistic minorities. He believed cultural unity in India was largely a result of Brahminical endeavour all major institutions of Hindu society originated among the Brahmins and were gradually accepted by other sections.</p>
 
@@ -5166,11 +5166,11 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Contemporary Indologists</h3>
 <ul>
- <li><strong>Wendy Doniger</strong> American Indologist; <em>The Hindus: An Alternative History</em></li>
- <li><strong>DP Mukherjee</strong> Marxian perspective on Indology (Marxology); <em>Dialects of Indian History</em></li>
- <li><strong>Johannes Bronkhorst</strong> History of Indian thought; interaction between Brahmanism, Buddhism, and Jainism; <em>Greater Magadha</em> (2007)</li>
+ <li><strong>Wendy Doniger</strong>: American Indologist; <em>The Hindus: An Alternative History</em></li>
+ <li><strong>DP Mukherjee</strong>: Marxian perspective on Indology (Marxology); <em>Dialects of Indian History</em></li>
+ <li><strong>Johannes Bronkhorst</strong>: History of Indian thought; interaction between Brahmanism, Buddhism, and Jainism; <em>Greater Magadha</em> (2007)</li>
  <li><strong>Arthur Llewellyn Basham</strong> <em>The Wonder That Was India</em>; the most widely used introduction to Indian civilisation; gauged the global impact of Swami Vivekananda</li>
- <li><strong>Ram Sharan Sharma</strong> Focused on early Indian social structure, material and economic life, state formation; applied historical materialism to unravel class formation in the Vedic period and age of the Buddha</li>
+ <li><strong>Ram Sharan Sharma</strong>: Focused on early Indian social structure, material and economic life, state formation; applied historical materialism to unravel class formation in the Vedic period and age of the Buddha</li>
 </ul>
 
 <h2>B. Structural-Functionalism (M.N. Srinivas)</h2>
@@ -5195,17 +5195,17 @@ export const sociologyNoteContent: Record<string, string> = {
  <li><strong>Secularisation</strong> growing separation of religious concerns from everyday social life</li>
 </ul>
 
-<p><strong>2. Religion and Society:</strong> Coorgs study led to Brahminization concept. Later field studies of caste and religion (1952, 1959, 1962, 1966) highlighted not only structural-functional aspects but also the dynamics of the caste system in rural settings. Hinduism was being spread by Sanskritisation; Srinivas was not fascinated by Hinduism in holistic form but looked for it in the caste system.</p>
+<p><strong>2. Religion and Society:</strong>: Coorgs study led to Brahminization concept. Later field studies of caste and religion (1952, 1959, 1962, 1966) highlighted not only structural-functional aspects but also the dynamics of the caste system in rural settings. Hinduism was being spread by Sanskritisation; Srinivas was not fascinated by Hinduism in holistic form but looked for it in the caste system.</p>
 
-<p><strong>3. Study of Village:</strong> Srinivas considers the village as the microcosm of Indian society and civilisation. The village retains the traditional composition of India's social reality. Rampura (Mysore) village study gave him the concept of "dominant caste," contained in <em>The Remembered Village</em> (1976).</p>
+<p><strong>3. Study of Village:</strong>: Srinivas considers the village as the microcosm of Indian society and civilisation. The village retains the traditional composition of India's social reality. Rampura (Mysore) village study gave him the concept of "dominant caste," contained in <em>The Remembered Village</em> (1976).</p>
 
-<p><strong>4. Caste:</strong> Srinivas views caste as a segmentary system. Every caste is divided into sub-castes with the following characteristics (keyword: SOPCP): Segmentary the unit of endogamy; Occupation members follow a common occupation; Pollution and purity rules; Commensality restrictions; Panchayat members governed by the same authoritative body. He showed how castes are interdependent in villages and discussed Westernisation and modernisation as viable paradigms of change.</p>
+<p><strong>4. Caste:</strong>: Srinivas views caste as a segmentary system. Every caste is divided into sub-castes with the following characteristics (keyword: SOPCP): Segmentary the unit of endogamy; Occupation members follow a common occupation; Pollution and purity rules; Commensality restrictions; Panchayat members governed by the same authoritative body. He showed how castes are interdependent in villages and discussed Westernisation and modernisation as viable paradigms of change.</p>
 
-<p><strong>5. Dominant Caste:</strong> First proposed in his early papers on Rampura village. In Rampura, Brahmin priests hold high ritual status while peasants hold land and thus considerable power over Brahmins despite lower ritual status. Six attributes of a dominant caste: sizeable amount of arable land; strength of numbers; high place in local hierarchy; western education; jobs in administration; urban sources of income. Most important three: numerical strength, economic power through land ownership, and political power.</p>
+<p><strong>5. Dominant Caste:</strong>: First proposed in his early papers on Rampura village. In Rampura, Brahmin priests hold high ritual status while peasants hold land and thus considerable power over Brahmins despite lower ritual status. Six attributes of a dominant caste: sizeable amount of arable land; strength of numbers; high place in local hierarchy; western education; jobs in administration; urban sources of income. Most important three: numerical strength, economic power through land ownership, and political power.</p>
 
 <h3>Critique of MN Srinivas and Structural-Functionalism</h3>
 <ul>
- <li><strong>Yoginder Singh</strong> Srinivas's structural-functionalism is a manifestation of objective idealism (preconceived notion that India changes slowly); in fact, India changes rapidly</li>
+ <li><strong>Yoginder Singh</strong>: Srinivas's structural-functionalism is a manifestation of objective idealism (preconceived notion that India changes slowly); in fact, India changes rapidly</li>
  <li><strong>Maitri Chowdhary</strong> conservative; cannot understand changes experienced by Indian social institutions under globalisation and feminist movements</li>
  <li><strong>Anand Chakravarti</strong> silent on class, factional politics, and different kinds of political manipulation</li>
  <li><strong>Gail Omvedt</strong> reflection of Brahminic ideology, not value-neutral sociology; caste as a product of culture shared by all Indians is unacceptable; does not explain why Dalits couldn't become dominant caste despite having numbers</li>
@@ -5228,48 +5228,48 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Desai rejects the uniqueness of Indian culture. He considers that Indian history should be interpreted from an economic perspective to understand the birth, growth, and rise of Indian society.</p>
 
-<p><strong>On the Birth of Caste:</strong> Aryan invasion destroyed the primitive mode of production; indigenous peoples were subjected to separate residence this was the beginning of caste. Aryans thought themselves superior and called themselves Brahmin. Different indigenous tribes got names from the totems they worshipped; their occupations were rigidified by Brahmins. Texts were written by the dominant caste to rigidify stratification e.g., the Rigveda's Purusha Sukta (Brahmin from head, Kshatriya from shoulders, Vaishya from legs, Shudra from feet) cultural reproduction in Bourdieusian terms.</p>
+<p><strong>On the Birth of Caste:</strong>: Aryan invasion destroyed the primitive mode of production; indigenous peoples were subjected to separate residence this was the beginning of caste. Aryans thought themselves superior and called themselves Brahmin. Different indigenous tribes got names from the totems they worshipped; their occupations were rigidified by Brahmins. Texts were written by the dominant caste to rigidify stratification e.g., the Rigveda's Purusha Sukta (Brahmin from head, Kshatriya from shoulders, Vaishya from legs, Shudra from feet) cultural reproduction in Bourdieusian terms.</p>
 
-<p><strong>On Buddhism and Jainism:</strong> Mainstream scholars see them as progressive anti-Brahminical movements for egalitarianism. Desai argues B&J simply offered some space for expression of existing dominant culture, sought patronage from the ruling class, and ultimately made Hinduism stronger Buddha was absorbed as one of Vishnu's avatars.</p>
+<p><strong>On Buddhism and Jainism:</strong>: Mainstream scholars see them as progressive anti-Brahminical movements for egalitarianism. Desai argues B&J simply offered some space for expression of existing dominant culture, sought patronage from the ruling class, and ultimately made Hinduism stronger Buddha was absorbed as one of Vishnu's avatars.</p>
 
-<p><strong>On Classes in India:</strong> Two classes Masters and Service. The service class was morally and socially bound to offer services to the master class; this relationship is a dialectical economic relation comparable to slavery in the West.</p>
+<p><strong>On Classes in India:</strong>: Two classes Masters and Service. The service class was morally and socially bound to offer services to the master class; this relationship is a dialectical economic relation comparable to slavery in the West.</p>
 
-<p><strong>On Feudalism in India:</strong> Indian feudalism was largely different from European feudalism. In Europe, feudalism came from below minor chieftains and feudal lords collectively determined kingship. In India, feudalism came from above by emperors or by the British. Common people had no ownership of the land they tilled; rent was in the form of taxes and labour services. Therefore, masses lost political, social, and economic freedom.</p>
+<p><strong>On Feudalism in India:</strong>: Indian feudalism was largely different from European feudalism. In Europe, feudalism came from below minor chieftains and feudal lords collectively determined kingship. In India, feudalism came from above by emperors or by the British. Common people had no ownership of the land they tilled; rent was in the form of taxes and labour services. Therefore, masses lost political, social, and economic freedom.</p>
 
-<p><strong>On Colonial Capitalism:</strong> Colonialism brought railways, roadways, different tenure systems, bureaucracy, legal courts, police, and cash transactions thus initiating a capitalistic mode of production. Machines were produced; cottage industries shut down; peasants lost rights over agricultural land and were forced to grow cash crops and indigo.</p>
+<p><strong>On Colonial Capitalism:</strong>: Colonialism brought railways, roadways, different tenure systems, bureaucracy, legal courts, police, and cash transactions thus initiating a capitalistic mode of production. Machines were produced; cottage industries shut down; peasants lost rights over agricultural land and were forced to grow cash crops and indigo.</p>
 
-<p><strong>On the Revolt of 1857:</strong> A clash between rising capitalism and declining feudalism, represented by different feudal communities. Not a spontaneous nationalist uprising but a structural conflict between two modes of production.</p>
+<p><strong>On the Revolt of 1857:</strong>: A clash between rising capitalism and declining feudalism, represented by different feudal communities. Not a spontaneous nationalist uprising but a structural conflict between two modes of production.</p>
 
 <p><strong>On the Indian National Movement (5 Phases, 1800-1940):</strong></p>
 <ul>
- <li><strong>Phase 1 (1800-1850)</strong> Introduction of British rule: large body of tax collectors, middlemen, police, disinterested bureaucracy, and cash transactions suppressed peasants. Rise of intelligentsia through modern education (Raja Ram Mohan Roy); narrow social base of nationalism; beginning of social reform movements (Arya Samaj, Brahmo Samaj)</li>
- <li><strong>Phase 2 (1850-1888)</strong> Consolidation of colonial infrastructure; railways, ports, telephony; destruction of indigenous industries; rise of mass poverty, debt trap, forced eviction; peasants supported by dethroned feudal lords led to 1857 a war between declining feudalism and rising capitalism</li>
- <li><strong>Phase 3 (1888-1905)</strong> Rise of Indian bourgeoisie (12 Indian industrialists; 80% of trusts were British-origin); Indian industrialists organised protests to protect class interest; funded and patronised Indian middle class to organise against British; rise of Congress and acceleration of Indian nationalism</li>
- <li><strong>Phase 4 (1905-1920)</strong> Landless peasantry mobilised by leaders with socialist inclinations; rise of Kisan Sabha movements in the countryside uniting peasants of different languages and regions</li>
- <li><strong>Phase 5 (1920-1940)</strong> Gandhi bridged the gap between different classes: thesis (Indian bourgeoisie) + antithesis (Indian proletariat) = synthesis (both together). Articulated concerns of peasants while supporting concessions to Indian industrialists and asking zamindars to support INC. Therefore, bourgeois interests got glorified in the INC agenda and have been so ever since</li>
+ <li><strong>Phase 1 (1800-1850)</strong>: Introduction of British rule: large body of tax collectors, middlemen, police, disinterested bureaucracy, and cash transactions suppressed peasants. Rise of intelligentsia through modern education (Raja Ram Mohan Roy); narrow social base of nationalism; beginning of social reform movements (Arya Samaj, Brahmo Samaj)</li>
+ <li><strong>Phase 2 (1850-1888)</strong>: Consolidation of colonial infrastructure; railways, ports, telephony; destruction of indigenous industries; rise of mass poverty, debt trap, forced eviction; peasants supported by dethroned feudal lords led to 1857 a war between declining feudalism and rising capitalism</li>
+ <li><strong>Phase 3 (1888-1905)</strong>: Rise of Indian bourgeoisie (12 Indian industrialists; 80% of trusts were British-origin); Indian industrialists organised protests to protect class interest; funded and patronised Indian middle class to organise against British; rise of Congress and acceleration of Indian nationalism</li>
+ <li><strong>Phase 4 (1905-1920)</strong>: Landless peasantry mobilised by leaders with socialist inclinations; rise of Kisan Sabha movements in the countryside uniting peasants of different languages and regions</li>
+ <li><strong>Phase 5 (1920-1940)</strong>: Gandhi bridged the gap between different classes: thesis (Indian bourgeoisie) + antithesis (Indian proletariat) = synthesis (both together). Articulated concerns of peasants while supporting concessions to Indian industrialists and asking zamindars to support INC. Therefore, bourgeois interests got glorified in the INC agenda and have been so ever since</li>
 </ul>
 <p>Desai's conclusion: "The so-called national leaders like Gandhi and Nehru adopted policies not to wipe out class inequality; rather they preferred to glorify nation in the minds of all in order to receive support from the hungry and speechless masses in India, so as to transfer power from external colonisers to internal colonisers." Democracy came to India without democratic participation, without economic freedom, without political freedom.</p>
 
-<p><strong>On Contemporary Policies:</strong> Desai is sceptical of new policies as they profess false consciousness. Government policies like land reforms and reservations are conscious designs by the dominant group to glorify segmentation amongst the culturally, politically, and economically deprived sections preventing true class consciousness and polarisation.</p>
+<p><strong>On Contemporary Policies:</strong>: Desai is sceptical of new policies as they profess false consciousness. Government policies like land reforms and reservations are conscious designs by the dominant group to glorify segmentation amongst the culturally, politically, and economically deprived sections preventing true class consciousness and polarisation.</p>
 
-<p><strong>Seven Broad Contemporary Ideas (AR Desai's critique of independent India):</strong> Constitution bourgeois and capitalistic; slogan of socialism is a hoax. State preaching science while popularising religious philosophies (naming India "Bharat," Dharma Chakra as national symbol). Culture idealistic and religious-mystical philosophies enforced by ruling bourgeoisie. Development weak Indian capitalist society cannot resolve economic, political, social, educational, cultural problems. Crisis present society will deepen economic, political, social, cultural crises. Capitalism cannot liquidate mass poverty, unemployment, illiteracy, caste, and feudal institutions. Socialism only socialism can end the crisis by changing the constitution and removing private property.</p>
+<p><strong>Seven Broad Contemporary Ideas (AR Desai's critique of independent India):</strong>: Constitution bourgeois and capitalistic; slogan of socialism is a hoax. State preaching science while popularising religious philosophies (naming India "Bharat," Dharma Chakra as national symbol). Culture idealistic and religious-mystical philosophies enforced by ruling bourgeoisie. Development weak Indian capitalist society cannot resolve economic, political, social, educational, cultural problems. Crisis present society will deepen economic, political, social, cultural crises. Capitalism cannot liquidate mass poverty, unemployment, illiteracy, caste, and feudal institutions. Socialism only socialism can end the crisis by changing the constitution and removing private property.</p>
 
 <h3>Critique of AR Desai and Marxist Sociology</h3>
 <ul>
  <li><strong>Andre Beteille</strong> exaggeration of economic history to fit Marxist theory; peasant movements across the country are signs of democracy; development is happening</li>
- <li><strong>Y. Singh</strong> Marxian theory never looks for alternatives to social change; highly sceptical of everything (government policies, mass media, popular movements)</li>
- <li><strong>Gail Omvedt</strong> Marxian theory sees only two polarised classes; in India, the degree of inequality experienced by different groups is not equal Dalits are immensely suppressed, the worst victims; cannot simply classify India into two polar classes</li>
- <li><strong>Jyoti Basu</strong> Biggest folly of Marxist studies in India is to ignore caste and religion; treating caste as class is invalid in India</li>
+ <li><strong>Y. Singh</strong>: Marxian theory never looks for alternatives to social change; highly sceptical of everything (government policies, mass media, popular movements)</li>
+ <li><strong>Gail Omvedt</strong>: Marxian theory sees only two polarised classes; in India, the degree of inequality experienced by different groups is not equal Dalits are immensely suppressed, the worst victims; cannot simply classify India into two polar classes</li>
+ <li><strong>Jyoti Basu</strong>: Biggest folly of Marxist studies in India is to ignore caste and religion; treating caste as class is invalid in India</li>
  <li>Urban areas are witnessing large swathes of middle class, contrary to Marxist predictions (Dahrendorf's critique of class polarisation)</li>
  <li>Lack of empirical data; more ideology than reality</li>
 </ul>
 
 <h3>Other Marxist Approaches to Indian Society</h3>
 <ul>
- <li><strong>Ranjit Guha's Subaltern Sociology</strong> History of India should be rewritten from a mass perspective, not a government's perspective. Empirical evidence shows how subaltern groups (tribal movements, caste movements, peasant movements) exhibited resistance across different parts of the country at different times</li>
- <li><strong>Anand Chakravarti's Hegemonistic Domination</strong> Against class domination. The "under-class" (people subjected to various forms of deprivation) needs support from urban intelligentsia to rise and acquire human rights and economic and political rights</li>
- <li><strong>Ashok Rudra and Pranab Bardhan</strong> Follow Althusser's theory of Ideological State Apparatus (focusing on the genesis of inequality rather than tracking its history)</li>
- <li><strong>Pradeep Sarkar</strong> LPG era = neo-colonialism (for explaining poverty and marginalisation in India)</li>
+ <li><strong>Ranjit Guha's Subaltern Sociology</strong>: History of India should be rewritten from a mass perspective, not a government's perspective. Empirical evidence shows how subaltern groups (tribal movements, caste movements, peasant movements) exhibited resistance across different parts of the country at different times</li>
+ <li><strong>Anand Chakravarti's Hegemonistic Domination</strong>: Against class domination. The "under-class" (people subjected to various forms of deprivation) needs support from urban intelligentsia to rise and acquire human rights and economic and political rights</li>
+ <li><strong>Ashok Rudra and Pranab Bardhan</strong>: Follow Althusser's theory of Ideological State Apparatus (focusing on the genesis of inequality rather than tracking its history)</li>
+ <li><strong>Pradeep Sarkar</strong>: LPG era = neo-colonialism (for explaining poverty and marginalisation in India)</li>
 </ul>
 
 <h2>D. Modernisation of Indian Tradition</h2>
@@ -5278,19 +5278,19 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Perspectives on Modernisation in India</h3>
 
-<p><strong>Nationalist View (Ghurye, Mukherjee, RN Sharma):</strong> Modernity is an effective instrument for development. Sceptical of colonial attempts. A synthesis should exist between tradition and modernity. Gandhi: "While rejecting pure modernity, man in India should be open to diverse thoughts without compromising his essential Indianness." Vivekananda: "Synthesis between western materialism and Indian spiritualism." Arya Samaj: English and Sanskrit both taught in schools judicious mixture. Conclusion: Indian process of modernisation is unique and specific; tradition and modernity co-exist.</p>
+<p><strong>Nationalist View (Ghurye, Mukherjee, RN Sharma):</strong>: Modernity is an effective instrument for development. Sceptical of colonial attempts. A synthesis should exist between tradition and modernity. Gandhi: "While rejecting pure modernity, man in India should be open to diverse thoughts without compromising his essential Indianness." Vivekananda: "Synthesis between western materialism and Indian spiritualism." Arya Samaj: English and Sanskrit both taught in schools judicious mixture. Conclusion: Indian process of modernisation is unique and specific; tradition and modernity co-exist.</p>
 
-<p><strong>Marxist View (DP Mukherjee):</strong> Modernity in India was accelerated during British rule modern trade, education, liberal thinking, growth of Indian middle class. But Indian modernity is different from the West's (which came through industrialisation) India got modernity without industrialism. Middle class in India engaged in transforming politics but was confused because modes of production were not emerging. AR Desai: Modernity is a colonial construct that destroyed weavers, handicrafts, village industries, and independent guilds. It serves the segmentary interests of class rather than the collective interest of the masses.</p>
+<p><strong>Marxist View (DP Mukherjee):</strong>: Modernity in India was accelerated during British rule modern trade, education, liberal thinking, growth of Indian middle class. But Indian modernity is different from the West's (which came through industrialisation) India got modernity without industrialism. Middle class in India engaged in transforming politics but was confused because modes of production were not emerging. AR Desai: Modernity is a colonial construct that destroyed weavers, handicrafts, village industries, and independent guilds. It serves the segmentary interests of class rather than the collective interest of the masses.</p>
 
-<p><strong>MN Srinivas:</strong> Both orthogenetic (Sanskritisation) and heterogenetic (Westernisation) change operate. Calls modernity "Westernisation" because "modernity" is a value-loaded term. Extended by Rudolf and Rudolf: in India, change can come without violence caste coexists with democracy (caste with its numbers gets elected). Both Westernisation and Sanskritisation are means of social mobility.</p>
+<p><strong>MN Srinivas:</strong>: Both orthogenetic (Sanskritisation) and heterogenetic (Westernisation) change operate. Calls modernity "Westernisation" because "modernity" is a value-loaded term. Extended by Rudolf and Rudolf: in India, change can come without violence caste coexists with democracy (caste with its numbers gets elected). Both Westernisation and Sanskritisation are means of social mobility.</p>
 
-<p><strong>Gunnar Myrdal:</strong> There is a distinction between modernity in the West and Asia. In the West, modernity comes through: Normative (ideas come first) → Instrumental (institutions follow). In Asia (India), only the instrumental dimension is present institutions come without prior normative transformation. Nehru: "Modernity in India should come through social institutions."</p>
+<p><strong>Gunnar Myrdal:</strong>: There is a distinction between modernity in the West and Asia. In the West, modernity comes through: Normative (ideas come first) → Instrumental (institutions follow). In Asia (India), only the instrumental dimension is present institutions come without prior normative transformation. Nehru: "Modernity in India should come through social institutions."</p>
 
-<p><strong>Louis Dumont (Cognitive Theory):</strong> India is a classic example of hierarchy where modernity is not acceptable in absolute form. Various traditional institutions Brahmanical supremacy, commitment to task-based occupation, social distance between castes stand in the way of modernity. Distinction between <em>Homo Hierarchicus</em> (the hierarchical man of traditional India) and <em>Homo Equalis</em> (the equal man of modernity).</p>
+<p><strong>Louis Dumont (Cognitive Theory):</strong>: India is a classic example of hierarchy where modernity is not acceptable in absolute form. Various traditional institutions Brahmanical supremacy, commitment to task-based occupation, social distance between castes stand in the way of modernity. Distinction between <em>Homo Hierarchicus</em> (the hierarchical man of traditional India) and <em>Homo Equalis</em> (the equal man of modernity).</p>
 
-<p>Critique by <strong>Andre Beteille:</strong> Change is derived by both internal and external motivations. Indian culture was never a central, uniform culture it was different at different places, under different dynasties (Jainism and Buddhism introduced at different places; then Mughals; then British). Cultural contradictions at different times led to cultural amendments and modernity. Public and private spheres both underwent amendment. People's adaptability is really high.</p>
+<p>Critique by <strong>Andre Beteille:</strong>: Change is derived by both internal and external motivations. Indian culture was never a central, uniform culture it was different at different places, under different dynasties (Jainism and Buddhism introduced at different places; then Mughals; then British). Cultural contradictions at different times led to cultural amendments and modernity. Public and private spheres both underwent amendment. People's adaptability is really high.</p>
 
-<p><strong>Y. Singh (Modernisation of Indian Tradition, most famous book):</strong> Contradicts all approaches on three grounds precision, objectivity, and integration. Explains modernisation through three perspectives: theoretical (Little Tradition), macroscopic (heterogenetic change), microscopic (orthogenetic change).</p>
+<p><strong>Y. Singh (Modernisation of Indian Tradition, most famous book):</strong>: Contradicts all approaches on three grounds precision, objectivity, and integration. Explains modernisation through three perspectives: theoretical (Little Tradition), macroscopic (heterogenetic change), microscopic (orthogenetic change).</p>
 
 <p>Singh borrows Singer's framework of Little Tradition and Great Tradition to explain:</p>
 <ul>
@@ -5300,7 +5300,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>PESTEL modernity leads to value modernity (individualism, achievement, rationality, secularism, liberty). Y. Singh: different people adopt change differently according to their needs; different places are impacted differently by modern forces. People adopt modernity selectively depending on their needs and expertise. Also identifies "Traditionalisation of Modernity" even in present times, traditions are helped by western innovations (Sanskar channel on cable TV, matrimonial websites with caste filters, temples offering e-darshana, kundli software).</p>
 
-<p>Critique by <strong>JPS Oberoi</strong> Indian modernity and European modernity come from the same principles (rejecting religion); the Dalit movement can be compared with the Protestant movement. Y. Singh's selective modernisation thesis is questioned.</p>
+<p>Critique by <strong>JPS Oberoi</strong>: Indian modernity and European modernity come from the same principles (rejecting religion); the Dalit movement can be compared with the Protestant movement. Y. Singh's selective modernisation thesis is questioned.</p>
 
 <h3>Little Tradition and Great Tradition (Robert Redfield; used in India by McKim Marriott)</h3>
 
@@ -5333,7 +5333,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>AR Desai: without social reforms, the rise of the freedom movement wouldn't have been possible. Y. Singh: social reforms played an important role in transforming traditional India into modern India. TN Madan: social reforms "Indianised modernity." Spontaneous protests were later supplemented by organised protests with the emergence of organised leadership. These movements encompassed not only economic but also social, political, and ideological aspects (Swadeshi and boycott movement, Home Rule League, NCM, CDM, culminating in the Quit India Movement).</p>
 
-<p><strong>Colonial Hangover:</strong> The British colonial rule ended in 1947 but the colonial hangover continues. MNS (Westernisation): changes in food habits and dressing; giving up superstitious rituals like child marriage and sati; increased avenues for social mobility. But westernisation is seen more as imitation of external culture than adoption of modern values like democracy and equality.</p>
+<p><strong>Colonial Hangover:</strong>: The British colonial rule ended in 1947 but the colonial hangover continues. MNS (Westernisation): changes in food habits and dressing; giving up superstitious rituals like child marriage and sati; increased avenues for social mobility. But westernisation is seen more as imitation of external culture than adoption of modern values like democracy and equality.</p>
 
 <p>Manifestations of colonial hangover: primacy of English language (missionary schools most sought after); parliamentary procedures following British conventions; government offices caught in bureaucracy and strict hierarchy; Western food and dress considered superior; obsession with fair skin; forest laws, Indian Police Act, IPC largely based on British rule ethics aimed at controlling local population; post-independence land reforms not fully successful; class stratification replacing Indian stratification systems. However, globalisation ensures that values and institutions from across the world are now being shared many phenomena like consumerist culture are not entirely colonial hangovers but effects of contemporary Western culture more broadly.</p>
 `,
@@ -5355,8 +5355,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Pre-colonial India was a significant global manufacturer particularly of cotton textiles (Dhaka muslin, Madras cloth, Bengal silk) and metalwork. The colonial encounter systematically destroyed these industries through two mechanisms:</p>
 
 <ul>
- <li><strong>Discriminatory tariffs</strong> Indian goods exported to Britain were heavily taxed (70-80% duty on Indian textiles) while British machine-made goods entered India duty-free or at very low rates. Indian handloom industries could not compete with cheap, machine-made Lancashire textiles.</li>
- <li><strong>Administrative policies</strong> India was converted from a manufacturing and exporting economy into a supplier of raw materials (cotton, jute, indigo, opium) and a captive market for British manufactured goods.</li>
+ <li><strong>Discriminatory tariffs</strong>: Indian goods exported to Britain were heavily taxed (70-80% duty on Indian textiles) while British machine-made goods entered India duty-free or at very low rates. Indian handloom industries could not compete with cheap, machine-made Lancashire textiles.</li>
+ <li><strong>Administrative policies</strong>: India was converted from a manufacturing and exporting economy into a supplier of raw materials (cotton, jute, indigo, opium) and a captive market for British manufactured goods.</li>
 </ul>
 
 <p>The result was massive deindustrialisation: weavers, potters, metalworkers, and craftsmen lost their livelihoods and were pushed into agriculture, creating agrarian overpopulation and downward pressure on agricultural wages. The famous observation of the Select Committee on Indian Affairs (1840) captures this: "The bones of the cotton weavers are bleaching the plains of India."</p>
@@ -5442,8 +5442,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The social background of nationalism included not only the elite nationalist movement but also a long history of popular protest and resistance:</p>
 
 <ul>
- <li><strong>Tribal revolts</strong> Santhal Hul (1855-56), Munda Ulgulan (Birsa Munda, 1899-1900), Rampa Rebellion (1879-80 in Andhra). Directed against colonial land revenue systems, forest laws, and money-lenders.</li>
- <li><strong>Peasant revolts</strong> Indigo Revolt (Bengal, 1859-60), Deccan Riots (1875), Moplah Rebellion (1921). The Indigo Revolt was the first organised peasant resistance against colonial exploitation in India.</li>
+ <li><strong>Tribal revolts</strong>: Santhal Hul (1855-56), Munda Ulgulan (Birsa Munda, 1899-1900), Rampa Rebellion (1879-80 in Andhra). Directed against colonial land revenue systems, forest laws, and money-lenders.</li>
+ <li><strong>Peasant revolts</strong>: Indigo Revolt (Bengal, 1859-60), Deccan Riots (1875), Moplah Rebellion (1921). The Indigo Revolt was the first organised peasant resistance against colonial exploitation in India.</li>
  <li><strong>The Revolt of 1857</strong> the most widespread armed challenge to British rule, involving sepoys, princes, landlords, and peasants. Colonial historiography called it the "Sepoy Mutiny"; nationalist historians like VD Savarkar called it the "First War of Indian Independence." Subaltern historians (Rudrangshu Mukherjee) have focused on the role of peasants and artisans whose livelihoods were being destroyed by colonial economic policies.</li>
  <li><strong>Swadeshi and boycott movements</strong> the 1905 partition of Bengal triggered mass protests including bonfires of imported cloth, economic boycott of British goods, and the establishment of national educational institutions.</li>
 </ul>
@@ -5475,9 +5475,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Prarthana Samaj (1867)</strong> founded by Atmaram Pandurang in Bombay, inspired by the Brahmo Samaj but more firmly rooted in the Bhakti tradition. Justice MG Ranade and RG Bhandarkar were leading figures. Focused on upliftment of women and depressed classes within a Hindu framework.</p>
 
-<p><strong>Aligarh Movement (1875)</strong> Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College at Aligarh. Urged Muslims to adopt Western education and science, while maintaining Islamic faith. Argued that Muslims needed to modernise to participate in colonial administration and the emerging modern economy. His "Two-Nation Theory" (that Hindus and Muslims were two separate nations) laid the ideological groundwork for the Pakistan movement a deeply controversial legacy.</p>
+<p><strong>Aligarh Movement (1875)</strong>: Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College at Aligarh. Urged Muslims to adopt Western education and science, while maintaining Islamic faith. Argued that Muslims needed to modernise to participate in colonial administration and the emerging modern economy. His "Two-Nation Theory" (that Hindus and Muslims were two separate nations) laid the ideological groundwork for the Pakistan movement a deeply controversial legacy.</p>
 
-<p><strong>Jyotiba Phule and Satyashodhak Samaj (1873)</strong> Phule was the first systematic thinker to challenge Brahmanical Hinduism from below, from the perspective of the <em>bahujan</em> (lower castes and untouchables). Key contributions:</p>
+<p><strong>Jyotiba Phule and Satyashodhak Samaj (1873)</strong>: Phule was the first systematic thinker to challenge Brahmanical Hinduism from below, from the perspective of the <em>bahujan</em> (lower castes and untouchables). Key contributions:</p>
 <ul>
  <li>Argued that the Brahmin's sacred authority rested on historical forgery and exploitation challenged the divine sanction claimed for the caste system.</li>
  <li>Founded the first schools for girls (including girls from lower castes) in Maharashtra (1848) well before the colonial government took interest.</li>
@@ -5508,7 +5508,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Deoband Movement (1867)</strong> founded by Maulana Qasim Nanautawi at Deoband (UP). An Islamic revivalist movement that sought to educate Muslims in orthodox Islamic theology independent of colonial patronage. Initially anti-colonial; later became divided between pan-Islamic and Indian nationalist tendencies. The Deoband madrassa system spread to become one of the largest networks of Islamic education in the world and a significant influence on later Islamic movements including the Taliban.</p>
 
-<p><strong>Sri Narayana Guru and SNDP Movement (Kerala)</strong> Narayana Guru (1856-1928) challenged caste untouchability in Kerala through the founding of temples accessible to lower castes, the establishment of schools, and the SNDP (Sree Narayana Dharma Paripalana) Yogam (1903). His philosophy: "One caste, one religion, one God for man." He consecrated temples with the motto: "Not for one religion, one caste or one sect, but for the betterment of all."</p>
+<p><strong>Sri Narayana Guru and SNDP Movement (Kerala)</strong>: Narayana Guru (1856-1928) challenged caste untouchability in Kerala through the founding of temples accessible to lower castes, the establishment of schools, and the SNDP (Sree Narayana Dharma Paripalana) Yogam (1903). His philosophy: "One caste, one religion, one God for man." He consecrated temples with the motto: "Not for one religion, one caste or one sect, but for the betterment of all."</p>
 
 <h2>Social Reforms Key Issues</h2>
 
@@ -5517,16 +5517,16 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <ul>
  <li><strong>Sati abolition (1829)</strong> the most celebrated reform. But as Lata Mani (<em>Contentious Traditions</em>) argues, the colonial debate on sati was not primarily about women it was about the interpretation of ancient texts. Women were objects of the discourse, not subjects.</li>
- <li><strong>Widow remarriage</strong> Ishwar Chandra Vidyasagar led the campaign that produced the Hindu Widows' Remarriage Act (1856). The widow remarriage reform was resisted by high-caste Hindus who associated widow chastity with family honour and caste purity.</li>
+ <li><strong>Widow remarriage</strong>: Ishwar Chandra Vidyasagar led the campaign that produced the Hindu Widows' Remarriage Act (1856). The widow remarriage reform was resisted by high-caste Hindus who associated widow chastity with family honour and caste purity.</li>
  <li><strong>Child marriage</strong> the Age of Consent Bill (1891) raised the age of consent from 10 to 12 years. Tilak opposed the bill as colonial interference in Hindu customs illustrating the tension between social reform and nationalist mobilisation.</li>
- <li><strong>Purdah and female seclusion</strong> Begum Rokeya Sakhawat Hossain (<em>Sultana's Dream</em>, 1905) was among the first Indian women to critique purdah from within an Islamic framework.</li>
- <li><strong>Education of women</strong> Phule (1848), Pandita Ramabai, and later Sarojini Naidu fought for women's access to education. By 1882, women's colleges had been established in Bombay, Calcutta, and Madras.</li>
+ <li><strong>Purdah and female seclusion</strong>: Begum Rokeya Sakhawat Hossain (<em>Sultana's Dream</em>, 1905) was among the first Indian women to critique purdah from within an Islamic framework.</li>
+ <li><strong>Education of women</strong>: Phule (1848), Pandita Ramabai, and later Sarojini Naidu fought for women's access to education. By 1882, women's colleges had been established in Bombay, Calcutta, and Madras.</li>
 </ul>
 
 <h3>Caste Reforms and Anti-Brahmanical Movements</h3>
 <ul>
- <li><strong>Non-Brahmin Movement (Maharashtra)</strong> Jyotiba Phule's Satyashodhak Samaj; later the Satya Shodhak movement and its newspaper <em>Dinabandhu</em>.</li>
- <li><strong>Self-Respect Movement and Dravidian Movement (Tamil Nadu)</strong> E.V. Ramasamy (Periyar) founded the Self-Respect Movement (1925) and later the Dravidar Kazhagam (1944). Periyar systematically attacked Brahminism, the caste system, and the subjugation of women. His ideas laid the intellectual foundation for Tamil Dravidian politics.</li>
+ <li><strong>Non-Brahmin Movement (Maharashtra)</strong>: Jyotiba Phule's Satyashodhak Samaj; later the Satya Shodhak movement and its newspaper <em>Dinabandhu</em>.</li>
+ <li><strong>Self-Respect Movement and Dravidian Movement (Tamil Nadu)</strong>: E.V. Ramasamy (Periyar) founded the Self-Respect Movement (1925) and later the Dravidar Kazhagam (1944). Periyar systematically attacked Brahminism, the caste system, and the subjugation of women. His ideas laid the intellectual foundation for Tamil Dravidian politics.</li>
  <li><strong>BR Ambedkar</strong> the most radical critic of the caste system. Ambedkar argued that Hinduism itself is inherently caste-ridden and cannot be reformed from within it must be annihilated. His book <em>Annihilation of Caste</em> (1936) is the most powerful critique of caste in Indian thought. He led mass conversions to Buddhism (1956), arguing that Buddhism provided a democratic and egalitarian alternative to Brahmanical Hinduism. Ambedkar was the first to frame untouchability as a problem not merely of custom but of constitutional rights.</li>
 </ul>
 
@@ -5749,12 +5749,12 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Post-LPG Phase Transformations</h3>
 <ul>
- <li><strong>Circulation of labour</strong> Agriculture commercialised; growth of seasonal migrant agricultural labour. Jan Breman calls them <em>Footloose Labour</em> they live in poor conditions, moving from harvest to harvest across states</li>
- <li><strong>Feminisation of agricultural labour</strong> Men move to cities for non-farm work; women left behind to do agricultural labour; women's labour is also systematically cheaper</li>
- <li><strong>WTO participation (Dr. K. Somasekhara)</strong> Opening of Indian markets for imports; imported fruits common; Indian farmers not as adequately supported as European and American ones through subsidies</li>
- <li><strong>Contract farming</strong> Though assured returns, increased insecurity through dependency on companies; loss of indigenous knowledge; diversion from food-grain production to elite export crops (cut flowers, exotic vegetables)</li>
- <li><strong>Multinationalisation of agriculture</strong> From selling seeds to marketing produce; government agents replaced by profit-driven agents of companies; terminating seeds increasing dependency</li>
- <li><strong>Farmer suicides</strong> Relatively new phenomenon; mainly marginal farmers trying to increase production using GR methods by borrowing; failing leads to heavy debt and suicide; increasing dowry demands, health and education costs; lack of mobilisation making agriculturists unable to influence policies</li>
+ <li><strong>Circulation of labour</strong>: Agriculture commercialised; growth of seasonal migrant agricultural labour. Jan Breman calls them <em>Footloose Labour</em> they live in poor conditions, moving from harvest to harvest across states</li>
+ <li><strong>Feminisation of agricultural labour</strong>: Men move to cities for non-farm work; women left behind to do agricultural labour; women's labour is also systematically cheaper</li>
+ <li><strong>WTO participation (Dr. K. Somasekhara)</strong>: Opening of Indian markets for imports; imported fruits common; Indian farmers not as adequately supported as European and American ones through subsidies</li>
+ <li><strong>Contract farming</strong>: Though assured returns, increased insecurity through dependency on companies; loss of indigenous knowledge; diversion from food-grain production to elite export crops (cut flowers, exotic vegetables)</li>
+ <li><strong>Multinationalisation of agriculture</strong>: From selling seeds to marketing produce; government agents replaced by profit-driven agents of companies; terminating seeds increasing dependency</li>
+ <li><strong>Farmer suicides</strong>: Relatively new phenomenon; mainly marginal farmers trying to increase production using GR methods by borrowing; failing leads to heavy debt and suicide; increasing dowry demands, health and education costs; lack of mobilisation making agriculturists unable to influence policies</li>
 </ul>
 
 <h3>Farmer Suicides (P. Sainath's Analysis)</h3>
@@ -5854,10 +5854,10 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Key aspects of Ghurye's perspective:</p>
 <ul>
  <li><strong>Textual origin</strong> the caste system has its genesis in the Vedic period. The Purusha Sukta hymn of the Rigveda presents the four Varnas as emerging from the cosmic body of Purusha: Brahmin from the mouth, Kshatriya from the arms, Vaishya from the thighs, Shudra from the feet.</li>
- <li><strong>Racial theory of caste origin</strong> Ghurye accepted HH Risley's racial theory: caste originated from the encounter between Aryan invaders (light-skinned) and the Dravidian and tribal populations they conquered. The Aryans used caste hierarchy to maintain racial purity Brahmin castes show the highest proportion of "Aryan" physical characteristics. This theory is widely contested by later scholars.</li>
+ <li><strong>Racial theory of caste origin</strong>: Ghurye accepted HH Risley's racial theory: caste originated from the encounter between Aryan invaders (light-skinned) and the Dravidian and tribal populations they conquered. The Aryans used caste hierarchy to maintain racial purity Brahmin castes show the highest proportion of "Aryan" physical characteristics. This theory is widely contested by later scholars.</li>
  <li><strong>Six features of caste</strong> as outlined above (segmental division, hierarchy, restrictions on feeding and social intercourse, civil and religious disabilities, lack of occupational choice, endogamy).</li>
- <li><strong>Brahminic civilisation</strong> Ghurye emphasised the centrality of Brahminic culture and its gradual spread across the subcontinent through Sanskritisation. He saw caste as rooted in and sustained by Brahminic Hindu ideology.</li>
- <li><strong>Critique of Indology</strong> MN Srinivas critiqued Ghurye for studying India through books rather than through fieldwork. Indology gives a Brahminic, textual view that misses the actual workings of caste at the village level. Subaltern historians criticise Ghurye's approach as ignoring the perspective of lower castes and untouchables.</li>
+ <li><strong>Brahminic civilisation</strong>: Ghurye emphasised the centrality of Brahminic culture and its gradual spread across the subcontinent through Sanskritisation. He saw caste as rooted in and sustained by Brahminic Hindu ideology.</li>
+ <li><strong>Critique of Indology</strong>: MN Srinivas critiqued Ghurye for studying India through books rather than through fieldwork. Indology gives a Brahminic, textual view that misses the actual workings of caste at the village level. Subaltern historians criticise Ghurye's approach as ignoring the perspective of lower castes and untouchables.</li>
 </ul>
 
 <h3>B. MN Srinivas Structural Functionalism and Village-Level Analysis</h3>
@@ -5897,20 +5897,20 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Key features of Dumont's analysis:</p>
 <ul>
- <li><strong>Holism vs individualism</strong> Western society is built on individualism (the individual as primary); Indian caste society is built on holism (the whole, the social order, is primary). The individual in caste society exists only in relation to the whole their place in the hierarchy defines them. Dumont called the ideal typical Indian caste person <em>Homo Hierarchicus</em>.</li>
+ <li><strong>Holism vs individualism</strong>: Western society is built on individualism (the individual as primary); Indian caste society is built on holism (the whole, the social order, is primary). The individual in caste society exists only in relation to the whole their place in the hierarchy defines them. Dumont called the ideal typical Indian caste person <em>Homo Hierarchicus</em>.</li>
  <li><strong>Purity and pollution</strong> the foundational principle of caste hierarchy. The Brahmin is pure because he is a vegetarian, does not handle death or bodily waste, performs purifying rituals. The untouchable is polluted because they handle leather, bodily waste, carrion, and the dead. Pollution is contagious through contact.</li>
- <li><strong>Separation of status and power</strong> Dumont argued that in the caste system, the Brahmin has highest ritual status but no direct political power (which belongs to the Kshatriya). This is a fundamental feature: the purity hierarchy and the power hierarchy are different and operate independently.</li>
- <li><strong>Caste as hierarchy, not stratification</strong> Dumont insisted that other sociologists (including Beteille) wrongly interpreted caste as a form of social stratification. Stratification implies comparison of individuals along a scale of rank; caste hierarchy is about the ordering of roles and functions within a system, not the comparison of individuals. Castes are not ranked individuals but interdependent parts of a whole.</li>
+ <li><strong>Separation of status and power</strong>: Dumont argued that in the caste system, the Brahmin has highest ritual status but no direct political power (which belongs to the Kshatriya). This is a fundamental feature: the purity hierarchy and the power hierarchy are different and operate independently.</li>
+ <li><strong>Caste as hierarchy, not stratification</strong>: Dumont insisted that other sociologists (including Beteille) wrongly interpreted caste as a form of social stratification. Stratification implies comparison of individuals along a scale of rank; caste hierarchy is about the ordering of roles and functions within a system, not the comparison of individuals. Castes are not ranked individuals but interdependent parts of a whole.</li>
  <li><strong>No mobility in principle</strong> in Dumont's reading, the caste system does not allow for social mobility. Srinivas's Sanskritisation is an empirical exception that Dumont saw as historically late and ideologically secondary.</li>
 </ul>
 
 <h4>Critiques of Dumont</h4>
 <ul>
- <li><strong>Andre Beteille</strong> Dumont vastly overemphasises the role of ideology (purity/pollution) and underestimates the role of power, economics, and conflict in maintaining caste. The caste system is a system of social stratification, not just an ideology.</li>
+ <li><strong>Andre Beteille</strong>: Dumont vastly overemphasises the role of ideology (purity/pollution) and underestimates the role of power, economics, and conflict in maintaining caste. The caste system is a system of social stratification, not just an ideology.</li>
  <li><strong>Dipankar Gupta</strong> (<em>Interrogating Caste</em>) Dumont's model presents caste hierarchy as consensual and internally consistent. In practice, castes do not accept their assigned position in the Varna hierarchy they contest it. "While there is agreement over hierarchy, there is no agreement over ranking." Brahmins are universally acknowledged as most superior in the Varna scheme, but powerful Kshatriyas consider themselves more important; even among Brahmins there is no consensus.</li>
  <li><strong>BR Ambedkar</strong> purity and pollution are instruments of oppression, not a coherent cultural worldview. The Brahmin invented the ideology of purity to justify exploitation and prevent the lower castes from accessing education, wealth, and power.</li>
  <li><strong>Feminist critique</strong> purity ideology is also used to control women's bodies and sexuality. Women's "pollution" during menstruation and childbirth is used to exclude them from rituals, temples, and domestic spaces.</li>
- <li><strong>Subaltern scholars</strong> Dumont's account is derived primarily from Brahminic texts and ignores the non-Brahminic traditions that have always challenged the caste hierarchy.</li>
+ <li><strong>Subaltern scholars</strong>: Dumont's account is derived primarily from Brahminic texts and ignores the non-Brahminic traditions that have always challenged the caste hierarchy.</li>
 </ul>
 
 <h3>D. Andre Beteille Caste, Class, and Power</h3>
@@ -5920,9 +5920,9 @@ export const sociologyNoteContent: Record<string, string> = {
 <ul>
  <li><strong>Three systems of stratification coexist</strong> in Sripuram, caste (ritual hierarchy), class (economic position), and power (political authority) are analytically distinct and do not always coincide. A change in one does not necessarily produce a change in another.</li>
  <li><strong>Cumulative vs dispersed inequality</strong> in the past, Brahmins of Sripuram were also the dominant landowners and the politically powerful caste, class, and power were "cumulative" (reinforcing each other). Post-independence land reforms and democratic politics have "dispersed" inequality non-Brahmins have gained political power and economic resources, even while Brahmins retain ritual status.</li>
- <li><strong>Caste as a form of social stratification</strong> Beteille directly contradicted Dumont by insisting that caste should be understood as social stratification, not just as ideology. Caste groups have unequal shares of scarce resources (income, property, education, political power).</li>
- <li><strong>Caste vs race comparison</strong> Beteille and Dipankar Gupta distinguish caste from race: Brahminic supremacy was always questioned from within (Buddhism, Jainism, Bhakti, Sikhism) while white supremacy was rarely challenged from within the dominant group. Caste is more internally differentiated (sub-castes within castes) and allows more internal mobility than race. Dalit sociologists counter that both are grounded in social justifications of inequality and both function as forms of discrimination.</li>
- <li><strong>Sripuram's caste map</strong> Beteille's detailed analysis revealed that even within the Brahmin community of Sripuram, there were at least four levels of segmentation: political divisions (Brahmins vs Non-Brahmins), occupational divisions (Mirasdar Brahmins/landowners vs temple priests vs panchangakkarans), doctrinal divisions (Smartha/Iyer vs Shri Vaishnava/Iyengar), and marital divisions (multiple sub-castes within each doctrinal group). This confirmed that the caste system is far more complex than the simple Varna scheme suggests.</li>
+ <li><strong>Caste as a form of social stratification</strong>: Beteille directly contradicted Dumont by insisting that caste should be understood as social stratification, not just as ideology. Caste groups have unequal shares of scarce resources (income, property, education, political power).</li>
+ <li><strong>Caste vs race comparison</strong>: Beteille and Dipankar Gupta distinguish caste from race: Brahminic supremacy was always questioned from within (Buddhism, Jainism, Bhakti, Sikhism) while white supremacy was rarely challenged from within the dominant group. Caste is more internally differentiated (sub-castes within castes) and allows more internal mobility than race. Dalit sociologists counter that both are grounded in social justifications of inequality and both function as forms of discrimination.</li>
+ <li><strong>Sripuram's caste map</strong>: Beteille's detailed analysis revealed that even within the Brahmin community of Sripuram, there were at least four levels of segmentation: political divisions (Brahmins vs Non-Brahmins), occupational divisions (Mirasdar Brahmins/landowners vs temple priests vs panchangakkarans), doctrinal divisions (Smartha/Iyer vs Shri Vaishnava/Iyengar), and marital divisions (multiple sub-castes within each doctrinal group). This confirmed that the caste system is far more complex than the simple Varna scheme suggests.</li>
 </ul>
 
 <h2>The Jajmani System</h2>
@@ -6014,11 +6014,11 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Key aspects of Ambedkar's analysis:</p>
 <ul>
- <li><strong>Annihilation of Caste (1936)</strong> Ambedkar's most powerful text, written as a presidential address to the Jat Pat Todak Mandal (a caste reform organisation that then refused to have him speak because of his radical views). Ambedkar argued that caste cannot be reformed it must be annihilated. Reform (Sanskritisation, occupational change, inter-dining) leaves the ideological foundation intact. Only the destruction of the religious sanction for caste (the shastras and the smritis) can end it. "The caste system is not merely a division of labour. It is also a division of labourers."</li>
- <li><strong>Graded inequality</strong> Ambedkar identified graded inequality as caste's most insidious feature. The system does not simply divide into two groups (oppressor/oppressed) as in Marx. Instead, every caste is above some and below others producing a vertical ladder of exploitation where each group has a grievance against those above but will not unite with those below to overthrow the system.</li>
- <li><strong>Racial theory</strong> Ambedkar, like Ghurye, partially accepted the racial theory of caste origins arguing that Dalits are the original inhabitants of India (Nagas/Dravidians) subjugated by the Aryan invaders. This argument was meant to invert the caste hierarchy the Dalits are "the original Indians" whose culture and civilisation preceded Brahminic Hinduism.</li>
- <li><strong>Buddhist conversion (1956)</strong> Ambedkar's most dramatic act. He led a mass conversion of approximately 600,000 Dalits to Buddhism at Nagpur on 14 October 1956, six weeks before his death. His reasoning: Hinduism cannot be reformed from within; Buddhism provides an egalitarian, non-hierarchical, rationalist alternative. Buddhism's founding was itself a protest against Brahminic hierarchy the Buddha rejected the Vedas, the caste system, and ritual animal sacrifice, and opened the Sangha to all, including women and Shudras.</li>
- <li><strong>Caste as totalising system</strong> Ambedkar argued that caste is not merely an economic or social institution; it is a total system that controls every aspect of life marriage, food, occupation, residence, education, and death. It cannot be compared to class (which is open) or race (which lacks the Brahminic textual sanction that makes caste morally legitimate).</li>
+ <li><strong>Annihilation of Caste (1936)</strong>: Ambedkar's most powerful text, written as a presidential address to the Jat Pat Todak Mandal (a caste reform organisation that then refused to have him speak because of his radical views). Ambedkar argued that caste cannot be reformed it must be annihilated. Reform (Sanskritisation, occupational change, inter-dining) leaves the ideological foundation intact. Only the destruction of the religious sanction for caste (the shastras and the smritis) can end it. "The caste system is not merely a division of labour. It is also a division of labourers."</li>
+ <li><strong>Graded inequality</strong>: Ambedkar identified graded inequality as caste's most insidious feature. The system does not simply divide into two groups (oppressor/oppressed) as in Marx. Instead, every caste is above some and below others producing a vertical ladder of exploitation where each group has a grievance against those above but will not unite with those below to overthrow the system.</li>
+ <li><strong>Racial theory</strong>: Ambedkar, like Ghurye, partially accepted the racial theory of caste origins arguing that Dalits are the original inhabitants of India (Nagas/Dravidians) subjugated by the Aryan invaders. This argument was meant to invert the caste hierarchy the Dalits are "the original Indians" whose culture and civilisation preceded Brahminic Hinduism.</li>
+ <li><strong>Buddhist conversion (1956)</strong>: Ambedkar's most dramatic act. He led a mass conversion of approximately 600,000 Dalits to Buddhism at Nagpur on 14 October 1956, six weeks before his death. His reasoning: Hinduism cannot be reformed from within; Buddhism provides an egalitarian, non-hierarchical, rationalist alternative. Buddhism's founding was itself a protest against Brahminic hierarchy the Buddha rejected the Vedas, the caste system, and ritual animal sacrifice, and opened the Sangha to all, including women and Shudras.</li>
+ <li><strong>Caste as totalising system</strong>: Ambedkar argued that caste is not merely an economic or social institution; it is a total system that controls every aspect of life marriage, food, occupation, residence, education, and death. It cannot be compared to class (which is open) or race (which lacks the Brahminic textual sanction that makes caste morally legitimate).</li>
 </ul>
 
 <h2>Caste in Contemporary India Change and Continuity</h2>
@@ -6075,20 +6075,20 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>FG Bailey suggests the definition of tribe should be seen as a continuum with tribe at one end and caste at the other:</p>
 <ul>
  <li><strong>Srikanth</strong> tribals; semi-tribals; acultural tribes; assimilated tribes</li>
- <li><strong>Ghurye</strong> Hinduised tribes; partially Hinduised tribes; hill sections</li>
+ <li><strong>Ghurye</strong>: Hinduised tribes; partially Hinduised tribes; hill sections</li>
  <li><strong>DN Majumdar</strong> primitive tribes; tribes with some degree of association; Hinduised tribes</li>
  <li><strong>Verrier Elwin</strong> most primitive; individualistic; detribalised; tribal aristocrats</li>
 </ul>
 <p>Even Beteille concedes: "There is no satisfactory way to define a tribe. It can only be explained through a continuum."</p>
 
 <h3>Ministry of Tribal Affairs: Official Criteria</h3>
-<p>Primitive traits; distinctive culture; geographic isolation; shyness from the general population; backwardness. Mnemonic: <strong>RIPPELD</strong> Religion; Isolation; Political organisation; Property; Living place; Economy; Dialects.</p>
+<p>Primitive traits; distinctive culture; geographic isolation; shyness from the general population; backwardness. Mnemonic: <strong>RIPPELD</strong>: Religion; Isolation; Political organisation; Property; Living place; Economy; Dialects.</p>
 
 <h2>Geographical Spread</h2>
 <ul>
- <li><strong>North-Northeast Zone</strong> Ladakh, Himachal Pradesh, Uttarakhand, Sikkim, and seven Northeast states</li>
- <li><strong>Central Zone</strong> West Bengal, Odisha, Bihar/Jharkhand, southern UP, southern Rajasthan, Gujarat, MP, Maharashtra</li>
- <li><strong>Southern Zone</strong> AP, Tamil Nadu, Karnataka, Kerala, Andaman and Nicobar Islands</li>
+ <li><strong>North-Northeast Zone</strong>: Ladakh, Himachal Pradesh, Uttarakhand, Sikkim, and seven Northeast states</li>
+ <li><strong>Central Zone</strong>: West Bengal, Odisha, Bihar/Jharkhand, southern UP, southern Rajasthan, Gujarat, MP, Maharashtra</li>
+ <li><strong>Southern Zone</strong>: AP, Tamil Nadu, Karnataka, Kerala, Andaman and Nicobar Islands</li>
 </ul>
 <p>Major tribes: Gonds (4 million+); Bhils (4 million+); Santhals (3 million+). Mostly patrilineal, but Garos matrilineal. Religions vary: Nagas/Mizos/Santhals Christianity; Bhutias/Lepchas Buddhism; Bhils Hinduism. Occupations: food gathering, forestry, jhum cultivation, wage labour.</p>
 
@@ -6098,18 +6098,18 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Administrative Policies (Three Phases)</h3>
 
-<p><strong>Phase 1 (1782-1827):</strong> Paharias of Rajmahal Hills revolted against Hindu zamindars. Administrator Cleveland created special tribal administration giving jurisdiction to local elders failed due to corruption.</p>
+<p><strong>Phase 1 (1782-1827):</strong>: Paharias of Rajmahal Hills revolted against Hindu zamindars. Administrator Cleveland created special tribal administration giving jurisdiction to local elders failed due to corruption.</p>
 
-<p><strong>Phase 2 (1855-1919):</strong> Santhal Rebellion (1855) led to a separate Santhal district. Queen's Proclamation (1858) right to own culture. 1861 Act special tribal administration. 1870 Act Scheduled Tracts created. 1919 Act Backward Tracts introduced (only law modification) alongside Scheduled Tracts (exclusive administration).</p>
+<p><strong>Phase 2 (1855-1919):</strong>: Santhal Rebellion (1855) led to a separate Santhal district. Queen's Proclamation (1858) right to own culture. 1861 Act special tribal administration. 1870 Act Scheduled Tracts created. 1919 Act Backward Tracts introduced (only law modification) alongside Scheduled Tracts (exclusive administration).</p>
 
-<p><strong>Phase 3 (1919-1947):</strong> GOI Act 1935 Partially Excluded Areas (Governor sought advice) and Wholly Excluded Areas (Governor's discretion). British feared tribals joining the freedom movement. In practice, isolation was compromised by extractive interests in mineral-rich tribal regions.</p>
+<p><strong>Phase 3 (1919-1947):</strong>: GOI Act 1935 Partially Excluded Areas (Governor sought advice) and Wholly Excluded Areas (Governor's discretion). British feared tribals joining the freedom movement. In practice, isolation was compromised by extractive interests in mineral-rich tribal regions.</p>
 
 <h3>Forest Policies</h3>
 
 <ul>
  <li>Lord Dalhousie declared teak state property; restricted Minor Forest Produce collection</li>
  <li>1855 formal forest policy; 1865 restrained local customs</li>
- <li><strong>1878 Forest Act</strong> Reserve, Protected, and Village forests; restricted tribal ownership; beginning of community alienation from forests</li>
+ <li><strong>1878 Forest Act</strong>: Reserve, Protected, and Village forests; restricted tribal ownership; beginning of community alienation from forests</li>
  <li>Five successive Acts (1901-1927) transferred forests from common property to state property</li>
  <li><strong>1952 National Forest Policy</strong> national interest paramount; Adivasis treated as "enemies of the forests"; traditional rights abolished</li>
  <li><strong>1988 Forest Policy</strong> people-oriented objectives; still retained exclusive state ownership</li>
@@ -6151,27 +6151,27 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Problems of Tribal Communities</h2>
 
-<p><strong>Displacement:</strong> Walter Fernandes estimates 60 million+ displaced by development since independence disproportionately tribal. Big dams (Sardar Sarovar, Hirakud, Tehri), mining, wildlife sanctuaries, linear projects. Rehabilitation woefully inadequate. Narmada Bachao Andolan (Medha Patkar) is the most prominent resistance movement.</p>
+<p><strong>Displacement:</strong>: Walter Fernandes estimates 60 million+ displaced by development since independence disproportionately tribal. Big dams (Sardar Sarovar, Hirakud, Tehri), mining, wildlife sanctuaries, linear projects. Rehabilitation woefully inadequate. Narmada Bachao Andolan (Medha Patkar) is the most prominent resistance movement.</p>
 
-<p><strong>Forest and land alienation:</strong> Despite FRA 2006, implementation inadequate. Forest departments continue filing encroachment cases. Mining leases allocated over tribal objections. Colonial legacy of treating tribals as encroachers on ancestral lands persists.</p>
+<p><strong>Forest and land alienation:</strong>: Despite FRA 2006, implementation inadequate. Forest departments continue filing encroachment cases. Mining leases allocated over tribal objections. Colonial legacy of treating tribals as encroachers on ancestral lands persists.</p>
 
-<p><strong>Naxalism:</strong> The Red Corridor (Chhattisgarh, Jharkhand, Odisha, AP) is the epicentre of Naxalite insurgency drawing support from landlessness, displacement, denial of forest rights, and caste violence. State's "Operation Green Hunt" criticised for treating a socio-economic problem as a law and order problem.</p>
+<p><strong>Naxalism:</strong>: The Red Corridor (Chhattisgarh, Jharkhand, Odisha, AP) is the epicentre of Naxalite insurgency drawing support from landlessness, displacement, denial of forest rights, and caste violence. State's "Operation Green Hunt" criticised for treating a socio-economic problem as a law and order problem.</p>
 
-<p><strong>Poor development indicators:</strong> Literacy 59% for STs vs 73% national average (Census 2011); highest dropout rates; significantly higher infant and maternal mortality; 75 PVTGs (Particularly Vulnerable Tribal Groups) showing population stagnation.</p>
+<p><strong>Poor development indicators:</strong>: Literacy 59% for STs vs 73% national average (Census 2011); highest dropout rates; significantly higher infant and maternal mortality; 75 PVTGs (Particularly Vulnerable Tribal Groups) showing population stagnation.</p>
 
-<p><strong>Cultural erosion:</strong> Tribal identity carries social stigma. Traditional knowledge and arts commodified (Madhubani, Warli, Gond art) with little community benefit. Liquor proliferation breaking traditional cultural controls.</p>
+<p><strong>Cultural erosion:</strong>: Tribal identity carries social stigma. Traditional knowledge and arts commodified (Madhubani, Warli, Gond art) with little community benefit. Liquor proliferation breaking traditional cultural controls.</p>
 
-<p><strong>Elite capture:</strong> A small educated tribal elite corners the bulk of reservation benefits while the most marginalised tribals in remote areas receive little the creamy layer problem.</p>
+<p><strong>Elite capture:</strong>: A small educated tribal elite corners the bulk of reservation benefits while the most marginalised tribals in remote areas receive little the creamy layer problem.</p>
 
-<p><strong>Lack of voice:</strong> Despite reserved constituencies, tribal representation is mediated through mainstream parties. Gram Sabhas under PESA remain weak poorly funded, dominated by local elites.</p>
+<p><strong>Lack of voice:</strong>: Despite reserved constituencies, tribal representation is mediated through mainstream parties. Gram Sabhas under PESA remain weak poorly funded, dominated by local elites.</p>
 
 <h2>Tribal Movements</h2>
 
 <p>Three broad forms of tribal response: coexistence (Meena and Bhils in Rajasthan); absorption into dominant group (Khond and Oraon through Hinduisation); secession seeking political independence (Nagas, Mizos led to separate states).</p>
 
-<p><strong>Colonial-era revolts:</strong> Santhal Hul (1855-56) Sidhu and Kanhu against zamindars; led eventually to Santhal Pargana. Munda Ulgulan (1899-1900) Birsa Munda's millenarian movement; Birsa died in custody; led to Chhota Nagpur Tenancy Act (1908). Khasi Rising (1829-33) U Tirot Sing resisted British annexation.</p>
+<p><strong>Colonial-era revolts:</strong>: Santhal Hul (1855-56) Sidhu and Kanhu against zamindars; led eventually to Santhal Pargana. Munda Ulgulan (1899-1900) Birsa Munda's millenarian movement; Birsa died in custody; led to Chhota Nagpur Tenancy Act (1908). Khasi Rising (1829-33) U Tirot Sing resisted British annexation.</p>
 
-<p><strong>Post-independence movements:</strong> Naga movement (NNC; Nagaland statehood 1963; insurgency continued); Mizo movement (Laldenga; peace accord 1986; Mizoram statehood); Jharkhand movement (separate state 2000; Chhattisgarh also created); Narmada Bachao Andolan; forest rights movements demanding FRA 2006 implementation.</p>
+<p><strong>Post-independence movements:</strong>: Naga movement (NNC; Nagaland statehood 1963; insurgency continued); Mizo movement (Laldenga; peace accord 1986; Mizoram statehood); Jharkhand movement (separate state 2000; Chhattisgarh also created); Narmada Bachao Andolan; forest rights movements demanding FRA 2006 implementation.</p>
 
 <h2>Government Schemes and Institutions</h2>
 
@@ -6288,7 +6288,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <ul>
  <li><strong>Farmer suicides</strong> rising input costs (seeds, fertilisers, pesticides), declining output prices, debt, and crop failure have driven farmer suicides, concentrated in Maharashtra, Karnataka, Andhra Pradesh, and Madhya Pradesh. P. Sainath's journalism has documented this crisis extensively. NCRB data shows over 300,000 farmer suicides between 1995 and 2020.</li>
  <li><strong>Contract farming</strong> large agribusiness companies entering into production contracts with farmers, often integrating them into commodity chains as dependent suppliers rather than independent producers. Raises questions about agrarian class relations are contract farmers becoming rural proletarians in disguised form?</li>
- <li><strong>Land dispossession for infrastructure</strong> Special Economic Zones, mining, dams, and urban expansion have led to large-scale land acquisition from peasant and tribal communities, pushing small farmers and Adivasis off agricultural land.</li>
+ <li><strong>Land dispossession for infrastructure</strong>: Special Economic Zones, mining, dams, and urban expansion have led to large-scale land acquisition from peasant and tribal communities, pushing small farmers and Adivasis off agricultural land.</li>
 </ul>
 
 <h2>Industrial Class Structure</h2>
@@ -6364,7 +6364,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h4>Features of the New Middle Class</h4>
 <ul>
- <li><strong>High entrepreneurial spirit</strong> Banerjee and Duflo note a strong startup culture and disposition toward entrepreneurship. Many new middle-class households combine a salaried primary earner with self-employment or small business activity.</li>
+ <li><strong>High entrepreneurial spirit</strong>: Banerjee and Duflo note a strong startup culture and disposition toward entrepreneurship. Many new middle-class households combine a salaried primary earner with self-employment or small business activity.</li>
  <li><strong>Drives consumption and savings simultaneously</strong> the new middle class both fuels domestic consumption (home appliances, automobiles, education, healthcare, travel) and sustains household savings. This dual role makes it central to both demand and capital formation in the Indian economy.</li>
  <li><strong>Aspiration for English-medium education</strong> parents invest heavily in English-medium schooling because they see English proficiency as the key to professional success. English education is seen as a social escalator out of the constraints of local language and caste identity.</li>
  <li><strong>Home ownership as a goal</strong> owning one's own home (flat) in a middle-class residential area is the central material aspiration. The real estate boom in Indian cities is largely driven by the new middle class's housing demand.</li>
@@ -6376,8 +6376,8 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>The Middle Class and Political Ideology</h3>
 <ul>
  <li><strong>Conservative tendency</strong> the middle class tends toward conservatism in social matters while demanding reform in governance and the economy. It supports economic liberalisation and market freedoms but is often hostile to redistributive policies that require higher taxation.</li>
- <li><strong>Nationalism</strong> Hindu middle-class nationalism has been a significant political force. The RSS and its affiliates drew extensively on the educated Hindu middle class as their social base. The BJP's rise to dominance reflects partly the alignment of Hindu nationalist politics with new middle-class aspirations.</li>
- <li><strong>Civil society activism</strong> RTI (Right to Information) activism, environmental movements, consumer rights movements, and anti-corruption campaigns have all drawn heavily on the educated middle class.</li>
+ <li><strong>Nationalism</strong>: Hindu middle-class nationalism has been a significant political force. The RSS and its affiliates drew extensively on the educated Hindu middle class as their social base. The BJP's rise to dominance reflects partly the alignment of Hindu nationalist politics with new middle-class aspirations.</li>
+ <li><strong>Civil society activism</strong>: RTI (Right to Information) activism, environmental movements, consumer rights movements, and anti-corruption campaigns have all drawn heavily on the educated middle class.</li>
  <li><strong>The "creamy layer" controversy</strong> the Supreme Court's doctrine (Indra Sawhney case, 1992) that the "creamy layer" (the better-off among OBCs) should be excluded from reservation benefits reflects the middle class's ambivalence about affirmative action supporting equality of opportunity in principle while resisting policies that appear to disadvantage their own children.</li>
 </ul>
 
@@ -6391,9 +6391,9 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>The relationship between caste and class in India is one of the most important and contested questions in Indian sociology. Several positions have been advanced:</p>
 
 <ul>
- <li><strong>Caste is primary (cultural approach)</strong> Louis Dumont and his followers argue that caste is the fundamental organising principle of Indian society, and class is secondary. Economic relations are embedded in and structured by caste relations, not the other way around.</li>
- <li><strong>Class is primary (Marxist approach)</strong> AR Desai and other Marxist sociologists argue that economic class relations (particularly those generated by colonialism and capitalism) are primary, and caste is a form of ideology that legitimises class exploitation. The ruling classes use caste ideology to divide the exploited classes and prevent class solidarity.</li>
- <li><strong>Cumulative hierarchy to dispersed hierarchy (Beteille's approach)</strong> Beteille argues that in the past, caste and class were cumulative (upper castes were also the propertied classes). Post-independence, they have become dispersed lower castes have gained political power while upper castes retain cultural capital. This is an ongoing and contested process.</li>
+ <li><strong>Caste is primary (cultural approach)</strong>: Louis Dumont and his followers argue that caste is the fundamental organising principle of Indian society, and class is secondary. Economic relations are embedded in and structured by caste relations, not the other way around.</li>
+ <li><strong>Class is primary (Marxist approach)</strong>: AR Desai and other Marxist sociologists argue that economic class relations (particularly those generated by colonialism and capitalism) are primary, and caste is a form of ideology that legitimises class exploitation. The ruling classes use caste ideology to divide the exploited classes and prevent class solidarity.</li>
+ <li><strong>Cumulative hierarchy to dispersed hierarchy (Beteille's approach)</strong>: Beteille argues that in the past, caste and class were cumulative (upper castes were also the propertied classes). Post-independence, they have become dispersed lower castes have gained political power while upper castes retain cultural capital. This is an ongoing and contested process.</li>
  <li><strong>Intersectionality</strong> the most productive approach recognises that caste and class interact in complex ways that vary by region, sector, and historical period. The SC agricultural labourer in Bihar occupies a very different structural position from the OBC small entrepreneur in Tamil Nadu, even if both are "lower class." Gender adds another dimension Dalit women face the triple burden of caste, class, and gender discrimination simultaneously.</li>
 </ul>
 
@@ -6663,7 +6663,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Gandhi's approach to social change was gradualist and moral rather than structural and coercive. Change must come from within from persuasion, example, and satyagraha not from state power. This is why he emphasised Constructive Programme (education, sanitation, cottage industries, Hindu-Muslim unity, untouchability removal) alongside political agitation. Gandhi inclined toward socialism but distrusted the state a combination that makes his vision genuinely difficult to categorise within conventional Left-Right frameworks.</p>
 
-<p><strong>Sociological assessment:</strong> AR Desai criticised Gandhi for prioritising national unity over class struggle deliberately constructing an ideology that served the interests of the Indian bourgeoisie while appealing to the masses on non-class terms. Ambedkar was more hostile: the village was a site of caste oppression, not harmony, and Gandhi's romantic village ideal perpetuated the conditions of Dalit subordination. Feminists noted that Gandhi's village ideal entrenched the sexual division of labour keeping women in domestic and craft roles.</p>
+<p><strong>Sociological assessment:</strong>: AR Desai criticised Gandhi for prioritising national unity over class struggle deliberately constructing an ideology that served the interests of the Indian bourgeoisie while appealing to the masses on non-class terms. Ambedkar was more hostile: the village was a site of caste oppression, not harmony, and Gandhi's romantic village ideal perpetuated the conditions of Dalit subordination. Feminists noted that Gandhi's village ideal entrenched the sexual division of labour keeping women in domestic and craft roles.</p>
 
 <h3>Nehruvian Vision: Socialist Planning and Mixed Economy</h3>
 
@@ -6671,12 +6671,12 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>The Nehruvian development model unfolded in phases:</p>
 <ul>
- <li><strong>First phase (1950s-60s)</strong> Welfare model, broad spectrum planning, five-year plans building infrastructure and heavy industry</li>
- <li><strong>Second phase (after 1970)</strong> Integrated and area-specific focus; Green Revolution technology concentrated in selected regions; central-state-district-block-village planning cascade</li>
- <li><strong>Third phase (post-1991)</strong> Decentralised, indicative, and participative planning; declining role of Planning Commission (abolished 2014, replaced by NITI Aayog); rising importance of NGOs and community involvement; right-based approach (MNREGA, RTI, RTE) replacing role-based approach</li>
+ <li><strong>First phase (1950s-60s)</strong>: Welfare model, broad spectrum planning, five-year plans building infrastructure and heavy industry</li>
+ <li><strong>Second phase (after 1970)</strong>: Integrated and area-specific focus; Green Revolution technology concentrated in selected regions; central-state-district-block-village planning cascade</li>
+ <li><strong>Third phase (post-1991)</strong>: Decentralised, indicative, and participative planning; declining role of Planning Commission (abolished 2014, replaced by NITI Aayog); rising importance of NGOs and community involvement; right-based approach (MNREGA, RTI, RTE) replacing role-based approach</li>
 </ul>
 
-<p><strong>Sociological critique:</strong> AR Desai argued that Nehruvian planning glorified the nation to conceal class interests socialist slogans masked the reality that development benefited the Indian bourgeoisie while displacing tribals and exploiting workers. The "Hindu Rate of Growth" (approximately 3.5% annually until the 1980s) confirmed that while the temples of modern India were built, mass poverty persisted. The "License-Quota-Permit Raj" created rent-seeking opportunities for industrialists who could use state connections producing crony capitalism rather than socialism. Sudipto Kaviraj adds that slow employment growth led to increased poverty even as industrialisation advanced.</p>
+<p><strong>Sociological critique:</strong>: AR Desai argued that Nehruvian planning glorified the nation to conceal class interests socialist slogans masked the reality that development benefited the Indian bourgeoisie while displacing tribals and exploiting workers. The "Hindu Rate of Growth" (approximately 3.5% annually until the 1980s) confirmed that while the temples of modern India were built, mass poverty persisted. The "License-Quota-Permit Raj" created rent-seeking opportunities for industrialists who could use state connections producing crony capitalism rather than socialism. Sudipto Kaviraj adds that slow employment growth led to increased poverty even as industrialisation advanced.</p>
 
 <h3>Ambedkar's Vision: Constitutional Rights and Social Democracy</h3>
 
@@ -6684,7 +6684,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 <ul>
  <li><strong>Constitutional rights</strong> the Constitution would establish legal equality, abolish untouchability, prohibit discrimination, and create reservations for SCs and STs. Ambedkar chaired the Drafting Committee and inserted these provisions despite fierce resistance.</li>
  <li><strong>Education</strong> "Educate, Agitate, Organise." Education was the primary instrument of social emancipation for Dalits providing the knowledge and credentials to escape occupational determination by caste.</li>
- <li><strong>Buddhism (Navayana)</strong> Conversion to an egalitarian religion was a spiritual and social repudiation of caste hierarchy. His Navayana Buddhism was a this-worldly ethic of human dignity rather than traditional metaphysics.</li>
+ <li><strong>Buddhism (Navayana)</strong>: Conversion to an egalitarian religion was a spiritual and social repudiation of caste hierarchy. His Navayana Buddhism was a this-worldly ethic of human dignity rather than traditional metaphysics.</li>
 </ul>
 
 <p>Ambedkar rejected Gandhi's village ideal as a utopia for upper castes. He was equally suspicious of Marxism, arguing that the emphasis on class ignored the deeper, more intractable oppression of caste which could not be dissolved simply by ending private property. He insisted: "Political democracy cannot last unless there lies at the base of it social democracy."</p>
@@ -6705,11 +6705,11 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>The Constitution attempts social change through three mechanisms:</p>
 
-<p><strong>Fundamental Rights (Part III)</strong> Articles 14-18 guarantee equality before law, prohibit discrimination on grounds of religion, race, caste, sex, or place of birth, prohibit untouchability, and abolish titles. Articles 23-24 abolish forced labour and child labour. Articles 25-30 guarantee religious freedom and protect minority rights. Article 32 provides the right to constitutional remedies what Ambedkar called "the heart and soul of the Constitution."</p>
+<p><strong>Fundamental Rights (Part III)</strong>: Articles 14-18 guarantee equality before law, prohibit discrimination on grounds of religion, race, caste, sex, or place of birth, prohibit untouchability, and abolish titles. Articles 23-24 abolish forced labour and child labour. Articles 25-30 guarantee religious freedom and protect minority rights. Article 32 provides the right to constitutional remedies what Ambedkar called "the heart and soul of the Constitution."</p>
 
-<p><strong>Directive Principles of State Policy (Part IV)</strong> Non-justiciable but morally binding guidelines: equal pay for equal work (Article 39(d)); right to work, education, and public assistance (Article 41); free and compulsory education for children (Article 45); living wage for workers (Article 43); equal justice and free legal aid (Article 39A). The DPSPs represent the socialist and Gandhian commitments that could not yet be fully enforced but set the direction of travel.</p>
+<p><strong>Directive Principles of State Policy (Part IV)</strong>: Non-justiciable but morally binding guidelines: equal pay for equal work (Article 39(d)); right to work, education, and public assistance (Article 41); free and compulsory education for children (Article 45); living wage for workers (Article 43); equal justice and free legal aid (Article 39A). The DPSPs represent the socialist and Gandhian commitments that could not yet be fully enforced but set the direction of travel.</p>
 
-<p><strong>Affirmative Action</strong> Reservations for SCs and STs in educational institutions (Article 15(4)) and government employment (Article 16(4)), extended to OBCs by the Mandal Commission recommendations (V.P. Singh government, 1990). The 73rd and 74th Constitutional Amendments (1992) created reservations for women in Panchayati Raj Institutions one-third of all seats, rising to one-half in several states.</p>
+<p><strong>Affirmative Action</strong>: Reservations for SCs and STs in educational institutions (Article 15(4)) and government employment (Article 16(4)), extended to OBCs by the Mandal Commission recommendations (V.P. Singh government, 1990). The 73rd and 74th Constitutional Amendments (1992) created reservations for women in Panchayati Raj Institutions one-third of all seats, rising to one-half in several states.</p>
 
 <p>Rajeev Bhargava argues the Constitution is expected to check the tyranny of a majoritarian democratic state and protect vulnerable groups it is a transformative document, not merely a codification of existing power relations.</p>
 
@@ -6748,19 +6748,19 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Critical Perspectives on Education as Social Change</h3>
 
-<p><strong>Karuna Ahmad (1974)</strong> Formal education can play a vital role in "ideational" change through transformation of knowledge, attitudes, and values. But its effectiveness in bringing about structural changes is extremely limited because of the linkages between existing educational practices and the vested interests of the status quo.</p>
+<p><strong>Karuna Ahmad (1974)</strong>: Formal education can play a vital role in "ideational" change through transformation of knowledge, attitudes, and values. But its effectiveness in bringing about structural changes is extremely limited because of the linkages between existing educational practices and the vested interests of the status quo.</p>
 
-<p><strong>AR Desai</strong> After independence, education has not been purposively geared to obtain the desired changes. Policies and funding have failed to attain goals of social mobility and equality. Education of SC, ST, and women has failed to uplift their status; unemployment and underemployment of educated youth persist.</p>
+<p><strong>AR Desai</strong>: After independence, education has not been purposively geared to obtain the desired changes. Policies and funding have failed to attain goals of social mobility and equality. Education of SC, ST, and women has failed to uplift their status; unemployment and underemployment of educated youth persist.</p>
 
-<p><strong>Karl Mannheim</strong> Education needs to be critical, not merely reproductive. It should equip students to challenge existing power structures rather than adjust to them.</p>
+<p><strong>Karl Mannheim</strong>: Education needs to be critical, not merely reproductive. It should equip students to challenge existing power structures rather than adjust to them.</p>
 
-<p><strong>Steve Lukes</strong> The third face of power (shaping preferences and desires) is promoted through education the dominant class uses the education system to make its ideology appear as common sense.</p>
+<p><strong>Steve Lukes</strong>: The third face of power (shaping preferences and desires) is promoted through education the dominant class uses the education system to make its ideology appear as common sense.</p>
 
-<p><strong>Pierre Bourdieu (Cultural Reproduction)</strong> Like economic capital, cultural capital (taste, knowledge, speech patterns) is difficult to acquire, and the education system rewards those who already possess it reproducing class privilege generation after generation. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</p>
+<p><strong>Pierre Bourdieu (Cultural Reproduction)</strong>: Like economic capital, cultural capital (taste, knowledge, speech patterns) is difficult to acquire, and the education system rewards those who already possess it reproducing class privilege generation after generation. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</p>
 
-<p><strong>Tawney (Tadpole Theory)</strong> Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. This produces Dalit Elites (Sachidanand Sinha) and Tribal Elites (SD Badgaiyyan) a small educated class that escapes its community's condition without transforming it.</p>
+<p><strong>Tawney (Tadpole Theory)</strong>: Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. This produces Dalit Elites (Sachidanand Sinha) and Tribal Elites (SD Badgaiyyan) a small educated class that escapes its community's condition without transforming it.</p>
 
-<p><strong>Althusser</strong> Education functions as an Ideological State Apparatus it produces workers who accept their place in the class hierarchy as natural and deserved. Gramsci: schools are sites of hegemonic struggle where the ruling class's worldview is transmitted as common sense.</p>
+<p><strong>Althusser</strong>: Education functions as an Ideological State Apparatus it produces workers who accept their place in the class hierarchy as natural and deserved. Gramsci: schools are sites of hegemonic struggle where the ruling class's worldview is transmitted as common sense.</p>
 
 <h3>Education Deprivations in India</h3>
 <ul>
@@ -6776,7 +6776,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>India's third education policy (after 1968 and 1986), NEP 2020 replaces 10+2 with a 5+3+3+4 structure bringing children from age 3 into the formal system. Key reforms: teaching in mother tongue up to Class 5; Foundational Literacy and Numeracy mission (basic reading/arithmetic by Grade 3); multiple entry-exit in higher education; elimination of rigid arts-science-commerce streams; Academic Bank of Credit; GER in higher education to 50% by 2035; public investment to 6% of GDP.</p>
 
-<p><strong>Critique:</strong> Mother tongue emphasis may impede English access and thus employment for marginalised sections. Phasing out college affiliations risks corporatisation. Only 9.85% of government schools have functional computers (UDISE+) online education emphasis deepens digital divide. Primary causes of dropout (child marriage, child labour, poverty) remain unaddressed.</p>
+<p><strong>Critique:</strong>: Mother tongue emphasis may impede English access and thus employment for marginalised sections. Phasing out college affiliations risks corporatisation. Only 9.85% of government schools have functional computers (UDISE+) online education emphasis deepens digital divide. Primary causes of dropout (child marriage, child labour, poverty) remain unaddressed.</p>
 
 <h2>D. Development Planning: Evolution and Challenges</h2>
 
@@ -7027,9 +7027,9 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Phases of Working Class Development</h3>
 <ul>
- <li><strong>Worker's phase (1850-1880)</strong> Modern industry established; first factory workers emerged in Bombay cotton mills and Bengal jute mills</li>
- <li><strong>Philanthropic phase (1890s-1915)</strong> Heavy industries expanded; working class grew; agriculture deteriorated; Shashipada Banerjee in Bengal started welfare activities in 1870s; LM Lokhande active in Bombay; 'Bharat Shramjivi' monthly magazine started in 1874; 'Deenbandhu' published by Lokhande</li>
- <li><strong>Trade union phase (1915-1947)</strong> ILU formed in 1919; AITUC in 1920; at independence, four main trade unions: AITUC, INTUC, HMS, UTUC</li>
+ <li><strong>Worker's phase (1850-1880)</strong>: Modern industry established; first factory workers emerged in Bombay cotton mills and Bengal jute mills</li>
+ <li><strong>Philanthropic phase (1890s-1915)</strong>: Heavy industries expanded; working class grew; agriculture deteriorated; Shashipada Banerjee in Bengal started welfare activities in 1870s; LM Lokhande active in Bombay; 'Bharat Shramjivi' monthly magazine started in 1874; 'Deenbandhu' published by Lokhande</li>
+ <li><strong>Trade union phase (1915-1947)</strong>: ILU formed in 1919; AITUC in 1920; at independence, four main trade unions: AITUC, INTUC, HMS, UTUC</li>
 </ul>
 
 <p>Pre-independence working class was geographically localised, highly exploited, mostly unskilled without formal education, and at the bottom of the social pyramid. Mobilisation before independence relied on welfare organisations and early trade unions. Post-LPG mobilisation has moved toward recognition of problems in the unorganised sector, social security measures, microfinance initiatives, and right to education.</p>
@@ -7060,12 +7060,12 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Indian cities can be classified by the dominant economic function they serve:</p>
 <ul>
- <li><strong>Industrial towns</strong> Mumbai (textiles, finance, port), Bhilai, Bokaro (steel)</li>
- <li><strong>Commercial towns</strong> Kolkata, Surat, Ahmedabad</li>
- <li><strong>Mining towns</strong> Raniganj, Jharia (coal)</li>
- <li><strong>Garrison/Cantonment towns</strong> Ambala, Jalandhar, Pune (Cantonment)</li>
- <li><strong>Education towns</strong> Roorkee, Aligarh, Pune (university city)</li>
- <li><strong>Tourist towns</strong> Nainital, Mussoorie, Shimla</li>
+ <li><strong>Industrial towns</strong>: Mumbai (textiles, finance, port), Bhilai, Bokaro (steel)</li>
+ <li><strong>Commercial towns</strong>: Kolkata, Surat, Ahmedabad</li>
+ <li><strong>Mining towns</strong>: Raniganj, Jharia (coal)</li>
+ <li><strong>Garrison/Cantonment towns</strong>: Ambala, Jalandhar, Pune (Cantonment)</li>
+ <li><strong>Education towns</strong>: Roorkee, Aligarh, Pune (university city)</li>
+ <li><strong>Tourist towns</strong>: Nainital, Mussoorie, Shimla</li>
 </ul>
 
 <h2>Urbanisation in India</h2>
@@ -7080,11 +7080,11 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Theories of Urbanisation</h3>
 
-<p><strong>Modernisation Theory (Parsons, Lerner)</strong> Urbanisation is a correlate of modernisation. The shift from traditional to modern society involves urbanisation alongside industrialisation, commercialisation, and democratisation. Cities are centres of diffusion from which modernity radiates outward into rural areas.</p>
+<p><strong>Modernisation Theory (Parsons, Lerner)</strong>: Urbanisation is a correlate of modernisation. The shift from traditional to modern society involves urbanisation alongside industrialisation, commercialisation, and democratisation. Cities are centres of diffusion from which modernity radiates outward into rural areas.</p>
 
-<p><strong>Dependency Theory (Castells, Harvey)</strong> Urbanisation in developing countries is driven by the needs of global capital rather than internal development. Cities in the periphery (Mumbai, Delhi, São Paulo, Lagos) are centres of capital accumulation and labour exploitation rather than wellbeing. Urban poverty and slums are products of uneven development produced by capitalism, not failures of modernisation.</p>
+<p><strong>Dependency Theory (Castells, Harvey)</strong>: Urbanisation in developing countries is driven by the needs of global capital rather than internal development. Cities in the periphery (Mumbai, Delhi, São Paulo, Lagos) are centres of capital accumulation and labour exploitation rather than wellbeing. Urban poverty and slums are products of uneven development produced by capitalism, not failures of modernisation.</p>
 
-<p><strong>MSA Rao (Indian perspective)</strong> Urbanisation in India should be understood in relation to its specific social structure caste, kinship, and village identities continue to shape urban social life. The concept of "mohalla culture" captures how city dwellers from the same regional or caste background cluster together, maintaining primary group solidarity in an otherwise impersonal urban environment. Remittances from urban migrants maintain functional jointness of families back in villages.</p>
+<p><strong>MSA Rao (Indian perspective)</strong>: Urbanisation in India should be understood in relation to its specific social structure caste, kinship, and village identities continue to shape urban social life. The concept of "mohalla culture" captures how city dwellers from the same regional or caste background cluster together, maintaining primary group solidarity in an otherwise impersonal urban environment. Remittances from urban migrants maintain functional jointness of families back in villages.</p>
 
 <h3>Impact of Urbanisation on the Environment</h3>
 
@@ -7171,7 +7171,7 @@ The sexual division of labour in India is continuously reproduced through the ki
  <li><strong>Relative deprivation</strong> if people of a particular region feel more deprived than others in distribution of resources and infrastructure, regional affiliation emerges (e.g. GNLF movement in Darjeeling perceived as most underdeveloped compared to southern West Bengal; growing regional inequalities post-LPG with coastal regions benefiting more from private investment)</li>
  <li><strong>Language and culture</strong> identity based on language, once politicised, plays important role in region formation; Edward Sapir: language plays vital role in creation and determination of a region; anti-Hindi imposition movements in South India</li>
  <li><strong>Unequal access to political power</strong> local elites complain of "reverse" discrimination as elites from other regions corner financial grants and lucrative portfolios</li>
- <li><strong>Reaction against cultural imposition</strong> Assam anti-foreigner movement to preserve Assamese culture; South resisting Hindi imposition as northern dominance</li>
+ <li><strong>Reaction against cultural imposition</strong>: Assam anti-foreigner movement to preserve Assamese culture; South resisting Hindi imposition as northern dominance</li>
  <li><strong>Administrative neglect</strong> continuous neglect by ruling parties; "sons of soil" theory promoted to advance interests of neglected groups; demand for decentralisation; demand to bifurcate unilingual states</li>
  <li><strong>Elite power ambitions</strong> regional parties (DMK, AIADMK, Akali Dal, Telugu Desam, AGP) have encouraged regionalism to capture power</li>
  <li><strong>Modernisation and mass participation interaction</strong> various groups failing to identify group interests with national interests</li>
@@ -7430,15 +7430,15 @@ The sexual division of labour in India is continuously reproduced through the ki
 <h3>Colonial-Era Peasant Revolts</h3>
 <ul>
  <li><strong>Santhal Hul (1855-56)</strong> the Santhals of Bengal-Bihar rose against diku (outsider) merchants, moneylenders, and zamindars who were destroying their traditional economy through debt and land alienation. Led by Sidhu and Kanhu Murmu. Brutally suppressed by the colonial military.</li>
- <li><strong>Indigo Revolt (1859-60)</strong> Bengali peasants refused to grow indigo for British planters under the exploitative <em>tinkathia</em> system (three kathas out of every bigha had to be grown as indigo at fixed low prices). First major organised peasant resistance against colonial economic exploitation. Gandhi's Champaran Satyagraha (1917) later challenged the same system in Bihar.</li>
+ <li><strong>Indigo Revolt (1859-60)</strong>: Bengali peasants refused to grow indigo for British planters under the exploitative <em>tinkathia</em> system (three kathas out of every bigha had to be grown as indigo at fixed low prices). First major organised peasant resistance against colonial economic exploitation. Gandhi's Champaran Satyagraha (1917) later challenged the same system in Bihar.</li>
  <li><strong>Deccan Riots (1875)</strong> peasants in Pune and Ahmednagar attacked and burned the account books of Marwari and Gujarati moneylenders who had acquired their lands through usurious lending.</li>
- <li><strong>Moplah Rebellion (1921)</strong> Muslim tenant-peasants (Moplahs) of Malabar rose against Hindu landlords and British authority. Began as a tenancy reform agitation within the Khilafat-Non-cooperation movement; became a violent uprising with communal overtones after the British declared martial law.</li>
+ <li><strong>Moplah Rebellion (1921)</strong>: Muslim tenant-peasants (Moplahs) of Malabar rose against Hindu landlords and British authority. Began as a tenancy reform agitation within the Khilafat-Non-cooperation movement; became a violent uprising with communal overtones after the British declared martial law.</li>
  <li><strong>Munda Ulgulan (Birsa Munda, 1899-1900)</strong> the Mundas of Jharkhand rose under Birsa Munda against colonial land alienation, the diku landlords, and Christian missionary activity. Birsa claimed divine authority and led a millenarian movement promising to restore Munda land rights. Brutally suppressed; Birsa died in colonial captivity.</li>
 </ul>
 
 <h3>Post-Independence Peasant Movements</h3>
 <ul>
- <li><strong>Tebhaga Movement (Bengal, 1946-47)</strong> Bengali sharecroppers (bargadars) demanded two-thirds of the harvest instead of the customary one-half. Led by the Communist-affiliated Kisan Sabha; involved hundreds of thousands of sharecroppers across North Bengal. Suppressed by the colonial state; demands were partly conceded after independence under Operation Barga (1977).</li>
+ <li><strong>Tebhaga Movement (Bengal, 1946-47)</strong>: Bengali sharecroppers (bargadars) demanded two-thirds of the harvest instead of the customary one-half. Led by the Communist-affiliated Kisan Sabha; involved hundreds of thousands of sharecroppers across North Bengal. Suppressed by the colonial state; demands were partly conceded after independence under Operation Barga (1977).</li>
  <li><strong>Telangana Rebellion (1946-51)</strong> armed agrarian uprising in Hyderabad's Telangana region against the Nizam's feudal landlords (deshmukhs and doras). Led by the Communist Party. Sharecroppers and agricultural labourers seized landlord land, established village soviets, and abolished bonded labour. Continued after police action (1948) against Hyderabad until the Indian state suppressed it militarily in 1951. The rebellion laid the groundwork for land reform demands that eventually shaped Andhra Pradesh politics.</li>
  <li><strong>Naxalbari Movement (1967)</strong> peasant uprising in Naxalbari block, Darjeeling, triggered by a dispute over a landlord's attack on a Santhali family. Local CPI(M) members led an armed seizure of landlord land. The Naxalbari uprising inspired the Naxalite movement that spread across Andhra Pradesh, Bihar, Bengal, and continues today in the "Red Corridor." JP Narayan called it "a spring thunder over India." The Naxalite movement reflects unresolved agrarian inequality and the failure of land reform in eastern India.</li>
  <li><strong>BKU (Bharatiya Kisan Union) and New Farmers Movements (1980s-90s)</strong> post-Green Revolution, a new type of farmers' movement emerged in Punjab, Haryana, and Western UP led by commercially oriented capitalist farmers (Jat Sikhs, Jats, Yadavs) demanding better prices for agricultural produce, lower input costs, electricity subsidies, and debt relief. Led by Mahendra Singh Tikait (UP), the BKU organised massive demonstrations at Delhi's Boat Club (1988, 500,000 farmers). These were New Social Movements in their organisational style decentralised, non-party, caste-based mobilisation demanding state support rather than structural transformation.</li>
@@ -7455,11 +7455,11 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <ul>
  <li><strong>Anti-price rise agitation (Maharashtra, 1973)</strong> women's organisations including the Pune-based Stree Mukti Sanghatana mobilised women against rising prices through public demonstrations. First major urban women's mobilisation in post-independence India.</li>
- <li><strong>Mathura rape case (1979)</strong> Mathura, a 16-year-old tribal girl, was raped by two policemen in a police station. The Supreme Court acquitted the accused, holding she had not resisted "sufficiently." Four law professors wrote an open letter; the resulting agitation produced the Criminal Law (Amendment) Act (1983) that shifted the burden of proof in rape cases from the victim to the accused and criminalised custodial rape.</li>
- <li><strong>Shahbano case and Muslim Women's Act (1985-86)</strong> Shahbano, a Muslim woman divorced by triple talaq, sued for maintenance under Section 125 CrPC. The Supreme Court granted maintenance. Congress government passed the Muslim Women (Protection of Rights on Divorce) Act 1986, reversing the verdict under pressure from conservative Muslim organisations. This galvanised both feminist mobilisation (against the reversal) and Hindu nationalist mobilisation (exploiting it for communal politics).</li>
+ <li><strong>Mathura rape case (1979)</strong>: Mathura, a 16-year-old tribal girl, was raped by two policemen in a police station. The Supreme Court acquitted the accused, holding she had not resisted "sufficiently." Four law professors wrote an open letter; the resulting agitation produced the Criminal Law (Amendment) Act (1983) that shifted the burden of proof in rape cases from the victim to the accused and criminalised custodial rape.</li>
+ <li><strong>Shahbano case and Muslim Women's Act (1985-86)</strong>: Shahbano, a Muslim woman divorced by triple talaq, sued for maintenance under Section 125 CrPC. The Supreme Court granted maintenance. Congress government passed the Muslim Women (Protection of Rights on Divorce) Act 1986, reversing the verdict under pressure from conservative Muslim organisations. This galvanised both feminist mobilisation (against the reversal) and Hindu nationalist mobilisation (exploiting it for communal politics).</li>
  <li><strong>Dowry deaths campaign (1980s)</strong> rising visibility of dowry-related violence and murder produced sustained feminist activism, media attention, and eventually the Dowry Prohibition (Amendment) Act (1983) and Section 498A IPC (1983) criminalising cruelty by husband and in-laws.</li>
  <li><strong>Chipko and women's environmental activism</strong> women in Uttarakhand led the Chipko movement, demonstrating that environmental activism and feminist activism are deeply connected. Women bore the primary burden of forest degradation (fuel, fodder, water collection).</li>
- <li><strong>Vishaka Guidelines and Sexual Harassment Law</strong> Bhanwari Devi, a government worker in Rajasthan who tried to prevent a child marriage, was gang-raped by upper-caste men as punishment. The Supreme Court's Vishaka judgment (1997) established guidelines against workplace sexual harassment, eventually codified in the Prevention of Workplace Sexual Harassment Act (POSH Act, 2013).</li>
+ <li><strong>Vishaka Guidelines and Sexual Harassment Law</strong>: Bhanwari Devi, a government worker in Rajasthan who tried to prevent a child marriage, was gang-raped by upper-caste men as punishment. The Supreme Court's Vishaka judgment (1997) established guidelines against workplace sexual harassment, eventually codified in the Prevention of Workplace Sexual Harassment Act (POSH Act, 2013).</li>
  <li><strong>Delhi gang rape (Nirbhaya) and 2012 protests</strong> the brutal gang rape and murder of a young woman in Delhi triggered the largest mass protests on women's safety since independence. The Justice Verma Committee's report and subsequent Criminal Law (Amendment) Act 2013 substantially strengthened rape laws, expanded the definition of sexual assault, and introduced new offences (acid attack, stalking, voyeurism).</li>
  <li><strong>#MeToo India (2018)</strong> social media-enabled NSM that exposed sexual harassment by powerful men in journalism, academia, entertainment, and politics. Led to resignations and investigations but also controversy about due process.</li>
 </ul>
@@ -7472,10 +7472,10 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <ul>
  <li><strong>Jyotiba Phule and Satyashodhak Samaj (1873)</strong> the first systematic attack on Brahminism from below. Phule founded schools for girls and untouchable children, conducted marriages without Brahmin priests, and wrote <em>Gulamgiri</em> (1873) comparing the condition of lower castes to American Black slavery. His concept of "Bahujan" (the majority) as the socially oppressed class anticipated Ambedkar's and Kanshi Ram's later politics.</li>
- <li><strong>Self-Respect Movement and Dravidian Movement (E.V. Ramasamy Periyar, Tamil Nadu, 1925)</strong> Periyar's Self-Respect Movement conducted marriages without Brahmin priests, attacked all forms of religious authority, demanded inter-caste and inter-religious marriages, and propagated radical rationalism. Periyar insisted: "If you look at a Brahmin, he looks at you as an inferior. If he looks at you as an inferior, react, don't remain silent." The Dravidian movement produced the DMK and AIADMK that have dominated Tamil Nadu politics since 1967.</li>
- <li><strong>BR Ambedkar's movement (1920s-1956)</strong> Ambedkar led multiple campaigns: Mahad Satyagraha (1927, right to use public tank water); Kalaram Temple Satyagraha (1930, right to enter temples); Poona Pact negotiations (1932, reserved constituencies vs. separate electorates). His <em>Annihilation of Caste</em> (1936) remains the most radical critique of the caste system. The Buddhist conversion (1956) was both a personal and a political act asserting that Dalits would not reform Hinduism from within but find a new non-hierarchical religious identity. Ambedkar's dictum: "Educate, Organise, Agitate."</li>
+ <li><strong>Self-Respect Movement and Dravidian Movement (E.V. Ramasamy Periyar, Tamil Nadu, 1925)</strong>: Periyar's Self-Respect Movement conducted marriages without Brahmin priests, attacked all forms of religious authority, demanded inter-caste and inter-religious marriages, and propagated radical rationalism. Periyar insisted: "If you look at a Brahmin, he looks at you as an inferior. If he looks at you as an inferior, react, don't remain silent." The Dravidian movement produced the DMK and AIADMK that have dominated Tamil Nadu politics since 1967.</li>
+ <li><strong>BR Ambedkar's movement (1920s-1956)</strong>: Ambedkar led multiple campaigns: Mahad Satyagraha (1927, right to use public tank water); Kalaram Temple Satyagraha (1930, right to enter temples); Poona Pact negotiations (1932, reserved constituencies vs. separate electorates). His <em>Annihilation of Caste</em> (1936) remains the most radical critique of the caste system. The Buddhist conversion (1956) was both a personal and a political act asserting that Dalits would not reform Hinduism from within but find a new non-hierarchical religious identity. Ambedkar's dictum: "Educate, Organise, Agitate."</li>
  <li><strong>Dalit Panthers (Mumbai, 1972)</strong> inspired by the Black Panther movement in the USA. Founded by Namdeo Dhasal and Raja Dhale in response to increasing atrocities against Dalits in Maharashtra post-1960s. The Panthers asserted an aggressive, confrontational Dalit identity against both Brahminism and the socialist left that subordinated caste to class. Their manifesto declared solidarity with all exploited Dalits, working class, tribals, women, and minorities.</li>
- <li><strong>Kanshi Ram and BSP (1984-)</strong> Kanshi Ram built a political movement among Dalit government employees (DS-4, BAMCEF) that eventually became the Bahujan Samaj Party (1984). His strategy: build a "vote bank" of the numerical majority (SC + ST + OBC + minorities = 85% of the population) to capture political power. Under Mayawati, BSP formed four governments in UP (1995, 1997, 2002, 2007). The 2007 majority government marked the first time a Dalit woman became Chief Minister of India's most populous state. Kanshi Ram's insight: caste is not just oppression it is a political resource that can be transformed into electoral power.</li>
+ <li><strong>Kanshi Ram and BSP (1984-)</strong>: Kanshi Ram built a political movement among Dalit government employees (DS-4, BAMCEF) that eventually became the Bahujan Samaj Party (1984). His strategy: build a "vote bank" of the numerical majority (SC + ST + OBC + minorities = 85% of the population) to capture political power. Under Mayawati, BSP formed four governments in UP (1995, 1997, 2002, 2007). The 2007 majority government marked the first time a Dalit woman became Chief Minister of India's most populous state. Kanshi Ram's insight: caste is not just oppression it is a political resource that can be transformed into electoral power.</li>
  <li><strong>Una Flogging (2016) and Bhima-Koregaon (2018)</strong> in Una (Gujarat), Dalit men skinning a dead cow were flogged by cow vigilantes. Instead of fleeing, Dalits led by Jignesh Mevani organised protests and symbolically deposited dead cattle at government offices asserting they would no longer do the "polluting" work assigned by the caste system. At Bhima-Koregaon (Maharashtra), commemorating Dalit soldiers' defeat of Peshwa forces in 1818, right-wing groups attacked Dalit attendees. The resulting Elgar Parishad case, in which activists were arrested under UAPA as alleged Naxalite conspirators, became a cause célèbre of civil liberties politics.</li>
 </ul>
 
@@ -7521,7 +7521,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 <h3>Linguistic Reorganisation The Telugu and Sikh Examples</h3>
 <ul>
  <li><strong>States Reorganisation Act (1956)</strong> following Potti Sriramulu's death-fast for Andhra (1952), the States Reorganisation Commission recommended (and Parliament accepted) reorganising states largely on linguistic lines. This created Andhra Pradesh (Telugu), Kerala (Malayalam), Karnataka (Kannada), Maharashtra (Marathi), and Punjab (Punjabi). The linguistic states movement was one of India's most successful social movements achieving its core demand through democratic mobilisation and constitutional reform.</li>
- <li><strong>Gorkhaland movement (Darjeeling, 1986-88, revived 2007-17)</strong> Nepali-speaking Gorkhas demanded a separate state from West Bengal, asserting a distinct linguistic and cultural identity. The Gorkha National Liberation Front (Suresh Giri Prasad) led violent agitation in 1986-88; the Darjeeling Gorkha Hill Council was created as a partial concession. Demands revived under the Gorkha Janmukti Morcha (Bimal Gurung) from 2007, with a 104-day general strike in 2017. The movement reflects the unresolved tension between linguistic states (Bengali-speaking West Bengal) and linguistic minorities within those states (Nepali-speaking Gorkhas).</li>
+ <li><strong>Gorkhaland movement (Darjeeling, 1986-88, revived 2007-17)</strong>: Nepali-speaking Gorkhas demanded a separate state from West Bengal, asserting a distinct linguistic and cultural identity. The Gorkha National Liberation Front (Suresh Giri Prasad) led violent agitation in 1986-88; the Darjeeling Gorkha Hill Council was created as a partial concession. Demands revived under the Gorkha Janmukti Morcha (Bimal Gurung) from 2007, with a 104-day general strike in 2017. The movement reflects the unresolved tension between linguistic states (Bengali-speaking West Bengal) and linguistic minorities within those states (Nepali-speaking Gorkhas).</li>
 </ul>
 
 <h3>Jharkhand Movement</h3>
