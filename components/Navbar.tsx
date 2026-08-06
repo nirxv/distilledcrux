@@ -102,7 +102,7 @@ export default function Navbar() {
         .nav-mobile-drawer {
           position: fixed; top: 0; left: 0; right: 0; bottom: 0;
           z-index: 101;
-          background: var(--bg-solid);
+          background: var(--bg);
           padding-top: 60px;
           overflow-y: auto;
           display: flex; flex-direction: column;
@@ -173,7 +173,7 @@ export default function Navbar() {
       ` }} />
 
       <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 102,
         height: isChat && navCollapsed ? 0 : 60,
         overflow: isChat && navCollapsed ? 'hidden' : 'visible',
         background: theme === 'dark' ? 'rgba(5,5,8,1)' : 'rgba(248,248,252,1)',
@@ -417,6 +417,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div className={`nav-mobile-drawer${mobileOpen ? ' open' : ''}`}>
+
         {/* Nav links */}
         <div style={{ flex: 1 }}>
           {NAV_LINKS.map((item) => (
@@ -443,71 +444,132 @@ export default function Navbar() {
 
         {/* Bottom: user info + actions */}
         <div className="nav-mobile-bottom">
-          {/* Theme toggle row */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '0.75rem', borderBottom: '1px solid var(--border)', marginBottom: '0.25rem' }}>
-            <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.85rem', color: 'var(--text2)' }}>
-              {theme === 'dark' ? '🌙 Dark mode' : '☀️ Light mode'}
-            </span>
-            <button onClick={toggleTheme} style={{
-              background: 'var(--bg3)', border: '1px solid var(--border2)',
-              borderRadius: 999, width: 52, height: 28,
-              display: 'flex', alignItems: 'center', padding: '0 3px',
-              cursor: 'pointer', position: 'relative', transition: 'background 0.2s',
-            }}>
-              <div style={{
-                width: 22, height: 22, borderRadius: '50%', background: 'var(--text)',
-                boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
-                transform: theme === 'dark' ? 'translateX(0)' : 'translateX(24px)',
-                transition: 'transform 0.22s cubic-bezier(0.4,0,0.2,1)', flexShrink: 0,
-              }} />
-            </button>
-          </div>
 
           {!loading && user ? (
             <>
-              <div className="nav-mobile-user">
+              {/* User card */}
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: '0.75rem',
+                padding: '0.85rem 1rem',
+                background: 'var(--bg3)', borderRadius: 10,
+                border: '1px solid var(--border)',
+              }}>
                 <div style={{
-                  width: 40, height: 40, borderRadius: '50%', overflow: 'hidden',
-                  border: '2px solid var(--border2)', flexShrink: 0,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  background: 'var(--text)',
+                  width: 38, height: 38, borderRadius: '50%', overflow: 'hidden',
+                  flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  background: 'var(--border2)',
                 }}>
                   {user.photoURL ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={user.photoURL} alt="Profile" referrerPolicy="no-referrer"
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
-                    <span style={{ color: 'var(--bg)', fontSize: '0.9rem', fontFamily: 'var(--font-ui)', fontWeight: 700 }}>
+                    <span style={{ color: 'var(--text)', fontSize: '0.85rem', fontFamily: 'var(--font-ui)', fontWeight: 700 }}>
                       {(user.displayName?.[0] ?? user.email?.[0] ?? '?').toUpperCase()}
                     </span>
                   )}
                 </div>
-                <div className="nav-mobile-user-info">
-                  <div className="nav-mobile-user-name">{user.displayName ?? 'User'}</div>
-                  <div className="nav-mobile-user-email">{user.email}</div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.88rem', color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {user.displayName ?? 'User'}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', color: 'var(--text3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
+                    {user.email}
+                  </div>
                 </div>
               </div>
-              <button
-                className="nav-mobile-action"
-                onClick={() => { setMobileOpen(false); router.push('/onboarding?change=1'); }}
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/>
-                </svg>
-                Change Optional
-              </button>
-              <button className="nav-mobile-action danger" onClick={handleSignOut}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
-                </svg>
-                Sign out
-              </button>
+
+              {/* Action row */}
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                {/* Theme toggle */}
+                <button onClick={toggleTheme} style={{
+                  flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                  padding: '0.65rem 0.75rem', borderRadius: 8,
+                  background: 'var(--bg3)', border: '1px solid var(--border)',
+                  cursor: 'pointer', transition: 'border-color 0.15s',
+                }}>
+                  {theme === 'dark' ? (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+                    </svg>
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                  )}
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: 'var(--text2)', fontWeight: 500 }}>
+                    {theme === 'dark' ? 'Dark' : 'Light'}
+                  </span>
+                </button>
+
+                {/* Change optional */}
+                <button
+                  onClick={() => { setMobileOpen(false); router.push('/onboarding?change=1'); }}
+                  style={{
+                    flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                    padding: '0.65rem 0.75rem', borderRadius: 8,
+                    background: 'var(--bg3)', border: '1px solid var(--border)',
+                    cursor: 'pointer', transition: 'border-color 0.15s',
+                  }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                  </svg>
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: 'var(--text2)', fontWeight: 500 }}>
+                    Switch
+                  </span>
+                </button>
+
+                {/* Sign out */}
+                <button onClick={handleSignOut} style={{
+                  flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                  padding: '0.65rem 0.75rem', borderRadius: 8,
+                  background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.18)',
+                  cursor: 'pointer', transition: 'border-color 0.15s',
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f87171" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+                  </svg>
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: '#f87171', fontWeight: 500 }}>
+                    Sign out
+                  </span>
+                </button>
+              </div>
             </>
           ) : (
             !loading && (
-              <Link href="/login" className="nav-mobile-sign-in" onClick={() => setMobileOpen(false)}>
-                Sign in →
-              </Link>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                {/* Theme toggle for logged out */}
+                <button onClick={toggleTheme} style={{
+                  display: 'flex', alignItems: 'center', gap: '0.6rem',
+                  padding: '0.65rem 1rem', borderRadius: 8,
+                  background: 'var(--bg3)', border: '1px solid var(--border)',
+                  cursor: 'pointer', width: '100%',
+                }}>
+                  {theme === 'dark' ? (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+                    </svg>
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                  )}
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', color: 'var(--text2)', fontWeight: 500 }}>
+                    {theme === 'dark' ? 'Dark mode' : 'Light mode'}
+                  </span>
+                </button>
+                <Link href="/login" className="nav-mobile-sign-in" onClick={() => setMobileOpen(false)}>
+                  Sign in →
+                </Link>
+              </div>
             )
           )}
         </div>
