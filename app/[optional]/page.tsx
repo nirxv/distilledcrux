@@ -62,7 +62,7 @@ const BASE_TOOLS = [
 const MAP_TOOL = { num: '06', label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.', href: '/mapping', badge: null };
 const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: '/tests', badge: 'Premium' };
 
-const getTools = (optional: string) => [...BASE_TOOLS, optional === 'geography' ? MAP_TOOL : TEST_SERIES_TOOL];
+const getTools = (_optional: string) => [...BASE_TOOLS, TEST_SERIES_TOOL];
 
 export function generateStaticParams() {
   return Object.keys(OPTIONALS).map((slug) => ({ optional: slug }));
