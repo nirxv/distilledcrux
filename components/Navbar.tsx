@@ -86,6 +86,7 @@ export default function Navbar() {
     { href: '/pricing', label: 'Pricing' },
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/evaluate', label: 'Evaluate' },
+    { href: '/test', label: 'Test Series' },
     { href: '/chat', label: 'AI Chat', accent: true },
   ];
 

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/prelims/current`,         lastModified: now, changeFrequency: 'daily',   priority: 0.8 },
     { url: `${base}/prelims/csat`,            lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${base}/prelims/quiz`,            lastModified: now, changeFrequency: 'daily',   priority: 0.7 },
+    { url: `${base}/test`,                    lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${base}/sociology/pyqs`,          lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/notes`,                   lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/privacy`,                 lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
