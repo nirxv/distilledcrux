@@ -96,14 +96,14 @@ export default function Navbar() {
         .nav-hamburger { display: none; }
         .nav-mobile-overlay {
           display: none;
-          position: fixed; inset: 0; z-index: 99;
+          position: fixed; inset: 0; z-index: 101;
           background: rgba(0,0,0,0.55);
         }
         .nav-mobile-drawer {
-          position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
-          z-index: 98;
-          background: var(--bg2);
-          border-top: 1px solid var(--border2);
+          position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+          z-index: 101;
+          background: var(--bg-solid);
+          padding-top: 60px;
           overflow-y: auto;
           display: flex; flex-direction: column;
           transform: translateY(-4px);
@@ -176,11 +176,9 @@ export default function Navbar() {
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         height: isChat && navCollapsed ? 0 : 60,
         overflow: isChat && navCollapsed ? 'hidden' : 'visible',
-        background: mobileOpen
-          ? (theme === 'dark' ? 'rgba(5,5,8,1)' : 'rgba(248,248,252,1)')
-          : (theme === 'dark' ? 'rgba(5,5,8,0.92)' : 'rgba(248,248,252,0.92)'),
-        backdropFilter: mobileOpen ? 'none' : 'blur(12px)',
-        WebkitBackdropFilter: mobileOpen ? 'none' : 'blur(12px)',
+        background: theme === 'dark' ? 'rgba(5,5,8,1)' : 'rgba(248,248,252,1)',
+        backdropFilter: 'none',
+        WebkitBackdropFilter: 'none',
         borderBottom: '1px solid var(--border)',
         display: 'flex', alignItems: 'center',
         padding: '0 1.25rem',
