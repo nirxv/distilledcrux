@@ -278,32 +278,32 @@ const CSS = `
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   margin-bottom:1rem; display:flex; align-items:center; gap:10px;
 }
-.ev-demand-item { display:flex; align-items:flex-start; gap:8px; font-family:var(--font-ui); font-size:0.82rem; color:var(--text2); line-height:1.55; margin-bottom:0.4rem; }
-.ev-demand-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:6px; }
+.ev-demand-item { display:flex; align-items:flex-start; gap:8px; font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.6; margin-bottom:0.4rem; }
+.ev-demand-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:8px; }
 .ev-feedback-grid { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
-.ev-fb-col-label { padding:0.6rem 1rem; font-family:var(--font-ui); font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid var(--border); }
+.ev-fb-col-label { padding:0.6rem 1rem; font-family:var(--font-ui); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid var(--border); }
 .ev-fb-col.strengths .ev-fb-col-label { color:#4ade80; }
 .ev-fb-col.weaknesses .ev-fb-col-label { color:#f87171; }
 .ev-fb-col.weaknesses { border-left:1px solid var(--border); }
 .ev-fb-items { padding:0.75rem 1rem; display:flex; flex-direction:column; gap:0.5rem; }
-.ev-fb-item { font-family:var(--font-ui); font-size:0.78rem; color:var(--text2); line-height:1.5; display:flex; gap:7px; align-items:flex-start; }
-.ev-fb-item::before { content:''; display:inline-block; width:4px; height:4px; border-radius:50%; flex-shrink:0; margin-top:6px; }
+.ev-fb-item { font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6; display:flex; gap:7px; align-items:flex-start; }
+.ev-fb-item::before { content:''; display:inline-block; width:4px; height:4px; border-radius:50%; flex-shrink:0; margin-top:8px; }
 .ev-fb-col.strengths .ev-fb-item::before { background:#4ade80; }
 .ev-fb-col.weaknesses .ev-fb-item::before { background:#f87171; }
 .ev-suggestions { display:flex; flex-direction:column; gap:0.5rem; margin-top:1rem; }
-.ev-suggestion { font-family:var(--font-ui); font-size:0.8rem; color:var(--text2); line-height:1.55; padding:0.6rem 0.9rem; background:var(--bg2); border-radius:5px; border-left:2px solid var(--accent-dim); }
-.ev-overall { font-family:var(--font-ui); font-size:0.85rem; color:var(--text2); line-height:1.75; }
+.ev-suggestion { font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6; padding:0.6rem 0.9rem; background:var(--bg2); border-radius:5px; border-left:2px solid var(--accent-dim); }
+.ev-overall { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
 .ev-thinkers { display:flex; flex-direction:column; gap:0.75rem; }
 .ev-thinker { padding:0.9rem 1.1rem; border:1px solid var(--border2); border-radius:6px; background:var(--bg2); border-left:2px solid var(--accent); }
-.ev-thinker-name { font-family:var(--font-ui); font-size:0.82rem; font-weight:700; color:var(--text); margin-bottom:2px; }
-.ev-thinker-work { font-size:0.72rem; color:var(--text3); margin-bottom:4px; }
-.ev-thinker-arg  { font-size:0.78rem; color:var(--text2); line-height:1.5; }
+.ev-thinker-name { font-family:var(--font-ui); font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:2px; }
+.ev-thinker-work { font-size:0.82rem; color:var(--text3); margin-bottom:4px; }
+.ev-thinker-arg  { font-size:0.92rem; color:var(--text2); line-height:1.6; }
 .ev-model-answer { display:flex; flex-direction:column; gap:1rem; }
-.ev-ma-part-label { font-family:var(--font-ui); font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:0.35rem; }
-.ev-ma-text { font-family:var(--font-ui); font-size:0.82rem; color:var(--text2); line-height:1.7; }
-.ev-ma-body-item { display:flex; gap:8px; align-items:flex-start; font-family:var(--font-ui); font-size:0.82rem; color:var(--text2); line-height:1.6; margin-bottom:0.5rem; }
-.ev-ma-body-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:7px; }
-.ev-wc-badge { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.72rem; padding:3px 10px; border-radius:4px; margin-top:0.5rem; }
+.ev-ma-part-label { font-family:var(--font-ui); font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:0.35rem; }
+.ev-ma-text { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
+.ev-ma-body-item { display:flex; gap:8px; align-items:flex-start; font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.7; margin-bottom:0.5rem; }
+.ev-ma-body-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:8px; }
+.ev-wc-badge { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.82rem; padding:3px 10px; border-radius:4px; margin-top:0.5rem; }
 .ev-wc-badge.short       { background:rgba(248,113,113,0.1); color:#f87171; }
 .ev-wc-badge.appropriate { background:rgba(74,222,128,0.1);  color:#4ade80; }
 .ev-wc-badge.long        { background:rgba(251,191,36,0.1);  color:#fbbf24; }
@@ -341,13 +341,13 @@ const CSS = `
   .ev-result-lbl { font-size:0.6rem; margin-bottom:0.75rem; }
   .ev-fb-col-label { padding:0.5rem 0.85rem; }
   .ev-fb-items { padding:0.6rem 0.85rem; }
-  .ev-fb-item { font-size:0.76rem; }
-  .ev-overall { font-size:0.82rem; }
-  .ev-suggestion { font-size:0.78rem; padding:0.5rem 0.75rem; }
+  .ev-fb-item { font-size:0.88rem; }
+  .ev-overall { font-size:0.92rem; }
+  .ev-suggestion { font-size:0.88rem; padding:0.5rem 0.75rem; }
   .ev-thinker { padding:0.75rem 1rem; }
-  .ev-thinker-name { font-size:0.8rem; }
-  .ev-ma-text { font-size:0.8rem; }
-  .ev-ma-body-item { font-size:0.8rem; }
+  .ev-thinker-name { font-size:0.92rem; }
+  .ev-ma-text { font-size:0.92rem; }
+  .ev-ma-body-item { font-size:0.92rem; }
 
   .ev-score-block { padding:1.25rem; }
   .ev-score-big { font-size:2.8rem; }
@@ -374,7 +374,7 @@ function SectionCard({ label, data }: {
     <div className="ev-result-section">
       <div className="ev-result-lbl">{label}</div>
       {data.what_was_written && (
-        <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.8rem', color:'var(--text3)', marginBottom:'1rem', fontStyle:'italic', lineHeight:1.6 }}>
+        <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.95rem', color:'var(--text3)', marginBottom:'1rem', fontStyle:'italic', lineHeight:1.7 }}>
           &ldquo;{data.what_was_written}&rdquo;
         </p>
       )}
@@ -398,7 +398,7 @@ function SectionCard({ label, data }: {
           </div>
         </div>
       )}
-      {data.analysis && <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.8rem', color:'var(--text3)', lineHeight:1.65, marginBottom: data.suggestions?.length ? '0.75rem' : 0 }}>{data.analysis}</p>}
+      {data.analysis && <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.95rem', color:'var(--text3)', lineHeight:1.75, marginBottom: data.suggestions?.length ? '0.75rem' : 0 }}>{data.analysis}</p>}
       {(data.suggestions ?? []).length > 0 && (
         <div className="ev-suggestions">
           {(data.suggestions ?? []).map((s,i) => <div key={i} className="ev-suggestion">{s}</div>)}
