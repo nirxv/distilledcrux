@@ -727,6 +727,7 @@ export default function EvaluatePage() {
               </div>
             </div>
           </div>
+        </>
         )}
 
         {/* Form */}
