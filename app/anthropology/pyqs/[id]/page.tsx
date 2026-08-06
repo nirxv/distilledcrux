@@ -9,10 +9,11 @@ type PYQ = {
   id: number;
   year: string;
   paper: string;
-  section: string;
+  section?: string;
   question: string;
   marks: number;
   topic: string;
+  microtheme?: string;
 };
 
 type AnswerEntry = {
