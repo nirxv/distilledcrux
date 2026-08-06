@@ -11,12 +11,24 @@ const SUBJECT_LABEL: Record<string, string> = {
   'public-administration': 'Public Administration', history: 'History',
 };
 
-const TOOLS = [
-  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
-  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
-  { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: '/sociology/pyqs', badge: 'Free', icon: 'pyq' },
-];
+const OPTIONAL_TO_ROUTE: Record<string, string> = {
+  sociology: 'sociology',
+  anthropology: 'anthropology',
+  geography: 'geography',
+  'political-science': 'polsci',
+  'public-administration': 'pub-admin',
+  history: 'history',
+};
+
+const getTools = (optional: string | null) => {
+  const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';
+  return [
+    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
+    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
+    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
+    { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' },
+  ];
+};
 
 interface Stats {
   optional: string | null;
@@ -369,7 +381,7 @@ export default function Dashboard() {
           <div className="db-tools">
             <div className="db-tools-label">Your Tools</div>
             <div className="db-tool-grid">
-              {TOOLS.map((tool) => (
+              {getTools(stats.optional).map((tool) => (
                 <Link key={tool.label} href={tool.href} className="db-tool-card">
                   {tool.badge && (
                     <span className={`db-tool-badge ${tool.badge === 'Free' ? 'free' : 'premium'}`}>
@@ -460,7 +472,7 @@ export default function Dashboard() {
                 {[
                   { label: 'Ask AI', href: '/chat' },
                   { label: 'Evaluate an answer', href: '/evaluate' },
-                  { label: 'Browse PYQs', href: '/sociology/pyqs' },
+                  { label: 'Browse PYQs', href: `/${OPTIONAL_TO_ROUTE[stats.optional ?? ''] ?? stats.optional ?? 'sociology'}/pyqs` },
                   { label: 'Read notes', href: '/notes' },
                   { label: 'Change optional', href: '/onboarding?change=1' },
                 ].map((a) => (
