@@ -229,7 +229,7 @@ async function pdfToImages(file: File): Promise<File[]> {
     const viewport = page.getViewport({ scale: 2 });
     const canvas = document.createElement('canvas');
     canvas.width = viewport.width; canvas.height = viewport.height;
-    await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise;
+    await page.render({ canvasContext: canvas.getContext('2d')!, viewport, canvas } as Parameters<typeof page.render>[0]).promise;
     const blob = await new Promise<Blob | null>(res => canvas.toBlob(res, 'image/jpeg', 0.85));
     if (blob) images.push(new File([blob], `page-${i}.jpg`, { type: 'image/jpeg' }));
   }
@@ -304,7 +304,8 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
     } catch { setError('Network error. Please try again.'); setStep('error'); }
   }
 
-  const d = evalData as Record<string, unknown> | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const d = evalData as Record<string, any> | null;
 
   function gaugeMood(pct: number) {
     if (pct >= 75) return { mood: 'great', color: 'var(--green)', label: 'Strong answer!' };
@@ -396,7 +397,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
             </div>
           )}
 
-          {step === 'done' && d && (() => {
+          {step === 'done' && d && ((() => {
             const marks_v = d.marks as number ?? 0;
             const out_of = d.marks_out_of as number ?? marks;
             const pct = Math.round((marks_v / out_of) * 100);
@@ -451,7 +452,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   </div>
                 )}
 
-                {d.body && (() => {
+                {d.body && ((() => {
                   const b = d.body as { strengths?: string[]; weaknesses?: string[] };
                   return (
                     <div style={{ marginBottom: '1rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
@@ -465,7 +466,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                       </div>
                     </div>
                   );
-                })()}
+                })() as React.ReactNode)}
 
                 {Array.isArray(d.historians_to_cite) && (d.historians_to_cite as unknown[]).length > 0 && (
                   <div style={{ marginBottom: '1rem' }}>
@@ -482,7 +483,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   </div>
                 )}
 
-                {d.model_answer && (() => {
+                {d.model_answer && ((() => {
                   const ma = d.model_answer as { introduction?: string; body?: string[]; conclusion?: string };
                   return (
                     <details>
@@ -502,10 +503,10 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                       </div>
                     </details>
                   );
-                })()}
+                })() as React.ReactNode)}
               </div>
             );
-          })()}
+          })() as React.ReactNode)}
         </div>
       )}
     </div>
