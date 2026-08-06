@@ -7543,6 +7543,126 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>Yet social movements in India face structural limitations: cooptation of leaders by the state (a consistent strategy used since the colonial period); fragmentation along caste, religious, and regional lines that prevents convergence; repression through UAPA, sedition laws, and police action; and the challenge of sustaining mass mobilisation beyond the immediate crisis. The relationship between social movements and the formal democratic system remains creative but tension-filled — movements need democracy to operate, but democracy often absorbs, dilutes, or deflects movement demands.</p>
 
 `,
-  'population-dynamics': '',
-  'challenges-social-transformation': '',
+  'population-dynamics': `
+<h2>Introduction: Population as a Sociological Concern</h2>
+<p>Population dynamics refers to the study of changes in size, composition, distribution, and growth of human populations. In India, population is not merely a demographic variable but a deeply sociological one shaped by caste, gender, religion, class, and regional culture. India became the world's most populous country in 2023, surpassing China. The sociological study of Indian population examines demographic transitions, sex ratios, reproductive health, ageing, migration, literacy, and their complex relationships with social structure.</p>
+
+<h2>Demographic Transition Theory</h2>
+<p>The Demographic Transition Theory (DTT), developed by Frank Notestein and Kingsley Davis, describes stages of population change societies pass through as they modernise:</p>
+<table>
+  <tr><th>Stage</th><th>Birth Rate</th><th>Death Rate</th><th>Population Growth</th></tr>
+  <tr><td><strong>Stage 1 (Pre-modern)</strong></td><td>High</td><td>High</td><td>Slow</td></tr>
+  <tr><td><strong>Stage 2 (Early modern)</strong></td><td>High</td><td>Falling</td><td>Rapid</td></tr>
+  <tr><td><strong>Stage 3 (Late modern)</strong></td><td>Falling</td><td>Low</td><td>Stabilising</td></tr>
+  <tr><td><strong>Stage 4 (Post-modern)</strong></td><td>Low</td><td>Low</td><td>Near zero or negative</td></tr>
+</table>
+<p>India is in the late Stage 2 or early Stage 3 transition. The Total Fertility Rate (TFR) has fallen from 5.7 at independence to 2.0 in 2019-21 (NFHS-5), below the replacement level of 2.1. Death rates have fallen dramatically due to improved nutrition, immunisation, antibiotics, and public health. The result is a large population with a young age structure, creating both the demographic dividend and the challenge of providing employment and services at scale.</p>
+
+<h2>Population Growth in India</h2>
+<p>India's population was approximately 345 million at independence (1947), crossed 1 billion in 2000, and reached approximately 1.44 billion in 2023. The decadal growth rate fell from 24.8% (1971-81) to 17.7% (2001-11). Regional variation is pronounced: Southern states have achieved near-replacement fertility while northern states (UP, Bihar, Rajasthan, MP) have higher TFRs. This regional demographic divergence has important implications for parliamentary delimitation, labour migration flows, and fiscal federalism.</p>
+
+<h3>Malthus on Population</h3>
+<p>Thomas Malthus in <em>An Essay on the Principle of Population</em> (1798) argued that population grows geometrically (1, 2, 4, 8) while food supply grows arithmetically (1, 2, 3, 4), creating a permanent tendency toward overpopulation, poverty, and misery. He identified two types of checks: preventive checks (delayed marriage, celibacy, moral restraint) and positive checks (war, famine, disease, poverty). Marx responded sharply: poverty is not natural but structural, a product of the capitalist mode of production creating a reserve army of labour to keep wages low. The solution is not population control but the abolition of the exploitative class structure.</p>
+
+<h2>Sex Ratio</h2>
+<p>The sex ratio (females per 1000 males) improved from 933 (2001 Census) to 943 (2011 Census) and 948 (NFHS-5). However, the child sex ratio (0-6 years) has consistently declined: 976 (1961), 945 (1991), 927 (2001), 918 (2011), 929 (NFHS-5). The slight improvement reflects the impact of Beti Bachao Beti Padhao and PCPNDT enforcement.</p>
+<p>Reasons for adverse sex ratio:</p>
+<ul>
+  <li>Son preference driven by patrilineal inheritance, dowry obligation for daughters, sons performing last rites and providing old-age security</li>
+  <li>Patrilineal kinship: daughters leave the family at marriage; sons continue the lineage</li>
+  <li>Honour and shame: female bodies treated as vessels of family honour</li>
+  <li>Severe neglect of girl babies: inadequate nutrition, delayed medical care</li>
+  <li>Sex-specific abortions enabled by ultrasound technology despite the PCPNDT Act</li>
+  <li>Female infanticide, historically practiced in some communities</li>
+</ul>
+<p>A key anomaly: lowest child sex ratios are found in the most prosperous regions (Punjab, Haryana, Delhi, Gujarat). As prosperous families decide to have fewer children and have access to ultrasound, they exercise son preference more precisely through selective abortion. Poverty sometimes results in higher female child survival because families cannot afford sex determination. Way out: civil society involvement; stringent PCPNDT enforcement; Beti Bachao Beti Padhao; attitudinal change through education; celebrating birth of girl children; women's inheritance rights.</p>
+
+<h2>Ageing Population</h2>
+<p>Becker defined ageing as "those changes occurring in an individual as a result of the passage of time." Clark Tibbitts defined it as "the survival of a growing number of people who have completed the traditional adult roles of making a living and childrearing." India's elderly population (60+ years) was 8.6% in 2011 (approximately 104 million), projected to reach 19.5% by 2050. Life expectancy has risen from 37 at independence to 70.8 years in 2019. Ancient scriptures divide family life into four stages: Brahmacharya, Grihastha, Vanaprastha (withdrawal from active life), and Sanyasa. Religion plays an important role in aged persons' lives, providing meaning, community, and daily routine.</p>
+
+<h3>Social Aspects of Ageing</h3>
+<p>There is a broad distinction between physical ageing (determined by health status) and social ageing (coinciding with retirement from production and social responsibilities). In rural areas, the aged are meaningful links to tradition and historical continuity. In industrialised and urban areas, the authority of the aged diminishes as formal education, market skills, and digital literacy displace traditional wisdom. In cities, aged persons often become socially isolated, experiencing profound psychological pressure from loss of productive role and social routine. MS Gore identifies four merits of ageing for society: continued social activities in civil society; environmental stewardship; carrying culture and values across generations; others learning from their experiences. These merits are increasingly difficult to realise in an individualised nuclear family and consumerist culture.</p>
+
+<h3>Problems of the Aged</h3>
+<ul>
+  <li>Psychological and emotional: dependency causing emotional disturbances; loneliness and isolation; intergenerational conflict; transition from breadwinner to dependent generating loss of identity</li>
+  <li>Health and medical care: gradual physical decline; expensive treatment; lack of geriatric specialists</li>
+  <li>Housing: inadequate accommodation; urban housing rarely designed for aged persons</li>
+  <li>Financial insecurity: for persons from the unorganised sector (vast majority of India's elderly), no pension, provident fund, or social security. Aged peasants and informal workers are the worst sufferers, often forced into prolonged work participation despite physical incapacity</li>
+</ul>
+<p>Impact of migration: rural-to-urban migration leaves aged parents managing alone without family support. Aged parents migrating to join urban children face adjustment problems, social isolation, and psychological distress.</p>
+
+<h3>Government Programmes</h3>
+<ul>
+  <li>IGNOAPS: monthly pension for BPL elderly 60 years and above</li>
+  <li>National Social Assistance Programme (NSAP): umbrella covering old age, widow, and disability pensions</li>
+  <li>Atal Pension Yojana (APY): defined pension for informal sector workers</li>
+  <li>Reverse Mortgage: senior citizens mortgage home to receive regular income</li>
+  <li>Maintenance and Welfare of Parents and Senior Citizens Act (2007): obligates children to maintain aged parents; old age homes in every district</li>
+  <li>Section 125 CrPC: right to maintenance from adult children</li>
+</ul>
+<p>The central paradox of ageing in India: medical technology has increased the span of life, but a higher proportion of aged persons with little income must depend on others. Traditional institutions have lost hold; the joint family is giving way to nuclear arrangements; changes in kinship and family organisation have been, on net, to the disadvantage of the aged.</p>
+
+<h2>Literacy</h2>
+<p>India's literacy rate was 12% at independence, 64.8% in 2001, and 74.04% in 2011. Male literacy (82.14%) is significantly higher than female literacy (65.46%). Regional variation is stark: Kerala (96.2%) vs Bihar (61.8%). India has approximately 287 million illiterate adults. Literacy is not merely a skill but a social variable determining access to employment, health services, legal rights, and political participation. Illiteracy is concentrated among women, Dalits, Adivasis, and rural populations, making it both a consequence and a cause of social inequality. Karuna Ahmad's research shows that while education has produced ideational change (changing knowledge and attitudes), structural change (redistribution of power and opportunity) has been far slower.</p>
+
+<h2>Migration</h2>
+<p>Jan Breman's concept of "footloose labour" captures India's vast population of seasonal and circular migrants: workers who move from harvest to harvest, construction site to construction site, without stable residence or social security. Breman estimates over 100 million are circular migrants in India. Push factors include agricultural distress, drought, land alienation, and caste violence. Pull factors include urban employment, higher wages, education, and aspiration. Post-LPG, migration toward metropolitan areas has intensified as services and manufacturing concentrate in urban centres. For sending areas, migration produces remittance income but also "missing men" villages where women manage alone. For receiving areas, it provides labour but generates housing pressure, slum formation, and ethnic tensions.</p>
+
+<h2>Reproductive Health</h2>
+<p>About 78% of total conceptions are unplanned; about 25% are definitely unwanted. Maternal Mortality Rate (MMR) has fallen from 556 (1990) to 97 (2018-20). Infant Mortality Rate (IMR) has fallen from 147 (1950s) to 28 (2020) but varies enormously by state (8 in Kerala vs 46 in MP). Government programmes include Janani Suraksha Yojana (conditional cash transfer for institutional delivery), the National Health Mission, the ASHA programme, the ANM network, and nutrition entitlements under the National Food Security Act for pregnant and lactating mothers.</p>
+`,
+  'challenges-social-transformation': `
+<h2>Introduction: The Unfinished Project of Social Transformation</h2>
+<p>Independent India set itself an extraordinary task: to transform a society marked by millennia of caste hierarchy, patriarchy, colonial extraction, mass illiteracy, and endemic poverty into a secular, democratic, egalitarian republic. Seven decades later, the transformation is real but profoundly incomplete. The challenges are simultaneously structural (caste, class, patriarchy), developmental (contradictions of capital accumulation and ecological limits), and civilisational (tension between modernity and tradition). This topic examines four principal challenges: the crisis of development and displacement; poverty, deprivation, and inequality; violence against women; and communalism and secularism.</p>
+
+<h2>A. Crisis of Development: Displacement, Environment, and Sustainability</h2>
+<p>India's development paradigm has generated enormous material gains but distributed benefits extraordinarily unequally. Jagannath Pathy writes: "Development is a conscious neo-colonialist design of a capitalist state that tries to destroy the holistic linkage between nature and culture." Walter Fernandes estimates over 60 million people have been displaced by development projects since independence. M. Areeparampil identifies three sequential stages of dispossession: land alienation, industrialisation, and urbanisation. Vasudha Dhagamwar identifies six failures in India's displacement practice: no uniform law on rehabilitation (LARR 2013 was significant but diluted); affected people mainly poor and frequently tribal with no participation in decision-making; people not properly informed about resettlement; compensation is cash-centric and inadequate; resettlement is at worst non-existent and at best unsatisfactory; and no attention to emotional trauma of displacement including loss of homeland, community, sacred sites, and ancestral graves. People's reactions have evolved from spontaneous resistance to organised movements: the Narmada Bachao Andolan (NBA) against the Sardar Sarovar Dam; the Niyamgiri movement in Odisha where 12 Gram Sabhas rejected Vedanta Aluminium's bauxite mining, upheld by the Supreme Court.</p>
+
+<h3>Constitutional Position on Displacement</h3>
+<ul>
+  <li>Article 21: right to life judicially expanded to include right to livelihood and shelter</li>
+  <li>Fifth and Sixth Schedules: special protection of tribal land rights in scheduled areas</li>
+  <li>PESA (1996): Gram Sabha consent required for land acquisition in scheduled areas</li>
+  <li>Forest Rights Act (2006): recognises community rights over forest land</li>
+  <li>LARR Act (2013): social impact assessment, informed consent requirement, enhanced compensation</li>
+</ul>
+
+<h3>Environment and Sustainability</h3>
+<p>Ecological consequences of India's development model are severe: deforestation; river pollution (Ganga and Yamuna among world's most polluted); air pollution (13 of world's 20 most polluted cities are in India); soil degradation; climate vulnerability. DN Dhanagre's concept of "growth with justice" provides an evaluative framework combining economic growth with equity and ecological integrity. True sustainability requires changing patterns of production and consumption, not merely improving technological efficiency. Eco-feminist movements (Chipko, Appiko, NBA) have had women at their forefront, demonstrating that sustainability is inseparable from gender equality.</p>
+
+<h2>B. Poverty, Deprivation, and Inequality</h2>
+<p>Amartya Sen's foundational insight is that "poverty is more than an economic problem." Sen's Capability Approach defines poverty as the deprivation of basic capabilities: the ability to live a long and healthy life, to be educated, to participate in political and social life. Social causes include caste-based disabilities, conspicuous spending obligations (dowry, elaborate marriages, funerals), and social exclusion from public goods. Economic causes include unequal land distribution, low wages, and rural indebtedness. Political causes include skewed policies favouring influential constituencies and poor accountability. Globalisation-related causes include sidelining of cottage industries and the race to the bottom in labour standards.</p>
+<p>Consequences of poverty: culture of poverty (Oscar Lewis) transmitting values and behaviours across generations including present-time orientation, fatalism, and apathy; malnutrition with India's stunting and wasting rates among the worst in the world; illiteracy as children are pulled out of school for labour; social deviance including crime and Naxalism as responses to structural exclusion. Andre Beteille in "Pollution and Poverty" argues poverty is more contagious than pollution, passing through barriers of caste, religion, and region. Bhalla and Chadha's study of 200 villages in Punjab found per capita income of rich farmers was 200 times higher than that of poor farmers after the Green Revolution, demonstrating that development itself deepens structured inequality.</p>
+<p>Government programmes operate through four channels: wage employment (MNREGA); self-employment (PM Mudra Yojana); food security (NFSA, PDS, Mid-Day Meal, POSHAN Abhiyan); and social security (Ayushman Bharat, NSAP pensions). Sen and Jean Dreze in <em>An Uncertain Glory</em> argue that poverty alleviation requires not just economic growth but active social provisioning in health, education, and nutrition, combined with democratic participation and RTI-based accountability.</p>
+
+<h2>C. Violence Against Women</h2>
+<p>Violence against women (VAW) is any act of gender-based violence resulting in physical, sexual, or psychological harm (UN Declaration, 1993). A woman is violated because of being a woman; gender is the reason for the violation. Five forms: Psychological (humiliation, emotional isolation, threats); Physical (hitting, beating, torture, murder); Sexual (any non-consensual sexual activity including rape and incest); Financial (controlling finances, preventing employment); Spiritual (destroying cultural or religious beliefs through ridicule or punishment).</p>
+<p>Types in India include rape (including marital, gang, and custodial rape); child sexual abuse; sexual harassment in the workplace; domestic violence; dowry deaths; female foeticide; honour killing; trafficking; and acid attacks. UN Special Rapporteur Rashida Manjoo identifies six underlying causes: historically unequal power relations; culture justifying violence against women; sexuality controlled through violence; privacy doctrine treating the home as outside the law; war weaponising sexual violence; and government inaction. In the Indian context: patriarchal kinship systems subordinating women's interests to family honour; caste endogamy rules enforced through honour killing; dowry as commodification of women; cultural lag (Ogburn and Nimkoff) where economic modernity has arrived without corresponding cultural modernity; and alcohol abuse.</p>
+
+<h3>Honour Killing</h3>
+<p>Honour and shame are vested in the bodies of women, through which communities of men interact. Women's sexuality is treated as collective property of the male kinship group. When women violate norms of sexual purity by marrying outside caste or marrying for love, male kinship groups respond with violence to restore honour. Reasons include cultural lag; Gunnar Myrdal's distinction between normative modernity (values of equality) and instrumental modernity (technology, economic organisation) with India acquiring instrumental without normative modernity; and Parsons' distinction between institutionalised (formally accepted) and internalised (genuinely believed) norms.</p>
+
+<h3>Legal Framework for Protection of Women</h3>
+<table>
+  <tr><th>Law/Policy</th><th>Purpose</th></tr>
+  <tr><td>Dowry Prohibition Act (1961)</td><td>Prohibits giving and taking of dowry</td></tr>
+  <tr><td>PCPNDT Act (1994, amended 2003)</td><td>Prohibits prenatal sex determination</td></tr>
+  <tr><td>Protection of Women from Domestic Violence Act (2005)</td><td>Civil remedies for all forms of domestic violence</td></tr>
+  <tr><td>POSH Act (2013)</td><td>Prevention of sexual harassment at workplace; mandatory Internal Complaints Committees</td></tr>
+  <tr><td>Criminal Law (Amendment) Act (2013)</td><td>Post-Nirbhaya; expanded definition of sexual assault; faster trials</td></tr>
+  <tr><td>Nari Shakti Vandan Adhiniyam (2023)</td><td>33% reservation for women in Lok Sabha and state assemblies</td></tr>
+</table>
+
+<h2>D. Communalism and Secularism</h2>
+<p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests at the expense of others. Bipin Chandra identifies three stages: liberal communalism (compatible but different interests); communal communalism (different but coexisting interests); and extreme communalism (fundamentally antagonistic interests, the logic of the Two-Nation Theory that produced Partition). Consequences include communal riots producing deaths, displacement, and chronic inter-community distrust; forced migration and ghettoisation of minorities; permanent fear and insecurity; hindrance to class-based social solidarity; and electoral politics structured around religious identity rather than development performance. The Indian Constitution's secular framework of principled distance (Rajeev Bhargava) treats all religions equally while preventing any religion from dictating state policy. TN Madan's "impossible project" argument and Ashis Nandy's critique of Western secularism point to the difficulty of implementing a constitutional ideal where religion is deeply public. Partha Chatterjee and Amartya Sen respond that the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
+
+<h2>E. Other Emerging Challenges</h2>
+<p>The digital divide compounds traditional social exclusion. India has over 800 million internet users (2023) but access is profoundly unequal across urban/rural, gender, caste, and class lines. COVID-19 exposed this starkly when poor children were excluded from online education while middle-class children shifted seamlessly.</p>
+<p>Climate change: India is among the world's most climate-vulnerable countries. Heat waves, floods, cyclones, and drought are intensifying, affecting agricultural livelihoods that still support the majority of India's population. Climate justice demands equitable burden-sharing given that India's per capita emissions are far below the global average.</p>
+<p>Mental health: India has one of the world's largest mental health burdens with approximately 150 million requiring active intervention. Stigma, grossly inadequate public infrastructure (one psychiatrist per 200,000 population), and a dominant biomedical model ignoring social determinants all limit effective response. The Mental Healthcare Act (2017) is a legislative advance without commensurate system capacity.</p>
+
+<h2>Conclusion: The Dialectics of Social Transformation</h2>
+<p>The challenges of social transformation in India are facets of a single structural reality: a society attempting to realise its constitutional promises within the constraints of a deeply stratified social structure, a capitalist economy producing both growth and inequality, a global ecological crisis, and a democratic polity that both empowers the marginalised and enables powerful groups to capture the state. Andre Beteille's paradox captures the challenge precisely: law, planning, and education determine the direction in which society should go; the social structure (caste, class, patriarchy, communalism) determines the direction in which it actually goes. The gap between the constitutional vision and social reality is occupied by social movements, subaltern politics, feminist struggles, Dalit assertion, and ecological resistance. Upendra Baxi's argument is indispensable: rights cannot be gifts from above; they must be claimed from below. Social transformation in India requires the organised, sustained, and rights-conscious mobilisation of those who bear the greatest costs of the existing social order.</p>
+`,
 };
