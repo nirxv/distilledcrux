@@ -176,9 +176,11 @@ export default function Navbar() {
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         height: isChat && navCollapsed ? 0 : 60,
         overflow: isChat && navCollapsed ? 'hidden' : 'visible',
-        background: theme === 'dark' ? 'rgba(5,5,8,0.92)' : 'rgba(248,248,252,0.92)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        background: mobileOpen
+          ? (theme === 'dark' ? 'rgba(5,5,8,1)' : 'rgba(248,248,252,1)')
+          : (theme === 'dark' ? 'rgba(5,5,8,0.92)' : 'rgba(248,248,252,0.92)'),
+        backdropFilter: mobileOpen ? 'none' : 'blur(12px)',
+        WebkitBackdropFilter: mobileOpen ? 'none' : 'blur(12px)',
         borderBottom: '1px solid var(--border)',
         display: 'flex', alignItems: 'center',
         padding: '0 1.25rem',

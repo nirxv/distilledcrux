@@ -56,13 +56,12 @@ const BASE_TOOLS = [
   { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
   { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
   { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
-  { num: '05', label: 'Topper Copies', desc: 'Real answer sheets from students who scored 140+. Annotated so you know what worked and why.', href: '/toppers', badge: 'Premium' },
 ];
 
 const MAP_TOOL = { num: '06', label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.', href: '/mapping', badge: null };
 const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: '/tests', badge: 'Premium' };
 
-const getTools = (optional: string) => [...BASE_TOOLS, optional === 'geography' ? MAP_TOOL : TEST_SERIES_TOOL];
+const getTools = (_optional: string) => [...BASE_TOOLS, TEST_SERIES_TOOL];
 
 export function generateStaticParams() {
   return Object.keys(OPTIONALS).map((slug) => ({ optional: slug }));
