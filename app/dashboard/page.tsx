@@ -20,13 +20,16 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   history: 'history',
 };
 
+const PYQS_ENABLED = new Set(['sociology', 'anthropology']);
+
 const getTools = (optional: string | null) => {
   const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';
+  const hasPyqs = PYQS_ENABLED.has(optional ?? '');
   return [
     { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
     { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
     { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
-    { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' },
+    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
   ];
 };
 
@@ -472,7 +475,7 @@ export default function Dashboard() {
                 {[
                   { label: 'Ask AI', href: '/chat' },
                   { label: 'Evaluate an answer', href: '/evaluate' },
-                  { label: 'Browse PYQs', href: `/${OPTIONAL_TO_ROUTE[stats.optional ?? ''] ?? stats.optional ?? 'sociology'}/pyqs` },
+                  ...(PYQS_ENABLED.has(stats.optional ?? '') ? [{ label: 'Browse PYQs', href: `/${OPTIONAL_TO_ROUTE[stats.optional ?? ''] ?? stats.optional ?? 'sociology'}/pyqs` }] : []),
                   { label: 'Read notes', href: '/notes' },
                   { label: 'Change optional', href: '/onboarding?change=1' },
                 ].map((a) => (
