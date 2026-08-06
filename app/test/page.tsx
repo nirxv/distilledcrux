@@ -42,31 +42,31 @@ const SUBJECTS: Record<SubjectId, {
   dataFile: string | null;     // null = PYQ file not yet available
 }> = {
   sociology: {
-    label: 'Sociology', icon: '🧩',
+    label: 'Sociology', icon: 'sociology',
     color: '#4361ee', dim: 'rgba(67,97,238,0.09)', border: 'rgba(67,97,238,0.28)',
     thinkerTerm: 'thinker',
     dataFile: '/data/sociology-pyqs.json',
   },
   anthropology: {
-    label: 'Anthropology', icon: '🧬',
+    label: 'Anthropology', icon: 'anthropology',
     color: '#2dd4bf', dim: 'rgba(45,212,191,0.09)', border: 'rgba(45,212,191,0.28)',
     thinkerTerm: 'anthropologist',
     dataFile: '/data/anthropology-pyqs.json',
   },
   polsci: {
-    label: 'PSIR', icon: '⚖️',
+    label: 'PSIR', icon: 'psir',
     color: '#f87171', dim: 'rgba(248,113,113,0.09)', border: 'rgba(248,113,113,0.25)',
     thinkerTerm: 'thinker',
     dataFile: null,
   },
   geography: {
-    label: 'Geography', icon: '🌍',
+    label: 'Geography', icon: 'geography',
     color: '#4ade80', dim: 'rgba(74,222,128,0.09)', border: 'rgba(74,222,128,0.25)',
     thinkerTerm: 'scholar',
     dataFile: null,
   },
   'pub-admin': {
-    label: 'Pub Admin', icon: '📋',
+    label: 'Pub Admin', icon: 'pubadmin',
     color: '#fb923c', dim: 'rgba(251,146,60,0.09)', border: 'rgba(251,146,60,0.25)',
     thinkerTerm: 'scholar',
     dataFile: null,
@@ -220,7 +220,7 @@ type OcrStep = 'idle' | 'ocr' | 'transcript' | 'evaluating' | 'done' | 'error';
 
 async function pdfToImages(file: File): Promise<File[]> {
   const pdfjs = await import('pdfjs-dist');
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.mjs', import.meta.url).toString();
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
   const buf = await file.arrayBuffer();
   const pdf = await pdfjs.getDocument({ data: buf }).promise;
   const images: File[] = [];
@@ -307,10 +307,10 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
   const d = evalData as Record<string, unknown> | null;
 
   function gaugeMood(pct: number) {
-    if (pct >= 75) return { emoji: '😄', color: 'var(--green)', label: 'Strong answer!' };
-    if (pct >= 50) return { emoji: '🙂', color: color, label: 'Decent — a few gaps to close.' };
-    if (pct >= 30) return { emoji: '😕', color: 'var(--gold)', label: 'Learn from mistakes — keep going.' };
-    return { emoji: '😟', color: 'var(--red)', label: 'Needs significant work.' };
+    if (pct >= 75) return { mood: 'great', color: 'var(--green)', label: 'Strong answer!' };
+    if (pct >= 50) return { mood: 'ok', color: color, label: 'Decent — a few gaps to close.' };
+    if (pct >= 30) return { mood: 'meh', color: 'var(--gold)', label: 'Learn from mistakes — keep going.' };
+    return { mood: 'bad', color: 'var(--red)', label: 'Needs significant work.' };
   }
 
   return (
@@ -325,19 +325,19 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
           padding: '0.45rem 0.9rem', color: isPremium ? color : 'var(--text3)',
           fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)',
         }}>
-          ✦ {isPremium ? '📷 Upload & Get AI Feedback' : '📷 AI Feedback — Premium 🔒'}
+          {isPremium ? <><UploadIcon /> Get the Answer Corrected</> : <><LockIcon /> Get the Answer Corrected</>}
         </button>
         {step !== 'idle' && step !== 'ocr' && step !== 'evaluating' && (
           <button onClick={() => { setStep('idle'); setImages([]); setPreviews([]); setTranscript(''); setEvalData(null); setError(''); setPanelOpen(false); }} style={{
             background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
             padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', cursor: 'pointer',
-          }}>↺ Re-upload</button>
+          }}>Re-upload</button>
         )}
         {(step === 'done' || step === 'transcript') && (
           <button onClick={() => setPanelOpen(o => !o)} style={{
             background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
             padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', cursor: 'pointer',
-          }}>{panelOpen ? 'Hide ↑' : 'Show ↓'}</button>
+          }}>{panelOpen ? 'Hide' : 'Show'}</button>
         )}
       </div>
 
@@ -349,7 +349,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
             <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
               <div style={{ width: 28, height: 28, border: `3px solid ${color}30`, borderTopColor: color, borderRadius: '50%', animation: 'spin-ai 0.8s linear infinite', margin: '0 auto 0.5rem' }} />
               <div style={{ color, fontSize: '0.85rem', fontFamily: 'var(--font-ui)' }}>
-                {step === 'ocr' ? ocrMsg || 'Reading your handwriting…' : '✦ Evaluating your answer… (~30s)'}
+                {step === 'ocr' ? ocrMsg || 'Reading your handwriting…' : 'Evaluating your answer… (~30s)'}
               </div>
             </div>
           )}
@@ -369,13 +369,13 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>OCR Transcript</div>
                   <div style={{ fontSize: '0.72rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>Review and fix errors before evaluating</div>
                 </div>
-                <span style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: 4, padding: '2px 8px', fontSize: '0.68rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}>✓ OCR Done</span>
+                <span style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: 4, padding: '2px 8px', fontSize: '0.68rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> OCR Done</span>
               </div>
               <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={10}
                 style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 6, padding: '0.65rem 0.8rem', color: 'var(--text)', fontSize: '0.84rem', resize: 'vertical', outline: 'none', fontFamily: 'inherit', lineHeight: 1.65 }} />
               <div style={{ marginTop: '0.75rem', display: 'flex', justifyContent: 'flex-end' }}>
                 <button onClick={runEval} style={{ background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-                  ✦ Evaluate →
+                  Evaluate →
                 </button>
               </div>
             </div>
@@ -389,7 +389,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={6}
                     style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 6, padding: '0.6rem 0.75rem', color: 'var(--text)', fontSize: '0.84rem', resize: 'vertical', outline: 'none', fontFamily: 'inherit' }} />
                   <button onClick={runEval} style={{ marginTop: '0.5rem', background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-                    ✦ Evaluate →
+                    Evaluate →
                   </button>
                 </div>
               )}
@@ -422,7 +422,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
                 {/* Gauge */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', background: 'var(--bg3)', borderRadius: 6, padding: '0.75rem 1rem', marginBottom: '0.75rem' }}>
-                  <div style={{ fontSize: '1.5rem', lineHeight: 1, flexShrink: 0 }}>{g.emoji}</div>
+                  <MoodIcon mood={g.mood} color={g.color} />
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.4rem', flexWrap: 'wrap' }}>
                       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.92rem', fontWeight: 700, color: g.color }}>{marks_v}</span>
@@ -437,7 +437,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
                 {/* Disclaimer */}
                 <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start', background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.25)', borderRadius: 6, padding: '0.6rem 0.8rem', marginBottom: '1rem' }}>
-                  <span style={{ flexShrink: 0 }}>⚠️</span>
+                  <WarnIcon />
                   <div style={{ fontSize: '0.74rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', lineHeight: 1.55 }}>
                     <strong style={{ color: 'var(--gold)' }}>AI scores are directional, not definitive.</strong>{' '}
                     Focus on the qualitative feedback below — demand gaps and missing thinkers are far more useful than any number.
@@ -456,11 +456,11 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   return (
                     <div style={{ marginBottom: '1rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                       <div style={{ background: 'var(--green-dim)', border: '1px solid rgba(74,222,128,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--green)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>✓ Strengths</div>
+                        <div style={{ color: 'var(--green)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> Strengths</div>
                         {(b.strengths ?? []).map((s, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', lineHeight: 1.5 }}>{s}</div>)}
                       </div>
                       <div style={{ background: 'var(--red-dim)', border: '1px solid rgba(248,113,113,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--red)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>✗ Weaknesses</div>
+                        <div style={{ color: 'var(--red)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CrossIcon size={10} /> Weaknesses</div>
                         {(b.weaknesses ?? []).map((w, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', lineHeight: 1.5 }}>{w}</div>)}
                       </div>
                     </div>
@@ -697,6 +697,131 @@ function ScrollFab({ color }: { color: string }) {
   );
 }
 
+
+// ─── SVG Icon Components ──────────────────────────────────────────────────────
+
+function SubjectIcon({ id, color = 'currentColor', size = 14 }: { id: string; color?: string; size?: number }) {
+  const s = { width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 4, flexShrink: 0 } as React.CSSProperties;
+  if (id === 'sociology') return (
+    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
+      <circle cx="5" cy="5" r="2.5"/><circle cx="11" cy="5" r="2.5"/>
+      <path d="M1 13c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5" strokeLinecap="round"/>
+      <path d="M8 10.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.5 4 3.5" strokeLinecap="round"/>
+    </svg>
+  );
+  if (id === 'anthropology') return (
+    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
+      <circle cx="8" cy="5" r="3"/>
+      <path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4" strokeLinecap="round"/>
+      <path d="M6 5h4M8 3v4" strokeLinecap="round"/>
+    </svg>
+  );
+  if (id === 'psir') return (
+    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
+      <path d="M8 2v12M2 8h12" strokeLinecap="round"/>
+      <circle cx="8" cy="8" r="5.5"/>
+    </svg>
+  );
+  if (id === 'geography') return (
+    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
+      <circle cx="8" cy="8" r="6"/>
+      <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" strokeLinecap="round"/>
+    </svg>
+  );
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
+      <rect x="2" y="6" width="12" height="8" rx="1"/>
+      <path d="M5 6V4a3 3 0 0 1 6 0v2" strokeLinecap="round"/>
+      <line x1="8" y1="10" x2="8" y2="12" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+function MoodIcon({ mood, color }: { mood: string; color: string }) {
+  const s = { width: 24, height: 24, flexShrink: 0 } as React.CSSProperties;
+  if (mood === 'great') return (
+    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
+      <circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2" strokeLinecap="round"/>
+      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
+    </svg>
+  );
+  if (mood === 'ok') return (
+    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
+      <circle cx="12" cy="12" r="9"/><line x1="9" y1="14" x2="15" y2="14" strokeLinecap="round"/>
+      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
+    </svg>
+  );
+  if (mood === 'meh') return (
+    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
+      <circle cx="12" cy="12" r="9"/><path d="M9 15s1-1 3-1 3 1 3 1" strokeLinecap="round"/>
+      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
+    </svg>
+  );
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
+      <circle cx="12" cy="12" r="9"/><path d="M9 16s1.5-2 3-2 3 2 3 2" strokeLinecap="round"/>
+      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
+    </svg>
+  );
+}
+
+function CheckIcon({ size = 12 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+      style={{ width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 3 }}>
+      <polyline points="2 6 5 9 10 3"/>
+    </svg>
+  );
+}
+
+function CrossIcon({ size = 12 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+      style={{ width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 3 }}>
+      <line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>
+    </svg>
+  );
+}
+
+function WarnIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="var(--gold)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+      style={{ width: 16, height: 16, flexShrink: 0, marginTop: 2 }}>
+      <path d="M10 2L2 17h16L10 2z"/>
+      <line x1="10" y1="8" x2="10" y2="12"/><circle cx="10" cy="15" r="0.8" fill="var(--gold)" stroke="none"/>
+    </svg>
+  );
+}
+
+function UploadIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+      style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 5 }}>
+      <path d="M8 10V3M5 6l3-3 3 3"/><path d="M3 13h10"/>
+    </svg>
+  );
+}
+
+function LockIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+      style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 5 }}>
+      <rect x="3" y="8" width="10" height="7" rx="1.5"/>
+      <path d="M5 8V6a3 3 0 0 1 6 0v2"/>
+    </svg>
+  );
+}
+
+function NoteIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="var(--gold)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+      style={{ width: 15, height: 15, flexShrink: 0 }}>
+      <rect x="2" y="2" width="12" height="12" rx="1.5"/>
+      <line x1="5" y1="6" x2="11" y2="6"/><line x1="5" y1="9" x2="9" y2="9"/>
+    </svg>
+  );
+}
+
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function TestPage() {
@@ -823,7 +948,7 @@ export default function TestPage() {
                     cursor: noData ? 'not-allowed' : 'pointer',
                     opacity: noData ? 0.4 : 1,
                   }}>
-                  {s.icon} {s.label}{noData ? ' (soon)' : ''}
+                  <SubjectIcon id={id} color={active ? s.color : 'var(--text3)'} /> {s.label}{noData ? ' (soon)' : ''}
                 </button>
               );
             })}
@@ -884,7 +1009,7 @@ export default function TestPage() {
 
         {/* Info banner */}
         <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
-          <span>📝</span>
+          <NoteIcon />
           <span>Q1 is always compulsory — 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.</span>
         </div>
 
@@ -928,7 +1053,7 @@ export default function TestPage() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', fontFamily: 'var(--font-ui)' }}>
               <span style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                {subMeta.icon} {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
+                <SubjectIcon id={subject} color={subMeta.color} /> {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
               </span>
               <span style={{ color: 'var(--text3)', fontSize: '0.72rem' }}>· {maxMarks}M</span>
             </div>

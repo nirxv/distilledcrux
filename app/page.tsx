@@ -18,10 +18,10 @@ const optionals = [
 ];
 
 const tools = [
-  { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01' },
-  { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains — written to be read before the exam.', num: '02' },
-  { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03' },
-  { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04' },
+  { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
+  { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains — written to be read before the exam.', num: '02', href: '/sociology' },
+  { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: '/sociology#pyqs' },
+  { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04', href: '/sociology#chat' },
 ];
 
 const marqueeItems = [
@@ -151,9 +151,9 @@ const CSS = `
   .lp-opt-card {
     background: var(--bg); padding: 1.75rem;
     text-decoration: none; display: flex; flex-direction: column;
-    transition: background 0.18s;
+    transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
   }
-  .lp-opt-card:hover { background: var(--bg2); }
+  .lp-opt-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-opt-card-icon { font-size: 1.4rem; margin-bottom: 1.25rem; display: block; }
   .lp-opt-card-name {
     font-family: var(--font-body); font-size: 1rem;
@@ -174,9 +174,9 @@ const CSS = `
     display: flex; align-items: center; justify-content: space-between;
     margin-top: 1px; padding: 1.25rem 1.75rem;
     background: var(--bg); border: 1px solid var(--border);
-    border-radius: 12px; text-decoration: none; transition: background 0.18s; gap: 1.5rem;
+    border-radius: 12px; text-decoration: none; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; gap: 1.5rem;
   }
-  .lp-history-card:hover { background: var(--bg2); }
+  .lp-history-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-history-left { display: flex; align-items: center; gap: 1rem; }
   .lp-history-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: #e8b86d; margin-bottom: 2px; }
   .lp-history-sub { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); }
@@ -192,9 +192,11 @@ const CSS = `
   }
   .lp-tool-item {
     background: var(--bg); padding: 1.75rem 2rem;
-    display: flex; align-items: flex-start; gap: 1.5rem; transition: background 0.18s;
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+    color: inherit;
   }
-  .lp-tool-item:hover { background: var(--bg2); }
+  .lp-tool-item:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-tool-num {
     font-family: var(--font-mono); font-size: 0.65rem;
     color: var(--text3); letter-spacing: 0.06em;
@@ -211,8 +213,8 @@ const CSS = `
     gap: 1px; background: var(--border);
     border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
   }
-  .lp-price-cell { background: var(--bg); padding: 2rem; transition: background 0.18s; }
-  .lp-price-cell:hover { background: var(--bg2); }
+  .lp-price-cell { background: var(--bg); padding: 2rem; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
+  .lp-price-cell:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-price-cell.featured { background: var(--bg2); }
   .lp-price-plan {
     font-family: var(--font-ui); font-size: 0.65rem;
@@ -466,13 +468,13 @@ export default function Home() {
           </div>
           <div className="lp-tools-list">
             {tools.map((t) => (
-              <div key={t.label} className="lp-tool-item">
+              <Link key={t.label} href={t.href} className="lp-tool-item" style={{ textDecoration: 'none', cursor: 'pointer' }}>
                 <span className="lp-tool-num">{t.num}</span>
                 <div>
                   <div className="lp-tool-label">{t.label}</div>
                   <div className="lp-tool-desc">{t.desc}</div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
