@@ -65,7 +65,7 @@ const CSS = `
 .m30{background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.15);color:#a855f7;}
 .m40{background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.15);color:#a855f7;}
 .m60{background:rgba(236,72,153,0.06);border:1px solid rgba(236,72,153,0.15);color:#ec4899;}
-.m0{background:#141414;border:1px solid #1e1e1e;color:#333;}
+.m0{background:transparent;border:none;color:var(--text3);}
 .pyq-question{font-family:var(--font-body);font-size:0.93rem;color:var(--text);line-height:1.7;margin-bottom:12px;}
 .pyq-card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .pyq-topic{font-family:var(--font-mono);font-size:0.58rem;color:var(--text2);letter-spacing:0.04em;}
