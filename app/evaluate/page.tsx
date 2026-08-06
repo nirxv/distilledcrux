@@ -269,6 +269,13 @@ const CSS = `
   transition:background 0.12s, color 0.12s; text-align:center; width:100%;
 }
 .ev-btn-ghost:hover { background:var(--bg2); color:var(--text); }
+.ev-btn-model-answer {
+  padding:0.85rem; border-radius:6px; font-family:var(--font-ui); font-size:0.88rem; font-weight:700;
+  background:var(--accent-dim); color:var(--accent3); border:1px solid var(--accent-glow); cursor:pointer;
+  transition:background 0.12s, color 0.12s; text-align:center; width:100%; display:block; text-decoration:none;
+  letter-spacing:0.02em;
+}
+.ev-btn-model-answer:hover { background:var(--accent); color:#fff; }
 
 .ev-main-col { padding:0; }
 .ev-result-section { border-bottom:1px solid var(--border); padding:1.75rem 2rem; }
@@ -298,6 +305,21 @@ const CSS = `
 .ev-thinker-name { font-family:var(--font-ui); font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:2px; }
 .ev-thinker-work { font-size:0.82rem; color:var(--text3); margin-bottom:4px; }
 .ev-thinker-arg  { font-size:0.92rem; color:var(--text2); line-height:1.6; }
+.ev-question-bar {
+  max-width:1200px; margin:0 auto;
+  padding:1rem 2rem;
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:flex-start; gap:0.75rem;
+  background:var(--bg2);
+}
+.ev-question-bar-label {
+  font-family:var(--font-ui); font-size:0.6rem;
+  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
+  white-space:nowrap; padding-top:2px; flex-shrink:0;
+}
+.ev-question-bar-text {
+  font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6;
+}
 .ev-model-answer { display:flex; flex-direction:column; gap:1rem; }
 .ev-ma-part-label { font-family:var(--font-ui); font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:0.35rem; }
 .ev-ma-text { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
@@ -337,6 +359,7 @@ const CSS = `
   .ev-loading { padding:3rem 1.25rem; }
   .ev-loading-title { font-size:1.3rem; }
 
+  .ev-question-bar { padding:0.75rem 1.25rem; }
   .ev-result-section { padding:1.25rem; }
   .ev-result-lbl { font-size:0.6rem; margin-bottom:0.75rem; }
   .ev-fb-col-label { padding:0.5rem 0.85rem; }
@@ -599,6 +622,11 @@ export default function EvaluatePage() {
 
         {/* Results */}
         {result && !loading && (
+          <>
+          <div className="ev-question-bar">
+            <span className="ev-question-bar-label">Question</span>
+            <span className="ev-question-bar-text">{question}</span>
+          </div>
           <div className="ev-results">
             <div className="ev-main-col">
               <div className="ev-result-section">
@@ -660,23 +688,7 @@ export default function EvaluatePage() {
                 </div>
               )}
 
-              <div className="ev-result-section">
-                <div className="ev-result-lbl">Model answer</div>
-                <div className="ev-model-answer">
-                  <div>
-                    <div className="ev-ma-part-label">Introduction</div>
-                    <p className="ev-ma-text">{result.model_answer.introduction}</p>
-                  </div>
-                  <div>
-                    <div className="ev-ma-part-label">Body</div>
-                    {result.model_answer.body.map((b,i) => <div key={i} className="ev-ma-body-item">{b}</div>)}
-                  </div>
-                  <div>
-                    <div className="ev-ma-part-label">Conclusion</div>
-                    <p className="ev-ma-text">{result.model_answer.conclusion}</p>
-                  </div>
-                </div>
-              </div>
+
             </div>
 
             <div className="ev-score-col">
@@ -705,6 +717,12 @@ export default function EvaluatePage() {
                 )
               })}
               <div className="ev-score-actions">
+                <a
+                  href={`/chat?q=${encodeURIComponent(question)}`}
+                  className="ev-btn-model-answer"
+                >
+                  Get model answer →
+                </a>
                 <button className="ev-btn-ghost" onClick={reset}>Evaluate another →</button>
               </div>
             </div>
