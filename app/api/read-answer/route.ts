@@ -62,14 +62,15 @@ QUESTION extraction rules:
 - If not found, return empty string
 
 TRANSCRIPT rules:
-- Transcribe ALL words of the answer body exactly as written — do not skip or summarise
-- Skip the question text at the top — start from the first word of the answer
+- Transcribe ALL pages COMPLETELY — do not stop early, do not truncate, do not summarise
+- Skip the question text at the top of page 1 — start from the first word of the answer body
 - Merge line-breaks within a paragraph into continuous text
-- Use a blank line only when a new paragraph or section begins
+- Use \n\n only when a new paragraph or section begins
 - Never correct spelling — transcribe letter for letter as written
 - Thinker/scholar names: transcribe exactly as written
 - If uncertain (70-89% confident): add (?) after the word
 - If unreadable (<70%): write [illegible]
+- The transcript must cover every page provided — page 2, page 3 etc must all be included
 
 Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
 
@@ -81,7 +82,7 @@ Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
       },
       body: JSON.stringify({
         model: 'pixtral-12b-2409',
-        max_tokens: 4000,
+        max_tokens: 8000,
         temperature: 0.0,
         response_format: { type: 'json_object' },
         messages: [
