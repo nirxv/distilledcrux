@@ -330,6 +330,43 @@ const CSS = `
 .ev-wc-badge.appropriate { background:rgba(74,222,128,0.1);  color:#4ade80; }
 .ev-wc-badge.long        { background:rgba(251,191,36,0.1);  color:#fbbf24; }
 
+/* Transcript review screen */
+.ev-transcript-page {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 360px;
+  border-bottom:1px solid var(--border);
+  animation:fadeUp 0.35s ease;
+}
+.ev-transcript-col { border-right:1px solid var(--border); }
+.ev-transcript-info {
+  padding:1.5rem 1.75rem; background:rgba(251,191,36,0.05);
+  border:1px solid rgba(251,191,36,0.15); border-radius:8px;
+  margin:1.75rem 2rem 0; font-family:var(--font-ui); font-size:0.8rem;
+  color:var(--text3); line-height:1.65;
+}
+.ev-transcript-info strong { color:#fbbf24; }
+.ev-tarea-tall { min-height:320px; }
+.ev-ocr-loading {
+  margin:1.75rem 2rem; padding:1.5rem;
+  background:var(--bg2); border:1px solid var(--border2); border-radius:8px;
+  display:flex; align-items:center; gap:12px;
+  font-family:var(--font-ui); font-size:0.82rem; color:var(--text3);
+}
+.ev-ocr-spinner {
+  width:16px; height:16px; border-radius:50%;
+  border:2px solid var(--border2); border-top-color:var(--accent3);
+  animation:spin 0.7s linear infinite; flex-shrink:0;
+}
+@media(max-width:900px){
+  .ev-transcript-page { grid-template-columns:1fr; }
+  .ev-transcript-col  { border-right:none; border-bottom:1px solid var(--border); }
+}
+@media(max-width:640px){
+  .ev-transcript-info { margin:1.25rem; }
+  .ev-tarea-tall { min-height:220px; }
+  .ev-ocr-loading { margin:1.25rem; }
+}
+
 @media(max-width:900px){
   .ev-body    { grid-template-columns:1fr; }
   .ev-form-col{ border-right:none; border-bottom:1px solid var(--border); }
@@ -448,6 +485,9 @@ export default function EvaluatePage() {
   const [error, setError]             = useState<string | null>(null)
   const [limitReached, setLimitReached] = useState(false)
   const [extractingQ, setExtractingQ] = useState(false)
+  const [transcript, setTranscript]   = useState('')
+  const [ocrLoading, setOcrLoading]   = useState(false)
+  const [showTranscript, setShowTranscript] = useState(false)
   const inputRef                      = useRef<HTMLInputElement>(null)
   const timerRef                      = useRef<NodeJS.Timeout | null>(null)
 
@@ -484,10 +524,10 @@ export default function EvaluatePage() {
     const valid = newFiles.filter(f =>
       (f.type.startsWith('image/') || f.type === 'application/pdf') && f.size < MAX_FILE_SIZE
     )
+    if (!valid.length) return
     setFiles(prev => [...prev, ...valid].slice(0, 10))
     valid.forEach(f => {
       if (f.type === 'application/pdf') {
-        // Show a PDF placeholder preview
         setPreviews(prev => [...prev, '__pdf__'].slice(0, 10))
       } else {
         const reader = new FileReader()
@@ -495,19 +535,54 @@ export default function EvaluatePage() {
         reader.readAsDataURL(f)
       }
     })
-    // Auto-extract question from first image
+
+    // Run extract-question + OCR in parallel
     const firstImage = valid.find(f => f.type.startsWith('image/'))
-    if (firstImage) {
-      setExtractingQ(true)
-      extractQuestion(firstImage).then(q => {
-        if (q) setQuestion(q)
-        setExtractingQ(false)
-      }).catch(() => setExtractingQ(false))
-    }
+    const imageFiles = valid.filter(f => f.type.startsWith('image/'))
+
+    setOcrLoading(true)
+    setShowTranscript(false)
+    setTranscript('')
+
+    const questionP = firstImage
+      ? (setExtractingQ(true), extractQuestion(firstImage)
+          .then(q => { if (q) setQuestion(q) })
+          .catch(() => {})
+          .finally(() => setExtractingQ(false)))
+      : Promise.resolve()
+
+    const ocrP = imageFiles.length > 0
+      ? (async () => {
+          try {
+            const fd = new FormData()
+            imageFiles.forEach(f => fd.append('files', f))
+            // /api/ocr requires auth token — get it if user is logged in
+            const headers: Record<string, string> = {}
+            if (auth.currentUser) {
+              const tok = await auth.currentUser.getIdToken()
+              headers['x-user-token'] = tok
+            }
+            const res = await fetch('/api/ocr', { method: 'POST', headers, body: fd })
+            if (res.ok) {
+              const data = await res.json()
+              setTranscript(data.text ?? '')
+            }
+          } catch { /* non-fatal */ }
+        })()
+      : Promise.resolve()
+
+    Promise.all([questionP, ocrP]).finally(() => {
+      setOcrLoading(false)
+      setShowTranscript(true)
+    })
   }, []) // eslint-disable-line
 
   const removeFile = (i: number) => {
-    setFiles(prev => prev.filter((_,idx) => idx !== i))
+    setFiles(prev => {
+      const next = prev.filter((_,idx) => idx !== i)
+      if (next.length === 0) { setShowTranscript(false); setTranscript('') }
+      return next
+    })
     setPreviews(prev => prev.filter((_,idx) => idx !== i))
   }
 
@@ -539,6 +614,7 @@ export default function EvaluatePage() {
       fd.append('marks', marks)
       fd.append('subject', subjectId)
       fd.append('lang', 'en')
+      if (transcript.trim()) fd.append('extractedText', transcript.trim())
 
       const res = await fetch('/api/evaluate', {
         method: 'POST',
@@ -561,7 +637,8 @@ export default function EvaluatePage() {
   }
 
   const reset = () => {
-    setResult(null); setFiles([]); setPreviews([]); setQuestion(''); setError(null); setLimitReached(false)
+    setResult(null); setFiles([]); setPreviews([]); setQuestion('')
+    setError(null); setLimitReached(false); setTranscript(''); setShowTranscript(false)
   }
 
   const subjectLabel = optionalId ? (OPTIONAL_LABEL[optionalId] ?? optionalId) : null
@@ -730,8 +807,8 @@ export default function EvaluatePage() {
         </>
         )}
 
-        {/* Form */}
-        {!loading && !result && !limitReached && (
+        {/* Upload form */}
+        {!loading && !result && !limitReached && !showTranscript && (
           <div className="ev-body">
             <div className="ev-form-col">
               <div className="ev-section-label">Answer images</div>
@@ -770,19 +847,86 @@ export default function EvaluatePage() {
                 </div>
               )}
 
-              <div className="ev-field" style={{ borderTop:'1px solid var(--border)', paddingTop:'1.5rem' }}>
-                <div style={{ display:'flex', alignItems:'center', gap:8, fontFamily:'var(--font-ui)', fontSize:'0.8rem', color:'var(--text3)', lineHeight:1.6 }}>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ flexShrink:0 }}>
-                    <circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeWidth="1.2"/>
-                    <path d="M7 6v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-                  </svg>
-                  {extractingQ
-                    ? <span style={{ color:'var(--accent3)' }}>Reading question from your answer sheet…</span>
-                    : files.length > 0
-                      ? <span>Question auto-extracted — <span style={{ color:'var(--text2)' }}>review before submitting.</span></span>
-                      : <span>Question will be auto-extracted from your answer sheet.</span>
-                  }
+              {/* OCR reading indicator */}
+              {ocrLoading && (
+                <div className="ev-ocr-loading">
+                  <div className="ev-ocr-spinner" />
+                  Reading handwriting… this takes a few seconds
                 </div>
+              )}
+
+              {error && <div className="ev-err">{error}</div>}
+            </div>
+
+            <div className="ev-sidebar">
+              <div className="ev-sidebar-block">
+                <div className="ev-sidebar-lbl">How it works</div>
+                {[
+                  { n:'01', title:'Upload images', sub:'Photograph your handwritten answer — up to 10 pages.' },
+                  { n:'02', title:'Review transcript', sub:'We OCR your answer — check and fix any misreads before submitting.' },
+                  { n:'03', title:'Get evaluated', sub:'Marks, section feedback, thinkers to cite, and a model answer.' },
+                ].map(s => (
+                  <div key={s.n} className="ev-step-row">
+                    <div className="ev-step-num">{s.n}</div>
+                    <div className="ev-step-text"><strong>{s.title}</strong>{s.sub}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ev-sidebar-block">
+                <div className="ev-sidebar-lbl">Tips</div>
+                <div className="ev-tip">
+                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF — up to 10 pages.<br/><br/>
+                  <strong>Good lighting matters.</strong> Shoot in daylight, avoid shadows. Blurry images reduce accuracy.<br/><br/>
+                  <strong>Review before submitting.</strong> After upload, you&apos;ll see the OCR transcript — fix any thinker names or dates before we evaluate.
+                </div>
+              </div>
+
+              {!profileLoading && subjectLabel && (
+                <div className="ev-sidebar-block">
+                  <div className="ev-sidebar-lbl">Your optional</div>
+                  <div className="ev-tip">
+                    Evaluation is calibrated for <strong>{subjectLabel}</strong> — thinker roster, rubric weights, and model answers are all subject-specific.
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Transcript review screen */}
+        {!loading && !result && !limitReached && showTranscript && (
+          <div className="ev-transcript-page">
+            <div className="ev-transcript-col">
+              <div className="ev-section-label">Review before submitting</div>
+
+              <div className="ev-transcript-info">
+                <strong>Check carefully before submitting.</strong> OCR can misread thinker names, dates, and technical terms.
+                Fix any errors below — this is what the AI will evaluate.
+              </div>
+
+              <div className="ev-field" style={{ paddingTop:'1.5rem' }}>
+                <label className="ev-field-label">
+                  Question
+                  {extractingQ && <span style={{ color:'var(--accent3)', marginLeft:8, fontWeight:400 }}>reading…</span>}
+                </label>
+                <textarea
+                  className="ev-textarea"
+                  value={question}
+                  onChange={e => setQuestion(e.target.value)}
+                  placeholder="Question will appear here — edit if needed"
+                  rows={3}
+                />
+              </div>
+
+              <div className="ev-field">
+                <label className="ev-field-label">Answer transcript — edit any OCR errors</label>
+                <textarea
+                  className="ev-textarea ev-tarea-tall"
+                  value={transcript}
+                  onChange={e => setTranscript(e.target.value)}
+                  placeholder="OCR transcript will appear here…"
+                />
               </div>
 
               <div className="ev-field">
@@ -798,20 +942,31 @@ export default function EvaluatePage() {
 
               {error && <div className="ev-err">{error}</div>}
 
-              <div className="ev-submit-wrap">
-                <button className="ev-submit" onClick={handleSubmit} disabled={loading || profileLoading || extractingQ || files.length === 0}>
-                  {profileLoading ? 'Loading…' : extractingQ ? 'Reading question…' : 'Evaluate answer →'}
+              <div className="ev-submit-wrap" style={{ display:'flex', gap:'0.75rem' }}>
+                <button
+                  className="ev-btn-ghost"
+                  style={{ width:'auto', padding:'0.85rem 1.25rem' }}
+                  onClick={() => { setShowTranscript(false); setTranscript(''); setFiles([]); setPreviews([]) }}
+                >
+                  ← Re-upload
+                </button>
+                <button
+                  className="ev-submit"
+                  onClick={handleSubmit}
+                  disabled={loading || profileLoading || !question.trim() || !transcript.trim()}
+                >
+                  {profileLoading ? 'Loading…' : 'Looks good — evaluate →'}
                 </button>
               </div>
             </div>
 
             <div className="ev-sidebar">
               <div className="ev-sidebar-block">
-                <div className="ev-sidebar-lbl">How it works</div>
+                <div className="ev-sidebar-lbl">What to check</div>
                 {[
-                  { n:'01', title:'Upload images', sub:'Photograph your handwritten answer — up to 10 pages.' },
-                  { n:'02', title:'Add question + marks', sub:'Paste the exact question and select 10M / 15M / 20M.' },
-                  { n:'03', title:'Get evaluated', sub:'Marks, section feedback, thinkers to cite, and a model answer.' },
+                  { n:'01', title:'Thinker names', sub:'OCR often misreads scholar names — check every name carefully.' },
+                  { n:'02', title:'Dates and years', sub:'Numbers can get transposed — verify all dates in the transcript.' },
+                  { n:'03', title:'Technical terms', sub:'Subject-specific vocabulary may be garbled — fix before evaluating.' },
                 ].map(s => (
                   <div key={s.n} className="ev-step-row">
                     <div className="ev-step-num">{s.n}</div>
@@ -820,20 +975,27 @@ export default function EvaluatePage() {
                 ))}
               </div>
 
-              <div className="ev-sidebar-block">
-                <div className="ev-sidebar-lbl">Tips</div>
-                <div className="ev-tip">
-                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF — up to 10 pages.<br/><br/>
-                  <strong>Good lighting matters.</strong> Shoot in daylight, avoid shadows. Blurry images reduce accuracy.<br/><br/>
-                  <strong>Question auto-fills.</strong> We try to read the question from your sheet — check and edit if needed.
+              {previews.length > 0 && (
+                <div className="ev-sidebar-block">
+                  <div className="ev-sidebar-lbl">Your pages ({previews.length})</div>
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:'0.5rem' }}>
+                    {previews.map((src, i) => (
+                      <div key={i}>
+                        {src === '__pdf__'
+                          ? <div style={{ width:56, height:56, borderRadius:5, background:'var(--bg3)', border:'1px solid var(--border2)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'0.6rem', color:'var(--text3)', fontFamily:'var(--font-ui)' }}>PDF</div>
+                          : <img src={src} alt={`p${i+1}`} style={{ width:56, height:56, borderRadius:5, objectFit:'cover', border:'1px solid var(--border2)' }} />
+                        }
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {!profileLoading && subjectLabel && (
                 <div className="ev-sidebar-block">
                   <div className="ev-sidebar-lbl">Your optional</div>
                   <div className="ev-tip">
-                    Evaluation is calibrated for <strong>{subjectLabel}</strong> — thinker roster, rubric weights, and model answers are all subject-specific.
+                    Evaluation is calibrated for <strong>{subjectLabel}</strong>.
                   </div>
                 </div>
               )}
