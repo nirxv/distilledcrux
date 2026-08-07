@@ -41,17 +41,6 @@ const OPTIONAL_LABEL: Record<string, string> = {
 const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20MB for PDFs
 const MARKS_OPTIONS = ['10', '15', '20']
 
-// ── Auto-extract question from first image via API ───────────────────────────
-async function extractQuestion(file: File): Promise<string> {
-  try {
-    const fd = new FormData()
-    fd.append('file', file)
-    const res = await fetch('/api/extract-question', { method: 'POST', body: fd })
-    const data = await res.json()
-    return data.question ?? ''
-  } catch { return '' }
-}
-
 const CHECKPOINTS = [
   'Reading handwriting',
   'Analysing structure',
@@ -484,7 +473,6 @@ export default function EvaluatePage() {
   const [result, setResult]           = useState<Evaluation | null>(null)
   const [error, setError]             = useState<string | null>(null)
   const [limitReached, setLimitReached] = useState(false)
-  const [extractingQ, setExtractingQ] = useState(false)
   const [transcript, setTranscript]   = useState('')
   const [ocrLoading, setOcrLoading]   = useState(false)
   const [showTranscript, setShowTranscript] = useState(false)
@@ -537,24 +525,6 @@ export default function EvaluatePage() {
     })
   }, []) // eslint-disable-line
 
-  // ── Compress image before sending to OCR ────────────────────────────────
-  const compressImage = (file: File, maxPx = 1600, quality = 0.82): Promise<Blob> =>
-    new Promise((resolve) => {
-      const img = new Image()
-      const url = URL.createObjectURL(file)
-      img.onload = () => {
-        const scale = Math.min(1, maxPx / Math.max(img.width, img.height))
-        const w = Math.round(img.width * scale)
-        const h = Math.round(img.height * scale)
-        const canvas = document.createElement('canvas')
-        canvas.width = w; canvas.height = h
-        canvas.getContext('2d')!.drawImage(img, 0, 0, w, h)
-        URL.revokeObjectURL(url)
-        canvas.toBlob(b => resolve(b ?? file), 'image/jpeg', quality)
-      }
-      img.src = url
-    })
-
   // ── Triggered only when user clicks "Read answer →" ──────────────────────
   const handleReadAnswer = async () => {
     if (!files.length) return
@@ -562,43 +532,44 @@ export default function EvaluatePage() {
     setShowTranscript(false)
     setTranscript('')
     setQuestion('')
+    setError(null)
 
-    const imageFiles = files.filter(f => f.type.startsWith('image/'))
-    const firstImage = imageFiles[0] ?? null
+    try {
+      const imageFiles = files.filter(f => f.type.startsWith('image/'))
+      if (!imageFiles.length) {
+        setError('No image files found. Please upload JPG/PNG images.')
+        setOcrLoading(false)
+        return
+      }
 
-    const questionP = firstImage
-      ? (setExtractingQ(true), extractQuestion(firstImage)
-          .then(q => { if (q) setQuestion(q) })
-          .catch(() => {})
-          .finally(() => setExtractingQ(false)))
-      : Promise.resolve()
+      const fd = new FormData()
+      imageFiles.forEach((f, i) => fd.append('files', f, `page-${i+1}.${f.type.split('/')[1] || 'jpg'}`))
 
-    const ocrP = imageFiles.length > 0
-      ? (async () => {
-          try {
-            const fd = new FormData()
-            const compressed = await Promise.all(imageFiles.map(f => compressImage(f)))
-            compressed.forEach((blob, i) => fd.append('files', new File([blob], `page-${i+1}.jpg`, { type: 'image/jpeg' })))
-            const headers: Record<string, string> = {}
-            if (user) {
-              const tok = await user.getIdToken()
-              headers['x-user-token'] = tok
-            }
-            const res = await fetch('/api/ocr', { method: 'POST', headers, body: fd })
-            const data = await res.json()
-            if (res.ok) {
-              setTranscript(data.text ?? '')
-            } else {
-              console.error('OCR failed:', res.status, data)
-              setError(`OCR failed: ${data.error ?? res.status}`)
-            }
-          } catch (e) { console.error('OCR exception:', e) }
-        })()
-      : Promise.resolve()
+      const headers: Record<string, string> = {}
+      if (user) {
+        const tok = await user.getIdToken()
+        headers['x-user-token'] = tok
+      }
 
-    await Promise.all([questionP, ocrP])
-    setOcrLoading(false)
-    setShowTranscript(true)
+      const res = await fetch('/api/read-answer', { method: 'POST', headers, body: fd })
+      const data = await res.json()
+
+      if (!res.ok) {
+        console.error('read-answer failed:', res.status, data)
+        setError(data.error ?? 'Failed to read answer sheet.')
+        setOcrLoading(false)
+        return
+      }
+
+      if (data.question) setQuestion(data.question)
+      setTranscript(data.transcript ?? '')
+    } catch (e) {
+      console.error('read-answer exception:', e)
+      setError('Network error. Please try again.')
+    } finally {
+      setOcrLoading(false)
+      setShowTranscript(true)
+    }
   }
 
   const removeFile = (i: number) => {
@@ -937,10 +908,7 @@ export default function EvaluatePage() {
               </div>
 
               <div className="ev-field" style={{ paddingTop:'1.5rem' }}>
-                <label className="ev-field-label">
-                  Question
-                  {extractingQ && <span style={{ color:'var(--accent3)', marginLeft:8, fontWeight:400 }}>reading…</span>}
-                </label>
+                <label className="ev-field-label">Question</label>
                 <textarea
                   className="ev-textarea"
                   value={question}
@@ -984,7 +952,7 @@ export default function EvaluatePage() {
                 <button
                   className="ev-submit"
                   onClick={handleSubmit}
-                  disabled={loading || profileLoading || !question.trim() || !transcript.trim()}
+                  disabled={loading || profileLoading || !question.trim()}
                 >
                   {profileLoading ? 'Loading…' : 'Looks good — evaluate →'}
                 </button>
