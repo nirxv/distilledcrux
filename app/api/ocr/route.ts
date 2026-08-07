@@ -21,7 +21,6 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const rawFiles = formData.getAll("files") as File[];
-    // Sort numerically so page-1, page-2 ... are in order
     const files = [...rawFiles].sort((a, b) =>
       a.name.localeCompare(b.name, undefined, { numeric: true })
     );
@@ -33,16 +32,18 @@ export async function POST(req: NextRequest) {
 
     for (const file of files) {
       if (file.size > MAX_FILE_SIZE)
-        return NextResponse.json({ error: "File too large (max 5MB each)" }, { status: 400 });
+        return NextResponse.json({ error: "File too large (max 20MB each)" }, { status: 400 });
       if (!ALLOWED_TYPES.includes(file.type))
         return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
     }
 
-    // Convert files to base64 for Gemini
-    const imageParts = await Promise.all(
+    // Convert files to base64 for Mistral
+    const imageContents = await Promise.all(
       files.map(async (file) => {
         const buffer = Buffer.from(await file.arrayBuffer());
-        return { inline_data: { mime_type: file.type || "image/jpeg", data: buffer.toString("base64") } };
+        const b64 = buffer.toString("base64");
+        const mimeType = file.type || "image/jpeg";
+        return `data:${mimeType};base64,${b64}`;
       })
     );
 
@@ -65,31 +66,35 @@ RULES:
 
 Output the transcription now:`;
 
-    const geminiParts = [
-      ...imageParts,
-      { text: ocrPrompt },
-    ];
+    // Build Mistral message content — one image_url block per page
+    const contentBlocks: object[] = imageContents.map(dataUrl => ({
+      type: "image_url",
+      image_url: dataUrl,
+    }));
+    contentBlocks.push({ type: "text", text: ocrPrompt });
 
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ role: "user", parts: geminiParts }],
-          generationConfig: { temperature: 0.0, maxOutputTokens: 4000 },
-        }),
-      }
-    );
+    const res = await fetch("https://api.mistral.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.MISTRAL_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "pixtral-12b-2409",
+        messages: [{ role: "user", content: contentBlocks }],
+        temperature: 0.0,
+        max_tokens: 4000,
+      }),
+    });
 
     if (!res.ok) {
       const err = await res.text();
-      console.error("Gemini OCR failed:", res.status, err);
+      console.error("Mistral OCR failed:", res.status, err);
       return NextResponse.json({ error: "OCR failed. Please try a clearer image.", detail: err }, { status: 500 });
     }
 
     const data = await res.json();
-    const text: string = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? "";
+    const text: string = data.choices?.[0]?.message?.content?.trim() ?? "";
 
     return NextResponse.json({ text });
   } catch (err) {
