@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -317,9 +317,20 @@ function ToolIcon({ icon }: { icon: string }) {
 
 export default function Dashboard() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
+
+  useEffect(() => {
+    if (searchParams.get('payment') === 'success') {
+      setShowPaymentSuccess(true);
+      // Clean URL without reload
+      window.history.replaceState({}, '', '/dashboard');
+      setTimeout(() => setShowPaymentSuccess(false), 5000);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
@@ -365,6 +376,29 @@ export default function Dashboard() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
+
+      {/* Payment success toast */}
+      {showPaymentSuccess && (
+        <div style={{
+          position: 'fixed', top: 80, right: 24, zIndex: 9999,
+          background: 'var(--bg2)', border: '1px solid rgba(74,222,128,0.35)',
+          borderRadius: 10, padding: '14px 20px',
+          display: 'flex', alignItems: 'center', gap: 12,
+          boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+          animation: 'fadeUp 0.25s ease',
+          maxWidth: 340,
+        }}>
+          <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'rgba(74,222,128,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#4ade80" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </div>
+          <div>
+            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Payment successful!</div>
+            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)' }}>Your premium access is now active.</div>
+          </div>
+          <button onClick={() => setShowPaymentSuccess(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', marginLeft: 'auto', padding: 4, lineHeight: 1 }}>✕</button>
+        </div>
+      )}
+
       <div className="db-page">
 
         {/* ── Header ── */}
