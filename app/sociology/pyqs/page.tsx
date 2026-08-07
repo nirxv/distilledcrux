@@ -81,7 +81,7 @@ const CSS = `
 `;
 
 const TOPICS = ["Sociology as Science","Social Research Methods","Sociological Thinkers","Social Stratification","Social Mobility","Social Movements","Religion and Society","Politics and Society","Economy and Society","Family and Marriage","Education and Society","Social Change","Indian Society","Indian Villages","Tribal Society","Caste System","Agrarian Structure","Industry and Labour","Weaker Sections","Social Movements in India","Other"];
-const YEARS = ["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"];
+const YEARS = ["2025","2024","2023","2022","2021","2020","2019","2018","2017","2016","2015","2014","2013"];
 
 export default function SociologyPYQsPage() {
   const router = useRouter();
