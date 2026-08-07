@@ -527,6 +527,26 @@ export default function EvaluatePage() {
   }, []) // eslint-disable-line
 
   // ── Triggered only when user clicks "Read answer →" ──────────────────────
+  // Convert PDF pages to JPEG blobs client-side using pdf.js
+  const convertPdfToImages = async (file: File): Promise<File[]> => {
+    const pdfjsLib = await import('pdfjs-dist')
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`
+    const arrayBuffer = await file.arrayBuffer()
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise
+    const imageFiles: File[] = []
+    for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
+      const page = await pdf.getPage(i)
+      const viewport = page.getViewport({ scale: 2 }) // 2x = ~150dpi equivalent
+      const canvas = document.createElement('canvas')
+      canvas.width = viewport.width
+      canvas.height = viewport.height
+      await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise
+      const blob = await new Promise<Blob>(res => canvas.toBlob(b => res(b!), 'image/jpeg', 0.92))
+      imageFiles.push(new File([blob], `page-${i}.jpg`, { type: 'image/jpeg' }))
+    }
+    return imageFiles
+  }
+
   const handleReadAnswer = async () => {
     if (!files.length) return
     setOcrLoading(true)
@@ -536,15 +556,25 @@ export default function EvaluatePage() {
     setError(null)
 
     try {
-      const imageFiles = files.filter(f => f.type.startsWith('image/'))
-      if (!imageFiles.length) {
-        setError('No image files found. Please upload JPG/PNG images.')
+      // Convert any PDFs to images first
+      const allImageFiles: File[] = []
+      for (const f of files) {
+        if (f.type === 'application/pdf') {
+          const pages = await convertPdfToImages(f)
+          allImageFiles.push(...pages)
+        } else if (f.type.startsWith('image/')) {
+          allImageFiles.push(f)
+        }
+      }
+
+      if (!allImageFiles.length) {
+        setError('No readable files found. Please upload JPG/PNG images or a PDF.')
         setOcrLoading(false)
         return
       }
 
       const fd = new FormData()
-      imageFiles.forEach((f, i) => fd.append('files', f, `page-${i+1}.${f.type.split('/')[1] || 'jpg'}`))
+      allImageFiles.forEach((f, i) => fd.append('files', f, `page-${i+1}.jpg`))
 
       const headers: Record<string, string> = {}
       if (user) {
