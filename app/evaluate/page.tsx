@@ -535,14 +535,18 @@ export default function EvaluatePage() {
         reader.readAsDataURL(f)
       }
     })
+  }, []) // eslint-disable-line
 
-    // Run extract-question + OCR in parallel
-    const firstImage = valid.find(f => f.type.startsWith('image/'))
-    const imageFiles = valid.filter(f => f.type.startsWith('image/'))
-
+  // ── Triggered only when user clicks "Read answer →" ──────────────────────
+  const handleReadAnswer = async () => {
+    if (!files.length) return
     setOcrLoading(true)
     setShowTranscript(false)
     setTranscript('')
+    setQuestion('')
+
+    const imageFiles = files.filter(f => f.type.startsWith('image/'))
+    const firstImage = imageFiles[0] ?? null
 
     const questionP = firstImage
       ? (setExtractingQ(true), extractQuestion(firstImage)
@@ -556,7 +560,6 @@ export default function EvaluatePage() {
           try {
             const fd = new FormData()
             imageFiles.forEach(f => fd.append('files', f))
-            // /api/ocr requires auth token — get it if user is logged in
             const headers: Record<string, string> = {}
             if (auth.currentUser) {
               const tok = await auth.currentUser.getIdToken()
@@ -571,11 +574,10 @@ export default function EvaluatePage() {
         })()
       : Promise.resolve()
 
-    Promise.all([questionP, ocrP]).finally(() => {
-      setOcrLoading(false)
-      setShowTranscript(true)
-    })
-  }, []) // eslint-disable-line
+    await Promise.all([questionP, ocrP])
+    setOcrLoading(false)
+    setShowTranscript(true)
+  }
 
   const removeFile = (i: number) => {
     setFiles(prev => {
@@ -847,7 +849,14 @@ export default function EvaluatePage() {
                 </div>
               )}
 
-              {/* OCR reading indicator */}
+              {files.length > 0 && !ocrLoading && (
+                <div className="ev-submit-wrap">
+                  <button className="ev-submit" onClick={handleReadAnswer}>
+                    Read answer →
+                  </button>
+                </div>
+              )}
+
               {ocrLoading && (
                 <div className="ev-ocr-loading">
                   <div className="ev-ocr-spinner" />
