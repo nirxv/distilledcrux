@@ -23,7 +23,27 @@ export async function POST(req: NextRequest) {
     const now = new Date().toISOString();
 
     if (is_new_session) {
-      // New session — insert row
+      // Geo lookup from IP
+      let country: string | null = null;
+      let city: string | null = null;
+      try {
+        const ip =
+          req.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+          req.headers.get('x-real-ip') ||
+          null;
+        if (ip && ip !== '::1' && ip !== '127.0.0.1') {
+          const geo = await fetch(`http://ip-api.com/json/${ip}?fields=country,city,status`, {
+            signal: AbortSignal.timeout(2000),
+          }).then(r => r.json());
+          if (geo.status === 'success') {
+            country = geo.country ?? null;
+            city = geo.city ?? null;
+          }
+        }
+      } catch {
+        // geo is best-effort, never block the insert
+      }
+
       await sb.from('user_sessions').insert({
         visitor_id,
         firebase_uid: firebase_uid || null,
@@ -40,6 +60,8 @@ export async function POST(req: NextRequest) {
         is_bounce: true,
         visit_count: 1,
         session_duration_secs: 0,
+        country,
+        city,
       });
     } else {
       // Existing session — fetch and update
