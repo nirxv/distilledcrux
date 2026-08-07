@@ -516,23 +516,13 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
     }
 
-    // Build image contents — handle PDF by rasterizing to JPEG pages first
-    const imageContents: { type: "image_url"; image_url: { url: string } }[] = [];
+    // Build image contents — client converts PDFs to images before sending
+    const imageContents: { type: "image_url"; image_url: { url: string } }[] = []
     for (const imgFile of files) {
-      if (imgFile.type === 'application/pdf') {
-        // Rasterize PDF → JPEG pages
-        const { rasterizePdf } = await import('@/lib/rasterizePdf');
-        const pdfBuffer = Buffer.from(await imgFile.arrayBuffer());
-        const pages = await rasterizePdf(pdfBuffer, 150);
-        for (const page of pages.slice(0, MAX_FILES)) {
-          imageContents.push({ type: "image_url" as const, image_url: { url: `data:${page.mimeType};base64,${page.base64}` } });
-        }
-      } else {
-        const buffer = Buffer.from(await imgFile.arrayBuffer());
-        const base64 = buffer.toString("base64");
-        const mime = imgFile.type || "image/jpeg";
-        imageContents.push({ type: "image_url" as const, image_url: { url: `data:${mime};base64,${base64}` } });
-      }
+      const buffer = Buffer.from(await imgFile.arrayBuffer());
+      const base64 = buffer.toString("base64");
+      const mime = imgFile.type || "image/jpeg";
+      imageContents.push({ type: "image_url" as const, image_url: { url: `data:${mime};base64,${base64}` } });
     }
     if (imageContents.length === 0 && !extractedText) {
       return NextResponse.json({ error: "No images or PDF provided" }, { status: 400 });
