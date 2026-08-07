@@ -3,7 +3,7 @@ import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 
 export const maxDuration = 60;
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB
 const MAX_FILES = 10;
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"];
 
@@ -84,8 +84,8 @@ Output the transcription now:`;
 
     if (!res.ok) {
       const err = await res.text();
-      console.error("Gemini OCR failed:", err);
-      return NextResponse.json({ error: "OCR failed. Please try a clearer image." }, { status: 500 });
+      console.error("Gemini OCR failed:", res.status, err);
+      return NextResponse.json({ error: "OCR failed. Please try a clearer image.", detail: err }, { status: 500 });
     }
 
     const data = await res.json();
