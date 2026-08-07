@@ -66,44 +66,55 @@ function touchSession() {
   } catch {}
 }
 
+const HEARTBEAT_MS = 5 * 60 * 1000; // 5 minutes
+
 export default function SessionTracker() {
   const pathname = usePathname();
   const lastPath = useRef<string | null>(null);
 
+  const ping = async (page: string, is_new_session: boolean) => {
+    const visitor_id = getVisitorId();
+    const firebase_uid = auth.currentUser?.uid ?? null;
+    const { device, os, browser } = parseUA();
+    touchSession();
+
+    try {
+      await fetch('/api/track-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          visitor_id,
+          firebase_uid,
+          page,
+          referrer: document.referrer || null,
+          device,
+          os,
+          browser,
+          is_new_session,
+        }),
+      });
+    } catch {
+      // silent — never break the UI
+    }
+  };
+
+  // Fire on page navigation
   useEffect(() => {
-    // Don't fire twice for same path
     if (lastPath.current === pathname) return;
     lastPath.current = pathname;
-
-    const track = async () => {
-      const visitor_id = getVisitorId();
-      const firebase_uid = auth.currentUser?.uid ?? null;
-      const { device, os, browser } = parseUA();
-      const new_session = isNewSession();
-      touchSession();
-
-      try {
-        await fetch('/api/track-session', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            visitor_id,
-            firebase_uid,
-            page: pathname,
-            referrer: document.referrer || null,
-            device,
-            os,
-            browser,
-            is_new_session: new_session,
-          }),
-        });
-      } catch {
-        // silent — never break the UI
-      }
-    };
-
-    track();
+    const new_session = isNewSession();
+    ping(pathname, new_session);
   }, [pathname]);
+
+  // Heartbeat every 5 mins — keeps duration + last_active fresh
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const page = lastPath.current ?? pathname;
+      ping(page, false);
+    }, HEARTBEAT_MS);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return null;
 }
