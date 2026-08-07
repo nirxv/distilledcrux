@@ -566,11 +566,14 @@ export default function EvaluatePage() {
               headers['x-user-token'] = tok
             }
             const res = await fetch('/api/ocr', { method: 'POST', headers, body: fd })
+            const data = await res.json()
             if (res.ok) {
-              const data = await res.json()
               setTranscript(data.text ?? '')
+            } else {
+              console.error('OCR failed:', res.status, data)
+              setError(`OCR failed: ${data.error ?? res.status}`)
             }
-          } catch { /* non-fatal */ }
+          } catch (e) { console.error('OCR exception:', e) }
         })()
       : Promise.resolve()
 
