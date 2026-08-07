@@ -530,7 +530,8 @@ export default function EvaluatePage() {
   // Convert PDF pages to JPEG blobs client-side using pdf.js
   const convertPdfToImages = async (file: File): Promise<File[]> => {
     const pdfjsLib = await import('pdfjs-dist')
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`
+    const workerUrl = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url)
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl.toString()
     const arrayBuffer = await file.arrayBuffer()
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise
     const imageFiles: File[] = []
