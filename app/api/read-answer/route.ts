@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
+import { createServerClient } from '@/lib/supabase';
 
 export const maxDuration = 60;
 
 const MAX_FILE_SIZE = 20 * 1024 * 1024;
 const MAX_FILES = 10;
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
+const OWNER_UID = process.env.OWNER_FIREBASE_UID ?? '';
+const READ_FREE_LIMIT = 1;
 
 async function mistral(imageBlocks: object[], prompt: string, maxTokens: number): Promise<string> {
   const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
@@ -38,11 +41,28 @@ const stripHtml = (s: string) =>
 export async function POST(req: NextRequest) {
   const token = req.headers.get('x-user-token') ?? '';
   if (!token) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  let verifiedUid: string | null = null;
   try {
     const user = await verifyFirebaseToken(token);
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    verifiedUid = user.uid;
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  // Usage gate — same limit as evaluate (1 free, shared counter)
+  if (verifiedUid !== OWNER_UID) {
+    const sb = createServerClient();
+    let isPremium = false;
+    const { data: sub } = await sb.from('subscriptions').select('id').eq('firebase_uid', verifiedUid).eq('status', 'active').maybeSingle();
+    if (sub) isPremium = true;
+
+    if (!isPremium) {
+      const { data: usage } = await sb.from('usage_tracking').select('eval_count').eq('firebase_uid', verifiedUid).maybeSingle();
+      if ((usage?.eval_count ?? 0) >= READ_FREE_LIMIT)
+        return NextResponse.json({ error: 'limit_reached' }, { status: 403 });
+    }
   }
 
   try {
