@@ -1,60 +1,63 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// app/api/extract-question/route.ts
-// Quick vision call: extract the question written at the top of an answer sheet.
-// Called after images are uploaded, before the user types the question manually.
-// ─────────────────────────────────────────────────────────────────────────────
-
 import { NextRequest, NextResponse } from 'next/server';
-import Anthropic from '@anthropic-ai/sdk';
-
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-
     const file = formData.get('file') as File | null;
     if (!file) return NextResponse.json({ question: '' });
     if (file.size > MAX_FILE_SIZE) return NextResponse.json({ question: '' });
 
     const buffer = Buffer.from(await file.arrayBuffer());
     const base64 = buffer.toString('base64');
-    const mime = (file.type?.startsWith('image/') ? file.type : 'image/jpeg') as 'image/jpeg' | 'image/png' | 'image/gif' | 'image/webp';
+    const mime = file.type?.startsWith('image/') ? file.type : 'image/jpeg';
 
-    const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5',
-      max_tokens: 300,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'image',
-              source: { type: 'base64', media_type: mime, data: base64 },
-            },
-            {
-              type: 'text',
-              text: `Look at the top of this UPSC answer sheet. Extract ONLY the question text written at the top (it may say "Q." or "Question:" before it, or just be written directly).
+    const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.MISTRAL_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: 'pixtral-12b-2409',
+        max_tokens: 200,
+        temperature: 0.0,
+        messages: [
+          {
+            role: 'user',
+            content: [
+              { type: 'image_url', image_url: `data:${mime};base64,${base64}` },
+              {
+                type: 'text',
+                text: `Look at this UPSC answer sheet. The question is written at the very top, often preceded by "Q." or "Q.No." or a number. It ends before the answer begins.
 
-Return ONLY the question text itself — no preamble, no "The question is:", no explanation. If you cannot find a question at the top, return an empty string.
+Extract ONLY the question text — one or two sentences at most. Stop as soon as the answer body begins (the answer usually starts with an introduction, definition, or thinker name).
 
-Do not include any answer content, only the question.`,
-            },
-          ],
-        },
-      ],
+Rules:
+- Return ONLY the question text, nothing else
+- No preamble, no "The question is:", no explanation
+- Do NOT include any part of the answer
+- If no question found, return empty string
+- Maximum 200 characters`,
+              },
+            ],
+          },
+        ],
+      }),
     });
 
-    const raw = (response.content[0] as { type: string; text: string })?.text?.trim() ?? '';
+    if (!res.ok) {
+      console.error('Mistral extract-question failed:', res.status, await res.text());
+      return NextResponse.json({ question: '' });
+    }
 
-    // Sanity check — if it looks like a full answer (>500 chars) it's probably wrong
+    const data = await res.json();
+    const raw = data.choices?.[0]?.message?.content?.trim() ?? '';
     const question = raw.length > 0 && raw.length < 500 ? raw : '';
-
     return NextResponse.json({ question });
   } catch (err) {
     console.error('extract-question error:', err);
-    return NextResponse.json({ question: '' }); // non-fatal, user can type manually
+    return NextResponse.json({ question: '' });
   }
 }
