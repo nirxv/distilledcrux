@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/pub-admin';
 
 export const metadata: Metadata = {
-  title: 'Public Administration Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Public Administration Optional — administrative theory, Indian administration, civil services, local government and more.',
+  title: 'Public Administration Optional Notes UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC Public Administration Optional administrative theory, Indian administration, civil services, local government and more.',
   alternates: { canonical: 'https://distilledcrux.com/notes/pub-admin' },
 };
 

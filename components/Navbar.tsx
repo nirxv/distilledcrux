@@ -259,7 +259,7 @@ export default function Navbar() {
           {/* Right: theme + avatar + hamburger */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
 
-            {/* Theme toggle — hidden on mobile to save space */}
+            {/* Theme toggle hidden on mobile to save space */}
             <button
               onClick={toggleTheme}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -372,7 +372,7 @@ export default function Navbar() {
               </Link>
             )}
 
-            {/* Hamburger button — mobile only */}
+            {/* Hamburger button mobile only */}
             <button
               className="nav-hamburger"
               onClick={() => setMobileOpen((o) => !o)}

@@ -20,8 +20,8 @@ export async function generateMetadata(
   if (!note) return {};
   const subjectLabel = subject.charAt(0).toUpperCase() + subject.slice(1);
   return {
-    title: `${note.title} — UPSC ${subjectLabel} Optional Notes | Distilled Crux`,
-    description: `${note.description}. Detailed notes for UPSC ${subjectLabel} Optional, Paper ${note.paper} — ${note.section}.`,
+    title: `${note.title} UPSC ${subjectLabel} Optional Notes | Distilled Crux`,
+    description: `${note.description}. Detailed notes for UPSC ${subjectLabel} Optional, Paper ${note.paper} ${note.section}.`,
     alternates: { canonical: `https://distilledcrux.com/notes/${subject}/${slug}` },
   };
 }
@@ -61,7 +61,7 @@ export default async function NotePage(
       {
         '@type': 'Article',
         '@id': `https://distilledcrux.com/notes/${subject}/${slug}#article`,
-        headline: `${note.title} — UPSC ${subject} Optional Notes`,
+        headline: `${note.title} UPSC ${subject} Optional Notes`,
         description: note.description,
         url: `https://distilledcrux.com/notes/${subject}/${slug}`,
         isPartOf: { '@id': 'https://distilledcrux.com/#website' },

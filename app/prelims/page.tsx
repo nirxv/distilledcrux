@@ -5,7 +5,7 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'UPSC Prelims Preparation | Distilled Crux',
   description:
-    'Topic-wise MCQ practice, previous year papers with AI explanations, daily quizzes and performance analytics — built for UPSC Prelims.',
+    'Topic-wise MCQ practice, previous year papers with AI explanations, daily quizzes and performance analytics built for UPSC Prelims.',
   alternates: { canonical: 'https://distilledcrux.com/prelims' },
 };
 
@@ -17,15 +17,15 @@ const subjects = [
   { id: 'environment',   name: 'Environment & Ecology',sub: 'Biodiversity, Climate & Current Affairs',      color: '#86efac', dim: 'rgba(134,239,172,0.07)', border: 'rgba(134,239,172,0.18)', icon: '🌿', href: '/prelims/environment' },
   { id: 'science',       name: 'Science & Technology', sub: 'Physics, Chemistry, Biology & Space',         color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.18)', icon: '🔬', href: '/prelims/science' },
   { id: 'current',       name: 'Current Affairs',      sub: 'Monthly digests, Schemes & Reports',          color: '#c084fc', dim: 'rgba(192,132,252,0.07)', border: 'rgba(192,132,252,0.18)', icon: '📰', href: '/prelims/current' },
-  { id: 'csat',          name: 'CSAT — Paper II',      sub: 'Reading, Reasoning & Basic Numeracy',         color: '#fb923c', dim: 'rgba(251,146,60,0.07)',  border: 'rgba(251,146,60,0.18)',  icon: '🧮', href: '/prelims/csat' },
+  { id: 'csat',          name: 'CSAT Paper II',      sub: 'Reading, Reasoning & Basic Numeracy',         color: '#fb923c', dim: 'rgba(251,146,60,0.07)',  border: 'rgba(251,146,60,0.18)',  icon: '🧮', href: '/prelims/csat' },
 ];
 
 const features = [
   { num: '01', label: 'Topic-wise MCQ Bank',       desc: '10,000+ MCQs organised by syllabus topic. Filter by year, difficulty, and source. Timed or practice mode.' },
-  { num: '02', label: 'PYP with AI Explanations',  desc: '25 years of previous year papers — each question explained by AI with the exact concept, trap, and correct reasoning.' },
-  { num: '03', label: 'Daily Quiz — 10 Questions',  desc: 'Ten curated questions every morning, mixed from weak areas and current affairs. Builds the habit that actually works.' },
+  { num: '02', label: 'PYP with AI Explanations',  desc: '25 years of previous year papers each question explained by AI with the exact concept, trap, and correct reasoning.' },
+  { num: '03', label: 'Daily Quiz 10 Questions',  desc: 'Ten curated questions every morning, mixed from weak areas and current affairs. Builds the habit that actually works.' },
   { num: '04', label: 'Weakness Radar',             desc: 'After every session, the platform maps your accuracy by subject and topic. Study what matters, skip what you already know.' },
-  { num: '05', label: 'CSAT Practice Sets',         desc: 'Full-length CSAT sets with reading comprehension, reasoning, and arithmetic — timed to mirror exam conditions.' },
+  { num: '05', label: 'CSAT Practice Sets',         desc: 'Full-length CSAT sets with reading comprehension, reasoning, and arithmetic timed to mirror exam conditions.' },
   { num: '06', label: 'Current Affairs Digest',     desc: 'Monthly digests linking every current affairs story to its Prelims syllabus topic. Mapped, not dumped.' },
 ];
 
@@ -116,7 +116,7 @@ const CSS = `
     letter-spacing: 0.04em; text-transform: uppercase;
   }
 
-  /* Marquee — identical to main LP */
+  /* Marquee identical to main LP */
   .pr-marquee-wrap {
     overflow: hidden; border-bottom: 1px solid var(--border);
     padding: 10px 0; background: var(--bg2);
@@ -179,7 +179,7 @@ const CSS = `
     color: var(--text3); line-height: 1.5;
   }
 
-  /* ── Feature list — identical structure to lp-tools-list ── */
+  /* ── Feature list identical structure to lp-tools-list ── */
   .pr-feat-list {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 1px; background: var(--border);
@@ -370,7 +370,7 @@ export default function PrelimsPage() {
           <div>
             <p className="pr-hero-desc">
               10,000+ topic-wise MCQs, 25 years of PYPs explained by AI, a daily quiz habit, and a
-              weakness radar that tells you exactly what to fix — built for aspirants who are serious about Prelims.
+              weakness radar that tells you exactly what to fix built for aspirants who are serious about Prelims.
             </p>
             <div className="pr-hero-actions">
               <Link href="/login" className="pr-btn-primary">Start free →</Link>
@@ -412,7 +412,7 @@ export default function PrelimsPage() {
               <h2 className="pr-section-h2">Eight subjects.<br /><em>One platform.</em></h2>
             </div>
             <p className="pr-section-desc">
-              Every Prelims topic — GS Paper I and CSAT — covered with MCQs, notes and
+              Every Prelims topic GS Paper I and CSAT covered with MCQs, notes and
               year-wise question breakdowns. No jumping between resources.
             </p>
           </div>
@@ -431,7 +431,7 @@ export default function PrelimsPage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <span style={{ fontSize: '1.4rem' }}>⚡</span>
               <div>
-                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Daily Quiz — 10 Questions</div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Daily Quiz 10 Questions</div>
                 <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)' }}>Mixed subjects · 60 seconds per question · Explanations included</div>
               </div>
             </div>
@@ -452,7 +452,7 @@ export default function PrelimsPage() {
               <h2 className="pr-section-h2">Prep that&apos;s precise.<br /><em>Not just vast.</em></h2>
             </div>
             <p className="pr-section-desc">
-              Every feature is built around one metric — your Prelims score. No content dumping,
+              Every feature is built around one metric your Prelims score. No content dumping,
               no passive reading. Active recall, evaluation, and iteration.
             </p>
           </div>
@@ -475,8 +475,8 @@ export default function PrelimsPage() {
               <div className="pr-callout-title">Don&apos;t treat CSAT as an afterthought</div>
               <div className="pr-callout-body">
                 CSAT is qualifying but it has failed thousands of aspirants who assumed they&apos;d clear it easily.
-                Distilled Crux includes a dedicated CSAT module — full-length sets, reading comprehension strategies,
-                and timed drills — so Paper II is never a surprise.
+                Distilled Crux includes a dedicated CSAT module full-length sets, reading comprehension strategies,
+                and timed drills so Paper II is never a surprise.
               </div>
             </div>
           </div>
@@ -523,7 +523,7 @@ export default function PrelimsPage() {
             <div className="pr-crosslink-left">
               <span style={{ fontSize: '1.5rem' }}>📖</span>
               <div>
-                <div className="pr-crosslink-name">Distilled Crux — Optional Subjects</div>
+                <div className="pr-crosslink-name">Distilled Crux Optional Subjects</div>
                 <div className="pr-crosslink-sub">Sociology, Anthropology, PSIR, Geography, Public Administration</div>
               </div>
             </div>

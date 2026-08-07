@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Refund Policy — Distilled Crux",
+  title: "Refund Policy Distilled Crux",
   description: "Refund Policy for distilledcrux.com premium subscriptions.",
   alternates: { canonical: "https://distilledcrux.com/refund" },
 };
@@ -35,7 +35,7 @@ export default function RefundPage() {
         <p style={S.p}>
           All subscription purchases are <strong style={S.strong}>final and non-refundable</strong>. Once a
           payment is processed via Razorpay, we do not offer refunds, partial refunds,
-          or credits — regardless of usage.
+          or credits regardless of usage.
         </p>
         <p style={S.p}>
           We strongly recommend using the <strong style={S.strong}>free plan</strong> to evaluate the platform
@@ -44,9 +44,9 @@ export default function RefundPage() {
 
         <h2 style={S.h2}>2. Subscription Plans</h2>
         <ul style={S.ul}>
-          <li style={S.li}><strong style={S.strong}>Daily</strong> — ₹49/day</li>
-          <li style={S.li}><strong style={S.strong}>6 Months</strong> — ₹3,999/6 months</li>
-          <li style={S.li}><strong style={S.strong}>Yearly</strong> — ₹5,999/year</li>
+          <li style={S.li}><strong style={S.strong}>Daily</strong> ₹49/day</li>
+          <li style={S.li}><strong style={S.strong}>6 Months</strong> ₹3,999/6 months</li>
+          <li style={S.li}><strong style={S.strong}>Yearly</strong> ₹5,999/year</li>
         </ul>
 
         <h2 style={S.h2}>3. Exceptions</h2>
@@ -55,11 +55,11 @@ export default function RefundPage() {
         </p>
         <ul style={S.ul}>
           <li style={S.li}>
-            <strong style={S.strong}>Duplicate payment</strong> — if you were charged more than once for the
+            <strong style={S.strong}>Duplicate payment</strong> if you were charged more than once for the
             same plan due to a technical error
           </li>
           <li style={S.li}>
-            <strong style={S.strong}>Extended service outage</strong> — if premium features were inaccessible
+            <strong style={S.strong}>Extended service outage</strong> if premium features were inaccessible
             for more than 5 consecutive days due to our platform failure
           </li>
         </ul>

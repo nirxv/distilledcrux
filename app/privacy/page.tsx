@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Distilled Crux",
-  description: "Privacy Policy for distilledcrux.com — how we collect, use, and protect your data.",
+  title: "Privacy Policy Distilled Crux",
+  description: "Privacy Policy for distilledcrux.com how we collect, use, and protect your data.",
   alternates: { canonical: "https://distilledcrux.com/privacy" },
 };
 
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
         <ul style={S.ul}>
           <li style={S.li}>Email address and name (when you sign in via Google OAuth)</li>
           <li style={S.li}>Answer scripts and evaluation content you upload</li>
-          <li style={S.li}>Payment information — processed by Razorpay; we do not store card details</li>
+          <li style={S.li}>Payment information processed by Razorpay; we do not store card details</li>
         </ul>
         <h3 style={S.h3}>Information collected automatically</h3>
         <ul style={S.ul}>
@@ -63,8 +63,8 @@ export default function PrivacyPage() {
         <h2 style={S.h2}>4. Sharing of Information</h2>
         <p style={S.p}>We do not sell your personal data. We share data only with:</p>
         <ul style={S.ul}>
-          <li style={S.li}><strong style={S.strong}>Razorpay</strong> — payment processing</li>
-          <li style={S.li}><strong style={S.strong}>Google</strong> — OAuth sign-in</li>
+          <li style={S.li}><strong style={S.strong}>Razorpay</strong> payment processing</li>
+          <li style={S.li}><strong style={S.strong}>Google</strong> OAuth sign-in</li>
           <li style={S.li}>Law enforcement, if required by applicable Indian law</li>
         </ul>
 

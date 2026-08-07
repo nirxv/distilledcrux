@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes } from '@/lib/notes/anthropology';
 
 export const metadata: Metadata = {
-  title: 'Anthropology Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Anthropology Optional covering all Paper I and Paper II topics — human evolution, genetics, tribal India, Indian archaeology and more.',
+  title: 'Anthropology Optional Notes UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC Anthropology Optional covering all Paper I and Paper II topics human evolution, genetics, tribal India, Indian archaeology and more.',
   alternates: { canonical: 'https://distilledcrux.com/notes/anthropology' },
 };
 

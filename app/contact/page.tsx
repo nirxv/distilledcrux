@@ -80,11 +80,11 @@ export default function ContactPage() {
           <div className="ct-head">
             <span className="ct-tag">Contact</span>
             <h1 className="ct-title">Get in <em>Touch</em></h1>
-            <p className="ct-sub">Have a question or issue? We typically respond within 1–2 business days.</p>
+            <p className="ct-sub">Have a question or issue? We typically respond within 1-2 business days.</p>
           </div>
 
           <div className="ct-grid">
-            {/* Left — info cards */}
+            {/* Left info cards */}
             <div className="ct-info">
               <div className="ct-info-card">
                 <div className="ct-info-icon" style={{ background: 'rgba(67,97,238,0.12)' }}>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <div>
                   <div className="ct-info-label">Email</div>
                   <div className="ct-info-value"><a href="mailto:"></a></div>
-                  <div className="ct-info-note">Response within 1–2 business days</div>
+                  <div className="ct-info-note">Response within 1-2 business days</div>
                 </div>
               </div>
 
@@ -120,19 +120,19 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="ct-info-label">Support Hours</div>
-                  <div className="ct-info-value">Mon – Sat, 10 AM – 7 PM IST</div>
-                  <div className="ct-info-note">We're a small team — thanks for your patience</div>
+                  <div className="ct-info-value">Mon Sat, 10 AM 7 PM IST</div>
+                  <div className="ct-info-note">We're a small team thanks for your patience</div>
                 </div>
               </div>
             </div>
 
-            {/* Right — form */}
+            {/* Right form */}
             <div className="ct-form-card">
               <div className="ct-form-title">Send us a message</div>
 
               {status === 'success' && (
                 <div className="ct-success" style={{ marginBottom: '1.25rem' }}>
-                  ✓ Message sent! We'll get back to you within 1–2 business days.
+                  ✓ Message sent! We'll get back to you within 1-2 business days.
                 </div>
               )}
               {status === 'error' && (

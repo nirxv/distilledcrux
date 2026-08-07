@@ -309,8 +309,8 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
   function gaugeMood(pct: number) {
     if (pct >= 75) return { mood: 'great', color: 'var(--green)', label: 'Strong answer!' };
-    if (pct >= 50) return { mood: 'ok', color: color, label: 'Decent — a few gaps to close.' };
-    if (pct >= 30) return { mood: 'meh', color: 'var(--gold)', label: 'Learn from mistakes — keep going.' };
+    if (pct >= 50) return { mood: 'ok', color: color, label: 'Decent a few gaps to close.' };
+    if (pct >= 30) return { mood: 'meh', color: 'var(--gold)', label: 'Learn from mistakes keep going.' };
     return { mood: 'bad', color: 'var(--red)', label: 'Needs significant work.' };
   }
 
@@ -441,7 +441,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   <WarnIcon />
                   <div style={{ fontSize: '0.74rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', lineHeight: 1.55 }}>
                     <strong style={{ color: 'var(--gold)' }}>AI scores are directional, not definitive.</strong>{' '}
-                    Focus on the qualitative feedback below — demand gaps and missing thinkers are far more useful than any number.
+                    Focus on the qualitative feedback below demand gaps and missing thinkers are far more useful than any number.
                   </div>
                 </div>
 
@@ -628,8 +628,8 @@ function InstructionsHeader({ subject, mode, paper, totalMins, maxMarks }: {
   const isFull = mode === 'full';
   const paperLabel = paper === 'both' ? 'Paper I + Paper II' : paper;
   const title = isFull
-    ? `${s.label} Optional — Full Test (${paperLabel})`
-    : `${s.label} Optional — Sectional Test (${paperLabel})`;
+    ? `${s.label} Optional Full Test (${paperLabel})`
+    : `${s.label} Optional Sectional Test (${paperLabel})`;
   return (
     <div style={{ border: '1px solid var(--border)', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem', background: 'var(--bg2)' }}>
       <div style={{ textAlign: 'center', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '1.25rem' }}>
@@ -927,7 +927,7 @@ export default function TestPage() {
           Start a Test
         </h1>
         <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '2.5rem', fontFamily: 'var(--font-ui)' }}>
-          Questions drawn from the full PYQ bank (2013–2024). Papers follow the exact UPSC Mains format.
+          Questions drawn from the full PYQ bank (2013-2024). Papers follow the exact UPSC Mains format.
         </p>
 
         {/* Subject selector */}
@@ -984,7 +984,7 @@ export default function TestPage() {
           <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Test Format</div>
           {([
             { id: 'sectional' as TestMode, title: 'Sectional Test', sub: '105 min · 150 marks · 4 questions', desc: 'Q1 compulsory + attempt 2 of 3 remaining. Focused practice.' },
-            { id: 'full'      as TestMode, title: 'Full-Length Test', sub: '3 hours · 250 marks · 8 questions',  desc: 'Complete paper — Q1 & Q5 compulsory + 3 more.' },
+            { id: 'full'      as TestMode, title: 'Full-Length Test', sub: '3 hours · 250 marks · 8 questions',  desc: 'Complete paper Q1 & Q5 compulsory + 3 more.' },
           ]).map(m => (
             <button key={m.id} className="dc-mode-btn"
               onClick={() => setMode(m.id)}
@@ -1011,7 +1011,7 @@ export default function TestPage() {
         {/* Info banner */}
         <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
           <NoteIcon />
-          <span>Q1 is always compulsory — 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.</span>
+          <span>Q1 is always compulsory 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.</span>
         </div>
 
         {/* Start button */}

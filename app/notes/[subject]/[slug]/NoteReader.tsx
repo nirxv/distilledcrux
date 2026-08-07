@@ -232,7 +232,7 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
                 }}
                 style={{ display: 'block', padding: entry.level === 2 ? '0.28rem 0' : '0.22rem 0', fontSize: entry.level === 2 ? '0.82rem' : '0.76rem', color: isActive ? 'var(--accent)' : entry.level === 2 ? 'var(--text2)' : 'var(--text3)', textDecoration: 'none', borderLeft: entry.level === 3 ? '2px solid var(--border2)' : 'none', marginLeft: entry.level === 3 ? '0.5rem' : 0, paddingLeft: entry.level === 3 ? '0.75rem' : 0, fontFamily: 'var(--font-ui)', fontWeight: entry.level === 2 ? 500 : 400, lineHeight: 1.5 }}
               >
-                {entry.level === 2 ? `${h2i}. ` : '– '}{entry.text}
+                {entry.level === 2 ? `${h2i}. ` : '- '}{entry.text}
               </a>
             );
           })}
@@ -503,7 +503,7 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
                 <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '1.5rem 2rem', textAlign: 'center', maxWidth: 360 }}>
                   <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>🔒</div>
                   <div style={{ fontFamily: 'var(--font-ui)', fontWeight: 700, color: 'var(--text)', fontSize: '0.95rem', marginBottom: '0.4rem' }}>Sign in to continue reading</div>
-                  <div style={{ color: 'var(--text3)', fontSize: '0.78rem', marginBottom: '1.1rem', lineHeight: 1.5 }}>Free account — full notes, highlights & progress tracking.</div>
+                  <div style={{ color: 'var(--text3)', fontSize: '0.78rem', marginBottom: '1.1rem', lineHeight: 1.5 }}>Free account full notes, highlights & progress tracking.</div>
                   <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: 8, padding: '0.55rem 1.5rem', fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', width: '100%' }}>
                     Sign in free →
                   </button>

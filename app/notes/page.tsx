@@ -7,8 +7,8 @@ import { allNotes as geoNotes } from '@/lib/notes/geography';
 import { allNotes as pubAdminNotes } from '@/lib/notes/pub-admin';
 
 export const metadata: Metadata = {
-  title: 'Optional Notes — UPSC Mains Preparation | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Optional subjects — Sociology, Anthropology, PSIR, Geography and Public Administration. Topic-wise structured for Mains.',
+  title: 'Optional Notes UPSC Mains Preparation | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC Optional subjects Sociology, Anthropology, PSIR, Geography and Public Administration. Topic-wise structured for Mains.',
   alternates: { canonical: 'https://distilledcrux.com/notes' },
 };
 

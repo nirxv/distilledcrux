@@ -26,9 +26,9 @@ const getTools = (optional: string | null) => {
   const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';
   const hasPyqs = PYQS_ENABLED.has(optional ?? '');
   return [
-    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
-    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
-    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
+    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
+    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
+    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: '/notes', badge: 'Free', icon: 'notes' },
     ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
   ];
 };
@@ -354,7 +354,7 @@ export default function Dashboard() {
   const optLabel = SUBJECT_LABEL[stats.optional ?? ''] ?? stats.optional ?? '';
   const joinDate = stats.joinedAt
     ? new Date(stats.joinedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
-    : '—';
+    : '';
   const expDate = stats.expiresAt
     ? new Date(stats.expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
     : null;

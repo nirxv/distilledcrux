@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/polsci';
 
 export const metadata: Metadata = {
-  title: 'PSIR Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC PSIR Optional — political theory, Indian polity, comparative politics and international relations.',
+  title: 'PSIR Optional Notes UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC PSIR Optional political theory, Indian polity, comparative politics and international relations.',
   alternates: { canonical: 'https://distilledcrux.com/notes/polsci' },
 };
 
@@ -22,7 +22,7 @@ export default function PolsciNotesPage() {
       </div>
 
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
-        PSIR — Political Science & IR Optional
+        PSIR Political Science & IR Optional
       </h1>
       <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '3rem' }}>
         {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants

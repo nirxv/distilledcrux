@@ -144,8 +144,8 @@ function ChatContent() {
     setMessages([{
       role: 'assistant',
       content: initialTopic
-        ? `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**. You selected the topic: **${initialTopic}**. Let\'s dive in — what would you like to explore first?`
-        : `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**.\n\nI can help with:\n\n• **Concept explanations** — deep dives into any topic\n• **Answer structuring** — UPSC-style frameworks\n• **PYQ analysis** — model answers and key points\n• **Thinkers** — citing the right scholar in the right context\n• **Brainstorm mode** — essay plans and argument maps\n\nWhat would you like to explore?`,
+        ? `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**. You selected the topic: **${initialTopic}**. Let\'s dive in what would you like to explore first?`
+        : `Hello! I'm your **${SUBJECT_DISPLAY[subject]} Optional AI**.\n\nI can help with:\n\n• **Concept explanations** deep dives into any topic\n• **Answer structuring** UPSC-style frameworks\n• **PYQ analysis** model answers and key points\n• **Thinkers** citing the right scholar in the right context\n• **Brainstorm mode** essay plans and argument maps\n\nWhat would you like to explore?`,
     }]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subject]);
@@ -156,8 +156,8 @@ function ChatContent() {
   const langHi = searchParams.get('lang') === 'hi';
 
   const greeting = initialTopic
-    ? `Hello! You're studying **${initialTopic}**. Ask me anything — concepts, answer structures, thinkers, or model answers.`
-    : `Hello! I'm your **${subjectDisplay} Optional AI**.\n\nI can help with:\n\n• **Concept explanations** — deep dives into any topic\n• **Answer structuring** — UPSC-style frameworks\n• **PYQ analysis** — model answers and key points\n• **Thinkers** — citing the right scholar in the right context\n• **Brainstorm mode** — essay plans and argument maps\n\nWhat would you like to explore?`;
+    ? `Hello! You're studying **${initialTopic}**. Ask me anything concepts, answer structures, thinkers, or model answers.`
+    : `Hello! I'm your **${subjectDisplay} Optional AI**.\n\nI can help with:\n\n• **Concept explanations** deep dives into any topic\n• **Answer structuring** UPSC-style frameworks\n• **PYQ analysis** model answers and key points\n• **Thinkers** citing the right scholar in the right context\n• **Brainstorm mode** essay plans and argument maps\n\nWhat would you like to explore?`;
 
   const [messages, setMessages] = useState<Message[]>([{ role: 'assistant', content: greeting }]);
   const [input, setInput] = useState(initialQ);
@@ -194,7 +194,7 @@ function ChatContent() {
   // Auth gate
   const [authChecked, setAuthChecked] = useState(false);
 
-  // Usage gate (simple — wired to Supabase usage_tracking same as history-optional)
+  // Usage gate (simple wired to Supabase usage_tracking same as history-optional)
   const [usageFree, setUsageFree] = useState<number | null>(null); // null = loading
   const [fingerprint, setFingerprint] = useState('');
   const [userToken, setUserToken] = useState('');
@@ -209,7 +209,7 @@ function ChatContent() {
       document.cookie = `fp=${fp}; path=/; max-age=31536000; SameSite=Lax`;
     }
     setFingerprint(fp);
-    // Auth check — redirect to login if not signed in
+    // Auth check redirect to login if not signed in
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setAuthChecked(true);
       if (user) {
@@ -291,7 +291,7 @@ function ChatContent() {
     if (id === chatId) startNewChat();
   }, [chatId, startNewChat]);
 
-  // All hooks above — safe to early-return now
+  // All hooks above safe to early-return now
   if (!authChecked) return null;
 
   const sendMessage = async (text?: string) => {
@@ -417,8 +417,8 @@ function ChatContent() {
     text = text.replace(/^### (.+)$/gm, (_: string, t: string) => `___H2___${t}___END___`);
     text = text.replace(/^#{4,6} (.+)$/gm, (_: string, t: string) => `___H3___${t}___END___`);
     text = text.replace(/^ *\d+[.)]\s+(.+)$/gm, (_: string, t: string) => `___BULLET___${t}___END___`);
-    text = text.replace(/^ *[-*•–—]\s+\*\*([^*]+?)\*\*:?\s*$/gm, (_: string, t: string) => `___H3___${t}___END___`);
-    text = text.replace(/^ *[-*•–—]\s+(.+)$/gm, (_: string, t: string) => `___BULLET___${t}___END___`);
+    text = text.replace(/^ *[-*•-]\s+\*\*([^*]+?)\*\*:?\s*$/gm, (_: string, t: string) => `___H3___${t}___END___`);
+    text = text.replace(/^ *[-*•-]\s+(.+)$/gm, (_: string, t: string) => `___BULLET___${t}___END___`);
     text = text.replace(/^\s*\*\*([^*]+)\*\*\s*$/gm, (_: string, t: string) => `___H3___${t}___END___`);
     text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
@@ -930,7 +930,7 @@ function ChatContent() {
             {!brainstormMode && (
               <div className="pp-style-toggle">
                 <span style={{ fontSize: '0.6rem', color: 'var(--text3, #555)', fontFamily: 'monospace', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Style</span>
-                <span style={{ fontSize: '0.6rem', color: 'var(--border, #1a1a2e)' }}>—</span>
+                <span style={{ fontSize: '0.6rem', color: 'var(--border, #1a1a2e)' }}></span>
                 {(['concise', 'elaborative'] as const).map((s) => (
                   <button key={s} onClick={() => setResponseStyle(s)} style={{
                     fontSize: '0.68rem', fontFamily: 'monospace', letterSpacing: '0.04em',

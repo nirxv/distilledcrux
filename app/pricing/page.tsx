@@ -10,7 +10,7 @@ const plans = [
     features: [
       { label: 'Full platform access for 24 hours' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
+      { label: 'AI Chat ask anything' },
       { label: 'PYQ Bank access' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
@@ -23,8 +23,8 @@ const plans = [
     features: [
       { label: 'Full platform access for 6 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
-      { label: 'PYQ Bank — 1500+ questions' },
+      { label: 'AI Chat ask anything' },
+      { label: 'PYQ Bank 1500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
       { label: 'Performance analytics' },
@@ -32,13 +32,13 @@ const plans = [
   },
   {
     id: 'yearly', label: 'Yearly', price: 5999, period: 'per year', tag: 'Best Value',
-    desc: 'Full-year coverage — from Prelims to Mains interview prep.',
+    desc: 'Full-year coverage from Prelims to Mains interview prep.',
     color: '#e8b86d',
     features: [
       { label: 'Full platform access for 12 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
-      { label: 'PYQ Bank — 1500+ questions' },
+      { label: 'AI Chat ask anything' },
+      { label: 'PYQ Bank 1500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
       { label: 'Performance analytics' },
@@ -49,11 +49,11 @@ const plans = [
 ];
 
 const faqs = [
-  { q: 'Is there a free tier?', a: 'Yes — 3 free AI chats, no card required.' },
+  { q: 'Is there a free tier?', a: 'Yes 3 free AI chats, no card required.' },
   { q: 'Can I switch plans?', a: 'After your current plan expires you can pick any plan. Plans are non-auto-renewing.' },
-  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, Public Administration — and History at historyoptional.xyz.' },
-  { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking — via Razorpay.' },
-  { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages — contact us within 7 days.' },
+  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, Public Administration and History at historyoptional.xyz.' },
+  { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking via Razorpay.' },
+  { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages contact us within 7 days.' },
 ];
 
 const CSS = `

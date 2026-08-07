@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Distilled Crux — UPSC Optional Preparation',
+  title: 'Distilled Crux UPSC Optional Preparation',
   description:
-    'AI answer evaluation, curated notes, 1500+ PYQs and real topper copies — built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
+    'AI answer evaluation, curated notes, 1500+ PYQs and real topper copies built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
   alternates: { canonical: 'https://distilledcrux.com' },
 };
 
@@ -19,7 +19,7 @@ const optionals = [
 
 const tools = [
   { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
-  { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains — written to be read before the exam.', num: '02', href: '/sociology' },
+  { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains written to be read before the exam.', num: '02', href: '/sociology' },
   { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: '/sociology#pyqs' },
   { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04', href: '/sociology#chat' },
 ];
@@ -354,7 +354,7 @@ export default function Home() {
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'Distilled Crux — UPSC Optional Preparation',
+          name: 'Distilled Crux UPSC Optional Preparation',
           url: 'https://distilledcrux.com',
           description: 'AI answer evaluation, notes, PYQs for UPSC optionals',
         })}
@@ -374,7 +374,7 @@ export default function Home() {
           </div>
           <div className="lp-hero-right">
             <p className="lp-hero-desc">
-              AI answer evaluation, syllabus notes, 1500+ PYQs and real topper copies —
+              AI answer evaluation, syllabus notes, 1500+ PYQs and real topper copies 
               built specifically for UPSC Mains Optional. No fluff.
             </p>
             <div className="lp-hero-actions">
@@ -418,7 +418,7 @@ export default function Home() {
               <h2 className="lp-section-h2">One subject.<br /><em>Total mastery.</em></h2>
             </div>
             <p className="lp-section-desc">
-              Pick your subject and get a platform built exactly for it —
+              Pick your subject and get a platform built exactly for it 
               notes, PYQs, evaluation and AI chat calibrated to your syllabus.
             </p>
           </div>
@@ -444,7 +444,7 @@ export default function Home() {
               <span style={{ fontSize: '1.5rem' }}>🏛️</span>
               <div>
                 <div className="lp-history-name">History Optional</div>
-                <div className="lp-history-sub">Paper I & II · Ancient to World History — dedicated platform</div>
+                <div className="lp-history-sub">Paper I & II · Ancient to World History dedicated platform</div>
               </div>
             </div>
             <div className="lp-history-link">
@@ -463,7 +463,7 @@ export default function Home() {
               <h2 className="lp-section-h2">Everything you need.<br /><em>Nothing you don't.</em></h2>
             </div>
             <p className="lp-section-desc">
-              Every tool on Distilled Crux exists for one reason — getting you more marks in your optional paper.
+              Every tool on Distilled Crux exists for one reason getting you more marks in your optional paper.
             </p>
           </div>
           <div className="lp-tools-list">
@@ -486,7 +486,7 @@ export default function Home() {
               <h2 className="lp-section-h2">Transparent plans.<br /><em>No surprises.</em></h2>
             </div>
             <p className="lp-section-desc">
-              Pay only for what you need. Daily access to full-year coverage —
+              Pay only for what you need. Daily access to full-year coverage 
               no auto-renewals, no hidden fees.
             </p>
           </div>
@@ -519,7 +519,7 @@ export default function Home() {
         <div className="lp-cta">
           <div>
             <h2 className="lp-cta-h2">Ready to crack<br /><em>your optional?</em></h2>
-            <p className="lp-cta-sub">Start free — no card needed. Upgrade when you're ready.</p>
+            <p className="lp-cta-sub">Start free no card needed. Upgrade when you're ready.</p>
           </div>
           <div className="lp-cta-right">
             <Link href="/login" className="lp-btn-primary">Start Preparing Free →</Link>

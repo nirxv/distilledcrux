@@ -662,7 +662,7 @@ export default function EvaluatePage() {
         {loading && (
           <div className="ev-loading">
             <div className="ev-loading-title">Evaluating your answer…</div>
-            <div className="ev-loading-sub">This takes 20–35 seconds</div>
+            <div className="ev-loading-sub">This takes 20-35 seconds</div>
             <div className="ev-progress-track">
               <div className="ev-progress-bar" style={{ animationDuration:'32s' }} />
             </div>
@@ -742,7 +742,7 @@ export default function EvaluatePage() {
                 <div className="ev-result-lbl">Overall feedback</div>
                 <p className="ev-overall">{result.overall_feedback}</p>
                 <div className={`ev-wc-badge ${result.word_count_rating}`}>
-                  {result.word_count} words — {result.word_count_rating}
+                  {result.word_count} words {result.word_count_rating}
                 </div>
               </div>
 
@@ -821,7 +821,7 @@ export default function EvaluatePage() {
                   </svg>
                 </div>
                 <div className="ev-upload-title">Drop images here or click to browse</div>
-                <div className="ev-upload-sub">JPG, PNG, WEBP or PDF — max 20MB, up to 10 pages</div>
+                <div className="ev-upload-sub">JPG, PNG, WEBP or PDF max 20MB, up to 10 pages</div>
                 <input ref={inputRef} type="file" accept="image/*,application/pdf" multiple className="ev-upload-input"
                   onChange={e => { addFiles(Array.from(e.target.files ?? [])); e.target.value = '' }} />
               </div>
@@ -865,8 +865,8 @@ export default function EvaluatePage() {
               <div className="ev-sidebar-block">
                 <div className="ev-sidebar-lbl">How it works</div>
                 {[
-                  { n:'01', title:'Upload images', sub:'Photograph your handwritten answer — up to 10 pages.' },
-                  { n:'02', title:'Review transcript', sub:'We OCR your answer — check and fix any misreads before submitting.' },
+                  { n:'01', title:'Upload images', sub:'Photograph your handwritten answer up to 10 pages.' },
+                  { n:'02', title:'Review transcript', sub:'We OCR your answer check and fix any misreads before submitting.' },
                   { n:'03', title:'Get evaluated', sub:'Marks, section feedback, thinkers to cite, and a model answer.' },
                 ].map(s => (
                   <div key={s.n} className="ev-step-row">
@@ -879,9 +879,9 @@ export default function EvaluatePage() {
               <div className="ev-sidebar-block">
                 <div className="ev-sidebar-lbl">Tips</div>
                 <div className="ev-tip">
-                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF — up to 10 pages.<br/><br/>
+                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF up to 10 pages.<br/><br/>
                   <strong>Good lighting matters.</strong> Shoot in daylight, avoid shadows. Blurry images reduce accuracy.<br/><br/>
-                  <strong>Review before submitting.</strong> After upload, you&apos;ll see the OCR transcript — fix any thinker names or dates before we evaluate.
+                  <strong>Review before submitting.</strong> After upload, you&apos;ll see the OCR transcript fix any thinker names or dates before we evaluate.
                 </div>
               </div>
 
@@ -889,7 +889,7 @@ export default function EvaluatePage() {
                 <div className="ev-sidebar-block">
                   <div className="ev-sidebar-lbl">Your optional</div>
                   <div className="ev-tip">
-                    Evaluation is calibrated for <strong>{subjectLabel}</strong> — thinker roster, rubric weights, and model answers are all subject-specific.
+                    Evaluation is calibrated for <strong>{subjectLabel}</strong> thinker roster, rubric weights, and model answers are all subject-specific.
                   </div>
                 </div>
               )}
@@ -905,7 +905,7 @@ export default function EvaluatePage() {
 
               <div className="ev-transcript-info">
                 <strong>Check carefully before submitting.</strong> OCR can misread thinker names, dates, and technical terms.
-                Fix any errors below — this is what the AI will evaluate.
+                Fix any errors below this is what the AI will evaluate.
               </div>
 
               <div className="ev-field" style={{ paddingTop:'1.5rem' }}>
@@ -914,13 +914,13 @@ export default function EvaluatePage() {
                   className="ev-textarea"
                   value={question}
                   onChange={e => setQuestion(e.target.value)}
-                  placeholder="Question will appear here — edit if needed"
+                  placeholder="Question will appear here edit if needed"
                   rows={3}
                 />
               </div>
 
               <div className="ev-field">
-                <label className="ev-field-label">Answer transcript — edit any OCR errors</label>
+                <label className="ev-field-label">Answer transcript edit any OCR errors</label>
                 <textarea
                   className="ev-textarea ev-tarea-tall"
                   value={transcript}
@@ -955,7 +955,7 @@ export default function EvaluatePage() {
                   onClick={handleSubmit}
                   disabled={loading || profileLoading || !question.trim()}
                 >
-                  {profileLoading ? 'Loading…' : 'Looks good — evaluate →'}
+                  {profileLoading ? 'Loading…' : 'Looks good evaluate →'}
                 </button>
               </div>
             </div>
@@ -964,9 +964,9 @@ export default function EvaluatePage() {
               <div className="ev-sidebar-block">
                 <div className="ev-sidebar-lbl">What to check</div>
                 {[
-                  { n:'01', title:'Thinker names', sub:'OCR often misreads scholar names — check every name carefully.' },
-                  { n:'02', title:'Dates and years', sub:'Numbers can get transposed — verify all dates in the transcript.' },
-                  { n:'03', title:'Technical terms', sub:'Subject-specific vocabulary may be garbled — fix before evaluating.' },
+                  { n:'01', title:'Thinker names', sub:'OCR often misreads scholar names check every name carefully.' },
+                  { n:'02', title:'Dates and years', sub:'Numbers can get transposed verify all dates in the transcript.' },
+                  { n:'03', title:'Technical terms', sub:'Subject-specific vocabulary may be garbled fix before evaluating.' },
                 ].map(s => (
                   <div key={s.n} className="ev-step-row">
                     <div className="ev-step-num">{s.n}</div>

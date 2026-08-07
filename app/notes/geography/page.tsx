@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { paper1Notes, paper2Notes, paper1Sections, paper2Sections } from '@/lib/notes/geography';
 
 export const metadata: Metadata = {
-  title: 'Geography Optional Notes — UPSC Mains Paper I & II | Distilled Crux',
-  description: 'Comprehensive free notes for UPSC Geography Optional — physical geography, human geography, Indian geography, regional planning and more.',
+  title: 'Geography Optional Notes UPSC Mains Paper I & II | Distilled Crux',
+  description: 'Comprehensive free notes for UPSC Geography Optional physical geography, human geography, Indian geography, regional planning and more.',
   alternates: { canonical: 'https://distilledcrux.com/notes/geography' },
 };
 

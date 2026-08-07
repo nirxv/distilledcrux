@@ -44,7 +44,7 @@ const SUBJECTS: Record<string, {
     years: ['2022','2023','2024'],
   },
   csat: {
-    name: 'CSAT — Paper II', sub: 'Reading, Reasoning & Basic Numeracy', color: '#fb923c', icon: '🧮',
+    name: 'CSAT Paper II', sub: 'Reading, Reasoning & Basic Numeracy', color: '#fb923c', icon: '🧮',
     topics: ['Reading Comprehension', 'Data Interpretation', 'Number System', 'Ratio & Proportion', 'Algebra', 'Logical Reasoning', 'Analytical Reasoning', 'Decision Making', 'Other'],
     years: ['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'],
   },
@@ -202,11 +202,11 @@ function makeSeedMCQs(subject: string, color: string, topics: string[]): MCQ[] {
       question: 'Which of the following statements is/are correct regarding this subject area? (1) Statement one is a commonly tested fact. (2) Statement two is often misunderstood by aspirants.',
       options: ['1 only', '2 only', 'Both 1 and 2', 'Neither 1 nor 2'],
       answer: 2,
-      explanation: 'Both statements are correct. Statement 1 covers the core concept while Statement 2 addresses the common misconception. Add your real MCQ data to <code>public/data/prelims-{subject}.json</code> — this card is a placeholder.',
+      explanation: 'Both statements are correct. Statement 1 covers the core concept while Statement 2 addresses the common misconception. Add your real MCQ data to <code>public/data/prelims-{subject}.json</code> this card is a placeholder.',
     },
     {
       year: '2022',
-      question: 'Consider the following pairs: (1) Term A — Definition X (2) Term B — Definition Y (3) Term C — Definition Z. Which of the pairs given above is/are correctly matched?',
+      question: 'Consider the following pairs: (1) Term A Definition X (2) Term B Definition Y (3) Term C Definition Z. Which of the pairs given above is/are correctly matched?',
       options: ['1 and 2 only', '2 and 3 only', '1 and 3 only', '1, 2 and 3'],
       answer: 0,
       explanation: 'Only pairs 1 and 2 are correctly matched. This "match the pairs" format is extremely common in UPSC Prelims. Load your real question bank from <code>public/data/prelims-{subject}.json</code>.',
@@ -214,9 +214,9 @@ function makeSeedMCQs(subject: string, color: string, topics: string[]): MCQ[] {
     {
       year: '2021',
       question: 'With reference to this topic, which of the following is NOT correct?',
-      options: ['Option A — a true statement about the topic', 'Option B — another true statement', 'Option C — the incorrect statement which is the answer', 'Option D — also a true statement'],
+      options: ['Option A a true statement about the topic', 'Option B another true statement', 'Option C the incorrect statement which is the answer', 'Option D also a true statement'],
       answer: 2,
-      explanation: 'Option C is incorrect. The "which is NOT correct" variant is a classic UPSC trap. This is a placeholder — replace with <code>public/data/prelims-{subject}.json</code>.',
+      explanation: 'Option C is incorrect. The "which is NOT correct" variant is a classic UPSC trap. This is a placeholder replace with <code>public/data/prelims-{subject}.json</code>.',
     },
   ];
   return samples.map((s, i) => ({
@@ -233,7 +233,7 @@ export default function PrelimsSubjectPage() {
   const slug = (params?.subject as string) ?? 'history';
   const cfg = SUBJECTS[slug] ?? SUBJECTS['history'];
 
-  // Seed data — replace with: import questions from '@/public/data/prelims-{slug}.json';
+  // Seed data replace with: import questions from '@/public/data/prelims-{slug}.json';
   const allQuestions: MCQ[] = useMemo(() => makeSeedMCQs(slug, cfg.color, cfg.topics), [slug, cfg]);
 
   const [search, setSearch] = useState('');
@@ -320,7 +320,7 @@ export default function PrelimsSubjectPage() {
             {/* Daily quiz CTA */}
             <div className="mcq-quiz-cta">
               <div className="mcq-quiz-cta-text">
-                <strong>Daily Quiz</strong> — 10 curated {cfg.name} questions every morning. Build the habit.
+                <strong>Daily Quiz</strong> 10 curated {cfg.name} questions every morning. Build the habit.
               </div>
               <Link href="/prelims/quiz" className="mcq-quiz-link">Take Quiz →</Link>
             </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Distilled Crux",
-  description: "Terms of Service for distilledcrux.com — rules governing use of our UPSC optional exam preparation platform.",
+  title: "Terms of Service Distilled Crux",
+  description: "Terms of Service for distilledcrux.com rules governing use of our UPSC optional exam preparation platform.",
   alternates: { canonical: "https://distilledcrux.com/terms" },
 };
 
@@ -55,9 +55,9 @@ export default function TermsPage() {
         <h2 style={S.h2}>4. Subscription &amp; Payments</h2>
         <p style={S.p}>Premium subscription plans and their prices are:</p>
         <ul style={S.ul}>
-          <li style={S.li}>Daily — ₹49 per day</li>
-          <li style={S.li}>6 Months — ₹3,999 per 6 months</li>
-          <li style={S.li}>Yearly — ₹5,999 per year</li>
+          <li style={S.li}>Daily ₹49 per day</li>
+          <li style={S.li}>6 Months ₹3,999 per 6 months</li>
+          <li style={S.li}>Yearly ₹5,999 per year</li>
         </ul>
         <p style={S.p}>
           All payments are processed securely by Razorpay. Prices are in Indian Rupees (INR)
@@ -79,8 +79,8 @@ export default function TermsPage() {
 
         <h2 style={S.h2}>6. Intellectual Property</h2>
         <p style={S.p}>
-          All content on this site — including notes, question banks, AI-generated evaluations,
-          and design — is owned by distilledcrux.com or its licensors. You may not copy,
+          All content on this site including notes, question banks, AI-generated evaluations,
+          and design is owned by distilledcrux.com or its licensors. You may not copy,
           redistribute, or sell any content without written permission.
         </p>
 

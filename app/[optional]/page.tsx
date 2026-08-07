@@ -23,38 +23,38 @@ const OPTIONALS: Record<string, {
     paper1: 'Meaning, Scope & Development of Anthropology; Evolution; Genetics; Human Variation',
     paper2: 'Indian Anthropology, Tribal India, Applied Anthropology, Fossil Records',
     stats: [{ label: 'PYQs', value: '1200+' }, { label: 'Topics', value: '100+' }, { label: 'Fossil Records', value: '40+' }, { label: 'Model Answers', value: '180+' }],
-    highlights: ['Biological & physical anthropology — evolution, genetics, primatology', 'Archaeological anthropology — fossil evidence, tools, culture', 'Social & cultural anthropology — kinship, marriage, religion', 'Tribal India — scheduled tribes, problems, development policy', 'Applied anthropology — development, forensics, ethnobotany'],
+    highlights: ['Biological & physical anthropology evolution, genetics, primatology', 'Archaeological anthropology fossil evidence, tools, culture', 'Social & cultural anthropology kinship, marriage, religion', 'Tribal India scheduled tribes, problems, development policy', 'Applied anthropology development, forensics, ethnobotany'],
   },
   polsci: {
-    name: 'PSIR', full: 'PSIR — Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
+    name: 'PSIR', full: 'PSIR Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
     color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)', icon: '⚖️',
     paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
     paper2: 'Comparative Politics & International Relations',
     stats: [{ label: 'PYQs', value: '1400+' }, { label: 'Topics', value: '110+' }, { label: 'Thinkers', value: '50+' }, { label: 'Model Answers', value: '190+' }],
-    highlights: ['Political theory — liberalism, Marxism, feminism, post-colonialism', 'Indian Constitution — federalism, fundamental rights, DPSPs', 'Political institutions — Parliament, executive, judiciary, election commission', 'Comparative politics — presidential vs parliamentary, federalism globally', 'International relations — realism, liberalism, constructivism, IR theory'],
+    highlights: ['Political theory liberalism, Marxism, feminism, post-colonialism', 'Indian Constitution federalism, fundamental rights, DPSPs', 'Political institutions Parliament, executive, judiciary, election commission', 'Comparative politics presidential vs parliamentary, federalism globally', 'International relations realism, liberalism, constructivism, IR theory'],
   },
   geography: {
     name: 'Geography', full: 'Geography Optional', sub: 'Physical, Human & Economic Geography',
     color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.2)', glow: 'rgba(74,222,128,0.13)', icon: '🌍',
-    paper1: 'Physical Geography — Geomorphology, Climatology, Oceanography, Biogeography',
+    paper1: 'Physical Geography Geomorphology, Climatology, Oceanography, Biogeography',
     paper2: 'Human & Economic Geography, Regional Planning, India-specific Geography',
     stats: [{ label: 'PYQs', value: '1300+' }, { label: 'Topics', value: '130+' }, { label: 'Diagrams', value: '80+' }, { label: 'Model Answers', value: '200+' }],
-    highlights: ['Geomorphology — plate tectonics, landforms, fluvial & aeolian processes', 'Climatology — atmospheric circulation, monsoon, climate change', 'Oceanography — currents, tides, marine resources', 'Human geography — population, migration, settlement patterns', 'India geography — agriculture, minerals, transport, regional development'],
+    highlights: ['Geomorphology plate tectonics, landforms, fluvial & aeolian processes', 'Climatology atmospheric circulation, monsoon, climate change', 'Oceanography currents, tides, marine resources', 'Human geography population, migration, settlement patterns', 'India geography agriculture, minerals, transport, regional development'],
   },
   'pub-admin': {
     name: 'Public Administration', full: 'Public Administration Optional', sub: 'Administrative Theory & Indian Administration',
     color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.2)', glow: 'rgba(251,146,60,0.13)', icon: '📋',
-    paper1: 'Administrative Theory — Organisation, Accountability, Comparative Admin',
-    paper2: 'Indian Administration — Union, State, District, Development Administration',
+    paper1: 'Administrative Theory Organisation, Accountability, Comparative Admin',
+    paper2: 'Indian Administration Union, State, District, Development Administration',
     stats: [{ label: 'PYQs', value: '1100+' }, { label: 'Topics', value: '90+' }, { label: 'Thinkers', value: '40+' }, { label: 'Model Answers', value: '160+' }],
-    highlights: ["Administrative theory — Weber's bureaucracy, Taylor, Fayol, Simon", 'Organisation theory — classical, human relations, systems, contingency', 'Accountability — parliamentary control, CAG, RTI, lokpal', 'Indian administration — civil services, central secretariat, cabinet', 'Development administration — planning, decentralisation, e-governance'],
+    highlights: ["Administrative theory Weber's bureaucracy, Taylor, Fayol, Simon", 'Organisation theory classical, human relations, systems, contingency', 'Accountability parliamentary control, CAG, RTI, lokpal', 'Indian administration civil services, central secretariat, cabinet', 'Development administration planning, decentralisation, e-governance'],
   },
 };
 
 const BASE_TOOLS = [
-  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers — get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate', badge: null },
-  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus — structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate — structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
+  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate', badge: null },
+  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
+  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
   { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
 ];
 
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ optional:
   const opt = OPTIONALS[optional];
   if (!opt) return { title: 'Not Found' };
   return {
-    title: `${opt.full} — Distilled Crux`,
+    title: `${opt.full} Distilled Crux`,
     description: `AI-powered preparation for UPSC ${opt.full}. Notes, PYQs, answer evaluation and AI chat for ${opt.name}.`,
     alternates: { canonical: `https://distilledcrux.com/${optional}` },
   };
@@ -311,7 +311,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
 
           <div>
             <p className="op-right-desc">
-              {opt.sub} — every topic, every thinker, every past question.
+              {opt.sub} every topic, every thinker, every past question.
               AI-calibrated to the actual UPSC rubric.
             </p>
             <div className="op-actions">
@@ -342,7 +342,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
               <h2 className="op-section-h2">What you&apos;ll<br /><em style={{ color: opt.color }}>cover.</em></h2>
             </div>
             <p className="op-section-desc">
-              Two papers, fully mapped. Every topic on the UPSC syllabus — notes and PYQs organised exactly the way the paper is structured.
+              Two papers, fully mapped. Every topic on the UPSC syllabus notes and PYQs organised exactly the way the paper is structured.
             </p>
           </div>
 
@@ -375,7 +375,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
               <h2 className="op-section-h2">Everything<br /><em style={{ color: opt.color }}>you need.</em></h2>
             </div>
             <p className="op-section-desc">
-              Six tools, one goal — more marks in your {opt.name} paper. Each one built specifically for how UPSC actually tests this subject.
+              Six tools, one goal more marks in your {opt.name} paper. Each one built specifically for how UPSC actually tests this subject.
             </p>
           </div>
 
@@ -407,7 +407,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
             <h2 className="op-cta-h2">
               Ready to ace<br /><em style={{ color: opt.color }}>{opt.name}?</em>
             </h2>
-            <p className="op-cta-sub">Start free — no card needed. Upgrade when you&apos;re ready to go unlimited.</p>
+            <p className="op-cta-sub">Start free no card needed. Upgrade when you&apos;re ready to go unlimited.</p>
           </div>
           <div className="op-cta-right">
             <Link href="/login" className="op-btn-primary">Start Preparing Free →</Link>
