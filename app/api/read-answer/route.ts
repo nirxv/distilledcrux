@@ -121,9 +121,13 @@ Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
       }
     }
 
+    // Strip any HTML tags the model may have introduced
+    const stripHtml = (s: string) =>
+      s.replace(/<\/p>/gi, '\n\n').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim()
+
     return NextResponse.json({
-      question:   (parsed.question   ?? '').trim(),
-      transcript: (parsed.transcript ?? '').trim(),
+      question:   stripHtml(parsed.question   ?? ''),
+      transcript: stripHtml(parsed.transcript ?? ''),
     });
   } catch (err) {
     console.error('read-answer route error:', err);

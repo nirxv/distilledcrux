@@ -142,6 +142,7 @@ const CSS = `
   border-radius:6px; padding:0.75rem 1rem;
   font-family:var(--font-ui); font-size:0.85rem; color:var(--text);
   line-height:1.6; outline:none; transition:border-color 0.15s; box-sizing:border-box;
+  white-space:pre-wrap;
 }
 .ev-textarea:focus { border-color:var(--border3); }
 .ev-textarea::placeholder { color:var(--text3); }
