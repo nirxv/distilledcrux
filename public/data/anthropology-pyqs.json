@@ -5686,5 +5686,275 @@
     "microtheme": "Political economy and bio-cultural perspectives",
     "question": "How political economy is integrated with ecological and adaptability perspectives in bio-cultural anthropology?",
     "marks": 15
+  },
+  {
+    "id": 633,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology",
+    "microtheme": "Origin of food production",
+    "question": "What are the major theories proposed in support of the origin of food production? How the change in subsistence economy brought revolution during this period?",
+    "marks": 15
+  },
+  {
+    "id": 634,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Molecular Anthropology",
+    "microtheme": "GWAS and health",
+    "question": "'Genome-wide Disease Association Studies (GWAS) advanced our understanding of health and disease.' Discuss.",
+    "marks": 15
+  },
+  {
+    "topic": "Prehistoric Archaeology",
+    "microtheme": "Soanian culture",
+    "question": "Write short note in about 150 words: Soanian cultural tradition.",
+    "marks": 10,
+    "id": 635,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Political Anthropology",
+    "microtheme": "Caste and political power",
+    "question": "Write short note in about 150 words: Caste domination, factionalism and political power.",
+    "marks": 10,
+    "id": 636,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Ethnicity and Tribe-Nation State",
+    "microtheme": "Regionalism and autonomy",
+    "question": "Write short note in about 150 words: Regionalism and Autonomy.",
+    "marks": 10,
+    "id": 637,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Tribal Situation in India",
+    "microtheme": "Verrier Elwin",
+    "question": "Write short note in about 150 words: Verrier Elwin's philosophy with respect to Arunachal Pradesh.",
+    "marks": 10,
+    "id": 638,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Civilization and Culture",
+    "microtheme": "Little and Great Traditions",
+    "question": "Write short note in about 150 words: Characteristics and communication between Little and Great Traditions.",
+    "marks": 10,
+    "id": 639,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Prehistoric Archaeology",
+    "microtheme": "Siwaliks fossil primates",
+    "question": "Discuss the palaeoanthropological significance of Siwaliks of India giving its subdivisions, fossil primate fauna and major primate fossil localities.",
+    "marks": 20,
+    "id": 640,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Indian Populations",
+    "microtheme": "SS Sarkar classification",
+    "question": "Delineate the major features of S. S. Sarkar's classification of Indian populations. Was his classification better than Risley? Explain.",
+    "marks": 15,
+    "id": 641,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Impact of Religions on Tribal Societies",
+    "microtheme": "Christianity in North-East India",
+    "question": "Evaluate the impact of Christianity on Scheduled Tribe societies of North-East India.",
+    "marks": 15,
+    "id": 642,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Prehistoric Archaeology",
+    "microtheme": "Upper Palaeolithic India",
+    "question": "Describe the distinctive features and distribution of Upper Palaeolithic of India.",
+    "marks": 20,
+    "id": 643,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Problems of Tribal Communities",
+    "microtheme": "Health of tribals",
+    "question": "Examine the environmental and biocultural factors influencing the health of tribals of India.",
+    "marks": 15,
+    "id": 644,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Contributions of Anthropology",
+    "microtheme": "Indian anthropologists contributions",
+    "question": "Highlight the significant contributions of B. S. Guha, Irawati Karve, and S. R. K. Chopra to Indian Anthropology.",
+    "marks": 15,
+    "id": 645,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Caste System",
+    "microtheme": "Caste mobility",
+    "question": "What are the different types of caste mobility in India? Highlight the various factors responsible for it.",
+    "marks": 20,
+    "id": 646,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Indian Populations",
+    "microtheme": "Population growth factors",
+    "question": "Elucidate the role of demographic and social factors for population growth in India.",
+    "marks": 15,
+    "id": 647,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Constitutional Safeguards and Exploitation",
+    "microtheme": "Scheduled Tribe concept",
+    "question": "Critically examine the concept of Scheduled Tribe (ST) and mention the limitations of the administrator's criteria.",
+    "marks": 15,
+    "id": 648,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Social Change and Contemporary Tribal Societies",
+    "microtheme": "Urbanization and tribals",
+    "question": "Write short note in about 150 words: Impact of urbanization and industrialization on tribal communities of India.",
+    "marks": 10,
+    "id": 649,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Hominid Evolution",
+    "microtheme": "Ramapithecus-Sivapithecus controversy",
+    "question": "Write short note in about 150 words: Taxonomic status of Ramapithecus in the light of Ramapithecus-Sivapithecus controversy.",
+    "marks": 10,
+    "id": 650,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Ethnicity and Tribe-Nation State",
+    "microtheme": "Tribalism and pseudotribalism",
+    "question": "Write short note in about 150 words: Tribalism and Pseudotribalism.",
+    "marks": 10,
+    "id": 651,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Caste System",
+    "microtheme": "Varnashrama",
+    "question": "Write short note in about 150 words: Varnashrama and its contemporary relevance.",
+    "marks": 10,
+    "id": 652,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Prehistoric Archaeology",
+    "microtheme": "Lothal and trade",
+    "question": "Write short note in about 150 words: Lothal dockyard and international trade relations.",
+    "marks": 10,
+    "id": 653,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Indian Villages",
+    "microtheme": "Village studies",
+    "question": "'The village was not merely a place where people lived; it had a design in which were reflected the basic values of Indian civilization.' Who said this? Elaborate.",
+    "marks": 20,
+    "id": 654,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Role of Anthropology in Tribal Development",
+    "microtheme": "NGOs and weaker sections",
+    "question": "Discuss the role of NGOs in the socioeconomic and political development of weaker sections and the manner in which they facilitate other stakeholders.",
+    "marks": 15,
+    "id": 655,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Constitutional Safeguards and Exploitation",
+    "microtheme": "OBC lists",
+    "question": "Trace the history and describe the methods of formulating the lists of OBCs, the State and National levels.",
+    "marks": 15,
+    "id": 656,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Role of Anthropology in Tribal Development",
+    "microtheme": "Tribal development limitations",
+    "question": "Identify the contemporary limitations in the process of tribal development. How can anthropological knowledge contribute in this process?",
+    "marks": 20,
+    "id": 657,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Ethnicity and Tribe-Nation State",
+    "microtheme": "Ethnic conflicts in India",
+    "question": "Discuss the rising ethnic conflicts in India and propose their possible remedial measures.",
+    "marks": 15,
+    "id": 658,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Tribe and Nation State",
+    "microtheme": "Nation-State and indigenous societies",
+    "question": "Critically evaluate the concept of Nation-State and describe its impact on indigenous societies.",
+    "marks": 15,
+    "id": 659,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Tribal Situation in India",
+    "microtheme": "Nilgiri tribes interdependence",
+    "question": "Describe the nature of traditional socioeconomic interdependence among the Toda, Kota, Kurumba and Irula tribes of Nilgiri Hills. Highlight the changes occurring in these interrelationships.",
+    "marks": 20,
+    "id": 660,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Indian Populations",
+    "microtheme": "Minorities in India",
+    "question": "Define minority. Elaborate the patterns of linguistic and religious minorities in India.",
+    "marks": 15,
+    "id": 661,
+    "year": "2025",
+    "paper": "Paper II"
+  },
+  {
+    "topic": "Constitutional Safeguards and Exploitation",
+    "microtheme": "PVTGs criteria",
+    "question": "What are the identifying criteria for PVTGs in India? Examine their current status, nomenclature and distribution.",
+    "marks": 15,
+    "id": 662,
+    "year": "2025",
+    "paper": "Paper II"
   }
 ]
