@@ -83,6 +83,7 @@ Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
         model: 'pixtral-12b-2409',
         max_tokens: 4000,
         temperature: 0.0,
+        response_format: { type: 'json_object' },
         messages: [
           {
             role: 'user',
@@ -100,14 +101,23 @@ Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
 
     const data = await res.json();
     const raw = data.choices?.[0]?.message?.content?.trim() ?? '';
-    const clean = raw.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
+    // Strip markdown fences if present
+    let clean = raw.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/```$/, '').trim();
 
     let parsed: { question: string; transcript: string };
     try {
       parsed = JSON.parse(clean);
     } catch {
-      console.error('JSON parse failed, raw:', raw);
-      return NextResponse.json({ error: 'Could not parse response.' }, { status: 500 });
+      // Attempt to fix unescaped newlines inside JSON string values
+      try {
+        const fixed = clean.replace(/("(?:[^"\\]|\\.)*")/g, (match) =>
+          match.replace(/\n/g, '\\n').replace(/\r/g, '')
+        );
+        parsed = JSON.parse(fixed);
+      } catch {
+        console.error('JSON parse failed, raw:', raw);
+        return NextResponse.json({ error: 'Could not parse response.' }, { status: 500 });
+      }
     }
 
     return NextResponse.json({
