@@ -110,7 +110,7 @@ Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
     } catch {
       // Attempt to fix unescaped newlines inside JSON string values
       try {
-        const fixed = clean.replace(/("(?:[^"\\]|\\.)*")/g, (match) =>
+        const fixed = clean.replace(/("(?:[^"\\]|\\.)*")/g, ( match: string) =>
           match.replace(/\n/g, '\\n').replace(/\r/g, '')
         );
         parsed = JSON.parse(fixed);
