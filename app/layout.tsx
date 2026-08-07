@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import SessionTracker from '@/components/SessionTracker';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Navbar />
+        <SessionTracker />
         <main style={{ minHeight: '100vh', paddingTop: 60 }} id="main-layout">
           {children}
         </main>
