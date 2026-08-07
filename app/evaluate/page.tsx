@@ -537,6 +537,24 @@ export default function EvaluatePage() {
     })
   }, []) // eslint-disable-line
 
+  // ── Compress image before sending to OCR ────────────────────────────────
+  const compressImage = (file: File, maxPx = 1600, quality = 0.82): Promise<Blob> =>
+    new Promise((resolve) => {
+      const img = new Image()
+      const url = URL.createObjectURL(file)
+      img.onload = () => {
+        const scale = Math.min(1, maxPx / Math.max(img.width, img.height))
+        const w = Math.round(img.width * scale)
+        const h = Math.round(img.height * scale)
+        const canvas = document.createElement('canvas')
+        canvas.width = w; canvas.height = h
+        canvas.getContext('2d')!.drawImage(img, 0, 0, w, h)
+        URL.revokeObjectURL(url)
+        canvas.toBlob(b => resolve(b ?? file), 'image/jpeg', quality)
+      }
+      img.src = url
+    })
+
   // ── Triggered only when user clicks "Read answer →" ──────────────────────
   const handleReadAnswer = async () => {
     if (!files.length) return
@@ -559,7 +577,8 @@ export default function EvaluatePage() {
       ? (async () => {
           try {
             const fd = new FormData()
-            imageFiles.forEach(f => fd.append('files', f))
+            const compressed = await Promise.all(imageFiles.map(f => compressImage(f)))
+            compressed.forEach((blob, i) => fd.append('files', new File([blob], `page-${i+1}.jpg`, { type: 'image/jpeg' })))
             const headers: Record<string, string> = {}
             if (user) {
               const tok = await user.getIdToken()
