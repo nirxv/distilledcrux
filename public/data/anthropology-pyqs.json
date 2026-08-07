@@ -2518,5 +2518,3173 @@
     "microtheme": "Communalism",
     "question": "Factors contributing to communalism.",
     "marks": 15
+  },
+  {
+    "id": 281,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Meaning, Scope and Development of Anthropology",
+    "microtheme": "Meaning and scope",
+    "question": "Anthropology provides a multidimensional understanding of human beings by bridging the gap between science and humanities. Elucidate.",
+    "marks": 20
+  },
+  {
+    "id": 282,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Meaning, Scope and Development of Anthropology",
+    "microtheme": "Meaning and scope",
+    "question": "\"Anthropology is the systematic, objective, and holistic study of humankind in all times and places.\" Elaborate the argument.",
+    "marks": 20
+  },
+  {
+    "id": 283,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Meaning, Scope and Development of Anthropology",
+    "microtheme": "Meaning and scope",
+    "question": "Relevance of Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 284,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Meaning, Scope and Development of Anthropology",
+    "microtheme": "Meaning and scope",
+    "question": "Define Anthropology. Describe the major branches of Anthropology elaborating on any one branch.",
+    "marks": 20
+  },
+  {
+    "id": 285,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Meaning, Scope and Development of Anthropology",
+    "microtheme": "Meaning and scope",
+    "question": "Critically examine the role of anthropology in Contemporary India.",
+    "marks": 15
+  },
+  {
+    "id": 286,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Relationships with Other Disciplines",
+    "microtheme": "Scope and uniqueness",
+    "question": "Elaborate the scope of anthropology and elucidate the uniqueness in the field of other social sciences.",
+    "marks": 20
+  },
+  {
+    "id": 287,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Relationships with Other Disciplines",
+    "microtheme": "Sociology vs Social Anthropology",
+    "question": "Differences between Social Anthropology and Sociology.",
+    "marks": 10
+  },
+  {
+    "id": 288,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Relationships with Other Disciplines",
+    "microtheme": "Economics and Economic Anthropology",
+    "question": "Differentiate between Economics and Economic Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 289,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Relationships with Other Disciplines",
+    "microtheme": "Social Sciences",
+    "question": "How do you situate Anthropology in Social Sciences?",
+    "marks": 10
+  },
+  {
+    "id": 290,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Biological Anthropology",
+    "question": "\"The agenda of biological anthropology became more scientific from the middle of the twentieth century.\" Justify.",
+    "marks": 15
+  },
+  {
+    "id": 291,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Social and Cultural Anthropology",
+    "question": "Scope and relevance of Social and Cultural Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 292,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Linguistic Anthropology",
+    "question": "Mention the major branches of linguistic anthropology and discuss language use in social and cultural settings.",
+    "marks": 15
+  },
+  {
+    "id": 293,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "All branches",
+    "question": "How can synergising the core branches of anthropology reinvigorate the holistic spirit of the discipline?",
+    "marks": 20
+  },
+  {
+    "id": 294,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Linguistic Anthropology",
+    "question": "Relationship between Linguistics and Social-Cultural Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 295,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Archaeological Anthropology",
+    "question": "Give an account of the field methods used in the study of Archaeological Anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 296,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Archaeological Anthropology",
+    "question": "Archaeological Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 297,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "All branches",
+    "question": "Major subdivisions of Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 298,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Main Branches of Anthropology",
+    "microtheme": "Linguistic Anthropology",
+    "question": "Linguistic Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 299,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Biological and cultural factors",
+    "question": "Critically discuss the synergistic effect of biological and cultural factors in human evolution.",
+    "marks": 15
+  },
+  {
+    "id": 300,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Hominization process",
+    "question": "What is the hominization process? Discuss the major trends in human evolution with the help of suitable examples and illustrations.",
+    "marks": 20
+  },
+  {
+    "id": 301,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Evolutionary forces",
+    "question": "Discuss the role of evolutionary forces in creating human diversity.",
+    "marks": 20
+  },
+  {
+    "id": 302,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Genetic mechanisms",
+    "question": "Explain the genetic mechanisms of micro and macro evolution.",
+    "marks": 15
+  },
+  {
+    "id": 303,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Synthetic theory",
+    "question": "Elucidate how Darwin and post-Darwin theories of evolution resulted in the development of the Synthetic theory of evolution.",
+    "marks": 15
+  },
+  {
+    "id": 304,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Biological and cultural factors",
+    "question": "Explain the biological changes that made human beings capable of making cultures.",
+    "marks": 20
+  },
+  {
+    "id": 305,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Biological and cultural factors",
+    "question": "Elucidate the biological and cultural factors in human evolution.",
+    "marks": 15
+  },
+  {
+    "id": 306,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Biological and cultural factors",
+    "question": "Elucidate the biological and cultural factors in human evolution.",
+    "marks": 15
+  },
+  {
+    "id": 307,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Darwinian theory",
+    "question": "Critically examine Darwin's theory of evolution in understanding evolution.",
+    "marks": 15
+  },
+  {
+    "id": 308,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Evolution and Emergence of Man",
+    "microtheme": "Neo-Darwinism",
+    "question": "Discuss how Neo-Darwinism integrated the fields of Genetics and Evolution?",
+    "marks": 15
+  },
+  {
+    "id": 309,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "African origin of humans",
+    "question": "Critically discuss the centrality of the African continent in the narrative of human evolution.",
+    "marks": 15
+  },
+  {
+    "id": 310,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Non-human primate communication",
+    "question": "Smell as a signal among non-human primates.",
+    "marks": 10
+  },
+  {
+    "id": 311,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Primate social organisation",
+    "question": "Discuss different forms of primate social organisation.",
+    "marks": 15
+  },
+  {
+    "id": 312,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Erect posture",
+    "question": "The losses and gains of erect posture.",
+    "marks": 10
+  },
+  {
+    "id": 313,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Primate behaviour",
+    "question": "Jane Goodall's contributions in studying primate behaviour.",
+    "marks": 10
+  },
+  {
+    "id": 314,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Locomotion patterns",
+    "question": "Illustrate with examples the various types of locomotion pattern among non-human primates.",
+    "marks": 15
+  },
+  {
+    "id": 315,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Adaptive radiation",
+    "question": "Adaptive primate radiation.",
+    "marks": 10
+  },
+  {
+    "id": 316,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Bipedalism and erect posture",
+    "question": "Discuss the evolutionary significance of bipedalism and erect posture.",
+    "marks": 20
+  },
+  {
+    "id": 317,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Man and Apes",
+    "question": "Bring out the comparative anatomical features of man and apes. Discuss their evolutionary significance.",
+    "marks": 15
+  },
+  {
+    "id": 318,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Erect posture",
+    "question": "Explain the skeletal changes due to erect posture and their implications.",
+    "marks": 15
+  },
+  {
+    "id": 319,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Man and chimpanzees",
+    "question": "Elucidate the skeletal differences between humans and chimpanzees.",
+    "marks": 15
+  },
+  {
+    "id": 320,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Characteristics of Primates",
+    "microtheme": "Primatology",
+    "question": "Role of Primatology in Anthropological studies.",
+    "marks": 10
+  },
+  {
+    "id": 321,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Mousterian culture",
+    "question": "Write a note on Mousterian tool tradition, Mousterian culture and its makers.",
+    "marks": 15
+  },
+  {
+    "id": 322,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Miocene hominoids",
+    "question": "Discuss the Miocene hominoid remains and their significance in evolution.",
+    "marks": 20
+  },
+  {
+    "id": 323,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Osteodontokeratic culture",
+    "question": "Osteodontokeratik culture and its makers.",
+    "marks": 10
+  },
+  {
+    "id": 324,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Homo erectus",
+    "question": "Discuss the geographical distribution of Homo erectus. Taking into account its physical features, where does it fit in the human evolutionary line?",
+    "marks": 20
+  },
+  {
+    "id": 325,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Australopithecines",
+    "question": "Discuss major species of Australopithecus discovered from South and East Africa. Describe the discovery, physical features, and significance of Taung baby.",
+    "marks": 20
+  },
+  {
+    "id": 326,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Neanderthal man",
+    "question": "Should we still distinguish between 'classic' and 'progressive' Neanderthals? Discuss the controversy surrounding Neanderthal's position in human evolution.",
+    "marks": 15
+  },
+  {
+    "id": 327,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Homo erectus",
+    "question": "What are the physical and cultural characteristics of Homo erectus? Discuss its phylogenetic status.",
+    "marks": 20
+  },
+  {
+    "id": 328,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Modern Homo sapiens",
+    "question": "Critically evaluate the contesting theories of the emergence and dispersal of modern Homo sapiens.",
+    "marks": 20
+  },
+  {
+    "id": 329,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Neanderthal man",
+    "question": "\"Europeans are closer to Neanderthals.\" Critically discuss in view of the African origin of humankind.",
+    "marks": 15
+  },
+  {
+    "id": 330,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Homo erectus culture",
+    "question": "Describe the culture related to Homo erectus.",
+    "marks": 15
+  },
+  {
+    "id": 331,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Rhodesian man",
+    "question": "Write short notes on Rhodesian Man.",
+    "marks": 10
+  },
+  {
+    "id": 332,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Homo erectus",
+    "question": "Describe the salient characteristics & geographical distribution of Homo erectus.",
+    "marks": 15
+  },
+  {
+    "id": 333,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Phylogenetic Status of Fossil Hominids",
+    "microtheme": "Homo erectus",
+    "question": "Asian Homo erectus.",
+    "marks": 10
+  },
+  {
+    "id": 334,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Biological Basis of Life",
+    "microtheme": "Gene expression",
+    "question": "Gene expression.",
+    "marks": 10
+  },
+  {
+    "id": 335,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Absolute dating",
+    "question": "Fission track dating method and its applications.",
+    "marks": 10
+  },
+  {
+    "id": 336,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Chronometric dating",
+    "question": "Chronometric dating.",
+    "marks": 10
+  },
+  {
+    "id": 337,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Identify the major Mesolithic sites and describe the typo-technological features with special reference to India.",
+    "marks": 15
+  },
+  {
+    "id": 338,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Paleolithic",
+    "question": "Discuss the Paleolithic environment, in light of available evidence with special reference to India.",
+    "marks": 15
+  },
+  {
+    "id": 339,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Prehistoric sites",
+    "question": "Prehistoric significance of Rakhigarhi.",
+    "marks": 10
+  },
+  {
+    "id": 340,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Iron Age",
+    "question": "Cultural impact of Iron Age.",
+    "marks": 10
+  },
+  {
+    "id": 341,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic rock art",
+    "question": "Mesolithic rock art in Indian subcontinent.",
+    "marks": 10
+  },
+  {
+    "id": 342,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Enumerate the evidence of animal domestication in Indian microlithic industry.",
+    "marks": 15
+  },
+  {
+    "id": 343,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Absolute dating",
+    "question": "Thermoluminescence (TL) dating.",
+    "marks": 10
+  },
+  {
+    "id": 344,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Neolithic",
+    "question": "Describe the features of early farming cultures and Neolithic of the Near East.",
+    "marks": 15
+  },
+  {
+    "id": 345,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Discuss the salient features of different traditions of European Mesolithic.",
+    "marks": 15
+  },
+  {
+    "id": 346,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Natufian culture.",
+    "marks": 10
+  },
+  {
+    "id": 347,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Paleolithic",
+    "question": "Differentiate between Lower Palaeolithic and Middle Palaeolithic culture with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 348,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Prehistoric sites",
+    "question": "Olduvai Gorge.",
+    "marks": 10
+  },
+  {
+    "id": 349,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Elucidate Mesolithic culture and associated rock art with examples from India.",
+    "marks": 15
+  },
+  {
+    "id": 350,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Relative dating",
+    "question": "Relative dating methods.",
+    "marks": 10
+  },
+  {
+    "id": 351,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Paleolithic",
+    "question": "Discuss briefly the major traditions in the Upper Paleolithic cultures of Europe.",
+    "marks": 15
+  },
+  {
+    "id": 352,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Neolithic",
+    "question": "Give an account of the consequences of food production of Neolithic culture.",
+    "marks": 15
+  },
+  {
+    "id": 353,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Absolute dating",
+    "question": "Describe the principles of radiocarbon dating. Mention its limitations.",
+    "marks": 15
+  },
+  {
+    "id": 354,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Dating methods",
+    "question": "What are dating methods? Discuss one absolute method and one relative method in detail.",
+    "marks": 15
+  },
+  {
+    "id": 355,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Mesolithic",
+    "question": "Salient features of Mesolithic culture.",
+    "marks": 10
+  },
+  {
+    "id": 356,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Chalcolithic",
+    "question": "Delineate the salient features of Chalcolithic cultures.",
+    "marks": 15
+  },
+  {
+    "id": 357,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Paleolithic",
+    "question": "Paleolithic Culture.",
+    "marks": 10
+  },
+  {
+    "id": 358,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Absolute dating",
+    "question": "Describe the absolute dating methods in Archaeology, highlighting the importance of each method.",
+    "marks": 15
+  },
+  {
+    "id": 359,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Paleolithic",
+    "question": "Give the broad outline of Palaeolithic culture emphasizing upon its tool technology.",
+    "marks": 20
+  },
+  {
+    "id": 360,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Prehistoric Archaeology and Cultural Evolution",
+    "microtheme": "Absolute dating",
+    "question": "Carbon-14 method of dating.",
+    "marks": 10
+  },
+  {
+    "id": 361,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Culture as integrated system",
+    "question": "Critically examine the drawbacks in assuming culture as an 'integrated-closed system in understanding of contemporary society.",
+    "marks": 15
+  },
+  {
+    "id": 362,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Culture and embodiment",
+    "question": "Culture and embodiment.",
+    "marks": 10
+  },
+  {
+    "id": 363,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Global cultural economy",
+    "question": "Critically examine Arjun Appadurai's conceptualization of the global cultural economy.",
+    "marks": 20
+  },
+  {
+    "id": 364,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural lag",
+    "question": "Write notes in about 150 words: William Ogburn and Cultural lag.",
+    "marks": 10
+  },
+  {
+    "id": 365,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Attributes of culture",
+    "question": "Attributes of culture.",
+    "marks": 10
+  },
+  {
+    "id": 366,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural relativism",
+    "question": "Discuss the historical and cultural contexts that led to superseding ethnocentrism with cultural relativism in anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 367,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural relativism",
+    "question": "Human rights and Cultural relativism.",
+    "marks": 10
+  },
+  {
+    "id": 368,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural relativism",
+    "question": "Cultural Relativism.",
+    "marks": 10
+  },
+  {
+    "id": 369,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Concept of culture",
+    "question": "Discuss the development of the concept of culture in Anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 370,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural relativism",
+    "question": "Cultural Relativism.",
+    "marks": 10
+  },
+  {
+    "id": 371,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Cultural relativism",
+    "question": "Why has the concept of Cultural Relativism been so dear to anthropologists?",
+    "marks": 15
+  },
+  {
+    "id": 372,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Nature of Culture",
+    "microtheme": "Culture and civilization",
+    "question": "Bring out the distinguishing features of culture and civilization.",
+    "marks": 15
+  },
+  {
+    "id": 373,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Social stratification",
+    "question": "Examine critically the concept of social stratification as a basis for sustaining social inequality.",
+    "marks": 20
+  },
+  {
+    "id": 374,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Status, role, institution",
+    "question": "Radcliffe-Brown's ideas on status, role, and institution.",
+    "marks": 10
+  },
+  {
+    "id": 375,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Status, role, institution",
+    "question": "Write a note in about 150 words: Radcliffe-Brown's ideas on status, role, and institution.",
+    "marks": 10
+  },
+  {
+    "id": 376,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Social stratification",
+    "question": "Critically evaluate different types of social stratifications with suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 377,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Total institutions",
+    "question": "Discuss Erving Goffman's concept of total institutions and its relevance in contemporary society.",
+    "marks": 15
+  },
+  {
+    "id": 378,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Social stratification",
+    "question": "Discuss social stratification according to any three major approaches.",
+    "marks": 20
+  },
+  {
+    "id": 379,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Society and culture",
+    "question": "Society and Culture.",
+    "marks": 10
+  },
+  {
+    "id": 380,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Nature of Society",
+    "microtheme": "Status and role",
+    "question": "Define Status and Role. Distinguish between Ascribed and Achieved Status.",
+    "marks": 15
+  },
+  {
+    "id": 381,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Marriage regulations",
+    "question": "Discuss the role of marriage regulations in traditional societies in India for strengthening social solidarity.",
+    "marks": 20
+  },
+  {
+    "id": 382,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Alliance theory",
+    "question": "Marriage Regulations and Alliance Theory.",
+    "marks": 10
+  },
+  {
+    "id": 383,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Mate acquisition",
+    "question": "Ways of Acquiring Mate in Tribal Society.",
+    "marks": 10
+  },
+  {
+    "id": 384,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Preferential marriage",
+    "question": "Discuss the different forms of preferential marriage with suitable examples from tribal societies in India.",
+    "marks": 15
+  },
+  {
+    "id": 385,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Incest taboos",
+    "question": "Incest Taboos.",
+    "marks": 10
+  },
+  {
+    "id": 386,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Types of marriage",
+    "question": "Define marriage and describe the various types of marriages in human societies.",
+    "marks": 15
+  },
+  {
+    "id": 387,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Marriage",
+    "microtheme": "Live-in relationship",
+    "question": "Where do you situate 'live-in relationship' within the institution of marriage?",
+    "marks": 15
+  },
+  {
+    "id": 388,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Urbanization and family",
+    "question": "Define urbanization and discuss its impact on family in India with examples.",
+    "marks": 15
+  },
+  {
+    "id": 389,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Household and domestic group",
+    "question": "Write a note in about 150 words: Household and domestic group.",
+    "marks": 10
+  },
+  {
+    "id": 390,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Feminist movement and family",
+    "question": "Explain the impact of the feminist movement on the universality of marriage and family structure.",
+    "marks": 20
+  },
+  {
+    "id": 391,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Urbanization and family",
+    "question": "Discuss the impact of urbanization and feminist movements on families in India.",
+    "marks": 20
+  },
+  {
+    "id": 392,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Universality of family",
+    "question": "Define family and critically examine the universality of family.",
+    "marks": 15
+  },
+  {
+    "id": 393,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Urbanization and family",
+    "question": "Discuss the impact of urbanization and the feminist movement on family.",
+    "marks": 15
+  },
+  {
+    "id": 394,
+    "year": "2012",
+    "paper": "Paper I",
+    "topic": "Family",
+    "microtheme": "Family as social institution",
+    "question": "Is family a social institution?",
+    "marks": 10
+  },
+  {
+    "id": 395,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Purum kinship system",
+    "question": "Theoretical significance of Purum kinship-system.",
+    "marks": 10
+  },
+  {
+    "id": 396,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Avoidance and joking relationships",
+    "question": "Critical perspective on avoidance and joking relationship.",
+    "marks": 10
+  },
+  {
+    "id": 397,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Kroeber and kinship",
+    "question": "Critically discuss A.L. Kroeber's contribution to kinship studies.",
+    "marks": 15
+  },
+  {
+    "id": 398,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Matrilineal descent",
+    "question": "Discuss how the rules of descent contradict the principles of residence in matrilineal society, mentioning suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 399,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Descent groups",
+    "question": "Write notes on: Descent Groups.",
+    "marks": 10
+  },
+  {
+    "id": 400,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Kinship terminology",
+    "question": "Kinship Terminology.",
+    "marks": 10
+  },
+  {
+    "id": 401,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Kinship terminology",
+    "question": "Elucidate the determinants of Kinship terminology.",
+    "marks": 15
+  },
+  {
+    "id": 402,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Bilineal and bilateral descent",
+    "question": "Bilineal and Bilateral descent.",
+    "marks": 10
+  },
+  {
+    "id": 403,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Descent and alliance theories",
+    "question": "Describe the cardinal points of descent and alliance theories.",
+    "marks": 20
+  },
+  {
+    "id": 404,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Lineage and clan",
+    "question": "Lineage and Clan.",
+    "marks": 10
+  },
+  {
+    "id": 405,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Double descent",
+    "question": "Double Descent.",
+    "marks": 10
+  },
+  {
+    "id": 406,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Kinship",
+    "microtheme": "Types of descent",
+    "question": "Various types of descent.",
+    "marks": 10
+  },
+  {
+    "id": 407,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Kula",
+    "question": "Cultural relevance of the Kula.",
+    "marks": 10
+  },
+  {
+    "id": 408,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Globalization and indigenous communities",
+    "question": "Discuss the impact of globalization on the economic systems of indigenous communities.",
+    "marks": 15
+  },
+  {
+    "id": 409,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Kula Ring",
+    "question": "Critically examine various anthropological interpretations about the Kula Ring.",
+    "marks": 15
+  },
+  {
+    "id": 410,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Formalist vs substantivist",
+    "question": "Write a note in about 150 words: Debate between formalist and substantivist approaches.",
+    "marks": 10
+  },
+  {
+    "id": 411,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Modes of subsistence",
+    "question": "Write notes on Modes of Subsistence.",
+    "marks": 10
+  },
+  {
+    "id": 412,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Globalization and indigenous people",
+    "question": "Discuss how indigenous people encounter globalization.",
+    "marks": 20
+  },
+  {
+    "id": 413,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Pastoralism",
+    "question": "Pastoralism in India.",
+    "marks": 10
+  },
+  {
+    "id": 414,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Hunting and gathering",
+    "question": "Write the characteristics of the hunting and gathering economy.",
+    "marks": 15
+  },
+  {
+    "id": 415,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Exchange systems",
+    "question": "With the help of appropriate examples, explain the various forms of the exchange system.",
+    "marks": 15
+  },
+  {
+    "id": 416,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Production, distribution and exchange",
+    "question": "Discuss the principles governing production, distribution, and exchange in simple societies.",
+    "marks": 20
+  },
+  {
+    "id": 417,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Formalist vs substantivist",
+    "question": "Critically examine the Formalists and Substantivists' views on the applicability of economic laws in the study of primitive societies.",
+    "marks": 20
+  },
+  {
+    "id": 418,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Horticulture",
+    "question": "Horticulture.",
+    "marks": 10
+  },
+  {
+    "id": 419,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Economic Organization",
+    "microtheme": "Globalization and tribal economy",
+    "question": "Discuss the impact of globalization on tribal economy.",
+    "marks": 20
+  },
+  {
+    "id": 420,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Authority and political organization",
+    "question": "Authority and forms of political organization.",
+    "marks": 10
+  },
+  {
+    "id": 421,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Social control mechanisms",
+    "question": "Discuss the mechanism of social control in different kinds of political systems.",
+    "marks": 20
+  },
+  {
+    "id": 422,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Primate social organization",
+    "question": "Discuss different forms of primate social organization.",
+    "marks": 15
+  },
+  {
+    "id": 423,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Power and legitimacy",
+    "question": "How do political organizations of simple societies establish power, authority, and legitimacy?",
+    "marks": 20
+  },
+  {
+    "id": 424,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Power and conspicuous consumption",
+    "question": "How is the construct of power linked to the notion of conspicuous consumption and its impact on distributive justice?",
+    "marks": 15
+  },
+  {
+    "id": 425,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Customary law",
+    "question": "How does customary law function in tribal society? Discuss its different sources.",
+    "marks": 15
+  },
+  {
+    "id": 426,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Band organization",
+    "question": "Mention the characteristic features of a band with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 427,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Social control",
+    "question": "Discuss different social control mechanisms in simple societies.",
+    "marks": 15
+  },
+  {
+    "id": 428,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "State and stateless societies",
+    "question": "Differentiate between State and Stateless Societies.",
+    "marks": 10
+  },
+  {
+    "id": 429,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Political Organization and Social Control",
+    "microtheme": "Law and justice",
+    "question": "Discuss the nature of Law and Justice in simple societies citing suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 430,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Levi-Strauss and myth",
+    "question": "How does Levi-Strauss look at the Tsimshian myth of Asdiwal? Critically discuss Levi-Strauss' theory of structuralism in the light of his study of mythologies.",
+    "marks": 15
+  },
+  {
+    "id": 431,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Clifford Geertz and religion",
+    "question": "How did Clifford Geertz look at religion? Differentiate between anthropological and psychological approaches to the study of religion.",
+    "marks": 15
+  },
+  {
+    "id": 432,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Shaman and sorcerer",
+    "question": "Write a note in about 150 words: Shaman, sorcerer, and medicine man.",
+    "marks": 10
+  },
+  {
+    "id": 433,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Animism and deep ecology",
+    "question": "Write notes on Animism and Deep Ecology in about 150 words.",
+    "marks": 10
+  },
+  {
+    "id": 434,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Anthropological approaches to religion",
+    "question": "Critically explain the anthropological approaches to religion.",
+    "marks": 15
+  },
+  {
+    "id": 435,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Science and magic",
+    "question": "Difference between Science and Magic.",
+    "marks": 10
+  },
+  {
+    "id": 436,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Traditional forms of religion",
+    "question": "Discuss the different traditional forms of religion in tribal societies.",
+    "marks": 15
+  },
+  {
+    "id": 437,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Religion and magic",
+    "question": "Difference between religion and magic.",
+    "marks": 10
+  },
+  {
+    "id": 438,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Anthropological approaches to religion",
+    "question": "Critically examine different Anthropological approaches to religion.",
+    "marks": 15
+  },
+  {
+    "id": 439,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Totemism",
+    "question": "Totemism.",
+    "marks": 10
+  },
+  {
+    "id": 440,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Sacred and profane",
+    "question": "How do you relate the concepts of 'Sacred' and 'Profane' in Durkheim's theory of religion with a focus on the role of the totem?",
+    "marks": 15
+  },
+  {
+    "id": 441,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Rites of passage",
+    "question": "What is understood by 'Rites of Passage'? Describe the various phases of the 'Rites of Passage' and their significance.",
+    "marks": 20
+  },
+  {
+    "id": 442,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Taboo and social control",
+    "question": "How does taboo serve as a means of social control?",
+    "marks": 15
+  },
+  {
+    "id": 443,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Religion",
+    "microtheme": "Totemism",
+    "question": "Totemism.",
+    "marks": 10
+  },
+  {
+    "id": 444,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Classical evolutionism",
+    "question": "How the study of variation in forms of marriage led to rethinking on the concepts of social reproduction, kinship and family?",
+    "marks": 20
+  },
+  {
+    "id": 445,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Classical evolutionism - Frazer",
+    "question": "Critically examine James Frazer's theory of evolutionism. Elucidate the place of religion in modernity.",
+    "marks": 15
+  },
+  {
+    "id": 446,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Classical evolutionism - Morgan",
+    "question": "Critically evaluate Lewis Morgan's classification of family.",
+    "marks": 15
+  },
+  {
+    "id": 447,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Classical evolutionism - Morgan",
+    "question": "How did Morgan explain the evolution of marriage, family and Socio-Political organization and how did other evolutionists disagree with his explanation?",
+    "marks": 20
+  },
+  {
+    "id": 448,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Historical particularism",
+    "question": "Discuss historical particularism as a critical development to classical evolutionism.",
+    "marks": 20
+  },
+  {
+    "id": 449,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Historical particularism - Boas",
+    "question": "Historical Particularism and Franz Boas.",
+    "marks": 10
+  },
+  {
+    "id": 450,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Diffusionism vs evolutionism",
+    "question": "How do diffusionism and evolutionism differ as explanations of Cultural Change?",
+    "marks": 15
+  },
+  {
+    "id": 451,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Historical particularism",
+    "question": "Historical Particularism.",
+    "marks": 10
+  },
+  {
+    "id": 452,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Structural functionalism and kinship",
+    "question": "How did Radcliffe-Brown and Levi-Strauss study kinship in terms of social structure?",
+    "marks": 15
+  },
+  {
+    "id": 453,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Structural functionalism",
+    "question": "Basic tenets of structural-functionalism.",
+    "marks": 10
+  },
+  {
+    "id": 454,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Functionalism",
+    "question": "Functionalism.",
+    "marks": 10
+  },
+  {
+    "id": 455,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Functionalism and religion",
+    "question": "What is functionalism? Discuss the functional approach to the understanding of Religion.",
+    "marks": 20
+  },
+  {
+    "id": 456,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Functionalism vs structural functionalism",
+    "question": "In what ways is Functionalism different from Structural Functionalism?",
+    "marks": 20
+  },
+  {
+    "id": 457,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Structuralism - Levi-Strauss",
+    "question": "Explain the structural analysis of kinship as proposed by Levi-Strauss.",
+    "marks": 15
+  },
+  {
+    "id": 458,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Structuralism - binary opposites",
+    "question": "How do the concepts of binary opposite and exchange figure in Levi-Strauss' structural analysis of Kinship?",
+    "marks": 15
+  },
+  {
+    "id": 459,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Culture and personality - Ruth Benedict",
+    "question": "Critically discuss the characteristics of the psychological types in the cultures of the American South-West as observed by Ruth Benedict.",
+    "marks": 20
+  },
+  {
+    "id": 460,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Culture and personality - Malinowski and Mead",
+    "question": "Critically discuss the controversies related to fieldwork of Bronislaw Malinowski and Margaret Mead.",
+    "marks": 20
+  },
+  {
+    "id": 461,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "National character studies",
+    "question": "Discuss political and methodological aspects of national character studies. Elucidate the contemporary relevance of such studies.",
+    "marks": 15
+  },
+  {
+    "id": 462,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Culture and personality",
+    "question": "Discuss various anthropological approaches to the study of personality and culture.",
+    "marks": 20
+  },
+  {
+    "id": 463,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "National character study",
+    "question": "What do you understand by the National Character Study? Illustrate the concept.",
+    "marks": 15
+  },
+  {
+    "id": 464,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Culture and personality - Ruth Benedict",
+    "question": "Explain Ruth Benedict's patterns of culture.",
+    "marks": 20
+  },
+  {
+    "id": 465,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Neo-evolutionism",
+    "question": "Discuss the approaches of Leslie White, Julian Steward, and Marshall Sahlins in the light of cultural evolution.",
+    "marks": 15
+  },
+  {
+    "id": 466,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Neo-evolutionism - Gordon Childe",
+    "question": "Gordon Childe's Theory of Cultural Evolution.",
+    "marks": 10
+  },
+  {
+    "id": 467,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Neo-evolutionism - Steward",
+    "question": "Critically examine the Stewardian view of neo-evolutionism.",
+    "marks": 15
+  },
+  {
+    "id": 468,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Cultural materialism",
+    "question": "Cultural Materialism.",
+    "marks": 10
+  },
+  {
+    "id": 469,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Symbolic theories - Geertz vs Turner",
+    "question": "Compare and contrast the symbolic approaches of Clifford Geertz and Victor Turner to understand culture.",
+    "marks": 15
+  },
+  {
+    "id": 470,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Thick description - Geertz",
+    "question": "Elucidate the concept of \"thick description\" of Clifford Geertz with a suitable example.",
+    "marks": 15
+  },
+  {
+    "id": 471,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Victor Turner - liminality",
+    "question": "Victor Turner and Liminality.",
+    "marks": 10
+  },
+  {
+    "id": 472,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Victor Turner and Clifford Geertz",
+    "question": "Examine critically the contributions of Victor Turner and Clifford Geertz in anthropology.",
+    "marks": 20
+  },
+  {
+    "id": 473,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Geertz - Balinese cockfight",
+    "question": "According to Geertz, how does the cockfight reveal aspects of Balinese culture?",
+    "marks": 15
+  },
+  {
+    "id": 474,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Geertz vs Turner - symbolic",
+    "question": "What made Geertz's Interpretive Anthropology distinct from Turner's symbolic anthropology? What does each of them mean by the terms 'Symbol' and 'Symbolic'?",
+    "marks": 25
+  },
+  {
+    "id": 475,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Symbolic and interpretive theories - Turner and Geertz",
+    "question": "Bring out the contribution of Turner and Geertz in symbolic and interpretive theories in Anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 476,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Postmodernism and social justice",
+    "question": "How the theories of postmodernism are relevant in promoting social justice and empowerment of marginalised communities?",
+    "marks": 15
+  },
+  {
+    "id": 477,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Postmodernism and social justice",
+    "question": "How the theories of postmodernism are relevant in promoting social justice and empowerment of marginalised communities?",
+    "marks": 20
+  },
+  {
+    "id": 478,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Postmodernism - Derrida",
+    "question": "Critically explain the notion of 'deconstruction' in the light of the postmodern works of Jacques Derrida.",
+    "marks": 20
+  },
+  {
+    "id": 479,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Anthropological Theories",
+    "microtheme": "Postmodernism",
+    "question": "Explain the basic features of 'Postmodernism' in Anthropology.",
+    "marks": 20
+  },
+  {
+    "id": 480,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Linguistic anthropology perspectives",
+    "question": "Describe briefly the theoretical perspectives in linguistic anthropology to explain the relationship of culture, language and thought.",
+    "marks": 15
+  },
+  {
+    "id": 481,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Glottochronology",
+    "question": "Write notes in about 150 words: Glottochronology.",
+    "marks": 10
+  },
+  {
+    "id": 482,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Language and social inequality",
+    "question": "Explain how variations in language usage are related to social inequality.",
+    "marks": 20
+  },
+  {
+    "id": 483,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Sapir-Whorf hypothesis",
+    "question": "Sapir-Whorf hypothesis.",
+    "marks": 10
+  },
+  {
+    "id": 484,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Language and culture",
+    "question": "Critically examine that the structure and content of language are influenced by culture.",
+    "marks": 15
+  },
+  {
+    "id": 485,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Culture, Language and Communication",
+    "microtheme": "Non-verbal communication",
+    "question": "Non-verbal communication.",
+    "marks": 10
+  },
+  {
+    "id": 486,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Pedigree and genealogical analysis",
+    "question": "Differentiate between Pedigree & Geniological Analysis. Discuss the history and application of these methods in anthropological studies.",
+    "marks": 15
+  },
+  {
+    "id": 487,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Fieldwork challenges",
+    "question": "Discuss the contemporary challenges in fieldwork method in anthropological research.",
+    "marks": 15
+  },
+  {
+    "id": 488,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Fieldwork tradition",
+    "question": "Write the historical development of fieldwork tradition in anthropology till recent times.",
+    "marks": 15
+  },
+  {
+    "id": 489,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Experiential ethnography",
+    "question": "Experiential Ethnography.",
+    "marks": 10
+  },
+  {
+    "id": 490,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Fieldwork characteristics",
+    "question": "Elucidate the basic characteristics of anthropological fieldwork methods.",
+    "marks": 15
+  },
+  {
+    "id": 491,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Fieldwork tradition",
+    "question": "Describe the evolution of fieldwork tradition in Anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 492,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Fieldwork tradition",
+    "question": "Fieldwork tradition in Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 493,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Sampling techniques",
+    "question": "Discuss the applicability of various sampling techniques in selecting the study group.",
+    "marks": 15
+  },
+  {
+    "id": 494,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Ethnographic methods",
+    "question": "Multispecies, Multi-sited and Critical Ethnography.",
+    "marks": 10
+  },
+  {
+    "id": 495,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Data collection tools",
+    "question": "Discuss various tools of data collection in conducting anthropological research.",
+    "marks": 20
+  },
+  {
+    "id": 496,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Participant observation",
+    "question": "Evaluate participant observation in producing anthropological knowledge.",
+    "marks": 15
+  },
+  {
+    "id": 497,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Phenomenology",
+    "question": "Discuss phenomenology as a research method in anthropological studies.",
+    "marks": 15
+  },
+  {
+    "id": 498,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Case study method",
+    "question": "How is case study method helpful in understanding social phenomena? Explain with suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 499,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Questionnaire",
+    "question": "Questionnaire.",
+    "marks": 10
+  },
+  {
+    "id": 500,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Genealogical method",
+    "question": "Genealogical Method.",
+    "marks": 10
+  },
+  {
+    "id": 501,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Case study method",
+    "question": "Discuss the relevance of Case Study method of data collection.",
+    "marks": 15
+  },
+  {
+    "id": 502,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Data interpretation and presentation",
+    "question": "How have interpretation and presentation of data changed from classical to contemporary writings in anthropological texts?",
+    "marks": 15
+  },
+  {
+    "id": 503,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Research Methods in Anthropology",
+    "microtheme": "Qualitative data analysis",
+    "question": "Describe various methods of qualitative data analysis. Highlight some popular computer softwares used in qualitative analysis.",
+    "marks": 20
+  },
+  {
+    "id": 504,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Heritability",
+    "question": "Heritability and its estimation.",
+    "marks": 10
+  },
+  {
+    "id": 505,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Karyotype analysis",
+    "question": "What is meant by karyotype? How does its analysis help in the diagnosis of chromosomal aberrations in man?",
+    "marks": 20
+  },
+  {
+    "id": 506,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Pedigree analysis",
+    "question": "Pedigree analysis in genetic counselling.",
+    "marks": 10
+  },
+  {
+    "id": 507,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic study methods",
+    "question": "Briefly describe the various methods used in the genetic study of man.",
+    "marks": 20
+  },
+  {
+    "id": 508,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Immunogenetics",
+    "question": "What do you understand by Immunogenetics? Explain with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 509,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Twin method",
+    "question": "Twin method in human genetics.",
+    "marks": 10
+  },
+  {
+    "id": 510,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Mendelian and non-Mendelian traits",
+    "question": "Mendelian and non-Mendelian traits.",
+    "marks": 10
+  },
+  {
+    "id": 511,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Lethal and sublethal genes",
+    "question": "Lethal and sublethal genes.",
+    "marks": 10
+  },
+  {
+    "id": 512,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Multifactorial traits",
+    "question": "What is a multifactorial trait? Illustrate your answer with suitable human examples.",
+    "marks": 15
+  },
+  {
+    "id": 513,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Polygenic inheritance",
+    "question": "Polygenic Inheritance.",
+    "marks": 10
+  },
+  {
+    "id": 514,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genes and human survival",
+    "question": "Categorize Genes that influence Human Survival.",
+    "marks": 10
+  },
+  {
+    "id": 515,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Mendelian principles",
+    "question": "Critically discuss the Mendelian principles and their application to human populations.",
+    "marks": 15
+  },
+  {
+    "id": 516,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Mitochondrial DNA",
+    "question": "Mitochondrial DNA and human evolution.",
+    "marks": 10
+  },
+  {
+    "id": 517,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic equilibrium",
+    "question": "What assumptions must be met for a population to be in genetic equilibrium? Explain the importance of genetic equilibrium.",
+    "marks": 15
+  },
+  {
+    "id": 518,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic polymorphism",
+    "question": "Balanced and transient genetic polymorphism.",
+    "marks": 10
+  },
+  {
+    "id": 519,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Evolutionary forces and human diversity",
+    "question": "Discuss the role of evolutionary forces in creating human diversity.",
+    "marks": 20
+  },
+  {
+    "id": 520,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic drift",
+    "question": "Genetic drift.",
+    "marks": 10
+  },
+  {
+    "id": 521,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Marriage and gene pool",
+    "question": "How do marriage rules impact the gene pool of populations?",
+    "marks": 15
+  },
+  {
+    "id": 522,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic polymorphism",
+    "question": "Differentiate between transient and balanced genetic polymorphisms. Illustrate your answer with suitable examples from human populations.",
+    "marks": 15
+  },
+  {
+    "id": 523,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Mutation",
+    "question": "Implications of mutation in evolution.",
+    "marks": 10
+  },
+  {
+    "id": 524,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Hardy-Weinberg Law",
+    "question": "Hardy-Weinberg Law.",
+    "marks": 10
+  },
+  {
+    "id": 525,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic polymorphism",
+    "question": "Define Genetic polymorphism. Give details of its types with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 526,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Gene frequencies",
+    "question": "Discuss the factors affecting gene frequencies among human populations.",
+    "marks": 20
+  },
+  {
+    "id": 527,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic load",
+    "question": "What do you understand by 'Genetic Load' in a population? How is it measured and what are the important factors that can influence it?",
+    "marks": 15
+  },
+  {
+    "id": 528,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Single-gene mutation disorders",
+    "question": "Single-gene mutation disorders in man.",
+    "marks": 10
+  },
+  {
+    "id": 529,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic counselling",
+    "question": "What is genetic counselling? Briefly discuss various steps involved in it.",
+    "marks": 15
+  },
+  {
+    "id": 530,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Structural chromosomal aberrations",
+    "question": "Describe the causes of structural abnormalities of chromosomes with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 531,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic imprinting",
+    "question": "Genetic imprinting in human diseases.",
+    "marks": 10
+  },
+  {
+    "id": 532,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Chromosomal aberrations",
+    "question": "\"Chromosomal aberrations can play havoc with the human body and mind.\" Explain with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 533,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Sex chromosomal aberrations",
+    "question": "How do numerical aberrations in sex chromosomes lead to genetic disorders?",
+    "marks": 15
+  },
+  {
+    "id": 534,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Human genomic research",
+    "question": "What are the applications of human genomic research in human welfare?",
+    "marks": 15
+  },
+  {
+    "id": 535,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Autosomal aberrations",
+    "question": "Describe the mechanism for structural anomalies of autosomes with diagrams.",
+    "marks": 20
+  },
+  {
+    "id": 536,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic screening",
+    "question": "Explain the significance of screening and counselling for genetic disorders.",
+    "marks": 15
+  },
+  {
+    "id": 537,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Down's syndrome",
+    "question": "Down's syndrome.",
+    "marks": 10
+  },
+  {
+    "id": 538,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Chromosomal aberrations",
+    "question": "Discuss chromosomal aberrations in man illustrating with examples.",
+    "marks": 15
+  },
+  {
+    "id": 539,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Turner and Klinefelter syndromes",
+    "question": "Describe Turner and Klinefelter Syndromes.",
+    "marks": 15
+  },
+  {
+    "id": 540,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Genetics",
+    "microtheme": "Genetic counselling",
+    "question": "Genetic Counselling.",
+    "marks": 10
+  },
+  {
+    "id": 541,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Race and ethnicity",
+    "question": "Race and Ethnicity.",
+    "marks": 10
+  },
+  {
+    "id": 542,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Race as a concept",
+    "question": "Is race a valid and biologically meaningful concept?",
+    "marks": 10
+  },
+  {
+    "id": 543,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Racism and eugenics",
+    "question": "Racism and Eugenics.",
+    "marks": 10
+  },
+  {
+    "id": 544,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Racial classification",
+    "question": "With reference to the somatoscopic and morphometric characteristics commonly used for racial classification, make critical comments as to whether 'Race' is a valid concept.",
+    "marks": 20
+  },
+  {
+    "id": 545,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Race as a concept",
+    "question": "Race is a Myth. Justify its Present-day Relevance.",
+    "marks": 10
+  },
+  {
+    "id": 546,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Concept of race",
+    "question": "Concept of Race.",
+    "marks": 10
+  },
+  {
+    "id": 547,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Heredity and environment in race",
+    "question": "Explain the role of heredity and environment in the formation of races.",
+    "marks": 15
+  },
+  {
+    "id": 548,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Race and Racism",
+    "microtheme": "Race and racism",
+    "question": "Differentiate between Race and Racism. What are three major races of the world? Give important biological criteria used frequently for such a classification.",
+    "marks": 15
+  },
+  {
+    "id": 549,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "Genetic markers",
+    "question": "What are genetic markers? Discuss their applications in understanding population variation, disease association and forensics.",
+    "marks": 20
+  },
+  {
+    "id": 550,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "Hemoglobin",
+    "question": "Hemoglobin in health and disease.",
+    "marks": 10
+  },
+  {
+    "id": 551,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "ABO and Rh blood groups",
+    "question": "Describe the genetics and inheritance patterns of the ABO and Rh blood groups in man.",
+    "marks": 15
+  },
+  {
+    "id": 552,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "Blood group systems and HLA",
+    "question": "What do you understand by blood group systems? How is HLA system different from those based on red cell antigens?",
+    "marks": 15
+  },
+  {
+    "id": 553,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "Rh blood group",
+    "question": "RH-blood group.",
+    "marks": 10
+  },
+  {
+    "id": 554,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Genetic Markers and Population Variation",
+    "microtheme": "Genetic markers and blood groups",
+    "question": "What are genetic markers and what is their usefulness? Why are blood groups considered as good genetic markers? Illustrate with examples.",
+    "marks": 15
+  },
+  {
+    "id": 555,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Customary laws and environment",
+    "question": "Customary laws and Environmental conservation.",
+    "marks": 10
+  },
+  {
+    "id": 556,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Acclimatization",
+    "question": "What is acclimatization? Discuss adaptive responses to high altitude and cold climate.",
+    "marks": 20
+  },
+  {
+    "id": 557,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Biocultural responses",
+    "question": "Describe the biocultural responses to extreme climatic events.",
+    "marks": 15
+  },
+  {
+    "id": 558,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "High altitude adaptation",
+    "question": "'Human adaptations are always bio-cultural in nature'. Discuss with reference to human adaptation to high-altitude climate.",
+    "marks": 20
+  },
+  {
+    "id": 559,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Adaptation and acclimatization",
+    "question": "Distinguish between adaptation, adaptability, and acclimatization with examples.",
+    "marks": 20
+  },
+  {
+    "id": 560,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Allen's and Bergmann's rules",
+    "question": "Do Allen's Rule and Bergmann's Rule hold for human populations? Explain with examples.",
+    "marks": 15
+  },
+  {
+    "id": 561,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "High altitude adaptation",
+    "question": "Discuss the responses and acclimatization to high altitude stresses.",
+    "marks": 15
+  },
+  {
+    "id": 562,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Bio-cultural adaptations",
+    "question": "Discuss the genetic and non-genetic factors in the bio-cultural adaptations of human beings to different environments.",
+    "marks": 20
+  },
+  {
+    "id": 563,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Cold climate adaptation",
+    "question": "Critically examine the physiological responses and acclimatization to cold climate in man.",
+    "marks": 15
+  },
+  {
+    "id": 564,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "High altitude adaptation",
+    "question": "What are the stresses at high altitudes? How do better cardiorespiratory functions help the native highlanders in combating low environmental pressure?",
+    "marks": 15
+  },
+  {
+    "id": 565,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Ecological anthropology",
+    "question": "Ecological Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 566,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Heat and cold adaptation",
+    "question": "Elaborate upon major human adaptations to heat and cold.",
+    "marks": 15
+  },
+  {
+    "id": 567,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Ecological Anthropology",
+    "microtheme": "Growth and environment",
+    "question": "\"Though human growth is under tight genetic control but it is influenced by various environmental factors\". Justify.",
+    "marks": 15
+  },
+  {
+    "id": 568,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Lifestyle diseases",
+    "question": "Critically comment on the lifestyle diseases and their impact on human health.",
+    "marks": 15
+  },
+  {
+    "id": 569,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Malnutrition",
+    "question": "Elucidate the different forms of malnutrition. Describe protein-calorie malnutrition with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 570,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Health and lifestyle diseases",
+    "question": "What is meant by health? Is the burden of lifestyle diseases on the rise? Justify your answer with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 571,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Infectious diseases",
+    "question": "Describe the impact of infectious diseases on indigenous populations.",
+    "marks": 15
+  },
+  {
+    "id": 572,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Epidemiological consequences of food production",
+    "question": "Critically examine the demographic and epidemiological consequences with the rise in food production and sedentism.",
+    "marks": 15
+  },
+  {
+    "id": 573,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Evolution of disease",
+    "question": "Narrate the evolution of disease and major causes of ill health in human populations.",
+    "marks": 15
+  },
+  {
+    "id": 574,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Scope of epidemiological anthropology",
+    "question": "Describe the scope of Epidemiological Anthropology in the study of infectious and non-infectious diseases.",
+    "marks": 20
+  },
+  {
+    "id": 575,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Epidemiological anthropology",
+    "question": "Epidemiological Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 576,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Anthropology and health",
+    "question": "Discuss the role of anthropology in the understanding of health and disease. What specific understanding is available with respect to infectious and non-infectious diseases?",
+    "marks": 20
+  },
+  {
+    "id": 577,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Epidemiological Anthropology",
+    "microtheme": "Epidemiological transition",
+    "question": "What is meant by epidemiological transition? Elaborate upon its causes and consequences highlighting major health problems of our adult population today.",
+    "marks": 15
+  },
+  {
+    "id": 578,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "David Barker and foetal origins",
+    "question": "Foetal origin of adult diseases and contribution of David Barker.",
+    "marks": 10
+  },
+  {
+    "id": 579,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Mixed-longitudinal method",
+    "question": "What is the mixed-longitudinal method of studying human growth? Discuss its merits and demerits.",
+    "marks": 15
+  },
+  {
+    "id": 580,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Heath-Carter somatotyping",
+    "question": "Why did Heath and Carter use anthropometric measurements instead of photographs to assess somatotype? Elaborate on their method.",
+    "marks": 20
+  },
+  {
+    "id": 581,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Pre-natal development",
+    "question": "Stages of human pre-natal development.",
+    "marks": 10
+  },
+  {
+    "id": 582,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Adolescent growth spurt",
+    "question": "Human adolescent growth spurt.",
+    "marks": 10
+  },
+  {
+    "id": 583,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Theories of ageing",
+    "question": "Discuss the physiological and evolutionary theories of aging.",
+    "marks": 15
+  },
+  {
+    "id": 584,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Secular trends in growth",
+    "question": "Secular trends in human growth can be positive, negative, or neutral. Illustrate with examples.",
+    "marks": 20
+  },
+  {
+    "id": 585,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Senescence",
+    "question": "Senescence.",
+    "marks": 10
+  },
+  {
+    "id": 586,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Factors affecting growth",
+    "question": "Genetico-environmental factors affecting human growth.",
+    "marks": 15
+  },
+  {
+    "id": 587,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Methods of studying growth",
+    "question": "Discuss the methods of studying human growth with their merits and demerits.",
+    "marks": 15
+  },
+  {
+    "id": 588,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Elderly and senescence",
+    "question": "Issues of elderly and senescence in developing and developed countries.",
+    "marks": 10
+  },
+  {
+    "id": 589,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Sheldon's somatotyping",
+    "question": "Discuss Sheldon's method of somatotyping.",
+    "marks": 15
+  },
+  {
+    "id": 590,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Methods of studying growth",
+    "question": "Describe the various methods of studying growth, highlighting their merits and demerits.",
+    "marks": 15
+  },
+  {
+    "id": 591,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Factors affecting growth",
+    "question": "Discuss different factors affecting growth and development in human beings.",
+    "marks": 20
+  },
+  {
+    "id": 592,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Heath-Carter somatotyping",
+    "question": "What is an Anthropometric Somatotype? Describe Heath & Carter's method of somatotyping.",
+    "marks": 20
+  },
+  {
+    "id": 593,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Stages of growth",
+    "question": "What are the different stages of growth? Describe any one of them in detail.",
+    "marks": 20
+  },
+  {
+    "id": 594,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Ageing and senescence",
+    "question": "Discuss aging and senescence. Describe either the biological or social theories of aging.",
+    "marks": 20
+  },
+  {
+    "id": 595,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Longitudinal method",
+    "question": "Longitudinal method of studying growth.",
+    "marks": 10
+  },
+  {
+    "id": 596,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Growth and environment",
+    "question": "Justify: \"Though human growth is under tight genetic control, it is influenced by various environmental factors.\"",
+    "marks": 15
+  },
+  {
+    "id": 597,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Child growth vs development",
+    "question": "Differentiation between child growth and development.",
+    "marks": 10
+  },
+  {
+    "id": 598,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Cross-sectional method",
+    "question": "Cross-sectional methods of studying human growth.",
+    "marks": 10
+  },
+  {
+    "id": 599,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Human Growth and Development",
+    "microtheme": "Ageing and senescence",
+    "question": "Aging and senescence.",
+    "marks": 10
+  },
+  {
+    "id": 600,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Menopause",
+    "question": "Evolutionary significance of menopause.",
+    "marks": 10
+  },
+  {
+    "id": 601,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Menopausal symptoms",
+    "question": "Menopausal symptoms.",
+    "marks": 10
+  },
+  {
+    "id": 602,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Menarche",
+    "question": "Critically evaluate the reasons for the reduction in age at menarche in human females over successive generations.",
+    "marks": 15
+  },
+  {
+    "id": 603,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Age at menarche",
+    "question": "Age at menarche.",
+    "marks": 10
+  },
+  {
+    "id": 604,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Menopause",
+    "question": "Menopause and its impact.",
+    "marks": 10
+  },
+  {
+    "id": 605,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Bio-events and fertility",
+    "question": "Discuss the relevance of menarche, menopause, and other bio-events to fertility.",
+    "marks": 15
+  },
+  {
+    "id": 606,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Demographic theories",
+    "question": "Discuss the contemporary population problems in the light of various socio-cultural demographic theories.",
+    "marks": 20
+  },
+  {
+    "id": 607,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Demographic transition",
+    "question": "Demographic transition.",
+    "marks": 10
+  },
+  {
+    "id": 608,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fertility and fecundity",
+    "question": "Discuss the bio-social determinants of fertility and fecundity.",
+    "marks": 15
+  },
+  {
+    "id": 609,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fertility factors",
+    "question": "Discuss the biological factors influencing fertility in light of the relationship between fecundity and fertility.",
+    "marks": 15
+  },
+  {
+    "id": 610,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fertility and mortality factors",
+    "question": "Describe the biological and socio-ecological factors affecting fertility and mortality.",
+    "marks": 15
+  },
+  {
+    "id": 611,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fecundity",
+    "question": "Define fecundity and explain major factors affecting fecundity in Indian populations.",
+    "marks": 15
+  },
+  {
+    "id": 612,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fertility and fecundity",
+    "question": "Fertility and Fecundity.",
+    "marks": 10
+  },
+  {
+    "id": 613,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Fertility and Demography",
+    "microtheme": "Fertility and fecundity",
+    "question": "Fertility and Fecundity.",
+    "marks": 10
+  },
+  {
+    "id": 614,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Forensic anthropology - facial reconstruction",
+    "question": "Examine the utility of human remains in forensic analysis. Discuss the facial reconstruction technique.",
+    "marks": 15
+  },
+  {
+    "id": 615,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Nutritional anthropology",
+    "question": "How anthropologists assess the nutritional status of a community? Discuss the significance of intersectionality of ecology, culture, and social inequality in the study of nutritional anthropology.",
+    "marks": 20
+  },
+  {
+    "id": 616,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Forensic anthropology",
+    "question": "Discuss the applications of forensic anthropology with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 617,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "DNA technology",
+    "question": "Describe the practical applications of DNA technology in the current scenario.",
+    "marks": 15
+  },
+  {
+    "id": 618,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Personal identification",
+    "question": "Discuss various methods of personal identification based on skeletal remains.",
+    "marks": 15
+  },
+  {
+    "id": 619,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Anthropometry and equipment design",
+    "question": "Discuss how anthropological knowledge of the human body may be used in designing equipment and articles of human use.",
+    "marks": 15
+  },
+  {
+    "id": 620,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Disputed paternity",
+    "question": "How are the cases of disputed paternity solved? Discuss the recent techniques.",
+    "marks": 15
+  },
+  {
+    "id": 621,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Anthropometry and sports",
+    "question": "What is Anthropometry? Discuss its role in assessing the nutritional status and sports capability of a person.",
+    "marks": 15
+  },
+  {
+    "id": 622,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Human genomic research",
+    "question": "What are the applications of human genomic research in human welfare?",
+    "marks": 15
+  },
+  {
+    "id": 623,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Ethics and genetic engineering",
+    "question": "Ethics and Genetic Engineering.",
+    "marks": 10
+  },
+  {
+    "id": 624,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Facial reconstruction",
+    "question": "Anthropological inputs in facial reconstruction.",
+    "marks": 10
+  },
+  {
+    "id": 625,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Applied human genetics",
+    "question": "'Applied human genetics has come to touch every sphere of human life.' Discuss in light of recent advances in molecular anthropology.",
+    "marks": 15
+  },
+  {
+    "id": 626,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Personal identification",
+    "question": "What are the methods of personal identification? Critically examine how personal identification helps in criminal investigations.",
+    "marks": 20
+  },
+  {
+    "id": 627,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Defense equipment design",
+    "question": "Describe the role of Anthropology in designing defense and other equipment.",
+    "marks": 15
+  },
+  {
+    "id": 628,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Forensic anthropology",
+    "question": "Write short notes on Forensic Anthropology.",
+    "marks": 10
+  },
+  {
+    "id": 629,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "DNA technology in medicine",
+    "question": "DNA Technology in Medicine.",
+    "marks": 10
+  },
+  {
+    "id": 630,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Sports anthropology",
+    "question": "Elucidate the role of Anthropology in selecting and monitoring sports persons.",
+    "marks": 15
+  },
+  {
+    "id": 631,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Applications of Anthropology",
+    "microtheme": "Forensic anthropology",
+    "question": "Forensic Science can help in Criminal Investigations. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 632,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Bio-cultural Anthropology",
+    "microtheme": "Political economy and bio-cultural perspectives",
+    "question": "How political economy is integrated with ecological and adaptability perspectives in bio-cultural anthropology?",
+    "marks": 15
   }
 ]
