@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { auth } from '@/lib/firebase';
@@ -315,22 +315,23 @@ function ToolIcon({ icon }: { icon: string }) {
   }
 }
 
+function PaymentSuccessToast({ onShow }: { onShow: () => void }) {
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    if (searchParams.get('payment') === 'success') {
+      onShow();
+      window.history.replaceState({}, '', '/dashboard');
+    }
+  }, [searchParams, onShow]);
+  return null;
+}
+
 export default function Dashboard() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
-
-  useEffect(() => {
-    if (searchParams.get('payment') === 'success') {
-      setShowPaymentSuccess(true);
-      // Clean URL without reload
-      window.history.replaceState({}, '', '/dashboard');
-      setTimeout(() => setShowPaymentSuccess(false), 5000);
-    }
-  }, [searchParams]);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
@@ -376,6 +377,10 @@ export default function Dashboard() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
+
+      <Suspense fallback={null}>
+        <PaymentSuccessToast onShow={() => { setShowPaymentSuccess(true); setTimeout(() => setShowPaymentSuccess(false), 5000); }} />
+      </Suspense>
 
       {/* Payment success toast */}
       {showPaymentSuccess && (
