@@ -561,8 +561,8 @@ export default function EvaluatePage() {
             const fd = new FormData()
             imageFiles.forEach(f => fd.append('files', f))
             const headers: Record<string, string> = {}
-            if (auth.currentUser) {
-              const tok = await auth.currentUser.getIdToken()
+            if (user) {
+              const tok = await user.getIdToken()
               headers['x-user-token'] = tok
             }
             const res = await fetch('/api/ocr', { method: 'POST', headers, body: fd })
