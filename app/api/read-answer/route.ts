@@ -7,6 +7,34 @@ const MAX_FILE_SIZE = 20 * 1024 * 1024;
 const MAX_FILES = 10;
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
 
+async function mistral(imageBlocks: object[], prompt: string, maxTokens: number): Promise<string> {
+  const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.MISTRAL_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: 'pixtral-12b-2409',
+      max_tokens: maxTokens,
+      temperature: 0.0,
+      messages: [{ role: 'user', content: [...imageBlocks, { type: 'text', text: prompt }] }],
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    console.error('Mistral call failed:', res.status, err);
+    throw new Error(`Mistral ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content?.trim() ?? '';
+}
+
+const stripHtml = (s: string) =>
+  s.replace(/<\/p>/gi, '\n\n').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
+
 export async function POST(req: NextRequest) {
   const token = req.headers.get('x-user-token') ?? '';
   if (!token) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -36,99 +64,49 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
     }
 
+    // Convert all images to base64 once — reused in both calls
     const imageBlocks = await Promise.all(
       files.map(async (file) => {
         const b64 = Buffer.from(await file.arrayBuffer()).toString('base64');
-        return {
-          type: 'image_url',
-          image_url: `data:${file.type || 'image/jpeg'};base64,${b64}`,
-        };
+        return { type: 'image_url', image_url: `data:${file.type || 'image/jpeg'};base64,${b64}` };
       })
     );
 
-    const prompt = `You are processing a UPSC Mains Optional answer sheet (${files.length} page(s)).
+    // ── Call 1: extract question from page 1 only ─────────────────────────
+    const questionPrompt = `This is a UPSC answer sheet. The question is written at the very top of the page, often circled or preceded by "Q." / "Q.No." / a number.
 
-Return a JSON object with exactly two keys:
-{
-  "question": "<the question written at the top of page 1, max 200 chars, empty string if not found>",
-  "transcript": "<full verbatim transcription of the answer body, all pages in order>"
-}
+Extract ONLY the question text. Stop immediately when the answer body begins.
+Return ONLY the question — no preamble, no explanation, no answer content.
+Maximum 200 characters. If not found, return empty string.`;
 
-QUESTION extraction rules:
-- Extract ONLY the question text at the very top of page 1
-- Often preceded by "Q." / "Q.No." / a number
-- Stop as soon as the answer body begins
-- Do NOT include any answer content
-- If not found, return empty string
+    // ── Call 2: transcribe answer body ────────────────────────────────────
+    const transcriptPrompt = `This is a UPSC Mains answer sheet (${files.length} page(s)).
 
-TRANSCRIPT rules:
-- Transcribe ALL pages COMPLETELY — do not stop early, do not truncate, do not summarise
-- Skip the question text at the top of page 1 — start from the first word of the answer body
-- Merge line-breaks within a paragraph into continuous text
-- Use \n\n only when a new paragraph or section begins
-- Never correct spelling — transcribe letter for letter as written
-- Thinker/scholar names: transcribe exactly as written
+Transcribe ONLY the answer body — the student's written response. 
+Do NOT include the question text at the top of page 1.
+
+Rules:
+- Transcribe ALL pages completely — do not truncate
+- Merge line-breaks within a paragraph into continuous text  
+- Use a blank line between paragraphs/sections
+- Never correct spelling — transcribe exactly as written
+- Thinker/scholar names: transcribe letter for letter
 - If uncertain (70-89% confident): add (?) after the word
-- If unreadable (<70%): write [illegible]
-- The transcript must cover every page provided — page 2, page 3 etc must all be included
+- If unreadable: write [illegible]
 
-Return ONLY the raw JSON object — no markdown, no backticks, no explanation.`;
+Return ONLY the transcribed answer text. No explanation, no preamble.`;
 
-    const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.MISTRAL_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'pixtral-12b-2409',
-        max_tokens: 8000,
-        temperature: 0.0,
-        response_format: { type: 'json_object' },
-        messages: [
-          {
-            role: 'user',
-            content: [...imageBlocks, { type: 'text', text: prompt }],
-          },
-        ],
-      }),
-    });
-
-    if (!res.ok) {
-      const err = await res.text();
-      console.error('Mistral read-answer failed:', res.status, err);
-      return NextResponse.json({ error: 'Failed to read answer sheet.' }, { status: 500 });
-    }
-
-    const data = await res.json();
-    const raw = data.choices?.[0]?.message?.content?.trim() ?? '';
-    // Strip markdown fences if present
-    let clean = raw.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/```$/, '').trim();
-
-    let parsed: { question: string; transcript: string };
-    try {
-      parsed = JSON.parse(clean);
-    } catch {
-      // Attempt to fix unescaped newlines inside JSON string values
-      try {
-        const fixed = clean.replace(/("(?:[^"\\]|\\.)*")/g, ( match: string) =>
-          match.replace(/\n/g, '\\n').replace(/\r/g, '')
-        );
-        parsed = JSON.parse(fixed);
-      } catch {
-        console.error('JSON parse failed, raw:', raw);
-        return NextResponse.json({ error: 'Could not parse response.' }, { status: 500 });
-      }
-    }
-
-    // Strip any HTML tags the model may have introduced
-    const stripHtml = (s: string) =>
-      s.replace(/<\/p>/gi, '\n\n').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim()
+    // Run both calls in parallel — same images, different prompts
+    const [questionRaw, transcriptRaw] = await Promise.all([
+      mistral([imageBlocks[0]], questionPrompt, 200),   // question: page 1 only
+      mistral(imageBlocks, transcriptPrompt, 8000),      // transcript: all pages
+    ]);
 
     return NextResponse.json({
-      question:   stripHtml(parsed.question   ?? ''),
-      transcript: stripHtml(parsed.transcript ?? ''),
+      question:   stripHtml(questionRaw),
+      transcript: stripHtml(transcriptRaw),
     });
+
   } catch (err) {
     console.error('read-answer route error:', err);
     return NextResponse.json({ error: 'Failed to read answer sheet.' }, { status: 500 });
