@@ -433,14 +433,14 @@ export async function POST(req: NextRequest) {
             }
           } else {
             // Normal chat → DeepSeek V4 Flash
-            const dsRes = await fetch('https://api.deepseek.com/chat/completions', {
+            const dsRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}`,
+                Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
               },
               body: JSON.stringify({
-                model: 'deepseek-v4-flash',
+                model: 'openai/gpt-oss-120b',
                 max_tokens: maxTokens,
                 stream: true,
                 messages: [
@@ -449,7 +449,7 @@ export async function POST(req: NextRequest) {
                 ],
               }),
             });
-            if (!dsRes.ok || !dsRes.body) throw new Error(`DeepSeek API error: ${dsRes.status}`);
+            if (!dsRes.ok || !dsRes.body) throw new Error(`Groq API error: ${dsRes.status}`);
             const reader = dsRes.body.getReader();
             const decoder = new TextDecoder();
             let buffer = '';
@@ -531,7 +531,7 @@ export async function POST(req: NextRequest) {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
                   body: JSON.stringify({
-                    model: 'llama-3.3-70b-versatile',
+                    model: 'openai/gpt-oss-120b',
                     max_tokens: 800,
                     stream: false,
                     messages: [
