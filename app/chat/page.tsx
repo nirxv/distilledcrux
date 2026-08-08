@@ -162,6 +162,7 @@ function ChatContent() {
   const [messages, setMessages] = useState<Message[]>([{ role: 'assistant', content: greeting }]);
   const [input, setInput] = useState(initialQ);
   const [loading, setLoading] = useState(false);
+  const [thinkingSeconds, setThinkingSeconds] = useState(0);
 
   // Modes
   const [bookMode, setBookMode] = useState(false);
@@ -249,6 +250,12 @@ function ChatContent() {
     });
   }, [messages, loading, chatId]);
 
+  useEffect(() => {
+    if (!loading) return;
+    const interval = setInterval(() => setThinkingSeconds((s) => s + 1), 1000);
+    return () => clearInterval(interval);
+  }, [loading]);
+
   const handlePdfUpload = useCallback((file: File) => {
     if (!file || file.type !== 'application/pdf') { alert('Please upload a valid PDF file.'); return; }
     if (file.size > 20 * 1024 * 1024) { alert('PDF too large. Max 20MB.'); return; }
@@ -303,6 +310,7 @@ function ChatContent() {
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
     setLoading(true);
+    setThinkingSeconds(0);
     if (inputRef.current) inputRef.current.style.height = 'auto';
 
     try {
@@ -851,7 +859,7 @@ function ChatContent() {
                 <div className="pp-typing-dots">
                   <div className="pp-typing-dot" /><div className="pp-typing-dot" /><div className="pp-typing-dot" />
                 </div>
-                <span className="pp-typing-text">Thinking…</span>
+                <span className="pp-typing-text">Thinking… ({thinkingSeconds}s)</span>
               </div>
             )}
 
