@@ -7889,6 +7889,353 @@ export const polsciNoteContent: Record<string, string> = {
 <p>"India should avoid the temptation of building a bloc against the developed North. Instead, offer sustainable economic cooperation to the Global South through national, regional, and global institutions to further joint causes."</p>
   `,
 
+  'united-nations': `
+<h2>UN Charter & Structure</h2>
+
+<h3>Origins of the United Nations</h3>
+<p>Learning from the experiences of World War I, the League of Nations was established as an International Body in 1920. The purpose of the body was to prevent wars and settle disputes. However, with absence of major global powers i.e., US and USSR and dis-interest of UK and France, the league failed in its primary objective, giving way to 2 nd World War.</p>
+<p>As war was about to end, representatives of 50 countries (including India) gathered at San Francisco (USA), in 1945. For the next two months, they proceeded to draft and then sign the UN Charter, which created a new international organization, the United Nations.</p>
+<p>As mentioned in the preamble of UN Charter, the envisaged role of UN is to save the succeeding generations from the scourge of war. It also aims to promote the respect for human rights, recognition of equality of status of nations, and promote socio-economic progress.</p>
+<p>Thus, the three pillars of the UN system are:</p>
+<p>1) Protection of World Peace. 2) Protection of Human Rights. 3) Promotion of development.</p>
+<p>The United Nations is part of the broader UN System, which includes a vast network of institutions and entities. There are five principal organs which were established by the UN Charter:</p>
+
+<h3>Principal Organs of the UN</h3>
+<li>UN General Assembly (UNGA)  -  Deliberative assembly of all UN member states</li>
+<li>UN Secretariat  -  Administrative organ of the UN</li>
+<li>UN Security Council (UNSC)  -  For international security issues</li>
+<li>UN Economic and Social Council (UN-ECOSOC)  -  For global economic and social affairs</li>
+<li>International Court of Justice (ICJ)  -  Universal court for international law</li>
+<p>A sixth principal organ, UN Trusteeship Council, created to supervise the administration of 'Trust Territories', suspended its operations in 1994 upon the independence of Palau; the last remaining UN trustee territory.</p>
+
+<h3>United Nations Secretariat</h3>
+<p>The United Nations Secretariat carries out the day-to-day work of the UN as mandated by the General Assembly and the UN's other main organs. The Secretary-General is the chief administrative officer and head of the Secretariat. The Secretariat is organized along departmental lines, with each department or office having a distinct area of action and responsibility. While much of the UN Secretariat is located in New York City, USA, UN also has offices outside of its headquarters.</p>
+<p>The functions of the UN secretariat include:</p>
+<li>Economic and political analysis for the General Assembly and Security Council;</li>
+<li>Administration of operations initiated by UN's deliberative organs,</li>
+<li>Operating political missions,</li>
+<li>Preparing assessments that precede peacekeeping operations and appointing the heads of peacekeeping operations</li>
+<li>Conducts surveys and research</li>
+<li>Communicates with non-state actors such as media and non-government organizations,</li>
+<li>Is responsible for publishing all of the treaties and international agreements.</li>
+<p>Dag Hammarskjöld, the UN's second secretary-general, described the power of UN secretariat power as follows: "The United Nations is what member nations made it, but within the limits set by government action and government cooperation, much depends on what the secretariat makes it. It has creative capacity. It can introduce new ideas. It can, in proper forms, take initiatives. It can put before member governments findings which will influence their actions."</p>
+
+<h3>United Nations Economic and Social Council (ECOSOC)</h3>
+<p>The United Nations Economic and Social Council (ECOSOC) is responsible for coordinating the economic and social role of the UN , specifically in regards agencies and commissions under its jurisdiction. The council also serves as the central forum for discussing international economic and social issues, and formulating policy recommendations. ECOSOC holds one four-week session each year in July, and an annual meeting in April.</p>
+<p>UN ECOSOC has 54 rotating members and over 1,600 NGOs have consultative status with Council to participate in the work of the United Nations. The 54 members are elected for a three-year overlapping term with 1/3rd getting elected every year by UNGA. Seats on the Council are allocated ensuring equitable geographic presentation.</p>
+<p>Originally, ECOSOC had 18 members, this was increased to 27 in 1965, and later to 54 in 1973. The current seat distribution is as follows:</p>
+<li>14 seats to the African Group</li>
+<li>11 seats to the Asia-Pacific Group (renamed from the Asia Group in 2011)</li>
+<li>6 seats to the Eastern European Group</li>
+<li>10 seats to the Latin American and Caribbean Group</li>
+<li>13 seats to the Western European and Others Group</li>
+
+<h3>International Court of Justice (ICJ)</h3>
+<p>The International Court of Justice, also known as the World Court, is the UN's principal judicial organ. It is located in the Peace Palace in The Hague, Netherlands, making it the only one of the UN's principal organs that is not based in New York.</p>
+<p>The Permanent Court of International Justice (PCIJ) was established by the League of Nations in 1922. The court was later converted to ICJ after 2nd WW by the San Francisco Conference, which also created the UN. All members of the UN are parties to the statute of the ICJ, and nonmembers may also become parties.</p>
+<p>The International Court of Justice acts as a world court. According to Article 34 of the ICJ, it deals with 1) Issues arising out of UN charter 2) Disputes declared by parties to be settled by the ICJ.</p>
+<p>The Court's jurisdiction is twofold:</p>
+<li>Jurisdiction in contentious cases: It decides, in accordance with international law, disputes of a legal nature that are submitted to it by States.</li>
+<p>Such cases, where ICJ is referred to, can be resolved in 3 manners:</p>
+<li>Settled by the parties themselves at any time during the proceedings, A state discontinues the proceedings and withdraw,</li>
+<li>The court delivers a verdict.</li>
+<li>Advisory jurisdiction: It gives advisory opinions on legal questions at the request of the organs of the United Nations, specialized agencies or one related organization authorized to make such a request. Although advisory opinions are only consultative, they are considered important.</li>
+<p>Although the court itself has no powers to implement the rulings, it is rare that the decisions of the court are not implemented (custom). Art 94 of the UN Charter suggests that the decision of ICJ is binding and there is no appeal against it, as per Art 94 countries which are party to the dispute before ICJ must implement its rulings and, parties can approach to UNSC in case of non-compliance.</p>
+<p>The key principle is that the Court only has jurisdiction only on the basis of consent. The court has no true compulsory jurisdiction like domestic courts of countries. Article 36 outlines four bases on which the Court's jurisdiction may be founded.</p>
+<li>Special agreement  -  This is the case when parties themselves refer case to the Court. Since there is explicit consent, this is the most effective basis for the Court's jurisdiction. Parties concerned have a desire for the Court to resolve the dispute and are thus more likely to comply with the Court's judgment. Parties will usually define the nature of the dispute between them and the legal questions on which they wish the Court to rule.</li>
+<li>Compromissory clause in a binding treaty  -  It gives the Court jurisdiction over "matters specifically provided for... in treaties and conventions in force". Many treaties will contain a clause (compromissory clause), that will provide for dispute resolution by the International Court.</li>
+<p>However, the experience of ICJ suggests that cases founded on compromissory clauses have not been as effective as cases founded on special agreements. Since the 1970s, the use of such cases has declined and many modern treaties set out their own dispute resolution process, often in form of arbitration (involving neutral third party).</p>
+<li>Optional clause declaration  -  Thirdly, article 36 allows states to make declarations accepting the Court's jurisdiction as compulsory. Not all countries accept the compulsory jurisdiction of the ICJ. India has submitted itself to the compulsory jurisdiction for the first time in 1956, then modified it in 1959 and again in 1974.</li>
+<li>Doctrine of forum prorogatum  -  It entails the consent of the respondent state with regards to the ICJ having jurisdiction over the case.</li>
+<p>It is to be noted that only states may be parties in cases before the ICJ. Individuals, corporations, PSUs, NGOs, UN organs and self-determination groups are excluded from direct participation in cases, although the Court may receive information from public international organizations.</p>
+<p>This provision, however, does not preclude non-state interests from being the subject of proceedings, if one state brings the case against another. For example, a state may, in case of "diplomatic protection", bring a case on behalf of one of its nationals or corporations.</p>
+<p>In continuation of point 3) Optional cause declaration, mentioned above, India has excluded compulsory jurisdiction (Optional cause declaration) in following situations.</p>
+<li>In case parties have signed an agreement over the specific method for the specific dispute.</li>
+<li>With respect to the dispute with the country, which is a member of commonwealth at the time of declaration by India.</li>
+<li>Any dispute which is essentially within the jurisdiction of republic of India.</li>
+<li>If it is a question related to military action performed by armed military forces. When they are fulfilling any obligation as per directed by UNSC.</li>
+<li>Dispute with any country which has accepted the compulsory jurisdiction of ICJ just 12 months prior.</li>
+<li>Dispute with any government with which, on the date of application to ICJ, govt. of India has no diplomatic relations.</li>
+<li>In the case of multilateral agreement only when all parties in the dispute have agreed to compulsory jurisdiction.</li>
+<li>No compulsory jurisdiction in territorial disputes.</li>
+<li>No compulsory jurisdiction with respect to the disputes with non-sovereign states/territories.</li>
+<li>No compulsory jurisdiction with respect to the disputes prior to the date of declaration of India's submission.</li>
+<li>The Court is composed of 15 judges elected by both the General Assembly and the Security Council</li>
+<li>These judges serve nine-year terms each.</li>
+<li>No two judges from the same nation may serve simultaneously.</li>
+<li>Seats are informally apportioned geographically to ensure that judges from all the world's main legal systems are represented on the Court.</li>
+<p>Ad Hoc Judge</p>
+<p>There is also a provision in Article 31 of the statute, which allows an ad hoc judges sit on contentious cases. The system allows any party to a contentious case (if it otherwise does not have one of that party's nationals sitting on the court) to select one additional person to sit as a judge on that case only. It is thus possible that as many as seventeen judges may sit on one case. The purpose of this system is to encourage states to submit cases.</p>
+<p>Since the entry of its first case in 1947, the ICJ has entertained 191 cases till 2023.</p>
+<h2>Security Council</h2>
+
+<h3>Composition and Functions of the UNSC</h3>
+<p>Consisting of only 15 members (5 permanent  -  USA, UK, France, Russia &amp; China, and 10 non-permanent members), the United Nations Security Council (UNSC) is charged with ensuring international peace and security. The non-permanent ten members are elected on a regional basis for a term of two years, with retiring member, not eligible for re-election.</p>
+<li>Ensuring international peace and security</li>
+<p>For this purpose, UNSC is also empowered to</p>
+<li>Investigate any dispute, or situation which might lead to international friction Establish peacekeeping operations</li>
+<li>Enforce international sanctions</li>
+<li>Authorize military action</li>
+<li>Recommending the admission of new UN members to the General Assembly</li>
+<li>Approving any changes to the UN Charter</li>
+<li>To recommend to the General Assembly the appointment of the Secretary-General</li>
+<li>Together with the Assembly, elect the Judges of the International Court of Justice.</li>
+<p>Under the Charter of the United Nations, all Member States are obligated to comply with Council decisions.</p>
+<p>"Everyone agrees that the present structure is flawed. But consensus on how to fix it remains out of reach." British historian Paul Kennedy, commenting on UNSC Reforms</p>
+<p>Presently there is a huge disappointment with the functioning of UN, primarily because permanent members didn't allowed UN to function by using veto powers. While the world is grappling with global problems, there is an urgent need for a credible institution of global governance which can be considered as impartial, at least by majority of countries.</p>
+<p>Currently, there is a lack of transparency and accountability in UNSC functioning. The coordination between UNSC and UNGA is poor and in its present configuration, UNSC cannot be called as truly representative body. The permanent five (P5) members are the powers of a gone era. The US hegemony is on decline and the unipolar world has given way to a multipolar one. In the words of India's external affairs minister S Jaishankar, "the days when a few nations set the agenda" are over.</p>
+<p>Thus, to keep the security council relevant, there is urgent need of reforms in UNSC.</p>
+
+<h3>Voting Procedure and the Veto</h3>
+<p>The subjects in UNSC are categorized into two types i.e. a) substantive and b) procedural matters . Under UN Charter Chapter 5: The Security Council,</p>
+<li>Security Council decisions on all substantive matters require the affirmative votes of three-fifths (i.e. nine out of fifteen) members. A negative vote or a "veto" by a permanent member prevents adoption of a proposal, even if it has received the required votes.</li>
+<li>Abstention is not regarded as a veto, although all five permanent members must vote for adopting any amendment of the UN Charter or any recommendation of the admission of a new UN member state.</li>
+<li>Procedural matters cannot be vetoed, and the affirmative vote of any 9 members is sufficient.</li>
+<p>The inclusion of veto was controversial even at the time of adoption of UN Charter. However, threatening that UN would otherwise not be founded, the veto was forced on smaller states by P5 countries. As of August 2023, Russia/USSR has used its veto 125 times, the US 82 times, the UK 29 times, China 17 times, and France 16 times.</p>
+<p>As the precise limits of the veto power were seen as ambiguous, the San Francisco Declaration was issued. The statement broadly interpreted the veto power suggesting that veto power could be exercised in the question of whether an issue is procedural or substantive.</p>
+<p>This has been called a double veto as it involves 1) initiating a vote on whether an issue is procedural or substantive (P5 can use it to term an issue as substantive), then 2) further use the veto power on the issue itself.</p>
+<p>Although this interpretation was not adopted into the Charter, the permissibility of a double veto has never been resolved. The permanent members later reached an informal agreement to avoid using it, and it has not been used since 1959.</p>
+
+<h3>Criticisms of the Veto</h3>
+<li>A single country can prevent a majority of the Security Council from taking any action</li>
+<li>The permanent members also veto resolutions that criticize their own actions. In 2014, Russia vetoed a resolution condemning its annexation of Crimea</li>
+<li>The veto has been used to protect allies of the permanent members, and to prevent or stall UN peacekeeping or peace enforcement operations</li>
+<li>The powers enjoyed by P5 through veto powers is disproportionate, not reflecting current geopolitical scenario</li>
+
+<h3>Justifications and Reform Proposals for the Veto</h3>
+<p>Justifications for the veto are usually based in the interests of the permanent members of UNSC. The main arguments include:</p>
+<li>United Nations would break down if it attempted to carry out enforcement actions against a permanent member</li>
+<li>The privileged status was linked to a responsibility for maintaining international peace and security.</li>
+<li>"To ensure that the United Nations did not commit to things it would be unable to follow through on due to great power opposition"  -  Gareth Evans (former Australian foreign minister)</li>
+<li>Eliminate the veto power completely.</li>
+<li>General assembly should be given power to override veto in case there is a deadlock.</li>
+<li>Noble World Foundation (NWF) suggests that membership and veto power be shifted from individual states to sovereignty-pooling organizations, like the European Union (EU).</li>
+
+<h3>UNSC Expansion and the Reform Debate</h3>
+<p>In 1945, when the strength of UNGA was 51, the strength of UNSC was 11 (5 permanent + 6 non-permanent). In 1965, as the strength of UNGA grew to 117, the non-permanent members of UNSC were increased from 6 to 10. Presently, while there are 193 members of United Nations, the membership of UNSC has remained constant for the last 6 decades.</p>
+<p>There has been consistent demand from developing countries to reform UNSC membership to accommodate the new realities of a changed global order. In the present permanent membership of United Nations, Africa and Latin America do not have any representation. While Asia, host to 60% of global population, is represented by only one country, Europe is over-represented with 3 permanent members.</p>
+<p>Further, if the permanent membership represents the great power status, the present configuration does not meet that criterion as well. While France and Britain are powers of a gone era, India, most populous nation, de-facto nuclear power with third largest army is not part of this inner circle. Similarly, Japan and Germany are large contributors to UN budget but do not have a final say on the use of the budget.</p>
+<p>If more countries are added to UNSC, it will enhance the credibility of the institution. The presence of neutral countries like India and Brazil will also dilute the present polarization, making UNSC relevant to the changing times.</p>
+<p>The main demands for UNSC membership reforms include:</p>
+<li>Expansion of UNSC membership (permanent and non-permanent)</li>
+<li>Inclusion of emerging global powers like India, Japan, Germany, Brazil as permanent members</li>
+<li>Abolition/reform of veto power of existing 5 permanent members</li>
+<p>The G4 nations, comprising Brazil, Germany, India, and Japan, are four countries which support each other's bids for permanent seats in UNSC. While Brazil and India are two of the largest contributors of troops to UN peace-keeping, Japan and Germany had been the UN's second- and third-largest funders, before China took over as the second largest funder in recent years. The economic significance of these countries have also grown significantly in recent decades, with Germany, Japan, India and Brazil figuring as the 3 rd , 4 th , 5 th and 9 th largest economies.</p>
+<p>The bid of G4 countries have been supported by various P5 countries. UK and France have expressed their support to G4. Japan has received explicit support from US and UK (opposed by China). All P5 have supported India's bid (with China conditioning that India's doesn't put condition to include Japan). The inclusion of Brazil have also been supported by all 5 permanent members.</p>
+<p>Uniting for Consensus (Coffee Club) have opposed the inclusion of G4 as UNSC permanent members.</p>
+<p>Opposing the candidature of G4, countries led by Italy, Pakistan, Turkey etc. have formed a group Uniting for Consensus in 1995. The group calls for a consensus before any decision is reached on the form and size of the United Nation Security Council. Also known as Coffee Club, currently the grouping has 10 core members.</p>
+<p>Coffee club (UfC) maintained that G4 countries are not the regional leaders but rather hegemonic powers. If they are given permanent seat, it will not consolidate the peace in the region rather it will destabilize the regional stability. According to UfC, an increase of permanent seats would increase the disparity between the member countries. They have suggested increasing the non-permanent members from ten to twenty, with immediate re-election allowed for retiring members.</p>
+<p>Another alternative suggested by Coffee Club includes a new type of UNSC membership, where members are elected for an extended period (3 to 5 years, without allowing re-election), rather than existing 2-year term.</p>
+<p>In light of opposition from Coffee Club, the G4 have also expressed its willingness to forgo veto power for 15 years if granted UNSC permanent seats.</p>
+<p>It proposed that there must be two members from Africa and there would be no expansion without veto. However, still there is no consensus among African countries over which two countries will be represented from Africa.</p>
+<p>OIC (Organization of Islamic Countries) and Arab League proposed the representation of Muslim countries because most conflict prone region is middle east and lot of UN intervention happens in this region.</p>
+<p>L.69 is a group of developing countries united by the common cause of achieving the lasting and comprehensive reform of the UNSC. The group currently has 32 countries as its members. The Group argues for expansion in both the permanent and non-permanent categories of membership of the Security Council and to achieve a more accountable, representative, transparent and more importantly a 'relevant' Security Council.</p>
+<p>The Mission of India serves as the Secretariat for the meetings of the L.69 Group of Developing Countries. Some Member States of the L.69 Group of Developing Countries include India, Brazil, South Africa, Nigeria, Ethiopia, Bhutan, Venezuela, Mongolia, Seychelles etc.</p>
+<p>The process of reforming the United Nations Security Council would require amendments in the United Nations Charter. As per Article 108 of the UN Charter: "Amendments to the present Charter shall come into force for all Members of the United Nations when they have been adopted by a vote of two thirds of the members of the General Assembly and ratified in accordance with their respective constitutional processes by two thirds of the Members of the United Nations , including all the permanent members of the Security Council ". Given that UN has 193 member countries, such a reform seems next to impossible.</p>
+<p>Apart from the process, there are also other challenges in UNSC membership reforms.</p>
+<li>If Germany is present, Europe will become more overrepresented.</li>
+<li>Since the European Union has formed a common foreign and defense policy, it has been proposed that all European seats should be merged and create a seat of EU to be occupied by these countries, by turn. Neither Britain nor France agreed.</li>
+<li>While there is strong consensus that Africa and South America must be represented in any expansion of the permanent membership (since these continents not to have representation in the present structure), there is no consensus over the candidates from Latin America and Africa.</li>
+<li>Coffee club has brought 'uniting for consensus resolution' which suggests that any amendment for expansion of membership will be done only by consensus in General Assembly. However, according to G4 countries, there is no need for consensus, charter provides for decision by majority.</li>
+<li>So far, there is no formula agreed by all countries.</li>
+<li>At present, the smaller island nations of Pacific and Caribbean have also proposed their representation.</li>
+<li>In 2015, UNGA adopted the resolution for 'text-based negotiations by consensus'. Now each country will give written submissions and discussion will be on the formal text. Till date we have not seen the implementation of this provision.</li>
+<p>"The Bretton Woods system and the Security Council reflect the power relations of 1945. And many things have changed since then. The global financial architecture became outdated, dysfunctional, and unfair... It's time to reform both the Security Council and the Bretton Woods institutions. This is essentially a question of redistributing power in line with the realities of today's world."  -  UN Secretary General, Antonio Guterres</p>
+
+<h3>India's Claim to a Permanent Seat</h3>
+<p>Apart from ability to influence decisions at global level, Permanent membership of UN Security Council also has a symbolic importance. It is a recognition of a country's greater status, which also brings advantages in conduct of foreign policy.</p>
+<li>With almost one fifth of global population, India is the most populous country in world.</li>
+<li>India is also the world's largest democracy.</li>
+<li>India is one of the founding members of UN and has participated in virtually all the initiatives of organization.</li>
+<li>It has played an unparallel contribution to UN peacekeeping efforts.</li>
+<li>The country has made regular contributions to the UN and never faltered on payments.</li>
+<li>India is also 5 th largest economy (3 rd largest in terms of PPP numbers), and the fastest growing large economy.</li>
+<li>According to multiple indices, India is the 4 th largest military power.</li>
+<li>Along with demographic, democratic, economic, and military power, India is also a civilization power, perhaps the oldest civilization of the world.</li>
+<li>India's history with NAM, the initiative of International Solar Alliance, Vaccine Maitri, the success of G20 in achieving consensus show the ability of nation to lead at global level.</li>
+<li>If India gets a permanent seat, it will be an acknowledgement of its great power status. It will be a recognition that India is a major stakeholder in international peace.</li>
+<li>It led and continues to lead the largest movement of the third world countries, NAM. It has always played a leadership role for global south, championing for New International Economic Order, WTO reforms, through groupings like IBSA, BRICS, ISA, RIS, CDRI, and recent initiatives like Vaccine Maitri.</li>
+<li>It explored both the options of going alone and going in coalition. Unilaterally, all P5 countries have expressed their support for India's claim. In Coalition, India is part of G4 and L.69 groupings, both asking for expansion of UNSC.</li>
+<li>The coalition diplomacy has not been so much fruitful since China has objected to inclusion of Japan, while the chances of Germany are dim as Europe is already over-represented.</li>
+<li>India is actively engaged in the ongoing Inter-Governmental Negotiations (IGN) on United Nations Security Council reforms at the United Nations.</li>
+<li>India have also acted as a non-permanent member of the UNSC 8 times since formation. In last election for 2021-22 term, it secured 184/193 votes, demonstrating overwhelming support for India's leadership role.</li>
+<li>India has played an active role in various UN initiatives like UN peacekeeping operations and made regulation contributions to UN.</li>
+<li>To ensure that the Chinese support for India's claim doesn't remain a lip service, and a tangible progress is made at UN, India has called for text-based negotiations rather than existing practice of oral Inter-Governmental Negotiations (IGN).</li>
+<li>The lack of Chinese support from P5 members</li>
+<li>Uniting for Consensus (Coffee Club) opposition to expansion of permanent members</li>
+<li>Regional rivals opposed to inclusion of G4 member countries.</li>
+<li>Some countries are also concerned about India's nuclear weapons capabilities, while some have suggested that India's difficulties with Pakistan will make it ineffective as a permanent member.</li>
+<li>There is also a concern that if India is included, other emerging powers such as Brazil, Germany, Japan, perhaps even South Africa will have to be accommodated.</li>
+<p>Given these concerns, it may not be very easy for India or anyone else to become a permanent member of the UN in the near future.</p>
+<p>Also include points from the subtopic UNSC Membership Reforms -&gt; Other Problems in UNSC Membership Reforms</p>
+<li>According to Ramchandra Guha, there is no need for India to be in the race of super stardom, rather it should focus on internal developments.</li>
+<li>According to Shyam Saran, India should focus on building real strength i.e. economic and military strength, rather than running after illusionary goals.</li>
+<li>As suggested by Prof. Ramesh Thakur, if India thinks that the goal of UNSC is so important, then it better go for non-cooperation with UN and make it realize the importance of India.</li>
+<li>C Rajamohan suggested that India should be careful while trying to gain permanent seat in UNSC. The goal is not so important that India allows itself to be bargained by western powers.</li>
+<li>"India's situation is like Sisyphus, the historic Greek character, carrying huge boulder on the head to the top of the hill, just to see it rolling down."  -  Kishor Mahbubani</li>
+<li>'The Need for UNSC Reform Cannot Be Denied Forever': S Jaishankar</li>
+<h2>General Assembly</h2>
+
+<h3>Role and Powers of the General Assembly</h3>
+<p>Composed of all the member states, General Assembly is the main deliberative, policymaking and representative organ of UN. The assembly meets regularly in yearly sessions (September to December), and emergency sessions can also be called. The assembly is led by a president (UN secretary-general), who is elected by the member states on a rotating regional basis. Additionally, there are 21 vice-presidents to UNGA.</p>
+<p>In UNGA, each of the 193 members nation has one vote. While most questions in UNGA are decided by a simple majority, certain important matters such as budgetary concerns, admission, or expulsion of members  -  is by a two-thirds majority of those present and voting. Apart from the approval of budgetary matters, UNGA resolutions are not binding on the members.</p>
+<p>The powers of UNGA include</p>
+<li>Appointing the Secretary-General on the recommendation of the Security Council</li>
+<li>Approving the UN budget</li>
+<li>Electing the non-permanent members of the Security Council</li>
+<li>Electing members to other organs of United Nations</li>
+<h2>Specialized Agencies</h2>
+
+<h3>Specialized Agencies Reporting to ECOSOC</h3>
+<p>The specialized agencies of the United Nations are autonomous organizations working within the United Nations System. While these agencies report to the Economic and Social Council, they are mostly free to their own devices. Each agency must negotiate with the Council as to what their relationship will look and work like. This has led to a system where different organizations maintain different types of relationships with the Council. While some of these agencies were created before the United Nations, some others were created by the League of Nations, and some were also created by the United Nations itself to meet emerging needs.</p>
+<p>The following is a list of the specialized agencies reporting to the Council:</p>
+<li>Food and Agriculture Organization (FAO)</li>
+<li>International Civil Aviation Organization (ICAO)</li>
+<li>International Fund for Agricultural Development (IFAD)</li>
+<li>International Labour Organization (ILO)</li>
+<li>International Monetary Fund (IMF)</li>
+<li>International Maritime Organization (IMO)</li>
+<li>International Telecommunication Union (ITU)</li>
+<li>United Nations Educational, Scientific and Cultural Organization (UNESCO)</li>
+<li>United Nations Industrial Development Organization (UNIDO)</li>
+<li>United Nations World Tourism Organization (UNWTO)</li>
+<li>Universal Postal Union (UPU)</li>
+<li>World Bank Group (WBG) International Bank for Reconstruction and Development (IBRD)</li>
+<li>International Development Association (IDA)</li>
+<li>International Finance Corporation (IFC)</li>
+<li>Multilateral Investment Guarantee Agency (MIGA)</li>
+<li>International Centre for Settlement of Investment Disputes (ICSID)</li>
+<li>World Health Organization (WHO)</li>
+<li>World Intellectual Property Organization (WIPO)</li>
+<li>World Meteorological Organization (WMO)</li>
+
+<h3>Functional Commissions</h3>
+<p>Functional Commissions</p>
+<li>Commission on Narcotic Drugs (CND)</li>
+<li>Commission on Population and Development (CPD)</li>
+<li>Commission on Science and Technology for Development (CSTD)</li>
+<li>Commission on the Status of Women (CSW)</li>
+<li>Statistical Commission</li>
+<li>Commission for Social Development (CSocD)</li>
+<li>Commission on Crime Prevention and Criminal Justice (CCPCJ)</li>
+<li>Forum on Forests (UNFF)</li>
+
+<h3>Regional Commissions</h3>
+<p>Regional Commissions</p>
+<li>United Nations Economic Commission for Europe (ECE)</li>
+<li>United Nations Economic Commission for Africa (ECA)</li>
+<li>United Nations Economic Commission for Latin America and the Caribbean (ECLAC)</li>
+<li>United Nations Economic and Social Commission for Asia and the Pacific (ESCAP)</li>
+<li>United Nations Economic and Social Commission for Western Asia (ESCWA)</li>
+<p>These regional commissions works to address some of the challenges facing respective regions through results-oriented projects, technical assistance and capacity building to member states in areas such as macroeconomic policy, socio-economic development, trade, investment, transport, environmental issues, disaster risk reduction, energy and 2030 SDG goals.</p>
+<h2>UN Peace-keeping</h2>
+
+<h3>Evolution of UN Peacekeeping</h3>
+<p>UN Peacekeeping was a spontaneous step taken to bring relief to the Israel-Palestine conflict in 1948 and was also extended to the Indo-Pakistan conflict the same year. Since it was invented after the UN was formed, it is not mentioned in the UN Charter.</p>
+<p>UN Peacekeeping was formed as a tool to maintain peace and security in the conflict areas during the cold war period when UNSC had been paralyzed. For the first time, Peacekeepers were sent to Arab-Israeli war. They were unarmed military troops whose primary role was to monitor, report and build confidence.</p>
+<p>1956 Suez Crisis was the first instance of armed peacekeeping mission.</p>
+<p>The Congo crisis was the first large scale mission where around 20,000 troops were deployed. India contributed heavily to this mission.</p>
+<p>Since then, 71 missions have been employed by the UN.</p>
+<p>The UN Peacekeeping is guided by four basic principles:</p>
+
+<h3>Principles of UN Peacekeeping</h3>
+<li>Consent of the parties</li>
+<li>Impartiality</li>
+<li>Nonuse of force except in self-defense</li>
+<li>Defence of the mandate</li>
+<p>The peacekeeping operations, which started mainly as military based, have now become multidimensional. Apart from military tasks monitoring ceasefires and patrolling buffer zones between hostile parties, now Peacekeepers are often involved in civil wars, where constitutional authority does not exist, or is often limited. Sometimes non-state actors are also involved, which are not bound to follow any norms.</p>
+<p>Peacekeeping troops are also called upon to monitor humanitarian relief operations, human rights violations, mine clearance, to monitor state boundaries, provide civilian police support, assist in infrastructure building like road, railway, bridges or to assist in electoral processes etc.</p>
+
+<h3>Challenges to Peacekeeping</h3>
+<li>The biggest challenge that peacekeepers face is regarding their own security. The challenges include terror threats by non-states members.</li>
+<li>The changing nature of peacekeeping operations from military to other aspects also brings in different challenges to peacekeepers, who may not be trained for such variety of tasks.</li>
+<li>Reluctance on the part of developed countries to contribute troops for the mission.</li>
+<li>Allegations by fund contributing countries of misappropriation of funds by troop contributing countries.</li>
+<li>Some countries like Pakistan and Bangladesh look at peacekeeping as a means to earn foreign exchange. They have failed to act in a responsible manner.</li>
+<li>Consultation with troop contributing countries. Countries like India, which carry the responsibility of the UN Peacekeeping, should have a decisive voice in the process of setting up the mission and resource mobilization.</li>
+<li>More funds and timely release of funds.</li>
+<li>Zero tolerance towards any irresponsible behavior like sexual violence, corruption etc. by peacekeepers.</li>
+<li>Developed countries have proposed 'robust peacekeeping'. Since attacks against peacekeepers are increasing, they should also be allowed to keep offensive weapons.</li>
+<p>(There is also objection to this idea since it will end difference between peacekeeping and collective security. This can be mis-utilized by developed countries who will send their forces in disguise of peacekeepers.)</p>
+
+<h3>India's Contribution to UN Peacekeeping</h3>
+<p>"It would be an understatement to say that India's contribution to global peace has been remarkable"  -  Antonio Guterres</p>
+<p>Following points highlight India's contribution to UN Peacekeeping efforts</p>
+<li>India's journey with peacekeeping started with its participation in the UN operation in Korea in the 1950s, where India played a very significant role in the armistice. India also participated in the Suez Canal crisis of 1956.</li>
+<li>Since then, India has contributed around 275000 troops so far in 49 of the 71 UN missions.</li>
+<li>In 2007, India became the first country to deploy an all-women contingent to a UN peacekeeping mission in Liberia.</li>
+<li>Image of Indian peacekeepers is that they have acted in extremely profession manner. They are known for their competence and ability to establish rapport with local populations.</li>
+<li>So far, 177 Indians have sacrificed their lives on peacekeeping mission, highest for any nation. Indian peacekeepers have been awarded with Dag Hammarskjold award for their supreme sacrifices.</li>
+<li>India also have developed a well-rounded policy on UN peacekeeping, and it has established training center in Delhi under Centre for UN Peacekeeping, which trains around 12000 peacekeepers every year.</li>
+<li>Currently (2024) around 5500 troops have been deployed globally in 11 UN missions.</li>
+<p>Recognizing the potential of women in effectively addressing the complex challenges of peacekeeping, India has been proactive in including women in various roles, including military, police, and civilian components. India displayed a strong commitment to gender parity by deploying Female Engagement Teams (FETs) and Female Formed Police Units (FFPUs) to countries like Lebanon and the Democratic Republic of Congo. These deployments enable Indian women peacekeepers to engage with local communities, foster dialogue, and provide vital support to marginalized. populations, particularly women and children.</p>
+<p>India, one of the leading nations in terms of troop contribution to UN peacekeeping, has made a notable deployment by sending a platoon of women peacekeepers to Abyei, South Sudan, in January 2023. This marks India's largest unit of female Blue Helmets in a UN mission since 2007. This deployment signifies India's commitment to peacekeeping while reflecting the country's determination to substantially enhance the participation of Indian women in peacekeeping contingents. India previously deployed the first-ever all-women's contingent in Liberia in 2007.</p>
+<p>Overcoming societal norms and perceptions regarding women's roles in conflict and security requires resilience and determination. Furthermore, logistical obstacles such as limited access to appropriate facilities, resources, and gender-specific training can hinder their effectiveness in the field. Additionally, women peacekeepers are vulnerable to security risks and gender-based violence, necessitating comprehensive measures to ensure their safety and well-being.</p>
+<p>Indian women serving in UN peacekeeping forces serve as inspiring role models, challenging gender stereotypes and inspiring future generations. Their presence has a profound impact on local communities, empowering women, and girls as agents of change while promoting gender equality. By engaging with local populations, Indian women peacekeepers build trust, facilitate dialogue, and address sensitive issues such as sexual and gender-based violence. Their contributions instill a sense of security and hope, playing a pivotal role in conflict resolution and sustainable peacebuilding efforts.</p>
+<p>John Lennon famously sang 'Give peace a chance'. These blue soldiers do that 24×7, in the pursuit of global peace!</p>
+<p>Peacekeeping is the only tool the global community has to mend various emerging cracks in the world. We will definitely come up with better tools, but until then, we will have to work on the ones we have to provide our fellow humans with a better environment.</p>
+<p>The professionalism and expertise of the Indian troops have helped in the implementation of the UN Peacekeeping doctrine. India should now gear up its peacekeeping role by not just contributing troops but also deriving newer strategies and thinking from its long experience.</p>
+<p>Click here</p>
+<p>Click here</p>
+<h2>Need for UN Reforms</h2>
+
+<h3>Evaluating the UN's Record</h3>
+<p>To evaluate the workings of the United Nations, we have to judge it against the purpose for which the body was created.As preamble of UN Charter suggests, "the envisaged role of UN is to save the succeeding generations from the scourge of war". In the words of former UN Secretary General Dag Hammarskjöld, "United nations was not created to create heaven on earth, but to prevent it from becoming hell."</p>
+<p>Thus, the primary purpose of the UN was to avoid war(s). Since there have been no major conflicts since 2 nd World War, and the Cold War was nearly averted, with UN playing important role in event like Cuban Missile Crisis, we can say that the organization has lived to its promise.</p>
+<p>However, there are additional roles the United Nations was expected to play, and it is in these parameters it has struggled. The three pillars of the UN system are 1) Protection of World Peace. 2) Protection of Human Rights. 3) Promotion of development.</p>
+<p>Although the world has not seen a major war since UN formation, there have been numerous regional conflicts across globe. And the role of UN in these have only been marginal. The Korean Peninsula crisis, India Pakistan conflict, the Israel-Palestine issue etc. are smoldering even now. Because of the East and West conflict, and the veto powers of UNSC, it could not play an effective role in its core objective i.e., maintaining peace. Collective security has remained paralyzed and the commitment of countries for peacekeeping is weakening. The body has also failed to check the growth of terrorism across globe.</p>
+<p>The human rights crisis in war torn Middle East, the Rohingya crisis, and crisis in many countries of Africa show the failure of the international community towards protecting human rights. The system have been, at times used by western countries to promote their geopolitical ambitions, and this has further corroded the trust of countries towards United Nation.</p>
+<p>If there is some achievement of UN, it is in the field of development. WHO has been largely successful as an international body. The earlier Millenium Development Goals (MDGs) and now Sustainable Development Goals (SDG) have created tangible, measurable goals for the developmental wing of the United Nations. This has helped in mobilization of resources to the poorer parts of the world and contributed to global development.</p>
+<p>"No other body invokes as many dreams yet so many frustrations like United Nations."  -  Gareth Evans, former foreign minister of Australia.</p>
+
+<h3>The Case for Reform</h3>
+<p>Reform and improvement are fundamental to any organization to serve the needs of a changing environment. The UN is no exception to it. We live in an increasingly globalized world, hence some form of institution of global governance is always needed. It is argued that even if we end UN, we will have to recreate it. Hence it is better to reform the organization.</p>
+<p>There have been signification changes in global economic, political and security structure since the inception of the United Nations. Since 1945,</p>
+<li>The Soviet Union has collapsed.</li>
+<li>The relationship between Russia, the successor to the Soviet Union, and the US is much more cooperative.</li>
+<li>The US hegemony has declined.</li>
+<li>China is fast emerging as a great power, and India also is growing rapidly.</li>
+<li>Many new countries have joined the UN.</li>
+<li>A whole new set of challenges confronts the world (genocide, civil war, ethnic conflict, terrorism, nuclear proliferation, climate change, environmental degradation, epidemics).</li>
+<p>To address these changing needs in a changed environment, it is essential that there are serious reforms in the organization. There are many global issues which are beyond the capacity of a single nation to solve. Thus, the UN as a body is more relevant now than it was after the 2 nd World War. In the words of former Secretary General Ban Ki Moon, 'we need more UN than less UN'.</p>
+<p>"UN is malleable to the wishes of those who are running the institution . It cannot be more successful than what we desire. "  -  Harry S. Truman (US President 1945-53)</p>
+
+<h3>Reform Agenda Across UN Organs</h3>
+<li>Reform of the UN Charter  -  Article 2(7) prohibits the United Nations from intervention in domestic affairs. However, that has not remained the practiced with invention of R2P (responsibility to protect). Further, the UN charter still mentions certain states as enemy states (Axis powers). However, these are all now UN members, aspiring for permanent membership. Amendment to the UN charter is needed to bridge the gap between the practice and the text of the UN charter.</li>
+<li>Reform in General Assembly  - - No major reforms are needed.</li>
+<li>United Nations Security Council  -  UNSC represents the 1945 power structure of the world, not 21 st century. There have been multiple demands to increase the permanent and non-permanent members of this core grouping and inclusion of countries like India, and presentation from geographies like Africa and Latin America. The Veto powers of P5 countries also needs a relook.</li>
+<li>UN Secretariat  -  As domestic bureaucracy, UN secretariat wields a great power, but remains hidden from public oversight. Thus, there are demands for increased transparency, accountability, efficiency, right sizing, addressing red-tapism, and a greater representation from developing countries.</li>
+<li>Trusteeship Council  -  Its mission fulfilled; the Trusteeship Council suspended its operation on 1 November 1994. However, in the UN charter, it continues to exist. Thus, either it needs to be totally abolished or given a new mandate e.g., governance of global commons.</li>
+<li>ECOSOC  -  The number of agencies has grown too much resulting in overlapping and duplication of efforts. Hence streamlining and clear demarcation of the domains of these agencies is needed.</li>
+<li>UN Peacekeeping  -  The program needs more budget and timely release of funds. A greater say in peacekeeping missions from a troop contributing countries.</li>
+<li>UN Finances  -  The United Nations is overdependent on the United States for its finances. Further, many UN bodies depend on the voluntary contribution by the countries. UN needs an independent source of income which will ensure its sustainability and independent decision-making. A tax on military expenditure, or on global trade, has been proposed.</li>
+
+<h3>The Rigid Amendment Process</h3>
+<p>All the institutional reforms of the United Nations require an amendment to the UN Charter. According to Article 108 of the UN Charter (which deals with amendment procedure), a proposal for amendment of UN Charter must be initiated by at least 2/3 members of General Assembly, passed by 2/3 members (including the consent of P5). Further, such an amendment should also be ratified by the domestic ratification procedure in 2/3 rd of the member countries.</p>
+<p>Thus, the process of amendment is very rigid, and the UN charter has been reformed only 5 times since formation. The last amendment was in 1973, more than 5 decades ago.</p>
+
+<h3>Responsibility to Protect (R2P)</h3>
+<p>Responsibility to protect (R2P) is a reinterpretation of the concept of sovereignty in the context of human rights. The end of the cold war resulted in the rise of ethnic conflicts and civil wars. Since then, the world has witnessed intra-state conflicts rather than inter-state conflicts. In these conflicts there has been violation of human rights at a mass scale e.g., Rwandan genocide of 1994, Bosnian genocide 1995, Sri Lankan civil war, the Rohingya crisis of Myanmar etc.</p>
+<p>These instances of civil wars created new challenges in international law. According to the UN, based on the Westphalian notion of sovereignty, the state is sovereign and no external institutions can interfere in domestic affairs. Accordingly, Article 2 (7) of the UN Charter prevents UN intervention in the domestic affairs of states. However, the violation of human rights by states themselves created a dilemma for the international community. Whether UN can intervene in domestic affairs for the sake of protection of human rights? And in the process, compromise the most sacrosanct principle of international law i.e., state sovereignty.</p>
+<p>As s solution, the commission led by govt. of Canada came with the idea of responsibility to protect (R2P). R2P redefines sovereignty. The conventional understanding of sovereignty is 'power of the state'. R2P redefines sovereignty as 'responsibility' rather than power. It means sovereignty is not a power of the state on the people, rather responsibility of the state to protect the rights of the people. State has been given right to use power not to kill the people but to protect them.</p>
+<p>In case state fails to fulfill its responsibility because of lack of capacity (e.g., poor states) or state itself start violating the rights of its people (e.g., Rohingya crisis in Myanmar), in such situations it becomes the responsibility of international community to protect the people from state. Thus, allowing intervention by the United Nations.</p>
+<p>The responsibility to protect as a global political commitment was endorsed by the UN General Assembly at the 2005 World Summit (India is also a signatory to the resolution). The doctrine has been regarded as a unanimous and well-established international norm over the past two decades.</p>
+<p>The responsibility to protect rests upon three pillars of equal standing:</p>
+<li>The responsibility of each State to protect its populations.</li>
+<li>The responsibility of the international community to assist States in protecting their populations; and</li>
+<li>The responsibility of the international community to protect when a State is manifestly failing to protect its populations.</li>
+<p>According to the guidelines adopted by the UN in implementation of R2P, 1) force to be used only as a last option, and 2) the use of force must be proportionate.</p>
+<p>Kenya, 2007 - 2008</p>
+<p>From December 2007 to January 2008, Kenya was swept by a wave of ethnic violence triggered by a disputed presidential election. French Foreign Affairs Ministers Bernard Kouchner made an appeal to the UN Security Council to react "in the name of the responsibility to protect" before Kenya plunged into a deadly ethnic conflict. On 10 January 2008, former UN Secretary-General Kofi Annan was accepted by the warring parties as mediator. The efforts led to the signing of a power-sharing agreement on 28 February 2008, and the violence subsided. This rapid and coordinated reaction by the international community was praised by Human Rights Watch as "a model of diplomatic action under the 'Responsibility to Protect' principles".</p>
+<p>Libya, 2011</p>
+<p>Libya was the first case where the Security Council authorized a military intervention citing the R2P. Following widespread and systematic attacks against the civilian population by the Libyan regime, the Security Council unanimously adopted resolution 1970 on 26 February 2011, demanding Libyan authorities to the violence.</p>
+<p>Days later, in resolution 1973, the Security Council authorized member states to take "all necessary measures" to protect civilians under threat of attack in the country. Acting on the resolution, NATO planes started striking Gaddafi's forces.</p>
+<p>This instance of use of R2P, however, remains controversial. NATA forces went beyond the mandate and entered an open battle with forces of Gaddafi. It led to great number of casualties (including civilian) and were condemned by Russia and China. They also held that the R2P has become a new discourse for western countries to intervene in domestic affairs of developing states.</p>
+<p>The experience of Libya has resulted into a situation where despite the repeated demands by the west, Russia and China did not sanction the permission for R2P in case of Syria. The action of both West and Russia and China have been responsible for the continuing violations of human rights and the lack of necessary action by United Nations.</p>
+<p>There are also other instances of use of R2P, like Ivory Coast 2011, Central African Republics 2013, Burundi etc.</p>
+<p>Brazil has proposed 'Responsibility While Protection'. According to the resolution it is necessary to ensure the accountability of those who implement the R2P resolution. In case they transgress the limits, they must be penalized.</p>
+  `,
+
 
 
 
