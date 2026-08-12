@@ -6,7 +6,6 @@ const OPTIONALS: Record<string, {
   name: string; full: string; sub: string;
   color: string; dim: string; border: string; glow: string; icon: string;
   paper1: string; paper2: string;
-  stats: { label: string; value: string }[];
   highlights: string[];
 }> = {
   sociology: {
@@ -14,7 +13,6 @@ const OPTIONALS: Record<string, {
     color: '#4361ee', dim: 'rgba(67,97,238,0.07)', border: 'rgba(67,97,238,0.22)', glow: 'rgba(67,97,238,0.15)', icon: '🧩',
     paper1: 'Sociological Theory, Research Methods, Social Stratification & Social Change',
     paper2: 'Indian Society, Social Issues, Movements & Contemporary Challenges',
-    stats: [{ label: 'PYQs', value: '1500+' }, { label: 'Topics', value: '120+' }, { label: 'Thinkers', value: '60+' }, { label: 'Model Answers', value: '200+' }],
     highlights: ['Structural-functional, conflict and interpretive traditions', 'Thinkers: Marx, Weber, Durkheim, Parsons, Merton, Giddens', 'Indian society: caste, tribe, gender, village & agrarian systems', 'Social movements: peasant, women, environmental, Dalit', 'Contemporary India: globalisation, IT revolution, diaspora'],
   },
   anthropology: {
@@ -22,7 +20,6 @@ const OPTIONALS: Record<string, {
     color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.22)', glow: 'rgba(45,212,191,0.14)', icon: '🧬',
     paper1: 'Meaning, Scope & Development of Anthropology; Evolution; Genetics; Human Variation',
     paper2: 'Indian Anthropology, Tribal India, Applied Anthropology, Fossil Records',
-    stats: [{ label: 'PYQs', value: '1200+' }, { label: 'Topics', value: '100+' }, { label: 'Fossil Records', value: '40+' }, { label: 'Model Answers', value: '180+' }],
     highlights: ['Biological & physical anthropology evolution, genetics, primatology', 'Archaeological anthropology fossil evidence, tools, culture', 'Social & cultural anthropology kinship, marriage, religion', 'Tribal India scheduled tribes, problems, development policy', 'Applied anthropology development, forensics, ethnobotany'],
   },
   polsci: {
@@ -30,7 +27,6 @@ const OPTIONALS: Record<string, {
     color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)', icon: '⚖️',
     paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
     paper2: 'Comparative Politics & International Relations',
-    stats: [{ label: 'PYQs', value: '1400+' }, { label: 'Topics', value: '110+' }, { label: 'Thinkers', value: '50+' }, { label: 'Model Answers', value: '190+' }],
     highlights: ['Political theory liberalism, Marxism, feminism, post-colonialism', 'Indian Constitution federalism, fundamental rights, DPSPs', 'Political institutions Parliament, executive, judiciary, election commission', 'Comparative politics presidential vs parliamentary, federalism globally', 'International relations realism, liberalism, constructivism, IR theory'],
   },
   geography: {
@@ -38,7 +34,6 @@ const OPTIONALS: Record<string, {
     color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.2)', glow: 'rgba(74,222,128,0.13)', icon: '🌍',
     paper1: 'Physical Geography Geomorphology, Climatology, Oceanography, Biogeography',
     paper2: 'Human & Economic Geography, Regional Planning, India-specific Geography',
-    stats: [{ label: 'PYQs', value: '1300+' }, { label: 'Topics', value: '130+' }, { label: 'Diagrams', value: '80+' }, { label: 'Model Answers', value: '200+' }],
     highlights: ['Geomorphology plate tectonics, landforms, fluvial & aeolian processes', 'Climatology atmospheric circulation, monsoon, climate change', 'Oceanography currents, tides, marine resources', 'Human geography population, migration, settlement patterns', 'India geography agriculture, minerals, transport, regional development'],
   },
   'pub-admin': {
@@ -46,7 +41,6 @@ const OPTIONALS: Record<string, {
     color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.2)', glow: 'rgba(251,146,60,0.13)', icon: '📋',
     paper1: 'Administrative Theory Organisation, Accountability, Comparative Admin',
     paper2: 'Indian Administration Union, State, District, Development Administration',
-    stats: [{ label: 'PYQs', value: '1100+' }, { label: 'Topics', value: '90+' }, { label: 'Thinkers', value: '40+' }, { label: 'Model Answers', value: '160+' }],
     highlights: ["Administrative theory Weber's bureaucracy, Taylor, Fayol, Simon", 'Organisation theory classical, human relations, systems, contingency', 'Accountability parliamentary control, CAG, RTI, lokpal', 'Indian administration civil services, central secretariat, cabinet', 'Development administration planning, decentralisation, e-governance'],
   },
 };
@@ -124,19 +118,7 @@ const CSS = `
     text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s;
   }
   .op-btn-secondary:hover { color: var(--text); }
-  .op-stat-row {
-    display: flex; gap: 2.5rem;
-    margin-top: 3rem; padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-  .op-stat-val {
-    font-family: var(--font-body); font-size: 1.75rem; font-weight: 700;
-    letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px;
-  }
-  .op-stat-label {
-    font-family: var(--font-ui); font-size: 0.72rem;
-    color: var(--text3); letter-spacing: 0.04em; text-transform: uppercase;
-  }
+
 
   /* ── Section wrapper ── */
   .op-section {
@@ -253,10 +235,6 @@ const CSS = `
     .op-right-desc { font-size:0.88rem; line-height:1.75; margin-bottom:2rem; }
     .op-actions { gap:0.85rem; }
     .op-btn-primary { padding:11px 22px; font-size:0.85rem; }
-    .op-stat-row { gap:1.75rem; margin-top:2rem; padding-top:1.5rem; }
-    .op-stat-val { font-size:1.5rem; }
-    .op-stat-label { font-size:0.68rem; }
-
     .op-section { padding:2.5rem 1.25rem; }
     .op-section-label { font-size:0.6rem; }
     .op-section-h2 { font-size:clamp(1.4rem,7vw,2rem); }
@@ -323,14 +301,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
                 </svg>
               </Link>
             </div>
-            <div className="op-stat-row">
-              {opt.stats.map((s) => (
-                <div key={s.label}>
-                  <div className="op-stat-val" style={{ color: opt.color }}>{s.value}</div>
-                  <div className="op-stat-label">{s.label}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </div>
 

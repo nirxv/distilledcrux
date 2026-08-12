@@ -20,7 +20,7 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   history: 'history',
 };
 
-const PYQS_ENABLED = new Set(['sociology', 'anthropology']);
+const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science']);
 
 const getTools = (optional: string | null) => {
   const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';

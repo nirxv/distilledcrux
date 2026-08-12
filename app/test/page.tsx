@@ -57,7 +57,7 @@ const SUBJECTS: Record<SubjectId, {
     label: 'PSIR', icon: 'psir',
     color: '#f87171', dim: 'rgba(248,113,113,0.09)', border: 'rgba(248,113,113,0.25)',
     thinkerTerm: 'thinker',
-    dataFile: null,
+    dataFile: '/data/psir-pyqs.json',
   },
   geography: {
     label: 'Geography', icon: 'geography',
