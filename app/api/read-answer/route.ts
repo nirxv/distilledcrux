@@ -51,11 +51,33 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  // Usage gate — same limit as evaluate (1 free, shared counter)
+  // Usage gate — optional-scoped subscription check
   if (verifiedUid !== OWNER_UID) {
     const sb = createServerClient();
     let isPremium = false;
-    const { data: sub } = await sb.from('subscriptions').select('id').eq('firebase_uid', verifiedUid).eq('status', 'active').maybeSingle();
+
+    // Peek subject from formData to scope subscription check
+    let optionalForRead = 'sociology';
+    try {
+      const cloned = req.clone();
+      const fd = await cloned.formData();
+      const subj = (fd.get('subject') as string) || 'sociology';
+      const MAP: Record<string, string> = {
+        sociology: 'sociology', anthropology: 'anthropology',
+        polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
+      };
+      optionalForRead = MAP[subj] ?? subj;
+    } catch { /* ignore */ }
+
+    const nowISO = new Date().toISOString();
+    const { data: sub } = await sb
+      .from('subscriptions')
+      .select('id')
+      .eq('firebase_uid', verifiedUid)
+      .eq('optional', optionalForRead)
+      .eq('status', 'active')
+      .gt('expires_at', nowISO)
+      .maybeSingle();
     if (sub) isPremium = true;
 
     if (!isPremium) {

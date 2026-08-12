@@ -437,6 +437,19 @@ export async function POST(req: NextRequest) {
   // Firebase auth check
   let isOwner = false;
   let isPremium = false;
+  // subject comes from formData later, but we need it now for optional-scoped check
+  // We'll re-read after formData.parse; for auth we peek at formData clone
+  let optionalForEval = 'sociology';
+  try {
+    const cloned = req.clone();
+    const fd = await cloned.formData();
+    const subj = (fd.get('subject') as string) || 'sociology';
+    const MAP: Record<string, string> = {
+      sociology: 'sociology', anthropology: 'anthropology',
+      polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
+    };
+    optionalForEval = MAP[subj] ?? subj;
+  } catch { /* ignore */ }
 
   if (token) {
     try {
@@ -454,6 +467,7 @@ export async function POST(req: NextRequest) {
           .from("subscriptions")
           .select("status")
           .eq("firebase_uid", user.uid)
+          .eq("optional", optionalForEval)
           .eq("status", "active")
           .gt("expires_at", nowISO)
           .single();

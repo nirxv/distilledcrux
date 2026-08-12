@@ -265,6 +265,25 @@ export async function POST(req: NextRequest) {
   let isPremium = false;
   let firebaseUid = '';
 
+  // Read subject from body early (needed for optional-scoped subscription check)
+  // We clone the request so the body can be read again later
+  let subjectForAuth = 'sociology';
+  try {
+    const cloned = req.clone();
+    const bodyJson = await cloned.json();
+    subjectForAuth = bodyJson.subject ?? 'sociology';
+  } catch { /* ignore */ }
+
+  // Map chat subject key → subscription optional key
+  const SUBJECT_TO_OPTIONAL: Record<string, string> = {
+    sociology:     'sociology',
+    anthropology:  'anthropology',
+    polsci:        'political-science',
+    geography:     'geography',
+    'pub-admin':   'public-administration',
+  };
+  const optionalForAuth = SUBJECT_TO_OPTIONAL[subjectForAuth] ?? subjectForAuth;
+
   if (token) {
     try {
       const { adminAuth } = await import('@/lib/firebaseAdmin');
@@ -277,6 +296,7 @@ export async function POST(req: NextRequest) {
           .from('subscriptions')
           .select('status')
           .eq('firebase_uid', decoded.uid)
+          .eq('optional', optionalForAuth)
           .eq('status', 'active')
           .gt('expires_at', nowISO)
           .single();
