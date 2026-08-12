@@ -12,9 +12,8 @@ export async function POST(req: NextRequest) {
   const user = await verifyFirebaseToken(token);
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const { razorpay_order_id, razorpay_payment_id, razorpay_signature, plan } = await req.json();
+  const { razorpay_order_id, razorpay_payment_id, razorpay_signature, plan, optional } = await req.json();
 
-  // Verify signature
   const body = razorpay_order_id + '|' + razorpay_payment_id;
   const expectedSig = crypto
     .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET!)
@@ -25,22 +24,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
+  if (!optional) {
+    return NextResponse.json({ error: 'Missing optional subject' }, { status: 400 });
+  }
+
   const days = PLAN_DAYS[plan] ?? 30;
   const expiresAt = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toISOString();
 
   const supabase = createServerClient();
 
-  // Upsert subscription
   const { error } = await supabase.from('subscriptions').upsert({
     firebase_uid: user.uid,
     email: user.email ?? '',
     plan,
+    optional,
     status: 'active',
     expires_at: expiresAt,
     razorpay_order_id,
     razorpay_payment_id,
     updated_at: new Date().toISOString(),
-  }, { onConflict: 'firebase_uid' });
+  }, { onConflict: 'firebase_uid,optional' });
 
   if (error) {
     console.error('Subscription upsert error:', error);

@@ -9,22 +9,35 @@ export async function GET(req: NextRequest) {
 
   const supabase = createServerClient();
 
-  // Fetch in parallel
-  const [profileRes, usageRes, subRes] = await Promise.all([
+  const [profileRes, usageRes] = await Promise.all([
     supabase.from('user_profiles').select('optional, created_at').eq('firebase_uid', user.uid).single(),
     supabase.from('usage_tracking').select('chat_count, updated_at').eq('firebase_uid', user.uid).single(),
-    supabase.from('subscriptions').select('status, expires_at, plan').eq('firebase_uid', user.uid).eq('status', 'active').gt('expires_at', new Date().toISOString()).single(),
   ]);
 
   const optional = profileRes.data?.optional ?? null;
   const chatCount = usageRes.data?.chat_count ?? 0;
   const lastActive = usageRes.data?.updated_at ?? null;
-  const isPremium = !!subRes.data;
-  const plan = subRes.data?.plan ?? null;
-  const expiresAt = subRes.data?.expires_at ?? null;
   const joinedAt = profileRes.data?.created_at ?? null;
 
-  // Days since joined (streak proxy)
+  let isPremium = false;
+  let plan: string | null = null;
+  let expiresAt: string | null = null;
+
+  if (optional) {
+    const subRes = await supabase
+      .from('subscriptions')
+      .select('status, expires_at, plan')
+      .eq('firebase_uid', user.uid)
+      .eq('optional', optional)
+      .eq('status', 'active')
+      .gt('expires_at', new Date().toISOString())
+      .single();
+
+    isPremium = !!subRes.data;
+    plan = subRes.data?.plan ?? null;
+    expiresAt = subRes.data?.expires_at ?? null;
+  }
+
   const daysSinceJoin = joinedAt
     ? Math.floor((Date.now() - new Date(joinedAt).getTime()) / (1000 * 60 * 60 * 24))
     : 0;
