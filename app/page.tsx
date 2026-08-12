@@ -479,8 +479,8 @@ export default function Home() {
           <div className="lp-pricing-row">
             {[
               { label: 'Daily',     price: '₹49',    period: 'per day',      desc: 'Exam-day sprints and last-minute revision.',    tag: null,           tagColor: '' },
-              { label: '6 Months', price: '₹3,999', period: 'per 6 months', desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
-              { label: 'Yearly',   price: '₹5,999', period: 'per year',     desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
+              { label: '6 Months', price: '₹1,999', period: 'per 6 months', desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
+              { label: 'Yearly',   price: '₹2,999', period: 'per year',     desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
             ].map((p) => (
               <div key={p.label} className={"lp-price-cell" + (p.tag === 'Most Popular' ? ' featured' : '')}>
                 {p.tag && (
