@@ -1,0 +1,5786 @@
+[
+  {
+    "id": 1,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Explain the Philosophical approach to the study of Political theory.",
+    "marks": 10
+  },
+  {
+    "id": 2,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Provide a comparative analysis of the behavioural and institutional approach to the study of political theory.",
+    "marks": 20
+  },
+  {
+    "id": 3,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Elucidate the meaning inherent in the term political with appropriate illustration.",
+    "marks": 20
+  },
+  {
+    "id": 4,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Behavioral approach to Political Science.",
+    "marks": 10
+  },
+  {
+    "id": 5,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Normative approach in Political Science.",
+    "marks": 10
+  },
+  {
+    "id": 6,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Decline of political theory.",
+    "marks": 10
+  },
+  {
+    "id": 7,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Eurocentrism is both the target and the motive force of post-colonial political theory. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 8,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "'Credo of Relevance' in post-behaviouralism advocates the importance of action science. Analyze.",
+    "marks": 15
+  },
+  {
+    "id": 9,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Systems Approach.",
+    "marks": 10
+  },
+  {
+    "id": 10,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Cultural Relativism.",
+    "marks": 10
+  },
+  {
+    "id": 11,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "'Revolution in Permanence'.",
+    "marks": 10
+  },
+  {
+    "id": 12,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Discuss the significance of a normative approach to Political theory.",
+    "marks": 15
+  },
+  {
+    "id": 13,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Resurgence of political theory.",
+    "marks": 10
+  },
+  {
+    "id": 14,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Decline of Political Theory.",
+    "marks": 10
+  },
+  {
+    "id": 15,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "The Post Behavioural Approach.",
+    "marks": 10
+  },
+  {
+    "id": 16,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "Discuss David Easton's model of systems analysis.",
+    "marks": 15
+  },
+  {
+    "id": 17,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Political Theory",
+    "question": "\"... political theory is not an escape mechanism but an arduous calling.\" (John Plamanetz)",
+    "marks": 10
+  },
+  {
+    "id": 18,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "What is the Marxist and liberal approach towards the state? On what grounds are the theoretical differences between them premised? Explain",
+    "marks": 20
+  },
+  {
+    "id": 19,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Pluralist theory of State.",
+    "marks": 10
+  },
+  {
+    "id": 20,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Examine the liberal theory of State in contemporary politics.",
+    "marks": 20
+  },
+  {
+    "id": 21,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Feminist critique of the State.",
+    "marks": 10
+  },
+  {
+    "id": 22,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Post colonial theory of the state.",
+    "marks": 10
+  },
+  {
+    "id": 23,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Pluralist theory of the State.",
+    "marks": 10
+  },
+  {
+    "id": 24,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Critically examine the neo-liberal theory of State.",
+    "marks": 20
+  },
+  {
+    "id": 25,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "\"Nothing against the State, nothing over it, nothing beyond it.\" — Mussolini",
+    "marks": 10
+  },
+  {
+    "id": 26,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Neo-liberal perspective of state.",
+    "marks": 10
+  },
+  {
+    "id": 27,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Discuss Feminist theory of the State.",
+    "marks": 20
+  },
+  {
+    "id": 28,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Examine the challenges to sovereignty of the State in the contemporary world.",
+    "marks": 20
+  },
+  {
+    "id": 29,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Theories of the State",
+    "question": "Examine the conception of the State in the ideologies of Fascism and Marxism.",
+    "marks": 15
+  },
+  {
+    "id": 30,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Explain how Rawls used the liberal and egalitarian perspective to develop his concept of distributive justice.",
+    "marks": 15
+  },
+  {
+    "id": 31,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Rawls' idea of the 'liberal self' is too individualistic. Explain, in this context, the communitarian critique of Rawls' theory of justice.",
+    "marks": 15
+  },
+  {
+    "id": 32,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Examine the entitlement theory of justice.",
+    "marks": 15
+  },
+  {
+    "id": 33,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "How has Rawls enriched the idea of justice in liberalism?",
+    "marks": 20
+  },
+  {
+    "id": 34,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Make a comparative assessment of the Greek perspective of Justice with the Rawlsian concept of Justice.",
+    "marks": 20
+  },
+  {
+    "id": 35,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Examine communitarian perspectives on justice.",
+    "marks": 15
+  },
+  {
+    "id": 36,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Analyze John Rawls justification of discrimination to achieve the goals of Justice.",
+    "marks": 15
+  },
+  {
+    "id": 37,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Distributive Justice.",
+    "marks": 10
+  },
+  {
+    "id": 38,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Rawls' theory of justice is both contractual and distributive. Examine.",
+    "marks": 20
+  },
+  {
+    "id": 39,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Critically examine John Rawl's argument for democratic equality.",
+    "marks": 15
+  },
+  {
+    "id": 40,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "'Difference Principle' in Rawls' Theory of Justice.",
+    "marks": 10
+  },
+  {
+    "id": 41,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "Explicate the conception of justice in the critiques of communitarian theorists.",
+    "marks": 20
+  },
+  {
+    "id": 42,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Justice",
+    "question": "\"Original position.\"",
+    "marks": 10
+  },
+  {
+    "id": 43,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Write a note on the relation between equality and liberty from the multi-cultural perspective.",
+    "marks": 10
+  },
+  {
+    "id": 44,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "The nature of the relationship between equality of democratic citizenship and liberty of citizens is influenced by economic equality. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 45,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Affirmative Action Policies draw as much strong criticism as strong support. Analyze this statement in the context of equality.",
+    "marks": 15
+  },
+  {
+    "id": 46,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "\"Equality of estates causes equality of power, and equality of power is liberty.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 47,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Equality of outcome as a political idea.",
+    "marks": 10
+  },
+  {
+    "id": 48,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Affirmative action.",
+    "marks": 10
+  },
+  {
+    "id": 49,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Equality of opportunity.",
+    "marks": 10
+  },
+  {
+    "id": 50,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Equality means fair treatment rather than equal treatment. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 51,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "Affirmative Action.",
+    "marks": 10
+  },
+  {
+    "id": 52,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Equality",
+    "question": "How is liberty a precondition for equality? Explicate the relationship between equality and liberty.",
+    "marks": 15
+  },
+  {
+    "id": 53,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "The debate on human rights is caught between the limitations of both universalism and cultural relativism. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 54,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Multicultural perspective on rights.",
+    "marks": 10
+  },
+  {
+    "id": 55,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Human Rights are complex and contested social practice that organizes relations between individuals, society and the State. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 56,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Can there be a universal conception of human rights? Give your arguments.",
+    "marks": 15
+  },
+  {
+    "id": 57,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Assess the significance of right to property in political theory.",
+    "marks": 15
+  },
+  {
+    "id": 58,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Discuss the doctrine of 'rights as trumps'.",
+    "marks": 15
+  },
+  {
+    "id": 59,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "What do you understand about three generations of Human Rights?",
+    "marks": 20
+  },
+  {
+    "id": 60,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "What do you understand about Multiculturalism? Discuss Bhikhu Parekh's view on Multiculturalism.",
+    "marks": 20
+  },
+  {
+    "id": 61,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "\"The implementation of human rights is regarded as a matter of changing the conduct of States.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 62,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Idea of Natural Rights.",
+    "marks": 10
+  },
+  {
+    "id": 63,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Rights",
+    "question": "Analyze the relationship between natural rights and human rights.",
+    "marks": 20
+  },
+  {
+    "id": 64,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Explain briefly the elite theory of democracy.",
+    "marks": 10
+  },
+  {
+    "id": 65,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Deliberative democracy seeks to promote democratic decision making about public issues among the citizens. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 66,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Success of contemporary democracies lies in the State limiting its own power. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 67,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "'Elitist theory of democracy denies the possibility of democracy as 'rule of the people'. Elucidate.",
+    "marks": 15
+  },
+  {
+    "id": 68,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "\"Free and fair deliberation is key to the foundation of democracy.\" Explain.",
+    "marks": 15
+  },
+  {
+    "id": 69,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Deliberative democracy.",
+    "marks": 10
+  },
+  {
+    "id": 70,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Critically examine Macpherson's views on Democracy.",
+    "marks": 15
+  },
+  {
+    "id": 71,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Substantive Democracy.",
+    "marks": 10
+  },
+  {
+    "id": 72,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Deliberative democracy does not have its salience without participation and participatory democracy does not have its credence without deliberations. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 73,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Explicate the features of Representative Democracy.",
+    "marks": 15
+  },
+  {
+    "id": 74,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Difference between Participatory and Deliberative Democracy.",
+    "marks": 10
+  },
+  {
+    "id": 75,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Democracy",
+    "question": "Explicate the features of deliberative democracy.",
+    "marks": 15
+  },
+  {
+    "id": 76,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Explain Macpherson's view on power.",
+    "marks": 10
+  },
+  {
+    "id": 77,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Do you think that legitimacy acquired by consent or manufactured by indoctrination is an essential element in the maintenance of political rule? Justify your answer with relevant examples.",
+    "marks": 15
+  },
+  {
+    "id": 78,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Linkage between Power and Hegemony.",
+    "marks": 10
+  },
+  {
+    "id": 79,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Legitimacy adds positive value to political authority and obligation. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 80,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Foucault's concept of power.",
+    "marks": 10
+  },
+  {
+    "id": 81,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Bases of Power.",
+    "marks": 10
+  },
+  {
+    "id": 82,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "\"Political ideology is primarily concerned with the allocation and utilization of power.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 83,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Tools of legitimation of the State.",
+    "marks": 10
+  },
+  {
+    "id": 84,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Examine the nature and meaning of power.",
+    "marks": 15
+  },
+  {
+    "id": 85,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "End of Ideology debate.",
+    "marks": 10
+  },
+  {
+    "id": 86,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Explain the relationship between power, authority and legitimacy.",
+    "marks": 15
+  },
+  {
+    "id": 87,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Write a brief note on The End of History debate.",
+    "marks": 15
+  },
+  {
+    "id": 88,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Distinguish between Power and Authority.",
+    "marks": 15
+  },
+  {
+    "id": 89,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Discuss the 'crisis of legitimacy' in capitalist societies (Habermas).",
+    "marks": 20
+  },
+  {
+    "id": 90,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
+    "question": "Examine the conditions that are required for the maintenance of legitimacy in modern societies.",
+    "marks": 15
+  },
+  {
+    "id": 91,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Mention the difference between Italian and German brands of fascism.",
+    "marks": 10
+  },
+  {
+    "id": 92,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Karl Popper presents a defence of the open society against its enemies. Elaborate.",
+    "marks": 15
+  },
+  {
+    "id": 93,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Explain how the slogan 'the personal is political' addresses the issue of women's oppression and discrimination.",
+    "marks": 15
+  },
+  {
+    "id": 94,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Marxism is a political theory of action demanding strict compliance with its core principles. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 95,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Decline of Liberalism.",
+    "marks": 10
+  },
+  {
+    "id": 96,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Fascism displays an ambivalent stance towards parliamentary democracy. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 97,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Factors like community, culture and nation weaken the hegemony of neoliberalism today. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 98,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Explicate the ideological components of Gandhism.",
+    "marks": 20
+  },
+  {
+    "id": 99,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Liberalism as a revolutionary idea.",
+    "marks": 10
+  },
+  {
+    "id": 100,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "What is the contemporary relevance of Marxism?",
+    "marks": 15
+  },
+  {
+    "id": 101,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Compare negative and positive concepts of liberty.",
+    "marks": 15
+  },
+  {
+    "id": 102,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Distinguish between liberal feminism and radical feminism.",
+    "marks": 15
+  },
+  {
+    "id": 103,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Define Socialism. Discuss the salient features of Fabian Socialism.",
+    "marks": 15
+  },
+  {
+    "id": 104,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Postmodernism.",
+    "marks": 10
+  },
+  {
+    "id": 105,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "\"The Political ideology of Globalization is Neoliberalism.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 106,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Discuss the key features of pre-marxist socialist theory.",
+    "marks": 15
+  },
+  {
+    "id": 107,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Discuss the relationship between base and superstructure in Marxist theory.",
+    "marks": 15
+  },
+  {
+    "id": 108,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Comment on the view that socialism in the 21st century may be reborn as anti-capitalism.",
+    "marks": 20
+  },
+  {
+    "id": 109,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Discuss the communitarian critique of liberalism.",
+    "marks": 20
+  },
+  {
+    "id": 110,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "\"Personal is political.\"",
+    "marks": 10
+  },
+  {
+    "id": 111,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Political Ideologies",
+    "question": "Explain Berlin's notion of value pluralism.",
+    "marks": 20
+  },
+  {
+    "id": 112,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "\"State does the greatest harm to mankind by destroying individuality, which lies at the root of all progress.\" — Mahatma Gandhi. Elucidate.",
+    "marks": 15
+  },
+  {
+    "id": 113,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Manabendra Nath Roy's political thought highlighted the humanistic aspects of Marxism. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 114,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Dharmashastra presents a duty-centric worldview for individuals and communities. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 115,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Sri Aurobindo's idea of Swaraj has deep significance in Indian social, political and cultural history. Analyze.",
+    "marks": 15
+  },
+  {
+    "id": 116,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Buddhist thought on Dhamma facilitates the emancipation of political action. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 117,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Dr. Ambedkar's idea of social justice leads to egalitarian justice as compared to Rawls' 'justice as fairness' which aims at the notion of 'pure procedural justice'. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 118,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Do you think that the Buddhist traditions have lent a greater ethical foundation to ancient Indian political thought? Give your arguments.",
+    "marks": 20
+  },
+  {
+    "id": 119,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "\"When a nation becomes devoid of arts and learning, it invites poverty.\" (Sir Syed Ahmad Khan). Assess the role of Sir Syed Ahmad Khan as a reformer in modern India.",
+    "marks": 15
+  },
+  {
+    "id": 120,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Explain the sources of ancient Indian political thought.",
+    "marks": 15
+  },
+  {
+    "id": 121,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Explicate the ideological components of Gandhism.",
+    "marks": 20
+  },
+  {
+    "id": 122,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Ambedkar's ideas on constitutionalism.",
+    "marks": 10
+  },
+  {
+    "id": 123,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Discuss Kautilya's views on the elements of the State.",
+    "marks": 15
+  },
+  {
+    "id": 124,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "M. K. Gandhi's concept of Swaraj.",
+    "marks": 10
+  },
+  {
+    "id": 125,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Discuss Ambedkar's ideas on 'annihilation of caste'.",
+    "marks": 15
+  },
+  {
+    "id": 126,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Political democracy could not last unless social democracy lay at its base. — B.R. Ambedkar. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 127,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "What do you understand by the notion of Statecraft? Discuss the theory of statecraft as given by Kautilya.",
+    "marks": 15
+  },
+  {
+    "id": 128,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "According to Sri Aurobindo, Swaraj is a necessary condition for India to accomplish its destined goal.",
+    "marks": 10
+  },
+  {
+    "id": 129,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Examine Gandhi's critique of Modernisation.",
+    "marks": 16
+  },
+  {
+    "id": 130,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Discuss Sri Aurobindo's views on Cultural Nationalism.",
+    "marks": 20
+  },
+  {
+    "id": 131,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Dr. B. R. Ambedkar's idea of state socialism.",
+    "marks": 10
+  },
+  {
+    "id": 132,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Compare and contrast the views of Kautilya and Machiavelli on Statecraft.",
+    "marks": 15
+  },
+  {
+    "id": 133,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Gandhi's Views on State.",
+    "marks": 10
+  },
+  {
+    "id": 134,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Evaluate the contributions of Buddhist tradition to Indian political thought.",
+    "marks": 15
+  },
+  {
+    "id": 135,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "\"Nationalism is not a mere political programme but a way of life like religion.\" (Aurobindo Ghose).",
+    "marks": 10
+  },
+  {
+    "id": 136,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Sri Aurobindo's 'idea of freedom'.",
+    "marks": 10
+  },
+  {
+    "id": 137,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Syed Ahmed Khan as modernizer.",
+    "marks": 10
+  },
+  {
+    "id": 138,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Analyze as per Kautilya, the Saptanga theory of the state.",
+    "marks": 15
+  },
+  {
+    "id": 139,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Examine the significance of Dharma in Ancient Indian political thought.",
+    "marks": 15
+  },
+  {
+    "id": 140,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Political Thought",
+    "question": "Examine Ambedkar's critique of Marxism.",
+    "marks": 15
+  },
+  {
+    "id": 141,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Hannah Arendt analysed a few categories of vita activa. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 142,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "The foundational base of western democracy has been shaped by Locke's ideas of constitutionalism, freedom, and property. Elucidate.",
+    "marks": 20
+  },
+  {
+    "id": 143,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Critically examine Plato's theory of Forms.",
+    "marks": 15
+  },
+  {
+    "id": 144,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Locke's views on Revolution.",
+    "marks": 10
+  },
+  {
+    "id": 145,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "State of Nature as State of War (Hobbes).",
+    "marks": 10
+  },
+  {
+    "id": 146,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"The legal subordination of one sex to another is wrong in itself, and now one of the chief hindrances to human development.\" (J. S. Mill). Comment.",
+    "marks": 15
+  },
+  {
+    "id": 147,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Locke's Social Contract.",
+    "marks": 10
+  },
+  {
+    "id": 148,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Individualism is inherent in Hobbes' absolutist ideology. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 149,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Explain the Aristotelian view of politics. To what extent do you think it has contributed to the development of modern-day constitutional democracies?",
+    "marks": 20
+  },
+  {
+    "id": 150,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "J. S. Mill's ideas on women suffrage.",
+    "marks": 15
+  },
+  {
+    "id": 151,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Marx's concept of 'alienation' is an essential part of the reality in capitalism. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 152,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Discuss Karl Marx's concept of class.",
+    "marks": 20
+  },
+  {
+    "id": 153,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Trace the evolution of Western Political Thought of ancient to contemporary period.",
+    "marks": 20
+  },
+  {
+    "id": 154,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Machiavelli's secularism.",
+    "marks": 10
+  },
+  {
+    "id": 155,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Representative democracy means the people and a body must be able to control the general direction of government policy. (J. S. Mill). Comment.",
+    "marks": 15
+  },
+  {
+    "id": 156,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Explain Aristotle's critique of Plato's Idealism.",
+    "marks": 20
+  },
+  {
+    "id": 157,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Critically examine Hannah Arendt's conceptual triad of labor, work and action.",
+    "marks": 20
+  },
+  {
+    "id": 158,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "According to Gramsci, hegemony is primarily based on the organization of consent.",
+    "marks": 20
+  },
+  {
+    "id": 159,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "John Locke is the father of liberalism. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 160,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Critically examine Machiavelli's views on religion and politics.",
+    "marks": 15
+  },
+  {
+    "id": 161,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "John Stuart Mill is a \"reluctant democrat\". — C. L. Wayper.",
+    "marks": 10
+  },
+  {
+    "id": 162,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Hobbesian notion of Political Obligation.",
+    "marks": 10
+  },
+  {
+    "id": 163,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Everywhere, inequality is a cause of revolution — Aristotle. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 164,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Differentiate between Freedom and Liberty. Discuss Marx's notion of freedom.",
+    "marks": 15
+  },
+  {
+    "id": 165,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Discuss Hannah Arendt's analysis of the role of Ideology in modern totalitarian regimes.",
+    "marks": 20
+  },
+  {
+    "id": 166,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"How would I and my fellow human beings behave if we were to find ourselves in a state of nature...\" (Thomas Hobbes)",
+    "marks": 10
+  },
+  {
+    "id": 167,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Explain Marx's understanding of Human Essence and Alienation.",
+    "marks": 15
+  },
+  {
+    "id": 168,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Gramsci's concept of Hegemony.",
+    "marks": 10
+  },
+  {
+    "id": 169,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Aristotle's Conception of Equality.",
+    "marks": 10
+  },
+  {
+    "id": 170,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"Plato was an enemy of open society.\" (Popper). Comment.",
+    "marks": 20
+  },
+  {
+    "id": 171,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Discuss Gramsci's notion of 'organic intellectuals'.",
+    "marks": 15
+  },
+  {
+    "id": 172,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"All silencing of discussion is an assumption of infallibility.\" (J. S. Mill)",
+    "marks": 10
+  },
+  {
+    "id": 173,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"Power is never the property of an individual; it belongs to a group and remains in existence only so long as the group keeps together.\" (Hannah Arendt)",
+    "marks": 10
+  },
+  {
+    "id": 174,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Explain how Machiavelli's application of empirical method to human affairs marks an important stage in the evolution of political science.",
+    "marks": 20
+  },
+  {
+    "id": 175,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Central to Aristotle's political thought is his classification of the different types of political constitutions in Politics. Evaluate.",
+    "marks": 15
+  },
+  {
+    "id": 176,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "\"Covenants without swords are but words and of no strength to secure a man at all.\" (Hobbes)",
+    "marks": 10
+  },
+  {
+    "id": 177,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Discuss in what sense Marx's understanding of state can be considered as materialistic.",
+    "marks": 15
+  },
+  {
+    "id": 178,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Comment on the Assertion of Laslett that Filmer and not Hobbes was the main antagonist of Locke.",
+    "marks": 15
+  },
+  {
+    "id": 179,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Western Political Thinkers",
+    "question": "Explain as per Gramsci the distinction between hegemony and domination.",
+    "marks": 15
+  },
+  {
+    "id": 180,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Explain briefly the role of Peasant Movements after 1857 and before independence.",
+    "marks": 10
+  },
+  {
+    "id": 181,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Write a note on the Dalit perspective of the Indian National Movement.",
+    "marks": 10
+  },
+  {
+    "id": 182,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Discuss the contribution of the Dalit struggle to establish egalitarianism in Indian society during the freedom movement.",
+    "marks": 20
+  },
+  {
+    "id": 183,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Satyagraha and Indian Nationalism.",
+    "marks": 10
+  },
+  {
+    "id": 184,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Dr. Ambedkar's clarion call, 'Educate, Agitate and Organize', strategizes the Dalit movement towards achieving civil liberty. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 185,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Analyze the workers' movement in India in the pre-independence period.",
+    "marks": 10
+  },
+  {
+    "id": 186,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Analyze the Marxist perspective of the nature of Indian National Movement.",
+    "marks": 10
+  },
+  {
+    "id": 187,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Role of socialist in Indian National Movement.",
+    "marks": 10
+  },
+  {
+    "id": 188,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Trace the role of militant and revolutionary movements in the Indian National Movement.",
+    "marks": 15
+  },
+  {
+    "id": 189,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Dalit perspective on Indian National Movement. Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 190,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "National movement in India was anti-imperialist and increasingly radical in its socio-economic and political programmes. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 191,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Revolt of 1857 is a 'Sepoy Mutiny' or 'First War of Independence'.",
+    "marks": 10
+  },
+  {
+    "id": 192,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "The success of Mahatma Gandhi lay in transforming both political and non-political movements into a unified nationalist movement.",
+    "marks": 10
+  },
+  {
+    "id": 193,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Differentiate Moderate Nationalism from Extremist-Militant Nationalism in terms of their objectives and means.",
+    "marks": 15
+  },
+  {
+    "id": 194,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Critically examine the Radical Humanist perspective on Indian National Movement.",
+    "marks": 10
+  },
+  {
+    "id": 195,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Satyagraha as a Strategy in the Indian National Movement.",
+    "marks": 10
+  },
+  {
+    "id": 196,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Explain how peasant movements promoted nationalist ideas during the struggle for Indian Independence.",
+    "marks": 15
+  },
+  {
+    "id": 197,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Nationalism",
+    "question": "Marxist understanding of India's freedom movement.",
+    "marks": 10
+  },
+  {
+    "id": 198,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Objective Resolution of the Constituent Assembly.",
+    "marks": 10
+  },
+  {
+    "id": 199,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Constitutional morality in the Indian Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 200,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "The Constitution of India is the cornerstone of a nation (Granville Austin). Analyze.",
+    "marks": 15
+  },
+  {
+    "id": 201,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Imprint of the British Constitution on the Indian Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 202,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "The making of the Indian Constitution is described as an attempt towards 'social revolution'. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 203,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "\"The Constitution makers faced the great task of forging a common national identity in the face of unparalleled social and cultural diversity in India.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 204,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "\"The Constitution of India is a product of a historical process, rich with constitutional antecedents.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 205,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Indian constitution makers' concerns on social inequality.",
+    "marks": 10
+  },
+  {
+    "id": 206,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Unity and integrity of India was perhaps the single uppermost factor in the minds of the Constitution makers. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 207,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "The Indian Constitution is a 'Lawyers' Paradise' — Ivor Jennings.",
+    "marks": 10
+  },
+  {
+    "id": 208,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Making of the Indian Constitution",
+    "question": "Secularism in the Indian Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 209,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "How far do you agree that the Directive Principles of State Policy are more fundamental than the Fundamental Rights in meeting socio-economic justice as mentioned in the Preamble of the Constitution?",
+    "marks": 20
+  },
+  {
+    "id": 210,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Legal remedies in Part III of the Constitution of India.",
+    "marks": 10
+  },
+  {
+    "id": 211,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "The main goal of the Fundamental Duties in the Indian Constitution is to generate civic responsibility among the citizens. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 212,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "The Doctrine of Basic Structure of the Constitution has enhanced the power of judicial review of the Supreme Court. Examine.",
+    "marks": 15
+  },
+  {
+    "id": 213,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "The Preamble of the Indian Constitution reflects itself as a social contract. Elucidate.",
+    "marks": 10
+  },
+  {
+    "id": 214,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "\"Constitutionally reconciling the fundamental Rights with the Directive Principles of State Policy has led to frequent amendments of the Constitution and judicial interventions.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 215,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Mention the founding principles that define India's Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 216,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Underline the significance of the first constitutional amendment.",
+    "marks": 10
+  },
+  {
+    "id": 217,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Right to constitutional remedies in India.",
+    "marks": 15
+  },
+  {
+    "id": 218,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Comment on the relevance of the Directive Principles of State Policy in an era of liberalization and globalisation.",
+    "marks": 15
+  },
+  {
+    "id": 219,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "\"The basic structure doctrine is implicit in the Indian Constitution, the Supreme Court has only given it an explicit form.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 220,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "The right to privacy is an intrinsic part of the right to life.",
+    "marks": 10
+  },
+  {
+    "id": 221,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Discuss the Right to Information and underline challenges being posed before it.",
+    "marks": 15
+  },
+  {
+    "id": 222,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Article 368 does not enable Parliament to alter the basic structure or framework of the Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 223,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "The purpose of the 42nd Constitutional Amendment was to make the economic and social democracy explicitly visible.",
+    "marks": 10
+  },
+  {
+    "id": 224,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Discuss the efficacy of judicial review in India.",
+    "marks": 20
+  },
+  {
+    "id": 225,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "99th Amendment of the Indian Constitution.",
+    "marks": 10
+  },
+  {
+    "id": 226,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "In the light of neo-economic policies adopted since 1991, examine the relevance of the term 'socialist' in the Preamble of the Indian Constitution.",
+    "marks": 20
+  },
+  {
+    "id": 227,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Discuss the 'Right to Education' and the concerns raised by it.",
+    "marks": 15
+  },
+  {
+    "id": 228,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Increasingly higher focus on Directive Principles of State Policy.",
+    "marks": 10
+  },
+  {
+    "id": 229,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "What are the provisions for constitutional protection of the right to freedom of religion and how far have they succeeded in promoting secularism in India?",
+    "marks": 15
+  },
+  {
+    "id": 230,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Examine the significance of the verdicts of the Supreme Court in the Golaknath and Keshavananda Bharati cases for an understanding of the scope of Article 368 in regard to Fundamental Rights.",
+    "marks": 20
+  },
+  {
+    "id": 231,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Analyze the significance of Article 32 of the Indian Constitution.",
+    "marks": 15
+  },
+  {
+    "id": 232,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Salient Features of the Indian Constitution",
+    "question": "Significance of the Preamble.",
+    "marks": 10
+  },
+  {
+    "id": 233,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Parliamentary committees are indispensable to the legislative process. It provides the opportunity for cross-pollination between the two chambers of Parliament. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 234,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Examine the constitutional provisions and nature of advisory jurisdiction of the Supreme Court of India. Evaluate your answer with relevant examples.",
+    "marks": 15
+  },
+  {
+    "id": 235,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Relevance of the Legislative Council.",
+    "marks": 10
+  },
+  {
+    "id": 236,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Do you agree that over the years the Supreme Court has become a forum for policy evolution? Justify your answer.",
+    "marks": 15
+  },
+  {
+    "id": 237,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "The Speaker represents the freedom and dignity of the House. Examine.",
+    "marks": 15
+  },
+  {
+    "id": 238,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Legislative council is a house without any effective powers. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 239,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "The role of the President of India becomes more significant during a minority government and a coalition government. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 240,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Examine the evolution of the jurisdiction of the Supreme Court of India as a constitutional court.",
+    "marks": 15
+  },
+  {
+    "id": 241,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Judicial overreach in India.",
+    "marks": 10
+  },
+  {
+    "id": 242,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Has the thrust of the government tilted towards the executive in contemporary Indian Politics? Give your arguments.",
+    "marks": 15
+  },
+  {
+    "id": 243,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "The Prime Minister's Office (PMO) has emerged as the most powerful institution in India. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 244,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Whether judicial activism has undermined or strengthened Parliamentary Democracy in India? Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 245,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Do the lieutenant Governors have more powers than the governors of the state? Explain.",
+    "marks": 15
+  },
+  {
+    "id": 246,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Differentiate parliamentary supremacy from parliamentary sovereignty. Would you consider the Indian Parliament as a Sovereign Parliament? Examine.",
+    "marks": 20
+  },
+  {
+    "id": 247,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "How is the President of India elected? Outline the salient characteristics of the electoral college of the Indian President.",
+    "marks": 15
+  },
+  {
+    "id": 248,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Judiciary has acquired the role of both a legislature and an executive in recent years. Examine with suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 249,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Critically examine the role of Governor in recent times.",
+    "marks": 15
+  },
+  {
+    "id": 250,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Critically analyze the discretionary powers granted to the Governor by the Indian Constitution.",
+    "marks": 15
+  },
+  {
+    "id": 251,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Examine the debates on the appointment procedure of judges to the higher judiciary in India.",
+    "marks": 15
+  },
+  {
+    "id": 252,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "\"India has thrown up a form of judicial democracy that has no parallel anywhere else, and has nurtured a kind of civil society that is uniquely its own.\" (Bhikhu Parekh)",
+    "marks": 10
+  },
+  {
+    "id": 253,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Examine the role of the Supreme Court as the final interpreter of the Indian Constitution.",
+    "marks": 15
+  },
+  {
+    "id": 254,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Principal Organs",
+    "question": "Decline of Indian Parliament.",
+    "marks": 10
+  },
+  {
+    "id": 255,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Enunciate the impediments to women's participation in local governance in the process of political decentralisation.",
+    "marks": 20
+  },
+  {
+    "id": 256,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Gram Sabha in the Panchayati Raj system is a forum which gives expression to the collective wisdom, aspirations and the will of the people. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 257,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Functions of the District Planning Committee.",
+    "marks": 10
+  },
+  {
+    "id": 258,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Discuss the major provisions of the 74th Constitutional Amendment Act. Do you think that the Act remains an unfulfilled dream? Argue your case.",
+    "marks": 20
+  },
+  {
+    "id": 259,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Examine the unique features of the 73rd Constitutional Amendment. Do you think this Amendment would contribute in achieving the goal of empowerment of marginalized sections of the society?",
+    "marks": 20
+  },
+  {
+    "id": 260,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "\"The Panchayats with Gram Sabhas should be so organized as to identify the resources locally available for the development in agricultural and industrial sectors.\" Examine the statement in the context of Gram Swaraj.",
+    "marks": 15
+  },
+  {
+    "id": 261,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Do you think that despite having significant limitations the Panchayati Raj Institutions have strengthened the process of democratic decentralization? Give your views.",
+    "marks": 15
+  },
+  {
+    "id": 262,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "To what extent have 73rd and 74th amendments of the Indian Constitution enhanced women's empowerment?",
+    "marks": 15
+  },
+  {
+    "id": 263,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Political decentralization has not been matched by administrative decentralization at the grass roots level. Explain.",
+    "marks": 10
+  },
+  {
+    "id": 264,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Examine the provisions of Panchayat Extension Services Act (PESA), 1996.",
+    "marks": 20
+  },
+  {
+    "id": 265,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "New Panchayat Raj is an effective instrument for women empowerment.",
+    "marks": 10
+  },
+  {
+    "id": 266,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Has the 73rd Constitutional Amendment empowered women in panchayats in India? Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 267,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "The goal of good governance will be achieved only by strengthening the grass root level democracy.",
+    "marks": 20
+  },
+  {
+    "id": 268,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Examine the role of Panchayati Raj Institutions and Urban Local Bodies in deepening democracy in India.",
+    "marks": 20
+  },
+  {
+    "id": 269,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Explain how the participation of women impacted the functioning of rural local bodies in India.",
+    "marks": 15
+  },
+  {
+    "id": 270,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Grassroots Democracy",
+    "question": "Examine the changing structure of Panchayati Raj institutions with special reference to the 73rd Constitution Amendment Act.",
+    "marks": 15
+  },
+  {
+    "id": 271,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "How far has the National Human Rights Commission been successful in achieving its objectives? Comment.",
+    "marks": 10
+  },
+  {
+    "id": 272,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "There is a debate on the procedure for the appointment of the Chief Election Commissioner and Election Commissioners to the Election Commission of India. Analyze its various aspects.",
+    "marks": 15
+  },
+  {
+    "id": 273,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Explain the structure and functions of the National Commission for Women.",
+    "marks": 15
+  },
+  {
+    "id": 274,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "National Commission for Minorities.",
+    "marks": 10
+  },
+  {
+    "id": 275,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "How does NITI Aayog as a 'policy think tank with shared vision' visualize the reorganization of planning in India? Justify your answer.",
+    "marks": 15
+  },
+  {
+    "id": 276,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "How far is the National Commission for Backward Classes an empowered body? Assess its role in the context of rising demand for backwardness among dominant communities.",
+    "marks": 10
+  },
+  {
+    "id": 277,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Discuss the policy initiatives of the Fourteenth Finance Commission aimed towards promoting and strengthening agricultural development in India.",
+    "marks": 15
+  },
+  {
+    "id": 278,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "The success of electoral democracy can partly be attributed to the status and role of the Election Commission of India. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 279,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Examine the role and functioning of the Election Commission of India and the Comptroller and Auditor General in the last two decades.",
+    "marks": 20
+  },
+  {
+    "id": 280,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Discuss, in brief, the role of the National Commission for women. Do you think it is a toothless organization?",
+    "marks": 15
+  },
+  {
+    "id": 281,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "The Comptroller and Auditor General of India enhances the accountability of the Government and serves as the watchdog of the finances of the Government. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 282,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Analyze the arguments in favor and against the lateral entry into higher civil services in India.",
+    "marks": 15
+  },
+  {
+    "id": 283,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Examine the role of the National commission for Minorities in preserving, promoting and protecting the rights of minorities in India.",
+    "marks": 10
+  },
+  {
+    "id": 284,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Examine the objective and role of the National Human Rights Commission.",
+    "marks": 15
+  },
+  {
+    "id": 285,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Structure and Function of NITI Aayog.",
+    "marks": 10
+  },
+  {
+    "id": 286,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "Discuss the working of the National Commission for Scheduled Castes to curb violence against Dalits.",
+    "marks": 20
+  },
+  {
+    "id": 287,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Statutory Institutions and Commissions",
+    "question": "The role of the Comptroller and Auditor General of India in promoting good governance.",
+    "marks": 10
+  },
+  {
+    "id": 288,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Delineate the key factors that have shaped the evolving political landscape in Jammu and Kashmir post-2019.",
+    "marks": 10
+  },
+  {
+    "id": 289,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "The recent developments in Indian Politics have not eroded the true spirit of federalism in India. Critically examine this statement with the help of appropriate examples.",
+    "marks": 15
+  },
+  {
+    "id": 290,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Does the actual working of Indian federalism conform to the centralizing tendencies in Indian polity? Give reasons for your answer.",
+    "marks": 20
+  },
+  {
+    "id": 291,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Discuss the composition and functions of the Inter-State Council. To what extent has this body been successful in achieving its objectives?",
+    "marks": 15
+  },
+  {
+    "id": 292,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Do you think that there has been a gradual shift in the basis on which the demands for the creation of new States have been raised in different regions of India? Explain.",
+    "marks": 15
+  },
+  {
+    "id": 293,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Does the functioning of federalism in India tend to make it appear as a unitary state in practice?",
+    "marks": 20
+  },
+  {
+    "id": 294,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Mechanism for settling Inter-State disputes.",
+    "marks": 10
+  },
+  {
+    "id": 295,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Despite constitutional mandate the Inter-State Council has not come of age. Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 296,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Discuss asymmetrical federalism in India.",
+    "marks": 15
+  },
+  {
+    "id": 297,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Implementation of GST and NEET is a major challenge to Indian federalism.",
+    "marks": 10
+  },
+  {
+    "id": 298,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "The Indian federation has moved from cooperative federation to competitive federation.",
+    "marks": 10
+  },
+  {
+    "id": 299,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "The philosophy and administration of the distribution of powers between Centre and State is required to be re-assessed.",
+    "marks": 10
+  },
+  {
+    "id": 300,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Identify the contested areas in Centre-State relations in India.",
+    "marks": 15
+  },
+  {
+    "id": 301,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "Cooperative Federalism in India.",
+    "marks": 10
+  },
+  {
+    "id": 302,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Federalism",
+    "question": "\"Cooperative federalism produces a strong central, or general government, yet it does not necessarily result in weak provincial governments...\" (Granville Austin). Examine the uniqueness of Indian federalism.",
+    "marks": 20
+  },
+  {
+    "id": 303,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Land reform programmes led to some constitutional amendments. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 304,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "With reference to the Nehruvian perspective of planning and economic development, examine how the early phase of economic planning in India has laid the foundation of modern India's economic growth.",
+    "marks": 15
+  },
+  {
+    "id": 305,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "The blueprint of Gram Swaraj is the key to understanding the Gandhian perspective on planning. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 306,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "The legacy of the Planning Commission still has a bearing on India's development policies. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 307,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "What explains India's modest improvements in social development outcomes even as the rate of growth has accelerated since the initiation of economic reforms?",
+    "marks": 15
+  },
+  {
+    "id": 308,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Liberalization of the Indian Economy has not been accompanied with adequate reforms. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 309,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "What has been the political fallout of the Green Revolution in India? Explain.",
+    "marks": 15
+  },
+  {
+    "id": 310,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Examine the various causes of the agrarian crisis in India.",
+    "marks": 20
+  },
+  {
+    "id": 311,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "What do you understand about the Green Revolution? Do you think that a Second Green Revolution is needed to adequately address the agrarian challenges in contemporary India? Examine.",
+    "marks": 15
+  },
+  {
+    "id": 312,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Land reforms have failed in the eradication of rural poverty. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 313,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Critically examine the politics of Economic growth in India.",
+    "marks": 20
+  },
+  {
+    "id": 314,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Compare the Nehruvian and Gandhian models of development.",
+    "marks": 15
+  },
+  {
+    "id": 315,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Planning and Economic Development",
+    "question": "Gandhian perspective of development and its contemporary relevance.",
+    "marks": 10
+  },
+  {
+    "id": 316,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Caste remains a vital axis for political mobilisation in India. How would the caste census address the aspirations of people? Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 317,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "\"Relative deprivation is a major source of ethnic conflict.\" Elaborate the statement with relevant examples.",
+    "marks": 15
+  },
+  {
+    "id": 318,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "The rise of caste politics is to be attributed to both regional aspirations and electoral manifestations. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 319,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Ethnicity is the underlying cause which poses a great challenge in the resolution of the problems in the North-East region of India. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 320,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Explain how caste as a social category is also becoming a political category in the democratic politics of India.",
+    "marks": 15
+  },
+  {
+    "id": 321,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Examine the role of religion in Indian Electoral Politics in contemporary times.",
+    "marks": 15
+  },
+  {
+    "id": 322,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Critically examine the ethnic conflicts in North-East India.",
+    "marks": 15
+  },
+  {
+    "id": 323,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Religion is still an important factor in Indian politics. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 324,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Comment on the emergence of Backward classes in the Indian Politics.",
+    "marks": 15
+  },
+  {
+    "id": 325,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "\"Identity politics has trumped development politics in India.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 326,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Relation between ethnicity and democracy in India.",
+    "marks": 10
+  },
+  {
+    "id": 327,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Indian Politics — Caste, Religion and Ethnicity",
+    "question": "Explain the phenomenon of ethnic politics in India in recent times.",
+    "marks": 20
+  },
+  {
+    "id": 328,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "The decision to conduct the Population Census-2027 has reopened the debate on delimitation in India. Discuss its various aspects.",
+    "marks": 20
+  },
+  {
+    "id": 329,
+    "year": "2025",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Illustrate with examples how political parties in India have played a crucial role in drawing the historically disadvantaged groups into the mainstream political system.",
+    "marks": 15
+  },
+  {
+    "id": 330,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Critically assess the role of pressure groups in the decision-making process of the government.",
+    "marks": 15
+  },
+  {
+    "id": 331,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "The decade 1989-1999 has created an epochal shift in the Indian party system at the national level. Identify the major national trends in the party system during this era.",
+    "marks": 15
+  },
+  {
+    "id": 332,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Electoral behavior of voters is governed more by the social and economic factors than the political factors. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 333,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "How far is it correct that the regional parties have strengthened Indian democracy and the federal system? Substantiate your answer with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 334,
+    "year": "2021",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "The Indian party system is shaped by a complex interaction of the country's federal structure, electoral system and social cleavages. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 335,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "To what extent has the inadequate intra-party democracy affected the functioning of Indian Democracy?",
+    "marks": 20
+  },
+  {
+    "id": 336,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "The changing socio-economic profile of our legislators does not augur well for the health of Indian democracy. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 337,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Development has overshadowed the influence of caste in electoral behavior in recent elections. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 338,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Explain the increasing role of regional political parties in national politics.",
+    "marks": 15
+  },
+  {
+    "id": 339,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Political personalities are more significant than political parties in India.",
+    "marks": 10
+  },
+  {
+    "id": 340,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "India has moved from 'one-party dominant system' to 'one-party led coalition'. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 341,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Discuss the pattern of Political Parties from one dominant party system to coalition politics in national politics.",
+    "marks": 15
+  },
+  {
+    "id": 342,
+    "year": "2015",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Account for the rise of regional political parties and assess their role in contemporary India.",
+    "marks": 15
+  },
+  {
+    "id": 343,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Marginalization of the left ideology in India.",
+    "marks": 10
+  },
+  {
+    "id": 344,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Discuss the nature of reforms of the electoral process in India and explain the further scope for reforms.",
+    "marks": 20
+  },
+  {
+    "id": 345,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Explain how pressure groups have been influencing public policy-making with suitable illustrations.",
+    "marks": 20
+  },
+  {
+    "id": 346,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Account for the changes in the socio-economic profile of legislators during last one decade in India.",
+    "marks": 15
+  },
+  {
+    "id": 347,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Explain to what extent the concept of \"one-party dominance\" (W.H.Morris/Jones) model is relevant in Indian policy today.",
+    "marks": 15
+  },
+  {
+    "id": 348,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Party System",
+    "question": "Analyze the position of the Prime Minister of India in a coalition regime.",
+    "marks": 15
+  },
+  {
+    "id": 349,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Discuss the role of environmental movements in shaping the environmental governance in India.",
+    "marks": 20
+  },
+  {
+    "id": 350,
+    "year": "2024",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Women's role in anti-arrack movement.",
+    "marks": 10
+  },
+  {
+    "id": 351,
+    "year": "2023",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Environmentalism of the poor.",
+    "marks": 10
+  },
+  {
+    "id": 352,
+    "year": "2022",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "High concentration of economic activities and consumption patterns in the post liberalization period has led to the failure of environmental movements in India. Elucidate.",
+    "marks": 10
+  },
+  {
+    "id": 353,
+    "year": "2020",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Examine the nature of the civil liberty movement in India.",
+    "marks": 15
+  },
+  {
+    "id": 354,
+    "year": "2019",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Write short note on the significance of Chipko Movement.",
+    "marks": 10
+  },
+  {
+    "id": 355,
+    "year": "2018",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Critically analyze the environmentalist movement in Tuticorin, Tamil Nadu.",
+    "marks": 15
+  },
+  {
+    "id": 356,
+    "year": "2017",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Eco-feminism.",
+    "marks": 10
+  },
+  {
+    "id": 357,
+    "year": "2016",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Critically examine the provisions made in the Constitution for the protection of Environment.",
+    "marks": 15
+  },
+  {
+    "id": 358,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Examine the scope and limitations of women's movement in India.",
+    "marks": 15
+  },
+  {
+    "id": 359,
+    "year": "2014",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "The dilemmas of the human rights movements in India.",
+    "marks": 10
+  },
+  {
+    "id": 360,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Compare and contrast Chipko Movement with Narmada Bachao Andolan.",
+    "marks": 10
+  },
+  {
+    "id": 361,
+    "year": "2013",
+    "paper": "Paper I",
+    "topic": "Social Movements",
+    "question": "Point out and comment on the historic importance of the document \"Towards Equality (1974)\", for women's movement in India.",
+    "marks": 15
+  },
+  {
+    "id": 362,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Discuss the interpretive approach to the study of comparative politics.",
+    "marks": 10
+  },
+  {
+    "id": 363,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "What are the crucial functions of empirical political theory in Comparative Politics?",
+    "marks": 10
+  },
+  {
+    "id": 364,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Discuss the main limitations of the comparative method to the study of Political Science.",
+    "marks": 10
+  },
+  {
+    "id": 365,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Discuss the political economy approach to the comparative analysis of politics.",
+    "marks": 10
+  },
+  {
+    "id": 366,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Discuss the subject matter of comparative politics. Outline the limitations of comparative political analysis.",
+    "marks": 10
+  },
+  {
+    "id": 367,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Examine the significance of the comparative method in political analysis. Discuss its limitations.",
+    "marks": 20
+  },
+  {
+    "id": 368,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Describe the changing nature of Comparative Politics. Briefly explain the Political Economy approach to the study of Comparative Politics.",
+    "marks": 10
+  },
+  {
+    "id": 369,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Explain the Political-Sociological Approach in the field of comparative politics and discuss its limitations.",
+    "marks": 10
+  },
+  {
+    "id": 370,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "Critically examine the Marxist aspect of political economy approach to the study of comparative politics.",
+    "marks": 10
+  },
+  {
+    "id": 371,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Comparative Political",
+    "question": "What are the major approaches of comparative politics? Explain in brief, the political economy approach to the study of comparative inquiry.",
+    "marks": 10
+  },
+  {
+    "id": 372,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "Discuss the political socialization of open and closed societies.",
+    "marks": 10
+  },
+  {
+    "id": 373,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "What are the distinctive features of the post-modern state in the advanced capitalist economies? Analyse.",
+    "marks": 15
+  },
+  {
+    "id": 374,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "What are the difficulties faced by a political theorist in comparing the States?",
+    "marks": 10
+  },
+  {
+    "id": 375,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "\"The post-colonial state was thought of as an entity that stood outside and above society as an autonomous agency.\" Explain.",
+    "marks": 20
+  },
+  {
+    "id": 376,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "Is democracy promotion in developing countries a feasible idea?",
+    "marks": 15
+  },
+  {
+    "id": 377,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "Describe the changing nature of the State in the developing societies in the context of inclusive growth in the 21st century.",
+    "marks": 15
+  },
+  {
+    "id": 378,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "Discuss the changing nature of the modern state with reference to transnational actors.",
+    "marks": 10
+  },
+  {
+    "id": 379,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "Do you subscribe to a view that the modern constructs of the State and politics are pre-eminently Eurocentric and not indigenous and appropriate for the analysis of non-western societies?",
+    "marks": 10
+  },
+  {
+    "id": 380,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "State in Comparative Perspective",
+    "question": "A minimal State ensures maximum Individual Liberty. Examine the concept of Minimal State.",
+    "marks": 15
+  },
+  {
+    "id": 381,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Of late, centrist and centre-left political parties have been facing setbacks while centre-right parties have been in ascendency the world over. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 382,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Critically examine the role of political parties in sustaining and stabilising democracies in the developing societies.",
+    "marks": 15
+  },
+  {
+    "id": 383,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "How does democratic politics construct citizenship?",
+    "marks": 10
+  },
+  {
+    "id": 384,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "How has electoral democracy augmented the participation of people in the democratic process?",
+    "marks": 20
+  },
+  {
+    "id": 385,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Discuss the role of social movements in strengthening the democratic processes in developing societies.",
+    "marks": 15
+  },
+  {
+    "id": 386,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "\"Political parties and pressure groups are sine qua non of democracy.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 387,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Explain the impact of electoral systems and cleavages in shaping party systems with reference to developing countries.",
+    "marks": 20
+  },
+  {
+    "id": 388,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Has the increased participation of the underprivileged in the political process of the developing societies strengthened democracy or created political chaos and conflict? Comment.",
+    "marks": 10
+  },
+  {
+    "id": 389,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Explain the reasons for low voter turnout in democratic countries with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 390,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Write an essay on New Social Movements in developing countries.",
+    "marks": 15
+  },
+  {
+    "id": 391,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "How big a role does identity play in determining political participation in developing countries? Discuss your answer with suitable illustrations.",
+    "marks": 15
+  },
+  {
+    "id": 392,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Examine the LGBT movement in developed societies and how it is affecting the political participation in developing societies.",
+    "marks": 10
+  },
+  {
+    "id": 393,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Comment on the decline of political parties and examine whether new social movements shall be an alternative strategy for establishing link between government and society.",
+    "marks": 10
+  },
+  {
+    "id": 394,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Do interest groups help to promote democracy or to undermine it? Give your opinion.",
+    "marks": 15
+  },
+  {
+    "id": 395,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "What is the difference between Interest Groups and Pressure Groups? Are the Pressure Groups in India in a position to fully protect or promote the interest of their members?",
+    "marks": 10
+  },
+  {
+    "id": 396,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "The party system in India is neither western nor indigenous. Explain.",
+    "marks": 10
+  },
+  {
+    "id": 397,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "In what respect is the new social movement new in nature. Explain.",
+    "marks": 10
+  },
+  {
+    "id": 398,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "In the rise of social movements a sign of opening up of popular space in the political process or decline of representative politics. Examine.",
+    "marks": 20
+  },
+  {
+    "id": 399,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Politics of Representation and Participation",
+    "question": "Compare and contrast social movements in advanced industrial and developing societies.",
+    "marks": 20
+  },
+  {
+    "id": 400,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Global South-sensitive model of globalization would prevent the danger emanating from overcentralized globalization. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 401,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "\"Deglobalisation is displacing globalisation.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 402,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Critically examine the impact of Globalisation on the developing countries of the world.",
+    "marks": 20
+  },
+  {
+    "id": 403,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "What are the main challenges faced by the developing countries in the era of globalization?",
+    "marks": 10
+  },
+  {
+    "id": 404,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "What is globalization? Why is there an intense debate about globalization and its consequences?",
+    "marks": 15
+  },
+  {
+    "id": 405,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Critically examine the impact of the process of globalization from the perspective of the countries of the Global South.",
+    "marks": 10
+  },
+  {
+    "id": 406,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Critically examine Globalisation in the past 25 years from the perspectives of the Western world.",
+    "marks": 10
+  },
+  {
+    "id": 407,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Discuss the impact of globalization on the internal functioning of the state.",
+    "marks": 10
+  },
+  {
+    "id": 408,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "How is that economic and non-liberal globalization is being interrogated from inside even in developed countries? What are the economic consequences of such globalization?",
+    "marks": 15
+  },
+  {
+    "id": 409,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Is globalization essentially a process of 'universalization' of political modernity?",
+    "marks": 10
+  },
+  {
+    "id": 410,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "How do you explain the growing importance of multinational corporations (MNCs) and civil society in contemporary international politics?",
+    "marks": 20
+  },
+  {
+    "id": 411,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "What is a 'global village'? Elaborate its main characteristics and also the factors contributing to its growth.",
+    "marks": 10
+  },
+  {
+    "id": 412,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Globalization",
+    "question": "Examine major principles of State centric world views.",
+    "marks": 20
+  },
+  {
+    "id": 413,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Discuss the psychological approach to the study of comparative politics.",
+    "marks": 10
+  },
+  {
+    "id": 414,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Neo-liberalism lightened neo-realism's dark view of international politics. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 415,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Explain the various facets of the idealist approach to the study of international relations. Comment on its contemporary relevance.",
+    "marks": 10
+  },
+  {
+    "id": 416,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Explain the central tenets of the World-Systems Theory.",
+    "marks": 10
+  },
+  {
+    "id": 417,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "What do you mean by offensive and defensive realism?",
+    "marks": 15
+  },
+  {
+    "id": 418,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "In what ways does the functionalist approach in International relations help in maintaining peace and order in global politics?",
+    "marks": 15
+  },
+  {
+    "id": 419,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "What is the realist prescription to the States to ensure their survival in an anarchical world?",
+    "marks": 15
+  },
+  {
+    "id": 420,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Discuss the commonalities between the Marxist and Realist approach to the study of International Politics.",
+    "marks": 15
+  },
+  {
+    "id": 421,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "\"Marxist approach to the study of international relations has lost its relevance in the post-cold war era.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 422,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "The modernization thesis asserts that affluence breeds stable democracy. How do you explain the success of India being the world's largest democracy as an exceptional case?",
+    "marks": 20
+  },
+  {
+    "id": 423,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Discuss the emergence of neo-realism and its basic tenets.",
+    "marks": 15
+  },
+  {
+    "id": 424,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "What are the core assumptions of idealism as an approach to study International Relations? Explain its continuing relevance in peace building.",
+    "marks": 10
+  },
+  {
+    "id": 425,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Explain the relevance of the Marxist approach in the context of globalization.",
+    "marks": 20
+  },
+  {
+    "id": 426,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Bring out the major differences between the Classical Realism of Hans Morgenthau and the Neorealism of Kenneth Waltz.",
+    "marks": 10
+  },
+  {
+    "id": 427,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Critically examine the Functionalist approach to the study of International Relations.",
+    "marks": 15
+  },
+  {
+    "id": 428,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Is Realist Approach the best method to understand International Relations? Examine this in the context of Classical Realism.",
+    "marks": 20
+  },
+  {
+    "id": 429,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Examine the World Systems Approach as developed by Immanuel Wallerstein.",
+    "marks": 15
+  },
+  {
+    "id": 430,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Critically examine the functional and system approaches to the study of international relations.",
+    "marks": 10
+  },
+  {
+    "id": 431,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Identify the major differences between the classical realism of Hans J. Morgenthau and the neorealism of Kenneth Waltz. Which approach is best suited for analyzing international relations after the Cold War?",
+    "marks": 10
+  },
+  {
+    "id": 432,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "\"The Feminist approach to international politics is biased.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 433,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "\"Morton A Kaplan's system theory is contrary to the fundamental precepts of systems approach.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 434,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "How does Marxist approach explain contemporary International Relations?",
+    "marks": 15
+  },
+  {
+    "id": 435,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "Write a note on Intellectual precursors of Realism.",
+    "marks": 15
+  },
+  {
+    "id": 436,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Approaches to the Study of International Relations",
+    "question": "'Building peace by pieces' is the basis of functionalism. Elaborate.",
+    "marks": 15
+  },
+  {
+    "id": 437,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Explain the non-traditional security threats in the context of food and environmental crises.",
+    "marks": 10
+  },
+  {
+    "id": 438,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Collective security and responsibility to protect (R2P) are similar but different in scope, goals and methods. Explain.",
+    "marks": 15
+  },
+  {
+    "id": 439,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "\"The Gramscian theory of hegemony provides many valuable insights into the nature of global power.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 440,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "National Interest is an essentially contested concept. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 441,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Discuss the conceptual dimensions of collective security.",
+    "marks": 15
+  },
+  {
+    "id": 442,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "What is 'complex interdependence'? Discuss the role of transnational actors in the international system.",
+    "marks": 15
+  },
+  {
+    "id": 443,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Explain the concept of balance of power. What are the various techniques of maintaining balance of power?",
+    "marks": 20
+  },
+  {
+    "id": 444,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Enumerate the challenges in the operation of the principles related to collective security in the UN Charter.",
+    "marks": 15
+  },
+  {
+    "id": 445,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "What, according to Joseph Nye, are the major sources of a country's soft power? Discuss its relevance in contemporary world politics.",
+    "marks": 10
+  },
+  {
+    "id": 446,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Explain the instruments and methods devised for the promotion of national interest.",
+    "marks": 20
+  },
+  {
+    "id": 447,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "\"The notion of balance of power is notoriously full of confusion.\" Do you think that the concept of balance of power is relevant?",
+    "marks": 15
+  },
+  {
+    "id": 448,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Why does global human security need to be emphasized along with economic security? Explain with examples.",
+    "marks": 20
+  },
+  {
+    "id": 449,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Discuss the main factors that have contributed to the gradual transformation of the world from 'Billiard Ball Model' to 'Cobweb Model'.",
+    "marks": 15
+  },
+  {
+    "id": 450,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Critically assess the changing nature of the concept of national security.",
+    "marks": 15
+  },
+  {
+    "id": 451,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "Transnational actors have become driving forces of global politics. Elaborate.",
+    "marks": 20
+  },
+  {
+    "id": 452,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "'Collective Security and Collective Defense are the institutional and State mechanisms to sustain the domination of powers that are in International politics'. Elaborate.",
+    "marks": 15
+  },
+  {
+    "id": 453,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Key Concepts in International Relations",
+    "question": "'National Interests are Dynamic'. Identify the dynamic nature of National Interests in contemporary world politics with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 454,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Do you agree with the view that the USA uses NATO as a traditional tool of strategy to perpetuate its hegemony in the world?",
+    "marks": 15
+  },
+  {
+    "id": 455,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "The expansionist tendencies of the current Russian regime indicate its intentions for the realisation of a Greater Russia on the lines of the Soviet era. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 456,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the various constraints on American hegemony today. Which of these are likely to become more prominent in the future?",
+    "marks": 15
+  },
+  {
+    "id": 457,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "\"During the Cold War, the Non-Aligned Movement tried to become a \"Third force\" in World Politics, but failed because it was too large and unwieldy.\" Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 458,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the relevance of the normative ethos of the Non-Aligned Movement in magnifying India's soft power in pursuit of her national interest.",
+    "marks": 20
+  },
+  {
+    "id": 459,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "The bipolar structure of the world is more stable than the multipolar one. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 460,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Critically examine the rise of People's Republic of China (PRC) as a great power and its implications on Asian Political order.",
+    "marks": 20
+  },
+  {
+    "id": 461,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Critically examine the decline of the United States of America as a hegemon and its implications for the changing international political order.",
+    "marks": 15
+  },
+  {
+    "id": 462,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the ways to strengthen the Non-aligned Movement (NAM) to enable it to address the challenges faced by the developing countries.",
+    "marks": 20
+  },
+  {
+    "id": 463,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Critically analyze the implications of Sino-American strategic rivalry for the South and South-East Asian region.",
+    "marks": 15
+  },
+  {
+    "id": 464,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Identify the benefits of a multi-polar world.",
+    "marks": 15
+  },
+  {
+    "id": 465,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Write a brief note on the 17th NAM Summit in Venezuela.",
+    "marks": 10
+  },
+  {
+    "id": 466,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the consequences of Trump's 'America First' and Xi's 'Chinese Dream' on World Politics.",
+    "marks": 15
+  },
+  {
+    "id": 467,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Do you endorse the view that the end of Bipolarity and the rise of multiple regional organizations has made Non-Aligned Movement (NAM) more or less irrelevant?",
+    "marks": 15
+  },
+  {
+    "id": 468,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "\"The development of advanced missile technology and nuclear threat by North Korea has challenged the American hegemony in South-East Asia.\" Evaluate.",
+    "marks": 20
+  },
+  {
+    "id": 469,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the evolution of non-proliferation of nuclear weapons in the post-cold War period.",
+    "marks": 15
+  },
+  {
+    "id": 470,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Examine in brief the rise and fall of the Cold War.",
+    "marks": 15
+  },
+  {
+    "id": 471,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the positive and negative impacts of the Soviet Union's disintegration on developing nations.",
+    "marks": 15
+  },
+  {
+    "id": 472,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Explain the socio-economic impacts of arms race and identify the obstacles in the way of disarmament.",
+    "marks": 20
+  },
+  {
+    "id": 473,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Discuss the collapse of the Soviet Union and its impact on international politics.",
+    "marks": 15
+  },
+  {
+    "id": 474,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "\"Ukraine crisis is a product of power politics and geo-politics.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 475,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Who was Mr. 'X' in international politics? Elaborate his approach to foreign policy.",
+    "marks": 15
+  },
+  {
+    "id": 476,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "Identify the challenges to American hegemony in the post Soviet world.",
+    "marks": 10
+  },
+  {
+    "id": 477,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Changing International Political Order",
+    "question": "What does the pace of nuclear proliferation in the post Cold War suggest?",
+    "marks": 10
+  },
+  {
+    "id": 478,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Trump's unilateral imposition of reciprocal tariffs on scores of countries poses an impending threat to the future of the rule-based multilateral global trading system under the WTO. What options do the WTO members have to salvage the organization?",
+    "marks": 15
+  },
+  {
+    "id": 479,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Transnational actors have qualitatively transformed the world by the way of their fresh insights and actions. Illustrate your answer with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 480,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Latin America has made moderate success in countering the US-led global economic order by forming various organizations emphasizing regional sovereignty, economic integration and alternative development. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 481,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "The return of trade barriers and economic sanctions has diminished the spirit of GATT. Discuss the factors contributing to the decline of the WTO in recent times.",
+    "marks": 15
+  },
+  {
+    "id": 482,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Why is the compromise reached at WTO regarding the Covid-19 vaccine manufacturing not a Trade Related Intellectual Property Rights (TRIPS) waiver?",
+    "marks": 10
+  },
+  {
+    "id": 483,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Identify and evaluate the reasons for deadlock in the WTO negotiations on fisheries between the developing and developed countries.",
+    "marks": 20
+  },
+  {
+    "id": 484,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Critically evaluate the role of the United States of America in the World Trade Organization (WTO) dispute settlement mechanism and its implications for the future of the WTO.",
+    "marks": 15
+  },
+  {
+    "id": 485,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Explain the significance and importance of the demand raised by the developing countries for a New International Economic Order (NIEO). Are they likely to achieve their objectives of NIEO in the foreseeable future?",
+    "marks": 15
+  },
+  {
+    "id": 486,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "How are the rising powers challenging the USA and Western dominance in the IMF and the World Bank?",
+    "marks": 20
+  },
+  {
+    "id": 487,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "\"Some feel Multinational Corporations (MNCs) are a vital new road to economic growth, whereas others feel they perpetuate underdevelopment.\" Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 488,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "How has the development of Global capitalism changed the nature of socialist economies and developing societies?",
+    "marks": 15
+  },
+  {
+    "id": 489,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "\"The IMF, World Bank, G-7, GATT and other structures are designed to serve the interests of TNCs, banks and investment firms in a new imperial age.\" Substantiate with examples of governance of the new world order.",
+    "marks": 20
+  },
+  {
+    "id": 490,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Explain the concept of the North-South divide and suggest how structural inequalities between the high wage, high investment industrial North and low wage, low investment predominantly rural South can be reduced.",
+    "marks": 15
+  },
+  {
+    "id": 491,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "How far are the world governance mechanisms, dominated by the IMF and World Bank, legitimate and relevant? What measures do you suggest to improve their effectiveness in global governance?",
+    "marks": 15
+  },
+  {
+    "id": 492,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Identify the major changes in the International Political economy in the post Cold War period.",
+    "marks": 15
+  },
+  {
+    "id": 493,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Evolution of the International Economic System",
+    "question": "Sketch the journey of global political economy from Washington consensus to the present.",
+    "marks": 10
+  },
+  {
+    "id": 494,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "The withdrawal of the United States of America from the World Health Organization is set to have far-reaching impacts on global health. Reimagining the existing WHO is vital for the global health agenda. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 495,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "What is the structure and functions of the International Court of Justice?",
+    "marks": 10
+  },
+  {
+    "id": 496,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Discuss the structure and functions of the UN Security Council.",
+    "marks": 10
+  },
+  {
+    "id": 497,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Describe the composition of the International Court of Justice (ICJ). Discuss its voluntary jurisdiction.",
+    "marks": 15
+  },
+  {
+    "id": 498,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "What measures have been undertaken by the United Nations for its reforms?",
+    "marks": 10
+  },
+  {
+    "id": 499,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Discuss the significance and urgency of the UN Security Council reforms. Explain the relevance of the reform proposals made by the UN Secretary General António Guterres for the developing countries.",
+    "marks": 20
+  },
+  {
+    "id": 500,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Evaluate the role of the International Court of Justice in inter-State disputes.",
+    "marks": 15
+  },
+  {
+    "id": 501,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "In what way does the predominance of the USA in the UN funding affect its decision-making?",
+    "marks": 10
+  },
+  {
+    "id": 502,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Discuss the relevance of UN Security Council Resolution 1325 on the security of women in conflict zones.",
+    "marks": 20
+  },
+  {
+    "id": 503,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Do you agree with the view that despite the limitations in the functioning of the UN, it has distinguished and unique achievements to its credit?",
+    "marks": 15
+  },
+  {
+    "id": 504,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Do you endorse that the United Nations needs major changes in its structures and functioning? Suggest the changes for efficient improvements.",
+    "marks": 15
+  },
+  {
+    "id": 505,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Has the reform of the economic and social arrangements of the United Nations been effective?",
+    "marks": 20
+  },
+  {
+    "id": 506,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Do you agree that the U.N. has failed to contain transnational terrorism? Elaborate your answer with examples.",
+    "marks": 10
+  },
+  {
+    "id": 507,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "United Nations",
+    "question": "Argue a case for U.N. reform in the context of changing global milieu.",
+    "marks": 20
+  },
+  {
+    "id": 508,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "How successful has the 'ASEAN Plus Three' been in addressing regional problems? Support your answer with specific examples.",
+    "marks": 15
+  },
+  {
+    "id": 509,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Do you agree with the view that the EU has thus far proved to be the most successful experiment in the regional integration processes? Account for its successes and also some of the recent challenges.",
+    "marks": 15
+  },
+  {
+    "id": 510,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "What were the limitations of NAFTA? How did its replacement by the United States-Mexico-Canada Agreement counter them? Explain.",
+    "marks": 15
+  },
+  {
+    "id": 511,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Account for the rise of the European Union as a highly influential regional organisation.",
+    "marks": 15
+  },
+  {
+    "id": 512,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "The Russian-Ukraine crisis has cast a dark shadow on the energy needs of the member states of the European Union (EU). Comment.",
+    "marks": 15
+  },
+  {
+    "id": 513,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Explain the success of ASEAN as a regional organisation.",
+    "marks": 15
+  },
+  {
+    "id": 514,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Critically analyze the role of ASEAN in the promotion of regional peace and security through economic cooperation and trade.",
+    "marks": 15
+  },
+  {
+    "id": 515,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Evaluate the role of BIMSTEC in multi-sectoral technical and economic cooperation.",
+    "marks": 10
+  },
+  {
+    "id": 516,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "\"Since its inception the South Asian Association for Regional Cooperation (SAARC) has failed to deliver on its promises.\" What initiatives should be taken to reinvigorate the organization?",
+    "marks": 15
+  },
+  {
+    "id": 517,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "How has 'BREXIT' affected the regionalisation process initiated by the European Union and what could be its likely impacts in the regionalisation process of world politics?",
+    "marks": 15
+  },
+  {
+    "id": 518,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "American President Donald Trump's proposal to withdraw from NAFTA would bring unforeseen consequences to the regionalisation of world politics. Elaborate.",
+    "marks": 10
+  },
+  {
+    "id": 519,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "How does regionalism shape world politics? Explain with examples.",
+    "marks": 15
+  },
+  {
+    "id": 520,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "'The European Union has become the most politically influential, economically powerful and demographically diverse regional entity in the world.' Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 521,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "\"Despite so many agreed areas of cooperation, innumerable institutional mechanisms and a permanent secretariat, South Asian Association for Regional Cooperation (SAARC) has not taken off as a meaningful regional grouping.\" Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 522,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Substantiate APEC as a regional economic and trade arrangement.",
+    "marks": 15
+  },
+  {
+    "id": 523,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Regionalisation of World Politics",
+    "question": "Give reasons for Regionalisation of world politics.",
+    "marks": 15
+  },
+  {
+    "id": 524,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Comment on the Red Lipstick Movement in the context of feminist rights.",
+    "marks": 10
+  },
+  {
+    "id": 525,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "The world currently has been in the throes of a twin process of 'democratic backsliding' and 'democratic backlash'. How would you explain this paradox?",
+    "marks": 20
+  },
+  {
+    "id": 526,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the major recent social movements related to the physical rights of women in various countries of the world.",
+    "marks": 20
+  },
+  {
+    "id": 527,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "The changing global order and ongoing regional conflicts, with the global powers taking sides, have jeopardised the progress made towards disarmament in the past. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 528,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Narrate the various ways in which rapid environmental degradation is posing a serious threat to human security. Illustrate your answer with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 529,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the efficacy of global conventions to combat international terrorism.",
+    "marks": 15
+  },
+  {
+    "id": 530,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the five proposals made by India in the recent COP-26 conference held in Glasgow.",
+    "marks": 10
+  },
+  {
+    "id": 531,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Analyze the contribution of liberal democratic principles in the democratization of Indian polity.",
+    "marks": 10
+  },
+  {
+    "id": 532,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Examine the role of the United Nations Framework major efforts by the UN to address the convention on Climate Change (UNFCCC) and other global environmental crisis.",
+    "marks": 15
+  },
+  {
+    "id": 533,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the utility of Nuclear Deterrence Theory in the context of the recent standoff between India and Pakistan.",
+    "marks": 10
+  },
+  {
+    "id": 534,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the importance of personal data protection in the context of human rights.",
+    "marks": 15
+  },
+  {
+    "id": 535,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Do you think that sustainable development goals are really attainable by 2030?",
+    "marks": 10
+  },
+  {
+    "id": 536,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the implications of the Trump-Kim Singapore Summit on the prospects of denuclearisation of the Korean Peninsula.",
+    "marks": 15
+  },
+  {
+    "id": 537,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Critically examine the notion of 'Asian Values' in the context of the on-going debates on human rights.",
+    "marks": 20
+  },
+  {
+    "id": 538,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Would you agree that the on-going debates on international environmental politics continue to be marred by a new North-South ideological divide over historical responsibility and developmental model? Illustrate your answer with suitable examples.",
+    "marks": 15
+  },
+  {
+    "id": 539,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Give an assessment of the Feminist critique of contemporary global issues.",
+    "marks": 10
+  },
+  {
+    "id": 540,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "The recent move of the USA to withdraw from the Paris climate Agreement is a setback in the consensus achieved on protecting the world environment. Assess the future perspective on climate control.",
+    "marks": 20
+  },
+  {
+    "id": 541,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "\"A combination of internal pressures (ethnic and regional forces) and external threats (EU, UN, TNC, global market, etc) has produced what is commonly referred to as a crisis of the nation-state.\" Elaborate.",
+    "marks": 10
+  },
+  {
+    "id": 542,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Examine the main problems and challenges involved in looking after environmental concerns in world politics.",
+    "marks": 20
+  },
+  {
+    "id": 543,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "The struggle for democracy has been marked by bitter strife and tribulations. Examine the statement, illustrating the cases of Pakistan, Nepal and Myanmar.",
+    "marks": 20
+  },
+  {
+    "id": 544,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Discuss the theory of Nuclear Deterrence. Did Nuclear Deterrence prevent a superpower war?",
+    "marks": 15
+  },
+  {
+    "id": 545,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "What are the real objectives of Millennium Development Goals (MDG)?",
+    "marks": 15
+  },
+  {
+    "id": 546,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Do you endorse that the conventional discourse on human rights has failed to include women's rights? Explain in the context of feminist theories.",
+    "marks": 20
+  },
+  {
+    "id": 547,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Critically evaluate the approaches of the global south towards addressing environmental concerns.",
+    "marks": 15
+  },
+  {
+    "id": 548,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "\"Global commons belong to global society and require global attention\". Comment.",
+    "marks": 10
+  },
+  {
+    "id": 549,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "What roles do norms, taboos and epistemic communities play in the context of nuclear proliferation?",
+    "marks": 15
+  },
+  {
+    "id": 550,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Identify the role and place of Gender in the global economy.",
+    "marks": 15
+  },
+  {
+    "id": 551,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "Compare and contrast Sino-India approaches to global Environmental concerns.",
+    "marks": 15
+  },
+  {
+    "id": 552,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "Contemporary Global Concerns",
+    "question": "State the place of Gender Justice in the global political agenda.",
+    "marks": 10
+  },
+  {
+    "id": 553,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Would you concur with the view that of late, India's foreign policy has been in a transition mode from Nehruvianism to Neoliberalism? Support your answer with the help of suitable examples.",
+    "marks": 20
+  },
+  {
+    "id": 554,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "What are the external determinants of the Foreign Policy of a State?",
+    "marks": 20
+  },
+  {
+    "id": 555,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Explain the major features of India's Foreign Policy in the 21st century.",
+    "marks": 10
+  },
+  {
+    "id": 556,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Critically examine the major factors responsible for the change in the trajectory of India's foreign policy after the Cold War.",
+    "marks": 15
+  },
+  {
+    "id": 557,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Peaceful co-existence remains the cornerstone of India's foreign policy. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 558,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Discuss the role of public diplomacy in the enhancement of India's global standing.",
+    "marks": 10
+  },
+  {
+    "id": 559,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Explain the philosophical foundations of India's foreign policy.",
+    "marks": 10
+  },
+  {
+    "id": 560,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "How do the constituent states influence the foreign policy making process in India?",
+    "marks": 15
+  },
+  {
+    "id": 561,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Describe the structure and function of the National Security Council of India. What role does it play in the formulation of Indian foreign policy?",
+    "marks": 10
+  },
+  {
+    "id": 562,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Examine the role of 'parliamentary diplomacy' in India's foreign policy.",
+    "marks": 10
+  },
+  {
+    "id": 563,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Examine the increasing significance of maritime security in India's foreign policy.",
+    "marks": 20
+  },
+  {
+    "id": 564,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "\"India is often said to have a rich strategic culture.\" Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 565,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Discuss the role of the Indian Council for Cultural Relations (ICCR) in promoting India's soft power abroad.",
+    "marks": 20
+  },
+  {
+    "id": 566,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Do you agree with the view that the Indian Foreign Policy is increasingly being shaped by the Neoliberal outlook? Elaborate.",
+    "marks": 10
+  },
+  {
+    "id": 567,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "\"India's current foreign policy marks significant qualitative shifts from that of the previous regimes.\" Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 568,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Examine the Indian National Movement and Geographical location of India as determinants of India's foreign policy.",
+    "marks": 10
+  },
+  {
+    "id": 569,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Which determinant factors play an important role in making India's foreign policy? Illustrate with examples.",
+    "marks": 10
+  },
+  {
+    "id": 570,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "How does the Parliament determine and influence the making of India's foreign policy?",
+    "marks": 10
+  },
+  {
+    "id": 571,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "The social structure of a country influences its foreign policy-making. How does the social structure of India impact the course and direction of its foreign policy?",
+    "marks": 10
+  },
+  {
+    "id": 572,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "The Ministry of External Affairs is losing its importance in the making of India's foreign policy with the parallel rise of the P.M.O. Explain.",
+    "marks": 20
+  },
+  {
+    "id": 573,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "\"Federal units are critical in the making of India's foreign policy.\" Examine this statement with reference to the role of West Bengal vis-à-vis Bangladesh.",
+    "marks": 15
+  },
+  {
+    "id": 574,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "Identify the elements of change in India's foreign policy.",
+    "marks": 10
+  },
+  {
+    "id": 575,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India's Foreign Policy — Changing International Order",
+    "question": "'The economic content of India's foreign trade is increasingly growing'. Substantiate the statement with economic diplomatic engagements of India in the last decade.",
+    "marks": 20
+  },
+  {
+    "id": 576,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Does the Non-Aligned Movement have any future in the wake of India's growing indifference towards it?",
+    "marks": 10
+  },
+  {
+    "id": 577,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Non-Alignment 2.0 underscores India's unique aspiration to emerge as a site for an alternative universality. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 578,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "\"India has of late, chosen to debunk non-alignment in its pursuit of multi-alignment.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 579,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "\"Non-alignment was little more than a rational strategy on the part of a materially weak India to maximize its interests with a bipolar distribution of global power.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 580,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Compare and contrast Non-alignment 1.0 with Non-alignment 2.0.",
+    "marks": 10
+  },
+  {
+    "id": 581,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Discuss the significance of the Non-Aligned Movement as a unique contribution of the Non-Western world to World Politics.",
+    "marks": 10
+  },
+  {
+    "id": 582,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Comment on India's contribution to Non-Alignment Movement and its contemporary relevance.",
+    "marks": 10
+  },
+  {
+    "id": 583,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "'Non-Alignment' has been the basic principle of India's foreign policy since independence. Discuss its relevance in the contemporary context.",
+    "marks": 10
+  },
+  {
+    "id": 584,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "\"India's policy of non-alignment has been guided by the genius of the Indian people and their interests.\" Explain.",
+    "marks": 15
+  },
+  {
+    "id": 585,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India and the Non-Alignment Movement",
+    "question": "Highlight the major features of Non-Alignment 2.0 document.",
+    "marks": 15
+  },
+  {
+    "id": 586,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "China's growing footprint and a tangible shift in power dynamics in Bangladesh has weakened India's leverage in Dhaka. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 587,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "For India, a multipolar world order would also mean a multipolar Asia. Comment.",
+    "marks": 10
+  },
+  {
+    "id": 588,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the potential role India can play in initiating a possible phase of trilateral economic engagement among India, China and Nepal.",
+    "marks": 15
+  },
+  {
+    "id": 589,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the implications of the scrapping of the Free Movement Regime with Myanmar by the Indian Government on the complex ethno-political dynamics of the north-eastern region.",
+    "marks": 15
+  },
+  {
+    "id": 590,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the future of SAARC in the light of India's increased focus on other regional groupings like ASEAN and BIMSTEC.",
+    "marks": 20
+  },
+  {
+    "id": 591,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Despite deep ties, India's relations with Sri Lanka have seen strains due to China's growing influence in Sri Lanka through investments and economic dominance. Analyse.",
+    "marks": 10
+  },
+  {
+    "id": 592,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Bhutan has historically been an ally of India, but the China-Bhutan border related issues have become a security issue for India. Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 593,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "What are the reasons for lack of 'regionness' in South Asia?",
+    "marks": 10
+  },
+  {
+    "id": 594,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Why do ethnic conflicts and insurgencies continue to remain major impediments to regional cooperation in South Asia?",
+    "marks": 10
+  },
+  {
+    "id": 595,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "How does the regime change and political crisis in Myanmar threaten regional security and peace?",
+    "marks": 15
+  },
+  {
+    "id": 596,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the ways and means to realize greater economic co-operation among the Member States of South Asia.",
+    "marks": 10
+  },
+  {
+    "id": 597,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "What are the implications of the 'Look-East' Policy on the north-eastern region of India.",
+    "marks": 15
+  },
+  {
+    "id": 598,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the steps required to realize 'hydro co-operation' between India and Bangladesh.",
+    "marks": 10
+  },
+  {
+    "id": 599,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the consequences of illegal cross-border migration in India's north-eastern region.",
+    "marks": 15
+  },
+  {
+    "id": 600,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Write a brief analysis of the ethnic conflicts and cross-border migrations along India-Myanmar and India-Bangladesh borders.",
+    "marks": 15
+  },
+  {
+    "id": 601,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the strategic implications of India's 'Look East Policy' transforming into 'Act East Policy'.",
+    "marks": 10
+  },
+  {
+    "id": 602,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Why is South Asia considered as the world's politically and economically least integrated region? Explain.",
+    "marks": 20
+  },
+  {
+    "id": 603,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the future prospects of Indo-Nepal relations in the context of the recent publication of new Nepalese map wrongly claiming Indian territory.",
+    "marks": 10
+  },
+  {
+    "id": 604,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Outline the reasons of low volume of trade in the SAARC region.",
+    "marks": 10
+  },
+  {
+    "id": 605,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Analyze the impact of hydropolitics on Indo-Bangladesh relations.",
+    "marks": 10
+  },
+  {
+    "id": 606,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "How does cross border terrorism impede the achievements of peace and security in SouthAsia?",
+    "marks": 10
+  },
+  {
+    "id": 607,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "What are the current issues in Brahmaputra River water sharing between India and China?",
+    "marks": 15
+  },
+  {
+    "id": 608,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Evaluate India's stand on the recent Rohingya refugee issue.",
+    "marks": 10
+  },
+  {
+    "id": 609,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Analyze the significance of India's 'Look East Policy' in the light of concerns of the indigenous peoples of North-east India.",
+    "marks": 10
+  },
+  {
+    "id": 610,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "\"The treaty of Perpetual Peace and Friendship between India and Bhutan needs to be revised with more pragmatic, realistic obligations and responsibilities.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 611,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "What are the impediments of the developments of South Asian Free Trade Area (SAFTA)?",
+    "marks": 10
+  },
+  {
+    "id": 612,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "\"Despite the difference between India and Pakistan on various issues, the Indus Water Treaty has stood the test of time.\" Discuss the recent developments over the issue.",
+    "marks": 15
+  },
+  {
+    "id": 613,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Discuss the shift of India's foreign policy towards Pakistan in the light of the Pathankot incident.",
+    "marks": 15
+  },
+  {
+    "id": 614,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "What are the hopes and aspirations of the 'Look East Policy' of India? Explain.",
+    "marks": 10
+  },
+  {
+    "id": 615,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "\"Sometimes we visualize that SAARC's efforts come to halt because of various impediments to regional cooperation.\" Elaborate with reasonable examples of impediments.",
+    "marks": 10
+  },
+  {
+    "id": 616,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Identify the constraints challenges to the regional cooperation in South Asia.",
+    "marks": 10
+  },
+  {
+    "id": 617,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "Ethnic conflicts and insurgencies in North-East India can be better managed by improving relations with the neighboring countries. Substantiate the statement with suitable examples.",
+    "marks": 10
+  },
+  {
+    "id": 618,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and South Asia",
+    "question": "River water disputes are emerging as a major source of irritation between India and its neighbors. Identify the sources of conflicts and suggest the remedial measures.",
+    "marks": 15
+  },
+  {
+    "id": 619,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Discuss some of the key drivers of India's new interests in Africa which might help in developing a long-term comparative advantage over China.",
+    "marks": 15
+  },
+  {
+    "id": 620,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Discuss the potential role that India could play as the leader of the Global South in realising the goal of establishing a new international economic order in the 21st century.",
+    "marks": 15
+  },
+  {
+    "id": 621,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "\"Nothing is going to move within the WTO negotiations unless India is on board.\" Discuss the main reasons behind India's increased clout in the WTO.",
+    "marks": 10
+  },
+  {
+    "id": 622,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Discuss the major drivers of India's interests in Africa.",
+    "marks": 15
+  },
+  {
+    "id": 623,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "What diplomatic steps has India taken to articulate the interests of the Global South in International Politics?",
+    "marks": 10
+  },
+  {
+    "id": 624,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Discuss the relevance of the demand for New International Economic Order (NIEO) in the present era of globalisation.",
+    "marks": 20
+  },
+  {
+    "id": 625,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Identify the drivers of India's new interest in Africa.",
+    "marks": 15
+  },
+  {
+    "id": 626,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Explain India's position on the waiver of intellectual property rights on COVID-19 vaccines in WTO.",
+    "marks": 10
+  },
+  {
+    "id": 627,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "How do the guiding principles of India-Africa relations seek to enhance harmony and mutual cooperation between India and Africa?",
+    "marks": 20
+  },
+  {
+    "id": 628,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "How is India pursuing her foreign policy objectives through the IBSA Dialogue Forum (India, Brazil and South Africa)?",
+    "marks": 10
+  },
+  {
+    "id": 629,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "India's coalitional diplomacy within the WTO has earned it wide appreciation. What accounts for the success of India's coalitional diplomacy?",
+    "marks": 20
+  },
+  {
+    "id": 630,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "\"India's capacity building programmes under the Indian Technical and Economic Cooperation (ITEC) has earned much goodwill for it in Africa.\" Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 631,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Analyze the stalled progress of Doha Round of WTO negotiations over the differences between the developed and the developing countries.",
+    "marks": 10
+  },
+  {
+    "id": 632,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Suggest measures so that India's partnership with Africa becomes a true symbol of South-South Cooperation, delivering clear-cut economic and political dividends to both sides of the equation.",
+    "marks": 20
+  },
+  {
+    "id": 633,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Discuss the factors for the decline of India's presence in Latin America.",
+    "marks": 15
+  },
+  {
+    "id": 634,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India and the Global South",
+    "question": "Sketch the leadership role of India in WTO negotiations.",
+    "marks": 10
+  },
+  {
+    "id": 635,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "\"Trump's return to the White House is a jolt to push the European Union to invest in its own defence and economic and technological revival.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 636,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "India continues to invoke its time-tested policy of strategic autonomy vis-à-vis both the United States of America and Russia by rejecting US' offer of mediation on the Kashmir issue and by refusing to criticize Russia in its ongoing war against Ukraine. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 637,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "The tariff threats have pushed India and the European Union closer. Evaluate the India-EU partnership.",
+    "marks": 15
+  },
+  {
+    "id": 638,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Historical ties between India and Japan grew into a 'special strategic and global partnership'. Comment.",
+    "marks": 15
+  },
+  {
+    "id": 639,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "\"India and the USA have become such strong strategic partners that they need not become formal allies.\" Comment.",
+    "marks": 15
+  },
+  {
+    "id": 640,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Does the idea of the 21st century as 'Asian century' continue to remain feasible given the growing friction between India and China?",
+    "marks": 15
+  },
+  {
+    "id": 641,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Arms trade, economic ties and congruent geo-political interests are no longer the three pillars of India-Russia relationship in the emerging strategic context. Comment.",
+    "marks": 20
+  },
+  {
+    "id": 642,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Explain the significance of Basic Exchange and Co-operation Agreement (BECA) for Indo-US strategic relations.",
+    "marks": 10
+  },
+  {
+    "id": 643,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "What are the main drivers of India-Japan Strategic and Global Partnership?",
+    "marks": 20
+  },
+  {
+    "id": 644,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Explain India's relations with the European Union in the context of Brexit.",
+    "marks": 15
+  },
+  {
+    "id": 645,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Examine the Geo-strategic points of contention in the bilateral relationship between India and China.",
+    "marks": 15
+  },
+  {
+    "id": 646,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "'Relations between India and Russia are rooted in history, mutual trust and mutually beneficial cooperation.' Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 647,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Explain the defense and foreign policy options of India to address the challenges emerging out of the current India-China standoff at the Line of Actual Control (LAC).",
+    "marks": 20
+  },
+  {
+    "id": 648,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "What are the notable features of the recently concluded Acquisition and Cross-Servicing Agreement (ACSA) between India and Japan? How is it likely to address the security concerns of India?",
+    "marks": 15
+  },
+  {
+    "id": 649,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Discuss the significance of Indo-US strategic partnership and its implications for India's security and national defence.",
+    "marks": 15
+  },
+  {
+    "id": 650,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Describe briefly China's 'One Belt One Road (OBOR)' Initiative and analyze India's major concerns.",
+    "marks": 20
+  },
+  {
+    "id": 651,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Critically examine India's position on South China Sea Dispute.",
+    "marks": 15
+  },
+  {
+    "id": 652,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Critically assess the evolving convergence of India and China in the areas of trade and environment.",
+    "marks": 15
+  },
+  {
+    "id": 653,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Discuss the role of Indian diaspora in promoting Indo-US relations.",
+    "marks": 15
+  },
+  {
+    "id": 654,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Do you agree that the growing assertiveness of China is leading to multilayered Indo-Japan relations? Comment.",
+    "marks": 15
+  },
+  {
+    "id": 655,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "How is the 'Belt and Road Initiative' of China going to affect India-China relationship?",
+    "marks": 15
+  },
+  {
+    "id": 656,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "The recent differences between India and Russia are the result of misconceptions rather than facts. Elucidate.",
+    "marks": 15
+  },
+  {
+    "id": 657,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "The natural behavior of India and the United States is likely to serve each other's interests. Hence, a deliberate strategy of dovetailing their efforts, will obviously benefit both. Elaborate.",
+    "marks": 20
+  },
+  {
+    "id": 658,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Illustrate the main causes of tension between India and China. Suggest the possibilities of improving relationship.",
+    "marks": 10
+  },
+  {
+    "id": 659,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Explain Britain's ouster from EU and bring out its consequences on world economy in general and India in particular.",
+    "marks": 20
+  },
+  {
+    "id": 660,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Comment on India's growing relationship with the USA in the background of constrained relations between India and China.",
+    "marks": 15
+  },
+  {
+    "id": 661,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Before the year 2000, the Indo-U.S. relationship has been marked more with estrangement than cordiality. Why?",
+    "marks": 20
+  },
+  {
+    "id": 662,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "\"Economic interest has emerged as the main component of India's foreign policy.\" Discuss the statement in the light of India's initiatives to improve relations with China, Japan and the Central Asian republics.",
+    "marks": 15
+  },
+  {
+    "id": 663,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "\"EU-India relations have a long way to go before they can purposely be termed strategic.\" Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 664,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Do you agree with the view that the USA is of late willing to treat India as a partner rather than merely a camp-follower? Give reasons for your answer.",
+    "marks": 10
+  },
+  {
+    "id": 665,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Evaluate the recent changes in Indo-Japan relations.",
+    "marks": 20
+  },
+  {
+    "id": 666,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Analyze the drivers of Indo-Russian relations in the post-Cold War era.",
+    "marks": 20
+  },
+  {
+    "id": 667,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "\"Some of the major changes that occurred in India's foreign policy after the Sino-India war in 1962 were within the larger framework of continuity.\" Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 668,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India and the Global Centres of Power",
+    "question": "Examine the recent developments in India-Japan relationship.",
+    "marks": 10
+  },
+  {
+    "id": 669,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "\"India must strive to become a semi-permanent member of the UNSC, rather than a permanent member without the right to veto.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 670,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Discuss the importance of India's role in UN peacekeeping operations as a ground for its claim to a permanent seat in the UN Security Council.",
+    "marks": 15
+  },
+  {
+    "id": 671,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Explain the factors which justify India's claim for a permanent seat at the UN security council.",
+    "marks": 15
+  },
+  {
+    "id": 672,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Discuss the 'Sustainable Development Goals' as set by the United Nations.",
+    "marks": 15
+  },
+  {
+    "id": 673,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Explain the importance of India's claim for a permanent seat in the UN Security Council.",
+    "marks": 15
+  },
+  {
+    "id": 674,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Analyze the recent trends in India's role in the UN peacekeeping operations.",
+    "marks": 15
+  },
+  {
+    "id": 675,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Discuss the various impediments in India's way to a permanent seat in the Security Council.",
+    "marks": 15
+  },
+  {
+    "id": 676,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "\"India has been the largest and consistent country contributing to the UN peacekeepers worldwide.\" Examine India's role in this perspective.",
+    "marks": 10
+  },
+  {
+    "id": 677,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "'Uniting for Census' also known as 'Coffee Club' has opposed the claims of India and other countries over permanent membership of the UN Security Council. Point out their major objections.",
+    "marks": 15
+  },
+  {
+    "id": 678,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Critically analyze China's role in international politics against India's demand for a permanent seat in UN Security Council.",
+    "marks": 15
+  },
+  {
+    "id": 679,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "The United Nations completes 70 years of its establishment. What reforms is India asking for to strengthen the global institutions of governance and why?",
+    "marks": 20
+  },
+  {
+    "id": 680,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Is India's quest for a permanent seat in the Security Council a possibility or just a pipedream? Elaborate with reasons.",
+    "marks": 10
+  },
+  {
+    "id": 681,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Evaluate India's participation in United Nations peace-keeping operations over the years.",
+    "marks": 15
+  },
+  {
+    "id": 682,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India and the UN System",
+    "question": "Bring out the objectives of India seeking permanent seat in the Security Council.",
+    "marks": 10
+  },
+  {
+    "id": 683,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "India's reluctance to perceive any 'existential threat' inevitably made the multilateral path to nuclear security a 'default option' until it decided to cross the nuclear Rubicon in 1998. Identify and analyze some of the major reasons behind this shift in India's position on the nuclear question.",
+    "marks": 20
+  },
+  {
+    "id": 684,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Critically examine India's persistent refusal to sign the nuclear non-proliferation treaty (NPT) despite being recognized as a de facto nuclear power.",
+    "marks": 15
+  },
+  {
+    "id": 685,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "India's Nuclear policy is deeply influenced by its cultural beliefs and the pragmatic approach of its foreign policy. Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 686,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Discuss the reasons behind India's refusal to sign the nuclear non-proliferation treaty (NPT).",
+    "marks": 15
+  },
+  {
+    "id": 687,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Examine the evolution of India's role in the global nuclear order.",
+    "marks": 15
+  },
+  {
+    "id": 688,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Discuss the efficacy of India's 'no first use' policy (nuclear weapons) in the context of the evolving strategic challenges from its neighbors.",
+    "marks": 15
+  },
+  {
+    "id": 689,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Given the recent developments in the region, do you think that there is a need to change India's 'No First Use (NFU)' nuclear policy?",
+    "marks": 15
+  },
+  {
+    "id": 690,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "The Nuclear Non-Proliferation Treaty (NPT) has failed to achieve the ultimate objective of the Global Nuclear Department. Discuss the deficiency in the provision of NPT.",
+    "marks": 20
+  },
+  {
+    "id": 691,
+    "year": "2016",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Critically analyze India's nuclear policy.",
+    "marks": 10
+  },
+  {
+    "id": 692,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "In 1998, India declared itself as a nuclear weapon state. India refuses to sign, NPT and CTBT. What would be the implications for India's nuclear-policy in case it signs both the treaties?",
+    "marks": 15
+  },
+  {
+    "id": 693,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Discuss the grounds for India's opposition to NPT.",
+    "marks": 10
+  },
+  {
+    "id": 694,
+    "year": "2013",
+    "paper": "Paper II",
+    "topic": "India and the Nuclear Question",
+    "question": "Is India's Nuclear doctrine a viable one?",
+    "marks": 10
+  },
+  {
+    "id": 695,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Would you agree with the contention that India's inclination to lean on a 'more aggressive hyper-realist posture' has gained new momentum in the aftermath of the Pahalgam terrorist strike?",
+    "marks": 10
+  },
+  {
+    "id": 696,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "India maintains strong ties with countries that will assure a free and open Indo-Pacific and guarantee greater connectivity with the rest of the world. Analyze.",
+    "marks": 15
+  },
+  {
+    "id": 697,
+    "year": "2025",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Critically analyze the different phases of India's foreign policy since independence. How justified, do you think, is S. Jaishankar's classification of the current phase as the phase of 'energetic diplomacy'?",
+    "marks": 20
+  },
+  {
+    "id": 698,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Discuss the rationale behind replacing the 'Asia-Pacific' strategy with the new term 'Indo-Pacific' strategy.",
+    "marks": 10
+  },
+  {
+    "id": 699,
+    "year": "2024",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Critically examine the continuity and change in India's Palestine policy in the wake of the ongoing Israel-Hamas War.",
+    "marks": 20
+  },
+  {
+    "id": 700,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Discuss the significance of 'West Asia Quad' in the light of India's 'Look West' policy.",
+    "marks": 15
+  },
+  {
+    "id": 701,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "What are the challenges and limitations in India-Iran relations?",
+    "marks": 15
+  },
+  {
+    "id": 702,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "What steps has India taken to regain its foothold in Afghanistan since the Taliban has taken over the country in August 2021?",
+    "marks": 15
+  },
+  {
+    "id": 703,
+    "year": "2023",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Quadrilateral Security Dialogue (QUAD) performs an important role in India's strategic balancing act to withstand the dominance of China in Asia. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 704,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "How does India-Israel bilateral ties reflect the autonomy of India's foreign policy choices?",
+    "marks": 20
+  },
+  {
+    "id": 705,
+    "year": "2022",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Discuss India's vision of a New World order in the 21st century.",
+    "marks": 15
+  },
+  {
+    "id": 706,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "How does the recent takeover of Afghanistan by the Taliban impact India's strategic interests?",
+    "marks": 15
+  },
+  {
+    "id": 707,
+    "year": "2021",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Write about the growing significance of QUAD.",
+    "marks": 10
+  },
+  {
+    "id": 708,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "\"The war in Afghanistan is crucial from the point of view of India's national security. If the Americans withdraw and Jihadis emerge with a sense of triumphalism, India will face an increasing onslaught of terrorism.\" Comment.",
+    "marks": 20
+  },
+  {
+    "id": 709,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Identify the key sectors of cooperation between India and Israel since 2014. Examine their significance in strengthening the bilateral ties between the two countries.",
+    "marks": 15
+  },
+  {
+    "id": 710,
+    "year": "2020",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Critically examine the role of India in shaping the emerging world order.",
+    "marks": 15
+  },
+  {
+    "id": 711,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "How is India responding to the idea of Indo-Pacific?",
+    "marks": 10
+  },
+  {
+    "id": 712,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "\"The growing closeness between India and Israel will strengthen the cause of Palestine.\" Comment.",
+    "marks": 10
+  },
+  {
+    "id": 713,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Write a brief note on India's interests in West Asia.",
+    "marks": 15
+  },
+  {
+    "id": 714,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Evaluate India's vision of a new world order.",
+    "marks": 20
+  },
+  {
+    "id": 715,
+    "year": "2019",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "How is the current standoff between the USA and Iran affecting India's energy security?",
+    "marks": 15
+  },
+  {
+    "id": 716,
+    "year": "2018",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Do you think that India's capacity building role in Afghanistan has shrunk the strategic space for Pakistan there? Discuss.",
+    "marks": 20
+  },
+  {
+    "id": 717,
+    "year": "2017",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Has the recent Indo-Israeli relationships given a new dynamic to India's stand on Palestinian's statehood?",
+    "marks": 10
+  },
+  {
+    "id": 718,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Vision of a new world order has emerged as the major objective of India's foreign policy. Discuss the policy initiative taken by India in this regard and the challenges faced by it.",
+    "marks": 20
+  },
+  {
+    "id": 719,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Discuss the realistic foreign policy initiatives taken by India to balance its relations between Israel and the Arab world.",
+    "marks": 15
+  },
+  {
+    "id": 720,
+    "year": "2015",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Discuss the humanitarian role played by India in the crisis-stricken Gulf countries like Yemen and by India to balance its relations between Israel and the Arab world.",
+    "marks": 15
+  },
+  {
+    "id": 721,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "In the history of foreign policy, seldom have relations between any two nations blossomed as fast as they have in the case of India and Israel. Discuss.",
+    "marks": 15
+  },
+  {
+    "id": 722,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "\"Afghanistan is a litmus test for India's ascendance as a regional and global power.\" Discuss.",
+    "marks": 10
+  },
+  {
+    "id": 723,
+    "year": "2014",
+    "paper": "Paper II",
+    "topic": "Recent Developments in Indian Foreign Policy",
+    "question": "Examine the implications of turmoil in Iraq and West Asia for India's security and foreign policy concerns.",
+    "marks": 15
+  }
+]
