@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
+import HomeToolsList from '@/components/HomeToolsList';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -17,12 +18,7 @@ const optionals = [
   { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true,  icon: '📋' },
 ];
 
-const tools = [
-  { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
-  { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains written to be read before the exam.', num: '02', href: '/sociology' },
-  { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: '/sociology#pyqs' },
-  { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04', href: '/sociology#chat' },
-];
+
 
 const marqueeItems = [
   'AI Answer Evaluation', 'Sociology Optional', 'Anthropology Optional', 'PYQ Bank',
@@ -466,17 +462,7 @@ export default function Home() {
               Every tool on Distilled Crux exists for one reason getting you more marks in your optional paper.
             </p>
           </div>
-          <div className="lp-tools-list">
-            {tools.map((t) => (
-              <Link key={t.label} href={t.href} className="lp-tool-item" style={{ textDecoration: 'none', cursor: 'pointer' }}>
-                <span className="lp-tool-num">{t.num}</span>
-                <div>
-                  <div className="lp-tool-label">{t.label}</div>
-                  <div className="lp-tool-desc">{t.desc}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <HomeToolsList />
         </section>
 
         <section className="lp-section">
