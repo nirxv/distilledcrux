@@ -600,7 +600,12 @@ function QBlock({ group, isResults, rubrics, onRubric, subjectId, isPremium, use
   return (
     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
       <div style={{ padding: '0.75rem 1.25rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg3)', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.{group.qNum}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.{group.qNum}</span>
+          {group.qNum === 5 && (
+            <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
+          )}
+        </div>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
           {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks`}
         </span>
@@ -900,7 +905,7 @@ export default function TestPage() {
 
     setCompQ(q1);
     setGroups(mode === 'full'
-      ? [g2, g3, g4, buildQGroup(pool, 6), buildQGroup(pool, 7), buildQGroup(pool, 8)]
+      ? [g2, g3, g4, buildQGroup(pool, 5), buildQGroup(pool, 6), buildQGroup(pool, 7), buildQGroup(pool, 8)]
       : [g2, g3, g4]);
     setRubrics({});
     setTimerOn(true);
