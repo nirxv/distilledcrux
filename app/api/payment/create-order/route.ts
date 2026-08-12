@@ -9,8 +9,8 @@ const razorpay = new Razorpay({
 
 const PLAN_AMOUNTS: Record<string, { amount: number; days: number; label: string }> = {
   daily:     { amount: 4900,   days: 1,   label: 'Daily Plan' },
-  sixmonth:  { amount: 399900, days: 180, label: '6 Month Plan' },
-  yearly:    { amount: 599900, days: 365, label: 'Yearly Plan' },
+  sixmonth:  { amount: 199900, days: 180, label: '6 Month Plan' },
+  yearly:    { amount: 299900, days: 365, label: 'Yearly Plan' },
 };
 
 export async function POST(req: NextRequest) {

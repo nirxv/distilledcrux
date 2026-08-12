@@ -17,7 +17,7 @@ const plans = [
     ],
   },
   {
-    id: 'sixmonth', label: '6 Months', price: 3999, period: 'per 6 months', tag: 'Most Popular',
+    id: 'sixmonth', label: '6 Months', price: 1999, period: 'per 6 months', tag: 'Most Popular',
     desc: 'Best for focused preparation cycles leading up to Mains.',
     color: '#4361ee',
     features: [
@@ -31,7 +31,7 @@ const plans = [
     ],
   },
   {
-    id: 'yearly', label: 'Yearly', price: 5999, period: 'per year', tag: 'Best Value',
+    id: 'yearly', label: 'Yearly', price: 2999, period: 'per year', tag: 'Best Value',
     desc: 'Full-year coverage from Prelims to Mains interview prep.',
     color: '#e8b86d',
     features: [
