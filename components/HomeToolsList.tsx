@@ -13,12 +13,15 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   history: 'history',
 };
 
+const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science']);
+
 export default function HomeToolsList() {
-  const [pyqHref, setPyqHref] = useState('/notes');
+  const [route, setRoute] = useState<string | null>(null);
+  const [hasPyqs, setHasPyqs] = useState(true);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
-      if (!u) return;
+      if (!u) { setRoute(null); return; }
       try {
         const token = await u.getIdToken();
         const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
@@ -26,16 +29,19 @@ export default function HomeToolsList() {
         const d = await r.json();
         const raw = d.optional as string | null;
         if (!raw) return;
-        const route = OPTIONAL_TO_ROUTE[raw] ?? raw;
-        setPyqHref(`/${route}/pyqs`);
+        setRoute(OPTIONAL_TO_ROUTE[raw] ?? raw);
+        setHasPyqs(PYQS_ENABLED.has(raw));
       } catch { /* ignore */ }
     });
     return unsub;
   }, []);
 
+  const notesHref  = route ? `/notes/${route}`    : '/login';
+  const pyqHref    = route ? (hasPyqs ? `/${route}/pyqs` : `/notes/${route}`) : '/login';
+
   const tools = [
     { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
-    { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains written to be read before the exam.', num: '02', href: '/notes' },
+    { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains written to be read before the exam.', num: '02', href: notesHref },
     { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: pyqHref },
     { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04', href: '/chat' },
   ];

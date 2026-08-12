@@ -73,7 +73,13 @@ const SUBJECTS: Record<SubjectId, {
   },
 };
 
-// ─── Rubric weights ───────────────────────────────────────────────────────────
+const OPTIONAL_TO_SUBJECT: Record<string, SubjectId> = {
+  sociology: 'sociology',
+  anthropology: 'anthropology',
+  'political-science': 'polsci',
+  geography: 'geography',
+  'public-administration': 'pub-admin',
+};
 
 function rubricOutOf(marks: number): { intro: number; body: number; conc: number; pres: number } {
   // 15% intro / 60% body / 15% conc / 10% pres (matches subjectConfig rubricWeights)
@@ -858,7 +864,12 @@ export default function TestPage() {
         try {
           const token = await u.getIdToken();
           const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
-          if (r.ok) { const d = await r.json(); setIsPremium(!!d.subscribed); }
+          if (r.ok) {
+            const d = await r.json();
+            setIsPremium(!!d.subscribed);
+            const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
+            if (mapped && SUBJECTS[mapped].dataFile) setSubject(mapped);
+          }
         } catch { /* ignore */ }
       }
     });
