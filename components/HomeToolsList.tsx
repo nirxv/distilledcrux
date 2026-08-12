@@ -36,8 +36,8 @@ export default function HomeToolsList() {
     return unsub;
   }, []);
 
-  const notesHref  = route ? `/notes/${route}`    : '/login';
-  const pyqHref    = route ? (hasPyqs ? `/${route}/pyqs` : `/notes/${route}`) : '/login';
+  const notesHref = route ? `/notes/${route}` : '/login';
+  const pyqHref   = route ? (hasPyqs ? `/${route}/pyqs` : `/notes/${route}`) : '/login';
 
   const tools = [
     { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
