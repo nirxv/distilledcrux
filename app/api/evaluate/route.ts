@@ -463,14 +463,15 @@ export async function POST(req: NextRequest) {
           process.env.SUPABASE_SECRET_KEY!
         );
         const nowISO = new Date().toISOString();
-        const { data: sub } = await supabase
+        const { data: sub, error: subError } = await supabase
           .from("subscriptions")
           .select("status")
           .eq("firebase_uid", user.uid)
           .eq("optional", optionalForEval)
           .eq("status", "active")
           .gt("expires_at", nowISO)
-          .single();
+          .maybeSingle();
+        console.log("[evaluate] uid:", user.uid, "optional:", optionalForEval, "sub:", sub, "error:", subError);
         if (sub) isPremium = true;
       }
     } catch {}
@@ -1263,3 +1264,4 @@ If no corrections are needed, return the original model_answer unchanged with co
     return NextResponse.json({ error: "Failed to evaluate answer. Please try again." }, { status: 500 });
   }
 }
+
