@@ -479,6 +479,8 @@ export default function EvaluatePage() {
   const [showTranscript, setShowTranscript] = useState(false)
   const inputRef                      = useRef<HTMLInputElement>(null)
   const timerRef                      = useRef<NodeJS.Timeout | null>(null)
+  const [elapsed, setElapsed]         = useState(0)
+  const elapsedRef                    = useRef<NodeJS.Timeout | null>(null)
 
   // Auth + fetch optional from profile
   useEffect(() => {
@@ -498,15 +500,17 @@ export default function EvaluatePage() {
 
   // Checkpoint ticker during loading
   useEffect(() => {
-    if (!loading) { setCpStep(-1); return }
+    if (!loading) { setCpStep(-1); setElapsed(0); if (elapsedRef.current) clearInterval(elapsedRef.current); return }
     setCpStep(0)
+    setElapsed(0)
+    elapsedRef.current = setInterval(() => setElapsed(s => s + 1), 1000)
     let step = 0
     timerRef.current = setInterval(() => {
       step++
       if (step < CHECKPOINTS.length) setCpStep(step)
       else clearInterval(timerRef.current!)
     }, 6000)
-    return () => clearInterval(timerRef.current!)
+    return () => { clearInterval(timerRef.current!); if (elapsedRef.current) clearInterval(elapsedRef.current) }
   }, [loading])
 
   const addFiles = useCallback((newFiles: File[]) => {
@@ -693,7 +697,7 @@ export default function EvaluatePage() {
         {loading && (
           <div className="ev-loading">
             <div className="ev-loading-title">Evaluating your answer…</div>
-            <div className="ev-loading-sub">This takes 20-35 seconds</div>
+            <div className="ev-loading-sub">This takes 45-55 seconds ({elapsed}s)</div>
             <div className="ev-progress-track">
               <div className="ev-progress-bar" style={{ animationDuration:'32s' }} />
             </div>
