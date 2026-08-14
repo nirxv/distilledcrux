@@ -813,15 +813,24 @@ BAND ${introMax}M (ONLY): names a MODERN thinker (${subjectConfig.thinkerRoster.
 IMPORTANT: Simply naming a ${subjectConfig.thinkerTerm} without their specific thesis = BAND 1M only, NOT full marks.
 RULE: You MUST pick one of the three values above.
 → INTRO BAND CHOSEN: [write mark]
-
 == STEP 4: BODY (max ${bodyMax}M) — count then pick band ==
-DEFINITIONS — be extremely strict:
-- STRONG: modern thinker named (${subjectConfig.thinkerRoster.slice(0, 5).map(t => t.name).join(', ')} etc.) WITH their specific argument clearly stated. "[${subjectConfig.thinkerTerm}] argues..." counts. "[${subjectConfig.thinkerTerm}] has written about this" does NOT count.
-- WEAK: modern ${subjectConfig.thinkerTerm} named but their argument is vague, absent, or just their name dropped without context.
-- NONE: no ${subjectConfig.thinkerTerm}. Foundational texts and abstract theoretical concepts alone do NOT count as thinkers — they are evidence/frameworks, not scholarly argument — a body point using only these with no ${subjectConfig.thinkerTerm} named is NONE. A body point using only concepts with no ${subjectConfig.thinkerTerm}'s name attached is NONE.
+DEFINITIONS — apply equally to THINKER points and ANALYTICAL points (50/50 weight):
 
-For each body point write: STRONG / WEAK / NONE — and if you mark WEAK or STRONG, you MUST quote the exact thinker's name from the text right next to your tag (e.g. "WEAK — ${subjectConfig.thinkerTerm} named: '${subjectConfig.thinkerRoster[0]?.name ?? 'Durkheim'}'"). If you cannot quote a specific thinker's name for a point, it is NONE, not WEAK.
-Tally: STRONG=__ WEAK=__ NONE=__ — sanity check: STRONG+WEAK count must equal the number of distinct ${subjectConfig.thinkerTerm} names you actually quoted above. If it doesn't match, recount.
+THINKER POINTS:
+- STRONG-T: modern thinker named (${subjectConfig.thinkerRoster.slice(0, 5).map(t => t.name).join(', ')} etc.) WITH their specific argument clearly stated. "[${subjectConfig.thinkerTerm}] argues..." counts. "[${subjectConfig.thinkerTerm}] has written about this" does NOT count.
+- WEAK-T: modern ${subjectConfig.thinkerTerm} named but their argument is vague, absent, or just their name dropped without context.
+
+- STRONG-A: a body point that does ALL THREE — (1) makes a clear causal/structural claim, (2) supports it with specific evidence (event, data, policy, case), (3) links it to the question demand. Example: "NFU reduces first-strike incentives because it signals restraint, as seen post-Kargil where no nuclear escalation occurred."
+- WEAK-A: makes a claim with some evidence but lacks the causal link, OR has the link but no specific evidence. Surface-level descriptive statements are NOT analytical — mark NONE.
+- NONE: purely descriptive, no thinker, no analytical structure. Abstract concept names alone without argument = NONE.
+
+For each body point write: STRONG-T / STRONG-A / WEAK-T / WEAK-A / NONE
+- For STRONG-T or WEAK-T: quote the exact thinker name (e.g. "STRONG-T — Morgenthau")
+- For STRONG-A or WEAK-A: one line summarising the claim (e.g. "STRONG-A — NFU + Kargil evidence + restraint link")
+- NONE needs no justification.
+
+Tally: STRONG=__ (STRONG-T + STRONG-A) WEAK=__ (WEAK-T + WEAK-A) NONE=__
+Sanity check: note if the answer is skewed entirely toward thinkers or entirely toward analysis — a balanced answer has both.
 
 ${marks === "10" ? `BAND 1M (ONLY): 0 strong, 0 weak — purely narrative, no ${subjectConfig.thinkerTerm}s at all — award exactly 1
 BAND 2M (ONLY): 0 strong, 1-2 weak — ${subjectConfig.thinkerTerm} names dropped without arguments — award exactly 2
