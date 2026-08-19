@@ -130,8 +130,6 @@ export default function GeoMappingPage() {
   const [openYears, setOpenYears] = useState<Set<number>>(new Set());
   const [selectedName, setSelectedName] = useState<string | null>(null);
   const [search, setSearch] = useState('');
-  const [noLabels, setNoLabels] = useState(false);
-  const [showGrid, setShowGrid] = useState(false);
   const [quizYear, setQuizYear] = useState<number | 'all'>('all');
 
   const entriesByYear = useMemo(() => {
@@ -170,7 +168,7 @@ export default function GeoMappingPage() {
           </p>
         </div>
         <button onClick={() => setQuizMode((prev: boolean) => !prev)} style={{ padding: '9px 20px', borderRadius: 8, border: `1.5px solid ${quizMode ? ACCENT : 'var(--border)'}`, background: quizMode ? 'rgba(67,97,238,0.12)' : 'var(--bg3)', color: quizMode ? ACCENT : 'var(--text2)', fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: 14, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span>��</span> {quizMode ? 'Exit Quiz' : 'Quiz Mode'}
+          <span>🗺️</span> {quizMode ? 'Exit Quiz' : 'Quiz Mode'}
         </button>
       </div>
 
@@ -191,16 +189,6 @@ export default function GeoMappingPage() {
 
       {!quizMode && (
         <>
-          <div style={{ display: 'flex', gap: 10, marginBottom: 16, flexWrap: 'wrap', alignItems: 'center' }}>
-            {[{ label: 'No Labels', state: noLabels, toggle: () => setNoLabels((p: boolean) => !p) }, { label: 'Grid', state: showGrid, toggle: () => setShowGrid((p: boolean) => !p) }].map(({ label, state, toggle }) => (
-              <div key={label} role="button" onClick={toggle} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', userSelect: 'none' }}>
-                <span style={{ fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 600, color: state ? ACCENT : 'var(--text2)' }}>{label}</span>
-                <span style={{ position: 'relative', display: 'inline-block', width: 36, height: 20, borderRadius: 10, background: state ? ACCENT : 'var(--border2)', transition: 'background 0.2s' }}>
-                  <span style={{ position: 'absolute', top: 2, left: state ? 17 : 2, width: 16, height: 16, borderRadius: '50%', background: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.4)', transition: 'left 0.2s' }} />
-                </span>
-              </div>
-            ))}
-          </div>
           <div style={{ position: 'relative', marginBottom: 24 }}>
             <input type="text" value={search} onChange={(e: any) => setSearch(e.target.value)} placeholder="Search locations by name or significance..."
               style={{ width: '100%', padding: '12px 16px', borderRadius: 8, border: `1px solid ${ACCENT}55`, background: 'var(--bg3)', color: 'var(--text)', fontFamily: 'var(--font-ui)', fontSize: 14, outline: 'none' }} />

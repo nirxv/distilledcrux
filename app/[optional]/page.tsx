@@ -52,10 +52,10 @@ const BASE_TOOLS = [
   { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
 ];
 
-const MAP_TOOL = { num: '06', label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.', href: '/mapping', badge: null };
+const MAP_TOOL = { num: '05', label: 'Map Practice', desc: 'Every UPSC Geography map question, year-wise. Identify locations, quiz yourself, track accuracy.', href: '/geography/mapping', badge: 'Free' };
 const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: (opt: string) => `/test?optional=${opt}`, badge: 'Premium' };
 
-const getTools = (_optional: string) => [...BASE_TOOLS, TEST_SERIES_TOOL];
+const getTools = (optional: string) => optional === 'geography' ? [...BASE_TOOLS, MAP_TOOL, TEST_SERIES_TOOL] : [...BASE_TOOLS, TEST_SERIES_TOOL];
 
 export function generateStaticParams() {
   return Object.keys(OPTIONALS).map((slug) => ({ optional: slug }));
