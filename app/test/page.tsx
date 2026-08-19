@@ -111,10 +111,10 @@ function pick<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n); }
 // We'll do: sectional = 4 Qs (Q1 compulsory short-notes + Q2,Q3,Q4 each 2×20M + 1×10M)
 // Full paper = 8 Qs across Paper I + Paper II
 
-function buildCompulsoryQ(pool: PYQ[]): PYQ[] {
-  // Q1: 5 short notes (10M each) = 50M
+function buildCompulsoryQ(pool: PYQ[], count = 5): PYQ[] {
+  // Q1: short notes (10M each); count=4 when map Q1(a) is included
   const tens = pool.filter(q => q.marks === 10);
-  return pick(tens, 5);
+  return pick(tens, count);
 }
 
 function buildQGroup(pool: PYQ[], qNum: number): QGroup {
@@ -562,13 +562,16 @@ function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPrem
 
 // ─── Compulsory Q1 Block ──────────────────────────────────────────────────────
 
-function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, isPremium, user }: {
+function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, isPremium, user, mapEntries }: {
   questions: PYQ[]; isResults: boolean;
   rubrics: Record<number, RubricState>; onRubric: (id: number, r: RubricState) => void;
   subjectId: SubjectId; isPremium: boolean; user: User | null;
+  mapEntries?: GeoMapEntry[];
 }) {
   const { color, border } = SUBJECTS[subjectId];
-  const totalPossible = questions.reduce((s, q) => s + q.marks, 0);
+  const hasMap = mapEntries && mapEntries.length > 0;
+  const mapMarks = hasMap ? 20 : 0;
+  const totalPossible = questions.reduce((s, q) => s + q.marks, 0) + mapMarks;
   const totalScored = isResults ? questions.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) : 0;
   return (
     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
@@ -578,15 +581,18 @@ function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, i
           <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
         </div>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
-          {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks Total · ${questions.length} short notes`}
+          {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks Total`}
         </span>
       </div>
       <div style={{ padding: '1.25rem' }}>
+        {hasMap && (
+          <MapSubBlock entries={mapEntries!} isResults={isResults} color={color} border={border} />
+        )}
         <p style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
           Write short notes on the following in about <strong>150 words</strong> each:
         </p>
         {questions.map((q, i) => (
-          <QuestionCard key={q.id} q={q} label={String.fromCharCode(97 + i)}
+          <QuestionCard key={q.id} q={q} label={String.fromCharCode(hasMap ? 98 + i : 97 + i)}
             isResults={isResults} rubric={rubrics[q.id]} onRubric={r => onRubric(q.id, r)}
             subjectId={subjectId} isPremium={isPremium} user={user} />
         ))}
@@ -595,9 +601,9 @@ function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, i
   );
 }
 
-// ─── Mapping Q1(a) Block — Geography Paper II ─────────────────────────────────
+// ─── Map Sub-Block — renders as (a) inside CompulsoryBlock ───────────────────
 
-function MappingQ1Block({ entries, isResults, color, border }: {
+function MapSubBlock({ entries, isResults, color, border }: {
   entries: GeoMapEntry[]; isResults: boolean; color: string; border: string;
 }) {
   const [revealed, setRevealed] = useState<Set<number>>(new Set());
@@ -610,10 +616,10 @@ function MappingQ1Block({ entries, isResults, color, border }: {
   });
 
   return (
-    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
-      <div style={{ padding: '0.75rem 1.25rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg3)', flexWrap: 'wrap', gap: '0.5rem' }}>
+    <div style={{ marginBottom: '1.5rem', borderBottom: '1px solid var(--border)', paddingBottom: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.1(a)</span>
+          <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>(a)</span>
           <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>MAP · PAPER II</span>
         </div>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
@@ -1010,7 +1016,7 @@ function TestPageInner() {
 
   function startTest() {
     const pool = getPool();
-    const q1 = buildCompulsoryQ(pool);
+    const q1 = buildCompulsoryQ(pool, includeMapQ && subject === 'geography' ? 4 : 5);
     const g2 = buildQGroup(pool, 2);
     const g3 = buildQGroup(pool, 3);
     const g4 = buildQGroup(pool, 4);
@@ -1245,10 +1251,7 @@ function TestPageInner() {
         </div>
 
         <div id="q1-anchor">
-          {mapEntries.length > 0 && (
-            <MappingQ1Block entries={mapEntries} isResults={false} color={subMeta.color} border={subMeta.border} />
-          )}
-          <CompulsoryBlock questions={compQ} isResults={false} rubrics={rubrics} onRubric={() => {}} subjectId={subject} isPremium={isPremium} user={user} />
+          <CompulsoryBlock questions={compQ} isResults={false} rubrics={rubrics} onRubric={() => {}} subjectId={subject} isPremium={isPremium} user={user} mapEntries={mapEntries.length > 0 ? mapEntries : undefined} />
         </div>
 
         {groups.map(g => (
@@ -1296,10 +1299,7 @@ function TestPageInner() {
         </div>
 
         <div id="q1-anchor">
-          {mapEntries.length > 0 && (
-            <MappingQ1Block entries={mapEntries} isResults={true} color={subMeta.color} border={subMeta.border} />
-          )}
-          <CompulsoryBlock questions={compQ} isResults={true} rubrics={rubrics} onRubric={(id, r) => setRubrics(p => ({ ...p, [id]: r }))} subjectId={subject} isPremium={isPremium} user={user} />
+          <CompulsoryBlock questions={compQ} isResults={true} rubrics={rubrics} onRubric={(id, r) => setRubrics(p => ({ ...p, [id]: r }))} subjectId={subject} isPremium={isPremium} user={user} mapEntries={mapEntries.length > 0 ? mapEntries : undefined} />
         </div>
 
         {groups.map(g => (

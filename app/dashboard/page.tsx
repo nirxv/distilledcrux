@@ -22,14 +22,19 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
 
 const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science']);
 
+const GEO_OPTIONAL = 'geography';
+
 const getTools = (optional: string | null) => {
   const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';
   const hasPyqs = PYQS_ENABLED.has(optional ?? '');
+  const isGeo = optional === GEO_OPTIONAL;
   return [
     { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
     { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
     { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: `/notes/${slug}`, badge: 'Free', icon: 'notes' },
     ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
+    { num: hasPyqs ? '05' : '04', label: 'Test Series', desc: 'Simulate exam conditions with PYQ-based timed tests and AI evaluation.', href: `/test?subject=${slug}`, badge: 'Free', icon: 'test' },
+    ...(isGeo ? [{ num: hasPyqs ? '06' : '05', label: 'Map Practice', desc: 'Identify 131+ UPSC Geography locations - PYQ maps, category-wise practice.', href: '/geography/mapping', badge: 'Free', icon: 'mapping' }] : []),
   ];
 };
 
@@ -305,6 +310,19 @@ function ToolIcon({ icon }: { icon: string }) {
         <circle cx="5.5" cy="7" r="1" fill="currentColor"/>
         <circle cx="5.5" cy="11" r="1" fill="currentColor"/>
         <path d="M8 7h5M8 11h5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    )
+    case 'test': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="2" y="3" width="14" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M5 7h8M5 10h5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+        <path d="M11 10.5l1.5 1.5 2.5-2.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+    case 'mapping': return (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M6.5 2.5L2 5v10.5l4.5-2.5 5 2.5 4.5-2.5V3L11.5 5.5l-5-3z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+        <path d="M6.5 2.5v10.5M11.5 5.5v10.5" stroke="currentColor" strokeWidth="1.3"/>
       </svg>
     )
     default: return (
