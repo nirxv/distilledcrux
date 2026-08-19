@@ -88,9 +88,18 @@ export default function Navbar() {
         .nav-desktop-links { display: flex; align-items: center; gap: 0.25rem; }
         .nav-hamburger { display: none; }
         .nav-mobile-overlay {
-          display: none;
-          position: fixed; inset: 0; z-index: 101;
+          position: fixed; inset: 0; z-index: 100;
           background: rgba(0,0,0,0.55);
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+        }
+        .nav-mobile-overlay.open {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transition: opacity 0.2s ease, visibility 0s linear 0s;
         }
         .nav-mobile-drawer {
           position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -407,9 +416,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile overlay */}
-      {mobileOpen && (
-        <div className="nav-mobile-overlay" onClick={() => setMobileOpen(false)} style={{ display: 'block' }} />
-      )}
+      <div className={`nav-mobile-overlay${mobileOpen ? ' open' : ''}`} onClick={() => setMobileOpen(false)} />
 
       {/* Mobile drawer */}
       <div className={`nav-mobile-drawer${mobileOpen ? ' open' : ''}`}>
