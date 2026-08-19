@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { auth } from '@/lib/firebase';
-import { onAuthStateChanged, User } from 'firebase/auth';
+import { useAuth } from '@/components/AuthProvider';
+import type { User } from 'firebase/auth';
 import { geoMapData, GeoMapEntry } from '@/lib/geoMapData';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -937,7 +937,7 @@ function NoteIcon() {
 
 function TestPageInner() {
   const searchParams = useSearchParams();
-  const [user, setUser] = useState<User | null>(null);
+  const { user } = useAuth();
   const [isPremium, setIsPremium] = useState(false);
 
   const [phase, setPhase] = useState<Phase>('config');
@@ -964,23 +964,20 @@ function TestPageInner() {
 
   // Auth
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (u) => {
-      setUser(u);
-      if (u) {
-        try {
-          const token = await u.getIdToken();
-          const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
-          if (r.ok) {
-            const d = await r.json();
-            setIsPremium(!!d.subscribed);
-            const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
-            if (mapped && SUBJECTS[mapped].dataFile) setSubject(mapped);
-          }
-        } catch { /* ignore */ }
-      }
-    });
-    return unsub;
-  }, []);
+    if (!user) return;
+    (async () => {
+      try {
+        const token = await user.getIdToken();
+        const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
+        if (r.ok) {
+          const d = await r.json();
+          setIsPremium(!!d.subscribed);
+          const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
+          if (mapped && SUBJECTS[mapped].dataFile) setSubject(mapped);
+        }
+      } catch { /* ignore */ }
+    })();
+  }, [user]);
 
   // Nav height
   useEffect(() => {

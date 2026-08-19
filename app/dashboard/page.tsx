@@ -2,8 +2,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { auth } from '@/lib/firebase';
-import { onAuthStateChanged, User } from 'firebase/auth';
+import { useAuth } from '@/components/AuthProvider';
 
 const SUBJECT_LABEL: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology',
@@ -346,17 +345,17 @@ function PaymentSuccessToast({ onShow }: { onShow: () => void }) {
 
 export default function Dashboard() {
   const router = useRouter();
-  const [user, setUser] = useState<User | null>(null);
+  const { user, loading: authLoading } = useAuth();
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (!firebaseUser) { router.push('/login'); return; }
-      setUser(firebaseUser);
+    if (authLoading) return;
+    if (!user) { router.push('/login'); return; }
+    (async () => {
       try {
-        const token = await firebaseUser.getIdToken();
+        const token = await user.getIdToken();
         const res = await fetch('/api/dashboard-stats', { headers: { 'x-user-token': token } });
         if (res.ok) {
           const data = await res.json();
@@ -365,9 +364,8 @@ export default function Dashboard() {
         }
       } catch {}
       setLoading(false);
-    });
-    return () => unsub();
-  }, [router]);
+    })();
+  }, [user, authLoading, router]);
 
   if (loading) return (
     <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

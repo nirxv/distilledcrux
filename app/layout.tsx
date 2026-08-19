@@ -8,6 +8,7 @@ import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import SessionTracker from '@/components/SessionTracker';
+import { AuthProvider } from '@/components/AuthProvider';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -41,16 +42,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();` }} />
       </head>
       <body>
+        <AuthProvider>
         <Navbar />
         <SessionTracker />
         <main style={{ minHeight: '100vh', paddingTop: 60 }} id="main-layout">
           {children}
         </main>
+        </AuthProvider>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];

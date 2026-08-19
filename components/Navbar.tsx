@@ -3,13 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
-import { onAuthStateChanged, signOut, User } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
+import { useAuth } from '@/components/AuthProvider';
 
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { user, loading } = useAuth();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navCollapsed, setNavCollapsed] = useState(false);
@@ -17,14 +17,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isChat = pathname === '/chat';
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
-      setUser(u);
-      setLoading(false);
-    });
-    return () => unsubscribe();
-  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -107,13 +99,16 @@ export default function Navbar() {
           padding-top: 60px;
           overflow-y: auto;
           display: flex; flex-direction: column;
-          transform: translateY(-4px);
+          transform: translateY(-6px);
           opacity: 0;
+          visibility: hidden;
           pointer-events: none;
-          transition: opacity 0.22s ease, transform 0.22s ease;
+          transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
         }
         .nav-mobile-drawer.open {
           opacity: 1; transform: translateY(0); pointer-events: auto;
+          visibility: visible;
+          transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
         }
         .nav-mobile-link {
           display: flex; align-items: center; justify-content: space-between;
