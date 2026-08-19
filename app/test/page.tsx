@@ -1,5 +1,6 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
@@ -61,9 +62,9 @@ const SUBJECTS: Record<SubjectId, {
   },
   geography: {
     label: 'Geography', icon: 'geography',
-    color: '#4ade80', dim: 'rgba(74,222,128,0.09)', border: 'rgba(74,222,128,0.25)',
+    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)',
     thinkerTerm: 'scholar',
-    dataFile: null,
+    dataFile: '/data/geography-pyqs.json',
   },
   'pub-admin': {
     label: 'Pub Admin', icon: 'pubadmin',
@@ -836,12 +837,16 @@ function NoteIcon() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-export default function TestPage() {
+function TestPageInner() {
+  const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [isPremium, setIsPremium] = useState(false);
 
   const [phase, setPhase] = useState<Phase>('config');
-  const [subject, setSubject] = useState<SubjectId>('sociology');
+  // Pre-select from ?optional= URL param if valid
+  const urlOptional = searchParams.get('optional');
+  const urlSubject = urlOptional && urlOptional in OPTIONAL_TO_SUBJECT ? OPTIONAL_TO_SUBJECT[urlOptional] : null;
+  const [subject, setSubject] = useState<SubjectId>(urlSubject && SUBJECTS[urlSubject].dataFile ? urlSubject : 'sociology');
   const [paper, setPaper] = useState<PaperChoice>('Paper I');
   const [mode, setMode] = useState<TestMode>('sectional');
 
@@ -1161,4 +1166,12 @@ export default function TestPage() {
   }
 
   return null;
+}
+
+export default function TestPage() {
+  return (
+    <Suspense fallback={null}>
+      <TestPageInner />
+    </Suspense>
+  );
 }

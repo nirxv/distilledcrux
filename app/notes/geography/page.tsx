@@ -8,10 +8,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://distilledcrux.com/notes/geography' },
 };
 
-const COLOR = '#4ade80';
-const COLOR_BG = 'rgba(74,222,128,0.09)';
-const COLOR_BORDER = 'rgba(74,222,128,0.25)';
-
 export default function GeographyNotesPage() {
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
@@ -31,7 +27,7 @@ export default function GeographyNotesPage() {
       {/* Paper I */}
       <div style={{ marginBottom: '3rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-          <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: COLOR, background: COLOR_BG, border: `1px solid ${COLOR_BORDER}`, padding: '3px 10px', borderRadius: 4 }}>Paper I</span>
+          <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--geo)', background: 'var(--geo-dim)', border: '1px solid var(--geo-border)', padding: '3px 10px', borderRadius: 4 }}>Paper I</span>
           <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Physical Geography & Human Geography</span>
         </div>
         {paper1Sections.map((section) => {
@@ -43,7 +39,7 @@ export default function GeographyNotesPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                 {notes.map(note => (
                   <Link key={note.slug} href={`/notes/geography/${note.slug}`} style={{ textDecoration: 'none' }}>
-                    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: `3px solid ${COLOR}`, display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
+                    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: '3px solid var(--geo)', display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
                       <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg3)', border: '1px solid var(--border)', padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px' }}>{String(note.topic).padStart(2, '0')}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ color: 'var(--text)', fontSize: '0.93rem', fontWeight: 600, marginBottom: '0.25rem' }}>{note.title}</div>
@@ -68,7 +64,7 @@ export default function GeographyNotesPage() {
       {/* Paper II */}
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-          <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: COLOR, background: COLOR_BG, border: `1px solid ${COLOR_BORDER}`, padding: '3px 10px', borderRadius: 4 }}>Paper II</span>
+          <span style={{ fontSize: '0.65rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--geo)', background: 'var(--geo-dim)', border: '1px solid var(--geo-border)', padding: '3px 10px', borderRadius: 4 }}>Paper II</span>
           <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Geography of India</span>
         </div>
         {paper2Sections.map((section) => {
@@ -80,7 +76,7 @@ export default function GeographyNotesPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                 {notes.map(note => (
                   <Link key={note.slug} href={`/notes/geography/${note.slug}`} style={{ textDecoration: 'none' }}>
-                    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: `3px solid ${COLOR}`, display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
+                    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem', borderLeft: '3px solid var(--geo)', display: 'flex', alignItems: 'flex-start', gap: '1rem', transition: 'background 0.15s' }}>
                       <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg3)', border: '1px solid var(--border)', padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px' }}>{String(note.topic).padStart(2, '0')}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ color: 'var(--text)', fontSize: '0.93rem', fontWeight: 600, marginBottom: '0.25rem' }}>{note.title}</div>

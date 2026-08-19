@@ -336,7 +336,9 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
     );
   }
 
-  const subjectColor = subject === 'sociology' ? '#4361ee' : 'var(--accent)';
+  const subjectColor = subject === 'sociology' ? '#4361ee'
+    : subject === 'geography' ? 'var(--geo)'
+    : 'var(--accent)';
 
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 0 5rem' }}>

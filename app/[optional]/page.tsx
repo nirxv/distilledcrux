@@ -31,7 +31,7 @@ const OPTIONALS: Record<string, {
   },
   geography: {
     name: 'Geography', full: 'Geography Optional', sub: 'Physical, Human & Economic Geography',
-    color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.2)', glow: 'rgba(74,222,128,0.13)', icon: '🌍',
+    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)', glow: 'var(--geo-dim)', icon: '🌍',
     paper1: 'Physical Geography Geomorphology, Climatology, Oceanography, Biogeography',
     paper2: 'Human & Economic Geography, Regional Planning, India-specific Geography',
     highlights: ['Geomorphology plate tectonics, landforms, fluvial & aeolian processes', 'Climatology atmospheric circulation, monsoon, climate change', 'Oceanography currents, tides, marine resources', 'Human geography population, migration, settlement patterns', 'India geography agriculture, minerals, transport, regional development'],
@@ -53,7 +53,7 @@ const BASE_TOOLS = [
 ];
 
 const MAP_TOOL = { num: '06', label: 'Map Practice', desc: 'Every UPSC map question, interactive. Attempt, submit, get evaluated.', href: '/mapping', badge: null };
-const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: '/test', badge: 'Premium' };
+const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: (opt: string) => `/test?optional=${opt}`, badge: 'Premium' };
 
 const getTools = (_optional: string) => [...BASE_TOOLS, TEST_SERIES_TOOL];
 

@@ -116,3 +116,30 @@ body {
   --glass-border:  rgba(0,0,0,0.07);
   --glass-border2: rgba(0,0,0,0.12);
 }
+
+/* ── Geography accent tokens ────────────────────────────────────── */
+:root {
+  --geo:          #4ade80;
+  --geo-dim:      rgba(74,222,128,0.09);
+  --geo-border:   rgba(74,222,128,0.22);
+  --geo-border2:  rgba(74,222,128,0.40);
+  --geo-bg-sel:   rgba(74,222,128,0.06);
+  --geo-muted:    #86efac;
+  --geo-text-btn: #000;
+}
+[data-theme="light"] {
+  --geo:          #15803d;
+  --geo-dim:      rgba(21,128,61,0.07);
+  --geo-border:   rgba(21,128,61,0.22);
+  --geo-border2:  rgba(21,128,61,0.42);
+  --geo-bg-sel:   rgba(21,128,61,0.06);
+  --geo-muted:    #166534;
+  --geo-text-btn: #fff;
+}
+
+/* Geography PYQ marks badge — light mode override */
+[data-theme="light"] .geo-m10 {
+  background: rgba(21,128,61,0.07);
+  border-color: rgba(21,128,61,0.22);
+  color: #15803d;
+}
