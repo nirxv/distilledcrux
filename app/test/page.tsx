@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import { geoMapData, GeoMapEntry } from '@/lib/geoMapData';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -594,6 +595,97 @@ function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, i
   );
 }
 
+// ─── Mapping Q1(a) Block — Geography Paper II ─────────────────────────────────
+
+function MappingQ1Block({ entries, isResults, color, border }: {
+  entries: GeoMapEntry[]; isResults: boolean; color: string; border: string;
+}) {
+  const [revealed, setRevealed] = useState<Set<number>>(new Set());
+  const [mapScore, setMapScore] = useState(0);
+
+  const toggle = (i: number) => setRevealed(prev => {
+    const n = new Set(prev);
+    n.has(i) ? n.delete(i) : n.add(i);
+    return n;
+  });
+
+  return (
+    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
+      <div style={{ padding: '0.75rem 1.25rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg3)', flexWrap: 'wrap', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.1(a)</span>
+          <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>MAP · PAPER II</span>
+        </div>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
+          {isResults ? `${mapScore} / 20 Marks` : '20 Marks · 10 locations × 2M'}
+        </span>
+      </div>
+
+      <div style={{ padding: '1.25rem' }}>
+        <p style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
+          On the outline map of India provided to you, mark the location of the following places and write their significance in not more than <strong>30 words</strong> each:
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
+          {entries.map((e, i) => (
+            <div key={i} style={{ border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
+              <div
+                onClick={() => isResults && toggle(i)}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.75rem',
+                  padding: '0.6rem 1rem', cursor: isResults ? 'pointer' : 'default',
+                  background: revealed.has(i) ? `${color}10` : 'var(--bg3)',
+                }}
+              >
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color, fontWeight: 600, minWidth: 20 }}>{i + 1}.</span>
+                <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.88rem', color: 'var(--text)', fontWeight: 500, flex: 1 }}>{e.name}</span>
+                <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)', whiteSpace: 'nowrap' }}>{e.category}</span>
+                {isResults && (
+                  <svg viewBox="0 0 12 12" fill="none" stroke="var(--text3)" strokeWidth="1.8" strokeLinecap="round"
+                    style={{ width: 12, height: 12, flexShrink: 0, transform: revealed.has(i) ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+                    <path d="M2 4l4 4 4-4"/>
+                  </svg>
+                )}
+              </div>
+              {isResults && revealed.has(i) && (
+                <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid var(--border)', background: 'var(--bg2)' }}>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.3rem' }}>
+                    Coordinates: {e.lat}°N, {e.lng}°E
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text2)', fontFamily: 'var(--font-body)', lineHeight: 1.6 }}>
+                    {e.significance}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {isResults && (
+          <div style={{ background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem' }}>
+            <div style={{ fontSize: '0.78rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              Self-Evaluate: Map Score (20M total · 2M per location)
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+              <input
+                type="range" min={0} max={20} step={1} value={mapScore}
+                onChange={e => setMapScore(Number(e.target.value))}
+                style={{ flex: 1, minWidth: 120, accentColor: color }}
+              />
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.1rem', fontWeight: 700, color, minWidth: 50, textAlign: 'right' }}>
+                {mapScore} / 20
+              </span>
+            </div>
+            <div style={{ fontSize: '0.72rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginTop: '0.4rem' }}>
+              1M correct location on map · 1M significance note (30 words)
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ─── Regular Q Block ──────────────────────────────────────────────────────────
 
 function QBlock({ group, isResults, rubrics, onRubric, subjectId, isPremium, user }: {
@@ -853,6 +945,9 @@ function TestPageInner() {
   const [pyqs, setPyqs] = useState<PYQ[]>([]);
   const [loading, setLoading] = useState(false);
 
+  const [includeMapQ, setIncludeMapQ] = useState(false);
+  const [mapEntries, setMapEntries] = useState<GeoMapEntry[]>([]);
+
   const [compQ, setCompQ] = useState<PYQ[]>([]);
   const [groups, setGroups] = useState<QGroup[]>([]);
 
@@ -890,6 +985,7 @@ function TestPageInner() {
   // Load PYQs when subject changes
   useEffect(() => {
     const meta = SUBJECTS[subject];
+    if (subject !== 'geography') setIncludeMapQ(false);
     if (!meta.dataFile) { setPyqs([]); return; }
     setLoading(true);
     fetch(meta.dataFile)
@@ -923,6 +1019,19 @@ function TestPageInner() {
     setGroups(mode === 'full'
       ? [g2, g3, g4, buildQGroup(pool, 5), buildQGroup(pool, 6), buildQGroup(pool, 7), buildQGroup(pool, 8)]
       : [g2, g3, g4]);
+
+    // Pick 10 random map entries (unique names)
+    if (includeMapQ && subject === 'geography') {
+      const seen = new Set<string>();
+      const pool10 = shuffle(geoMapData).filter(e => {
+        if (seen.has(e.name)) return false;
+        seen.add(e.name); return true;
+      }).slice(0, 10);
+      setMapEntries(pool10);
+    } else {
+      setMapEntries([]);
+    }
+
     setRubrics({});
     setTimerOn(true);
     setPhase('test');
@@ -1000,6 +1109,41 @@ function TestPageInner() {
           </div>
         </div>
 
+        {/* Map question toggle — geography only, Paper II or both */}
+        {subject === 'geography' && (paper === 'Paper II' || paper === 'both') && (
+          <div style={{ marginBottom: '2rem' }}>
+            <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Map Question</div>
+            <button
+              onClick={() => setIncludeMapQ(v => !v)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%',
+                padding: '0.75rem 1rem', borderRadius: 8, textAlign: 'left', cursor: 'pointer',
+                border: includeMapQ ? `1.5px solid ${subMeta.color}` : '1px solid var(--border)',
+                background: includeMapQ ? subMeta.dim : 'var(--bg2)',
+              }}>
+              <div style={{
+                width: 16, height: 16, borderRadius: 3, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                border: includeMapQ ? `2px solid ${subMeta.color}` : '2px solid var(--border3)',
+                background: includeMapQ ? subMeta.color : 'transparent',
+              }}>
+                {includeMapQ && (
+                  <svg viewBox="0 0 10 10" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 10, height: 10 }}>
+                    <polyline points="1.5 5 4 7.5 8.5 2.5"/>
+                  </svg>
+                )}
+              </div>
+              <div>
+                <div style={{ fontSize: '0.88rem', fontWeight: includeMapQ ? 600 : 400, color: includeMapQ ? 'var(--text)' : 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
+                  Include Map Question (Q.1a · Paper II)
+                </div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>
+                  10 locations · 20 marks · self-eval rubric + significance reveal
+                </div>
+              </div>
+            </button>
+          </div>
+        )}
+
         {/* Mode selector */}
         <div style={{ marginBottom: '2rem' }}>
           <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Test Format</div>
@@ -1032,7 +1176,10 @@ function TestPageInner() {
         {/* Info banner */}
         <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
           <NoteIcon />
-          <span>Q1 is always compulsory 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.</span>
+          <span>
+            Q1 is always compulsory 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.
+            {includeMapQ && ' · Map Q.1(a) adds 10 locations × 2M = 20M (Paper II compulsory).'}
+          </span>
         </div>
 
         {/* Start button */}
@@ -1098,6 +1245,9 @@ function TestPageInner() {
         </div>
 
         <div id="q1-anchor">
+          {mapEntries.length > 0 && (
+            <MappingQ1Block entries={mapEntries} isResults={false} color={subMeta.color} border={subMeta.border} />
+          )}
           <CompulsoryBlock questions={compQ} isResults={false} rubrics={rubrics} onRubric={() => {}} subjectId={subject} isPremium={isPremium} user={user} />
         </div>
 
@@ -1146,6 +1296,9 @@ function TestPageInner() {
         </div>
 
         <div id="q1-anchor">
+          {mapEntries.length > 0 && (
+            <MappingQ1Block entries={mapEntries} isResults={true} color={subMeta.color} border={subMeta.border} />
+          )}
           <CompulsoryBlock questions={compQ} isResults={true} rubrics={rubrics} onRubric={(id, r) => setRubrics(p => ({ ...p, [id]: r }))} subjectId={subject} isPremium={isPremium} user={user} />
         </div>
 
