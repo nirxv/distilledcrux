@@ -16,25 +16,23 @@ const RATE_LIMIT = 20;
 const CHAT_FREE_LIMIT = 3;
 const OWNER_EMAIL = process.env.OWNER_EMAIL!;
 
-// ── Embed service (same as history-optional) ─────────────────
-const EMBED_SERVICE_URL = process.env.EMBED_SERVICE_URL || 'https://rag-embed-rerank.onrender.com';
-
+// ── Voyage AI embed (voyage-4-lite, 1024 dims) ───────────────
 async function localEmbedBatch(texts: string[]): Promise<number[][]> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 8000);
-  try {
-    const res = await fetch(`${EMBED_SERVICE_URL}/embed`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ texts }),
-      signal: controller.signal,
-    });
-    const data = await res.json();
-    if (!data.embeddings) throw new Error('Embed failed: ' + JSON.stringify(data));
-    return data.embeddings;
-  } finally {
-    clearTimeout(timer);
-  }
+  const res = await fetch('https://api.voyageai.com/v1/embeddings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.VOYAGE_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: 'voyage-4-lite',
+      input: texts,
+      input_type: 'query',
+    }),
+  });
+  const data = await res.json();
+  if (!data.data) throw new Error('Voyage embed failed: ' + JSON.stringify(data));
+  return data.data.map((d: { embedding: number[] }) => d.embedding);
 }
 
 // ── RAG: fetch book context from Supabase ────────────────────
