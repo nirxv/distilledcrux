@@ -16,6 +16,7 @@ const optionals = [
   { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
   { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true,  icon: '🌍' },
   { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true,  icon: '📋' },
+  { id: 'history',      name: 'History Optional',      sub: 'Paper I & II · Ancient to World History',   color: '#e8b86d', dim: 'rgba(232,184,109,0.07)', border: 'rgba(232,184,109,0.18)', live: true,  icon: '🏛️', external: 'https://historyoptional.xyz' },
 ];
 
 
@@ -192,6 +193,7 @@ const CSS = `
     transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
     color: inherit;
   }
+  .lp-tool-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .lp-tool-item:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-tool-num {
     font-family: var(--font-mono); font-size: 0.65rem;
@@ -419,37 +421,38 @@ export default function Home() {
             </p>
           </div>
           <div className="lp-opt-grid">
-            {optionals.map((opt) => (
-              <Link key={opt.id} href={"/" + opt.id} className="lp-opt-card">
-                <span className="lp-opt-card-icon">{opt.icon}</span>
-                <div className="lp-opt-card-body">
-                  <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
-                  <div className="lp-opt-card-sub">{opt.sub}</div>
-                  <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
-                    Explore
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+            {optionals.map((opt) =>
+              opt.external ? (
+                <a key={opt.id} href={opt.external} target="_blank" rel="noopener noreferrer" className="lp-opt-card">
+                  <span className="lp-opt-card-icon">{opt.icon}</span>
+                  <div className="lp-opt-card-body">
+                    <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
+                    <div className="lp-opt-card-sub">{opt.sub}</div>
+                    <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
+                      historyoptional.xyz
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </a>
+              ) : (
+                <Link key={opt.id} href={"/" + opt.id} className="lp-opt-card">
+                  <span className="lp-opt-card-icon">{opt.icon}</span>
+                  <div className="lp-opt-card-body">
+                    <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
+                    <div className="lp-opt-card-sub">{opt.sub}</div>
+                    <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
+                      Explore
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              )
+            )}
           </div>
-          <a href="https://historyoptional.xyz" target="_blank" rel="noopener noreferrer" className="lp-history-card" style={{ marginTop: '1px' }}>
-            <div className="lp-history-left">
-              <span style={{ fontSize: '1.5rem' }}>🏛️</span>
-              <div>
-                <div className="lp-history-name">History Optional</div>
-                <div className="lp-history-sub">Paper I & II · Ancient to World History dedicated platform</div>
-              </div>
-            </div>
-            <div className="lp-history-link">
-              historyoptional.xyz
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2 6.5h9M6.5 2l4.5 4.5-4.5 4.5" stroke="#e8b86d" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </a>
         </section>
 
         <section id="features" className="lp-section">
