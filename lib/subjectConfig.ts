@@ -292,12 +292,16 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
   ],
   anthropology: [
     {
-      group: 'Core Anthropology',
+      group: 'Physical Anthropology',
       books: [
-        { value: 'Ember & Ember — Anthropology', label: 'Ember & Ember — Anthropology' },
-        { value: 'Keesing — Cultural Anthropology', label: 'Keesing — Cultural Anthropology' },
-        { value: 'Haviland — Cultural Anthropology', label: 'Haviland — Cultural Anthropology' },
-        { value: 'Kottak — Cultural Anthropology', label: 'Kottak — Cultural Anthropology' },
+        { value: 'P. Nath — Physical Anthropology', label: 'P. Nath — Physical Anthropology' },
+      ],
+    },
+    {
+      group: 'Social and Cultural Anthropology',
+      books: [
+        { value: 'Nadeem Hasnain — Indian Anthropology', label: 'Nadeem Hasnain — Indian Anthropology' },
+        { value: 'Majumdar & Madan — An Introduction to Social Anthropology', label: 'Majumdar & Madan — Social Anthropology' },
       ],
     },
     {
@@ -310,6 +314,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Indian Anthropology',
       books: [
+        { value: 'Nadeem Hasnain — Tribal India', label: 'Nadeem Hasnain — Tribal India' },
         { value: 'Xaxa — State Society and Tribes', label: 'Xaxa — State Society and Tribes' },
         { value: 'Elwin — The Muria and their Ghotul', label: 'Elwin — The Muria' },
       ],
@@ -321,6 +326,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       books: [
         { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I' },
         { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II' },
+        { value: 'O.P. Gauba — An Introduction to Political Theory', label: 'O.P. Gauba — Political Theory' },
         { value: 'Heywood — Political Theory', label: 'Heywood — Political Theory' },
         { value: 'Heywood — Politics', label: 'Heywood — Politics' },
       ],
@@ -328,6 +334,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'IR',
       books: [
+        { value: 'V.N. Khanna — International Relations', label: 'V.N. Khanna — International Relations' },
         { value: 'Baylis & Smith — The Globalization of World Politics', label: 'Baylis & Smith — World Politics' },
         { value: 'Morgenthau — Politics Among Nations', label: 'Morgenthau — Politics Among Nations' },
       ],
@@ -354,6 +361,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       group: 'Human & Economic',
       books: [
         { value: 'Majid Husain — Human Geography', label: 'Majid Husain — Human Geography' },
+        { value: 'Majid Husain — Evolution of Geographical Thought', label: 'Majid Husain — Geographical Thought' },
         { value: 'Majid Husain — World Geography', label: 'Majid Husain — World Geography' },
       ],
     },
@@ -376,6 +384,13 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
         { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II' },
         { value: 'Avasthi & Maheshwari — Public Administration', label: 'Avasthi & Maheshwari' },
         { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya' },
+      ],
+    },
+    {
+      group: 'Thinkers & Concepts',
+      books: [
+        { value: 'D. Ravindra Prasad — Administrative Thinkers', label: 'Ravindra Prasad — Admin Thinkers' },
+        { value: 'Rumki Basu — Public Administration: Concepts and Theories', label: 'Rumki Basu — Pub Admin' },
       ],
     },
     {
