@@ -23,23 +23,28 @@ function OnboardingInner() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (!firebaseUser) {
-        router.push('/');
+        router.push('/login');
         return;
       }
       setUser(firebaseUser);
 
       // Check if already onboarded (skip if coming from "Change Optional")
-      const token = await firebaseUser.getIdToken();
-      const res = await fetch('/api/user-profile', {
-        headers: { 'x-user-token': token },
-      });
-      if (res.ok) {
-        const data = await res.json();
-        const isChanging = new URLSearchParams(window.location.search).get('change') === '1';
-        if (data.optional && !isChanging) {
-          router.push('/dashboard');
-          return;
+      try {
+        const token = await firebaseUser.getIdToken();
+        const res = await fetch('/api/user-profile', {
+          headers: { 'x-user-token': token },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          const isChanging = new URLSearchParams(window.location.search).get('change') === '1';
+          if (data.optional && !isChanging) {
+            router.push('/dashboard');
+            return;
+          }
         }
+      } catch (err) {
+        // Fall through to the picker rather than hanging on the spinner.
+        console.error('Profile lookup failed:', err);
       }
       setLoading(false);
     });

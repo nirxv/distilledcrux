@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { auth, googleProvider } from '@/lib/firebase';
-import { onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { auth, signInWithGoogle, signInWithGoogleRedirect } from '@/lib/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const FEATURES = [
   { color: '#4361ee', label: 'AI Answer Evaluation' },
@@ -15,24 +15,35 @@ export default function LoginPage() {
   const router = useRouter();
   const [signingIn, setSigningIn] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [popupFailed, setPopupFailed] = useState(false);
   const [checking, setChecking] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (firebaseUser) {
+      if (!firebaseUser) {
+        setChecking(false);
+        return;
+      }
+      // Only ever send the user to a path on this origin.
+      const raw = new URLSearchParams(window.location.search).get('next');
+      const next = raw && raw.startsWith('/') && !raw.startsWith('//') ? raw : null;
+      try {
         const token = await firebaseUser.getIdToken();
         const res = await fetch('/api/user-profile', {
           headers: { 'x-user-token': token },
         });
         if (res.ok) {
           const data = await res.json();
-          router.push(data.optional ? '/dashboard' : '/onboarding');
+          if (!data.optional) { router.push('/onboarding'); return; }
+          router.push(next ?? '/dashboard');
         } else {
           router.push('/onboarding');
         }
-        return;
+      } catch (err) {
+        // Never strand the user on the spinner if the profile lookup fails.
+        console.error('Profile lookup failed:', err);
+        router.push(next ?? '/dashboard');
       }
-      setChecking(false);
     });
     return () => unsubscribe();
   }, [router]);
@@ -40,13 +51,35 @@ export default function LoginPage() {
   const handleGoogleSignIn = async () => {
     setSigningIn(true);
     setError(null);
+    setPopupFailed(false);
     try {
-      await signInWithPopup(auth, googleProvider);
+      const mode = await signInWithGoogle();
+      // 'redirect' means the page is navigating away; leave the spinner up.
+      if (mode === 'redirect') return;
     } catch (err: unknown) {
-      const firebaseError = err as { code?: string };
-      if (firebaseError.code !== 'auth/popup-closed-by-user') {
+      const code = (err as { code?: string }).code ?? '';
+      if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request') {
+        // On mobile the popup often closes itself without completing, so offer
+        // the redirect flow rather than silently doing nothing.
+        setPopupFailed(true);
+      } else if (code === 'auth/unauthorized-domain') {
+        setError('This domain is not authorised for sign in. Please contact support.');
+      } else {
         setError('Sign in failed. Please try again.');
       }
+      setSigningIn(false);
+    }
+  };
+
+  const handleRedirectSignIn = async () => {
+    setSigningIn(true);
+    setError(null);
+    setPopupFailed(false);
+    try {
+      await signInWithGoogleRedirect();
+    } catch (err) {
+      console.error('Redirect sign-in failed:', err);
+      setError('Sign in failed. Please try again.');
       setSigningIn(false);
     }
   };
@@ -161,6 +194,28 @@ export default function LoginPage() {
               </>
             )}
           </button>
+
+          {popupFailed && (
+            <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+              <p style={{
+                color: 'var(--text3)', fontSize: '0.8rem',
+                fontFamily: 'var(--font-ui)', marginBottom: '0.5rem',
+              }}>
+                Popup didn&apos;t complete. Some mobile browsers block it.
+              </p>
+              <button
+                onClick={handleRedirectSignIn}
+                style={{
+                  background: 'none', border: 'none', padding: 0,
+                  color: 'var(--accent)', fontSize: '0.85rem', fontWeight: 600,
+                  fontFamily: 'var(--font-ui)', cursor: 'pointer',
+                  textDecoration: 'underline',
+                }}
+              >
+                Sign in without a popup →
+              </button>
+            </div>
+          )}
 
           {error && (
             <p style={{

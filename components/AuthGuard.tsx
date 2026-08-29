@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { auth, googleProvider } from '@/lib/firebase';
-import { onAuthStateChanged, signInWithPopup, User } from 'firebase/auth';
+import { auth, signInWithGoogle } from '@/lib/firebase';
+import { onAuthStateChanged, User } from 'firebase/auth';
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -31,7 +31,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const handleSignIn = async () => {
     setSigningIn(true);
     try {
-      await signInWithPopup(auth, googleProvider);
+      await signInWithGoogle();
     } catch (err) {
       console.error('Sign in error:', err);
       setSigningIn(false);

@@ -7,8 +7,8 @@ import { allNotes as allSocNotes } from '@/lib/notes/sociology';
 import { allNotes as allPolNotes } from '@/lib/notes/polsci';
 import { allNotes as allGeoNotes } from '@/lib/notes/geography';
 import { allNotes as allPANotes } from '@/lib/notes/pub-admin';
-import { auth, googleProvider } from '@/lib/firebase';
-import { onAuthStateChanged, signInWithPopup, signOut as firebaseSignOut } from 'firebase/auth';
+import { auth, signInWithGoogle } from '@/lib/firebase';
+import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 
 // ── Scroll-direction hook ────────────────────────────────────
@@ -277,7 +277,7 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
   }, []);
 
   const handleSignIn = async () => {
-    try { await signInWithPopup(auth, googleProvider); } catch (e) { console.error(e); }
+    try { await signInWithGoogle(); } catch (e) { console.error(e); }
   };
 
   // Persist highlights to localStorage

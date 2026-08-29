@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '@/lib/firebase';
-import { onAuthStateChanged, User } from 'firebase/auth';
+import { onAuthStateChanged, getRedirectResult, User } from 'firebase/auth';
 
 interface AuthState {
   user: User | null;
@@ -15,6 +15,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // A redirect sign-in lands back on whichever page started it, so the pending
+    // result has to be consumed globally — not just on /login.
+    getRedirectResult(auth).catch((err) => {
+      console.error('Redirect sign-in failed:', err);
+    });
+
     const unsub = onAuthStateChanged(auth, (u) => {
       setUser(u);
       setLoading(false);

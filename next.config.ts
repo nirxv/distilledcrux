@@ -16,15 +16,33 @@ const securityHeaders = [
       "connect-src 'self' https://api.anthropic.com https://*.supabase.co https://www.google-analytics.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://ip-api.com",
       "frame-src 'self' https://*.firebaseapp.com https://accounts.google.com https://api.razorpay.com https://checkout.razorpay.com",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://*.firebaseapp.com https://accounts.google.com",
+      "frame-ancestors 'self'",
     ].join('; '),
   },
 ];
+// Firebase always serves the real auth handler from <project>.firebaseapp.com.
+// Proxying it under our own origin makes the sign-in handshake first-party, so
+// Safari/WebKit ITP (Telegram's iOS webview included) stops partitioning it.
+// Inert until NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN is pointed at our own domain.
+const FIREBASE_AUTH_UPSTREAM = `${process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`;
+
 const nextConfig: NextConfig = {
   serverExternalPackages: ['firebase-admin', 'razorpay'],
+  rewrites: async () => [
+    {
+      source: '/__/auth/:path*',
+      destination: `https://${FIREBASE_AUTH_UPSTREAM}/__/auth/:path*`,
+    },
+    {
+      source: '/__/firebase/:path*',
+      destination: `https://${FIREBASE_AUTH_UPSTREAM}/__/firebase/:path*`,
+    },
+  ],
   headers: async () => [
     {
-      source: '/(.*)',
+      // The proxied auth handler is Google's own page — our CSP would break it.
+      source: '/((?!__/).*)',
       headers: securityHeaders,
     },
   ],
