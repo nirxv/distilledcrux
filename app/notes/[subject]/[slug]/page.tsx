@@ -50,14 +50,14 @@ export default async function NotePage(
     if (data?.content) {
       initialContent = data.content;
     } else {
-      // Fallback to local noteContent store
+      // Fallback to the bundled note body for this subject
       const { getNoteContent } = await import('@/lib/noteContent');
-      initialContent = getNoteContent(slug) || '';
+      initialContent = await getNoteContent(subject, slug);
     }
   } catch {
     try {
       const { getNoteContent } = await import('@/lib/noteContent');
-      initialContent = getNoteContent(slug) || '';
+      initialContent = await getNoteContent(subject, slug);
     } catch {}
   }
 
