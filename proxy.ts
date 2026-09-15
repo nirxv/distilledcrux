@@ -16,12 +16,15 @@ import { NextRequest, NextResponse } from 'next/server';
  *
  * The list is explicit rather than a prefix test, because a prefix test is
  * easy to get wrong as paths are renamed.
+ *
+ * This is proxy.ts, not middleware.ts: Next 16 deprecated the middleware file
+ * convention and renamed it, function included.
  */
 const GATED = ['/cms', '/cms-api'];
 const GATE_COOKIE = 'cms_gate';
 const GATE_MAX_AGE = 60 * 60 * 8;
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const isGated = GATED.some(p => pathname === p || pathname.startsWith(`${p}/`));
@@ -29,6 +32,17 @@ export function middleware(req: NextRequest) {
 
   const hasCookie = Boolean(req.cookies.get(GATE_COOKIE)?.value);
   const expected = process.env.ADMIN_SECRET_KEY;
+
+  // Without the variable nothing can ever match, so the panel 404s for
+  // everyone including whoever holds the key. That is the right way to fail,
+  // but it is indistinguishable from a wrong key at the door, so say which it
+  // is in the log. Deliberately not deduped behind a module flag: proxy code
+  // may be deployed to the CDN and must not rely on globals persisting.
+  if (!expected) {
+    console.error(
+      '[proxy] ADMIN_SECRET_KEY is not set, so /cms is unreachable in this deploy.');
+  }
+
   const keyIsValid = Boolean(expected) && req.nextUrl.searchParams.get('key') === expected;
 
   if (!hasCookie && !keyIsValid) {
