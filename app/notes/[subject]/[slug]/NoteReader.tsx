@@ -1,12 +1,6 @@
 'use client';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
-import { allNotes, getNoteBySlug } from '@/lib/notes';
-import { allAnthroNotes } from '@/lib/notes/anthropology';
-import { allNotes as allSocNotes } from '@/lib/notes/sociology';
-import { allNotes as allPolNotes } from '@/lib/notes/polsci';
-import { allNotes as allGeoNotes } from '@/lib/notes/geography';
-import { allNotes as allPANotes } from '@/lib/notes/pub-admin';
 import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
@@ -243,8 +237,30 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
 }
 
 // ── Main NoteReader ───────────────────────────────────────────
-export default function NoteReader({ slug, subject, initialContent = '' }: { slug: string; subject: string; initialContent?: string }) {
-  const note = getNoteBySlug(slug);
+type NavLink = { slug: string; title: string } | null;
+
+/**
+ * The note, and its neighbours, come from the server. This used to import all
+ * five subject indexes to work out prev/next, which shipped roughly 82KB of
+ * every subject's note metadata to the browser on every note page to use one
+ * subject's worth.
+ */
+export default function NoteReader({
+  slug, subject, initialContent = '', note, prev, next,
+}: {
+  slug: string;
+  subject: string;
+  initialContent?: string;
+  note: {
+    title: string;
+    section: string;
+    paper: 1 | 2;
+    description: string;
+    subtopics?: string[];
+  };
+  prev: NavLink;
+  next: NavLink;
+}) {
   const noteContentRef = useRef<HTMLDivElement>(null);
   const noteSearch = useNoteSearch(noteContentRef);
   const headerVisible = useScrollDirection();
@@ -257,17 +273,6 @@ export default function NoteReader({ slug, subject, initialContent = '' }: { slu
 
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
-
-  const subjectNotes: { slug: string; title: string }[] =
-    subject === 'anthropology' ? allAnthroNotes :
-    subject === 'sociology'    ? allSocNotes :
-    subject === 'polsci'       ? allPolNotes :
-    subject === 'geography'    ? allGeoNotes :
-    subject === 'pub-admin'    ? allPANotes :
-    allNotes;
-  const idx  = subjectNotes.findIndex(n => n.slug === slug);
-  const prev = idx > 0 ? subjectNotes[idx - 1] : null;
-  const next = idx < subjectNotes.length - 1 ? subjectNotes[idx + 1] : null;
 
   const processedContent = injectHeadingIds(initialContent);
 

@@ -1,14 +1,17 @@
-import { allNotes } from '@/lib/notes';
+import { NOTE_SUBJECTS, notesForSubject, getNote, getNoteNeighbours } from '@/lib/notes';
 import NoteReader from './NoteReader';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-// Supported subjects
-const SUBJECTS = ['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'];
-
+/**
+ * One page per note, under its own subject. This used to be the cartesian
+ * product of every slug and every subject — 790 pages, of which 632 served a
+ * real note under a subject it does not belong to, each with a title claiming
+ * it was that subject's note.
+ */
 export function generateStaticParams() {
-  return allNotes.flatMap(n =>
-    SUBJECTS.map(subject => ({ subject, slug: n.slug }))
+  return NOTE_SUBJECTS.flatMap(subject =>
+    notesForSubject(subject).map(n => ({ subject, slug: n.slug }))
   );
 }
 
@@ -16,7 +19,7 @@ export async function generateMetadata(
   { params }: { params: Promise<{ subject: string; slug: string }> }
 ): Promise<Metadata> {
   const { subject, slug } = await params;
-  const note = allNotes.find(n => n.slug === slug);
+  const note = getNote(subject, slug);
   if (!note) return {};
   const subjectLabel = subject.charAt(0).toUpperCase() + subject.slice(1);
   return {
@@ -30,8 +33,12 @@ export default async function NotePage(
   { params }: { params: Promise<{ subject: string; slug: string }> }
 ) {
   const { subject, slug } = await params;
-  const note = allNotes.find(n => n.slug === slug);
+  // The pairing is checked, not just the slug: a sociology note requested under
+  // /notes/geography/ is a 404, not a page.
+  const note = getNote(subject, slug);
   if (!note) notFound();
+
+  const { prev, next } = getNoteNeighbours(subject, slug);
 
   let initialContent = '';
 
@@ -39,7 +46,7 @@ export default async function NotePage(
     // Try Supabase note_overrides first (admin-edited content)
     const { createServerClient } = await import('@/lib/supabase');
     const db = createServerClient();
-    const { data } = await db.from('note_overrides').select('content').eq('slug', slug).single();
+    const { data } = await db.from('note_overrides').select('content').eq('slug', slug).maybeSingle();
     if (data?.content) {
       initialContent = data.content;
     } else {
@@ -85,7 +92,20 @@ export default async function NotePage(
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <NoteReader slug={slug} subject={subject} initialContent={initialContent} />
+      <NoteReader
+        slug={slug}
+        subject={subject}
+        initialContent={initialContent}
+        note={{
+          title: note.title,
+          section: note.section,
+          paper: note.paper,
+          description: note.description,
+          subtopics: note.subtopics,
+        }}
+        prev={prev}
+        next={next}
+      />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { paper1Notes, paper2Notes } from '@/lib/notes';
+import { paper1Notes, paper2Notes } from '@/lib/notes/sociology';
 
 export const metadata: Metadata = {
   title: 'Sociology Optional Notes UPSC Mains Paper I & II | Distilled Crux',
