@@ -1,7 +1,9 @@
 export const maxDuration = 60;
 
 import { NextRequest, NextResponse } from "next/server";
+import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
+import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
 import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
 
 // ── Legacy SYSTEM_PROMPT kept only as fallback reference — DO NOT USE DIRECTLY ──
@@ -425,87 +427,67 @@ Total model answer length: 10M~200 words, 15M~300 words, 20M~400 words.`;
 
 
 
+const FREE_EVAL_LIMIT = 1;
 const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB to accommodate PDFs
 const MAX_FILES = 10;
 const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
 const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, 'application/pdf'];
 
 export async function POST(req: NextRequest) {
-  const token = req.headers.get("x-user-token") ?? "";
-  const fingerprint = req.headers.get("x-fingerprint") ?? "";
-
-  // Firebase auth check
-  let isOwner = false;
-  let isPremium = false;
-  // subject comes from formData later, but we need it now for optional-scoped check
-  // We'll re-read after formData.parse; for auth we peek at formData clone
-  let optionalForEval = 'sociology';
+  // One parse. This used to clone the request and parse the multipart body a
+  // second time just to read `subject` before the auth check, so every upload
+  // was decoded twice.
+  let formData: FormData;
   try {
-    const cloned = req.clone();
-    const fd = await cloned.formData();
-    const subj = (fd.get('subject') as string) || 'sociology';
-    const MAP: Record<string, string> = {
-      sociology: 'sociology', anthropology: 'anthropology',
-      polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
-    };
-    optionalForEval = MAP[subj] ?? subj;
-  } catch { /* ignore */ }
-
-  if (token) {
-    try {
-      const { verifyFirebaseToken } = await import("@/lib/verifyFirebaseToken");
-      const user = await verifyFirebaseToken(token);
-      if (user?.email === process.env.OWNER_EMAIL) isOwner = true;
-      if (!isOwner && user) {
-        const { createClient } = await import("@supabase/supabase-js");
-        const supabase = createClient(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!,
-          process.env.SUPABASE_SECRET_KEY!
-        );
-        const nowISO = new Date().toISOString();
-        const { data: sub, error: subError } = await supabase
-          .from("subscriptions")
-          .select("status")
-          .eq("firebase_uid", user.uid)
-          .eq("optional", optionalForEval)
-          .eq("status", "active")
-          .gt("expires_at", nowISO)
-          .maybeSingle();
-        console.log("[evaluate] uid:", user.uid, "optional:", optionalForEval, "sub:", sub, "error:", subError);
-        if (sub) isPremium = true;
-      }
-    } catch {}
+    formData = await req.formData();
+  } catch {
+    return NextResponse.json({ error: "Malformed request body" }, { status: 400 });
   }
+
+  const token = req.headers.get("x-user-token") ?? "";
+  const subjectField = (formData.get("subject") as string) || "sociology";
+  const OPTIONAL_BY_SUBJECT: Record<string, string> = {
+    sociology: "sociology", anthropology: "anthropology",
+    polsci: "political-science", geography: "geography",
+    "pub-admin": "public-administration",
+  };
+  const optionalForEval = OPTIONAL_BY_SUBJECT[subjectField] ?? subjectField;
+
+  const user = token ? await verifyFirebaseToken(token) : null;
+  const isOwner = Boolean(user?.email && user.email === process.env.OWNER_EMAIL);
+
+  let isPremium = false;
+  if (user && !isOwner) {
+    const sb = createServerClient();
+    const { data: sub } = await sb
+      .from("subscriptions")
+      .select("status")
+      .eq("firebase_uid", user.uid)
+      .eq("optional", optionalForEval)
+      .eq("status", "active")
+      .gt("expires_at", new Date().toISOString())
+      .maybeSingle();
+    isPremium = Boolean(sub);
+  }
+
+  // Identity is resolved server-side. The client's x-fingerprint header is no
+  // longer consulted: it was the entire free tier, and the client chose it.
+  const identity = resolveUsageIdentity(req, user?.uid ?? null);
 
   if (!isOwner && !isPremium) {
-    const { createClient: cc } = await import("@supabase/supabase-js");
-    const sb = cc(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SECRET_KEY!);
-    let used = 0;
-    if (token) {
-      try {
-        const { verifyFirebaseToken: vft } = await import("@/lib/verifyFirebaseToken");
-        const u = await vft(token);
-        if (u) {
-          const { data: byUid } = await sb.from("usage_tracking").select("eval_count").eq("firebase_uid", u.uid).single();
-          used = Math.max(used, byUid?.eval_count ?? 0);
-        }
-      } catch {}
-    }
-    if (fingerprint) {
-      const { data: byFp } = await sb.from("usage_tracking").select("eval_count").eq("fingerprint", fingerprint).single();
-      used = Math.max(used, byFp?.eval_count ?? 0);
-    }
-    if (used >= 1)
+    const used = await readUsage(identity, "eval_count");
+    if (used >= FREE_EVAL_LIMIT) {
       return NextResponse.json({ error: "limit_reached" }, { status: 403 });
+    }
   }
+
   try {
-    const formData = await req.formData();
     const files = formData.getAll("files") as File[];
     const question = formData.get("question") as string;
     const lang = (formData.get("lang") as string) || "en";
     const marks = formData.get("marks") as string;
     const extractedText = (formData.get("extractedText") as string) || "";
-    const subject = (formData.get("subject") as string) || "history";
+    const subject = subjectField;
 
     // ── Resolve subject config + assemble final system prompt ──────────────
     const subjectConfig = getSubjectConfig(subject);
@@ -1237,32 +1219,14 @@ If no corrections are needed, return the original model_answer unchanged with co
       console.log("Pass 3 error (non-fatal):", p3err);
     }
 
-    // Increment eval_count for all users after successful evaluation
-    if (token) {
+    // Count the call. Anonymous ones are counted too; this was gated on a
+    // verified token, so an anonymous caller incremented nothing and the free
+    // limit could never actually be reached.
+    if (!isOwner && !isPremium) {
       try {
-        const { verifyFirebaseToken: vftInc } = await import("@/lib/verifyFirebaseToken");
-        const userInc = await vftInc(token);
-        if (userInc) {
-          const { createClient: createClientInc } = await import("@supabase/supabase-js");
-          const supabaseInc = createClientInc(
-            process.env.NEXT_PUBLIC_SUPABASE_URL!,
-            process.env.SUPABASE_SECRET_KEY!
-          );
-          const { data: existingUsage } = await supabaseInc
-            .from("usage_tracking")
-            .select("eval_count")
-            .eq("firebase_uid", userInc.uid)
-            .single();
-          const newCount = (existingUsage?.eval_count ?? 0) + 1;
-          await supabaseInc
-            .from("usage_tracking")
-            .upsert(
-              { firebase_uid: userInc.uid, fingerprint: fingerprint ?? '', eval_count: newCount, updated_at: new Date().toISOString() },
-              { onConflict: "firebase_uid" }
-            );
-        }
+        await recordUsage(identity, "eval_count");
       } catch (incErr) {
-        console.log("eval_count increment failed", incErr);
+        console.error("eval_count increment failed", incErr);
       }
     }
 

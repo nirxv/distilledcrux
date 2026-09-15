@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
+import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
 import { createClient } from '@supabase/supabase-js';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
@@ -256,76 +258,52 @@ export async function POST(req: NextRequest) {
   );
 
   const token = req.headers.get('x-user-token') ?? '';
-  const fingerprint = req.headers.get('x-fingerprint') ?? '';
 
-  // Auth
-  let isOwner = false;
-  let isPremium = false;
-  let firebaseUid = '';
-
-  // Read subject from body early (needed for optional-scoped subscription check)
-  // We clone the request so the body can be read again later
-  let subjectForAuth = 'sociology';
+  // One parse. The body used to be cloned and read a second time just to get
+  // `subject` before the auth check.
+  let body: Record<string, unknown>;
   try {
-    const cloned = req.clone();
-    const bodyJson = await cloned.json();
-    subjectForAuth = bodyJson.subject ?? 'sociology';
-  } catch { /* ignore */ }
-
-  // Map chat subject key → subscription optional key
-  const SUBJECT_TO_OPTIONAL: Record<string, string> = {
-    sociology:     'sociology',
-    anthropology:  'anthropology',
-    polsci:        'political-science',
-    geography:     'geography',
-    'pub-admin':   'public-administration',
-  };
-  const optionalForAuth = SUBJECT_TO_OPTIONAL[subjectForAuth] ?? subjectForAuth;
-
-  if (token) {
-    try {
-      const { adminAuth } = await import('@/lib/firebaseAdmin');
-      const decoded = await adminAuth.verifyIdToken(token);
-      firebaseUid = decoded.uid;
-      if (decoded.email === OWNER_EMAIL) isOwner = true;
-      if (!isOwner) {
-        const nowISO = new Date().toISOString();
-        const { data: sub } = await supabase
-          .from('subscriptions')
-          .select('status')
-          .eq('firebase_uid', decoded.uid)
-          .eq('optional', optionalForAuth)
-          .eq('status', 'active')
-          .gt('expires_at', nowISO)
-          .single();
-        if (sub) isPremium = true;
-      }
-    } catch { /* auth failed — treat as free user */ }
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Malformed request body' }, { status: 400 });
   }
 
-  // Usage check
+  const SUBJECT_TO_OPTIONAL: Record<string, string> = {
+    sociology:    'sociology',
+    anthropology: 'anthropology',
+    polsci:       'political-science',
+    geography:    'geography',
+    'pub-admin':  'public-administration',
+  };
+  const subjectForAuth = (body.subject as string) ?? 'sociology';
+  const optionalForAuth = SUBJECT_TO_OPTIONAL[subjectForAuth] ?? subjectForAuth;
+
+  const user = token ? await verifyFirebaseToken(token) : null;
+  const firebaseUid = user?.uid ?? '';
+  const isOwner = Boolean(user?.email && user.email === OWNER_EMAIL);
+
+  let isPremium = false;
+  if (user && !isOwner) {
+    const { data: sub } = await supabase
+      .from('subscriptions')
+      .select('status')
+      .eq('firebase_uid', user.uid)
+      .eq('optional', optionalForAuth)
+      .eq('status', 'active')
+      .gt('expires_at', new Date().toISOString())
+      .maybeSingle();
+    isPremium = Boolean(sub);
+  }
+
+  // Server-derived. The client's x-fingerprint header is no longer trusted: it
+  // was the whole free tier, and the client picked its own value.
+  const identity = resolveUsageIdentity(req, user?.uid ?? null);
+
   if (!isOwner && !isPremium) {
-    let used = 0;
-    if (firebaseUid) {
-      try {
-        const { data: byUid } = await supabase
-          .from('usage_tracking')
-          .select('chat_count')
-          .eq('firebase_uid', firebaseUid)
-          .single();
-        used = Math.max(used, byUid?.chat_count ?? 0);
-      } catch { /* ignore */ }
-    }
-    if (fingerprint) {
-      const { data: byFp } = await supabase
-        .from('usage_tracking')
-        .select('chat_count')
-        .eq('fingerprint', fingerprint)
-        .single();
-      used = Math.max(used, byFp?.chat_count ?? 0);
-    }
-    if (used >= CHAT_FREE_LIMIT)
+    const used = await readUsage(identity, 'chat_count');
+    if (used >= CHAT_FREE_LIMIT) {
       return NextResponse.json({ error: 'limit_reached' }, { status: 403 });
+    }
   }
 
   try {
@@ -340,7 +318,7 @@ export async function POST(req: NextRequest) {
       responseStyle = 'concise',
       brainstormMode = false,
       mentorMode = false,
-    } = await req.json();
+    } = body as Record<string, any>;
 
     // Validate subject
     const validSubjects: SubjectKey[] = ['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'];
@@ -587,24 +565,14 @@ export async function POST(req: NextRequest) {
           // Append sources delimiter
           send('\n__SOURCES__' + JSON.stringify(ragSources));
 
-          // Increment usage (track everyone including owner)
-          if (firebaseUid) {
+          // Count the call. Anonymous ones are counted too; this was gated on
+          // firebaseUid, so an anonymous caller incremented nothing and the
+          // free limit could never be reached.
+          if (!isOwner && !isPremium) {
             try {
-              const { createClient: ccInc } = await import('@supabase/supabase-js');
-              const sbInc = ccInc(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
-              const { data: existing } = await sbInc
-                .from('usage_tracking')
-                .select('chat_count')
-                .eq('firebase_uid', firebaseUid)
-                .single();
-              const newCount = (existing?.chat_count ?? 0) + 1;
-              await sbInc.from('usage_tracking')
-                .upsert(
-                  { firebase_uid: firebaseUid, fingerprint: fingerprint ?? '', chat_count: newCount, updated_at: new Date().toISOString() },
-                  { onConflict: 'firebase_uid' }
-                );
+              await recordUsage(identity, 'chat_count');
             } catch (incErr) {
-              console.log('chat_count increment failed', incErr);
+              console.error('chat_count increment failed', incErr);
             }
           }
         } catch (err) {

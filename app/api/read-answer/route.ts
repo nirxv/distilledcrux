@@ -51,23 +51,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  // One parse. The body was cloned and parsed twice, once here purely to read
+  // `subject`, and again below for the files.
+  let formData: FormData;
+  try {
+    formData = await req.formData();
+  } catch {
+    return NextResponse.json({ error: 'Malformed request body' }, { status: 400 });
+  }
+
   // Usage gate — optional-scoped subscription check
   if (verifiedUid !== OWNER_UID) {
     const sb = createServerClient();
     let isPremium = false;
 
-    // Peek subject from formData to scope subscription check
-    let optionalForRead = 'sociology';
-    try {
-      const cloned = req.clone();
-      const fd = await cloned.formData();
-      const subj = (fd.get('subject') as string) || 'sociology';
-      const MAP: Record<string, string> = {
-        sociology: 'sociology', anthropology: 'anthropology',
-        polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
-      };
-      optionalForRead = MAP[subj] ?? subj;
-    } catch { /* ignore */ }
+    const MAP: Record<string, string> = {
+      sociology: 'sociology', anthropology: 'anthropology',
+      polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
+    };
+    const subj = (formData.get('subject') as string) || 'sociology';
+    const optionalForRead = MAP[subj] ?? subj;
 
     const nowISO = new Date().toISOString();
     const { data: sub } = await sb
@@ -88,7 +91,6 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const formData = await req.formData();
     const rawFiles = formData.getAll('files') as File[];
     const files = [...rawFiles].sort((a, b) =>
       a.name.localeCompare(b.name, undefined, { numeric: true })
