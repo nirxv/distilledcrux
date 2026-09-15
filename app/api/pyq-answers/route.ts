@@ -38,7 +38,12 @@ export async function GET(req: NextRequest) {
     .eq('pyq_id', pyqId)
     .order('created_at', { ascending: true });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) {
+    // The database's own message names tables and columns. Log it, do not
+    // return it.
+    console.error('[pyq-answers] read failed:', error.message);
+    return NextResponse.json({ error: 'Could not load answers.' }, { status: 500 });
+  }
 
   const answers = (data ?? []).map(row => ({ ...row, public_url: publicUrl(row.storage_path) }));
   // Short window: an upload should reach other readers quickly. The uploader
@@ -109,7 +114,8 @@ export async function POST(req: NextRequest) {
     .upload(storagePath, bytes, { contentType: 'application/pdf', upsert: false });
 
   if (uploadErr) {
-    return NextResponse.json({ error: uploadErr.message }, { status: 500 });
+    console.error('[pyq-answers] upload failed:', uploadErr.message);
+    return NextResponse.json({ error: 'Could not store that file.' }, { status: 500 });
   }
 
   const { data: inserted, error: insertErr } = await db
@@ -129,7 +135,8 @@ export async function POST(req: NextRequest) {
     // The row is what makes the file reachable, so an orphaned object is only
     // cost. Remove it rather than leave it paid for and unreferenced.
     await db.storage.from(BUCKET).remove([storagePath]);
-    return NextResponse.json({ error: insertErr.message }, { status: 500 });
+    console.error('[pyq-answers] insert failed:', insertErr.message);
+    return NextResponse.json({ error: 'Could not save that answer.' }, { status: 500 });
   }
 
   return NextResponse.json({

@@ -47,6 +47,11 @@ export async function POST(req: NextRequest) {
       updated_at: new Date().toISOString(),
     }, { onConflict: 'firebase_uid' });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) {
+    // The database's own message names tables and columns. Log it, do not
+    // return it.
+    console.error('[user-profile] upsert failed:', error.message);
+    return NextResponse.json({ error: 'Could not save your profile.' }, { status: 500 });
+  }
   return NextResponse.json({ success: true });
 }
