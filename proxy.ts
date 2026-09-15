@@ -51,7 +51,14 @@ export function proxy(req: NextRequest) {
   }
 
   if (keyIsValid && !hasCookie) {
-    const res = NextResponse.next();
+    // Redirect to the same path without the key rather than serving it in
+    // place. The cookie carries the gate from here on, so the key has done its
+    // job, and leaving it in the address bar is how it leaks: it sits in
+    // browser history, in the back button, and in any screenshot of the
+    // window. Two working keys were burned that way before this existed.
+    const clean = req.nextUrl.clone();
+    clean.searchParams.delete('key');
+    const res = NextResponse.redirect(clean);
     res.cookies.set(GATE_COOKIE, '1', {
       httpOnly: true,
       sameSite: 'lax',
