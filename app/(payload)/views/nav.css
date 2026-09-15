@@ -1,0 +1,16 @@
+/* The one piece of ours that is NOT Untitled UI.
+   These links render inside Payload's own sidebar, so they use Payload's theme
+   variables and sit flush with its collection links. Dropping Untitled UI here
+   would make our group the odd one out in its own nav. */
+.ops-nav {
+  border-top: 1px solid var(--theme-border-color);
+  margin-top: calc(var(--base) * 0.75);
+  padding-top: calc(var(--base) * 0.75);
+}
+.ops-nav-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--theme-elevation-500);
+  padding: 0 0 calc(var(--base) * 0.35);
+}

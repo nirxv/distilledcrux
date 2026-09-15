@@ -1,0 +1,58 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tailwind, isolated for use inside Payload's admin.
+   ---------------------------------------------------------------------------
+   The whole risk of putting a Tailwind-based kit inside someone else's app is
+   preflight: it restyles bare h1-h6, a, button, table, input, hr and more,
+   globally. Dropping that into Payload's DOM would restyle Payload itself.
+
+   Tailwind 4 ships its entry points separately, so we import the two we need
+   and never the one we don't:
+
+     theme.css      the design tokens the utilities compile against
+     utilities.css  the utility classes themselves
+     preflight.css  NOT IMPORTED, this is the global reset
+
+   Checked before wiring: theme.css declares zero variables that collide with
+   Payload's --theme-* or --color-base-* namespaces.
+
+   Utilities are imported unlayered on purpose. Payload wraps its own rules in
+   @layer payload-default, and unlayered CSS outranks any layer, so a utility
+   applied inside our views wins without !important while nothing outside them
+   is touched.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Importing utilities.css directly skips Tailwind's automatic source
+   detection, which only runs for the full `@import "tailwindcss"`. Without
+   these, Tailwind never scans our components and generates none of the classes
+   they use: the buttons rendered completely unstyled in production. */
+@source "../views";
+@source "../uui";
+
+@import "tailwindcss/theme.css";
+@import "../uui/theme.css";
+@import "../uui/typography.css";
+@import "tailwindcss/utilities.css";
+
+@plugin "tailwindcss-react-aria-components";
+@plugin "tailwindcss-animate";
+
+/* There is no dark variant. The panel is pinned to light in payload.config.ts
+   and Untitled UI's dark token block has been removed, so a `dark:` utility
+   would compile to a rule that can never match. Defining it would invite one to
+   be written. */
+@custom-variant label (& [data-label]);
+@custom-variant focus-input-within (&:has(input:focus));
+
+/* Everything our views render lives inside .uui. Nothing here leaks upward:
+   these are the few base styles preflight would have given us, scoped. */
+.uui,
+.uui *,
+.uui *::before,
+.uui *::after { box-sizing: border-box; }
+
+.uui button { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+.uui table { border-collapse: collapse; width: 100%; }
+.uui input, .uui textarea, .uui select { font: inherit; color: inherit; }
+.uui h1, .uui h2, .uui h3, .uui h4 { font-size: inherit; font-weight: inherit; margin: 0; }
+.uui p, .uui ul, .uui ol { margin: 0; }
+.uui ul, .uui ol { list-style: none; padding: 0; }

@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { withPayload } from '@payloadcms/next/withPayload';
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -60,4 +61,4 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 };
-export default nextConfig;
+export default withPayload(nextConfig);
