@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rejectUpload, IMAGE_TYPES } from '@/lib/uploadLimits';
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024;
-const MAX_FILES = 10;
-const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
 
 export async function POST(req: NextRequest) {
   // Auth check — must be logged in
@@ -24,15 +22,10 @@ export async function POST(req: NextRequest) {
     const rawFiles = formData.getAll("files") as File[];
     const files = [...rawFiles].sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
-    if (!files || files.length === 0)
-      return NextResponse.json({ error: "No files provided" }, { status: 400 });
-    if (files.length > MAX_FILES)
-      return NextResponse.json({ error: `Too many files (max ${MAX_FILES})` }, { status: 400 });
-    for (const file of files) {
-      if (file.size > MAX_FILE_SIZE)
-        return NextResponse.json({ error: "File too large (max 5MB each)" }, { status: 400 });
-      if (!ALLOWED_TYPES.includes(file.type))
-        return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
+    // Count, types and both size ceilings. The total was never checked.
+    const rejected = rejectUpload(files, IMAGE_TYPES);
+    if (rejected) {
+      return NextResponse.json({ error: rejected.error }, { status: rejected.status });
     }
 
     const imageContents = await Promise.all(files.map(async (file) => {

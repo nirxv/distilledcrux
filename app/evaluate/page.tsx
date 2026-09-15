@@ -37,7 +37,11 @@ const OPTIONAL_LABEL: Record<string, string> = {
   'public-administration':'Public Administration',
 }
 
-const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20MB for PDFs
+// An image is sent to the server as-is, so it must fit the server's per-file
+// ceiling. A PDF never leaves the browser: it is rasterised to JPEG pages
+// first, so only the source file is bounded here.
+const MAX_IMAGE_SIZE = 8 * 1024 * 1024
+const MAX_PDF_SIZE = 20 * 1024 * 1024
 const MARKS_OPTIONS = ['10', '15', '20']
 
 const CHECKPOINTS = [
@@ -514,8 +518,13 @@ export default function EvaluatePage() {
 
   const addFiles = useCallback((newFiles: File[]) => {
     const valid = newFiles.filter(f =>
-      (f.type.startsWith('image/') || f.type === 'application/pdf') && f.size < MAX_FILE_SIZE
+      f.type === 'application/pdf'
+        ? f.size <= MAX_PDF_SIZE
+        : f.type.startsWith('image/') && f.size <= MAX_IMAGE_SIZE
     )
+    if (valid.length < newFiles.length) {
+      setError('Some files were skipped. Images must be under 8MB and PDFs under 20MB.')
+    }
     if (!valid.length) return
     setFiles(prev => [...prev, ...valid].slice(0, 10))
     valid.forEach(f => {

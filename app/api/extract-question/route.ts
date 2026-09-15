@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+import { rejectUpload, IMAGE_TYPES } from '@/lib/uploadLimits';
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const file = formData.get('file') as File | null;
     if (!file) return NextResponse.json({ question: '' });
-    if (file.size > MAX_FILE_SIZE) return NextResponse.json({ question: '' });
+    // This route soft-fails: an oversized or wrong-typed file yields no
+    // question rather than an error, so the caller carries on regardless.
+    if (rejectUpload([file], IMAGE_TYPES)) return NextResponse.json({ question: '' });
 
     const buffer = Buffer.from(await file.arrayBuffer());
     const base64 = buffer.toString('base64');

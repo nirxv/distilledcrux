@@ -1,6 +1,7 @@
 export const maxDuration = 60;
 
 import { NextRequest, NextResponse } from "next/server";
+import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/uploadLimits";
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
 import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
@@ -428,10 +429,6 @@ Total model answer length: 10M~200 words, 15M~300 words, 20M~400 words.`;
 
 
 const FREE_EVAL_LIMIT = 1;
-const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB to accommodate PDFs
-const MAX_FILES = 10;
-const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
-const ALLOWED_TYPES = [...ALLOWED_IMAGE_TYPES, 'application/pdf'];
 
 export async function POST(req: NextRequest) {
   // One parse. This used to clone the request and parse the multipart body a
@@ -503,24 +500,17 @@ export async function POST(req: NextRequest) {
     if (question.length > 600)
       return NextResponse.json({ error: "Question too long (max 600 chars)" }, { status: 400 });
 
-    // File validation
-    if (files.length > MAX_FILES)
-      return NextResponse.json({ error: `Too many files (max ${MAX_FILES})` }, { status: 400 });
-    for (const file of files) {
-      if (file.size > MAX_FILE_SIZE)
-        return NextResponse.json({ error: "File too large (max 20MB)" }, { status: 400 });
-      if (!ALLOWED_TYPES.includes(file.type))
-        return NextResponse.json({ error: `Invalid file type: ${file.type}` }, { status: 400 });
+    // Count, types and BOTH size ceilings, checked before anything is read
+    // into memory. The total is the one that was missing.
+    if (files.length) {
+      const rejected = rejectUpload(files, IMAGE_AND_PDF_TYPES);
+      if (rejected) {
+        return NextResponse.json({ error: rejected.error }, { status: rejected.status });
+      }
     }
 
-    // Build image contents — client converts PDFs to images before sending
-    const imageContents: { type: "image_url"; image_url: { url: string } }[] = []
-    for (const imgFile of files) {
-      const buffer = Buffer.from(await imgFile.arrayBuffer());
-      const base64 = buffer.toString("base64");
-      const mime = imgFile.type || "image/jpeg";
-      imageContents.push({ type: "image_url" as const, image_url: { url: `data:${mime};base64,${base64}` } });
-    }
+    // Client converts PDFs to images before sending.
+    const imageContents = await toImageContents(files);
     if (imageContents.length === 0 && !extractedText) {
       return NextResponse.json({ error: "No images or PDF provided" }, { status: 400 });
     }

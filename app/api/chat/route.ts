@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isPdfBase64TooLarge } from '@/lib/uploadLimits';
 import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
@@ -336,6 +337,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Message too long' }, { status: 400 });
     if (!Array.isArray(messages) || messages.length > 50)
       return NextResponse.json({ error: 'Too many messages in context' }, { status: 400 });
+    // The PDF arrives as base64 in the JSON body and is resent with every
+    // message, so it is bounded here as well as in the browser.
+    if (isPdfBase64TooLarge(pdf_base64))
+      return NextResponse.json({ error: 'PDF too large (max 20MB)' }, { status: 413 });
 
     // ── RAG ─────────────────────────────────────────────────
     let ragContext = '';
