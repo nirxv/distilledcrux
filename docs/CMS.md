@@ -99,7 +99,7 @@ not imported, so following an OS dark preference would render half-themed.
 |---|---|
 | `DATABASE_URL` | Postgres for Payload. Supabase transaction pooler, port 6543. |
 | `PAYLOAD_SECRET` | Signs CMS sessions. Any 32 random bytes. |
-| `ADMIN_SECRET_KEY` | The `?key=` that opens the gate. Same key as the history-optional panel. |
+| `ADMIN_SECRET_KEY` | The `?key=` that opens the gate. |
 
 The pool is capped at 8 connections: the build prerenders 137 note pages, each
 able to open one, and the pooler allows 15 clients in total.
