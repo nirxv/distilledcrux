@@ -485,6 +485,17 @@ export default function EvaluatePage() {
   const [elapsed, setElapsed]         = useState(0)
   const elapsedRef                    = useRef<NodeJS.Timeout | null>(null)
 
+  // Every PYQ page links here as /evaluate?question=...&marks=..., but nothing
+  // read those params, so the question and marks were silently dropped and the
+  // student had to retype the question they had just clicked on.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const q = params.get('question')
+    if (q) setQuestion(q)
+    const m = params.get('marks')
+    if (m && (MARKS_OPTIONS as readonly string[]).includes(m)) setMarks(m)
+  }, [])
+
   // Auth + fetch optional from profile
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
