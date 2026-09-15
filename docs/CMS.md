@@ -77,14 +77,28 @@ able to open one, and the pooler allows 15 clients in total.
 
 ## First run
 
-Not done yet. `DATABASE_URL` in `.env.local` still carries a placeholder
-password, so Payload cannot reach Postgres and `/cms` will not load.
+Put the real database password into `DATABASE_URL` in `.env.local`, then:
 
 ```
-npx payload migrate:create      # generates the DDL for the payload schema
-npx payload migrate             # applies it
+./scripts/db-setup.sh
 ```
+
+That applies every file in `supabase/migrations`, then Payload's own migration,
+then prints the tables and whether RLS is on for each. Each migration runs in a
+single transaction with `ON_ERROR_STOP`, so a half-applied one never survives,
+and all of them are safe to re-run.
+
+The password is at Supabase > Project Settings > Database. Supabase shows it
+only when the project is created, so if it was not saved it has to be reset
+there. URL-encode special characters in it: `#` becomes `%23`, `@` becomes
+`%40`.
 
 Then open `/cms` and create the first user. `cms_users` is the auth collection;
 it is separate from the app's Firebase users on purpose, since a student
 account should never be a CMS account.
+
+## Storage
+
+The `pyq-answers` bucket holds community answer PDFs. It is public, capped at
+5MB per object and restricted to `application/pdf`, so the bucket enforces the
+same two limits the route does even if something reached it another way.
