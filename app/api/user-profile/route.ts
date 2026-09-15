@@ -26,8 +26,11 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { optional } = body;
 
+  // Must match OPTIONAL_LABELS in payment/create-order. History is not an
+  // optional here: it is a separate product at historyoptional.xyz. Accepting
+  // it stranded the user, because checkout then rejected it.
   const validOptionals = [
-    'history', 'sociology', 'anthropology',
+    'sociology', 'anthropology',
     'geography', 'political-science', 'public-administration',
   ];
   if (!validOptionals.includes(optional)) {

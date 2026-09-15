@@ -35,7 +35,6 @@ const OPTIONAL_LABEL: Record<string, string> = {
   geography:              'Geography',
   'political-science':    'PSIR',
   'public-administration':'Public Administration',
-  history:                'History',
 }
 
 const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20MB for PDFs

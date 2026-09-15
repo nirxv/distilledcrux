@@ -127,7 +127,6 @@ function ChatContent() {
               'geography': 'geography',
               'political-science': 'polsci',
               'public-administration': 'pub-admin',
-              'history': 'sociology', // fallback
             };
             const mapped = optionalMap[data.optional];
             if (mapped) setSubject(mapped);

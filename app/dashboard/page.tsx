@@ -7,7 +7,7 @@ import { useAuth } from '@/components/AuthProvider';
 const SUBJECT_LABEL: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology',
   geography: 'Geography', 'political-science': 'PSIR',
-  'public-administration': 'Public Administration', history: 'History',
+  'public-administration': 'Public Administration',
 };
 
 const OPTIONAL_TO_ROUTE: Record<string, string> = {
@@ -16,7 +16,6 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   geography: 'geography',
   'political-science': 'polsci',
   'public-administration': 'pub-admin',
-  history: 'history',
 };
 
 const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science']);

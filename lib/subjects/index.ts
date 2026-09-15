@@ -47,7 +47,6 @@ export interface SubjectConfig {
 
 // ── Registry ─────────────────────────────────────────────────────────────────
 
-import { historyConfig }      from './history'
 import { sociologyConfig }    from './sociology'
 import { anthropologyConfig } from './anthropology'
 import { polsciConfig }       from './polsci'
@@ -55,7 +54,6 @@ import { geographyConfig }    from './geography'
 import { pubAdminConfig }     from './pub-admin'
 
 export const SUBJECT_REGISTRY: Record<string, SubjectConfig> = {
-  'history':      historyConfig,
   'sociology':    sociologyConfig,
   'anthropology': anthropologyConfig,
   'polsci':       polsciConfig,
@@ -63,8 +61,15 @@ export const SUBJECT_REGISTRY: Record<string, SubjectConfig> = {
   'pub-admin':    pubAdminConfig,
 }
 
+// History is not an optional on this site — it lives at historyoptional.xyz,
+// and the home page links out to it. Sociology is the fallback simply because
+// it is the default subject everywhere else.
+export const DEFAULT_SUBJECT = 'sociology'
+
 export function getSubjectConfig(id: string): SubjectConfig {
-  return SUBJECT_REGISTRY[id] ?? SUBJECT_REGISTRY['history']
+  const found = SUBJECT_REGISTRY[id]
+  if (!found) console.warn(`[subjects] unknown subject "${id}", falling back to ${DEFAULT_SUBJECT}`)
+  return found ?? SUBJECT_REGISTRY[DEFAULT_SUBJECT]
 }
 
 // ── Prompt assembly ───────────────────────────────────────────────────────────
