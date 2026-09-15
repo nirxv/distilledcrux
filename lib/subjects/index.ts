@@ -111,3 +111,33 @@ export function assemblePrompt(
     .replace('{{RAG_CONTEXT}}', ragBlock)
     + hiSuffix
 }
+
+/**
+ * The part of a subject's prompt template that applies to writing, not marking.
+ *
+ * Each template is two halves: an epistemic protocol with the subject's
+ * verified thinker roster and citation rules, then an EVALUATION RUBRIC that
+ * describes the JSON an evaluation must return. A route that writes a model
+ * answer wants the first half exactly as written and none of the second, so it
+ * is cut here rather than restated in a second copy that would drift.
+ */
+export function writingRules(
+  config: SubjectConfig,
+  ragContext = '',
+  lang = 'en',
+): string {
+  const full = assemblePrompt(
+    config.systemPromptTemplate,
+    buildRosterString(config.thinkerRoster),
+    ragContext,
+    config.label,
+    lang,
+  );
+  const cut = full.indexOf('EVALUATION RUBRIC');
+  if (cut === -1) return full;
+  // The heading sits between two rule lines, so step back past the opening
+  // one as well, otherwise the writing rules end on a bare divider.
+  const headingLine = full.lastIndexOf('\n', cut);
+  const ruleLine = headingLine === -1 ? -1 : full.lastIndexOf('\n', headingLine - 1);
+  return full.slice(0, ruleLine === -1 ? cut : ruleLine).trimEnd();
+}

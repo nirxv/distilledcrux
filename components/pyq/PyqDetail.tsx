@@ -189,6 +189,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
   const [generating, setGenerating] = useState(false);
   const [generated, setGenerated] = useState(false);
   const [isPremium, setIsPremium] = useState(false);
+  const [paywalled, setPaywalled] = useState(false);
 
   const [answers, setAnswers] = useState<AnswerEntry[]>([]);
   const [loadingAnswers, setLoadingAnswers] = useState(true);
@@ -226,6 +227,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
     if (!pyq || generating) return;
     setGenerating(true);
     setGenerated(false);
+    setPaywalled(false);
     setModelAnswer('');
     const user = auth.currentUser;
     const token = user ? await user.getIdToken() : '';
@@ -235,7 +237,18 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
         body: JSON.stringify({ question: pyq.question, marks: pyq.marks, subject, topic: pyq.topic }),
       });
-      if (!res.ok) { setModelAnswer('Failed to generate. Please try again.'); setGenerating(false); return; }
+      if (!res.ok) {
+        // The route answers 403 for a reader without a subscription, so say
+        // that rather than reporting it as a failure they could retry.
+        const reason = await res.json().catch(() => null);
+        if (reason?.error === 'premium_required') {
+          setPaywalled(true);
+        } else {
+          setModelAnswer(reason?.error || 'Could not generate an answer. Please try again.');
+        }
+        setGenerating(false);
+        return;
+      }
       const reader = res.body!.getReader();
       const dec = new TextDecoder();
       let full = '';
@@ -355,6 +368,21 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
             </div>
 
             {/* Model Answer */}
+            {paywalled && (
+              <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
+                <div className="pd-section-label">Model Answer</div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6rem', padding: '1.5rem 1rem', textAlign: 'center' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <p className="pd-paywall-text">
+                    Model answers are part of Premium.
+                  </p>
+                  <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', padding: '7px 16px' }}>
+                    See plans →
+                  </Link>
+                </div>
+              </div>
+            )}
+
             {(generating || generated || modelAnswer) && (
               <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
                 <div className="pd-section-label">Model Answer · {pyq.marks} marks · {config.label} Optional</div>

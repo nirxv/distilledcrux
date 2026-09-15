@@ -32,15 +32,23 @@ export function clientIp(req: NextRequest): string {
 /**
  * Counts one hit against `key` and says whether it is allowed.
  *
- * Fails OPEN: if Postgres is unreachable the request is allowed and `degraded`
- * is set. A limiter that takes the whole product down when the database blips
- * is worse than one that briefly stops limiting, but the caller should log it,
- * because a permanently degraded limiter is not a limiter.
+ * Fails OPEN by default: if Postgres is unreachable the request is allowed and
+ * `degraded` is set. A limiter that takes the whole product down when the
+ * database blips is worse than one that briefly stops limiting, but the caller
+ * should log it, because a permanently degraded limiter is not a limiter.
+ *
+ * Pass `failClosed` where the limiter is the only ceiling on something
+ * expensive or irreversible, such as an unauthenticated write into paid
+ * storage. There a database outage must not turn the endpoint into an open one.
  */
 export async function checkRateLimit(
   key: string,
-  { windowSeconds, limit }: { windowSeconds: number; limit: number },
+  { windowSeconds, limit, failClosed = false }:
+    { windowSeconds: number; limit: number; failClosed?: boolean },
 ): Promise<RateLimitResult> {
+  const onFailure = (): RateLimitResult =>
+    ({ allowed: !failClosed, remaining: 0, resetAt: null, degraded: true });
+
   try {
     const supabase = createServerClient();
     const { data, error } = await supabase.rpc('bump_rate_limit', {
@@ -50,8 +58,10 @@ export async function checkRateLimit(
     });
 
     if (error || !data?.[0]) {
-      console.error('[rateLimit] check failed, allowing through:', error?.message ?? 'no row');
-      return { allowed: true, remaining: 0, resetAt: null, degraded: true };
+      console.error(
+        `[rateLimit] check failed, ${failClosed ? 'rejecting' : 'allowing through'}:`,
+        error?.message ?? 'no row');
+      return onFailure();
     }
 
     const row = data[0] as { allowed: boolean; remaining: number; reset_at: string };
@@ -62,8 +72,9 @@ export async function checkRateLimit(
       degraded: false,
     };
   } catch (e) {
-    console.error('[rateLimit] check threw, allowing through:', e);
-    return { allowed: true, remaining: 0, resetAt: null, degraded: true };
+    console.error(
+      `[rateLimit] check threw, ${failClosed ? 'rejecting' : 'allowing through'}:`, e);
+    return onFailure();
   }
 }
 
