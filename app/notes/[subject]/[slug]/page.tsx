@@ -58,7 +58,10 @@ export default async function NotePage(
     try {
       const { getNoteContent } = await import('@/lib/noteContent');
       initialContent = await getNoteContent(subject, slug);
-    } catch {}
+    } catch {
+      // Last fallback of three. The reader renders its own empty state, and
+      // the note may also be served from note_overrides on the client.
+    }
   }
 
   // JSON-LD

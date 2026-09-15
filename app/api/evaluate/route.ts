@@ -1,6 +1,7 @@
 export const maxDuration = 60;
 
 import { NextRequest, NextResponse } from "next/server";
+import { debug } from "@/lib/debugLog";
 import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/uploadLimits";
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
@@ -115,12 +116,12 @@ export async function POST(req: NextRequest) {
       let res = await groqFetch(body, process.env.GROQ_API_KEY!);
       // Key 2 fallback for rate limits
       if (res.status === 429 && process.env.GROQ_API_KEY_2) {
-        console.log("Primary key rate limited, trying key 2...");
+        debug("Primary key rate limited, trying key 2...");
         res = await groqFetch(body, process.env.GROQ_API_KEY_2);
       }
       // Model fallback for kimi-k2 over capacity (503 or 429 still failing)
       if ((res.status === 503 || res.status === 429) && (body as Record<string, unknown>).model?.toString().includes("kimi-k2")) {
-        console.log("Kimi-K2 over capacity, falling back to llama-3.3-70b...");
+        debug("Kimi-K2 over capacity, falling back to llama-3.3-70b...");
         const fallbackBody = withFallbackModel(body);
         res = await groqFetch(fallbackBody, process.env.GROQ_API_KEY!);
         if (res.status === 429 && process.env.GROQ_API_KEY_2) {
@@ -129,7 +130,7 @@ export async function POST(req: NextRequest) {
       }
       // 413 — payload too large: trim assistant message content and retry
       if (res.status === 413) {
-        console.log("413 payload too large, trimming assistant messages and retrying...");
+        debug("413 payload too large, trimming assistant messages and retrying...");
         const b = body as Record<string, unknown>;
         const msgs = (b.messages as any[]) ?? [];
         const trimmed = msgs.map((m: any) => {
@@ -177,12 +178,12 @@ Target ~${marks === "10" ? "200" : marks === "15" ? "300" : "400"} words. Be spe
       if (refRes.ok) {
         const refData = await refRes.json();
         referenceAnswer = refData.choices?.[0]?.message?.content?.trim() || "";
-        console.log("Pass 0.5 reference answer generated:", referenceAnswer.slice(0, 200));
+        debug("Pass 0.5 reference answer generated:", referenceAnswer.slice(0, 200));
       } else {
-        console.log("Pass 0.5 skipped (rate limited or failed) — evaluating without reference");
+        debug("Pass 0.5 skipped (rate limited or failed) — evaluating without reference");
       }
     } catch (refErr) {
-      console.log("Pass 0.5 error (non-fatal):", refErr);
+      debug("Pass 0.5 error (non-fatal):", refErr);
     }
 
     // ── PASS 0 + RAG: Run OCR and RAG fetch in parallel ──────────
@@ -267,11 +268,11 @@ Go page by page. Do not rush. Every word matters.`;
           if (ocrRes.ok) {
             const ocrData = await ocrRes.json();
             const transcript = ocrData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-            console.log("Pass 0 OCR transcript (Gemini):\n", transcript.slice(0, 300));
+            debug("Pass 0 OCR transcript (Gemini):\n", transcript.slice(0, 300));
             return transcript;
           } else {
             const errText = await ocrRes.text();
-            console.log("Pass 0 Gemini OCR failed:", errText, "— falling back to in-line image reading in Pass 1");
+            debug("Pass 0 Gemini OCR failed:", errText, "— falling back to in-line image reading in Pass 1");
             return "";
           }
         })()
@@ -295,10 +296,10 @@ Go page by page. Do not rush. Every word matters.`;
         });
         const ragData = await ragRes.json();
         const ctx = ragData.context || '';
-        if (ctx) console.log(`RAG context fetched [${subjectConfig.rag.namespace}], length:`, ctx.length);
+        if (ctx) debug(`RAG context fetched [${subjectConfig.rag.namespace}], length:`, ctx.length);
         return ctx;
       } catch (ragErr) {
-        console.log('RAG fetch failed (non-fatal):', ragErr);
+        debug('RAG fetch failed (non-fatal):', ragErr);
         return '';
       }
     })();
@@ -466,7 +467,7 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
       .filter((b) => b.type === "text")
       .map((b) => (b as { type: "text"; text: string }).text)
       .join("");
-    console.log("CoT reasoning:\n", cotReasoning);
+    debug("CoT reasoning:\n", cotReasoning);
 
     // Wait between passes to avoid TPM rate limiting
     await new Promise(res => setTimeout(res, 1000));
@@ -509,7 +510,7 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
       const data = await response.json();
       let content = data.choices[0].message.content;
       content = content.replace(/```json|```/g, "").trim();
-      console.log("Pass 2 raw content length:", content.length, "| finish_reason:", data.choices[0].finish_reason);
+      debug("Pass 2 raw content length:", content.length, "| finish_reason:", data.choices[0].finish_reason);
       try {
         evaluation = JSON.parse(content);
       } catch {
@@ -653,7 +654,7 @@ Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were miss
         if (pass3.overall_feedback) evaluation.overall_feedback = pass3.overall_feedback;
         if (pass3.body) evaluation.body = pass3.body;
         if (pass3.thinkers_to_cite?.length) evaluation.thinkers_to_cite = pass3.thinkers_to_cite;
-        console.log("Pass 3 feedback merged successfully");
+        debug("Pass 3 feedback merged successfully");
 
         // ── PASS 4: Rich model answer ─────────────────────────────
         const bulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
@@ -706,7 +707,7 @@ ${rosterStr}
             const pass4 = JSON.parse(pass4Content);
             if (pass4.model_answer) {
               evaluation.model_answer = pass4.model_answer;
-              console.log("Pass 4 model answer merged successfully");
+              debug("Pass 4 model answer merged successfully");
 
               // ── PASS 5: Model answer integrity checker ─────────────
               // Strips wrong attributions, off-roster thinkers, vague claims
@@ -762,30 +763,30 @@ If no corrections are needed, return the original model_answer unchanged with co
                   if (pass5.model_answer) {
                     evaluation.model_answer = pass5.model_answer;
                     if (pass5.corrections_made?.length) {
-                      console.log("Pass 5 corrections applied:", pass5.corrections_made);
+                      debug("Pass 5 corrections applied:", pass5.corrections_made);
                     } else {
-                      console.log("Pass 5 audit passed — no corrections needed");
+                      debug("Pass 5 audit passed — no corrections needed");
                     }
                   }
                 } else {
-                  console.log("Pass 5 skipped (rate limited) — using unchecked Pass 4 model answer");
+                  debug("Pass 5 skipped (rate limited) — using unchecked Pass 4 model answer");
                 }
               } catch (p5err) {
-                console.log("Pass 5 error (non-fatal):", p5err);
+                debug("Pass 5 error (non-fatal):", p5err);
               }
               // ── END PASS 5 ────────────────────────────────────────
             }
           } else {
-            console.log("Pass 4 skipped (rate limited) — using Pass 2 model answer");
+            debug("Pass 4 skipped (rate limited) — using Pass 2 model answer");
           }
         } catch (p4err) {
-          console.log("Pass 4 error (non-fatal):", p4err);
+          debug("Pass 4 error (non-fatal):", p4err);
         }
       } else {
-        console.log("Pass 3 skipped (rate limited or failed) — using Pass 2 feedback");
+        debug("Pass 3 skipped (rate limited or failed) — using Pass 2 feedback");
       }
     } catch (p3err) {
-      console.log("Pass 3 error (non-fatal):", p3err);
+      debug("Pass 3 error (non-fatal):", p3err);
     }
 
     // Count the call. Anonymous ones are counted too; this was gated on a

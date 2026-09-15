@@ -348,23 +348,33 @@ export default function Dashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     if (authLoading) return;
     if (!user) { router.push('/login'); return; }
     (async () => {
+      // A failure used to be swallowed and left stats null, and the render
+      // below returned null for null stats, so a logged-in user whose stats
+      // call failed got a blank white page with nothing to act on.
+      setFailed(false);
       try {
         const token = await user.getIdToken();
         const res = await fetch('/api/dashboard-stats', { headers: { 'x-user-token': token } });
-        if (res.ok) {
+        if (!res.ok) {
+          setFailed(true);
+        } else {
           const data = await res.json();
           if (!data.optional) { router.push('/onboarding'); return; }
           setStats(data);
         }
-      } catch {}
+      } catch {
+        setFailed(true);
+      }
       setLoading(false);
     })();
-  }, [user, authLoading, router]);
+  }, [user, authLoading, router, reloadKey]);
 
   if (loading) return (
     <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -373,7 +383,26 @@ export default function Dashboard() {
     </div>
   );
 
-  if (!stats) return null;
+  if (!stats) return (
+    <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.85rem', padding: '2rem', textAlign: 'center' }}>
+      <div style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 700, color: 'var(--text)' }}>
+        {failed ? 'Could not load your dashboard' : 'Nothing to show yet'}
+      </div>
+      <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.85rem', color: 'var(--text3)', maxWidth: '30rem', lineHeight: 1.6 }}>
+        {failed
+          ? 'Your stats did not come back. This is usually a connection problem.'
+          : 'Your study stats will appear here once you start using the app.'}
+      </div>
+      {failed && (
+        <button
+          onClick={() => { setLoading(true); setReloadKey(k => k + 1); }}
+          style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 600, background: 'var(--accent)', color: '#fff', padding: '8px 18px', borderRadius: 6, border: 'none', cursor: 'pointer' }}
+        >
+          Try again
+        </button>
+      )}
+    </div>
+  );
 
   const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || 'there';
   const hour = new Date().getHours();

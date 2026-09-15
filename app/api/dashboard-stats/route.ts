@@ -10,8 +10,8 @@ export async function GET(req: NextRequest) {
   const supabase = createServerClient();
 
   const [profileRes, usageRes] = await Promise.all([
-    supabase.from('user_profiles').select('optional, created_at').eq('firebase_uid', user.uid).single(),
-    supabase.from('usage_tracking').select('chat_count, updated_at').eq('firebase_uid', user.uid).single(),
+    supabase.from('user_profiles').select('optional, created_at').eq('firebase_uid', user.uid).maybeSingle(),
+    supabase.from('usage_tracking').select('chat_count, updated_at').eq('firebase_uid', user.uid).maybeSingle(),
   ]);
 
   const optional = profileRes.data?.optional ?? null;
@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
       .eq('optional', optional)
       .eq('status', 'active')
       .gt('expires_at', new Date().toISOString())
-      .single();
+      .maybeSingle();
 
     isPremium = !!subRes.data;
     plan = subRes.data?.plan ?? null;

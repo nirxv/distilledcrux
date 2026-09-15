@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     .from('user_profiles')
     .select('optional, email, created_at')
     .eq('firebase_uid', user.uid)
-    .single();
+    .maybeSingle();
 
   if (error || !data) return NextResponse.json({ optional: null });
   return NextResponse.json(data);

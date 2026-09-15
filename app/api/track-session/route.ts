@@ -38,7 +38,7 @@ export async function PATCH(req: NextRequest) {
       .eq('visitor_id', visitor_id)
       .order('session_start', { ascending: false })
       .limit(1)
-      .single();
+      .maybeSingle();
 
     if (!existing) return NextResponse.json({ ok: false });
 
@@ -84,9 +84,12 @@ export async function POST(req: NextRequest) {
       .eq('visitor_id', visitor_id)
       .order('session_start', { ascending: false })
       .limit(1)
-      .single();
+      .maybeSingle();
 
-    if (selErr && selErr.code !== 'PGRST116') {
+    // maybeSingle() gives null data and no error when there is no session yet,
+    // so an error here is a real one rather than the PGRST116 that single()
+    // raised on every first-time visitor.
+    if (selErr) {
       return NextResponse.json({ ok: false, reason: selErr.message });
     }
 

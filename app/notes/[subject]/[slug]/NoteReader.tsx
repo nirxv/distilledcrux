@@ -290,11 +290,18 @@ export default function NoteReader({
     try {
       const saved = localStorage.getItem(`pp-hl-${slug}`);
       if (saved) setHighlights(JSON.parse(saved));
-    } catch {}
+    } catch {
+      // localStorage throws in private browsing and when site data is blocked.
+      // Highlights are a convenience, so the reader opens without them.
+    }
   }, [slug]);
 
   useEffect(() => {
-    try { localStorage.setItem(`pp-hl-${slug}`, JSON.stringify(highlights)); } catch {}
+    try {
+      localStorage.setItem(`pp-hl-${slug}`, JSON.stringify(highlights));
+    } catch {
+      // Same as above: storage may be unavailable or full. Nothing to recover.
+    }
   }, [highlights, slug]);
 
   const handleMouseUp = useCallback(() => {
