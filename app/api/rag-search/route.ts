@@ -38,36 +38,31 @@ export async function POST(req: NextRequest) {
       };
     }));
 
+    // The two modes differ only in what they do with the question written at
+    // the top of the sheet, so the shared rules live in one string. This route
+    // serves sociology, anthropology, PSIR, geography and pub-admin, so the
+    // prompt no longer tells the model it is reading History answer sheets.
+    const OCR_RULES = `You are a precise handwriting transcription engine for UPSC optional-subject answer sheets. Transcribe every word exactly as written.
+
+RULES:
+- Transcribe ALL words - do not skip, summarise, or compress anything
+- Join hyphenated line-breaks into one word
+- Never correct spelling silently - transcribe exactly what is written
+- Names of scholars and thinkers are critical - transcribe letter for letter as written
+- If uncertain (70-89% confident): add (?) after the word
+- If unreadable (<70%): write [illegible]
+- Preserve paragraph breaks as blank lines`;
+
     // PDF mode: include question text as [Q]: markers so detect-questions can extract it.
     // Normal mode: skip question text (user enters it manually in the single-question flow).
-    const ocrPrompt = isPdfMode
-      ? `You are a precise handwriting transcription engine for UPSC History Optional answer sheets. Transcribe every word exactly as written.
+    const questionRule = isPdfMode
+      ? `- CRITICAL: If the student has written a question at the top of an answer (underlined, circled, in a box, or written in a distinct style before the answer body begins), transcribe it verbatim on its own line with the prefix "[Q]: " - for example: [Q]: Discuss the relevance of Weber's idea of bureaucracy in contemporary India.
+- After the [Q]: line, transcribe the complete answer body normally`
+      : `- Skip the question text at the top - start from the first word of the answer body`;
 
-RULES:
-- Transcribe ALL words — do not skip, summarise, or compress anything
-- Join hyphenated line-breaks into one word
-- Never correct spelling silently — transcribe exactly what is written
-- Historian names are critical — transcribe letter for letter as written
-- If uncertain (70-89% confident): add (?) after the word
-- If unreadable (<70%): write [illegible]
-- Preserve paragraph breaks as blank lines
-- CRITICAL: If the student has written a question at the top of an answer (underlined, circled, in a box, or written in a distinct style before the answer body begins), transcribe it verbatim on its own line with the prefix "[Q]: " — for example: [Q]: Discuss the role of the Bhakti movement in medieval India.
-- After the [Q]: line, transcribe the complete answer body normally
-- Output ONLY plain transcribed text — no headings, no markdown, no commentary, no LaTeX
-
-Output the transcription now:`
-      : `You are a precise handwriting transcription engine for UPSC History Optional answer sheets. Transcribe every word exactly as written.
-
-RULES:
-- Transcribe ALL words — do not skip, summarise, or compress anything
-- Join hyphenated line-breaks into one word
-- Never correct spelling silently — transcribe exactly what is written
-- Historian names are critical — transcribe letter for letter as written
-- If uncertain (70-89% confident): add (?) after the word
-- If unreadable (<70%): write [illegible]
-- Preserve paragraph breaks as blank lines
-- Skip the question text at the top — start from the first word of the answer body
-- Output ONLY plain transcribed text — no headings, no markdown, no commentary, no LaTeX
+    const ocrPrompt = `${OCR_RULES}
+${questionRule}
+- Output ONLY plain transcribed text - no headings, no markdown, no commentary, no LaTeX
 
 Output the transcription now:`;
 
