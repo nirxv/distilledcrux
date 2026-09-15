@@ -3,7 +3,7 @@ import { isPdfBase64TooLarge } from '@/lib/uploadLimits';
 import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
-import { createClient } from '@supabase/supabase-js';
+import { createServerClient } from '@/lib/supabase';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
   SUBJECT_THINKER_BOOKS,
@@ -50,10 +50,7 @@ async function getBookContext(
   bookTitle?: string,
 ): Promise<string> {
   try {
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    );
+    const supabase = createServerClient();
     const filter = bookTitle && bookTitle !== 'all' ? bookTitle : null;
 
     const [embedding] = await localEmbedBatch([query]);
@@ -257,10 +254,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  );
+  const supabase = createServerClient();
 
   const token = req.headers.get('x-user-token') ?? '';
 

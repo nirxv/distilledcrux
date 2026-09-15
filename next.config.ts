@@ -8,7 +8,11 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://checkout.razorpay.com",
+      // No 'unsafe-eval'. The only thing that wanted it was pdf.js, which now
+      // runs with isEvalSupported:false in app/evaluate. Checked the rest:
+      // gtag.js needs no eval, and Razorpay's checkout.js has one new Function
+      // in a try/catch globalThis polyfill that never runs in a real browser.
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://checkout.razorpay.com",
       "worker-src 'self' blob:",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",

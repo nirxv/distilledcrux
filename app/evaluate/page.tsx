@@ -556,7 +556,10 @@ export default function EvaluatePage() {
     const workerUrl = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url)
     pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl.toString()
     const arrayBuffer = await file.arrayBuffer()
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise
+    // isEvalSupported is what makes pdf.js want 'unsafe-eval' in the CSP. It
+    // only enables a font-rendering fast path, and these pages are rasterised
+    // to JPEG for an OCR model, so turning it off costs nothing here.
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, isEvalSupported: false }).promise
     const imageFiles: File[] = []
     for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
       const page = await pdf.getPage(i)
