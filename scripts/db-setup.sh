@@ -42,9 +42,20 @@ for f in supabase/migrations/*.sql; do
   echo "   applied"
 done
 
-echo "── payload"
-# Payload manages its own migration table inside the payload schema.
-npx payload migrate 2>&1 | sed 's/^/   /'
+echo "── payload schema"
+# Payload's generated migration creates its tables but not the schema holding
+# them, so `payload migrate` fails with "schema payload does not exist" on a
+# database that has never had it.
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -q -c 'create schema if not exists payload'
+echo "   ok"
+
+echo "── payload migrations"
+# Generate on first run; Payload records what it has applied in
+# payload.payload_migrations, so this is safe to repeat.
+if [ ! -d migrations ] || [ -z "$(ls -A migrations 2>/dev/null)" ]; then
+  npx payload migrate:create initial 2>&1 | sed 's/^/   /'
+fi
+npx payload migrate 2>&1 | grep -vE "^\s+at |node_modules" | sed 's/^/   /'
 
 echo
 echo "── what is there now"

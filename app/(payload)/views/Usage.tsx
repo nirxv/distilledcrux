@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { Shell, Stats, TableFrame, Row, Cell } from './Shell';
 import { readTable, relative, truncate } from './data';
 
@@ -16,7 +17,7 @@ type Usage = {
   updated_at?: string | null;
 };
 
-export default async function UsageView() {
+export default cmsView(async function UsageView() {
   const { rows, error } = await readTable<Usage>(
     'usage_tracking', '*', { column: 'updated_at' }, 2000);
 
@@ -54,4 +55,4 @@ export default async function UsageView() {
       </TableFrame>
     </Shell>
   );
-}
+});

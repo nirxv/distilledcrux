@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { Shell } from './Shell';
 import { Badge } from '../uui/base/badges';
 import { readTable } from './data';
@@ -27,7 +28,7 @@ async function probe(table: string) {
   return error;
 }
 
-export default async function OperationsView() {
+export default cmsView(async function OperationsView() {
   const tables = ['user_profiles', 'subscriptions', 'usage_tracking', 'user_sessions', 'note_overrides', 'rate_limits'];
   const probes = await Promise.all(tables.map(async t => ({ table: t, error: await probe(t) })));
 
@@ -75,4 +76,4 @@ export default async function OperationsView() {
       </div>
     </Shell>
   );
-}
+});

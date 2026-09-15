@@ -33,11 +33,32 @@ so a dedicated schema means it never looks at the app's tables at all.
 Payload never touches `note_overrides`, `user_profiles`, `subscriptions`,
 `usage_tracking`, `user_sessions`, `book_chunks` or `rate_limits`.
 
+## Getting in
+
+`/cms` and `/cms-api` return a bare 404 unless the request carries
+`?key=<ADMIN_SECRET_KEY>`, so the panel is not discoverable. Passing the gate
+drops an 8-hour `cms_gate` cookie, and that cookie is load-bearing rather than
+a convenience: the key can only ever appear on the first request, because
+Payload's client navigations and its `/cms-api` fetches carry no query string,
+so gating on `?key=` alone would 404 the panel's own traffic and it could never
+log in.
+
+The gate is obscurity, not access control. Payload's login is what protects the
+data.
+
 ## The six views
 
 These read the app's own tables, not Payload collections, so they are custom
 views rather than collections. They are server components that query Supabase
-with the service client; Payload's auth already gates everything under `/cms`.
+with the service client, which bypasses RLS.
+
+**Every one of them must be wrapped in `cmsView()` from `views/guard.tsx`.**
+Payload does not gate a custom view's server component the way it gates its own
+screens: on a signed-out request it renders the login chrome but still renders
+the custom view and streams its RSC payload with the page. Measured here before
+the guard existed, `/cms/subscribers` with no session returned a live
+subscriber's email address inside the flight data. A new view that forgets the
+wrapper is a data leak, not a cosmetic bug.
 
 | View | Reads | Shows |
 |---|---|---|
@@ -48,10 +69,17 @@ with the service client; Payload's auth already gates everything under `/cms`.
 | Content | `note_overrides` + `lib/notes` | every syllabus topic and whether its body comes from the CMS, the bundle, or nowhere yet |
 | Operations | env + a one-row probe per table | whether this deploy is actually configured and reachable |
 
-Add a view: write it under `app/(payload)/views/`, register it in
-`payload.config.ts` under `admin.components.views`, add its link to
-`views/NavLinks.tsx`, then run `npx payload generate:importmap`. The panel will
-404 on the path until the import map is regenerated.
+Add a view: write it under `app/(payload)/views/` **wrapped in `cmsView()`**,
+register it in `payload.config.ts` under `admin.components.views`, add its link
+to `views/NavLinks.tsx`, then run `npx payload generate:importmap`. The panel
+will 404 on the path until the import map is regenerated.
+
+To check a new view does not leak, request it with the gate cookie but no
+session and confirm none of its own text comes back:
+
+```
+curl -s -H 'Cookie: cms_gate=1' localhost:3000/cms/<path> | grep -c '<a string only that view renders>'
+```
 
 ## Styling
 
@@ -71,6 +99,7 @@ not imported, so following an OS dark preference would render half-themed.
 |---|---|
 | `DATABASE_URL` | Postgres for Payload. Supabase transaction pooler, port 6543. |
 | `PAYLOAD_SECRET` | Signs CMS sessions. Any 32 random bytes. |
+| `ADMIN_SECRET_KEY` | The `?key=` that opens the gate. Same key as the history-optional panel. |
 
 The pool is capped at 8 connections: the build prerenders 137 note pages, each
 able to open one, and the pooler allows 15 clients in total.

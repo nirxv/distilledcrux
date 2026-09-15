@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { Shell, Stats, TableFrame, Row, Cell } from './Shell';
 import { readTable, relative, truncate, since } from './data';
 
@@ -12,7 +13,7 @@ type Session = {
   duration_seconds?: number | null;
 };
 
-export default async function SessionsView() {
+export default cmsView(async function SessionsView() {
   const { rows, error } = await readTable<Session>(
     'user_sessions', '*', { column: 'session_start' }, 1000);
 
@@ -85,4 +86,4 @@ export default async function SessionsView() {
       </TableFrame>
     </Shell>
   );
-}
+});

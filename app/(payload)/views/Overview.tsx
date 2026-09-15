@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { NOTE_SUBJECTS, notesForSubject } from '@/lib/notes';
 import { Shell, Stats } from './Shell';
 import { readTable, since, SUBJECT_LABEL, normaliseSubject } from './data';
@@ -35,7 +36,7 @@ function Bars({ title, rows }: {
 }
 
 /** Content and account activity from the app's own records, not page traffic. */
-export default async function OverviewView() {
+export default cmsView(async function OverviewView() {
   const [profiles, subs, usage, sessions, overrides] = await Promise.all([
     readTable<Profile>('user_profiles', 'firebase_uid, email, optional, created_at', undefined, 2000),
     readTable<Sub>('subscriptions', 'firebase_uid, optional, plan, status, expires_at', undefined, 2000),
@@ -117,4 +118,4 @@ export default async function OverviewView() {
       </div>
     </Shell>
   );
-}
+});

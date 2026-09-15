@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { Shell, Stats, TableFrame, Row, Cell } from './Shell';
 import { Badge } from '../uui/base/badges';
 import { readTable, relative, SUBJECT_LABEL, normaliseSubject } from './data';
@@ -27,7 +28,7 @@ function state(s: Sub, now: number) {
   return { label: 'Active', color: 'success' as const };
 }
 
-export default async function SubscribersView() {
+export default cmsView(async function SubscribersView() {
   const { rows, error } = await readTable<Sub>(
     'subscriptions', '*', { column: 'updated_at' }, 2000);
 
@@ -71,4 +72,4 @@ export default async function SubscribersView() {
       </TableFrame>
     </Shell>
   );
-}
+});

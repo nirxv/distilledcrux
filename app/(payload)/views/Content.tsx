@@ -1,4 +1,5 @@
 import React from 'react';
+import { cmsView } from './guard';
 import { NOTE_SUBJECTS, notesForSubject } from '@/lib/notes';
 import { Shell, Stats, TableFrame, Row, Cell } from './Shell';
 import { Badge } from '../uui/base/badges';
@@ -12,7 +13,7 @@ type Override = { slug: string; content: string | null; updated_at?: string | nu
  * lib/noteContent; pub-admin has metadata but no bundled bodies yet, so its
  * topics are shown as awaiting content rather than simply unedited.
  */
-export default async function ContentView() {
+export default cmsView(async function ContentView() {
   const { rows, error } = await readTable<Override>(
     'note_overrides', 'slug, content, updated_at', { column: 'updated_at' }, 1000);
 
@@ -71,4 +72,4 @@ export default async function ContentView() {
       </TableFrame>
     </Shell>
   );
-}
+});
