@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
 import { createClient } from '@supabase/supabase-js';
@@ -13,8 +14,8 @@ import {
 export const maxDuration = 60;
 
 // ── Rate limit (per IP, 20 msgs / 10 min) ────────────────────
-const chatLimits = new Map<string, { count: number; ts: number }>();
 const RATE_LIMIT = 20;
+const RATE_WINDOW_SECONDS = 10 * 60;
 const CHAT_FREE_LIMIT = 3;
 const OWNER_EMAIL = process.env.OWNER_EMAIL!;
 
@@ -243,14 +244,17 @@ ${bookTitle && bookTitle !== 'all'
 
 // ── Main POST handler ─────────────────────────────────────────
 export async function POST(req: NextRequest) {
-  // Rate limit
-  const ip = req.headers.get('x-forwarded-for') ?? req.headers.get('x-real-ip') ?? 'unknown';
-  const now = Date.now();
-  if (chatLimits.get(ip) && now - chatLimits.get(ip)!.ts > 10 * 60 * 1000) chatLimits.delete(ip);
-  const current = chatLimits.get(ip);
-  if (current && current.count >= RATE_LIMIT)
-    return NextResponse.json({ error: 'too_many_requests' }, { status: 429 });
-  chatLimits.set(ip, { count: (current?.count ?? 0) + 1, ts: current?.ts ?? now });
+  // Rate limit, shared across instances rather than per-lambda.
+  const rl = await checkRateLimit(`chat:${clientIp(req)}`, {
+    windowSeconds: RATE_WINDOW_SECONDS,
+    limit: RATE_LIMIT,
+  });
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'too_many_requests' },
+      { status: 429, headers: rateLimitHeaders(rl, RATE_LIMIT) },
+    );
+  }
 
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,

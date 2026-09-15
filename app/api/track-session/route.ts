@@ -1,21 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
+import { checkRateLimit } from '@/lib/rateLimit';
 
 export const runtime = 'nodejs';
 
 const BOT_UA = /bot|crawler|spider|crawling|googlebot|bingbot|ahrefsbot|semrushbot|mj12bot|dotbot|rogerbot|facebookexternalhit|python|curl|wget|axios|node-fetch|go-http-client|java|ruby|scrapy/i;
 
-// In-memory rate limiter (per visitor_id, 3 req / 10s)
-const rateLimitStore = new Map<string, number[]>();
-function isRateLimited(visitor_id: string): boolean {
-  const now = Date.now();
-  const timestamps = (rateLimitStore.get(visitor_id) ?? []).filter(t => now - t < 10_000);
-  if (timestamps.length >= 3) return true;
-  timestamps.push(now);
-  rateLimitStore.set(visitor_id, timestamps);
-  if (rateLimitStore.size > 10_000) rateLimitStore.delete(rateLimitStore.keys().next().value as string);
-  return false;
-}
+// 3 requests per 10s per visitor. This was an in-memory Map, so it counted
+// per lambda instead of per visitor, and once it held 10,000 entries it evicted
+// by deleting an arbitrary key — quietly clearing whoever happened to be first.
+const SESSION_RATE_LIMIT = 3;
+const SESSION_RATE_WINDOW_SECONDS = 10;
 
 function parseCountry(req: NextRequest) {
   const country = req.headers.get('x-vercel-ip-country') ?? null;
@@ -73,7 +68,11 @@ export async function POST(req: NextRequest) {
     const { visitor_id, firebase_uid, page, referrer, device, os, browser, is_first_visit } = await req.json();
     if (!visitor_id) return NextResponse.json({ ok: false, reason: 'no visitor_id' });
 
-    if (isRateLimited(visitor_id)) return NextResponse.json({ ok: false, reason: 'rate_limited' });
+    const rl = await checkRateLimit(`session:${visitor_id}`, {
+      windowSeconds: SESSION_RATE_WINDOW_SECONDS,
+      limit: SESSION_RATE_LIMIT,
+    });
+    if (!rl.allowed) return NextResponse.json({ ok: false, reason: 'rate_limited' });
 
     const sb = createServerClient();
     const { country, city } = parseCountry(req);
