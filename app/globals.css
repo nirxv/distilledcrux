@@ -137,6 +137,28 @@ body {
   --geo-text-btn: #fff;
 }
 
+/* ── PSIR accent tokens ──────────────────────────────────────────
+   The PYQ pages hardcoded #f87171 for PSIR. That is the dark-mode red,
+   and in light mode it measured about 2.4:1 against the page and 2.1:1
+   under the white button label, so the accent and its buttons failed
+   contrast on every PSIR PYQ page. Same shape as the geography ramp. */
+:root {
+  --psir:          #f87171;
+  --psir-dim:      rgba(248,113,113,0.09);
+  --psir-border:   rgba(248,113,113,0.22);
+  --psir-border2:  rgba(248,113,113,0.40);
+  --psir-muted:    #fca5a5;
+  --psir-text-btn: #000;
+}
+[data-theme="light"] {
+  --psir:          #b91c1c;
+  --psir-dim:      rgba(185,28,28,0.07);
+  --psir-border:   rgba(185,28,28,0.22);
+  --psir-border2:  rgba(185,28,28,0.42);
+  --psir-muted:    #991b1b;
+  --psir-text-btn: #fff;
+}
+
 /* Geography PYQ marks badge — light mode override */
 [data-theme="light"] .geo-m10 {
   background: rgba(21,128,61,0.07);
