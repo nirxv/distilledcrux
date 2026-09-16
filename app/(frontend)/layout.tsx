@@ -4,6 +4,16 @@ import '@fontsource/libre-baskerville/700.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
 import type { Metadata, Viewport } from 'next';
+/**
+ * Root layout for the public site.
+ *
+ * It sits inside a route group rather than at app/ because the Payload admin
+ * needs a root layout of its own. Next allows more than one only when there is
+ * no top-level layout.tsx, and while there was one, this file wrapped the CMS
+ * too: /cms came back with two <html> and two <body> tags, which the browser
+ * discarded, so React's hydration never matched the DOM and the admin crashed
+ * with "This page couldn't load".
+ */
 import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
