@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
+import { normalizeIndianMobile } from '@/lib/phone';
 
 export async function GET(req: NextRequest) {
   const token = req.headers.get('x-user-token');
@@ -10,11 +11,13 @@ export async function GET(req: NextRequest) {
   const supabase = createServerClient();
   const { data, error } = await supabase
     .from('user_profiles')
-    .select('optional, email, created_at')
+    .select('optional, email, phone, created_at')
     .eq('firebase_uid', user.uid)
     .maybeSingle();
 
-  if (error || !data) return NextResponse.json({ optional: null });
+  // phone is reported alongside optional because onboarding needs both to
+  // decide whether this profile is actually complete.
+  if (error || !data) return NextResponse.json({ optional: null, phone: null });
   return NextResponse.json(data);
 }
 
@@ -23,8 +26,9 @@ export async function POST(req: NextRequest) {
   const user = await verifyFirebaseToken(token);
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const body = await req.json();
-  const { optional } = body;
+  const body = await req.json().catch(() => null);
+  if (!body) return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+  const { optional, phone } = body;
 
   // Must match OPTIONAL_LABELS in payment/create-order. History is not an
   // optional here: it is a separate product at historyoptional.xyz. Accepting
@@ -37,6 +41,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid optional' }, { status: 400 });
   }
 
+  // Checked here and not only in the form. The form's validation is a courtesy
+  // to the person typing; this is the one that decides what reaches the table.
+  const number = normalizeIndianMobile(phone);
+  if (!number.ok) {
+    return NextResponse.json({ error: number.error }, { status: 400 });
+  }
+
   const supabase = createServerClient();
   const { error } = await supabase
     .from('user_profiles')
@@ -44,6 +55,7 @@ export async function POST(req: NextRequest) {
       firebase_uid: user.uid,
       email: user.email,
       optional,
+      phone: number.phone,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'firebase_uid' });
 

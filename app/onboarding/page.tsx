@@ -3,6 +3,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import { normalizeIndianMobile } from '@/lib/phone';
 
 const optionals = [
   { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: true },
@@ -17,6 +18,8 @@ function OnboardingInner() {
   const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -37,10 +40,16 @@ function OnboardingInner() {
         if (res.ok) {
           const data = await res.json();
           const isChanging = new URLSearchParams(window.location.search).get('change') === '1';
-          if (data.optional && !isChanging) {
+          // A profile only counts as done when it has both. Readers who
+          // onboarded before the number was asked for have an optional and no
+          // phone, and they are sent through here again rather than waved past,
+          // which is what makes the field mandatory rather than merely new.
+          if (data.optional && data.phone && !isChanging) {
             router.push('/dashboard');
             return;
           }
+          if (data.optional) setSelected(data.optional);
+          if (data.phone) setPhone(data.phone);
         }
       } catch (err) {
         // Fall through to the picker rather than hanging on the spinner.
@@ -53,6 +62,16 @@ function OnboardingInner() {
 
   const handleContinue = async () => {
     if (!selected || !user) return;
+
+    // Same rules the route applies, so nobody is told their number is fine and
+    // then refused by the server.
+    const number = normalizeIndianMobile(phone);
+    if (!number.ok) {
+      setPhoneError(number.error);
+      return;
+    }
+    setPhoneError(null);
+
     setSaving(true);
     try {
       const token = await user.getIdToken();
@@ -62,17 +81,23 @@ function OnboardingInner() {
           'Content-Type': 'application/json',
           'x-user-token': token,
         },
-        body: JSON.stringify({ optional: selected }),
+        body: JSON.stringify({ optional: selected, phone: number.phone }),
       });
       if (res.ok) {
         router.push('/dashboard');
       } else {
+        const data = await res.json().catch(() => null);
+        setPhoneError(data?.error ?? 'Could not save. Please try again.');
         setSaving(false);
       }
     } catch {
+      setPhoneError('Could not save. Please check your connection.');
       setSaving(false);
     }
   };
+
+  // Both are required, so the button reflects both rather than just the picker.
+  const ready = Boolean(selected) && normalizeIndianMobile(phone).ok;
 
   if (loading) {
     return (
@@ -174,20 +199,87 @@ function OnboardingInner() {
           })}
         </div>
 
+        {/* Mobile number */}
+        <div style={{ marginBottom: '2rem' }}>
+          <label
+            htmlFor="phone"
+            style={{
+              display: 'block',
+              fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600,
+              color: 'var(--text2)', marginBottom: '0.5rem',
+              letterSpacing: '0.02em',
+            }}
+          >
+            Mobile number
+          </label>
+          <div style={{
+            display: 'flex', alignItems: 'stretch',
+            background: 'var(--bg2)',
+            border: `1px solid ${phoneError ? 'rgba(248,113,113,0.5)' : 'var(--border)'}`,
+            borderRadius: 10,
+            overflow: 'hidden',
+            transition: 'border-color 0.15s',
+          }}>
+            <span style={{
+              display: 'flex', alignItems: 'center',
+              padding: '0 0.75rem',
+              background: 'var(--bg3)',
+              borderRight: '1px solid var(--border)',
+              fontFamily: 'var(--font-mono)', fontSize: '0.85rem',
+              color: 'var(--text3)',
+            }}>
+              +91
+            </span>
+            <input
+              id="phone"
+              type="tel"
+              inputMode="numeric"
+              autoComplete="tel"
+              placeholder="98765 43210"
+              value={phone}
+              onChange={(e) => { setPhone(e.target.value); if (phoneError) setPhoneError(null); }}
+              aria-invalid={phoneError ? true : undefined}
+              aria-describedby={phoneError ? 'phone-error' : 'phone-hint'}
+              style={{
+                flex: 1, minWidth: 0,
+                background: 'transparent', border: 'none', outline: 'none',
+                padding: '0.875rem 1rem',
+                color: 'var(--text)',
+                fontFamily: 'var(--font-ui)', fontSize: '0.95rem',
+              }}
+            />
+          </div>
+          {phoneError ? (
+            <p id="phone-error" role="alert" style={{
+              margin: '0.5rem 0 0', color: '#f87171',
+              fontFamily: 'var(--font-ui)', fontSize: '0.78rem',
+            }}>
+              {phoneError}
+            </p>
+          ) : (
+            <p id="phone-hint" style={{
+              margin: '0.5rem 0 0', color: 'var(--text3)',
+              fontFamily: 'var(--font-ui)', fontSize: '0.78rem', lineHeight: 1.5,
+            }}>
+              So we can reach you about your subscription. We will not send marketing messages.
+            </p>
+          )}
+        </div>
+
         {/* Continue button */}
         <button
           onClick={handleContinue}
-          disabled={!selected || saving}
+          disabled={!ready || saving}
           style={{
             width: '100%',
-            background: selected ? 'var(--accent)' : 'var(--bg3)',
-            color: selected ? '#fff' : 'var(--text3)',
+            background: ready ? 'var(--accent)' : 'var(--bg3)',
+            color: ready ? '#fff' : 'var(--text3)',
             border: 'none',
             borderRadius: 10,
             padding: '0.875rem',
             fontSize: '0.95rem', fontWeight: 600,
             fontFamily: 'var(--font-ui)',
-            cursor: selected ? 'pointer' : 'not-allowed',
+            cursor: ready ? 'pointer' : 'not-allowed',
             transition: 'all 0.15s',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
           }}
