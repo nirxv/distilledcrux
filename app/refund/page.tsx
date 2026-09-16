@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
 import { PLANS, PLAN_ORDER, formatRupees } from "@/lib/plans";
 
 export const metadata: Metadata = {
@@ -88,7 +89,7 @@ export default function RefundPage() {
         <p style={S.p}>
           For refund-related queries, reach us at:<br />
           <strong style={S.strong}>Distilled Crux Team</strong><br />
-          Email: <a href="mailto:" style={S.a}></a><br />
+          Email: <a href={SUPPORT_MAILTO} style={S.a}>{SUPPORT_EMAIL}</a><br />
           Response time: within 5 business days
         </p>
       </div>

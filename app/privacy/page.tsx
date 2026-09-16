@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Privacy Policy Distilled Crux",
@@ -94,7 +95,7 @@ export default function PrivacyPage() {
         <p style={S.p}>
           For privacy-related queries or to exercise your data rights, contact us at:<br />
           <strong style={S.strong}>Distilled Crux Team</strong><br />
-          Email: <a href="mailto:" style={S.a}></a>
+          Email: <a href={SUPPORT_MAILTO} style={S.a}>{SUPPORT_EMAIL}</a>
         </p>
 
         <h2 style={S.h2}>8. Changes to This Policy</h2>

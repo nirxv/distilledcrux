@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Terms of Service Distilled Crux",
@@ -118,7 +119,7 @@ export default function TermsPage() {
         <p style={S.p}>
           Questions about these terms? Contact us at:<br />
           <strong style={S.strong}>Distilled Crux Team</strong><br />
-          Email: <a href="mailto:" style={S.a}></a>
+          Email: <a href={SUPPORT_MAILTO} style={S.a}>{SUPPORT_EMAIL}</a>
         </p>
       </div>
     </main>

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from '@/lib/contact';
 import type { Metadata } from 'next';
 
 const CSS = `
@@ -94,7 +95,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="ct-info-label">Email</div>
-                  <div className="ct-info-value"><a href="mailto:"></a></div>
+                  <div className="ct-info-value"><a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a></div>
                   <div className="ct-info-note">Response within 1-2 business days</div>
                 </div>
               </div>
