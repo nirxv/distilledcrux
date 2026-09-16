@@ -147,7 +147,7 @@ function OnboardingInner() {
           </h1>
           <p style={{ color: 'var(--text3)', fontSize: '0.9rem', lineHeight: 1.6 }}>
             {phoneOnly
-              ? 'We ask everyone for one now, so we can reach you about your account. Your optional is unchanged.'
+              ? 'We ask everyone for one now, so we can reach you about new features, materials, offers and discounts. Your optional is unchanged.'
               : 'All content, PYQs, and AI will be tailored to your optional subject.'}
           </p>
         </div>
@@ -277,7 +277,7 @@ function OnboardingInner() {
               margin: '0.5rem 0 0', color: 'var(--text3)',
               fontFamily: 'var(--font-ui)', fontSize: '0.78rem', lineHeight: 1.5,
             }}>
-              So we can reach you about your account. We will not send marketing messages.
+              So we can reach you about new features, materials, offers and discounts.
             </p>
           )}
         </div>
