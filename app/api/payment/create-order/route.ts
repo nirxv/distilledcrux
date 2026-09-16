@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { PLANS, PLAN_ORDER } from '@/lib/plans';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import Razorpay from 'razorpay';
 
@@ -7,11 +8,16 @@ const razorpay = new Razorpay({
   key_secret: process.env.RAZORPAY_KEY_SECRET!,
 });
 
-const PLAN_AMOUNTS: Record<string, { amount: number; days: number; label: string }> = {
-  daily:     { amount: 4900,   days: 1,   label: 'Daily Plan' },
-  sixmonth:  { amount: 199900, days: 180, label: '6 Month Plan' },
-  yearly:    { amount: 299900, days: 365, label: 'Yearly Plan' },
-};
+// Amounts live in lib/plans, which the pricing page and the refund policy also
+// read, so a price cannot be changed in one place and stale in another.
+const PLAN_AMOUNTS: Record<string, { amount: number; days: number; label: string }> =
+  Object.fromEntries(
+    PLAN_ORDER.map((id) => [id, {
+      amount: PLANS[id].amountPaise,
+      days: PLANS[id].days,
+      label: PLANS[id].orderLabel,
+    }]),
+  );
 
 const OPTIONAL_LABELS: Record<string, string> = {
   sociology:               'Sociology',

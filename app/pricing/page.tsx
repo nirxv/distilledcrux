@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { PLANS, rupees } from '@/lib/plans';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
@@ -13,7 +14,7 @@ const OPTIONALS = [
 
 const plans = [
   {
-    id: 'daily', label: 'Daily', price: 49, period: 'per day', tag: null,
+    id: 'daily', label: 'Daily', price: rupees(PLANS.daily), period: PLANS.daily.period, tag: null,
     desc: 'Perfect for exam-day sprints and last-minute revision.',
     color: '#2dd4bf',
     features: [
@@ -26,7 +27,7 @@ const plans = [
     ],
   },
   {
-    id: 'sixmonth', label: '6 Months', price: 1999, period: 'per 6 months', tag: 'Most Popular',
+    id: 'sixmonth', label: '6 Months', price: rupees(PLANS.sixmonth), period: PLANS.sixmonth.period, tag: 'Most Popular',
     desc: 'Best for focused preparation cycles leading up to Mains.',
     color: '#4361ee',
     features: [
@@ -40,7 +41,7 @@ const plans = [
     ],
   },
   {
-    id: 'yearly', label: 'Yearly', price: 2999, period: 'per year', tag: 'Best Value',
+    id: 'yearly', label: 'Yearly', price: rupees(PLANS.yearly), period: PLANS.yearly.period, tag: 'Best Value',
     desc: 'Full-year coverage from Prelims to Mains interview prep.',
     color: '#e8b86d',
     features: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PLANS, PLAN_ORDER, formatRupees } from "@/lib/plans";
 
 export const metadata: Metadata = {
   title: "Refund Policy Distilled Crux",
@@ -43,10 +44,18 @@ export default function RefundPage() {
         </p>
 
         <h2 style={S.h2}>2. Subscription Plans</h2>
+        {/* Rendered from lib/plans so the policy cannot state a price the
+            checkout does not charge. It previously said 3,999 and 5,999,
+            both 2,000 more than the amount actually taken. */}
         <ul style={S.ul}>
-          <li style={S.li}><strong style={S.strong}>Daily</strong> ₹49/day</li>
-          <li style={S.li}><strong style={S.strong}>6 Months</strong> ₹3,999/6 months</li>
-          <li style={S.li}><strong style={S.strong}>Yearly</strong> ₹5,999/year</li>
+          {PLAN_ORDER.map((id) => {
+            const plan = PLANS[id];
+            return (
+              <li key={id} style={S.li}>
+                <strong style={S.strong}>{plan.label}</strong> {formatRupees(plan)} {plan.period}
+              </li>
+            );
+          })}
         </ul>
 
         <h2 style={S.h2}>3. Exceptions</h2>
