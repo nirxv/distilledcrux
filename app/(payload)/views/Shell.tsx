@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Gutter } from '@payloadcms/ui';
 import '../uui/theme.css';
 
@@ -37,16 +38,40 @@ export function Shell({ title, count, error, children }: {
   );
 }
 
-/** Read-only stat tiles, for views with nothing to filter by. */
-export function Stats({ items }: { items: { label: string; value: React.ReactNode }[] }) {
+/**
+ * Stat tiles. A tile with an `href` becomes a link to the screen that shows
+ * the rows behind the number, which is the question anyone reading a figure
+ * asks next. One without stays inert rather than pretending to be clickable.
+ */
+export type StatItem = {
+  label: string;
+  value: React.ReactNode;
+  href?: string;
+};
+
+export function Stats({ items }: { items: StatItem[] }) {
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {items.map(i => (
-        <div key={i.label} className="rounded-xl border border-secondary bg-primary px-4 py-3">
-          <div className="text-xs font-medium uppercase tracking-wide text-tertiary">{i.label}</div>
-          <div className="mt-1 text-2xl font-semibold tabular-nums text-primary">{i.value}</div>
-        </div>
-      ))}
+      {items.map(i => {
+        const body = (
+          <>
+            <div className="text-xs font-medium uppercase tracking-wide text-tertiary">{i.label}</div>
+            <div className="mt-1 text-2xl font-semibold tabular-nums text-primary">{i.value}</div>
+          </>
+        );
+        const base = 'rounded-xl border border-secondary bg-primary px-4 py-3';
+        return i.href ? (
+          <Link
+            key={i.label}
+            href={i.href}
+            className={`${base} block transition-colors hover:border-brand hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+          >
+            {body}
+          </Link>
+        ) : (
+          <div key={i.label} className={base}>{body}</div>
+        );
+      })}
     </div>
   );
 }

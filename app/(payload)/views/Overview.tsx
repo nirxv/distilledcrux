@@ -67,15 +67,16 @@ export default cmsView(async function OverviewView() {
 
   return (
     <Shell title="Overview" count="from the app's own records, not page traffic" error={profiles.error}>
+      {/* Every tile leads to the rows behind its number. */}
       <Stats items={[
-        { label: 'Registered users', value: profiles.error ? '—' : profiles.rows.length },
-        { label: 'Active subscriptions', value: subs.error ? '—' : active.length },
-        { label: 'Chat messages', value: usage.error ? '—' : chats },
-        { label: 'Evaluations', value: usage.error ? '—' : evals },
-        { label: 'Sessions', value: sessions.error ? '—' : sessions.rows.length },
-        { label: 'Active last 24h', value: sessions.error ? '—' : since(sessions.rows, 86_400_000, 'last_active') },
-        { label: 'Syllabus topics', value: bySubject.reduce((n, s) => n + s.total, 0) },
-        { label: 'Edited in CMS', value: overrides.error ? '—' : edited.size },
+        { label: 'Registered users',    value: profiles.error ? '—' : profiles.rows.length,                            href: '/cms/users' },
+        { label: 'Active subscriptions', value: subs.error ? '—' : active.length,                                       href: '/cms/subscribers' },
+        { label: 'Chat messages',       value: usage.error ? '—' : chats,                                              href: '/cms/usage' },
+        { label: 'Evaluations',         value: usage.error ? '—' : evals,                                              href: '/cms/usage' },
+        { label: 'Sessions',            value: sessions.error ? '—' : sessions.rows.length,                            href: '/cms/sessions' },
+        { label: 'Active last 24h',     value: sessions.error ? '—' : since(sessions.rows, 86_400_000, 'last_active'), href: '/cms/sessions' },
+        { label: 'Syllabus topics',     value: bySubject.reduce((n, s) => n + s.total, 0),                             href: '/cms/content' },
+        { label: 'Edited in CMS',       value: overrides.error ? '—' : edited.size,                                    href: '/cms/content' },
       ]} />
 
       <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">

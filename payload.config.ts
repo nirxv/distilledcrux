@@ -44,6 +44,7 @@ export default buildConfig({
       afterNavLinks: ['/app/(payload)/views/NavLinks.tsx#default'],
       views: {
         overview:      { Component: '/app/(payload)/views/Overview.tsx#default',      path: '/overview' },
+        users:         { Component: '/app/(payload)/views/Users.tsx#default',         path: '/users' },
         subscribers:   { Component: '/app/(payload)/views/Subscribers.tsx#default',   path: '/subscribers' },
         usage:         { Component: '/app/(payload)/views/Usage.tsx#default',         path: '/usage' },
         sessions:      { Component: '/app/(payload)/views/Sessions.tsx#default',      path: '/sessions' },

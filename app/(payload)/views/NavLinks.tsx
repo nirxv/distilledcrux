@@ -11,6 +11,7 @@ import './nav.css';
  */
 const LINKS = [
   ['/cms/overview', 'Overview'],
+  ['/cms/users', 'Users'],
   ['/cms/subscribers', 'Subscribers'],
   ['/cms/usage', 'Usage'],
   ['/cms/sessions', 'Sessions'],
