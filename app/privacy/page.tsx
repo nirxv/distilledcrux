@@ -37,6 +37,7 @@ export default function PrivacyPage() {
         <h3 style={S.h3}>Information you provide</h3>
         <ul style={S.ul}>
           <li style={S.li}>Email address and name (when you sign in via Google OAuth)</li>
+          <li style={S.li}>Mobile number (required during onboarding, used to contact you about your account)</li>
           <li style={S.li}>Answer scripts and evaluation content you upload</li>
           <li style={S.li}>Payment information processed by Razorpay; we do not store card details</li>
         </ul>
