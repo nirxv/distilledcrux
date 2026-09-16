@@ -10,11 +10,12 @@ export async function GET(req: NextRequest) {
   const supabase = createServerClient();
 
   const [profileRes, usageRes] = await Promise.all([
-    supabase.from('user_profiles').select('optional, created_at').eq('firebase_uid', user.uid).maybeSingle(),
+    supabase.from('user_profiles').select('optional, phone, created_at').eq('firebase_uid', user.uid).maybeSingle(),
     supabase.from('usage_tracking').select('chat_count, updated_at').eq('firebase_uid', user.uid).maybeSingle(),
   ]);
 
   const optional = profileRes.data?.optional ?? null;
+  const phone = profileRes.data?.phone ?? null;
   const chatCount = usageRes.data?.chat_count ?? 0;
   const lastActive = usageRes.data?.updated_at ?? null;
   const joinedAt = profileRes.data?.created_at ?? null;
@@ -44,6 +45,7 @@ export async function GET(req: NextRequest) {
 
   return NextResponse.json({
     optional,
+    phone,
     chatCount,
     lastActive,
     isPremium,

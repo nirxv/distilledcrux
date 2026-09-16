@@ -34,7 +34,10 @@ export default function LoginPage() {
         });
         if (res.ok) {
           const data = await res.json();
-          if (!data.optional) { router.push('/onboarding'); return; }
+          // Both, not just the optional. Readers who signed up before the
+          // number was asked for are sent to fill it in on their next visit,
+          // which is what makes it mandatory for them too.
+          if (!data.optional || !data.phone) { router.push('/onboarding'); return; }
           router.push(next ?? '/dashboard');
         } else {
           router.push('/onboarding');

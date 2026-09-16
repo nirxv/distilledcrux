@@ -366,7 +366,9 @@ export default function Dashboard() {
           setFailed(true);
         } else {
           const data = await res.json();
-          if (!data.optional) { router.push('/onboarding'); return; }
+          // Same completeness test as the login gate: an existing reader with
+          // no number is sent to onboarding rather than shown the dashboard.
+          if (!data.optional || !data.phone) { router.push('/onboarding'); return; }
           setStats(data);
         }
       } catch {

@@ -18,6 +18,10 @@ function OnboardingInner() {
   const searchParams = useSearchParams();
   const [user, setUser] = useState<User | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  // True when the reader already has an optional and is here only because
+  // their profile predates the number being asked for. The card says so
+  // rather than telling someone who chose months ago to choose again.
+  const [phoneOnly, setPhoneOnly] = useState(false);
   const [phone, setPhone] = useState('');
   const [phoneError, setPhoneError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -50,6 +54,7 @@ function OnboardingInner() {
           }
           if (data.optional) setSelected(data.optional);
           if (data.phone) setPhone(data.phone);
+          if (data.optional && !data.phone && !isChanging) setPhoneOnly(true);
         }
       } catch (err) {
         // Fall through to the picker rather than hanging on the spinner.
@@ -130,7 +135,7 @@ function OnboardingInner() {
             padding: '4px 14px', borderRadius: 20, marginBottom: '1.25rem',
             letterSpacing: '0.08em', textTransform: 'uppercase',
           }}>
-            One-time setup
+            {phoneOnly ? 'One more thing' : 'One-time setup'}
           </div>
           <h1 style={{
             fontFamily: 'var(--font-display)',
@@ -138,19 +143,30 @@ function OnboardingInner() {
             fontWeight: 700, color: 'var(--text)',
             letterSpacing: '-0.02em', marginBottom: '0.6rem',
           }}>
-            Choose your Optional
+            {phoneOnly ? 'Add your mobile number' : 'Choose your Optional'}
           </h1>
           <p style={{ color: 'var(--text3)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-            All content, PYQs, and AI will be tailored to your optional subject.
+            {phoneOnly
+              ? 'We ask everyone for one now, so we can reach you about your subscription. Your optional is unchanged.'
+              : 'All content, PYQs, and AI will be tailored to your optional subject.'}
           </p>
         </div>
 
         {/* Optional grid */}
+        {phoneOnly && (
+          <p style={{
+            fontFamily: 'var(--font-ui)', fontSize: '0.78rem',
+            color: 'var(--text3)', marginBottom: '0.6rem',
+          }}>
+            Your optional, if you want to change it while you are here:
+          </p>
+        )}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
           gap: '0.75rem',
           marginBottom: '2rem',
+          opacity: phoneOnly ? 0.75 : 1,
         }}>
           {optionals.map((opt) => {
             const isSelected = selected === opt.id;
