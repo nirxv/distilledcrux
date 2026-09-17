@@ -251,7 +251,7 @@ function OnboardingInner() {
               type="tel"
               inputMode="numeric"
               autoComplete="tel"
-              placeholder="98765 43210"
+              placeholder="Your mobile number here"
               value={phone}
               // Ten digits is the whole alphabet of this field, so anything
               // else is dropped as it is typed rather than rejected afterwards.
