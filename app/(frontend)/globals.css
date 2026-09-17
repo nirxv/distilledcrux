@@ -112,7 +112,7 @@ body {
   --border:        rgba(0,0,0,0.07);
   --border2:       rgba(0,0,0,0.11);
   --border3:       rgba(0,0,0,0.18);
-  --text:          #0e0e1a;
+  --text:          #000000;
   --text2:         #4a4860;
   /* Was #8a88a0: 3.24:1 on --bg and 3.44:1 on white cards, so small text on it
      failed here too. Now 5.32:1 and 5.63:1. */
