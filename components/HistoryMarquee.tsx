@@ -28,7 +28,7 @@ export default function HistoryMarquee() {
         {items.map((t, i) => (
           <span key={i} style={{
             fontFamily: 'var(--font-ui)',
-            fontSize: '0.75rem',
+            fontSize: '0.75rem', fontWeight: 500,
             letterSpacing: '0.04em',
             color: 'var(--text2)',
             paddingRight: '3.5rem',

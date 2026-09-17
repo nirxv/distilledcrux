@@ -39,7 +39,7 @@ const CSS = `
   }
   .lp-hero-kicker {
     font-family: var(--font-ui);
-    font-size: 0.68rem;
+    font-size: 0.68rem; font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text3);
@@ -77,7 +77,7 @@ const CSS = `
   .lp-btn-primary:hover { opacity: 0.85; }
   .lp-btn-ghost {
     font-family: var(--font-ui);
-    font-size: 0.88rem; color: var(--text3);
+    font-size: 0.88rem; font-weight: 500; color: var(--text3);
     text-decoration: none;
     display: flex; align-items: center; gap: 6px;
     transition: color 0.15s;
@@ -96,7 +96,7 @@ const CSS = `
   }
   .lp-hero-stat-label {
     font-family: var(--font-ui);
-    font-size: 0.72rem; color: var(--text3);
+    font-size: 0.72rem; font-weight: 500; color: var(--text3);
     letter-spacing: 0.04em; text-transform: uppercase;
   }
 
@@ -109,8 +109,8 @@ const CSS = `
   .lp-marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
   .lp-marquee-track:hover { animation-play-state: paused; }
   .lp-marquee-item { display: flex; align-items: center; gap: 0.6rem; padding: 0 2.5rem; flex-shrink: 0; }
-  .lp-marquee-sep { font-family: var(--font-body); font-size: 0.65rem; color: var(--border3); }
-  .lp-marquee-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); letter-spacing: 0.03em; }
+  .lp-marquee-sep { font-family: var(--font-body); font-size: 0.65rem; font-weight: 500; color: var(--border3); }
+  .lp-marquee-text { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); letter-spacing: 0.03em; }
 
   .lp-section {
     max-width: 1200px; margin: 0 auto;
@@ -123,7 +123,7 @@ const CSS = `
   }
   .lp-section-label {
     font-family: var(--font-ui);
-    font-size: 0.65rem; letter-spacing: 0.18em;
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--text3);
     margin-bottom: 1rem;
     display: flex; align-items: center; gap: 10px;
@@ -156,7 +156,7 @@ const CSS = `
     font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em;
   }
   .lp-opt-card-sub {
-    font-family: var(--font-ui); font-size: 0.75rem;
+    font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500;
     color: var(--text3); line-height: 1.5; margin-bottom: 1.25rem; flex: 1;
   }
   .lp-opt-card-body { display: flex; flex-direction: column; flex: 1; }
@@ -175,7 +175,7 @@ const CSS = `
   .lp-history-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-history-left { display: flex; align-items: center; gap: 1rem; }
   .lp-history-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: #e8b86d; margin-bottom: 2px; }
-  .lp-history-sub { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); }
+  .lp-history-sub { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); }
   .lp-history-link {
     font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600;
     color: #e8b86d; display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;
@@ -194,7 +194,7 @@ const CSS = `
   }
   .lp-tool-item:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-tool-num {
-    font-family: var(--font-mono); font-size: 0.65rem;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
     color: var(--text3); letter-spacing: 0.06em;
     padding-top: 4px; flex-shrink: 0; width: 24px;
   }
@@ -202,7 +202,7 @@ const CSS = `
     font-family: var(--font-body); font-size: 0.95rem;
     font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
   }
-  .lp-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); line-height: 1.65; }
+  .lp-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
 
   .lp-pricing-row {
     display: grid; grid-template-columns: repeat(3, 1fr);
@@ -213,7 +213,7 @@ const CSS = `
   .lp-price-cell:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-price-cell.featured { background: var(--bg2); }
   .lp-price-plan {
-    font-family: var(--font-ui); font-size: 0.65rem;
+    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--text3); margin-bottom: 0.75rem;
   }
@@ -222,8 +222,8 @@ const CSS = `
     font-weight: 700; letter-spacing: -0.04em;
     color: var(--text); line-height: 1; margin-bottom: 0;
   }
-  .lp-price-period { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-bottom: 1rem; }
-  .lp-price-desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text2); line-height: 1.5; }
+  .lp-price-period { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-bottom: 1rem; }
+  .lp-price-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text2); line-height: 1.5; }
   .lp-price-tag {
     display: inline-block; font-family: var(--font-ui); font-size: 0.62rem;
     font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -241,7 +241,7 @@ const CSS = `
     font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
   }
   .lp-cta-h2 em { font-style: italic; color: var(--accent); }
-  .lp-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text3); margin-top: 0.75rem; }
+  .lp-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
   .lp-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
   .lp-footer {
@@ -251,9 +251,9 @@ const CSS = `
   }
   .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
   .lp-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
-  .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); text-decoration: none; transition: color 0.15s; }
+  .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
   .lp-footer-link:hover { color: var(--text); }
-  .lp-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3); }
+  .lp-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); }
 
   /* ── Tablet ── */
   @media (max-width: 900px) {
@@ -279,57 +279,57 @@ const CSS = `
       padding: 88px 1.25rem 2.5rem;
       gap: 1.5rem;
     }
-    .lp-hero-kicker { font-size: 0.62rem; letter-spacing: 0.14em; gap: 8px; }
+    .lp-hero-kicker { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.14em; gap: 8px; }
     .lp-hero-h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); margin-bottom: 1.25rem; }
-    .lp-hero-desc { font-size: 0.9rem; line-height: 1.75; margin-bottom: 2rem; }
+    .lp-hero-desc { font-size: 0.9rem; font-weight: 500; line-height: 1.75; margin-bottom: 2rem; }
     .lp-hero-actions { gap: 0.85rem; }
-    .lp-btn-primary { padding: 11px 22px; font-size: 0.85rem; }
-    .lp-btn-ghost { font-size: 0.82rem; }
+    .lp-btn-primary { padding: 11px 22px; font-size: 0.85rem; font-weight: 500; }
+    .lp-btn-ghost { font-size: 0.82rem; font-weight: 500; }
     .lp-hero-stat-row { gap: 2rem; margin-top: 2.5rem; padding-top: 1.5rem; }
     .lp-hero-stat-val { font-size: 1.5rem; }
-    .lp-hero-stat-label { font-size: 0.68rem; }
+    .lp-hero-stat-label { font-size: 0.68rem; font-weight: 500; }
 
     /* Marquee: faster on narrow screens */
     .lp-marquee-wrap { padding: 8px 0; }
-    .lp-marquee-text { font-size: 0.72rem; }
+    .lp-marquee-text { font-size: 0.72rem; font-weight: 500; }
 
     /* Sections */
     .lp-section { padding: 3rem 1.25rem; }
-    .lp-section-label { font-size: 0.6rem; }
+    .lp-section-label { font-size: 0.6rem; font-weight: 500; }
     .lp-section-h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
-    .lp-section-desc { font-size: 0.85rem; line-height: 1.7; }
+    .lp-section-desc { font-size: 0.85rem; font-weight: 500; line-height: 1.7; }
 
     /* Optionals: single column */
     .lp-opt-grid { grid-template-columns: 1fr; }
     .lp-opt-card { padding: 1.25rem 1.25rem; flex-direction: row; align-items: center; gap: 1rem; }
     .lp-opt-card-icon { font-size: 1.5rem; margin-bottom: 0; flex-shrink: 0; }
     .lp-opt-card-name { font-size: 0.95rem; margin-bottom: 0.15rem; }
-    .lp-opt-card-sub { font-size: 0.72rem; margin-bottom: 0; flex: none; }
+    .lp-opt-card-sub { font-size: 0.72rem; font-weight: 500; margin-bottom: 0; flex: none; }
     .lp-opt-card-body { flex: 1; }
-    .lp-opt-card-arrow { margin-top: 0; font-size: 0.7rem; }
+    .lp-opt-card-arrow { margin-top: 0; font-size: 0.7rem; font-weight: 500; }
 
     /* History card */
     .lp-history-card { padding: 1rem 1.25rem; }
-    .lp-history-name { font-size: 0.9rem; }
-    .lp-history-sub { font-size: 0.7rem; }
-    .lp-history-link { font-size: 0.72rem; }
+    .lp-history-name { font-size: 0.9rem; font-weight: 500; }
+    .lp-history-sub { font-size: 0.7rem; font-weight: 500; }
+    .lp-history-link { font-size: 0.72rem; font-weight: 500; }
 
     /* Tools: full width, more compact */
     .lp-tool-item { padding: 1.25rem 1.25rem; gap: 1rem; }
-    .lp-tool-num { font-size: 0.6rem; width: 20px; }
-    .lp-tool-label { font-size: 0.88rem; }
-    .lp-tool-desc { font-size: 0.77rem; line-height: 1.6; }
+    .lp-tool-num { font-size: 0.6rem; font-weight: 500; width: 20px; }
+    .lp-tool-label { font-size: 0.88rem; font-weight: 500; }
+    .lp-tool-desc { font-size: 0.77rem; font-weight: 500; line-height: 1.6; }
 
     /* Pricing: compact cells */
     .lp-price-cell { padding: 1.5rem 1.25rem; }
     .lp-price-amount { font-size: 1.75rem; }
-    .lp-price-plan { font-size: 0.62rem; }
-    .lp-price-desc { font-size: 0.78rem; }
+    .lp-price-plan { font-size: 0.62rem; font-weight: 500; }
+    .lp-price-desc { font-size: 0.78rem; font-weight: 500; }
 
     /* CTA */
     .lp-cta { padding: 3rem 1.25rem 4rem; gap: 1.5rem; }
     .lp-cta-h2 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
-    .lp-cta-sub { font-size: 0.82rem; }
+    .lp-cta-sub { font-size: 0.82rem; font-weight: 500; }
     .lp-cta-right { flex-direction: column; gap: 0.65rem; width: 100%; }
     .lp-cta-right .lp-btn-primary { text-align: center; width: 100%; display: block; padding: 14px; }
     .lp-cta-right .lp-btn-ghost { justify-content: center; }
@@ -337,9 +337,9 @@ const CSS = `
     /* Footer */
     .lp-footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; gap: 0.85rem; }
     .lp-footer-links { justify-content: center; gap: 1.25rem; }
-    .lp-footer-link { font-size: 0.75rem; }
-    .lp-footer-copy { font-size: 0.7rem; }
-    .lp-footer-logo { font-size: 0.72rem; }
+    .lp-footer-link { font-size: 0.75rem; font-weight: 500; }
+    .lp-footer-copy { font-size: 0.7rem; font-weight: 500; }
+    .lp-footer-logo { font-size: 0.72rem; font-weight: 500; }
   }
 `;
 
@@ -496,7 +496,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ marginTop: '1.25rem', textAlign: 'right' }}>
-            <Link href="/pricing" style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', color: 'var(--accent)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Link href="/pricing" style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', fontWeight: 500, color: 'var(--accent)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
               Full pricing details →
             </Link>
           </div>

@@ -9,7 +9,7 @@ const CSS = `
 .ct-orb2{position:absolute;border-radius:50%;width:500px;height:500px;background:radial-gradient(circle,rgba(45,212,191,0.07) 0%,transparent 65%);bottom:100px;left:-100px;filter:blur(80px);pointer-events:none;z-index:0;}
 .ct-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
 .ct-head{text-align:center;margin-bottom:3.5rem;}
-.ct-tag{display:inline-block;font-family:var(--font-ui);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.ct-tag{display:inline-block;font-family:var(--font-ui);font-size:0.68rem; font-weight: 500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
 .ct-title{font-family:var(--font-body);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.1;margin-bottom:1rem;}
 .ct-title em{font-style:normal;color:var(--accent);}
 .ct-sub{font-family:var(--font-ui);font-size:1rem;color:var(--text2);max-width:480px;margin:0 auto;line-height:1.7;}
@@ -21,13 +21,13 @@ const CSS = `
 .ct-info-value{font-family:var(--font-ui);font-size:0.92rem;color:var(--text);font-weight:500;}
 .ct-info-value a{color:var(--accent);text-decoration:none;}
 .ct-info-value a:hover{text-decoration:underline;}
-.ct-info-note{font-family:var(--font-ui);font-size:0.78rem;color:var(--text3);margin-top:0.2rem;line-height:1.5;}
+.ct-info-note{font-family:var(--font-ui);font-size:0.78rem; font-weight: 500;color:var(--text3);margin-top:0.2rem;line-height:1.5;}
 .ct-form-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:20px;padding:2rem;}
 .ct-form-title{font-family:var(--font-body);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:1.5rem;}
 .ct-form{display:flex;flex-direction:column;gap:1.1rem;}
 .ct-field{display:flex;flex-direction:column;gap:0.4rem;}
 .ct-label{font-family:var(--font-ui);font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text3);}
-.ct-input,.ct-textarea,.ct-select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:0.75rem 1rem;font-family:var(--font-ui);font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.15s,box-shadow 0.15s;appearance:none;}
+.ct-input,.ct-textarea,.ct-select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:0.75rem 1rem;font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;color:var(--text);outline:none;transition:border-color 0.15s,box-shadow 0.15s;appearance:none;}
 .ct-input:focus,.ct-textarea:focus,.ct-select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(67,97,238,0.15);}
 .ct-input::placeholder,.ct-textarea::placeholder{color:var(--text3);}
 .ct-textarea{resize:vertical;min-height:130px;line-height:1.6;}
@@ -35,8 +35,8 @@ const CSS = `
 .ct-btn{padding:0.85rem 2rem;border-radius:10px;font-family:var(--font-ui);font-size:0.9rem;font-weight:600;background:var(--accent);color:#fff;border:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;align-self:flex-start;}
 .ct-btn:hover:not(:disabled){opacity:0.88;transform:translateY(-1px);}
 .ct-btn:disabled{opacity:0.5;cursor:not-allowed;}
-.ct-success{background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.25);border-radius:10px;padding:1rem 1.25rem;font-family:var(--font-ui);font-size:0.88rem;color:var(--green);line-height:1.5;}
-.ct-error{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:10px;padding:1rem 1.25rem;font-family:var(--font-ui);font-size:0.88rem;color:var(--red);line-height:1.5;}
+.ct-success{background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.25);border-radius:10px;padding:1rem 1.25rem;font-family:var(--font-ui);font-size:0.88rem; font-weight: 500;color:var(--green);line-height:1.5;}
+.ct-error{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:10px;padding:1rem 1.25rem;font-family:var(--font-ui);font-size:0.88rem; font-weight: 500;color:var(--red);line-height:1.5;}
 @media(max-width:760px){.ct-grid{grid-template-columns:1fr;}.ct-btn{width:100%;text-align:center;}}
 `;
 

@@ -82,14 +82,14 @@ const CSS = `
 .mcq-sidebar::-webkit-scrollbar { width: 3px; }
 .mcq-sidebar::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 .mcq-sidebar-title {
-  font-family: var(--font-mono); font-size: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.55rem; font-weight: 500;
   letter-spacing: 0.28em; text-transform: uppercase; color: var(--text3); margin-bottom: 7px;
 }
 .mcq-filter-group { display: flex; flex-direction: column; gap: 3px; }
 .mcq-filter-btn {
   padding: 6px 10px; border-radius: 5px; border: 1px solid transparent;
   background: transparent; color: var(--text3); font-family: var(--font-mono);
-  font-size: 0.68rem; cursor: pointer; text-align: left; transition: all 0.13s;
+  font-size: 0.68rem; font-weight: 500; cursor: pointer; text-align: left; transition: all 0.13s;
   letter-spacing: 0.02em;
 }
 .mcq-filter-btn:hover { color: var(--text2); background: var(--bg3); }
@@ -100,17 +100,17 @@ const CSS = `
 .mcq-head { margin-bottom: 20px; }
 .mcq-breadcrumb {
   display: flex; align-items: center; gap: 6px;
-  font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3);
+  font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3);
   margin-bottom: 1.25rem;
 }
 .mcq-breadcrumb a { color: var(--text3); text-decoration: none; transition: color 0.15s; }
 .mcq-breadcrumb a:hover { color: var(--text); }
 .mcq-head-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .mcq-title { font-family: var(--font-body); font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
-.mcq-count { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text3); letter-spacing: 0.1em; }
+.mcq-count { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500; color: var(--text3); letter-spacing: 0.1em; }
 .mcq-search {
   width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
-  padding: 10px 14px; color: var(--text); font-family: var(--font-ui); font-size: 0.86rem;
+  padding: 10px 14px; color: var(--text); font-family: var(--font-ui); font-size: 0.86rem; font-weight: 500;
   outline: none; transition: border-color 0.18s;
 }
 .mcq-search:focus { border-color: var(--border2); }
@@ -127,21 +127,21 @@ const CSS = `
 
 .mcq-card-top { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; flex-wrap: wrap; }
 .mcq-year-tag {
-  font-family: var(--font-mono); font-size: 0.6rem; padding: 2px 8px; border-radius: 3px;
+  font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500; padding: 2px 8px; border-radius: 3px;
   background: rgba(67,97,238,0.08); border: 1px solid rgba(67,97,238,0.2); color: var(--accent3);
 }
-.mcq-topic-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text3); }
-.mcq-diff-easy  { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; padding: 2px 8px; border-radius: 3px; background: rgba(74,222,128,0.06); border: 1px solid rgba(74,222,128,0.15); color: #4ade80; }
-.mcq-diff-medium{ margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; padding: 2px 8px; border-radius: 3px; background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24; }
-.mcq-diff-hard  { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; padding: 2px 8px; border-radius: 3px; background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.15); color: #f87171; }
+.mcq-topic-tag { font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500; color: var(--text3); }
+.mcq-diff-easy  { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 500; padding: 2px 8px; border-radius: 3px; background: rgba(74,222,128,0.06); border: 1px solid rgba(74,222,128,0.15); color: #4ade80; }
+.mcq-diff-medium{ margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 500; padding: 2px 8px; border-radius: 3px; background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24; }
+.mcq-diff-hard  { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 500; padding: 2px 8px; border-radius: 3px; background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.15); color: #f87171; }
 
-.mcq-question { font-family: var(--font-body); font-size: 0.9rem; color: var(--text); line-height: 1.7; margin-bottom: 11px; }
+.mcq-question { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--text); line-height: 1.7; margin-bottom: 11px; }
 
 .mcq-options { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
 .mcq-option {
   display: flex; align-items: flex-start; gap: 9px; padding: 8px 12px;
   border-radius: 6px; border: 1px solid var(--border); background: var(--bg);
-  cursor: pointer; transition: all 0.13s; font-family: var(--font-ui); font-size: 0.8rem;
+  cursor: pointer; transition: all 0.13s; font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
   color: var(--text2); text-align: left;
 }
 .mcq-option:hover { border-color: var(--border2); background: var(--bg3); color: var(--text); }
@@ -154,7 +154,7 @@ const CSS = `
 }
 
 .mcq-explanation {
-  font-family: var(--font-ui); font-size: 0.78rem; color: var(--text2);
+  font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text2);
   line-height: 1.65; padding: 10px 12px;
   background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
   margin-top: 4px; animation: fade-up 0.2s ease;
@@ -165,11 +165,11 @@ const CSS = `
 .mcq-skip-btn {
   padding: 4px 12px; border-radius: 4px; border: 1px solid var(--border);
   background: transparent; color: var(--text3); font-family: var(--font-mono);
-  font-size: 0.6rem; letter-spacing: 0.05em; cursor: pointer; transition: all 0.13s;
+  font-size: 0.6rem; font-weight: 500; letter-spacing: 0.05em; cursor: pointer; transition: all 0.13s;
 }
 .mcq-skip-btn:hover { border-color: var(--border2); color: var(--text2); }
 
-.mcq-empty { text-align: center; padding: 80px 20px; color: var(--text3); font-family: var(--font-ui); font-size: 0.88rem; }
+.mcq-empty { text-align: center; padding: 80px 20px; color: var(--text3); font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; }
 
 /* Quiz CTA strip */
 .mcq-quiz-cta {
@@ -177,7 +177,7 @@ const CSS = `
   padding: 1rem 1.25rem; margin-bottom: 20px;
   background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
 }
-.mcq-quiz-cta-text { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text2); line-height: 1.5; }
+.mcq-quiz-cta-text { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2); line-height: 1.5; }
 .mcq-quiz-cta-text strong { color: var(--text); font-weight: 600; }
 .mcq-quiz-link {
   font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;

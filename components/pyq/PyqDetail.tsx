@@ -27,7 +27,7 @@ const CSS = `
   @media(max-width:768px){ .pd-inner{grid-template-columns:1fr;} .pd-sidebar{position:static!important;} }
 
   /* Breadcrumb */
-  .pd-crumb { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.72rem; color:var(--text3); margin-bottom:1.5rem; }
+  .pd-crumb { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.72rem; font-weight: 500; color:var(--text3); margin-bottom:1.5rem; }
   .pd-crumb a { color:var(--text3); text-decoration:none; transition:color 0.15s; }
   .pd-crumb a:hover { color:var(--text); }
 
@@ -39,7 +39,7 @@ const CSS = `
   }
   .pd-badges { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:1rem; }
   .pd-badge {
-    font-family:var(--font-mono); font-size:0.6rem; padding:2px 9px;
+    font-family:var(--font-mono); font-size:0.6rem; font-weight: 500; padding:2px 9px;
     border-radius:3px; border:1px solid var(--border); background:var(--bg3); color:var(--text3);
   }
   .pd-badge.accent { background:var(--pd-accent-dim); border-color:var(--pd-accent-border); color:var(--pd-accent); }
@@ -71,7 +71,7 @@ const CSS = `
   .pd-btn-ghost:hover { border-color:var(--pd-accent-border); color:var(--pd-accent); background:var(--pd-accent-dim); }
 
   .pd-section-label {
-    font-family:var(--font-mono); font-size:0.58rem; letter-spacing:0.18em;
+    font-family:var(--font-mono); font-size:0.58rem; font-weight: 500; letter-spacing:0.18em;
     text-transform:uppercase; color:var(--text3); margin-bottom:1rem;
   }
 
@@ -97,11 +97,11 @@ const CSS = `
     padding:2rem;
   }
   [data-theme="light"] .pd-paywall { background:linear-gradient(to bottom, rgba(248,248,252,0) 0%, var(--bg) 40%); }
-  .pd-paywall-text { font-family:var(--font-ui); font-size:0.82rem; color:var(--text3); margin:0; }
+  .pd-paywall-text { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); margin:0; }
 
   .pd-generating {
     display:flex; align-items:center; gap:8px; padding:1.5rem 0;
-    font-family:var(--font-mono); font-size:0.72rem; color:var(--text3); letter-spacing:0.06em;
+    font-family:var(--font-mono); font-size:0.72rem; font-weight: 500; color:var(--text3); letter-spacing:0.06em;
   }
   .pd-dot { width:6px; height:6px; border-radius:50%; background:var(--pd-accent);
     animation:pd-dot 1.2s ease-in-out infinite; }
@@ -113,7 +113,7 @@ const CSS = `
   .pd-nav { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:2rem; }
   .pd-nav-btn {
     display:inline-flex; align-items:center; gap:6px;
-    font-family:var(--font-ui); font-size:0.78rem; color:var(--text2);
+    font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text2);
     padding:7px 14px; border:1px solid var(--border); border-radius:6px;
     text-decoration:none; transition:all 0.15s;
   }
@@ -127,7 +127,7 @@ const CSS = `
   .pd-upload-input {
     width:100%; background:var(--bg3); border:1px solid var(--border);
     border-radius:6px; padding:0.6rem 0.8rem; color:var(--text);
-    font-family:var(--font-ui); font-size:0.84rem; outline:none; box-sizing:border-box;
+    font-family:var(--font-ui); font-size:0.84rem; font-weight: 500; outline:none; box-sizing:border-box;
     margin-bottom:0.6rem;
   }
   .pd-upload-input:focus { border-color:var(--pd-accent-border2); }
@@ -141,7 +141,7 @@ const CSS = `
   .pd-answer-icon { font-size:1.1rem; margin-bottom:0.4rem; }
   .pd-answer-name { font-family:var(--font-ui); font-size:0.82rem; color:var(--text); font-weight:600;
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px; }
-  .pd-answer-meta { font-family:var(--font-mono); font-size:0.62rem; color:var(--text3); }
+  .pd-answer-meta { font-family:var(--font-mono); font-size:0.62rem; font-weight: 500; color:var(--text3); }
 
   /* Sidebar */
   .pd-sidebar { position:sticky; top:90px; display:flex; flex-direction:column; gap:1rem; }
@@ -151,14 +151,14 @@ const CSS = `
   .pd-related { display:flex; flex-direction:column; gap:0.5rem; }
   .pd-related-item {
     display:block; padding:0.6rem 0.75rem; border:1px solid var(--border); border-radius:6px;
-    text-decoration:none; font-family:var(--font-ui); font-size:0.78rem; color:var(--text2); line-height:1.5;
+    text-decoration:none; font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text2); line-height:1.5;
     transition:all 0.15s;
   }
   .pd-related-item:hover { border-color:var(--pd-accent-border); background:var(--pd-accent-dim); color:var(--pd-accent); }
-  .pd-related-year { font-family:var(--font-mono); font-size:0.6rem; color:var(--text3); margin-top:3px; }
+  .pd-related-year { font-family:var(--font-mono); font-size:0.6rem; font-weight: 500; color:var(--text3); margin-top:3px; }
 
-  .pd-empty { text-align:center; padding:3rem 1rem; color:var(--text3); font-family:var(--font-ui); font-size:0.88rem; }
-  .pd-dashed { border:1px dashed var(--border); border-radius:8px; padding:2rem; text-align:center; color:var(--text3); font-family:var(--font-ui); font-size:0.82rem; }
+  .pd-empty { text-align:center; padding:3rem 1rem; color:var(--text3); font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; }
+  .pd-dashed { border:1px dashed var(--border); border-radius:8px; padding:2rem; text-align:center; color:var(--text3); font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; }
 `;
 
 function marksClass(m: number) {
@@ -376,7 +376,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                   <p className="pd-paywall-text">
                     Model answers are part of Premium.
                   </p>
-                  <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', padding: '7px 16px' }}>
+                  <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', fontWeight: 500, padding: '7px 16px' }}>
                     See plans →
                   </Link>
                 </div>
@@ -407,7 +407,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                       <div className="pd-paywall">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         <p className="pd-paywall-text">Full model answer available on Premium</p>
-                        <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', padding: '7px 16px' }}>
+                        <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', fontWeight: 500, padding: '7px 16px' }}>
                           Upgrade →
                         </Link>
                       </div>
@@ -431,10 +431,10 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 type="file"
                 accept="application/pdf"
                 onChange={e => setFile(e.target.files?.[0] ?? null)}
-                style={{ color: 'var(--text2)', fontSize: '0.82rem', marginBottom: '0.6rem', display: 'block' }}
+                style={{ color: 'var(--text2)', fontSize: '0.82rem', fontWeight: 500, marginBottom: '0.6rem', display: 'block' }}
               />
-              {uploadErr && <div style={{ color: 'var(--red,#f87171)', fontSize: '0.8rem', marginBottom: '0.5rem' }}>{uploadErr}</div>}
-              {uploadOk && <div style={{ color: '#4ade80', fontSize: '0.8rem', marginBottom: '0.5rem' }}>✓ Submitted!</div>}
+              {uploadErr && <div style={{ color: 'var(--red,#f87171)', fontSize: '0.8rem', fontWeight: 500, marginBottom: '0.5rem' }}>{uploadErr}</div>}
+              {uploadOk && <div style={{ color: '#4ade80', fontSize: '0.8rem', fontWeight: 500, marginBottom: '0.5rem' }}>✓ Submitted!</div>}
               <button
                 className="pd-btn-primary"
                 onClick={handleUpload}
@@ -495,7 +495,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
             {/* Ask AI card */}
             <div className="pd-sidebar-card">
               <div className="pd-section-label">AI Tutor</div>
-              <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', color: 'var(--text3)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
+              <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', fontWeight: 500, color: 'var(--text3)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
                 Ask the AI to explain this question, suggest an outline, cite relevant thinkers, or critique your draft answer.
               </p>
               <Link
@@ -524,7 +524,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text)' }}>
                   Coming Soon
                 </div>
-                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)', lineHeight: 1.6 }}>
+                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', lineHeight: 1.6 }}>
                   Topper&apos;s answer copies for this question will be added here. Check back soon.
                 </div>
               </div>
@@ -557,8 +557,8 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 pyq.microtheme ? ['Microtheme', pyq.microtheme] : null,
               ].filter(Boolean) as string[][]).map(([k, v]) => (
                 <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '5px 0', borderBottom: '1px solid var(--border)', gap: '1rem' }}>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--text3)', flexShrink: 0 }}>{k}</span>
-                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', color: 'var(--text2)', textAlign: 'right' }}>{v}</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', fontWeight: 500, color: 'var(--text3)', flexShrink: 0 }}>{k}</span>
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text2)', textAlign: 'right' }}>{v}</span>
                 </div>
               ))}
             </div>

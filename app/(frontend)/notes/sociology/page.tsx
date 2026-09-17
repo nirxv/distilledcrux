@@ -25,7 +25,7 @@ export default function SociologyNotesPage() {
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
 
       {/* Breadcrumb */}
-      <div style={{ color: 'var(--text3)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+      <div style={{ color: 'var(--text3)', fontSize: '0.75rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
         <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
         <span>·</span>
         <span>Sociology</span>
@@ -34,7 +34,7 @@ export default function SociologyNotesPage() {
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
         Sociology Optional
       </h1>
-      <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '3rem' }}>
+      <p style={{ color: 'var(--text2)', fontSize: '0.9rem', fontWeight: 500, marginBottom: '3rem' }}>
         {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants
       </p>
 
@@ -47,7 +47,7 @@ export default function SociologyNotesPage() {
             color: COLOR, background: 'rgba(67,97,238,0.1)',
             border: '1px solid rgba(67,97,238,0.25)', padding: '3px 10px', borderRadius: 4,
           }}>Paper I</span>
-          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Fundamentals of Sociology</span>
+          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>Fundamentals of Sociology</span>
         </div>
 
         {SECTIONS_P1.map(({ label, value }) => {
@@ -71,7 +71,7 @@ export default function SociologyNotesPage() {
                       transition: 'background 0.15s, border-color 0.15s',
                     }}>
                       <span style={{
-                        fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)',
+                        fontSize: '0.62rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)',
                         background: 'var(--bg3)', border: '1px solid var(--border)',
                         padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px',
                       }}>
@@ -79,12 +79,12 @@ export default function SociologyNotesPage() {
                       </span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ color: 'var(--text)', fontSize: '0.93rem', fontWeight: 600, marginBottom: '0.25rem' }}>{note.title}</div>
-                        <div style={{ color: 'var(--text3)', fontSize: '0.78rem', lineHeight: 1.5 }}>{note.description}</div>
+                        <div style={{ color: 'var(--text3)', fontSize: '0.78rem', fontWeight: 500, lineHeight: 1.5 }}>{note.description}</div>
                         {note.subtopics && (
                           <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' as const, marginTop: '0.5rem' }}>
                             {note.subtopics.map(st => (
                               <span key={st} style={{
-                                fontSize: '0.65rem', fontFamily: 'var(--font-ui)',
+                                fontSize: '0.65rem', fontWeight: 500, fontFamily: 'var(--font-ui)',
                                 color: 'var(--text3)', background: 'var(--bg)',
                                 border: '1px solid var(--border)', padding: '1px 7px', borderRadius: 3,
                               }}>{st}</span>
@@ -110,7 +110,7 @@ export default function SociologyNotesPage() {
             color: '#2dd4bf', background: 'rgba(45,212,191,0.08)',
             border: '1px solid rgba(45,212,191,0.22)', padding: '3px 10px', borderRadius: 4,
           }}>Paper II</span>
-          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>Indian Society: Structure and Change</span>
+          <span style={{ color: 'var(--text2)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>Indian Society: Structure and Change</span>
         </div>
 
         {SECTIONS_P2.map(({ label, value }) => {
@@ -134,7 +134,7 @@ export default function SociologyNotesPage() {
                       transition: 'background 0.15s',
                     }}>
                       <span style={{
-                        fontSize: '0.62rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)',
+                        fontSize: '0.62rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)',
                         background: 'var(--bg3)', border: '1px solid var(--border)',
                         padding: '2px 7px', borderRadius: 3, flexShrink: 0, marginTop: '2px',
                       }}>
@@ -142,12 +142,12 @@ export default function SociologyNotesPage() {
                       </span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ color: 'var(--text)', fontSize: '0.93rem', fontWeight: 600, marginBottom: '0.25rem' }}>{note.title}</div>
-                        <div style={{ color: 'var(--text3)', fontSize: '0.78rem', lineHeight: 1.5 }}>{note.description}</div>
+                        <div style={{ color: 'var(--text3)', fontSize: '0.78rem', fontWeight: 500, lineHeight: 1.5 }}>{note.description}</div>
                         {note.subtopics && (
                           <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' as const, marginTop: '0.5rem' }}>
                             {note.subtopics.map(st => (
                               <span key={st} style={{
-                                fontSize: '0.65rem', fontFamily: 'var(--font-ui)',
+                                fontSize: '0.65rem', fontWeight: 500, fontFamily: 'var(--font-ui)',
                                 color: 'var(--text3)', background: 'var(--bg)',
                                 border: '1px solid var(--border)', padding: '1px 7px', borderRadius: 3,
                               }}>{st}</span>

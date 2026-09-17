@@ -14,7 +14,7 @@ const CSS = `
 .qz-intro-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
 .qz-intro-h { font-family: var(--font-body); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.035em; color: var(--text); line-height: 1.08; margin-bottom: 0.75rem; }
 .qz-intro-h em { font-style: italic; color: var(--gold); }
-.qz-intro-sub { font-family: var(--font-ui); font-size: 0.9rem; color: var(--text2); line-height: 1.7; margin-bottom: 2rem; }
+.qz-intro-sub { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; color: var(--text2); line-height: 1.7; margin-bottom: 2rem; }
 .qz-start-btn { font-family: var(--font-ui); font-size: 0.92rem; font-weight: 600; background: var(--text); color: var(--bg); padding: 13px 36px; border-radius: 6px; border: none; cursor: pointer; transition: opacity 0.15s; letter-spacing: 0.01em; }
 .qz-start-btn:hover { opacity: 0.85; }
 
@@ -27,8 +27,8 @@ const CSS = `
 
 /* Timer */
 .qz-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-.qz-qnum { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); letter-spacing: 0.1em; }
-.qz-timer { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); transition: color 0.3s, border-color 0.3s; }
+.qz-qnum { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500; color: var(--text3); letter-spacing: 0.1em; }
+.qz-timer { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); transition: color 0.3s, border-color 0.3s; }
 .qz-timer.ok   { color: var(--text3); border-color: var(--border); }
 .qz-timer.warn { color: #fbbf24; border-color: rgba(251,191,36,0.3); }
 .qz-timer.red  { color: #f87171; border-color: rgba(248,113,113,0.3); }
@@ -44,7 +44,7 @@ const CSS = `
 .qz-opt {
   display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px;
   border-radius: 7px; border: 1px solid var(--border); background: var(--bg);
-  cursor: pointer; transition: all 0.13s; font-family: var(--font-ui); font-size: 0.82rem;
+  cursor: pointer; transition: all 0.13s; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
   color: var(--text2); text-align: left; width: 100%;
 }
 .qz-opt:hover:not(:disabled) { border-color: var(--border2); background: var(--bg3); color: var(--text); }
@@ -54,7 +54,7 @@ const CSS = `
 .qz-opt-key { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 700; flex-shrink: 0; padding-top: 1px; }
 
 /* Explanation */
-.qz-expl { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text2); line-height: 1.65; padding: 10px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; margin-top: 10px; animation: quiz-fade 0.2s ease; }
+.qz-expl { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text2); line-height: 1.65; padding: 10px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; margin-top: 10px; animation: quiz-fade 0.2s ease; }
 .qz-expl strong { color: var(--text); }
 
 /* Next button */
@@ -69,16 +69,16 @@ const CSS = `
   background: var(--bg2); border: 2px solid var(--border); margin: 0 auto 1.75rem;
 }
 .qz-score-num { font-family: var(--font-body); font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; color: var(--text); line-height: 1; }
-.qz-score-den { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); letter-spacing: 0.06em; }
+.qz-score-den { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500; color: var(--text3); letter-spacing: 0.06em; }
 .qz-results-h { font-family: var(--font-body); font-size: clamp(1.5rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.5rem; }
 .qz-results-h em { font-style: italic; color: var(--gold); }
-.qz-results-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text2); margin-bottom: 2rem; }
+.qz-results-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text2); margin-bottom: 2rem; }
 
 .qz-review { display: flex; flex-direction: column; gap: 6px; text-align: left; margin-bottom: 2rem; }
 .qz-review-row {
   display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px;
   border-radius: 7px; border: 1px solid var(--border); background: var(--bg2);
-  font-family: var(--font-ui); font-size: 0.78rem; color: var(--text2);
+  font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text2);
 }
 .qz-review-row.c { border-color: rgba(74,222,128,0.25); }
 .qz-review-row.w { border-color: rgba(248,113,113,0.25); }
@@ -91,14 +91,14 @@ const CSS = `
 .qz-results-actions { display: flex; align-items: center; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .qz-retake-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600; background: var(--text); color: var(--bg); padding: 11px 28px; border-radius: 6px; border: none; cursor: pointer; transition: opacity 0.15s; }
 .qz-retake-btn:hover { opacity: 0.85; }
-.qz-back-link { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text3); text-decoration: none; transition: color 0.15s; }
+.qz-back-link { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
 .qz-back-link:hover { color: var(--text); }
 
 /* Time per question display */
 .qz-stat-row { display: flex; gap: 1.25rem; justify-content: center; margin-bottom: 1.75rem; }
 .qz-stat { text-align: center; }
 .qz-stat-val { font-family: var(--font-body); font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: -0.03em; line-height: 1; margin-bottom: 3px; }
-.qz-stat-label { font-family: var(--font-ui); font-size: 0.65rem; color: var(--text3); letter-spacing: 0.05em; text-transform: uppercase; }
+.qz-stat-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; color: var(--text3); letter-spacing: 0.05em; text-transform: uppercase; }
 `;
 
 /* ─── Placeholder questions (10 mixed subjects) ─────────────────
@@ -300,11 +300,11 @@ export default function PrelimsQuizPage() {
                   <div key={q.id} className={`qz-review-row ${cls}`}>
                     <div className={`qz-review-dot ${cls}`} />
                     <div>
-                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: 'var(--text)', marginBottom: 2 }}>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', fontWeight: 500, color: 'var(--text)', marginBottom: 2 }}>
                         {i + 1}. {q.question.slice(0, 80)}{q.question.length > 80 ? '…' : ''}
                       </div>
                       {!isSkip && !isCorrect && (
-                        <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', color: 'var(--text3)' }}>
+                        <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
                           Correct: {q.options[q.answer]}
                         </div>
                       )}

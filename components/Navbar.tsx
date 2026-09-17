@@ -151,7 +151,7 @@ export default function Navbar() {
           color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         }
         .nav-mobile-user-email {
-          font-family: var(--font-ui); font-size: 0.75rem;
+          font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500;
           color: var(--text3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         }
         .nav-mobile-action {
@@ -335,12 +335,12 @@ export default function Navbar() {
                       <div style={{ color: 'var(--text)', fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.85rem', marginBottom: 2 }}>
                         {user.displayName ?? 'User'}
                       </div>
-                      <div style={{ color: 'var(--text3)', fontFamily: 'var(--font-ui)', fontSize: '0.75rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      <div style={{ color: 'var(--text3)', fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {user.email}
                       </div>
                     </div>
                     <button onClick={() => { setDropdownOpen(false); router.push('/onboarding?change=1'); }}
-                      style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
+                      style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--bg3)')}
                       onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
                     >
@@ -350,7 +350,7 @@ export default function Navbar() {
                       Change Optional
                     </button>
                     <button onClick={handleSignOut}
-                      style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--red)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
+                      style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--red)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--red-dim)')}
                       onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
                     >
@@ -476,7 +476,7 @@ export default function Navbar() {
                   <div style={{ fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.88rem', color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                     {user.displayName ?? 'User'}
                   </div>
-                  <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', color: 'var(--text3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
+                  <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
                     {user.email}
                   </div>
                 </div>
@@ -589,7 +589,7 @@ export default function Navbar() {
             borderRadius: 999, width: 24, height: 24,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             cursor: 'pointer', transition: 'top 0.2s ease',
-            fontSize: '0.55rem', color: 'var(--text3)',
+            fontSize: '0.55rem', fontWeight: 500, color: 'var(--text3)',
             boxShadow: '0 2px 8px rgba(0,0,0,0.2)', padding: 0,
           }}
         >

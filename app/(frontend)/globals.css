@@ -19,12 +19,11 @@
   --border2:       rgba(255,255,255,0.10);
   --border3:       rgba(255,255,255,0.16);
   --text:          #ffffff;
-  --text2:         #9896b0;
-  /* Was #5a5870, which measured 2.97:1 on --bg and 2.85:1 on --bg2. That is
-     below even the 3:1 floor for large text, and this is the most used text
-     token on the site, almost entirely on 10 to 13px labels where the
-     requirement is 4.5:1. Now 5.92:1 and 5.67:1. */
-  --text3:         #8a88a0;
+  /* Both dim tokens are the full-contrast value. 5.92:1 cleared the standard
+     and still read as grey at 10 to 13px, so the ratio was not the thing that
+     needed fixing. Nothing on this ground is dimmed by colour any more. */
+  --text2:         #ffffff;
+  --text3:         #ffffff;
   --accent:        #4361ee;
   --accent2:       #2d4fd4;
   --accent3:       #7b93f7;
@@ -113,10 +112,8 @@ body {
   --border2:       rgba(0,0,0,0.11);
   --border3:       rgba(0,0,0,0.18);
   --text:          #000000;
-  --text2:         #4a4860;
-  /* Was #8a88a0: 3.24:1 on --bg and 3.44:1 on white cards, so small text on it
-     failed here too. Now 5.32:1 and 5.63:1. */
-  --text3:         #67657c;
+  --text2:         #000000;
+  --text3:         #000000;
   --glass-bg:      rgba(0,0,0,0.02);
   --glass-bg2:     rgba(0,0,0,0.04);
   --glass-border:  rgba(0,0,0,0.07);

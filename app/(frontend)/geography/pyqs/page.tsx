@@ -15,7 +15,7 @@ const CSS = `
   appearance:none;-webkit-appearance:none;
   background:var(--bg2);border:1px solid var(--border);border-radius:7px;
   padding:7px 30px 7px 12px;color:var(--text2);
-  font-family:var(--font-mono);font-size:0.7rem;cursor:pointer;outline:none;
+  font-family:var(--font-mono);font-size:0.7rem; font-weight: 500;cursor:pointer;outline:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right 10px center;
   transition:border-color 0.15s,color 0.15s;min-width:100px;
@@ -26,7 +26,7 @@ const CSS = `
 }
 .pyq-filter-reset{
   padding:7px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg2);
-  color:var(--text3);font-family:var(--font-mono);font-size:0.68rem;
+  color:var(--text3);font-family:var(--font-mono);font-size:0.68rem; font-weight: 500;
   cursor:pointer;transition:all 0.15s;white-space:nowrap;
 }
 .pyq-filter-reset:hover{border-color:var(--border2);color:var(--text);}
@@ -34,8 +34,8 @@ const CSS = `
 .pyq-head{margin-bottom:20px;}
 .pyq-head-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
 .pyq-title{font-family:var(--font-body);font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
-.pyq-count{font-family:var(--font-mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.1em;}
-.pyq-search{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:11px 16px;color:var(--text);font-family:var(--font-ui);font-size:0.88rem;outline:none;transition:border-color 0.2s;margin-bottom:12px;}
+.pyq-count{font-family:var(--font-mono);font-size:0.65rem; font-weight: 500;color:var(--text3);letter-spacing:0.1em;}
+.pyq-search{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:11px 16px;color:var(--text);font-family:var(--font-ui);font-size:0.88rem; font-weight: 500;outline:none;transition:border-color 0.2s;margin-bottom:12px;}
 .pyq-search:focus{border-color:var(--geo-border2);}
 .pyq-search::placeholder{color:var(--text3);}
 
@@ -44,10 +44,10 @@ const CSS = `
 .pyq-card:hover{border-color:var(--geo-border);background:var(--bg3);}
 .pyq-card-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
 
-.pyq-year{font-family:var(--font-mono);font-size:0.62rem;padding:2px 9px;border-radius:3px;background:var(--geo-dim);border:1px solid var(--geo-border);color:var(--geo);}
-.pyq-paper{font-family:var(--font-mono);font-size:0.6rem;color:var(--text2);}
-.pyq-section{font-family:var(--font-mono);font-size:0.6rem;color:var(--text2);}
-.pyq-marks{margin-left:auto;font-family:var(--font-mono);font-size:0.62rem;padding:2px 9px;border-radius:3px;}
+.pyq-year{font-family:var(--font-mono);font-size:0.62rem; font-weight: 500;padding:2px 9px;border-radius:3px;background:var(--geo-dim);border:1px solid var(--geo-border);color:var(--geo);}
+.pyq-paper{font-family:var(--font-mono);font-size:0.6rem; font-weight: 500;color:var(--text2);}
+.pyq-section{font-family:var(--font-mono);font-size:0.6rem; font-weight: 500;color:var(--text2);}
+.pyq-marks{margin-left:auto;font-family:var(--font-mono);font-size:0.62rem; font-weight: 500;padding:2px 9px;border-radius:3px;}
 .m10{background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.15);color:#4ade80;}
 .m15{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.15);color:#fbbf24;}
 .m20{background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.15);color:#f87171;}
@@ -56,20 +56,20 @@ const CSS = `
 
 .pyq-question{font-family:var(--font-body);font-size:0.93rem;color:var(--text);line-height:1.7;margin-bottom:12px;}
 .pyq-card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-.pyq-topic{font-family:var(--font-mono);font-size:0.58rem;color:var(--geo);letter-spacing:0.04em;opacity:0.8;}
-.pyq-attempt{padding:5px 14px;border-radius:4px;border:1px solid var(--geo-border);background:var(--geo-dim);color:var(--geo);font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;cursor:pointer;transition:all 0.15s;}
+.pyq-topic{font-family:var(--font-mono);font-size:0.58rem; font-weight: 500;color:var(--geo);letter-spacing:0.04em;opacity:0.8;}
+.pyq-attempt{padding:5px 14px;border-radius:4px;border:1px solid var(--geo-border);background:var(--geo-dim);color:var(--geo);font-family:var(--font-mono);font-size:0.62rem; font-weight: 500;letter-spacing:0.06em;cursor:pointer;transition:all 0.15s;}
 .pyq-attempt:hover{background:var(--geo-bg-sel);border-color:var(--geo-border2);}
-.pyq-view{padding:5px 14px;border-radius:4px;border:1px solid rgba(129,140,248,0.2);background:rgba(129,140,248,0.05);color:#818cf8;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;cursor:pointer;transition:all 0.15s;}
+.pyq-view{padding:5px 14px;border-radius:4px;border:1px solid rgba(129,140,248,0.2);background:rgba(129,140,248,0.05);color:#818cf8;font-family:var(--font-mono);font-size:0.62rem; font-weight: 500;letter-spacing:0.06em;cursor:pointer;transition:all 0.15s;}
 .pyq-view:hover{background:rgba(129,140,248,0.1);border-color:rgba(129,140,248,0.35);}
 [data-theme="light"] .pyq-view{border-color:rgba(67,97,238,0.2);background:rgba(67,97,238,0.04);color:#4361ee;}
 [data-theme="light"] .pyq-view:hover{background:rgba(67,97,238,0.08);border-color:rgba(67,97,238,0.35);}
 
-.pyq-empty{text-align:center;padding:80px 20px;color:var(--text3);font-family:var(--font-ui);font-size:0.88rem;}
+.pyq-empty{text-align:center;padding:80px 20px;color:var(--text3);font-family:var(--font-ui);font-size:0.88rem; font-weight: 500;}
 
 @media(max-width:600px){
   .pyq-inner{padding:0 1rem;}
   .pyq-filter-bar{gap:6px;}
-  .pyq-filter-select{font-size:0.68rem;padding:6px 26px 6px 10px;min-width:unset;flex:1 1 calc(50% - 3px);}
+  .pyq-filter-select{font-size:0.68rem; font-weight: 500;padding:6px 26px 6px 10px;min-width:unset;flex:1 1 calc(50% - 3px);}
   .pyq-filter-reset{flex:1 1 100%;}
   .pyq-title{font-size:1.25rem;}
   .pyq-card{padding:14px 16px;}

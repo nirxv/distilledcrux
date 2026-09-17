@@ -64,7 +64,7 @@ const CSS = `
     animation: fadeUp 0.3s ease;
   }
   .db-kicker {
-    font-family: var(--font-ui); font-size: 0.65rem;
+    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px;
   }  .db-h1 {
@@ -75,7 +75,7 @@ const CSS = `
   }
   .db-h1 em { font-style: italic; }
   .db-sub {
-    font-family: var(--font-ui); font-size: 0.85rem;
+    font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
     color: var(--text3); margin-top: 0.5rem;
   }
 
@@ -94,7 +94,7 @@ const CSS = `
   }
   .db-tools-label {
     padding: 2rem 2rem 1rem;
-    font-family: var(--font-ui); font-size: 0.62rem;
+    font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid var(--border);
@@ -128,7 +128,7 @@ const CSS = `
     font-weight: 700; color: var(--text); margin-bottom: 0.2rem; letter-spacing: -0.01em;
   }
   .db-tool-desc {
-    font-family: var(--font-ui); font-size: 0.76rem;
+    font-family: var(--font-ui); font-size: 0.76rem; font-weight: 500;
     color: var(--text3); line-height: 1.6;
   }
   .db-tool-badge {
@@ -140,7 +140,7 @@ const CSS = `
   .db-tool-badge.free { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.22); }
   .db-tool-badge.premium { background: rgba(232,184,109,0.1); color: #e8b86d; border: 1px solid rgba(232,184,109,0.22); }
   .db-tool-arrow {
-    margin-top: auto; font-family: var(--font-ui); font-size: 0.72rem;
+    margin-top: auto; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
     color: var(--text3); transition: color 0.15s, gap 0.15s;
     display: flex; align-items: center; gap: 4px;
   }
@@ -154,7 +154,7 @@ const CSS = `
     border-bottom: 1px solid var(--border);
   }
   .db-sidebar-label {
-    font-family: var(--font-ui); font-size: 0.6rem;
+    font-family: var(--font-ui); font-size: 0.6rem; font-weight: 500;
     letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;
   }
@@ -166,7 +166,7 @@ const CSS = `
     border-bottom: 1px solid var(--border);
   }
   .db-stat-row:last-child { border-bottom: none; }
-  .db-stat-key { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); }
+  .db-stat-key { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); }
   .db-stat-val { font-family: var(--font-body); font-size: 0.88rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
 
   /* Plan badge */
@@ -175,7 +175,7 @@ const CSS = `
     gap: 1rem; flex-wrap: wrap;
   }
   .db-plan-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
-  .db-plan-desc { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+  .db-plan-desc { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-top: 2px; }
   .db-upgrade-btn {
     font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
     background: var(--text); color: var(--bg);
@@ -187,7 +187,7 @@ const CSS = `
     display: flex; align-items: center; gap: 10px;
   }
   .db-pro-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: #e8b86d; }
-  .db-pro-exp { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+  .db-pro-exp { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-top: 2px; }
   .db-active-pill {
     font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
     letter-spacing: 0.08em; text-transform: uppercase;
@@ -201,7 +201,7 @@ const CSS = `
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 10px;
   }
-  .db-usage-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text2); }
+  .db-usage-text { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text2); }
   .db-usage-link {
     font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
     color: var(--text); text-decoration: none; 
@@ -214,7 +214,7 @@ const CSS = `
   /* Quick actions */
   .db-actions { display: flex; flex-direction: column; gap: 6px; }
   .db-action-link {
-    font-family: var(--font-ui); font-size: 0.82rem; color: var(--text2);
+    font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2);
     text-decoration: none; padding: 8px 0;
     display: flex; align-items: center; justify-content: space-between;
     border-bottom: 1px solid var(--border);
@@ -222,7 +222,7 @@ const CSS = `
   }
   .db-action-link:last-child { border-bottom: none; }
   .db-action-link:hover { color: var(--text); }
-  .db-action-arrow { color: var(--text3); font-size: 0.78rem; }
+  .db-action-arrow { color: var(--text3); font-size: 0.78rem; font-weight: 500; }
 
   /* ── Footer CTA ── */
   .db-footer-cta {
@@ -237,7 +237,7 @@ const CSS = `
     font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
   }
   .db-footer-h2 em { font-style: italic; }
-  .db-footer-sub { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text3); margin-top: 0.4rem; }
+  .db-footer-sub { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text3); margin-top: 0.4rem; }
 
   @media (max-width: 900px) {
     .db-body { grid-template-columns: 1fr; }
@@ -247,8 +247,8 @@ const CSS = `
   @media (max-width: 640px) {
     .db-header { padding:88px 1.25rem 2rem; padding-bottom:2rem; }
     .db-h1 { font-size:clamp(1.9rem,9vw,2.6rem); }
-    .db-kicker { font-size:0.6rem; }
-    .db-sub { font-size:0.8rem; }
+    .db-kicker { font-size:0.6rem; font-weight: 500; }
+    .db-sub { font-size:0.8rem; font-weight: 500; }
 
     .db-tools-label { padding:1.25rem 1.25rem 0.85rem; }
 
@@ -256,15 +256,15 @@ const CSS = `
     .db-tool-card { border-right: none !important; padding:1.25rem; }
     .db-tool-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
     .db-tool-card:last-child { border-bottom: none; }
-    .db-tool-label { font-size:0.88rem; }
-    .db-tool-desc { font-size:0.74rem; }
+    .db-tool-label { font-size:0.88rem; font-weight: 500; }
+    .db-tool-desc { font-size:0.74rem; font-weight: 500; }
     .db-tool-badge { top:1rem; right:1rem; }
 
     .db-sidebar-section { padding:1.25rem; }
 
     .db-footer-cta { padding:2.5rem 1.25rem 4rem; }
     .db-footer-h2 { font-size:clamp(1.5rem,7vw,2rem); }
-    .db-footer-sub { font-size:0.82rem; }
+    .db-footer-sub { font-size:0.82rem; font-weight: 500; }
     .db-footer-actions { flex-direction:column; gap:0.65rem; }
     .db-footer-btn { text-align:center; }
   }
@@ -390,7 +390,7 @@ export default function Dashboard() {
       <div style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 700, color: 'var(--text)' }}>
         {failed ? 'Could not load your dashboard' : 'Nothing to show yet'}
       </div>
-      <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.85rem', color: 'var(--text3)', maxWidth: '30rem', lineHeight: 1.6 }}>
+      <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.85rem', fontWeight: 500, color: 'var(--text3)', maxWidth: '30rem', lineHeight: 1.6 }}>
         {failed
           ? 'Your stats did not come back. This is usually a connection problem.'
           : 'Your study stats will appear here once you start using the app.'}
@@ -444,7 +444,7 @@ export default function Dashboard() {
           </div>
           <div>
             <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Payment successful!</div>
-            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)' }}>Your premium access is now active.</div>
+            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)' }}>Your premium access is now active.</div>
           </div>
           <button onClick={() => setShowPaymentSuccess(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', marginLeft: 'auto', padding: 4, lineHeight: 1 }}>✕</button>
         </div>
@@ -582,7 +582,7 @@ export default function Dashboard() {
               <h2 className="db-footer-h2">Ready to go<br /><em>unlimited?</em></h2>
               <p className="db-footer-sub">Unlock all tools, unlimited AI chats, topper copies and more.</p>
             </div>
-            <Link href="/pricing" className="db-upgrade-btn" style={{ fontSize: '0.88rem', padding: '11px 24px' }}>
+            <Link href="/pricing" className="db-upgrade-btn" style={{ fontSize: '0.88rem', fontWeight: 500, padding: '11px 24px' }}>
               See Plans →
             </Link>
           </div>

@@ -148,7 +148,7 @@ export default function LoginPage() {
             Welcome back
           </h1>
           <p style={{
-            color: 'var(--text3)', fontSize: '0.875rem',
+            color: 'var(--text3)', fontSize: '0.875rem', fontWeight: 500,
             textAlign: 'center', marginBottom: '2rem',
             lineHeight: 1.5, fontFamily: 'var(--font-ui)',
           }}>
@@ -201,7 +201,7 @@ export default function LoginPage() {
           {popupFailed && (
             <div style={{ marginTop: '1rem', textAlign: 'center' }}>
               <p style={{
-                color: 'var(--text3)', fontSize: '0.8rem',
+                color: 'var(--text3)', fontSize: '0.8rem', fontWeight: 500,
                 fontFamily: 'var(--font-ui)', marginBottom: '0.5rem',
               }}>
                 Popup didn&apos;t complete. Some mobile browsers block it.
@@ -223,7 +223,7 @@ export default function LoginPage() {
           {error && (
             <p style={{
               marginTop: '1rem',
-              color: 'var(--red)', fontSize: '0.8rem',
+              color: 'var(--red)', fontSize: '0.8rem', fontWeight: 500,
               textAlign: 'center', fontFamily: 'var(--font-ui)',
             }}>
               {error}
@@ -238,7 +238,7 @@ export default function LoginPage() {
 
           {/* Feature dots */}
           <p style={{
-            fontSize: '0.72rem', color: 'var(--text3)',
+            fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)',
             fontFamily: 'var(--font-ui)', letterSpacing: '0.06em',
             textTransform: 'uppercase', textAlign: 'center',
             marginBottom: '0.9rem',
@@ -274,7 +274,7 @@ export default function LoginPage() {
 
         <p style={{
           textAlign: 'center', marginTop: '1.25rem',
-          fontSize: '0.73rem', color: 'var(--text3)',
+          fontSize: '0.73rem', fontWeight: 500, color: 'var(--text3)',
           fontFamily: 'var(--font-ui)', lineHeight: 1.6,
         }}>
           By continuing, you agree to our{' '}
@@ -292,7 +292,7 @@ export default function LoginPage() {
         }
         @media (max-width: 640px) {
           .login-card { padding: 1.75rem 1.25rem !important; border-radius: 14px !important; }
-          .login-google-btn { padding: 0.85rem 1rem !important; font-size: 0.9rem !important; }
+          .login-google-btn { padding: 0.85rem 1rem !important; font-size: 0.9rem font-weight: 500; !important; }
           .login-features-grid { grid-template-columns: 1fr !important; }
         }
         .orb {

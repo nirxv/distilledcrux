@@ -11,7 +11,7 @@ const S = {
   page: { minHeight: "100vh", padding: "4rem 1.5rem 6rem", background: "var(--bg)" } as React.CSSProperties,
   container: { maxWidth: 760, margin: "0 auto", color: "var(--text)" } as React.CSSProperties,
   h1: { fontFamily: "var(--font-body)", fontSize: "2.2rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.5rem", lineHeight: 1.2 } as React.CSSProperties,
-  meta: { fontSize: "0.82rem", color: "var(--text3)", marginBottom: "2rem", paddingBottom: "1.5rem", borderBottom: "1px solid var(--border)", display: "block" } as React.CSSProperties,
+  meta: { fontSize: "0.82rem", fontWeight: 500, color: "var(--text3)", marginBottom: "2rem", paddingBottom: "1.5rem", borderBottom: "1px solid var(--border)", display: "block" } as React.CSSProperties,
   h2: { fontFamily: "var(--font-ui)", fontSize: "1.1rem", fontWeight: 600, color: "var(--gold)", margin: "2.5rem 0 0.75rem", paddingBottom: "0.3rem", borderBottom: "1px solid var(--border)" } as React.CSSProperties,
   p: { fontSize: "0.95rem", lineHeight: 1.75, color: "var(--text2)", marginBottom: "1rem" } as React.CSSProperties,
   ul: { margin: "0.5rem 0 1rem 1.2rem", padding: 0 } as React.CSSProperties,

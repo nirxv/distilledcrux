@@ -131,7 +131,7 @@ function OnboardingInner() {
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             background: 'var(--accent-dim)', border: '1px solid rgba(67,97,238,0.2)',
-            color: 'var(--accent)', fontSize: '0.72rem', fontFamily: 'var(--font-ui)',
+            color: 'var(--accent)', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)',
             padding: '4px 14px', borderRadius: 20, marginBottom: '1.25rem',
             letterSpacing: '0.08em', textTransform: 'uppercase',
           }}>
@@ -145,7 +145,7 @@ function OnboardingInner() {
           }}>
             {phoneOnly ? 'Add your mobile number' : 'Choose your Optional'}
           </h1>
-          <p style={{ color: 'var(--text3)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+          <p style={{ color: 'var(--text3)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.6 }}>
             {phoneOnly
               ? 'We ask everyone for one now, so we can reach you about new features, materials, offers and discounts. Your optional is unchanged.'
               : 'All content, PYQs, and AI will be tailored to your optional subject.'}
@@ -155,7 +155,7 @@ function OnboardingInner() {
         {/* Optional grid */}
         {phoneOnly && (
           <p style={{
-            fontFamily: 'var(--font-ui)', fontSize: '0.78rem',
+            fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 500,
             color: 'var(--text3)', marginBottom: '0.6rem',
           }}>
             Your optional, if you want to change it while you are here:
@@ -241,7 +241,7 @@ function OnboardingInner() {
               padding: '0 0.75rem',
               background: 'var(--bg3)',
               borderRight: '1px solid var(--border)',
-              fontFamily: 'var(--font-mono)', fontSize: '0.85rem',
+              fontFamily: 'var(--font-mono)', fontSize: '0.85rem', fontWeight: 500,
               color: 'var(--text3)',
             }}>
               +91
@@ -274,14 +274,14 @@ function OnboardingInner() {
           {phoneError ? (
             <p id="phone-error" role="alert" style={{
               margin: '0.5rem 0 0', color: '#f87171',
-              fontFamily: 'var(--font-ui)', fontSize: '0.78rem',
+              fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 500,
             }}>
               {phoneError}
             </p>
           ) : (
             <p id="phone-hint" style={{
               margin: '0.5rem 0 0', color: 'var(--text3)',
-              fontFamily: 'var(--font-ui)', fontSize: '0.78rem', lineHeight: 1.5,
+              fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 500, lineHeight: 1.5,
             }}>
               So we can reach you about new features, materials, offers and discounts.
             </p>
@@ -324,7 +324,7 @@ function OnboardingInner() {
 
         <p style={{
           textAlign: 'center', marginTop: '1rem',
-          color: 'var(--text3)', fontSize: '0.78rem',
+          color: 'var(--text3)', fontSize: '0.78rem', fontWeight: 500,
           fontFamily: 'var(--font-ui)',
         }}>
           

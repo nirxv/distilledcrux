@@ -67,7 +67,7 @@ const CSS = `
   animation: fadeUp 0.3s ease;
 }
 .ev-kicker {
-  font-family:var(--font-ui); font-size:0.65rem;
+  font-family:var(--font-ui); font-size:0.65rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   margin-bottom:1.5rem; display:flex; align-items:center; gap:10px;
 }
@@ -77,7 +77,7 @@ const CSS = `
   margin-bottom:0.75rem;
 }
 .ev-h1 em { font-style:italic; color:var(--accent3); }
-.ev-tagline { font-family:var(--font-ui); font-size:0.88rem; color:var(--text3); line-height:1.7; }
+.ev-tagline { font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; color:var(--text3); line-height:1.7; }
 .ev-optional-pill {
   display:inline-flex; align-items:center; gap:7px;
   margin-top:1rem; padding:5px 12px; border-radius:5px;
@@ -97,7 +97,7 @@ const CSS = `
 
 .ev-section-label {
   padding:1.5rem 2rem 1.25rem;
-  font-family:var(--font-ui); font-size:0.62rem;
+  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   display:flex; align-items:center; gap:10px;
   border-bottom:1px solid var(--border);
@@ -117,8 +117,8 @@ const CSS = `
   display:flex; align-items:center; justify-content:center;
   margin:0 auto 1rem; color:var(--text3);
 }
-.ev-upload-title { font-family:var(--font-ui); font-size:0.88rem; color:var(--text2); margin-bottom:0.3rem; }
-.ev-upload-sub   { font-family:var(--font-ui); font-size:0.75rem; color:var(--text3); }
+.ev-upload-title { font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; color:var(--text2); margin-bottom:0.3rem; }
+.ev-upload-sub   { font-family:var(--font-ui); font-size:0.75rem; font-weight: 500; color:var(--text3); }
 .ev-upload-input { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
 
 .ev-previews { display:flex; gap:0.5rem; flex-wrap:wrap; padding:0 2rem 1.5rem; }
@@ -135,7 +135,7 @@ const CSS = `
 
 .ev-field { padding:0 2rem 1.5rem; }
 .ev-field-label {
-  font-family:var(--font-ui); font-size:0.72rem;
+  font-family:var(--font-ui); font-size:0.72rem; font-weight: 500;
   letter-spacing:0.08em; text-transform:uppercase; color:var(--text3);
   margin-bottom:0.6rem; display:block;
 }
@@ -143,7 +143,7 @@ const CSS = `
   width:100%; resize:vertical; min-height:90px;
   background:var(--bg2); border:1px solid var(--border2);
   border-radius:6px; padding:0.75rem 1rem;
-  font-family:var(--font-ui); font-size:0.85rem; color:var(--text);
+  font-family:var(--font-ui); font-size:0.85rem; font-weight: 500; color:var(--text);
   line-height:1.6; outline:none; transition:border-color 0.15s; box-sizing:border-box;
   white-space:pre-wrap;
 }
@@ -178,23 +178,23 @@ const CSS = `
   margin:0 2rem 1rem;
   background:rgba(248,113,113,0.07); border:1px solid rgba(248,113,113,0.2);
   border-radius:6px; padding:0.65rem 1rem;
-  font-family:var(--font-ui); font-size:0.8rem; color:#f87171;
+  font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:#f87171;
 }
 
 /* Sidebar */
 .ev-sidebar { padding:0; }
 .ev-sidebar-block { padding:1.75rem; border-bottom:1px solid var(--border); }
 .ev-sidebar-lbl {
-  font-family:var(--font-ui); font-size:0.62rem;
+  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   margin-bottom:1.25rem; display:flex; align-items:center; gap:10px;
 }
 .ev-step-row { display:flex; gap:0.75rem; margin-bottom:1rem; }
 .ev-step-row:last-child { margin-bottom:0; }
 .ev-step-num { font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent3); min-width:18px; }
-.ev-step-text { font-family:var(--font-ui); font-size:0.8rem; color:var(--text3); line-height:1.55; }
+.ev-step-text { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.55; }
 .ev-step-text strong { color:var(--text2); font-weight:600; display:block; margin-bottom:2px; }
-.ev-tip { font-family:var(--font-ui); font-size:0.8rem; color:var(--text3); line-height:1.65; }
+.ev-tip { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.65; }
 .ev-tip strong { color:var(--text2); font-weight:600; }
 
 /* Upgrade banner */
@@ -205,7 +205,7 @@ const CSS = `
   background:var(--accent-dim);
 }
 .ev-upgrade-title { font-family:var(--font-body); font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.35rem; letter-spacing:-0.01em; }
-.ev-upgrade-sub { font-family:var(--font-ui); font-size:0.8rem; color:var(--text3); line-height:1.6; margin-bottom:1rem; }
+.ev-upgrade-sub { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.6; margin-bottom:1rem; }
 .ev-upgrade-btn {
   display:inline-block; padding:0.6rem 1.25rem; border-radius:6px;
   background:var(--text); color:var(--bg);
@@ -221,11 +221,11 @@ const CSS = `
   animation:fadeUp 0.3s ease;
 }
 .ev-loading-title { font-family:var(--font-body); font-size:1.6rem; font-weight:700; color:var(--text); letter-spacing:-0.02em; margin-bottom:0.5rem; }
-.ev-loading-sub { font-family:var(--font-ui); font-size:0.82rem; color:var(--text3); margin-bottom:2.5rem; }
+.ev-loading-sub { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); margin-bottom:2.5rem; }
 .ev-progress-track { max-width:320px; margin:0 auto 2rem; height:2px; background:var(--border2); border-radius:2px; overflow:hidden; }
 .ev-progress-bar { height:100%; background:var(--accent); animation:progress linear forwards; }
 .ev-checkpoints { display:flex; flex-direction:column; gap:0.6rem; max-width:240px; margin:0 auto; }
-.ev-checkpoint { display:flex; align-items:center; gap:10px; font-family:var(--font-ui); font-size:0.78rem; color:var(--text3); transition:color 0.3s; }
+.ev-checkpoint { display:flex; align-items:center; gap:10px; font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text3); transition:color 0.3s; }
 .ev-checkpoint.done { color:var(--text2); }
 .ev-checkpoint.active { color:var(--accent3); }
 .ev-cp-dot { width:6px; height:6px; border-radius:50%; background:var(--border2); flex-shrink:0; transition:background 0.3s; }
@@ -242,19 +242,19 @@ const CSS = `
 .ev-score-col { border-left:1px solid var(--border); }
 .ev-score-block { padding:1.75rem; border-bottom:1px solid var(--border); }
 .ev-score-lbl {
-  font-family:var(--font-ui); font-size:0.62rem;
+  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   margin-bottom:1.25rem; display:flex; align-items:center; gap:10px;
 }
 .ev-score-big { font-family:var(--font-body); font-size:3.5rem; font-weight:700; letter-spacing:-0.05em; color:var(--text); line-height:1; margin-bottom:0.25rem; }
-.ev-score-denom { font-family:var(--font-ui); font-size:0.82rem; color:var(--text3); }
+.ev-score-denom { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); }
 .ev-score-bar-track { height:3px; background:var(--border2); border-radius:2px; margin-top:1rem; overflow:hidden; }
 .ev-score-bar-fill { height:100%; border-radius:2px; transition:width 0.8s ease; }
-.ev-ss-row { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1.75rem; border-bottom:1px solid var(--border); font-family:var(--font-ui); font-size:0.8rem; }
+.ev-ss-row { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1.75rem; border-bottom:1px solid var(--border); font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; }
 .ev-ss-row:last-child { border-bottom:none; }
 .ev-ss-name { color:var(--text2); }
 .ev-ss-score { color:var(--text); font-weight:600; }
-.ev-ss-reason { color:var(--text3); font-size:0.72rem; margin-top:2px; }
+.ev-ss-reason { color:var(--text3); font-size:0.72rem; font-weight: 500; margin-top:2px; }
 .ev-score-actions { padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem; }
 .ev-btn-ghost {
   padding:0.75rem; border-radius:6px; font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
@@ -274,7 +274,7 @@ const CSS = `
 .ev-result-section { border-bottom:1px solid var(--border); padding:1.75rem 2rem; }
 .ev-result-section:last-child { border-bottom:none; }
 .ev-result-lbl {
-  font-family:var(--font-ui); font-size:0.62rem;
+  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   margin-bottom:1rem; display:flex; align-items:center; gap:10px;
 }
@@ -296,7 +296,7 @@ const CSS = `
 .ev-thinkers { display:flex; flex-direction:column; gap:0.75rem; }
 .ev-thinker { padding:0.9rem 1.1rem; border:1px solid var(--border2); border-radius:6px; background:var(--bg2); border-left:2px solid var(--accent); }
 .ev-thinker-name { font-family:var(--font-ui); font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:2px; }
-.ev-thinker-work { font-size:0.82rem; color:var(--text3); margin-bottom:4px; }
+.ev-thinker-work { font-size:0.82rem; font-weight: 500; color:var(--text3); margin-bottom:4px; }
 .ev-thinker-arg  { font-size:0.92rem; color:var(--text2); line-height:1.6; }
 .ev-question-bar {
   max-width:1200px; margin:0 auto;
@@ -306,7 +306,7 @@ const CSS = `
   background:var(--bg2);
 }
 .ev-question-bar-label {
-  font-family:var(--font-ui); font-size:0.6rem;
+  font-family:var(--font-ui); font-size:0.6rem; font-weight: 500;
   letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
   white-space:nowrap; padding-top:2px; flex-shrink:0;
 }
@@ -318,7 +318,7 @@ const CSS = `
 .ev-ma-text { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
 .ev-ma-body-item { display:flex; gap:8px; align-items:flex-start; font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.7; margin-bottom:0.5rem; }
 .ev-ma-body-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:8px; }
-.ev-wc-badge { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.82rem; padding:3px 10px; border-radius:4px; margin-top:0.5rem; }
+.ev-wc-badge { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; padding:3px 10px; border-radius:4px; margin-top:0.5rem; }
 .ev-wc-badge.short       { background:rgba(248,113,113,0.1); color:#f87171; }
 .ev-wc-badge.appropriate { background:rgba(74,222,128,0.1);  color:#4ade80; }
 .ev-wc-badge.long        { background:rgba(251,191,36,0.1);  color:#fbbf24; }
@@ -334,7 +334,7 @@ const CSS = `
 .ev-transcript-info {
   padding:1.5rem 1.75rem; background:rgba(251,191,36,0.05);
   border:1px solid rgba(251,191,36,0.15); border-radius:8px;
-  margin:1.75rem 2rem 0; font-family:var(--font-ui); font-size:0.8rem;
+  margin:1.75rem 2rem 0; font-family:var(--font-ui); font-size:0.8rem; font-weight: 500;
   color:var(--text3); line-height:1.65;
 }
 .ev-transcript-info strong { color:#fbbf24; }
@@ -343,7 +343,7 @@ const CSS = `
   margin:1.75rem 2rem; padding:1.5rem;
   background:var(--bg2); border:1px solid var(--border2); border-radius:8px;
   display:flex; align-items:center; gap:12px;
-  font-family:var(--font-ui); font-size:0.82rem; color:var(--text3);
+  font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3);
 }
 .ev-ocr-spinner {
   width:16px; height:16px; border-radius:50%;
@@ -371,8 +371,8 @@ const CSS = `
 @media(max-width:640px){
   .ev-header { padding:88px 1.25rem 2rem; }
   .ev-h1 { font-size:clamp(1.9rem,9vw,2.6rem); margin-bottom:0.5rem; }
-  .ev-tagline { font-size:0.82rem; }
-  .ev-kicker { font-size:0.6rem; }
+  .ev-tagline { font-size:0.82rem; font-weight: 500; }
+  .ev-kicker { font-size:0.6rem; font-weight: 500; }
 
   .ev-section-label { padding:1.25rem 1.25rem 1rem; }
   .ev-upload-zone { margin:1.25rem; padding:1.5rem 1rem; }
@@ -391,12 +391,12 @@ const CSS = `
 
   .ev-question-bar { padding:0.75rem 1.25rem; }
   .ev-result-section { padding:1.25rem; }
-  .ev-result-lbl { font-size:0.6rem; margin-bottom:0.75rem; }
+  .ev-result-lbl { font-size:0.6rem; font-weight: 500; margin-bottom:0.75rem; }
   .ev-fb-col-label { padding:0.5rem 0.85rem; }
   .ev-fb-items { padding:0.6rem 0.85rem; }
-  .ev-fb-item { font-size:0.88rem; }
+  .ev-fb-item { font-size:0.88rem; font-weight: 500; }
   .ev-overall { font-size:0.92rem; }
-  .ev-suggestion { font-size:0.88rem; padding:0.5rem 0.75rem; }
+  .ev-suggestion { font-size:0.88rem; font-weight: 500; padding:0.5rem 0.75rem; }
   .ev-thinker { padding:0.75rem 1rem; }
   .ev-thinker-name { font-size:0.92rem; }
   .ev-ma-text { font-size:0.92rem; }
@@ -405,9 +405,9 @@ const CSS = `
   .ev-score-block { padding:1.25rem; }
   .ev-score-big { font-size:2.8rem; }
   .ev-score-lbl { padding:1.25rem 1.25rem 0.6rem; }
-  .ev-ss-row { padding:0.65rem 1.25rem; font-size:0.78rem; }
+  .ev-ss-row { padding:0.65rem 1.25rem; font-size:0.78rem; font-weight: 500; }
   .ev-score-actions { padding:1.25rem; }
-  .ev-btn-ghost { padding:0.65rem; font-size:0.8rem; }
+  .ev-btn-ghost { padding:0.65rem; font-size:0.8rem; font-weight: 500; }
 
   .ev-upgrade { margin:1.25rem; padding:1rem 1.25rem; }
 }
@@ -741,7 +741,7 @@ export default function EvaluatePage() {
               <p style={{ fontFamily:'var(--font-body)', fontSize:'1.5rem', fontWeight:700, color:'var(--text)', letterSpacing:'-0.02em', marginBottom:'0.5rem' }}>
                 You&apos;ve used your free evaluation.
               </p>
-              <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.85rem', color:'var(--text3)', lineHeight:1.7, marginBottom:'1.5rem' }}>
+              <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.85rem', fontWeight: 500, color:'var(--text3)', lineHeight:1.7, marginBottom:'1.5rem' }}>
                 Upgrade to get unlimited evaluations, AI chat, PYQ bank access, and more.
               </p>
               <a href="/pricing" className="ev-upgrade-btn">See plans →</a>
@@ -888,7 +888,7 @@ export default function EvaluatePage() {
                   {previews.map((src, i) => (
                     <div key={i} className="ev-preview-wrap">
                       {src === '__pdf__'
-                ? <div className="ev-preview-thumb" style={{ display:'flex', alignItems:'center', justifyContent:'center', background:'var(--bg3)', fontSize:'0.65rem', color:'var(--text3)', fontFamily:'var(--font-ui)', flexDirection:'column', gap:3 }}>
+                ? <div className="ev-preview-thumb" style={{ display:'flex', alignItems:'center', justifyContent:'center', background:'var(--bg3)', fontSize:'0.65rem', fontWeight: 500, color:'var(--text3)', fontFamily:'var(--font-ui)', flexDirection:'column', gap:3 }}>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.3"/><path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
                     PDF
                   </div>
@@ -1039,7 +1039,7 @@ export default function EvaluatePage() {
                     {previews.map((src, i) => (
                       <div key={i}>
                         {src === '__pdf__'
-                          ? <div style={{ width:56, height:56, borderRadius:5, background:'var(--bg3)', border:'1px solid var(--border2)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'0.6rem', color:'var(--text3)', fontFamily:'var(--font-ui)' }}>PDF</div>
+                          ? <div style={{ width:56, height:56, borderRadius:5, background:'var(--bg3)', border:'1px solid var(--border2)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'0.6rem', fontWeight: 500, color:'var(--text3)', fontFamily:'var(--font-ui)' }}>PDF</div>
                           : <img src={src} alt={`p${i+1}`} style={{ width:56, height:56, borderRadius:5, objectFit:'cover', border:'1px solid var(--border2)' }} />
                         }
                       </div>

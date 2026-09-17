@@ -55,7 +55,7 @@ const CSS = `
   }
   .pr-hero-kicker {
     font-family: var(--font-ui);
-    font-size: 0.68rem;
+    font-size: 0.68rem; font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text3);
@@ -93,7 +93,7 @@ const CSS = `
   .pr-btn-primary:hover { opacity: 0.85; }
   .pr-btn-ghost {
     font-family: var(--font-ui);
-    font-size: 0.88rem; color: var(--text3);
+    font-size: 0.88rem; font-weight: 500; color: var(--text3);
     text-decoration: none;
     display: flex; align-items: center; gap: 6px;
     transition: color 0.15s;
@@ -112,7 +112,7 @@ const CSS = `
   }
   .pr-hero-stat-label {
     font-family: var(--font-ui);
-    font-size: 0.72rem; color: var(--text3);
+    font-size: 0.72rem; font-weight: 500; color: var(--text3);
     letter-spacing: 0.04em; text-transform: uppercase;
   }
 
@@ -126,8 +126,8 @@ const CSS = `
   .pr-marquee-track { display: flex; width: max-content; animation: marquee 36s linear infinite; }
   .pr-marquee-track:hover { animation-play-state: paused; }
   .pr-marquee-item { display: flex; align-items: center; gap: 0.6rem; padding: 0 2.5rem; flex-shrink: 0; }
-  .pr-marquee-sep { font-family: var(--font-body); font-size: 0.65rem; color: var(--border3); }
-  .pr-marquee-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); letter-spacing: 0.03em; }
+  .pr-marquee-sep { font-family: var(--font-body); font-size: 0.65rem; font-weight: 500; color: var(--border3); }
+  .pr-marquee-text { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); letter-spacing: 0.03em; }
 
   /* ── Shared section wrapper ── */
   .pr-section {
@@ -141,7 +141,7 @@ const CSS = `
   }
   .pr-section-label {
     font-family: var(--font-ui);
-    font-size: 0.65rem; letter-spacing: 0.18em;
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--text3);
     margin-bottom: 1rem;
     display: flex; align-items: center; gap: 10px;
@@ -175,7 +175,7 @@ const CSS = `
     font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em;
   }
   .pr-subj-sub {
-    font-family: var(--font-ui); font-size: 0.73rem;
+    font-family: var(--font-ui); font-size: 0.73rem; font-weight: 500;
     color: var(--text3); line-height: 1.5;
   }
 
@@ -191,7 +191,7 @@ const CSS = `
   }
   .pr-feat-item:hover { background: var(--bg2); }
   .pr-feat-num {
-    font-family: var(--font-mono); font-size: 0.65rem;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
     color: var(--text3); letter-spacing: 0.06em;
     padding-top: 4px; flex-shrink: 0; width: 24px;
   }
@@ -199,7 +199,7 @@ const CSS = `
     font-family: var(--font-body); font-size: 0.95rem;
     font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
   }
-  .pr-feat-desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); line-height: 1.65; }
+  .pr-feat-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
 
   /* ── Score band / CSAT callout ── */
   .pr-callout {
@@ -218,7 +218,7 @@ const CSS = `
     font-weight: 700; color: var(--text); margin-bottom: 0.35rem;
   }
   .pr-callout-body {
-    font-family: var(--font-ui); font-size: 0.82rem;
+    font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
     color: var(--text2); line-height: 1.7;
   }
 
@@ -229,7 +229,7 @@ const CSS = `
   }
   .pr-table {
     width: 100%; border-collapse: collapse;
-    font-family: var(--font-ui); font-size: 0.82rem;
+    font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
   }
   .pr-table th {
     background: var(--bg2); color: var(--text3);
@@ -251,7 +251,7 @@ const CSS = `
   }
   .pr-table .score {
     font-family: var(--font-mono); color: var(--gold);
-    font-size: 0.85rem;
+    font-size: 0.85rem; font-weight: 500;
   }
 
   /* ── CTA ── */
@@ -266,7 +266,7 @@ const CSS = `
     font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
   }
   .pr-cta-h2 em { font-style: italic; color: var(--gold); }
-  .pr-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text3); margin-top: 0.75rem; }
+  .pr-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
   .pr-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
   /* ── Daily quiz strip ── */
@@ -293,7 +293,7 @@ const CSS = `
     font-family: var(--font-body); font-size: 1rem;
     font-weight: 700; color: var(--accent); margin-bottom: 2px;
   }
-  .pr-crosslink-sub { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text3); }
+  .pr-crosslink-sub { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); }
   .pr-crosslink-arrow {
     font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600;
     color: var(--accent); display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;
@@ -308,9 +308,9 @@ const CSS = `
   .pr-footer-logo { font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; color: var(--text); }
   .pr-footer-logo em { font-style: normal; color: var(--accent); }
   .pr-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
-  .pr-footer-link { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text3); text-decoration: none; transition: color 0.15s; }
+  .pr-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
   .pr-footer-link:hover { color: var(--text); }
-  .pr-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3); }
+  .pr-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
@@ -432,7 +432,7 @@ export default function PrelimsPage() {
               <span style={{ fontSize: '1.4rem' }}>⚡</span>
               <div>
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Daily Quiz 10 Questions</div>
-                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--text3)' }}>Mixed subjects · 60 seconds per question · Explanations included</div>
+                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)' }}>Mixed subjects · 60 seconds per question · Explanations included</div>
               </div>
             </div>
             <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
@@ -508,7 +508,7 @@ export default function PrelimsPage() {
                   <tr key={row.cat}>
                     <td className="cat-label">{row.cat}</td>
                     <td className="score">{row.gs}</td>
-                    <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: 'var(--text2)' }}>{row.csat}</td>
+                    <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', fontWeight: 500, color: 'var(--text2)' }}>{row.csat}</td>
                   </tr>
                 ))}
               </tbody>

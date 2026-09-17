@@ -85,13 +85,13 @@ const CSS = `
   }
   .op-breadcrumb {
     display: flex; align-items: center; gap: 6px;
-    font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3);
+    font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3);
     margin-bottom: 2rem;
   }
   .op-breadcrumb a { color: var(--text3); text-decoration: none; transition: color 0.15s; }
   .op-breadcrumb a:hover { color: var(--text); }
   .op-kicker {
-    font-family: var(--font-ui); font-size: 0.68rem;
+    font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px;
   }  .op-h1 {
@@ -114,7 +114,7 @@ const CSS = `
   }
   .op-btn-primary:hover { opacity: 0.85; }
   .op-btn-secondary {
-    font-family: var(--font-ui); font-size: 0.88rem; color: var(--text3);
+    font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3);
     text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s;
   }
   .op-btn-secondary:hover { color: var(--text); }
@@ -131,7 +131,7 @@ const CSS = `
     gap: 2rem; align-items: start; margin-bottom: 3rem;
   }
   .op-section-label {
-    font-family: var(--font-ui); font-size: 0.65rem;
+    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
     margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
   }  .op-section-h2 {
@@ -150,10 +150,10 @@ const CSS = `
   }
   .op-paper-cell { background: var(--bg); padding: 2rem; }
   .op-paper-label {
-    font-family: var(--font-ui); font-size: 0.65rem;
+    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
     letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.75rem;
   }
-  .op-paper-text { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text2); line-height: 1.7; }
+  .op-paper-text { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text2); line-height: 1.7; }
   .op-highlights {
     display: flex; flex-direction: column;
     border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
@@ -166,11 +166,11 @@ const CSS = `
   .op-highlight-row:last-child { border-bottom: none; }
   .op-highlight-row:hover { background: var(--bg2); }
   .op-highlight-num {
-    font-family: var(--font-mono); font-size: 0.62rem;
+    font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500;
     color: var(--text3); letter-spacing: 0.06em;
     padding-top: 3px; flex-shrink: 0; width: 20px;
   }
-  .op-highlight-text { font-family: var(--font-ui); font-size: 0.84rem; color: var(--text2); line-height: 1.6; }
+  .op-highlight-text { font-family: var(--font-ui); font-size: 0.84rem; font-weight: 500; color: var(--text2); line-height: 1.6; }
 
   /* ── Tools ── */
   .op-tools-list {
@@ -185,7 +185,7 @@ const CSS = `
   }
   .op-tool-row:hover { background: var(--bg2); }
   .op-tool-num {
-    font-family: var(--font-mono); font-size: 0.65rem;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
     color: var(--text3); letter-spacing: 0.06em;
     padding-top: 4px; flex-shrink: 0; width: 24px;
   }
@@ -193,7 +193,7 @@ const CSS = `
     font-family: var(--font-body); font-size: 0.95rem;
     font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
   }
-  .op-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); line-height: 1.65; }
+  .op-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
   .op-tool-badge {
     position: absolute; top: 1.75rem; right: 2rem;
     font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700;
@@ -215,7 +215,7 @@ const CSS = `
     font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
   }
   .op-cta-h2 em { font-style: italic; }
-  .op-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text3); margin-top: 0.75rem; }
+  .op-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
   .op-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
   @media (max-width: 900px) {
@@ -230,29 +230,29 @@ const CSS = `
   @media (max-width: 640px) {
     .op-hero { padding:88px 1.25rem 2.5rem; gap:1.5rem; }
     .op-h1 { font-size:clamp(2.4rem,11vw,3.2rem); }
-    .op-kicker { font-size:0.62rem; letter-spacing:0.14em; }
-    .op-breadcrumb { font-size:0.68rem; margin-bottom:1.5rem; }
-    .op-right-desc { font-size:0.88rem; line-height:1.75; margin-bottom:2rem; }
+    .op-kicker { font-size:0.62rem; font-weight: 500; letter-spacing:0.14em; }
+    .op-breadcrumb { font-size:0.68rem; font-weight: 500; margin-bottom:1.5rem; }
+    .op-right-desc { font-size:0.88rem; font-weight: 500; line-height:1.75; margin-bottom:2rem; }
     .op-actions { gap:0.85rem; }
-    .op-btn-primary { padding:11px 22px; font-size:0.85rem; }
+    .op-btn-primary { padding:11px 22px; font-size:0.85rem; font-weight: 500; }
     .op-section { padding:2.5rem 1.25rem; }
-    .op-section-label { font-size:0.6rem; }
+    .op-section-label { font-size:0.6rem; font-weight: 500; }
     .op-section-h2 { font-size:clamp(1.4rem,7vw,2rem); }
-    .op-section-desc { font-size:0.85rem; }
+    .op-section-desc { font-size:0.85rem; font-weight: 500; }
 
     .op-paper-cell { padding:1.25rem; }
-    .op-paper-text { font-size:0.82rem; }
+    .op-paper-text { font-size:0.82rem; font-weight: 500; }
     .op-highlight-row { padding:0.85rem 1.25rem; gap:1rem; }
-    .op-highlight-text { font-size:0.8rem; }
+    .op-highlight-text { font-size:0.8rem; font-weight: 500; }
 
     .op-tool-row { padding:1.25rem; gap:1rem; }
-    .op-tool-label { font-size:0.88rem; }
-    .op-tool-desc { font-size:0.76rem; }
+    .op-tool-label { font-size:0.88rem; font-weight: 500; }
+    .op-tool-desc { font-size:0.76rem; font-weight: 500; }
     .op-tool-badge { top:1.25rem; right:1.25rem; }
 
     .op-cta { padding:2.5rem 1.25rem 3.5rem; gap:1.5rem; }
     .op-cta-h2 { font-size:clamp(1.5rem,8vw,2.2rem); }
-    .op-cta-sub { font-size:0.82rem; }
+    .op-cta-sub { font-size:0.82rem; font-weight: 500; }
     .op-cta-right { flex-direction:column; width:100%; gap:0.65rem; }
     .op-btn-primary { text-align:center; display:block; }
   }

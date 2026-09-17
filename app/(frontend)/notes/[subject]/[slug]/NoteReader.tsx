@@ -210,7 +210,7 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
           </svg>
           Table of Contents
         </span>
-        <span style={{ fontSize: '0.65rem', color: 'var(--text3)', opacity: 0.55, fontFamily: 'var(--font-ui)' }}>{open ? '▲ hide' : '▼ show'}</span>
+        <span style={{ fontSize: '0.65rem', fontWeight: 500, color: 'var(--text3)', opacity: 0.55, fontFamily: 'var(--font-ui)' }}>{open ? '▲ hide' : '▼ show'}</span>
       </button>
       {open && (
         <nav>
@@ -342,8 +342,8 @@ export default function NoteReader({
   if (!note) {
     return (
       <div style={{ maxWidth: 760, margin: '4rem auto', padding: '2rem', textAlign: 'center' }}>
-        <div style={{ color: 'var(--text3)', fontSize: '0.9rem' }}>Note not found.</div>
-        <Link href={`/notes/${subject}`} style={{ color: 'var(--accent)', textDecoration: 'none', fontSize: '0.85rem' }}>← Back to {subject}</Link>
+        <div style={{ color: 'var(--text3)', fontSize: '0.9rem', fontWeight: 500 }}>Note not found.</div>
+        <Link href={`/notes/${subject}`} style={{ color: 'var(--accent)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 500 }}>← Back to {subject}</Link>
       </div>
     );
   }
@@ -369,7 +369,7 @@ export default function NoteReader({
         .note-content strong { color: var(--text); font-weight: 700; }
         .note-content em { color: var(--text2); font-style: italic; }
         .note-content blockquote { border-left: 3px solid var(--gold); padding: 0.85rem 1.25rem; margin: 1.5rem 0; background: rgba(232,184,109,0.06); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text2); }
-        .note-content table { display: block; width: 100%; max-width: 100%; border-collapse: collapse; margin: 1.75rem 0; font-size: 0.875rem; border-radius: 6px; border: 1px solid var(--border2); overflow-x: auto; }
+        .note-content table { display: block; width: 100%; max-width: 100%; border-collapse: collapse; margin: 1.75rem 0; font-size: 0.875rem; font-weight: 500; border-radius: 6px; border: 1px solid var(--border2); overflow-x: auto; }
         .note-content table > * { display: table; width: 100%; }
         .note-content th { background: var(--bg3); color: var(--gold); padding: 0.7rem 1rem; text-align: left; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border2); }
         .note-content td { padding: 0.6rem 1rem; border: 1px solid var(--border); color: var(--text); vertical-align: top; line-height: 1.65; }
@@ -381,7 +381,7 @@ export default function NoteReader({
       {/* ── Header ── */}
       <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: headerVisible ? 60 : -200, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)', transition: 'top 0.28s cubic-bezier(0.4,0,0.2,1)', opacity: headerVisible ? 1 : 0 }}>
         {/* Breadcrumb */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
           <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
           <span>·</span>
           <Link href={`/notes/${subject}`} style={{ color: 'var(--text3)', textDecoration: 'none', textTransform: 'capitalize' }}>{subject}</Link>
@@ -394,7 +394,7 @@ export default function NoteReader({
             <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: subjectColor, background: `${subjectColor}18`, border: `1px solid ${subjectColor}30`, padding: '2px 8px', borderRadius: 3 }}>
               Paper {note.paper}
             </span>
-            <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
+            <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
           </div>
 
           {/* Toolbar actions */}
@@ -423,7 +423,7 @@ export default function NoteReader({
               background: 'rgba(67,97,238,0.08)', border: '1px solid rgba(67,97,238,0.22)',
               color: 'rgba(123,147,247,0.9)', padding: '0.28rem 0.65rem',
               borderRadius: 5, textDecoration: 'none',
-              fontSize: '0.72rem', fontFamily: 'var(--font-mono)',
+              fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-mono)',
             }}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -434,7 +434,7 @@ export default function NoteReader({
             {/* Auth */}
             {!authLoading && (
               user ? (
-                <button onClick={() => firebaseSignOut(auth)} style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.7rem', fontFamily: 'var(--font-ui)' }}>
+                <button onClick={() => firebaseSignOut(auth)} style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
                   Sign out
                 </button>
               ) : (
@@ -450,7 +450,7 @@ export default function NoteReader({
       {/* ── Highlight color picker (when in highlight mode) ── */}
       {annotationMode === 'highlight' && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 2rem', borderBottom: '1px solid var(--border)', background: 'rgba(201,168,76,0.04)' }}>
-          <span style={{ fontSize: '0.68rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginRight: '0.25rem' }}>Color:</span>
+          <span style={{ fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginRight: '0.25rem' }}>Color:</span>
           {HIGHLIGHT_COLORS.map(c => (
             <button key={c.id} onClick={() => setSelectedColor(c.id as typeof selectedColor)} style={{
               width: 18, height: 18, borderRadius: '50%', background: c.color, border: selectedColor === c.id ? '2px solid rgba(255,255,255,0.7)' : '2px solid transparent',
@@ -458,7 +458,7 @@ export default function NoteReader({
             }} title={c.label} />
           ))}
           {highlights.length > 0 && (
-            <button onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }} style={{ marginLeft: '0.75rem', background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', cursor: 'pointer', padding: '2px 8px', borderRadius: 4, fontSize: '0.68rem', fontFamily: 'var(--font-mono)' }}>
+            <button onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }} style={{ marginLeft: '0.75rem', background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', cursor: 'pointer', padding: '2px 8px', borderRadius: 4, fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>
               Clear all
             </button>
           )}
@@ -488,7 +488,7 @@ export default function NoteReader({
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             {note.title}
           </h1>
-          <p style={{ color: 'var(--text3)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <p style={{ color: 'var(--text3)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)', marginBottom: '2rem', lineHeight: 1.6 }}>
             {note.description}
           </p>
 
@@ -496,7 +496,7 @@ export default function NoteReader({
           {note.subtopics && (
             <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' as const, marginBottom: '2rem' }}>
               {note.subtopics.map(st => (
-                <span key={st} style={{ fontSize: '0.7rem', fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg2)', border: '1px solid var(--border)', padding: '3px 10px', borderRadius: 20 }}>{st}</span>
+                <span key={st} style={{ fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg2)', border: '1px solid var(--border)', padding: '3px 10px', borderRadius: 20 }}>{st}</span>
               ))}
             </div>
           )}
@@ -507,7 +507,7 @@ export default function NoteReader({
           {/* Note body */}
           <div style={{ position: 'relative' }}>
             <div ref={noteContentRef} className="note-content"
-              dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem;">Content coming soon. Check back shortly.</p>' }}
+              dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;">Content coming soon. Check back shortly.</p>' }}
               style={!user && !authLoading && displayContent ? { maxHeight: '140vh', overflow: 'hidden', pointerEvents: 'none', userSelect: 'none' } : undefined}
             />
 
@@ -517,7 +517,7 @@ export default function NoteReader({
                 <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '1.5rem 2rem', textAlign: 'center', maxWidth: 360 }}>
                   <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>🔒</div>
                   <div style={{ fontFamily: 'var(--font-ui)', fontWeight: 700, color: 'var(--text)', fontSize: '0.95rem', marginBottom: '0.4rem' }}>Sign in to continue reading</div>
-                  <div style={{ color: 'var(--text3)', fontSize: '0.78rem', marginBottom: '1.1rem', lineHeight: 1.5 }}>Free account full notes, highlights & progress tracking.</div>
+                  <div style={{ color: 'var(--text3)', fontSize: '0.78rem', fontWeight: 500, marginBottom: '1.1rem', lineHeight: 1.5 }}>Free account full notes, highlights & progress tracking.</div>
                   <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: 8, padding: '0.55rem 1.5rem', fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', width: '100%' }}>
                     Sign in free →
                   </button>
@@ -532,7 +532,7 @@ export default function NoteReader({
               <div style={{ fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text3)', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>Subtopics covered</div>
               <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '0.5rem' }}>
                 {note.subtopics.map(st => (
-                  <span key={st} style={{ display: 'inline-block', padding: '0.35rem 0.85rem', fontSize: '0.78rem', color: 'var(--text2)', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 20, fontFamily: 'var(--font-ui)' }}>
+                  <span key={st} style={{ display: 'inline-block', padding: '0.35rem 0.85rem', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text2)', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 20, fontFamily: 'var(--font-ui)' }}>
                     {st}
                   </span>
                 ))}
@@ -568,30 +568,30 @@ export default function NoteReader({
           <input autoFocus value={noteSearch.query} onChange={e => noteSearch.setQuery(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') noteSearch.jump(e.shiftKey ? -1 : 1); if (e.key === 'Escape') noteSearch.close(); }}
             placeholder="Find in note…"
-            style={{ flex: 1, background: 'none', border: 'none', outline: 'none', color: '#e8eaf6', fontSize: '0.9rem', fontFamily: 'var(--font-body)', minWidth: 0 }}
+            style={{ flex: 1, background: 'none', border: 'none', outline: 'none', color: '#e8eaf6', fontSize: '0.9rem', fontWeight: 500, fontFamily: 'var(--font-body)', minWidth: 0 }}
           />
           {noteSearch.total > 0 && (
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'rgba(99,152,255,0.8)', whiteSpace: 'nowrap', flexShrink: 0, background: 'rgba(59,130,246,0.1)', padding: '2px 8px', borderRadius: 4, border: '1px solid rgba(59,130,246,0.2)' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 500, color: 'rgba(99,152,255,0.8)', whiteSpace: 'nowrap', flexShrink: 0, background: 'rgba(59,130,246,0.1)', padding: '2px 8px', borderRadius: 4, border: '1px solid rgba(59,130,246,0.2)' }}>
               {noteSearch.current} / {noteSearch.total}
             </span>
           )}
           {noteSearch.query.length >= 2 && noteSearch.total === 0 && (
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: '#f87171', whiteSpace: 'nowrap', flexShrink: 0 }}>no match</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 500, color: '#f87171', whiteSpace: 'nowrap', flexShrink: 0 }}>no match</span>
           )}
           <div style={{ display: 'flex', gap: 2, borderLeft: '1px solid rgba(59,130,246,0.2)', paddingLeft: 8, marginLeft: 2 }}>
             <button onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} style={{ background: noteSearch.total > 0 ? 'rgba(59,130,246,0.1)' : 'transparent', border: `1px solid ${noteSearch.total > 0 ? 'rgba(59,130,246,0.25)' : 'transparent'}`, borderRadius: 6, color: noteSearch.total > 0 ? '#60a5fa' : 'var(--text3)', cursor: noteSearch.total > 0 ? 'pointer' : 'default', padding: '3px 8px', fontSize: '0.78rem', lineHeight: 1 }}>↑</button>
             <button onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} style={{ background: noteSearch.total > 0 ? 'rgba(59,130,246,0.1)' : 'transparent', border: `1px solid ${noteSearch.total > 0 ? 'rgba(59,130,246,0.25)' : 'transparent'}`, borderRadius: 6, color: noteSearch.total > 0 ? '#60a5fa' : 'var(--text3)', cursor: noteSearch.total > 0 ? 'pointer' : 'default', padding: '3px 8px', fontSize: '0.78rem', lineHeight: 1 }}>↓</button>
           </div>
-          <button onClick={noteSearch.close} style={{ background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,238,0.2)', borderRadius: 6, color: '#60a5fa', cursor: 'pointer', padding: '3px 9px', fontSize: '0.68rem', fontFamily: 'var(--font-mono)', marginLeft: 2 }}>esc</button>
+          <button onClick={noteSearch.close} style={{ background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,238,0.2)', borderRadius: 6, color: '#60a5fa', cursor: 'pointer', padding: '3px 9px', fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-mono)', marginLeft: 2 }}>esc</button>
         </div>
       )}
 
       {/* ── Search trigger ── */}
       {!noteSearch.open && (
-        <button onClick={() => noteSearch.setOpen(true)} title="Find in note (⌘F)" style={{ position: 'fixed', bottom: 28, right: 28, zIndex: 9998, background: 'rgba(10,14,26,0.95)', border: '1px solid rgba(67,97,238,0.3)', borderRadius: 10, padding: '9px 14px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 7, color: '#60a5fa', fontSize: '0.75rem', fontFamily: 'var(--font-mono)', boxShadow: '0 4px 20px rgba(0,0,0,0.6)', backdropFilter: 'blur(12px)' }}>
+        <button onClick={() => noteSearch.setOpen(true)} title="Find in note (⌘F)" style={{ position: 'fixed', bottom: 28, right: 28, zIndex: 9998, background: 'rgba(10,14,26,0.95)', border: '1px solid rgba(67,97,238,0.3)', borderRadius: 10, padding: '9px 14px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 7, color: '#60a5fa', fontSize: '0.75rem', fontWeight: 500, fontFamily: 'var(--font-mono)', boxShadow: '0 4px 20px rgba(0,0,0,0.6)', backdropFilter: 'blur(12px)' }}>
           <svg width="13" height="13" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/><path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
           Find
-          <span style={{ opacity: 0.45, fontSize: '0.62rem', background: 'rgba(59,130,246,0.1)', padding: '1px 5px', borderRadius: 3, border: '1px solid rgba(59,130,246,0.2)' }}>⌘F</span>
+          <span style={{ opacity: 0.45, fontSize: '0.62rem', fontWeight: 500, background: 'rgba(59,130,246,0.1)', padding: '1px 5px', borderRadius: 3, border: '1px solid rgba(59,130,246,0.2)' }}>⌘F</span>
         </button>
       )}
     </div>

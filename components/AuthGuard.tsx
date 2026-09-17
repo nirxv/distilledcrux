@@ -91,7 +91,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
             </h2>
             <p style={{
               color: 'var(--text3)',
-              fontSize: '0.875rem',
+              fontSize: '0.875rem', fontWeight: 500,
               lineHeight: 1.55,
             }}>
               Access notes, PYQs, AI evaluation and more with a free account.
@@ -141,7 +141,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
           </button>
 
           <a href="/" style={{
-            fontSize: '0.78rem',
+            fontSize: '0.78rem', fontWeight: 500,
             color: 'var(--text3)',
             textDecoration: 'none',
             transition: 'color 0.15s',

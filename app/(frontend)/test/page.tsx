@@ -173,7 +173,7 @@ function RubricScorer({ marks, value, onChange, color }: {
   return (
     <div style={{ background: 'var(--bg3)', borderRadius: 8, padding: '1rem', marginTop: '0.75rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-        <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>
+        <span style={{ fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>
           Self Evaluation
         </span>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700,
@@ -186,9 +186,9 @@ function RubricScorer({ marks, value, onChange, color }: {
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.2rem' }}>
             <div>
               <span style={{ fontSize: '0.78rem', color: 'var(--text)', fontWeight: 500 }}>{c.label}</span>
-              <span style={{ fontSize: '0.68rem', color: 'var(--text3)', marginLeft: '0.4rem', fontFamily: 'var(--font-ui)' }}>{c.desc}</span>
+              <span style={{ fontSize: '0.68rem', fontWeight: 500, color: 'var(--text3)', marginLeft: '0.4rem', fontFamily: 'var(--font-ui)' }}>{c.desc}</span>
             </div>
-            <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text2)' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 500, fontFamily: 'var(--font-mono)', color: 'var(--text2)' }}>
               {cur[c.key].toFixed(1)}/{c.max}
             </span>
           </div>
@@ -339,13 +339,13 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
         {step !== 'idle' && step !== 'ocr' && step !== 'evaluating' && (
           <button onClick={() => { setStep('idle'); setImages([]); setPreviews([]); setTranscript(''); setEvalData(null); setError(''); setPanelOpen(false); }} style={{
             background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
-            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', cursor: 'pointer',
+            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', fontWeight: 500, cursor: 'pointer',
           }}>Re-upload</button>
         )}
         {(step === 'done' || step === 'transcript') && (
           <button onClick={() => setPanelOpen(o => !o)} style={{
             background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
-            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', cursor: 'pointer',
+            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', fontWeight: 500, cursor: 'pointer',
           }}>{panelOpen ? 'Hide' : 'Show'}</button>
         )}
       </div>
@@ -357,7 +357,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
           {(step === 'ocr' || step === 'evaluating') && (
             <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
               <div style={{ width: 28, height: 28, border: `3px solid ${color}30`, borderTopColor: color, borderRadius: '50%', animation: 'spin-ai 0.8s linear infinite', margin: '0 auto 0.5rem' }} />
-              <div style={{ color, fontSize: '0.85rem', fontFamily: 'var(--font-ui)' }}>
+              <div style={{ color, fontSize: '0.85rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
                 {step === 'ocr' ? ocrMsg || 'Reading your handwriting…' : 'Evaluating your answer… (~30s)'}
               </div>
             </div>
@@ -376,12 +376,12 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <div>
                   <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>OCR Transcript</div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>Review and fix errors before evaluating</div>
+                  <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>Review and fix errors before evaluating</div>
                 </div>
                 <span style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: 4, padding: '2px 8px', fontSize: '0.68rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> OCR Done</span>
               </div>
               <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={10}
-                style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 6, padding: '0.65rem 0.8rem', color: 'var(--text)', fontSize: '0.84rem', resize: 'vertical', outline: 'none', fontFamily: 'inherit', lineHeight: 1.65 }} />
+                style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 6, padding: '0.65rem 0.8rem', color: 'var(--text)', fontSize: '0.84rem', fontWeight: 500, resize: 'vertical', outline: 'none', fontFamily: 'inherit', lineHeight: 1.65 }} />
               <div style={{ marginTop: '0.75rem', display: 'flex', justifyContent: 'flex-end' }}>
                 <button onClick={runEval} style={{ background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
                   Evaluate →
@@ -392,11 +392,11 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
           {step === 'error' && (
             <div>
-              <div style={{ color: 'var(--red)', fontSize: '0.85rem', marginBottom: '0.5rem', fontFamily: 'var(--font-ui)' }}>{error}</div>
+              <div style={{ color: 'var(--red)', fontSize: '0.85rem', fontWeight: 500, marginBottom: '0.5rem', fontFamily: 'var(--font-ui)' }}>{error}</div>
               {transcript && (
                 <div>
                   <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={6}
-                    style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 6, padding: '0.6rem 0.75rem', color: 'var(--text)', fontSize: '0.84rem', resize: 'vertical', outline: 'none', fontFamily: 'inherit' }} />
+                    style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 6, padding: '0.6rem 0.75rem', color: 'var(--text)', fontSize: '0.84rem', fontWeight: 500, resize: 'vertical', outline: 'none', fontFamily: 'inherit' }} />
                   <button onClick={runEval} style={{ marginTop: '0.5rem', background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
                     Evaluate →
                   </button>
@@ -412,19 +412,19 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
             const g = gaugeMood(pct);
             const sm = d.section_marks as Record<string, { awarded: number; out_of: number; reasoning: string }> | undefined;
             return (
-              <div style={{ fontSize: '0.85rem', lineHeight: 1.7 }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.7 }}>
                 {/* Score strip */}
                 <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', padding: '0.75rem', background: 'var(--bg3)', borderRadius: 6, marginBottom: '0.75rem' }}>
                   <div>
-                    <div style={{ color: 'var(--text3)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: 'var(--font-ui)' }}>AI Score</div>
+                    <div style={{ color: 'var(--text3)', fontSize: '0.65rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: 'var(--font-ui)' }}>AI Score</div>
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1.4rem', fontWeight: 700, color }}>
-                      {marks_v} <span style={{ fontSize: '0.82rem', color: 'var(--text3)' }}>/ {out_of}</span>
+                      {marks_v} <span style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text3)' }}>/ {out_of}</span>
                     </div>
                   </div>
                   {sm && Object.entries(sm).map(([k, v]) => (
                     <div key={k}>
-                      <div style={{ color: 'var(--text3)', fontSize: '0.65rem', textTransform: 'capitalize', fontFamily: 'var(--font-ui)' }}>{k}</div>
-                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem' }}>{v.awarded}/{v.out_of}</div>
+                      <div style={{ color: 'var(--text3)', fontSize: '0.65rem', fontWeight: 500, textTransform: 'capitalize', fontFamily: 'var(--font-ui)' }}>{k}</div>
+                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', fontWeight: 500 }}>{v.awarded}/{v.out_of}</div>
                     </div>
                   ))}
                 </div>
@@ -435,8 +435,8 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.4rem', flexWrap: 'wrap' }}>
                       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.92rem', fontWeight: 700, color: g.color }}>{marks_v}</span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text3)' }}>/{out_of}</span>
-                      <span style={{ fontSize: '0.74rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>{g.label}</span>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', fontWeight: 500, color: 'var(--text3)' }}>/{out_of}</span>
+                      <span style={{ fontSize: '0.74rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>{g.label}</span>
                     </div>
                     <div style={{ position: 'relative', height: 6, borderRadius: 3, background: 'linear-gradient(90deg, var(--red), var(--gold), var(--green))' }}>
                       <div style={{ position: 'absolute', top: -8, left: `${pct}%`, width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent', borderTop: '6px solid var(--text)', transform: 'translateX(-50%)' }} />
@@ -447,7 +447,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                 {/* Disclaimer */}
                 <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start', background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.25)', borderRadius: 6, padding: '0.6rem 0.8rem', marginBottom: '1rem' }}>
                   <WarnIcon />
-                  <div style={{ fontSize: '0.74rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', lineHeight: 1.55 }}>
+                  <div style={{ fontSize: '0.74rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)', lineHeight: 1.55 }}>
                     <strong style={{ color: 'var(--gold)' }}>AI scores are directional, not definitive.</strong>{' '}
                     Focus on the qualitative feedback below demand gaps and missing thinkers are far more useful than any number.
                   </div>
@@ -455,8 +455,8 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
                 {d.overall_feedback && (
                   <div style={{ marginBottom: '1rem' }}>
-                    <div style={{ color, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>Mentor Feedback</div>
-                    <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem' }}>{String(d.overall_feedback)}</p>
+                    <div style={{ color, fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>Mentor Feedback</div>
+                    <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{String(d.overall_feedback)}</p>
                   </div>
                 )}
 
@@ -465,12 +465,12 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                   return (
                     <div style={{ marginBottom: '1rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                       <div style={{ background: 'var(--green-dim)', border: '1px solid rgba(74,222,128,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--green)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> Strengths</div>
-                        {(b.strengths ?? []).map((s, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', lineHeight: 1.5 }}>{s}</div>)}
+                        <div style={{ color: 'var(--green)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> Strengths</div>
+                        {(b.strengths ?? []).map((s, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', fontWeight: 500, lineHeight: 1.5 }}>{s}</div>)}
                       </div>
                       <div style={{ background: 'var(--red-dim)', border: '1px solid rgba(248,113,113,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--red)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CrossIcon size={10} /> Weaknesses</div>
-                        {(b.weaknesses ?? []).map((w, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', lineHeight: 1.5 }}>{w}</div>)}
+                        <div style={{ color: 'var(--red)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CrossIcon size={10} /> Weaknesses</div>
+                        {(b.weaknesses ?? []).map((w, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', fontWeight: 500, lineHeight: 1.5 }}>{w}</div>)}
                       </div>
                     </div>
                   );
@@ -478,14 +478,14 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
 
                 {Array.isArray(d.historians_to_cite) && (d.historians_to_cite as unknown[]).length > 0 && (
                   <div style={{ marginBottom: '1rem' }}>
-                    <div style={{ color: 'var(--gold)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>
+                    <div style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>
                       {SUBJECTS[subjectId].thinkerTerm === 'anthropologist' ? 'Anthropologists to Cite' : 'Thinkers to Cite'}
                     </div>
                     {(d.historians_to_cite as { name: string; work?: string; argument: string }[]).map((h, i) => (
                       <div key={i} style={{ padding: '0.4rem 0.6rem', background: 'var(--gold-dim)', borderRadius: 4, marginBottom: '0.25rem', borderLeft: `2px solid ${color}60` }}>
                         <span style={{ color: 'var(--gold)', fontWeight: 600 }}>{h.name}</span>
-                        {h.work && <span style={{ color: 'var(--text3)', fontStyle: 'italic', fontSize: '0.8rem' }}> · {h.work}</span>}
-                        <div style={{ color: 'var(--text2)', marginTop: '0.1rem', fontSize: '0.8rem' }}>{h.argument}</div>
+                        {h.work && <span style={{ color: 'var(--text3)', fontStyle: 'italic', fontSize: '0.8rem', fontWeight: 500 }}> · {h.work}</span>}
+                        <div style={{ color: 'var(--text2)', marginTop: '0.1rem', fontSize: '0.8rem', fontWeight: 500 }}>{h.argument}</div>
                       </div>
                     ))}
                   </div>
@@ -498,15 +498,15 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
                       <summary style={{ color, cursor: 'pointer', fontSize: '0.82rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}>View Model Answer</summary>
                       <div style={{ marginTop: '0.75rem', padding: '0.75rem', background: 'var(--bg3)', borderRadius: 6 }}>
                         {ma.introduction && <div style={{ marginBottom: '0.75rem' }}>
-                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Introduction</div>
-                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem' }}>{ma.introduction}</p>
+                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Introduction</div>
+                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{ma.introduction}</p>
                         </div>}
                         {Array.isArray(ma.body) && ma.body.map((b, i) => (
                           <div key={i} style={{ paddingLeft: '0.75rem', borderLeft: `2px solid ${color}40`, marginBottom: '0.5rem', color: 'var(--text2)', fontSize: '0.84rem' }}>{b}</div>
                         ))}
                         {ma.conclusion && <div style={{ marginTop: '0.5rem' }}>
-                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Conclusion</div>
-                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem' }}>{ma.conclusion}</p>
+                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Conclusion</div>
+                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{ma.conclusion}</p>
                         </div>}
                       </div>
                     </details>
@@ -536,15 +536,15 @@ function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPrem
         <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', flexWrap: 'wrap' }}>
           <span style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--text)', fontFamily: 'var(--font-ui)', minWidth: '1.4rem' }}>({label})</span>
           <span style={{ background: dim, color, border: `1px solid ${border}`, fontSize: '0.65rem', fontFamily: 'var(--font-mono)', padding: '1px 6px', borderRadius: 3 }}>{q.topic}</span>
-          <span style={{ color: 'var(--text3)', fontSize: '0.7rem', fontFamily: 'var(--font-mono)' }}>{q.year}</span>
+          <span style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>{q.year}</span>
         </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--text3)', whiteSpace: 'nowrap' }}>[{q.marks} Marks]</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', whiteSpace: 'nowrap' }}>[{q.marks} Marks]</span>
       </div>
 
       <p style={{ color: 'var(--text)', fontSize: '0.92rem', lineHeight: 1.75, marginBottom: '0.75rem', fontFamily: 'var(--font-body)' }}>{q.question}</p>
 
       {!isResults && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg3)', border: '1px dashed var(--border2)', borderRadius: 6, padding: '0.6rem 0.9rem', color: 'var(--text3)', fontSize: '0.8rem', fontFamily: 'var(--font-ui)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg3)', border: '1px dashed var(--border2)', borderRadius: 6, padding: '0.6rem 0.9rem', color: 'var(--text3)', fontSize: '0.8rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
           <span>✏️</span>
           <span>Write your answer on paper · {wordTarget} words</span>
         </div>
@@ -580,7 +580,7 @@ function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, i
           <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.1</span>
           <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
         </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
           {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks Total`}
         </span>
       </div>
@@ -588,7 +588,7 @@ function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, i
         {hasMap && (
           <MapSubBlock entries={mapEntries!} isResults={isResults} color={color} border={border} />
         )}
-        <p style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
+        <p style={{ color: 'var(--text)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
           Write short notes on the following in about <strong>150 words</strong> each:
         </p>
         {questions.map((q, i) => (
@@ -622,13 +622,13 @@ function MapSubBlock({ entries, isResults, color, border }: {
           <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>(a)</span>
           <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>MAP · PAPER II</span>
         </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
           {isResults ? `${mapScore} / 20 Marks` : '20 Marks · 10 locations × 2M'}
         </span>
       </div>
 
       <div style={{ padding: '1.25rem' }}>
-        <p style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
+        <p style={{ color: 'var(--text)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
           On the outline map of India provided to you, mark the location of the following places and write their significance in not more than <strong>30 words</strong> each:
         </p>
 
@@ -655,10 +655,10 @@ function MapSubBlock({ entries, isResults, color, border }: {
               </div>
               {isResults && revealed.has(i) && (
                 <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid var(--border)', background: 'var(--bg2)' }}>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.3rem' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.3rem' }}>
                     Coordinates: {e.lat}°N, {e.lng}°E
                   </div>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text2)', fontFamily: 'var(--font-body)', lineHeight: 1.6 }}>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-body)', lineHeight: 1.6 }}>
                     {e.significance}
                   </div>
                 </div>
@@ -669,7 +669,7 @@ function MapSubBlock({ entries, isResults, color, border }: {
 
         {isResults && (
           <div style={{ background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem' }}>
-            <div style={{ fontSize: '0.78rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+            <div style={{ fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
               Self-Evaluate: Map Score (20M total · 2M per location)
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
@@ -682,7 +682,7 @@ function MapSubBlock({ entries, isResults, color, border }: {
                 {mapScore} / 20
               </span>
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginTop: '0.4rem' }}>
+            <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginTop: '0.4rem' }}>
               1M correct location on map · 1M significance note (30 words)
             </div>
           </div>
@@ -711,7 +711,7 @@ function QBlock({ group, isResults, rubrics, onRubric, subjectId, isPremium, use
             <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
           )}
         </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text3)' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
           {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks`}
         </span>
       </div>
@@ -743,20 +743,20 @@ function InstructionsHeader({ subject, mode, paper, totalMins, maxMarks }: {
   return (
     <div style={{ border: '1px solid var(--border)', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem', background: 'var(--bg2)' }}>
       <div style={{ textAlign: 'center', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '1.25rem' }}>
-        <div style={{ fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.3rem', fontFamily: 'var(--font-ui)' }}>
+        <div style={{ fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.3rem', fontFamily: 'var(--font-ui)' }}>
           Distilled Crux · Practice Test Series
         </div>
         <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>{title}</div>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-          <div style={{ fontSize: '0.82rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
+          <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
             <span style={{ color: 'var(--text3)' }}>Time: </span><strong>{timeStr}</strong>
           </div>
-          <div style={{ fontSize: '0.82rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
+          <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
             <span style={{ color: 'var(--text3)' }}>Maximum Marks: </span><strong>{maxMarks}</strong>
           </div>
         </div>
       </div>
-      <div style={{ fontSize: '0.82rem', color: 'var(--text2)', lineHeight: 2, fontFamily: 'var(--font-ui)' }}>
+      <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', lineHeight: 2, fontFamily: 'var(--font-ui)' }}>
         {isFull ? (
           <>
             <div>There are <strong>EIGHT questions</strong> divided in <strong>TWO SECTIONS</strong>.</div>
@@ -1055,17 +1055,17 @@ function TestPageInner() {
           .dc-mode-btn:hover { border-color: var(--border3) !important; }
         `}</style>
 
-        <div style={{ fontSize: '0.68rem', fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.5rem' }}>Distilled Crux · Practice</div>
+        <div style={{ fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.5rem' }}>Distilled Crux · Practice</div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.3rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
           Start a Test
         </h1>
-        <p style={{ color: 'var(--text2)', fontSize: '0.9rem', marginBottom: '2.5rem', fontFamily: 'var(--font-ui)' }}>
+        <p style={{ color: 'var(--text2)', fontSize: '0.9rem', fontWeight: 500, marginBottom: '2.5rem', fontFamily: 'var(--font-ui)' }}>
           Questions drawn from the full PYQ bank (2013-2024). Papers follow the exact UPSC Mains format.
         </p>
 
         {/* Subject selector */}
         <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Optional Subject</div>
+          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Optional Subject</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {(Object.entries(SUBJECTS) as [SubjectId, typeof SUBJECTS[SubjectId]][]).map(([id, s]) => {
               const active = subject === id;
@@ -1091,7 +1091,7 @@ function TestPageInner() {
 
         {/* Paper selector */}
         <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Paper</div>
+          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Paper</div>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
             {(['Paper I', 'Paper II', 'both'] as PaperChoice[]).map(p => {
               const active = paper === p;
@@ -1115,7 +1115,7 @@ function TestPageInner() {
         {/* Map question toggle — geography only, Paper II or both */}
         {subject === 'geography' && (paper === 'Paper II' || paper === 'both') && (
           <div style={{ marginBottom: '2rem' }}>
-            <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Map Question</div>
+            <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Map Question</div>
             <button
               onClick={() => setIncludeMapQ(v => !v)}
               style={{
@@ -1139,7 +1139,7 @@ function TestPageInner() {
                 <div style={{ fontSize: '0.88rem', fontWeight: includeMapQ ? 600 : 400, color: includeMapQ ? 'var(--text)' : 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
                   Include Map Question (Q.1a · Paper II)
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>
                   10 locations · 20 marks · self-eval rubric + significance reveal
                 </div>
               </div>
@@ -1149,7 +1149,7 @@ function TestPageInner() {
 
         {/* Mode selector */}
         <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Test Format</div>
+          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Test Format</div>
           {([
             { id: 'sectional' as TestMode, title: 'Sectional Test', sub: '105 min · 150 marks · 4 questions', desc: 'Q1 compulsory + attempt 2 of 3 remaining. Focused practice.' },
             { id: 'full'      as TestMode, title: 'Full-Length Test', sub: '3 hours · 250 marks · 8 questions',  desc: 'Complete paper Q1 & Q5 compulsory + 3 more.' },
@@ -1170,14 +1170,14 @@ function TestPageInner() {
                 <div style={{ fontSize: '0.9rem', fontWeight: mode === m.id ? 600 : 400, color: mode === m.id ? 'var(--text)' : 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
                   {m.title}<span style={{ marginLeft: '0.5rem', fontSize: '0.72rem', color: 'var(--text3)', fontWeight: 400 }}>{m.sub}</span>
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>{m.desc}</div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>{m.desc}</div>
               </div>
             </button>
           ))}
         </div>
 
         {/* Info banner */}
-        <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
+        <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', fontWeight: 500, display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
           <NoteIcon />
           <span>
             Q1 is always compulsory 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.
@@ -1206,7 +1206,7 @@ function TestPageInner() {
         </button>
 
         {!user && (
-          <p style={{ marginTop: '0.75rem', color: 'var(--text3)', fontSize: '0.8rem', fontFamily: 'var(--font-ui)' }}>
+          <p style={{ marginTop: '0.75rem', color: 'var(--text3)', fontSize: '0.8rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
             <a href="/login" style={{ color: subMeta.color, textDecoration: 'none' }}>Sign in</a> to generate a test paper.
           </p>
         )}
@@ -1224,10 +1224,10 @@ function TestPageInner() {
         <div style={{ position: 'sticky', top: navH, zIndex: 90, background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '0.6rem 0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', fontFamily: 'var(--font-ui)' }}>
-              <span style={{ color: 'var(--text3)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                 <SubjectIcon id={subject} color={subMeta.color} /> {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
               </span>
-              <span style={{ color: 'var(--text3)', fontSize: '0.72rem' }}>· {maxMarks}M</span>
+              <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500 }}>· {maxMarks}M</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.3rem', fontWeight: 700, color: urgency ? 'var(--red)' : 'var(--text)' }}>
@@ -1268,7 +1268,7 @@ function TestPageInner() {
     return (
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1.5rem 6rem' }}>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.25rem', letterSpacing: '-0.02em' }}>Test Results</h1>
-        <p style={{ color: 'var(--text2)', fontSize: '0.88rem', marginBottom: '2rem', fontFamily: 'var(--font-ui)' }}>
+        <p style={{ color: 'var(--text2)', fontSize: '0.88rem', fontWeight: 500, marginBottom: '2rem', fontFamily: 'var(--font-ui)' }}>
           Use the rubric sliders to self-evaluate. Premium users can upload answer images for AI Mentor evaluation.
         </p>
 
@@ -1277,21 +1277,21 @@ function TestPageInner() {
         {/* Score card */}
         <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '1.5rem', marginBottom: '2rem', display: 'flex', gap: '2.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
           <div>
-            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Self Score</div>
+            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Self Score</div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem' }}>
               <span style={{ fontSize: '2.2rem', fontWeight: 700, fontFamily: 'var(--font-mono)', color: subMeta.color }}>{written.toFixed(1)}</span>
-              <span style={{ color: 'var(--text3)', fontSize: '0.88rem', fontFamily: 'var(--font-ui)' }}>/ {maxMarks}</span>
+              <span style={{ color: 'var(--text3)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>/ {maxMarks}</span>
             </div>
           </div>
           <div>
-            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Time Used</div>
+            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Time Used</div>
             <div style={{ fontSize: '1.5rem', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>{Math.floor((totalMins * 60 - rem) / 60)}m</div>
           </div>
           <div style={{ flex: 1, minWidth: 140 }}>
             <div style={{ height: 8, background: 'var(--bg3)', borderRadius: 4 }}>
               <div style={{ height: '100%', borderRadius: 4, width: `${Math.min(pct, 100)}%`, background: pct >= 60 ? 'var(--green)' : pct >= 40 ? 'var(--gold)' : 'var(--red)', transition: 'width 1s' }} />
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--text3)', marginTop: 4, fontFamily: 'var(--font-ui)' }}>{pct}% of total marks</div>
+            <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', marginTop: 4, fontFamily: 'var(--font-ui)' }}>{pct}% of total marks</div>
           </div>
         </div>
 

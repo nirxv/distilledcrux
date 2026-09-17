@@ -76,19 +76,19 @@ function SourcePassages({ sources }: { sources: { book_title: string; content: s
         style={{ padding: '0.5rem 0.9rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', background: 'rgba(99,102,241,0.08)', borderBottom: expanded ? '1px solid rgba(99,102,241,0.15)' : 'none' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          <span style={{ fontSize: '0.75rem' }}>📖</span>
-          <span style={{ fontSize: '0.68rem', fontFamily: 'monospace', color: '#818cf8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+          <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>📖</span>
+          <span style={{ fontSize: '0.68rem', fontWeight: 500, fontFamily: 'monospace', color: '#818cf8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
             Source Passages · {cleaned.length} found
           </span>
         </div>
-        <span style={{ fontSize: '0.6rem', color: '#6366f1' }}>{expanded ? '▲' : '▼'}</span>
+        <span style={{ fontSize: '0.6rem', fontWeight: 500, color: '#6366f1' }}>{expanded ? '▲' : '▼'}</span>
       </div>
       {expanded && cleaned.map((s, si) => (
         <div key={si} style={{ padding: '0.75rem 0.9rem', borderTop: si > 0 ? '1px solid rgba(99,102,241,0.1)' : 'none' }}>
-          <div style={{ display: 'inline-block', fontSize: '0.6rem', fontFamily: 'monospace', color: '#a5b4fc', background: 'rgba(99,102,241,0.15)', borderRadius: 4, padding: '0.15rem 0.5rem', marginBottom: '0.5rem' }}>
+          <div style={{ display: 'inline-block', fontSize: '0.6rem', fontWeight: 500, fontFamily: 'monospace', color: '#a5b4fc', background: 'rgba(99,102,241,0.15)', borderRadius: 4, padding: '0.15rem 0.5rem', marginBottom: '0.5rem' }}>
             {s.book_title}
           </div>
-          <div style={{ fontSize: '0.8rem', color: 'var(--text2, #aaa)', lineHeight: 1.75 }}>
+          <div style={{ fontSize: '0.8rem', fontWeight: 500, color: 'var(--text2, #aaa)', lineHeight: 1.75 }}>
             {s.content.split(/(?<=[.?!])\s+/).filter((t) => t.trim().length > 20).slice(0, 6).map((sentence, i) => (
               <span key={i}>{sentence.trim()} </span>
             ))}
@@ -488,7 +488,7 @@ function ChatContent() {
         .pp-mode-strip::-webkit-scrollbar { display: none; }
         .pp-mode-pill {
           display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0;
-          font-size: 0.65rem; font-family: monospace;
+          font-size: 0.65rem; font-weight: 500; font-family: monospace;
           padding: 4px 10px; border-radius: 20px;
           border: 1px solid var(--border, #1a1a2e);
           background: transparent; color: var(--text3, #555);
@@ -507,7 +507,7 @@ function ChatContent() {
         .pp-textarea {
           flex: 1; background: transparent; border: none; outline: none;
           resize: none; color: var(--text, #e8e8f0);
-          font-family: inherit; font-size: 0.88rem; line-height: 1.5;
+          font-family: inherit; font-size: 0.88rem; font-weight: 500; line-height: 1.5;
           padding: 0.3rem 0; min-height: 36px; max-height: 180px;
         }
         .pp-textarea::placeholder { color: var(--text3, #555); }
@@ -530,7 +530,7 @@ function ChatContent() {
           border: 1px solid rgba(59,130,246,0.22);
           border-radius: 18px 18px 4px 18px;
           padding: 0.7rem 1rem; color: var(--text, #e8e8f0);
-          font-size: 0.88rem; line-height: 1.6; word-break: break-word;
+          font-size: 0.88rem; font-weight: 500; line-height: 1.6; word-break: break-word;
         }
         .pp-bubble-ai {
           max-width: 97%;
@@ -539,7 +539,7 @@ function ChatContent() {
           border-radius: 4px 18px 18px 18px;
           padding: 1rem 1.1rem 0.85rem;
           color: var(--text, #e8e8f0);
-          font-size: 0.88rem; line-height: 1.8; position: relative;
+          font-size: 0.88rem; font-weight: 500; line-height: 1.8; position: relative;
           box-shadow: 0 4px 24px rgba(0,0,0,0.4); word-break: break-word;
         }
         .pp-bubble-ai::before {
@@ -564,7 +564,7 @@ function ChatContent() {
 
         /* tables */
         .pp-table-wrap { overflow-x: auto; margin: 0.8rem 0; border-radius: 8px; border: 1px solid rgba(59,130,246,0.15); }
-        .pp-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+        .pp-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; font-weight: 500; }
         .pp-table th { background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.2); padding: 7px 10px; text-align: left; color: #f1f5f9; font-weight: 600; }
         .pp-table td { border: 1px solid rgba(0,0,0,0.07); padding: 6px 10px; color: #c8d3e0; vertical-align: top; }
 
@@ -575,8 +575,8 @@ function ChatContent() {
         /* meta */
         .pp-meta { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.3rem; padding: 0 4px; }
         .pp-meta.user { flex-direction: row-reverse; }
-        .pp-meta-label { color: var(--text3, #555); font-size: 0.62rem; letter-spacing: 0.08em; font-family: monospace; }
-        .pp-ai-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; letter-spacing: 0.1em; font-family: monospace; color: rgba(59,130,246,0.6); }
+        .pp-meta-label { color: var(--text3, #555); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; font-family: monospace; }
+        .pp-ai-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; font-family: monospace; color: rgba(59,130,246,0.6); }
         .pp-ai-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(59,130,246,0.6); box-shadow: 0 0 5px rgba(59,130,246,0.5); }
 
         /* typing */
@@ -586,19 +586,19 @@ function ChatContent() {
         .pp-typing-dot:nth-child(2) { animation-delay: 0.16s; }
         .pp-typing-dot:nth-child(3) { animation-delay: 0.32s; }
         @keyframes ppDotPulse { 0%,100% { opacity:0.2; transform:scale(0.72); } 50% { opacity:1; transform:scale(1.12); } }
-        .pp-typing-text { font-size: 0.65rem; color: var(--text3, #555); letter-spacing: 0.07em; font-family: monospace; }
+        .pp-typing-text { font-size: 0.65rem; font-weight: 500; color: var(--text3, #555); letter-spacing: 0.07em; font-family: monospace; }
 
         /* suggested */
-        .pp-suggested-label { font-family: monospace; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3, #555); margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem; }
+        .pp-suggested-label { font-family: monospace; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3, #555); margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem; }
         .pp-suggested-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border, #1a1a2e), transparent); }
         .pp-suggested-grid { display: flex; flex-direction: column; gap: 0.4rem; }
-        .pp-suggested-btn { background: var(--bg2, #0d0d1a); border: 1px solid var(--border, #1a1a2e); border-radius: 12px; padding: 0.65rem 0.9rem; text-align: left; color: var(--text2, #aaa); cursor: pointer; font-size: 0.82rem; line-height: 1.45; width: 100%; transition: all 0.18s; }
+        .pp-suggested-btn { background: var(--bg2, #0d0d1a); border: 1px solid var(--border, #1a1a2e); border-radius: 12px; padding: 0.65rem 0.9rem; text-align: left; color: var(--text2, #aaa); cursor: pointer; font-size: 0.82rem; font-weight: 500; line-height: 1.45; width: 100%; transition: all 0.18s; }
         .pp-suggested-btn:hover { border-color: rgba(59,130,246,0.3); color: var(--text, #e8e8f0); background: rgba(29,78,216,0.08); }
 
         /* pdf strip */
-        .pp-pdf-strip { display: flex; align-items: center; gap: 0.4rem; font-size: 0.65rem; font-family: monospace; color: #a5b4fc; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25); border-radius: 8px; padding: 0.25rem 0.6rem; margin-bottom: 0.45rem; }
+        .pp-pdf-strip { display: flex; align-items: center; gap: 0.4rem; font-size: 0.65rem; font-weight: 500; font-family: monospace; color: #a5b4fc; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25); border-radius: 8px; padding: 0.25rem 0.6rem; margin-bottom: 0.45rem; }
         .pp-pdf-strip-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
-        .pp-pdf-strip-close { cursor: pointer; opacity: 0.6; flex-shrink: 0; font-size: 0.75rem; }
+        .pp-pdf-strip-close { cursor: pointer; opacity: 0.6; flex-shrink: 0; font-size: 0.75rem; font-weight: 500; }
 
         /* books sheet */
         .pp-books-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 899; backdrop-filter: blur(2px); }
@@ -610,8 +610,8 @@ function ChatContent() {
         .pp-books-toggle.on { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
         .pp-books-toggle.off { background: rgba(99,102,241,0.2); }
         .pp-books-toggle-dot { position: absolute; top: 3px; width: 17px; height: 17px; border-radius: 50%; background: #fff; transition: left 0.25s; box-shadow: 0 1px 4px rgba(0,0,0,0.4); }
-        .pp-books-select { width: 100%; font-size: 0.75rem; background: var(--bg3, #111); color: var(--text, #e8e8f0); border: 1px solid rgba(99,102,241,0.3); border-radius: 8px; padding: 0.45rem 0.6rem; cursor: pointer; outline: none; font-family: monospace; margin-top: 0.5rem; }
-        .pp-books-group-label { font-size: 0.65rem; color: var(--text3, #555); font-family: monospace; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0 0.2rem; }
+        .pp-books-select { width: 100%; font-size: 0.75rem; font-weight: 500; background: var(--bg3, #111); color: var(--text, #e8e8f0); border: 1px solid rgba(99,102,241,0.3); border-radius: 8px; padding: 0.45rem 0.6rem; cursor: pointer; outline: none; font-family: monospace; margin-top: 0.5rem; }
+        .pp-books-group-label { font-size: 0.65rem; font-weight: 500; color: var(--text3, #555); font-family: monospace; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0 0.2rem; }
 
         /* mode sheet */
         .pp-mode-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 800; }
@@ -623,7 +623,7 @@ function ChatContent() {
         .pp-mode-btn.active { border-color: rgba(99,102,241,0.55); background: rgba(99,102,241,0.14); }
         .pp-mode-icon { font-size: 1.25rem; margin-bottom: 0.35rem; }
         .pp-mode-label { font-size: 0.78rem; font-weight: 600; color: var(--text, #e8e8f0); }
-        .pp-mode-desc { font-size: 0.65rem; color: var(--text3, #555); margin-top: 0.15rem; line-height: 1.4; }
+        .pp-mode-desc { font-size: 0.65rem; font-weight: 500; color: var(--text3, #555); margin-top: 0.15rem; line-height: 1.4; }
 
         /* history */
         .pp-hist-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 998; }
@@ -631,15 +631,15 @@ function ChatContent() {
         .pp-hist-head { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.1rem; border-bottom: 1px solid var(--border, #1a1a2e); }
         .pp-hist-title { font-size: 0.85rem; font-weight: 600; color: var(--text, #e8e8f0); }
         .pp-hist-close { background: none; border: none; color: var(--text3, #555); font-size: 1.1rem; cursor: pointer; }
-        .pp-hist-new { margin: 0.75rem 1rem 0.5rem; display: flex; align-items: center; justify-content: center; gap: 6px; background: linear-gradient(135deg, rgba(29,78,216,0.22), rgba(59,130,246,0.1)); border: 1px solid rgba(59,130,246,0.3); color: #dbe6ff; padding: 0.5rem; border-radius: 9px; cursor: pointer; font-size: 0.78rem; }
+        .pp-hist-new { margin: 0.75rem 1rem 0.5rem; display: flex; align-items: center; justify-content: center; gap: 6px; background: linear-gradient(135deg, rgba(29,78,216,0.22), rgba(59,130,246,0.1)); border: 1px solid rgba(59,130,246,0.3); color: #dbe6ff; padding: 0.5rem; border-radius: 9px; cursor: pointer; font-size: 0.78rem; font-weight: 500; }
         .pp-hist-list { flex: 1; overflow-y: auto; padding: 0.4rem 0.6rem 1rem; }
-        .pp-hist-empty { color: var(--text3, #555); font-size: 0.78rem; text-align: center; padding: 2rem 1rem; line-height: 1.6; }
+        .pp-hist-empty { color: var(--text3, #555); font-size: 0.78rem; font-weight: 500; text-align: center; padding: 2rem 1rem; line-height: 1.6; }
         .pp-hist-item { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; padding: 0.6rem 0.65rem; border-radius: 9px; cursor: pointer; margin-bottom: 3px; transition: background 0.15s; }
         .pp-hist-item:hover { background: rgba(59,130,246,0.08); }
         .pp-hist-item.active { background: rgba(59,130,246,0.14); border: 1px solid rgba(59,130,246,0.28); }
-        .pp-hist-item-title { font-size: 0.77rem; color: var(--text2, #aaa); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .pp-hist-item-date { font-size: 0.6rem; color: var(--text3, #555); margin-top: 3px; font-family: monospace; }
-        .pp-hist-item-del { background: none; border: none; color: var(--text3, #555); cursor: pointer; font-size: 0.85rem; flex-shrink: 0; padding: 2px 4px; opacity: 0.6; }
+        .pp-hist-item-title { font-size: 0.77rem; font-weight: 500; color: var(--text2, #aaa); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .pp-hist-item-date { font-size: 0.6rem; font-weight: 500; color: var(--text3, #555); margin-top: 3px; font-family: monospace; }
+        .pp-hist-item-del { background: none; border: none; color: var(--text3, #555); cursor: pointer; font-size: 0.85rem; font-weight: 500; flex-shrink: 0; padding: 2px 4px; opacity: 0.6; }
         .pp-hist-item-del:hover { opacity: 1; color: #f87171; }
 
         /* citation modal */
@@ -684,7 +684,7 @@ function ChatContent() {
       >
         {dragOver && (
           <div className="pp-drag-overlay">
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', color: 'rgba(139,143,255,0.9)', fontFamily: 'monospace', fontSize: '0.8rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', color: 'rgba(139,143,255,0.9)', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 500 }}>
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               Drop PDF here
             </div>
@@ -757,7 +757,7 @@ function ChatContent() {
             <div className="pp-mode-overlay" onClick={() => setModeSheetOpen(false)} />
             <div className="pp-mode-sheet">
               <div className="pp-mode-handle" />
-              <div style={{ fontFamily: 'monospace', fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text3, #555)', marginBottom: '0.75rem' }}>Select Mode</div>
+              <div style={{ fontFamily: 'monospace', fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text3, #555)', marginBottom: '0.75rem' }}>Select Mode</div>
               <div className="pp-mode-grid">
                 <button className={`pp-mode-btn ${responseStyle === 'concise' && !brainstormMode ? 'active' : ''}`}
                   onClick={() => { setResponseStyle('concise'); setBrainstormMode(false); setModeSheetOpen(false); }}>
@@ -787,13 +787,13 @@ function ChatContent() {
           <div className="pp-cite-modal-bg" onClick={() => setCitationModal(null)}>
             <div className="pp-cite-modal" onClick={(e) => e.stopPropagation()}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.9rem' }}>
-                <span style={{ fontSize: '0.7rem', fontFamily: 'monospace', color: '#818cf8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>📖 Cited Passage{citationModal.length > 1 ? 's' : ''}</span>
+                <span style={{ fontSize: '0.7rem', fontWeight: 500, fontFamily: 'monospace', color: '#818cf8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>📖 Cited Passage{citationModal.length > 1 ? 's' : ''}</span>
                 <button onClick={() => setCitationModal(null)} style={{ background: 'none', border: 'none', color: 'var(--text3, #555)', fontSize: '1.1rem', cursor: 'pointer' }}>✕</button>
               </div>
               {citationModal.map((s, si) => (
                 <div key={si} style={{ marginBottom: si < citationModal.length - 1 ? '1rem' : 0, paddingBottom: si < citationModal.length - 1 ? '1rem' : 0, borderBottom: si < citationModal.length - 1 ? '1px solid rgba(99,102,241,0.12)' : 'none' }}>
-                  <div style={{ display: 'inline-block', fontSize: '0.6rem', fontFamily: 'monospace', color: '#a5b4fc', background: 'rgba(99,102,241,0.15)', borderRadius: 4, padding: '0.15rem 0.5rem', marginBottom: '0.5rem' }}>{s.book_title}</div>
-                  <div style={{ fontSize: '0.82rem', color: 'var(--text2, #aaa)', lineHeight: 1.75 }}>{cleanChunk(s.content) || 'Passage text unavailable.'}</div>
+                  <div style={{ display: 'inline-block', fontSize: '0.6rem', fontWeight: 500, fontFamily: 'monospace', color: '#a5b4fc', background: 'rgba(99,102,241,0.15)', borderRadius: 4, padding: '0.15rem 0.5rem', marginBottom: '0.5rem' }}>{s.book_title}</div>
+                  <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2, #aaa)', lineHeight: 1.75 }}>{cleanChunk(s.content) || 'Passage text unavailable.'}</div>
                 </div>
               ))}
             </div>
@@ -811,7 +811,7 @@ function ChatContent() {
                   ) : msg.content === '__LIMIT_REACHED__' ? (
                     <div style={{ padding: '0.5rem 0' }}>
                       <div style={{ fontWeight: 600, fontSize: '0.95rem', marginBottom: '0.4rem' }}>You&apos;ve used your 3 free messages.</div>
-                      <div style={{ fontSize: '0.83rem', color: 'var(--text3)', marginBottom: '1rem' }}>Upgrade to Distilled Crux Pro for unlimited access to all subjects.</div>
+                      <div style={{ fontSize: '0.83rem', fontWeight: 500, color: 'var(--text3)', marginBottom: '1rem' }}>Upgrade to Distilled Crux Pro for unlimited access to all subjects.</div>
                       <a href="/pricing" style={{
                         display: 'inline-block',
                         background: 'var(--accent)',
@@ -825,7 +825,7 @@ function ChatContent() {
                       }}>Upgrade to Pro →</a>
                     </div>
                   ) : msg.content === '' ? (
-                    <span style={{ opacity: 0.4, fontFamily: 'monospace', fontSize: '0.8rem' }}>●●●</span>
+                    <span style={{ opacity: 0.4, fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 500 }}>●●●</span>
                   ) : loading && i === messages.length - 1 ? (
                     <div dangerouslySetInnerHTML={{ __html: sanitize(formatMessage(msg.content)) }} />
                   ) : (
@@ -936,8 +936,8 @@ function ChatContent() {
             {/* Style toggle (desktop) */}
             {!brainstormMode && (
               <div className="pp-style-toggle">
-                <span style={{ fontSize: '0.6rem', color: 'var(--text3, #555)', fontFamily: 'monospace', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Style</span>
-                <span style={{ fontSize: '0.6rem', color: 'var(--border, #1a1a2e)' }}></span>
+                <span style={{ fontSize: '0.6rem', fontWeight: 500, color: 'var(--text3, #555)', fontFamily: 'monospace', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Style</span>
+                <span style={{ fontSize: '0.6rem', fontWeight: 500, color: 'var(--border, #1a1a2e)' }}></span>
                 {(['concise', 'elaborative'] as const).map((s) => (
                   <button key={s} onClick={() => setResponseStyle(s)} style={{
                     fontSize: '0.68rem', fontFamily: 'monospace', letterSpacing: '0.04em',
@@ -1016,7 +1016,7 @@ function ChatContent() {
               </button>
             </div>
 
-            <div style={{ textAlign: 'center', marginTop: '0.3rem', fontFamily: 'monospace', fontSize: '0.58rem', letterSpacing: '0.07em', color: 'var(--text3, #555)' }}>
+            <div style={{ textAlign: 'center', marginTop: '0.3rem', fontFamily: 'monospace', fontSize: '0.58rem', fontWeight: 500, letterSpacing: '0.07em', color: 'var(--text3, #555)' }}>
               Enter to send · Shift+Enter for new line
             </div>
           </div>
