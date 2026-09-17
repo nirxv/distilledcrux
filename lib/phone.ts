@@ -1,99 +1,88 @@
 /**
- * Phone normalisation and validation, shared by the onboarding form and the
- * route that stores the number.
+ * Indian mobile validation, shared by the onboarding form and the route that
+ * stores the number.
  *
- * It lives here rather than in either of them so the two cannot drift on what
- * counts as valid: the form must not accept a number the route will reject,
- * and the route must never trust that the form checked anything.
+ * It lives here rather than in either of them so the two cannot drift: the
+ * form must not accept a number the route will reject, and the route must
+ * never trust that the form checked anything.
+ *
+ * This used to fall back to a generic international check of 8 to 15 digits
+ * whenever the input did not look Indian. That is how +90800888 reached the
+ * table: eight digits behind a Turkish country code, on a field labelled +91.
+ * The fallback protected a case that does not exist here, since the field
+ * shows a fixed +91, so it is gone. Only an Indian mobile is accepted now.
  */
 
-/** Digits only, no country code, per ITU E.164 minus the leading '+'. */
-const MIN_DIGITS = 8;
-const MAX_DIGITS = 15;
-
-/**
- * Numbers that are syntactically fine and obviously fake. Collected numbers
- * are only worth having if someone can be reached on them, and these are what
- * people type when a modal will not let them past.
- */
-function isJunk(digits: string): boolean {
-  const national = digits.length > 10 ? digits.slice(-10) : digits;
-  if (/^(\d)\1+$/.test(national)) return true;           // 9999999999
-  if (national === '1234567890') return true;
-  if (national === '0123456789') return true;
-  return false;
-}
+/** An allocated Indian mobile is ten digits opening with 6, 7, 8 or 9. */
+const INDIAN_MOBILE = /^[6-9]\d{9}$/;
 
 export type PhoneResult =
   | { ok: true; phone: string }
   | { ok: false; error: string };
 
-export function normalizePhone(raw: unknown): PhoneResult {
-  if (typeof raw !== 'string') return { ok: false, error: 'Please enter your phone number.' };
+const NOT_A_NUMBER = 'Enter a 10-digit Indian mobile number.';
+const NOT_REAL = 'That number is not a real mobile number.';
 
-  // Strip the separators people actually type. Anything else surviving this is
-  // a real character in the wrong place, and should fail rather than be
-  // silently dropped.
-  const cleaned = raw.replace(/[\s\-().]/g, '');
-  const match = cleaned.match(/^(\+?)(\d+)$/);
-  if (!match) return { ok: false, error: 'That does not look like a phone number.' };
+/**
+ * Numbers that are the right shape and obviously invented. A mandatory field
+ * is only worth having if someone can be reached on the answer, and these are
+ * what people type when a form will not let them past.
+ *
+ * Deliberately narrow. This field blocks access, so wrongly rejecting a real
+ * number costs a reader their account, which is worse than letting one fake
+ * through. Only patterns no allocated number realistically carries are here.
+ */
+function isInvented(digits: string): boolean {
+  // 9999999999, and anything else with barely any variety: 9898989898,
+  // 9090909090, 8888899999.
+  if (new Set(digits).size <= 2) return true;
 
-  let digits = match[2];
-  if (digits.length < MIN_DIGITS || digits.length > MAX_DIGITS) {
-    return { ok: false, error: 'That number looks too short or too long.' };
-  }
-  if (isJunk(digits)) return { ok: false, error: 'Please enter a real phone number.' };
+  // A straight run in either direction: 9876543210, 6789012345. Counted
+  // modulo 10, because a run crosses the 9-to-0 wrap and a plain subtraction
+  // reads that step as -9 and lets the number through.
+  const d = [...digits].map(Number);
+  const steps = d.slice(1).map((n, i) => (n - d[i] + 10) % 10);
+  if (steps.every(s => s === 1) || steps.every(s => s === 9)) return true;
 
-  // The field is prefixed +91 and people type their number again with the
-  // country code in it, giving +91 91 XXXXXXXXXX. Fourteen digits passes the
-  // generic international check and is not dialable. The intent is not in
-  // doubt, so the duplicate is dropped rather than refused.
-  if (digits.length === 14 && digits.startsWith('9191') && /^[6-9]\d{9}$/.test(digits.slice(4))) {
-    digits = digits.slice(2);
-  }
-
-  // An Indian mobile is 10 digits starting 6-9. The field defaults to +91, so
-  // this is the case worth checking properly.
-  if (digits.startsWith('91') && digits.length === 12) {
-    const national = digits.slice(2);
-    if (!/^[6-9]\d{9}$/.test(national)) {
-      return { ok: false, error: 'Indian mobile numbers are 10 digits starting with 6, 7, 8 or 9.' };
-    }
-  }
-
-  return { ok: true, phone: '+' + digits };
+  return false;
 }
 
 /**
- * For a field that already shows a fixed +91, where what gets typed is a
- * national number rather than an international one.
+ * Accepts what people actually type into a field already labelled +91:
  *
- * Without this, a reader typing the ten digits under a +91 label would be
- * stored as +9876543210: ten digits passes the generic length check, so it
- * looks valid and is not dialable. Three shapes are accepted because all three
- * are what people actually type into a field labelled +91:
+ *   9876543210      the ten digits, as the label invites
+ *   09876543210     with the trunk prefix, as written on forms in India
+ *   +919876543210   the whole thing again, ignoring the label
+ *   91 98765 43210  spaced, hyphenated or bracketed, in any of the above
  *
- *   9876543210        the ten digits, as the label invites
- *   09876543210       with the trunk prefix, as written on forms in India
- *   +919876543210     the whole thing again, ignoring the label
+ * Always returns E.164, so the stored value is dialable as written.
  */
 export function normalizeIndianMobile(raw: unknown): PhoneResult {
-  if (typeof raw !== 'string') return { ok: false, error: 'Please enter your mobile number.' };
+  if (typeof raw !== 'string') return { ok: false, error: NOT_A_NUMBER };
 
+  // Strip the separators people type. Anything else surviving this is a real
+  // character in the wrong place and should fail rather than be dropped.
   const cleaned = raw.replace(/[\s\-().]/g, '');
-  const national = /^0([6-9]\d{9})$/.exec(cleaned)?.[1] ?? cleaned;
+  if (!/^\+?\d+$/.test(cleaned)) return { ok: false, error: NOT_A_NUMBER };
 
-  if (/^[6-9]\d{9}$/.test(national)) return normalizePhone(`91${national}`);
+  // Peel one country code or one trunk prefix, not both and not repeatedly:
+  // +9191... is not a number anyone has.
+  const national = cleaned
+    .replace(/^\+?91(?=[6-9]\d{9}$)/, '')
+    .replace(/^0(?=[6-9]\d{9}$)/, '');
 
-  // Ten bare digits under a +91 label mean an Indian number and nothing else,
-  // so a ten-digit string that is not a valid Indian mobile is wrong rather
-  // than foreign. Without this it fell through to the generic check, which
-  // accepts any 8 to 15 digits, and 5876543210 was stored as +5876543210.
-  if (/^\d{10}$/.test(cleaned)) {
-    return { ok: false, error: 'Indian mobile numbers are 10 digits starting with 6, 7, 8 or 9.' };
-  }
+  if (!INDIAN_MOBILE.test(national)) return { ok: false, error: NOT_A_NUMBER };
+  if (isInvented(national)) return { ok: false, error: NOT_REAL };
 
-  // Anything else goes through as typed, so someone entering a genuine
-  // international number with its own country code still works.
-  return normalizePhone(cleaned);
+  return { ok: true, phone: `+91${national}` };
+}
+
+/**
+ * Kept so callers reading a stored value do not need to know the format.
+ * Everything in the column is E.164 with an Indian country code.
+ */
+export function formatIndianMobile(stored: string | null | undefined): string {
+  if (!stored) return '—';
+  const m = /^\+91(\d{5})(\d{5})$/.exec(stored);
+  return m ? `+91 ${m[1]} ${m[2]}` : stored;
 }

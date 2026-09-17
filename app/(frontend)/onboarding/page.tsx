@@ -253,7 +253,13 @@ function OnboardingInner() {
               autoComplete="tel"
               placeholder="98765 43210"
               value={phone}
-              onChange={(e) => { setPhone(e.target.value); if (phoneError) setPhoneError(null); }}
+              // Ten digits is the whole alphabet of this field, so anything
+              // else is dropped as it is typed rather than rejected afterwards.
+              maxLength={10}
+              onChange={(e) => {
+                setPhone(e.target.value.replace(/\D/g, '').slice(0, 10));
+                if (phoneError) setPhoneError(null);
+              }}
               aria-invalid={phoneError ? true : undefined}
               aria-describedby={phoneError ? 'phone-error' : 'phone-hint'}
               style={{
