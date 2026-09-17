@@ -76,8 +76,9 @@ const CSS = `
 .pr-h1 em { font-style: italic; color: var(--accent); }
 .pr-tagline { font-family: var(--font-ui); font-size: 0.92rem; color: var(--text3); max-width: 480px; line-height: 1.7; }
 .pr-optional-wrap { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem; border-bottom: 1px solid var(--border); }
-.pr-section-label { font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; }
-.pr-section-label::before { content: ''; display: block; width: 16px; height: 1px; background: var(--border3); }
+/* No leading rule. The flex row and its gap existed only to seat that
+   pseudo-element, so they go with it. */
+.pr-section-label { font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.25rem; }
 .pr-optional-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .pr-opt-btn { display: flex; align-items: center; gap: 7px; padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid var(--border2); background: var(--bg2); cursor: pointer; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2); transition: all 0.12s; }
 .pr-opt-btn:hover { border-color: var(--border3); color: var(--text); background: var(--bg3); }
