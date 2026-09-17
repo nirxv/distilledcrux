@@ -20,7 +20,7 @@ const plans = [
     features: [
       { label: 'Full platform access for 24 hours' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
+      { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank access' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
@@ -33,7 +33,7 @@ const plans = [
     features: [
       { label: 'Full platform access for 6 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
+      { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank 1500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
@@ -47,7 +47,7 @@ const plans = [
     features: [
       { label: 'Full platform access for 12 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat — ask anything' },
+      { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank 1500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
@@ -59,12 +59,12 @@ const plans = [
 ];
 
 const faqs = [
-  { q: 'Is there a free tier?', a: 'Yes — 3 free AI chats, no card required.' },
+  { q: 'Is there a free tier?', a: 'Yes. 3 free AI chats, no card required.' },
   { q: 'Can I switch plans?', a: 'After your current plan expires you can pick any plan. Plans are non-auto-renewing.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, and Public Administration. History is at historyoptional.xyz.' },
   { q: 'Can I buy for multiple optionals?', a: 'Each optional requires a separate purchase. Your active subscription is tied to the optional you select at checkout.' },
   { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking via Razorpay.' },
-  { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages — contact us within 7 days.' },
+  { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages. Contact us within 7 days.' },
 ];
 
 const CSS = `
@@ -230,7 +230,7 @@ export default function PricingPage() {
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'History Optional',
-        description: `${optLabel} — ${planLabel} Plan`,
+        description: `${optLabel} ${planLabel} Plan`,
         order_id: orderData.orderId,
         prefill: { email: user.email ?? '', name: user.displayName ?? '' },
         theme: { color: '#4361ee' },
@@ -279,7 +279,7 @@ export default function PricingPage() {
         </div>
 
         <div className="pr-optional-wrap">
-          <div className="pr-section-label">Step 1 — Select your optional</div>
+          <div className="pr-section-label">Step 1: Select your optional</div>
           <div className="pr-optional-grid">
             {OPTIONALS.map((opt) => {
               const isSelected = selectedOptional === opt.id;
@@ -319,7 +319,7 @@ export default function PricingPage() {
                 <path d="M7 4v3.5" stroke="#e8b86d" strokeWidth="1.3" strokeLinecap="round"/>
                 <circle cx="7" cy="10" r="0.7" fill="#e8b86d"/>
               </svg>
-              Select your optional above — then pick a plan below.
+              Select your optional above, then pick a plan below.
             </div>
           )}
         </div>
@@ -331,7 +331,7 @@ export default function PricingPage() {
         )}
 
         <div className="pr-grid-wrap">
-          <div className="pr-section-label" style={{ marginBottom: '1.5rem' }}>Step 2 — Choose a plan</div>
+          <div className="pr-section-label" style={{ marginBottom: '1.5rem' }}>Step 2: Choose a plan</div>
           <div className="pr-grid">
             {plans.map((plan) => {
               const isFeatured = plan.id === 'sixmonth';
@@ -394,7 +394,7 @@ export default function PricingPage() {
             <path d="M6 3.5v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
             <circle cx="6" cy="8.5" r="0.6" fill="currentColor"/>
           </svg>
-          Payment is processed by Razorpay. You will see “History Optional” on your payment screen — Distilled Crux is a product by the History Optional venture.
+          Payment is processed by Razorpay. You will see “History Optional” on your payment screen. Distilled Crux is a product by the History Optional venture.
         </div>
 
         <div className="pr-faq">
