@@ -230,7 +230,12 @@ export default function PricingPage() {
         key: orderData.keyId,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: 'History Optional',
+        // The brand the reader is buying from on this site. Checkout is the
+        // only surface this reaches: Razorpay's own emails, the card statement
+        // and the UPI merchant name all keep the account's registered name,
+        // which is why the note under the button says so.
+        name: 'Distilled Crux',
+        image: 'https://www.distilledcrux.com/apple-icon.png',
         description: `${optLabel} ${planLabel} Plan`,
         order_id: orderData.orderId,
         prefill: { email: user.email ?? '', name: user.displayName ?? '' },
@@ -395,7 +400,7 @@ export default function PricingPage() {
             <path d="M6 3.5v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
             <circle cx="6" cy="8.5" r="0.6" fill="currentColor"/>
           </svg>
-          Payment is processed by Razorpay. You will see “History Optional” on your payment screen. Distilled Crux is a product by the History Optional venture.
+          Payment is processed by Razorpay. Your card statement and Razorpay’s receipt will show “History Optional”, the venture Distilled Crux is a product of.
         </div>
 
         <div className="pr-faq">

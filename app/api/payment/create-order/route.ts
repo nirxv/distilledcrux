@@ -67,7 +67,6 @@ export async function POST(req: NextRequest) {
       amount: planData.amount,
       currency: 'INR',
       keyId: process.env.RAZORPAY_KEY_ID,
-      businessName: 'History Optional',
       description: `${optLabel} — ${planData.label}`,
       optional,
     });
