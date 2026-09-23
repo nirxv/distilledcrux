@@ -8,14 +8,15 @@
  * of the route, so the module is chosen at call time instead and only the one
  * subject's file is ever loaded.
  *
- * pub-admin has note metadata but no bodies yet, so it resolves to empty
- * exactly as it did when it was missing from the flat merge.
+ * pub-admin is being written note by note, so a slug with no body yet
+ * resolves to empty exactly as it did before the module existed.
  */
 const loaders: Record<string, () => Promise<Record<string, string>>> = {
   sociology: () => import('./sociology').then(m => m.sociologyNoteContent),
   anthropology: () => import('./anthropology').then(m => m.anthropologyNoteContent),
   polsci: () => import('./polsci').then(m => m.polsciNoteContent),
   geography: () => import('./geography').then(m => m.geographyNoteContent),
+  'pub-admin': () => import('./pub-admin').then(m => m.pubAdminNoteContent),
 };
 
 export async function getNoteContent(subject: string, slug: string): Promise<string> {
