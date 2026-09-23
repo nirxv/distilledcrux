@@ -2667,4 +2667,301 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Taken together the three are a single reform of some significance: they restore the unity and comprehensiveness that the principles of budgeting demand, and they attack the rule-of-lapse pathology at its root by giving departments a full year in which to spend rather than a truncated one ending in a March rush.</p>
 `,
+ 'new-public-management': `
+<h2>From Government to Governance</h2>
+
+<p>The shift this topic describes is a shift in the unit of analysis. Traditional public administration studied <em>government</em>, the institutions of the state. Governance studies the process by which a society is steered, in which government is one actor among several, alongside markets, civil society and international bodies.</p>
+
+<p><strong>Osborne and Gaebler</strong> state the distinction in the form most often quoted: "We do not need more government, we need better government, to be precise, we need better governance. Governance is the act of collectively solving our problems. Government is the instrument we use. The instrument is outdated and it is time to remake it."</p>
+
+<p>The claim buried in that passage is worth examining rather than accepting. If governance is collective problem-solving and government is merely an instrument for it, then the state loses its distinctive standing and becomes one provider among many, which is precisely the move that critics of the whole paradigm resist.</p>
+
+<h3>Good Governance</h3>
+
+<p>Good governance means improvement in the quality of life of the people, and it implies a high degree of organisational effectiveness. It relates to the capacity of the centres of power in the political and administrative system to cope with the challenges arising in society, and to the adoption of new values of governance ensuring greater efficiency, legitimacy and credibility of the system. It must be citizen-friendly, and it involves the idea of a responsive administration.</p>
+
+<p>Its determinants relate to the basic goals of a society as enshrined in its constitution. Beyond creating institutions and a framework for law and order, the state and its authorities frame the rules by which the politico-administrative system governs itself. In some countries the state plays a catalytic role, establishing basic infrastructure for economic development and providing services that secure social justice; in others it plays a minimal role. The degree of direct involvement required for good governance therefore differs from society to society, which is the answer to any question assuming a single model.</p>
+
+<h4>Characteristics</h4>
+
+<ul>
+ <li><strong>Accountability</strong> of political leaders and public officials to the ruled for their actions.</li>
+ <li><strong>Rule of law</strong>, meaning citizens have legal protection against arbitrary action by public authorities.</li>
+ <li><strong>Responsiveness</strong> of public agencies to the needs of the public.</li>
+ <li><strong>Availability of information</strong> sufficient to permit accountability, to allow markets to function, and to allow the correct application of laws.</li>
+ <li><strong>Effective implementation</strong> of laws and policies, since a law well made and badly enforced governs nobody.</li>
+</ul>
+
+<p>The <strong>UNDP</strong> formulation, which is the one most often cited in examination answers, gives eight interconnected and mutually reinforcing characteristics: <em>participation</em>, <em>consensus orientation</em>, <em>accountability</em>, <em>transparency</em>, <em>responsiveness</em>, <em>effectiveness and efficiency</em>, <em>equity and inclusiveness</em>, and adherence to the <em>rule of law</em>. Good governance so defined assures that corruption is minimised, that the views of minorities are taken into account, and that the voices of the most vulnerable are heard in decision-making.</p>
+
+
+<h4>The Donor Agencies' Approach</h4>
+
+<p>The <strong>World Bank</strong> and the <strong>OECD</strong> supplied the operative content of the agenda. The Bank's emphasis fell on accountability, a legal framework for development, information and transparency, and it held cooperation between government and civil society organisations to be necessary for good governance. The <strong>OECD</strong> set out conditions its member countries considered vital for developing nations receiving developmental aid, tying that aid to human rights, democratisation and participatory development, and stressing the legitimacy of government, the accountability of the political system and the bureaucracy to the people, competent governments making suitable policies and delivering services, and respect for the rule of law and the human rights of citizens.</p>
+
+<p>The approach has attracted three serious objections. It is said to <strong>encroach on the sovereignty of nations</strong>, since conditions attached to aid decide questions that belong to a country's own politics. It is said to <strong>promote capitalism</strong> through its insistence on reducing the role of government and enlarging that of the market. And the single model of government it advocates amounts to reviving the <strong>one best way</strong> of the classical theory of public administration, a proposition the discipline abandoned decades earlier. The question the literature leaves open is the right one for an answer to take up: is good governance as it exists in developed nations the only answer to the problems of developing and underdeveloped countries, or should alternative methods of collective problem-solving be considered?</p>
+
+<h3>Good Governance in India</h3>
+
+<p>The Constitution of India enshrines the values good governance requires, and the administrative apparatus for pursuing them has been repeatedly examined. The <strong>first Administrative Reforms Commission</strong> of 1966, chaired first by Morarji Desai and then by K. Hanumanthaiya, examined administration across its range. The <strong>Ashok Mehta Committee</strong> of 1977 addressed panchayati raj institutions; the <strong>Sarkaria Commission</strong> of 1983 addressed centre-state relations; the <strong>Economic Administrative Reforms Commission</strong> under L.K. Jha in the same year urged greater accountability, with performance valued above mere adherence to rules; and the <strong>G.V.K. Rao Committee</strong> of 1985 recommended further administrative improvement. The Planning Commission, the Estimates Committee and the Committee on Public Undertakings have all pressed modern techniques of financial, project and human resource management on public organisations.</p>
+
+<p>The shift of 1990 was decisive. The structural adjustment programme introduced new economic policies, and these could not be implemented without corresponding change in the administrative system, of which decentralisation was the principal requirement. The <strong>73rd and 74th constitutional amendments</strong> followed, strengthening panchayati raj bodies and municipalities. In 2005 the <strong>second Administrative Reforms Commission</strong> under Veerappa Moily submitted fifteen reports amounting to a detailed blueprint for revamping the Indian administrative system.</p>
+
+<h4>What the Indian Agenda Requires</h4>
+
+<ul>
+ <li>Effective <strong>grievance redress</strong> machinery at every level to monitor delay and enforce organisational accountability, accompanied by effort directed at the basic causes of grievance rather than at its symptoms.</li>
+ <li>An active role for <strong>citizen groups, consumer associations, social groups and the media</strong> in identifying problems and pressing public organisations to address them.</li>
+ <li><strong>Technology upgradation</strong>, modern management techniques, capacity building through the training of civil servants, and transparency and openness in public organisations.</li>
+ <li><strong>Empowerment of citizens</strong> generally and of vulnerable sections particularly, through decentralisation; empowerment of grassroots functionaries through delegation; dispersal of politico-administrative power through democratisation; and privatisation, contracting out and the removal of delay and rigidity through debureaucratisation.</li>
+</ul>
+
+<p>The conclusion the source reaches is worth carrying into an answer because it resists the managerial framing that dominates the rest of this topic: good governance in its essential aspect means <strong>balanced governance</strong>, in which government, the private sector, non-governmental organisations and cooperatives share the responsibility and together ensure that the interests and needs of the people are addressed. Good governance cannot be achieved by government alone; it depends on the cooperation of citizens, groups and organisations, and that cooperation is what makes sustainable human development possible.</p>
+
+<h4>Criticism of the Good Governance Agenda</h4>
+
+<ul>
+ <li>It originated with lenders rather than with the societies it describes, and arrived attached to conditionality, so that reform is owned by the creditor rather than by the polity that must live with it.</li>
+ <li>The eight characteristics are not always compatible: consensus orientation slows responsiveness, participation can reduce efficiency, and equity may require overriding a majority.</li>
+ <li>It is presented as a technical standard while embedding a particular political theory, in which a limited state, secure property and market coordination are treated as neutral facts.</li>
+ <li>It describes an end state without supplying a route, which is the same objection made against Riggs's diffracted model.</li>
+</ul>
+
+<h2>New Public Management</h2>
+
+<p>The term <strong>New Public Management</strong> was coined by <strong>Christopher Hood</strong> in his 1991 article <em>A Public Management for All Seasons</em>. <strong>David Osborne</strong> and <strong>Ted Gaebler's</strong> <em>Reinventing Government: How the Entrepreneurial Spirit is Transforming the Public Sector</em>, published in 1992, heralded its arrival as a movement. NPM is regarded as the second reinvention of public administration, the first being the New Public Administration of the late 1960s.</p>
+
+<p>It travels under several names: <strong>managerialism</strong> (Pollitt, 1990), <strong>market-based public administration</strong> (Lan and Rosenbloom, 1992), <strong>entrepreneurial government</strong> or <strong>reinventing government</strong> (Osborne and Gaebler, 1992), and the <strong>post-bureaucratic paradigm</strong> (Barzelay, 1993).</p>
+
+<p><strong>S.R. Maheshwari</strong> observes that public management represents a new human culture for the discipline, and that the dominant thinking of the school is that <em>administration</em> must give way to the more appealing term <em>management</em>, which suggests firmness and efficiency. The substitution is not merely verbal: administration implies serving a purpose set elsewhere, management implies responsibility for results.</p>
+
+<h3>What It Rejects</h3>
+
+<p>NPM rejects a list of propositions that together constitute traditional public administration: the politics-administration dichotomy, the necessity of a hierarchy-ridden organisation, over-centralisation of powers, the supremacy of rules, rationality in decision-making of the classical kind, the impersonal nature of administration, rigidity in administrative process, and an inward-looking orientation.</p>
+
+<h3>Micro and Macro Change</h3>
+
+<p><strong>Micro-level</strong> changes aim to improve the performance of public organisations by raising the managerial content of their functioning, which requires a clear definition of the organisation's roles so that more effective programmes can be framed; definition of standards of quality so that better services are offered to consumers; improved structuring of organisations; and reduction of organisational costs.</p>
+
+<p><strong>Macro-level</strong> changes aim to transform the functioning and structure of public organisations, and are being pursued around the world through part-privatisation of state-run organisations, the introduction of user charges for services, and the creation of autonomous service delivery agencies with the authority and flexibility to provide improved services.</p>
+
+<h3>Hood's Seven Doctrines</h3>
+
+<ul>
+ <li>Hands-on professional management in the public sector.</li>
+ <li>Explicit standards and measures of performance, with targets set to improve efficiency.</li>
+ <li>Greater emphasis on <strong>output controls</strong>, that is, results rather than procedures.</li>
+ <li>Disaggregation of units, with large entities divided into corporatised units organised around products.</li>
+ <li>Greater competition within the public sector.</li>
+ <li>Greater discipline and parsimony in the use of resources.</li>
+ <li>Emphasis on private sector management practice, including flexibility in hiring and reward.</li>
+</ul>
+
+<p><strong>Peter Aucoin</strong> (1990) characterised the same movement as a shift from policy to management; from aggregation to disaggregation in public sector organisations; and from planning and public service welfarism to cost-cutting and labour discipline. Aucoin's phrasing is the more candid, because it names what the movement subtracts as well as what it adds.</p>
+
+<h3>The Three Es and the Shifts</h3>
+
+<p>NPM borrows the <em>how</em> from business management and blends it with the <em>what</em> of administration, aiming at <strong>economy</strong>, the eradication of waste; <strong>efficiency</strong>, the streamlining of service; and <strong>effectiveness</strong>, the specification of objectives so that resources are aimed at problems.</p>
+
+<ul>
+ <li>From <strong>collective provision</strong> to flexible provision of individualised products, so that the <em>customer</em> replaces the <em>citizen</em> and the production line of public administration is broken into pieces suitable for contracting out or privatisation.</li>
+ <li>From input and procedure control to performance indicators and measured output.</li>
+ <li>From permanent tenure and uniform pay to contract employment and performance-related reward.</li>
+ <li>From the integrated department to the purchaser-provider split, with policy separated from delivery.</li>
+ <li>From accountability through hierarchy to accountability through contract and published standards.</li>
+</ul>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li>It imports the <strong>negative features of private management</strong> along with the positive, including short time horizons and the treatment of employees as costs.</li>
+ <li>It <strong>ignores the public interest</strong> and administrative ethics in the running of public affairs, replacing a citizen who has rights with a customer who has preferences. A citizen can be wronged; a customer can only be dissatisfied.</li>
+ <li>It overlooks the core issue, which is that the <strong>major problems in public administration are political</strong> rather than managerial, and cannot be solved by better technique.</li>
+ <li>It offers <strong>oversimplified answers to complex problems</strong>.</li>
+ <li>Disaggregation fragments accountability: where twenty agencies deliver a service by contract, the citizen who suffers cannot identify who is answerable, and ministerial responsibility becomes unenforceable.</li>
+ <li>Competition presupposes a market, and most public services are monopolies for good reasons, so the competition introduced is often artificial and its transaction costs real.</li>
+ <li>Its transferability to developing countries is doubtful. NPM assumes a capable, rule-bound bureaucracy that can be safely loosened. Where the Weberian stage has not been consolidated, loosening rules removes the only discipline present, which is why the sequencing argument matters: a state may need to become bureaucratic before it can usefully become post-bureaucratic.</li>
+</ul>
+
+<h2>Public Choice</h2>
+
+<p>Public choice supplies NPM's theoretical foundation, and is defined by <strong>Dennis Mueller</strong> as "the economic study of non-market decision making, or simply the application of economics to political science".</p>
+
+<p>It studies political behaviour on the premise of <strong>utility maximisation</strong>: human beings in a democracy act to promote their own interests, so that the decisions of politicians are framed to maximise their chances of election and the retention of power, without concern for the long-term interests of those they represent. The theory was developed by <strong>James Buchanan</strong>, <strong>Gordon Tullock</strong> and <strong>William Niskanen</strong>, and arose from <strong>Vincent Ostrom's</strong> critique of the dominant governing organisation theory, which he faulted for its emphasis on integrating public responsibility by reducing the number of decision centres and strengthening the executive.</p>
+
+<h3>What Follows From It</h3>
+
+<ul>
+ <li><strong>Bureaucrats maximise budgets.</strong> On Niskanen's account the official's utility is served by a larger agency, a larger staff and a larger appropriation, so the bureau systematically over-supplies its output relative to what citizens would choose.</li>
+ <li><strong>Monopoly is the problem.</strong> Because the citizen cannot take custom elsewhere, the provider has no reason to respond, so remedies lie in creating choice.</li>
+ <li><strong>Institutional pluralism.</strong> Ostrom's prescription is multiple, overlapping decision centres rather than a single integrated hierarchy, so that citizens may choose between providers and so that failure is contained rather than systemic.</li>
+ <li><strong>Vouchers and choice.</strong> Public choice thinkers hold that citizens given choices are capable of rational decisions. The standard illustration is the Public Distribution System, a monopoly in food distribution, which could be replaced by food stamps usable at any shop, introducing competition and thereby raising the quality of delivery.</li>
+</ul>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li>The premise is a caricature. Public servants act from professional commitment, duty and belief as well as from interest, and a theory that cannot accommodate the honest official describes an administration nobody has met.</li>
+ <li>Choice presupposes an informed chooser with real alternatives, which the poorest citizens least often possess, so choice-based reform can redistribute quality upward.</li>
+ <li>Fragmenting provision into competing centres raises coordination costs and may defeat the equity objective that justified public provision in the first place.</li>
+ <li>The theory explains the growth of government without explaining the periods in which government contracted, which suggests its mechanism is weaker than claimed.</li>
+</ul>
+
+<h2>Entrepreneurial Government</h2>
+
+<p>Entrepreneurial government means that government should shed its bureaucratic approach and behave like a private organisation or an entrepreneur. It advocates a changed role for the state in society and the economy, emphasising the market against state regulation, and it requires government to change from the <em>doer</em> of public activities to a distributor of public benefit, a facilitator and a promoter of change.</p>
+
+<p>The concept arose from the poor performance of public bureaucracies and the daily annoyances of cumbersome red tape, unpleasant officials, poor service and corrupt practice. Osborne and Gaebler's <em>Reinventing Government</em> sets out how a bureaucratic government becomes an entrepreneurial one that is adaptable, responsive, efficient and effective, and therefore capable of producing quality goods and services and of responding to customers by providing incentives and empowering them.</p>
+
+<h3>The Ten Principles</h3>
+
+<ul>
+ <li><strong>Catalytic government</strong>: steering rather than rowing, so that government directs and others deliver.</li>
+ <li><strong>Community-owned government</strong>: empowering citizens rather than serving them, by not allowing the bureaucracy to exert so much control.</li>
+ <li><strong>Competitive government</strong>: promoting competition between diverse providers of goods and services.</li>
+ <li><strong>Mission-driven government</strong>: transforming rule-driven organisations so that purpose rather than procedure governs action.</li>
+ <li><strong>Results-oriented government</strong>: funding outcomes rather than inputs, and measuring the performance of agencies.</li>
+ <li><strong>Customer-driven government</strong>: meeting the needs of the customer rather than the convenience of the bureaucracy.</li>
+ <li><strong>Enterprising government</strong>: earning rather than only spending.</li>
+ <li><strong>Anticipatory government</strong>: prevention rather than cure.</li>
+ <li><strong>Decentralised government</strong>: moving from hierarchy to participation and teamwork.</li>
+ <li><strong>Market-oriented government</strong>: leveraging change through the market rather than through programmes.</li>
+</ul>
+
+<p>The direction of travel is summarised in the movement from rules to reward, from inaction to action, from centralisation to decentralisation, and from the duties of administrators to the rights of citizens.</p>
+
+<h3>Features</h3>
+
+<ul>
+ <li><strong>Prioritise activities and limit size.</strong> Government must define its goals clearly and decide, as an entrepreneur would, which activities to undertake and which not. It should take up what the private sector is unwilling to pursue and step back once private players are sufficiently involved. National defence, internal security, the legal system and the implementation of economic policy are functions government must always perform. The number of organisations and personnel should be kept to a minimum consistent with efficiency, leaving a wide field to the private sector where it can perform better under competition, with government supplying the regulatory framework that makes such competition possible.</li>
+ <li><strong>Focus on clients' needs</strong>, since an entrepreneur who fails to satisfy clients does not survive.</li>
+ <li><strong>Devolution, decentralisation and autonomy</strong> for public organisations and managers, coupled with accountability for results.</li>
+ <li><strong>Cost-effectiveness</strong> as a continuing discipline rather than an occasional economy drive.</li>
+</ul>
+
+<h3>Where the Analogy Breaks</h3>
+
+<p>The literature is careful to state the limits, and an answer should carry them. Government, unlike a private entrepreneur, must be concerned with the welfare of the people and must treat them <strong>equally</strong>, which forbids the selection of profitable customers that is ordinary commercial practice. It cannot abandon an unprofitable service, choose its clientele, or decline a loss-making obligation, and a private entrepreneur faces no such compulsion. The conclusion the literature draws is balanced: government can learn much from private entrepreneurs and should adopt their techniques, while ensuring the basic principles of equality of all citizens and the protection of the interests of every section of the population.</p>
+
+<h2>The New Public Service</h2>
+
+<p><strong>Janet Denhardt</strong> and <strong>Robert Denhardt</strong> proposed the <strong>New Public Service</strong> in 2000 as the explicit counter to NPM, in an article titled <em>The New Public Service: Serving Rather than Steering</em>. Its central proposition is that the primary role of the public servant is to help citizens articulate and meet their shared interests, rather than to control or steer society. It draws on three traditions: theories of democratic citizenship, models of community and civil society, and organisational humanism and discourse theory.</p>
+
+<ul>
+ <li><strong>Serve citizens, not customers.</strong> The relationship is one of shared interest and responsibility, not exchange.</li>
+ <li><strong>Seek the public interest</strong>, which is arrived at through dialogue about shared values rather than by aggregating individual preferences.</li>
+ <li><strong>Value citizenship and public service above entrepreneurship.</strong></li>
+ <li><strong>Think strategically, act democratically.</strong> Policies meeting public needs are most effectively achieved through collective effort and collaborative process.</li>
+ <li><strong>Recognise that accountability is not simple.</strong> Public servants answer to statute, constitutional values, community norms, professional standards and citizen interests at once, not to a contract alone.</li>
+ <li><strong>Serve rather than steer.</strong></li>
+ <li><strong>Value people, not just productivity.</strong></li>
+</ul>
+
+<p>The exam value of NPS is that it gives a structured alternative to NPM rather than a list of complaints about it. Where NPM says the citizen is a customer, NPS says the citizen is an owner; where NPM says steer, NPS says serve; where NPM measures productivity, NPS asks about democratic legitimacy. Taken with NPA of 1968, the sequence gives a clear three-cornered debate for any question on the paradigms of the discipline.</p>
+
+<h2>E-Governance</h2>
+
+<p>E-governance is more than the computerisation of existing work. Broadly it is about transforming the nature of society from industrial to informative, and enhancing people's capabilities for socio-economic development.</p>
+
+<h3>Definitions</h3>
+
+<p>Definitions range from the narrow, the ability of anyone visiting a city website to communicate or interact with the city over the internet in any way more sophisticated than an email to a generic address, to the broad, the use of technology to enhance access to and delivery of government services for the benefit of citizens, business partners and employees.</p>
+
+<p>The <em>limited</em> sense is the use of ICTs by government to deliver services. The <em>wider</em> sense is ICT-enabled transformation of government and governance, which includes the limited sense together with greater opportunity for citizens to participate comprehensively in the process of governance. <strong>Christopher Baum</strong> captures the wider sense as the continuous optimisation of service delivery, constituency participation and governance by transforming internal and external relationships through technology.</p>
+
+<p>The channels are not confined to the web: identity cards, smart cards and near field communication applications, polling station technology including non-online electronic voting, delivery of government services by television and radio, email, online community facilities, newsgroups and mailing lists, online chat and instant messaging.</p>
+
+<h3>Types of Interaction</h3>
+
+<ul>
+ <li><strong>G2C</strong>, government to citizen: certificates, licences, pensions, land records, grievance redress.</li>
+ <li><strong>G2B</strong>, government to business: registrations, clearances, tax filing, procurement.</li>
+ <li><strong>G2G</strong>, government to government: the internal integration between departments and between levels, which is the hardest and least visible part.</li>
+ <li><strong>G2E</strong>, government to employee: personnel records, payroll, training and internal services.</li>
+</ul>
+
+<h3>Principles and Goals</h3>
+
+<p>The E-governance Institute at Rutgers University identifies the principles as building services with citizen choices in view, increasing the accessibility of government, disseminating information responsibly, using taxpayers' resources efficiently, and fostering social inclusion.</p>
+
+<p>The goals in promoting democracy and effective governance include improved government decisions, increased trust of citizens in government, greater accountability and transparency, the capacity of government to accommodate the public will in the information age, and the effective involvement of stakeholders including NGOs, businesses and interested citizens in new ways of meeting public challenges. The overarching goal is <strong>greater citizen participation</strong>: through the internet people across a country can interact with politicians and public servants and be heard, and interactive tools allow representatives to understand the perspectives of those they represent.</p>
+
+<h3>The Indian Programme</h3>
+
+<p>India's framework moved from scattered departmental computerisation to the <strong>National e-Governance Plan</strong>, which organised effort around mission mode projects at central, state and integrated levels with shared infrastructure of state data centres, state wide area networks and common service centres, so that delivery reached beyond those with their own connection.</p>
+
+<p><strong>Digital India</strong>, launched on 1 July 2015, restated the programme as a transformation of India into a digitally empowered society, resting on nine pillars: broadband highways; universal access to mobile connectivity; the public internet access programme; e-governance, meaning the reform of government through technology; e-Kranti, the electronic delivery of services; information for all; electronics manufacturing; IT for jobs; and early harvest programmes.</p>
+
+<p>The significant point for this topic is the fourth pillar. Reforming government <em>through</em> technology is different from delivering existing services electronically, and the distinction is the same one the definitions draw between the limited and wider senses. Digitising a bad process produces a faster bad process.</p>
+
+<h3>Limits</h3>
+
+<ul>
+ <li><strong>The digital divide.</strong> Access and support do not reach many users, particularly those in remote areas, with low literacy, or on poverty-line incomes. In developing countries the technology is not available across the whole country, people lack the resources to own or access computers, and the basic necessities of food, clean water, sanitation and health are so pressing that citizens have neither the will nor the time nor the resources to pursue such benefits as e-governance offers.</li>
+ <li><strong>A false sense of transparency and accountability.</strong> Online transparency is dubious because it is maintained by governments themselves, and information can be added to or removed from public view with or without notice. After the attack on the World Trade Center in September 2001, federal officials in the United States removed a large volume of government information from their websites in the name of national security, and the act went relatively unnoticed; few organisations monitor such modifications, and governments themselves may not track what they insert and delete.</li>
+ <li><strong>Privacy and security</strong>, since the same systems that make services accessible make personal data concentrated and attackable.</li>
+ <li><strong>Exclusion by design</strong>, where an online-only channel removes the counter that was the only channel available to those without connectivity.</li>
+</ul>
+
+<h2>Citizens' Charters</h2>
+
+<p>A citizens' charter is a public declaration of the services an organisation provides, the standards and time limits to which it will provide them, the remedy available on failure, and what is expected of the citizen in return. Its logic is to convert a discretionary favour into a published entitlement, so that failure becomes visible and comparable across offices.</p>
+
+<p>The principles usually stated are quality of service, choice wherever practicable, published standards, value for money, accountability, and transparency about who is responsible. In India the initiative dates from 1997, and <strong>Sevottam</strong> was developed as the assessment framework for service delivery, combining charter implementation, grievance redress and capability assessment.</p>
+
+<p>The recurring criticisms are that charters are drafted without consulting either the citizens or the frontline staff who must deliver them; that they are not revised as conditions change; that standards are pitched at what the office already achieves rather than at what the citizen needs; that staff are frequently unaware of the commitments made in their name; and above all that charters are <strong>not legally enforceable</strong>, which reduces the document to an advertisement. The statutory Right to Public Services legislation enacted by many Indian states is the direct answer to that last defect, converting the promise into an enforceable right with a penalty on the defaulting officer.</p>
+
+<h2>Performance Management</h2>
+
+<p>Performance management is the thread running through everything else in this topic, because output control is what NPM substitutes for procedural control. It requires objectives stated in advance, indicators that measure achievement against them, information systems that collect the data honestly, and consequences attached to the result.</p>
+
+<p>Its instruments include performance agreements between the political executive and departments; management by objectives at the level of the individual officer; outcome budgeting, which ties expenditure to results rather than to heads; benchmarking between comparable units; and independent evaluation.</p>
+
+<h3>Why It Is Harder in Government</h3>
+
+<ul>
+ <li><strong>Objectives are plural and contested</strong> by design, so there is no single measure corresponding to profit, and improving one indicator often worsens another.</li>
+ <li><strong>Attribution is difficult.</strong> Outcomes such as literacy or public health depend on many agencies and on conditions no agency controls, so credit and blame cannot be assigned cleanly.</li>
+ <li><strong>Measurement distorts behaviour.</strong> What is measured is managed, and what is managed is often gamed: a target for cases disposed produces disposal, not justice. Riggs would call the resulting gap between reported and actual performance formalism, and the anticipation of it is why the choice of indicator is a substantive decision rather than a technical one.</li>
+ <li><strong>The timescale of outcomes</strong> exceeds the tenure of the officers being appraised, which is the transfer problem in another form.</li>
+</ul>
+
+<h2>Public-Private Partnerships</h2>
+
+<p>A PPP is a long-term contractual arrangement in which the private sector supplies finance, construction, operation or management of an asset or service traditionally provided by government, and bears a defined share of the risk. PPPs have been increasingly used in many countries as an alternative route to the procurement of public facilities and services.</p>
+
+<h3>Why Governments Turn to Them</h3>
+
+<p>Governments face rapidly expanding urban populations to service, and recognise that their limited financial resources cannot cover the required expansion. Even where resources are found to subsidise public utilities, service is often poor and sections of the population remain unserved. Tax revenues do not meet the continually growing demand for water, waste, energy and other urban services, and official development assistance has not filled the gap. Against that background, governments seek alternative sources of finance, technical excellence and support, and involving the private sector in what were state monopolies is among the most viable options.</p>
+
+<p>Such arrangements are variously called <strong>private sector participation</strong>, <strong>public private partnerships</strong> and <strong>private finance initiatives</strong>. The usages are often interchangeable with slight differences in definition and operational framework, and all convey the involvement of the private sector in public services. Private participation brings technical and managerial expertise, improves operating efficiency, injects capital at scale, allows greater efficiency in the use of that capital, and permits rationalisation of the cost base.</p>
+
+<h3>How They Are Structured</h3>
+
+<p>In some schemes government uses tax revenue to provide the capital, with operations run jointly with the private sector or under contract. In others, such as the <strong>Private Finance Initiative</strong> in the United Kingdom, capital investment is made by the private sector on the strength of a contract with government to provide agreed services. Government contributions may also be in kind, through the transfer of existing assets. For projects creating public goods, as in infrastructure, government may provide a <strong>capital subsidy</strong> as a one-time grant to make the project attractive to private investors, or support it through revenue subsidies including tax breaks or guaranteed annual revenues for a fixed period.</p>
+
+<p>Typically a private consortium forms a <strong>special purpose vehicle</strong> to develop, build, maintain and operate the asset for the contracted period. Where government has invested, it is generally allotted an equity share in the SPV. The consortium usually comprises a building contractor, a maintenance company and a bank or lenders, and the SPV signs the contract with government and with subcontractors to build and then maintain the facility.</p>
+
+<h3>Models</h3>
+
+<ul>
+ <li><strong>Build-Operate-Transfer</strong>, where the private party builds and operates for a concession period, recovering its investment from user charges, and then transfers the asset to government.</li>
+ <li><strong>Build-Own-Operate-Transfer</strong>, where ownership rests with the private party during the concession.</li>
+ <li><strong>Design-Build-Finance-Operate</strong>, bundling the stages so that the party that will operate the asset also designs it, which aligns construction quality with operating cost.</li>
+ <li><strong>The annuity model</strong>, where the private party is paid fixed periodic sums by government rather than collecting user charges, which transfers demand risk back to the state and is used where tolling is impractical or politically impossible.</li>
+ <li><strong>Management and lease contracts</strong>, where the asset stays public and only operation is contracted out.</li>
+</ul>
+
+<h3>Risk and the Reasons They Fail</h3>
+
+<ul>
+ <li><strong>Risk allocation is the whole contract.</strong> The defensible principle is that each risk should sit with the party best able to manage it: construction risk with the builder, demand risk with whichever party can influence or absorb it, and political and regulatory risk with government. Contracts fail when risk is allocated by bargaining power instead.</li>
+ <li><strong>Renegotiation.</strong> A concession is long, conditions change, and the private party has every incentive to bid low and renegotiate later, when government's alternatives have narrowed because the asset is half built.</li>
+ <li><strong>Contingent liability.</strong> Guarantees and viability gap funding keep expenditure off the budget while creating an obligation the state will meet, which weakens the comprehensiveness principle that budgeting depends on.</li>
+ <li><strong>Regulatory capacity.</strong> A PPP replaces the task of providing a service with the harder task of regulating a monopoly provider under a complex contract, and a state that could not do the first will not do the second.</li>
+ <li><strong>Equity.</strong> User charges ration by ability to pay, so a PPP-financed service may be excellent and out of reach, which is a policy choice that should be made openly rather than arrived at through a financing decision.</li>
+</ul>
+
+<p>The balanced conclusion, and the one that connects this topic back to the strong state debate, is that PPPs do not reduce the demands on the state but change them. They substitute contracting, regulating and monitoring for building and operating, and every one of those is an administrative capability that has to be built before it can be relied on.</p>
+`,
 };
