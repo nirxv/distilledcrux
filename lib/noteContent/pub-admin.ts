@@ -1324,4 +1324,278 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Discretion is unavoidable in a modern state because no statute can foresee every case, and it is the point at which administrative law does its real work. The doctrine does not seek to abolish discretion but to structure it: the power must be conferred by law, exercised by the authority on whom it was conferred and not another, used for the purpose for which it was given, applied on relevant considerations after genuine application of mind to the individual case, supported by reasons, and exercised consistently with published standards so that like cases are treated alike. Guidelines, published criteria and the duty to give reasons are more effective controls in practice than the writ, because they operate on every decision rather than on the few that reach a court.</p>
 `,
+ 'comparative-public-administration': `
+<h2>Why the Field Exists</h2>
+
+<p>The administrative theories that emerged before the Second World War referred specifically to Western countries, above all the United States. The countries that gained independence after colonialism in Asia, Africa and South America adopted those models, and they did not work, because the theories failed to relate to non-Western settings and needs. The need arose for concepts built on cross-cultural and cross-national study, and that is the crucial factor in the development of Comparative Public Administration.</p>
+
+<p><strong>Ferrel Heady</strong> stated the purpose in the form worth quoting: "Comparative perspective will become more prominent, enriching general public administration by widening the horizon of interest in such a way that understanding of one's own national system of administration will be enhanced by placing it in a cross-cultural setting." Comparison is not a branch of the subject but a method for it, and its first product is a better understanding of the system one already knows.</p>
+
+<h3>The Comparative Administration Group</h3>
+
+<p>The institutional vehicle was the Comparative Administration Group, funded by the Ford Foundation, with <strong>Fred W. Riggs</strong> as its long-time chairman until 1970, a position that made him the prime mover of academic interest in the field.</p>
+
+<p>Comparative public administration in the classical era, generally taken as the 1960s to the 1980s, worked under CAG doctrines that emphasised the transfer of Western technology, the export of political democracy, the modernisation of governments through inducements from outside, training by foreign experts and the establishment of institutes of public administration. Much of the debate about what development was, and how to attain socio-economic advance, was rhetorical. Events in the international context then pushed the field from that theoretical emphasis towards a new empirical one.</p>
+
+
+<h3>How the Movement Began</h3>
+
+<p>The practical origin lies in the advisory work of the 1950s. Members of the <strong>US School of Institution Builders</strong>, originating in institutions such as the University of Pittsburgh and with adherents across the north-eastern United States, were predominant among the advisers who shaped administrative structures in the newly independent countries. Their influence was felt in India, Indonesia, Nigeria and elsewhere, where they recommended establishing national institutes of public administration to train administrators in modern techniques.</p>
+
+<p>The techniques taught were modern and they were copies, and therefore West-oriented. No attempt was made to develop techniques suited to the conditions actually prevailing in colonial and post-colonial countries. The result is described in the literature with unusual candour: the experience was traumatic, and scores of American professors became personally aware of a whole universe of ways in which their universal principles did not fit and were almost totally useless. The stage of development of administrative capacity in these countries was quite different from the West, and the problems of development they faced were different and far more complex.</p>
+
+<p>That failure set the stage for a movement to study public administration by comparing the administrative systems not only of Western democracies but of the developing countries of Asia and Africa, in order to arrive at principles that could actually be applied there. Comparative public administration was born out of the demonstrated failure of transplantation, which is why its central preoccupation is with context.</p>
+
+<h3>What Comparison Is For</h3>
+
+<p><strong>Woodrow Wilson</strong> had already envisaged the scope in <em>The Study of Administration</em>: comparative study was necessary to find whether American administrative processes were relevant or applicable elsewhere, and whether practices from other countries could be transplanted to the United States. Wilson stressed the practical purpose; <strong>Nimrod Raphaeli</strong>, <strong>Robert A. Dahl</strong> and <strong>Tickner</strong> emphasised the theoretical purposes as well.</p>
+
+<p>Heady adds the argument that reverses the usual direction of learning: "The laboratories for administrative experimentation provided by the emergence of many new nations should in the future offer numerous instances of innovations in administration worthy of attention in the more established countries." The developing world is not only a field for applying Western theory but a source of administrative innovation for the West.</p>
+
+<p>The scope operates at two levels. At the <strong>micro level</strong>, comparison examines a single feature of an administrative system, such as its training arrangements, across cases. At the <strong>macro level</strong>, it is cross-cultural and cross-national, comparing whole systems. <strong>Middle-range theory</strong> sits between, focusing on particular components of an administrative system rather than on the whole or on a single agency, and it is where most usable comparative work is done.</p>
+
+<h3>The Two Models and Their Common Limit</h3>
+
+<p>The two major models for comparing administrative systems are the Weberian or classic model of bureaucracy and the prismatic model developed by Riggs, and both are held to treat the conceptual framework inadequately. <strong>Jun</strong> puts the shared defect precisely: they "fail to explore the subjective meaning of social action, to provide a mechanism for organisational change, and to consider the renewal effects of conflict-induced disequilibrium. Both the functional and bureaucratic models stress the structural pattern of social action, with an emphasis on orderliness, roles, and organisational norms." Neither is comprehensive enough for social phenomena that vary from one system to another.</p>
+
+
+<h2>Approaches to Comparative Study</h2>
+
+<ul>
+ <li><strong>The bureaucratic or Weberian approach</strong> uses the ideal type as the yardstick against which actual bureaucracies are measured. Applying an ideal-type model in settings where specific legal-rational authority systems operate has generated problems for comparative study, but the relevance of the model is established, and <strong>Dwight Waldo</strong> went so far as to treat it as a paradigm of public administration.</li>
+ <li><strong>The behavioural approach</strong> is concerned with human behaviour in administrative settings, stressing rigorous scientific data collection and analysis, experimentation and testing, and a generally inter-disciplinary orientation.</li>
+ <li><strong>The general systems approach</strong> treats the administrative system as a sub-system of the social set-up, dealing with linkages between the parts of the administrative system, the formal and informal organisation, assigned roles and individual performance, and analysing the interaction between the system and its external environment. <strong>Riggs</strong> preferred this approach, and <strong>Dorsey's</strong> information-energy model is another instance, an equilibrium theory explaining a system through inputs and outputs for examining social, political and administrative systems together.</li>
+ <li><strong>The structural-functional approach</strong>, borrowed from sociology, asks what functions must be performed in any society and which structures perform them, which is what allows systems with entirely different institutions to be compared at all.</li>
+ <li><strong>The ecological approach</strong> has emerged as the most important. It studies the interactions between an administrative system and its external environment: the effect of political, social, economic and cultural systems on the structure and behaviour of administration, and the impact of administration on its environmental setting.</li>
+</ul>
+
+<h2>Ferrel Heady</h2>
+
+<p>Heady treats a public bureaucracy, for analytical purposes, as a sub-system of the <strong>political</strong> system in which it operates, implying that bureaucracy interacts more with the political system than with the economic or socio-cultural ones.</p>
+
+<p>His image is of concentric circles: "The environment of bureaucracy may be visualised as a series of concentric circles, with bureaucracy at the centre. The smallest circle generally has the most decisive influence, and the larger circles represent a descending order of importance as far as bureaucracy is concerned. We may visualise the largest circle as representing all of society or the general social system. The next circle represents the economic system or the economic aspects of the social system. The inner circle is the political system; it encloses the administrative sub-system and bureaucracy, as one of its elements."</p>
+
+<p>The approach has been criticised for attending only to the influence of social, political and economic systems upon bureaucracy without considering their interaction, which is the same one-directional defect later charged against Riggs. <strong>Ramesh K. Arora</strong> reads it as marking an important trend of thought, the predominance of political elements in the ecology of public bureaucracies viewed comparatively.</p>
+
+<h3>Heady's Typology</h3>
+
+<p>Heady classifies bureaucratic systems, distinguishing developed from developing states. France and Germany have <em>classic</em> administrative systems; British and American administration is shaped by a <em>civic culture</em> of parity. In developing countries, bureaucratic systems are similarly shaped by the political systems in which they operate, so the type of regime, not the level of income, is the organising variable.</p>
+
+<h3>Bureaucracy in Developing Countries</h3>
+
+<ul>
+ <li>The pattern of administration is basically imitative rather than indigenous, reproducing a colonial or foreign model.</li>
+ <li>Bureaucracies are deficient in skilled manpower necessary for development, the shortage being of specialists rather than of numbers.</li>
+ <li>They are oriented towards other objectives than development goals, particularly regulation, revenue and the maintenance of order.</li>
+ <li>There is a wide discrepancy between form and reality, which is Riggs's formalism arriving under another name. Its symptoms include restricting administrative discretion while keeping decision-making at the centre, and reporting that production targets have been met when they are only partly fulfilled.</li>
+ <li>The bureaucracy has a generous measure of <strong>operational autonomy</strong>, with something like a monopoly of technical expertise, and few groups are capable of competing for political influence or imposing controls on it.</li>
+ <li>Public bureaucracies are more likely to be <strong>multifunctional</strong> in developing than in developed countries, so their role in policy and rule-making and in interest articulation and aggregation is correspondingly important.</li>
+</ul>
+
+<p>The last two together are the analytical heart of the topic. A bureaucracy that monopolises expertise, faces no competing organised interest and performs political functions as well as administrative ones is not an instrument of the political system at all; it is one of its principal actors.</p>
+
+<h2>The Three Trends</h2>
+
+<p>The standard account of how the field has changed is given as three movements, and it is the most examinable single framework in this topic.</p>
+
+<h3>From Normative to Empirical</h3>
+
+<p>Traditional studies were descriptive, historical and normative, emphasising <em>good administration</em> defined by adherence to ideal principles, with efficiency and economy as the hallmark of a sound system, and a few Western models treated as useful for everyone else. After the Second World War it became clear that a culture-bound normative approach was inadequate. The behavioural approach motivated greater scientific research and empirical theory construction, shifting emphasis from what was good for a system to the structural patterns and behaviour it actually displays. The present trend is towards empirical study of organisational behaviour and decision-making in cross-cultural settings.</p>
+
+<h3>From Ideographic to Nomothetic</h3>
+
+<p>An <strong>ideographic</strong> approach concentrates on a single agency, country or case within a cultural area, and is primarily descriptive. Early comparative work was of this kind, dealing with individual nations or institutions. A <strong>nomothetic</strong> approach seeks generalisations and theories based on analysis of regularities in the behaviour of administrative systems, comparing systems across nations and cultures to draw conclusions that hold beyond any one of them. A large number of studies remain ideographic in character, but the emerging trend is nomothetic.</p>
+
+<p>The tension between the two is genuine rather than a stage to be passed through. Nomothetic generalisation is what makes a science possible, and the whole finding of comparative administration is that administrative behaviour is context-dependent, which is what makes generalisation hazardous.</p>
+
+<h3>From Non-ecological to Ecological</h3>
+
+<p>Traditional comparative studies ignored environmental factors and treated administrative systems as self-contained. The ecological turn made the environment constitutive rather than incidental, and it is the movement that produced Riggs.</p>
+
+<h3>Where the Field Stands</h3>
+
+<p><strong>Ramesh K. Arora</strong> describes a two-way exchange that has partly repaired the field's original condescension. Comparative theory can contribute to American administrative theory "by way of proving certain propositions like those dealing with prismatic elements in a diffracted society and with positive formalism", while comparative public administration can take the rich stock of propositions developed by American administrative theory and test how far they are culture-bound. Both traditions have converged on an ecological and developmental orientation, and the New Public Administration of the late 1960s, with its concern for administration and environment, belongs to the same movement.</p>
+
+<h2>Historical and Sociological Factors</h2>
+
+<p>Administrative systems are shaped by the histories that produced them, which is why two states with similar constitutions administer differently.</p>
+
+<ul>
+ <li>The <strong>Greeks and Egyptians</strong> organised public affairs by office, the principal office holders administering justice and maintaining law and order.</li>
+ <li>The <strong>Roman Empire</strong> evolved a sophisticated system with distinct administrative hierarchies for justice, foreign affairs, taxation and other functions, each under a principal officer of state. The elaborate structure ended with the collapse of the Empire in the fifth century, but its practices continued in use, as in the <strong>Byzantine Empire</strong>.</li>
+ <li>The <strong>medieval royal household</strong> in the West produced the early European administrative structures. Official duties in the households of kings were not well defined until the twelfth century, with several officers often holding the same post. The well-defined posts were the butler; the <em>chamberlain</em>, who received and paid out money kept in the royal sleeping chamber; and the <em>chancellor</em>, a priest responsible for writing and applying the monarch's seal.</li>
+ <li>When the domestic functions of the household were separated from the functions of governing the state in the thirteenth century, the chancellor's office became the important link between the court offices and the new ministries. The <strong>modern treasury or finance ministry</strong> is traced to the chamberlain's office, which is why finance retains a peculiar primacy among departments: it is the oldest of them.</li>
+ <li>Beyond justice and the treasury, modern ministerial structures in Europe developed out of the <strong>royal councils</strong>, and from the division of labour within those bodies the departmental system emerged.</li>
+</ul>
+
+<p>The sociological point that follows is the one the topic turns on. Western administrative structures were not designed; they accumulated over centuries, and the norms that make them work, the separation of office from household, of public money from private, of the official's person from his post, were internalised long before they were codified. Post-colonial states received the codified structure without the centuries of internalisation, which is exactly the gap Riggs named formalism.</p>
+
+<h2>The Ecological Approach</h2>
+
+<p><strong>John M. Gaus</strong> first elaborated the approach in <em>Reflections on Public Administration</em> (1945), advocating that government functions be related to their environment. His ecological factors were people, the varying political, economic and social conditions, physical technology, social technology, wishes and ideas, catastrophe and personality, and he held that these must be included in any ecological study of public administration.</p>
+
+<p>The link between ecology and administration rests on the proposition that administrative culture is an outgrowth of the interaction between the values and traits of the administrative system and the social system as a whole. An administrative system is not an independent variable; it acts and reacts under the influence of the sub-systems surrounding it. There is deep interdependence between social organisations and their ecological settings, which include topography, population, and the level of physical and social technology, and organisations, structures, procedures and goals are largely created and changed by the interaction between an organisation and its environment.</p>
+
+<p>The consequence for method is the one the topic turns on: to understand a bureaucracy's structures and functions, the bureaucracy must be seen in its relationship with other social institutions. It interacts continually with the political, economic, social and cultural sub-systems around it, is influenced by them and influences them in turn, and must adapt to changing conditions if it is to survive. Administrative reform that ignores this is transplanting an organ without regard to the body receiving it, which is exactly what the post-colonial transfer of Western models attempted.</p>
+
+<h2>Fred Riggs</h2>
+
+<p>Riggs is the central figure of the field. His principal works are <em>The Ecology of Public Administration</em> (1961), <em>Administration in Developing Countries: The Theory of Prismatic Society</em> (1964), <em>Thailand: The Modernisation of a Bureaucratic Polity</em> (1966), <em>Frontiers of Development Administration</em> (1970, edited), <em>Administrative Reform and Political Responsiveness</em> (1971), <em>Prismatic Society Revisited</em> (1974), <em>Applied Prismatic</em> (1978) and <em>Development Debate</em> (1987).</p>
+
+<h3>Agraria and Industria</h3>
+
+<p>Riggs's first typology, borrowed from the structural-functional sociology of the period, contrasted the <strong>agraria</strong>, a traditional agricultural society with ascriptive status, particularistic relations and a diffuse role structure, against <strong>industria</strong>, an industrial society with achievement-based status, universalistic norms and specific, specialised roles.</p>
+
+<h4>Why It Failed</h4>
+
+<ul>
+ <li>It was not useful for studying <strong>transitional societies</strong>, those in the process of transformation from the agrarian to the industrial stage, which is precisely the category that mattered.</li>
+ <li>Modern industrial societies retain agrarian characteristics, and such mixed societies cannot be handled by the typology at all.</li>
+ <li>It assumes society moves unidirectionally, only from agrarian to industrial.</li>
+ <li>It emphasised the environment of the administrative system far more than the administrative system itself, which was given only a peripheral place.</li>
+</ul>
+
+<p>Its contribution was nonetheless significant, because it opened the way for ecological studies in comparative public administration. Riggs replaced it with the fused-prismatic-diffracted model.</p>
+
+<h3>Fused, Prismatic and Diffracted</h3>
+
+<p>These are hypothetical constructs used to study pre-historic, developing and developed societies. They are ideal types in Weber's sense: not found as such in any society but approximated by some.</p>
+
+<p>The analogy is a ray of light passing through a prism. The point where the ray starts is <strong>fused</strong>; the process of internal vibration within the prism is <strong>prismatic</strong>; and the ray emerging from the prism, separated into its constituent colours, is <strong>diffracted</strong>. Social systems are fused at the initial stage of development, where a single structure performs many functions; prismatic in the transitional stage, where differentiation has begun but is incomplete; and diffracted where each function has its own specialised structure.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Fused</th><th>Prismatic</th><th>Diffracted</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Differentiation</td><td>None: one structure, many functions</td><td>Partial and uneven</td><td>High: one structure per function</td></tr>
+ <tr><td>Society</td><td>Traditional agrarian</td><td>Transitional</td><td>Modern industrial</td></tr>
+ <tr><td>Administrative office</td><td>Chamber</td><td>Sala</td><td>Bureau or office</td></tr>
+ <tr><td>Economic structure</td><td>Redistributive</td><td>Bazaar-canteen</td><td>Market</td></tr>
+ <tr><td>Norms</td><td>Particularistic, ascriptive</td><td>Both at once, applied selectively</td><td>Universalistic, achievement-based</td></tr>
+ </tbody>
+</table>
+
+<h2>The Prismatic Society</h2>
+
+<p>Riggs's account of the prismatic society rests on three defining features.</p>
+
+<h3>Heterogeneity</h3>
+
+<p>Different kinds of system, practice and viewpoint exist simultaneously and side by side. A modern capital city coexists with subsistence villages; a sophisticated financial sector coexists with moneylenders; constitutional guarantees of equality coexist with caste. The society is not partly modern in the sense of being halfway along a line, but wholly modern and wholly traditional in different sectors at the same time.</p>
+
+<h3>Formalism</h3>
+
+<p>Formalism is the gap between what is formally prescribed and what is actually practised, between the stated norm and the real behaviour, between law on the books and law in action. Rules are enacted, published, and not enforced or applied selectively.</p>
+
+<p>Its administrative effects compound. There are intra-bureaucratic politics and ritualisation of procedure, because bureaucrats have no clear sense of the goals to be accomplished and there is no effective political control, so officials take their own decisions. Formalism assists the growth of corruption: officials can insist on the letter of the law and regulation, and the power this gives over the private citizen can be used for personal advantage. Recruitment becomes <em>attainment-oriented</em>, falling between ascription and achievement, and although attainment criteria look like achievement criteria they can be read as a disguised form of ascription.</p>
+
+<p>Riggs traces its persistence to intellectual formation: "If formalism arose, in the first place, because of the introduction of alien patterns of government and administration in social orders to which these patterns were not attuned, it has been perpetuated, in the second place, by the highly schooled incapacity of the intelligentsia to see the world in terms other than those of the relatively diffracted Western industrial society, or their own traditions. Since the members of the bureaucracy are drawn from the intelligentsia, they reinforce formalism in every branch of the government service."</p>
+
+<h3>Overlapping</h3>
+
+<p>Overlapping is a characteristic only of the prismatic model. It is "the extent to which formally differentiated structures of a diffracted society coexist with undifferentiated structures of a fused type". Administrative behaviour is in fact determined by non-administrative criteria, that is by political, economic, social, religious or other factors. A selection board applies its rules and the outcome tracks caste; a regulator has its statute and the decision tracks a political connection.</p>
+
+<p>In a fused society overlapping does not occur, because all functions are openly carried out by traditional structures and no one pretends otherwise. Overlapping requires the formal structure to exist, which is why it is the distinctive pathology of the transitional stage.</p>
+
+<h3>Poly-communalism and Clects</h3>
+
+<p>The prismatic society is poly-communal: several communities coexist, one usually dominant, with the state apparatus captured by the dominant group and the minorities excluded, which produces mutual hostility. Riggs notes that this is not peculiar to developing countries, since such tensions exist in developed countries too.</p>
+
+<p>The characteristic prismatic association is the <strong>clect</strong>, a group "which makes use of modern, associational methods of organisation, but retains diffuse and particularistic goals of a transitional type". A clect has the outward features of the club of a diffracted society and the inner character of the sect of a fused one. Clects represent a particular community or group; officials of a given category serve members of their own clect effectively and others less so; and the sala may itself have close links with clects, working for their interest while speaking the language of universalistic norms.</p>
+
+<h3>The Bazaar-Canteen</h3>
+
+<p>The economic sub-system of a prismatic society is neither the redistributive system of a fused society nor a true market. Its defining feature is <strong>price indeterminacy</strong>: no settled price exists, and what is paid depends on the relationship between the public servant and the client, on kinship, bargaining power and political contacts.</p>
+
+<p>Members of clects and dominant groups obtain services cheaply, the economic structure working for them as a <em>subsidised canteen</em>; those outside the clects, and minorities, pay high prices, the same structure behaving towards them as a <em>tributary canteen</em>. The same service has two prices depending on who is asking, which is the exact economic expression of formalism.</p>
+
+<p>Price indeterminacy worsens economic conditions, producing black-marketing, hoarding and adulteration, and feeding inflation, while sala officials exploit the situation for their own ends, so that the society sees corruption, exploitation, injustice and poverty together. The economic sub-system is further affected by norms of official conduct shaped by kinship, since family ties affect wage relations, promotions and rewards. Where the gap between the highest and lowest wages is large, low earners turn to illegitimate means to supplement income, official conduct suffers, and the economy suffers with it. Riggs held that in a prismatic society market factors develop without a proportionate rise in capital, production does not increase, and society places less value on trade and commerce, so that the groups who do provide capital and conduct business extend their influence over the political and administrative spheres.</p>
+
+<h2>The Sala Model</h2>
+
+<p>The <strong>sala</strong> is the administrative sub-system of the prismatic society, the counterpart of the <em>chamber</em> in a fused society and the <em>bureau</em> in a diffracted one. The Spanish and Latin American word carries the right ambiguity: a room that is partly office, partly drawing room, where public business and private relationship are transacted in the same space.</p>
+
+<h3>Authority and Control</h3>
+
+<p>Riggs describes the overlapping in a prismatic administrative system as "a highly centralised and concentrated authority structure overlapping a control system that is highly localised and dispersed". The <em>de jure</em> authority, the officially sanctioned power, gives way to <em>de facto</em> control, which is unofficial and local. On paper the system is centralised; in practice the effective power to make things happen lies with whoever commands local influence.</p>
+
+<h3>Nepotism Beneath Universalism</h3>
+
+<p>Sala officials are appointed on educational criteria through competitive examination, which is the universalistic surface. But in promotion, career development and even opportunities for training they need the support of senior officers, which reintroduces personal dependence. The higher administrative machinery speaks of modern and fair norms and functions by ignoring the norms inconvenient to it. Sala officials thereby set a negative example favouring nepotism and favouritism, which the public follows.</p>
+
+<p>This is the most useful part of the model for an Indian answer, because it explains a familiar pattern without resorting to national character: an examination system that is genuinely meritocratic at entry, attached to a career system in which advancement depends on the goodwill of superiors, will reproduce particularism whatever the recruitment rules say.</p>
+
+<h2>Criticism of Riggs</h2>
+
+<p>His models have had tremendous influence, and no study of comparative or development administration can avoid them. They have also been heavily criticised.</p>
+
+<ul>
+ <li><strong>The vocabulary.</strong> Riggs coined new words and gave fresh meanings to existing ones, creating confusion rather than clarity. Reading Riggs is a hard job: one must first learn his language, then examine his concepts, and only then reach what is being argued.</li>
+ <li><strong>They are equilibrium models.</strong> The object of administration is to change a system, not to maintain it as it is. <strong>Hahn-Been Lee</strong> argues that the prismatic and sala models are equilibrium models which do not tell us about the process of social change in relation to development, and he doubts their utility. <strong>Daya Krishna</strong> points out that the prismatic model does not enlighten us about the stages in the process of development. Change is inevitable, yet the diffracted model represents an equilibrium state standing for stability and the preservation of the system, which is impracticable, and the diffracted society is not self-evidently a desirable one.</li>
+ <li><strong>The ecology runs one way.</strong> A genuinely ecological model would examine the interaction between the administrative system and its environment and how each affects the other's behaviour. Riggs mainly examines the impact of the environment on administrative structures, leaving administration a dependent variable in a model whose whole point was interdependence.</li>
+ <li><strong>Overlapping is not confined to prismatic societies.</strong> Relatively diffracted societies such as the United States experience it too. <strong>Michel Crozier</strong> notes that in American administration two or more competitive agencies may be set up "whose conflicts will certainly entail waste, but which also bring new ideas and interesting change". Developed societies have less multi-functionality of structures but do not differ from developing ones as regards overlapping. Riggs equally neglected the existence of diffracted behaviour within prismatic societies.</li>
+ <li><strong>Western bias.</strong> The analysis has a Western bias, most visible in the identification of the negative attributes of prismatic society and in the value-laden terms used for it: <em>normlessness</em>, <em>ritualism</em>, <em>bazaar-canteen</em>, <em>subsidised canteen</em>, <em>myths</em>, <em>interference complex</em>, <em>dependency syndrome</em>. Deviant behaviour in a diffracted society is meanwhile described with the neutral language of <em>market imperfections</em> and <em>frictions</em>. <strong>Michael Monroe</strong> puts the objection sharply: "Riggs' theory appears to use developed nations, like the United States, as the standard for evaluating activities in the prismatic nations. In this way, development setbacks in the prismatic countries are explained as dysfunctional application of diffracted norms to bewildered and unstable societies." Riggs studies prismatic societies in terms of how they violate ideal Western standards.</li>
+</ul>
+
+<p>The defence available to Riggs is that an ideal type is a measuring instrument and not a moral judgement, and that the vocabulary is deliberately technical to avoid importing Western institutional labels. The criticism that survives the defence is Hahn-Been Lee's, because a model of transition that cannot describe the mechanism of transition has failed at its own task.</p>
+
+<h2>Bureaucracy and Development</h2>
+
+<p>In the eighteenth and nineteenth centuries the state's role was seen as restricted to defence and the maintenance of law and order, with little intervention in the economy. After the Great Depression of the 1930s, with growing unemployment, the state was expected to regulate the economy to increase production, expand employment, moderate prices and restrain monopolies. In developing countries this role came to be seen as paramount for containing poverty and unemployment, through regulation by fiscal and monetary policy, planning for sustained growth, developing transport and communications, and providing loans and raw materials to farmers and industrialists. Government performs these through its officials in departments, nationalised banks and public enterprises, which is why the bureaucracy has a central role in development.</p>
+
+<h3>The Role of the Bureaucracy</h3>
+
+<p>It was earlier believed that politicians decide policy and the bureaucracy simply implements it. Research has shown that policy-making and implementation are too interconnected for that division to hold: formulating policy requires an understanding of how earlier policies worked, and that information is held by the administrators who worked them. In developing countries the bureaucracy is frequently the only institution with the reach, records and continuity to formulate policy at all, which makes it an author of development rather than merely its instrument.</p>
+
+<p>The organisational implication drawn in the literature is that <strong>delegation should be the hallmark of a developmental bureaucracy</strong>, just as coordination and teamwork are the essence of implementation. A development task is dispersed, local and variable, and cannot be run from a capital by reference upward.</p>
+
+<h3>The Anti-Development Thesis</h3>
+
+<p>Against all this stands the argument that bureaucracy obstructs development rather than delivering it. A bureaucracy that is over-developed relative to the political institutions around it, a common colonial inheritance, acquires the capacity to set goals rather than merely pursue them, and its interest in the continuation of controls that generate its own power conflicts with the reform those controls need. Riggs's own study of Thailand as a <em>bureaucratic polity</em>, where the bureaucracy is the principal arena of politics because no other institution is strong enough to check it, is the classic statement of this danger.</p>
+
+<h2>Strong State versus the Market</h2>
+
+<p>At the beginning of the 1990s developing nations faced a financial crisis: exchange rates were falling, paying capacity was reduced, and lending institutions found it difficult to finance their expenditure.</p>
+
+<h3>The Low State Paradigm</h3>
+
+<p>The <strong>1991 World Development Report</strong> called for a drastic reduction in the role of government, which should focus on creating infrastructure and investing in human resources through health, education and other basic amenities. Governments were asked to create a favourable investment climate by reducing state control and opening the economy to free enterprise, so that markets could operate without intervention and attract private investment from within and outside the country. On this view government is a facilitator or arbitrator, responsible for macro-economic stability and for ensuring conditions suitable for private participation.</p>
+
+<p>The argument was driven by the collapse of the Eastern European states, large growth in public expenditure and the economic crises that followed in developed and developing countries alike, and the poor performance of public sector undertakings in developing nations. States should be confined to core areas and more space given to market-oriented principles, so that the interaction between government and market became the central issue in development.</p>
+
+<h3>The Question Restated</h3>
+
+<p>The debate is not simply whether the state should be large or small. Where the 1950s and 1960s felt a need to increase the <em>size</em> of government so that it could perform macro-economic functions, the need now is to build its <em>capacity</em> to perform them. Governments have to be strong administratively and technically in order to ensure an enabling environment in which private players and the market can function effectively. Having removed controls such as licensing, the state must frame and enforce laws preventing cartels and anti-competitive practices, and must ensure fair practice by utilities serving the public.</p>
+
+<p>This is the decisive insight of the topic: <strong>liberalisation increases rather than reduces the demands on administrative capacity</strong>. A licensing state needs officials who can say no; a regulatory state needs officials who can understand a market, detect collusion and withstand the regulated industry. The second is harder.</p>
+
+<h3>The 1997 World Development Report</h3>
+
+<p>The <strong>World Development Report 1997, The State in a Changing World</strong>, marked the turn away from the minimal-state position and set out a two-part strategy. The first part is to <strong>match the state's activities to its capability</strong>, doing less where capability is low rather than attempting everything badly. The second is to <strong>raise that capability by reinvigorating public institutions</strong>, with particular emphasis on mechanisms that give public officials the incentive to do their jobs better and more flexibly while also providing restraints against arbitrary and corrupt behaviour. The report is the institutional acknowledgement that development requires an effective state, not an absent one.</p>
+
+<h3>Evans and Embedded Autonomy</h3>
+
+<p><strong>Peter Evans</strong>, in <em>Embedded Autonomy: States and Industrial Transformation</em> (1995), supplies the comparative explanation of why some states develop their economies and others prey on them. He classifies states by their relation to society: <strong>predatory</strong>, as in Zaire, ruthlessly extracting and providing nothing in return; <strong>developmental</strong>, as in Korea, promoting industrial transformation; and <strong>intermediate</strong>, as in Brazil and India, sometimes helping and sometimes hindering.</p>
+
+<p>The condition for the developmental type is <strong>embedded autonomy</strong>, the combination of coherent internal organisation with close links to society. <em>Autonomy</em> is a Weberian bureaucracy insulated enough to resist capture by particular firms; <em>embeddedness</em> is "a concrete set of connections that link the state intimately and aggressively to particular social groups with whom the state shares a joint project of transformation". Either alone fails: autonomy without embeddedness produces an insulated bureaucracy that cannot learn what industry needs, and embeddedness without autonomy is simply capture.</p>
+
+<p>Evans's placement of India in the intermediate category is the most useful single sentence in this topic for an Indian answer, and it connects directly to Riggs: a sala in which authority is centralised and control is local is a state that has neither full autonomy nor productive embeddedness.</p>
+
+<h3>What the Market Cannot Do</h3>
+
+<p>The debate also recognises that although the role of government must be reduced, the state retains duties and functions, particularly in welfare and development, that are best performed by it. The market cannot take up all development functions: market forces promote economic growth but do not remove illiteracy or poverty, and do not develop backward regions, because the returns there do not attract private investment. The state's role remains important for development precisely where the market's logic does not reach.</p>
+
+<h2>Democratic Decentralisation</h2>
+
+<p>Decentralisation belongs in this topic because it is the standing comparative answer to the failures the prismatic model describes. If administrative behaviour in a transitional society is in fact determined by local power, then a structure that pretends to centralised authority while control remains local is the worst arrangement available, since it combines the rigidity of the centre with the particularism of the locality.</p>
+
+<p>The case made in the literature is that as the distance between the citizen and the decision grows, the responsiveness of political and bureaucratic personnel declines, so the best way to safeguard the public interest is to decentralise decision making. In developing countries, decentralisation is beginning to unload the state machinery of many responsibilities, and in traditionally centralised systems it can help the central government address globalisation and liberalisation with more focus.</p>
+
+<p>Democratic decentralisation also trains citizens for leadership in local affairs, which is its formative rather than its administrative justification. It requires rigorous training of political and bureaucratic personnel if they are to help citizens identify local issues arising from globalisation, and ethical awareness matters as much at the local level as at the centre.</p>
+
+<p>Non-governmental organisations support local and central government in crucial decisions, particularly on environmental pollution and deforestation, and many have contested national and international vested interests. Such activity generates local awareness and can stir protest challenging the adverse effects of globalisation. By raising critical awareness of both the advantages and the dangers of globalisation and liberalisation, local associations serve society better, and the demand for transparency in dealings at every level should come from them.</p>
+
+<p>The qualification an answer should carry is that decentralisation transfers power to local arenas, and where those arenas are dominated by entrenched caste or landed interests it may deliver capture rather than democracy. Riggs would have predicted exactly this, and it is why decentralisation is a necessary condition for responsive administration and not a sufficient one.</p>
+`,
 };
