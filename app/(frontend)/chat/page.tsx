@@ -741,7 +741,9 @@ function ChatContent() {
                   {bookGroups.map((g) => (
                     <optgroup key={g.group} label={`── ${g.group} ──`}>
                       {g.books.map((b) => (
-                        <option key={b.value} value={b.value}>{b.label}</option>
+                        <option key={b.value} value={b.value} disabled={b.soon}>
+                          {b.soon ? `${b.label} (coming soon)` : b.label}
+                        </option>
                       ))}
                     </optgroup>
                   ))}
@@ -921,7 +923,9 @@ function ChatContent() {
                           {bookGroups.map((g) => (
                             <optgroup key={g.group} label={`── ${g.group} ──`}>
                               {g.books.map((b) => (
-                                <option key={b.value} value={b.value}>{b.label}</option>
+                                <option key={b.value} value={b.value} disabled={b.soon}>
+                                  {b.soon ? `${b.label} (coming soon)` : b.label}
+                                </option>
                               ))}
                             </optgroup>
                           ))}

@@ -268,7 +268,7 @@ export const SUBJECT_DISPLAY: Record<SubjectKey, string> = {
 // ── Books per subject (placeholder — add to Supabase as books get embedded) ──
 // These are the book_title values that will be stored in Supabase once embedded.
 // The select dropdown is populated from here.
-export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: string; label: string }[] }[]> = {
+export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: string; label: string; soon?: true }[] }[]> = {
   sociology: [
     {
       group: 'Core Theory',
@@ -282,8 +282,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Indian Sociology',
       books: [
-        { value: 'IGNOU Sociology Paper 1', label: 'IGNOU Sociology Paper I' },
-        { value: 'IGNOU Sociology Paper 2', label: 'IGNOU Sociology Paper II' },
+        { value: 'IGNOU Sociology Paper 1', label: 'IGNOU Sociology Paper I', soon: true },
+        { value: 'IGNOU Sociology Paper 2', label: 'IGNOU Sociology Paper II', soon: true },
         { value: 'Srinivas — Social Change in Modern India', label: 'Srinivas — Social Change in Modern India' },
         { value: 'Beteille — Caste Class and Power', label: 'Beteille — Caste Class and Power' },
         { value: 'Desai — Social Background of Indian Nationalism', label: 'Desai — Social Background' },
@@ -307,8 +307,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'IGNOU',
       books: [
-        { value: 'IGNOU Anthropology Paper 1', label: 'IGNOU Anthropology Paper I' },
-        { value: 'IGNOU Anthropology Paper 2', label: 'IGNOU Anthropology Paper II' },
+        { value: 'IGNOU Anthropology Paper 1', label: 'IGNOU Anthropology Paper I', soon: true },
+        { value: 'IGNOU Anthropology Paper 2', label: 'IGNOU Anthropology Paper II', soon: true },
       ],
     },
     {
@@ -324,8 +324,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Core Theory',
       books: [
-        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I' },
-        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II' },
+        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I', soon: true },
+        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II', soon: true },
         { value: 'O.P. Gauba — An Introduction to Political Theory', label: 'O.P. Gauba — Political Theory' },
         { value: 'Heywood — Political Theory', label: 'Heywood — Political Theory' },
         { value: 'Heywood — Politics', label: 'Heywood — Politics' },
@@ -343,7 +343,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       group: 'Indian Polity',
       books: [
         { value: 'Austin — The Indian Constitution: Cornerstone of a Nation', label: 'Austin — Indian Constitution' },
-        { value: 'Lakshmikanth — Indian Polity', label: 'Lakshmikanth — Indian Polity' },
+        { value: 'Laxmikanth — Indian Polity', label: 'Lakshmikanth — Indian Polity' },
       ],
     },
   ],
@@ -368,11 +368,11 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'India',
       books: [
-        { value: 'Majid Husain — Geography of India', label: 'Majid Husain — Geography of India' },
-        { value: 'Khullar — India: A Comprehensive Geography', label: 'Khullar — India Geography' },
-        { value: 'NCERT Geography Class 11 Part 1', label: 'NCERT Geo XI Part 1' },
-        { value: 'NCERT Geography Class 11 Part 2', label: 'NCERT Geo XI Part 2' },
-        { value: 'NCERT Geography Class 12', label: 'NCERT Geo XII' },
+        { value: 'Majid Husain — Geography of India', label: 'Majid Husain — Geography of India', soon: true },
+        { value: 'Khullar — India: A Comprehensive Geography', label: 'Khullar — India Geography', soon: true },
+        { value: 'NCERT Geography Class 11 Part 1', label: 'NCERT Geo XI Part 1', soon: true },
+        { value: 'NCERT Geography Class 11 Part 2', label: 'NCERT Geo XI Part 2', soon: true },
+        { value: 'NCERT Geography Class 12', label: 'NCERT Geo XII', soon: true },
       ],
     },
   ],
@@ -380,24 +380,24 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Core Theory',
       books: [
-        { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I' },
-        { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II' },
-        { value: 'Avasthi & Maheshwari — Public Administration', label: 'Avasthi & Maheshwari' },
-        { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya' },
+        { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I', soon: true },
+        { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II', soon: true },
+        { value: 'Avasthi & Maheshwari — Public Administration', label: 'Avasthi & Maheshwari', soon: true },
+        { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya', soon: true },
       ],
     },
     {
       group: 'Thinkers & Concepts',
       books: [
-        { value: 'D. Ravindra Prasad — Administrative Thinkers', label: 'Ravindra Prasad — Admin Thinkers' },
-        { value: 'Rumki Basu — Public Administration: Concepts and Theories', label: 'Rumki Basu — Pub Admin' },
+        { value: 'D. Ravindra Prasad — Administrative Thinkers', label: 'Ravindra Prasad — Admin Thinkers', soon: true },
+        { value: 'Rumki Basu — Public Administration: Concepts and Theories', label: 'Rumki Basu — Pub Admin', soon: true },
       ],
     },
     {
       group: 'Indian Administration',
       books: [
-        { value: 'Arora & Goyal — Indian Public Administration', label: 'Arora & Goyal — Indian PA' },
-        { value: 'Ramesh Arora — Indian Administration', label: 'Ramesh Arora — Indian Administration' },
+        { value: 'Arora & Goyal — Indian Public Administration', label: 'Arora & Goyal — Indian PA', soon: true },
+        { value: 'Ramesh Arora — Indian Administration', label: 'Ramesh Arora — Indian Administration', soon: true },
       ],
     },
   ],
