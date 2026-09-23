@@ -1105,4 +1105,223 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The criticism is not about the numbers but about who sets them. An information commission whose members' tenure and terms are at the discretion of the government they adjudicate against has lost the security that made it an independent authority, which returns the topic to Finer's objection: an accountability institution dependent on the body it holds accountable is not an external control at all.</p>
 `,
+ 'administrative-law': `
+<h2>What Administrative Law Is</h2>
+
+<p>Administrative law is the body of law governing the powers, procedures and liabilities of administrative authorities, and the remedies available to those affected by their acts. It is the legal answer to the same problem accountability answers politically: an administration that legislates, adjudicates and executes needs rules about how it may do so.</p>
+
+<h3>Its Elements</h3>
+
+<ul>
+ <li>Constitutions, statutes, charters, ordinances and resolutions dealing with the powers and duties of administrative agencies.</li>
+ <li>Rules and regulations made by administrative agencies themselves.</li>
+ <li>The orders and directives issued by administrative officers, and the hearings and investigations they conduct.</li>
+ <li>Judicial decisions and precedents relating to those agencies and to the work done by administrative officers.</li>
+</ul>
+
+<p>Administrative law is universal today. Wherever there is public administration there is administrative law, because the modern state confers wide discretionary powers on officials as it takes a larger role in citizens' lives. Those powers are necessary for flexible and dynamic administration, and the principles governing the limits of discretion are the essence of the subject.</p>
+
+<h3>Administrative Law and Constitutional Law</h3>
+
+<p>In England the whole of administrative law is treated as a branch of constitutional law, and is said to emerge directly from the constitutional principle of the rule of law, doing much to determine the balance of power between the state and the citizen. The working distinction is that constitutional law describes the structure of the state at rest, while administrative law describes it in motion: not what organs exist and what powers they hold, but how those powers must be exercised in a particular case against a particular person.</p>
+
+<h2>Where It Came From</h2>
+
+<h3>France and Droit Administratif</h3>
+
+<p>Administrative law originated in France as a result of political and historical circumstance. Before the Revolution of 1789 there was judicial control over administrative authorities, and the resulting judicial interference was seen as hampering administrative efficiency. Montesquieu's theory of the separation of powers was influential, and its appeal was such that immediately after the Revolution laws were passed preventing the judiciary from interfering in the work of the administration.</p>
+
+<p>The consequence was predictable. Administrative authorities began to act as they pleased, arbitrarily and even oppressively. To address this, <strong>Napoleon Bonaparte</strong> established councils of jurisconsults: the <strong>Conseil d'Etat</strong> at the national level and Prefectorial Councils in the departments.</p>
+
+<p><strong>Droit administratif</strong> is the system that grew from this. It views the rights of the state as determined by a special set of laws which do not apply to ordinary citizens, and provides special administrative courts, staffed by civil servants, to try cases against civil servants. Ordinary courts have no jurisdiction over such cases, nor over cases where the government is a party. The administrative courts of the civil law system are headed by the Conseil d'Etat, and the law they have developed is an autonomous system, evolved independently and uninfluenced by the principles of private law.</p>
+
+<p>The point usually missed is that this separate system produced a body of state liability more generous to the citizen than the English one. French administrative courts developed doctrines allowing the revision of contracts between government and private citizens where altered conditions had upset the equilibrium of the contract, while English law gave the government immunity from liability in tort and in contract. A system Dicey condemned as privileging officials in fact held them to account in ways the common law then could not.</p>
+
+<h3>England</h3>
+
+<p>England resisted the idea that administration needed separate law, then acquired one by increments. The <strong>Statutory Instruments Act, 1946</strong> regularised delegated legislation, and the <strong>Tribunals and Inquiries Act, 1958</strong> provided for the supervision and control of administrative decisions, making the decisions of administrative authorities and tribunals subject to appeal and to the supervisory jurisdiction of the ordinary courts.</p>
+
+<h3>India</h3>
+
+<p>Before independence, administration in India was mostly confined to the maintenance of law and order and the administration of justice, so the occasions for administrative law were few. Independence, planning and the welfare state changed that within a generation. India's system is a hybrid: it retains the English insistence that officials answer in the ordinary courts, adds the writs as constitutional remedies under Articles 32 and 226 rather than as procedural forms, and then grafts on a tribunal structure of the continental kind.</p>
+
+<h2>Dicey and the Rule of Law</h2>
+
+<p><strong>A.V. Dicey</strong> is credited with popularising the expression <em>rule of law</em> in modern times, in <em>The Law of the Constitution</em> (1885). The concept did not originate with him.</p>
+
+<h3>Antecedents</h3>
+
+<ul>
+ <li><strong>Aristotle</strong> argued that law should govern all rather than any one citizen, and that if it were advantageous to place supreme power in particular persons, they should be appointed only as guardians and servants of the laws.</li>
+ <li><strong>Cicero</strong> held that all are servants of the laws in order that they may be free. Under the Roman Republic magistrates could be tried when their term of office expired, though the sovereign was personally immune, <em>legibus solutus</em>, under the Empire.</li>
+ <li>The Chinese school of <strong>legalism</strong> in the third century BC argued for using law as a tool of governance.</li>
+ <li>In the seventh century the rule of law was formulated in Islamic jurisprudence, under which no official could claim to be above the law, not even the caliph.</li>
+ <li>The phrase itself appears in a petition to James I of England in 1610, and <strong>Samuel Rutherford</strong> was among the first modern writers to give the principle theoretical foundations.</li>
+</ul>
+
+<h3>The Three Meanings</h3>
+
+<ul>
+ <li><strong>Supremacy of law.</strong> No person may be punished except for a distinct breach of law established in the ordinary manner before the ordinary courts. The executive cannot decide matters arbitrarily; it must follow the normal laws and observe the limits of the authority given to it. This is the rule against arbitrary and discretionary power.</li>
+ <li><strong>Equality before the law.</strong> Every person, whatever rank or condition, is subject to the ordinary law of the realm and to the jurisdiction of the ordinary courts. Officials enjoy no special exemption and no special forum.</li>
+ <li><strong>The constitution as the result of ordinary law.</strong> In England the general principles of the constitution are the result of judicial decisions determining the rights of private persons in particular cases, rather than the source from which those rights derive. Rights are secured by the remedies the courts provide, not by a declaration in a document.</li>
+</ul>
+
+<h3>Dicey's Denial of Administrative Law</h3>
+
+<p>Dicey believed the French system of separate administrative courts perpetuated injustice and put citizens' rights in jeopardy, violating the equality between citizen and government implicit in the common law tradition. Because a system in which actions against officials for wrongful acts committed in their official capacity are tried by special administrative courts staffed by civil servants did not exist in England, Dicey denied the existence of administrative law in England altogether.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>He misread droit administratif.</strong> The Conseil d'Etat was not a device for protecting officials, and it developed state liability further than the English courts did. Dicey partially conceded the point in later editions.</li>
+ <li><strong>He denied what already existed.</strong> English administration in 1885 already exercised discretionary and adjudicatory powers, and by treating administrative law as a foreign disease he delayed by decades the English development of principles to control it.</li>
+ <li><strong>Equality before the law is formal.</strong> The criticism in the literature is blunt: what is equality in the eye of the law, if a rich man can employ a kind of legal talent that a poor man cannot afford? So far as law means equity, it is equity measured by ethical standards set by property-owning classes; so far as it is custom, it is the custom of age-long exploitation justified by prescription and the sanctity of the status quo; and statutory law protects the interests of law-making bodies dominated by the upper middle classes. Equality in the eye of the law may be read as the legal counterpart of laissez faire. Habeas corpus secures the liberty of the individual, but only so long as the individual does not break the law.</li>
+ <li><strong>Equality between governors and governed is a myth.</strong> There will always be inequalities between them. The workable position is not that they should not exist but that they should rest on principle rather than on arbitrariness, being inequalities of function and service rather than of status.</li>
+ <li><strong>Discretion is unavoidable.</strong> Dicey's first meaning condemns wide discretionary power, which a welfare state cannot do without. The modern rule of law therefore asks not whether discretion exists but whether it is conferred by law, exercised for the purpose for which it was given, and open to review.</li>
+</ul>
+
+<h2>Delegated Legislation</h2>
+
+<p>Law-making is the responsibility of the legislature, but the volume and complexity of governmental functions make it impossible for Parliament to do all the work of legislation. The legislature therefore delegates a large part of its legislative power to the executive, which exercises it by making rules and regulations in accordance with the provisions of the enabling Act. The exercise of legislative power by the executive is <strong>delegated legislation</strong>.</p>
+
+<p>There is no general power in the executive to make law; it only supplements the law under the authority of the legislature. Yet in the United Kingdom, the United States and India the amount of delegated legislation far exceeds the volume of statute law. We are governed more by rules today than by statutes, which lay down only a policy that is amplified, explained and given concrete shape by the rules framed under them.</p>
+
+<h3>Why It Grew</h3>
+
+<p>The <em>Encyclopaedia of the Social Sciences</em> explains increased legislative delegation as a phenomenon of the modern positive state. Changing concepts of the function of government in a complex economic world placed an ever-increasing burden on legislatures; the sheer volume of business made delegation necessary; the spread of democracy increased the size of legislative bodies and altered the role of individual members, making it harder for legislatures to deal effectively with their business; the importance of technology rendered mere intelligence inadequate for solving governmental problems; and a rapidly changing social and economic order demanded that schemes of control and regulation be flexible. Administrative agencies offer the services of the expert and are better equipped for experimentation than legislatures.</p>
+
+<p><strong>Harold Laski</strong> put the case for it plainly: "there is everything to be said for, and little effective to be said against, the process of delegated legislation. Anyone who examines the kind of subject matter with which it deals will find that it saves a good deal of valuable parliamentary time which can be better used for other matters."</p>
+
+<h3>Forms</h3>
+
+<ul>
+ <li><strong>Title-based</strong>: rules, regulations, bye-laws, orders, schemes, notifications and directions, the label varying by parent Act rather than by legal effect.</li>
+ <li><strong>Skeleton legislation</strong>, where the Act lays down only the bare policy and leaves the entire substance to rules.</li>
+ <li><strong>Conditional legislation</strong>, where the legislature makes the law complete but leaves to the executive the determination of when, where or to whom it shall apply.</li>
+ <li><strong>Sub-delegation</strong>, where the authority that received the power delegates it further, which multiplies the distance between the elected legislature and the rule that binds the citizen.</li>
+</ul>
+
+<h3>The Henry VIII Clause</h3>
+
+<p>Ordinarily a legislature delegating its law-making power does not confer power on the executive to amend or vary the parent Act itself. Where a clause conferring exactly that power is inserted, it is called a <strong>Henry VIII clause</strong>, a reference to that monarch's preference for legislating by royal proclamation rather than through Parliament.</p>
+
+<p>Its ostensible object is the removal of difficulties in bringing a new statute into operation, and such clauses are often time-limited for that reason. The term is used critically, because a power to amend the parent Act inverts the relationship between delegate and delegator: the body whose authority is derived becomes able to alter the instrument from which it derives.</p>
+
+<h3>Dangers</h3>
+
+<ul>
+ <li>Rules are framed in a department and often signed by a subordinate official, where a statute is passed by Parliament after full debate. The difference in deliberation is the whole objection.</li>
+ <li>The volume is such that legislators cannot scrutinise it, and publicity is poor, so citizens are bound by rules they have no practical means of knowing.</li>
+ <li>Delegation shifts power from the legislature to the executive, and within the executive from the minister to the permanent official who actually drafts.</li>
+ <li>Wide or vague enabling provisions amount to abdication rather than delegation.</li>
+</ul>
+
+<h3>Controls</h3>
+
+<ul>
+ <li><strong>Parliamentary control.</strong> The enabling Act itself limits the power by specifying its purpose and scope. Rules are laid before the legislature, either simply, or subject to negative resolution allowing annulment, or subject to affirmative resolution requiring approval. In India the <strong>Committees on Subordinate Legislation</strong> in both Houses scrutinise rules, regulations, bye-laws and schemes made under delegated powers.</li>
+ <li><strong>Judicial control.</strong> Courts strike down delegated legislation that is <em>ultra vires</em>, either because the parent Act did not authorise it, or because the parent Act itself exceeded constitutional limits by delegating essential legislative function. Rules may also fall for procedural failure, for unreasonableness, or for conflict with the Constitution.</li>
+ <li><strong>Procedural control.</strong> Prior publication of draft rules, consultation with affected interests and expert bodies, and mandatory publication after making are the safeguards that operate before the rule bites rather than after.</li>
+</ul>
+
+<h2>Administrative Tribunals</h2>
+
+<p>Administrative tribunals accept for adjudication only controversies of a specific nature arising under particular enactments. They exclude from their purview questions about the validity or the basic concepts of the relevant enactment, and stipulate as a precondition the acceptance of that enactment, even if under protest. They interpret and apply the law when acts of public administration are questioned, and they need not follow the elaborate rules of evidence and procedure that bind ordinary courts, following instead the procedure prescribed by the statute and the principles of natural justice. They are quasi-judicial instruments for the application of administrative law.</p>
+
+<h3>Wade on What They Are</h3>
+
+<p><strong>Professor H.W.R. Wade</strong> gives the definition worth quoting. "They are often called administrative tribunals but this does not mean that their decisions are necessarily administrative. In the great majority of cases they are judicial, in the sense that the tribunal has to decide facts and apply rules to them impartially, without considering executive policy. Such tribunals in substance are courts of law." He adds: "They are administrative because the reasons for preferring them to the ordinary courts of law are administrative reasons. These tribunals, therefore, have the character of courts but they are deeply enmeshed in the administrative machinery of the state."</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Ordinary courts</th><th>Administrative tribunals</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Jurisdiction</td><td>General: from a simple claim for recovery of debt to complicated issues of law and fact</td><td>Specific: only controversies arising under a particular enactment</td></tr>
+ <tr><td>The enactment itself</td><td>May be tested for validity</td><td>Must be accepted; its validity is outside the tribunal's purview</td></tr>
+ <tr><td>Procedure</td><td>Elaborate rules of evidence and procedure</td><td>Statutory procedure plus natural justice; summary in practice</td></tr>
+ <tr><td>Membership</td><td>Legally trained judges</td><td>Experts with specialised knowledge, often with administrative members</td></tr>
+ <tr><td>Precedent</td><td>Bound by it, producing predictability</td><td>Generally not bound, so future decisions are hard to forecast</td></tr>
+ </tbody>
+</table>
+
+<h3>Tribunals in India</h3>
+
+<p>The <strong>42nd Constitutional Amendment, 1976</strong> inserted Articles <strong>323A</strong> and <strong>323B</strong>. Article 323A empowers Parliament to provide for administrative tribunals to adjudicate disputes relating to recruitment and conditions of service of public servants; Article 323B permits the appropriate legislature to establish tribunals for other specified matters such as taxation, land reforms, industrial and labour disputes, elections and essential commodities.</p>
+
+<p>The <strong>Administrative Tribunals Act, 1985</strong> gave effect to Article 323A, establishing the <strong>Central Administrative Tribunal</strong> with a chairman, vice-chairmen and members drawn from both judicial and administrative backgrounds, so that the tribunal has the benefit of expertise in legal and administrative fields alike. State administrative tribunals were set up by several states, among them Andhra Pradesh, Himachal Pradesh, Odisha, Karnataka, Maharashtra, Tamil Nadu, West Bengal and Madhya Pradesh.</p>
+
+<p>The decisive judgment is <strong>L. Chandra Kumar v. Union of India (1997)</strong>. Before it, an appeal from a tribunal's order lay only to the Supreme Court. The Court held that the power of judicial review vested in the High Courts under Article 226 and in the Supreme Court under Article 32 is part of the basic structure of the Constitution and cannot be excluded, so that a tribunal's order must now be challengeable before the High Court, and only thereafter before the Supreme Court. The judgment restored the constitutional guarantee at a real administrative cost: it added a tier, and the delay and expense for a government servant rose, so that the object of setting up tribunals for speedy justice was undercut. Several state governments pressed to scrap tribunals that had, on their account, become white elephants after 1997.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li>Adjudication by tribunals is said to be a negation of the rule of law. They work according to separate laws and procedures, often of their own making, where the rule of law asserts equality before the law and the supremacy of ordinary law and due procedure over governmental arbitrariness.</li>
+ <li>They frequently do not work on set procedures, and have been known to violate the principles of natural justice.</li>
+ <li>There is no uniform code of procedure across tribunals, unlike the uniform pattern of the courts. <strong>Rumki Basu</strong> notes that procedures and practices vary "from completely informal rules of evidence and with no examination or cross-examination of witness to the sufficiently well-developed and set practices of judicial procedures".</li>
+ <li>They hold summary trials and do not follow precedent, making the course of future decisions unpredictable.</li>
+ <li>Administrators and technical heads who administer justice in tribunals often lack the requisite legal background or judicial training, and do not possess independent perspectives.</li>
+ <li>Appointment, tenure and service conditions of members frequently rest with the very executive that is the usual litigant before them.</li>
+</ul>
+
+<h3>Safeguards Suggested</h3>
+
+<ul>
+ <li>Those administering justice should have adequate legal training and experience, and appointments may be made after consulting the Supreme Court.</li>
+ <li>A uniform code of procedure should be enforced to end the present confusion between competing procedures of administrative adjudication.</li>
+ <li>Reasons should be recorded for every decision, and decisions should be published so that a body of consistent practice can form.</li>
+ <li>A right of appeal should lie to the ordinary courts, which <em>L. Chandra Kumar</em> has secured in India.</li>
+ <li>Tenure and service conditions of members should be insulated from the department whose decisions they review.</li>
+</ul>
+
+<h2>The Principles of Natural Justice</h2>
+
+<p>Natural justice is the minimum procedural fairness the law requires of anyone deciding a matter affecting another's rights, whether or not the governing statute says so. It is judge-made, it fills the silences of statutes, and it is the main instrument by which courts control procedure without controlling policy.</p>
+
+<h3>Nemo Judex in Causa Sua</h3>
+
+<p>No one shall be a judge in his own cause. The administrator exercising adjudicatory power must have no personal or proprietary interest in the outcome, and there must be no reasonable ground for believing there was a likelihood of bias. The rule covers pecuniary bias, personal bias arising from relationship or hostility, and official or subject-matter bias where the decider has already committed to a view. The test is not whether the decision was in fact biased but whether a reasonable person would apprehend that it might be, because justice must not only be done but be seen to be done.</p>
+
+<h3>Audi Alteram Partem</h3>
+
+<p>Hear the other side: no decision shall be given against a party without affording a reasonable hearing. Its components are notice of the case to be met, stated with enough particularity to allow an answer; disclosure of the material relied on, since a hearing against undisclosed evidence is no hearing; a genuine opportunity to present one's case and to answer the other; and, where the consequences are serious, the opportunity to cross-examine and to be represented.</p>
+
+<h3>The Reasoned Decision</h3>
+
+<p>A third requirement was added to the two classical rules, that quasi-judicial enquiries be held in good faith, without bias, and not arbitrarily or unreasonably. From this grew the modern duty to give reasons. Reasons discipline the decider, allow the affected person to know why, and make appeal and review possible at all, since an unexplained order cannot be tested against anything.</p>
+
+<h3>A.K. Kraipak and the Collapse of a Distinction</h3>
+
+<p>In <strong>A.K. Kraipak v. Union of India (1969)</strong> the Supreme Court struck down a selection to the Indian Forest Service because one of the selectors was himself a candidate. The Court observed that the concept of natural justice had undergone great change: in the past it included only the two rules, and a third had since been envisaged.</p>
+
+<p>The lasting importance of the case is that it blurred the line between administrative and quasi-judicial functions. Before <em>Kraipak</em>, natural justice was owed only where a function was classified as quasi-judicial, and classification became the battleground. After it, the question is not what the function is labelled but whether the decision affects rights, and administrative authorities cannot act arbitrarily where their decisions affect rights and livelihoods. <strong>Maneka Gandhi v. Union of India (1978)</strong> carried the same logic into Article 21, requiring that a procedure established by law be just, fair and reasonable rather than merely enacted.</p>
+
+<h3>Limits</h3>
+
+<p>Natural justice is excluded or curtailed in genuine emergency, where immediate action is required; in matters of national security; where a statute expressly excludes it, subject to constitutional challenge; and where a hearing would serve no purpose because the outcome could not change. Courts also decline relief where the breach caused no prejudice. The rules are flexible by design, which is their strength and the reason they can be diluted in precisely the situations where they matter most.</p>
+
+<h2>Judicial Review of Administrative Action</h2>
+
+<p>In India judicial review rests on the Constitution rather than on the sufferance of the legislature. Article 32 makes the right to constitutional remedies itself a fundamental right, Article 226 gives the High Courts a wider writ jurisdiction extending to any legal right, and <em>L. Chandra Kumar</em> places the power beyond the reach of amendment by holding it part of the basic structure.</p>
+
+<h3>Grounds</h3>
+
+<ul>
+ <li><strong>Illegality</strong>: the authority acted without jurisdiction, exceeded the power conferred, applied the wrong law, or failed to exercise a discretion it was bound to exercise.</li>
+ <li><strong>Irrationality</strong>: a decision so unreasonable that no reasonable authority could have arrived at it.</li>
+ <li><strong>Procedural impropriety</strong>: breach of the statutory procedure or of natural justice.</li>
+ <li><strong>Proportionality</strong>: whether the means adopted were excessive in relation to the object, applied most readily where fundamental rights are restricted.</li>
+ <li><strong>Legitimate expectation</strong>: where a settled practice or an express promise has induced a reasonable expectation, it may not be defeated without fair procedure or overriding public interest.</li>
+ <li><strong>Abuse of discretion</strong>: acting on irrelevant considerations, ignoring relevant ones, acting for an improper purpose, acting in bad faith, or acting under dictation from another authority.</li>
+</ul>
+
+<h3>Limits</h3>
+
+<p>Review is of legality, not of merit. The court asks whether the decision was open to the authority, not whether it was the best decision available, and it does not substitute its own view on questions of policy, expediency or technical judgement. This is the boundary that makes review compatible with democracy, and it is also why judicial review cannot correct the most common administrative failures, which are delay, insensitivity and incompetence within the law. The remaining difficulties are practical: review is slow and expensive, available only after the injury and only to someone who knows a remedy exists, and the expansion of public interest litigation is a partial answer to exactly those defects.</p>
+
+<h2>Administrative Discretion</h2>
+
+<p>Discretion is unavoidable in a modern state because no statute can foresee every case, and it is the point at which administrative law does its real work. The doctrine does not seek to abolish discretion but to structure it: the power must be conferred by law, exercised by the authority on whom it was conferred and not another, used for the purpose for which it was given, applied on relevant considerations after genuine application of mind to the individual case, supported by reasons, and exercised consistently with published standards so that like cases are treated alike. Guidelines, published criteria and the duty to give reasons are more effective controls in practice than the writ, because they operate on every decision rather than on the few that reach a court.</p>
+`,
 };
