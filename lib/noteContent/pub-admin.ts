@@ -5525,4 +5525,272 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The conclusion that an answer should reach is that India's difficulty in this field is not a shortage of recommendations. The National Police Commission reported in 1981, the Supreme Court directed implementation in 2006, the Model Police Act was drafted in 2006, the Malimath Committee reported in 2003 and the Mulla Committee in 1983, and the Acts of 1861 and 1894 still govern. Each of these instruments is useful to somebody in its unreformed condition, and reform has failed not because the diagnosis was absent but because the beneficiaries of the disease are the people who would have to enact the cure.</p>
 `,
+ 'welfare-administration': `
+<h2>What Welfare Administration Is</h2>
+
+<p>Social welfare refers to the welfare of society, meaning the upliftment of its vulnerable sections so that they too may use the opportunities available for growth and development. It covers the social interventions aimed at maintaining the social functioning of human beings.</p>
+
+<p>It is not a modern idea. Helping the needy and those in distress has been practised by civilised communities throughout history, and in many earlier kingdoms welfare was applied to secure peace and stability. What is modern is its attachment to the <strong>state</strong>: with the development of the concept of the state, social welfare came to be related to the idea of the welfare state, and its meaning and scope now vary from country to country according to each one's administrative history.</p>
+
+<h3>Definitions</h3>
+
+<ul>
+ <li><strong>The National Association of Social Workers</strong>: social welfare denotes "the full range of organised activities of voluntary and governmental agencies that seek to prevent, alleviate, or contribute to the solution of recognised social problems, or to improve the well-being of individuals, groups, or communities".</li>
+ <li><strong>The United Nations</strong> defines it as an organised function, a body of activities designed to enable individuals, families, groups and communities to cope with the social problems of changing conditions; and adds a larger claim, that beyond specific services social welfare has a function in a country's <em>social development</em>, contributing to the effective mobilisation and deployment of human and material resources to meet the social requirements of change, and thereby <strong>participating in nation-building</strong>.</li>
+ <li><strong>Encyclopaedia Britannica</strong>: "a system of laws and institutions through which a government attempts to protect and promote the economic and social welfare of its citizens, usually based on various forms of social insurance against unemployment, accident, illness and old age".</li>
+ <li><strong>The Encyclopaedia of the Social Sciences</strong> observes that the welfare state is the institutional outcome of a society assuming <em>legal and therefore formal and explicit responsibility</em> for the welfare of its members, which is the distinction that matters: charity is discretionary, welfare is owed.</li>
+</ul>
+
+<p>In its broadest sense social welfare embraces all efforts to improve health, education, employment, housing, recreation and culture for the community at large, and is concerned with the quality of life including the environment, the level of crime, the extent of drug abuse and the availability of essential services. In a narrower sense it refers to personal welfare or to the services of a welfare department and the voluntary sector in a particular place.</p>
+
+<h3>Residual and Institutional Conceptions</h3>
+
+<p>Two conceptions divide the field and determine how a welfare administration is designed.</p>
+
+<ul>
+ <li>The <strong>residual</strong> conception treats state assistance as temporary, minimal, requiring evidence of need, and available only after every other avenue, the market and the family, has been exhausted. The cause of need may itself determine whether a person qualifies. Welfare organisations play a residual role and assist <em>selectively</em>.</li>
+ <li>The <strong>institutional</strong> conception treats welfare provision as a normal and permanent function of a modern society, available as of right rather than after failure, and directed at the population rather than at a residue.</li>
+</ul>
+
+<p>The administrative consequences are large. A residual system must <strong>identify the deserving</strong>, which requires means-testing, verification and the discretion that goes with them, and which produces exclusion errors, stigma and corruption. An institutional system is simpler to administer and costs far more. India has moved from a broadly residual design towards an institutional one in food, employment and education without ever making the choice explicitly, which is why its schemes carry the targeting machinery of the first inside the entitlement language of the second.</p>
+
+<h3>Normalisation</h3>
+
+<p>The principle of <strong>normalisation</strong> is treated as fundamental to a welfare system: a person should be enabled to live, work and develop in a normal environment irrespective of physical, psychological or social handicap. It is the principle that turns welfare from segregated provision, the separate institution, the special colony, into support within ordinary life, and it underlies the modern law on disability, mental health and juvenile justice.</p>
+
+<h3>Social Justice and Its Critics</h3>
+
+<p><strong>John Stuart Mill</strong> gave the classic formulation in the 1850s: "Society should treat all equally well who have deserved equally well of it, that is, who have deserved equally well absolutely. This is the highest abstract standard of social and distributive justice; towards which all institutions, and the efforts of all virtuous citizens, should be made in the utmost degree to converge."</p>
+
+<p><strong>Friedrich Hayek</strong> attacked the term. He observed that whole books have been written about social justice without offering a definition, and that the moment one attempts to define it one runs into intellectual difficulty, so that it becomes a term of art whose operational meaning is "we need a law against that", and thereby an instrument of ideological intimidation for the purpose of gaining the power of legal coercion. Most authors claim to use it as a moral virtue while the descriptions they attach to it concern impersonal states of affairs such as high unemployment or inequality of incomes, which are nobody's intentional act.</p>
+
+<p>Hayek's objection is worth including because the honest reply to it is also the justification for welfare administration. An outcome that no individual intended may still be one a society has chosen to tolerate through its arrangements, and it is precisely the function of welfare administration to convert a state of affairs nobody willed into a responsibility somebody bears. That is what the Encyclopaedia's phrase about formal and explicit responsibility describes.</p>
+
+<h2>Constitutional Provisions</h2>
+
+<p>The Indian Constitution is unusually explicit about welfare, and the provisions fall into four groups.</p>
+
+<h3>Fundamental Rights</h3>
+
+<ul>
+ <li><strong>Article 14</strong>, equality before the law, which guarantees that no person is denied equality, and <strong>Articles 15 and 16</strong>, which prohibit discrimination and permit special provision for women, children and socially and educationally backward classes.</li>
+ <li><strong>Article 17</strong>, abolishing untouchability, the only social practice the Constitution abolishes by name.</li>
+ <li><strong>Article 21</strong>, from which the courts have derived rights to health, shelter, livelihood and food, and <strong>Article 21A</strong>, the right to education.</li>
+ <li><strong>Articles 23 and 24</strong>, prohibiting trafficking and forced labour, and the employment of children in hazardous work.</li>
+</ul>
+
+<h3>Directive Principles</h3>
+
+<ul>
+ <li><strong>Article 38</strong>: the state shall secure a social order for the promotion of welfare and minimise inequalities of income, status, facilities and opportunities.</li>
+ <li><strong>Article 39</strong>: adequate means of livelihood, distribution of material resources to subserve the common good, prevention of concentration of wealth, equal pay for equal work, and protection of the health of workers and children.</li>
+ <li><strong>Article 41</strong>: the right to work, to education and to <strong>public assistance in old age, sickness, disablement and undeserved want</strong>.</li>
+ <li><strong>Article 42</strong>: just and humane conditions of work and <strong>maternity relief</strong>.</li>
+ <li><strong>Article 45</strong>: early childhood care and education for children below six.</li>
+ <li><strong>Article 46</strong>: promotion of the educational and economic interests of the Scheduled Castes, Scheduled Tribes and other weaker sections, and protection from social injustice and exploitation. This is the constitutional foundation of the entire apparatus of positive discrimination.</li>
+ <li><strong>Article 47</strong>: raising the level of nutrition and the standard of living, and the <strong>improvement of public health</strong> as a primary duty of the state.</li>
+</ul>
+
+<h3>The Constitutional Commissions</h3>
+
+<ul>
+ <li><strong>Article 338</strong> originally provided for a Special Officer and was amended in 2003 to establish the <strong>National Commission for Scheduled Castes</strong>, and amended again in 2018 to remove backward classes from its ambit.</li>
+ <li><strong>Article 338A</strong> establishes the <strong>National Commission for Scheduled Tribes</strong>, separated from the Scheduled Castes commission in 2003.</li>
+ <li><strong>Article 338B</strong>, inserted by the <strong>102nd Constitutional Amendment of 2018</strong>, gives constitutional status to the <strong>National Commission for Backward Classes</strong>, which had been a statutory body since 1993.</li>
+</ul>
+
+<p>The trajectory is worth noting: a single officer in 1950 became a commission in 1990, then two commissions in 2003, then three in 2018. The multiplication of constitutional machinery for specific groups is itself a fact about Indian welfare administration, and the question it raises, whether separate commissions strengthen representation or fragment it, is a reasonable one to pose in an answer.</p>
+
+<h2>The Machinery</h2>
+
+<ul>
+ <li><strong>At the Union</strong>: the Ministry of Social Justice and Empowerment for Scheduled Castes, backward classes, persons with disabilities and the aged; the Ministry of Tribal Affairs; the Ministry of Women and Child Development; the Ministry of Minority Affairs; the Ministry of Rural Development; and the Ministry of Consumer Affairs, Food and Public Distribution.</li>
+ <li><strong>At the state</strong>: corresponding departments of social welfare, tribal welfare, women and child development and food and civil supplies, which are the bodies that actually spend.</li>
+ <li><strong>At the district and below</strong>: the District Social Welfare Officer, the Integrated Tribal Development Agency, the child development project officer and the anganwadi worker, the fair price shop, and the panchayat, which is where a scheme either reaches a person or does not.</li>
+ <li><strong>The voluntary sector</strong>, which delivers a substantial share of institutional care, runs homes and shelters, and supplies both innovation and the advocacy that has produced most rights-based legislation.</li>
+</ul>
+
+<p>The recurring structural weakness is that welfare functions are divided among many ministries and departments organised by <em>group</em>, while a poor household is poor in several respects at once and encounters each department separately. Convergence has been the declared object of policy for decades and remains the least achieved.</p>
+
+<h2>From Welfare to Rights</h2>
+
+<p>The most important change in Indian welfare administration since the 1990s is the conversion of discretionary schemes into <strong>justiciable entitlements</strong>: the right to information, the right to work under the employment guarantee, the right to education, and the right to food under the National Food Security Act.</p>
+
+<p>The administrative consequences are considerable. An entitlement must be delivered on demand rather than within a budget, which reverses the direction of accountability; a denial becomes actionable, so the administration must record and give reasons; grievance machinery ceases to be optional; and the officer's duty is owed to the individual rather than to the target. The criticism is that entitlements commit expenditure irrespective of fiscal capacity, and that a right unaccompanied by the capacity to deliver it produces litigation rather than services. Both propositions are true, and the honest position is that rights-based design has improved <em>accountability</em> more than it has improved <em>delivery</em>.</p>
+
+
+<h2>Health Administration</h2>
+
+<p>The Constitution imposes duties on the state for public assistance to the sick and disabled under <strong>Article 41</strong>, protection of the health of infants and mothers under <strong>Article 42</strong>, and the improvement of public health as a primary duty under <strong>Article 47</strong>. Public health and sanitation are State List subjects, which means the Union's role is exercised through policy, money and centrally sponsored missions rather than through direct provision.</p>
+
+<p>The <strong>Ministry of Health and Family Welfare</strong> implements health and family welfare programmes nationally, is responsible for the prevention and control of major communicable diseases, and promotes the traditional systems of medicine, adding new programmes such as immunisation from time to time. The <strong>National Health Policy, 2002</strong> focused on enhanced funding and organisational restructuring of national public health initiatives to facilitate equitable access.</p>
+
+<h3>The Missions</h3>
+
+<ul>
+ <li>The <strong>National Rural Health Mission</strong>, launched on <strong>12 April 2005</strong>, to provide accessible, affordable and quality health care to the rural population and particularly to vulnerable groups. Its thrust was a fully functional, community-owned and decentralised health delivery system with inter-sectoral convergence at every level, and its most consequential innovation was the <strong>accredited social health activist</strong>, a woman selected from and accountable to her own village, who connects the household to the health system.</li>
+ <li>The <strong>National Health Mission</strong>, launched in 2013, subsuming the rural mission and the later National Urban Health Mission.</li>
+ <li><strong>Ayushman Bharat</strong>, launched on <strong>23 September 2018</strong>, with two components: <strong>Health and Wellness Centres</strong> upgrading sub-centres and primary health centres to deliver comprehensive primary care, with a target of a hundred and fifty thousand; and <strong>Pradhan Mantri Jan Arogya Yojana</strong>, providing eligible families cashless hospitalisation cover of up to <strong>five lakh rupees annually</strong> for secondary and tertiary care, covering some sixty crore people.</li>
+</ul>
+
+<h3>The Administrative Argument</h3>
+
+<p>Ayushman Bharat's two components express two different theories of health administration, and the tension between them is worth stating. The <strong>insurance</strong> component purchases care from providers, largely private, and its administrative task is claims management, fraud detection and price regulation. The <strong>wellness centre</strong> component builds public provision, and its administrative task is staffing, supply and supervision in places where neither is easy.</p>
+
+<p>The first is administratively simpler and politically visible; the second is what determines whether people fall ill. A system that funds hospitalisation generously while primary care remains weak will pay repeatedly for conditions that primary care would have prevented, which is the standard criticism of insurance-led health financing and the reason the wellness centre component matters more than its lower profile suggests.</p>
+
+<h2>Tribal Welfare</h2>
+
+<h3>The Approaches Debate</h3>
+
+<p>Indian tribal policy was settled through an argument that an answer should open with.</p>
+
+<ul>
+ <li><strong>Isolation</strong>, associated with <strong>Verrier Elwin</strong> in his early work, which held that tribal societies should be protected from contact until they could deal with it on their own terms, and which critics characterised as keeping them in a museum.</li>
+ <li><strong>Assimilation</strong>, associated with <strong>G.S. Ghurye</strong>, who regarded tribes as <em>backward Hindus</em> whose absorption into the wider society was already in progress and should be completed.</li>
+ <li><strong>Integration</strong>, which became official policy through <strong>Nehru's tribal panchsheel</strong>: that tribal people should develop along the lines of their own genius, that their rights in land and forest should be respected, that a team of their own people should be trained to administer and develop rather than an army of outsiders being introduced, that administration should not be over-administered or overwhelmed with schemes, and that results should be judged by the quality of human character built up rather than by statistics or money spent.</li>
+</ul>
+
+<p>The last of Nehru's five principles is the most administratively radical and the least observed: it makes the test of tribal administration qualitative, and every subsequent evaluation has measured expenditure and coverage.</p>
+
+<h3>Constitutional Framework</h3>
+
+<p>The <strong>Fifth Schedule</strong> governs Scheduled Areas in most states, with a Governor empowered to make regulations and required to report to the President, advised by a Tribes Advisory Council. The <strong>Sixth Schedule</strong> establishes autonomous district councils with legislative and judicial powers in the tribal areas of the north-east, which is a far stronger form of self-government than exists anywhere else in India. <strong>Article 275</strong> provides grants-in-aid for tribal welfare and for raising the administration of Scheduled Areas.</p>
+
+<h3>Programmes and Machinery</h3>
+
+<ul>
+ <li>The <strong>Development Action Plan for Scheduled Tribes</strong>, the successor to the Tribal Sub-Plan, under which a large number of ministries earmark budget for tribal development, with the earmarked total having grown several-fold over the last decade.</li>
+ <li><strong>Eklavya Model Residential Schools</strong>, providing quality middle and high school education with residential facilities in remote blocks.</li>
+ <li>The <strong>Forest Rights Act, 2006</strong>, which recognises individual and community rights over forest land, habitation and minor forest produce, under which lakhs of individual and community titles have been distributed. It is the most significant legislative recognition of tribal claims since independence, and its implementation has been uneven, with community rights conceded far less readily than individual ones.</li>
+ <li><strong>PESA, 1996</strong>, treated in the note on local government, which confers wide powers on the Gram Sabha in Scheduled Areas.</li>
+ <li>The <strong>Ministry of Tribal Affairs</strong> and the <strong>National Commission for Scheduled Tribes</strong> under Article 338A, with Integrated Tribal Development Agencies at the field level.</li>
+</ul>
+
+<h3>Why It Falls Short</h3>
+
+<ul>
+ <li><strong>Displacement.</strong> Tribal areas hold the country's mineral and forest wealth, so development projects have displaced tribal populations disproportionately, and resettlement has consistently been the weakest part of project administration.</li>
+ <li><strong>Land alienation</strong> continues despite protective legislation, through debt, benami transfer and encroachment.</li>
+ <li><strong>Administrative distance</strong>: officers posted to tribal areas frequently regard the posting as a punishment, do not speak the language, and are transferred before they understand the society.</li>
+ <li><strong>Over-administration</strong>, which is precisely what Nehru warned against: a proliferation of schemes and agencies in areas where the binding constraint is the capacity to absorb them.</li>
+ <li><strong>Left-wing extremism</strong>, which is concentrated in the districts where these failures are deepest, and which converts a development failure into a security problem, after which the security response displaces the development effort.</li>
+</ul>
+
+
+<h2>Social Security</h2>
+
+<p>Social security is the organised protection of individuals against the contingencies of sickness, injury, old age, unemployment and death, and India's arrangements divide sharply between the organised and unorganised sectors.</p>
+
+<p>The <strong>organised sector</strong> has statutory provision through provident fund, pension and insurance schemes for employees and through employees' state insurance for medical care and cash benefits, financed by employer and employee contributions and administered by tripartite bodies. It covers a small minority of the workforce.</p>
+
+<p>The <strong>unorganised sector</strong>, which is the great majority of Indian workers, has historically had almost none. The recent architecture attempts to reach it in two ways.</p>
+
+<ul>
+ <li>The <strong>Code on Social Security, 2020</strong>, which consolidates earlier legislation and widens coverage to include the unorganised sector, fixed-term employees, and <strong>gig and platform workers</strong>, inter-state migrant workers and contract employees, with provision for schemes funded partly by aggregators.</li>
+ <li><strong>e-Shram</strong>, launched on <strong>26 August 2021</strong> as an Aadhaar-seeded national database of unorganised workers, open to those between sixteen and fifty-nine, free of cost, issuing each registrant a <strong>Universal Account Number</strong> as portable proof of identity. Registrations exceed thirty crore.</li>
+</ul>
+
+<p>The administrative significance of e-Shram is that identification has been the binding constraint on unorganised-sector welfare: a state that cannot name its informal workers cannot deliver anything to them except through the crude proxies of ration card and residence. A database is therefore a precondition rather than a benefit, and the open question is whether entitlements of substance will be attached to it. The recognition of gig and platform workers as a distinct category in the 2020 Code is significant for the same reason: it treats a form of employment that the earlier statutes could not see.</p>
+
+<h2>Women's Welfare</h2>
+
+<h3>The Shift in Approach</h3>
+
+<p>Policy towards women has passed through three phases that an answer should distinguish. The <strong>welfare</strong> approach of the early plan period treated women as beneficiaries of services, chiefly maternal and child health. The <strong>development</strong> approach from the 1970s treated them as participants in and contributors to development, following the international recognition that development had bypassed them. The <strong>empowerment</strong> approach from the 1990s treats the distribution of power itself as the object, which is why reservation in panchayats, property rights and self-help groups belong to this phase rather than to the earlier ones.</p>
+
+<h3>Machinery and Programmes</h3>
+
+<ul>
+ <li>The <strong>Ministry of Women and Child Development</strong>, and the <strong>National Commission for Women</strong> with state counterparts.</li>
+ <li><strong>Integrated Child Development Services</strong>, the largest programme of its kind anywhere, delivering supplementary nutrition, immunisation, health check-ups, referral services and pre-school non-formal education through the anganwadi.</li>
+ <li><strong>Beti Bachao Beti Padhao</strong>, launched in 2015 and run jointly by the Ministries of Women and Child Development, Health and Family Welfare and Education, addressing the declining child sex ratio and the education of girls.</li>
+ <li><strong>Mission Shakti</strong>, with two sub-schemes: <em>Sambal</em> for the safety and security of women, and <em>Samarthya</em> for their empowerment.</li>
+ <li>Legislative protection against dowry, domestic violence, workplace harassment and trafficking, together with maternity benefit and equal remuneration law.</li>
+ <li>Reservation of one-third and in many states one-half of seats in panchayats and municipalities, which has done more to change who holds local office than any programme.</li>
+</ul>
+
+<h3>Problems</h3>
+
+<p>The anganwadi worker, on whom the largest programme rests, is classified as an honorary worker rather than an employee and paid accordingly, which is a structural statement about how the state values care work. Schemes addressed to women are administered by departments in which women are underrepresented at every level. And the deepest difficulty is that the outcomes sought, sex ratio, nutrition, school completion, freedom from violence, are determined within households that no administrative instrument reaches directly, which is why the reservation provisions, by changing who exercises public authority, have arguably accomplished more than the schemes.</p>
+
+
+<h2>Education Administration</h2>
+
+<p>Education moved to the Concurrent List by the 42nd Amendment, so both the Union and the states legislate, and the resulting machinery is shared. <strong>Article 21A</strong>, inserted by the 86th Amendment, makes free and compulsory education for children between six and fourteen a fundamental right, and <strong>Article 45</strong> as amended directs the state to provide early childhood care and education below six.</p>
+
+<p>The <strong>Right of Children to Free and Compulsory Education Act</strong> gives that right effect, prescribing norms for schools, pupil-teacher ratios and infrastructure, prohibiting screening at admission and capitation fees, requiring school management committees with parent majorities, and reserving a proportion of places in private unaided schools for children from disadvantaged groups. Its administrative innovation is the <strong>school management committee</strong>, which is the education counterpart of the Gram Sabha: a body of parents with statutory standing to hold the school to account.</p>
+
+<p>The recurring difficulty is that the Act regulates <em>inputs</em>, buildings, teachers, ratios, and the deficit is in <em>learning</em>. Enrolment is near universal and learning outcomes measured by successive surveys are far below the level enrolment would suggest, which is the clearest instance in Indian welfare administration of a right being delivered in form while the purpose it served went unmet.</p>
+
+<h2>Backward Classes Welfare</h2>
+
+<p>The category of socially and educationally backward classes is constitutionally distinct from the Scheduled Castes and Tribes, and it has been the most contested area of Indian welfare administration.</p>
+
+<p>The <strong>Mandal Commission</strong>, reporting in 1980 and implemented for central services in 1990, recommended reservation for the other backward classes, and the resulting litigation produced the framework the courts have applied since: reservation is permissible, the total is ordinarily subject to a ceiling, the <em>creamy layer</em> among the backward classes is to be excluded, and adequacy of representation must be demonstrable rather than assumed.</p>
+
+<p>The <strong>National Commission for Backward Classes</strong>, statutory from 1993, received constitutional status through <strong>Article 338B</strong> by the 102nd Amendment in 2018, with the power to examine complaints and participate in decisions on the inclusion of communities in the central list. The administrative machinery also includes reservation in education and services, scholarships, hostels and finance and development corporations.</p>
+
+<p>The administrative difficulties are specific. Identifying beneficiaries requires data that has not been collected in a usable form, so inclusion and exclusion both rest on contested evidence. The creamy layer criterion must be applied by officials on the basis of income and status certificates that are easy to obtain improperly. And the benefits concentrate among the more advanced of the backward communities, which has produced demands for sub-categorisation, itself now a live question.</p>
+
+<h2>Welfare of Persons with Disabilities</h2>
+
+<p>The administrative approach has moved from a <strong>medical</strong> model, which treats disability as an individual defect to be treated or compensated, to a <strong>social</strong> model, which treats it as the product of an environment that excludes, and therefore requires accessibility, reasonable accommodation and non-discrimination rather than charity. The principle of <em>normalisation</em> discussed above is the same proposition stated from the welfare side.</p>
+
+<p>The statutory framework provides for reservation in employment and education, accessibility obligations, a certification and identification system, a Chief Commissioner and State Commissioners with power to inquire into deprivation of rights, and provision for guardianship and social security. The implementation gap is largest in accessibility, which requires action by every department and agency rather than by a welfare ministry, and in certification, which routes an entitlement through a medical bureaucracy the claimant must navigate.</p>
+
+<h2>Food Security Administration</h2>
+
+<h3>From PDS to Targeted PDS</h3>
+
+<p>The Public Distribution System began as a universal rationing arrangement and was converted in <strong>June 1997</strong> into the <strong>Targeted Public Distribution System</strong>, which distinguished households below the poverty line from those above it and concentrated the subsidy on the first. The shift is the clearest instance in Indian administration of the residual conception displacing the institutional one, and it introduced the problem that has dominated the subject since: the state must now <em>identify the poor</em>, and every identification method produces both exclusion and inclusion errors.</p>
+
+<h3>The National Food Security Act, 2013</h3>
+
+<p>The Act converted subsidised food from a scheme into a <strong>legal entitlement</strong>. It covers up to <strong>75 per cent of the rural</strong> and up to <strong>50 per cent of the urban</strong> population. <strong>Antyodaya Anna Yojana</strong> households, the poorest of the poor, are entitled to <strong>35 kg of foodgrain per household per month</strong>; <strong>priority households</strong> are entitled to <strong>5 kg per person per month</strong>, at subsidised prices.</p>
+
+<p>It also provides maternity benefit and nutritional support for pregnant women and lactating mothers, meals for children through the anganwadi and school systems, a food security allowance where entitlements are not supplied, and a grievance redress mechanism with district grievance redressal officers and state food commissions. Notably, the Act designates the <strong>eldest woman of the household</strong> as the head for the purpose of issuing ration cards, which is a small provision with a substantial effect on who controls the entitlement.</p>
+
+<h3>Technology and Portability</h3>
+
+<ul>
+ <li><strong>Aadhaar-based authentication</strong> at the fair price shop, with electronic point of sale devices, which addresses the diversion of grain against the cards of people who do not exist or do not collect.</li>
+ <li><strong>One Nation One Ration Card</strong>, which introduces nationwide portability so that a cardholder may draw the entitlement from any fair price shop in the country without obtaining a new card, using the existing card number with Aadhaar authentication. Its significance is specifically administrative: an entitlement tied to a place excluded precisely the migrant workers who needed it most, and portability is the answer to a defect the 1997 design created.</li>
+ <li><strong>Direct benefit transfer</strong>, under which very large savings have been reported in food subsidy through the elimination of duplicate and non-existent beneficiaries.</li>
+</ul>
+
+<h3>The Argument About Aadhaar and Exclusion</h3>
+
+<p>The claimed savings are contested, and an answer that states only the savings figure is incomplete. Studies have documented that authentication requirements reduce benefits for those who have not linked or cannot authenticate, with a proportion of beneficiaries receiving nothing at all; that linkage to a bank account is frequently made to the last linked account without the beneficiary knowing whose it is; and that the consent that is supposed to precede such mapping is often absent in practice.</p>
+
+<p>The underlying trade-off is the fundamental one in welfare administration and should be stated as such. Tightening identification reduces <strong>inclusion error</strong>, the leakage of benefits to those not entitled, and increases <strong>exclusion error</strong>, the denial of benefits to those who are. The two errors fall on different people: leakage costs the exchequer, and exclusion costs a poor household its food. A system that optimises against leakage alone has chosen whose mistakes it prefers to make, and that choice should be made openly rather than arrived at through a technical decision about authentication.</p>
+
+<h3>Other Problems</h3>
+
+<ul>
+ <li><strong>Identification.</strong> The poverty line used to determine eligibility has never commanded agreement, and errors in the beneficiary list are the largest single source of injustice in the system.</li>
+ <li><strong>Diversion and quality</strong>, as grain is substituted or short-weighted at the fair price shop, and the dealer's margin is too small to sustain an honest shop.</li>
+ <li><strong>Storage and transport losses</strong>, with grain rotting in procurement godowns while entitlements go unmet.</li>
+ <li><strong>The procurement bias</strong>, since the system buys rice and wheat from a few surplus states, which shapes national cropping patterns, depletes groundwater and delivers a cereal-heavy diet where the nutritional deficit is in protein and micronutrients.</li>
+</ul>
+
+<h2>Why Welfare Administration Underperforms</h2>
+
+<ul>
+ <li><strong>Targeting.</strong> Every selective benefit requires identification, and identification in a society where most income is informal cannot be accurate, so both kinds of error are structural rather than remediable by better verification.</li>
+ <li><strong>Fragmentation.</strong> Benefits are organised by group and by ministry while deprivation is experienced whole, so a household must approach many doors.</li>
+ <li><strong>The last mile.</strong> The anganwadi worker, the fair price shop dealer and the village-level functionary carry the entire system and are the least trained, least paid and least supervised part of it.</li>
+ <li><strong>Capture.</strong> Local power structures influence who is listed and who is served, which is why social audit and the Gram Sabha matter more here than anywhere else.</li>
+ <li><strong>Measurement by expenditure.</strong> Programmes are evaluated by funds released and coverage claimed rather than by outcomes, which rewards disbursement over effect, and which Nehru's fifth principle anticipated.</li>
+ <li><strong>Attitude.</strong> Welfare is administered as a favour conferred on a supplicant rather than a right owed to a citizen, and the rights-based statutes changed the law faster than they changed the counter.</li>
+</ul>
+
+<h2>Assessment</h2>
+
+<p>India operates welfare programmes of a scale no other democracy attempts at comparable income levels: the largest child development programme, the largest school meal programme, the largest food subsidy and the largest employment guarantee in the world. The achievement is real, and the persistence of hunger, malnutrition and exclusion alongside it is also real.</p>
+
+<p>The change of the last three decades has been in <em>form</em> rather than scale: from scheme to entitlement, from discretion to right, from beneficiary to claimant. That change has strengthened accountability, made denial actionable and given the citizen a standing the earlier design did not. It has not solved the two problems that determine whether welfare reaches people, which are the accuracy of identification and the capacity of the last mile.</p>
+
+<p>The conclusion worth carrying into an answer is that Indian welfare administration has largely completed its legal and institutional reform and has barely begun its administrative one. The statutes confer rights that the anganwadi, the fair price shop and the district office are not equipped to deliver, and the gap between the two is where the subject actually lies.</p>
+`,
 };
