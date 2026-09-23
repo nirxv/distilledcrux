@@ -6128,4 +6128,274 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Administrative reform in India has been most successful where it has bypassed the question of persuading the administration to improve, and has instead armed the citizen to demand it. That is not a complete answer, because a right cannot create a capacity that does not exist, and an entitlement delivered by an under-staffed and under-trained frontline produces litigation rather than services. The work that remains is the unglamorous half: the levels a file must climb, the tenure of an officer, the training that carries a consequence, the appraisal that discriminates, and the functionaries the third tier still does not have. Those are the reforms nobody announces, and they are the ones the diagnosis has pointed at since 1951.</p>
 `,
+ 'rural-development-administration': `
+<h2>Why This Is a Distinct Subject</h2>
+
+<p>Rural development administration is the machinery through which the state attempts to change conditions in villages where most Indians live and where the administration's own presence is thinnest. It is distinct from general administration in four respects that shape everything else in this topic.</p>
+
+<ul>
+ <li>Its object is <strong>change</strong> rather than the maintenance of order or the collection of revenue, so it requires an administrative disposition the inherited machinery did not possess.</li>
+ <li>It is <strong>multi-sectoral</strong>. Agriculture, credit, health, education, roads, water and employment are separate departments and a single household's poverty, which means coordination is not a refinement but the core task.</li>
+ <li>It depends on <strong>participation</strong>. Unlike a licence or a summons, a development programme fails if its intended beneficiaries do not engage with it, so administration must persuade rather than direct.</li>
+ <li>It operates at the <strong>lowest and weakest tier</strong>, through functionaries who are the least trained, least paid and least supervised part of the system, and whose performance determines the whole.</li>
+</ul>
+
+<h2>Community Development: The Founding Experiment</h2>
+
+<p>The <strong>Community Development Programme</strong> was launched in <strong>1952</strong>, complemented by the <strong>National Extension Service</strong> in <strong>1953</strong>. It was the most ambitious administrative innovation of the early republic, and its failure shaped everything that followed.</p>
+
+<h3>The Design</h3>
+
+<ul>
+ <li>The country was divided into <strong>blocks</strong>, each covering roughly a hundred villages, as the unit of development administration. The block remains the unit today, which is the programme's most durable legacy.</li>
+ <li>The <strong>Block Development Officer</strong> headed the block, with extension officers for agriculture, animal husbandry, cooperation, industries, education and health under him, which was an attempt to place the multi-sectoral task in one office.</li>
+ <li>The <strong>village level worker</strong>, or gram sevak, covering a group of villages, was the point of contact with the cultivator, expected to carry agricultural advice, health messages and programme information alike.</li>
+ <li>The method was <strong>extension</strong>: persuading villagers to adopt improved practices and to contribute labour and materials, on the assumption that development was chiefly a matter of knowledge and motivation.</li>
+</ul>
+
+<h3>Why It Faded</h3>
+
+<p>The <strong>Balwant Rai Mehta Committee</strong> of 1957 was appointed to examine why a programme of such scale had achieved so little, and its diagnosis is the foundation of the entire subject.</p>
+
+<ul>
+ <li>The programme was <strong>bureaucratically conceived and executed</strong>, with targets set above and delivered downward, so that villagers experienced it as something done to them.</li>
+ <li>There was <strong>no institution at the local level</strong> through which people could participate, decide priorities or hold the machinery to account.</li>
+ <li>The <strong>village level worker was overloaded</strong>, expected to be an expert in everything and consequently an expert in nothing, and answerable upward rather than to the village.</li>
+ <li>Benefits were <strong>captured by the better-off</strong>, since extension advice and inputs reached those with land, literacy and standing.</li>
+ <li>Popular <strong>enthusiasm declined</strong> once the programme became routine, because it had rested on official initiative rather than local demand.</li>
+</ul>
+
+<p>The Committee's conclusion was that development could not be administered into a village without <strong>democratic decentralisation</strong>, and its recommendation of the three-tier panchayati raj structure followed directly. That is the moment at which rural development administration and local government became the same subject, and they have remained entangled since.</p>
+
+<h2>The Institutional Sequence</h2>
+
+<p>The arrangements through which rural development has been administered changed repeatedly, and the sequence is best understood as an unresolved argument about <em>who should do it</em>.</p>
+
+<ul>
+ <li><strong>The block administration</strong> from 1952, a bureaucratic structure with an appointed officer.</li>
+ <li><strong>Panchayati raj</strong> from 1959, an elected structure, which the Balwant Rai Mehta Committee intended to take over development, and which in practice was given implementation without resources or staff.</li>
+ <li><strong>The District Rural Development Agency</strong> from 1980, a registered society chaired by the Collector and composed of district officers of the development departments, created as the nodal body for programme formulation, implementation, monitoring and evaluation. It gave the Collector a financial handle and created a channel outside both the departmental hierarchy and the elected structure.</li>
+ <li><strong>Panchayati raj again</strong> from 1993 with constitutional status, without the DRDA being wound up, so that two bodies with overlapping mandates now operate in the same district.</li>
+</ul>
+
+<h3>The Committees That Saw the Problem</h3>
+
+<p>By the 1980s the expansion of anti-poverty programmes and the creation of the DRDA and similar agencies had made it necessary to integrate panchayati raj with the development programmes, and three bodies addressed it.</p>
+
+<ul>
+ <li>The <strong>C.H. Hanumantha Rao Working Group on District Planning</strong> (1983).</li>
+ <li>The <strong>G.V.K. Rao Committee</strong> (1985), appointed to review the administrative arrangements for rural development and poverty alleviation. It recommended <strong>strengthening the Zila Parishad</strong>, endorsed the working group's proposals on district planning and on better integration of block and lower-level planning into the panchayati raj institutions, and found substantial corruption at the bureaucratic level.</li>
+ <li>The <strong>L.M. Singhvi Committee</strong> (1986), whose concept paper held that panchayati raj institutions should be closely involved in the planning and implementation of rural development programmes at the lower level, supported the G.V.K. Rao recommendations, and was the first to propose <strong>constitutional status</strong> for panchayati raj, along with attention to the Gram Sabha.</li>
+</ul>
+
+<h3>What the 73rd Amendment Left Unresolved</h3>
+
+<p>Constitutional status did not settle the argument, and the shortcomings identified in the literature are precise.</p>
+
+<ul>
+ <li>Panchayati raj bodies are <strong>not treated as the planning and implementing agencies</strong> for rural development programmes, but as one agency among several.</li>
+ <li>There is <strong>no clarity in the relationship</strong> between panchayati raj bodies and development administration, because there are <strong>no separate cadres</strong> for the panchayats. The administration's dual responsibility, to the state department and to the panchayat, produces confusion and complication. This is the missing third of the three Fs stated in its administrative form.</li>
+ <li>There is <strong>no systematic method of involving the weaker sections</strong>, so panchayati raj leaders may not involve the poor, and the administration cannot interfere. Without the participation of the poor in particular, the idea of panchayati raj is empty.</li>
+ <li><strong>No clear trend</strong> has emerged in the decentralisation of power.</li>
+</ul>
+
+<h2>The Programme Sequence</h2>
+
+<p>Rural development programmes fall into three families, and the sequence within each is a record of what was learned.</p>
+
+<h3>Self-Employment and Asset Creation</h3>
+
+<ul>
+ <li><strong>The Integrated Rural Development Programme</strong>, launched in all blocks on <strong>2 October 1980</strong> as a credit-linked self-employment programme for poverty alleviation. Its object was to enable identified poor families to augment income and cross the poverty line by acquiring <strong>credit-based productive assets</strong> yielding self-employment on a sustained basis, thereby creating employment, reducing poverty and making families economically viable.</li>
+ <li><strong>The Swarnjayanti Gram Swarozgar Yojana</strong>, launched on <strong>1 April 1999</strong>, which subsumed IRDP together with the Development of Women and Children in Rural Areas, Training of Rural Youth for Self-Employment, the supply of improved toolkits to rural artisans, the Ganga Kalyan Yojana and the Million Wells Scheme. It was designed around the strengths and deficiencies of those programmes as a <strong>credit-cum-subsidy</strong> scheme in which credit is the critical component and subsidy only an enabling element, with far greater bank involvement in project identification, activity clusters, the choice of activity for self-help groups, the selection of individual beneficiaries and post-credit monitoring including recovery, and with emphasis on skill development through designed training courses.</li>
+</ul>
+
+<p>The <strong>lesson of the merger</strong> is one of the most useful observations available in this topic. Six separate programmes with separate guidelines, staff and reporting were collapsed into one because a district administration could not run them coherently. The proliferation of schemes is itself an administrative problem, and every subsequent rationalisation exercise has repeated the discovery.</p>
+
+<h3>Wage Employment</h3>
+
+<ul>
+ <li><strong>The Jawahar Rozgar Yojana</strong> of <strong>1989</strong>, formed by merging two earlier programmes, whose primary object was additional gainful employment for the unemployed and underemployed in rural areas, with secondary objects of sustained employment and the creation of physical assets.</li>
+ <li><strong>The Pradhan Mantri Gramodaya Yojana</strong> of 2000, providing additional central assistance to states for selected basic minimum services, with half its allocation for <strong>rural roads</strong> and half divided among primary health, primary education, rural shelter, rural drinking water and nutrition, administered by the Ministry of Rural Development.</li>
+</ul>
+
+<h3>The Shift to Rights</h3>
+
+<p>The change from scheme to entitlement, discussed in the note on welfare administration, happened in rural development first and most completely, with the employment guarantee.</p>
+
+<h2>The Employment Guarantee</h2>
+
+<p>Parliament passed the <strong>National Rural Employment Guarantee Act</strong> in <strong>August 2005</strong>, brought into force in <strong>February 2006</strong>, guaranteeing <strong>one hundred days of unskilled work per rural household</strong>. It was introduced in the 200 most backward districts of 27 states in 2006-07, extended to 130 more districts in 2007-08, and to the whole country in 2008. Its stated aim was to reduce poverty and make villages self-sustaining through the creation of productive assets, and the permissible works are listed in a statutory order of priority beginning with water conservation and water supply, drought proofing including afforestation, and irrigation.</p>
+
+<h3>The Administrative Innovations</h3>
+
+<p>The Act is the most administratively interesting statute in Indian rural development, and the reason is the set of devices it uses to make the guarantee self-enforcing rather than dependent on official goodwill.</p>
+
+<ul>
+ <li><strong>Demand-driven.</strong> Work is provided because a household asks for it, not because a district has a target, which reverses the direction of the programme.</li>
+ <li><strong>The dated receipt.</strong> An application must be acknowledged with a dated receipt, which starts a clock and destroys the discretion to lose a request.</li>
+ <li><strong>The unemployment allowance</strong>, payable if work is not provided within fifteen days, which places the cost of administrative failure on the administration rather than on the applicant.</li>
+ <li><strong>Statutory works priority and a wage-material ratio</strong>, which constrain what the money may be spent on.</li>
+ <li><strong>The muster roll in the open</strong>, with wages paid into accounts rather than in cash, which attacks the classic diversion in public works, the fictitious worker.</li>
+ <li><strong>Mandatory social audit</strong> by the Gram Sabha, which is the first statutory social audit in Indian law.</li>
+ <li><strong>Planning by the Gram Sabha</strong>, which selects and prioritises works, giving the elected body a genuine function rather than a consultative one.</li>
+</ul>
+
+<h3>Social Audit</h3>
+
+<p>Social audit under the Act is conducted by the Gram Sabha, examining muster rolls, measurement books, materials and completed works against the record, in a public meeting at which officials must answer. Its importance to this subject is that it is the only accountability mechanism in Indian rural development that is <strong>external to the administration and internal to the village</strong>.</p>
+
+<p>Its effectiveness depends on independence from the implementing agency, which most states have failed to secure. <strong>Meghalaya</strong> went furthest, enacting in <strong>2017</strong> a comprehensive social audit law covering some twenty-six schemes across education, health, rural development and other areas, which is India's first such state legislation and the model usually cited.</p>
+
+<h3>Assessment</h3>
+
+<p>The case for the programme is that it provides a floor, is self-targeting because only those needing unskilled work at a statutory wage will seek it, transfers income to the poorest regions and seasons, has raised rural wages generally, and has created water and land assets of real value where planning was good. Its administrative significance is that it made accountability machinery, receipts, time limits, audit and disclosure, a condition of the entitlement rather than an addition to it.</p>
+
+<p>The criticisms are equally serious: delayed wage payment, which defeats the purpose for a household with no savings; assets of poor quality where works were selected badly; leakage despite the safeguards; the administrative burden on a gram panchayat without staff; and the argument that a large permanent works programme is a second-best substitute for the productive employment that growth should have provided.</p>
+
+<h2>Rural Housing</h2>
+
+<p><strong>Pradhan Mantri Awaas Yojana Gramin</strong>, launched in <strong>2016</strong>, aims to provide a pucca house with basic amenities to every houseless household and to those in dilapidated housing.</p>
+
+<p>Its administratively significant feature is <strong>how beneficiaries are chosen</strong>. Selection is based on housing deprivation parameters in the <strong>Socio Economic and Caste Census of 2011</strong>, supplemented by the Awaas Plus survey, and validated through a three-stage process combining the census data, <strong>Gram Sabha approval</strong> and <strong>geo-tagging</strong> of the house at successive stages of construction with payment released against verified progress.</p>
+
+<p>That design addresses the oldest problem in Indian welfare delivery, which is not the absence of money but the determination of who receives it. Using a census-based list removes the official's discretion to decide who is poor; Gram Sabha validation exposes the list to people who know the truth; and geo-tagging with staged payment removes the possibility of paying for a house that was never built. The residual difficulty is that a household missed by the 2011 census or by the supplementary survey has no easy route back onto the list, which is the exclusion error that accompanies every census-based method.</p>
+
+<h2>Rural Connectivity</h2>
+
+<p><strong>Pradhan Mantri Gram Sadak Yojana</strong>, launched in <strong>2000</strong>, provides all-weather road connectivity to unconnected habitations as an instrument of poverty alleviation. Eligibility is fixed by habitation population, with thresholds set lower for the north-eastern, hill and special category states and lower still for districts affected by left-wing extremism, reflecting terrain and security rather than population alone. The programme has proceeded through successive phases: universal access first, then consolidation and upgradation of the existing network, then further strengthening, with the current phase directed at remaining unconnected habitations.</p>
+
+<p>Connectivity deserves more weight in an answer than it usually receives, because it is the one rural intervention whose benefits are general rather than targeted. A road changes the price a farmer receives, the wage a labourer can seek, the school a child can reach and the hospital a woman in labour can be taken to, and it does so without any further administrative act. Programmes that require continuing administration to deliver a benefit are vulnerable at every point in the chain; a road, once built, delivers without administration. The corresponding weakness is maintenance, which does require continuing administration and has been the programme's persistent failure.</p>
+
+<h2>Livelihoods, Self-Help Groups and Microfinance</h2>
+
+<h3>The SHG-Bank Linkage Model</h3>
+
+<p>The architecture was designed by <strong>NABARD</strong> and links self-help groups to the banking system. Small groups, usually of women, pool savings, lend within the group and build a credit record, after which the group is linked to a bank that lends to it. <strong>Joint liability substitutes for the collateral</strong> poor borrowers cannot offer, and the group's own knowledge of its members substitutes for the credit assessment a bank cannot perform at that scale and cost.</p>
+
+<p>As the note on development dynamics records, the Indian model was sustained against external pressure to adopt the microfinance designs current elsewhere, which replicate the banking system and focus on credit alone, and Indian institutions persevered with a model giving the group a broader role than credit management. That perseverance is the principal reason it spread.</p>
+
+
+<h3>How the Model Was Built</h3>
+
+<p>The SHG-bank linkage was not designed in a ministry; it was built from a voluntary experiment upward, and the sequence is worth knowing because it is the clearest Indian instance of policy learning from the field.</p>
+
+<ul>
+ <li><strong>1985 onwards</strong>, the voluntary organisation <strong>MYRADA</strong> promoted self-help groups from its own experience.</li>
+ <li><strong>1987</strong>, NABARD made its first grant to that work, of a million rupees, to identify affinity groups, build their capacity and match their savings after three to six months.</li>
+ <li><strong>1989</strong>, NABARD launched an action research project extending similar grants to other voluntary organisations.</li>
+ <li><strong>1990</strong>, after analysing that research, the Reserve Bank accepted the self-help group strategy as an <strong>alternative credit model</strong>, which is the moment an experiment became policy. In about the same year the Tamil Nadu Women's Empowerment Project, supported by IFAD and implemented through the state women's development corporation, became the first state-sponsored programme to incorporate the concept.</li>
+ <li><strong>1992</strong>, NABARD issued the guidelines framing a strategy under which banks could lend directly to self-help groups, and the <strong>SHG-Bank Linkage Programme</strong> was launched. NABARD has since promoted and monitored it through its network, funded capacity building and innovation, and worked to create an enabling policy environment.</li>
+</ul>
+
+<h3>What the Groups Do Beyond Credit</h3>
+
+<p>A self-help group is formed by women of the community, typically of fifteen to twenty members, drawn from different social and economic categories and including the poorest, who come together for savings, for mutual economic support, in emergencies such as a disaster, and for ordinary social interaction. Its stated objectives include sensitising women to the relevance of such a group in their empowerment, creating a group feeling, enhancing confidence and capability, developing collective decision-making, and encouraging the habit of saving so that women accumulate their own funds.</p>
+
+<p>The wider effect is what distinguishes the Indian model from credit-only microfinance. Groups become <strong>community platforms</strong> from which women take part in village affairs, stand for local election, and act on questions such as violence against women, alcohol, dowry, the absence of schools and poor water supply. A body of the poor that meets regularly, keeps accounts and transacts with a bank has acquired the organisational capability that every other participatory arrangement in this paper, the Gram Sabha, the school management committee, the social audit, presupposes and rarely finds.</p>
+
+<h3>The National Rural Livelihoods Mission</h3>
+
+<p><strong>DAY-NRLM</strong>, also called Aajeevika, is the central programme for reducing rural poverty through community-based organisations. It works by organising poor rural women into self-help groups, building savings and credit habits, linking the groups to banks, and helping members establish or strengthen livelihoods, with federations of groups at village and higher levels.</p>
+
+<p>Its administrative interest lies in the model it represents. Rather than delivering a benefit to individuals, it <strong>builds an institution</strong> that then transacts with banks, markets and government on its members' behalf. That is a different theory of development administration from the one underlying IRDP, which gave an individual an asset and a subsidy and then discovered the asset had been sold. An institution persists, accumulates capability, and can bear functions that an individual beneficiary cannot.</p>
+
+<h3>Assessment</h3>
+
+<p>The gains are access to credit outside the moneylender, repayment records better than formal lending to comparable populations, and a measurable rise in the standing of women within the household and the village. The criticisms are interest rates that are high in absolute terms, the risk of over-lending and indebtedness, the modest scale of enterprise such credit can support, and the danger of treating micro-credit as a substitute for the public provision of health, education and employment that poverty at this scale requires.</p>
+
+
+<h2>Land Reform as Rural Development</h2>
+
+<p>Land reform was the first and most consequential rural development programme, and it belongs in this topic because its administration determined its outcome more than its legislation did.</p>
+
+<h3>The Four Components</h3>
+
+<ul>
+ <li><strong>Abolition of intermediaries</strong>, the zamindari, jagirdari and inam tenures, which removed a layer of rent collectors between the cultivator and the state. This was the most successful component, because it required a single legislative act followed by a settlement operation the revenue administration already knew how to conduct, and because the beneficiaries of the change were numerous and the losers few.</li>
+ <li><strong>Tenancy reform</strong>, regulating rent, securing the tenant against eviction and conferring ownership on him. This was far less successful, because it required the state to identify tenants whose tenancy was unrecorded, against a landlord who controlled the record and the village, and because the first effect of the legislation in many places was the eviction of tenants before the law took effect.</li>
+ <li><strong>Ceilings on holdings</strong> with redistribution of the surplus, which achieved least of all. Ceilings were fixed high, exemptions were numerous, and holdings were transferred within families to evade the limit, so that the surplus declared was a fraction of what the policy contemplated.</li>
+ <li><strong>Consolidation of holdings</strong>, combining a cultivator's scattered plots into fewer compact ones, which succeeded in some states and was barely attempted in others.</li>
+</ul>
+
+<p>The <strong>Bhoodan</strong> movement, seeking voluntary donation of land for redistribution, operated alongside the statutory effort and is usually assessed as having collected substantial land of which a smaller part was cultivable and a smaller part still was actually distributed.</p>
+
+<h3>Why the Administrative Lesson Matters</h3>
+
+<p>The differing fates of the four components are the best natural experiment available in Indian administration, and the explanation is consistent. Reform succeeded where it required a <strong>single act against a small number of identifiable people</strong> and used a record the state already held. It failed where it required <strong>continuing administration in the village against locally powerful interests</strong>, and where the evidence needed to enforce it, who tenanted what land, was in the hands of the party against whom it would be used.</p>
+
+<p>That finding recurs through every subsequent programme in this note, and it is the strongest single argument for the emphasis on land records, digitisation and title management that the second ARC made. An entitlement that depends on a record the adversary controls is not an entitlement.</p>
+
+<h2>Rural Credit</h2>
+
+<p>The indebtedness of the cultivator to the moneylender is the oldest identified problem of rural India, and the institutional response has three layers.</p>
+
+<ul>
+ <li><strong>Cooperative credit</strong>, the earliest response, structured in three tiers from the primary agricultural credit society through the district central cooperative bank to the state cooperative bank. Its promise was credit controlled by borrowers themselves; its recurring difficulty has been capture by the larger cultivators, political control of the societies, and the accumulation of overdues.</li>
+ <li><strong>Commercial banks</strong>, brought into rural lending through nationalisation, branch expansion requirements and priority sector lending obligations, which achieved reach at the cost of an arms-length relationship with borrowers whose creditworthiness the bank could not assess.</li>
+ <li><strong>Regional Rural Banks and NABARD</strong>, the first intended to combine the local knowledge of a cooperative with the discipline of a commercial bank, the second as the apex institution for agricultural and rural credit, refinance and the development of the sector, including the self-help group architecture described above.</li>
+</ul>
+
+<p>The administrative problem common to all three is the one the self-help group model solved indirectly: a formal lender cannot assess a borrower who has no collateral, no accounts and no credit history, and the cost of doing so exceeds the value of the loan. Cooperative credit tried to solve it through member control and was captured; priority lending tried to solve it by direction and produced loans that were not repaid; the self-help group solved it by making the group rather than the lender assess the borrower.</p>
+
+<h2>The Role of Non-Governmental Organisations</h2>
+
+<p>The voluntary sector occupies a position in rural development that it holds nowhere else in Indian administration, and its contributions are distinct.</p>
+
+<ul>
+ <li><strong>Reaching where the state does not</strong>, in remote habitations and among groups the administration finds hard to serve.</li>
+ <li><strong>Innovation.</strong> Several of the largest government programmes began as voluntary experiments: the self-help group model, watershed development approaches, and community health work.</li>
+ <li><strong>Mobilisation and awareness</strong>, which is the precondition of participation, since people cannot claim entitlements they do not know exist.</li>
+ <li><strong>Advocacy.</strong> The right to information began as the Mazdoor Kisan Shakti Sangathan's demand for wage records in Rajasthan, and the employment guarantee and social audit provisions owe much to campaigns outside government.</li>
+ <li><strong>Delivery under contract</strong>, running institutions, training and services on behalf of government.</li>
+</ul>
+
+<h3>The Difficulties</h3>
+
+<ul>
+ <li><strong>Accountability.</strong> A body spending public money without being elected or subject to audit in the same way raises a legitimate question, and the regulatory response, registration, foreign contribution regulation and reporting requirements, has at times been used to restrict advocacy rather than to secure accountability.</li>
+ <li><strong>Dependence.</strong> An organisation funded largely by government contracts becomes an implementing agency and loses the independence that made it valuable.</li>
+ <li><strong>Variable quality and uneven distribution</strong>, with voluntary activity concentrated where it is easiest rather than where it is most needed.</li>
+ <li><strong>The tension in the relationship.</strong> <strong>Amartya Sen</strong> described the relationship between the state and non-governmental organisations as one of <em>cooperative conflict</em>, which captures it exactly: they need each other and their interests diverge, and a government that wants only the delivery and not the advocacy has misunderstood what it is buying.</li>
+</ul>
+
+<h2>Decentralised Planning</h2>
+
+<p>The case for planning from below, set out in the note on plans and priorities, rests on three propositions: that surveys and assessments of local resources and local needs cannot be made adequately at state or central level; that uniform programmes formulated above and applied without regard to local conditions waste physical, financial and human resources; and that centralised planning leaves little freedom to the people for whose benefit it is intended. Decentralised planning based on community involvement is also cheaper, since plans can be managed by community members themselves.</p>
+
+<p>The reasons it has not worked are equally established: political and bureaucratic resistance at the state level to sharing power and resources; centrally designed schemes arriving in standard form with their own guidelines, which leaves little scope for local planning; inadequate planning machinery at district level; and the fact that the pressure for decentralisation came from above rather than from local demand, so the institutions exist without a constituency insisting that they work.</p>
+
+<p>In rural development specifically, the consequence is that a district plan is generally an aggregation of departmental proposals rather than a synthesis of village plans, which reproduces at the district level exactly the defect the Balwant Rai Mehta Committee identified in the Community Development Programme in 1957.</p>
+
+<h2>Rural Transformation</h2>
+
+<p>The village the administration was designed for is not the village that now exists, and an answer that ignores this describes a vanished object.</p>
+
+<ul>
+ <li><strong>The non-farm shift.</strong> A declining share of rural income comes from cultivation, and a growing share from wage labour, construction, transport, trade and services, so a development administration organised around agricultural extension addresses a shrinking part of the rural economy.</li>
+ <li><strong>Migration</strong>, seasonal and long-term, which means a substantial part of a village's working population is elsewhere for part of the year, and entitlements tied to place exclude precisely those people. Portability of the ration card is the administrative response to this, and most other entitlements have no equivalent.</li>
+ <li><strong>Connectivity and the blurring of the rural and urban</strong>. Roads, mobile telephony and the growth of small towns have created a continuum rather than a divide, while the administrative categories, rural and urban, panchayat and municipality, remain binary. The transitional Nagar Panchayat is the constitutional acknowledgement of this, and the difficulty of determining which area has become transitional, noted in the local government literature, is the administrative expression of the same change.</li>
+ <li><strong>Economic corridors and infrastructure.</strong> Large industrial and freight corridors, of which the Delhi-Mumbai corridor is the leading instance, alter the rural areas along their route profoundly, through land acquisition, changes in land value, new employment and new settlement. Their administration is conducted through special purpose vehicles and development authorities rather than through the district or the panchayat, which means the bodies constitutionally responsible for a territory are frequently not the bodies transforming it.</li>
+ <li><strong>Aspiration.</strong> A rural population with education, mobile connectivity and knowledge of what exists elsewhere does not accept what it once did, which changes what a development administration must supply and how it must behave.</li>
+</ul>
+
+<h2>Why Rural Development Administration Underperforms</h2>
+
+<ul>
+ <li><strong>The coordination problem</strong>, which is the oldest and least solved. Departments run vertically and rural poverty is horizontal, and every structural device tried, the block, the DRDA, the district planning committee, has been an attempt to solve it.</li>
+ <li><strong>Multiplicity of schemes</strong>, each with guidelines, funds, formats and reporting, which exceeds the absorptive capacity of the block and panchayat staff who must run them all.</li>
+ <li><strong>The missing functionaries.</strong> Elected bodies have functions and some funds and almost no staff of their own, so they must ask the state's officials to act.</li>
+ <li><strong>Capture</strong>, in the selection of beneficiaries, the location of works and the award of contracts, which social audit and Gram Sabha approval exist to check and do so only where they function.</li>
+ <li><strong>Measurement by expenditure</strong>, which rewards disbursal over effect, so a district with unspent funds is censured and a district with badly spent funds is not.</li>
+ <li><strong>The weakest link</strong>, since the village level worker, the panchayat secretary and the anganwadi worker carry the system and are the least equipped part of it.</li>
+</ul>
+
+<h2>Assessment</h2>
+
+<p>Indian rural development administration has been reorganised more often than any other part of the system and reformed less. The block was created in 1952 and remains; the elected tier was created in 1959, weakened, and recreated with constitutional status in 1993; the DRDA was created in 1980 and never wound up; and all three now operate in the same district with overlapping claims to the same work.</p>
+
+<p>Within that unresolved structure, three genuine achievements stand. The <strong>employment guarantee</strong> established that an entitlement can be made self-enforcing through receipts, time limits and audit. <strong>Connectivity</strong> delivered a benefit that requires no further administration. And the <strong>self-help group</strong> movement demonstrated that building an institution among the poor accomplishes what delivering an asset to them did not.</p>
+
+<p>What they have in common is instructive and is the right note on which to end this paper. Each succeeded by <strong>reducing its dependence on the discretion of the individual official</strong>: a statutory right the applicant can invoke, an asset that works whether or not anyone administers it, an institution that acts for itself. The administration's weakest point has been known since the Balwant Rai Mehta Committee reported in 1957, and the reforms that have worked are the ones that found a way around it rather than the ones that hoped to correct it.</p>
+`,
 };
