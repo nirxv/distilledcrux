@@ -2937,6 +2937,20 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The recurring criticisms are that charters are drafted without consulting either the citizens or the frontline staff who must deliver them; that they are not revised as conditions change; that standards are pitched at what the office already achieves rather than at what the citizen needs; that staff are frequently unaware of the commitments made in their name; and above all that charters are <strong>not legally enforceable</strong>, which reduces the document to an advertisement. The statutory Right to Public Services legislation enacted by many Indian states is the direct answer to that last defect, converting the promise into an enforceable right with a penalty on the defaulting officer.</p>
 
+
+<h2>Reform in the States</h2>
+
+<p>Because most administration citizens encounter is state administration, the reform that matters most is state reform, and central commissions can recommend but not require it. The consequence is wide variation and, more usefully for an answer, a set of natural experiments.</p>
+
+<ul>
+ <li><strong>Service guarantee legislation</strong> spread from Madhya Pradesh across most states within a few years, which is the clearest case of horizontal diffusion between states without central compulsion.</li>
+ <li><strong>Land records computerisation</strong> was pioneered by particular states and adopted elsewhere once the gains were visible.</li>
+ <li><strong>Devolution to local bodies</strong> shows the widest spread of all, with the leading states on the Devolution Index far ahead of the trailing ones under an identical constitutional framework, which establishes that the constraint is state political will rather than constitutional design.</li>
+ <li><strong>Secretariat and directorate reform</strong>, where some states have merged the two and others separated them again, producing the three approaches set out in the note on state administration.</li>
+</ul>
+
+<p>The general finding is that Indian administrative reform is better understood as <strong>diffusion between states</strong> than as transmission from the Centre. A state that solves a problem visibly is copied; a central recommendation that no state has tested is not. This has a practical implication for how reform should be pursued: piloting in a willing state and publicising the result is more effective than recommending to all states simultaneously.</p>
+
 <h2>Performance Management</h2>
 
 <p>Performance management is the thread running through everything else in this topic, because output control is what NPM substitutes for procedural control. It requires objectives stated in advance, indicators that measure achievement against them, information systems that collect the data honestly, and consequences attached to the result.</p>
@@ -5792,5 +5806,326 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The change of the last three decades has been in <em>form</em> rather than scale: from scheme to entitlement, from discretion to right, from beneficiary to claimant. That change has strengthened accountability, made denial actionable and given the citizen a standing the earlier design did not. It has not solved the two problems that determine whether welfare reaches people, which are the accuracy of identification and the capacity of the last mile.</p>
 
 <p>The conclusion worth carrying into an answer is that Indian welfare administration has largely completed its legal and institutional reform and has barely begun its administrative one. The statutes confer rights that the anganwadi, the fair price shop and the district office are not equipped to deliver, and the gap between the two is where the subject actually lies.</p>
+`,
+ 'administrative-reforms-india': `
+<h2>What Administrative Reform Is</h2>
+
+<p>Administrative reform is the deliberate, induced change of an administrative system to make it perform better. The word <em>deliberate</em> distinguishes it from the drift that occurs anyway, and the word <em>induced</em> identifies its central difficulty: reform is done <em>to</em> an administration by people who are usually part of it.</p>
+
+<h3>The Kinds of Reform</h3>
+
+<ul>
+ <li><strong>Structural</strong> reform alters organisation: creating, merging or abolishing departments, changing the number of hierarchical levels, redistributing functions between tiers. It is the most visible kind and the most frequently attempted, because a government can announce it and it costs nothing immediately.</li>
+ <li><strong>Procedural</strong> reform alters how work is done: simplifying rules, reducing the levels a file must climb, delegating financial powers, introducing technology. It produces the largest gains per unit of effort and attracts the least attention.</li>
+ <li><strong>Behavioural</strong> reform alters how officials act: training, incentives, appraisal, discipline. It is slow and depends on personnel systems that are themselves in need of reform.</li>
+ <li><strong>Attitudinal</strong> reform alters how administration conceives its relationship with the citizen, from ruler to servant, from discretion to entitlement. It cannot be legislated and is what the rights-based statutes attempt indirectly.</li>
+</ul>
+
+<p>Most Indian reform effort has been structural, most of the gains available are procedural, and the deficits that citizens actually experience are behavioural and attitudinal. That mismatch is the single most useful observation to organise an answer around.</p>
+
+<h3>Why Reform Is Hard</h3>
+
+<ul>
+ <li><strong>The reformer is the reformed.</strong> Recommendations are implemented by the service whose position they would alter, and that service controls the pace.</li>
+ <li><strong>Diffuse benefits, concentrated costs.</strong> Reform benefits citizens generally and costs identifiable people specifically, so opposition is organised and support is not.</li>
+ <li><strong>Political horizons.</strong> Administrative reform yields returns beyond an electoral cycle and imposes disruption within one.</li>
+ <li><strong>Federalism.</strong> Most administration citizens meet is state administration, and central commissions can recommend to states but cannot bind them.</li>
+ <li><strong>Reform fatigue.</strong> Repeated exercises that change little teach officials that the next one may also be waited out.</li>
+</ul>
+
+
+<h2>How Reform Is Attempted</h2>
+
+<h3>Comprehensive and Incremental Strategies</h3>
+
+<p>Two strategies are available and India has used both.</p>
+
+<ul>
+ <li>The <strong>comprehensive</strong> strategy appoints a commission, surveys the whole system, and produces an integrated programme. Its merit is coherence: the recommendations fit together, and reform of personnel supports reform of finance. Its defect is that it generates more than any government can implement at once, so implementation becomes selective, and selection is made by those the programme was meant to change.</li>
+ <li>The <strong>incremental</strong> strategy changes one thing at a time, tests it and extends it. Its merit is that each step is achievable and its effects are observable. Its defect is that a system whose defects reinforce one another resists piecemeal correction: fixing appraisal accomplishes little while promotion runs on seniority, and fixing tenure accomplishes little while transfer remains a political instrument.</li>
+</ul>
+
+<p>The defensible position is that the choice depends on what is being reformed. Procedural change is best pursued incrementally, because each simplification stands alone. Personnel reform requires a package, because its components are interlocking. Most Indian reform has attempted comprehensive diagnosis followed by incremental implementation, which combines the weaknesses of both: a programme designed as a whole is delivered in the fragments that meet least resistance.</p>
+
+<h3>Conditions Under Which Reform Succeeds</h3>
+
+<ul>
+ <li><strong>A crisis or an external compulsion.</strong> The most consequential Indian administrative changes followed the fiscal crisis of 1991, a judicial direction, or a popular movement, rather than an internal decision to improve.</li>
+ <li><strong>Sustained political ownership</strong> at the highest level, because a reform that any minister may quietly abandon will be abandoned.</li>
+ <li><strong>A constituency outside the administration</strong> with an interest in the outcome and the means to press for it.</li>
+ <li><strong>Visible early results</strong>, which sustain support through the period when costs are felt and benefits are not.</li>
+ <li><strong>Capacity to implement</strong>, since a reform that outruns the ability of the frontline to deliver it discredits itself.</li>
+</ul>
+
+<h3>The Nodal Machinery</h3>
+
+<p>The <strong>Department of Administrative Reforms and Public Grievances</strong>, within the Ministry of Personnel, Public Grievances and Pensions, is the nodal agency for administrative reform. Its instruments are advisory rather than directive, and the mix tells its own story about how reform is pursued in a federal system.</p>
+
+<ul>
+ <li><strong>Policy and documentation</strong>: guidance on citizens' charters, grievance redress, change management and process re-engineering for e-governance projects.</li>
+ <li><strong>Grievance administration</strong> through CPGRAMS and the monthly reports that make departmental performance comparable.</li>
+ <li><strong>Recognition and diffusion</strong>: the annual <strong>National Awards for e-Governance</strong>, presented to honour excellence in implementation, foster the sharing of effective practice and encourage innovation, with categories including <strong>government process re-engineering</strong> for digital transformation; the national conferences and webinars through which successful state initiatives are circulated.</li>
+ <li><strong>Assessment and ranking</strong>, which is how a department with no authority over states nonetheless influences them, by making performance visible and comparable.</li>
+</ul>
+
+<p>The reliance on awards, conferences and rankings is easy to dismiss and should not be. Where a central department cannot direct a state, publicising what one state has achieved is the instrument that remains, and the diffusion of successful state innovations, in land records, service guarantees and grievance systems, has in fact occurred largely this way.</p>
+
+<h2>The Reform Committees</h2>
+
+<p>The sequence from N. Gopalaswamy Ayyangar in 1949 through Gorwala, Appleby, Ashok Chandra, Krishnamachari and Santhanam to the first Administrative Reforms Commission of 1966, and thence through Kothari, Ashok Mehta, Sarkaria, L.K. Jha and G.V.K. Rao to the 1990s, is set out in the note on the evolution of Indian administration. What belongs here is what distinguishes the two Commissions and what the second one actually said.</p>
+
+<h3>The First ARC, 1966 to 1970</h3>
+
+<p>Constituted in January 1966 under Morarji Desai and then K. Hanumanthaiya, the first Commission examined the machinery of government and its procedures, financial and personnel administration, the machinery of planning, centre-state relations, state and district administration, and the redress of citizens' grievances, producing some twenty reports.</p>
+
+<p>Its lasting contributions were the recommendation for a <strong>Lokpal and Lokayuktas</strong>, the call for the <strong>gradual infusion of specialists</strong> into the administrative services, the strengthening of Organisation and Method work, and its proposals on district administration. Its limitation was that it worked within the assumptions of its time: a planned economy, a dominant public sector and an administration whose problem was thought to be capacity rather than accountability.</p>
+
+<h2>The Second Administrative Reforms Commission</h2>
+
+<p>Constituted in <strong>2005</strong> under <strong>Veerappa Moily</strong>, the second Commission completed its work by <strong>31 May 2009</strong> and submitted <strong>fifteen reports</strong>. Its organising philosophy was to make administration <strong>citizen-centric, transparent, accountable, efficient and ethical</strong>, which is a different starting point from the first Commission's concern with capacity, and reflects the intervening arrival of liberalisation, the right to information and rights-based legislation.</p>
+
+<h3>The Fifteen Reports</h3>
+
+<ol>
+ <li><strong>Right to Information: Master Key to Good Governance</strong> (June 2006). Treats access to information as the instrument on which every other accountability mechanism depends, and recommends strengthening proactive disclosure and the compliance machinery.</li>
+ <li><strong>Unlocking Human Capital: Entitlements and Governance</strong> (July 2006). A case study built around the employment guarantee, on converting entitlements into deliverable services.</li>
+ <li><strong>Crisis Management: From Despair to Hope</strong> (October 2006). On institutional preparedness for disaster, anticipating the district authority structure.</li>
+ <li><strong>Ethics in Governance</strong>. The most cited of the reports, covering the anti-corruption architecture, the Lokpal, protection for whistle-blowers, and the ethical framework for public servants.</li>
+ <li><strong>Public Order</strong>. On police reform, the separation of investigation from law and order, and accountability machinery.</li>
+ <li><strong>Local Governance</strong>. On devolution of functions, funds and functionaries, and the relationship between the district administration and elected local bodies.</li>
+ <li><strong>Capacity Building for Conflict Resolution</strong>. On social and communal conflict as an administrative rather than merely a policing problem.</li>
+ <li><strong>Combating Terrorism</strong>.</li>
+ <li><strong>Social Capital: A Shared Destiny</strong>. On the voluntary sector, cooperatives and self-help groups as partners in delivery.</li>
+ <li><strong>Refurbishing Personnel Administration: Scaling New Heights</strong>. On recruitment, training linked to promotion, performance-based advancement, fixed tenures and a transparent transfer mechanism.</li>
+ <li><strong>Promoting e-Governance: The SMART Way Forward</strong>. The framework report on technology in administration.</li>
+ <li><strong>Citizen Centric Administration: The Heart of Governance</strong>. On charters, grievance redress, service standards and the citizen's experience of the administration.</li>
+ <li><strong>Organisational Structure of Government of India</strong>. On the number and grouping of ministries, delegation, and the levels through which a case passes.</li>
+ <li><strong>Strengthening Financial Management Systems</strong>. On budgeting, accounting, audit and the link between expenditure and outcome.</li>
+ <li><strong>State and District Administration</strong>. On the secretariat and directorates, the Collector's functions and the district machinery.</li>
+</ol>
+
+<h3>What Runs Through Them</h3>
+
+<p>Read together the reports form a coherent programme rather than fifteen separate exercises, and an answer that identifies the programme is stronger than one that lists the titles.</p>
+
+<ul>
+ <li><strong>From process to outcome.</strong> Almost every report recommends shifting control from prior sanction of transactions to assessment of results: outcome budgeting in finance, performance-linked advancement in personnel, monitoring rather than clearance in the secretariat-directorate relationship.</li>
+ <li><strong>From secrecy to disclosure</strong>, beginning with the first report and running through every subsequent one.</li>
+ <li><strong>From provider to partner</strong>, with the voluntary sector, panchayats and citizens treated as participants in delivery rather than as recipients.</li>
+ <li><strong>From discretion to entitlement</strong>, with published standards, time limits and remedies replacing the official's judgement about who deserves what.</li>
+</ul>
+
+<h3>The Implementation Record</h3>
+
+<p>A substantial proportion of the recommendations were accepted in principle by the Union government, and implementation has been partial and uneven. The measures that required only central executive action, the grievance portal, the e-governance plan, performance documents, have largely happened. Those requiring legislation have happened selectively; those requiring state action have happened where states chose; and those touching the interests of the services, performance-linked promotion, fixed tenure, a transparent transfer mechanism, have happened least.</p>
+
+<p>That pattern is not accidental and is the finding to state: <strong>reform proceeds in inverse proportion to how much it disturbs.</strong></p>
+
+<h2>E-Governance</h2>
+
+<p>E-governance is the use of information and communication technology to improve the delivery of services, the efficiency of internal processes and the participation of citizens. The distinction that matters, drawn in the note on New Public Management, is between the <em>limited</em> sense of delivering existing services electronically and the <em>wider</em> sense of transforming government and governance through technology. Digitising a bad process produces a faster bad process.</p>
+
+<h3>The Stages</h3>
+
+<ul>
+ <li><strong>Presence</strong>: information published online, one-way and static.</li>
+ <li><strong>Interaction</strong>: forms downloadable, queries answerable, some two-way communication.</li>
+ <li><strong>Transaction</strong>: the service completed online, with payment and delivery, which is where most Indian applications now sit.</li>
+ <li><strong>Transformation</strong>: back-end processes and the organisation itself redesigned around the technology, with departments integrated so that the citizen deals with government once rather than with each department separately. This stage requires changing who does what, which is why it is reached least often.</li>
+</ul>
+
+<h3>Types of Interaction</h3>
+
+<p><strong>G2C</strong>, government to citizen, covering certificates, licences, pensions, land records and grievances; <strong>G2B</strong>, government to business, covering registration, clearances, tax and procurement; <strong>G2G</strong>, the internal integration between departments and levels, which is the hardest and least visible; and <strong>G2E</strong>, government to employee.</p>
+
+<h3>The Indian Programme</h3>
+
+<ul>
+ <li><strong>The National e-Governance Plan</strong> organised effort around <strong>mission mode projects</strong> at central, state and integrated levels, supported by shared infrastructure: state data centres for hosting, state wide area networks for connectivity, and <strong>common service centres</strong> to deliver services at the village, which addressed the fact that the citizens who most need a service are the least likely to have their own connection.</li>
+ <li><strong>Digital India</strong>, launched on 1 July 2015, restated the programme on nine pillars including broadband highways, universal mobile connectivity, public internet access, e-governance as the reform of government through technology, <strong>e-Kranti</strong> for electronic delivery of services, information for all, electronics manufacturing, IT for jobs and early harvest programmes.</li>
+ <li><strong>Digital public infrastructure</strong>: a national identity system, a payments layer and consent-based data sharing, on which both welfare transfers and private services now run.</li>
+</ul>
+
+<h3>What Has Worked</h3>
+
+<p>The clearest successes share a common shape: a single high-volume transaction, a defined record, and the removal of a discretionary intermediary. Computerised <strong>land records</strong>, which allow a certified copy across a counter instead of after repeated visits; <strong>railway and passport</strong> services; <strong>tax filing and refunds</strong>; <strong>direct benefit transfer</strong>, which removes the intermediary between sanction and beneficiary; and <strong>electronic procurement</strong>, which makes the tender process visible.</p>
+
+<h3>What Has Not</h3>
+
+<ul>
+ <li><strong>The digital divide.</strong> Access does not reach remote areas, the low-literate or those on poverty-line incomes, and in a developing country the basic necessities are pressing enough that citizens have neither time nor resources to pursue such benefits as e-governance offers.</li>
+ <li><strong>Back-end neglect.</strong> A front-end portal over an unchanged process moves the queue rather than removing it.</li>
+ <li><strong>A false sense of transparency.</strong> Online disclosure is maintained by governments themselves, and information can be added or removed with or without notice, with few organisations monitoring the changes.</li>
+ <li><strong>Exclusion by design</strong>, where an online-only channel closes the counter that was the only channel available to those without connectivity.</li>
+ <li><strong>Capacity and continuity</strong>, since projects depend on officers who are transferred and on vendors whose contracts end.</li>
+</ul>
+
+
+<h2>Regulatory Reform</h2>
+
+<p>A distinct strand of reform addresses not how government serves citizens but how it <em>regulates</em> them, and it has become the most active area of the last decade.</p>
+
+<ul>
+ <li><strong>Decriminalisation.</strong> The <strong>Jan Vishwas (Amendment of Provisions) Act, 2023</strong> amended <strong>183 provisions across 42 central Acts</strong> in nineteen ministries, converting minor offences from criminal liability to monetary penalty determined by an adjudicating officer, on the principle that the severity of punishment should be proportionate to the gravity of the violation. The administrative significance is large: a provision carrying imprisonment gives an inspector leverage entirely disproportionate to the offence, and that leverage is the mechanism of petty corruption.</li>
+ <li><strong>Single-window clearance.</strong> The <strong>National Single Window System</strong> consolidates approvals from many departments into one application, which addresses the defect the note on district administration identifies in another form: a citizen or a business must otherwise approach each department separately for a single project.</li>
+ <li><strong>Process simplification</strong>, including the removal of redundant compliances, self-certification, deemed approval after a time limit, and the acceptance of self-attested documents in place of affidavits.</li>
+</ul>
+
+<p>The criticism deserves statement alongside the case. Decriminalisation reduces harassment and it also reduces deterrence, and the question in each instance is whether the provision was being used to secure compliance or to extract rent. Single-window systems consolidate the application without necessarily consolidating the decision, so if the departments behind the window still decide separately the citizen has gained a form and not an outcome. Both reforms are therefore genuine where the back-end process changed and cosmetic where it did not, which is the same test that distinguishes transformational e-governance from computerisation.</p>
+
+<h2>Right to Public Services</h2>
+
+<p>The Right to Public Services legislation is the most consequential administrative reform of the last two decades, and it is under-discussed relative to its effect.</p>
+
+<p>Its logic is simple. A citizens' charter states a standard and provides no remedy; the Act converts the same standard into a <strong>statutory entitlement</strong> with a named officer, a fixed time limit, an appeal and a <strong>penalty on the defaulting official personally</strong>. <strong>Madhya Pradesh</strong> enacted and implemented the first such law on <strong>18 August 2010</strong>, notifying fifty-two services including caste, birth, marriage and domicile certificates, drinking water connections, ration cards and copies of land records, with a time period fixed for each. Most states have since enacted comparable legislation.</p>
+
+<h3>Why the Design Matters</h3>
+
+<ul>
+ <li>It attaches the sanction to the <strong>individual officer</strong> rather than to the department, which is the only form of sanction that reliably changes behaviour.</li>
+ <li>It converts service delivery from an act of administration into a <strong>right of the citizen</strong>, which reverses the direction of the relationship.</li>
+ <li>It requires the administration to <strong>specify what it does</strong>, service by service, with a time limit, which is an exercise in self-description most departments had never performed.</li>
+ <li>It creates a record, since the clock starts on receipt, which removes the discretion to lose an application.</li>
+</ul>
+
+<h3>Limits</h3>
+
+<p>The Acts cover only the services a state chooses to notify, and the number varies widely. Penalties are small and imposed rarely. The time limits are frequently set at what the office already achieves rather than at what the citizen needs. And compliance is often secured by recording a decision within the limit rather than by deciding well, which converts a delay problem into a quality problem. The legislation is nonetheless the clearest instance of a reform that altered the daily relationship between citizen and counter.</p>
+
+<h2>Citizens' Charters and Sevottam</h2>
+
+<p>The citizens' charter initiative began in India in 1997, and its weakness, that a charter is not enforceable, is treated in the note on accountability. <strong>Sevottam</strong> is the framework developed by the Department of Administrative Reforms and Public Grievances to make charters operational, and it rests on <strong>three modules</strong>.</p>
+
+<ul>
+ <li><strong>Citizens' Charter</strong>: formulating a clear and comprehensive charter defining the services, the standards and what the citizen may expect.</li>
+ <li><strong>Public Grievance Redress</strong>: establishing machinery to receive, process and resolve complaints efficiently.</li>
+ <li><strong>Service Delivery Capability</strong>: building the organisational infrastructure, processes and competencies needed to deliver at the committed standards.</li>
+</ul>
+
+<p>The third module is what distinguishes Sevottam from the charter movement that preceded it. A charter promises and a grievance mechanism records failure; neither creates the capacity to perform. By making capability an assessed component, the framework acknowledges that a department cannot commit to a standard it is not equipped to meet, which is precisely the defect that made the earlier charters ornamental.</p>
+
+<h2>Grievance Redressal</h2>
+
+<p>Grievance redress is the administration's own mechanism for correcting itself, and it matters because the overwhelming majority of administrative failures never reach a court, a legislature or an auditor. If they are not corrected internally they are not corrected.</p>
+
+<h3>The Machinery</h3>
+
+<ul>
+ <li>The <strong>Department of Administrative Reforms and Public Grievances</strong> is the nodal agency for administrative reform and for public grievance policy.</li>
+ <li>The <strong>Directorate of Public Grievances</strong> in the Cabinet Secretariat handles grievances against specified central organisations that citizens deal with directly.</li>
+ <li><strong>CPGRAMS</strong>, the Centralised Public Grievance Redress and Monitoring System, is an online platform available twenty-four hours a day on which citizens may lodge grievances on any matter of service delivery. It is a single portal connected to all ministries and departments of the Union and to the states, developed by the National Informatics Centre with the Directorate of Public Grievances and DARPG, and it carries a very large and growing volume of grievances with published monthly disposal reports.</li>
+ <li>Departmental machinery: public grievance officers, appellate authorities, and in statutory schemes the district grievance redressal officers and state commissions.</li>
+</ul>
+
+<h3>What CPGRAMS Changed and What It Did Not</h3>
+
+<p>Its achievement is visibility. A grievance lodged is numbered, routed, tracked and counted, so that a department's disposal record becomes a published statistic, which is a real discipline where none existed. Its limitation follows from the same design: a grievance is <strong>disposed</strong> when the department records an action, and the system measures disposal rather than resolution, so a well-drafted rejection closes a case as effectively as a remedy. The addition of an appeal and a feedback rating addresses this partially, and the underlying problem is that the body judging whether a grievance was answered is the body complained against.</p>
+
+<h3>What the Second ARC Recommended</h3>
+
+<ul>
+ <li>Analysing grievances to identify and remove their <strong>systemic causes</strong>, rather than disposing of them one at a time. A department receiving a thousand complaints about the same delay has a process problem, not a thousand grievance problems.</li>
+ <li>Strengthening the compliance machinery at district level, including a dedicated cell in the Collector's office reviewed by him periodically.</li>
+ <li>Making lower formations more responsive and proactive, since the Commission found that rights legislation had not percolated significantly beyond the state capital.</li>
+</ul>
+
+<h2>Performance Management</h2>
+
+<h3>The Results-Framework Document</h3>
+
+<p>The Prime Minister approved the outline of a <strong>Performance Monitoring and Evaluation System</strong> for government departments on <strong>11 September 2009</strong>, under which each department prepares a <strong>Results-Framework Document</strong> annually. The RFD summarises the most important results a department expects to achieve in the financial year, and has two declared purposes: to move the department's focus <strong>from process orientation to result orientation</strong>, and to provide an objective and fair basis for evaluating its overall performance at the end of the year.</p>
+
+<p>A document of this kind typically sets out the department's vision, mission, objectives and functions; the actions proposed against each objective; success indicators with weights; and targets at several levels of achievement, so that performance can be scored on a composite index.</p>
+
+<h3>Outcome Budgeting</h3>
+
+<p>Outcome budgeting carries performance budgeting one step further, from <em>outputs</em> to <em>outcomes</em>: not the number of classrooms built but whether learning improved, not the kilometres of road laid but whether access changed. It requires objectives stated in advance, indicators that measure achievement against them, data systems that collect honestly, and consequences attached to the result.</p>
+
+<h3>Why Both Under-Deliver</h3>
+
+<ul>
+ <li><strong>Objectives are plural and contested</strong> in government by design, so there is no single measure corresponding to profit, and improving one indicator often worsens another.</li>
+ <li><strong>Attribution.</strong> Outcomes such as literacy or public health depend on many agencies and on conditions no agency controls, so credit and blame cannot be assigned cleanly.</li>
+ <li><strong>Gaming.</strong> What is measured is managed and what is managed is gamed. Departments negotiate soft targets, report against the indicator rather than the objective, and the resulting scores compress at the top until they no longer discriminate, which is the appraisal problem from personnel administration appearing at organisational level.</li>
+ <li><strong>Data.</strong> The system depends for its figures on the agencies it evaluates, which is the same structural weakness that limited the Programme Evaluation Organisation.</li>
+ <li><strong>No consequence.</strong> Where a poor score affects neither budget nor career, the exercise becomes a compliance ritual.</li>
+</ul>
+
+<h2>Techniques of Administrative Improvement</h2>
+
+<p>Beneath the large reform exercises lies a body of technique that does much of the actual work of improvement, and which examiners sometimes ask about directly.</p>
+
+<ul>
+ <li><strong>Organisation and Method</strong>, established in India in 1954 under the Cabinet Secretariat, transferred to Home Affairs in 1964 and now with the Department of Administrative Reforms and Public Grievances. O&M studies examine how work is organised and how it is done, and recommend simplification, which is the procedural reform that yields the most and attracts the least notice.</li>
+ <li><strong>Work study and work measurement</strong>, establishing how long a task should take and how many people a volume of work requires, which is the basis of any rational staffing.</li>
+ <li><strong>Management information systems</strong>, supplying managers with the information needed to decide, which is what converts data collection into control.</li>
+ <li><strong>Network analysis</strong>, including <strong>PERT</strong> and the <strong>critical path method</strong>, for scheduling complex projects with many interdependent activities. PERT was developed by the United States Navy for a missile programme and refined with the involvement of scholars including Herbert Simon; it identifies the key activities required for completion, the sequence among them and the path that determines the total duration, and it has become an effective means of controlling project management during implementation, including in public-private projects.</li>
+ <li><strong>Process re-engineering</strong>, which redesigns a procedure around its purpose rather than automating it as it stands, and which is what distinguishes transformational e-governance from computerisation.</li>
+</ul>
+
+
+<h2>Reform Elsewhere, and What India Did Differently</h2>
+
+<p>The reform wave of the 1980s and 1990s took a particular form in the Anglophone democracies, and comparing it with India's is instructive because the two took different routes to similar objectives.</p>
+
+<h3>The United Kingdom</h3>
+
+<p>The <strong>Next Steps</strong> initiative began with a report of the Prime Minister's Efficiency Unit, <em>Improving Management in Government: The Next Steps</em>, submitted in <strong>February 1988</strong> under Sir <strong>Robin Ibbs</strong>. It proposed delegating the bulk of executive functions, estimated at three-quarters or more of civil service activity, to <strong>semi-autonomous agencies</strong>, separating day-to-day delivery from central policy-making so that each could focus on what it did. By May 1991 some fifty agencies had been created covering half the civil service, with most chief executives appointed by open competition and about a third drawn from outside the service.</p>
+
+<p>The <strong>Citizen's Charter</strong> of <strong>1991</strong> followed, with the Next Steps agencies identified as the principal vehicle for carrying its principles into central government. The pairing is the point: a delivery body with its own chief executive and published standards can be held to those standards, where an undifferentiated department cannot.</p>
+
+<h3>The United States</h3>
+
+<p>The <strong>National Performance Review</strong> was created in March <strong>1993</strong> under Vice-President <strong>Al Gore</strong>, reported within six months, and produced <strong>384 recommendations</strong> under the slogan of a government that works better and costs less. It drew directly on Osborne and Gaebler's <em>Reinventing Government</em>, and its emphasis fell on customer service standards, procurement simplification, cutting regulation and reducing the federal workforce.</p>
+
+<h3>New Zealand</h3>
+
+<p>The most thoroughgoing reform was New Zealand's, through the <strong>State Sector Act 1988</strong> and the Public Finance Act 1989. Its organising principle was that if managers were permitted to make all input decisions, pay, appointments, structures and production systems, they would accept personal accountability for higher quality outputs. Chief executives were placed on fixed-term contracts with performance agreements, and departments were funded for specified outputs rather than for inputs.</p>
+
+<h3>The Comparison</h3>
+
+<table>
+ <thead>
+ <tr><th></th><th>The Anglophone model</th><th>The Indian route</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Instrument</td><td>Managerial: agencies, contracts, output funding</td><td>Legal: rights, entitlements, statutory time limits</td></tr>
+ <tr><td>Accountability to</td><td>The minister, through a performance agreement</td><td>The citizen, through an enforceable claim</td></tr>
+ <tr><td>Driver</td><td>Executive decision, sustained over a decade</td><td>Judicial direction, popular movement and legislation</td></tr>
+ <tr><td>Civil service</td><td>Tenure weakened, lateral entry normal, pay decentralised</td><td>Tenure and service rules substantially intact</td></tr>
+ <tr><td>Characteristic risk</td><td>Fragmented accountability, hollowed-out state</td><td>Rights conferred that the frontline cannot deliver</td></tr>
+ </tbody>
+</table>
+
+<p>The reason for the divergence is worth stating, because it answers a question examiners ask in the form of whether India should have adopted New Public Management. Those reforms presupposed a capable, rule-bound bureaucracy that could safely be given discretion, and a political system in which a government could sustain an unpopular programme across a decade. India had neither in the same measure, and it also had something the others lacked: an active judiciary and a vigorous civil society capable of generating demands from outside the administration. It was therefore rational, and not merely accidental, that Indian reform proceeded by <strong>arming the citizen</strong> rather than by <strong>freeing the manager</strong>.</p>
+
+<h3>Capacity Building as the Missing Half</h3>
+
+<p>The one element the managerial reforms had and the Indian rights-based route lacked is systematic investment in the capability of those expected to deliver. <strong>Mission Karmayogi</strong>, launched in 2020, is the belated attempt to supply it: a framework calibrating every civil service position to defined roles, activities and competencies, with continuous learning delivered digitally, resting on policy, institutional, competency, digital learning, electronic human resource management and monitoring frameworks.</p>
+
+<p>Its significance in a reform answer is that it addresses the half of the problem the statutes do not reach. A right to a service within thirty days is enforceable against an officer; it does not make the officer able to deliver in thirty days. Whether a competency framework can bind against a promotion system still running on seniority is the open question, and it is the same question that recurs at every point in this topic.</p>
+
+<h2>Why Reform Fails, and What Would Work</h2>
+
+<h3>The Diagnosis Has Never Been the Problem</h3>
+
+<p>Gorwala identified delay, over-centralisation and the displacement of purpose by procedure in 1951. The second ARC identified substantially the same defects in 2009. The National Police Commission reported in 1981 and the 1861 Act still stands. India has produced an unusually rich body of administrative diagnosis over seventy-five years, and the gap between the diagnosis and the condition is itself the finding.</p>
+
+<h3>What Distinguishes the Reforms That Worked</h3>
+
+<p>A small number of Indian administrative reforms have visibly changed how administration behaves, and they share features worth extracting.</p>
+
+<ul>
+ <li>They created a <strong>right in the citizen</strong> rather than a duty in the official: the right to information, the right to a service within a time limit, the right to work.</li>
+ <li>They attached a <strong>consequence to an individual</strong>, not to an organisation: the penalty on the public information officer, on the designated officer under the service guarantee Acts.</li>
+ <li>They created an <strong>external</strong> body or an <strong>external</strong> demand rather than relying on internal supervision: the information commission, the applicant, the social audit.</li>
+ <li>They were <strong>simple enough to be used</strong> by an ordinary person without an intermediary.</li>
+</ul>
+
+<p>The reforms that failed share the opposite features: they reorganised structures, relied on the administration to supervise itself, produced documents rather than entitlements, and required the goodwill of those whose position they threatened.</p>
+
+<h3>The Conclusion</h3>
+
+<p>Administrative reform in India has been most successful where it has bypassed the question of persuading the administration to improve, and has instead armed the citizen to demand it. That is not a complete answer, because a right cannot create a capacity that does not exist, and an entitlement delivered by an under-staffed and under-trained frontline produces litigation rather than services. The work that remains is the unglamorous half: the levels a file must climb, the tenure of an officer, the training that carries a consequence, the appraisal that discriminates, and the functionaries the third tier still does not have. Those are the reforms nobody announces, and they are the ones the diagnosis has pointed at since 1951.</p>
 `,
 };
