@@ -2037,4 +2037,330 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The United Nations statement of the administrative stake in all this is blunt and worth carrying into a conclusion: "It would be disastrous if the importance of public administration were not recognised by those responsible for national development or if public administration were not fully developed and made to contribute its utmost to the development of the developing countries." The study of development administration has been reorganised around the continuing problems of developing countries, and the honest assessment is that the field has become more modest in its claims and more accurate in its descriptions, which is the usual shape of intellectual progress after a confident programme fails.</p>
 `,
+ 'personnel-administration': `
+<h2>What Personnel Administration Is</h2>
+
+<p>Personnel administration is that part of the administrative function primarily concerned with human relationships in an organisation. Since an administration is finally a body of people rather than a body of rules, the quality of every other administrative arrangement depends on who is recruited, how they are trained, what advances them and what they are paid.</p>
+
+<ul>
+ <li>The <strong>Institute of Personnel Management, UK</strong>, holds that its aim "is to bring together and develop into an effective organisation the men and women who make up an enterprise and, having regard for the well-being of the individual and of working groups, to enable them to make their best contribution to its success".</li>
+ <li><strong>Dimock and Dimock</strong> define public personnel administration as "the staff function which advises and facilitates the work of the programme manager in matters relating to the recruitment, deployment, motivation and training of employees, so as to improve the morale and the effectiveness of the service". The identification of it as a <em>staff</em> function matters: personnel advises and facilitates, it does not run the programme.</li>
+ <li><strong>Felix Nigro</strong> calls it "the art of selecting new employees and making use of old ones in such a manner that the maximum quality and quantity of output and service are obtained from the working force".</li>
+</ul>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Selecting the right employees to work in the organisation.</li>
+ <li>Administering the daily operations of existing employees.</li>
+ <li>Examining the capabilities of those already working and assessing the organisation's future needs.</li>
+ <li>Linking personnel to the budgetary system and supplying the information required for labour-management negotiation.</li>
+</ul>
+
+<p>The <strong>Indian Institute of Personnel Management</strong> identifies three aspects: the <strong>welfare</strong> aspect, covering working conditions and the amenities available; the <strong>labour or personnel</strong> aspect, covering recruitment, remuneration, productivity and incentives; and the <strong>industrial relations</strong> aspect, covering the relationship between the organisation and its employees collectively.</p>
+
+<h2>The Civil Service</h2>
+
+<p>The civil service is the permanent, paid, professional body of officials through which a government acts. Its functions extend well beyond execution.</p>
+
+<ul>
+ <li><strong>Implementation of government policy</strong>, a broad function covering the many tasks of the several stages of implementation.</li>
+ <li><strong>Quasi-legislative functions</strong>, making rules and regulations where authorised by the legislature. These belong to the legislature and are delegated because it is busy and lays down only the broad guidelines of an Act.</li>
+ <li><strong>Quasi-judicial functions</strong>, including the grant or refusal of licences and adjudication or arbitration between parties. These belong to the judiciary and are delegated because the questions have an administrative aspect and the process through the civil service is shorter.</li>
+ <li><strong>Advice on policy formulation</strong>, given by the higher echelons to the political executive.</li>
+ <li><strong>Public relations</strong>, since officials at certain levels are expected to explain government policy to the people and enlist their support.</li>
+</ul>
+
+<p>Read together, these show why the politics-administration dichotomy cannot describe a modern civil service: a body that makes rules, decides cases and advises on policy is exercising all three powers of the state.</p>
+
+<h2>Human Resource Development</h2>
+
+<p>Efficient administration depends on leadership, organisation, morale, finance, methods and procedures, and above all on human resources. The central task is finding capable people who will do their best in a given working environment, and then keeping them capable as that environment changes.</p>
+
+<p>Human resource development differs from personnel management in its time horizon and its object. Personnel management fills posts; HRD develops capability, treating the employee as an appreciating asset rather than a cost to be administered. In a public service the case for it is stronger than in a firm, because tenure is long, exit is rare, and the person recruited at twenty-five will still be serving at sixty, by which time the job will have changed beyond recognition.</p>
+
+<h2>Recruitment</h2>
+
+<p>Recruitment is the point at which the quality of an administration is largely settled, because no later process fully compensates for poor selection.</p>
+
+<h3>Merit Against Spoils</h3>
+
+<p>Before the merit system, the West used the <strong>spoils system</strong> and the sale of offices. Under the spoils system, public office is treated as a spoil to be enjoyed by the party victorious at the election, so that candidates appointed on political considerations cannot expect to continue when the opposing party takes power.</p>
+
+<p>The <strong>merit system</strong> stands for the selection, retention and promotion of civil servants on demonstrated fitness, with recruitment and service conditions determined by qualifications and physical fitness judged objectively against well-defined standards. Its advantages are that it keeps administration free of political intrigue and personal caprice; that it promotes efficiency by removing the temptation to misuse power; and that the resulting security of service generates a sense of duty and loyalty to the country.</p>
+
+<p>The spoils system is a bane on efficient administration because it involves nepotism, giving officials a class of loyal and obedient subordinates who will always praise their masters. <strong>Herman Finer</strong>, studying its effects in America in <em>Theory and Practice of Modern Government</em>, records that "sheer inefficiency was the first result and increase in public costs second", followed by the creation of a class of office-seekers. The <strong>Pendleton Act</strong>, signed by the President in 1883, established the Civil Service Commission and began the American transition to merit.</p>
+
+<h3>The Process</h3>
+
+<ul>
+ <li><strong>Announcement of the vacancy</strong>, which must be public and adequately publicised if competition is to be real.</li>
+ <li><strong>Application and scrutiny</strong> against the prescribed qualifications.</li>
+ <li><strong>Written examination</strong>, which tests attainment objectively and at scale.</li>
+ <li><strong>Interview or personality test</strong>, which reaches qualities an examination cannot, and which is the stage most exposed to subjectivity.</li>
+ <li><strong>Character verification and medical examination.</strong> A candidate whose name appears in the selected list may still be rejected after these, as where a disease is likely to interfere with official work.</li>
+ <li><strong>Probation</strong>, generally one or two years, during which performance at work is assessed even though the candidate performed well in the examination, and at the end of which services may be terminated if performance is inadequate.</li>
+ <li><strong>Placement</strong>, the assignment of a job to the employee, which is a continuous process rather than a single act, since the right person must be in the right position for administration to be effective.</li>
+</ul>
+
+<p>The <strong>probation</strong> stage deserves more attention than it usually receives. It allows an organisation to discharge someone who does not perform or does not show the right attitude without the cumbersome procedure of dismissal, saving time, effort and money, and allowing the employee to seek other work without having wasted years. It makes employees work harder, since they try to impress and learn from being told where they went wrong. Because it is vital, it must be protected from personal prejudice and undue influence, which requires a constant record of performance and, where necessary, consultation with an independent body such as the Civil Service Commission. In Indian practice, probation has become close to automatic, which forfeits the one opportunity the system has to correct a recruitment error.</p>
+
+<h3>The Generalist and the Specialist</h3>
+
+<p>The procedures of recruitment and training have long been debated, and the debate crystallised in Britain around the <strong>Fulton Committee</strong>, appointed to examine personnel administration, especially recruitment and training. Its report in 1968 opened the <strong>generalist against specialist</strong> controversy, advocating that jobs be related to organisational objectives and that there be increased professionalism in the public services. It held that the concept of a <strong>generalist administrative class is obsolete</strong> and insufficient for changing needs. In India, the <strong>first Administrative Reforms Commission</strong> called for the gradual infusion of specialists into the administrative services to meet the technological challenge facing administration.</p>
+
+<table>
+ <thead>
+ <tr><th>Case for the generalist</th><th>Case for the specialist</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Administration is a skill in itself, distinct from any subject matter</td><td>Modern administration is technical, and decisions require subject knowledge</td></tr>
+ <tr><td>A trained mind can master a brief and move between departments</td><td>Mastering a brief is not the same as understanding a field</td></tr>
+ <tr><td>Detachment from the technical view allows balancing of competing considerations</td><td>Detachment often means dependence on the very experts being supervised</td></tr>
+ <tr><td>Coordination requires someone whose loyalty is to the whole rather than to a profession</td><td>Specialists resent subordination to those who know less, which damages morale</td></tr>
+ </tbody>
+</table>
+
+<p>The workable resolution, and the one most defensible in an answer, is that the distinction is one of degree: the generalist must acquire specialisation through domain assignment and training, and the specialist must acquire managerial capability, which is precisely what competency-based capacity building attempts.</p>
+
+<h3>The Recruiting Agency</h3>
+
+<p>Recruitment is usually done by the head of the organisation, but as organisations grow and need many kinds of employee, a separate agency becomes necessary, either within government or as an independent body. The argument for independence is the argument for merit itself: an appointing authority that is also the employer cannot credibly resist political pressure. This is the rationale for the constitutional position of the Union Public Service Commission and the State Public Service Commissions in India, whose independence rests on security of tenure, a charged salary and restrictions on the future employment of members.</p>
+
+<h2>Training</h2>
+
+<p>Training is the deliberate improvement of an employee's capacity to perform, and in a career service it is the only instrument available for adjusting a workforce to new tasks, since the workforce itself cannot be replaced.</p>
+
+<h3>Objects</h3>
+
+<ul>
+ <li>Raising the quality and speed of work and reducing the need for supervision.</li>
+ <li>Preparing an officer for the next assignment rather than only the present one.</li>
+ <li>Transmitting the values and norms of the service, which is the part no manual accomplishes.</li>
+ <li>Improving morale, since an employee who is being developed reads the investment as a signal of worth.</li>
+ <li>Supplying, as Simon argued, the internalised premises that allow decentralisation: an officer who has been trained can be trusted with discretion that would otherwise have to be withheld.</li>
+</ul>
+
+<h3>Types</h3>
+
+<ul>
+ <li><strong>Induction or orientation</strong> training, introducing the recruit to the organisation.</li>
+ <li><strong>Foundational</strong> training, common to several services, which builds a shared frame of reference across the higher civil service.</li>
+ <li><strong>Professional or departmental</strong> training in the substantive work of the service.</li>
+ <li><strong>In-service and refresher</strong> training at intervals through the career, to renew skills and introduce new methods.</li>
+ <li><strong>Pre-promotion</strong> training, preparing officers for the different demands of the next level.</li>
+</ul>
+
+<h3>Methods</h3>
+
+<p>Lecture and classroom instruction for transmitting a body of knowledge; the <strong>case method</strong> for developing judgement on concrete facts; <strong>role-play</strong> and simulation for interpersonal and crisis skills; the <strong>conference method</strong>, which Simon valued for producing a common organisational language; on-the-job training and attachment, which is how most administrative learning actually occurs; and, increasingly, digital and self-paced learning.</p>
+
+<h3>Mission Karmayogi</h3>
+
+<p>India's current framework is the <strong>National Programme for Civil Services Capacity Building</strong>, launched in 2020 as <strong>Mission Karmayogi</strong>, which aims at a competent civil service rooted in Indian ethos with a shared understanding of national priorities. Its structural innovation is the <strong>Framework of Roles, Activities and Competencies</strong>, which calibrates every civil service position to a defined set of roles, activities and competencies, and then creates and delivers learning content against those competencies. Learning is continuous and delivered through the <strong>iGOT Karmayogi</strong> digital platform. The programme rests on six pillars: the policy framework, the institutional framework, the competency framework, the digital learning framework, an electronic human resource management system, and a monitoring and evaluation framework.</p>
+
+<p>The significance for this topic is that it shifts training from <em>rule-based</em> to <em>role-based</em>: capability is defined by what a post requires rather than by what a service traditionally studies, which is the administrative answer to the generalist-specialist question rather than a rhetorical one. The open question is whether a competency framework can be enforced against a promotion system that continues to run largely on seniority, since training that carries no consequence for advancement will be treated as an obligation to be discharged rather than a capability to be acquired.</p>
+
+<h2>Career Advancement</h2>
+
+<p>A career system is one in which a person enters young at the bottom of a service, advances within it, and remains until retirement, as against a position-based system in which each post is filled by open competition from inside or outside. Career systems buy commitment, institutional memory and continuity at the price of mobility and fresh capability, which is the trade-off behind every argument about lateral entry.</p>
+
+<p>Career advancement serves the individual by giving direction to effort, recognition of achievement and rising reward; and it serves the organisation by retaining capability, motivating performance and filling higher posts with people who understand the institution. The standard hindrances are the shape of the hierarchy, which narrows towards the top so that most careers stall by design; the absence of any reliable link between performance and advancement; political interference in postings; and the tendency of seniority to substitute for assessment.</p>
+
+<h2>Classification</h2>
+
+<p>Classification is the arrangement of posts or people into groups for the purposes of recruitment, pay, promotion and control. It is recognised as indispensable to a career service based on merit, because it allows rational standards for selection, uniformity in describing jobs, and a common basis for equal status and equal pay for equal work. It matters to the legislator, the budget official and the taxpayer as much as to the employee.</p>
+
+<p>The prevailing bases are the educational qualifications required, competence on the job, the level of responsibility entailed, and the rank and personal status of the employee, and the mix depends on a country's administrative value system and culture.</p>
+
+<h3>The Four Steps</h3>
+
+<ul>
+ <li><strong>Job analysis and description</strong>: analysing and recording the duties and distinctive characteristics of the positions to be classified.</li>
+ <li><strong>Grouping</strong> the positions into classes on the basis of their similarities.</li>
+ <li><strong>Writing standards or specifications</strong> for each class that indicate its character, define its boundaries, and guide the allocation of individual positions, recruitment and examination.</li>
+ <li><strong>Installation</strong>, by allocating individual positions to the classes described.</li>
+</ul>
+
+<p>The first three establish the plan and the fourth begins its administration.</p>
+
+<h3>Position Classification</h3>
+
+<p>Position classification starts from the individual post rather than the person. A <strong>position</strong> is the basic organisational unit, characterised by certain duties and responsibilities calling for the time and attention of an individual, and it must be distinguished from its incumbent: it is immaterial whether the post is occupied or vacant, and the personal characteristics of the holder are extraneous except where the duties performed reflect them. If positions are the raw material, the <strong>class</strong> is the operating unit, defined as a group of positions sufficiently alike in duties and responsibilities to justify common treatment in selection, compensation and other employment processes, and sufficiently different from other classes to justify different treatment.</p>
+
+<p>Duties within a class must be similar enough that the same title applies to every position in it, the same test can fill them, and persons with the same minimum education, training and experience can do the work of any of them. The criteria for evaluating jobs into classes are the nature of the occupational field, the complexity and difficulty of the duties, the scope of responsibility, and the knowledge and skill required.</p>
+
+<h4>What It Achieves and Where It Fails</h4>
+
+<ul>
+ <li>It supports equal pay for equal work and rational salary administration, and it disciplines recruitment by fixing entrance qualifications and the nature of the testing programme.</li>
+ <li>It ensures objectivity and impersonality in personnel management, which is its deepest purpose: the post is defined before anyone occupies it, so the description cannot be tailored to a favourite.</li>
+ <li>It does not by itself guarantee a good promotion and placement policy, but supplies a systematic picture of opportunities and the relationships between positions, which is essential to any orderly promotion procedure.</li>
+ <li>It provides a foundation for common understanding between superior and employee about the job and its pay, which eases employee-management relations and promotes work-centred motivation.</li>
+ <li>Its limitations are rigidity, the administrative cost of maintaining thousands of descriptions as work changes, and the tendency of classification to freeze an organisation's structure at the moment the survey was done.</li>
+</ul>
+
+<h3>Rank Classification</h3>
+
+<p>Under rank classification the civil servant is a member of a broad group or service, and his ranking within it determines his pay and privileges. The basis is the rank and personal status of the incumbent rather than the precise duties of the post. The system is in use in India, Pakistan, Britain, France, Germany, Malaysia and elsewhere.</p>
+
+<p>In India, public personnel are classified both into <strong>classes</strong> and into <strong>services</strong>. The classes correspond to differences in the responsibility of the work and the qualifications required: Class I and Class II comprise personnel exercising higher administrative and executive responsibility, Class III clerical personnel, and Class IV the lowest in the hierarchy, including peons, orderlies, watchmen and carpenters engaged in manual work. Personnel are also recruited directly into distinct <strong>services</strong>, remaining members of that service until retirement or resignation with no inter-service mobility, and holding their posts by virtue of that membership.</p>
+
+<p>The claimed advantages are that it is easy to understand and administer, and that the civil servant enjoys greater security because he is unaffected by changes in the duties attached to any particular post. That same feature is its weakness: pay and status follow the person rather than the work, so an officer carries rank into a post of any weight, and the system cannot easily reward a difficult posting or penalise a trivial one.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Position classification</th><th>Rank classification</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Unit</td><td>The post, independent of its holder</td><td>The person, within a service</td></tr>
+ <tr><td>Pay follows</td><td>The duties of the post</td><td>The rank of the officer</td></tr>
+ <tr><td>Entry</td><td>At any level, by open competition for the post</td><td>At the base of the service, young</td></tr>
+ <tr><td>Strength</td><td>Equal pay for equal work; objectivity</td><td>Security, mobility across posts, generalist flexibility</td></tr>
+ <tr><td>Weakness</td><td>Rigidity and high maintenance cost</td><td>Pay unrelated to the work actually done</td></tr>
+ <tr><td>Typical of</td><td>United States</td><td>India, Britain, France, Germany</td></tr>
+ </tbody>
+</table>
+
+<h2>Performance Appraisal</h2>
+
+<p>Appraisal is the systematic assessment of an employee's performance against standards, and it is the hinge on which merit-based promotion, training needs and accountability all turn.</p>
+
+<h3>What It Is For</h3>
+
+<p>It tells an employee where he stands with his employer and how to develop his potential; it opens scope for job counselling and gives a sense of work satisfaction; it allows the right kind of incentive to be provided; it supplies a basis for transfer; and it serves as the basis for warning and punishing officials responsible for misconduct.</p>
+
+<h3>Methods</h3>
+
+<ul>
+ <li><strong>Straight ranking</strong>, the oldest and simplest method, in which the employee and his performance are treated as an entity and the whole person is compared against the whole person, each being ranked against others in the work group. No attempt is made to break performance into components.</li>
+ <li><strong>Paired comparison</strong>, in which each employee is compared with every other in turn, producing a ranking from many small judgements.</li>
+ <li><strong>Grading and graphic rating scales</strong>, assessing defined traits on a scale, which is the form most public services use.</li>
+ <li><strong>Forced distribution</strong>, requiring raters to place a fixed proportion in each grade, which exists to defeat the inflation that otherwise destroys any rating system.</li>
+ <li><strong>Critical incident</strong> method, recording specific instances of effective and ineffective behaviour rather than general impressions.</li>
+ <li><strong>Management by objectives</strong>, assessing results against targets agreed in advance, which shifts appraisal from traits to outcomes.</li>
+ <li><strong>Assessment centres</strong> and <strong>multi-source or 360-degree</strong> appraisal, which gather judgements from superiors, peers, subordinates and clients rather than from the reporting officer alone.</li>
+</ul>
+
+<p>The methods differ in the traits chosen, because job requirements, statistical demands and managerial opinion differ; in the kind of employee rated; in the precision attempted; and in how the weightings for traits are obtained.</p>
+
+<h3>The Indian System and Its Reform</h3>
+
+<p>India used the <strong>Annual Confidential Report</strong>, whose defining features were that it was written by the reporting officer alone and was not disclosed to the person reported on, adverse remarks being communicated only in part. The system was replaced by the <strong>Annual Performance Appraisal Report</strong>, whose important changes were full disclosure of the report to the officer, the opportunity to make representations, and the introduction of work targets against which performance is assessed rather than traits alone.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>Grade inflation.</strong> When nearly everyone is rated outstanding, the report ceases to discriminate and promotion necessarily falls back on seniority.</li>
+ <li><strong>Subjectivity and the halo effect</strong>, where a single strong impression colours every category.</li>
+ <li><strong>Trait-based assessment</strong> measures qualities that are hard to observe and easy to dispute, where results are observable.</li>
+ <li><strong>Timing bias</strong>, since raters recall recent events more vividly than the year as a whole.</li>
+ <li><strong>The reporting officer's own interest</strong> in the harmony of his office argues against candour, and an adverse report invites a representation and a dispute.</li>
+ <li><strong>Absence of consequence.</strong> Where the appraisal does not materially affect advancement, both parties treat it as a formality, which is self-fulfilling.</li>
+</ul>
+
+<h2>Promotion</h2>
+
+<p>Promotion is advancement to a post of higher responsibility, status and pay, and it is integral to a career service because it is the principal reward the service can offer and the principal instrument by which it retains ability.</p>
+
+<p><strong>L.D. White</strong> states the stake: promotion "is one of the means of holding in government service the best qualified men and women who enter the lower grades and is thus an important phase of a career service. Conversely, delay in promotion may become one of the surest means of driving them out."</p>
+
+<p>Recruitment of the best is the first task of personnel administration, and retaining them is the second, which promotion performs. A sound promotion system fosters belonging, maintains continuity in policies and programmes, and secures the best incumbents for higher posts while maintaining the morale of the organisation as a whole. The interest to be served is the <em>public</em> interest and not the personal interest of civil servants, and the public interest is best served when reasonable opportunities exist for all qualified employees, when genuinely superior officers can rise as fast as their merit and the vacancies allow, and when selection is made on assessment rather than on influence.</p>
+
+<h3>Seniority and Merit</h3>
+
+<table>
+ <thead>
+ <tr><th>Seniority</th><th>Merit</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Objective, verifiable, and immune to favouritism</td><td>Rewards ability and so improves the quality of higher posts</td></tr>
+ <tr><td>Protects morale by removing the sense of arbitrary preference</td><td>Motivates performance, since effort changes prospects</td></tr>
+ <tr><td>Rewards length of service rather than capability</td><td>Depends on an appraisal system honest enough to bear the weight</td></tr>
+ <tr><td>Produces a predictable and unmotivating career</td><td>Opens the door to patronage where assessment is weak</td></tr>
+ </tbody>
+</table>
+
+<p>Most systems compromise, using seniority as the threshold for eligibility and merit for selection within the eligible field, which is the arrangement Indian services largely follow. The compromise is only as good as the appraisal that feeds it, which is why appraisal reform and promotion reform have to move together.</p>
+
+<h2>Pay and Service Conditions</h2>
+
+<p>The object is to create and maintain a salary structure that makes employees willing to give their best, gives them satisfaction in the job and rewards them suitably. In no part of personnel administration is the possibility of misunderstanding and conflict greater than in compensation, and this holds equally in private and public employment. Payment for personnel services is the largest single item in the operating budgets of state and local governments, which is why pay policy is fiscal policy as much as personnel policy.</p>
+
+<h3>How Pay Is Determined</h3>
+
+<ul>
+ <li><strong>By statute</strong>, where the legislature lays down the salary structure in broad outline and leaves the details to the executive. This prevails in the Middle East, in the local bodies of some countries, and in the federal government of the United States.</li>
+ <li><strong>By collective bargaining</strong>, usual in private and most public enterprises, with an element of bargaining also present in fixing the salaries of government employees, particularly at lower levels. A structure agreed between government and employees is then formalised by legislation or executive order.</li>
+ <li><strong>By commission</strong>, where an expert body examines the structure periodically and recommends revision, which is the Indian method.</li>
+</ul>
+
+<p>Staff associations and labour unions press the employer to pay more, and the continual rise in prices gives that pressure a permanent basis.</p>
+
+<h3>Principles of a Compensation Plan</h3>
+
+<ul>
+ <li><strong>Equal pay for equal work</strong>, which requires a classification system to define what is equal.</li>
+ <li><strong>External comparability</strong>, so that public pay bears a defensible relation to what comparable work earns outside, since too wide a gap costs the service its recruits.</li>
+ <li><strong>Internal relativity</strong>, so that differentials between grades reflect differences in responsibility and are accepted as fair.</li>
+ <li><strong>A living wage at the base</strong>, adequate to the cost of living.</li>
+ <li><strong>Incentive</strong>, through increments and the prospect of advancement.</li>
+ <li><strong>Affordability</strong>, since the bill is recurring and compounds through pensions.</li>
+</ul>
+
+<h3>Pay Commissions in India</h3>
+
+<p>Central pay revision is done by periodic Central Pay Commissions appointed by the government, which examine the structure of emoluments, allowances and service conditions and recommend revision. Their recommendations are not binding, and their effect extends far beyond the central government because state governments and public bodies generally follow them.</p>
+
+<p>The <strong>Seventh Central Pay Commission</strong>, headed by Justice <strong>A.K. Mathur</strong>, submitted its report on 19 November 2015, and the Union Cabinet approved the recommendations on 29 June 2016 with effect from 1 January 2016. Its principal changes were the replacement of the earlier system of separate pay bands and grade pay with a single <strong>pay matrix</strong>; the raising of minimum monthly basic pay from 7,000 to 18,000 rupees; and a uniform <strong>fitment factor of 2.57</strong> to move employees from the previous basic pay into the new matrix.</p>
+
+<p>Two criticisms recur in the literature and are worth carrying into an answer. The fiscal one is that a pay commission's award, amplified by state governments following it and by pension liabilities that follow pay, commits public finances for a decade on the basis of a single exercise. The administrative one is more serious: successive commissions have raised pay substantially without securing any corresponding link between pay and performance, so the largest instrument of motivation available to the state is spent without being used.</p>
+
+<h2>Discipline and Conduct</h2>
+
+<p>Discipline in the civil service rests on <strong>conduct rules</strong> that state what constitutes misconduct, and on a disciplinary procedure that must satisfy natural justice before a penalty is imposed. The Indian rules cover, among much else, restrictions on private trade and employment: no dependant of a government servant may take employment with a private organisation having dealings with government without prior sanction; a government servant may not take employment in a private organisation within two years of retirement without sanction; and no official may raise subscriptions or donations without sanction, associate with an organisation making such collections, or use his position to conduct business for himself or his family.</p>
+
+<p>The disciplinary procedure itself illustrates the tension in this subject. Procedural safeguards protect the honest officer against victimisation, and the same safeguards make dismissal for incompetence so slow and contested that it effectively does not occur, which shifts the whole burden of quality onto recruitment and probation.</p>
+
+<h2>Employer and Employee Relations</h2>
+
+<p>Public employees organise, and the state as employer faces the problem of bargaining with people whose work the public cannot do without. The machinery for dialogue takes different forms: in Britain and India through joint consultative machinery and compulsory arbitration, and in the United States through more formal collective bargaining, with restrictions in all three on the right to strike in essential services. The underlying question is whether the state is an employer like any other, which it cannot be where the service is a monopoly and the withdrawal of labour is a withdrawal of government itself.</p>
+
+<h2>Integrity Management</h2>
+
+<h3>Neutrality and Anonymity</h3>
+
+<p>Neutrality and anonymity are the two attributes traditionally considered essential in a civil service, and both were developed first in Britain. They are connected. The civil service is permanent, the civil servant serves for years, and he must necessarily serve successive governments formed by parties whose policies differ. To serve different political masters he must be <strong>neutral</strong> between the policies they advocate, and cannot become closely associated with the policy of any one government. He may advise the government of the day on the right policy, and he must then implement whatever policy is decided even where it runs against his own opinion or his own advice, without letting his views influence implementation.</p>
+
+<p><strong>Anonymity</strong> is the corresponding protection: because the minister answers publicly for the department, the official is not publicly identified with the advice he gave, and is therefore free to give it honestly. The two attributes stand or fall together, and where officials are publicly identified with policies, neutrality becomes impossible to sustain.</p>
+
+<h3>The Politicised Bureaucracy</h3>
+
+<p>The classical doctrine is under pressure from several directions: the demand that administrators be <em>committed</em> to development goals, which development administration explicitly asks for; the use of transfer and posting as political instruments, which rewards alignment; the growth of the official's public visibility; and post-retirement appointments, which create an interest in pleasing during service. The result in practice is an administration in which neutrality is formally professed and selectively observed, which is a familiar form of Riggs's formalism.</p>
+
+<h3>Administrative Ethics</h3>
+
+<p><strong>Germany (Prussia)</strong> was the first modern state to have a professional civil service, and it is <strong>Britain</strong> that produced a democratic professional code for its civil servants, the British service being best known for administrative ethics. In India there is no ethical code for public administrators as such; there are government servant conduct rules stating what constitutes misconduct or unethical conduct, which is a different and weaker thing, because a list of prohibitions cannot supply a standard of conduct.</p>
+
+<p>The components of administrative ethics are integrity, honesty, efficiency, devotion to duty, loyalty to the country, a sense of public good, neutrality, anonymity, secrecy, fairness, sincerity and a non-partisan attitude. In India these are set out in the <strong>All India Services (Conduct) Rules, 1954</strong>, the <strong>Central Services (Conduct) Rules, 1955</strong> and the <strong>Railway Services (Conduct) Rules, 1956</strong>, along with rules for specific situations.</p>
+
+<h4>What Determines Whether Ethics Are Observed</h4>
+
+<ul>
+ <li>The traditions and precedents set by top administrators, ministers and legislators. Conduct at the top is the strongest single determinant, because it establishes what is safe.</li>
+ <li>The effectiveness of disciplinary action against public servants, since a prohibition without a sanction is advice.</li>
+ <li>The communication patterns within the administrative system.</li>
+ <li>The service conditions of civil servants and internal relations within the organisation.</li>
+ <li>The attitude of political superiors towards public servants.</li>
+ <li>The ethical values of the society itself and the attitude of the people towards public servants.</li>
+</ul>
+
+<p>The last two are the reason integrity cannot be secured by administrative means alone. Where favouritism and bribery are ordinary in the wider society, an official is asked to observe a standard that nothing around him observes, and the arrangements that succeed are those that reduce the occasion for discretion rather than those that exhort the officer holding it.</p>
+
+<h2>Morale and Motivation</h2>
+
+<p>Morale is the collective attitude of a service towards its work and its organisation, and it is a personnel question rather than only a behavioural one because the instruments that raise or destroy it are the instruments of personnel administration: recruitment that is seen as fair, training that is taken seriously, appraisal that discriminates honestly, promotion that follows performance, pay that is adequate and equitable, and protection from arbitrary transfer.</p>
+
+<p>The theories of motivation, Maslow's hierarchy, Herzberg's distinction between hygiene factors and motivators, McGregor's Theory X and Theory Y, Vroom's expectancy model and Adams's equity theory, are treated in the note on administrative behaviour. Their application here is direct and uncomfortable. Herzberg predicts that pay revision removes dissatisfaction without creating motivation, which is what successive pay commissions have demonstrated. Vroom predicts that where promotion follows seniority, instrumentality is near zero and effort will not respond to incentive, however large. Adams predicts that a revision perceived as inequitable between cadres will damage morale even where every cadre gains. The personnel system, in other words, already contains the explanation for the motivation problem it complains of.</p>
+`,
 };
