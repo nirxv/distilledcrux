@@ -2079,6 +2079,32 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Human resource development differs from personnel management in its time horizon and its object. Personnel management fills posts; HRD develops capability, treating the employee as an appreciating asset rather than a cost to be administered. In a public service the case for it is stronger than in a firm, because tenure is long, exit is rare, and the person recruited at twenty-five will still be serving at sixty, by which time the job will have changed beyond recognition.</p>
 
+
+<h2>The Cadre System</h2>
+
+<p>An All India Service officer is allotted to a <strong>state cadre</strong> on appointment and serves in it for most of his career, returning to it between spells of central deputation. The cadre is therefore the officer's permanent professional home, and the rules governing allotment shape the composition of every state's senior administration.</p>
+
+<h3>Allotment</h3>
+
+<p>Under the <strong>cadre allocation policy notified in 2017</strong> and first applied to that year's batch, the states and union territories are grouped into <strong>five zones</strong>. A candidate first ranks all five zones in order of preference and then indicates one cadre from each zone in the same order, so that choices are spread across regions rather than concentrated on a few preferred states. Allocation then follows merit rank, the vacancy position and the reservation roster.</p>
+
+<p>Each cadre is composed so that roughly <strong>one-third are insiders</strong>, officers domiciled in the state of the cadre, and <strong>two-thirds outsiders</strong> drawn from elsewhere. The ratio is the operative expression of the national integration argument: a state's senior administration is deliberately staffed in the main by officers from outside it.</p>
+
+<h3>Why the Ratio Matters</h3>
+
+<ul>
+ <li><strong>For the outsider majority.</strong> An officer without local ties is less exposed to the pressures of kinship, caste and local faction, and more able to act against locally powerful interests. He brings practices from elsewhere and carries the state's experience outward when he goes on deputation.</li>
+ <li><strong>Against it.</strong> An officer unfamiliar with the language, land system and social structure of the state he administers takes years to become effective, and a service composed predominantly of outsiders reinforces the distance between administration and people that the whole of this paper identifies as the inherited defect.</li>
+</ul>
+
+<p>The insider third is the compromise, and the periodic pressure from states for a larger insider share is a federal argument in personnel form.</p>
+
+<h3>The Career Pattern</h3>
+
+<p>An officer's progression runs through sub-divisional charge, district magistrate, posts in the state secretariat as deputy and joint secretary, spells on central deputation under the Central Staffing Scheme, secretary to the state government, and for a few, additional secretary and secretary to the Government of India. The <strong>cadre review</strong>, conducted periodically, fixes the number of posts at each level in each cadre and determines how quickly officers advance, which makes it the instrument that actually governs career prospects.</p>
+
+<p>Two features of the pattern deserve comment. The district years come early and are the only period in which most officers exercise general territorial authority, so the formative experience of the service is acquired in the first decade and drawn on for the next three. And an officer's most senior posts are almost always in the secretariat rather than in the field, which means the service's leadership is composed of people whose recent experience is of policy rather than of delivery.</p>
+
 <h2>Recruitment</h2>
 
 <p>Recruitment is the point at which the quality of an administration is largely settled, because no later process fully compensates for poor selection.</p>
@@ -4681,5 +4707,277 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The Collector therefore administers, simultaneously, state laws and schemes under the state government's direction; centrally sponsored schemes under central guidelines with their own reporting; and statutory functions under the Election Commission, the census organisation and the disaster management framework which answer elsewhere again. He does so in a territory for which elected panchayats and municipalities hold constitutional responsibility for twenty-nine and eighteen subjects respectively.</p>
 
 <p>The conclusion to carry into an answer is that the district officer's difficulty is not a shortage of authority in any one line but the number of lines converging on him. He is the point at which a federal structure, a party system, a permanent service and an elected local government all touch the same citizen, and the office has survived because no alternative has been found for the function of being answerable when the lines conflict.</p>
+`,
+ 'civil-services-india': `
+<h2>What the Civil Service Is For</h2>
+
+<p>A civil service exists to supply a democracy with something elections cannot: continuity, expertise and impartiality. Governments change, and the state must go on collecting revenue, running schools and maintaining order through the change. The constitutional design of the Indian services is an attempt to secure that continuity without creating a body so independent that it escapes democratic control, and every controversy in this topic, neutrality, tenure, lateral entry, politicisation, is a dispute about where that balance should sit.</p>
+
+<h2>Constitutional Provisions</h2>
+
+<p>Part XIV of the Constitution deals with services under the Union and the states, and the provisions are unusually detailed for a constitution, which itself tells us how central the framers thought the question was.</p>
+
+<ul>
+ <li><strong>Article 309</strong> empowers the appropriate legislature to regulate the recruitment and conditions of service of persons appointed to public services and posts, with the President or Governor competent to make rules until it does. Because legislatures have rarely legislated, service rules in India are overwhelmingly <em>executive</em> rules made under the proviso.</li>
+ <li><strong>Article 310</strong> provides that members of the All India Services, the central services and holders of posts under the Union hold office <strong>during the pleasure of the President</strong>, and their state counterparts during the pleasure of the Governor.</li>
+ <li><strong>Article 311</strong> qualifies that pleasure with two protections: no civil servant may be dismissed or removed by an authority <strong>subordinate to the appointing authority</strong>; and none may be dismissed, removed or reduced in rank except after an inquiry in which he has been informed of the charges and given a reasonable opportunity of being heard.</li>
+ <li><strong>Article 312</strong> governs the creation of All India Services.</li>
+ <li><strong>Articles 315 to 323</strong> establish the Union and State Public Service Commissions, prescribe their composition, tenure and functions, and protect their independence.</li>
+</ul>
+
+<h3>Pleasure and Its Limits</h3>
+
+<p>The relationship between Articles 310 and 311 is the constitutional expression of the central problem of this topic. <em>Pleasure</em> keeps the service ultimately answerable to the elected executive, which is what prevents a self-governing bureaucracy. The <em>procedural protections</em> prevent that pleasure being exercised capriciously, which is what makes a career service and therefore impartial advice possible.</p>
+
+<p>The same protections that shield an honest officer from victimisation make removal for incompetence slow and contested, which is why dismissal is effectively unavailable as a management tool and the entire burden of quality falls on recruitment, probation and posting. Any proposal to weaken Article 311 must answer the question of what would then protect an officer who refuses an improper instruction.</p>
+
+<h3>Article 312 and the Creation of an All India Service</h3>
+
+<p>Article 312 provides a deliberately difficult route. A bill to create a new All India Service must first be introduced in the <strong>Council of States</strong>, because that House represents the states and is expected to protect their interest, and must be passed there by a <strong>special majority</strong> of not less than two-thirds of the members present and voting. It then goes to the House of the People, where a special majority is again required, and on the President's assent becomes law creating the service.</p>
+
+<p>At independence there were two All India Services, the <strong>Indian Administrative Service</strong> and the <strong>Indian Police Service</strong>. The <strong>Indian Forest Service</strong> was created in <strong>1966</strong>, bringing the number to three. That the route runs through the states' own chamber is the constitutional answer to the federal objection: the states cannot be given a common service without their House consenting by a large majority.</p>
+
+<h2>The Classification of Services</h2>
+
+<h3>All India Services</h3>
+
+<p>Members are <strong>recruited by the Centre but deployed in the states</strong>, where transfer, promotion, pay and postings are regulated by the state government. They serve under a state cadre for most of their careers while their cadre control, disciplinary authority in the last resort, and empanelment for central posts rest with the Union.</p>
+
+<h3>Central Services</h3>
+
+<p>Members are recruited by the Centre and, though they may be posted in the states, they <strong>work for the Centre</strong>, with transfer and conditions of service regulated by it. The <strong>Indian Foreign Service</strong>, the <strong>Indian Revenue Service</strong>, the Indian Audit and Accounts Service, the Indian Railway services and the rest fall here. They are classified into Group A and Group B, with Groups C and D covering the subordinate services.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>All India Services</th><th>Central Services</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Recruited by</td><td>The Centre</td><td>The Centre</td></tr>
+ <tr><td>Serve</td><td>In the states, under state cadres</td><td>The Centre, wherever posted</td></tr>
+ <tr><td>Transfer, promotion and pay</td><td>Regulated by the state</td><td>Regulated by the Centre</td></tr>
+ <tr><td>Examples</td><td>IAS, IPS, Indian Forest Service</td><td>Indian Foreign Service, Indian Revenue Service, and others</td></tr>
+ <tr><td>Created by</td><td>Parliament under Article 312, through the Council of States</td><td>Ordinary executive or legislative action</td></tr>
+ </tbody>
+</table>
+
+<h3>State Services</h3>
+
+<p>Each state maintains its own civil, police, revenue, forest and specialist services, recruited by the State Public Service Commission. A proportion of posts in each All India Service is filled by promotion from the corresponding state service, which is the point at which the two systems meet and where most of the friction between them occurs.</p>
+
+<h2>Why the All India Services Exist</h2>
+
+<ul>
+ <li><strong>National integration.</strong> A service recruited nationally, trained together and serving outside its members' home states creates a body with a national rather than a provincial outlook, which mattered acutely in a country assembling itself from provinces and princely states.</li>
+ <li><strong>Uniformity of administration</strong> across the country, so that standards, procedures and quality do not vary entirely between states.</li>
+ <li><strong>Efficiency</strong>, through competitive recruitment at a scale and quality no single state could sustain.</li>
+ <li><strong>Cooperative federalism</strong>, since officers move between the Union and the states and carry an understanding of both, which makes the two levels legible to each other.</li>
+ <li><strong>Continuity in crisis.</strong> During President's Rule the All India Services maintain the administration and thereby the unity of the country, which is the function most obviously requiring a service the Union can rely on.</li>
+</ul>
+
+<h3>The Federal Objection</h3>
+
+<p>The case against is that a state's senior administration is staffed by officers it did not recruit and cannot finally discipline, whose prospects beyond the state depend on the Union's empanelment, so that state control of its own administration is incomplete and an officer in conflict with a state government has somewhere else to look. <strong>Sardar Patel's</strong> defence in the Constituent Assembly rested squarely on integration: a service that holds the country together is worth the qualification it imposes on state autonomy.</p>
+
+<p>The tension is not resolvable within the design, and it surfaces predictably whenever the Union and a state are governed by different parties, most visibly in disputes over the deputation of officers without the state's consent. The honest formulation is that the All India Services are a <em>unitary</em> device embedded in a federal constitution, deliberately, and that whether the benefit still justifies the cost is a genuine question rather than a settled one.</p>
+
+<h2>Recruitment</h2>
+
+<h3>The Union Public Service Commission</h3>
+
+<p>The UPSC is a constitutional body whose independence rests on a structure that recurs throughout the Constitution: appointment by the executive, and insulation once appointed. Members hold office for a fixed term, may be removed only on the grounds and by the procedure the Constitution lays down, have their salaries and expenses <strong>charged on the Consolidated Fund of India</strong> so that the legislature cannot vote them into submission, and are barred from further employment under government, the chairman entirely and members except for specified higher appointments.</p>
+
+<p>Its functions are to conduct examinations for appointment to the services of the Union; to assist states, if requested by two or more of them, in framing and operating schemes of joint recruitment; and to be consulted on methods of recruitment, on the principles of appointment, promotion and transfer, on disciplinary matters, and on claims for costs and pensions. Its advice on disciplinary matters is not binding, and the requirement that departures be reported to Parliament is the only sanction.</p>
+
+<h3>The State Public Service Commissions</h3>
+
+<p>The State Commissions hold the same constitutional position within the states, with members appointed by the Governor and removable only by the President, which is a deliberate protection against the state government that appoints them. Their record has been markedly worse than the Union Commission's: vacancies in the commissions themselves, long delays in completing recruitment, and recruitment scandals of a kind the UPSC has largely avoided. The difference is one of practice rather than of law, and the reason usually given is the weaker convention surrounding appointments to them.</p>
+
+<h3>The Examination and the Baswan Committee</h3>
+
+<p>Recruitment to the All India Services and the higher central services is through the Civil Services Examination, in three stages: a preliminary screening test, a written main examination, and a personality test. The structure derives from the <strong>Kothari Committee</strong> of 1976, which shaped the modern pattern.</p>
+
+<p>The <strong>Baswan Committee</strong>, constituted in August 2015 and reporting to the UPSC on 9 August 2016, examined the eligibility, syllabus, scheme and pattern of the examination. Among its recommendations were reducing the upper age limit for general category candidates to twenty-six, and discontinuing the use of regional languages as a medium for writing the examination.</p>
+
+<p>Both recommendations illustrate the genuine difficulty of examination reform. A lower age limit raises the service's average working life and reduces the years lost to repeated attempts, and it disadvantages candidates from backgrounds that take longer to reach the starting line, which is why the proposal has not been accepted. Restricting the medium would standardise assessment and would narrow access in a country where higher education is not uniformly available in English. Each proposal trades <em>quality of intake</em> against <em>breadth of access</em>, and the political system has consistently preferred access.</p>
+
+<h3>Standing Criticisms</h3>
+
+<ul>
+ <li>The examination tests the capacity to acquire and reproduce knowledge rather than the aptitudes administration requires, judgement under uncertainty, capacity to deal with people, and the ability to write clearly and decide quickly.</li>
+ <li>The personality test carries substantial weight and limited reliability.</li>
+ <li>The coaching industry that has grown around the examination advantages those who can pay for it, which qualifies the meritocracy the system claims.</li>
+ <li>The long recruitment cycle leaves posts vacant and candidates in suspense for the better part of two years.</li>
+ <li>There is no systematic effort to match the aptitudes revealed by the process to the services allotted, which are determined by rank and preference alone.</li>
+</ul>
+
+<h2>Training</h2>
+
+<p>Training is the only instrument available for adjusting a career service to changing tasks, because the workforce cannot be replaced. The Indian arrangement is unusually elaborate and unusually front-loaded.</p>
+
+<h3>The Structure</h3>
+
+<p>Training for the Indian Administrative Service runs for about two years and passes through five stages, combining classroom instruction with field experience.</p>
+
+<ul>
+ <li><strong>The Foundation Course</strong> at the Lal Bahadur Shastri National Academy of Administration, of about four months, taken jointly by recruits to <em>all</em> the All India Services and the central services. This is the most important feature of the design: officers who will spend their careers in different services acquire a common frame of reference and personal acquaintance at the outset, which is what makes coordination between services possible later.</li>
+ <li><strong>Phase I</strong> at the Academy, in which theoretical concepts, law, administration, revenue and management are imparted.</li>
+ <li><strong>Bharat Darshan</strong>, a structured study tour across the country.</li>
+ <li><strong>District training</strong> in the allotted state, where ground-level realities are learned and the officer holds his first independent charges.</li>
+ <li><strong>Phase II</strong> at the Academy, designed so that officer trainees returning from the districts share the experience gathered across the country, which converts individual field experience into a collective body of it.</li>
+</ul>
+
+<h3>The Argument About Duration</h3>
+
+<p>A committee that reviewed the syllabus recommended reducing the training period substantially, from about 103 weeks to around 75, on the ground that changes in the examination syllabus had created overlap with the Academy's teaching and that officers spent too long in attachments and too little in independent charge. The Academy resisted a reduction on that scale and proposed a smaller one.</p>
+
+<p>The arguments for retaining the longer period are worth setting out because they generalise. The existing system has worked for six decades and produced capable officers, so it is not prudent to disturb it; the need is to <strong>change the content of training rather than its duration</strong>; and the training needs of the present generation of officers have changed, so the period should be used differently rather than shortened. That last point is the one that matters, and it is the same conclusion Mission Karmayogi reaches by defining capability through roles and competencies rather than through a syllabus.</p>
+
+<h3>The Institutional Framework</h3>
+
+<p>The <strong>Department of Personnel and Training</strong>, within the Ministry of Personnel, Public Grievances and Pensions, is the central agency responsible for policy formulation and coordination across the field of public personnel management, including training, administrative vigilance, staff welfare, machinery for joint consultation, arbitration, reservation and pension-related issues. It is the cadre-controlling authority for the Indian Administrative Service and the central secretariat services, gives the final interpretation of service rules where doubt arises, handles administrative matters relating to the Central Vigilance Commission, the Central Bureau of Investigation, the UPSC and the Central Administrative Tribunal, and oversees the functioning of the Academy and the training institutes.</p>
+
+<p>Beyond the Academy, the system includes the Sardar Vallabhbhai Patel National Police Academy for the Indian Police Service, the Indira Gandhi National Forest Academy, the Foreign Service Institute, the national academies of the revenue and audit services, and the state administrative training institutes which train state services and conduct in-service courses.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>Front-loading.</strong> The great bulk of training occurs before an officer has done the work, and in-service training thereafter is sporadic, poorly attended and not connected to advancement.</li>
+ <li><strong>No consequence.</strong> Where completion of training does not affect promotion, it is treated as an obligation discharged rather than a capability acquired, which is why the second ARC recommended linking promotion to the completion of training.</li>
+ <li><strong>Content.</strong> Training has been criticised for emphasising rules and procedure over the skills of management, negotiation, data and technology that modern administration requires.</li>
+ <li><strong>The specialist gap.</strong> An officer is trained as a general administrator and then spends a career in a succession of unrelated sectors, acquiring domain knowledge in none, which is the training system's contribution to the generalist problem.</li>
+</ul>
+
+
+<h2>Representativeness</h2>
+
+<p>A civil service recruited purely on examination performance will reproduce the social distribution of educational advantage, and in India that distribution is deeply unequal. The question of whether and how the service should mirror the society it administers is therefore both a constitutional and an administrative one.</p>
+
+<h3>The Idea</h3>
+
+<p><strong>J. Donald Kingsley</strong> developed the concept of <strong>representative bureaucracy</strong> in his analysis of the British civil service, and the proposition, as later stated with <strong>Samuel Krislov</strong>, is that broad social groups should have spokesmen and officeholders in administrative as well as political positions. <strong>Dwight Waldo</strong> identified representative bureaucracy, alongside client-oriented bureaucracy and people's participation, as one of the three perspectives the New Public Administration projected, holding that weaving them into public administration would democratise it further.</p>
+
+<p>The argument has a <em>passive</em> and an <em>active</em> form. Passive representation is about composition: a service that looks like the society it serves is more legitimate in its eyes. Active representation is the stronger claim, that officers from a group will in fact advance that group's interests in administration. The first is easier to demonstrate and the second is what the objection to representative bureaucracy fastens on, since an official acting for a constituency is by definition not neutral.</p>
+
+<h3>The Indian Arrangement</h3>
+
+<ul>
+ <li><strong>Article 16(4)</strong> permits the state to reserve appointments for any backward class of citizens not adequately represented in the services.</li>
+ <li><strong>Indra Sawhney</strong> held that the power under Article 16(4) applies to appointments and <strong>not to promotions</strong>.</li>
+ <li>The <strong>77th Amendment</strong> of 1995 inserted <strong>Article 16(4A)</strong>, permitting reservation in matters of promotion for the Scheduled Castes and Scheduled Tribes where the state is of the opinion that they are not adequately represented, which reversed that part of <em>Indra Sawhney</em> by constitutional amendment.</li>
+</ul>
+
+<p>The sequence is instructive beyond its subject: a judicial limit on a legislative power was displaced by constitutional amendment, and the courts have since returned to the question repeatedly on the conditions that must be satisfied before the power is exercised. Reservation in the services is therefore one of the few areas where the balance between the judiciary and the legislature has been genuinely contested rather than settled.</p>
+
+<h3>The Administrative Argument</h3>
+
+<p>The case for representation in the service is that a bureaucracy drawn from a narrow social base will not understand the problems of those outside it, will be distrusted by them, and will in practice administer differently for people like itself. The case against is that it dilutes the merit principle, that it imports into the administration the social divisions it is supposed to hold itself above, and that it sits uneasily with neutrality.</p>
+
+<p>The position most defensible in an answer is that the two objectives are not alternatives on the same axis. Merit determines whether an officer can do the work; representativeness determines whether the service as a body commands the confidence of those it administers. A service that is highly competent and visibly drawn from one section of society has an administrative problem as real as one that is representative and incompetent, and the reasonable object of policy is to widen the pool from which competent officers are drawn rather than to trade one value against the other.</p>
+
+<h2>Neutrality, Anonymity and Commitment</h2>
+
+<p>The relationship between the political and the permanent executive is the theoretical core of this topic, and a harmonious relationship between them is essential to effective administration. The civil servant's role is to advise the political executive impartially, and the doctrines of neutrality and anonymity exist to make that possible.</p>
+
+<h3>Neutrality</h3>
+
+<p>Neutrality means the impartial and non-political character of the civil service: civil servants remain non-political and serve different governments at different times impartially, performing their functions with efficiency, integrity, loyalty and proficiency. <strong>Mohit Bhattacharya</strong> describes it as a kind of <em>political sterilisation</em>, in which the bureaucracy remains unaffected by the changing flow of politics, giving technical advice to political masters while keeping aloof from the politics of the day.</p>
+
+<p>The doctrine developed first in <strong>Britain</strong>, where it has become synonymous with the operation of the civil service. <strong>Earl Attlee</strong> called neutrality one of the strongest bulwarks of democracy. The <strong>Masterman Committee</strong> of 1949 gave it its formal statement, observing that impartiality had long been recognised as a special virtue of British administration, and warning that any weakening of the existing tradition of political impartiality would be the first step towards a political civil service, which would be contrary to the public interest and, in the long run, to the interest of the civil service itself. The concept spread to Canada, Australia, India, France and the United States, where the <strong>Hoover Commission</strong> of 1949 recommended its adoption.</p>
+
+<h3>Anonymity</h3>
+
+<p>Bureaucratic anonymity means that civil servants work from behind the curtain, without praise or blame. Its logic is reciprocal: the minister is answerable in Parliament and in public for the actions of the civil servants under him, and in return he protects them from parliamentary criticism. Anonymity and ministerial responsibility are therefore a single arrangement viewed from two sides, and neither survives the other's collapse.</p>
+
+
+<h4>The Limits of Anonymity</h4>
+
+<p>The norm operates only in respect of the <strong>legal and proper</strong> acts of civil servants. A minister must protect officials who implemented policy according to law; he does not assume responsibility for an official guilty of abuse of authority, which is treated as the official's personal act.</p>
+
+<p>The Indian doctrine dates from the <strong>Mundhra case</strong> of 1957, in which public funds were invested improperly and the <strong>Chagla Commission</strong>, appointed to inquire into it, concluded that the Finance Minister should resign on the principle of ministerial responsibility. The episode established in India that the doctrine has teeth, and it remains the standard illustration, which is itself significant: a convention cited by reference to one instance from the 1950s has not been reinforced by many since.</p>
+
+<h3>The Committed Bureaucracy Debate</h3>
+
+<p>Against neutrality stands the argument for a <strong>committed bureaucracy</strong>, which arose in India in the late 1960s and has two quite different versions that an answer should distinguish.</p>
+
+<ul>
+ <li><strong>Commitment to constitutional values and to development goals.</strong> On this reading an administrator in a poor and unequal society cannot be indifferent between outcomes: he is committed to the Constitution's promises of equality and social justice, and a neutrality that treats land reform and its obstruction with equal detachment is a form of complicity. Development administration makes exactly this demand.</li>
+ <li><strong>Commitment to the government of the day and its programme</strong>, which is a different proposition entirely and shades into commitment to the party in office. This is the version the Masterman Committee warned against, and the version that produces a politicised service in which an officer's career depends on alignment.</li>
+</ul>
+
+<p>The defensible position is that the first is compatible with neutrality and the second is not, and that the practical difficulty is the absence of any bright line between them, since a government's programme is normally presented as the implementation of constitutional values. The distinction that survives is procedural rather than substantive: an officer may be committed to the ends the Constitution sets, and must give the same honest advice whichever party is pursuing them.</p>
+
+<h3>Politicisation in Practice</h3>
+
+<p>The forms the problem takes in India are specific and worth naming: transfer and posting used as reward and punishment; the cultivation of officers by parties expecting to return to office; post-retirement appointments creating an interest in pleasing during service; and public identification of officers with particular policies, which destroys anonymity and makes neutrality unsustainable. The Supreme Court's direction that minimum tenures be fixed, and the creation of civil services boards to advise on postings, are the principal institutional answers, and both have been implemented unevenly.</p>
+
+
+<h2>The Service and Good Governance</h2>
+
+<p>Good governance has become the standard against which administration is judged internationally, and meeting it requires a change in the behaviour and skills of the services themselves. Several proposals have been advanced to that end, and they are worth knowing because they indicate the direction of institutional thinking.</p>
+
+<h3>A Central Authority for the All India Services</h3>
+
+<p>One proposal is a code of conduct for the All India Services enforced by a <strong>central regulatory authority</strong> with the features of a constitutional body rather than a departmental one: a multi-member body of a chairperson and between three and five members; appointment by the President on the recommendation of a high-level committee of the Prime Minister, the Leader of the Opposition in the House of the People and a judge of the Supreme Court; a tenure of five years or until the age of sixty-five; a requirement of twenty-five years' experience in public administration; status equivalent to the Chief Election Commissioner for the chairperson and to an Election Commissioner for members; and removal only by the President on grounds of proven misbehaviour or incapacity established by inquiry by a judge of the Supreme Court.</p>
+
+<p>The design borrows deliberately from the Election Commission, and the borrowing identifies the problem it is meant to solve: postings, transfers and disciplinary decisions are currently taken by the executive that also has an interest in their outcome, and the only Indian institution that has successfully resisted comparable pressure is the one protected in this way.</p>
+
+<h3>Other Proposals</h3>
+
+<ul>
+ <li><strong>Reconstituting the UPSC.</strong> One suggestion is to convert it into a Union Public Merit Promotion Commission, which would handle promotion, transfer and service conditions as well as recruitment, on the argument that an independent body deciding careers would bring transparency and accountability to the working of the bureaucracy.</li>
+ <li><strong>A vision for the services.</strong> Officers should work to a clear civil services code and a stated set of objectives oriented to the unity, integrity and sovereignty of the country.</li>
+ <li><strong>Reducing size.</strong> The strength of the Indian Administrative Service has grown from about 1,115 in 1951 to roughly 5,124 in 1991 and beyond 6,000 since, and the proposal is that redundant posts be eliminated and officers who do not perform be removed. The second half of that proposal runs directly into Article 311, which is why it is easier to state than to implement.</li>
+ <li><strong>Changing the mode of delivery</strong>, with officers working alongside citizens in the delivery of services rather than above them, which is the good governance agenda applied to the individual officer.</li>
+</ul>
+
+<h3>An Assessment of the All India Services</h3>
+
+<ul>
+ <li><strong>Strengths.</strong> Their members are a reservoir of ability selected through a merit-based system; they are drawn from all classes, regions and castes, giving the service a genuinely national social base; and they work within a constitutional and legal framework rather than at the discretion of those in office.</li>
+ <li><strong>Weaknesses.</strong> Poor cadre management; tenure too short for accountability; advancement by seniority; appraisal that does not discriminate; and vulnerability to political pressure through transfer and posting.</li>
+ <li><strong>Opportunities.</strong> Competency-based capacity building, domain assignment, digital delivery, and the demand from an increasingly informed citizenry for measurable performance.</li>
+ <li><strong>Threats.</strong> Politicisation, the erosion of neutrality, the loss of able people to better-paid alternatives, and the risk that an administration which does not reform will simply be bypassed by bodies created outside it.</li>
+</ul>
+
+<h2>Generalist and Specialist</h2>
+
+<p>The Indian higher civil service is built on the generalist principle: an officer recruited without reference to a subject, trained in general administration, and posted across unrelated sectors through a career. The <strong>Fulton Committee</strong> in Britain declared the concept of a generalist administrative class obsolete, and the first Administrative Reforms Commission in India called for the gradual infusion of specialists to meet the technological challenge facing administration.</p>
+
+<p>The defence of the generalist is that administration is itself a skill, that detachment from a technical viewpoint is what allows competing claims to be balanced, and that coordination requires someone whose loyalty is to the whole rather than to a profession. The case against is that modern administration is technical, that a secretary who moves every two years cannot understand the field he governs, and that subordinating specialists to generalists damages the morale of the specialist services.</p>
+
+<p>The practical resolution is domain assignment, in which officers are attached to sectors for extended periods and build expertise within a generalist career, which is the direction both Mission Karmayogi's competency framework and the empanelment reforms point in. Whether it can be sustained against a posting system driven by political convenience is the open question.</p>
+
+<h2>Civil Services Reform</h2>
+
+<h3>The Sequence of Committees</h3>
+
+<p>Indian civil service reform has been examined continuously: <strong>Gorwala</strong> in 1951 on integrity and speed; <strong>Appleby</strong> in 1953 and 1956 on organisation and method; <strong>Santhanam</strong> in 1964 on corruption; the <strong>first ARC</strong> from 1966 on specialists and on the Lokpal; the <strong>Kothari Committee</strong> in 1976 on recruitment; the <strong>Surinder Nath Committee</strong> and the <strong>Hota Committee</strong> in the 2000s on performance appraisal and on reform generally; the <strong>second ARC</strong> from 2005, whose tenth report dealt specifically with refurbishing personnel administration; and the <strong>Baswan Committee</strong> in 2016 on the examination.</p>
+
+<h3>What the Second ARC Recommended</h3>
+
+<ul>
+ <li>Regular in-service training, with <strong>promotion linked to its completion</strong>.</li>
+ <li>Performance-based rather than seniority-based advancement, resting on a reformed appraisal system with disclosure and work targets.</li>
+ <li>An ethics framework and a strengthened anti-corruption architecture.</li>
+ <li>Fixed minimum tenures and a transparent mechanism for postings and transfers.</li>
+ <li>Training conducted so that a disposition to work selflessly is developed, which the Commission raised in its report on unlocking human capital.</li>
+ <li>Modernisation of the recruitment process, including the conduct of UPSC examinations online.</li>
+</ul>
+
+<h3>Lateral Entry</h3>
+
+<p>Lateral entry is the recruitment of specialists from outside the career service directly into senior posts. In <strong>June 2018</strong> the Department of Personnel and Training invited applications for ten posts at <strong>Joint Secretary</strong> level, on a contract of three to five years, and the scheme was extended in <strong>2019</strong> to Joint Secretary and Director level appointments for accomplished professionals from outside government, on contracts of three years extendable to five.</p>
+
+<p><strong>The case for it.</strong> It brings domain expertise the career service does not possess, particularly in finance, technology, energy and trade; it introduces competition into a closed career structure and thereby some pressure on those within it; it widens the pool from which senior advice is drawn; and it addresses directly the generalist problem that every reform report since Fulton has identified.</p>
+
+<p><strong>The case against.</strong> It bypasses the constitutional recruitment machinery unless the UPSC conducts the selection, and the manner of selection determines whether the scheme is merit-based or patronage under another name. It risks importing the values of the sector an appointee comes from into decisions about regulating that sector. It damages the morale and the career prospects of a service that entered by open competition and finds senior posts filled from outside. Reservation does not apply to individual contractual appointments in the same way, which raises a question of representativeness. And an officer on a three-year contract has neither the security that makes independent advice possible nor the long horizon that public decisions require.</p>
+
+<p>The balanced position is that lateral entry is a reasonable answer to a real problem and is not a substitute for reforming the career service. A handful of specialists at Joint Secretary level cannot change an administration of millions, and if the career service continues to promote by seniority, post by political convenience and train without consequence, lateral entry will supply a few good officers to a system that will absorb them without changing.</p>
+
+<h2>Assessment</h2>
+
+<p>The Indian civil service is an institution of considerable achievement and an obvious set of defects, and an answer should hold both. It has conducted elections in the world's largest democracy, held a diverse federation together, administered famine relief and disaster response, and maintained a standard of integrity at senior levels that many comparable states have not. Its recruitment remains genuinely open and competitive, which is not a small thing.</p>
+
+<p>Its defects are the ones every commission has named for seventy years: advancement by seniority rather than performance, appraisal that does not discriminate, tenure too short for accountability, training without consequence, generalism in an age of technical government, and a posting system through which political pressure reaches the individual officer. The diagnosis has never been the difficulty. The difficulty is that each defect protects someone, and that the service asked to reform itself is the body whose position reform would alter.</p>
 `,
 };
