@@ -4980,4 +4980,269 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Its defects are the ones every commission has named for seventy years: advancement by seniority rather than performance, appraisal that does not discriminate, tenure too short for accountability, training without consequence, generalism in an age of technical government, and a posting system through which political pressure reaches the individual officer. The diagnosis has never been the difficulty. The difficulty is that each defect protects someone, and that the service asked to reform itself is the body whose position reform would alter.</p>
 `,
+ 'local-government-india': `
+<h2>Why Local Government</h2>
+
+<p>Local government is defended on two quite different grounds, and confusing them weakens most answers on this topic. The <strong>efficiency</strong> argument is that local bodies know local conditions, can match services to need, and can be held to account by people who see the results. The <strong>democratic</strong> argument, which is Ripon's and Gandhi's, is that local government is a school of democracy, valuable because it trains citizens in self-rule whether or not it delivers services more cheaply.</p>
+
+<p>The two lead to different conclusions when they conflict. If a local body delivers badly, the efficiency argument says to take the function back and the democratic argument says to build the body's capacity. Indian practice has generally followed the first, which is why the third tier remains weak four decades after it was created.</p>
+
+<h3>The Indian Antecedents</h3>
+
+<ul>
+ <li><strong>Lord Ripon's</strong> resolution of 1882 initiated local self-government and gave it the educative justification, so that local bodies might become a school of democracy. He is called the father of local self-government in India and the resolution its Magna Carta.</li>
+ <li><strong>Mahatma Gandhi</strong> understood Indian society as a society of villages and worked for <em>gram swaraj</em>, village self-sufficiency, as the aim of independent India.</li>
+ <li><strong>B.R. Ambedkar</strong>, chairman of the drafting committee, was <strong>against</strong> the village panchayat, and only lip service was paid to the concept in the draft Constitution. His objection was not administrative but social: he regarded the village as a sink of localism and the seat of caste oppression, and saw no reason to hand power to the structure that had excluded the people he represented.</li>
+ <li>The compromise was <strong>Article 40</strong> in the Directive Principles: the state shall take steps to organise village panchayats and endow them with such powers and authority as may be necessary to enable them to function as units of self-government.</li>
+</ul>
+
+<p>Ambedkar's objection is not a historical footnote. It anticipates the single most serious criticism of decentralisation, that devolving power to a locality dominated by entrenched interests delivers capture rather than democracy, and it should be raised in any answer that treats local government as self-evidently good.</p>
+
+<h2>Panchayati Raj Before 1992</h2>
+
+<h3>The Balwant Rai Mehta Committee, 1957</h3>
+
+<p>Appointed to operationalise Article 40, the committee produced the <strong>three-tier</strong> structure that has defined Indian panchayati raj since: the <strong>Gram Panchayat</strong> at village level, the <strong>Panchayat Samiti</strong> at the block or intermediate level, and the <strong>Zila Parishad</strong> at district level. Elections were to be direct at village level and indirect at block and district level, and the three tiers were organically linked because the chairmen of lower bodies were <em>ex officio</em> members of higher ones. The bodies were given responsibility for planning and development work.</p>
+
+<p>The committee's own statement of purpose is the key to what followed: panchayati raj would establish a link between a local leadership enjoying the confidence of local people and the government, and <strong>transfer the policy of the government into action</strong>. The village panchayat was accordingly made a subordinate unit of government at the local level for implementing its programmes, <strong>not an agency of self-government or gram swaraj</strong> as Gandhi had envisaged.</p>
+
+<p>That is the founding ambiguity of Indian local government, and it has never been resolved. The institution was created as an instrument of the state's development administration and justified in the language of self-rule, and its subsequent history is the working out of that contradiction.</p>
+
+<h3>The Ashok Mehta Committee, 1977 to 1978</h3>
+
+<p>Panchayati raj lost its impetus, people's participation weakened, and elections to the bodies were not held regularly. The Janata government, interested in giving panchayati raj a meaningful role, appointed a committee under <strong>Ashok Mehta</strong> in December 1977 to suggest a viable organisation for grassroots institutions capable of mobilising popular participation. It reported in 1978 with <strong>132 recommendations</strong>.</p>
+
+<p>Its central proposal was a <strong>two-tier</strong> structure in place of three: the <strong>Zila Parishad</strong> at district level as the executive body responsible for planning, and the <strong>Mandal Panchayat</strong> below it covering a population of fifteen to twenty thousand. It also recommended an open role for political parties in panchayat elections, reservation for Scheduled Castes and Tribes, and regular elections. The party-political recommendation was the boldest: it accepted that pretending local elections are non-political merely drives the politics underground.</p>
+
+<h3>The Later Committees</h3>
+
+<ul>
+ <li>The <strong>G.V.K. Rao Committee</strong> of 1985 found that development administration had become divorced from the district machinery and recommended that the district be the unit of development planning, with the Zila Parishad given the central role.</li>
+ <li>The <strong>L.M. Singhvi Committee</strong> of 1986 made the decisive conceptual recommendation: that panchayati raj be given <strong>constitutional status</strong>, with a new chapter in the Constitution, so that local bodies could not be suspended or superseded at the convenience of a state government.</li>
+</ul>
+
+<h3>Why Panchayati Raj Declined</h3>
+
+<p>The reasons identified in the literature are political rather than administrative, and they are the most useful part of this topic because they explain why constitutional status alone has not been sufficient.</p>
+
+<ul>
+ <li><strong>Electoral rivalry.</strong> State-level leaders came to see panchayat representatives as rivals and, out of that fear, withdrew important functions from the bodies and turned them into a dumping ground for discarded state cadre officers. Successive amendments to the state Acts removed most of the extension and development functions.</li>
+ <li><strong>Irrational functional distribution.</strong> Subjects that should lie with panchayati raj bodies, the development of land, water, forests, grazing land and animal husbandry, were retained by state departments, so that the institutions remained <em>panchayat</em> and never became <em>raj</em>.</li>
+ <li><strong>Postponed elections.</strong> Elections were repeatedly deferred on flimsy grounds, which destroyed popular faith in institutions that were visibly unable to function.</li>
+ <li><strong>Patronage.</strong> Political considerations dominated the distribution of patronage through these bodies, and panchayati raj officials and block development officers were not left free to decide objectively.</li>
+ <li><strong>Inadequate finance</strong>, since most funds came from the state government, so that the bodies could not act independently of the authority that funded them.</li>
+ <li><strong>Supersession.</strong> Where a sarpanch or pradhan did not act according to the state party line, he could be removed or suspended on flimsy grounds.</li>
+ <li><strong>Popular apathy</strong>, which followed rather than caused the rest: people lost faith in the capacity of these bodies to meet their needs.</li>
+</ul>
+
+<h2>The 73rd Amendment, 1992</h2>
+
+<h3>Legislative History</h3>
+
+<p>The amendment had a chequered history and struggled for nearly forty years. The Rajiv Gandhi government introduced a Panchayati Raj Bill in 1989 which the House of the People passed and which failed to secure the required majority in the Council of States. The V.P. Singh government attempted a bill in 1990 which lapsed with the dissolution of the House. The Congress government reintroduced it with modifications in 1991; it was referred to a Select Committee, passed the House of the People on <strong>22 December 1992</strong> and the Council of States the following day, was ratified by seventeen state assemblies, received the President's assent on <strong>20 April 1993</strong>, and came into force on <strong>24 April 1993</strong>.</p>
+
+<p>That a measure devolving power to villages required forty years and failed twice in the states' own chamber is itself the topic's central fact: the resistance came from the level being asked to devolve.</p>
+
+<h3>Principal Provisions</h3>
+
+<ul>
+ <li>A <strong>Gram Sabha</strong> in every village, consisting of all persons registered in the electoral rolls of the panchayat area. This is the only body in the Indian constitutional structure that is an assembly of citizens rather than of representatives.</li>
+ <li>A <strong>three-tier</strong> structure at village, intermediate and district level, the intermediate tier being optional for states with a population below twenty lakhs.</li>
+ <li><strong>Reservation</strong> of seats for Scheduled Castes and Scheduled Tribes in proportion to their share of the panchayat area's population, with chairpersons' offices also reserved; <strong>one-third of all seats at every level reserved for women</strong>, and one-third of the seats reserved for Scheduled Castes and Tribes reserved for women of those groups. Many states have since raised the women's share to one half.</li>
+ <li>Members of Parliament and of the state legislature are represented in the panchayats of their areas, without a vote for the chairpersons of the intermediate and district tiers.</li>
+ <li><strong>Financial powers</strong>: panchayats may be empowered to levy and collect appropriate taxes and are entitled to grants-in-aid from the state on the recommendation of the State Finance Commission, financial paucity having been one of the main reasons for past failure.</li>
+ <li>A <strong>five-year term</strong> with elections before its expiry, and elections within six months of any dissolution, which removes the power to postpone indefinitely.</li>
+ <li>A <strong>State Election Commission</strong> for the superintendence and conduct of panchayat elections, which removes the conduct of elections from the state government.</li>
+ <li>A <strong>State Finance Commission</strong> every five years to review the financial position of the panchayats.</li>
+ <li>A <strong>District Planning Committee</strong> to consolidate the plans of panchayats and municipalities.</li>
+</ul>
+
+<h3>Compulsory and Voluntary</h3>
+
+<p>The distinction is the key to assessing the amendment. The <strong>compulsory</strong> provisions, regular elections, reservation, the five-year term, the State Election Commission and the State Finance Commission, are self-executing and have been broadly complied with. The <strong>voluntary</strong> provisions are those that matter most for power: <strong>Article 243G</strong> provides that the state legislature <em>may</em> endow panchayats with such powers and authority as may be necessary to enable them to function as institutions of self-government, with respect to the preparation of plans and the implementation of schemes for economic development and social justice, including the <strong>twenty-nine subjects</strong> in the <strong>Eleventh Schedule</strong>.</p>
+
+<p>The amendment therefore guaranteed the <em>form</em> of local democracy and left its <em>substance</em> to the states, with no time limit and no minimum. That drafting choice is the single most important explanation of what has happened since: India has three million elected local representatives and a third tier with very little power.</p>
+
+
+<h3>The Gram Sabha</h3>
+
+<p>The Gram Sabha consists of every person registered in the electoral roll of a village within the panchayat area, and it is the only institution in the Indian constitutional structure that is an assembly of <em>citizens</em> rather than of representatives. Everything else in Indian government, including the panchayat itself, is representative; the Gram Sabha is direct.</p>
+
+<p>Its powers under Part IX are what the state legislature confers, and states have typically given it the approval of plans and budgets, the identification of beneficiaries for anti-poverty schemes, the social audit of works, and the consideration of annual accounts. Under PESA its powers in Scheduled Areas are far greater and are conferred by central law rather than left to the state.</p>
+
+<p>The Gram Sabha matters theoretically out of proportion to its practice. It is the only mechanism in the structure capable of checking <strong>capture from below</strong>: a panchayat dominated by a locally powerful family answers to an assembly in which every adult in the village may speak and vote. Ambedkar's objection to village government is answered, if it is answered at all, here rather than anywhere else.</p>
+
+<p>Its practice is weak. Meetings are frequently not held, quorum requirements are not met or are waived, attendance is dominated by the same interests that dominate the panchayat, proceedings are recorded without meetings having occurred, and the poorest and women attend least. The statutory social audit of employment guarantee works is the one context in which Gram Sabhas have functioned at scale, and its relative success indicates the condition: the assembly works where it has a specific, material and recurring question in front of it, and does not where it is convened to approve a document.</p>
+
+<h3>Reservation and Who Holds Office</h3>
+
+<p>The reservation provisions have changed the composition of local political life more than any other feature of the amendments. One-third of all seats at every tier are reserved for women and one-third of the seats reserved for Scheduled Castes and Scheduled Tribes are reserved for women of those communities, with seats for the Scheduled Castes and Tribes themselves reserved in proportion to their share of the population. Offices of chairperson are reserved on the same basis, and many states have since raised the women's share to one half.</p>
+
+<p>The effects, and the arguments about them, should both appear in an answer.</p>
+
+<ul>
+ <li><strong>Scale.</strong> The provisions have brought women and members of the Scheduled Castes and Tribes into elected office in numbers with no parallel anywhere, and have done so in the institutions closest to where social exclusion is practised.</li>
+ <li><strong>The proxy problem.</strong> The phenomenon of the <em>sarpanch pati</em>, where a husband or male relative exercises the authority of a woman's reserved office, is real and widely documented, and it is the standard objection to treating the numbers as achievement.</li>
+ <li><strong>The counter-evidence.</strong> Research on reserved panchayats has found measurable differences in the pattern of expenditure, with more spending on the goods women report as priorities, and evidence that repeated reservation reduces the proxy problem over successive terms as women accumulate experience and independent standing.</li>
+ <li><strong>Rotation.</strong> Because reserved seats rotate between constituencies, an incumbent frequently cannot contest the seat again, which prevents the accumulation of experience that would make representatives effective. It is the clearest case in the design where the instrument of inclusion works against the capability of those included.</li>
+</ul>
+
+<h3>The Planning Committees</h3>
+
+<p>The <strong>District Planning Committee</strong>, provided for by the 74th Amendment and constituted in every district, consolidates the plans prepared by the panchayats and the municipalities of the district into a <strong>draft district development plan</strong>, having regard to matters of common interest between rural and urban areas, the sharing of water and other physical and natural resources, infrastructure and environmental conservation. Four-fifths of its members are elected by and from among the elected members of the district panchayat and the municipalities, in proportion to the ratio of rural to urban population.</p>
+
+<p>The <strong>Metropolitan Planning Committee</strong> performs the same function for metropolitan areas with a population of ten lakhs or more spanning more than one district or local authority, and is the only constitutional body addressing the governance of a metropolitan region as a unit.</p>
+
+<p>Both were designed to solve a real problem, that rural and urban bodies in the same territory plan separately for shared water, transport and land. In practice district plans are generally compiled from departmental proposals rather than built up from local ones, and metropolitan committees have been constituted in very few of the metropolitan areas that qualify, which leaves the governance of India's largest urban regions divided among municipalities, development authorities and parastatals with no body responsible for the whole.</p>
+
+<h2>PESA, 1996</h2>
+
+<p>The <strong>Provisions of the Panchayats (Extension to the Scheduled Areas) Act, 1996</strong> extends Part IX to the Scheduled Areas identified under the <strong>Fifth Schedule</strong>, which had been excluded from the 73rd Amendment. It followed the <strong>Bhuria Committee</strong>, which reported in January 1995 and recommended a three-tier structure of self-governance in tribal areas with the Gram Sabha exercising command over natural resources, resolving disputes and managing institutions such as schools and cooperatives.</p>
+
+<p>PESA is radical in a way the 73rd Amendment is not. It confers <strong>absolute powers on the Gram Sabha</strong> in these areas, leaving the state legislature an advisory role in ensuring that panchayats and gram sabhas function properly. The Gram Sabha's powers extend to approving plans and programmes before they are taken up, identifying beneficiaries, being consulted before land acquisition and before the grant of prospecting licences or mining leases for minor minerals, managing minor water bodies and minor forest produce, controlling local plans and resources, and safeguarding community resources and customary law.</p>
+
+<p>The gap between the Act and its implementation is wide and well documented: state rules under PESA were delayed for years in several states, the consultation requirement before land acquisition has repeatedly been treated as a formality, and control over minor forest produce and minor minerals, which is where the money is, has been conceded least. PESA is therefore the clearest single demonstration of the topic's general finding, that the legal transfer of authority to local bodies and the actual transfer of power are different events.</p>
+
+<h2>The 74th Amendment, 1992</h2>
+
+<h3>Why It Was Needed</h3>
+
+<p>Urban local government before 1992 suffered from inadequate finance, lack of proper planning and development, and the growth of densely populated metropolitan cities with large populations living in slums and single rooms, which produced social tension requiring a viable local institutional framework to manage. With the liberalisation of the 1980s, several attempts were made to reform municipal government, culminating in the amendment which gave municipal government constitutional status.</p>
+
+<h3>Provisions</h3>
+
+<p>The provisions appear in <strong>Articles 243P to 243ZG</strong>, and their characteristic features are:</p>
+
+<ul>
+ <li>Three types of municipal body by population: the <strong>Nagar Panchayat</strong> for an area in transition from rural to urban, the <strong>Municipal Council</strong> for a smaller urban area, and the <strong>Municipal Corporation</strong> for a larger one.</li>
+ <li>Reservation of electoral wards for Scheduled Castes and Scheduled Tribes and for women, on the same principle as the 73rd Amendment.</li>
+ <li>A suggestive list of municipal functions.</li>
+ <li>Creation of <strong>District Planning Committees</strong> and, for larger agglomerations, <strong>Metropolitan Planning Committees</strong>.</li>
+ <li>Appointment of a <strong>State Election Commission</strong> and a <strong>State Finance Commission</strong>, the same bodies serving both rural and urban bodies.</li>
+ <li>Ward committees in larger municipalities, which are the urban counterpart of the Gram Sabha and have generally not been made functional.</li>
+</ul>
+
+<h3>The Functional List</h3>
+
+<p>The 74th Amendment did not specify the functions of municipal bodies but mentioned them vaguely. <strong>Article 243W</strong> provides that the state may by law endow municipalities with such powers and authority as are required to enable them to function as institutions of self-government, and attaches the <strong>Twelfth Schedule</strong> of <strong>eighteen</strong> functional items for devolution by the state government.</p>
+
+<p>Three defects in that arrangement are worth naming. <strong>No time limit</strong> was fixed for devolving the listed functions. The functions <strong>do not correspond</strong> to the Union, State and Concurrent Lists, so that items such as protection of the environment, slum improvement, urban poverty alleviation and promotion of cultural aspects sit alongside state and even central responsibilities without any rule of precedence. And the amendment gives the municipality no independent taxing power, only what the state confers. The development of urban local bodies has accordingly not been up to the mark.</p>
+
+
+<h3>The Structure of Urban Local Government</h3>
+
+<p>The three categories are defined by population alongside other criteria. A <strong>Nagar Panchayat</strong> is created for a population of roughly ten thousand to fifty thousand in an area transitional between rural and urban; a <strong>Municipal Council</strong> for fifty thousand to five lakhs; and a <strong>Municipal Corporation</strong> for populations above five lakhs. Population is not the sole test: density, the prospects of internal revenue, the proportion of employment in non-agricultural activity and other factors are also considered.</p>
+
+<h4>Composition</h4>
+
+<p>A municipal body comprises directly elected members from wards, together with additional members provided by the amendment: members of the state legislative assembly and members of Parliament whose constituencies fall within the municipal area; the chairpersons of ward committees in corporations with populations of three lakhs and above; and nominated experts, who have no right to vote.</p>
+
+<p>The provision for <strong>ward committees and zonal committees</strong> in larger cities is the amendment's genuine innovation, because it creates the possibility of decentralisation within the municipality and of popular involvement in municipal affairs at a scale where the corporation itself is remote. In most cities ward committees have been constituted late, made too large to function, or not constituted at all, so the innovation remains largely on paper.</p>
+
+<h4>The Mayor and the Commissioner</h4>
+
+<p>The distinctive administrative problem of Indian urban government is the division between the elected <strong>Mayor</strong> or chairperson and the appointed <strong>Municipal Commissioner</strong>. In most states the Mayor has a short term, frequently one year, and largely ceremonial authority, while executive power rests with the Commissioner, a state government officer who is not appointed by, answerable to, or removable by the elected body.</p>
+
+<p>The consequence is that the city's chief executive answers to the state and its elected head does not command the administration. Where Mayors have been given longer terms and executive authority, as some states have experimented, the office becomes capable of being held accountable for the city's condition, which is the precondition of urban reform. The contrast with the metropolitan mayoralties of other countries is the standard comparison, and it identifies the missing element: Indian cities have no single elected figure whom voters can hold responsible.</p>
+
+<h4>Other Urban Bodies</h4>
+
+<p>Beyond the three constitutional categories, urban administration includes <strong>cantonment boards</strong> under central law for military stations, <strong>notified area</strong> and <strong>town area</strong> committees for smaller or newly developing settlements, <strong>townships</strong> established by public enterprises for their employees, <strong>port trusts</strong>, and <strong>special purpose agencies</strong> constituted for single functions such as water supply, housing or transport.</p>
+
+<h3>Why Urban Bodies Remain Weak</h3>
+
+<ul>
+ <li><strong>Insufficient grants.</strong> State grants are inadequate because state governments generally reject the recommendations of the State Finance Commission.</li>
+ <li><strong>Difficulty in declaring transitional areas.</strong> Determining which rural area has become transitional for the purpose of constituting a Nagar Panchayat is genuinely hard, because the indicators of rapid socio-economic change in a rural population are not easy to analyse. Migration into urban areas is not taken into account in determining urban status, and in consequence slum populations are left outside the framework altogether, which the literature rightly calls an injustice measured against constitutional principle.</li>
+ <li><strong>The pace of urbanisation.</strong> Overpopulation and migration place demands on municipalities that must be met from resources fixed independently of them.</li>
+ <li><strong>Leadership and participation.</strong> Municipalities have not developed administrative capability, for want of competent leadership and of any serious effort to build relations between citizen and administration.</li>
+ <li><strong>Parallel multi-purpose agencies.</strong> Development authorities, water and sewerage boards, housing boards and transport corporations operate in the same territory with overlapping mandates, producing duplication and conflict and diluting municipal autonomy in real terms. In most large Indian cities the municipality does not control planning, water, transport or housing, which are the functions by which a city is actually governed.</li>
+</ul>
+
+<h3>The Urban Missions</h3>
+
+<p>Central urban programmes have become the principal source of municipal investment, and they illustrate the topic's tension rather than resolving it. Successive missions for infrastructure renewal, sanitation, housing and technology-led urban development have brought substantial resources to cities and have done so through <strong>centrally designed schemes with reform conditionalities</strong>, implemented frequently through special purpose vehicles rather than through elected municipal bodies.</p>
+
+<p>The effect is double. Cities obtain capital they could not raise, and the constitutional body created to govern the city is bypassed in favour of an administrative vehicle answerable to the state and the Union. This is exactly the pattern of parallel bodies described for rural local government, appearing in urban form and at larger scale.</p>
+
+<h2>Devolution: The Three Fs</h2>
+
+<p>Devolution has three elements, and the standard formulation in the literature is that a local body needs <strong>functions, funds and functionaries</strong> together. The Indian record is progressively worse across the three.</p>
+
+<ul>
+ <li><strong>Functions</strong> have been transferred most readily, because transferring a subject on paper costs the state nothing.</li>
+ <li><strong>Funds</strong> have followed partially, mostly as tied grants for specific schemes rather than as untied resources a local body may allocate according to its own priorities.</li>
+ <li><strong>Functionaries</strong> have been devolved least. Most panchayats rely on state-appointed secretaries and development officers who <strong>report to line departments rather than to the elected body</strong>, so an elected chairperson directs staff whose careers lie elsewhere. This is the decisive gap: a body with a function and a budget but no staff of its own must ask the state's officials to act, which reproduces the old relationship inside the new structure.</li>
+</ul>
+
+<h3>Activity Mapping</h3>
+
+<p><strong>Activity mapping</strong> is the exercise of breaking each devolved subject into its constituent activities, planning, implementation, monitoring, maintenance, asset creation, and assigning each activity to a specific tier. Without it, elected representatives remain uncertain what they may decide and officials continue to bypass them, so overlap and confusion persist even where a subject has formally been transferred. The devolution of taxes to the tiers should follow the activity mapping, so that the money reaches whichever tier is responsible for the activity.</p>
+
+<p>Few states have completed a serious activity mapping, and its absence is why a subject can appear transferred in a state's statute and unchanged in its districts.</p>
+
+<h3>The Devolution Index</h3>
+
+<p>The <strong>Devolution Index</strong>, published by the Ministry of Panchayati Raj, scores and ranks states on six dimensions: <strong>framework, functions, finances, functionaries, capacity enhancement and accountability</strong>. The 2024 report, <em>Status of Devolution to Panchayats in States</em>, released in February 2025, placed <strong>Karnataka</strong> first overall and first on finances and accountability, followed by <strong>Kerala</strong> and <strong>Tamil Nadu</strong>.</p>
+
+<p>The Index matters beyond its rankings for two reasons. It makes devolution measurable, which converts an argument about intentions into a comparison of records; and the wide spread between the leading and trailing states establishes that the constraint is <em>state political will</em> rather than any feature of the constitutional design, since all states operate under the same amendment.</p>
+
+<h2>Financial Resources</h2>
+
+<h3>Own Revenue</h3>
+
+<p>Local bodies may levy such taxes as the state authorises. For <strong>rural</strong> bodies these are typically small: house tax, taxes on fairs and markets, fees for services, and income from common property. For <strong>urban</strong> bodies the principal source is the <strong>property tax</strong>, supplemented by user charges, licence fees and advertisement taxes.</p>
+
+<p>Two developments have squeezed municipal revenue. <strong>Octroi</strong>, formerly the major source for local bodies, has been subsumed into the <strong>Goods and Services Tax</strong>, removing a buoyant tax collected at the local level and replacing it with a share determined elsewhere. And the <strong>property tax</strong> is poorly realised because the indicators for assessment are unclear and assessment is widely corrupted, so that collection falls far short of potential in most cities.</p>
+
+<h3>Transfers</h3>
+
+<ul>
+ <li><strong>Assigned and shared taxes</strong>, where the state collects and passes on a share.</li>
+ <li><strong>Grants-in-aid</strong> from the state on the recommendation of the State Finance Commission.</li>
+ <li><strong>Central Finance Commission grants</strong>, made to local bodies under the provision requiring the Union Finance Commission to recommend measures to augment a state's Consolidated Fund to supplement the resources of panchayats and municipalities on the basis of the State Finance Commission's recommendations. These have grown substantially and are now the most predictable money local bodies receive.</li>
+ <li><strong>Scheme funds</strong>, which are tied to the scheme's purpose and leave no discretion.</li>
+</ul>
+
+<p>The composition matters more than the total. A local body funded almost wholly by tied transfers is an implementing agency whatever its constitutional status, and the measure of genuine fiscal decentralisation is the share of untied resources, which remains small.</p>
+
+<h2>The State Finance Commission</h2>
+
+<p>The State Finance Commission is constituted by the Governor every five years to review the financial position of the panchayats and municipalities and to recommend the principles governing the distribution between the state and its local bodies of the net proceeds of taxes, duties, tolls and fees leviable by the state; the determination of taxes that may be assigned to local bodies; grants-in-aid from the state's Consolidated Fund; and measures to improve the financial position of local bodies.</p>
+
+<p>It is, in design, the exact counterpart at the state level of the Union Finance Commission, and its record is markedly worse. Commissions have been constituted late or not at all in several states; reports have been submitted and not placed before the legislature with an action-taken memorandum as required; and recommendations have been accepted in part and implemented in smaller part.</p>
+
+<p>The asymmetry is the sharpest argument available in this topic. No state would accept the Union treating the Union Finance Commission's award as advisory in the way states treat their own commissions' awards, and the same governments that demand fiscal federalism upward decline to practise it downward. That observation does more work in an answer than any list of provisions.</p>
+
+<h2>Why It Still Has Not Worked</h2>
+
+<ul>
+ <li><strong>The voluntary drafting.</strong> Articles 243G and 243W say the state <em>may</em> devolve, and no time limit or minimum was fixed, so the amendment guaranteed elections and left power where it was.</li>
+ <li><strong>Political rivalry persists.</strong> The logic that led state leaders to strip functions before 1992 has not changed: an elected district chairperson with resources is a rival to the legislator from the same area.</li>
+ <li><strong>Parallel bodies.</strong> District Rural Development Agencies, scheme-specific societies and mission structures channel funds and functions outside the panchayat structure, so that the constitutionally mandated body is bypassed by arrangements created administratively.</li>
+ <li><strong>Missing functionaries</strong>, so that elected bodies command no staff of their own.</li>
+ <li><strong>Elite capture</strong>, which is Ambedkar's objection in modern form: devolution to a locality dominated by caste or landed interests can transfer power to those interests rather than to the people. The evidence on reservation is more encouraging here than the theory predicted, since reserved seats have brought Scheduled Caste, Scheduled Tribe and women representatives into office in very large numbers, but the phenomenon of the proxy office-holder is real and well documented.</li>
+ <li><strong>Capacity.</strong> Local bodies frequently lack the technical, accounting and planning capability to use powers they are given, which is used as a reason not to devolve and which devolution accompanied by capacity-building would be the means of correcting. The argument is circular and the circle has not been broken.</li>
+</ul>
+
+<h2>What Would Make It Work</h2>
+
+<ul>
+ <li>Complete <strong>activity mapping</strong> in every state, so that each tier knows which activities under each subject are its own.</li>
+ <li>Devolve <strong>functionaries</strong>, placing the staff of devolved subjects under the administrative control of the elected body, which is the change that would alter the relationship most.</li>
+ <li>Increase the <strong>untied share</strong> of transfers and strengthen own-source revenue, particularly by reforming property tax assessment in cities.</li>
+ <li>Make the <strong>State Finance Commission</strong> effective through timely constitution, statutory deadlines for action-taken reports, and a convention that its award is accepted as the Union Finance Commission's is.</li>
+ <li>Wind down or subordinate <strong>parallel bodies</strong> so that funds and functions flow through the constitutional structure.</li>
+ <li>Invest in <strong>capacity</strong>: training for elected representatives as well as officials, professional accounting, and technical support at the block level.</li>
+ <li>Make the <strong>Gram Sabha and ward committees</strong> functional, since the assembly of citizens is the only mechanism that checks capture from below.</li>
+</ul>
+
+<h2>Assessment</h2>
+
+<p>The achievement of the 73rd and 74th Amendments should not be understated. India holds regular elections to some quarter of a million local bodies, has roughly three million elected representatives, and has brought Scheduled Caste, Scheduled Tribe and women representatives into local office on a scale unmatched anywhere, which has altered who appears in public life in rural India whatever the state of devolution.</p>
+
+<p>The failure is equally clear and is a failure of <em>power</em> rather than of <em>form</em>. The amendments guaranteed the existence of local government and left its authority to the states, and the states have devolved functions on paper, funds in tied form and functionaries hardly at all. The result is a third tier with democratic legitimacy and administrative dependence, which is a combination that generates frustration in the elected representative and contempt in the official.</p>
+
+<p>The conclusion worth carrying into an answer is that Indian federalism's unfinished business is the third tier, and that the resistance comes from the states rather than from the Union. The same argument states make to the Centre about autonomy and untied resources is made to them by their own local bodies, and is answered in the same way.</p>
+`,
 };
