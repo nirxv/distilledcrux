@@ -3204,4 +3204,296 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The conclusion worth carrying into an answer is that India has not suffered from a shortage of administrative diagnosis. It has produced an unusually rich body of it over seventy-five years, and the gap between the diagnosis and the condition is itself the finding: an administration capable of commissioning excellent reports on its own defects, and structurally insulated from acting on them, is exhibiting precisely the formalism that the comparative literature attributes to transitional systems.</p>
 `,
+ 'constitutional-framework-administration': `
+<h2>The Constitution as an Administrative Document</h2>
+
+<p>The Indian Constitution is unusual among constitutions in how much administration it contains. It does not merely establish organs and distribute powers; it prescribes the services, protects their tenure, creates the audit and recruitment machinery, allocates taxes, and provides for the suspension of the whole arrangement in an emergency. For Paper II this means the constitutional framework is not background to administration but its operating charter, and most administrative controversies in India are ultimately arguments about provisions rather than about practices.</p>
+
+<h2>The Parliamentary System</h2>
+
+<p>India adopted a parliamentary executive at the Union and in the states, in which the real executive is a Council of Ministers drawn from and answerable to the legislature, headed by a Prime Minister or Chief Minister, with a constitutional head who acts on their advice.</p>
+
+<h3>Why It Was Chosen</h3>
+
+<p>The Constituent Assembly's reasoning turned on three considerations. India had <strong>familiarity</strong> with the form, since the Government of India Act 1919 and the Act of 1935 had introduced responsible government in the provinces and the political class had worked it. The framers preferred <strong>responsibility to stability</strong>: a presidential executive is stable for a fixed term and answerable only periodically, where a parliamentary executive is answerable daily and removable at any time. And in a society of great diversity, a <strong>plural executive</strong> in which a cabinet accommodates regions, communities and interests was judged safer than a single elected president in whom power and symbolism concentrate.</p>
+
+<h3>Features</h3>
+
+<ul>
+ <li><strong>Nominal and real executives.</strong> The President is the constitutional head; executive power is exercised in his name by the Council of Ministers, whose advice binds him, subject to a single reference back.</li>
+ <li><strong>Collective responsibility</strong> of the Council of Ministers to the House of the People, which is the bedrock of the system: the ministry stands or falls together, and a minister who cannot accept a cabinet decision must resign rather than dissent publicly.</li>
+ <li><strong>Individual responsibility</strong> of each minister for the department in his charge, which is what makes the permanent official answerable at all, since the official answers to the minister and the minister to the House.</li>
+ <li><strong>Membership of the legislature</strong>, so that ministers sit in and are questioned by the body that can remove them.</li>
+ <li><strong>Leadership of the Prime Minister</strong>, who selects and can effectively remove ministers, allocates portfolios and chairs the cabinet.</li>
+ <li><strong>A permanent, politically neutral civil service</strong> serving successive ministries, which is the corollary of a political executive that changes.</li>
+</ul>
+
+<table>
+ <thead>
+ <tr><th></th><th>Parliamentary</th><th>Presidential</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Executive-legislature relation</td><td>Fused: the executive sits in and is drawn from the legislature</td><td>Separated: the executive is separately elected and excluded from the legislature</td></tr>
+ <tr><td>Tenure of the executive</td><td>Continues while it holds a majority</td><td>Fixed term, removable only by impeachment</td></tr>
+ <tr><td>Accountability</td><td>Continuous, through questions, debates, motions and the confidence of the House</td><td>Periodic, through election, with legislative oversight by committee</td></tr>
+ <tr><td>Administrative headship</td><td>Minister as political head of a department, with a permanent secretary</td><td>Agency heads appointed by the President, often from outside the career service</td></tr>
+ <tr><td>Legislative control of administration</td><td>Indirect, through ministerial responsibility</td><td>Direct, over agencies, through appropriation and confirmation</td></tr>
+ <tr><td>Characteristic risk</td><td>Instability and executive dominance of the legislature through the party whip</td><td>Deadlock between separately elected branches</td></tr>
+ </tbody>
+</table>
+
+<h3>What It Means for Administration</h3>
+
+<ul>
+ <li><strong>Anonymity and neutrality</strong> follow from ministerial responsibility. Because the minister answers publicly, the official need not be publicly identified with advice, and can therefore give it candidly and serve the next ministry equally.</li>
+ <li><strong>The secretariat system</strong> follows from the same source: a minister who must answer in the House needs a department organised to brief him, which is what the secretariat and the file exist to do.</li>
+ <li><strong>The generalist bias</strong> follows too. A secretary's central task is to advise a minister and manage the department's relations with the legislature and the cabinet, which rewards breadth and political sense over technical depth.</li>
+ <li><strong>Executive dominance of the legislature.</strong> Because the government commands the majority that is supposed to hold it accountable, and party discipline is reinforced by anti-defection provisions, parliamentary control of administration is weaker in practice than in principle, which is the theme of the accountability topic.</li>
+</ul>
+
+<h3>The Case Against, and the Reply</h3>
+
+<p>Critics argue that the parliamentary system produces short horizons, coalition instability, ministries distributed for political balance rather than competence, and legislatures too weak to scrutinise. The presidential alternative is periodically proposed on those grounds.</p>
+
+<p>The reply is that the presidential model solves the stability problem by removing the removability that is the system's central safeguard, and that in a country of India's diversity an executive that must continuously hold a coalition together is performing a representative function as well as an administrative one. The defects identified are real and their sources are the party system and the weakness of legislative committees rather than the parliamentary form itself, which is where remedies should be aimed.</p>
+
+
+<h3>The Ordinance Power and Its Limits</h3>
+
+<p>The President may promulgate an ordinance on any subject on which Parliament may legislate, when the Houses are not in session. Once promulgated, the Houses have <strong>six weeks</strong> from reassembly to act, the period being reckoned from the later date where the two Houses reassemble on different days. If approved it becomes law; if not, it lapses at the end of that period, which gives an ordinance a maximum life of roughly six months and six weeks.</p>
+
+<p>The power was placed beyond judicial review by the <strong>38th Amendment of 1975</strong>, and the courts recovered the ground. In <strong>A.K. Roy v. Union of India</strong> the Supreme Court held that an ordinance is reviewable on the grounds of <em>mala fide</em> exercise of the power and of whether the circumstances demanded it. In <strong>D.C. Wadhwa</strong> the Court held that where a Bill has failed to pass, the government cannot achieve the same end by ordinance, and that an ordinance re-promulgated repeatedly without any intention of placing it before the House may be struck down.</p>
+
+<p>The administrative significance is that the ordinance is a legislative power vested in the executive, and re-promulgation was for decades an established practice in some states, which is executive law-making sustained by nothing but the executive's own repetition. The two judgments are the counterpart in ordinary times of what <em>Bommai</em> did for emergencies: the conversion of a discretionary political power into a reviewable one.</p>
+
+<h3>The Constitutional Administrative Bodies</h3>
+
+<p>The Constitution does not leave the key administrative functions to ordinary legislation. It creates the bodies and protects them, which is how it attempts to place certain functions beyond the reach of the government of the day.</p>
+
+<ul>
+ <li><strong>The Union and State Public Service Commissions</strong>, which conduct recruitment and are consulted on disciplinary matters, their members protected by security of tenure, a salary charged on the Consolidated Fund and restrictions on subsequent employment.</li>
+ <li><strong>The Comptroller and Auditor General</strong>, an officer of the legislature auditing the accounts of both Union and states, with a single office serving both levels.</li>
+ <li><strong>The Election Commission</strong>, conducting elections to Parliament, the state legislatures and the offices of President and Vice-President, and relying on state administrative machinery to do so.</li>
+ <li><strong>The Finance Commission</strong>, constituted every five years to recommend the division of revenues.</li>
+ <li><strong>The Attorney General</strong> and the Advocates General as the law officers of the two levels.</li>
+</ul>
+
+<p>The recurring design principle is the same in each case: appointment by the executive, insulation once appointed, and a charged salary so that the legislature cannot vote the office into submission. The recurring weakness is also the same, that appointment remains with the executive, so independence begins only after a choice the executive alone makes.</p>
+
+<h3>Services Under the Constitution</h3>
+
+<p><strong>Article 309</strong> empowers the appropriate legislature to regulate recruitment and conditions of service, with the executive competent to make rules until it does, which is why service rules in India are overwhelmingly executive rules rather than statutes. <strong>Article 310</strong> retains the doctrine that civil servants hold office during the pleasure of the President or Governor, and <strong>Article 311</strong> then qualifies that pleasure with the protections that make a career service possible: no dismissal or removal by an authority subordinate to the appointing authority, and no dismissal, removal or reduction in rank except after an inquiry in which the officer has been informed of the charges and given a reasonable opportunity of being heard.</p>
+
+<p>The relationship between 310 and 311 is the constitutional form of the central tension in personnel administration. Pleasure keeps the service answerable to the elected executive; the procedural protections keep it independent of that executive's displeasure. The balance struck determines whether a service is a professional body or a political instrument, and the same protections that shield the honest officer from victimisation are what make removal for incompetence so difficult.</p>
+
+<h2>Federal Features and the Unitary Bias</h2>
+
+<p>The Constitution establishes a <strong>dual polity</strong> with a clear division of power between the Union and the states. Each state is free to legislate within its allotted sphere, and both Union and state governments draw their authority from the Constitution itself rather than from each other, which is the defining federal fact.</p>
+
+<h3>Federal Features</h3>
+
+<ul>
+ <li>A <strong>written Constitution</strong> that is <strong>supreme</strong>, binding both levels.</li>
+ <li><strong>Division of powers</strong> through the three lists of the Seventh Schedule.</li>
+ <li><strong>Rigidity</strong> in the provisions affecting the federal structure, which require ratification by half the state legislatures in addition to a special majority in Parliament.</li>
+ <li>An <strong>independent judiciary</strong> with power to adjudicate disputes between the Union and the states, and a Supreme Court with original jurisdiction in such disputes.</li>
+ <li><strong>Bicameralism</strong>, with the Council of States representing the states in the Union legislature.</li>
+</ul>
+
+<h3>Unitary Features</h3>
+
+<ul>
+ <li>A <strong>strong Centre</strong>: the Union List is longest and contains the most important subjects, Parliament prevails in the Concurrent List, and <strong>residuary powers</strong> rest with the Union, which is the reverse of the American arrangement.</li>
+ <li><strong>States are not indestructible.</strong> Parliament may by ordinary law alter the area, boundaries or name of any state, so the units of the federation exist at the pleasure of the Union legislature.</li>
+ <li><strong>A single Constitution</strong>, a <strong>single citizenship</strong>, a <strong>single integrated judiciary</strong> and a single election machinery serve both levels.</li>
+ <li><strong>All India Services</strong> whose members staff the senior posts of the states while being recruited and disciplined by the Union.</li>
+ <li><strong>Governors</strong> appointed by and holding office at the pleasure of the Union.</li>
+ <li><strong>Emergency provisions</strong> under which the federal structure may be converted into a unitary one.</li>
+ <li><strong>Integrated audit</strong> through a single Comptroller and Auditor General for Union and states.</li>
+</ul>
+
+<h3>What Kind of Federation</h3>
+
+<p><strong>K.C. Wheare</strong> described India as <strong>quasi-federal</strong> on account of its centralising tendencies, a formulation that has dominated textbook treatment. Others have called it federal in form and unitary in spirit, or a federation with a strong centralising tendency.</p>
+
+<p>The Supreme Court has gone beyond Wheare, holding that India has its own distinct model of <strong>cooperative federalism</strong> rather than approximating an ideal type imperfectly. That reading is the more defensible and the more useful in an answer. Wheare's category was built from the American and Australian cases and measures India against them; the framers were not attempting that model and said so. They designed a federation for a country that had just been partitioned, faced integration of princely states and secessionist pressure, and required a centre strong enough to hold it, while devolving enough to govern a subcontinent. The centralising features are a design choice with stated reasons, not a failure to achieve federalism.</p>
+
+<p>The examinable formulation is that Indian federalism is best described by its own working rather than by a label: <em>federal in structure, unitary in emergency, cooperative in finance and competitive in practice</em>, and its balance has shifted repeatedly with the party system, being most centralised under single-party dominance and most genuinely federal under coalition governments at the Centre.</p>
+
+<h2>Distribution of Legislative Powers</h2>
+
+<h3>The Three Lists</h3>
+
+<ul>
+ <li><strong>The Union List</strong>, on which Parliament alone legislates: defence, foreign affairs, currency, banking, railways, communications, citizenship, and the like.</li>
+ <li><strong>The State List</strong>, on which state legislatures alone legislate: public order, police, public health and sanitation, agriculture, land, local government, and state public services.</li>
+ <li><strong>The Concurrent List</strong>, on which both may legislate: criminal law and procedure, marriage, contracts, bankruptcy, trade unions, education, forests, and economic and social planning.</li>
+</ul>
+
+<p>Two structural asymmetries matter. <strong>Residuary power</strong> rests with Parliament, so the unforeseen falls to the Centre. And under <strong>Article 254</strong>, where a state law is repugnant to a Union law on a concurrent subject, the Union law prevails, unless the state law received the President's assent, in which case it prevails in that state, and even then Parliament may legislate afresh to override it.</p>
+
+<h3>When Parliament May Legislate on State Subjects</h3>
+
+<ul>
+ <li><strong>Article 249.</strong> Parliament may legislate on a State List subject where the Council of States resolves that it is necessary or expedient in the national interest. The resolution must be passed by a <strong>special majority</strong> of not less than two-thirds of members present and voting, and the resulting law operates for one year, though the resolution may be renewed any number of times.</li>
+ <li><strong>Article 250.</strong> Parliament may legislate on any State List subject while a national emergency is in operation.</li>
+ <li><strong>Article 252.</strong> Where two or more states resolve that Parliament should legislate on a State List subject, it may do so for those states, and the law may then be adopted by others.</li>
+ <li><strong>Article 253.</strong> Parliament may legislate to implement international treaties and agreements, regardless of the distribution of subjects. This is the widest of the routes, and its scope has grown with the range of matters now governed by international agreement, from environment to trade to intellectual property.</li>
+ <li><strong>Article 356.</strong> Where the President's Rule is in force, Parliament exercises the powers of the state legislature.</li>
+</ul>
+
+<p>The important point for an answer is that <strong>Article 249 requires the Council of States to act</strong>, which is the chamber representing the states, so the Constitution's own mechanism for central encroachment is routed through the states' own house. Whether that is a real safeguard depends on whether the Council of States functions as a federal chamber or as a second party chamber, and the honest answer is that it has largely functioned as the latter.</p>
+
+<h2>Distribution of Executive Powers</h2>
+
+<p>The general rule is that executive power follows legislative power: the Union's executive power extends to matters on which Parliament may legislate, and a state's to matters within its legislature's competence, with the Union prevailing on concurrent subjects where Parliament has so provided.</p>
+
+<p>The administrative relationship serves a twofold purpose: to ensure effective federal executive control over matters within the Union Parliament's legislative jurisdiction, and to minimise the possibility of conflict between Union and state administrative machinery. Because the Union is responsible for the governance of the whole country, an effective administrative nexus between it and the federating units is necessary.</p>
+
+<h3>Union Directions to States</h3>
+
+<ul>
+ <li><strong>Article 256</strong> obliges a state to exercise its executive power so as to ensure compliance with laws made by Parliament, and empowers the Union to give such directions as appear necessary for that purpose.</li>
+ <li><strong>Article 257</strong> requires a state not to impede the executive power of the Union, and permits directions on the construction and maintenance of means of communication of national or military importance and on the protection of railways.</li>
+ <li><strong>Article 355</strong> imposes on the Union the duty to protect every state against external aggression and internal disturbance and to ensure that the government of every state is carried on in accordance with the Constitution. It is a duty rather than a power, and it is the constitutional foundation on which intervention rests.</li>
+ <li><strong>Article 365</strong> provides that where a state fails to comply with a direction of the Union, the President may hold that a situation has arisen in which the government of the state cannot be carried on in accordance with the Constitution, which is the bridge from a disobeyed direction to President's Rule.</li>
+</ul>
+
+<p>The sequence from 256 and 257 through 365 to 356 is the mechanism by which an administrative disagreement can become a constitutional intervention, and it is why the discretion of the Union in issuing directions is a federal question and not merely an administrative one.</p>
+
+<h3>The All India Services</h3>
+
+<p>The All India Services are the most distinctive administrative device of Indian federalism. Their members are recruited and trained by the Union and their conditions of service and disciplinary control rest substantially with it, while they serve in and are paid by the states, occupying the senior posts of state administration and the district.</p>
+
+<p>The argument for them is that they supply a common standard of administration across the country, give officers a national outlook and experience of both levels, provide states with a trained cadre they could not each maintain, and furnish a link that makes cooperative administration possible. <strong>Sardar Patel's</strong> defence of them in the Constituent Assembly rested on national integration.</p>
+
+<p>The argument against is squarely federal: the officer who heads a state department is recruited, disciplined and ultimately protected by the Union, so the state government's control over its own senior administration is incomplete, and an officer who resists a state government may look to the Centre. The tension is real and is not resolvable within the design, which is why the topic recurs whenever Centre and state are governed by different parties.</p>
+
+<h3>The Coordinating Machinery</h3>
+
+<ul>
+ <li><strong>Zonal Councils</strong>, set up under the States Reorganisation Act of 1956 on the recommendation of the Fazl Ali Commission, conceived as advisory bodies to develop cooperative working among the states of a zone after the linguistic reorganisation, which had left issues requiring deliberation at the regional level with the central leadership. There are at present six zones, the North Eastern Council having been created separately under the North Eastern Council Act of 1971. Their functions are to promote a cooperative approach to economic and social planning and the execution of development schemes, particularly inter-state projects; to deal with matters arising from reorganisation such as border problems, integration of services, linguistic minorities and inter-state transport; to initiate measures of common interest and exchange information, statistics and experience; to tackle common law and order problems and devise uniform policies on the administration of civil and criminal law; and to deal with common problems such as floods, drought and scarcity.</li>
+ <li><strong>The Inter-State Council</strong>, established under <strong>Article 263</strong> by presidential order in <strong>1990</strong> on the recommendation of the <strong>Sarkaria Commission</strong>. Its composition, amended in 2019, comprises the Prime Minister as chairman; the Chief Ministers of all states and of Union Territories having a legislature; the administrators of Union Territories without a legislative assembly; the Governors of states under President's Rule; six cabinet ministers nominated by the Prime Minister; and ten Union ministers nominated as permanent invitees. Its weakness is that it is advisory and has met infrequently, so the Constitution's own instrument for federal consultation has been used far less than the machinery of party politics.</li>
+ <li><strong>Article 262</strong>, under which Parliament may provide for the adjudication of disputes relating to inter-state rivers and may bar the jurisdiction of courts, which is the basis of the water disputes tribunals.</li>
+ <li><strong>NITI Aayog</strong>, which replaced the Planning Commission with the stated object of promoting <strong>cooperative federalism</strong>, so that the demands of state governments are addressed through consultation. The change of method is the point: where the Planning Commission formulated policy first and then consulted states about allocations, the declared intent of NITI Aayog is that policy should bear fruit only after due consultation with states at the formulation stage. It also removed the Commission's power to allocate plan funds, which was the instrument that had made it consequential.</li>
+</ul>
+
+<h2>Distribution of Financial Powers</h2>
+
+<p>Finance is where Indian federalism is decided, because a level of government that cannot raise what it must spend is not autonomous whatever the lists say.</p>
+
+<h3>The Structural Imbalance</h3>
+
+<p>The Constitution assigns the more elastic and productive tax bases to the Union while assigning to the states the functions, health, education, agriculture, police, local government, that account for the larger share of expenditure. The resulting <strong>vertical imbalance</strong> is deliberate and permanent, and it is why transfer machinery is not an occasional correction but a structural component of the system. The Centre levies and collects certain taxes because it is better placed to do so, inter-state and international transactions being the clearest instance.</p>
+
+<h3>The Finance Commission</h3>
+
+<p><strong>Article 280(1)</strong> empowers the President to constitute a Finance Commission within two years of the commencement of the Constitution and thereafter every five years or earlier. <strong>Article 280(2)</strong> empowers Parliament to determine by law the qualifications of members and the manner of their selection. <strong>Article 280(3)</strong> sets out its duties, which are to recommend to the President:</p>
+
+<ul>
+ <li>the <strong>distribution between the Union and the states</strong> of the net proceeds of taxes which are to be or may be divided between them, and the allocation between the states of their respective shares;</li>
+ <li>the <strong>principles governing grants-in-aid</strong> of the revenues of the states out of the Consolidated Fund of India;</li>
+ <li>the measures needed to <strong>augment the Consolidated Fund of a state</strong> to supplement the resources of panchayats and municipalities, on the basis of the recommendations of the State Finance Commissions;</li>
+ <li>any other matter referred to it by the President in the interests of sound finance.</li>
+</ul>
+
+<p>Its transfers are governed by principles of long-term value such as poverty alleviation, demographic stabilisation and the promotion of autonomy, which is the justification for having a constitutional body do the work rather than leaving it to negotiation. The Commission is described as <strong>quasi-judicial</strong> because it is constitutionally constituted, works to terms of reference, hears the parties and gives a reasoned award, though its recommendations are not binding and it is the Union that frames its terms of reference, appoints its members and decides whether to accept its award.</p>
+
+<h3>The GST Council</h3>
+
+<p>The <strong>101st Constitutional Amendment</strong>, enacted in 2016 with the tax in force from July 2017, inserted <strong>Article 279A</strong> creating the <strong>GST Council</strong>, and it is the most significant change to Indian fiscal federalism since the Constitution began.</p>
+
+<p>The Council is chaired by the Union Finance Minister and comprises the finance ministers of the states, who elect a Vice-Chairperson from among themselves. A decision requires at least <strong>three-fourths of the weighted votes</strong> of members present and voting, with the Centre holding one-third of the weight and all states together two-thirds. The arithmetic is deliberate: neither the Centre alone nor the states alone can carry a decision, so the design forces agreement.</p>
+
+<p>The federal significance cuts both ways, and an answer should say so. States surrendered a large part of their independent taxing power, which is a real loss of autonomy, and gained a constitutional voice in a joint body that sets rates for the whole country, which is a form of shared sovereignty that Indian federalism had not previously contained. Whether the Council represents cooperative federalism institutionalised or the centralisation of fiscal power in a body the Centre chairs depends on how it works in practice, particularly on whether decisions continue to be taken by consensus rather than by vote, and on the timeliness of compensation to states.</p>
+
+<h3>Borrowing and Grants</h3>
+
+<p>The Union may borrow on the security of the Consolidated Fund of India without limit; a state may borrow within India but requires the Union's consent while indebted to it, which in practice is always. Grants-in-aid under Article 275 and discretionary grants under Article 282 supply further transfers, the latter having been the vehicle for centrally sponsored schemes, which are the standing federal grievance: they commit state expenditure to central priorities in subjects on the State List, with the state supplying a matching share for a scheme it did not design.</p>
+
+<h2>Emergency Provisions</h2>
+
+<h3>National Emergency, Article 352</h3>
+
+<p>A national emergency may be proclaimed on the ground of <strong>war, external aggression or armed rebellion</strong>, the <strong>44th Amendment</strong> having replaced the original ground of <em>internal disturbance</em> with <em>armed rebellion</em>. It has been proclaimed three times: in <strong>1962</strong> during the war with China, withdrawn in 1968; in <strong>1971</strong> during the war with Pakistan; and in <strong>1975</strong> on the ground of internal disturbance, both later proclamations being revoked in 1978. During its operation India functions as a unitary state.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Before the 44th Amendment</th><th>After</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Grounds</td><td>Included internal disturbance</td><td>Armed rebellion replaces internal disturbance</td></tr>
+ <tr><td>Advice to the President</td><td>Not required in writing from the cabinet</td><td>Written recommendation of the cabinet required; the word cabinet is inserted in Article 352</td></tr>
+ <tr><td>Parliamentary approval</td><td>Simple majority</td><td>Special majority: two-thirds of those present and voting, and more than half the total strength of the House, within one month</td></tr>
+ <tr><td>Duration</td><td>Continued as long as the executive wished</td><td>Renewable but requiring parliamentary approval every six months</td></tr>
+ <tr><td>Fundamental rights</td><td>All could be suspended</td><td>Articles 20 and 21 cannot be suspended</td></tr>
+ <tr><td>Revocation</td><td>At the executive's discretion</td><td>One-tenth of the members of the House of the People may require a sitting, at which a simple majority may disapprove the proclamation</td></tr>
+ </tbody>
+</table>
+
+<p>During its operation, state legislative assemblies are suspended but not dissolved, Parliament may legislate on State List subjects, and the Union may give executive directions to states on any matter. The 44th Amendment is the clearest instance in Indian constitutional history of a legislature deliberately restricting its own successors' power in response to experience, and it is the reason the 1975 proclamation could not easily be repeated.</p>
+
+<h3>President's Rule, Article 356</h3>
+
+<p>Where the President is satisfied, on the Governor's report or otherwise, that the government of a state cannot be carried on in accordance with the Constitution, he may assume to himself the functions of the state government, declare that the powers of the state legislature shall be exercised by Parliament, and make incidental provisions.</p>
+
+<p>The provision was intended as a remedy of last resort and became the most misused article in the Constitution, invoked scores of times, frequently against governments of parties opposed to the one in power at the Centre, and often without a test of majority on the floor.</p>
+
+<p><strong>S.R. Bommai v. Union of India (1994)</strong> altered this decisively.</p>
+
+<ul>
+ <li>A proclamation under Article 356 is <strong>subject to judicial review</strong>, displacing the earlier deference to the President's subjective satisfaction. The Court may examine whether the material before the President had a rational nexus to the action taken.</li>
+ <li>The <strong>floor of the Assembly is the sole authority</strong> to test a government's majority, not the subjective opinion of the Governor. The floor test is supreme in determining whether a ministry retains support.</li>
+ <li>Article 356 is justified only where there is a breakdown of <strong>constitutional</strong> machinery, not of administrative machinery. Maladministration, corruption or financial mismanagement do not suffice.</li>
+ <li>The Assembly may not be dissolved until both Houses of Parliament have approved the proclamation, so that a wrongly dismissed government can be restored.</li>
+</ul>
+
+<p><em>Bommai</em> is the single most important federal judgment in Indian constitutional law, and the reason invocations of Article 356 fell sharply thereafter. It is the answer to any question on whether judicial review can discipline a political power.</p>
+
+<h3>Financial Emergency, Article 360</h3>
+
+<p>Where the President is satisfied that the financial stability or credit of India or any part of it is threatened, he may proclaim a financial emergency, during which the Union may direct states to observe specified canons of financial propriety, may require the reduction of salaries of state officials and of judges, and may require all money bills passed by state legislatures to be reserved for the President's consideration. It has never been proclaimed.</p>
+
+<h3>Assessment</h3>
+
+<p>The emergency provisions are the sharpest expression of the Constitution's unitary bias, and the framers defended them on the ground that a federation formed in the circumstances of 1947 required a legal means of holding together under strain. The record supports a divided verdict: Article 352 was abused once and then constrained by amendment; Article 356 was abused persistently and then constrained by judicial decision; Article 360 has never been used. The instruments were dangerous as drafted, and the correction came from two different sources, which is itself an argument for the resilience of the constitutional system rather than against it.</p>
+
+<h2>The Commissions on Centre-State Relations</h2>
+
+<h3>Rajamannar Committee, 1969</h3>
+
+<p>Appointed by the Government of Tamil Nadu rather than by the Union, the Rajamannar Committee was the first systematic statement of the states' case, recommending the establishment of an Inter-State Council, the deletion of Articles 356 and 365, the transfer of subjects from the Union and Concurrent Lists to the State List, and that the Finance Commission be made a permanent body. Its origin is part of its significance: the federal question was raised from a state capital, by a state governed by a party not in office at the Centre.</p>
+
+<h3>Sarkaria Commission, 1983 to 1988</h3>
+
+<p>Appointed on <strong>9 June 1983</strong> under Justice <strong>Ranjit Singh Sarkaria</strong>, with <strong>B. Sivaraman</strong> and <strong>S.R. Sen</strong> added in July 1983, to examine the division of powers between Centre and states and their mutual relationship. It reported in <strong>October 1987</strong>, in three volumes of some nine hundred pages containing <strong>247 recommendations</strong>.</p>
+
+<ul>
+ <li>Establishment of a permanent <strong>Inter-State Council</strong> under Article 263, which was acted on in 1990 and is the Commission's most concrete legacy.</li>
+ <li>Article 356 to be used <strong>sparingly</strong>, as a last resort, after exhausting all alternatives.</li>
+ <li>The <strong>Governor</strong> should be an eminent person in some walk of life, from outside the state, a detached figure not intimately connected with the state's local politics, and not deeply involved in politics generally or recently. A person belonging to the ruling party at the Centre should not be appointed Governor in a state governed by another party, and after demitting office a Governor should not hold an office of profit or return to active politics. The Commission's own drafting notes that the recommendation on appointment has not been accepted.</li>
+ <li>The <strong>National Development Council</strong> to be renamed and reconstituted as the National Economic and Development Council.</li>
+ <li>The <strong>Zonal Councils</strong> to be reconstituted and reactivated to promote the spirit of federalism, the Commission observing that although they had long existed they had very rarely been used as effective instruments of inter-state consultation and problem solving. Five were created under the States Reorganisation Act of 1956 to curb rising regional and sectarian feeling and promote cooperation in resolving regional disputes, with the North Eastern Council added in 1971.</li>
+ <li>The Centre should consult states before deploying central forces in a state.</li>
+</ul>
+
+<h3>Punchhi Commission, 2007 to 2010</h3>
+
+<p>The second Commission on Centre-State Relations was constituted in <strong>April 2007</strong> under Justice <strong>Madan Mohan Punchhi</strong>, with former Home Secretaries <strong>Dhirendra Singh</strong> and <strong>V.K. Duggal</strong> and Professor <strong>N.R. Madhava Menon</strong>, later joined by <strong>Amaresh Bagchi</strong>. It reported in <strong>April 2010</strong>.</p>
+
+<ul>
+ <li>The Union should be <strong>extremely restrained</strong> in asserting parliamentary supremacy in matters assigned to the states, with greater flexibility allowed to states on State List subjects and transferred items in the Concurrent List, and the Union legislating only where necessary.</li>
+ <li>The Union should <strong>consult the states</strong> before legislating on Concurrent List subjects.</li>
+ <li>The Planning Commission's role after liberalisation should be that of a <strong>coordinator rather than a micro-manager</strong> of the sectoral plans of central ministries and states, with sectoral plans conforming to overall plan objectives and states free to plan according to their own needs and priorities within a nationally accepted framework.</li>
+ <li>The <strong>Inter-State Council</strong> should be strengthened so that it does not remain merely a centrally created institution, with genuine state participation in its formulation and agenda.</li>
+ <li>Perceptions of discrimination in central plan transfers require attention, since impartiality must not only exist but be seen to exist.</li>
+ <li>Demands for the creation of smaller states should be addressed rationally, taking demographic and economic facts and administrative convenience into account, and a fresh States Reorganisation Commission could be set up to examine the question and thereby contain misgivings and control public passions.</li>
+</ul>
+
+<h2>The Balance Today</h2>
+
+<p>Three developments have reshaped the framework since the commissions reported. <strong>Coalition politics</strong> from 1989 made the states' bargaining position real, and the fall in invocations of Article 356 followed political arithmetic as much as it followed <em>Bommai</em>. The <strong>73rd and 74th Amendments</strong> added a third tier, which changed the federal question from a two-level to a three-level one and exposed the states as reluctant devolvers in their turn. And the <strong>GST Council</strong> created a form of shared sovereignty in taxation that neither the Constitution as framed nor the commissions that examined it had contemplated.</p>
+
+<p>The conclusion an answer should reach is that the formal framework has been remarkably stable while the working balance has moved substantially, and that it has moved with the party system more than with any amendment. Indian federalism is best understood as a constitutional design whose centralising provisions are permanently available and only intermittently used, which makes the political conditions of their use as important a subject as the provisions themselves.</p>
+`,
 };
