@@ -2363,4 +2363,308 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The theories of motivation, Maslow's hierarchy, Herzberg's distinction between hygiene factors and motivators, McGregor's Theory X and Theory Y, Vroom's expectancy model and Adams's equity theory, are treated in the note on administrative behaviour. Their application here is direct and uncomfortable. Herzberg predicts that pay revision removes dissatisfaction without creating motivation, which is what successive pay commissions have demonstrated. Vroom predicts that where promotion follows seniority, instrumentality is near zero and effort will not respond to incentive, however large. Adams predicts that a revision perceived as inequitable between cadres will damage morale even where every cadre gains. The personnel system, in other words, already contains the explanation for the motivation problem it complains of.</p>
 `,
+ 'financial-administration': `
+<h2>What Financial Administration Covers</h2>
+
+<p>Financial administration is the management of public money from the moment it is estimated to the moment its use is audited. It matters constitutionally rather than merely technically, because the power of the purse is how a legislature controls an executive, and every serious question about accountability eventually becomes a question about money.</p>
+
+<p>It is a continuous chain of operations: preparation of the budget; securing legislative sanction for it; execution of the budget; management of the treasury, meaning the safe custody of the funds raised; accounting; the reporting system; and auditing. Each link is a control point, and a failure at any one of them cannot be repaired by strength at the others.</p>
+
+<h2>Monetary Policy</h2>
+
+<p><strong>H.G. Johnson</strong> defines monetary policy as "a policy employing the central bank's control of the supply of money as an instrument for achieving the objectives of general economic policy". That definition suits developed economies. In less developed countries such as India, monetary policy cannot be confined to controlling the money supply, because a policy playing no positive developmental role serves only a limited purpose. The Reserve Bank's monetary policy in India has accordingly been designed to meet the requirements of a developing economy, and is concerned with the common objectives of economic policy as well: price stability, full employment and rapid growth. Which of these has priority is decided by the government, not the central bank.</p>
+
+<h3>Objectives Change With Circumstance</h3>
+
+<p>The objectives are not fixed; they shift with the national and global economic situation. Under the international gold standard, currency was convertible into gold at a predetermined rate, so monetary policy was occupied with maintaining the external value of the currency, expanding credit when gold flowed in and contracting it when gold flowed out. The abandonment of that standard freed monetary authorities for domestic objectives and simultaneously removed the automatic discipline the standard had imposed.</p>
+
+
+<h3>Instruments</h3>
+
+<ul>
+ <li><strong>Open market operations.</strong> When the central bank buys securities in the open market, bank reserves increase and their capacity to create credit expands, raising the total availability of money and credit. When it sells, banks purchase the securities, their reserves fall and their credit-creating capacity contracts. It is a flexible tool and for that reason carries the general support of policy-makers.</li>
+ <li><strong>The variable reserve ratio.</strong> The central bank varies the reserve that commercial banks must hold against deposits. Reducing the requirement allows banks to create more credit on the same reserves; raising it forces them to build reserves by restricting loans, contracting the money supply. The instrument is effective and capable of causing major dislocation, which is why it is less preferred than open market operations.</li>
+ <li><strong>The bank rate or discount rate</strong>, which works by varying the cost of credit and therefore the demand for it, affecting availability only indirectly. It is considered less efficient than the other instruments.</li>
+ <li><strong>Selective credit controls</strong>, by which the central bank channels money where the economy requires it, making credit available on softer terms for procuring essential commodities, or making its cost and terms unfavourable where lending is to be discouraged. This is the instrument that matters most in a developing economy, because it addresses the composition of credit and not only its quantity.</li>
+</ul>
+
+<h3>How It Works and Why It Fails</h3>
+
+<p>Monetary policy promotes growth through the price stability it creates, and by encouraging savings and investment both indirectly, through that stability, and directly through open market operations and the bank rate.</p>
+
+<p>Its success depends on whether it is applied at the proper time and implemented quickly, and this is where it characteristically fails. An imbalance requiring immediate action may not be visible immediately; the problem may be recognised and the response still delayed; and because many monetary measures operate indirectly, their effect may not be felt for a long time after they are taken. The lag is threefold, in recognition, in decision and in effect, and it is the structural reason monetary policy is a blunt instrument for a developing economy with large non-monetised sectors.</p>
+
+<h2>Fiscal Policy</h2>
+
+<p>The word <em>fiscal</em> derives from the Greek <em>fisc</em>, meaning basket, symbolising the treasury or public coffers. Fiscal policy is concerned with the revenues and expenditures of government, and may include public debt.</p>
+
+<p>Broadly, it covers the raising and spending of financial resources, the allocation of resources between the private and public sectors and their use, and public debt operations, all directed at supporting the economic activity of the country. Its instruments are taxes, public expenditure and public debt, and policies on raising revenue, levying income tax, taxing commodities, services, exports and imports, and on public expenditure have a major effect on the economy.</p>
+
+<h3>Objectives</h3>
+
+<ul>
+ <li><strong>Resource mobilisation</strong> for development, which in a poor economy means raising a public savings rate that private savings alone will not supply.</li>
+ <li><strong>Allocation</strong>, directing resources towards goods the market under-provides, such as public health, education and infrastructure.</li>
+ <li><strong>Redistribution</strong>, through progressive taxation and targeted expenditure, which is the instrument no other arm of policy possesses.</li>
+ <li><strong>Stabilisation</strong>, moderating the cycle by expanding expenditure in a downturn and restraining it in an inflation.</li>
+ <li><strong>Growth and employment</strong>, by shaping the level and composition of investment.</li>
+</ul>
+
+<table>
+ <thead>
+ <tr><th></th><th>Fiscal policy</th><th>Monetary policy</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Authority</td><td>Government, through the budget</td><td>Central bank</td></tr>
+ <tr><td>Instruments</td><td>Taxation, expenditure, public debt</td><td>Money supply, interest rates, reserve requirements, open market operations</td></tr>
+ <tr><td>Speed of decision</td><td>Slow: requires legislative sanction</td><td>Fast: administratively decided</td></tr>
+ <tr><td>Speed of effect</td><td>Direct and relatively quick on demand</td><td>Indirect and lagged</td></tr>
+ <tr><td>Distributive reach</td><td>Can target a class, sector or region</td><td>Broad and untargeted</td></tr>
+ <tr><td>Political exposure</td><td>High, since taxing and spending are visible</td><td>Lower, which is the argument for central bank independence</td></tr>
+ </tbody>
+</table>
+
+<h3>Fiscal Discipline</h3>
+
+<p>The standing problem of fiscal policy in a democracy is that its expansionary side is politically rewarding and its contractionary side is not, so deficits accumulate asymmetrically. The Indian answer has been statutory: the <strong>Fiscal Responsibility and Budget Management</strong> framework commits the government to targets for the fiscal deficit and to disclosure of its medium-term fiscal position, with the intention of removing the discretion whose exercise is the problem. Its record illustrates the difficulty of binding a sovereign to its own promises, since the escape clauses invoked in difficult years are invoked by the same authority the rule was meant to constrain.</p>
+
+
+<h3>Budget Surplus, Deficit and the Built-in Stabilisers</h3>
+
+<p>The effect of a budget surplus on the economy depends entirely on what is done with it, which is a point worth making because it shows that fiscal aggregates alone do not determine outcomes.</p>
+
+<ul>
+ <li>If the surplus is <strong>impounded</strong> in the government's account at the central bank, commercial banks' deposits there fall and their capacity to create credit is reduced, so aggregate spending contracts.</li>
+ <li>If the surplus is used to <strong>repay public debt</strong>, aggregate spending is not reduced and the surplus fails to control inflation.</li>
+ <li>If it repays government bonds held by <strong>commercial banks</strong>, their cash reserves rise and their credit-creating capacity is intact, so the primary reduction in spending occurs but the secondary reduction does not.</li>
+ <li>If it repays securities held by the <strong>central bank</strong>, the effect is the same as impounding, and the reduction in aggregate spending is effective.</li>
+</ul>
+
+<p><strong>Built-in stabilisers</strong> work automatically through the structure of taxation and expenditure: when incomes are high, as during rapid growth, a higher proportion of income is taxed, and when incomes are low a smaller proportion is. They cannot by themselves have a large stabilising effect, so stability must be maintained through discretionary fiscal and monetary policy. Taxation policy can create a climate favourable to saving and to proper patterns of expenditure, which is its developmental as distinct from its revenue function.</p>
+
+<h2>Public Debt</h2>
+
+<p>Public debt is borrowing by government against future revenue, and its administration is part of fiscal policy rather than an exception to it. Borrowing for capital formation that yields a return exceeding the cost of the debt enlarges the economy's capacity; borrowing to meet current consumption transfers a present liability to a future population that had no part in incurring it. The distinction between the two is what makes the separation of revenue and capital accounts in a budget a matter of substance rather than of bookkeeping.</p>
+
+
+<h3>Kinds of Public Debt</h3>
+
+<ul>
+ <li><strong>Internal and external.</strong> Internal debt is a transfer within the economy; external debt must be serviced in foreign currency, so a country raising it must be able to earn enough foreign exchange through trade or otherwise to repay with interest, and whatever loans it can raise usually carry a high interest rate. Where domestic borrowing is insufficient, governments borrow from foreign individuals and banks at market rates, take bilateral assistance from friendly nations, or draw assistance from the IMF, the World Bank and the UNDP.</li>
+ <li><strong>Voluntary and compulsory.</strong> Compulsory borrowing is a rarity in modern public finance; India's Compulsory Deposit Scheme was one instance.</li>
+ <li><strong>Short-term and long-term.</strong> Short-term debt is repayable within a year; long-term debt finances long-gestation development projects in irrigation, power, railways and similar fields.</li>
+ <li><strong>Funded and unfunded.</strong> A funded debt has a separate fund to which the government credits money annually and from which the debt is repaid at the end of its term. Unfunded debt is repaid in a short time, needs no separate fund, fills temporary gaps in the budget and carries a low interest rate.</li>
+ <li><strong>Marketable and non-marketable</strong>, depending on whether the securities are negotiable on the stock exchange.</li>
+ <li><strong>Gross and net.</strong> Gross debt is the total outstanding at a point in time; net debt is gross debt less the sinking fund or the bonds earmarked for repayment.</li>
+</ul>
+
+<h3>Debt Management</h3>
+
+<p>Public debt management means determining, through the fiscal and monetary authorities, the size and nature of the debt, its maturity pattern, interest rates and redemption. It must be done efficiently, because public borrowing has grown greatly and the extent to which government can mobilise funds depends on how well it is managed.</p>
+
+<p>As a portion of debt falls due, the government <strong>refinances</strong> it, selling new bonds and using the proceeds to pay off the holders of maturing bonds, rather than raising taxes or cutting expenditure to find the money. Only part of the saving capacity of the people can be used, which is the real constraint on domestic borrowing.</p>
+
+<p>The important qualification for an answer is that a government's inability to default on debt in its own currency is a monetary fact and not a licence: refinancing shifts the burden forward, and the interest on accumulated debt becomes a first charge on revenue that crowds out the development expenditure the borrowing was meant to fund. This is why the composition of debt, between capital formation and current consumption, matters more than its level.</p>
+
+<h2>The Budget</h2>
+
+<p>The budget is a statement of estimated receipts and expenses for a fixed period. It states the receipts to be realised and the expenses to be incurred, and it is an authorisation by the competent authority to incur those expenses and collect those revenues. It must also contain the facts of past operations and present conditions, and set out future proposals.</p>
+
+<ul>
+ <li><strong>Munro</strong> calls it "a financial statement, prepared in advance of the opening of a fiscal year, of the estimated revenues and proposed expenditures of a given organisation for the ensuing fiscal year".</li>
+ <li><strong>Dimock</strong>: "A budget is a financial plan summarising the financial experience of the past, stating a current plan and projecting it over a specified period of time in future." The three tenses are the point.</li>
+ <li><strong>Rene Stourm</strong>: "Budget is a document containing a preliminary approved plan of public revenue and expenditure."</li>
+ <li><strong>Thomas D. Lynch</strong>: "The one common subject in any budget discussion is money. Other subjects are important, but they are mentioned in relationship to money or are translated into money."</li>
+ <li><strong>Willoughby</strong>: "The Budget is something much more than a mere estimate of revenues and expenditure. It is or should be, at once a report, an estimate, and a proposal." This is the formulation to quote, because it distinguishes the budget's three functions in a single line.</li>
+</ul>
+
+<p>The budget must be distinguished from the Revenue and Appropriation Acts: the budget is an act of the <em>administration</em>, while those Acts are acts of the <em>legislature</em>. It is the consolidated and comprehensive presentation of all facts about government expenditure, past and prospective, and about revenue and the financial position of the treasury, and it is the occasion on which the executive comes before the fund-raising and fund-granting authority.</p>
+
+<h3>Features</h3>
+
+<ul>
+ <li>It is prepared and presented on behalf of the <strong>executive</strong>; no private member may present a budget.</li>
+ <li>In a parliamentary democracy it is placed before the legislature for sanction.</li>
+ <li>It is normally annual, a year being the shortest period that will not consume too much of the legislative session in consideration of it, although because budgeting presupposes planning it must also be framed within a longer timeframe.</li>
+ <li>It is characteristically <strong>incremental</strong>: ongoing activities are left untouched and marginal adjustments are made in raising and allocating resources. This is the practice that zero-base budgeting exists to attack.</li>
+</ul>
+
+<h3>Principles of Budgeting</h3>
+
+<ul>
+ <li><strong>Annuality</strong>, and the <strong>rule of lapse</strong>: any part of a grant unspent within the financial year expires at its close and cannot be carried over, and no reserve fund may be built without statutory authorisation. The rule is inconvenient for the economic planning of expenditure and produces a well-known pathology: anxious to prevent their grants lapsing, executives spend the balances with scant regard to urgency or real utility, which is the March rush familiar to every department.</li>
+ <li><strong>Separation of revenue and capital.</strong> The budget should be on a revenue basis with its revenue and capital portions kept distinct, because receipts from loans and deposits and outlays on works and debt repayment are occasional. Capital expenditure should not be met from loan funds in a way that shows a surplus where there is actually a deficit; the two parts must be balanced separately before any surplus or deficit is declared.</li>
+ <li><strong>Gross and not net budgeting.</strong> Receipts and expenditure should be shown in full rather than as a resultant net figure, although the United Kingdom permits net budgeting in some departments with small receipts.</li>
+ <li><strong>Accuracy.</strong> Estimates should be as near the actuals as possible, allowing for depreciation, inflation and devaluation. Chronic under-estimation of expenditure is a way of concealing a deficit rather than a failure of forecasting.</li>
+ <li><strong>Correspondence of heads.</strong> Budgetary heads should be identical to the heads under which accounts are kept, since otherwise formulation and control cannot be connected to what was actually spent.</li>
+ <li><strong>Publicity</strong>, comprehensiveness, unity and clarity, which <strong>Mohit Bhattacharya</strong> emphasises in <em>New Horizons of Public Administration</em> as principles of the budgetary process itself. A budget that cannot be understood cannot be debated, and one that is not comprehensive conceals as much as it reveals.</li>
+</ul>
+
+<h3>Functions</h3>
+
+<p>The budget is a powerful instrument in the hands of government. For the administrator it is three things at once: a record of past performance, a method of current control, and a projection of future plans. If it is broken down finely enough, the administrator can determine what has been happening and whether the intended results are being achieved. For the legislature it is the principal occasion of control over the executive; for the economy it is the government's main instrument of demand management and redistribution; and for the citizen it is the clearest available statement of what the government actually intends, since priorities stated in speeches are contradicted or confirmed by the allocations.</p>
+
+<h2>Types of Budget</h2>
+
+<h3>Single and Plural</h3>
+
+<p>A <strong>single budget</strong> contains the estimates of all government undertakings in one document, which reveals the financial position of the government as a whole. <strong>Plural budgets</strong> present separate department-wise budgets passed separately by the legislature. India followed the plural practice for the Railways from 1921, presenting a Railway Budget and then a general budget.</p>
+
+<h3>Cash and Revenue</h3>
+
+<p>A <strong>cash budget</strong> estimates the amounts actually to be received and spent within the year, and is used in the United States, Britain and India. A <strong>revenue budget</strong> includes revenue and expenditure accruing in a financial year regardless of whether the revenue is realised or the expenditure incurred within it, and is used in some European countries including France. Cash budgeting allows the year's accounts to be finalised soon after its close, at the cost of not revealing the true financial picture of the year.</p>
+
+<h3>Departmental and Performance</h3>
+
+<p>In a <strong>departmental</strong> or <strong>line-item</strong> budget, the revenues and expenditures of a department are grouped under one head, with no information about the activity or performance for which the money is budgeted. It is simple, it is easy to audit for regularity, and it tells nobody what the money achieved.</p>
+
+<p>In a <strong>performance budget</strong>, the budget is framed by functions, programmes, activities and projects, so that the total expenditure on a specific programme, though incurred by different departments, appears under that programme's head. The gain is that expenditure becomes comparable to purpose; the difficulty is that it demands measures of output that many public activities do not readily yield.</p>
+
+<h3>Zero-Base Budgeting</h3>
+
+<p>ZBB attacks incrementalism directly. Under it a ministry, department or organisation must justify not only new proposals and the funds for them but also its <strong>ongoing activities</strong> and their funds, so that existing programmes are not treated as permanent but examined afresh for continued utility and effectiveness, freeing resources for new programmes. Its aims include prioritising objectives and programmes, switching resources from lower to higher priority, and identifying and eliminating programmes that have outlived their utility.</p>
+
+<p>The approach requires each organisation to evaluate and review all programmes and activities systematically, whether current or new, reviewing them on output or performance as well as cost. It has been defined as a systematic method of reviewing all or a selected number of organisational activities for the purpose of reallocating resources to improve operational effectiveness, with the result that a budget may be restored anywhere within a range from zero to a hundred per cent or beyond. It is an approach rather than a fixed procedure applied uniformly, and must be adapted to each organisation.</p>
+
+<h4>The Procedure</h4>
+
+<ul>
+ <li><strong>Identification of decision units</strong>, the smallest activity for which a separate budget decision can sensibly be made.</li>
+ <li><strong>Development of decision packages</strong>, each carrying the purpose, a description of the actions, the costs and benefits, the workload and performance measures, the alternative means of accomplishing the objective, and the various levels of effort. The most important aspect is the formulation of <em>meaningful alternatives</em>, both alternative methods of achieving the objective and different levels of effort, and identifying and evaluating those levels is a key element of the whole process.</li>
+ <li><strong>Ranking</strong>, which gives management a technique for allocating limited resources. It identifies the benefit gained at each level of expenditure and examines the consequence of not approving packages ranked below the expenditure level, setting priorities among the incremental levels of each decision unit so that the ranking displays a marginal analysis. The key to effective review lies in focusing top management's attention on key policy issues and discretionary expenditure.</li>
+</ul>
+
+<h4>Advantages and Limits</h4>
+
+<ul>
+ <li>It focuses the management process on analysis and decision rather than on numbers alone, addressing the what, why and how as well as the how much.</li>
+ <li>It combines planning, budgeting and operational decision-making into a single process.</li>
+ <li>It forces managers to examine the cost-effectiveness of their operations.</li>
+ <li>It permits quick budget adjustment or resource shifts during the year when revenue falls, because the ranking already shows what would be given up.</li>
+ <li>Against this, it is extremely demanding of time and information; the number of decision packages in a large government is unmanageable; much public expenditure is committed by statute or contract and cannot be reduced to zero whatever the analysis says; and ranking across dissimilar activities requires a common measure of value that does not exist. In practice ZBB is best applied selectively to discretionary programmes rather than universally, which is what its own literature concedes when it calls itself an approach rather than a procedure.</li>
+</ul>
+
+<h3>Planning, Programming and Budgeting System</h3>
+
+<p>PPBS attempts to connect the three functions its name lists, defining objectives, identifying alternative programmes for achieving them, costing each over several years, and choosing between them by systematic analysis. Its contribution was to introduce multi-year costing and explicit alternatives into a process that had neither. Its failure came from the same source as ZBB's: it demanded analytical capacity and agreed objectives, and public programmes typically have neither, because their objectives are plural and contested by design.</p>
+
+<h3>Outcome and Gender Budgeting</h3>
+
+<p><strong>Outcome budgeting</strong> carries performance budgeting one step further, from outputs to outcomes: not how many classrooms were built but whether learning improved. It also permits comparison over time between two outcomes, which is the discipline a line-item budget cannot supply.</p>
+
+<p><strong>Gender budgeting</strong> was first initiated in <strong>Australia in 1984</strong>, and within two decades the practice had spread to some sixty countries. It is not a separate budget for women but an examination of the whole budget for its differential impact by gender, on the understanding that an allocation which appears neutral may not be. In India it reflects the recognition that development depends on the empowerment of women, and the planning process now attends to gender so that women are not left behind in development.</p>
+
+<h3>How Other Systems Differ</h3>
+
+<p>The <strong>French</strong> budgetary system rests on strong financial control, and the <strong>Indian</strong> system does likewise, though that aspect has been progressively diluted by decentralisation and the delegation of powers. The <strong>Netherlands</strong> applies commercial principles, including provision for depreciation allowances. <strong>Italy</strong> allows funds to remain available beyond the financial year for which the budget was framed, with the preceding year's budget operating in parallel. <strong>Japan</strong> maintains special accounts outside the budgetary process, and extra-budgetary devices of various kinds are used in many countries. Extra-budgetary funds are worth noting in an answer, because every one of them is expenditure outside the scrutiny the budget exists to provide.</p>
+
+<h2>The Budgetary Process</h2>
+
+<p>The cycle runs from preparation of estimates, through their submission to the legislature as finance and appropriation bills, to execution, accounting, auditing, and finally legislative control through committees.</p>
+
+<h3>Preparation</h3>
+
+<p>Responsibility rests with the executive, and the method is much the same in all countries.</p>
+
+<ul>
+ <li>Preparation of preliminary estimates by the <strong>disbursing officers</strong>, that is, from the lowest level upward on the basis of instructions issued by the top nodal agency, with the political executive having settled the overall financial policy.</li>
+ <li>Scrutiny and review by the <strong>controlling officers</strong>.</li>
+ <li>Scrutiny and review of revised estimates by the <strong>accountant general</strong> and the administrative department.</li>
+ <li>Scrutiny and review by the <strong>finance ministry</strong>, which is the decisive stage, since it is here that departmental ambition meets the aggregate constraint.</li>
+ <li>Final consideration of the consolidated estimates by the <strong>cabinet</strong>.</li>
+</ul>
+
+<h3>Enactment</h3>
+
+<p>Enactment is the legislature's task and is part of the constitutional law of the country. In India the sequence is a general discussion on the budget as a whole; detailed examination of the demands for grants of each ministry by the <strong>departmentally related standing committees</strong>, which is where the real scrutiny occurs; voting on the demands for grants, during which cut motions may be moved; the <strong>guillotine</strong>, by which the remaining demands are put to the vote without discussion when the allotted time expires; passage of the <strong>Appropriation Bill</strong>, which authorises withdrawal from the Consolidated Fund; and passage of the <strong>Finance Bill</strong>, which gives effect to the taxation proposals. Where the process cannot be completed before the financial year begins, a <strong>vote on account</strong> authorises expenditure for the interim.</p>
+
+<p>The guillotine deserves comment rather than mere mention: the great majority of demands are typically passed under it without discussion, which means that the legislature's most important control is exercised, in the main, without being exercised.</p>
+
+<h3>Execution and the Treasury</h3>
+
+<p>Execution involves the collection of revenue, the custody of funds and their disbursement. <strong>Custody</strong> covers safe-keeping of public funds, depositing a substantial portion in banks, safe investment of surplus money, the crediting of interest on public money to the public treasury, and maintenance of adequate cash reserves.</p>
+
+<p>Arrangements differ. In India the <strong>Reserve Bank of India</strong> conducts the treasury business of government to a large extent, with the State Bank of India acting where there is no branch agency of the RBI, and a network of district treasuries and sub-treasuries persists because banking facilities do not reach everywhere. In <strong>Great Britain</strong>, public receipts and payments are centralised in the Bank of England with no outlying state treasuries. In the <strong>United States</strong> most public receipts and payments are made through private banks, since the central government has no bank of its own, with statutory rules determining where public funds are deposited and accounts opened by tender; the earlier practice of letting departmental heads choose the banks was abandoned after repeated corruption and loss of public money. The general advantage of a government having its own central bank is that public money is safer and corruption and malpractice are harder.</p>
+
+<h2>Accounts</h2>
+
+<p>Accounting is an <strong>executive</strong> function, and its object is to record transactions so that the financial position can be known and audited. Once government accounts are prepared, annual accounts reports should be published to give the correct financial picture of all departments.</p>
+
+<ul>
+ <li><strong>Double-entry book-keeping</strong> enters every item of expenditure in two places, one remaining with the operating officer and the other going to the accounts office or the controlling officer. Its value is that a deliberate error is easily detected, because it cannot be made to agree in both entries.</li>
+ <li>The <strong>cash system</strong> records transactions only when cash is received or disbursed, disregarding operations in which no actual cash transfer takes place, and providing information about liquidation alone rather than about the accrual of assets and liabilities.</li>
+ <li>The <strong>accrual system</strong> records a transaction when the commitment is made and the right to a receipt or the obligation to pay is established. It takes each item into account when it falls due or is billed, and is therefore always current, where the cash system does not reveal the exact financial situation at a given moment. It provides full current information about the realisation of revenue estimates and about expenditure.</li>
+</ul>
+
+<p>India's <strong>departmentalisation of accounts</strong>, launched in three phases from 1 April 1976 and completed by 1 October 1976, separated accounting from audit by transferring the accounting function to the departments themselves, leaving the Comptroller and Auditor General free to audit accounts he had not prepared. That separation is the precondition of independent audit, and it is why the reform matters beyond its administrative detail.</p>
+
+<h2>Audit</h2>
+
+<p>Audit is one of the most important instruments of control over a country's finances. It is a means of enforcing accountability and forms part of the external control over administration, and it means, simply, the examination of accounts to determine their correctness. Audit is a <strong>quasi-judicial</strong> function, as against accounting, which is an executive one, and that distinction is the source of the auditor's independence.</p>
+
+<h3>What Audit Examines</h3>
+
+<ul>
+ <li>The legal availability of the money that has been spent.</li>
+ <li>Whether the money was spent on the activity for which the legislature sanctioned it.</li>
+ <li>Whether it was disbursed to the right authority.</li>
+ <li>Whether all the rules and regulations of financial administration were observed.</li>
+ <li>Whether due <strong>economy, wisdom and faithfulness</strong> were observed in spending it. This fifth limb is propriety audit, and it is what carries audit past legality into judgement.</li>
+</ul>
+
+<h3>Origin and Forms</h3>
+
+<p>Audit as a system of control over public finance first arose in England, by gradual development rather than fresh creation, and was established by the <strong>Exchequer and Audit Departments Act of 1866</strong>. Formerly audit covered only expenditure, and only to ensure that money had been spent in accordance with the appropriation grants. The modern system goes further, examining the faithfulness, wisdom and economy with which officials spent.</p>
+
+<p><strong>Pre-audit</strong> examines a transaction before payment is made, which prevents irregular expenditure at the cost of delay and of involving the auditor in the executive act. <strong>Post-audit</strong> examines after the event, preserving the auditor's independence at the cost of arriving after the money is gone. Most systems use post-audit for general expenditure with pre-audit retained for specified categories.</p>
+
+<p>Audit types run from <strong>regularity or compliance</strong> audit, through <strong>propriety</strong> audit, to <strong>performance or value for money</strong> audit examining economy, efficiency and effectiveness. The movement along that sequence is a movement from asking whether spending was lawful to asking whether it was worthwhile, and it is the ground on which audit is periodically accused of trespassing on policy.</p>
+
+<h3>The Comptroller and Auditor General</h3>
+
+<p>In India the CAG is created by the Constitution and audits all expenditure from the revenues of the Union and the states. The office is an officer of the legislature functioning independently, and its reports are submitted to the legislature and taken up by the Public Accounts Committee. Its independence rests on the manner of appointment and removal, a salary charged on the Consolidated Fund, and the bar on further office under government after demitting.</p>
+
+<p>Its limits are equally clear. Audit is post-facto, so the expenditure has already occurred; it has no power to enforce its findings, depending on the PAC and the department to act; and the further it moves into performance audit, the more contested its conclusions become. The office's real power is publicity rather than sanction, which makes it depend on a legislature and a press willing to use what it produces.</p>
+
+<h2>The Finance Ministry</h2>
+
+<p>The finance ministry is the pivot of the entire system. It frames the budget and issues the instructions on which departmental estimates are built; it scrutinises those estimates and is the effective arbiter between departmental demand and aggregate capacity; it sanctions expenditure and frames the financial rules under which departments operate; it manages public debt and the cash position; and it advises on every proposal with a financial implication, which in practice means every proposal of consequence.</p>
+
+<p>Its instrument inside departments is the <strong>integrated financial adviser</strong>, an officer attached to a ministry who is both part of its management and answerable for financial propriety. The arrangement embodies the central tension of the office: financial control exercised from outside is resented as obstruction and delay, and financial control internalised risks becoming complicity with the department it is meant to restrain.</p>
+
+<h2>Financial Accountability</h2>
+
+<p>The legislature's financial control is completed by its committees, which convert audit and estimate into scrutiny.</p>
+
+<ul>
+ <li><strong>The Public Accounts Committee</strong> examines the appropriation accounts and the CAG's reports, asking whether the money was spent on the purpose voted and within the authority granted. Its chairman is by convention from the Opposition, which is what makes it work.</li>
+ <li><strong>The Estimates Committee</strong> examines the estimates and suggests economies, improvements in organisation and efficiency, and alternative policies achieving the same result at less cost, working continuously rather than only after audit.</li>
+ <li><strong>The Committee on Public Undertakings</strong> examines the reports and accounts of public enterprises.</li>
+ <li><strong>The departmentally related standing committees</strong> examine demands for grants ministry by ministry before they are voted.</li>
+</ul>
+
+<p>The candid assessment is the one that applies to legislative control generally: the machinery is elaborate and its effect is limited, because control is post-facto, the government commands the majority that is meant to hold it to account, and the guillotine disposes of most demands without discussion. Financial accountability in practice rests less on the vote than on audit, publicity and the committee that reads what audit produces.</p>
+
+<h2>The Indian Funds and the 2017 Reforms</h2>
+
+<h3>The Three Funds</h3>
+
+<ul>
+ <li><strong>The Consolidated Fund of India</strong>, into which all revenues, loans raised and receipts from loan repayments flow, and from which no money may be withdrawn except under an appropriation made by law.</li>
+ <li><strong>The Contingency Fund</strong>, placed at the disposal of the President to meet unforeseen expenditure pending authorisation by Parliament, and recouped thereafter.</li>
+ <li><strong>The Public Account</strong>, holding money where government acts as banker or trustee rather than owner, such as provident funds and small savings, withdrawals from which do not require appropriation because the money is not the government's.</li>
+</ul>
+
+<h3>The 2017 Changes</h3>
+
+<p>Three long-standing features of the Indian budget were altered simultaneously with effect from the budget of 2017-18, and any current answer must reflect them.</p>
+
+<ul>
+ <li><strong>The Railway Budget was merged with the general budget</strong>, ending the separate presentation followed since 1921, on the recommendation of the committee headed by <strong>Bibek Debroy</strong> of NITI Aayog. India thereby moved from a plural to a single budget.</li>
+ <li><strong>The plan and non-plan classification of expenditure was abolished</strong>, the distinction having encouraged the neglect of maintenance and salaries as non-plan while privileging new schemes as plan. Expenditure is now classified as revenue and capital, which is the classification that carries economic meaning.</li>
+ <li><strong>The date of presentation was advanced</strong> from the last day of February to the first of February, so that the legislative process can be completed before the financial year begins and departments can spend from April rather than waiting on a vote on account. The first combined budget was presented on 1 February 2017.</li>
+</ul>
+
+<p>Taken together the three are a single reform of some significance: they restore the unity and comprehensiveness that the principles of budgeting demand, and they attack the rule-of-lapse pathology at its root by giving departments a full year in which to spend rather than a truncated one ending in a March rush.</p>
+`,
 };
