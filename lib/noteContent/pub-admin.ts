@@ -4400,4 +4400,286 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Three problems recur and are worth naming in any answer. The <strong>Governor's office</strong> remains the unresolved point at which Union appointment meets state autonomy. The <strong>secretariat-directorate relationship</strong> remains a duplication that every commission has identified and none has settled. And the <strong>politicisation of transfer and posting</strong>, which the Chief Minister's control of the General Administration Department makes possible, remains the mechanism by which political pressure reaches the individual officer. None of the three is a defect of design that better drafting would cure; each is a point where the Constitution left a genuine tension for practice to resolve, and practice has resolved it in favour of power rather than of administration.</p>
 `,
+ 'district-administration': `
+<h2>The District as the Unit</h2>
+
+<p>The district is the basic unit of administration in India, and the district officer is the point at which the state becomes a person. All the policies and programmes of the Union and state governments are actually implemented at the district level; the district officer is the representative of government there; and it is he who deals with the public on the government's behalf. A paper on Indian administration that stops at the secretariat has described the part of the system that decides and not the part that acts.</p>
+
+<h2>How the Office Came About</h2>
+
+<p>Present-day district administration and the office of the Collector came into being under British rule. After the Battle of Buxar and the grant of the Diwani in 1765, the Company acquired the right to collect revenue in Bengal, and in <strong>1772 Warren Hastings</strong>, then Governor of Bengal, created the office of <strong>District Collector</strong>. The Collector was responsible for civil justice and magistracy in addition to revenue collection, and the combination made him an extremely powerful functionary. <strong>Lord Cornwallis</strong> reorganised and modernised the office, and successive Viceroys refined it.</p>
+
+<h3>What Contemporaries Made of It</h3>
+
+<ul>
+ <li>He was described as a <strong>little Napoleon</strong> in his district, which captures the concentration of revenue, magisterial and judicial authority in one person.</li>
+ <li><strong>Ramsay MacDonald</strong> compared the Collector to <em>a tortoise on whose back stood the elephant of the Government of India</em>, which is the most economical statement of the fact that the entire imperial structure rested on a single officer in each district.</li>
+ <li><strong>Lord Wavell</strong> said that the English would be remembered not by this institution or that but by the ideal left behind in the form of the office of the District Collector.</li>
+ <li>In the eyes of most inhabitants of a district, the Collector simply <em>is</em> the government.</li>
+</ul>
+
+<h3>The French Parallel</h3>
+
+<p>The office is unique and has no parallel in any other administrative system except the <strong>Prefect</strong> in France. The Prefect heads the department, the largest unit of French administration, and is simultaneously the agent of the central government, the same duality that makes the Indian Collector both the head of district administration and the representative of a higher authority. The comparison is worth making in an answer, because it identifies what is distinctive: not that a district has an officer, but that one officer combines general territorial authority with agency for a distant government.</p>
+
+<h2>Where the Collector Sits</h2>
+
+<p>The District Collector belongs to the <strong>General Administration Department</strong> of the state secretariat, which is headed politically by the Chief Minister and administratively by the Chief Secretary. He is controlled and supervised by the <strong>Divisional Commissioner</strong>. The chain therefore runs from the Chief Minister and Chief Secretary at the state level, through the Divisional Commissioner at the divisional level, to the Collector in the district.</p>
+
+<p>That the Collector's cadre-controlling department is General Administration rather than Revenue is significant: it establishes him as the state government's general representative in the district rather than as the head of one department among several, which is the constitutional basis of his coordinating role.</p>
+
+<h2>Functions</h2>
+
+<h3>Revenue Administration</h3>
+
+<p>Revenue collection has historically been the first charge of the office, as the title Collector signifies, since the primary motive of the British was to maximise revenue. He remains head of revenue administration in the district, styled differently in different states, and his revenue functions are:</p>
+
+<ul>
+ <li>Collection of land revenue, maintenance of land records, and collection of rural statistics.</li>
+ <li>Acquisition of land for industry, slum clearance and public purposes.</li>
+ <li>Implementation of land reform, including the payment of zamindari abolition compensation.</li>
+ <li>Assessment of crop loss and recommendation of relief during natural calamity.</li>
+ <li>Hearing revenue appeals against the orders of lower authorities, which is a quasi-judicial function.</li>
+ <li>Recovery of government dues, and the recovery of arrears of other departments as arrears of land revenue, which is why the office is drawn into matters far from land.</li>
+</ul>
+
+<h3>Law and Order</h3>
+
+<p>Before independence the Collector was responsible for law and order as his principal duty, acting as both <strong>executive magistrate</strong>, responsible for maintaining order, and <strong>judicial magistrate</strong>, responsible for trying criminal and civil cases by interpreting the law. After independence the government largely continued the arrangement.</p>
+
+<p><strong>Article 50</strong> of the Directive Principles provides that the State shall take steps to separate the judiciary from the executive in the public services. The <strong>Code of Criminal Procedure, 1973</strong> gave effect to this, vesting judicial powers in district judicial magistrates working under the direct control of the High Court. The Collector's judicial function thereby came to an end, while the <strong>executive magisterial</strong> function remained, so that the District Magistrate continues to be ultimately responsible for law and order in the district.</p>
+
+<p>His powers in that capacity include issuing prohibitory orders under section 144 of the Code when public peace is threatened; calling in the armed forces where the situation is beyond the civil police; visiting and inspecting jails within his jurisdiction and releasing prisoners on parole; enforcing regulatory statutes such as those on entertainment and the press; and ordering the disposal of unclaimed property.</p>
+
+<h3>Development Administration</h3>
+
+<p>Independence added a set of functions the office was not designed for. The Collector chairs or coordinates the district's development machinery, supervises the implementation of centrally sponsored and state schemes, chairs the district-level committees on credit, welfare and monitoring, and is answerable upward for the district's performance on programme targets.</p>
+
+
+<h3>Welfare and Regulatory Functions</h3>
+
+<ul>
+ <li><strong>Civil supplies</strong>: responsibility for food and other essential commodities, which in practice means the public distribution system and the control of hoarding and black-marketing, and which is the function that most directly touches the poorest.</li>
+ <li><strong>Civil defence</strong>, and liaison with the military authorities, together with the welfare of serving and retired members of the armed forces.</li>
+ <li><strong>Personnel matters</strong> of the district staff, as head of district administration.</li>
+ <li>Prosecution of offenders under regulatory statutes such as the Factories Act and the Trade Marks Act, and enforcement of the Entertainment Tax Act and the Press Act.</li>
+ <li>Recommending schemes for the development of forests, and a range of comparable functions attached to the office by particular statutes.</li>
+</ul>
+
+<h3>The Collectorate</h3>
+
+<p>The Collectorate is the Collector's office at district headquarters, divided into sections each of which assists him with a defined part of his work. A typical collectorate contains sections for <strong>accounts, civil supplies, development, elections, establishment, general, housing, intelligence, judicial, land acquisition, land records, land reforms, panchayat, protocol, public relations, revenue, rehabilitation, registration, statistics and transport</strong>.</p>
+
+<p>The list is worth reading as evidence rather than as detail. Nineteen sections covering everything from land records to protocol to intelligence is not the office of a departmental head; it is a miniature government, and it shows why the Collector is drawn into matters no single department would claim.</p>
+
+<h3>The District Departments</h3>
+
+<p>The majority of state departments are represented at district level, each with its own district head: the Superintendent of Police for police, the Chief Medical Officer for health, the District Education Officer, the District Agriculture Officer, the Executive Engineer for public works and for irrigation, the District Industries Officer, the District Social Welfare Officer and so on. Each reports substantively to its own directorate at the state headquarters while working within the Collector's territorial jurisdiction, which is the structural origin of the coordination problem set out below.</p>
+
+<h3>Elections, Census and Crisis</h3>
+
+<ul>
+ <li>As <strong>District Election Officer and Returning Officer</strong>, he conducts parliamentary and assembly elections in the district, coordinating the entire election machinery there. This is the function in which the office is most visibly and successfully independent, since for its duration he answers to the Election Commission rather than to the state government.</li>
+ <li>As <strong>District Census Officer</strong>, he conducts the decennial census.</li>
+ <li>As <strong>crisis administrator in chief</strong>, he leads the response to natural calamity and emergency, which is the function that most clearly justifies retaining a single general authority in the district.</li>
+ <li>He supervises municipal administration in the district, acts as public relations officer for the government, and serves as a buffer between the citizen and the administration.</li>
+</ul>
+
+<p>The list is open-ended, and that is itself a finding: the role of the district officer is multi-dimensional and new responsibilities continue to be attached to the post, because whenever a new programme requires someone in the district to be accountable, the Collector is the only officer with general authority to whom it can be given.</p>
+
+
+<h3>The District Rural Development Agency</h3>
+
+<p>An important dimension of the Collector's developmental role is his association with the <strong>District Rural Development Agency</strong>, of which he is <em>ex officio</em> chairman. The DRDA was established in each district in <strong>1980</strong> under the Societies Registration Act, and is the nodal agency for the formulation, implementation, monitoring and evaluation of rural development programmes.</p>
+
+<p>The programmes it has carried include the <strong>Integrated Rural Development Programme</strong>, the <strong>Desert Development Programme</strong>, the <strong>Drought Prone Areas Programme</strong>, <strong>Training of Rural Youth for Self-Employment</strong>, <strong>Development of Women and Children in Rural Areas</strong>, and the <strong>Command Area Development Programme</strong>. It is composed of the district-level officers of the various development departments, over whom the Collector presides as chairman.</p>
+
+<p>The DRDA is the clearest illustration of how the development function was grafted onto the district. Rather than restructuring the district administration, the state created a registered society with its own funds and its own governing body, chaired by the Collector and staffed by the same officers who served the line departments. It gave the Collector a financial handle he otherwise lacked, and it created a parallel channel outside both the departmental hierarchy and, after 1992, the elected panchayati raj structure, which is why its relationship with the Zila Parishad has been contested ever since.</p>
+
+<h2>The Changing Role</h2>
+
+<p>After independence the office suffered a decline in status and authority, and the literature identifies ten reasons.</p>
+
+<ul>
+ <li><strong>Expansion of governmental activity</strong>, as the police state was replaced by the welfare state, so that government did far more than the Collector could personally superintend.</li>
+ <li><strong>Change in the form of government</strong>, with parliamentary government adopted at the Centre and in the states, placing an elected political executive above him where the colonial Collector had answered to an appointed hierarchy.</li>
+ <li><strong>Change in the ends of government</strong>, welfare orientation replacing colonial exploitation, which altered what the office was for.</li>
+ <li><strong>The emergence of panchayati raj</strong> as a unit of local administration, transferring functions and legitimacy to elected local bodies.</li>
+ <li><strong>Separation of the judiciary from the executive</strong>, which removed his judicial powers.</li>
+ <li><strong>Increasing political consciousness</strong> among the people, who no longer regard the office with the deference it once commanded.</li>
+ <li><strong>The emergence and growth of a large number of departments</strong> in the district, each with its own technical head reporting to its own directorate.</li>
+ <li><strong>Replacement of the ICS by the IAS</strong>, a service of different composition, shorter district experience and different career horizons.</li>
+ <li><strong>The rise and influence of pressure groups and political parties</strong>, which supply alternative channels between the citizen and the state.</li>
+ <li><strong>The rise of the commissionerate system</strong> of law and order administration in the larger cities, which removes the magisterial function from the district officer entirely in those jurisdictions.</li>
+</ul>
+
+<h3>Decline or Transformation?</h3>
+
+<p>The better answer is transformation rather than simple decline, and the distinction is worth arguing. The Collector has lost the <em>judicial</em> power, lost the <em>magisterial</em> power in commissionerate cities, lost the monopoly of local legitimacy to elected panchayats, and lost technical command to specialist departments. He has gained responsibility for development programmes, for disaster management, for elections and for an ever-lengthening list of committees.</p>
+
+<p>What has not changed is the structural fact that produced the office: the state needs a single general authority in each district who can be held responsible for whatever no one else is responsible for. Political decentralisation has occurred and democratic institutions function at the district level, and the District Magistrate's office remains the place to which the ordinary citizen brings a problem in the hope of a solution. The office survives not because of its powers but because of its generality.</p>
+
+
+<h2>Disaster Management at the District</h2>
+
+<p>Disaster management has become one of the Collector's principal statutory functions, and it is the clearest modern illustration of why a general territorial authority remains necessary.</p>
+
+<p>Disaster does not appear in any of the three legislative lists, and Parliament nonetheless enacted the <strong>Disaster Management Act, 2005</strong> to provide protection against natural and man-made calamity. Under <strong>section 25</strong> the Act establishes a <strong>District Disaster Management Authority</strong> in each district, chaired by the <strong>Collector, District Magistrate or Deputy Commissioner</strong>, with the elected representative of the area as <em>ex officio</em> co-chairperson and not more than seven other members as the state government prescribes. Under <strong>section 30</strong> the District Authority acts as the district planning, coordinating and implementing body for disaster management, taking all measures for that purpose in accordance with the guidelines of the National and State Authorities.</p>
+
+<p>Three features of the design repay attention in an answer.</p>
+
+<ul>
+ <li>It places the <strong>appointed officer in the chair and the elected representative beside him</strong> as co-chairperson, which is an explicit and unusual resolution of the tension that runs through district administration everywhere else, and it resolves it in favour of the administrator on the reasoning that a disaster requires a single chain of command.</li>
+ <li>It creates a <strong>statutory</strong> authority rather than an administrative arrangement, so the Collector's disaster powers rest on an Act of Parliament rather than on state executive instructions, which places them beyond the ordinary reach of state-level interference.</li>
+ <li>It confirms the pattern by which new functions accrue to the office: faced with a task requiring coordination across every department in a territory under conditions of urgency, the system had no candidate other than the Collector.</li>
+</ul>
+
+<p>The concern for those affected by calamity is not a modern innovation in Indian administration. Kautilya's <em>Arthashastra</em> gives special protection to people suffering from natural calamity, and the assessment of crop loss and recommendation of relief has been part of the Collector's revenue work since the office was created. What the 2005 Act changed was the shift from <em>relief after the event</em> to <em>preparedness and mitigation before it</em>, which requires planning, drills and infrastructure rather than the distribution of assistance, and therefore requires an officer in post long enough to prepare.</p>
+
+<h2>The District Magistrate and the Superintendent of Police</h2>
+
+<p>Law and order at ground level depends on the relationship between the District Magistrate and the Superintendent of Police, and the arrangement is one of <strong>dual control</strong>.</p>
+
+<p>There are two lines of authority over the police in a district. The <strong>departmental</strong> line runs through the Director General of Police, or the Commissioner in a city, and covers recruitment, training, discipline, deployment and internal management. The <strong>general administrative</strong> line runs through the state government, whose principal representative in the district is the District Magistrate. This is the pattern established under the <strong>Police Act of 1861</strong>, which placed control of the district police with the District Magistrate, and the Code of Criminal Procedure recognises the District Magistrate as responsible for maintaining law and order with the assistance of the Superintendent of Police.</p>
+
+<h3>The Argument</h3>
+
+<ul>
+ <li><strong>For dual control.</strong> A civil authority stands between the police and the citizen, so that the use of force is authorised by someone who is not himself a policeman. The Magistrate coordinates the police with revenue, health, transport and municipal functions that any serious disturbance involves. And a general administrator brings a wider view of local conditions than a force concerned with its own operations.</li>
+ <li><strong>Against it.</strong> Divided command confuses accountability when something goes wrong; the Superintendent answers to two masters whose instructions may differ; the arrangement dates from 1861 and was designed for a colonial state; and professional policing is now technical enough that supervision by a generalist adds little.</li>
+</ul>
+
+<h3>The Commissionerate System</h3>
+
+<p>In the larger cities the commissionerate system concentrates both magisterial and police powers in a <strong>Commissioner of Police</strong>, removing the District Magistrate from law and order administration in that jurisdiction. Its case is unity of command and speed in a dense urban environment; the case against is that it removes the civil check on police power precisely where police power is most concentrated.</p>
+
+<h3>Police Reform</h3>
+
+<p>In 1996 two retired police officers and a non-governmental organisation petitioned the Supreme Court for implementation of the National Police Commission's recommendations, and in 2006 the Court delivered the judgment known as <strong>Prakash Singh</strong>, which addresses three aspects of policing: <em>autonomy</em>, <em>accountability</em> and <em>efficiency</em>. The Court observed that whimsical transfer of police personnel not only demoralises the force but politicises it.</p>
+
+<p>The recommendations common to the National Police Commission and later committees are that the <strong>Police Act of 1861 be repealed</strong> and replaced; that measures be taken to make the force independent of executive interference in recruitment, transfer, promotion and discipline; that the <strong>investigation wing be separated from the law and order wing</strong>; and that machinery be established to deal with complaints against the police. The National Police Commission further recommended a <strong>State Security Commission</strong> to lay down policy guidelines, evaluate performance and act as a forum of appeal, and a statutory tenure of four years for the Director General of Police with a transparent method of selection.</p>
+
+<p>Personnel problems underlie the whole subject. Recruitment of constables and, to a degree, of sub-inspectors turns largely on physical fitness, while the qualities policing actually requires, service attitude, ability to deal with people, problem-solving, quick decision and the writing of a clear report, are not tested. The <strong>Gore Committee</strong> on police training in 1974 found professional training neglected, and promotional avenues at the cutting-edge level remain poor.</p>
+
+<h2>Field Administration</h2>
+
+<p>The district sits within a wider field structure, and the tiers below the state are these.</p>
+
+<ul>
+ <li>The <strong>division</strong>, comprising several districts under a Divisional Commissioner.</li>
+ <li>The <strong>district</strong>, under the Collector and District Magistrate.</li>
+ <li>The <strong>sub-division</strong>, under a Sub-Divisional Officer or Sub-Divisional Magistrate, who is the Collector's counterpart for a part of the district and is frequently a young officer's first independent charge.</li>
+ <li>The <strong>tehsil or taluk</strong>, under a Tehsildar, which is the unit of revenue administration and the level at which land records are actually maintained.</li>
+ <li>The <strong>village</strong>, with the patwari or village accountant and the revenue and police officials who constitute the state's permanent presence there.</li>
+</ul>
+
+<p>Alongside this territorial hierarchy runs a functional one. Every department of the state, agriculture, health, education, public works, irrigation, industries, has its own district officer reporting to its own directorate at the state headquarters. The district therefore contains two structures: a <strong>territorial</strong> one whose apex is the Collector, and a set of <strong>functional</strong> ones whose apexes are elsewhere.</p>
+
+<h2>Coordination</h2>
+
+<p>The central administrative problem of the district follows directly from that duality. The Collector is responsible for the district's performance and does not command most of the officers whose work determines it.</p>
+
+<h3>Why Coordination Fails</h3>
+
+<ul>
+ <li><strong>Divided reporting.</strong> The district agriculture or health officer is appraised, promoted and transferred by his own department, so his incentive is to satisfy his directorate rather than the Collector.</li>
+ <li><strong>Technical autonomy.</strong> Specialist officers resist direction by a generalist on matters they consider professional, which is the district-level form of the secretariat-directorate conflict.</li>
+ <li><strong>Vertical programmes.</strong> Centrally sponsored schemes arrive with their own guidelines, funds and reporting lines, creating channels that bypass the district's own machinery.</li>
+ <li><strong>Overload.</strong> The Collector chairs dozens of committees, and attention distributed across all of them is effective in none.</li>
+ <li><strong>No financial hold.</strong> He cannot ordinarily sanction, withhold or reallocate the funds of another department, so his coordination rests on persuasion and on his standing with the state government.</li>
+</ul>
+
+<h3>The Devices Available</h3>
+
+<p>District-level coordination committees chaired by the Collector; the annual district plan; his power to write a supplementary entry in the appraisal of district-level officers where the state provides for it; inspection and the calling of reports; and, most effectively, his access to the Chief Secretary and the Divisional Commissioner. The literature's judgement is that coordination works where the Collector has personal standing and fails where he does not, which is another way of saying that the system has never given the office the authority its responsibility requires.</p>
+
+<h2>District Planning</h2>
+
+<p>The 73rd and 74th Amendments created a three-tier arrangement, adding the Eleventh and Twelfth Schedules which set out <strong>twenty-nine subjects</strong> for panchayats and <strong>eighteen</strong> for municipalities, and requiring a <strong>District Planning Committee</strong> to consolidate the plans of the panchayats and municipalities into a draft district development plan, with a Metropolitan Planning Committee for the larger urban agglomerations.</p>
+
+<p>The Collector's position in this structure is ambiguous by design. He is usually a member or the member-secretary of the District Planning Committee and often the chief executive of the <strong>District Rural Development Agency</strong>, while the Zila Parishad has an elected chairperson with a democratic mandate for the same territory. Both the panchayati raj institutions and the Collector have been given significant roles, and the relationship between an elected chairperson and an appointed officer of superior administrative standing has never been settled in a way that satisfies either.</p>
+
+<p>The practical outcome in most states is that district planning consolidates departmental proposals rather than aggregating local ones, which is the same failure the note on planning identifies at the state level, appearing one tier lower.</p>
+
+
+<h2>Technology and the Citizen Interface</h2>
+
+<p>The district is where electronic governance either reaches the citizen or does not, and the Collector's office is the point at which most of it is delivered.</p>
+
+<ul>
+ <li><strong>Digitisation of land records</strong> is the largest single application, converting the patwari's handwritten register into a searchable database, permitting a certified copy to be issued across a counter rather than after repeated visits, and attacking the discretion of the lowest and most numerous tier of the revenue establishment. It is also the precondition of the land title management system the second ARC recommended.</li>
+ <li><strong>Common service centres</strong> bring certificates, applications and payments to the block and village, which matters because the constraint on access has always been distance and the cost of travel rather than the fee.</li>
+ <li><strong>Single-window and time-bound delivery</strong>, under the Right to Public Services legislation most states have enacted, converts a discretionary favour into an enforceable entitlement with a penalty on the defaulting officer.</li>
+ <li><strong>Grievance redress portals</strong> and the older device of the <em>janata darbar</em>, at which the Chief Minister or Collector hears the public directly, serve the same function by different means, and the persistence of the second alongside the first is evidence that the electronic channel has not displaced the need for a person who can be addressed.</li>
+</ul>
+
+<p>The qualification belongs in any answer that praises this. Digitising a process does not change who decides or on what basis; it changes the speed and the record. Where the underlying discretion is the problem, as with the mutation of a land record or the grant of a certificate, technology reduces the opportunity for delay without removing the opportunity for a decision to be wrong, and the compliance machinery the second ARC asked for is what addresses the second.</p>
+
+
+<h2>The Collector and Elected Local Government</h2>
+
+<p>The relationship between the appointed district officer and the elected district body is the unresolved question of Indian district administration, and it is a favourite of examiners because there is no settled answer.</p>
+
+<h3>The Three Arrangements</h3>
+
+<ul>
+ <li><strong>The Collector as chief executive of the Zila Parishad</strong>, which preserves administrative capacity and subordinates the elected chairperson to an officer he cannot appoint, appraise or remove.</li>
+ <li><strong>A separate chief executive officer</strong> of the Zila Parishad, distinct from the Collector, which is the Maharashtra and Gujarat pattern: the Collector retains regulatory work and development is entrusted to an officer working under the elected district head. This respects the elected body's authority and divides the district's administration into two hierarchies.</li>
+ <li><strong>The Collector outside the panchayat structure altogether</strong>, confined to regulatory functions with development wholly devolved, which is the logical terminus of the 73rd Amendment and which no state has fully adopted.</li>
+</ul>
+
+<h3>Why the Question Resists Settlement</h3>
+
+<ul>
+ <li>The 73rd Amendment created elected bodies with constitutional standing for twenty-nine subjects and left the transfer of <strong>functions, funds and functionaries</strong> to the states, which have transferred functions readily, funds partially and functionaries least of all. An elected body without staff must borrow the administration's, which reproduces the officer's authority inside the elected structure.</li>
+ <li>Centrally sponsored schemes and the DRDA route money to the district outside the panchayat structure, so the Collector controls resources the elected chairperson does not.</li>
+ <li>Accountability runs in incompatible directions. The Collector answers upward to the state government; the chairperson answers outward to an electorate. Where the two disagree, no rule determines which prevails, and the outcome turns on the relative political standing of the two individuals.</li>
+ <li>Capacity is genuinely unequal. Panchayati raj institutions frequently lack the technical and financial staff to plan and execute, which is used as the reason not to devolve, and which devolution would be the means of correcting. The argument is circular and has not been broken.</li>
+</ul>
+
+<p>The defensible position is that the Collector's role should contract as local capacity grows, and that the sequencing matters more than the principle: transferring functions to bodies without staff or money produces failure that is then cited against devolution itself. The second ARC's recommendation that the Collector concentrate on core regulatory functions is an answer to this question as much as to the question of overload, since what it removes from his charge is precisely what the elected bodies were created to do.</p>
+
+<h2>The Problems of the Office</h2>
+
+<ul>
+ <li><strong>Tenure.</strong> The office suffers from acute instability, arising from political instability in the states, with transfers made irrespective of the completion of a tenure. Research cited in the literature puts the <strong>average tenure of a Collector in many states at three to four months</strong>, which is the single most damaging fact in this topic: no officer can know a district, still less change it, in that time, and every long-horizon responsibility given to the office is thereby defeated.</li>
+ <li><strong>Political interference.</strong> The Collector is responsible for justice, law and order and much else, and cannot discharge those duties sincerely under political pressure, which is most pronounced in regional politics where state-level politics dominates.</li>
+ <li><strong>Corruption.</strong> Development projects in many states dissipate into corruption, disrupting one social development project after another, which has in turn lowered the standing of the institution itself.</li>
+ <li><strong>Overload and role conflict.</strong> Regulatory functions require distance from the public and developmental functions require closeness to it, and the same officer is asked for both. The roles are at times contradictory, and there is no consensus in a plural society about which should prevail.</li>
+</ul>
+
+<h2>Reform Proposals</h2>
+
+<ul>
+ <li><strong>Separate the regulatory from the developmental.</strong> The District Magistrate should retain revenue, law and order and other regulatory functions while development work is entrusted to a separate officer. <strong>Gujarat and Maharashtra</strong> follow a version of this, with the Collector holding regulatory and other functions while development is given to an independent officer working under the elected district body.</li>
+ <li><strong>Delegate.</strong> District administrators should delegate most of their functions and powers to subordinate officers, so as to give more time to coordination and supervision, which is the only way the coordinating role can actually be performed.</li>
+ <li><strong>Secure tenure.</strong> The Collector's tenure should be assured for at least three years, and transfers for unnecessary political reasons prevented.</li>
+ <li><strong>Limit and clarify the relationship with panchayati raj institutions</strong>, keeping the number of development projects entrusted to them manageable and avoiding unnecessary interference in the Collector's work.</li>
+ <li><strong>Social audit.</strong> To control corruption, every department should undertake social audit involving the people of the district, non-governmental organisations and the local media, which would significantly reduce its incidence.</li>
+</ul>
+
+<p>The recurring recommendation of separating the two roles deserves a caution, and making it is what distinguishes a considered answer. Splitting regulation from development resolves the role conflict and creates a coordination problem in its place, since the district then has two apexes and no single officer answerable for the whole. States that have separated the functions have not conspicuously outperformed those that have not, which suggests that the binding constraint is tenure and political interference rather than the allocation of functions.</p>
+
+
+<h2>What the Second ARC Recommended</h2>
+
+<p>The second Administrative Reforms Commission examined district administration directly, and its recommendations are the most current authoritative statement on the subject.</p>
+
+<ul>
+ <li><strong>Realign the Collector's functions</strong> so that he concentrates on core work: land and revenue administration, maintenance of law and order, disaster management, public distribution and civil supplies, excise, elections, transport, census, protocol, general administration, treasury management, and coordination with the various agencies and departments. The list is notable for what it omits, namely the direct management of development programmes, which the Commission would leave to the elected local bodies and the line departments.</li>
+ <li><strong>Land title management.</strong> The Commission reiterated its recommendation from the eleventh report on e-Governance for a proper land title management system, and held that performing that task should be one of the Collector's primary duties. The significance is substantial: India's land records record possession rather than guaranteed title, which is the source of an enormous volume of litigation and a standing obstacle to credit and investment, and the officer who holds the records is the Collector.</li>
+ <li><strong>Strengthen the compliance machinery at district level</strong> to enforce the provisions of the Right to Information Act and to reduce delay and subjectivity in the working of lower formations, including by creating a special <strong>RTI cell</strong> in the Collector's office whose functioning he reviews periodically. The Commission observed that such legislation has not percolated significantly beyond the state capital, and that lower-level officials of state and district administration should be far more responsive and proactive to citizens' needs.</li>
+ <li><strong>Post experienced officers as Collectors.</strong> In many states officers are posted as Collector or District Magistrate soon after reaching senior scale, that is after only a few years of service, and the Commission considered greater experience necessary for an office of this responsibility.</li>
+</ul>
+
+<p>Read together, the four amount to a coherent position: narrow the office to what only it can do, give it a substantive modern task in land titling, make it the local enforcer of the citizen's right to information, and staff it with officers senior enough to withstand pressure. Whether the last is achievable while tenure averages a few months is the question the Commission does not answer.</p>
+
+<h2>Union, State and Local at the District</h2>
+
+<p>The district is where the three levels of the Indian federation actually meet. Responsibility for the social sectors, education, health, housing and drinking water, rests with the state governments, and most policy in those fields is made by them. Because of widespread poverty and the limited resources available to states, the Union also frames programmes in the same fields, the <strong>centrally sponsored schemes</strong>, and these too are implemented at the district level, alongside flagship national programmes.</p>
+
+<p>The Collector therefore administers, simultaneously, state laws and schemes under the state government's direction; centrally sponsored schemes under central guidelines with their own reporting; and statutory functions under the Election Commission, the census organisation and the disaster management framework which answer elsewhere again. He does so in a territory for which elected panchayats and municipalities hold constitutional responsibility for twenty-nine and eighteen subjects respectively.</p>
+
+<p>The conclusion to carry into an answer is that the district officer's difficulty is not a shortage of authority in any one line but the number of lines converging on him. He is the point at which a federal structure, a party system, a permanent service and an elected local government all touch the same citizen, and the office has survived because no alternative has been found for the function of being answerable when the lines conflict.</p>
+`,
 };
