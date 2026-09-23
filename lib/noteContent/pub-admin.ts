@@ -3803,4 +3803,313 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The three-layer arrangement, secretariat for policy, attached office for direction, subordinate office for execution, is the structural expression of the staff and line distinction. Its recurring difficulty is that the secretariat's authority over bodies it does not manage is exercised through correspondence rather than command, so the gap between a policy decided in the ministry and an action taken in the field is wider than the organisation chart suggests.</p>
 `,
+ 'plans-priorities-administration': `
+<h2>Why India Planned</h2>
+
+<p>Economic planning began formally on <strong>11 April 1951</strong> with the launch of the First Five Year Plan, but the idea was long established among Indian leaders, who had stressed the need for planning to eradicate mass poverty well before independence.</p>
+
+<h3>The Antecedents</h3>
+
+<ul>
+ <li><strong>M. Visvesvaraya</strong> urged the need for planning in <em>Planned Economy for India</em> (1934), proposing a ten-year plan to double national income. In 1937 the Congress ministries in the provinces attempted to act on such ideas.</li>
+ <li>The <strong>National Planning Committee</strong> was set up in 1938 under <strong>Jawaharlal Nehru</strong> and prepared a plan for the country's economic development.</li>
+ <li>Three further plans followed: the <strong>Bombay Plan</strong>, prepared by eight leading businessmen; the <strong>People's Plan</strong> of <strong>M.N. Roy</strong>; and the <strong>Gandhian Plan</strong> of <strong>Shriman Narayan</strong>. None received adequate attention from the colonial government.</li>
+ <li>A Department of Planning and Development was created in 1944 and accomplished nothing.</li>
+ <li>In 1946 the interim government under Nehru set up an <strong>Advisory Planning Board</strong> under <strong>K.C. Neogy</strong>, which recommended the establishment of a planning commission that would continuously attend to economic development.</li>
+</ul>
+
+<p>The range of that list is itself significant. Industrialists, a Marxist, a Gandhian and the Congress leadership all produced plans in the same decade, which tells us that planning in India was not imported with socialism but was the common assumption of the entire political spectrum about how a poor country would develop.</p>
+
+<h3>The Case for Planning, and the Doubt</h3>
+
+<p>Planning has been viewed with mixed feelings. One view, popular in many developing countries, treats it as a magical formula for social and economic development. Against this there has been growing scepticism about its contribution: some countries have developed without much planning, and others with planned economies have not reached satisfactory levels of development, so one can never be certain what planning contributed.</p>
+
+<p>Despite the debate, there is widespread recognition of the usefulness of some systematic planning. Planning makes economic and social development easier by providing explicit analysis and evaluation of alternative policies, and by resolving competing demands and conflicts systematically. It is therefore a means of harnessing resources and organs and of coordinating a wide range of tasks to achieve quantified goals. In a mixed economy it aids policy-makers across many aspects of the economy, because the market in developing countries operates imperfectly through lack of competition or the absence of appropriate institutions, and planning complements the market mechanism where that is so.</p>
+
+<p>The constitutional foundation is twofold: the <strong>Directive Principles</strong> commit the state to securing a social order for the promotion of welfare, to minimising inequalities of income and status, and to distributing material resources to subserve the common good; and <strong>economic and social planning</strong> is an entry in the Concurrent List, which is what allows the Union to plan for subjects otherwise belonging to the states.</p>
+
+
+<h2>Types of Planning</h2>
+
+<p>The word planning covers several distinct arrangements, and distinguishing them is usually the first move a good answer makes.</p>
+
+<h3>By Direction and by Inducement</h3>
+
+<p><strong>Planning by direction</strong> is integral to a socialist economy. It entails the complete absence of laissez faire: a single central authority plans, directs and orders the execution of the plan according to predetermined targets and priorities, and such planning is comprehensive, encompassing the entire economy.</p>
+
+<p><strong>Planning by inducement</strong> is democratic planning. It works by manipulating the market, using monetary and fiscal policy to stimulate private activity and to secure harmony between the social objectives of government and the behaviour of private producers. Competing demands are ironed out, adjusted and reconciled as rationally as is feasible, rather than overridden.</p>
+
+<p>India chose the second and retained instruments of the first. The licensing system directed private investment while the plan formally only induced it, and that hybrid is the source of both the rent-seeking the system produced and the confusion about what Indian planning actually was.</p>
+
+<h3>Indicative and Imperative</h3>
+
+<p><strong>Indicative planning</strong> is a French system resting on decentralisation in the operation and execution of the national plan. It is flexible rather than imperative. The private sector is expected to fulfil the targets for the plan to succeed, and is neither rigidly controlled nor directed to do so: the state provides facilities and <em>indicates</em> the areas in which private effort can help implement the plan, without directing it.</p>
+
+<p><strong>Imperative planning</strong> places all economic activity and all resources under the direction of the state, with complete control over the factors of production and the entire resources of the economy allocated by decision rather than by price.</p>
+
+<p>India moved from something close to the imperative end towards the indicative after 1991, and the Eighth Plan is where the shift is visible: the plan continued to set targets while losing the instruments that had made targets binding.</p>
+
+<h3>Perspective and Annual</h3>
+
+<p><strong>Perspective planning</strong> is long-term planning in which targets are set in advance for fifteen, twenty or twenty-five years. A perspective plan does not mean a single plan for the whole period: the broader objectives and targets are achieved within it by dividing the perspective into several shorter plans of four, five or six years, and a five year plan is itself broken into <strong>annual plans</strong>, each fitting within the framework of the five-year plan.</p>
+
+<p>Plans of either kind are further divided into <strong>regional</strong> plans, pertaining to regions, districts and localities, and <strong>sectoral</strong> plans covering an industry or a service across the country. The nesting is what NITI Aayog's fifteen-year Vision, seven-year Strategy and three-year Action Agenda reproduce, which is worth noticing: the architecture of Indian planning survived the abolition of the Five Year Plan, with the periods altered and the binding document shortened.</p>
+
+<h3>Physical and Financial</h3>
+
+<p><strong>Financial planning</strong> allocates money and works in rupees; <strong>physical planning</strong> allocates real resources, materials, capacity, skilled manpower, and works in quantities. The two must agree, and in Indian practice frequently did not, since an allocation of funds does not create the cement, steel or engineers the project requires. Much of the shortfall in plan implementation is explained by financial provision unmatched by physical availability.</p>
+
+<h2>The Planning Commission</h2>
+
+<p>Acting on the Advisory Planning Board's recommendation, the Planning Commission was set up in <strong>March 1950</strong> by a resolution of the Government of India, with the <strong>Prime Minister as its chairman</strong>. It was therefore an <strong>executive body created by resolution</strong>, neither constitutional nor statutory, which is the fact from which most of the later criticism of its power follows.</p>
+
+<p>Planning was conceived as the major instrument for removing poverty and achieving socio-economic justice. The object was to mobilise the material and human resources of the nation for accelerated growth in infrastructure and in consumer goods so as to improve living conditions, and the basic concept was <strong>balanced growth</strong> that would remove both regional imbalance and the imbalance between rural and urban sectors. To that end the Commission formulated and executed the Five Year Plans, of which it produced twelve before being replaced.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>To assess the country's material, capital and human resources, and to investigate the possibility of augmenting deficient resources.</li>
+ <li>To formulate a plan for the most effective and balanced use of those resources.</li>
+ <li>To determine priorities and the stages in which the plan should be carried out, and to propose the allocation of resources for each stage.</li>
+ <li>To identify the factors retarding economic development and to determine the conditions necessary for successful execution.</li>
+ <li>To determine the nature of the machinery required for executing the plan at each stage.</li>
+ <li>To appraise progress from time to time and recommend the adjustments of policy and measure that appraisal indicates.</li>
+ <li>To advise the Union and state governments on matters referred to it.</li>
+</ul>
+
+<h3>The National Development Council</h3>
+
+<p>The NDC was constituted in 1952 as the body through which the states participate in planning. Chaired by the Prime Minister, it comprised Union ministers, the Chief Ministers of all states and the members of the Planning Commission, and its role was to prescribe guidelines for the national plan, consider the plan formulated by the Commission, assess resources, and review the working of the plan from time to time.</p>
+
+<p>Its significance is that it was the only forum in which the states could shape the plan as a whole, and its weakness is that it met infrequently and generally endorsed what was placed before it. The Sarkaria Commission's recommendation that it be renamed and reconstituted as a National Economic and Development Council was a recognition that a body designed for federal consultation had become a ratifying assembly.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>It ceased to be a staff agency.</strong> The Commission was losing its character as a staff agency of the Government of India and acquiring an authoritarian pattern. It was created to advise and to plan, not to discuss, dictate or acquire lordship over the administration. A body with no statutory authority had become directive because it controlled money.</li>
+ <li><strong>It eroded the autonomy of the states</strong>, reducing them to grant-receiving agencies, which is against the basic principles of federalism. States depended on it for economic advice and financial assistance, and because they relied on central assistance they had to abide by its advice.</li>
+ <li><strong>It encroached on the Finance Commission.</strong> It tended to take over the functions of the Ministry of Finance and of the Finance Commission, with considerable overlap between them, so that conflict arose between a <em>constitutional</em> body and an <em>executive</em> one, and overlapping recommendations created problems. This is the sharpest constitutional objection: the Constitution provided one channel for transfers, and an executive resolution created a second and larger one beside it.</li>
+ <li><strong>It expanded excessively</strong>, becoming a victim of Parkinson's Law, its staff strength rising continuously without a proportionate rise in the volume of work, the overstaffing imposing an unnecessary burden.</li>
+ <li><strong>Monitoring and evaluation were its weakest function</strong>, partly because central ministries and state governments did not supply the necessary facts and data in time.</li>
+</ul>
+
+<h2>The Five Year Plans</h2>
+
+<h3>The Strategy and Its Phases</h3>
+
+<ul>
+ <li><strong>First Plan (1951 to 1956).</strong> Built on the Harrod-Domar model and directed at agriculture, irrigation and power, and at repairing the dislocation of partition. It met its targets, largely because those targets were modest and the monsoon cooperated.</li>
+ <li><strong>Second Plan (1956 to 1961).</strong> The decisive one. Built on the <strong>Mahalanobis</strong> model, it committed India to heavy industry and capital goods in the public sector, on the reasoning that a country that can make machines can eventually make everything else. It is the origin of the public sector's commanding heights and of the licensing system that grew to administer it.</li>
+ <li><strong>Third Plan (1961 to 1966).</strong> Aimed at a self-reliant and self-generating economy and was disrupted. The country faced two wars, with China in 1962 and Pakistan in 1965, which diverted resources from development to defence, and the long gestation of public sector undertakings meant the expected surpluses did not arrive.</li>
+ <li><strong>The plan holiday (1966 to 1969).</strong> By the end of the Third Plan the government lacked the money to finance the next one. The Fourth Plan was postponed and <strong>three annual plans</strong>, described as rolling plans, were run instead. Food shortages, aggravated when the United States halted wheat supplies under PL-480, prompted the launch of the <strong>Green Revolution</strong>, which succeeded and made India self-sufficient in food grains. The episode is worth dwelling on in an answer, because the most consequential development programme of the period was adopted outside the plan process, under external compulsion.</li>
+ <li><strong>Fourth Plan (1969 to 1974)</strong>, aiming at growth with stability and self-reliance, and coinciding with bank nationalisation.</li>
+ <li><strong>Fifth Plan (1974 to 1979)</strong>, framed around <em>garibi hatao</em>, poverty removal and employment, with the Minimum Needs Programme, and terminated a year early by the incoming government.</li>
+ <li><strong>The Rolling Plan (1978 to 1980).</strong> The Janata government adopted the rolling plan concept associated with <strong>Gunnar Myrdal</strong>, under which a plan is revised annually, with targets rolled forward one year at a time rather than fixed for five. The method suits an uncertain economy and defeats the purpose of a plan as a commitment, which is why it was abandoned when the government changed.</li>
+ <li><strong>Sixth (1980 to 1985) and Seventh (1985 to 1990) Plans</strong>, returning to growth with poverty alleviation, with IRDP and NREP, and with a growing emphasis on food, work and productivity.</li>
+ <li><strong>Eighth Plan (1992 to 1997).</strong> Delayed by the crisis of 1991 and framed after liberalisation, it marked the shift from a plan that allocated to a plan that indicated: the state was to be a facilitator, the market the principal allocator, and planning increasingly a matter of human development and of infrastructure the market would not supply.</li>
+ <li><strong>Ninth to Twelfth Plans (1997 to 2017)</strong>, running on growth with social justice and equity, and finally on <strong>inclusive growth</strong>, the Twelfth being the last.</li>
+</ul>
+
+<h3>Assessment</h3>
+
+<p>The <strong>achievements</strong> are real and are usually understated by critics. India built an industrial base, an irrigation and power system, a network of higher technical institutions, and a food surplus where famine had been periodic; savings and investment rates rose substantially; and life expectancy and literacy improved from very low bases. A poor country with a weak state did these things while holding elections, which few comparable states managed.</p>
+
+<p>The <strong>failures</strong> are equally clear. Growth rates remained low for three decades; poverty declined far more slowly than promised; the licensing system created to implement the plan produced rent-seeking on a large scale; public sector undertakings frequently failed to generate the surplus on which the whole strategy depended; regional imbalance widened rather than narrowed; and the plans consistently overestimated the administrative capacity available to implement them, which is the specifically administrative failure and the one this paper is concerned with.</p>
+
+
+<h2>How a Plan Was Made and Implemented</h2>
+
+<h3>Formulation</h3>
+
+<ul>
+ <li>The Planning Commission prepared an <strong>approach paper</strong> setting out objectives, the growth target and the broad allocation between sectors, which went to the National Development Council for approval.</li>
+ <li><strong>Working groups and steering committees</strong>, drawing on ministries, states and outside experts, prepared sectoral proposals.</li>
+ <li><strong>States submitted their plans</strong>, discussed with the Commission in annual plan discussions at which the size of the state plan and the central assistance to it were settled.</li>
+ <li>A <strong>draft plan</strong> was assembled, placed before the NDC and then before Parliament, and the approved plan was broken into <strong>annual plans</strong> implemented through the budget.</li>
+</ul>
+
+<p>The mechanism that gave this process its force was the annual plan discussion, where the Commission's view of a state's priorities was attached to the assistance it would receive. That is precisely the leverage NITI Aayog does not have, and it explains both why the Commission was resented and why its successor is described as a think tank.</p>
+
+<h3>Implementation and Evaluation</h3>
+
+<p>Implementation belongs to the ministries and, for the larger part of expenditure, to the states, which is the structural difficulty at the heart of the subject: the body that planned did not implement, and the bodies that implemented did not plan.</p>
+
+<p>Evaluation was the function of the <strong>Programme Evaluation Organisation</strong>, set up within the Planning Commission to conduct independent evaluation of programmes and to feed the findings back into the next plan. Its work was respected and its influence limited, for the reason the Commission itself identified: monitoring and evaluation were the weakest part of its functions, partly because central ministries and state governments did not supply the necessary facts and data in time. An evaluation machinery dependent for its data on the agencies it evaluates is structurally weak, and the same difficulty besets outcome budgeting and performance management today.</p>
+
+<h3>Centrally Sponsored Schemes</h3>
+
+<p>Centrally sponsored schemes are programmes framed by the Union in subjects largely on the State List, funded on a sharing basis, and implemented by the states under central guidelines. They grew into the principal instrument by which the Centre shaped state expenditure, and they are the standing federal grievance in this topic.</p>
+
+<ul>
+ <li>They commit state resources through the matching share, so a state must fund a central priority before its own.</li>
+ <li>They arrive in <strong>standard form</strong>, with guidelines drawn for the country as a whole, which reduces the scope for decentralised planning and for adaptation to local conditions.</li>
+ <li>They proliferated to a number no state could administer coherently, which prompted successive rationalisation exercises and the recommendation that they be reduced and made more flexible.</li>
+ <li>Their persistence after the Planning Commission's abolition is the reason the claim of cooperative federalism is contested: the plan transfers that were criticised as centralising have gone, and the scheme transfers that direct state spending remain.</li>
+</ul>
+
+<h2>Development Philosophy</h2>
+
+<p>The philosophy underlying Indian planning shifted repeatedly, and tracing the shift is often what a question is really asking for.</p>
+
+<ul>
+ <li><strong>The Nehruvian model</strong>: a mixed economy with a dominant public sector, heavy industry first, import substitution, self-reliance, and the state as the principal agent of accumulation, resting on the belief that growth would eventually reach the poor.</li>
+ <li><strong>The turn to poverty (late 1960s to 1970s)</strong>: when growth did not reach them, the objective shifted to direct attack through <em>garibi hatao</em>, minimum needs and target-group programmes.</li>
+ <li><strong>Basic needs and employment (1970s to 1980s)</strong>, following the international shift in development thinking towards fundamental human needs.</li>
+ <li><strong>Liberalisation (from 1991)</strong>: the state as facilitator and regulator rather than producer, with planning reduced from allocation to indication.</li>
+ <li><strong>Inclusive growth and human development (2000s)</strong>: growth taken as necessary but insufficient, with rights-based entitlements in employment, education and food, and outcomes measured in capability rather than income.</li>
+</ul>
+
+<p>The constant across all five is the assumption that the administration could deliver what the philosophy required, and it is the least examined assumption in the whole sequence.</p>
+
+<h2>NITI Aayog</h2>
+
+<p>The Planning Commission, after a legacy of sixty-five years, was replaced by the <strong>National Institution for Transforming India</strong> on <strong>1 January 2015</strong>, following an announcement by the Prime Minister on Independence Day in 2014, and after extensive consultation with state governments, domain experts and relevant institutions.</p>
+
+<h3>The Comparison</h3>
+
+<table>
+ <thead>
+ <tr><th></th><th>Planning Commission</th><th>NITI Aayog</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Financial power</td><td>Allocated funds to ministries and state governments</td><td>An advisory body and think tank; the power to allocate rests with the Finance Ministry</td></tr>
+ <tr><td>Role of states</td><td>Limited to the National Development Council and annual interactions at plan meetings</td><td>States expected to play a significantly larger part</td></tr>
+ <tr><td>Chief official</td><td>Secretary appointed through the usual process</td><td>Chief Executive Officer appointed by the Prime Minister, of the rank of secretary</td></tr>
+ <tr><td>Membership</td><td>Full-time members only</td><td>Full-time and part-time members as need arises, with a Vice-Chairperson</td></tr>
+ <tr><td>Method</td><td>Formulated policy first, then consulted states on allocations</td><td>Policy to bear fruit after consultation with states at the formulation stage</td></tr>
+ </tbody>
+</table>
+
+<p>The change that matters most is the first. A body that allocates money is obeyed; a body that advises is heard. Removing the allocation function converted the apex planning institution from an authority into an influence, and whether that is a gain depends entirely on whether one regarded the Commission's financial power as the source of its usefulness or of its constitutional impropriety.</p>
+
+<h3>Objectives</h3>
+
+<ul>
+ <li>To promote <strong>cooperative federalism</strong>, so that the demands of state governments are addressed and development follows.</li>
+ <li>To frame economic policy that incorporates national security interests.</li>
+ <li>To advise on and encourage partnerships between key stakeholders and national and international think tanks, and with educational and policy research institutions.</li>
+ <li>To generate knowledge, innovation and entrepreneurial support through a shared community of national and international experts.</li>
+ <li>To attend to technology upgradation and capacity building for the discharge of programmes and initiatives.</li>
+</ul>
+
+<h3>The Seven Pillars of Effective Governance</h3>
+
+<ul>
+ <li><strong>Pro-people</strong>, fulfilling the aspirations of society and of individuals.</li>
+ <li><strong>Pro-activity</strong>, in anticipation of and response to citizens' needs.</li>
+ <li><strong>Participation</strong>, involving the citizen in the development process.</li>
+ <li><strong>Empowerment</strong>, particularly of women in all aspects.</li>
+ <li><strong>Inclusion</strong> of all people irrespective of caste, creed and gender.</li>
+ <li><strong>Equality</strong>, providing equal opportunity for all.</li>
+ <li><strong>Transparency</strong>, making government visible and responsive.</li>
+</ul>
+
+<h3>The Vision Documents</h3>
+
+<p>In May 2016 the Prime Minister's Office advised NITI Aayog to prepare a <strong>Fifteen Year Vision</strong>, a <strong>Seven Year Strategy</strong> and a <strong>Three Year Action Agenda</strong>, replacing the Five Year Plan process which had run with few discontinuities until 2016-17. The three were conceived as nested layers.</p>
+
+<ul>
+ <li>The <strong>Fifteen Year Vision (2017-18 to 2031-32)</strong> was to articulate long-range developmental aspirations and social sector goals along the trajectory towards the centenary of independence in 2047.</li>
+ <li>The <strong>Seven Year Strategy (2017-18 to 2023-24)</strong> was to translate the Vision's objectives into sectoral interventions, institutional reforms and policy levers.</li>
+ <li>The <strong>Three Year Action Agenda (2017-18 to 2019-20)</strong> was the operational document, aligned to the medium-term expenditure framework and to the years for which revenue could be projected with reasonable confidence. It was the only one of the three formally released, in August 2017 after presentation to the Governing Council, and contained over three hundred action points across agriculture, industry, infrastructure, the financial sector, governance and education.</li>
+</ul>
+
+<p>The Seven Year Strategy was reconceived and published in <strong>December 2018</strong> as <strong>Strategy for New India @ 75</strong>, organised in forty-one chapters under four sections, <em>Drivers</em>, <em>Infrastructure</em>, <em>Inclusion</em> and <em>Governance</em>, aiming at a four trillion dollar economy by 2022-23, growth of nine to ten per cent, and the achievement of the Sustainable Development Goals.</p>
+
+<p>The design is a genuine departure and deserves to be assessed as one. Aligning the operational document to the expenditure framework addresses a real defect of the Five Year Plan, which committed expenditure over a horizon for which revenue could not be forecast. Against that, only one of the three documents was released as designed, the fifteen-year Vision never appeared, and a framework in which the binding document covers three years while the aspiration covers fifteen risks losing precisely the medium-term commitment that planning existed to supply.</p>
+
+<h3>Programmes</h3>
+
+<ul>
+ <li><strong>The Aspirational Districts Programme</strong>, launched in January 2018, covering <strong>112 districts</strong> with at least one from each state, anchored by NITI Aayog and operating on the <em>three Cs</em>: <strong>convergence</strong> of existing central and state schemes, <strong>collaboration</strong> between the tiers of government and with the private sector and civil society, and <strong>competition</strong> between districts through public ranking on published indicators. It converges some forty-nine key performance indicators across health, education, agriculture, financial inclusion and infrastructure, and amounts to the localisation of the Sustainable Development Goals. Administratively it is the most interesting thing NITI Aayog does, because it substitutes <em>ranking and publicity</em> for the financial leverage the Planning Commission possessed, and tests whether an advisory body can move district administration by reputation alone.</li>
+ <li><strong>The SDG India Index</strong>, first released in 2018, measuring and ranking states and union territories on progress towards the Sustainable Development Goals and supporting their localisation, with India's composite score rising from 57 in 2018 to 66 in 2020-21 and 71 in 2023-24. It is the same instrument as the Aspirational Districts ranking applied one tier higher: measurement published as an incentive.</li>
+</ul>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>Influence without leverage.</strong> A think tank with no money can recommend and cannot secure compliance, and the Planning Commission's faults were inseparable from the instrument that made it effective.</li>
+ <li><strong>The federal gain is partly formal.</strong> The Governing Council brings Chief Ministers together as the NDC did, and the question is whether consultation at the formulation stage has actually replaced consultation after the fact, which depends on practice rather than on design.</li>
+ <li><strong>Transfers moved rather than disappeared.</strong> With plan transfers gone, the Finance Commission and centrally sponsored schemes carry the load, and the latter remain the standing federal grievance, since they commit state expenditure to central priorities on State List subjects.</li>
+ <li><strong>The loss of a medium-term horizon.</strong> Whatever the defects of the Five Year Plan, it forced ministries and states to think beyond the annual budget, and a three-year action agenda aligned to the expenditure framework is closer to budgeting than to planning.</li>
+</ul>
+
+<h2>Cooperative Federalism</h2>
+
+<p>Cooperative federalism is NITI Aayog's organising claim, and it should be assessed rather than repeated. The institutional expression is the Governing Council of Chief Ministers, the use of sub-groups and task forces of Chief Ministers on specific subjects, and the language of <em>Team India</em> in which the Centre and the states are described as partners rather than as principal and agent.</p>
+
+<p>Three developments support the claim: the abolition of the distinction between plan and non-plan transfers removed an instrument of central direction; the raising of the states' share in the divisible pool on the Fourteenth Finance Commission's recommendation enlarged untied transfers substantially; and the GST Council created a joint body in which taxation is decided by weighted vote rather than by central decision.</p>
+
+<p>Two developments cut the other way: centrally sponsored schemes persist and continue to direct state spending on State List subjects; and a ranking-and-competition model, while it respects state autonomy formally, substitutes reputational pressure from the Centre for financial pressure, which is a change in the instrument of influence rather than its abandonment. The honest conclusion is that Indian federalism has become more cooperative in <em>finance</em> and more competitive in <em>performance</em>, and that the second is not the same thing as the first.</p>
+
+
+<h2>Planning and Administration</h2>
+
+<p>This is the part of the topic that belongs specifically to public administration rather than to economics, and it is where an answer can distinguish itself, because the plans failed more often in execution than in conception.</p>
+
+<h3>What Planning Demands of an Administration</h3>
+
+<ul>
+ <li><strong>Reliable data.</strong> A plan rests on estimates of resources, capacity and need, and an administration that cannot count cannot plan. India's statistical system was built for this purpose and remained thinner at the district level than at the national.</li>
+ <li><strong>Technical competence</strong> in project formulation and appraisal, which a generalist service recruited to maintain order and collect revenue did not possess and acquired slowly.</li>
+ <li><strong>Coordination across departments</strong>, since a development programme almost never falls within one department. Irrigation requires revenue, power, agriculture and public works to act together, and the administrative structure is organised vertically while the programme runs horizontally.</li>
+ <li><strong>Coordination across levels</strong>, since the Union plans, the state implements and the district delivers, with each level answerable to a different political authority.</li>
+ <li><strong>Sustained attention</strong>, which frequent transfer defeats: a project with a five-year horizon passes through three or four collectors, none of whom is accountable for its completion.</li>
+ <li><strong>Feedback</strong>, so that what is learned in implementation reaches those who plan the next cycle, which is what the Programme Evaluation Organisation existed to supply and what the flow of data from the field failed to sustain.</li>
+</ul>
+
+<h3>The Administrative Reasons Plans Fell Short</h3>
+
+<ul>
+ <li><strong>Targets set without reference to capacity.</strong> Plan targets were derived from need and from political commitment rather than from any assessment of what the implementing machinery could absorb, so shortfalls were structural rather than accidental.</li>
+ <li><strong>The regulatory inheritance.</strong> An administration trained to prevent irregularity treated a development programme as a set of sanctions to be given rather than an outcome to be produced, which is the point the note on the British legacy makes and which reappears here in its practical form.</li>
+ <li><strong>Separation of planning from implementation</strong>, at every level: the Commission planned and ministries implemented; the state planning board planned and line departments implemented; the district plan was drawn where the district administration was not.</li>
+ <li><strong>The pathology of the financial year.</strong> The rule of lapse, discussed in the note on financial administration, pushed expenditure into March and rewarded the disbursal of funds rather than the completion of works, so plan expenditure figures measured spending rather than achievement.</li>
+ <li><strong>Weak district machinery</strong>, which the G.V.K. Rao Committee identified when it found that development administration had become divorced from the district machinery and recommended that the district be restored as the unit of development planning.</li>
+ <li><strong>Absence of a constituency for the plan.</strong> The people for whom the plan was made had no part in making it and no means of insisting on its execution, which is the argument that produced decentralised planning and the case for the 73rd and 74th Amendments.</li>
+</ul>
+
+<h3>The Recurring Recommendation</h3>
+
+<p>Every commission that examined the question, from the first Administrative Reforms Commission through the G.V.K. Rao Committee to the second ARC, reached substantially the same conclusion: strengthen the district as the unit of planning and implementation, integrate the development departments there under a single authority, give panchayati raj institutions funds, functions and functionaries together, and build the technical capacity of the district machinery.</p>
+
+<p>The recommendation has been made for sixty years and implemented in fragments, which is itself the finding. The apex of the planning system has been reorganised twice, once in 1950 and once in 2015, while the end of the system where plans become facts has been left substantially as it was. That asymmetry is the most useful single observation to close an answer on this topic with.</p>
+
+<h2>Planning Machinery Below the Centre</h2>
+
+<h3>The State Planning Boards</h3>
+
+<p>Every state has a planning board or department, generally chaired by the Chief Minister, whose functions mirror the Commission's at the state level: to assess the state's resources and formulate a plan for their most effective and balanced use; to determine the state's plan priorities within the framework of national priorities; to identify the factors retarding the state's economic and social development and determine the conditions for successful execution; and to review the progress of implementation and recommend adjustments in policy and measure.</p>
+
+<p>The candid assessment in the literature is unflattering. Little is known about the machinery actually in place; the usual pattern is a planning secretary at the top assisted by special, deputy and under secretaries; some states associate experts as non-official members or draw on eminent persons from outside government. The conclusion drawn is that <strong>states have by and large not taken planning seriously</strong>, their plans being mostly a collection of requirements prepared by the various departments, which is aggregation rather than planning.</p>
+
+<h3>Decentralised Planning</h3>
+
+<p>The constitutional amendments of 1992 created the framework for decentralised planning for economic development and social justice, with <strong>District Planning Committees</strong> required to consolidate the plans of panchayats and municipalities into a draft district plan.</p>
+
+<p>Three reasons are given for decentralising the planning process, and they are the best available statement of the case.</p>
+
+<ul>
+ <li>Surveys and assessments of <strong>local resources and local needs</strong> cannot be made adequately at the state or central level.</li>
+ <li>Uniform application of programmes formulated at the centre and the state, without regard to local conditions, leads to <strong>misuse and wastage</strong> of physical, financial and human resources.</li>
+ <li>Centralised planning offers <strong>little freedom to the people</strong> for whose benefit the planning is intended.</li>
+</ul>
+
+<p>Decentralised planning based on community involvement is also less of a financial burden, since plans and programmes can be managed by community members themselves.</p>
+
+<h4>Why It Has Not Worked</h4>
+
+<ul>
+ <li><strong>Political and bureaucratic resistance at the state level</strong> to sharing power and resources with local institutions. States that resent central direction have proved reluctant to devolve in their turn, which is the most important finding in this area.</li>
+ <li><strong>Centrally designed schemes in standard form</strong>, which arrive with their own guidelines and leave little scope for local planning.</li>
+ <li><strong>Inadequate planning machinery at the district level</strong>, in staff, data and technical capacity.</li>
+ <li>The pressure for decentralisation came <strong>from above</strong> rather than from local demand, so the institutions exist without a constituency that insists on their working.</li>
+</ul>
+
+<h2>Assessment</h2>
+
+<p>Indian planning succeeded at building things and failed at delivering them. It created an industrial base, an irrigation and power system and a food surplus, and it consistently overestimated the administrative capacity available to translate allocation into outcome. The shift from the Planning Commission to NITI Aayog changed the instrument from money to advice and the method from direction to competition, which addresses the federal objection squarely and leaves open whether an advisory body can move an administration that a directing one could not.</p>
+
+<p>The conclusion worth carrying into an answer is that the recurring weakness has never been the quality of the plans. It has been the gap between what was planned at the apex and what could be executed in the district, and no reorganisation of the apex has yet addressed the district end of that gap, which is why decentralised planning remains the unfinished part of the subject.</p>
+`,
 };
