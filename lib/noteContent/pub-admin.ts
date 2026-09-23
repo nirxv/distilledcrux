@@ -557,4 +557,315 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Contingency theory is the natural terminus of the sequence: having watched each school claim universality and lose it, the field concluded that fit is the only general principle available. Its weakness is the mirror of its strength. A theory that says the answer depends on the circumstances gives the practitioner very little until the relevant circumstances are specified, and the list of contingent variables has grown long enough that the theory risks becoming a restatement of the problem. For public administration there is a further difficulty: a government department cannot choose its environment, its tasks or often its structure, so the prescription to fit the organisation to its circumstances meets a system in which very few of those variables are in the administrator's hands.</p>
 `,
+ 'administrative-behaviour': `
+<h2>What This Topic Asks</h2>
+
+<p>Administrative behaviour is the study of what people actually do inside organisations, as against what the organisation chart says they do. The classical writers described a structure and assumed the behaviour would follow; the human relations school showed that it does not. This topic collects the theories that grew in that gap: how decisions are really made, how information really moves, what really motivates people at work, and what leadership adds that authority cannot supply.</p>
+
+<h2>Decision Making</h2>
+
+<p>Decision making has been defined as "a conscious and human process, involving both individual and social phenomena, based upon factual and value premises, which concludes with a choice of one behavioural activity from among one or more alternatives with the intention of moving toward some state of affairs". Every element of that definition is doing work: the process is conscious, it is both individual and social, it rests on two kinds of premise, and it ends in a choice directed at a future state.</p>
+
+<h3>The Four Phases</h3>
+
+<ul>
+ <li><strong>Explorative</strong>: searching for decision occasions, that is, recognising that a decision is required at all.</li>
+ <li><strong>Speculative</strong>: identifying the factors that bear on the decision problem.</li>
+ <li><strong>Evaluative</strong>: analysing and weighing alternative courses of action.</li>
+ <li><strong>Selective</strong>: choosing the course to follow.</li>
+</ul>
+
+<h3>Characteristics</h3>
+
+<ul>
+ <li><strong>Goal-oriented.</strong> Decisions are made to achieve objectives, and in an organisation those are the organisation's objectives.</li>
+ <li><strong>Implies alternatives.</strong> A decision problem arises only where there are two or more courses open. With a single alternative there is no decision, only an action.</li>
+ <li><strong>Dynamic and situational.</strong> It involves a time dimension and a time lag, and the technique used varies with the type of problem and the time available to solve it.</li>
+ <li><strong>Environment-related.</strong> An executive may decide one way in one set of circumstances and differently in another.</li>
+ <li><strong>Continuous.</strong> Decision making is not an event in administration but the texture of it.</li>
+</ul>
+
+<h3>Chester Barnard on the Decision</h3>
+
+<p><strong>Chester Barnard</strong>, in <em>The Functions of the Executive</em> (1938), set the terms Simon would formalise. For Barnard, decision making in the organisation is <strong>specialised by level</strong>: decisions at the upper levels have more to do with the ends of the organisation, and decisions at the lower levels with the means of achieving them.</p>
+
+<p>His central device is the <strong>strategic factor</strong>. The decision-maker must distinguish facts relevant to the organisation's purpose from those that are irrelevant, which requires searching out the factor whose alteration would change the outcome. Barnard noted the difficulty honestly: technical methods for disclosing the strategic factors in the economic and social parts of the environment have had little attention, so the administrator must develop <strong>non-logical mental processes</strong> to make up the deficit. Intuition, in other words, is not a failure of method but a necessary supplement to it.</p>
+
+<p>He described the <strong>opportunistic element</strong> of decision making as a chain of means and ends in which a purpose is defined, pursued to a more specific level, and then redefined, with each redefinition starting a new search for a strategic factor.</p>
+
+<p>Barnard held that the decision process rests on three things: the purpose of the decision, whether to determine a course of action or to persuade; the speed required; and the quality of the information available, since precise information allows logical processes while uncertainty compels non-logical ones.</p>
+
+<h3>Authority and the Zone of Indifference</h3>
+
+<p>Barnard inverted the classical account of authority. Authority does not flow downward from position; it is conferred upward by acceptance. If subordinates are unable or unwilling to comply with an order it will be disobeyed or disregarded, so orders must respect the mental and physical capacity of those who receive them.</p>
+
+<p>Arrange the orders a person might receive in order of their acceptability and they fall into three groups: those clearly unacceptable; those on the neutral line, just acceptable or just unacceptable; and those unquestionably acceptable. The last group lies within the <strong>zone of indifference</strong>, and orders falling inside it are obeyed without conscious question, whatever the nature of the authority behind them. The zone widens or narrows with the inducements the organisation offers against the burdens and sacrifices it demands.</p>
+
+<p>Simon adopted the idea and renamed it the <strong>zone of acceptance</strong>. The practical importance for public administration is large: it means the effective authority of a superior is a variable maintained by the organisation's incentives, not a constant conferred by the rules.</p>
+
+<h2>Herbert Simon</h2>
+
+<p><strong>Herbert A. Simon's</strong> <em>Administrative Behaviour</em> (1947) is the single most consequential book in the discipline's theory. Its claim is that <strong>administration is decision making</strong>, and that a theory of administration is therefore a theory of choice under limits.</p>
+
+<h3>The Attack on the Principles</h3>
+
+<p>Simon's opening move was destructive. The principles of administration inherited from Gulick, Urwick and Fayol are not principles but <strong>proverbs</strong>: like proverbs they come in contradictory pairs, and they offer no criterion for deciding which applies. Specialisation increases efficiency, but so does unity of command, and functional specialisation of the kind Taylor wanted destroys unity of command. A narrow span of control improves supervision, and it also multiplies the levels of hierarchy through which information must pass, which the same literature says to minimise. Simon also showed that the four bases of organisation, <em>purpose, process, clientele and place</em>, are not independent categories at all but compete with one another, since a purpose gained through an activity is simply that activity described differently.</p>
+
+<h3>Fact and Value</h3>
+
+<p>Every decision, Simon argued, combines <strong>factual premises</strong> and <strong>value premises</strong>. Facts point to tangible and concrete information verifiable by anyone; values involve preferences and cannot be verified as true or false. Administrative propositions are therefore mixed, and the scientific study of administration must separate the two strands, confining itself to the factual.</p>
+
+<h3>A Pure Science of Administration</h3>
+
+<p>Simon wanted a pure science of administration, and that required separating values from facts so that a body of knowledge resting on the factual content of administrative behaviour could be built. In his own words, such a science "would attempt to answer such questions as: what factors determine the degree of efficiency achieved by an organisation? Under what circumstances is public responsibility secured in a government agency?" The answers to these do not depend on the value system of the inquirer. An applied science of administration would then use the empirical propositions of the pure science for implementation, according to whatever system of values applied.</p>
+
+<p>The proposal has been criticised for making administration remote from social interest and less socially relevant, and this is the fault line the New Public Administration would open in 1968.</p>
+
+<h3>Economic Man and Administrative Man</h3>
+
+<p>Simon rejected the completely rational <strong>economic man</strong> of classical economics and replaced him with the realistic <strong>administrative man</strong>.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Economic man</th><th>Administrative man</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Rationality</td><td>Complete, as to both means and ends</td><td>Intendedly rational but boundedly so</td></tr>
+ <tr><td>Preferences</td><td>A complete and consistent system allowing choice among all alternatives</td><td>Shaped by role, duty, moral and ethical responsibility, and organisational culture</td></tr>
+ <tr><td>Alternatives</td><td>Complete awareness of all possible alternatives</td><td>Knows only a few, discovered sequentially</td></tr>
+ <tr><td>Choice rule</td><td>Selects the best alternative available</td><td>Selects one that is good enough</td></tr>
+ <tr><td>Status</td><td>A hypothetical position that assists analysis</td><td>A description of real decision-making behaviour</td></tr>
+ </tbody>
+</table>
+
+<p>The administrative man's behaviour is conditioned by the obligations and duties of his position, his moral and ethical responsibilities, and, in a bureaucracy, by the rules and prescribed courses of action of the organisational culture. It is not practical for him to maximise. This is why Simon describes human behaviour in organisations as <strong>intendedly rational</strong>: the intention to be rational is real, and the achievement is partial.</p>
+
+<h3>Bounded Rationality</h3>
+
+<p>Rationality is bounded because the bounds arise from the limits on available information and on the decision-maker's own computational capacity. Simon identified four features that obstruct rational decision making: a multitude of problems, goals and policy commitments; barriers to gathering sufficient information; the personal needs, commitments, inhibitions and inadequacies of the decision-makers themselves; and structural difficulties.</p>
+
+<h3>Satisficing</h3>
+
+<p><strong>Satisficing</strong>, a word Simon coined from <em>satisfaction</em> and <em>sufficing</em>, means choosing a course of action that is satisfactory or good enough. In his formulation, "the key to the simplification of the choice process is the replacement of the goal of maximising with the goal of satisficing, of finding a course of action that is good enough".</p>
+
+<p>The economic man maximises, selecting the best course from those available; the administrative man satisfices, taking the first course that clears an acceptable threshold without surveying all the alternatives. The satisficing man ignores most of the complex interrelationships of the real world and applies simple rules of thumb. Simon rejected traditional game theory and statistical decision theory on precisely this ground, that they are not reality-based.</p>
+
+<h3>Programmed and Non-programmed Decisions</h3>
+
+<p>Simon divided decisions by whether a settled procedure exists for them. <strong>Programmed decisions</strong> are repetitive and routine, and the organisation has a definite procedure for handling them: standard operating procedures, rules, clerical routines and, increasingly, software. <strong>Non-programmed decisions</strong> are novel, unstructured and consequential, with no cut-and-dried method available, and they must be handled by general problem-solving capacity, judgement and heuristics.</p>
+
+<p>The distinction is administratively useful rather than merely descriptive. An organisation improves by programming as much as it safely can, pushing the routine downward and outward so that scarce senior attention is reserved for what cannot be programmed. This is Taylor's exception principle restated in the language of decisions.</p>
+
+<h3>How Organisations Make People More Rational</h3>
+
+<p>Simon's constructive claim is that since the individual cannot be made fully rational, the <strong>organisation must be designed so that the individual approaches rationality as closely as possible</strong>. It does this by supplying the premises of his decisions.</p>
+
+<ul>
+ <li><strong>Authority</strong> supplies premises directly: the subordinate accepts a decision made elsewhere, within his zone of acceptance, without re-deciding it.</li>
+ <li><strong>Communication</strong> carries the information on which factual premises rest, both through formal channels and informal ones.</li>
+ <li><strong>Training</strong> is the most interesting of the mechanisms. It internalises the premises so that the employee acts "as desired by his own motivation rather than by the stimulus of moment-by-moment instructions". Training through conferences or formal instruction develops a common organisational language and shared frames of reference, removing some of the communication obstacles. Where formal authority is hard to exercise by command, training substitutes for it, and by building competence at lower levels it makes decentralisation of decision making possible.</li>
+ <li><strong>Hierarchy</strong> divides the decision so that each level handles the part it is placed to see.</li>
+ <li><strong>Planning and review</strong> set premises in advance and check the results against them.</li>
+ <li><strong>Efficiency</strong> operates as the criterion by which alternatives within the zone of acceptable values are compared.</li>
+</ul>
+
+<h3>Criticism of Simon</h3>
+
+<ul>
+ <li>Decision making is an important variable in the organisational situation but is <strong>not by itself enough</strong> to explain the totality of the organisational picture. In concentrating on the process and role of decision making, Simon relegates social, political, economic and cultural factors to the background, though their role in analysing administrative behaviour is equally important.</li>
+ <li>His fact-based administrative theory is <strong>more relevant to business than to public administration</strong>. Excluding value premises, which are integral and essential to policy determination, diverts the study of public administration to its mechanical and routine aspects.</li>
+ <li>The theory of decision making is <strong>too general</strong>. It provides a framework to organisational planners without supplying the detail to guide them.</li>
+ <li><strong>Chris Argyris</strong> argued that by insisting on rationality Simon ignored the role of intuition, tradition and faith in decision making, and that his model describes a person stripped of the emotional life that actually shapes choice.</li>
+ <li>The administrative man is, on some readings, a counsel of conservatism: an actor who takes the first acceptable option and whose premises are supplied by the organisation is unlikely to be the source of change.</li>
+</ul>
+
+<h3>The Simon and Waldo Debate</h3>
+
+<p>The most important exchange in the discipline's theory ran through the <em>American Political Science Review</em> in 1952, arising from <strong>Dwight Waldo's</strong> article on the development of a theory of democratic administration. Simon accused Waldo of logical unrigour; Waldo charged Simon with philosophical myopia for his reliance on logical positivism.</p>
+
+<p>The substance divides on three points. On <strong>fact and value</strong>, Simon, grounded in logical positivism, insisted that factual propositions could be handled scientifically while value propositions belonged to the political realm; Waldo replied that values are always involved and that public administrators cannot escape making value judgements. On <strong>method</strong>, Simon wanted a rigorous science; Waldo held that the demand for rigour was itself a value choice that narrowed what the field could study. On <strong>democracy</strong>, Waldo's point was that a discipline organised around efficiency cannot explain, let alone justify, the democratic processes that public administration exists to serve.</p>
+
+<p>Neither side won, and the argument is still the spine of the subject. New Public Administration in 1968 is Waldo's position institutionalised; New Public Management in the 1980s is Simon's efficiency criterion returning in market dress.</p>
+
+<h2>Communication in Organisations</h2>
+
+<p>Communication is the process by which the premises of decisions are transmitted from one member of an organisation to another. Without it, authority cannot be exercised, coordination cannot occur and no decision can be executed by anyone other than the person who made it.</p>
+
+<h3>The Process</h3>
+
+<p>Three elements are essential: the <strong>sender</strong>, the <strong>receiver</strong> and the <strong>message</strong>. Communication is impossible if any is missing. A fuller model was developed by <strong>Harold Lasswell</strong> and by <strong>Claude Shannon</strong> and <strong>Warren Weaver</strong> in 1948 and 1949, covering the sender, the verbal or non-verbal content, the transmission channel selected, the receiver, and the effect of the message judged by its interpretation and the response it evokes.</p>
+
+<ul>
+ <li><strong>The sender</strong> initiates the process, conceptualising the message before encoding it.</li>
+ <li><strong>Encoding</strong> translates the message into a series of symbols, since information can be transmitted only through symbols and other forms of representation.</li>
+ <li><strong>The channel</strong> carries the encoded message, and the choice of channel is itself part of the message.</li>
+ <li><strong>Decoding</strong> is the receiver's translation back, and the encoding and decoding frames must overlap for meaning to survive the journey.</li>
+ <li><strong>Feedback</strong> returns the receiver's response and is the only way the sender learns whether communication occurred rather than merely transmission.</li>
+ <li><strong>Noise</strong> is anything that distorts the message in transit.</li>
+</ul>
+
+<p>Communication is not confined to words. The way in which physical space is used, the arrangement of an office and of the chairs in it, communicates a great deal about a manager.</p>
+
+<h3>Types</h3>
+
+<ul>
+ <li><strong>Formal</strong> communication follows the official channels laid down by the structure. <strong>Downward</strong> flow carries orders, policy and instruction; <strong>upward</strong> flow carries reports, suggestions and grievances; <strong>horizontal</strong> flow coordinates units at the same level; and <strong>diagonal</strong> flow crosses both level and line, which is Fayol's gangplank in the language of communication.</li>
+ <li><strong>Informal</strong> communication, the <strong>grapevine</strong>, follows social relationships rather than the chart. It is fast, it carries the feeling of the organisation as well as its facts, and it cannot be abolished. The administrative task is to keep it supplied with accurate information rather than to suppress it, since a grapevine starved of fact will carry rumour instead.</li>
+</ul>
+
+<h3>Barnard on Communication</h3>
+
+<p>For <strong>Barnard</strong>, a cooperative system is held together by the ability of its members to communicate with one another, and the first function of the executive is to create and maintain a system of communication. That function has three parts: defining the scheme of organisation through charts, specification of duties and division of labour; maintaining the personnel system through selection and incentives; and securing an informal organisation, which he regarded as necessary rather than merely tolerable.</p>
+
+<p>A fair criticism is that Barnard treats communication as a problem of connection rather than of information. Because he places so much weight on cooperation, he gives little attention to the problem of <em>extracting</em> information: if everyone is working for the same common purpose there is no incentive to conceal anything, so the executive may collect all the information and decide accordingly. Real organisations do not work this way, and Weber's point about the official's informational advantage over the political superior is the direct rebuttal.</p>
+
+<h3>Barriers</h3>
+
+<ul>
+ <li><strong>Structural</strong>: too many levels, so that a message is filtered at each transmission; excessive specialisation producing separate vocabularies; and physical or geographical distance.</li>
+ <li><strong>Semantic</strong>: the same words carrying different meanings for sender and receiver, worsened by technical jargon and, in Indian administration, by the movement between English and regional languages.</li>
+ <li><strong>Psychological</strong>: selective perception, distrust of the source, premature evaluation, and the reluctance of subordinates to transmit unwelcome news upward.</li>
+ <li><strong>Status</strong>: hierarchy suppresses upward candour, so the most senior official is often the worst-informed person about conditions at the base.</li>
+ <li><strong>Overload</strong>: volume beyond the receiver's capacity to process, which in practice means important messages are lost among routine ones.</li>
+</ul>
+
+<h3>Improving Communication</h3>
+
+<p>Shorten the chain of transmission; provide multiple and redundant channels; build systematic feedback so that reception is verified rather than assumed; use training to establish the common organisational language Simon described; protect upward channels through grievance machinery and open-door practice; and accept the informal network as part of the system rather than as interference in it.</p>
+
+<h2>Morale</h2>
+
+<p>Morale is the collective attitude of a group towards its work, its colleagues and its organisation. It is distinct from motivation, which is individual and directed at a particular effort, and the distinction matters because the two can move in opposite directions: an individual may be strongly motivated by a personal incentive in an organisation whose morale is low, and a high-morale unit may still contain individuals doing very little.</p>
+
+<p>Morale is usually treated as a function of confidence in the organisation's purpose and leadership, a sense of belonging to the group, perceived fairness in reward and discipline, security of tenure, and the belief that one's work matters. Its indices are indirect: absenteeism, turnover, grievance rates, indiscipline and the ordinary quality of work.</p>
+
+<p>Barnard's account connects it to the executive function. Every organisation must attend to the maintenance and growth of its authority in order to survive, and does so, in his list, by maintaining morale, education and training, incentives, and supervision and control.</p>
+
+<h2>Motivation</h2>
+
+<h3>Abraham Maslow: Hierarchy of Needs</h3>
+
+<p><strong>Maslow</strong> arranged human needs in a hierarchy in which the lower must be satisfied before the higher become active.</p>
+
+<ul>
+ <li><strong>Physiological</strong>: the requirements of biological existence, which in employment terms is the basic wage.</li>
+ <li><strong>Safety and security</strong>: once physiological needs are substantially satisfied they cease to motivate, and the individual begins to care not merely for the present but for the future. Tenure, pension and predictable conditions answer this level.</li>
+ <li><strong>Social</strong>: the need for identity and belonging. The organisation must provide opportunities for good social relationships among its employees.</li>
+ <li><strong>Esteem</strong>: once people begin to satisfy the need to belong, they want to be held in esteem by themselves and by others, which yields the satisfactions of power, prestige, status and self-confidence. Where these needs are frustrated, employees may behave irresponsibly in order to satisfy them.</li>
+ <li><strong>Self-actualisation</strong>: the desire to become what one is capable of becoming, to maximise one's potential and accomplish something. At this level employees are motivated by a sense of duty.</li>
+</ul>
+
+<p>The first three are the lower needs and the last two the higher. The lesson Maslow offers a manager is to find out which level a subordinate is operating at, since an incentive pitched at a satisfied need does not motivate. The standing criticisms are that the hierarchy is not universal across cultures, that people pursue several levels at once, and that the empirical support is thin.</p>
+
+<h3>Frederick Herzberg: Motivation and Hygiene</h3>
+
+<p>Herzberg's finding is that satisfaction and dissatisfaction at work are produced by two different sets of factors rather than by more and less of one.</p>
+
+<ul>
+ <li><strong>Hygiene factors</strong>, which are extrinsic and relate to the context of work: pay, supervision, working conditions, company policy, job security and interpersonal relations. Their absence produces dissatisfaction; their presence does not produce satisfaction, only its absence.</li>
+ <li><strong>Motivators</strong>, which are intrinsic and relate to the content of work: achievement, recognition, the work itself, responsibility, advancement and growth. These produce satisfaction, and their effect lasts longer than the effect of hygiene factors.</li>
+</ul>
+
+<p>The crucial formulation is that job satisfaction is not the opposite of job dissatisfaction. The opposite of job satisfaction is no job satisfaction, and the opposite of job dissatisfaction is no job dissatisfaction. Hygiene factors must be present or dissatisfaction arises; but attending to them alone produces a workforce that is not unhappy and not motivated either.</p>
+
+<p>Herzberg's prescription is <strong>job enrichment</strong>, the deliberate upgrading of the responsibility and challenge of work, since small repetitive jobs lower motivation. He distinguished <strong>vertical job loading</strong>, weaving opportunities for achievement and learning into the job, from <strong>horizontal job loading</strong>, adding or shifting from one undemanding task to another, which accomplishes nothing. Vertical loading is done by removing some controls while retaining or increasing responsibility, granting freedom and authority, making employees accountable for their own work, making reports available to the employees concerned, and introducing genuinely difficult tasks.</p>
+
+<h3>Douglas McGregor: Theory X and Theory Y</h3>
+
+<p>McGregor's argument is that every managerial practice rests on an implicit theory of human nature, and that the theory usually held is wrong.</p>
+
+<p><strong>Theory X</strong> assumes that the average person dislikes work and avoids it, must therefore be coerced, controlled, directed and threatened with punishment, prefers to be directed, wishes to avoid responsibility, has relatively little ambition and wants security above all.</p>
+
+<p><strong>Theory Y</strong> assumes the opposite set:</p>
+
+<ul>
+ <li>The expenditure of physical and mental effort in work is as natural as play or rest.</li>
+ <li>Self-direction and self-control operate in the service of objectives to which a person is committed.</li>
+ <li>Commitment to objectives is a function of the rewards associated with their achievement.</li>
+ <li>The average human being learns, under proper conditions, not only to accept responsibility but to seek it.</li>
+ <li>The capacity to exercise a relatively high degree of creativity, imagination and ingenuity in solving organisational problems is widely distributed.</li>
+ <li>In modern industrial life the intellectual potentialities of the average human being are only partly utilised.</li>
+</ul>
+
+<p>The sharp consequence is that Theory X is self-confirming. If employees are lazy, indifferent, unwilling to take responsibility, uncreative and uncooperative, the cause lies in management's method of organisation and control. The central principle of Theory Y is <strong>integration</strong>: creating conditions in which members of an organisation achieve their own goals best by directing their efforts towards the success of the organisation. External control and the threat of punishment are not the only means of obtaining effort.</p>
+
+<h3>David McClelland: Achievement Motivation</h3>
+
+<p>McClelland held that needs are learned rather than innate, and identified the needs for <strong>achievement</strong>, <strong>affiliation</strong> and <strong>power</strong>. His interest was in achievement motivation, and his ring-toss experiment is the memorable illustration: volunteers threw rings over pegs with no distance stipulated, and most threw from arbitrary, random distances, while a small group measured and tested distances first. McClelland read this as the need for a <strong>balanced challenge</strong>.</p>
+
+<p>Achievement-motivated people are a contrast to gamblers and are not risk-takers; they set goals they can influence through their own ability and effort. Achievement matters more to them than material or financial reward and gives greater personal satisfaction than recognition; financial reward is a measure of success rather than an end; security and status are not prime motivators; feedback is necessary because it permits the measurement of success; and they continually seek better ways of doing things. The administrative application is in selection and placement: a person with a high need for achievement should be placed where the job characteristics allow that need to be exercised.</p>
+
+<h3>Stacy Adams: Equity Theory</h3>
+
+<p>Adams, writing in 1963, made the point the other theories omit: what motivates is not the absolute reward but whether the individual perceives the reward structure as <strong>fair</strong>. The employee compares the ratio of his own inputs and outcomes with the same ratio for a reference person, and inequity in either direction produces tension and a move to restore balance, by reducing effort, seeking more reward, changing the comparison or leaving. The theory explains why a pay revision that raises everyone's salary can still lower morale, which no need-based theory can account for.</p>
+
+<h3>Victor Vroom: Expectancy Theory</h3>
+
+<p>Vroom's model holds that motivation is a product of three judgements rather than of a need: <strong>expectancy</strong>, that effort will produce performance; <strong>instrumentality</strong>, that performance will produce the reward; and <strong>valence</strong>, that the reward is worth having. Because the three combine multiplicatively, motivation collapses if any one is near zero. The administrative reading is uncomfortable for public systems: where promotion is by seniority, instrumentality is low whatever the effort, and the theory predicts precisely the behaviour usually attributed to individual character.</p>
+
+<h3>Chris Argyris: Immaturity to Maturity</h3>
+
+<p>Argyris argued that human personality develops along a continuum from immaturity towards maturity, from passivity to activity, dependence to relative independence, shallow to deeper interests, a short to a longer time perspective, and subordinate to equal or superordinate position. Formal organisation, with its specialisation, chain of command, unity of direction and narrow span of control, demands the immature end of that continuum from adults who have reached the mature end. The resulting frustration produces absenteeism, apathy, aggression and informal restriction of output, which management then reads as proof that tighter control is needed, closing the loop.</p>
+
+<h3>Rensis Likert: Systems 1 to 4 and the Linking Pin</h3>
+
+<p>Likert placed management styles along a continuum and marked four points on it: <strong>System 1, exploitative authoritative</strong>; <strong>System 2, benevolent authoritative</strong>; <strong>System 3, consultative</strong>; and <strong>System 4, participative</strong>. The systems are arrayed along two dimensions, the type of authority or control the organisation exercises over its members, and its operating characteristics. His empirical claim was that System 4 organisations perform better over time, and his prescription was to move organisations towards it.</p>
+
+<p>His <strong>linking pin</strong> model rebuilds the organisation as a set of overlapping work groups rather than a chain of individuals. Each manager holds twin roles in two overlapping groups, as a member of the higher-level group and the leader of the lower-level one, and communication passes through people occupying both. Group functions matter more than individual roles, though Likert warned against superfluous multiplication of functions and committees: overlapping groups should exist only where they are needed to perform the linking function. The growth is upward from the organisational base, in contrast to top-down management in traditional hierarchies.</p>
+
+<p>The model is criticised for simply drawing triangles around the existing hierarchical structure without changing it, and for slowing down decision making.</p>
+
+<p>On <strong>conflict</strong> Likert is worth citing directly. He defines it as "the active striving for one's own preferred outcome, which if attained, precludes the attainment by others of their own preferred outcome, thereby producing hostility", and distinguishes <em>substantive</em> conflict, arising from the substance of the task, from <em>affective</em> conflict, arising from the emotional aspects of interpersonal relations. His remedy for both is System 4 management.</p>
+
+<h2>Leadership</h2>
+
+<p><strong>Keith Davis</strong> defines leadership as "the ability to persuade others to seek defined objectives, enthusiastically. It is the human factor which binds a group together and motivates it towards goals." <strong>Koontz and Weihrich</strong> describe it as "the art or process of influencing people so that they will strive willingly and enthusiastically towards the achievement of group goals", adding that leaders do not stand behind a group to push and prod but place themselves before it to facilitate progress.</p>
+
+<h3>Why Leadership Is Needed</h3>
+
+<p><strong>Daniel Katz and Robert Kahn</strong> locate the essence of leadership in the "influential increment which goes beyond routine and taps bases of power beyond those that are organisationally decreed". Their reasons for its necessity are the best available answer to why a well-designed structure still needs leaders.</p>
+
+<ul>
+ <li><strong>The incompleteness of formal organisational design.</strong> A formal organisation is generally incomplete and imperfect, and its voids are filled by the informal organisation, so that the real organisation differs widely from the formal one. Leadership compensates for the weakness inherent in formal design.</li>
+ <li><strong>Changing environmental conditions.</strong> Technological, legal and cultural change require corresponding changes in the organisation, which a leader must bring about.</li>
+ <li><strong>The internal dynamics of the organisation.</strong> As it grows, new structural complexities appear, new needs for coordination arise and new policies must be invented.</li>
+ <li><strong>The nature of human membership.</strong> People belong to several organisations at once and bring divided loyalties and changing expectations with them.</li>
+</ul>
+
+<h3>The Great Man Theory</h3>
+
+<p>One of the earliest theories, holding that leaders in general and great leaders in particular are born and not made. Born leaders inherit favourable traits that separate them from those who cannot lead. Figures such as Napoleon, Nelson, Mao Tse-tung and Mahatma Gandhi are cited as natural leaders who received no training in leadership and acquired no specific leadership skills, such skills being natural to them, with an innate urge to assume leadership and an inborn will to achieve.</p>
+
+<p>The theory has no scientific basis and is devoid of empirical validity. It is speculative, and it is misleading to contend that good administrators are born rather than trained, since the claim would make the entire apparatus of administrative training pointless.</p>
+
+<h3>Trait Theory</h3>
+
+<p>The trait approach retains the assumption that leadership inheres in the person but tries to make it empirical by listing the qualities that distinguish leaders: intelligence, initiative, self-assurance, decisiveness, integrity, energy. The research defeated itself. The lists produced by different studies did not agree, the traits identified were possessed by many people who never led anything, and no trait predicted effectiveness across different situations. The failure is what pushed the field towards behaviour and then towards situation.</p>
+
+<h3>Behavioural Theories and the Managerial Grid</h3>
+
+<p>The behavioural school asked what leaders do rather than what they are, and converged on two independent dimensions: concern for the task and concern for people. The Ohio State studies called these <em>initiating structure</em> and <em>consideration</em>, and the Michigan studies distinguished production-centred from employee-centred supervision.</p>
+
+<p><strong>Robert Blake and Jane Mouton</strong> turned the two dimensions into the <strong>managerial grid</strong>, scoring concern for production and concern for people from one to nine and naming the corners: <em>impoverished</em> management at 1,1 with minimal effort on either; <em>country club</em> at 1,9 with attention to people at the cost of output; <em>task</em> or <em>authority-compliance</em> at 9,1; <em>middle of the road</em> at 5,5; and <em>team</em> management at 9,9, which they held to be the one best style. The claim that 9,9 is always best is exactly what the contingency theorists denied.</p>
+
+<h3>Situational and Contingency Theories</h3>
+
+<ul>
+ <li><strong>Fred Fiedler</strong> made effectiveness depend on the match between the leader's style, measured by his rating of the least preferred co-worker, and the favourableness of the situation, itself composed of leader-member relations, task structure and position power. Task-oriented leaders perform best in very favourable and very unfavourable situations, relationship-oriented leaders in the middle range. Fiedler's position that style is relatively fixed implies that the situation should be engineered to fit the leader rather than the reverse.</li>
+ <li><strong>Paul Hersey and Kenneth Blanchard</strong> made the appropriate style depend on the <em>maturity</em> or readiness of the followers, moving through telling, selling, participating and delegating as competence and willingness rise. It is the most directly usable of the leadership models for a supervisor with a mixed team.</li>
+ <li><strong>Robert House's</strong> path-goal theory casts the leader's function as clarifying the path to the reward and removing the obstacles along it, which connects leadership to Vroom's expectancy model.</li>
+</ul>
+
+<h3>Transactional and Transformational Leadership</h3>
+
+<p><strong>Transactional leadership</strong> works by exchange: the leader clarifies what is required, and rewards or corrects performance against it. It is the ordinary mode of bureaucratic supervision and it maintains an organisation efficiently without changing it.</p>
+
+<p><strong>Transformational leadership</strong>, associated with <strong>James MacGregor Burns</strong> and developed by <strong>Bernard Bass</strong>, works by raising the aspirations of followers so that they transcend their own immediate interests for a collective purpose. Its components are usually given as idealised influence, inspirational motivation, intellectual stimulation and individualised consideration. Burns's own distinction is that the transforming leader engages with followers in a way that raises both leader and led to higher levels of motivation and morality, which is why the model is the one usually invoked for administrative reform.</p>
+
+<h3>Leadership in Public Administration</h3>
+
+<p>The leadership literature is drawn from business and transfers to government imperfectly, which is a point worth making in an answer rather than assuming. The public administrator leads without control over the two instruments the models assume: he cannot usually set the goal, which is fixed by statute or by the political executive, and he cannot usually distribute the reward, since pay and promotion are governed by service rules. What he has instead is the authority of office, the example of his own conduct, and the ability to protect his subordinates from arbitrary interference.</p>
+
+<p>Tenure compounds the difficulty. A district officer transferred every eighteen months cannot pursue a transformational agenda that requires years, and the frequent transfer of Indian civil servants is therefore not only an administrative irritant but a structural limit on what leadership in the public service can be. The theories remain useful, but the honest conclusion is that public leadership is exercised against constraints the business literature does not contemplate.</p>
+`,
 };
