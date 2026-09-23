@@ -2964,4 +2964,244 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The balanced conclusion, and the one that connects this topic back to the strong state debate, is that PPPs do not reduce the demands on the state but change them. They substitute contracting, regulating and monitoring for building and operating, and every one of those is an administrative capability that has to be built before it can be relied on.</p>
 `,
+ 'evolution-indian-administration': `
+<h2>Why the Past Matters Here</h2>
+
+<p>Indian administration is not a design but a deposit. The district officer, the secretariat, the file, the tenured service recruited by competition and the revenue system all reached independent India already formed, and the republic inherited an apparatus built to hold a territory and collect from it, then asked it to develop a society and answer to an electorate. Almost every difficulty in Paper II descends from that mismatch, which is why the evolution of the system is a diagnostic topic rather than a historical preliminary.</p>
+
+<h2>The Kautilyan Tradition</h2>
+
+<p><strong>Kautilya's Arthashastra</strong> gives a detailed account of Mauryan administration: the status and powers of the king, the council of ministers, the limits on the exercise of those powers, and descriptions of the revenue system, the local system and the spy system.</p>
+
+<h3>Is It a Text of Public Administration?</h3>
+
+<p>Many scholars have treated the <em>Arthashastra</em> as a complete book of public administration, and the claim needs qualifying. The principles of public administration are not stated as principles in the text. What the work supplies is Kautilya's analysis of the political system of his time, from which a detailed programme of administrative principles can be drawn out. The distinction matters for an answer: the <em>Arthashastra</em> is evidence of administrative thought rather than a treatise of administrative theory, and reading it as the latter produces the anachronism that critics of the comparison object to.</p>
+
+<h3>Principles Found in Kautilya's Administration</h3>
+
+<ul>
+ <li><strong>Division of labour.</strong> Kautilya distributed the functions of governance across departments and personnel, dividing the work into <strong>eighteen departments</strong>. Every classical thinker treats division of work as the first principle of administration, on the ground that without it an organisation is a crowd rather than a structure.</li>
+ <li><strong>Centralisation.</strong> All power rested with the king, so that he could take the decisions required for the smooth functioning of the state. The classical school likewise emphasised centralisation.</li>
+ <li><strong>Order and discipline</strong>, which Kautilya connects to centralisation: because power is concentrated, discipline and order can be maintained across the state, and unity of command and unity of direction can be sustained together.</li>
+ <li><strong>Hierarchy and supervision</strong>, running from the king through the <em>amatyas</em> and departmental superintendents to district and village officers, with each level reporting upward.</li>
+ <li><strong>Personnel doctrine</strong>, in the attention given to the qualities required of ministers, their testing before appointment, and the fixing of salaries in graded scales, which is a recognisably administrative concern rather than a merely political one.</li>
+</ul>
+
+
+<h3>The Structure of the Mauryan State</h3>
+
+<ul>
+ <li><strong>The king</strong> was the focal point of the empire, expansionist in tendency and, in the text's own framing, bound to sympathy towards his subjects. He administered with the advice of a council of ministers whose advice was not binding, since he retained the sovereign right to act on his own judgement. The modern parallel is exact in form and different in substance: the Council of Ministers aids and advises, and the advice does not bind, but the modern executive is answerable to a legislature where the Mauryan king was not.</li>
+ <li><strong>The amatyas</strong>, the council of ministers, made the strategic and operational decisions of governance. They held distinct portfolios, were responsible for their departments and were accountable to the king. No maximum number was fixed, and the associated departments are generally counted at eighteen; the modern contrast is that the 91st Amendment fixes a ceiling on the size of the Council of Ministers.</li>
+ <li><strong>The tirthas</strong>, the eighteen departments, constituted a recognisable secretariat, with most high officers functioning as secretaries and a class of senior officials assisting them. A portfolio system with departmental allocation existed, which is the administrative fact that makes the comparison with a modern state worth drawing at all.</li>
+ <li><strong>Provincial administration</strong> was conducted by a governor responsible for law and order, revenue collection and justice, carrying out those duties through subordinate officers while remaining under the direct control of the centre, and obliged to communicate the working of the province to it. The parallel drawn in the literature is with the modern governor, appointed by the Union, acting as its agent, reporting on the state's functioning, and administering it through subordinates when constitutional machinery fails.</li>
+ <li><strong>Local administration</strong> is attested in <strong>Megasthenes's</strong> <em>Indica</em>, which describes urban administration conducted by <strong>committees</strong> with distinct charges including taxation and the census. Mauryan administration may be the first empire in the world to have conducted a census, which is a claim about administrative capacity rather than about scale. At the village level officers such as the <strong>gramika</strong>, <strong>gopa</strong> and <strong>sthanika</strong> operated as the base of the structure.</li>
+ <li><strong>Justice</strong> was administered through two kinds of court, the <em>dharmasthiya</em> or religious court and the <strong>kantakashodhana</strong> court, whose functions correspond broadly to the modern civil and criminal jurisdictions. The separation of the two is the feature worth noting, since it distinguishes disputes between subjects from offences against the order of the state.</li>
+ <li><strong>Revenue.</strong> Kautilya's dictum that "all undertakings depend on finance" states the priority plainly. The tax system was organised to maintain a large empire and a large army, and rested principally on <strong>bali</strong>, a religious tribute, and <strong>bhaga</strong>, the levy on agricultural produce and cattle.</li>
+</ul>
+
+<h3>The Spy System</h3>
+
+<p>The espionage system was highly organised, of two kinds, <em>organisational</em> and <em>communicational</em>. Spies known as <strong>gudapurusha</strong> also supported the military. They were drawn from a variety of occupations, traders, snake charmers, blacksmiths, cultivators, and were trained for a year before deployment, which is a personnel system in miniature: recruitment from a wide base, task-specific training, and placement under cover of an ordinary occupation.</p>
+
+<p>The modern parallel drawn in the literature is that India's intelligence organisations similarly maintain an organised system drawing personnel from many fields. The deeper administrative point is that the spy network was an <strong>information system</strong>: in the absence of records, audit and press, it was how the centre learned what its own officials were doing, which makes it an instrument of internal control as much as of external security.</p>
+
+<h3>The Mauryan State and the Modern Nation-State</h3>
+
+<p>Almost all the elements of a modern nation-state were present: a developed central government, provincial and local administration, a proper revenue and tax system, an organised intelligence apparatus and a system of justice. The resemblance is real and it is not identity, and the four differences the literature draws are the answer to any question inviting the comparison.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Mauryan administration</th><th>Modern Indian state</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Source of authority</td><td>The king, in whom power was concentrated</td><td>The people: the Preamble's "we the people" makes them the supreme authority</td></tr>
+ <tr><td>Distribution of power</td><td>Integration of power, all of it in the king's hands</td><td>Separation of powers, with legislature, executive and judiciary holding distinct duties and responsibilities</td></tr>
+ <tr><td>Basis of governance</td><td>Rule of individuals, monarchical in nature</td><td>Rule of law, with equality before the law and equal protection of the law</td></tr>
+ <tr><td>Recruitment</td><td>No systematic personnel recruitment system</td><td>Open recruitment on merit by competitive examination, irrespective of religion, race, caste, sex or place of birth, followed by training and performance-based promotion</td></tr>
+ </tbody>
+</table>
+
+<p>There are genuine similarities between Mauryan and contemporary Indian administration, and the rise of democracy has produced institutions with no past counterpart. The honest formulation is that the Mauryan state was administratively sophisticated and politically pre-modern, and that the sophistication is what makes the comparison tempting while the politics is what makes it wrong.</p>
+
+<h2>The Mughal Tradition</h2>
+
+<p>The Mughal empire was among the largest and most powerful of its time, ruled by what the literature calls liberal despotic kings. The credit for the strength of Mughal administration goes principally to <strong>Akbar</strong>, who organised central, provincial and local administration systematically, and who reorganised revenue administration on modern lines with the advice of <strong>Todarmal</strong>, one of the <em>navratnas</em>.</p>
+
+<h3>Akbar's Theory of Monarchy</h3>
+
+<p><strong>K.M. Panikkar</strong> holds that the foundations of Akbar's rule rested on a theory of kingship and constitutionalism resting on three claims: a divine right to rule, the establishment of a secular state in India, and the establishment of a welfare state. Whatever the historiographical contest over that reading, it identifies the feature that distinguishes Mughal from earlier administration: a conception of rulership carrying obligations to a plural population rather than only to a community.</p>
+
+<h3>The Three Levels</h3>
+
+<ul>
+ <li><strong>Central.</strong> The emperor was the core of government, the ultimate source of authority and of justice. The structural weakness was the near-absence of rules governing succession, so that among Akbar's successors it was the powerful rather than the designated who became emperor, and the administrative apparatus was periodically disrupted by contests it had no procedure to settle.</li>
+ <li><strong>Provincial.</strong> The empire was divided into provinces, reaching a maximum of twenty-one under Aurangzeb, each ruled by a <strong>subahdar</strong> who was the focal point of administration, usually a son or close relative of the emperor, responsible for revenue, law and order, welfare and justice, and assisted by officers of whom the <strong>diwan</strong> was the most important. The province existed at the centre's pleasure, since its power was delegated from the centre: it had independence in day-to-day administration but required permission for strategic matters, so the centre dominated.</li>
+ <li><strong>Local.</strong> Local government was an important feature of the system, improved particularly by Akbar and Shah Jahan. Akbar created the <strong>mansabdar</strong> and appointed <strong>kirodi</strong> and <strong>faujdar</strong> officers; Shah Jahan created the <strong>chakla</strong> as a new unit of local administration. Present-day local revenue arrangements are in large part a modernised continuation of the Mughal system.</li>
+</ul>
+
+
+<h3>Justice and the Military</h3>
+
+<p><strong>Justice.</strong> The emperor was among the highest authorities in the administration of justice, and below him the <strong>qazi-ul-quzat</strong> was responsible for its delivery. Some emperors, Aurangzeb notably, laid emphasis on morality in society and appointed special officers so that justice might reach the poor. Justice was for the most part administered according to the Mughal code, which survived into the early years of British rule, so that the transition of legal authority was considerably slower than the transition of political authority.</p>
+
+<p><strong>The military and the mansabdari system.</strong> Mughal administration rested on the dominance of power and therefore on the maintenance of a large army. The <strong>mansabdari</strong> system created by Akbar fused the military and civil services into one graded hierarchy: an officer held a <em>mansab</em>, a numerical rank determining his status, pay and the contingent of cavalry he was obliged to maintain. The arrangement is administratively interesting because it is a pure form of <strong>rank classification</strong>, the officer's position and emoluments attaching to his person rather than to any post, and because the officer's remuneration through assignment of revenue from land tied personnel administration directly to revenue administration.</p>
+
+<p>Its structural weakness is equally instructive: an officer paid by assignment of land revenue has an interest in extracting from that land during the term of his assignment, and no interest in its long-term productivity. The problem of aligning the agent's interest with the principal's, which modern personnel and financial administration address through salary, audit and tenure, was the one the system could not solve.</p>
+
+<h3>What Carried Forward</h3>
+
+<p>The land revenue settlement, the district as the effective unit of administration, the combination of revenue collection with magisterial and police functions in a single local officer, and the maintenance of detailed land records all passed from the Mughal system through the Company to the modern collectorate. The British did not invent the district officer; they inherited the post, standardised it and gave it a covenanted service to fill.</p>
+
+<h2>The British Legacy</h2>
+
+<h3>Company Rule and the First Regulation</h3>
+
+<p>The <strong>Regulating Act of 1773</strong> was the first attempt by the British Parliament to regulate the power and functioning of the East India Company, recognising Parliament's right to regulate the civil, military and revenue affairs of the Company's Indian territories. It changed the designation of the Governor of Bengal to <strong>Governor-General of Bengal</strong> and subordinated the Governors of Bombay and Madras to him, thereby laying the foundation of central administration in India. <strong>Warren Hastings</strong> was the first Governor-General of Bengal, and a Supreme Court was established at Calcutta in 1774 with a chief justice and three other judges.</p>
+
+<p><strong>Pitt's India Act of 1784</strong> removed the defects of the Regulating Act by dividing the Company's activities into commercial and political. The <strong>Court of Directors</strong> was constituted for commercial functions and a <strong>Board of Control</strong> for political ones, with the Court of Directors made subordinate to the Board and the Board answerable to Parliament. This was the first step towards centralising power in British hands, and it established the dual structure, commerce under political supervision, that would govern India until 1858.</p>
+
+<h3>Cornwallis and the Making of a Civil Service</h3>
+
+<p><strong>Lord Cornwallis</strong> is regarded as the <strong>father of the civil service in India</strong>. His reforms separated commercial from administrative functions, raised salaries to remove the excuse for private trade, prohibited officials from engaging in it, and introduced appointment and promotion by seniority within a covenanted service. His efforts were legalised by Parliament in the <strong>Charter Act of 1793</strong>.</p>
+
+<p>The Cornwallis settlement also carried the decision that shaped Indian administration for a century: Indians were excluded from higher office, on the reasoning that only Europeans could be trusted with it. A service designed to be incorruptible was thereby designed to be alien, and the two features were connected in its founder's mind.</p>
+
+<p><strong>Lord Wellesley</strong> succeeded Cornwallis in 1798 and opened a training institution for civil servants at <strong>Fort William, Calcutta, in 1800</strong>. His formulation of the change in their character is worth quoting: civil servants were no longer the agents of a commercial concern but the officers of a powerful sovereign state, and must therefore do their work accordingly. Between 1805 and 1833 the secretariat expanded rapidly as workload grew, and new departments and boards were created, including the Board of Customs and additional Boards of Revenue, which was the first step of decentralisation undertaken to cope with the volume of business.</p>
+
+<h3>The Charter Acts and Open Competition</h3>
+
+<ul>
+ <li><strong>1833.</strong> The Presidency of Bengal was divided into Bengal and Agra, and the Governor-General of Bengal became the <strong>Governor-General of India</strong>. Open competition for the civil service was proposed but not implemented, and Indians continued to be treated as subordinate to the British.</li>
+ <li><strong>1853.</strong> The Act abolished the <strong>patronage system</strong> of recruitment and introduced a merit system. A Civil Service Commission was set up in England in 1854 under <strong>Lord Macaulay</strong>, and the first competitive examination was held in London in 1855 on the Macaulay Commission's recommendation, with an age limit of nineteen to twenty-two.</li>
+</ul>
+
+<p>The examination was open and it was held in London, which is the point on which the nationalist critique turned: a competition formally open to all was practically closed to Indians by distance, cost and the age limit, so the merit principle and the exclusion operated together rather than against each other.</p>
+
+<h3>Under the Crown, 1858 to 1947</h3>
+
+<ul>
+ <li>In <strong>1858</strong> responsibility for conducting open competitions lay with the Board of Control and was later transferred to the British Civil Service Commission, with training for civil servants imparted in British universities.</li>
+ <li>The <strong>Indian Civil Service Act, 1861</strong> reserved certain principal posts for members of the covenanted service.</li>
+ <li>The <strong>Statutory Civil Service Act of 1870</strong> was enacted to remove the defects of the 1861 Act, providing for the appointment of Indians of standing to reserved posts by nomination.</li>
+ <li>The <strong>Aitchison Commission of 1886</strong>, under Sir Charles Aitchison, recommended replacing the two-tier classification into covenanted and uncovenanted services with a three-tier classification into <strong>imperial, provincial and subordinate</strong> civil services; raising the maximum age to twenty-three; abolishing the statutory civil service system of recruitment; and filling a proportion of imperial civil service posts by promotion from the provincial services.</li>
+ <li>The <strong>Islington Commission</strong>, the Royal Commission on Public Services in India under Lord Islington, was appointed in 1912 and reported in 1915, recommending a larger Indian share of higher appointments, though its report was overtaken by the war and by the constitutional reforms that followed.</li>
+</ul>
+
+<h3>The Constitutional Sequence</h3>
+
+<ul>
+ <li><strong>Indian Councils Act, 1892.</strong> After 1861 the British were unwilling to concede further political reform, but the founding of the Indian National Congress in 1885 channelled the demand and compelled some movement. The Act began a system of elections, though indirect; expanded the legislative council by including more Indian members; and gave members the right to raise questions at the time of the budget.</li>
+ <li><strong>Indian Councils Act, 1909</strong>, the <strong>Morley-Minto reforms</strong>. The legislative council was enlarged from sixteen to sixty members, members were allowed to ask supplementary questions, Indians were admitted to the Viceroy's Executive Council, and a <strong>separate electorate for Muslims</strong> was introduced, for which Lord Minto is known as the father of the communal electorate.</li>
+ <li><strong>Government of India Act, 1919</strong>, the <strong>Montagu-Chelmsford reforms</strong>, which introduced <strong>dyarchy</strong> in the provinces, meaning dual or double government: provincial subjects were divided into <em>reserved</em> subjects, administered by the Governor with his executive council, and <em>transferred</em> subjects, administered by the Governor with ministers responsible to the legislature. Dyarchy is the first moment at which Indian ministers held executive responsibility, and it failed precisely because the division of subjects cut across the unity of administration, leaving ministers responsible for departments whose finance lay on the reserved side.</li>
+ <li><strong>Government of India Act, 1935</strong>, which introduced <strong>provincial autonomy</strong> in place of dyarchy at the provincial level, transferred dyarchy to the centre, provided for a federation, established a <strong>Federal Court</strong>, and created Public Service Commissions at the federal and provincial levels. Its structure, a federal division of powers with a strong centre, emergency provisions, and a governor with discretionary powers, was carried substantially into the Constitution of India, which is why the 1935 Act matters more to Indian administration than any other colonial statute.</li>
+</ul>
+
+
+<h3>Two Reforms That Shaped the Modern Machinery</h3>
+
+<p><strong>Police and criminal law.</strong> The Police Act of 1861 created the provincial police force under the control of the district magistrate, with a structure and a subordination that survive substantially intact. Together with the codification of criminal law and procedure, it produced an apparatus of order that is among the most durable parts of the legacy, and among the most criticised, since a force designed to maintain the authority of an alien government was carried into a republic without a corresponding change in its accountability.</p>
+
+<p><strong>Local self-government.</strong> <strong>Lord Ripon</strong>, whose resolution of 1882 initiated local self-government, is regarded as the <strong>father of local self-government in India</strong>, and his report is termed the <em>Magna Carta</em> of local self-government here. Ripon gave more importance to local self-government than to district administration, precisely so that local bodies might develop as a <strong>school of democracy</strong> in rural India, which is an educative justification rather than an administrative one.</p>
+
+<p>The line from Ripon runs directly into Paper II's later topics. <strong>Mahatma Gandhi</strong> was the first to advance <em>gram swaraj</em>, village self-rule; the Constitution makers recognised local self-government in <strong>Article 40</strong>, directing the State to organise village panchayats and endow them with the powers necessary to function as units of self-government; the <strong>Balwant Rai Mehta Committee</strong> recommended involving panchayati raj institutions in planning; and the 73rd and 74th Amendments gave the tier constitutional standing. Ripon's justification and Gandhi's are the same one, that local government teaches democracy, and it is a different argument from the efficiency case for decentralisation that development administration later made.</p>
+
+<h3>What the Legacy Consists Of</h3>
+
+<ul>
+ <li><strong>A neutral, permanent, generalist civil service</strong> recruited by open competition, organised in an all-India cadre, and holding office independently of the government of the day.</li>
+ <li><strong>The district as the unit of administration</strong>, with the collector combining revenue, magisterial and coordinating functions.</li>
+ <li><strong>The rule of law and an independent judiciary</strong>, with administrative action justiciable and officials personally liable.</li>
+ <li><strong>The secretariat system</strong>, with policy formulated in secretariat departments and executed by attached and subordinate offices.</li>
+ <li><strong>Written record and procedure</strong>: the file, the note sheet, the precedent, and the manual.</li>
+ <li><strong>Financial control</strong>, with legislative appropriation, treasury procedure and independent audit.</li>
+ <li><strong>A federal structure with a strong centre</strong>, taken from the 1935 Act.</li>
+</ul>
+
+<h3>Assessment</h3>
+
+<p>The balanced judgement, and the one an examiner rewards, is that the legacy is genuinely double-edged rather than simply good or bad.</p>
+
+<p>Its <strong>strengths</strong> were real: an administration of considerable integrity at its upper levels by the standards of its time, capable of maintaining order and revenue across a subcontinent, staffed by competitive examination when patronage was the norm elsewhere, and operating under law. India inherited a working machine, which most decolonising states did not, and that inheritance explains a good deal of the republic's capacity to hold elections, move populations and administer famine relief in its first decades.</p>
+
+<p>Its <strong>defects</strong> were equally structural. The service was <em>regulatory</em> rather than developmental, built to maintain order and collect revenue, so it had no experience of promoting change and a settled preference against it. It was <em>elitist and distant</em>, the officer being socially and physically removed from the people. It was <em>over-centralised</em>, with initiative reserved to the top. It was <em>generalist</em>, distrusting the specialist at a moment when development required technical competence. It was <em>procedure-bound</em>, so that correctness of process displaced achievement of result. And it was designed for an <em>unaccountable</em> executive, so that the habits of secrecy and anonymity survived into a system in which the executive answers to an elected legislature.</p>
+
+<p>The sharpest formulation is that the steel frame was built to hold a structure up, not to move it, and the demand made of it after 1947 was that it move.</p>
+
+<h2>Post-Independence Development</h2>
+
+<p>Independence changed the task without changing the instrument. The administration was asked to take on planned economic development, the delivery of welfare and social services, the integration of the princely states, the resettlement of refugees, the conduct of universal-franchise elections, and the implementation of land reform and social legislation aimed at altering the society the administration had previously only policed.</p>
+
+<p>The Constitution supplied the framework of values, and developmental plans were framed and implemented to address poverty and secure equality for all groups. Administrative reform was felt to be necessary for social and economic development, and the process of reform has continued since independence without interruption.</p>
+
+
+<h3>The Immediate Tasks</h3>
+
+<ul>
+ <li><strong>Integration of the princely states.</strong> Over five hundred states had to be brought into the Union and their separate administrative systems assimilated to the provincial pattern, which involved extending the all-India services, the revenue system and the judicial structure into territories that had known none of them.</li>
+ <li><strong>Partition and resettlement</strong>, which imposed on a newly formed administration the movement and rehabilitation of millions, a task of logistics and welfare for which its regulatory training had not prepared it.</li>
+ <li><strong>Planning.</strong> The Planning Commission, established in 1950, created a parallel apparatus of plan formulation, resource allocation and evaluation alongside the constitutional machinery of finance, and the relationship between the two was never fully settled, which is why its replacement in 2015 is a live topic rather than a closed one.</li>
+ <li><strong>The public sector</strong>, with departmental undertakings, statutory corporations and government companies created to occupy the commanding heights, each requiring forms of control and accountability that the departmental model did not supply.</li>
+ <li><strong>Universal franchise elections</strong>, conducted by the same district machinery that collected revenue, which is the single clearest demonstration of the inherited apparatus succeeding at a task it was never designed for.</li>
+</ul>
+
+<h3>Continuity and Change</h3>
+
+<p>What <strong>continued</strong>: the district collectorate, the all-India services, the secretariat, the file, the rules of business, the financial and audit system, and the basic federal design inherited from 1935.</p>
+
+<p>What <strong>changed</strong>: the introduction of planning machinery and a vast apparatus of development departments and public enterprises; the creation of the Indian Administrative Service in place of the ICS, with constitutional protection and a different mandate; the arrival of political executives answerable to an electorate; reservation in recruitment to make the service representative; and, from 1992, a constitutional tier of local government.</p>
+
+<p>The assessment that follows is the one the topic exists to reach: the structures were retained and the purposes were replaced, and much of what is criticised in Indian administration is the friction between the two. An apparatus whose habits are regulatory has been asked to be developmental, and reform has mostly attempted to change the habits while leaving the apparatus in place.</p>
+
+<h2>Administrative Reform Commissions</h2>
+
+<h3>The Early Reports</h3>
+
+<ul>
+ <li><strong>N. Gopalaswamy Ayyangar (1949)</strong> suggested improvements in the methods of transacting government business and the creation of an <strong>Organisation and Method</strong> division at the central level.</li>
+ <li><strong>A.D. Gorwala (April 1951)</strong> held that a clean, efficient and impartial administration was vital to the success of democratic planning, and recommended reorganising the administrative machinery for greater speed, effectiveness and responsiveness. On administrative delay he proposed more junior officers and fewer clerks in administrative departments. His linking of integrity to the success of <em>planning</em>, rather than to propriety alone, is the argument that later development administration would restate.</li>
+ <li><strong>Paul H. Appleby</strong>, in reports submitted in <strong>1953 and 1956</strong>, urged reform through the establishment of an O&M organisation in the Union government and an Institute of Public Administration, stressed the importance of satisfying citizens' needs, and made suggestions for improving the record and filing system. The Indian Institute of Public Administration followed from his recommendation.</li>
+ <li><strong>Ashok Chandra (1954)</strong> proposed measures to remove delays in the execution of projects.</li>
+ <li><strong>T.T. Krishnamachari</strong> reported on the training of IAS officers and the improvement of state administration.</li>
+ <li><strong>K. Santhanam (1964)</strong> addressed corruption, and his committee produced the Central Vigilance Commission and the framework of modern anti-corruption law.</li>
+</ul>
+
+<h3>The First Administrative Reforms Commission</h3>
+
+<p>Set up in <strong>January 1966</strong> under <strong>Morarji Desai</strong> and then <strong>K. Hanumanthaiya</strong>, the first ARC examined the machinery of government and its procedures, financial and personnel administration, the machinery for planning, centre-state relations, state and district administration, and the redress of citizens' grievances. Its most consequential recommendations were the <strong>Lokpal and Lokayuktas</strong>, the gradual infusion of <strong>specialists</strong> into the administrative services to meet the technological challenge, and the strengthening of O&M and of the district machinery. It produced some twenty reports, of which a substantial part was accepted and a smaller part implemented.</p>
+
+<h3>The Committees Between</h3>
+
+<ul>
+ <li><strong>Kothari Committee (1976)</strong> on recruitment, which reshaped the civil services examination into its preliminary, main and interview structure.</li>
+ <li><strong>Ashok Mehta Committee (1977)</strong> on panchayati raj institutions, which recommended a two-tier structure with the <em>mandal panchayat</em> as the base and an open role for political parties, and which anticipated the constitutional amendments of 1992.</li>
+ <li><strong>Sarkaria Commission (1983)</strong> on centre-state relations.</li>
+ <li><strong>Economic Administrative Reforms Commission</strong> under <strong>L.K. Jha (1983)</strong>, which urged far greater accountability, with performance valued above mere adherence to rules. The phrase is the whole of the reform agenda in a line.</li>
+ <li><strong>G.V.K. Rao Committee (1985)</strong> on the administration of rural development, which found that development administration had become divorced from the district machinery and recommended strengthening the district as the unit of development planning.</li>
+</ul>
+
+<p>The Planning Commission, the Estimates Committee and the Committee on Public Undertakings also pressed modern techniques of financial, project and human resource management upon public organisations.</p>
+
+<h3>The 1990s Turn</h3>
+
+<p>A significant shift in the development paradigm occurred in 1990. The structural adjustment programme introduced new economic policies, and these could not be implemented well without corresponding change in the administrative system, of which decentralisation was the principal requirement. The <strong>73rd and 74th constitutional amendments</strong> followed, strengthening panchayati raj bodies and municipalities. Administrative reform thus became a condition of economic reform rather than a separate exercise, which is the relationship that had been missing from the earlier reports.</p>
+
+<h3>The Second Administrative Reforms Commission</h3>
+
+<p>Constituted in <strong>2005</strong> under <strong>Veerappa Moily</strong>, the second ARC submitted <strong>fifteen reports</strong> amounting to a detailed blueprint for revamping the Indian administrative system, covering among other subjects the right to information, unlocking human capital, crisis management, ethics in governance, local governance, capacity building for conflict resolution, public order, financial management, the refurbishing of personnel administration, e-governance, and the organisational structure of the Government of India.</p>
+
+<p>Its characteristic recommendations connect directly to the rest of this paper: competition and choice in service delivery; performance-based rather than seniority-based advancement, with training linked to promotion; an ethics framework and a strengthened anti-corruption architecture; citizen-centric administration through charters and grievance redress; and devolution to local bodies with funds, functions and functionaries together.</p>
+
+<h3>Why Administrative Reform Under-delivers</h3>
+
+<ul>
+ <li><strong>Reform is recommended by outsiders and implemented by insiders.</strong> The service asked to reorganise itself is the body whose position the reorganisation would alter, and it controls the pace of implementation.</li>
+ <li><strong>Political ownership is episodic.</strong> Administrative reform yields returns beyond an electoral cycle and imposes costs within one.</li>
+ <li><strong>The diagnosis repeats.</strong> Gorwala in 1951 and the second ARC in 2005 identify substantially the same defects, delay, over-centralisation, procedure displacing purpose, weak accountability, which indicates the causes are structural rather than remediable by further recommendation.</li>
+ <li><strong>Reform targets structures where the binding constraint is incentives.</strong> Reorganising a department changes nothing if promotion still follows seniority, transfer remains a political instrument and appraisal does not discriminate.</li>
+ <li><strong>Federalism limits reach.</strong> Most administration that citizens encounter is state administration, and central commissions can recommend to the states but cannot bind them.</li>
+</ul>
+
+<p>The conclusion worth carrying into an answer is that India has not suffered from a shortage of administrative diagnosis. It has produced an unusually rich body of it over seventy-five years, and the gap between the diagnosis and the condition is itself the finding: an administration capable of commissioning excellent reports on its own defects, and structurally insulated from acting on them, is exhibiting precisely the formalism that the comparative literature attributes to transitional systems.</p>
+`,
 };
