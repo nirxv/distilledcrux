@@ -868,4 +868,241 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Tenure compounds the difficulty. A district officer transferred every eighteen months cannot pursue a transformational agenda that requires years, and the frequent transfer of Indian civil servants is therefore not only an administrative irritant but a structural limit on what leadership in the public service can be. The theories remain useful, but the honest conclusion is that public leadership is exercised against constraints the business literature does not contemplate.</p>
 `,
+ 'accountability-control': `
+<h2>The Problem This Topic Answers</h2>
+
+<p>A permanent, expert, unelected service exercises enormous discretionary power over citizens who never chose it and cannot remove it. Accountability is the set of arrangements by which that power is answered for. The subject exists because the administrative state made the classical answer, that officials merely execute what elected representatives decide, factually untrue.</p>
+
+<h3>Accountability, Responsibility, Responsiveness</h3>
+
+<ul>
+ <li><strong>Accountability</strong> is the obligation to render an account of one's conduct to an authority empowered to judge it and to impose consequences. It is external, formal and enforceable, and it is retrospective: it operates after the act.</li>
+ <li><strong>Responsibility</strong> is the internal sense of obligation to a professional standard, a code or a conscience. It is prospective and self-enforcing, and it operates at the moment of decision rather than after it.</li>
+ <li><strong>Responsiveness</strong> is the disposition to act on the felt needs of citizens rather than merely within the rules. An administration can be perfectly accountable and wholly unresponsive, which is the usual complaint against Indian bureaucracy, and the reason the two words must not be used interchangeably in an answer.</li>
+</ul>
+
+<h3>Why the Problem Grew</h3>
+
+<p>Three developments made control a live question rather than a settled one.</p>
+
+<ul>
+ <li><strong>The expansion of the state.</strong> As government moved from order-keeping to welfare, planning and regulation, the range of decisions taken by officials rather than legislators expanded with it. <strong>Herman Finer</strong> observed that the state is present everywhere and hardly leaves a gap, and <strong>Dwight Waldo</strong> named the result the <em>Administrative State</em> in his 1948 book, elaborating the power and responsibilities of an administration that implements all the policies of government without being elected by anyone, which was said in the United States debate to be against the spirit of democracy.</li>
+ <li><strong>Delegated legislation.</strong> In theory policy formulation belongs to the legislature. In practice, from paucity of time and lack of technical skill, legislatures pass only the skeleton of a policy and the executive adds the flesh and blood, which is why delegated legislation is also called executive legislation.</li>
+ <li><strong>Administrative discretion.</strong> Modern statutes confer wide discretion because the situations they govern cannot be specified in advance. Discretion is necessary and it is also the space in which arbitrariness lives.</li>
+</ul>
+
+<h3>The Friedrich and Finer Debate</h3>
+
+<p>The theoretical core of the topic is an exchange between <strong>Carl J. Friedrich</strong> and <strong>Herman Finer</strong> in the years around 1940, prompted by a United States federal government that was becoming an administrative state in which administrative organs had grown more powerful than a Congress criticised for merely rubber-stamping administrative rules.</p>
+
+<p><strong>Friedrich</strong>, in <em>Public Policy and the Nature of Administrative Responsibility</em> (1940), argued that given the incapacity of the legislature to control administration in detail, administrators must fulfil their responsibilities autonomously. His controls are internal: the <em>inner check</em> of professional standards, technical knowledge and the judgement of one's professional peers. Responsibility to the canons of one's craft, he held, is a sturdier guarantee than an oversight that cannot keep pace.</p>
+
+<p><strong>Finer</strong> replied in <em>Administrative Responsibility in Democratic Government</em> (1941) that even if the administrative state is inevitable, external control remains essential. His formulation is the one to quote: the servants of the public are not to decide their own course, but are to be responsible to the elected representatives of the public. An inner check is no check at all, because it leaves the official as judge in his own cause.</p>
+
+<p>Neither position is sufficient alone, and the modern architecture of accountability is a compromise between them. External control supplies the sanction, and codes of conduct, professional training and administrative ethics supply what external control cannot reach: the vast majority of decisions no one will ever review.</p>
+
+<h2>Legislative Control</h2>
+
+<p>In a parliamentary system the legislature controls administration indirectly, through the ministers who are responsible to it, under the doctrine of <strong>collective and individual ministerial responsibility</strong>.</p>
+
+<h3>Control Through Debate and Motion</h3>
+
+<ul>
+ <li><strong>The President's address</strong> at the opening of a session sets out the major policies and activities with which the executive will be occupied. Four days are set aside for general discussion before the vote of thanks is passed, and members may in that period criticise the entire realm of administration for its acts of commission and omission. The speeches tend to sway opinion outside Parliament as much as inside it.</li>
+ <li><strong>The budget.</strong> The finance minister's speech opens a review of the administration's functioning. General discussion follows on the budget as a whole or on any question of principle in it; voting on grants provides an occasion to criticise; discussion on the Finance Bill permits any subject to be raised and any grievance ventilated; and while considering demands for grants, Parliament examines the working of individual departments.</li>
+ <li><strong>Question Hour</strong>, in which ministers answer starred questions orally with supplementaries and unstarred questions in writing, is the most-used instrument and reaches individual administrative acts that no other device touches.</li>
+ <li><strong>Zero Hour, calling attention motions and adjournment motions</strong> raise matters of urgent public importance, the adjournment motion carrying an element of censure because it sets aside the business of the House.</li>
+ <li><strong>No-confidence and censure motions.</strong> A censure motion brings the whole or part of government policy under fire, and an adverse vote leads to resignation. In practice a no-confidence motion is difficult to carry, since the party or coalition that commands the majority forms the government, so the device operates largely as a threat that keeps the government alert.</li>
+</ul>
+
+<h3>Control Through Committees</h3>
+
+<p>Debate on the floor is episodic and partisan, so the effective scrutiny is done in committee.</p>
+
+<ul>
+ <li><strong>The Public Accounts Committee</strong> examines the appropriation accounts and the reports of the Comptroller and Auditor General, asking whether money was spent on the purpose for which it was voted and within the authority governing it. It works after the event, and by convention its chairman is drawn from the Opposition.</li>
+ <li><strong>The Estimates Committee</strong> examines the estimates and suggests economies, improvements in organisation and efficiency, and alternative policies to achieve the same result at less cost. It works continuously rather than only after audit, and it is confined to the Lok Sabha.</li>
+ <li><strong>The Committee on Public Undertakings</strong> examines the reports and accounts of public sector enterprises, which the other two committees could not adequately reach.</li>
+ <li><strong>The Departmentally Related Standing Committees</strong> cover the ministries between them, examining demands for grants, bills referred to them, annual reports and long-term policy documents. Their creation is the single most significant strengthening of parliamentary control in the Indian system, because they are permanent, subject-specialised and less exposed to party heat than the floor of the House.</li>
+ <li><strong>The Committee on Subordinate Legislation</strong>, constituted in both Houses, scrutinises rules, regulations, bye-laws and schemes made under delegated legislation, and is the direct answer to the delegation problem.</li>
+</ul>
+
+<h3>The Comptroller and Auditor General</h3>
+
+<p>The office originated in the United Kingdom under the <strong>Exchequer and Audit Departments Act 1866</strong>, which combined the functions of the Comptroller-General of the Exchequer, who had authorised the issue of public monies to departments since 1834, with those of the commissioners of audit, who had presented government accounts to the treasury. The Act kept the comptroller function of authorising issues and added the new task of examining departmental accounts and reporting the results to Parliament.</p>
+
+<p>In India the CAG is created by the Constitution and examines the financial transactions of the administration. As an officer of the legislature functioning independently, the CAG audits all expenditure from union and state revenues incurred within or outside India, and the audit extends across a wide range of state activity, including departments and offices, funds administered by them, revenue collection, non-commercial state-sponsored bodies, and bodies such as universities.</p>
+
+<p>The important modern development is the <strong>value for money examination</strong>, which looks at the economy, efficiency and effectiveness with which an entity has used its resources and discharged its functions. It moves audit beyond the question of whether money was spent lawfully to whether it was spent well, and it is the instrument by which audit reaches policy outcomes. It is also the ground on which audit is accused of straying into policy, which is the standing tension of the office.</p>
+
+<h3>The Presidential Variant</h3>
+
+<p>Where the separation of powers applies, as in the United States, the mechanisms differ entirely: no-confidence motions, adjournment motions and question hours are meaningless there. Congress instead creates executive departments, boards, commissions and agencies by law; Senate approval is required for senior presidential appointments and for treaties; the legislature controls receipts through taxation and debt and expenditure through the appropriation Act; it creates independent regulatory commissions accountable to itself; it appoints investigating committees which the administration greatly fears; and it holds the power of impeachment. The comparison is worth making in an answer, because legislative control in a presidential system is more direct over the agency and less able to reach the political executive.</p>
+
+<h3>Limits of Legislative Control</h3>
+
+<p>The honest assessment in the literature is that these devices are of greater theoretical than practical efficacy, and that legislative control is inadequate. The reasons are structural rather than remediable by exhortation.</p>
+
+<ul>
+ <li>The government commands the majority, so the body meant to control the executive is led by it.</li>
+ <li>Legislators lack the technical expertise and the staff to examine complex administration, and anti-defection discipline removes the independence that scrutiny requires.</li>
+ <li>Time is short, the volume of business is large, and much of it is passed with little discussion, including guillotined demands for grants.</li>
+ <li>Control is largely post-facto: the PAC examines what audit reports on, often years after the transaction.</li>
+ <li>Because members must spend so much effort on parochial and partisan affairs, sustained control over larger policy is not possible, and control of the bureaucracy can only be haphazard.</li>
+</ul>
+
+<h2>Executive Control</h2>
+
+<p>Executive control is internal control over civil servants who are themselves part of the machinery of executive government. A chain of command runs through the administrative machinery, officials are responsible to and under the control of their administrative superiors, and at the top are ministers responsible for everything in their departments. If a civil servant errs, the minister in charge is ultimately answerable.</p>
+
+<ul>
+ <li><strong>Political control.</strong> The minister has full authority to manage and direct the department, lays down policy, issues directives, and must be informed of all important decisions. A minister may concentrate authority, transfer officials and cut through red tape. In practice, because civil servants are the experts, they exert substantial influence on ministers, so a minister's real control depends not only on the legal and constitutional system but on the personal and political resources brought to the office.</li>
+ <li><strong>Control over personnel.</strong> The executive regulates recruitment and conditions of service, and the political executive is concerned with appointment, promotion, transfer and removal. This is described in the literature as the most effective means of executive control over administration. It is also the most abused: transfer used as a sanction is the standard instrument of political pressure on Indian officers, and it works precisely because it is effective.</li>
+ <li><strong>Budgetary control.</strong> The finance ministry sanctions expenditure, scrutinises proposals and imposes financial rules, which gives it a continuous check on every department.</li>
+ <li><strong>Direct control through commissions and investigation</strong>, exercised through bodies such as the Central Vigilance Commission and the Central Bureau of Investigation.</li>
+ <li><strong>Delegated legislation and rule-making</strong>, through which the executive supplies the detail of policy. The legislature formulates the outline and the executive frames the implementing guidelines, subject to the scrutiny of the parliamentary committees on subordinate legislation.</li>
+ <li><strong>Ordinance-making power</strong>, which allows the political executive to legislate when Parliament is not in session and an emergency requires it.</li>
+ <li><strong>Civil service rules and disciplinary proceedings</strong>, which supply the formal sanction against individual misconduct.</li>
+</ul>
+
+<h2>Judicial Control</h2>
+
+<p>Judicial control is the citizen's remedy against the administration, available on the initiative of the aggrieved rather than at the discretion of a legislature or a superior.</p>
+
+<h3>Grounds</h3>
+
+<ul>
+ <li><strong>Lack of jurisdiction</strong>, where the authority acted beyond the power conferred, or where the power was exercised by the wrong body.</li>
+ <li><strong>Error of law</strong> apparent on the face of the record.</li>
+ <li><strong>Abuse of discretion</strong>, including acting on irrelevant considerations, ignoring relevant ones, acting for an improper purpose, or acting in bad faith.</li>
+ <li><strong>Violation of natural justice</strong>, under the two rules that no one may be a judge in his own cause and that no one may be condemned unheard, extended in modern law to the duty to give reasons.</li>
+ <li><strong>Unreasonableness</strong>, where a decision is so unreasonable that no reasonable authority could have reached it.</li>
+</ul>
+
+<h3>The Writs</h3>
+
+<p>The writ system is an English inheritance. Writs were originally written orders issued in the name of the king on a petition to the king-in-council, treated as royal orders and forming the groundwork for subsequent proceedings. They commanded that a case be brought before the issuing court or that the recipient do some other act. Originally exceptional and non-routine devices issued by the Crown in the Crown's interest, they later became available to ordinary citizens on payment of a prescribed fee, the filing being known as the purchase of a writ. New writs could be created only with the sanction of Parliament, and their forms remained essentially static, each defining a particular form of action.</p>
+
+<table>
+ <thead>
+ <tr><th>Writ</th><th>What it does</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Habeas corpus</td><td>Requires a detained person to be produced, and tests the legality of the detention</td></tr>
+ <tr><td>Mandamus</td><td>Commands a public authority to perform a public duty it has refused to perform</td></tr>
+ <tr><td>Prohibition</td><td>Restrains a lower court or tribunal from exceeding its jurisdiction, issued while proceedings are pending</td></tr>
+ <tr><td>Certiorari</td><td>Quashes an order already passed without jurisdiction or against natural justice</td></tr>
+ <tr><td>Quo warranto</td><td>Questions the authority by which a person holds a public office</td></tr>
+ </tbody>
+</table>
+
+<p>In England the Woolf Reforms and the Civil Procedure Rules of 1999 unified most High Court and County Court civil procedure, so that almost all civil actions now begin with a claim form rather than a writ. The United States inherited the English system as a rigid set of forms of relief, abolished several writs by name, and now grants most of the old relief through ordinary civil action, though a few writs survive in federal practice. India retained the writs as constitutional remedies, which is the significant difference: the remedy is a fundamental right rather than a procedural form.</p>
+
+<h3>Administrative Tribunals</h3>
+
+<p>Tribunals grew because ordinary courts were slow, expensive and unspecialised, and because the disputes thrown up by a welfare state are technical and numerous. They offer speed, expertise and informality, and they carry a matching risk: being staffed partly from the administration, they may lack the independence that makes adjudication worth having. The debate over the composition and appointment of tribunal members, and over the exclusion of High Court jurisdiction, is therefore not a technicality but the whole question of whether a tribunal is a court or an extension of the department.</p>
+
+<h3>Limits of Judicial Control</h3>
+
+<ul>
+ <li>It is slow and expensive, which makes it unavailable to those most exposed to administrative arbitrariness, and public interest litigation is a partial correction to precisely this.</li>
+ <li>It is available only after the injury, and only to someone who knows a remedy exists.</li>
+ <li>Courts examine legality rather than wisdom, so an inefficient, insensitive or merely foolish decision that stays within the law is beyond their reach. This is the crucial limitation, because most administrative failure is of that kind.</li>
+ <li>Judicial intervention in policy raises its own accountability question, since the reviewing judge is no more elected than the official reviewed.</li>
+</ul>
+
+<h2>The Ombudsman, Lokpal and Lokayukta</h2>
+
+<p>The ombudsman institution answers a gap the three classical controls leave open: maladministration that is legal, within jurisdiction, and beyond the practical reach of Parliament, yet unjust to the individual affected.</p>
+
+<h3>The Model Abroad</h3>
+
+<p>In the Scandinavian model the ombudsman is elected by Parliament by simple majority, with status equal to that of the president of the supreme court. The jurisdiction is comprehensive, extending to all public officials and to members of local government. The ombudsman is not a member of Parliament but has the right to speak and participate in its proceedings, and submits an annual report to it. In the <strong>United Kingdom</strong> the office is known as the Parliamentary Commissioner, created in 1967 and functioning from 1969, empowered to take up administrative cases that no court or tribunal can admit, and reporting annually to Parliament.</p>
+
+<h3>The Indian Story</h3>
+
+<ul>
+ <li>A constitutional ombudsman was first proposed in Parliament in the 1960s by the then Law Minister <strong>Ashok Kumar Sen</strong>, and the terms <em>Lokpal</em> and <em>Lokayukta</em> were coined by <strong>L.M. Singhvi</strong> in 1963.</li>
+ <li>The <strong>first Administrative Reforms Commission</strong>, under Morarji Desai, recommended in 1966 two independent institutions, a Lokpal at the centre and Lokayuktas in the states, to look into complaints against public officials and against MPs and MLAs respectively.</li>
+ <li>A Lokpal Bill was introduced in 1968 and passed by the Lok Sabha but lapsed in the Rajya Sabha. Between 1968 and 2001 bills were introduced seven times without result.</li>
+ <li>In 2002 the commission to review the working of the Constitution, headed by <strong>M.N. Venkatachaliah</strong>, recommended the appointment of Lokpal and Lokayuktas, with the office of the Prime Minister kept outside the Lokpal's purview.</li>
+ <li>In 2005 the <strong>second ARC</strong>, headed by Veerappa Moily, recommended the same institutions at the centre and in the states.</li>
+ <li>In 2011 a group of ministers under Pranab Mukherjee endorsed their creation, and in the same year the <em>India Against Corruption</em> movement led by <strong>Anna Hazare</strong> brought decisive public pressure.</li>
+ <li>India is a signatory to the United Nations Convention against Corruption, which obliged the government to act.</li>
+</ul>
+
+<h3>The Lokpal and Lokayuktas Act, 2013</h3>
+
+<table>
+ <tbody>
+ <tr><td>Status</td><td>Statutory body under the Lokpal and Lokayuktas Act, 2013; Lokpal at the centre, Lokayukta in the states</td></tr>
+ <tr><td>Composition</td><td>A chairperson and up to eight members, of whom half are judicial members; at least half the members to be from SCs, STs, OBCs, minorities and women</td></tr>
+ <tr><td>Judicial member</td><td>A serving or retired judge of the Supreme Court, or a serving or retired Chief Justice of a High Court</td></tr>
+ <tr><td>Non-judicial member</td><td>An eminent person with at least twenty-five years of experience and special knowledge of anti-corruption policy, public administration, vigilance, finance, insurance, banking, law or management</td></tr>
+ <tr><td>Appointment</td><td>By the President, on the recommendation of a selection committee of the Prime Minister, the Speaker of the Lok Sabha, the Leader of the Opposition in the Lok Sabha, the Chief Justice of India or a judge nominated by him, and an eminent jurist</td></tr>
+ </tbody>
+</table>
+
+<p>The Act brings the Prime Minister within jurisdiction, subject to exclusions for international relations, external and internal security, public order, atomic energy and space, and to procedural safeguards requiring a substantial majority of the full bench to initiate an inquiry. Its weaknesses are widely noted: the long delay in making the first appointment, the dependence on the government for staff and investigating machinery, the absence of constitutional status, and the fact that an institution created to check corruption is appointed by a committee dominated by the executive it is meant to check.</p>
+
+<h3>The Central Vigilance Commission</h3>
+
+<p>The CVC was set up on the recommendation of the Santhanam Committee on Prevention of Corruption in 1964 as an executive body, and was given statutory status by the Central Vigilance Commission Act, 2003, following the Supreme Court's direction in the Vineet Narain case. It is a multi-member body consisting of a Central Vigilance Commissioner and two Vigilance Commissioners, appointed by the President on the recommendation of a committee of the Prime Minister, the Home Minister and the Leader of the Opposition. It supervises the vigilance administration of central government organisations, exercises superintendence over the Delhi Special Police Establishment in corruption cases, and tenders advice on disciplinary proceedings. Its central weakness is that its recommendations are advisory, so the department it advises decides whether to act.</p>
+
+<h2>The Citizen and the Administration</h2>
+
+<h3>Citizens' Charters</h3>
+
+<p>A citizens' charter is a public declaration by an organisation of the services it provides, the standards to which it will provide them, the time limits it accepts, the remedy available when it fails and the expectations it has of the citizen. Its logic is to convert a discretionary favour into a published entitlement, so that failure becomes visible and comparable.</p>
+
+<p>In India the initiative began in 1997 and now covers a large number of central and state agencies, with <strong>Sevottam</strong> developed as the assessment framework for service delivery. The recurring criticisms are that charters are drafted without consulting the citizens or the frontline staff who must deliver them, that they are not revised, that the standards are pitched to what the office already achieves, and above all that they are not legally enforceable, which reduces a charter to an advertisement.</p>
+
+<h3>Social Audit</h3>
+
+<p>Social audit is the counterpart of the official audit, and the difference is structural rather than procedural. <strong>Government audits</strong> are conducted in-house or by external professional auditing institutions, without significant involvement of the affected persons or intended beneficiaries; they assess output rather than outcome, that is, the quantity of work rather than its quality; and the arrangement is corruptible because those conducting the audit have no real stake in what they audit.</p>
+
+<p><strong>Social audits</strong> are conducted jointly by the government and the people, especially by those affected by or intended to benefit from the activity audited. Their principles are <strong>participation</strong>, a rights-based entitlement for all affected persons, and not merely their representatives, to take part in decision making and validation; and <strong>accountability</strong>, the immediate answerability of elected representatives and government functionaries to all concerned and affected people for action or inaction. The difficulties are real: there is a lack of uniformity and methodology in conducting them, and local factors affect their efficiency. The statutory social audit of MGNREGA works, and its limits show exactly where the method is strong and where it depends on the very local power it is auditing.</p>
+
+<h3>Civil Society</h3>
+
+<p>Civil society bodies supply what the formal machinery cannot: they identify the grievance before it reaches a forum, aggregate individual complaints into a pattern, sustain attention between elections, and supply the technical capacity that individual citizens lack. The MKSS campaign in Rajasthan, which began as a demand for wage records and ended in the national right to information, is the clearest Indian demonstration that accountability instruments are usually won from below rather than granted from above.</p>
+
+<h2>The Right to Information</h2>
+
+<p>RTI means access to reasonable information, files and documents concerning government operations and performance, available to citizens and to non-governmental organisations. It is the precondition of every other accountability mechanism, because a control that cannot see what was done cannot judge it.</p>
+
+<h3>Origins</h3>
+
+<ul>
+ <li><strong>Sweden</strong> was the first country to provide access to information as a constitutional provision, in 1766.</li>
+ <li>The <strong>United States</strong> granted the right through the Freedom of Information Act, 1966, a comprehensive law for transparency in public administration.</li>
+ <li>In <strong>India</strong>, the inherited obstacle was the <strong>Official Secrets Act, 1923</strong>, which gave administrators the discretion to decide what information to release and how much, producing an administration low in accountability, responsibility and transparency.</li>
+ <li>The Supreme Court laid the groundwork in <em>Raj Narain</em> (1976) and <em>S.P. Gupta</em> (1981), holding that no accountable government can survive without the right to information, and treating it as consistent with the fundamental rights under Articles 19 and 21. RTI in India is therefore an inferred constitutional right given statutory shape, not a concession by the legislature.</li>
+ <li>The <strong>World Bank</strong> has treated the right to information as an important element of good governance, and many countries regard it as a fundamental right because of its connection to freedom of speech and expression.</li>
+</ul>
+
+<h3>The Right to Information Act, 2005</h3>
+
+<p>The Act obliges every public authority to designate Public Information Officers, to disclose specified categories of information proactively under section 4 so that citizens need not ask, and to answer requests within <strong>thirty days</strong>, or within <strong>forty-eight hours</strong> where the information concerns the life or liberty of a person. Refusals are appealable within the authority and then to the Central or State Information Commission, which can order disclosure and impose penalties on the officer who withheld it. Section 8 lists the exemptions, including national security, foreign relations, commercial confidence, cabinet papers and personal information, subject to a public interest override.</p>
+
+<h3>Why It Matters</h3>
+
+<ul>
+ <li>Accountability is supplemented through the transparency RTI creates.</li>
+ <li>It counters a maladapted bureaucratic setup, reducing corruption and the status-quoist tendency of bureaucracy.</li>
+ <li>It serves the public interest by discouraging arbitrariness in administrative decision making.</li>
+ <li>It empowers people and raises rights consciousness among them.</li>
+ <li>It facilitates participation and makes bureaucracy democratic, accountable and responsive.</li>
+ <li>It admits honest public criticism into public administration and helps it adapt to the changing needs of the social system.</li>
+ <li>It is consonant with the public choice approach, which seeks to empower the citizen against the monopoly provider.</li>
+</ul>
+
+<h3>Limits and the 2019 Amendment</h3>
+
+<p>The practical problems are the pendency of appeals before information commissions, vacancies in those commissions, the wide use of section 8 exemptions, poor compliance with proactive disclosure under section 4 which forces citizens to file requests for what ought to be published, and the exposure of applicants in sensitive cases, which the absence of adequate whistle-blower protection makes serious.</p>
+
+<p>The structural change came with the <strong>Right to Information (Amendment) Act, 2019</strong>, which removed from the Act the provisions fixing the tenure and salary of the Chief Information Commissioner and the Information Commissioners, and empowered the central government to prescribe them by rules. Under the Right to Information Rules notified on 24 October 2019, the term was fixed at three years, and the central government retained discretion over allowances and service conditions not specifically covered, with its decisions binding and the power to relax the rules resting with it.</p>
+
+<p>The criticism is not about the numbers but about who sets them. An information commission whose members' tenure and terms are at the discretion of the government they adjudicate against has lost the security that made it an independent authority, which returns the topic to Finer's objection: an accountability institution dependent on the body it holds accountable is not an external control at all.</p>
+`,
 };
