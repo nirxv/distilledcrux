@@ -3496,4 +3496,311 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The conclusion an answer should reach is that the formal framework has been remarkably stable while the working balance has moved substantially, and that it has moved with the party system more than with any amendment. Indian federalism is best understood as a constitutional design whose centralising provisions are permanently available and only intermittently used, which makes the political conditions of their use as important a subject as the provisions themselves.</p>
 `,
+ 'union-government-administration': `
+<h2>The Shape of the Union Executive</h2>
+
+<p>The Union executive has a formal structure and a working one, and the gap between them is the subject of this topic. Formally, executive power vests in the <strong>President</strong>, who acts on the aid and advice of a <strong>Council of Ministers</strong> headed by the <strong>Prime Minister</strong>, and the machinery is run by the <strong>Central Secretariat</strong>, coordinated by the <strong>Cabinet Secretariat</strong>. In practice the balance among the Prime Minister, the cabinet, the PMO and the Cabinet Secretariat has shifted repeatedly with the personality of the Prime Minister and the arithmetic of Parliament, and describing that shift is what separates a marked answer from a recited one.</p>
+
+<h2>The President</h2>
+
+<p><strong>Article 53</strong> vests the executive power of the Union in the President, to be exercised by him directly or through officers subordinate to him. <strong>Article 74</strong> provides for a Council of Ministers with the Prime Minister at its head to aid and advise the President, who <em>shall</em> act in accordance with that advice, the 42nd and 44th Amendments having made the obligation explicit while permitting one reference back for reconsideration, after which the advice tendered again binds. <strong>Article 77</strong> provides that all executive action be expressed to be taken in the President's name, and authorises rules for the more convenient transaction of business and its allocation among ministers, which is the source of the Allocation of Business Rules and the Transaction of Business Rules. <strong>Article 78</strong> obliges the Prime Minister to communicate cabinet decisions to the President, furnish information he calls for, and submit for cabinet consideration any matter decided by a minister but not considered by the cabinet.</p>
+
+<h3>Election and Tenure</h3>
+
+<p>The President is elected indirectly by an electoral college of the elected members of both Houses of Parliament and of the legislative assemblies of the states and of Delhi and Puducherry, voting by single transferable vote with values weighted to secure parity between the Union and the states and uniformity among the states. He holds office for five years and may be removed only by impeachment for violation of the Constitution, by a process requiring a two-thirds majority of the total membership of each House.</p>
+
+<p>The indirect election is deliberate and is the constitutional foundation of the President's position: a directly elected head of state would possess a mandate rivalling the Prime Minister's, which is precisely what a parliamentary system cannot accommodate.</p>
+
+<h3>Powers</h3>
+
+<ul>
+ <li><strong>Executive</strong>: appointment of the Prime Minister and, on his advice, of other ministers; appointment of the Attorney General, the Comptroller and Auditor General, Governors, the Chief Election Commissioner, the chairman and members of the Union Public Service Commission and the Finance Commission; administration of Union Territories; and the conduct of the business of government through rules made under Article 77.</li>
+ <li><strong>Legislative</strong>: summoning, proroguing and dissolving Parliament; addressing it; assenting to, withholding assent from, or returning Bills; nominating members; and promulgating ordinances.</li>
+ <li><strong>Financial</strong>: money bills require his prior recommendation, the annual financial statement is laid before Parliament on his direction, and he constitutes the Finance Commission.</li>
+ <li><strong>Judicial</strong>: appointment of judges; the power under Article 72 to grant pardons, reprieves, respites and remissions, and to suspend, remit or commute sentences; and the power to seek the Supreme Court's opinion on a question of law or fact of public importance.</li>
+ <li><strong>Emergency</strong>: proclamations under Articles 352, 356 and 360, treated in the note on the constitutional framework.</li>
+</ul>
+
+<h3>Where Discretion Survives</h3>
+
+<p>An office bound to accept advice nonetheless retains judgement in a few situations, and these are the examinable ones.</p>
+
+<ul>
+ <li><strong>Appointment of a Prime Minister</strong> where no party or pre-poll alliance has a clear majority, the President deciding whom to invite and on what terms.</li>
+ <li><strong>Dismissal of a ministry</strong> that has lost the confidence of the House and declines to resign.</li>
+ <li><strong>Dissolution</strong> of the House on the advice of a Prime Minister who has himself lost its confidence, where the President may test whether an alternative government is available.</li>
+ <li><strong>The suspensive veto and the pocket veto.</strong> The President may return a Bill other than a money Bill for reconsideration once, and must assent if it is passed again; and since no time limit is prescribed for assent, he may decline to act, which is the so-called pocket veto exercised in the case of the Indian Post Office (Amendment) Bill.</li>
+ <li><strong>The reference back under Article 74</strong>, which is a real if limited power, since a government whose advice is returned must consider the public consequence of tendering it again.</li>
+</ul>
+
+<p>The right formulation for an answer is that the President is a constitutional head whose influence is a function of circumstance: negligible where a government commands a stable majority, and decisive where it does not. The office is insurance against the failure of the party system rather than a participant in its ordinary working.</p>
+
+<h2>The Vice-President</h2>
+
+<p>The Vice-President is elected by an electoral college of the members of both Houses of Parliament, including nominated members, by single transferable vote, for five years. He is <em>ex officio</em> Chairman of the Council of States, in which capacity he presides over its sittings and regulates its business, and he acts as President during a vacancy in that office or when the President is unable to discharge his functions.</p>
+
+<p>The office is a constitutional device of some elegance: it supplies continuity in the headship of state without requiring a fresh election, and it occupies its holder in the meantime with a real function, presiding over the Council of States, rather than leaving him idle. Its one structural oddity is that the presiding officer of the house representing the states is not himself a member of it and is elected by both Houses together.</p>
+
+<h2>The Prime Minister</h2>
+
+<p>The Prime Minister is the head of the real executive. He is appointed by the President, who in ordinary circumstances has no choice but to invite the leader of the party or coalition commanding a majority in the House of the People.</p>
+
+<h3>Powers</h3>
+
+<ul>
+ <li><strong>Over the ministry</strong>: recommending appointment and removal of ministers, allocating and reallocating portfolios, presiding over the cabinet and determining its agenda. His resignation dissolves the entire Council of Ministers, which no other resignation does.</li>
+ <li><strong>Over the administration</strong>: he heads the Ministry of Personnel, Public Grievances and Pensions, chairs the Appointments Committee of the Cabinet through which senior appointments are cleared, and chairs NITI Aayog.</li>
+ <li><strong>Over Parliament</strong>: he advises the President on summoning, prorogation and dissolution, and is the government's principal spokesman in the House.</li>
+ <li><strong>Over the relationship with the President</strong>, through the duty under Article 78 to communicate decisions and furnish information, which makes him the sole channel between the two executives.</li>
+</ul>
+
+<h3>Prime Ministerial Government?</h3>
+
+<p>The question whether cabinet government has become prime ministerial government is a standing one in this topic. The case that it has rests on the Prime Minister's control of appointments and portfolios, the growth of the PMO into a policy centre, the decline in the frequency and substance of full cabinet meetings in favour of committees and informal consultation, the personalisation of electoral politics, and the direct access of the Prime Minister's office to departments.</p>
+
+<p>The case against rests on the continuing need to hold a coalition or a party together, the political weight of senior colleagues who cannot be removed without cost, federal constraints where states are governed by other parties, and the fact that collective responsibility remains the constitutional rule whatever the practice. The defensible conclusion is that the balance is not fixed by the Constitution and has tracked the electoral arithmetic: prime ministerial where a single party commands a secure majority, more genuinely collegial under coalitions.</p>
+
+<h2>The Council of Ministers</h2>
+
+<p>The Council of Ministers comprises <strong>Cabinet Ministers</strong>, who head major portfolios and attend cabinet meetings; <strong>Ministers of State</strong>, who may hold independent charge of a department or assist a cabinet minister; and <strong>Deputy Ministers</strong>, who assist and do not attend the cabinet. The <strong>cabinet</strong> is thus the inner body of the Council, and the distinction, which the Constitution did not originally draw, was inserted into Article 352 by the 44th Amendment.</p>
+
+<p>Every minister must be or become a member of either House within six months. The <strong>91st Amendment</strong> caps the total number of ministers at fifteen per cent of the strength of the House of the People, which was a response to the practice of enlarging ministries to secure coalition support.</p>
+
+<p><strong>Collective responsibility</strong> to the House of the People binds the Council: the ministry stands or falls together, cabinet decisions bind every minister whether present or not, and a minister who cannot defend a decision publicly must resign. <strong>Individual responsibility</strong> makes each minister answerable for his department, and it is the mechanism through which the permanent service is held to account at all.</p>
+
+<h3>Cabinet Committees</h3>
+
+<p>Cabinet committees exist to relieve the cabinet of detail and to secure inter-departmental agreement before a matter reaches it. The system is analogous to the British, and committees are a means of enhancing the capacity of the cabinet by dividing its work.</p>
+
+<ul>
+ <li><strong>Standing committees</strong> are permanent, formed to make policy in specific areas, of indeterminate duration, and terminable by a fresh decision of the cabinet or by the Prime Minister.</li>
+ <li><strong>Ad hoc committees</strong> are formed to resolve a particular problem referred to the cabinet or the Prime Minister, and dissolve automatically once they report or their task is complete.</li>
+</ul>
+
+<p>In the years after 1947 there were two standing committees. The <strong>Defence Committee</strong>, established in 1947 with five or six cabinet members, had its own secretariat organisation within the Cabinet Secretariat known as the military wing. The <strong>Economic Committee</strong> followed soon after with six members. Priority, rehabilitation and resource committees were added in due course, and the number of committees has risen and fallen with circumstance. The committees that matter most are those on political affairs, security, economic affairs and appointments, the last of which clears senior civil service appointments and is therefore the point at which the political executive touches the permanent service most directly.</p>
+
+<h2>The Cabinet Secretariat</h2>
+
+<p>The Cabinet Secretariat is the secretariat of the cabinet and the apex coordinating body of the Union government. The office of Cabinet Secretary is the successor to the Secretary of the Viceroy's Executive Council in the cabinet system, and it was created in India in 1950.</p>
+
+<h3>Evolution</h3>
+
+<p>Its composition has changed repeatedly with the reorganisation of the Union government's executive functions, and the sequence is worth knowing because it shows the Secretariat being used as a holding place for new functions until they acquired departments of their own.</p>
+
+<ul>
+ <li><strong>1954</strong>: the <strong>Organisation and Method</strong> division was established under the Cabinet Secretariat, transferred in <strong>1964</strong> to Home Affairs, and now sits with the Department of Administrative Reforms and Public Grievances in the Ministry of Personnel, Public Grievances and Pensions.</li>
+ <li><strong>1957</strong>: a <strong>defence wing</strong> was added to provide effective advice to the defence services; it was separated on <strong>1 July 1991</strong> and became the military wing of the Ministry of Defence.</li>
+ <li><strong>April 1961</strong>: the <strong>Department of Statistics</strong> was created within the Secretariat and transferred in February 1973 to the Ministry of Planning, later renamed the Ministry of Planning and Programme Implementation in July 1991.</li>
+ <li><strong>July 1965</strong>: the <strong>intelligence wing</strong> was set up to assist the Joint Intelligence Committee, and it continues under the Cabinet Secretariat.</li>
+ <li><strong>24 July 1981</strong>: the Department of Ocean Development was created under the Secretariat, becoming independent on 12 February 1982.</li>
+</ul>
+
+<p>The Secretariat originally oversaw administrative matters only, and that has changed: the <strong>Research and Analysis Wing</strong> and the <strong>Special Protection Group</strong> now form part of it, and its security wing has a secretary responsible for the protection of the Prime Minister and other dignitaries. The drift of intelligence and security functions into the body that coordinates the cabinet is a significant institutional fact, since it gives the Cabinet Secretary a role in national security assessment that the office did not originally have.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Providing secretariat assistance to the cabinet and the cabinet committees: preparing the agenda, circulating papers, recording decisions and communicating them.</li>
+ <li>Preparing proposals for the cabinet after consultation with the ministries and departments concerned, so that a matter reaching the cabinet has already been tested against the views of those affected.</li>
+ <li><strong>Monitoring and coordinating the implementation</strong> of cabinet decisions, which is the function that distinguishes a cabinet secretariat from a minute-taking office.</li>
+ <li>Preparing the papers connected with appointments the Prime Minister must make.</li>
+ <li>Handling matters the President or the Prime Minister wishes to place before the cabinet, proposals for the withdrawal of court cases by government, and proposals to modify a decision already taken by the cabinet.</li>
+ <li>Administering the Government of India (Allocation of Business) Rules and the Transaction of Business Rules, which determine which department does what.</li>
+</ul>
+
+<h3>The Cabinet Secretary</h3>
+
+<p>The Cabinet Secretary is the <strong>seniormost civil servant</strong> in the country and the most important figure in the cabinet system, sitting beside the Prime Minister during cabinet meetings to brief him on the items before it. He chairs the Committee of Secretaries and presides, when called upon, over conferences of the Chief Secretaries of the states.</p>
+
+<p>The report of the <strong>Gopalaswamy Ayyangar</strong> Committee on the reorganisation of the machinery of government (1949) framed the qualities the office required: selection on the basis of tact, initiative, efficiency and energy, and a holder interested, as head of the Cabinet Secretariat, in securing coordination in all matters, commanding the respect and confidence of all ranks of the civil services.</p>
+
+<p>He is head of the civil services and chief adviser to the Council of Ministers, the Prime Minister, the cabinet and its committees. He coordinates the activities of ministries and departments and so acts as the link between the PMO and the administrative departments, and as the connecting pin between the political part of government, the cabinet, and the apolitical machinery, the bureaucracy. His functions now extend to internal security and the sifting of intelligence reports, where it falls to him to make a coordinated assessment of a situation from the source reports. He is responsible for the fair administration of the services and for ensuring that unhealthy linkages do not develop within them. He has no role in judicial appointments.</p>
+
+<p>The office has no statutory powers of its own. Its authority is entirely derived, from proximity to the cabinet, from seniority in the service, and from the convening power that coordination confers, which is why its weight has varied so sharply with the standing of the PMO beside it.</p>
+
+<h2>The Prime Minister's Office</h2>
+
+<p>Before independence, the Governor-General's Executive Council was served by a small secretariat under the Secretary to the Governor-General. On <strong>15 August 1947</strong>, <strong>Jawaharlal Nehru</strong> established a personal secretariat, the <strong>Prime Minister's Secretariat</strong>, distinct from the office of Prime Minister, and was assisted through his seventeen years by his principal private secretary <strong>K. Ram</strong>. The body was later renamed the Prime Minister's Office and holds the status of a department of the Government of India under the Allocation of Business Rules, with no attached or subordinate office under it.</p>
+
+<h3>The Justification</h3>
+
+<p>In a parliamentary democracy the Prime Minister is the centre of power and responsibility, and in a crisis the decision is left to him, so he requires institutional help to decide quickly. The reasoning accepted in the literature is that a Prime Minister is entitled to an office of his own staffed by advisers loyal to him, distinct from the general machinery of government. The objection is the mirror image: an office loyal to the Prime Minister personally, interposed between him and departments headed by ministers, weakens both cabinet government and ministerial responsibility.</p>
+
+<h3>Evolution</h3>
+
+<ul>
+ <li><strong>Nehru.</strong> The Secretariat remained a personal office of modest size; policy coordination lay with the Cabinet Secretariat, and the cabinet functioned collegially.</li>
+ <li><strong>Indira Gandhi.</strong> Facing an eroded central authority and a cabinet not composed of like-minded colleagues, she needed both to establish pre-eminence in the cabinet and to address financial crisis, and required aid and advice from people who were not colleagues and could give professional assistance. She expanded the strength and authority of her secretary <strong>L.K. Jha</strong>, who took charge of her foreign engagements, and from that point the influence of the Cabinet Secretariat declined sharply. Jha's power drew the comment in the House from <strong>Hiren Mukherjee</strong> that the Prime Minister was surrounded by political upstarts and bureaucrats. Jha went on to become Governor of the Reserve Bank, and <strong>P.N. Haksar</strong> succeeded him, made more powerful than any other official, until he fell from favour after advising her to check the activities of Sanjay Gandhi.</li>
+ <li><strong>Morarji Desai (1977 to 1979).</strong> He favoured reducing the power of the office, renamed the Prime Minister's Secretariat the <strong>Prime Minister's Office</strong>, reduced its strength and made it subordinate to the Cabinet Secretariat. Its power and role diminished significantly.</li>
+ <li><strong>Indira Gandhi (1980 to 1984).</strong> Returning to office, she again made the PMO the hub of power, bringing <strong>P.C. Alexander</strong> back from the United Nations to head it.</li>
+ <li><strong>Rajiv Gandhi (1984 to 1989).</strong> He did not disturb what had been established, and the PMO remained more powerful than the Cabinet Secretariat.</li>
+</ul>
+
+<p>The pattern is the point rather than the personalities: the role and power of the PMO rise and fall with the working style of the Prime Minister, which means the balance between the two apex bodies is not settled by rule and cannot be, since neither has statutory authority over the other.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Dealing with all references that come to the Prime Minister under the Rules of Business.</li>
+ <li>Assisting the Prime Minister in his overall responsibilities as head of government, including liaison with Union ministers and with state governments on matters in which he takes an interest.</li>
+ <li>Assisting him in his responsibilities as chairman of NITI Aayog.</li>
+ <li>Handling the public relations side, including relations with the press and the public.</li>
+ <li>Assisting him in examining cases submitted for orders under the prescribed rules.</li>
+</ul>
+
+<h3>PMO and Cabinet Secretariat Compared</h3>
+
+<table>
+ <thead>
+ <tr><th></th><th>Cabinet Secretariat</th><th>Prime Minister's Office</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Serves</td><td>The cabinet as a collective body</td><td>The Prime Minister personally</td></tr>
+ <tr><td>Basis of authority</td><td>Institutional, through the Rules of Business</td><td>Derived from the Prime Minister's own position</td></tr>
+ <tr><td>Staffing</td><td>Career civil servants under the Cabinet Secretary</td><td>Officials chosen by the Prime Minister, including from outside the career service</td></tr>
+ <tr><td>Doctrinal fit</td><td>Supports collective responsibility</td><td>Tends towards prime ministerial government</td></tr>
+ <tr><td>Weight over time</td><td>Dominant under Nehru and Desai</td><td>Dominant from the later 1960s onwards</td></tr>
+ </tbody>
+</table>
+
+<h2>The Central Secretariat</h2>
+
+<p>The Central Secretariat is the collection of ministries and departments at the seat of the Union government, staffed by officials who advise ministers on policy, frame rules and supervise execution. It is a <strong>staff</strong> body rather than an operating one: it does not itself deliver services, and the distinction between it and the executive agencies below it is the organising idea of the whole structure.</p>
+
+<h3>Ministry and Department</h3>
+
+<p>The terms are often used synonymously and are not identical. A <strong>ministry</strong> is a political and parliamentary unit, headed by a minister, and is an office of Parliament in the sense that the minister answers for it there. A <strong>department</strong> more commonly indicates an operating arm of the public service rather than the political side. Ministries are government departments, but not every government department is a ministry: ministries are those departments headed by a minister in the government. Where a minister's charge is heavy, a ministry may comprise several departments.</p>
+
+<h3>Internal Structure</h3>
+
+<p>For the efficient disposal of business a department is divided into <strong>wings, divisions, branches and sections</strong>, with the section as the basic unit handling a defined subject. The hierarchy runs from the <strong>Secretary</strong>, the administrative head and principal adviser to the minister, through <strong>Additional</strong> and <strong>Joint Secretaries</strong>, each heading a wing, to <strong>Directors</strong> and <strong>Deputy Secretaries</strong> heading divisions, and <strong>Under Secretaries</strong> heading branches, with section officers and assistants below.</p>
+
+<p>The characteristic Indian feature is the <strong>section system</strong>, in which a case is built up from the bottom by an assistant, noted upon at each successive level, and decided at the level competent to decide it. Its merit is that every decision carries a recorded trail of reasoning; its defect is the number of levels a routine case must climb, which is the origin of most complaints about delay in Indian administration and the target of every proposal for desk officer systems and delegation.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Advising and assisting the minister in framing policies and programmes.</li>
+ <li>Collecting from field agencies and other sources the data on which policy must rest.</li>
+ <li>Framing legislation, rules and regulations.</li>
+ <li>Giving general direction and guidance to the executive agencies and supervising their work.</li>
+ <li>Sectoral planning and the formulation of budget proposals.</li>
+ <li>Coordinating with other ministries and with the states.</li>
+ <li>Answering to Parliament, which conditions everything else, since a secretariat exists in large part to enable a minister to answer.</li>
+</ul>
+
+<h3>How It Is Staffed</h3>
+
+<p>Two devices distinguish the Indian Central Secretariat from a permanent bureaucracy of the British kind.</p>
+
+<p>The <strong>tenure system</strong> brings officers from the states into the Union secretariat for a fixed period and returns them, on the reasoning that officers with field experience should staff the policy machinery and should not lose touch with the field by remaining at headquarters permanently. The intention is to prevent a secretariat class remote from implementation, which is the defect the arrangement was designed to avoid.</p>
+
+<p>The <strong>Central Staffing Scheme</strong> is the mechanism. It arranges for officers of the All India Services and of some Central Services to serve in the Union government as Deputy Secretary, Director, Joint Secretary, Additional Secretary and Secretary, distinct from their cadre postings. Officers are <strong>empanelled</strong> at each level on the basis of their appraisal reports, performance and seniority, must ordinarily have completed a minimum period of service and have a specified number of years left before retirement, and must obtain clearance from their parent cadre. The Department of Personnel and Training, as cadre-controlling authority for the Indian Administrative Service and nodal department for central staffing, invites nominations from Chief Secretaries and service authorities and prepares an offer list each year, while appointments at Joint Secretary level and above require the clearance of the <strong>Appointments Committee of the Cabinet</strong>, chaired by the Prime Minister. For Indian Administrative Service officers, a minimum period at Deputy Secretary or Director level under the Scheme has been made a condition of empanelment at Joint Secretary level.</p>
+
+<p>The arrangement has an inherent tension worth stating. The tenure system is meant to keep the secretariat connected to the field; empanelment and the Appointments Committee make central postings dependent on assessments controlled by the Centre, which gives officers a career interest in central favour that the framers of the tenure system did not intend and which bears directly on the neutrality question.</p>
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>Too many levels.</strong> The section system multiplies the stages through which a case passes, and the literature on administrative reform has recommended reduction of levels and delegation of authority for seventy years without substantially achieving either.</li>
+ <li><strong>Generalists in specialist roles.</strong> Secretaries move between unrelated ministries on tenure, arriving without domain knowledge and departing as they acquire it.</li>
+ <li><strong>Short tenures.</strong> Frequent transfer prevents both mastery and accountability for outcomes that mature slowly.</li>
+ <li><strong>File-bound decision-making</strong>, where the correctness of the process displaces the achievement of the result, and where the safest note is the one that recommends nothing.</li>
+ <li><strong>Separation from implementation.</strong> A secretariat that formulates policy without responsibility for delivering it produces policy that is elegant on paper and unworkable in the district, which is the case the tenure system was designed to answer and only partly does.</li>
+</ul>
+
+<h2>Types of Government Organisation</h2>
+
+<h3>Line, Staff and Auxiliary</h3>
+
+<ul>
+ <li><strong>Line agencies</strong> carry out the substantive work of government and deal directly with the public: the departments, corporations and boards that deliver services.</li>
+ <li><strong>Staff agencies</strong> advise, plan and think, and have no authority of their own over line agencies. The Cabinet Secretariat and the PMO are staff bodies in this sense.</li>
+ <li><strong>Auxiliary agencies</strong>, which <strong>John Gaus</strong> calls auxiliary technical staff services, serve the line departments rather than the public, performing functions such as the recruitment of personnel, contracting, purchasing, storing and issuing supplies, and the keeping of accounts, so that line agencies may perform the primary duties for which they exist.</li>
+</ul>
+
+<p>Whether staff and auxiliary are genuinely distinct is disputed. <strong>Pfiffner</strong> sees no difference, defining staff functions broadly to include general, technical and auxiliary functions, and noting that both facilitate the work of the line departments and have no <em>locus standi</em> of their own. <strong>Willoughby</strong> distinguishes them: staff services are thinking, observing, planning and advising agencies, while auxiliary services are operating services such as recruiting boards and purchasing agencies; and staff is concerned with major policy and reorganisation where auxiliary agencies do not deal with major substantive policy.</p>
+
+<p>The distinction matters administratively because staff agencies exercise influence without responsibility. They advise the chief executive, their advice carries his authority, and the line department that must act has no corresponding right of appeal, which is the classic source of line-staff conflict.</p>
+
+<h3>Integrated and Disintegrated Systems</h3>
+
+<p>Government operations may be organised on the <strong>disintegrated</strong> or independent principle, in which each service or agency is treated as an independent unit not related to the others, or on the <strong>integrated</strong> or departmental principle, in which agencies are grouped under departments headed by a minister answerable to the legislature. India follows the integrated principle, which is what makes ministerial responsibility possible: a structure of independent agencies has no single person who can be held to account for the whole.</p>
+
+<h3>The Three Types of Line Agency</h3>
+
+<ul>
+ <li><strong>Departments</strong>, financed from the budget, staffed by civil servants, subject to full ministerial and parliamentary control and to the ordinary financial and personnel rules. Maximum accountability, minimum flexibility.</li>
+ <li><strong>Public corporations</strong>, created by statute with a separate legal personality, their own funds, freedom from the ordinary civil service and financial rules, and a board rather than a minister in direct charge. Maximum flexibility, and a corresponding problem of accountability, since the minister answers for a body he does not run.</li>
+ <li><strong>Boards and commissions</strong>, plural-headed bodies used where independence from the executive is the object, as with the Public Service Commissions and the Election Commission, or where expertise and continuity are needed, as with regulatory authorities. Their strength is insulation; their weakness is that plural headship slows decision and diffuses responsibility.</li>
+</ul>
+
+
+<h3>The Departmental Undertaking</h3>
+
+<p>The departmental form organises a commercial or industrial activity as an ordinary department of government, financed from the budget, staffed by civil servants, and subject to the same financial, audit and personnel rules as any other department, with a minister answerable for it in Parliament. The posts and telegraphs and the railways were run on this pattern.</p>
+
+<p>Its merits are maximum public accountability, full parliamentary and audit control, and the direct application of government policy. Its defects are the absence of commercial flexibility: revenues go to the Consolidated Fund and expenditure requires appropriation, so the undertaking cannot retain surpluses or vary prices quickly; recruitment and pay follow civil service rules unsuited to commercial work; and decisions requiring speed pass through a procedure designed for propriety rather than for trade.</p>
+
+<h3>The Public Corporation</h3>
+
+<p>A corporation is a corporate body created by a special Act of the legislature, with its powers, duties, privileges and pattern of management defined by that Act. In law a corporation is a body of natural persons legally recognised and enabled to act as a single person.</p>
+
+<p>The form emerged from crisis rather than from design. As <strong>T.H. O'Brien</strong> observes, it was the result of "accident and the spirit of compromise" rather than of deliberate constitutional invention, arising in the conditions created by the world wars and the Great Depression. It represents a compromise between laissez faire and strict bureaucratic control, and in practice corporations are revenue-producing enterprises of public importance.</p>
+
+<ul>
+ <li><strong>W.A. Robson</strong> calls the public corporation "the most important innovation in political organisation and constitutional practice".</li>
+ <li><strong>Herbert Morrison</strong> defines it as "a combination of public ownership, public accountability and business management for public ends", which is the formulation to quote because it names all three elements the form tries to hold together.</li>
+ <li><strong>Roosevelt</strong> describes it as "an organisation which is located with the power of the government but is possessed of the flexibility of private enterprise".</li>
+ <li><strong>Marshall Dimock</strong>: "a public owned enterprise that has been chartered under federal, state or local law for a particular business or financial purpose".</li>
+ <li><strong>M.C. Shukla</strong>: "a corporate body created by legislature, with defined powers and functions, and financially independent, having a clear-cut jurisdiction over a specified area or over a particular type of commercial activity".</li>
+</ul>
+
+<p>Corporations are created mainly for three purposes: the extension or facilitation of credit, the management and operation of industrial or commercial undertakings, and the administration of activities of a business character where governmental control is nonetheless required.</p>
+
+<p>Their advantage is autonomy in finance, personnel and day-to-day management, with accountability preserved through the founding statute, the audit of accounts and the minister's answerability for policy. Their difficulty is the same autonomy viewed from the other side: a minister answerable for a body he cannot direct, a legislature restricted to questions of policy rather than management, and a board whose independence can shade into insulation from any control at all.</p>
+
+<h3>The Government Company</h3>
+
+<p>The government company is registered under the ordinary company law, with the government holding the whole or a majority of the share capital, and it is the form most used in India because it can be created by executive decision without waiting for a statute.</p>
+
+<p>Its advantages are the flexibility of the company form, freedom from the detailed procedure of departmental finance, and the ability to invest heavily in research and development so that new designs and better products may be produced, which a department cannot readily do.</p>
+
+<p>The criticisms are serious and worth stating fully, because this is the form through which most public enterprise in India is conducted.</p>
+
+<ul>
+ <li>The company <strong>evades the constitutional responsibility</strong> that a fully state-controlled enterprise owes to the government and Parliament in a democratic society. A structure chosen partly because it escapes parliamentary procedure has, by that choice, escaped parliamentary control.</li>
+ <li>The form is in a sense a fiction: ultimately most of the functions normally vested in shareholders and management are reserved to the government under the statute establishing the company, so the commercial autonomy is nominal where it matters.</li>
+ <li>Formation and registration involve a long and complicated procedure, with legal documents and formalities requiring chartered accountants and company secretaries, which raises the cost of formation.</li>
+ <li>Companies are regulated under the companies legislation, and public limited companies in particular must complete extensive formalities, non-compliance attracting heavy penalties that affect smooth functioning.</li>
+ <li>Policy decisions are taken at board meetings subject to procedural formalities that are time-consuming and may delay action.</li>
+</ul>
+
+<table>
+ <thead>
+ <tr><th></th><th>Departmental undertaking</th><th>Statutory corporation</th><th>Government company</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Created by</td><td>Executive decision</td><td>A special Act of the legislature</td><td>Registration under company law</td></tr>
+ <tr><td>Legal personality</td><td>None separate from government</td><td>Separate, defined by its statute</td><td>Separate, under company law</td></tr>
+ <tr><td>Finance</td><td>Budget appropriation; receipts to the Consolidated Fund</td><td>Own funds; may borrow within statutory limits</td><td>Share capital and borrowing</td></tr>
+ <tr><td>Staff</td><td>Civil servants</td><td>Own employees outside civil service rules</td><td>Own employees</td></tr>
+ <tr><td>Audit</td><td>Ordinary government audit</td><td>As provided by the statute</td><td>Company auditors, with CAG powers of supplementary audit</td></tr>
+ <tr><td>Accountability</td><td>Highest: full ministerial and parliamentary control</td><td>Through the statute and ministerial answerability for policy</td><td>Weakest, which is the standing objection to the form</td></tr>
+ <tr><td>Flexibility</td><td>Lowest</td><td>Substantial</td><td>Highest</td></tr>
+ </tbody>
+</table>
+
+<h3>The Grouping of Ministries</h3>
+
+<p>Ministries are grouped into systems of closely related work, each characterised by a distinct function or line of activity, a vertical structure with specialised persons and institutions at each level of the hierarchy, and distinct centralised channels of authority and communication through which instructions descend and reports ascend. The usual groupings cover political and legal affairs, finance and trade, culture and education, industry and communications, agriculture and water resources, foreign affairs, and defence.</p>
+
+<p>The status of a minister within the machinery is high and the responsibility correspondingly large, since he must survey not only the work of his ministry but that of its subordinate counterparts throughout the country. That span is the practical reason cabinet committees and the Cabinet Secretariat exist: no minister can in fact survey the whole of what he formally answers for, and coordination has to be supplied institutionally rather than personally.</p>
+
+<h3>Attached and Subordinate Offices</h3>
+
+<p>Below the secretariat, a ministry is served by <strong>attached offices</strong>, which provide executive direction for the implementation of policy and technical advice on it, typically headed by a director general or equivalent and located at the seat of government; and by <strong>subordinate offices</strong>, which are the field agencies that actually execute, operating under the general direction of the attached office or the ministry.</p>
+
+<p>The three-layer arrangement, secretariat for policy, attached office for direction, subordinate office for execution, is the structural expression of the staff and line distinction. Its recurring difficulty is that the secretariat's authority over bodies it does not manage is exercised through correspondence rather than command, so the gap between a policy decided in the ministry and an action taken in the field is wider than the organisation chart suggests.</p>
+`,
 };
