@@ -3560,6 +3560,13 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The case against rests on the continuing need to hold a coalition or a party together, the political weight of senior colleagues who cannot be removed without cost, federal constraints where states are governed by other parties, and the fact that collective responsibility remains the constitutional rule whatever the practice. The defensible conclusion is that the balance is not fixed by the Constitution and has tracked the electoral arithmetic: prime ministerial where a single party commands a secure majority, more genuinely collegial under coalitions.</p>
 
+
+<h3>The Chief Minister's Office</h3>
+
+<p>Every Chief Minister maintains a personal office, headed by a principal secretary or secretary of his choosing, which performs at the state level what the PMO performs at the Union: handling references that come to him, liaison with ministers and with the Union government, public relations, and the examination of cases submitted for his orders.</p>
+
+<p>Its growth raises the same question in the same form. Where the Chief Minister's Office becomes a centre of decision, the Chief Secretary's coordinating authority declines, departments learn to route proposals through the personal office rather than through the secretariat, and the minister in charge of a department finds decisions on his subject taken elsewhere. The state version of the problem is sharper than the Union's for one reason: the state secretariat is smaller, so a personal office of even modest size can dominate it.</p>
+
 <h2>The Council of Ministers</h2>
 
 <p>The Council of Ministers comprises <strong>Cabinet Ministers</strong>, who head major portfolios and attend cabinet meetings; <strong>Ministers of State</strong>, who may hold independent charge of a department or assist a cabinet minister; and <strong>Deputy Ministers</strong>, who assist and do not attend the cabinet. The <strong>cabinet</strong> is thus the inner body of the Council, and the distinction, which the Constitution did not originally draw, was inserted into Article 352 by the 44th Amendment.</p>
@@ -4111,5 +4118,286 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Indian planning succeeded at building things and failed at delivering them. It created an industrial base, an irrigation and power system and a food surplus, and it consistently overestimated the administrative capacity available to translate allocation into outcome. The shift from the Planning Commission to NITI Aayog changed the instrument from money to advice and the method from direction to competition, which addresses the federal objection squarely and leaves open whether an advisory body can move an administration that a directing one could not.</p>
 
 <p>The conclusion worth carrying into an answer is that the recurring weakness has never been the quality of the plans. It has been the gap between what was planned at the apex and what could be executed in the district, and no reorganisation of the apex has yet addressed the district end of that gap, which is why decentralised planning remains the unfinished part of the subject.</p>
+`,
+ 'state-government-administration': `
+<h2>Why State Administration Matters Most</h2>
+
+<p>Almost everything a citizen encounters as government is state government. Police, land records, school, dispensary, ration, electricity, water, the tehsil and the district office are all state subjects administered by state machinery. The Union frames much of the policy and supplies a share of the money, and the state delivers or fails to deliver. A paper on Indian administration that concentrates on the Union describes the part of the system the citizen meets least.</p>
+
+<p>The structure mirrors the Union's: a constitutional head, a real executive answerable to a legislature, a secretariat for policy, and executive agencies for implementation. Two features distinguish it. The Governor is appointed rather than elected, which introduces a Union presence into the state executive; and the state has, below the secretariat, a layer the Union does not have in the same form, the <strong>directorates</strong>, whose relationship with the secretariat is the central administrative question of this topic.</p>
+
+<h2>The Governor</h2>
+
+<p><strong>Article 153</strong> provides that there shall be a Governor for each state, and since the <strong>Seventh Amendment of 1956</strong> the same person may be appointed for two or more states. <strong>Article 154</strong> vests the executive power of the state in the Governor, exercised by him directly or through officers subordinate to him. He is a <strong>nominal head</strong>; actual power is exercised by the Council of Ministers headed by the Chief Minister, and <strong>Article 163</strong> provides for a Council of Ministers to aid and advise him except where he is required to act in his discretion.</p>
+
+<h3>Appointment</h3>
+
+<p>The method was contested in the Constituent Assembly, which considered various alternatives before settling on appointment by the President. The argument against an <strong>elected</strong> Governor was that he was to be a nominal head with no substantial power, so an election was thought inappropriate; the further objection, which is the stronger one, is that an elected Governor would possess a mandate rivalling the Chief Minister's, which a parliamentary system in the state cannot accommodate any more than at the Union.</p>
+
+<p>The qualifications are that the person be a citizen of India, have completed thirty-five years of age, hold no office of profit, and not be a member of Parliament or of any state legislature.</p>
+
+<p>Two <strong>conventions</strong> developed over time: that an <em>outsider</em> is preferred, someone who does not belong to the state to which he is appointed; and that the President consults the Chief Minister of the state concerned before appointing. Both have been violated in a number of cases, and the violations are the substance of the federal grievance about the office.</p>
+
+<h3>Powers</h3>
+
+<ul>
+ <li><strong>Executive.</strong> All executive decisions and actions of the state are formally taken in his name. He makes rules for the more convenient transaction of the business of the state government. He appoints the Chief Minister and, on the Chief Minister's advice, the other ministers, as well as the Advocate General and the chairman and members of constitutional bodies such as the State Public Service Commission and the State Election Commission. He acts as Chancellor of the universities in the state, which is the source of a recurring and distinctly modern set of disputes.</li>
+ <li><strong>Legislative.</strong> The state legislature consists of the legislative assembly, the legislative council where one exists, and the Governor, so he is an integral part of it. He summons, prorogues and dissolves the assembly. He nominates one-sixth of the members of the legislative council. He holds wide veto powers over bills passed by the legislature, being able to assent, withhold assent, return a bill other than a money bill for reconsideration, or reserve it for the consideration of the President under <strong>Article 200</strong>, upon which <strong>Article 201</strong> governs what follows.</li>
+ <li><strong>Financial.</strong> His prior recommendation is mandatory for introducing a money bill in the assembly; he causes the state budget to be laid before the legislature; and he constitutes the <strong>State Finance Commission</strong> every five years, which is the device through which resources reach panchayats and municipalities.</li>
+ <li><strong>Judicial.</strong> The President consults him on the appointment of judges of the High Court; he makes appointments, postings and promotions of district judges in consultation with the High Court; and he has power to pardon, though not in respect of a death sentence.</li>
+</ul>
+
+
+<h3>Assent to Bills and the Pocket Veto Controversy</h3>
+
+<p>Article 200 gives the Governor four options on a bill presented to him: assent; withhold assent; return it, if it is not a money bill, with a message asking the House to reconsider the bill or specified provisions, in which case he must assent if it is passed again; or reserve it for the consideration of the President. Article 201 then governs the President's decision on a reserved bill. The article requires a returned bill to be sent back <em>as soon as possible</em>, and prescribes no time limit for the other courses.</p>
+
+<p>That silence produced the most significant federal controversy of recent years. Because no period is prescribed, a Governor could decline to act at all, neither assenting, returning nor reserving, which amounted to a <strong>pocket veto</strong> over the legislation of an elected assembly. In <em>State of Punjab v. Principal Secretary to the Governor of Punjab</em> (2023) the Supreme Court disapproved indefinite delay and observed that it thwarted the normal course of lawmaking.</p>
+
+<p>The matter came to a head in <strong>April 2025</strong>, when the Court held the Tamil Nadu Governor's withholding of ten bills, some pending for over three years, to be illegal and erroneous. It held that the Governor has no veto power under Article 200, prescribed indicative timelines, an outer limit of three months for reserving a bill against ministerial advice and one month where he acts on advice, and used its power under Article 142 to treat the pending bills as having received assent.</p>
+
+<p>The episode is worth carrying into an answer because it is the clearest recent illustration of the structural problem with the office. The Constitution left the Governor's assent powers untimed on the assumption that a constitutional head would act promptly, and when that assumption failed the correction came from the courts rather than from amendment, which is the same pattern as <em>Bommai</em> on Article 356. In both cases a discretionary power available to the Union's appointee, dormant while both levels were governed by the same party, became contentious when they diverged, and was disciplined by judicial review rather than by political convention.</p>
+
+<h3>Where He Acts in His Discretion</h3>
+
+<ul>
+ <li>Appointing a Chief Minister where no party commands a clear majority.</li>
+ <li>Dismissing a ministry that has lost the confidence of the assembly and will not resign, and deciding whether to dissolve the assembly on the advice of a Chief Minister who has himself lost it.</li>
+ <li><strong>Reserving a bill for the President's consideration</strong> under Article 200, which is a real power because the reservation is not time-bound.</li>
+ <li><strong>Reporting to the President</strong> under Article 356 that the government of the state cannot be carried on in accordance with the Constitution, which is the most consequential thing the office does.</li>
+ <li>Seeking information from the Chief Minister on the administration of the state, and functions in respect of scheduled and tribal areas in the states where those provisions apply.</li>
+</ul>
+
+<h3>The Change After 1967</h3>
+
+<p>The position and role of the Governor altered profoundly after the fourth general election. While the Congress was dominant at the Centre and in most states, the Governor had no occasion to act on his own and played the part of a constitutional head. After <strong>1967</strong>, when the Congress was reduced to a minority in a number of states and governments were formed by combinations of parties, the conditions arose in which Governors could and did exercise discretion.</p>
+
+<p>The sequence matters because it shows the Governor's role being determined by the party system rather than by the Constitution, whose text did not change. The discretionary provisions lay dormant while one party held both levels and became live the moment the levels diverged, which is the same finding the federalism topic reaches by a different route.</p>
+
+<h3>The Commissions on the Office</h3>
+
+<p>The <strong>Sarkaria Commission</strong> recommended that the Governor be an eminent person in some walk of life, from outside the state, a detached figure not intimately connected with the state's local politics, and not deeply involved in politics generally or in the recent past; that a person belonging to the party in power at the Centre should not be appointed Governor in a state governed by another party; and that after demitting office he should not hold an office of profit or return to active politics. The Commission's own record notes that the recommendation on appointment was not accepted.</p>
+
+<p>The <strong>Punchhi Commission</strong> pressed further, recommending among other things that the Governor's discretion be confined and that his removal not be at pleasure alone. <em>S.R. Bommai</em> completed the picture from the judicial side by making the Governor's report reviewable and establishing that the floor of the assembly, not the Governor's opinion, determines whether a ministry retains a majority.</p>
+
+<h3>Assessment</h3>
+
+<p>The office is defensible in principle and problematic in practice. A constitutional head who can insist on a floor test, refuse to dissolve an assembly while an alternative government exists, and report a genuine breakdown is a safeguard the federal structure needs. The difficulty is that the same office is filled by the Union, held at its pleasure, and often occupied by a politician with a continuing career, so the safeguard and the instrument of central intervention are the same person. Every recommendation made on the subject for sixty years has addressed that single problem, and none has been accepted in the form proposed.</p>
+
+<h2>The Chief Minister</h2>
+
+<p>The Chief Minister symbolises the ruling power structure and wields more authority than anyone else in the state. He is the actual executive head of the state government.</p>
+
+<p><strong>Article 164</strong> provides that the Chief Minister is appointed by the Governor and the other ministers by the Governor on the Chief Minister's advice. The leader of the majority party in the assembly must be invited to form the government, and so long as that party holds an absolute majority the Governor has little choice. Where no party holds an absolute majority the situation becomes fluid, no clear convention has been established, and the Governor must use discretion.</p>
+
+<h3>Powers</h3>
+
+<ul>
+ <li><strong>Forming the ministry.</strong> It is his privilege to choose his team, subject to the political standing of other leaders in the party: he cannot ignore senior figures or the leaders of groups within it. His resignation entails the resignation of the entire ministry, so he is, in the phrase used in the literature, the creator and destroyer of the whole Council of Ministers.</li>
+ <li><strong>Allocation of portfolios</strong>, which he decides and distributes, and may reallocate.</li>
+ <li><strong>Presiding over the cabinet</strong> as <em>de facto</em> executive head, setting its agenda and guiding its decisions.</li>
+ <li><strong>Relations with the Governor</strong>, being the channel through which decisions are communicated and information furnished, mirroring Article 78 at the Union.</li>
+ <li><strong>Leadership of the administration</strong>, through control of the General Administration Department and of senior postings, which is where his authority over the permanent service is exercised.</li>
+ <li><strong>Relations with the Centre</strong>, since he is the state's principal negotiator in the NITI Aayog Governing Council, the Inter-State Council, the GST Council and in every dealing with Union ministries.</li>
+</ul>
+
+<p>The Chief Minister's position within his state is in some respects stronger than the Prime Minister's within the Union, because the state cabinet is smaller, the party organisation in a state is often more directly under his control, and there is no state counterpart to the independent institutional weight of the Union's senior ministries. It is weaker in one decisive respect: he heads a government whose resources, and in some circumstances whose continuance, depend on the Union.</p>
+
+<h2>The Council of Ministers</h2>
+
+<p>The state Council of Ministers is collectively responsible to the legislative assembly and individually responsible to the Governor for the departments in each minister's charge. Ministers must be or become members of the legislature within six months. The <strong>91st Amendment</strong> caps the size of a state ministry at fifteen per cent of the strength of the assembly, subject to a minimum of twelve.</p>
+
+<p>Its working differs from the Union's chiefly in the weight of the individual minister. A state minister deals directly with a department whose field machinery reaches every district, and with legislators whose constituency demands are specific and immediate, so the pressure on transfer, posting and the location of works is more intense and more personal than at the Union. That pressure is the practical source of most of what is criticised as politicisation of state administration.</p>
+
+<h2>The State Secretariat</h2>
+
+<p>The three essential components of the state government are the <strong>minister</strong>, the <strong>secretary</strong> and the <strong>executive head</strong>. The minister's most important function is to frame policy; the secretary supplies the data on which policy is based and oversees its implementation; and the executive head gives practical shape to the decisions of ministers and secretaries. The secretariat is the conglomeration of administrative departments that serves the first two.</p>
+
+<h3>Organisation</h3>
+
+<p>The secretariat is divided into departments, each consisting of officers and office staff: a <strong>secretary</strong>, with additional or special secretaries, joint secretaries, deputy secretaries, under secretaries and officers on special duty. The number of departments varies considerably from state to state, from about eleven to about thirty-five, and typically includes General Administration, Home, Revenue, Finance, Law, Agriculture and the development departments.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Advising and assisting the minister in formulating the policies and programmes of the government.</li>
+ <li>Collecting the data required for that formulation from field agencies and other sources.</li>
+ <li>Giving general direction and guidance to the directorates and other field agencies for efficient execution.</li>
+ <li>Framing legislation and rules, and preparing the departmental budget.</li>
+ <li>Coordinating between departments and with the Union government.</li>
+ <li>Supervising and evaluating the work of the executive agencies, and answering to the legislature for it.</li>
+</ul>
+
+<p>The secretariat is the apex organisation of state administration because it performs all of these together, which is also the source of its characteristic defect: a body that advises, directs, coordinates, budgets and supervises will tend to draw decisions upward, and the levels through which a case must pass multiply accordingly.</p>
+
+
+<h3>Criticism</h3>
+
+<ul>
+ <li><strong>Too many levels.</strong> A case passes through the section, under secretary, deputy secretary, joint secretary and secretary before reaching the minister, and frequently through the directorate before that, so a routine proposal may be examined at eight or nine points. Every reform report for six decades has recommended reducing the levels and delegating authority downward.</li>
+ <li><strong>Overload at the top.</strong> Because delegation is weak, matters of small consequence reach the Chief Secretary and the Chief Minister, which crowds out the strategic work only they can do.</li>
+ <li><strong>Distance from the field.</strong> Secretariat officers frame schemes for districts they have not recently served in, and the information reaching them has passed through the directorate and the district and been shaped at each stage.</li>
+ <li><strong>Generalist dominance.</strong> The senior secretariat posts are largely held by generalist administrators, and technical departments are therefore headed at the policy level by officers without the technical background, which is the state-level form of the Fulton controversy.</li>
+ <li><strong>Tenure.</strong> Frequent transfer of secretaries prevents both mastery of a subject and accountability for outcomes that take years, and the Supreme Court's direction that fixed minimum tenures be prescribed has been implemented unevenly.</li>
+ <li><strong>Politicisation of posting.</strong> Because the General Administration Department under the Chief Minister controls transfers, posting becomes an instrument of political management, which is the single most corrosive feature of state administration and the one least amenable to structural reform.</li>
+</ul>
+
+<h2>The Chief Secretary</h2>
+
+<p>The office was created in <strong>1799</strong> by <strong>Lord Wellesley</strong>, then Governor-General of Bengal, and the first holder was <strong>G.H. Barlow</strong>. It began as an office of the central government and in time disappeared from it, so that there is now no post in the Government of India equivalent to a Chief Secretary in a state. The Cabinet Secretary performs some of what a Chief Secretary does, and several of the remaining functions are distributed among the Home Ministry, the Ministry of Personnel and the Ministry of Finance.</p>
+
+<p>The Chief Secretary is the head of the State Secretariat and always holds charge of general administration, which forms part of the Chief Minister's own portfolio. His control extends over the other departments of the secretariat as well, and he is in reality the chief of the secretariat, which is why the literature calls him the kingpin of state administration.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li><strong>Principal adviser to the Chief Minister</strong> in all administrative matters. It is customary for the Chief Minister to consult him on appointments to senior secretary posts.</li>
+ <li><strong>Secretary to the state cabinet</strong>, preparing its agenda, attending its meetings, recording its decisions and following up their implementation.</li>
+ <li><strong>Head of the state civil service</strong>, in charge of the General Administration Department, which controls the transfer and posting of all Indian Administrative Service and state civil service officers, so that the entire staff of the department is under his control.</li>
+ <li><strong>Coordinator</strong>, as head of the secretariat responsible for coordination among all the secretaries, and chairman of several secretariat committees.</li>
+ <li><strong>Residuary authority.</strong> Under the Rules of Business he handles every matter not within the jurisdiction of any secretary.</li>
+ <li><strong>Crisis manager.</strong> In a crisis it falls to him to take immediate steps and coordinate the activity of the various departments.</li>
+</ul>
+
+<h3>Chief Secretary and Cabinet Secretary Compared</h3>
+
+<table>
+ <thead>
+ <tr><th></th><th>Chief Secretary</th><th>Cabinet Secretary</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Headship</td><td>Head of the State Secretariat as a whole</td><td>Head of the Cabinet Secretariat, but not of the Central Secretariat</td></tr>
+ <tr><td>Residuary work</td><td>Any portfolio not looked after by a department falls to him</td><td>Residuary responsibility rests with the PMO; a new subject arising goes to the PMO rather than to him</td></tr>
+ <tr><td>Crisis</td><td>The crisis officer of the state</td><td>The PMO handles crisis situations at the Union level</td></tr>
+ <tr><td>Civil service</td><td>Head of the state civil service, controlling postings through the GAD</td><td>Seniormost civil servant and head of the services, without comparable control over postings</td></tr>
+ </tbody>
+</table>
+
+<p>The comparison repays attention because it shows the same formal position producing different real authority. The Chief Secretary is more powerful <em>within his own government</em> than the Cabinet Secretary is within the Union, because at the Union the PMO has absorbed the residuary and crisis functions, while in the state no comparable office of the Chief Minister has grown to the same size. Where a Chief Minister's office does grow in that way, the Chief Secretary's position declines correspondingly, which is the state-level version of the PMO story.</p>
+
+<h2>The Directorates</h2>
+
+<p>The secretariat is concerned with policy-making; the execution of policy is the function of the executive department and its field agencies. The <strong>Simon Commission</strong> defined the executive department as an administrative unit separate from the secretariat, reaching its apex usually in a single officer such as the Director General of Police or the Chief Conservator of Forests, outside the secretariat altogether. Such a head of department is normally concerned with a single secretary to the government and a single minister, from whom orders and funds come.</p>
+
+<h3>Structure</h3>
+
+<p>There is generally a separate department for each activity of the state, and these give the executive directions needed to implement the policy laid down by the secretariat. Not every secretariat department has an executive department attached: <strong>Finance</strong> and <strong>Law</strong>, whose functions are advisory and controlling, have none, which is a useful illustration of the distinction between a staff department and a line one.</p>
+
+<p>The number and size of the heads of departments depend on the number of important subjects the state administers. They are generally styled <strong>directors</strong> or <strong>commissioners</strong>, assisted by additional, joint, deputy and assistant directors, and for smooth functioning the departments are organised into <strong>headquarters, divisions and districts</strong>.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Formulation of the departmental budget.</li>
+ <li>Acting as technical adviser to the minister.</li>
+ <li>Inspection and supervision of the work of the departmental district staff.</li>
+ <li>Allocation of grants according to the rules, including re-appropriation within prescribed limits.</li>
+ <li>Exercising disciplinary powers over subordinate officers according to the rules.</li>
+ <li>Execution of the department's programmes through its field machinery, and the collection of the information on which the secretariat's policy advice rests.</li>
+</ul>
+
+<h2>Secretariat and Directorate</h2>
+
+<p>The relationship between the two is the classic administrative problem of state government, and it is a recurring examination question.</p>
+
+<h3>The Two Governing Principles</h3>
+
+<ul>
+ <li><strong>Policy-making is the primary responsibility of the secretariat, and implementation that of the department.</strong></li>
+ <li><strong>The head of the department has complete control over the persons under him</strong>, subject to the rules governing conditions of service.</li>
+</ul>
+
+<h3>Why They Conflict</h3>
+
+<ul>
+ <li><strong>The line cannot be drawn cleanly.</strong> Policy and implementation shade into one another, and a decision about how a scheme is to run is simultaneously an implementation detail to the secretariat and a policy matter to the directorate.</li>
+ <li><strong>Generalist and specialist.</strong> The secretary is usually a generalist administrator, often of the Indian Administrative Service, and the head of department a technical specialist with a career in the subject. The specialist resents being supervised by someone who knows less of the field; the generalist replies that the specialist cannot see beyond it. This is the Fulton controversy restated in a state government.</li>
+ <li><strong>Duplication.</strong> Cases travel from the district to the directorate and then through the secretariat's levels again, so that the same proposal is examined twice by two hierarchies, which is the chief source of delay.</li>
+ <li><strong>Status and access.</strong> The secretary sits near the minister and the directorate does not, so the technical head's advice reaches the political executive filtered through an officer who may not accept it.</li>
+ <li><strong>Financial and personnel control.</strong> The directorate is responsible for results while the secretariat controls sanction and posting, which is responsibility without authority.</li>
+</ul>
+
+<h3>Three Approaches</h3>
+
+<ul>
+ <li><strong>The status quo approach</strong>, keeping the two separate on the classic division, on the argument that the secretariat's detachment is exactly what enables it to weigh a department's claims against others and against the state's finances.</li>
+ <li><strong>The bridging approach</strong>, which seeks to integrate the two. Its devices are conferring <strong>ex officio secretariat status</strong> on heads of departments, so that a director acts as secretary for his subject; posting technical officers into secretariat posts; and requiring joint consideration of proposals. The argument for ex officio status is that it saves time and frees the work of many procedural delays.</li>
+ <li><strong>The de-amalgamation approach</strong>, separating them again where merger has been tried and found to have produced a body too preoccupied with execution to do the secretariat's work.</li>
+</ul>
+
+<h3>Merger</h3>
+
+<p>Two state-level administrative reforms commissions have favoured merging the office of the head of department with the state secretariat, on three grounds: that it permits adequate interaction between the policy-making and policy-implementing agencies; that it expedites the sanction of schemes and of staff; and that it speeds up implementation and facilitates periodic review.</p>
+
+<p>The objection is that merger solves the problem by abolishing one of its terms. A secretariat that also executes loses the distance that allows it to appraise a proposal against competing claims, and the state acquires a set of powerful single-subject empires with no body above them able to say no. The balanced position, which is the one to argue in an answer, is that the case for merger is strongest in technical departments with a clear single purpose and weakest in departments whose work requires continual trade-offs against other departments.</p>
+
+<h3>What the Second ARC Recommended</h3>
+
+<ul>
+ <li>Clearer demarcation of functions between the secretariat and the heads of departments.</li>
+ <li>Greater delegation of financial and administrative powers to heads of departments, which addresses the responsibility-without-authority complaint directly.</li>
+ <li>Streamlining of secretariat procedures by reducing the number of hierarchical levels a case must climb.</li>
+ <li>Strengthening of monitoring mechanisms, so that the secretariat's supervision operates through results rather than through prior sanction.</li>
+</ul>
+
+<p>The direction of all four is the same: move the secretariat from <em>ex ante</em> control of transactions to <em>ex post</em> assessment of outcomes. It is the same prescription that outcome budgeting and performance management make elsewhere in this paper, and it fails for the same reason, that an administration whose accountability mechanisms examine propriety of process will not be reformed by instruments that measure results.</p>
+
+
+<h2>The State Legislature and Administration</h2>
+
+<p>The assembly is the body to which the state executive answers, and its instruments are the same as Parliament's: question hour, calling attention and adjournment motions, debate on the budget and on demands for grants, cut motions, and no-confidence. Its financial committees, the Public Accounts Committee, the Estimates Committee and the Committee on Public Undertakings, examine the Accountant General's reports and the estimates in the same way their central counterparts do.</p>
+
+<p>Its control is weaker than Parliament's for reasons of capacity rather than of design. State assemblies sit for fewer days, many have no committee system comparable to the departmentally related standing committees at the Union, members have little research support, and the volume of business passed without discussion is correspondingly larger. Where a legislative council exists, it provides a revising chamber; where it does not, the single chamber's scrutiny is all there is. The consequence is that the principal effective check on state administration is not the assembly but the combination of audit, the courts and the press.</p>
+
+<h2>The Machinery Between State and District</h2>
+
+<h3>The Board of Revenue</h3>
+
+<p>The Board of Revenue, where it survives, is the apex authority in revenue administration, exercising appellate and supervisory jurisdiction over revenue cases and general control over the land revenue system. Its origins are in Company administration, and its functions have been transferred in several states to a Financial Commissioner or to the Revenue Department of the secretariat, which is part of the wider shift by which revenue administration ceased to be the whole of administration and became one department among many.</p>
+
+<h3>The Divisional Commissioner</h3>
+
+<p>The office was created in <strong>1829</strong> as a link between the Collector and the Board of Revenue, and it retains that intermediary character. A division comprises several districts, and the Commissioner supervises the Collectors within it, hears appeals in revenue matters, coordinates development administration across districts, and inspects district offices.</p>
+
+<p>The office is the subject of a long-running argument. Against it: it is an additional tier between the district and the secretariat, adding delay in an already long chain, and improvements in communications have removed the reason it existed, since a Collector can now deal with the secretariat directly. For it: no secretariat can effectively supervise thirty or fifty districts, a Commissioner supplies the inspection and appellate work that would otherwise not be done, and inter-district coordination of development and disaster response needs an authority above the district. Several states abolished the post and a number later restored it, which is the most useful fact in the debate: the functions did not disappear with the office, and had to be placed somewhere.</p>
+
+<h2>Personnel and Finance at the State Level</h2>
+
+<h3>The State Public Service Commission</h3>
+
+<p>Constituted under the Constitution with the same protections as the Union Commission, the State Public Service Commission conducts recruitment to the state services and is consulted on promotions, transfers and disciplinary matters. Its independence rests on the manner of appointment and removal, a salary charged on the Consolidated Fund of the state, and the bar on further employment under the state government.</p>
+
+<p>The recurring criticisms are of the quality and timeliness of recruitment, of vacancies left unfilled for years while the commission itself lacks members, and of the vulnerability of appointments to the commission to political considerations, since the Governor appoints on the advice of the state government. The result in several states has been recruitment scandals of a kind that have no counterpart at the Union, which points to the difference that matters: the Union Commission's independence has been better protected in practice, not in law.</p>
+
+<h3>The State Civil Services</h3>
+
+<p>Below the All India Services, each state maintains its own civil, police and other services, recruited by the State Public Service Commission, from which a proportion of posts in the All India Services is filled by promotion. The relationship between the two is a standing source of grievance: a state civil service officer reaches by promotion in his fifties a rank an All India Service officer reaches by direct recruitment in his thirties, and the resulting resentment affects the working of the district and the secretariat alike.</p>
+
+<h3>State Finances</h3>
+
+<p>A state's revenue comes from its own taxes, from its share of central taxes as determined by the Finance Commission, from grants-in-aid, and from borrowing, which requires the Union's consent while the state is indebted to it. The structural imbalance described in the note on the constitutional framework is felt here as a permanent dependence: the state carries the expenditure responsibilities and the Union commands the elastic revenue bases.</p>
+
+<p>The <strong>State Finance Commission</strong>, constituted by the Governor every five years, performs for the panchayats and municipalities what the Union Finance Commission performs for the states, recommending the distribution of the state's revenues between the state and its local bodies. Its record is poor across most states: commissions have been constituted late, their reports acted on partially, and their recommendations treated as advisory in a way that no state would accept if the Union treated the Union Finance Commission's award similarly. That asymmetry is the sharpest available evidence for the proposition that states resist devolution downward while demanding it upward.</p>
+
+<h2>Union and State Administrative Relations</h2>
+
+<p>The constitutional provisions are treated in the note on the constitutional framework; what matters here is how they operate as administration.</p>
+
+<ul>
+ <li><strong>Directions.</strong> Articles 256 and 257 permit the Union to direct a state on compliance with Union laws and on specified matters, and Article 365 makes failure to comply a ground on which President's Rule may follow. In practice directions are rare and the relationship runs on correspondence, consultation and money rather than on command.</li>
+ <li><strong>The All India Services</strong> supply the senior personnel of state administration while being recruited and ultimately controlled by the Union, which is the most persistent structural tension in the relationship. The state government directs the officer; the Union holds his cadre, his empanelment and his prospects beyond the state.</li>
+ <li><strong>Deputation</strong> under the Central Staffing Scheme moves officers between the levels, which builds a common administrative culture and also creates a career interest in central favour.</li>
+ <li><strong>Central agencies</strong> operating within states, in investigation, taxation, and central armed police forces, raise the question of consent and of the state's primacy in public order, which is a State List subject.</li>
+ <li><strong>Centrally sponsored schemes</strong> are the largest practical instrument, shaping state expenditure on State List subjects through guidelines and matching shares.</li>
+ <li><strong>Consultative machinery</strong>, the Inter-State Council, the Zonal Councils, the NITI Aayog Governing Council and the GST Council, supplies the forums in which the two levels meet as parties rather than as superior and subordinate.</li>
+</ul>
+
+<p>The working conclusion is that Union-state administrative relations are conducted far more through <strong>finance and personnel</strong> than through the constitutional powers of direction. The articles describe a hierarchy that is seldom invoked; the schemes and the services describe an influence that operates continuously.</p>
+
+<h2>Assessment</h2>
+
+<p>State administration carries the largest share of what government actually does and receives the smallest share of attention, in the literature and in reform. The Union's apex has been reorganised repeatedly; the state secretariat's structure, its relationship with the directorates and the levels a case must climb have changed very little since the pattern was set.</p>
+
+<p>Three problems recur and are worth naming in any answer. The <strong>Governor's office</strong> remains the unresolved point at which Union appointment meets state autonomy. The <strong>secretariat-directorate relationship</strong> remains a duplication that every commission has identified and none has settled. And the <strong>politicisation of transfer and posting</strong>, which the Chief Minister's control of the General Administration Department makes possible, remains the mechanism by which political pressure reaches the individual officer. None of the three is a defect of design that better drafting would cure; each is a point where the Constitution left a genuine tension for practice to resolve, and practice has resolved it in favour of power rather than of administration.</p>
 `,
 };
