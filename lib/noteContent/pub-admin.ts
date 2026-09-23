@@ -5245,4 +5245,284 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The conclusion worth carrying into an answer is that Indian federalism's unfinished business is the third tier, and that the resistance comes from the states rather than from the Union. The same argument states make to the Centre about autonomy and untied resources is made to them by their own local bodies, and is answered in the same way.</p>
 `,
+ 'law-order-anti-corruption': `
+<h2>What Law and Order Means</h2>
+
+<p>Law and order is a state of society characterised by the prevention and detection of crime and the prosecution of criminals, together with the prevalence of peace and tranquillity, such that an average citizen has a sense of security about person and property inside the home and outside it. The <strong>World Bank</strong> treats it as a primary or core function of the state.</p>
+
+<h3>Why It Comes First</h3>
+
+<ul>
+ <li><strong>Historically</strong>, the state came into being to maintain order. In the social contract account, <strong>Hobbes</strong> described a stateless condition as anarchy in which everyone stands against all, from which people surrender part of their sovereignty to a authority that uses it to bring about order. The first form of the state in its evolution was the <strong>police state</strong>, whose responsibility was order alone, and the lawful ability to use force remains a defining characteristic of statehood.</li>
+ <li><strong>As a precondition for development.</strong> Foreign investment does not flow to states where order is weak. The literature contrasts Bihar and militancy-affected Jammu and Kashmir, where per capita income declined sharply, with <strong>Punjab</strong>, which emerged as one of India's most prosperous states after terrorism ended.</li>
+ <li><strong>As a manifestation of good governance.</strong> Order and progress are its two expressions, and there can be no progress without order. The relationship is a vicious circle: the absence of progress fuels further disorder, which is the standard explanation for the spread of Naxalism into the least developed regions.</li>
+</ul>
+
+<h3>The Paradox of Empowerment</h3>
+
+<p>One observation in the literature deserves to be carried into an answer because it explains something the security framing cannot. As Indian democracy empowers groups that history disempowered, <strong>conflict potential increases</strong> rather than decreases: Dalits and minorities become assertive of their rights, and the assertion is resisted, so that caste conflict of the kind seen in Bihar becomes a law and order problem.</p>
+
+<p>The implication is uncomfortable and important. Disorder of this kind is not a failure of democracy but a symptom of it working, and an administration that treats such conflict purely as a policing problem will suppress the assertion rather than secure the right. The law and order machinery in a society undergoing social change is therefore doing something more delicate than keeping the peace.</p>
+
+<h2>Police Administration</h2>
+
+<h3>The British Legacy</h3>
+
+<ul>
+ <li><strong>Warren Hastings</strong> created the office of District Collector in 1772 and placed law and order within its ambit.</li>
+ <li><strong>Lord Cornwallis</strong> established the <strong>daroga system</strong> of policing, taking police powers away from the zamindars, and in <strong>1792</strong> separated the police force from the district magistrate's control.</li>
+ <li>The British Indian government constituted a <strong>Police Commission in 1860</strong>, on whose recommendation the <strong>Indian Police Act of 1861</strong> was enacted, creating a force modelled on the <strong>Irish Constabulary</strong>.</li>
+</ul>
+
+<p>The choice of model is the most consequential fact in Indian police history. The Irish constabulary was an armed force designed to control a disaffected population on behalf of a government it did not consent to, not a civil police designed to serve a community. India inherited that design, and the 1861 Act still governs, which is why every reform commission for fifty years has begun by recommending its repeal.</p>
+
+<h3>The Structure Today</h3>
+
+<p>Police is an umbrella term covering the state police forces and the central police organisations including the armed police forces. The total strength exceeds <strong>18.5 lakh</strong>, of which roughly <strong>13 lakh</strong> are state police, distributed across more than <strong>12,000 police stations</strong>, with about ten lakh civil police supported by three lakh armed police personnel.</p>
+
+<p>At state level the <strong>teeth-to-tail ratio</strong> is about <strong>1:8</strong>: for every eight constables and head constables there is one officer of the rank of assistant sub-inspector and above, though the figure varies between states. The consequence is a promotion system with very little room in it, which is the structural source of the poor morale at the cutting edge. The <strong>Padmanabhaiah Committee</strong> of 2000 recommended that the ratio be brought to <strong>1:4</strong>, and the recommendation has not been implemented.</p>
+
+<h3>The Indian Police Service</h3>
+
+<p>The IPS is an All India Service, and its all-India character gives its members a particular advantage in handling problems that cross state boundaries. The <strong>Ministry of Home Affairs</strong> is its cadre-controlling authority, and the <strong>Sardar Vallabhbhai Patel National Police Academy</strong> at Hyderabad, established in <strong>1948</strong>, is the national training institution and has established itself as a centre of excellence.</p>
+
+<h3>The Central Armed Police Forces</h3>
+
+<p>Seven central police forces operate under the Union government and play a key role in managing internal security, a role that cross-border terrorism has made more demanding.</p>
+
+<ul>
+ <li><strong>Assam Rifles</strong>, known as the <em>Friends of the Hill People</em>, the oldest police force in the country, headquartered at Shillong, with the dual role of internal security in the north-east and guarding the border with Myanmar.</li>
+ <li><strong>Border Security Force</strong>, raised in 1965 and headquartered in New Delhi, responsible along the borders with Pakistan and Bangladesh, and deployed on the Line of Control under the operational control of the army.</li>
+ <li><strong>Central Reserve Police Force</strong>, originally raised in 1939, now handling law and order, counter-insurgency, anti-militancy and anti-terrorism, and assisting states in maintaining public order.</li>
+ <li><strong>Rapid Action Force</strong>, a specialised unit of the CRPF formed in 1992 by reorganising ten battalions, intended for communal and riot situations.</li>
+ <li>Alongside these are the forces for industrial security, border guarding in the Himalayan sector, and the specialised counter-terrorist force.</li>
+</ul>
+
+<p>The steady growth of central forces raises a federal question worth stating: public order is a State List subject, and a Union that maintains large forces deployed within states at their request, and sometimes in the face of their reluctance, exercises a practical authority the constitutional distribution did not contemplate.</p>
+
+
+<h3>What the Police Actually Do</h3>
+
+<p>The police are the only agency available twenty-four hours a day throughout the year to respond to a citizen in distress, and it is a mistake to understand their activity in one dimension. Four roles are usually distinguished.</p>
+
+<ul>
+ <li><strong>Law enforcement</strong>: control and reduction of crime through preventive action, detection and investigation.</li>
+ <li><strong>Maintenance of order</strong>, meaning peace and tranquillity, which includes protecting the constitutional and legal rights of citizens, resolving conflict, regulating movement, helping those in distress and generally promoting a sense of security.</li>
+ <li><strong>Internal security</strong>: dealing with sabotage, espionage, terrorism and political threats, and enforcing the special security laws.</li>
+ <li><strong>Social service and social change</strong>: enforcing social legislation such as the laws against immoral trafficking, dowry, bonded and child labour and untouchability, and thereby protecting the weaker sections. On this view the Indian police is a public service institution required to perform its role with something like missionary zeal.</li>
+</ul>
+
+<p>The fourth role is now contested. There is a demand that the police confine themselves to law and order and that the enforcement of social legislation pass to other agencies, so that such legislation may be implemented efficiently. The argument has force on both sides: a force trained to suppress disorder is poorly suited to protecting a bride from her in-laws, and no other agency in an Indian district has the reach or the coercive authority to do it either.</p>
+
+<h4>A Working Typology</h4>
+
+<p>The literature offers a rough classification of those the police deal with that is more useful than it first appears. A small number are law-abiding and require no external control to remain so. A small number are determined offenders, and the police role towards them is protective, keeping them out of circulation. The <strong>vast majority lie in between</strong> and behave well under some degree of control, for whom the mere visible presence of the police is what secures compliance.</p>
+
+<p>The administrative implication is that the greater part of policing is not detection or coercion but <em>presence</em>, which is precisely what the finding that 82 per cent of people never see a beat constable calls into question.</p>
+
+<h3>What the Indian Police Has Achieved</h3>
+
+<p>An assessment that lists only failures is not an assessment. The Indian police has controlled and reversed <strong>terrorism in Punjab</strong>, contained militancy in <strong>Jammu and Kashmir</strong>, and suppressed the earlier phase of <strong>Naxalism in West Bengal</strong>. It has conducted general elections of extraordinary scale, maintained order through communal provocations that might have destroyed a less resilient state, and done so under political conditions and with equipment and pay that no comparable force would accept. The failures set out above are real, and they are failures of an institution that has also done these things.</p>
+
+<h3>The Problems</h3>
+
+<p>The ills of the Indian police are wider than political interference, and an answer that treats interference as the whole problem misses most of it.</p>
+
+<ul>
+ <li><strong>Subordination without accountability.</strong> Police is a state subject, each state government controls its force, and <strong>no mechanism has been created to make the police accountable to the community</strong>. The force is subordinate to the state executive rather than an autonomous institution, so it succumbs to the wishes of political masters, most damagingly in sensitive situations.</li>
+ <li><strong>Unchecked power.</strong> The police may detain, arrest, lawfully carry arms and curtail liberty, and in the extreme may cause death. That power carries obvious potential for abuse, and <strong>there is no structural device to fix responsibility</strong> for its exercise.</li>
+ <li><strong>Corruption.</strong> It is so rampant that it is difficult even to have a first information report recorded without payment, with the consequence that crime goes unreported.</li>
+ <li><strong>Custodial violence</strong>, including torture, and the infliction on women and girls of custodial rape, molestation and severe harassment.</li>
+ <li><strong>Loss of public confidence.</strong> A survey cited in the literature found that <strong>71 per cent</strong> of people did not report crime because they believed the police could not or would not act, and <strong>82 per cent</strong> said no beat constable ever visited their village.</li>
+ <li><strong>Personnel failures.</strong> Recruitment of constables and, to a degree, sub-inspectors turns largely on physical fitness, while service attitude, the ability to deal with people, problem-solving, quick decision and the writing of a clear report go untested. The <strong>Gore Committee</strong> of 1974 found professional training neglected, and promotional avenues at the cutting-edge level remain poor.</li>
+ <li><strong>Obsolete methods.</strong> The state police apparatus is stagnant, its methods of investigation old and crude, and officers know very little of modern methods for handling communal riots, student agitations and violent disorder.</li>
+ <li><strong>Role confusion.</strong> The police have multiple and at times contradictory roles, as an arm of government, as a social service agency and as an instrument of development, and there is no consensus in a plural society on which should prevail.</li>
+</ul>
+
+<p>The figure of 71 per cent is the one to build an argument around. A police force whose principal failure is that people do not approach it has a legitimacy problem rather than a capacity problem, and equipment, numbers and training will not reach it.</p>
+
+<h3>Police Reform</h3>
+
+<ul>
+ <li><strong>The National Police Commission</strong> (1977 to 1981) produced eight reports and remains the most thorough examination. It recommended a <strong>State Security Commission</strong> to lay down policy guidelines, evaluate performance and act as a forum of appeal; a statutory tenure of <strong>four years for the Director General of Police</strong> with a transparent selection process; separation of the investigation wing from the law and order wing; and the replacement of the 1861 Act.</li>
+ <li>The <strong>Ribeiro Committee</strong> and the <strong>Padmanabhaiah Committee</strong> of 2000 followed, the latter recommending the improved officer ratio noted above.</li>
+ <li>The <strong>Police Act Drafting Committee</strong> under <strong>Soli Sorabjee</strong>, constituted in September 2005, submitted the <strong>Model Police Act, 2006</strong> in October 2006. Its guiding idea was a professional police <em>service</em> in a democratic society: efficient, effective, responsive to people's needs and accountable to the rule of law, governed by principles of impartiality and human rights norms, with particular attention to the protection of weaker sections and minorities. The shift from <em>force</em> to <em>service</em> is the whole argument in a word.</li>
+ <li><strong>Prakash Singh (2006).</strong> Two retired officers and a non-governmental organisation had petitioned in 1996 for implementation of the National Police Commission's recommendations, and after ten years the Supreme Court issued directions addressing <em>autonomy</em>, <em>accountability</em> and <em>efficiency</em>. The Court observed that whimsical transfer of police personnel both demoralises and politicises the force.</li>
+ <li><strong>Non-compliance.</strong> Two years after the directions, only the north-eastern states, Uttarakhand and Goa had complied; the larger states refused on one pretext or another. On <strong>16 May 2008</strong> the Supreme Court appointed a committee under retired Justice <strong>K.T. Thomas</strong> to oversee implementation.</li>
+</ul>
+
+<p>That sequence is the most instructive thing in this topic. A commission reported comprehensively in 1981; a court ordered implementation in 2006; a monitoring committee was needed by 2008; and the 1861 Act still stands. Police reform in India is not blocked by an absence of diagnosis or even of legal compulsion, but by the unwillingness of state governments to surrender an instrument they find useful.</p>
+
+
+<h2>Internal Security and the Federal Problem</h2>
+
+<p>Law and order is a State List subject under the Seventh Schedule, and the central government plays a <strong>supplementary</strong> role whenever the need arises. Within a state the Home Minister is the final authority on law and order policy, subject to cabinet approval, and the machinery implements what he lays down.</p>
+
+<p>This creates the central difficulty of Indian internal security. The threats that now dominate, terrorism, insurgency, organised crime and left-wing extremism, cross state boundaries and are beyond the capacity of a single state's police, while the constitutional responsibility for meeting them lies with the states. The Union's response has been to build capacity it can deploy on request, the central armed police forces and central investigative and intelligence agencies, so that the practical balance has shifted towards the Centre without any change in the constitutional distribution.</p>
+
+<h3>Intelligence</h3>
+
+<p>Intelligence is the bedrock of police effectiveness, in crime control and in order maintenance alike, and it is at present a weak link. The <strong>Vohra Committee</strong> called for a nodal agency at the national level to integrate all intelligence, and it has been suggested that each state create a separate intelligence department distinct from the police department.</p>
+
+<p>The Vohra Committee's wider finding is the one that belongs in an answer on this topic: it examined the <strong>nexus between criminals, politicians and bureaucrats</strong> and concluded that such networks had developed considerable power, which is the systemic condition behind both the law and order failures and the corruption discussed below.</p>
+
+<h3>Community Policing</h3>
+
+<p>Security cannot be supplied to a community that will not assist in it, and community policing arrangements are the attempt to formalise that assistance in crime prevention and investigation. The importance of the approach follows directly from the finding that most people do not report crime: a force that cannot obtain information cannot detect, and information comes from a public that trusts the institution asking for it.</p>
+
+<h3>Autonomy and Accountability Together</h3>
+
+<p>The <strong>National Police Commission</strong> observed that the police lack both autonomy and accountability, and the pairing is the important part. The police must have autonomy in the investigation of crime, so that an investigation cannot be directed or suppressed from outside; and accountability must be ensured at the same time, so that autonomy does not become impunity.</p>
+
+<p>Most Indian debate treats these as alternatives, demanding either insulation from politicians or control over an abusive force. They are in fact complements, and a reform that delivers one without the other produces either a politicised police or an unaccountable one. This is the single most useful proposition to organise an answer on police reform around.</p>
+
+<h2>The Criminal Justice System</h2>
+
+<p>Policing is one part of a chain that runs from investigation through prosecution and trial to punishment and correction, and the chain fails at every link.</p>
+
+<p>The <strong>Committee on Reforms of the Criminal Justice System</strong> under Justice <strong>V.S. Malimath</strong> reported to the Ministry of Home Affairs in <strong>April 2003</strong> with <strong>158 recommendations</strong>, focusing on the pendency of criminal cases and the inefficiency and ineffectiveness of the system. Its proposals included separating the investigation wing from law and order duties, strengthening the prosecution, giving courts a more inquisitorial role in the search for truth, and measures on victim rights and compensation. Several recommendations, particularly those touching the right to silence and the standard of proof, attracted serious criticism from human rights organisations, and the Committee's report remains contested rather than implemented.</p>
+
+<ul>
+ <li><strong>Pendency and delay</strong>, which is the system's defining failure and the direct cause of the undertrial problem below.</li>
+ <li><strong>Investigation tied to law and order duties</strong>, so that the officer investigating a case is also managing a procession, which is why separation of the two wings appears in every report from the National Police Commission onwards.</li>
+ <li><strong>Weak prosecution</strong>, with prosecutors appointed on political considerations and poorly coordinated with investigators.</li>
+ <li><strong>Low conviction rates</strong>, which destroy deterrence and encourage the extra-legal shortcuts the police then take.</li>
+ <li>The <strong>second ARC</strong> recommended creating local courts in rural areas with populations of twenty-five thousand and above, to bring adjudication within reach.</li>
+</ul>
+
+<h2>Prisons</h2>
+
+<p>Prisons are a State List subject administered under legislation inherited from the colonial period, principally the <strong>Prisons Act of 1894</strong>, whose object was custody and discipline rather than correction.</p>
+
+<h3>The Mulla Committee</h3>
+
+<p>The <strong>All India Committee on Jail Reforms</strong>, chaired by Justice <strong>A.N. Mulla</strong> and working from 1980 to 1983, was asked to review the laws, rules and regulations with the overall objective of protecting society and rehabilitating offenders. Its recommendations included improving prison conditions throughout the country through adequate provision of clothing, sanitation, food and ventilation; training prison staff properly and organising them into distinct cadres; and establishing an <strong>All India Service to be called the Indian Prisons and Correctional Service</strong> so that prison officials could be recruited nationally.</p>
+
+<p>The proposal for a national service is the most telling of these. Prison administration is the lowest-status branch of Indian public administration, staffed by officers few of whom chose it, and the Committee identified that as a cause rather than a consequence of the system's condition.</p>
+
+<h3>Overcrowding and Undertrials</h3>
+
+<p>The defining fact of Indian prisons is that most of the people in them have not been convicted of anything. The <strong>National Crime Records Bureau's</strong> prison statistics report an undertrial share of roughly <strong>73 per cent</strong> of the prison population, with national occupancy above capacity. While the great majority of undertrials are confined for under a year, a significant number have been held for more than five years without conviction.</p>
+
+<p>The administrative significance is that this is not primarily a prison problem. It is the criminal justice system's delay and the operation of bail, which turns on the ability to furnish surety, arriving in the prison as overcrowding. A poor accused who cannot furnish bail serves a sentence before trial, and a prison administration can do nothing about it. Any answer that treats overcrowding as a question of building more prisons has misidentified the cause.</p>
+
+<h3>The Model Prisons Act, 2023</h3>
+
+<p>The Ministry of Home Affairs prepared the <strong>Model Prisons Act, 2023</strong> to replace the Act of 1894 and to reorient prison administration towards the <strong>reformation and rehabilitation</strong> of inmates. Its salient features include provision for security assessment and segregation of prisoners; <strong>individual sentence planning</strong>; a grievance redressal mechanism; a prison development board; legal aid and support for parole and premature release; encouragement of <strong>open prisons</strong> as a means of addressing overcrowding; and an intended change of attitude towards prisoners.</p>
+
+<p>Because prisons are a State List subject the Act is a <em>model</em> for states to adopt, which is the same limitation that attends the Model Police Act, and its effect will depend entirely on how many states enact it and in what form.</p>
+
+<h2>Corruption</h2>
+
+<p>Corruption is the use of public office for private gain, and its administrative significance is that it converts a public entitlement into a purchasable favour, which destroys equality before the administration more completely than any formal discrimination.</p>
+
+<h3>Why It Occurs</h3>
+
+<ul>
+ <li><strong>Discretion.</strong> The <strong>Santhanam Committee</strong> concluded that the discretionary powers enjoyed by civil servants led to harassment, malpractice and corruption. Wherever an official may decide either way without having to justify the choice, the decision acquires a price.</li>
+ <li><strong>Scarcity and control.</strong> A licensing system that rations a valuable permission creates rent by design, which is why liberalisation reduced some forms of corruption while creating others in regulation and procurement.</li>
+ <li><strong>Low probability of detection</strong>, arising from weak investigation, slow prosecution and a low conviction rate.</li>
+ <li><strong>Procedural complexity</strong>, which creates the intermediary who navigates it and is paid for doing so.</li>
+ <li><strong>Political finance</strong>, which generates a demand for funds that administrative discretion can supply.</li>
+ <li><strong>Societal tolerance.</strong> As the note on personnel administration observes, where favouritism and bribery are ordinary in the wider society, the official is asked to observe a standard that nothing around him observes.</li>
+</ul>
+
+<h3>The Santhanam Committee</h3>
+
+<p>Appointed in 1962 under <strong>K. Santhanam</strong> with four other members of Parliament and two senior officers, the Committee examined corruption in government departments and recommended measures to check it, expressly excluding political and ministerial corruption from its terms of reference. It reported in <strong>1964</strong>, and the government accepted <strong>106 of its 137 recommendations</strong>.</p>
+
+<p>Among its proposals were the amendment of Article 311 so that the judicial process in corruption cases could be simplified and expedited; the strengthening of vigilance organisations in ministries and departments; and, on disciplinary rules, the withdrawal of pension in whole or part and compulsory retirement on completion of twenty-five years of service or on attaining fifty years of age, whichever is earlier, where an officer's integrity is suspect. Its principal institutional legacy is the <strong>Central Vigilance Commission</strong>.</p>
+
+<p>The exclusion of ministerial corruption from its terms of reference is worth noting rather than passing over. A committee constituted to examine corruption in government, forbidden to examine corruption by ministers, illustrates the boundary that Indian anti-corruption machinery has repeatedly been designed to respect, and which the Lokpal was created to cross.</p>
+
+<h2>The Anti-Corruption Machinery</h2>
+
+<p>The framework is a layered one, and the standard enumeration is worth having in full because questions frequently ask for the machinery rather than for an argument.</p>
+
+<ul>
+ <li>The <strong>Prevention of Corruption Act, 1988</strong>, as amended in 2018, which is the substantive criminal law.</li>
+ <li>The <strong>Commissions of Inquiry Act, 1952</strong>, used against political leaders and eminent public men.</li>
+ <li>The conduct rules: the <strong>All India Services (Conduct) Rules, 1954</strong>, the <strong>Central Civil Services (Conduct) Rules, 1955</strong> and the <strong>Railway Services (Conduct) Rules, 1956</strong>.</li>
+ <li><strong>Vigilance organisations</strong> in ministries, departments, attached and subordinate offices and public undertakings.</li>
+ <li>The <strong>Central Bureau of Investigation</strong>, 1963.</li>
+ <li>The <strong>Central Vigilance Commission</strong>, 1964, and the <strong>State Vigilance Commissions</strong> of the same year.</li>
+ <li><strong>Anti-corruption bureaus</strong> in the states.</li>
+ <li><strong>Lokayuktas</strong> in the states and the <strong>Lokpal</strong> at the Centre.</li>
+ <li><strong>Divisional vigilance boards</strong> and <strong>district vigilance officers</strong>.</li>
+</ul>
+
+<h3>The Central Vigilance Commission</h3>
+
+<p>The CVC is the principal agency for preventing corruption in the central government. It was established in <strong>1964 by an executive resolution</strong> on the Santhanam Committee's recommendation, and was given <strong>statutory status by the Central Vigilance Commission Act, 2003</strong> following the Supreme Court's direction in the <em>Vineet Narain</em> case. It is a multi-member body of a Central Vigilance Commissioner and two Vigilance Commissioners, appointed by the President on the recommendation of a committee of the Prime Minister, the Home Minister and the Leader of the Opposition.</p>
+
+<p>Its independence is protected on the constitutional pattern: a Commissioner may be removed by the President on the ground of proved misbehaviour or incapacity only after the matter has been referred to the Supreme Court and the Court, on inquiry, has advised removal. He is deemed guilty of misbehaviour if he is concerned or interested in any contract or agreement made by the central government, or participates in its profit or in any benefit arising from it otherwise than as a member of an incorporated company in common with other members.</p>
+
+<h4>Functions</h4>
+
+<ul>
+ <li>To exercise <strong>superintendence over the vigilance administration</strong> of the ministries of the central government and its authorities.</li>
+ <li>To exercise superintendence over the functioning of the <strong>Delhi Special Police Establishment</strong> in so far as it relates to the investigation of offences under the Prevention of Corruption Act.</li>
+ <li>To review the progress of investigations conducted by the Delhi Special Police Establishment into alleged offences under that Act.</li>
+ <li>To review the progress of applications pending with competent authorities for <strong>sanction of prosecution</strong> under that Act, which addresses the point at which corruption cases most often stall.</li>
+ <li>To tender advice to the central government and its authorities on matters referred to it.</li>
+ <li>To inquire or cause inquiries into complaints against specified categories of public servants.</li>
+</ul>
+
+<p>The Commission's central weakness is that its role is <strong>advisory</strong>. It recommends, and the department that receives the recommendation decides whether to act. An institution designed to supervise vigilance without the power to compel a disciplinary authority is dependent on the good faith of the body it supervises.</p>
+
+<h3>The Central Bureau of Investigation</h3>
+
+<p>The CBI's investigative arm derives its powers from the <strong>Delhi Special Police Establishment Act, 1946</strong>, under which it enjoys powers of investigation and prosecution; its role is <strong>supplementary</strong> to the state police forces. To avoid duplication and overlap, administrative arrangements provide that the Special Police Establishment takes up cases essentially and substantially concerned with the affairs or employees of the central government, even where state government employees are also involved, while other cases remain with the state police.</p>
+
+<p>Its structural weaknesses are well known and follow from that legal basis. It functions under an Act that does not name it; it requires the <strong>consent of a state government</strong> to operate within that state, and general consent has been withdrawn by several states; its officers' careers rest with their parent cadres; and its administrative control lies with the central government whose affairs it frequently investigates. The Supreme Court's description of it in one case as a caged parrot captured the dependence, and the remedy repeatedly proposed, a separate statute, a fixed tenure for the Director and selection by a broad-based committee, addresses exactly that.</p>
+
+<h3>Lokpal and Lokayukta</h3>
+
+<p>The ombudsman institution addresses what the CVC and CBI do not: corruption at the political level and maladministration that is legal but unjust. The Indian story, from <strong>Ashok Kumar Sen's</strong> proposal in the 1960s and <strong>L.M. Singhvi's</strong> coinage of the terms in 1963, through the first ARC's recommendation in 1966, the lapsed bill of 1968 and seven further attempts to 2001, the Venkatachaliah recommendation of 2002, the second ARC in 2005 and the <strong>India Against Corruption</strong> movement of 2011, is set out in the note on accountability, as are the provisions of the <strong>Lokpal and Lokayuktas Act, 2013</strong>.</p>
+
+<p>What belongs here is the assessment. The Act brings the Prime Minister within jurisdiction subject to exclusions and procedural safeguards; it requires every state to establish a Lokayukta; and it has been undermined by the long delay in making the first appointment, by dependence on government for staff and investigating machinery, by the absence of constitutional status, and by the composition of the selection committee, in which the executive it is meant to check predominates. The <strong>Lokayuktas</strong> vary enormously between states in jurisdiction, powers and effectiveness, and the strongest of them have been the ones given <em>suo motu</em> powers and an investigating agency of their own.</p>
+
+<h2>Vigilance Administration</h2>
+
+<p>Vigilance administration is the internal machinery of integrity within each organisation, and it is where most cases begin and end.</p>
+
+<p>Every ministry, department, attached and subordinate office and public undertaking has a <strong>vigilance unit</strong> headed by a <strong>Chief Vigilance Officer</strong>, who is appointed in consultation with the CVC and acts as its extension within the organisation while remaining an officer of that organisation, which is the arrangement's strength and its weakness at once.</p>
+
+<h3>The Three Functions</h3>
+
+<ul>
+ <li><strong>Preventive vigilance</strong>: identifying the procedures, postings and points of discretion that generate corruption and redesigning them. Simplifying a procedure, publishing criteria, rotating officers in sensitive posts and reducing personal contact between official and applicant prevent more corruption than any number of prosecutions, and this is the part of the work most neglected.</li>
+ <li><strong>Punitive vigilance</strong>: investigating complaints, conducting departmental inquiries and recommending penalties, which is what the machinery is usually thought to be for.</li>
+ <li><strong>Surveillance and detection</strong>: maintaining lists of officers of doubtful integrity, scrutinising property returns, and watching sensitive posts.</li>
+</ul>
+
+<h3>Why It Underperforms</h3>
+
+<ul>
+ <li>The Chief Vigilance Officer is usually a serving officer of the same organisation, part-time in the role, reporting to a head who may himself be implicated.</li>
+ <li>Departmental inquiries are slow, and the procedural protections of Article 311 make them slower, so that an officer under inquiry frequently retires before it concludes.</li>
+ <li><strong>Sanction for prosecution</strong> is required and is often delayed or refused, which is why the CVC was given the function of reviewing pending sanction applications, and why section 17A of the amended Prevention of Corruption Act is contested.</li>
+ <li>Preventive vigilance requires changing systems that somebody benefits from, while punitive vigilance requires only pursuing an individual, so the machinery drifts towards the second.</li>
+</ul>
+
+<h2>What the Second ARC Recommended</h2>
+
+<ul>
+ <li>A <strong>National Counter-Terrorism Centre</strong> to check the financing of terrorism.</li>
+ <li>A <strong>multi-pronged and comprehensive strategy</strong> involving many stakeholders, in which the executive, political parties, security agencies, civil society and the media all have a larger role.</li>
+ <li>A <strong>specialised central investigation agency in every state</strong>, so that investigation becomes a distinct professional function rather than an adjunct of law and order duty.</li>
+ <li>A <strong>Police Public Service Commission</strong> in every state to preserve the independence of police administration in recruitment and postings.</li>
+ <li><strong>Local courts</strong> in rural areas with populations of twenty-five thousand and above, to reform the criminal justice system from its base.</li>
+ <li>A <strong>zero-tolerance strategy</strong> towards criminalisation in all public agencies.</li>
+ <li>At least <strong>one-third representation of women</strong> in the police forces, which addresses both the custodial abuse problem and the reluctance of women to approach a police station.</li>
+</ul>
+
+<h2>Assessment</h2>
+
+<p>The state of law and order administration reflects several failures that reinforce one another. Maintenance of order and peace is the principal function of any government, and the performance of both the Union and the states is inadequate to the present situation. Because law and order is a State List subject, the Centre cannot intervene effectively even where a state's machinery has failed. The state police apparatus is stagnant and status-quo oriented, its investigative methods old and crude, complaints of third-degree methods and harassment accumulate, and officers are ill-equipped for communal riots, agitations and violent disorder.</p>
+
+<p>Beyond the machinery lies the political condition the literature names directly: the <strong>criminalisation of politics and the politicisation of criminals</strong>, and the nexus between politicians, criminals and business, which has made the situation genuinely complex. The degradation of moral values and the passivity of integrative forces have contributed to it. Modern equipment is necessary and is not the answer.</p>
+
+<p>The conclusion that an answer should reach is that India's difficulty in this field is not a shortage of recommendations. The National Police Commission reported in 1981, the Supreme Court directed implementation in 2006, the Model Police Act was drafted in 2006, the Malimath Committee reported in 2003 and the Mulla Committee in 1983, and the Acts of 1861 and 1894 still govern. Each of these instruments is useful to somebody in its unreformed condition, and reform has failed not because the diagnosis was absent but because the beneficiaries of the disease are the people who would have to enact the cure.</p>
+`,
 };
