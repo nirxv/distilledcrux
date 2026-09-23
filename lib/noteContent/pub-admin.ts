@@ -1758,4 +1758,283 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The qualification an answer should carry is that decentralisation transfers power to local arenas, and where those arenas are dominated by entrenched caste or landed interests it may deliver capture rather than democracy. Riggs would have predicted exactly this, and it is why decentralisation is a necessary condition for responsive administration and not a sufficient one.</p>
 `,
+ 'development-dynamics': `
+<h2>The Concept of Development</h2>
+
+<p>Development in its simplest sense means growth into a better, fuller and more mature condition. The difficulty is that scholars have tended to treat it as an endless syndrome, a destination that recedes as it is approached, so the definitions that survive describe a direction rather than a state.</p>
+
+<ul>
+ <li><strong>Edward Weidner</strong> defines development as "a state of mind, a tendency, and a direction". It is not a fixed goal but a rate of change in a particular direction, which makes development administration an activity rather than an achievement.</li>
+ <li><strong>John Montgomery</strong> calls it "an aspect of change that is desirable, broadly predicted or planned or at least influenced by governmental action". Two elements matter here: development is the part of change that is <em>desirable</em>, which imports a value judgement, and it is change connected to governmental action, which is what makes it an administrative subject at all.</li>
+ <li><strong>Fred W. Riggs</strong> defines it as "a process of increasing autonomy (discretion) of social systems, made possible by rising level of diffraction". A society develops when its activities and institutions multiply on the basis of division of labour and specialisation, and are well coordinated, which allows the system to act autonomously with reference to its environment. Riggs thus makes development the increase of a society's capacity to choose, and connects it directly to his prismatic scheme.</li>
+</ul>
+
+<h3>The Shift from Growth to Capability</h3>
+
+<p>The most important change in the concept is the separation of development from economic growth. <strong>Mahbub ul Haq</strong>, the pioneer of the human development school, put the difference precisely: economic growth focuses exclusively on the expansion of one choice, income, while human development embraces the enlargement of all human choices, whether economic, social, cultural or political. The human development paradigm places <em>people</em> at the centre of development concern.</p>
+
+<p><strong>Amartya Sen's</strong> capability approach supplies the philosophical grounding. Development is the expansion of "our capability to lead the kind of lives we have reason to value", rather than the usual concentration on rising GDP, technical progress or industrialisation. Freedom is both the principal means of development and its primary end. His two working terms are <strong>functionings</strong>, the beings and doings a person values and has reason to value, such as being nourished, being educated or taking part in the life of the community; and <strong>capabilities</strong>, the real freedoms a person has to achieve those functionings. The distinction matters administratively: a scheme that delivers grain to a village has supplied a functioning, and a scheme that leaves the villager able to obtain food by several routes has enlarged a capability. Only the second survives the scheme's withdrawal.</p>
+
+<p>The <strong>Human Development Index</strong>, introduced by the UNDP in 1990 under Haq's direction, gave the idea a measure, combining achievement in three dimensions: a long and healthy life, knowledge, and a decent standard of living, the last represented by gross national income per capita adjusted for purchasing power. The HDI is crude by design; its purpose was to displace GDP as the single number by which countries are ranked, and in that it succeeded.</p>
+
+<p>The <strong>Brundtland Report</strong> of the World Commission on Environment and Development (1987) added the temporal dimension, defining sustainable development as development that meets the needs of the present without compromising the ability of future generations to meet their own. The definition carries two concepts: <em>needs</em>, in particular the essential needs of the world's poor, to which overriding priority should be given; and <em>limitations</em> imposed by the state of technology and social organisation on the environment's ability to meet present and future needs. Read carefully, it is a redistributive claim as much as an ecological one.</p>
+
+<h2>Development Administration</h2>
+
+<p>The term <strong>development administration</strong> was first coined by the Indian scholar <strong>Goswami</strong> in 1955. The concept was introduced by <strong>Edward Weidner</strong> and later popularised by <strong>Fred W. Riggs</strong>, <strong>Joseph La Palombara</strong>, <strong>Albert Waterston</strong> and others. It is now understood as public administration with its focus on government-influenced change towards the attainment of progressive social, economic and political objectives.</p>
+
+<p>Its essence is to ensure change through integrated, organised and properly directed governmental action, and it places emphasis on political commitment to specific developmental goals.</p>
+
+<h3>Definitions</h3>
+
+<ul>
+ <li><strong>Inayatullah</strong> defines it as "the complex of organisational arrangements for the achievement of action through public authority in pursuance of socio-economic goals and nation-building. It presupposes policies, plans and programmes with a distinct development basis as well as a bureaucracy which consciously and continually seeks to modernise itself to meet the demands of planned change." The last clause is the important one: the administration must reform itself while it delivers.</li>
+ <li><strong>Riggs</strong> defines it as "organised efforts to carry out programmes or projects thought by those involved to serve development objectives", and adds the crucial extension: it "refers not only to a government's efforts to carry out programmes designed to reshape its physical, human and cultural environment, but also to the struggle to enlarge a government's capacity to engage in such programmes".</li>
+</ul>
+
+<h3>Development of Administration and Administration of Development</h3>
+
+<p>Riggs's extension names the topic's central duality. <strong>Administration of development</strong> is the delivery of development programmes: building the dam, running the school, distributing the credit. <strong>Development of administration</strong> is the building of administrative capability itself: recruitment, training, structures, procedures and morale.</p>
+
+<p>The two are in tension as well as in sequence. A government under pressure to show results diverts its best people to delivery and neglects capacity-building, and finds a decade later that delivery has degraded because the capability was never renewed. The reverse error, reforming administration indefinitely without delivering anything, is rarer but not unknown. The examiner's question is usually which must come first, and the defensible answer is that neither does, because capacity is built through delivery and consumed by it at the same time.</p>
+
+<h3>Traditional and Development Administration Compared</h3>
+
+<p><strong>John Gunnel</strong> states the requirement: "To quicken the pace of development there is an additional need for a new breed of administrators of superior calibre and vision with a passion for achieving results and of those who can take risks and introduce innovations. There is an increasing need to have heightened sensitivity to the welfare of the poor sections and greater responsiveness to the political process."</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Traditional administration</th><th>Development administration</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Task</td><td>Routine operations performed in a rigid manner</td><td>New tasks, responding to a rapidly changing environment</td></tr>
+ <tr><td>Criterion</td><td>Efficiency and economy, stressing individual performance</td><td>Organisational growth and effectiveness, stressing group-to-group collaboration and group performance</td></tr>
+ <tr><td>Decision-making</td><td>Centralised, with the past experience of administrators weighing heavily</td><td>Widely shared, with an empirical approach using modern technological aids</td></tr>
+ <tr><td>Structure</td><td>Rigid, elaborate hierarchy</td><td>Shaped by the requirements of goal achievement, so more flexible</td></tr>
+ <tr><td>Orientation</td><td>Rule-oriented and status-quoist</td><td>Goal-oriented, client-centred and change-oriented</td></tr>
+ <tr><td>Risk</td><td>Avoided; deviation from precedent is the danger</td><td>Accepted; failure to innovate is the danger</td></tr>
+ </tbody>
+</table>
+
+<h3>Features</h3>
+
+<ul>
+ <li><strong>Change-oriented.</strong> It is dynamic and not status-quoist, focused on government-influenced change towards progressive social, economic and political objectives. Change is part of its philosophic values rather than an occasional disturbance.</li>
+ <li><strong>Goal-oriented.</strong> On Weidner's account the goals are progressive in nature. It involves adapting existing administrative agencies and creating new ones so as to develop the administrative capability for prompt and effective execution of development policies, through which the goals of social justice, modernisation, industrialisation and economic growth are met.</li>
+ <li><strong>Innovative rather than dogmatic.</strong> It stresses identifying and adopting new structures, methods, procedures, policies and projects that achieve developmental objectives in the shortest time with the fewest resources.</li>
+ <li><strong>Client-oriented and people-centred.</strong> It aims to deliver maximum benefit to the very people for whom the organisation was designed, and is oriented to the needs of specific target groups such as agricultural labourers and rural artisans, giving priority to beneficiaries in the preparation and review of programmes.</li>
+ <li><strong>Committed.</strong> Neutrality in the classical sense is inadequate; the development administrator is expected to be committed to the goals, which is precisely what makes the idea contentious in a system that also demands political neutrality.</li>
+ <li><strong>Temporal.</strong> Development programmes are time-bound, so speed is itself a criterion of success in a way it is not in regulatory administration.</li>
+</ul>
+
+
+<h3>Scope and Significance</h3>
+
+<p>Development administration covers the range of administrative and management tasks required to carry out development programmes: industrial and infrastructural development, and programmes in agriculture, health, education, communication and social services.</p>
+
+<p>Its wider object is <strong>nation-building</strong>, which involves moulding social behaviour and reconstructing social structures by overcoming the effects of traditional and parochial social relationships. It aims at economic growth and the advancement of technology, and equally at social equity and justice, the removal of poverty and unemployment, and the other socio-economic problems, because development activity that does not bring social change cannot contribute to nation-building.</p>
+
+<p>An important component is <strong>programming</strong>, which supplies information about gaps in needed skills and identifies the groups of people willing to take initiative, so that the programme is built around capability that exists rather than capability that is assumed.</p>
+
+<p><strong>Pai Panandikar</strong> treats development administration as the administration of <strong>planned change</strong>. Planning as a programme of action to achieve specified goals in a given period makes the fullest use of time and other resources, which is why developing countries adopted socio-economic planning as a development strategy. Development planning stresses proper assessment of resources, determination of plan priorities, and implementation and monitoring, so that maximum results follow in minimum time and cost, and it emphasises the link between what he calls economic development normatives and geo-social positives.</p>
+
+<h3>It Is Ecological and Organic</h3>
+
+<p>Development administration affects and is affected by the environment around it. Knowledge of that environment, of what will and will not work in a particular setting, is vital, because development administration can produce change only when the society or system is ready for it. In a developing country a growth model or a sophisticated technology cannot be blindly adopted without studying how, where, and whether it can be applied at all. It is <em>organic</em> rather than mechanical: it does not follow a rigid set of rules in a routine and fixed manner.</p>
+
+<h3>Criticism of the Concept</h3>
+
+<p><strong>Mohit Bhattacharya</strong>, examining the criticism in detail, reports the objection that the distinction between development and non-development administration is highly artificial, and answers it: the conceptualisation has nonetheless facilitated an analytical distinction between different aspects of public administration. The reply is the right one. Every administration develops something and every development programme requires routine administration, so the categories overlap in practice while remaining useful for analysis.</p>
+
+<p>A second criticism is that development administration has exaggerated the role of democracy while under-rating other forms of public management. Against this stand the experiments in <strong>debureaucratisation</strong> in countries such as India, of which <strong>panchayati raj</strong> is the leading instance, where local development supported by local popular involvement has reduced the distance between the administration and the people it serves.</p>
+
+<p>Three further objections are worth stating because they recur in questions. The concept was <strong>Western in origin and normative in content</strong>, treating a particular trajectory as development itself. It assumed a <strong>capable and committed bureaucracy</strong>, which is what developing countries conspicuously lacked, so the instrument presupposed the outcome. And the demand for <strong>administrative commitment</strong> to development goals sits awkwardly with political neutrality, since an administrator committed to the government's programme is difficult to distinguish from an administrator committed to the government.</p>
+
+<h2>Models of Development Administration</h2>
+
+<h3>Edward Weidner's Eight Models</h3>
+
+<p>Weidner built his typology from three variables: whether change is <em>planned</em> or unplanned, whether there is <em>directional growth</em>, and whether there is <em>system change</em>. The combinations give eight cases.</p>
+
+<ul>
+ <li><strong>The Ideal: planned directional growth with system change.</strong> Programmes are worked out and implemented together with system change, through agencies such as planning commissions and boards. Developing countries face restrictions on the ability of political and administrative systems to achieve both at once, and difficulty in effecting innovation in an administrative setting.</li>
+ <li><strong>Short-run payoff: planned directional growth, no system change.</strong> Development is maximised within the limits of the existing system, with negligible administrative change. It yields the maximum short-run payoff in consumption, nation-building or socio-economic progress, and the returns are limited because the basic administrative structure is untouched.</li>
+ <li><strong>Long-run payoff: planned system change, no directional growth.</strong> System change may not lead to growth and may even harm it in the short term. Here the political and administrative systems are treated as objects of value in themselves. Weidner uses <strong>Esman's</strong> classification of regimes, conservative oligarchy, dominant mass party, military, communist and so on, each having people who strongly support the system and its patterns of differentiation and coordination.</li>
+ <li><strong>Failure: planning that leads to neither growth nor system change.</strong> Drawn from the observation of economists in the 1960s that development planning had failed in Southeast Asia. Weidner's study of budget reform in Vietnam suggested that major administrative change can be carried through where the innovation is seen as posing no major threat to the security of employees, and that innovation falling short of change at the governmental level will be restricted by central control.</li>
+ <li><strong>Environmental stimulus: unplanned directional growth with system change.</strong> Modernisation and socio-economic growth can occur without planning. The governmental planning process has many steps, and resistance and weak development administration may make them unachievable. The centre brings about some planned development while extensive innovation results from the efforts of individual ministers, provinces, districts and projects. Major system changes emerge from the reactions of groups and leaders to environmental factors, and ad hoc pragmatic adaptation within an agency, together with emulation of programmes and procedures, can produce major system change through decentralisation and delegation rather than through the accepted processes of planned change.</li>
+ <li><strong>Pragmatism: unplanned directional growth, no system change.</strong> The most common form of development in mildly liberalising regimes. Growth is painless because no complex planning machinery is needed, and it produces short-run payoff.</li>
+ <li><strong>Crisis: unplanned system change, no directional growth.</strong> Wars, newly won independence, refugee influx, famine, floods and uncontrolled epidemics demand quick action and on-the-spot solutions. Decentralised adaptation, local initiative and emulation produce unplanned system change without any growth orientation.</li>
+ <li><strong>Static society: no plan, no change.</strong> Pockets of change coexist with pockets of resistance. Crises may not generate any desire for major system change, and static conditions may actively confront developmental effort.</li>
+</ul>
+
+<p>The models show the conditions under which major system change occurs and what contributes to it, and establish that development administration has two distinct dimensions, planning and system change, which together produce modernisation without exhausting it. The criticism is that it is difficult to tell which model's outcomes would suit a specific developing country, and that Weidner offers no operational framework stating what kind of administrative change would transform a non-developmental system into a developmental one. The typology describes; it does not prescribe.</p>
+
+<h3>Riggs's Model</h3>
+
+<p>Using the ecological approach, Riggs treats public bureaucracies as one among several basic institutions interacting with the political, economic, social and cultural sub-systems, so that each type of society has its own type of bureaucracy.</p>
+
+<ul>
+ <li>In the <strong>fused</strong> model, traditional bureaucracies are functionally diffuse: each official performs a wide range of functions, political and economic as well as administrative.</li>
+ <li>In the <strong>diffracted</strong> model, differentiated and well-integrated societies have bureaucracies that are much more functionally specific.</li>
+ <li>In the transitional <strong>prismatic</strong> societies, bureaucracies are neither diffuse nor narrowly specific but intermediate in their degree of functional specialisation. They do not blend well with the other institutions of the political system and so fuel the forces of mal-integration.</li>
+</ul>
+
+<p>The diagnosis that follows is the one to carry into an answer on bureaucracy and development: prismatic societies suffer a serious <strong>lack of balance between political growth and bureaucratic growth</strong>, and because of bureaucratic hegemony officials encroach on the politician's jurisdiction and deliberately affect the political process.</p>
+
+<p>The qualification is equally important. The prismatic-sala model has lost its specificity, and Riggs himself later conceded that it is not meant for exclusive application to developing countries. It suffers from over-generalisation, since the developing countries are not a homogeneous category, and any meaningful conceptualisation must take account of the peculiarities of particular societies in culture, history, administrative tradition, economy and geography.</p>
+
+<h3>John D. Montgomery</h3>
+
+<p>Montgomery's contribution is twofold. Institutionally he argued that "semi-public corporations and similar devices can serve both to stimulate the bureaucracy and to develop controlled non-governmental capabilities for serving national purposes", which anticipates by decades the arguments for autonomous agencies and public-private arrangements.</p>
+
+<p>On <strong>foreign aid</strong> he was an expert critic of United States policy. He urged that aid for development be linked to the kind of regime it was intended for, and held that the United States was too willing to overlook the undesirable aspects of recipient regimes, earning it the reputation of being divorced from the social progress of the people in those countries. The point generalises: aid delivered to a predatory state finances predation.</p>
+
+<h2>The Changing Profile of Development Administration</h2>
+
+<p>The end of imperialism in Asia, Africa and South America produced countries that were backward in agricultural and industrial terms and short of material resources. The state had to take responsibility for systematic development through uniform planning, and its functions grew as it pursued modernisation, industrialisation, economic progress and self-reliance. It became clear that Western models would not suit the political, economic, social and cultural contexts of these countries, and that a different model was needed, including an administrative system suited to their needs and understood as part of a larger political and socio-economic set-up.</p>
+
+<h3>The 1950s</h3>
+
+<p>Academics and practitioners concentrated on <strong>administrative development</strong>, one aspect being personnel reform directed at merit systems and central personnel agencies. The 1950s and early 1960s were the era of the <strong>Technical Assistance Programme</strong>, in which Western aid went to countries in Asia, Africa and Latin America for public administration and the training of administrators, using role-play, the case method and comparable techniques.</p>
+
+<p>The assumptions were confident and, as it turned out, wrong: that economic growth and modernisation would be accelerated by wise policies, that the transfer of resources and technology would speed growth and raise efficiency, that the state would play a proactive role in balanced development, that training and equipping the bureaucracy was what an effective modern administration required, and that rapid progress would follow whose benefits would be widely shared, ending in stable political democracy.</p>
+
+<h3>The 1960s</h3>
+
+<p>The Technical Assistance Programme was criticised, notably by <strong>Dwight Waldo</strong>, who called it "a sad waste of scarce human resources". The failure was acknowledged, and the reasons identified were these.</p>
+
+<ul>
+ <li>The environmental context of administration and technology was wholly ignored.</li>
+ <li>Concepts such as efficiency, economy and rationality were interpreted differently in developing and developed countries.</li>
+ <li>Political and bureaucratic support was not forthcoming for the proposed administrative reforms.</li>
+ <li>Those who planned the programmes lacked knowledge of the societies they were planning for.</li>
+</ul>
+
+<p>Attention shifted to <strong>institution-building</strong>, understanding of which was seen as fundamental to the success of the technical assistance enterprise of the United Nations and other agencies.</p>
+
+<h3>The 1970s</h3>
+
+<p>The meaning of development changed. Goals came to be interpreted in terms of <strong>fundamental human needs</strong>, and the unidirectional emphasis was abandoned. The report of the Commission on International Development on the Technical Assistance Programme in 1969 announced the change, pointing out that administrative modernisation is not merely a technical process of transferring methods, procedures and practices, and that <strong>local people cannot be assumed to be irrational in decision-making</strong>. The problems of development administration were to be linked to the political economy of particular societies.</p>
+
+<p>The ecological perspective related public administration to the political, social, economic and cultural structures of a country, and development came to be read as a holistic concept. The politics-administration dichotomy lost its relevance in this decade, as it became clear that the political environment shapes administrative performance and the implementation of development programmes, so that development depends on strong political institutions and practices. It was also recognised that <strong>a bureaucracy more developed than the political leadership and structures can harm development efforts</strong>. The UN Second Development Decade, 1971 to 1981, recognised the importance of social development alongside the economic.</p>
+
+<h3>The 1980s and After</h3>
+
+<p>The blueprint approach gave way to the <strong>learning process approach</strong>, which adapts to environmental change and incorporates corrections while a programme is being implemented. Instead of planning <em>for</em> the people, as the blueprint approach did, the method is planning <em>with</em> them, taking account of each other's experience and seeking solutions by looking at oneself, at others nearby and at the local environment.</p>
+
+
+<h2>Liberalisation and Administrative Capacity</h2>
+
+<p>Liberalisation changed what administration in developing countries is required to do, and the change has not generally been matched by a change in what it is equipped to do.</p>
+
+<p>Where bureaucracies are weakly established, public administration is less efficient, fair and productive, and personal, organisational or political interests frequently displace the public interest, because public administration is often not separable from politics. The consequence is distributive: <strong>weak public administration systems cause developing countries to gain far less from globalisation and liberalisation than developed nations</strong>, because administration and governance in the former are shaped by unstable political structures, under-developed economic systems, poor technology, weak infrastructure and poor education.</p>
+
+<p>This is the practical form of the strong state argument. A licensing state needs officials who can refuse; a liberalised state needs officials who can understand a market, detect collusion, regulate a natural monopoly and resist the industry they regulate. Removing controls therefore raises rather than lowers the demand on administrative capability, and a state that liberalises without building that capability exchanges one set of failures for another.</p>
+
+<h3>International Aid and Technical Assistance</h3>
+
+<p>International aid and technical assistance form an important part of the development agenda of international organisations, several of which sit within the United Nations system.</p>
+
+<ul>
+ <li><strong>The International Monetary Fund</strong>, established on 22 July 1944 by the Articles of Agreement signed at the UN Monetary and Financial Conference at Bretton Woods, effective from 27 December 1945 and formally operational from 1 March 1947, with the object of safeguarding international financial and monetary stability and providing financial backing for the revival and expansion of international trade. It became a UN specialised agency by agreement with ECOSOC.</li>
+ <li><strong>The World Bank Group</strong>, whose lending and, more consequentially, whose World Development Reports have set the terms of the development debate, from the minimal-state position of 1991 to the effective-state position of 1997.</li>
+ <li><strong>The World Trade Organisation</strong>, whose rules constrain the policy instruments available to a developing state, which is itself an administrative fact: subsidies, procurement preferences and tariff protection are no longer freely available tools.</li>
+ <li><strong>The Asian Development Bank</strong> and comparable regional institutions, which lend for infrastructure and increasingly attach governance conditions.</li>
+</ul>
+
+<p>The recurring criticism of conditional assistance is <strong>Montgomery's</strong>: aid attached to the wrong regime finances the wrong things, and the donor that overlooks the character of the recipient government ends up divorced from the social progress of that country's people. The second criticism is that conditionality displaces domestic political deliberation, so that the reform is owned by the lender rather than by the society that must live with it, which is a reliable predictor of its reversal.</p>
+
+<h2>The Anti-Development Thesis</h2>
+
+<p>The anti-development thesis holds that development administration has not merely underperformed but has been part of the problem: that it has served the state and its allied classes rather than the poor, imposed alien categories on societies that did not share them, and expanded bureaucratic power in the name of helping people.</p>
+
+<h3>Chambers and the Biases of the Outsider</h3>
+
+<p><strong>Robert Chambers</strong> supplies the most concrete version of the critique, and his passage is worth reproducing because it converts a general suspicion into six specific, checkable errors.</p>
+
+<blockquote>"Outsiders underperceive rural poverty. They are attracted to and trapped in urban cores which generate and communicate their own sort of knowledge while rural peripheries are isolated and neglected. The direct rural experience of most urban based outsiders is limited to the brief and hurried visits, from urban centres, of rural development tourism."</blockquote>
+
+<p>The six biases of rural development tourism are these.</p>
+
+<ul>
+ <li><strong>Spatial</strong>: urban, tarmac and roadside. The visitor sees what lies near a road.</li>
+ <li><strong>Project</strong>: towards places where there are projects, which are by definition not typical.</li>
+ <li><strong>Person</strong>: towards those who are better off, towards men rather than women, towards users of services and adopters of practices rather than non-users and non-adopters, and towards those who are active, present and living. The last phrase carries the whole argument: the worst-affected are absent from the survey because they have migrated or died.</li>
+ <li><strong>Seasonal</strong>: avoiding the bad times of the wet season, which is when rural distress is at its worst.</li>
+ <li><strong>Diplomatic</strong>: not seeking out the poor for fear of giving offence to hosts.</li>
+ <li><strong>Professional</strong>: confined to the concerns of the outsider's own specialisation, so that the agronomist sees crops and the engineer sees works.</li>
+</ul>
+
+<p>The consequence is that the poorer rural people are little seen and the nature of their poverty is even less understood. The administrative implication is severe: a planning process fed by field visits of this kind will systematically misdescribe the population it is planning for, and will do so while believing itself well-informed.</p>
+
+<h3>Political Reform Before Administrative Reform</h3>
+
+<p>The second strand of the critique is that American scholars gave too much attention to administrative reform and too little to political reform, when political reform must precede administrative reform and the two cannot be separated if development goals are to be achieved. Nations cannot develop without bureaucratic organisation, but the question that follows is how to make the administrative state accountable and responsible, and that is the crux of the problem facing developing countries.</p>
+
+<h3>Other Charges</h3>
+
+<ul>
+ <li><strong>Ethnocentrism.</strong> The model of the developed West was treated as the destination, so that other trajectories appeared as failure rather than as difference.</li>
+ <li><strong>Capture.</strong> Development programmes are appropriated by local elites, so that expenditure intended for the poorest raises the assets of those already better placed.</li>
+ <li><strong>Displacement and ecological cost.</strong> Large projects impose their costs on populations who receive none of the benefits, which is a distributional objection rather than a technical one.</li>
+ <li><strong>The growth of the bureaucracy itself.</strong> Development administration expands the apparatus, its budget and its discretion, and the apparatus acquires an interest in the continuation of the problem it administers.</li>
+</ul>
+
+<p>The defensible position in an answer is not to accept or reject the thesis wholesale. Its factual observations, capture by elites, the biases of the outsider, the growth of the administrative state, are well evidenced; its conclusion, that development administration should be abandoned, does not follow from them, since the alternative to a badly performing state in a poor country is usually not a market but no provision at all. The thesis is best used as a specification of what development administration must correct.</p>
+
+<h2>Bureaucracy and Development</h2>
+
+<p>The bureaucracy's role in development follows from the fact, established by research, that policy-making and implementation are too interconnected to be separated: formulating policy requires understanding how earlier policies worked, and that knowledge sits with the administrators who worked them.</p>
+
+<p>In developing countries this gives the bureaucracy a double position. It is often the only institution with the reach, the records and the continuity to formulate policy at all, which makes it an author of development. It is also, on Riggs's diagnosis, frequently more developed than the political institutions meant to direct it, which makes it a danger to the democratic control of development.</p>
+
+<p>The organisational conclusion drawn in the literature is that <strong>delegation should be the hallmark of a developmental bureaucracy</strong>, just as coordination and teamwork are the essence of implementation. Development tasks are dispersed, local and variable, and cannot be run from a capital by reference upward. The centralisation that suits revenue and order administration is precisely wrong for development administration, which is why the same service can be competent at the first and poor at the second.</p>
+
+<h2>Participative Development</h2>
+
+<p>The contemporary people-centred approach focuses on the empowerment of people at the grassroots so that they can deal with officials on something like a partnership basis. It involves respecting the ideas of the beneficiaries, questioning what administrators are doing, stimulating ideas from a range of people, and bringing about attitudinal change through close observation and discussion.</p>
+
+<p>Equity is primary in this approach. The concern is to design programmes that respond to the varied needs of people and foster local capabilities for action, which requires innovating services and practices suited to basic-needs strategies rather than blindly adopting Western administrative practice. Sustainability of programmes and the creation of opportunities for change have become part of the same emphasis.</p>
+
+<h3>Why Participation Is Not Merely Decorative</h3>
+
+<ul>
+ <li>It corrects the information defect Chambers identified, because the beneficiaries know things the visiting official cannot learn.</li>
+ <li>It supplies the local monitoring that no inspection system can afford, which is the principle behind statutory social audit.</li>
+ <li>It creates the stake that determines whether an asset is maintained after the project closes, which is the usual point of failure in rural infrastructure.</li>
+ <li>It builds the civic capability that is itself a development outcome on Sen's definition, not merely a means to one.</li>
+</ul>
+
+<p>The standing caution is that participation is easily simulated. A meeting held to ratify a decision already taken, or a committee composed of the locally powerful, delivers the appearance of participation and the substance of capture. The test is whether the participants can change the outcome.</p>
+
+<h3>Self-Help Groups and Micro-credit</h3>
+
+<p>The self-help group movement and the <strong>Grameen Bank</strong> model are the most widely cited instances of participative development at scale. Small groups, usually of women, pool savings and lend within the group, with joint liability substituting for collateral that poor borrowers cannot offer, and with the group's own knowledge of its members substituting for the credit assessment a bank cannot perform at that scale.</p>
+
+<p>The gains are real: access to credit outside the moneylender, a lower default rate than formal lending to the same population, and a measurable increase in the standing of women within the household. The criticisms are equally real: interest rates that are high in absolute terms, the risk of over-lending and consequent indebtedness, the limited scale of the enterprises such credit can support, and the substitution of micro-credit for the public provision of health, education and employment that poverty on this scale actually requires.</p>
+
+
+<h4>The Indian Self-Help Group Model</h4>
+
+<p>The Indian experience is distinctive enough to be worth stating separately, because it is a case of a developing country resisting an externally recommended design and doing better with its own.</p>
+
+<p>The SHG model began in India without support from the major financial institutions based abroad. It was the initiative of Indian non-governmental organisations, supported by <strong>NABARD</strong> and the <strong>Reserve Bank of India</strong>, that promoted it. The SHG programme is perhaps the only programme in India to have enjoyed the sustained support of a government financial institution over twenty years. NABARD worked at national, state and district levels to collect feedback, analyse progress, remove obstacles, fund training and persuade banks to widen their coverage, using its network of offices and field officials.</p>
+
+<p>The decisive choice was made against external advice. Despite pressure from major international financial institutions to adopt the microfinance models current elsewhere, which replicate the banking system and focus on credit provision alone, Indian financial institutions and most NGOs persevered with the SHG model, which gives the group a broader role than the management of credit. That perseverance is a principal reason the model spread. Many NGOs and banks resisted conditions that would have restricted the groups' freedom and their potential to become instruments of change.</p>
+
+<p>Read against the rest of this topic, the episode is the clearest available refutation of the transplantation assumption that comparative public administration was founded to attack: an indigenous institutional design, supported by a domestic development bank and evaluated continuously against local evidence, outperformed the imported template.</p>
+
+<h2>The New Development Paradigm</h2>
+
+<p>The paradigm that has replaced both the planning optimism of the 1950s and the market optimism of the early 1990s has four components.</p>
+
+<ul>
+ <li><strong>Human development</strong> as the objective, measured by capability rather than income, following Haq and Sen and institutionalised in the HDI and the Human Development Reports.</li>
+ <li><strong>Sustainability</strong> as a constraint, following Brundtland, which introduces the interests of people who cannot participate in any present decision because they do not yet exist.</li>
+ <li><strong>Good governance</strong> as the means: accountability, transparency, rule of law, participation and responsiveness, which is the recognition that development outcomes depend on the quality of institutions rather than on the volume of investment.</li>
+ <li><strong>A plural cast of actors.</strong> The approach favoured by international agencies since the 1990s is to provide an alternative model in which government, the private sector, non-governmental organisations and civil society work together, with development pursued at the grassroots rather than administered downward to it.</li>
+</ul>
+
+<p>The United Nations statement of the administrative stake in all this is blunt and worth carrying into a conclusion: "It would be disastrous if the importance of public administration were not recognised by those responsible for national development or if public administration were not fully developed and made to contribute its utmost to the development of the developing countries." The study of development administration has been reorganised around the continuing problems of developing countries, and the honest assessment is that the field has become more modest in its claims and more accurate in its descriptions, which is the usual shape of intellectual progress after a confident programme fails.</p>
+`,
 };
