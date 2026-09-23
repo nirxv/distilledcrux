@@ -257,4 +257,304 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Public administration also carries a distinctive democratic burden. It is the point at which abstract rights become concrete entitlements, and the point at which the failure of a state is first experienced as an unanswered application, an unpaid pension or an absent teacher. That is why the discipline's recurring questions, the dichotomy, the search for principles, the demand for equity, are not academic refinements but arguments about how a state keeps its promises.</p>
 `,
+ 'theories-of-organisation': `
+<h2>How Organisation Theory Divides</h2>
+
+<p>Organisation theory is usually taught in three layers, each a reaction to the one before. The <strong>classical</strong> school, running from Taylor through Fayol, Gulick and Urwick to Weber, treats the organisation as a designed structure and asks how to design it well. The <strong>neo-classical</strong> or human relations school, opened by Elton Mayo at Hawthorne, answers that the structure is inhabited by people whose behaviour the design did not anticipate. The <strong>modern</strong> approaches, behavioural, systems and contingency, abandon the search for one best design and ask instead what the organisation is deciding, what it exchanges with its environment, and what fits the case in hand.</p>
+
+<p>The useful thread for an answer is that each school did not simply replace its predecessor but relocated the problem. Taylor put it at the shop floor, Fayol at the executive, Weber in the legitimacy of authority, Mayo in the informal group, Simon in the decision, the systems theorists at the boundary with the environment, and the contingency theorists in the fit between the two.</p>
+
+<h2>Scientific Management: F.W. Taylor</h2>
+
+<p>Scientific management refers to a body of theory and practice aimed at more efficient and rational performance in the organisation. It began as a direct attempt to raise labour productivity and widened into a claim about all the basic factors involved in production.</p>
+
+<h3>The Setting</h3>
+
+<p>In the second half of the nineteenth century the American industrial climate produced a managerial class, and management practice began to shift from a day-to-day, problem-solving approach to a comprehensive, long-term one. <strong>Henri R. Towne</strong> and <strong>Henri Metcalf</strong> had attempted a unified system of management, and Towne called the new philosophy the science of management. <strong>Frederick Winslow Taylor</strong> (1856 to 1915) took up their ideas and is known as the Father of Scientific Management, though the term itself was coined by <strong>Louis Brandeis</strong> in 1910. Other contributors to the movement were <strong>Henry Lawrence Gantt</strong>, <strong>Harrington Emerson</strong>, <strong>Frank Bunker Gilbreth</strong>, <strong>Lillian Moller Gilbreth</strong>, <strong>Morris L. Cooke</strong> and <strong>Horace K. Hathaway</strong>.</p>
+
+<p>Taylor's own path matters to the doctrine. He joined the Enterprise Hydraulic Works of Philadelphia in 1874 as an unpaid apprentice for four years, then worked at the Midvale Steel Company as a labourer and became its chief engineer in 1884. He was a working engineer with inventions to his name, and his belief that the best management is a true science came from the shop floor rather than the study. The movement's influence spread beyond America: in the USSR it took shape as the Stakhanovite Movement between 1920 and 1940.</p>
+
+<h3>What Taylor Diagnosed</h3>
+
+<ul>
+ <li><strong>Systematic soldiering.</strong> Workers deliberately restricted output, and Taylor held the practice to be practically universal. It was designed to keep the supervisor ignorant of how much work could be done, so that the expectation of performance was never raised.</li>
+ <li><strong>Rule of thumb.</strong> Inefficient, effort-wasting methods were in use and there was no systematic method of doing things.</li>
+ <li><strong>Mismatch of worker and work.</strong> The work expected did not match the ability of the person assigned to it, so workers lacked interest.</li>
+ <li><strong>Absent incentives.</strong> Workers were not given proper incentives for better performance.</li>
+</ul>
+
+<p>The remedy was a systematic study of work to discover the most efficient way of performing a task, followed by a systematic study of management to find the best way of managing workers. Taylor's justification was mutual gain: increased efficiency would finally benefit everyone, including the workers, by ensuring continuing and well-paid employment.</p>
+
+<h3>The Four Principles</h3>
+
+<ul>
+ <li><strong>Development of a science of work.</strong> Scientific investigation of the daily task of qualified workers under optimum conditions, classified and tabulated, replaces rule-of-thumb methods. Management fixes the Expected Work Performance and assesses actual work against it, rewarding those above the level and penalising those below.</li>
+ <li><strong>Scientific selection, training and development of workmen.</strong> Skill and experience must be matched to the requirements of the job through tests and interviews, and the selected worker trained for the specific task. Taylor held that every worker has potential for development, and that it is management's responsibility to provide the opportunity to realise that natural capacity to the full.</li>
+ <li><strong>Bringing the science of work and the scientifically selected worker together.</strong> Workers must be given inspiration and incentive so that they do not slip back into old methods.</li>
+ <li><strong>Division of work and responsibility between management and workers.</strong> Management takes the planning and the worker the execution. Taylor argued that this creates understanding and mutual dependence, producing constant and intimate cooperation that rules out conflict and strikes.</li>
+</ul>
+
+<p>The philosophy behind them, in summary: replace rule of thumb with organised knowledge; obtain harmony in group action rather than discord; achieve cooperation rather than chaotic individualism; work for maximum rather than restricted output; and develop workers to their fullest for their own benefit and the organisation's. None of the principles can be isolated, since it is their combination that constitutes scientific management.</p>
+
+<h3>The Techniques</h3>
+
+<ul>
+ <li><strong>Time-and-motion study</strong>, the primary tool of analysis, establishing standards for performance while accounting for the capacity, speed and durability of the worker. It proceeds by breaking physical activity into component parts, specifying the optimal routine for each part, and finding the best method of recombining them. The steps are to provide the best implements, divide the task into elementary units, discard useless movements, and study skilled workmen performing the task.</li>
+ <li><strong>Functional foremanship</strong>, in which the worker reports not to one foreman but to eight specialists. Four sit in the planning department: the <em>routine clerk</em> overseeing workflow and deciding the best method; the <em>instruction card man</em> preparing detailed instructions and timings; the <em>time clerk</em> handling pay, time cards and work costs; and the <em>disciplinarian</em> handling disputes, hiring and firing. Four work on the shop floor: the <em>gang boss</em> who organises machinery and routes the work, the <em>speed boss</em> who sees that the job is done in the prescribed fashion, the <em>inspection foreman</em>, and the <em>repair boss</em>.</li>
+ <li><strong>The planning department</strong>, which carries the thinking work of the organisation. Taylor placed planning here rather than at the top, leaving executives to handle only the problems the department could not.</li>
+ <li><strong>The exception principle</strong>, under which management reports are condensed into comparative summaries recording only the exceptions to past standards or averages, so that the manager's attention goes where performance has deviated.</li>
+ <li><strong>Differential piece rate</strong>, paying a higher rate per piece to those who meet or exceed the standard and a lower rate to those who fall short, so the incentive is attached to the standard rather than to output alone.</li>
+</ul>
+
+<h3>The Mental Revolution</h3>
+
+<p>Taylor insisted that his system was not a set of devices but a complete mental revolution on both sides. Workers must stop seeing the employer's gain as their loss, and management must stop treating the division of the surplus as the main question. Both were to turn their attention to increasing the size of the surplus, which would make its division a smaller quarrel. The claim is the weakest part of the doctrine in practice and the most important part of it in theory, because without it scientific management is simply a method of extracting more work for the same wage.</p>
+
+<h3>Criticisms</h3>
+
+<ul>
+ <li><strong>The worker as an instrument.</strong> The scheme treats the worker as an adjunct to the machine, motivated only by money. The later human relations school would show that this psychology is false.</li>
+ <li><strong>Division of planning from execution.</strong> Separating the two would not develop team spirit, and workers would not see themselves as an integral part of the organisation.</li>
+ <li><strong>Trade union opposition.</strong> Unions held that the premium bonus system would destroy collective bargaining and cause unemployment. They agitated and petitioned the American Congress, which set up a Special Committee of the House of Representatives in 1912 to examine Taylorism. The committee took no clear stand, but in 1915 the unions succeeded in preventing the use of stopwatches and the payment of premiums in army arsenals. A US Commission on Industrial Relations investigation criticised the mechanical aspects of Taylorism and stated that scientific management and labour unionism were not compatible.</li>
+ <li><strong>Managerial opposition.</strong> Managers disliked the division of a job into steps and its consequent oversimplification, which made the work appear as something anyone could do, and they felt it reduced their own initiative and discretion. Taylor's insistence on training by experts was resisted by managers eager for quick promotion. Taylor himself had to resign from companies where he worked owing to differences with their managers.</li>
+ <li><strong>Neglect of the environment.</strong> The systems school criticised the principles for ignoring factors external to the organisation. Wage payment depends on demand for the product; if demand falls, workers may be retrenched, and no amount of shop-floor science prevents it.</li>
+ <li><strong>Unity of command is destroyed.</strong> Functional foremanship gives one worker eight superiors, which is precisely what Fayol's principle of unity of command was framed against.</li>
+</ul>
+
+<h3>Why It Survives</h3>
+
+<p>Work study, standardisation, ergonomics, job design, performance standards, incentive pay and management by exception all descend from Taylor, and process re-engineering and the productivity literature of the 1990s restated his questions in new vocabulary. In public administration his influence runs through the economy-and-efficiency movement, work measurement and performance budgeting. The criticism that matters is not that his techniques failed but that they answered only one question, and treated it as the whole of administration.</p>
+
+<h2>Administrative Management: Henri Fayol</h2>
+
+<p>Where Taylor looked upward from the shop floor, <strong>Henri Fayol</strong> (1841 to 1925), a French mining engineer who rose to managing director, looked downward from the chief executive's chair. <em>General and Industrial Management</em> generalises from that vantage point, and its claim is that management is a distinct activity that can be taught.</p>
+
+<h3>The Five Elements of Administration</h3>
+
+<p>Administration, for Fayol, consists of <strong>planning</strong>, <strong>organising</strong>, <strong>commanding</strong>, <strong>coordinating</strong> and <strong>controlling</strong>. Planning is the chief manifestation and most effective instrument of administration, separating short-run events from long-range ones and giving forethought to operations; a reliable plan has unity, continuity, flexibility and precision. Organising provides the undertaking with raw materials, tools, capital and personnel, and Fayol divides it into the material organisation and the human organisation, the latter including both personnel leadership and organisation structure. This scheme is the direct ancestor of Gulick's POSDCORB.</p>
+
+<h3>The Fourteen Principles</h3>
+
+<table>
+ <thead>
+ <tr><th>Principle</th><th>What Fayol meant</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Division of work</td><td>Specialisation raises output by letting people concentrate on a narrower range of tasks</td></tr>
+ <tr><td>Authority and responsibility</td><td>Wherever authority is exercised, responsibility arises; there must be parity between the two</td></tr>
+ <tr><td>Discipline</td><td>Requires good supervisors at all levels, clear and fair agreements, and judicious application of penalties. Discipline is two-faced: employees obey orders only when management provides good leadership, and discipline merely imposed from above is enforced, one-sided discipline</td></tr>
+ <tr><td>Unity of command</td><td>Each employee should have only one direct superior from whom orders come, ruling out conflicting lines of authority. Fayol opposed dual command as producing confusion in authority and ambiguity in responsibility</td></tr>
+ <tr><td>Unity of direction</td><td>One head and one plan for a group of activities with the same aim. Unity of command cannot exist without unity of direction but does not flow from it</td></tr>
+ <tr><td>Subordination of individual interest</td><td>The goals of the organisation take precedence over those of any individual or group within it</td></tr>
+ <tr><td>Remuneration</td><td>Fair payment reflecting the value of the employee, through time rates, job rates, piece rates, bonuses, profit-sharing or non-financial rewards</td></tr>
+ <tr><td>Centralisation</td><td>A question of proportion rather than principle: the right degree depends on the case</td></tr>
+ <tr><td>Scalar chain</td><td>The route followed, via every link, by all communications starting from or going to the ultimate authority</td></tr>
+ <tr><td>Order</td><td>Material order and social order: a place for everything and everything in its place, applied to things and to people</td></tr>
+ <tr><td>Equity</td><td>Kindliness combined with justice in dealing with subordinates</td></tr>
+ <tr><td>Stability of tenure</td><td>Turnover is both cause and effect of poor management; people need time to become effective</td></tr>
+ <tr><td>Initiative</td><td>The power to conceive and execute a plan, which managers should encourage in subordinates even at some cost to their own vanity</td></tr>
+ <tr><td>Esprit de corps</td><td>Harmony and union among personnel as a source of organisational strength</td></tr>
+ </tbody>
+</table>
+
+<h3>The Gangplank</h3>
+
+<p>Fayol's best-known device is his own qualification of the scalar chain. In a large organisation the chain is too long for swift action. If a person F needs to work with P on the same level, following the chain would require going through every link upward and down again. Fayol proposed that F contact P directly across a <strong>gangplank</strong>, provided the procedure is agreeable to their superiors. His formulation deserves quoting in an answer: "It is an error to depart needlessly from the line of authority, but it is an even greater one to keep to it when detriment to the business ensues."</p>
+
+<p>The gangplank is the classical school admitting its own limit. A structure of authority is necessary, and a structure of authority followed rigidly will strangle the work it was built to do.</p>
+
+<h3>Fayol and Taylor Compared</h3>
+
+<table>
+ <thead>
+ <tr><th></th><th>Taylor</th><th>Fayol</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Vantage point</td><td>Shop floor upward</td><td>Chief executive downward</td></tr>
+ <tr><td>Unit of analysis</td><td>The task and the worker</td><td>The whole undertaking</td></tr>
+ <tr><td>Method</td><td>Observation, measurement, experiment</td><td>Reflection on long managerial experience</td></tr>
+ <tr><td>Supervision</td><td>Functional foremanship: eight specialist superiors</td><td>Unity of command: one superior only</td></tr>
+ <tr><td>Claim</td><td>A science of work</td><td>A teachable body of administrative principles</td></tr>
+ </tbody>
+</table>
+
+<h3>Criticisms</h3>
+
+<ul>
+ <li>The principles are derived from personal experience rather than systematic investigation, and Fayol offers no way to decide between them when they conflict, which is the ground of Simon's later charge that such principles are proverbs.</li>
+ <li>They assume a stable, closed organisation and say little about the environment.</li>
+ <li>The human element appears as a variable to be managed rather than as a source of behaviour the design cannot predict.</li>
+</ul>
+
+<h2>Max Weber and the Ideal Type of Bureaucracy</h2>
+
+<p>Weber's account is not a design proposal. It is an attempt to state what is distinctive about the form of administration that modern societies converged on, and why.</p>
+
+<h3>What "Ideal Type" Means</h3>
+
+<p>Weber did not use ideal to mean perfect or desirable. The ideal type is a methodological construct that isolates and exaggerates the key features of a phenomenon in order to explain it. He used the method to identify the administrative characteristics typical of a certain kind of organisation, not to recommend them. Much of the criticism of Weber misreads the construct as a blueprint.</p>
+
+<h3>The Three Types of Authority</h3>
+
+<ul>
+ <li><strong>Traditional authority</strong> rests on the sanctity of immemorial custom, and the ruler may exercise arbitrary authority within it. Its administrative staff is patrimonial, where officials are personal retainers and servants dependent on the ruler for remuneration, or feudal, where officials have greater autonomy and their own income but still owe traditional loyalty. Conformity with custom and personal arbitrariness are its two marks.</li>
+ <li><strong>Charismatic authority</strong> rests, in Weber's words, "on devotion to specific and exceptional sanctity, heroism or exemplary character of an individual or of normative patterns or orders revealed or ordained by him". The leader, prophet or hero, commands by virtue of extraordinary qualities, and legitimacy comes from the acceptance of that charisma by followers. It is inherently unstable and faces the problem of succession, which Weber called the routinisation of charisma.</li>
+ <li><strong>Legal-rational authority</strong> rests on belief in the legality of enacted rules and in the right of those elevated to authority under those rules to issue commands. Obedience is owed to the office and not to the person. Bureaucracy is the administrative apparatus of this type, and that is the whole of Weber's claim for it.</li>
+</ul>
+
+<h3>Characteristics of the Bureaucratic Type</h3>
+
+<ul>
+ <li>Official business is conducted on a continuous basis under rules, within defined spheres of competence.</li>
+ <li>Offices are organised in a hierarchy, each lower one under the control of a higher.</li>
+ <li>Administration is based on written documents, and the office is separated from the household.</li>
+ <li>Officials are selected on the basis of professional qualifications.</li>
+ <li>Officials receive a money salary, usually with pension rights, graded by hierarchical position. They may leave their posts and may be terminated in certain circumstances.</li>
+ <li>The post is the official's major occupation.</li>
+ <li>There is a career structure, with promotion by seniority or merit and the judgement of superiors.</li>
+ <li>The official can appropriate neither the post nor the resources that go with it.</li>
+ <li>Officials are subject to a unified system of control and discipline.</li>
+</ul>
+
+<p>The aim is a comparatively stable organisation marked by permanence, rationality, neutrality and rule-orientation, able to counter the political instability that affected Western democracies in Weber's time. The model is particularly relevant to parliamentary systems such as India's, where a permanent service persists across changes of government.</p>
+
+<h3>Bureaucracy and Democracy</h3>
+
+<p>Weber was ambivalent. Democracy promotes the development of a rational, neutral, rule-oriented bureaucracy; but democracy also obstructs bureaucratic organisation by limiting terms of office through election and by dispensing with the qualification of expertise, so in one sense the two inevitably conflict.</p>
+
+<p>His deeper worry was about mastery. Bureaucracy should be subordinate to its elected political master, but Weber feared that those who staffed it would become the masters of the state. In relation to the political superior the bureaucrat is an expert who accumulates concrete information, and that information is not always passed upward, which places the official at a great advantage. The very superiority that made bureaucracy essential to modern society also made it dangerous to it.</p>
+
+<h3>Weber's Mechanisms of Control</h3>
+
+<p>Weber canvassed collegiality, the separation of powers, amateur administration, direct democracy and representation as checks. He was unpersuaded by most of them. Amateur administration, where government depends on those wealthy enough to serve unpaid, cannot match professionals who depend on the work for a livelihood and are integrally linked to it. Direct democracy offers short terms of office, selection by lot and recall. Representation he thought the most promising, since representative bodies containing all sections of the population can bring the lapses of lower officials to the notice of higher ones, and organised public resistance can force action.</p>
+
+<p>These mechanisms have been largely ineffective in practice, because administrators and politicians have not taken up the roles Weber assigned them, and because he conceived control in simple terms. The modern problem is harder: to keep bureaucracy responsible and responsive while keeping it under control at all.</p>
+
+<h3>The Dysfunctions</h3>
+
+<ul>
+ <li><strong>Robert Merton</strong> questioned the rationality of the legal-rational model on the ground that it produces dysfunctional consequences. The hierarchy and rules that are rational in Weber's sense can easily lead to consequences detrimental to the attainment of the organisation's objectives, as conformity to the rule displaces the purpose the rule served.</li>
+ <li><strong>Philip Selznick</strong>, pointing to the division of functions, showed how sub-units set up goals of their own that conflict with the purposes of the organisation as a whole. He located the central dilemma in the need to delegate power to sub-systems: increasing complexity compels decentralisation and delegation to intermediaries, and the result is goal displacement and the bifurcation of interests.</li>
+ <li>Merton and Selznick together made the decisive methodological point, that the formal specification of structure is insufficient to predict how officials will actually behave, because officials have characteristics as social beings beyond those the administrative code specifies.</li>
+ <li><strong>Alvin Gouldner</strong>, in <em>Patterns of Industrial Bureaucracy</em>, distinguished <em>punishment-centred bureaucracy</em>, where members conform reluctantly to rules they see as imposed by an alien group, from <em>representative bureaucracy</em>, where members view rules as technically necessary and in their own interest. He also showed that bureaucratic technique produces its own reactions: rules come to define the minimum acceptable level of behaviour, managers respond to that minimum with further rules, and the cycle produces tension and goal displacement. His distinction between <em>cosmopolitans</em>, loyal to their profession, and <em>locals</em>, loyal to the organisation, is a standard citation on bureaucratic behaviour.</li>
+ <li><strong>Peter M. Blau</strong> argued that the model explains social structure through the functions of its elements without taking account of the dysfunctions those elements generate. Weber did not see that "the same factor that enhances efficiency in one respect often threatens it in another; it may have both functional and dysfunctional consequences".</li>
+ <li><strong>Michel Crozier</strong>, in <em>The Bureaucratic Phenomenon</em> (1964), described bureaucracy as "a rigid organisation that cannot correct its behaviour by learning from its errors", which is the sharpest one-line statement of the case against it.</li>
+ <li><strong>Chris Argyris</strong> held that bureaucracies restrict the psychological growth of individuals and cause frustration and conflict, where the organisation ought to provide a sense of responsibility and the opportunity to use one's full potential.</li>
+ <li><strong>Talcott Parsons</strong>, a translator of Weber, questioned the internal consistency of the type. Weber expects the administrative staff to be technically superior and also to have the right to give orders by virtue of position, and there is no guarantee that a high position in the hierarchy of authority will coincide with high professional competence. Conflict follows.</li>
+ <li><strong>Gouldner, Blau and Parsons</strong> all noted that rule-orientation produces delay, since inflexible rules must be adhered to at all costs, and that rationality and impersonality pressed too far produce avoidable delay and client disenchantment. Weber never stated how far the ideal construct should be applied in practice.</li>
+ <li>There is a <strong>mismatch of authority and responsibility</strong>: the bureaucracy is only internally accountable, so it holds authority with little responsibility, and this is strengthened in a parliamentary democracy during periods of political instability when no formal structure enforces accountability.</li>
+</ul>
+
+<h3>Beetham and Offe</h3>
+
+<p><strong>David Beetham</strong> draws attention to three aspects of Weber's theory. First, it emphasises the purely technical, instrumental nature of bureaucracy. Second, it recognises bureaucracy's inherent tendency to exceed that instrumental function and become a separate power group capable of usurping the goal-setting function that properly belongs to the politician. Third, it conceives bureaucracy as reflecting the class structure of society, so that the model presents a bureaucracy unable to free itself from the outlook of the classes from which it is recruited and to which it is allied.</p>
+
+<p><strong>Claus Offe</strong> makes the most penetrating contemporary criticism. A rule-bound bureaucracy has only to apply legal norms to specific situations blindly and mechanically, which Offe calls the unadulterated realisation of norms, or <em>organisational rationality</em>. There is a second kind, <em>systematic rationality</em>, which is the bureaucratic fulfilment of the functional requirements of the societal environment. Under developed welfare-state capitalism the two come apart: an administration can be perfectly rational in the first sense while failing entirely in the second. This is the theoretical statement of a familiar Indian experience, a scheme administered faultlessly by the file and uselessly by the outcome.</p>
+
+<p><strong>William Delaney</strong>, attempting to use the Weberian type to build a development construct, observed that unless further ideal types are created, the existing Weberian work has little applicability outside Western Europe, certain Commonwealth countries and the United States. This is the bridge to Riggs and Comparative Public Administration.</p>
+
+<h3>In Defence of Weber</h3>
+
+<ul>
+ <li>The model is an ideal type meant for the best of situations, and Weber knew practice would vary. It is for administrators in a given socio-cultural setting to use it as a guide and adapt it.</li>
+ <li>Weber held that deviation from the model in a large, complex organisation leads to inefficiency. Most present dysfunctions result from deviations, such as over-insistence on hierarchy, rather than from the model itself.</li>
+ <li>Weber anticipated the tendency of bureaucracy to accumulate power, which is why the question of control occupies so much of his writing. The criticism that he ignored the danger reverses his actual position.</li>
+ <li>He never claimed to give a fully developed description of bureaucracy as a social and technical system, so the charge of behavioural incompleteness asks the construct to do what it was not built to do. The ideal type is a starting point for understanding real bureaucracies, not a substitute for studying them.</li>
+ <li>As <strong>Martin Albrow</strong> notes, formal rationality has increased manifold in present-day administration thanks to the advance of management technique, so the emphasis on formalism has aged better than its critics expected.</li>
+</ul>
+
+<h2>The Human Relations School: Elton Mayo</h2>
+
+<p><strong>George Elton Mayo</strong> (born 1880 in Adelaide) studied logic and philosophy at Adelaide and medicine at Edinburgh, worked in psychopathology, chaired the philosophy department at Queensland in 1919, and moved to America, joining the Wharton School and then becoming Professor of Industrial Research at the Harvard Graduate School of Business Administration in 1926. He was influenced by <strong>Pierre Janet</strong> and <strong>Sigmund Freud</strong>, which is visible in his attention to sentiment rather than incentive. He criticised the classical school for dehumanising operations, breaking traditional social relations and creating social tension.</p>
+
+<h3>The Philadelphia Textile Mill (1923)</h3>
+
+<p>Mayo's first study was at a textile mill near Philadelphia, in a mule-spinning department where labour turnover was very high despite the facilities provided. The introduction of rest pauses, and of a degree of control by the workers over their own scheduling, reduced turnover and raised output. The finding that conditions of work interact with morale rather than with physiology alone set the direction for Hawthorne.</p>
+
+<h3>The Hawthorne Experiments</h3>
+
+<p>Conducted at the Hawthorne Plant of the Western Electric Company near Chicago, in four phases.</p>
+
+<ul>
+ <li><strong>The Illumination Experiments (1924 to 1927).</strong> Lighting was increased and then decreased for a test group while a control group worked under constant light, and production was measured against the varying levels. After a year and a half the team reported, in what became the founding surprise of the field, that production rose in both groups regardless of the level of illumination. The original hypothesis was rejected and two new ones proposed: that individual wage incentive had stimulated the increase, and that a change in supervisory technique had improved attitudes and output.</li>
+ <li><strong>The Relay Assembly Test Room (1927).</strong> Two groups of female operatives assembling telephone relays were placed in a special room on an individual piece-work incentive. In the first group output rose and then held constant; the second, also on individual incentive, was exposed to variations in rest periods and hours of work and showed an average rise over fourteen months. The wage hypothesis was therefore not confirmed, since it was not wages that explained the difference. Testing the second hypothesis, the atmosphere was made relaxed and congenial, the women were allowed to interact freely with each other and with supervisors, and output rose again.</li>
+ <li><strong>The Interviewing Programme (1928 to 1930).</strong> Over twenty thousand employees were interviewed about their attitudes to work, initially through directed questions and then through a non-directive method that let workers talk freely. The shift itself was a finding: the directed interviews produced little, the open ones revealed that grievances often had no relation to the facts complained of and everything to do with the worker's social situation.</li>
+ <li><strong>The Bank Wiring Room (1931 to 1932).</strong> Fourteen men attaching wires to switches, two inspectors, nine wiremen and three solderers, were observed in a natural setting and paid on a group bonus tied to average group output. The expectation was that workers would produce more for more money and would press each other to do so. Instead output was restricted despite the incentive. The men formed a team with natural leaders, and fear that higher output would cost some of them their jobs kept production below capacity. An unofficial code enforced the norm: a worker should not turn out too much work, or he was a <em>rate buster</em>, and not too little, or he was a <em>chiseller</em>; and he should not tell a supervisor anything to a colleague's detriment.</li>
+</ul>
+
+<h3>What Hawthorne Established</h3>
+
+<ul>
+ <li>Output is a function of social factors, not only physical conditions or financial incentive.</li>
+ <li>The organisation is not merely an economic and technological structure but a social structure, "an intricate web of human relations bound together by a system of sentiments".</li>
+ <li>The <strong>informal group</strong> sets its own norms of output and enforces them, and those norms may run against management's interest as effectively as any union.</li>
+ <li>The style of supervision matters more than its intensity. The relay assembly group improved under sympathetic, consultative supervision.</li>
+ <li>Attention itself changes behaviour, which is the <strong>Hawthorne effect</strong>: being studied is an intervention.</li>
+</ul>
+
+<h3>Criticisms</h3>
+
+<ul>
+ <li><strong>Method.</strong> Small samples, replacement of participants mid-study, and no proper controls. The Hawthorne effect undermines the studies that discovered it, since the results may record the experiment rather than the variable.</li>
+ <li><strong>Pro-management bias.</strong> Critics hold that the school treats conflict as a failure of communication rather than a real divergence of interest, and offers sympathetic supervision as a substitute for bargaining power. The term "cow sociology" captures the charge, that contented workers produce more and contentment is the object.</li>
+ <li><strong>Neglect of the union and of the wider environment.</strong> The plant is studied as a closed social world.</li>
+ <li><strong>Over-correction.</strong> Where the classical school saw only structure, the human relations school came close to seeing only sentiment. The behavioural approach would rejoin the two.</li>
+</ul>
+
+<h2>The Behavioural Approach: Herbert Simon</h2>
+
+<p><strong>Herbert Simon's</strong> <em>Administrative Behaviour</em> (1947) shifts the unit of analysis once more. The organisation is neither a structure of positions nor a web of sentiments but a system of <strong>decisions</strong>, and administrative theory is the theory of how decisions are made and constrained.</p>
+
+<p>Two moves matter at the level of organisation theory. First, Simon dismissed the classical principles as <strong>proverbs</strong>: they come in mutually contradictory pairs, specialisation against unity of command, narrow span of control against few hierarchical levels, and nothing in them indicates which member of a pair applies to a given case. Second, he replaced economic man, who maximises, with <strong>administrative man</strong>, who <em>satisfices</em>, choosing the first alternative that meets an acceptable threshold because the information and computing capacity required to maximise are never available. The limit is not irrationality but <strong>bounded rationality</strong>: rational behaviour within the boundary of what the decision-maker can know and process.</p>
+
+<p>The organisational consequence is that structure is best understood as the mechanism by which the premises of decisions are supplied to those who make them. Hierarchy, communication channels, training and standard procedures all work by shaping what a subordinate takes as given. The full treatment of Simon, including the fact-value dichotomy, the zone of acceptance and his critics, belongs to the note on administrative behaviour.</p>
+
+<h2>The Systems Approach</h2>
+
+<p>The systems approach treats the organisation as an open system that exchanges energy, material and information with its environment, rather than as a closed structure to be designed. Its vocabulary comes from <strong>Ludwig von Bertalanffy's</strong> general systems theory, and its best-known application to organisations is <strong>Daniel Katz and Robert Kahn's</strong> <em>The Social Psychology of Organizations</em> (1966).</p>
+
+<h3>Propositions</h3>
+
+<ul>
+ <li>Organisations import energy and materials from the environment and transform these inputs into products and services through internal social and technological processes, the <strong>throughput</strong>.</li>
+ <li>They export their outputs to the environment, where those outputs usually become the inputs of other organisations.</li>
+ <li>Structures develop around patterned activities that form stable and predictable input, throughput and output cycles.</li>
+ <li>Over time, structural differentiation and task specialisation are common responses to the search for resources and adaptiveness, and managerial structures for coordination and control grow more elaborate as the organisation grows more complex.</li>
+ <li><strong>Feedback</strong>, information about the environment's response to the organisation's outputs, keeps the system on course and is used to evaluate the organisation and its sub-units.</li>
+ <li>Organisations seek equilibrium, internally and against external forces, and reach it through constant adaptation.</li>
+</ul>
+
+<h3>What It Contributes</h3>
+
+<ul>
+ <li>A unified focus for organisational effort, and a view of the organisation as a whole greater than the sum of its parts. Managers previously took one part, attended to it, then moved to another, with the result that an organisation could have well-functioning departments that did not integrate.</li>
+ <li>A treatment of the organisation as open, with dynamic interaction between sub-systems.</li>
+ <li>A multi-variable account, in which an event is the product of many inter-related and interdependent factors.</li>
+ <li>A mechanism, through feedback, for rearranging the parts as the environment changes.</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+ <li>It is very abstract, and therefore of less use in actual administrative practice. It tells you that the parts are related without identifying the precise nature of the relationship.</li>
+ <li>It lacks universality. Its modern structural forms, such as the cybernetic model of control and communication, suit large and complex organisations and not small ones.</li>
+ <li>The equilibrium assumption carries a conservative bias, treating adaptation as the normal response and conflict as disturbance.</li>
+</ul>
+
+<h2>Contingency Theory</h2>
+
+<p>Contingency theory arose to overcome the shortcomings of the systems approach by giving its abstractions specific content. Its single proposition is that there is no one best way to organise, and that the best way depends on the environment to which the organisation relates. <strong>Galbraith</strong> stated the first half in 1973, and <strong>Scott</strong> the second in 1981.</p>
+
+<ul>
+ <li><strong>Tom Burns and G.M. Stalker</strong>, in <em>The Management of Innovation</em> (1961), drew the founding distinction. <strong>Mechanistic</strong> systems, with strict roles, specialisation, hierarchy and vertical communication, suit stable conditions. <strong>Organic</strong> systems, with flexible roles, lateral communication and holistic task definition, suit changing conditions where tasks and roles must be continually redefined. The work directly challenged the received wisdom that there is one best way to manage.</li>
+ <li><strong>Joan Woodward</strong> argued that technology directly determines differences in organisational attributes such as span of control, centralisation of authority and the formalisation of rules and procedures. Historically, contingency theory has sought broad generalisations about the formal structures that best fit different technologies.</li>
+ <li><strong>Paul Lawrence and Jay Lorsch</strong> (1967) coined the term contingency theory, arguing that different amounts of environmental uncertainty place different requirements on organisations. Their related concepts of <em>differentiation</em>, the divergence of sub-units facing different environments, and <em>integration</em>, the effort needed to hold them together, explain why a firm in a turbulent market needs more coordinating machinery than one in a stable market.</li>
+ <li><strong>Fred Fiedler</strong> carried the logic into leadership. Before his work, industrial psychologists focused on the personal traits of successful leaders and believed in an ideal science of organisation, assuming one best way to manage. Fiedler's contingency model made the effectiveness of a leadership style depend on the situation.</li>
+ <li>The field has since expanded to cover strategy, size, scale, technology, geography, uncertainty, the individual predispositions of participants, resource dependency, national and cultural differences, scope and organisational life cycle.</li>
+</ul>
+
+<h3>Assessment</h3>
+
+<p>Contingency theory is the natural terminus of the sequence: having watched each school claim universality and lose it, the field concluded that fit is the only general principle available. Its weakness is the mirror of its strength. A theory that says the answer depends on the circumstances gives the practitioner very little until the relevant circumstances are specified, and the list of contingent variables has grown long enough that the theory risks becoming a restatement of the problem. For public administration there is a further difficulty: a government department cannot choose its environment, its tasks or often its structure, so the prescription to fit the organisation to its circumstances meets a system in which very few of those variables are in the administrator's hands.</p>
+`,
 };
