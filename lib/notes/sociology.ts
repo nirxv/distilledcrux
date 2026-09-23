@@ -99,7 +99,7 @@ export const paper1Notes: Note[] = [
     section: 'Fundamentals of Sociology',
     topic: 10,
     description: 'Concepts of equality, inequality, hierarchy; theories of stratification; class, status, gender, ethnicity; social mobility types',
-    subtopics: ['Equality, Inequality & Hierarchy', 'Theories of Stratification', 'Class, Status, Gender & Ethnicity', 'Social Mobility — Types & Sources'],
+    subtopics: ['Equality, Inequality & Hierarchy', 'Theories of Stratification', 'Class, Status, Gender & Ethnicity', 'Social Mobility: Types & Sources'],
   },
   {
     slug: 'works-economic-life',
@@ -125,7 +125,7 @@ export const paper1Notes: Note[] = [
     paper: 1,
     section: 'Fundamentals of Sociology',
     topic: 13,
-    description: 'Sociological theories of religion, types of religious practices, religion in modern society — secularisation, revivalism, fundamentalism',
+    description: 'Sociological theories of religion, types of religious practices, religion in modern society: secularisation, revivalism, fundamentalism',
     subtopics: ['Sociological Theories of Religion', 'Types of Religious Practices', 'Religion & Science', 'Secularisation & Fundamentalism'],
   },
   {
@@ -157,8 +157,8 @@ export const paper2Notes: Note[] = [
     paper: 2,
     section: 'Indian Society: Structure',
     topic: 1,
-    description: 'Indology (Ghurye), structural functionalism (Srinivas), Marxist sociology (AR Desai) — three perspectives on studying Indian society',
-    subtopics: ['Indology — G.S. Ghurye', 'Structural Functionalism — M.N. Srinivas', 'Marxist Sociology — A.R. Desai'],
+    description: 'Indology (Ghurye), structural functionalism (Srinivas), Marxist sociology (AR Desai): three perspectives on studying Indian society',
+    subtopics: ['Indology: G.S. Ghurye', 'Structural Functionalism: M.N. Srinivas', 'Marxist Sociology: A.R. Desai'],
   },
   {
     slug: 'colonial-rule-indian-society',
@@ -184,8 +184,8 @@ export const paper2Notes: Note[] = [
     paper: 2,
     section: 'Indian Society: Structure',
     topic: 4,
-    description: 'Perspectives of Ghurye, Srinivas, Dumont and Beteille; features of caste; untouchability — forms and perspectives',
-    subtopics: ['Ghurye on Caste', 'Srinivas — Sanskritization & Dominant Caste', 'Louis Dumont — Homo Hierarchicus', 'Andre Beteille — Caste, Class & Power', 'Features of Caste System', 'Untouchability'],
+    description: 'Perspectives of Ghurye, Srinivas, Dumont and Beteille; features of caste; untouchability: forms and perspectives',
+    subtopics: ['Ghurye on Caste', 'Srinivas: Sanskritization & Dominant Caste', 'Louis Dumont: Homo Hierarchicus', 'Andre Beteille: Caste, Class & Power', 'Features of Caste System', 'Untouchability'],
   },
   {
     slug: 'tribal-communities',
@@ -248,7 +248,7 @@ export const paper2Notes: Note[] = [
     section: 'Social Changes in India',
     topic: 11,
     description: 'Modern industry in India, urban settlements, working class, informal sector, child labour, slums and deprivation',
-    subtopics: ['Evolution of Modern Industry', 'Growth of Urban Settlements', 'Working Class — Structure & Mobilization', 'Informal Sector & Child Labour', 'Slums & Urban Deprivation'],
+    subtopics: ['Evolution of Modern Industry', 'Growth of Urban Settlements', 'Working Class: Structure & Mobilization', 'Informal Sector & Child Labour', 'Slums & Urban Deprivation'],
   },
   {
     slug: 'politics-society-india',
@@ -275,7 +275,7 @@ export const paper2Notes: Note[] = [
     section: 'Social Changes in India',
     topic: 14,
     description: 'Population size, growth, composition; birth, death, migration; population policy and family planning; emerging issues',
-    subtopics: ['Population Size, Growth & Composition', 'Components of Growth — Birth, Death, Migration', 'Population Policy & Family Planning', 'Emerging Issues — Ageing, Sex Ratio, Reproductive Health'],
+    subtopics: ['Population Size, Growth & Composition', 'Components of Growth: Birth, Death, Migration', 'Population Policy & Family Planning', 'Emerging Issues: Ageing, Sex Ratio, Reproductive Health'],
   },
   {
     slug: 'challenges-social-transformation',
@@ -284,7 +284,7 @@ export const paper2Notes: Note[] = [
     section: 'Social Changes in India',
     topic: 15,
     description: 'Crisis of development, poverty and deprivation, violence against women, caste and ethnic conflicts, communalism, illiteracy',
-    subtopics: ['Crisis of Development — Displacement & Sustainability', 'Poverty, Deprivation & Inequalities', 'Violence Against Women', 'Caste Conflicts', 'Ethnic Conflicts, Communalism & Religious Revivalism', 'Illiteracy & Disparities in Education'],
+    subtopics: ['Crisis of Development: Displacement & Sustainability', 'Poverty, Deprivation & Inequalities', 'Violence Against Women', 'Caste Conflicts', 'Ethnic Conflicts, Communalism & Religious Revivalism', 'Illiteracy & Disparities in Education'],
   },
 ];
 

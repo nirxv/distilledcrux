@@ -17,7 +17,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Foundations of Anthropology',
     topic: 1,
-    description: 'Meaning and scope of anthropology, its development as a discipline, relationships with other disciplines — social sciences, behavioral sciences, life sciences, medical sciences, earth sciences',
+    description: 'Meaning and scope of anthropology, its development as a discipline, relationships with other disciplines: social sciences, behavioral sciences, life sciences, medical sciences, earth sciences',
     subtopics: ['Meaning & Scope', 'Development as a Discipline', 'Relationship with Social Sciences', 'Relationship with Life & Medical Sciences', 'Relationship with Earth Sciences'],
   },
   {
@@ -26,7 +26,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Foundations of Anthropology',
     topic: 2,
-    description: 'Physical / Biological Anthropology, Social / Cultural Anthropology, Archaeological Anthropology, and Linguistic Anthropology — scope and interrelations',
+    description: 'Physical / Biological Anthropology, Social / Cultural Anthropology, Archaeological Anthropology, and Linguistic Anthropology: scope and interrelations',
     subtopics: ['Physical & Biological Anthropology', 'Social & Cultural Anthropology', 'Archaeological Anthropology', 'Linguistic Anthropology'],
   },
   {
@@ -35,8 +35,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 3,
-    description: 'Organic evolution, theories of evolution — Lamarckism, Darwinism, Synthetic Theory; palaeontological evidence; evolutionary history of primates; Australopithecines; Homo erectus; archaic and anatomically modern Homo sapiens',
-    subtopics: ['Organic Evolution — Theories', 'Palaeontological Evidence', 'Order Primates', 'Hominid Evolution', 'Australopithecines', 'Homo Erectus', 'Archaic Homo Sapiens', 'Anatomically Modern Homo Sapiens'],
+    description: 'Organic evolution, theories of evolution: Lamarckism, Darwinism, Synthetic Theory; palaeontological evidence; evolutionary history of primates; Australopithecines; Homo erectus; archaic and anatomically modern Homo sapiens',
+    subtopics: ['Organic Evolution: Theories', 'Palaeontological Evidence', 'Order Primates', 'Hominid Evolution', 'Australopithecines', 'Homo Erectus', 'Archaic Homo Sapiens', 'Anatomically Modern Homo Sapiens'],
   },
   {
     slug: 'biological-basis-of-life',
@@ -53,7 +53,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 5,
-    description: 'Methods of human genetics — pedigree, twin, cytogenetic, biochemical; genetics of ABO, Rh blood groups; HLA system; eugenics and euphenics; population genetics — Hardy-Weinberg equilibrium; consanguinity; genetic disorders — chromosomal and Mendelian',
+    description: 'Methods of human genetics: pedigree, twin, cytogenetic, biochemical; genetics of ABO, Rh blood groups; HLA system; eugenics and euphenics; population genetics: Hardy-Weinberg equilibrium; consanguinity; genetic disorders: chromosomal and Mendelian',
     subtopics: ['Methods of Study', 'Pedigree & Twin Studies', 'ABO & Rh Blood Groups', 'HLA System', 'Hardy-Weinberg Equilibrium', 'Population Genetics', 'Consanguinity', 'Eugenics & Euphenics', 'Chromosomal Disorders', 'Mendelian Disorders'],
   },
   {
@@ -62,8 +62,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 6,
-    description: 'Biological basis of racial classifications; typological vs population concept of race; racism and its critique; racial elements in Indian population — racial affinities',
-    subtopics: ['Race — Biological Basis & Classification', 'Typological vs Population Concept', 'Racism & Scientific Critique', 'Racial Affinities in India'],
+    description: 'Biological basis of racial classifications; typological vs population concept of race; racism and its critique; racial elements in Indian population: racial affinities',
+    subtopics: ['Race: Biological Basis & Classification', 'Typological vs Population Concept', 'Racism & Scientific Critique', 'Racial Affinities in India'],
   },
   {
     slug: 'human-growth-development',
@@ -71,7 +71,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 7,
-    description: 'Stages of growth — infancy, childhood, adolescence, adulthood; factors influencing growth — genetic, hormonal, environmental, nutritional; concept of secular trend; relevance of menarche, menopause and other bioevents to fertility patterns',
+    description: 'Stages of growth: infancy, childhood, adolescence, adulthood; factors influencing growth: genetic, hormonal, environmental, nutritional; concept of secular trend; relevance of menarche, menopause and other bioevents to fertility patterns',
     subtopics: ['Stages of Growth', 'Factors Influencing Growth', 'Secular Trend', 'Menarche, Menopause & Bioevents', 'Fertility Patterns & Differentials'],
   },
   {
@@ -80,7 +80,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 8,
-    description: 'Epidemiological anthropology — disease patterns, nutritional anthropology, occupational health and ergonomics, bioarchaeology, forensic anthropology',
+    description: 'Epidemiological anthropology: disease patterns, nutritional anthropology, occupational health and ergonomics, bioarchaeology, forensic anthropology',
     subtopics: ['Epidemiological Anthropology', 'Nutritional Anthropology', 'Forensic Anthropology', 'Bioarchaeology', 'Ergonomics & Occupational Health'],
   },
   {
@@ -89,7 +89,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Archaeological Anthropology',
     topic: 9,
-    description: 'Objectives and principles of prehistoric archaeology; typology of stone tools; chronology — relative and absolute dating methods; archaeological excavation techniques; cultural stratigraphy',
+    description: 'Objectives and principles of prehistoric archaeology; typology of stone tools; chronology: relative and absolute dating methods; archaeological excavation techniques; cultural stratigraphy',
     subtopics: ['Objectives & Principles', 'Stone Tool Typology', 'Relative Dating Methods', 'Absolute Dating Methods (C-14, K-Ar, TL)', 'Excavation Techniques', 'Cultural Stratigraphy'],
   },
   {
@@ -98,7 +98,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Archaeological Anthropology',
     topic: 10,
-    description: 'Palaeolithic (Lower, Middle, Upper), Mesolithic, Neolithic, Chalcolithic, Bronze Age and Iron Age cultures — subsistence patterns, tools, social organization and emergence of food production',
+    description: 'Palaeolithic (Lower, Middle, Upper), Mesolithic, Neolithic, Chalcolithic, Bronze Age and Iron Age cultures: subsistence patterns, tools, social organization and emergence of food production',
     subtopics: ['Lower Palaeolithic Culture', 'Middle Palaeolithic Culture', 'Upper Palaeolithic Culture', 'Mesolithic Culture', 'Neolithic Culture', 'Chalcolithic & Bronze Age', 'Iron Age & Emergence of Civilisation'],
   },
   {
@@ -116,7 +116,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 12,
-    description: 'Concept of society and social structure; community and association; norms and institutions; concepts of role, status and social group; types of societies — band, tribe, chiefdom, state',
+    description: 'Concept of society and social structure; community and association; norms and institutions; concepts of role, status and social group; types of societies: band, tribe, chiefdom, state',
     subtopics: ['Society & Social Structure', 'Community & Association', 'Norms & Institutions', 'Role, Status & Social Groups', 'Band, Tribe, Chiefdom & State'],
   },
   {
@@ -125,8 +125,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 13,
-    description: 'Definitions and functions of marriage; rules of marriage — endogamy, exogamy, preferential mating; forms of marriage; family — types, functions, evolution; household; kinship — consanguinity and affinity, descent theories, kinship terminology',
-    subtopics: ['Marriage — Definition & Functions', 'Rules & Forms of Marriage', 'Family — Types & Functions', 'Evolution of Family', 'Kinship — Consanguinity & Affinity', 'Descent Theories', 'Kinship Terminology Systems', 'Joking & Avoidance Relationships'],
+    description: 'Definitions and functions of marriage; rules of marriage: endogamy, exogamy, preferential mating; forms of marriage; family: types, functions, evolution; household; kinship: consanguinity and affinity, descent theories, kinship terminology',
+    subtopics: ['Marriage: Definition & Functions', 'Rules & Forms of Marriage', 'Family: Types & Functions', 'Evolution of Family', 'Kinship: Consanguinity & Affinity', 'Descent Theories', 'Kinship Terminology Systems', 'Joking & Avoidance Relationships'],
   },
   {
     slug: 'economic-organization',
@@ -134,7 +134,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 14,
-    description: 'Meaning of economic anthropology; subsistence economies; production, distribution and exchange — reciprocity, redistribution, market; formalism and substantivism debate; gift economy; food foraging to food production',
+    description: 'Meaning of economic anthropology; subsistence economies; production, distribution and exchange: reciprocity, redistribution, market; formalism and substantivism debate; gift economy; food foraging to food production',
     subtopics: ['Meaning of Economic Anthropology', 'Subsistence Economies', 'Production, Distribution & Exchange', 'Reciprocity, Redistribution & Market', 'Formalism vs Substantivism', 'Gift Economy'],
   },
   {
@@ -143,8 +143,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 15,
-    description: 'Concepts of power, authority and legitimacy; band, tribal, chiefdom and state level organizations; political anthropology; social control — formal and informal; law and legal anthropology; conflict resolution',
-    subtopics: ['Power, Authority & Legitimacy', 'Band & Tribal Political Organization', 'Chiefdom & State Level Organization', 'Political Anthropology', 'Social Control — Formal & Informal', 'Law & Legal Anthropology', 'Conflict Resolution'],
+    description: 'Concepts of power, authority and legitimacy; band, tribal, chiefdom and state level organizations; political anthropology; social control: formal and informal; law and legal anthropology; conflict resolution',
+    subtopics: ['Power, Authority & Legitimacy', 'Band & Tribal Political Organization', 'Chiefdom & State Level Organization', 'Political Anthropology', 'Social Control: Formal & Informal', 'Law & Legal Anthropology', 'Conflict Resolution'],
   },
   {
     slug: 'religion',
@@ -152,7 +152,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 16,
-    description: 'Anthropological approaches to religion — animism, animatism, totemism; myth and ritual; magic, religion and science; shamanism; ancestors and spirit worship; world religions and local traditions; sacred and profane',
+    description: 'Anthropological approaches to religion: animism, animatism, totemism; myth and ritual; magic, religion and science; shamanism; ancestors and spirit worship; world religions and local traditions; sacred and profane',
     subtopics: ['Animism, Animatism & Totemism', 'Myth & Ritual', 'Magic, Religion & Science', 'Shamanism & Spirit Possession', 'Ancestor Worship', 'Sacred & Profane', 'Anthropological Theories of Religion'],
   },
   {
@@ -161,7 +161,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 17,
-    description: 'Classical evolutionism — Tylor, Morgan; diffusionism — British, German; historical particularism — Boas; functionalism — Malinowski; structural-functionalism — Radcliffe-Brown; culture and personality school; neo-evolutionism; structuralism — Lévi-Strauss; symbolic and interpretive anthropology; post-modernism in anthropology',
+    description: 'Classical evolutionism: Tylor, Morgan; diffusionism: British, German; historical particularism: Boas; functionalism: Malinowski; structural-functionalism: Radcliffe-Brown; culture and personality school; neo-evolutionism; structuralism: Lévi-Strauss; symbolic and interpretive anthropology; post-modernism in anthropology',
     subtopics: ['Classical Evolutionism (Tylor, Morgan)', 'Diffusionism', 'Historical Particularism (Boas)', 'Functionalism (Malinowski)', 'Structural-Functionalism (Radcliffe-Brown)', 'Culture & Personality School', 'Neo-Evolutionism', 'Structuralism (Lévi-Strauss)', 'Symbolic & Interpretive Anthropology', 'Post-Modernism in Anthropology'],
   },
   {
@@ -170,7 +170,7 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Socio-Cultural Anthropology',
     topic: 18,
-    description: 'Language and culture — Sapir-Whorf hypothesis; origins of language; linguistic anthropology; non-verbal communication; ethnolinguistics; sociolinguistics; language and cognition',
+    description: 'Language and culture: Sapir-Whorf hypothesis; origins of language; linguistic anthropology; non-verbal communication; ethnolinguistics; sociolinguistics; language and cognition',
     subtopics: ['Language & Culture', 'Sapir-Whorf Hypothesis', 'Origins of Language', 'Non-Verbal Communication', 'Ethnolinguistics & Sociolinguistics', 'Language & Cognition'],
   },
   {
@@ -188,8 +188,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Methods',
     topic: 20,
-    description: 'Applied anthropology — scope and relevance; development anthropology; medical anthropology; nutritional anthropology; forensic anthropology; urban anthropology; disaster anthropology; advocacy and action anthropology',
-    subtopics: ['Applied Anthropology — Scope & History', 'Development Anthropology', 'Medical Anthropology', 'Nutritional Anthropology', 'Forensic Anthropology', 'Urban Anthropology', 'Disaster & Action Anthropology'],
+    description: 'Applied anthropology: scope and relevance; development anthropology; medical anthropology; nutritional anthropology; forensic anthropology; urban anthropology; disaster anthropology; advocacy and action anthropology',
+    subtopics: ['Applied Anthropology: Scope & History', 'Development Anthropology', 'Medical Anthropology', 'Nutritional Anthropology', 'Forensic Anthropology', 'Urban Anthropology', 'Disaster & Action Anthropology'],
   },
 ];
 
@@ -202,7 +202,7 @@ export const paper2Notes: AnthroNote[] = [
     paper: 2,
     section: 'Indian Prehistory & Archaeology',
     topic: 1,
-    description: 'Prehistoric periods — Palaeolithic, Mesolithic, Neolithic, Neolithic-Chalcolithic; Protohistoric: pre-Harappan, Harappan and post-Harappan cultures; contributions of tribal cultures to Indian civilization',
+    description: 'Prehistoric periods: Palaeolithic, Mesolithic, Neolithic, Neolithic-Chalcolithic; Protohistoric: pre-Harappan, Harappan and post-Harappan cultures; contributions of tribal cultures to Indian civilization',
     subtopics: ['Palaeolithic India', 'Mesolithic India', 'Neolithic & Neolithic-Chalcolithic', 'Pre-Harappan Cultures', 'Harappan Civilization', 'Post-Harappan Cultures', 'Tribal Contributions to Indian Civilization'],
   },
   {
@@ -211,7 +211,7 @@ export const paper2Notes: AnthroNote[] = [
     paper: 2,
     section: 'Indian Prehistory & Archaeology',
     topic: 2,
-    description: 'Fossil evidence from India — Siwaliks and Narmada basin; Ramapithecus, Sivapithecus and Narmada Man; significance of Indian fossil record in hominid evolution',
+    description: 'Fossil evidence from India: Siwaliks and Narmada basin; Ramapithecus, Sivapithecus and Narmada Man; significance of Indian fossil record in hominid evolution',
     subtopics: ['Siwalik Fossil Record', 'Ramapithecus & Sivapithecus', 'Narmada Man (Homo narmadensis)', 'Significance for Hominid Evolution'],
   },
   {
@@ -239,7 +239,7 @@ export const paper2Notes: AnthroNote[] = [
     section: 'Indian Society & Social Structure',
     topic: 5,
     description: 'Varnashrama, purushartha, karma, rina and rebirth; ideology and structure of the traditional social system; inter-relationship among varna, ashrama and purushartha',
-    subtopics: ['Varna & Ashrama System', 'Purushartha — Four Aims of Life', 'Karma, Rina & Rebirth', 'Ideology of Traditional Social Order'],
+    subtopics: ['Varna & Ashrama System', 'Purushartha: Four Aims of Life', 'Karma, Rina & Rebirth', 'Ideology of Traditional Social Order'],
   },
   {
     slug: 'caste-system-india',
@@ -283,7 +283,7 @@ export const paper2Notes: AnthroNote[] = [
     paper: 2,
     section: 'Indian Society & Social Structure',
     topic: 10,
-    description: 'Linguistic and religious minorities in India — their social, political and economic status; constitutional provisions; minority rights and issues',
+    description: 'Linguistic and religious minorities in India: their social, political and economic status; constitutional provisions; minority rights and issues',
     subtopics: ['Linguistic Minorities in India', 'Religious Minorities in India', 'Social & Economic Status of Minorities', 'Constitutional Provisions for Minorities', 'Minority Rights & Issues'],
   },
   {
@@ -301,7 +301,7 @@ export const paper2Notes: AnthroNote[] = [
     paper: 2,
     section: 'Tribal India',
     topic: 12,
-    description: 'Bio-genetic variability; linguistic and socio-economic characteristics of tribal populations and their distribution; scheduled tribes — geographical spread and demographic profile',
+    description: 'Bio-genetic variability; linguistic and socio-economic characteristics of tribal populations and their distribution; scheduled tribes: geographical spread and demographic profile',
     subtopics: ['Bio-Genetic Variability of Tribes', 'Linguistic Characteristics', 'Socio-Economic Characteristics', 'Tribal Distribution in India', 'Demographic Profile of Scheduled Tribes'],
   },
   {
@@ -365,7 +365,7 @@ export const paper2Notes: AnthroNote[] = [
     section: 'Tribal India',
     topic: 19,
     description: 'Comparative study of tribal communities in India and other countries; tribal integration and assimilation vs autonomy; Fourth World movements; indigenous rights globally',
-    subtopics: ['Tribes in India — Integration vs Autonomy', 'Comparative Tribal Studies (World)', 'Fourth World Movements', 'Indigenous Rights Globally'],
+    subtopics: ['Tribes in India: Integration vs Autonomy', 'Comparative Tribal Studies (World)', 'Fourth World Movements', 'Indigenous Rights Globally'],
   },
   {
     slug: 'administration-tribal-areas',
@@ -373,8 +373,8 @@ export const paper2Notes: AnthroNote[] = [
     paper: 2,
     section: 'Tribal India',
     topic: 20,
-    description: 'History of administration of tribal areas; tribal policies and development plans; concept of PTGs (Particularly Vulnerable Tribal Groups) — distribution and special programs; role of NGOs in tribal development',
-    subtopics: ['History of Tribal Administration', 'Tribal Policies & Development Plans', 'PTGs — Concept, Distribution & Programs', 'Role of NGOs in Tribal Development', 'Fifth & Sixth Schedules'],
+    description: 'History of administration of tribal areas; tribal policies and development plans; concept of PTGs (Particularly Vulnerable Tribal Groups): distribution and special programs; role of NGOs in tribal development',
+    subtopics: ['History of Tribal Administration', 'Tribal Policies & Development Plans', 'PTGs: Concept, Distribution & Programs', 'Role of NGOs in Tribal Development', 'Fifth & Sixth Schedules'],
   },
   {
     slug: 'role-of-anthropology-development',

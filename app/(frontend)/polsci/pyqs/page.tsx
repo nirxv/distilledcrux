@@ -101,7 +101,7 @@ const P1_TOPICS = [
   "Statutory Institutions and Commissions",
   "Federalism",
   "Planning and Economic Development",
-  "Indian Politics — Caste, Religion and Ethnicity",
+  "Indian Politics: Caste, Religion and Ethnicity",
   "Party System",
   "Social Movements",
 ];
@@ -118,7 +118,7 @@ const P2_TOPICS = [
   "United Nations",
   "Regionalisation of World Politics",
   "Contemporary Global Concerns",
-  "India's Foreign Policy — Changing International Order",
+  "India's Foreign Policy: Changing International Order",
   "India and the Non-Alignment Movement",
   "India and South Asia",
   "India and the Global South",

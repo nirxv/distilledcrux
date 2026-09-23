@@ -455,7 +455,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                   <div className="pd-dot" /><div className="pd-dot" /><div className="pd-dot" />
                 </div>
               ) : answers.length === 0 ? (
-                <div className="pd-dashed">No answers yet — be the first to submit.</div>
+                <div className="pd-dashed">No answers yet. Be the first to submit.</div>
               ) : (
                 <div className="pd-answer-grid">
                   {answers.map(ans => (

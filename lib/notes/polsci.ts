@@ -36,8 +36,8 @@ export const paper1Notes: PolsciNote[] = [
     paper: 1,
     section: 'Political Theory',
     topic: 3,
-    description: 'Conceptions of justice — Rawls\' theory of justice as fairness, veil of ignorance, difference principle, communitarian critiques',
-    subtopics: ['Conceptions of Justice', 'Rawls — Theory of Justice', 'Veil of Ignorance & Original Position', 'Difference Principle', 'Communitarian Critiques (Sandel, Walzer, MacIntyre)'],
+    description: 'Conceptions of justice: Rawls\' theory of justice as fairness, veil of ignorance, difference principle, communitarian critiques',
+    subtopics: ['Conceptions of Justice', 'Rawls: Theory of Justice', 'Veil of Ignorance & Original Position', 'Difference Principle', 'Communitarian Critiques (Sandel, Walzer, MacIntyre)'],
   },
   {
     slug: 'equality',
@@ -63,7 +63,7 @@ export const paper1Notes: PolsciNote[] = [
     paper: 1,
     section: 'Political Theory',
     topic: 6,
-    description: 'Classical and contemporary theories of democracy; models — representative, participatory and deliberative democracy',
+    description: 'Classical and contemporary theories of democracy; models: representative, participatory and deliberative democracy',
     subtopics: ['Classical Theory', 'Elitist Theory', 'Pluralist Theory', 'Representative Democracy', 'Participatory Democracy', 'Deliberative Democracy'],
   },
   {
@@ -73,7 +73,7 @@ export const paper1Notes: PolsciNote[] = [
     section: 'Political Theory',
     topic: 7,
     description: 'Concept of power, Dahl vs Lukes, Gramsci\'s hegemony, ideology as legitimation, false consciousness',
-    subtopics: ['Concept of Power', 'Dahl — Pluralist Power', 'Lukes — Three Faces of Power', 'Gramsci\'s Hegemony', 'Ideology & Legitimacy'],
+    subtopics: ['Concept of Power', 'Dahl: Pluralist Power', 'Lukes: Three Faces of Power', 'Gramsci\'s Hegemony', 'Ideology & Legitimacy'],
   },
   {
     slug: 'political-ideologies',
@@ -295,7 +295,7 @@ export const paper2Notes: PolsciNote[] = [
     paper: 2,
     section: 'Comparative Political Analysis and International Politics',
     topic: 10,
-    description: 'EU, ASEAN, APEC, SAARC, NAFTA — regional organisations and their role in international politics',
+    description: 'EU, ASEAN, APEC, SAARC, NAFTA: regional organisations and their role in international politics',
     subtopics: ['European Union', 'ASEAN', 'APEC', 'SAARC', 'NAFTA / USMCA', 'Regionalism vs Globalisation'],
   },
   {
@@ -332,8 +332,8 @@ export const paper2Notes: PolsciNote[] = [
     paper: 2,
     section: 'India and the World',
     topic: 14,
-    description: 'SAARC — performance and prospects, South Asia as free trade area, Look East policy, impediments to regional co-operation',
-    subtopics: ['SAARC — Past & Future', 'South Asia Free Trade Area', 'Look East / Act East Policy', 'River Water Disputes', 'Cross-border Migration', 'Ethnic Conflicts & Border Disputes'],
+    description: 'SAARC: performance and prospects, South Asia as free trade area, Look East policy, impediments to regional co-operation',
+    subtopics: ['SAARC: Past & Future', 'South Asia Free Trade Area', 'Look East / Act East Policy', 'River Water Disputes', 'Cross-border Migration', 'Ethnic Conflicts & Border Disputes'],
   },
   {
     slug: 'india-and-global-south',
@@ -350,7 +350,7 @@ export const paper2Notes: PolsciNote[] = [
     paper: 2,
     section: 'India and the World',
     topic: 16,
-    description: 'India\'s relations with USA, EU, Japan, China and Russia — bilateral and multilateral dimensions',
+    description: 'India\'s relations with USA, EU, Japan, China and Russia: bilateral and multilateral dimensions',
     subtopics: ['India-USA Relations', 'India-EU Relations', 'India-Japan Strategic Partnership', 'India-China Relations', 'India-Russia Relations', 'Multilateral Forums (QUAD, BRICS, SCO)'],
   },
   {

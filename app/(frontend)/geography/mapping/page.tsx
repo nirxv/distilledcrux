@@ -183,7 +183,7 @@ export default function GeoMappingPage() {
           </h1>
           <p style={{ color: 'var(--text2)', fontSize: 15 }}>
             {viewMode === 'quiz'
-              ? 'Identify the marked location. Paper II, Q1(a) — 20 marks.'
+              ? 'Identify the marked location. Paper II, Q1(a), 20 marks.'
               : <span>PYQ map locations 2013–2025. <span style={{ color: ACCENT }}>131 locations</span> across 13 years · Paper II Q1(a).</span>}
           </p>
         </div>

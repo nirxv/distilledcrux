@@ -26,7 +26,7 @@ export const paper1Notes: PubAdminNote[] = [
     paper: 1,
     section: 'Administrative Theory',
     topic: 2,
-    description: 'Classical theory — Weber\'s bureaucracy, Taylor\'s scientific management, Fayol\'s principles; human relations school — Elton Mayo; behavioural approach — Simon; systems approach; contingency theory',
+    description: 'Classical theory: Weber\'s bureaucracy, Taylor\'s scientific management, Fayol\'s principles; human relations school: Elton Mayo; behavioural approach: Simon; systems approach; contingency theory',
     subtopics: ['Weber\'s Bureaucracy', 'Taylor\'s Scientific Management', 'Fayol\'s Principles', 'Human Relations School (Elton Mayo)', 'Behavioural Approach (Simon)', 'Systems & Contingency Approach'],
   },
   {
@@ -35,7 +35,7 @@ export const paper1Notes: PubAdminNote[] = [
     paper: 1,
     section: 'Administrative Theory',
     topic: 3,
-    description: 'Process and means of decision making; Simon\'s bounded rationality; communication in organisations; morale and motivation — Maslow, Herzberg, McGregor; leadership theories',
+    description: 'Process and means of decision making; Simon\'s bounded rationality; communication in organisations; morale and motivation: Maslow, Herzberg, McGregor; leadership theories',
     subtopics: ['Decision Making Process', 'Simon\'s Bounded Rationality', 'Communication in Organisations', 'Motivation Theories (Maslow, Herzberg, McGregor)', 'Leadership Theories'],
   },
   {
@@ -62,7 +62,7 @@ export const paper1Notes: PubAdminNote[] = [
     paper: 1,
     section: 'Administrative Theory',
     topic: 6,
-    description: 'Historical and sociological factors; Riggs\' ecological approach — prismatic society; bureaucracy and development; strong state vs market debate; democratic decentralisation',
+    description: 'Historical and sociological factors; Riggs\' ecological approach: prismatic society; bureaucracy and development; strong state vs market debate; democratic decentralisation',
     subtopics: ['Riggs\' Ecological Approach', 'Prismatic-Sala Model', 'Bureaucracy & Development', 'Strong State vs Market', 'Democratic Decentralisation'],
   },
   {
@@ -184,7 +184,7 @@ export const paper2Notes: PubAdminNote[] = [
     paper: 2,
     section: 'Indian Administration',
     topic: 9,
-    description: 'Law and order administration; police administration; prisons; anti-corruption machinery — CBI, CVC, Lokpal, Lokayukta; vigilance administration',
+    description: 'Law and order administration; police administration; prisons; anti-corruption machinery: CBI, CVC, Lokpal, Lokayukta; vigilance administration',
     subtopics: ['Law & Order Administration', 'Police Administration', 'CBI & CVC', 'Lokpal & Lokayukta', 'Vigilance Administration'],
   },
   {
@@ -211,7 +211,7 @@ export const paper2Notes: PubAdminNote[] = [
     paper: 2,
     section: 'Indian Administration',
     topic: 12,
-    description: 'Development programmes — MGNREGS, PMAY, PMGSY; community development; role of NGOs; SHGs and microfinance; decentralised planning; DMIC and rural transformation',
+    description: 'Development programmes: MGNREGS, PMAY, PMGSY; community development; role of NGOs; SHGs and microfinance; decentralised planning; DMIC and rural transformation',
     subtopics: ['MGNREGS', 'PMAY & PMGSY', 'Community Development', 'Role of NGOs', 'SHGs & Microfinance', 'Decentralised Planning'],
   },
 ];

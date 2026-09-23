@@ -82,9 +82,9 @@ const TOPICS = [
   "Environmental Geography","Geographical Thought & Methods",
   "Population & Settlement","Economic Geography","Agriculture","Industries",
   "Transport & Trade","Disasters & Hazards",
-  "India — Physical","India — Climate","India — Agriculture & Resources",
-  "India — Industries & Economy","India — Population & Urbanization",
-  "India — Transport & Regional Development",
+  "India: Physical","India: Climate","India: Agriculture & Resources",
+  "India: Industries & Economy","India: Population & Urbanization",
+  "India: Transport & Regional Development",
 ];
 
 const YEARS = ["2025","2024","2023","2022","2021","2020","2019","2018","2017","2016","2015","2014","2013"];

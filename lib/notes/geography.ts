@@ -26,7 +26,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Physical Geography',
     topic: 2,
-    description: 'Geomorphic processes and resulting landforms — fluvial cycle, arid cycle, glacial erosion and deposition; coastal landforms; karst topography',
+    description: 'Geomorphic processes and resulting landforms: fluvial cycle, arid cycle, glacial erosion and deposition; coastal landforms; karst topography',
     subtopics: ['Fluvial Landforms', 'Arid & Desert Landforms', 'Glacial Landforms', 'Coastal Landforms', 'Karst Topography'],
   },
   {
@@ -35,7 +35,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Physical Geography',
     topic: 3,
-    description: 'Rock cycle; igneous, sedimentary and metamorphic rocks; earthquakes — types, distribution and measurement; volcanoes — types, distribution and associated landforms',
+    description: 'Rock cycle; igneous, sedimentary and metamorphic rocks; earthquakes: types, distribution and measurement; volcanoes: types, distribution and associated landforms',
     subtopics: ['Rock Cycle', 'Igneous Rocks', 'Sedimentary Rocks', 'Metamorphic Rocks', 'Earthquakes', 'Volcanoes & Distribution'],
   },
   {
@@ -44,7 +44,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Physical Geography',
     topic: 4,
-    description: 'Composition and structure of atmosphere; solar radiation and heat budget; temperature — horizontal and vertical distribution; inversion of temperature; atmospheric pressure and planetary winds',
+    description: 'Composition and structure of atmosphere; solar radiation and heat budget; temperature: horizontal and vertical distribution; inversion of temperature; atmospheric pressure and planetary winds',
     subtopics: ['Atmospheric Composition & Structure', 'Solar Radiation & Heat Budget', 'Temperature Distribution', 'Temperature Inversion', 'Atmospheric Pressure', 'Planetary Wind Systems'],
   },
   {
@@ -53,7 +53,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Physical Geography',
     topic: 5,
-    description: 'Evaporation, condensation and precipitation; types of rainfall; cyclones — tropical and temperate; air masses and fronts; ENSO, monsoon and jet streams',
+    description: 'Evaporation, condensation and precipitation; types of rainfall; cyclones: tropical and temperate; air masses and fronts; ENSO, monsoon and jet streams',
     subtopics: ['Evaporation & Condensation', 'Types of Rainfall', 'Tropical Cyclones', 'Temperate Cyclones', 'Air Masses & Fronts', 'ENSO & Monsoon', 'Jet Streams'],
   },
   {
@@ -62,7 +62,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Physical Geography',
     topic: 6,
-    description: 'World climatic types — Köppen\'s classification; Thornthwaite\'s classification; climate change and global warming; greenhouse effect; ozone depletion',
+    description: 'World climatic types: Köppen\'s classification; Thornthwaite\'s classification; climate change and global warming; greenhouse effect; ozone depletion',
     subtopics: ['Köppen\'s Climatic Classification', 'Thornthwaite\'s Classification', 'World Climatic Regions', 'Climate Change & Global Warming', 'Greenhouse Effect', 'Ozone Depletion'],
   },
   {
@@ -98,7 +98,7 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Human Geography',
     topic: 10,
-    description: 'World economic development — measurement and problems; world resources and their distribution; energy resources; mineral distribution; agriculture — world types and problems',
+    description: 'World economic development: measurement and problems; world resources and their distribution; energy resources; mineral distribution; agriculture: world types and problems',
     subtopics: ['World Economic Development', 'World Resources & Distribution', 'Energy Resources', 'Mineral Resources', 'World Agricultural Types', 'Food Security & Problems'],
   },
   {
@@ -107,8 +107,8 @@ export const paper1Notes: GeoNote[] = [
     paper: 1,
     section: 'Human Geography',
     topic: 11,
-    description: 'Population growth, distribution and density; demographic transition; migration — causes and consequences; population theories; rural settlements — types and patterns; urban settlements — morphology and functional classification',
-    subtopics: ['Population Growth & Distribution', 'Demographic Transition Theory', 'Migration — Causes & Consequences', 'Population Theories', 'Rural Settlements', 'Urban Settlements & Morphology', 'Urbanization Trends'],
+    description: 'Population growth, distribution and density; demographic transition; migration: causes and consequences; population theories; rural settlements: types and patterns; urban settlements: morphology and functional classification',
+    subtopics: ['Population Growth & Distribution', 'Demographic Transition Theory', 'Migration: Causes & Consequences', 'Population Theories', 'Rural Settlements', 'Urban Settlements & Morphology', 'Urbanization Trends'],
   },
   {
     slug: 'regional-planning',
@@ -148,8 +148,8 @@ export const paper2Notes: GeoNote[] = [
     paper: 2,
     section: 'Physical Geography of India',
     topic: 2,
-    description: 'Climatic conditions and variability; monsoon — origin, mechanism and variability; droughts and floods; climatic regions of India; climate change and its impact on India',
-    subtopics: ['Monsoon — Origin & Mechanism', 'Monsoon Variability', 'Droughts & Floods in India', 'Climatic Regions of India', 'Climate Change Impact'],
+    description: 'Climatic conditions and variability; monsoon: origin, mechanism and variability; droughts and floods; climatic regions of India; climate change and its impact on India',
+    subtopics: ['Monsoon: Origin & Mechanism', 'Monsoon Variability', 'Droughts & Floods in India', 'Climatic Regions of India', 'Climate Change Impact'],
   },
   {
     slug: 'soils-vegetation-india',
@@ -175,7 +175,7 @@ export const paper2Notes: GeoNote[] = [
     paper: 2,
     section: 'Human Geography of India',
     topic: 5,
-    description: 'Infrastructure — irrigation, seeds, fertilisers, power; institutional factors — land holdings, land tenure, land reforms; cropping pattern and agricultural productivity; Green Revolution and its impacts; agricultural problems and policies',
+    description: 'Infrastructure: irrigation, seeds, fertilisers, power; institutional factors: land holdings, land tenure, land reforms; cropping pattern and agricultural productivity; Green Revolution and its impacts; agricultural problems and policies',
     subtopics: ['Irrigation & Agricultural Infrastructure', 'Land Holdings & Land Reforms', 'Cropping Patterns & Productivity', 'Green Revolution', 'Agricultural Problems & Policies', 'Food Security in India'],
   },
   {
@@ -184,7 +184,7 @@ export const paper2Notes: GeoNote[] = [
     paper: 2,
     section: 'Human Geography of India',
     topic: 6,
-    description: 'Evolution of industries; locational factors; distribution and growth of major industries — iron and steel, cotton textiles, fertilisers, chemicals, electronics; new industrial policy; industrial regions and corridors',
+    description: 'Evolution of industries; locational factors; distribution and growth of major industries: iron and steel, cotton textiles, fertilisers, chemicals, electronics; new industrial policy; industrial regions and corridors',
     subtopics: ['Locational Factors of Industries', 'Iron & Steel Industry', 'Cotton Textile Industry', 'Chemical & Fertiliser Industry', 'Electronics & IT Industry', 'Industrial Policy & Corridors'],
   },
   {
@@ -193,7 +193,7 @@ export const paper2Notes: GeoNote[] = [
     paper: 2,
     section: 'Human Geography of India',
     topic: 7,
-    description: 'Population growth and distribution; demographic characteristics; migration — internal and international; population problems and policy; scheduled castes and scheduled tribes; linguistic and religious diversity',
+    description: 'Population growth and distribution; demographic characteristics; migration: internal and international; population problems and policy; scheduled castes and scheduled tribes; linguistic and religious diversity',
     subtopics: ['Population Growth & Distribution', 'Demographic Characteristics', 'Internal & International Migration', 'Population Policy', 'SC & ST Distribution', 'Linguistic & Religious Diversity'],
   },
   {
@@ -220,8 +220,8 @@ export const paper2Notes: GeoNote[] = [
     paper: 2,
     section: 'Human Geography of India',
     topic: 10,
-    description: 'Road, railway, waterway and air networks; national highways; ports and their hinterlands; foreign trade — composition and direction; trade policy; special economic zones',
-    subtopics: ['Road & Railway Networks', 'Waterways & Air Transport', 'Ports & Hinterlands', 'Foreign Trade — Composition & Direction', 'Trade Policy & SEZs'],
+    description: 'Road, railway, waterway and air networks; national highways; ports and their hinterlands; foreign trade: composition and direction; trade policy; special economic zones',
+    subtopics: ['Road & Railway Networks', 'Waterways & Air Transport', 'Ports & Hinterlands', 'Foreign Trade: Composition & Direction', 'Trade Policy & SEZs'],
   },
   {
     slug: 'geographical-basis-indian-federalism',
