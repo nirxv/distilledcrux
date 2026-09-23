@@ -881,6 +881,20 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Responsiveness</strong> is the disposition to act on the felt needs of citizens rather than merely within the rules. An administration can be perfectly accountable and wholly unresponsive, which is the usual complaint against Indian bureaucracy, and the reason the two words must not be used interchangeably in an answer.</li>
 </ul>
 
+
+<h3>The Kinds of Accountability</h3>
+
+<p>Answerability runs along several lines at once, and an answer that distinguishes them can explain why an administration may be tightly controlled on one axis and wholly unaccountable on another.</p>
+
+<ul>
+ <li><strong>Political accountability</strong>, running through the minister to the legislature and finally to the electorate. It is the constitutionally central line and the weakest in practice, because it reaches individual administrative acts only when they become politically salient.</li>
+ <li><strong>Legal accountability</strong>, to the courts, which is precise, enforceable and available only for illegality.</li>
+ <li><strong>Hierarchical or administrative accountability</strong>, to superiors within the organisation. It covers every act, which no other line does, and it is compromised whenever the superior's own interest is implicated.</li>
+ <li><strong>Financial accountability</strong>, through audit and the legislature's financial committees.</li>
+ <li><strong>Professional accountability</strong>, to the standards of a calling, which is Friedrich's inner check institutionalised.</li>
+ <li><strong>Social or public accountability</strong>, to citizens directly through information, charters, social audit, the press and civil society. This is the line that has grown most in India since 2005, and it works by making the other lines operable rather than by replacing them.</li>
+</ul>
+
 <h3>Why the Problem Grew</h3>
 
 <p>Three developments made control a live question rather than a settled one.</p>
@@ -934,6 +948,17 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>In India the CAG is created by the Constitution and examines the financial transactions of the administration. As an officer of the legislature functioning independently, the CAG audits all expenditure from union and state revenues incurred within or outside India, and the audit extends across a wide range of state activity, including departments and offices, funds administered by them, revenue collection, non-commercial state-sponsored bodies, and bodies such as universities.</p>
 
 <p>The important modern development is the <strong>value for money examination</strong>, which looks at the economy, efficiency and effectiveness with which an entity has used its resources and discharged its functions. It moves audit beyond the question of whether money was spent lawfully to whether it was spent well, and it is the instrument by which audit reaches policy outcomes. It is also the ground on which audit is accused of straying into policy, which is the standing tension of the office.</p>
+
+
+<h4>What Audit Actually Examines</h4>
+
+<ul>
+ <li><strong>Regularity or compliance audit</strong> asks whether expenditure was incurred with proper authority, against a sanctioned grant, and in accordance with the rules. It is the oldest form and the narrowest.</li>
+ <li><strong>Propriety audit</strong> goes beyond legality to ask whether the expenditure was prudent: whether public money was spent with the care a person of ordinary prudence would apply to their own, whether the order conferred a benefit on an individual, and whether the allowance was reasonable. It is the audit of wisdom within the law, and it is inherently contestable.</li>
+ <li><strong>Performance or value for money audit</strong> examines economy, efficiency and effectiveness in the use of resources, reaching the outcome rather than the transaction.</li>
+</ul>
+
+<p>The limitations are real and worth stating. Audit is post-facto, so the money is already spent; it depends on the PAC and the department to act on its findings, and it has no power of its own to enforce them; and the further it moves from regularity towards performance, the more it is accused of substituting its judgement for the executive's on questions of policy. The tension is not a defect in the office but the price of making audit useful.</p>
 
 <h3>The Presidential Variant</h3>
 
@@ -1049,6 +1074,29 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The CVC was set up on the recommendation of the Santhanam Committee on Prevention of Corruption in 1964 as an executive body, and was given statutory status by the Central Vigilance Commission Act, 2003, following the Supreme Court's direction in the Vineet Narain case. It is a multi-member body consisting of a Central Vigilance Commissioner and two Vigilance Commissioners, appointed by the President on the recommendation of a committee of the Prime Minister, the Home Minister and the Leader of the Opposition. It supervises the vigilance administration of central government organisations, exercises superintendence over the Delhi Special Police Establishment in corruption cases, and tenders advice on disciplinary proceedings. Its central weakness is that its recommendations are advisory, so the department it advises decides whether to act.</p>
 
+
+<h2>The Anti-Corruption Machinery</h2>
+
+<p>Corruption is the failure mode that accountability arrangements exist to prevent, and India's legal apparatus against it has three main components.</p>
+
+<h3>The Prevention of Corruption Act</h3>
+
+<p>The <strong>Santhanam Committee on Prevention of Corruption</strong> reported in 1964 and produced both the Central Vigilance Commission and the framework of modern anti-corruption law. The <strong>Prevention of Corruption Act, 1988</strong> consolidated the offences relating to public servants.</p>
+
+<p>The <strong>Prevention of Corruption (Amendment) Act, 2018</strong> made three significant changes. It <strong>criminalised bribe-giving</strong> as a distinct offence, where the earlier law concentrated on the recipient. It <strong>redefined criminal misconduct</strong>, narrowing it substantially. And it inserted <strong>section 17A</strong>, which bars any police officer from conducting an enquiry, inquiry or investigation into an offence under the Act where the allegation relates to a recommendation made or a decision taken by a public servant in the discharge of official functions, without the prior approval of the competent authority.</p>
+
+<p>Section 17A is the provision worth arguing about in an answer, because the two readings of it are both defensible. On one view it is a necessary safeguard: without it, officials facing the prospect of investigation for any honest decision that later looks wrong will stop deciding at all, and the resulting paralysis is itself an administrative failure. On the other it is a gateway controlled by the executive, requiring the government's permission before its own servants can be investigated, which reproduces at the investigative stage exactly the dependence that weakens the Lokpal and the information commissions.</p>
+
+<h3>Whistle-blower Protection</h3>
+
+<p>Internal disclosure is the only mechanism that reaches corruption before it is complete, since the people who know are the people inside. The <strong>Whistle Blowers Protection Act, 2014</strong> was passed by both Houses and received assent, and it has still not been brought into force, the stated reason being that it requires amendment to safeguard against disclosures affecting the sovereignty and integrity of India and the security of the state.</p>
+
+<p>The consequence is that India has a statutory protection that exists on paper and not in operation, which is Riggs's formalism appearing in the accountability machinery itself. It matters directly for RTI, because an applicant who exposes wrongdoing has no statutory protection, and the risk falls on precisely the people the system most needs.</p>
+
+<h3>The Central Bureau of Investigation</h3>
+
+<p>The CBI investigates corruption cases under the Delhi Special Police Establishment Act, under the superintendence of the CVC in such cases following the Supreme Court's directions in the <strong>Vineet Narain</strong> case. Its structural weakness is that it requires the consent of a state government to operate in that state, and that its officers' careers remain with their parent cadres, so that the agency's independence is a function of the goodwill of the governments it investigates.</p>
+
 <h2>The Citizen and the Administration</h2>
 
 <h3>Citizens' Charters</h3>
@@ -1056,6 +1104,23 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>A citizens' charter is a public declaration by an organisation of the services it provides, the standards to which it will provide them, the time limits it accepts, the remedy available when it fails and the expectations it has of the citizen. Its logic is to convert a discretionary favour into a published entitlement, so that failure becomes visible and comparable.</p>
 
 <p>In India the initiative began in 1997 and now covers a large number of central and state agencies, with <strong>Sevottam</strong> developed as the assessment framework for service delivery. The recurring criticisms are that charters are drafted without consulting the citizens or the frontline staff who must deliver them, that they are not revised, that the standards are pitched to what the office already achieves, and above all that they are not legally enforceable, which reduces a charter to an advertisement.</p>
+
+
+<h3>Right to Public Services Legislation</h3>
+
+<p>The answer to the charter's central weakness, that it is not enforceable, is to give the promise statutory force. <strong>Madhya Pradesh</strong> was the first state to do so, enacting and implementing the <strong>Public Services Guarantee Act</strong> on 18 August 2010. It notified fifty-two key public services, among them caste, birth, marriage and domicile certificates, drinking water connections, ration cards and copies of land records, and fixed a time period for the delivery of each. Failure attracts a penalty on the designated officer and an appeal to a superior.</p>
+
+<p>Most states have since enacted comparable legislation. The significance for this topic is conceptual rather than merely administrative: the Acts convert service delivery from a discretionary act of administration into an enforceable entitlement of the citizen, which is the same move RTI made for information, and they attach the sanction to the individual officer rather than to the department, which is the only form of sanction that reliably changes behaviour.</p>
+
+<h3>The Press and Public Interest Litigation</h3>
+
+<p>Two instruments outside the formal machinery do much of the work in practice. The <strong>press</strong> supplies the publicity on which every other mechanism depends, since parliamentary questions, audit paragraphs and court proceedings mostly begin with something reported. Its limits are its own ownership structure and its preference for episode over pattern.</p>
+
+<p><strong>Public interest litigation</strong> relaxed the rule of locus standi so that a person acting bona fide in the interest of others could move the court, which answered the defect that judicial remedies were available only to those able to reach a court. It has produced significant administrative accountability in prisons, environment, food security and bonded labour. It also raises its own objection, that a court directing administration through continuing mandamus is making policy without the information or the accountability the executive has, and the balance between the two is an open question rather than a settled one.</p>
+
+<h3>Technology as an Accountability Instrument</h3>
+
+<p>Electronic delivery changes accountability by changing what can be hidden. Online records create an audit trail that cannot be selectively lost; direct benefit transfer removes intermediaries between the sanction and the beneficiary; and public dashboards make performance comparable across districts, which is a sharper discipline than any report. The qualification is that transparency of data is not the same as accountability for outcomes, and a system can publish everything while answering for nothing.</p>
 
 <h3>Social Audit</h3>
 
@@ -1109,6 +1174,26 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h2>What Administrative Law Is</h2>
 
 <p>Administrative law is the body of law governing the powers, procedures and liabilities of administrative authorities, and the remedies available to those affected by their acts. It is the legal answer to the same problem accountability answers politically: an administration that legislates, adjudicates and executes needs rules about how it may do so.</p>
+
+
+<h3>How It Has Been Defined</h3>
+
+<p><strong>Garner</strong> holds that administrative law "consists of those rules which are recognised by the courts as law and which relate to and regulate the administration of government". The emphasis on judicial recognition matters: it treats administrative law as law controlling the administration rather than law produced by it.</p>
+
+<p>The <strong>Supreme Court of India</strong> has given the fullest working definition: administrative law "deals with the structure, powers and functions of the organs of administration; the limits of their powers; the methods and procedures followed by them in exercising their powers and functions; the methods by which their powers are controlled including the legal remedies available to a person against them when his rights are infringed by their operation".</p>
+
+<p><strong>Griffith and Street</strong> reduce the subject to three inquiries, which is the most useful structure for an answer: what sort of powers does the administration exercise; what procedures do administrative authorities follow in exercising them; and what limits work on those powers, including the remedies open to the aggrieved. Precisely stated, the subject deals with the quasi-legislative and quasi-judicial powers of administrative authorities alongside their executive powers, and with the control of all three.</p>
+
+<h3>Sources</h3>
+
+<ul>
+ <li><strong>The Constitution</strong>, which in India supplies not only the structure of administration but the enforceable limits on it through the fundamental rights and Articles 32 and 226.</li>
+ <li><strong>Statutes</strong>, which confer powers and prescribe the procedure for exercising them.</li>
+ <li><strong>Delegated legislation</strong>, the rules and regulations made under those statutes, which is the bulk of the law citizens actually encounter.</li>
+ <li><strong>Judicial decisions</strong>, which supply the principles of review, natural justice, reasonableness and legitimate expectation, none of which is usually written in any statute.</li>
+ <li><strong>Administrative directions and circulars</strong>, which lack the force of law but govern how officials behave, and which courts increasingly treat as binding on the administration that issued them.</li>
+ <li><strong>Reports of law commissions and committees</strong>, which have shaped the statutory framework in both England and India.</li>
+</ul>
 
 <h3>Its Elements</h3>
 
@@ -1208,6 +1293,35 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Its ostensible object is the removal of difficulties in bringing a new statute into operation, and such clauses are often time-limited for that reason. The term is used critically, because a power to amend the parent Act inverts the relationship between delegate and delegator: the body whose authority is derived becomes able to alter the instrument from which it derives.</p>
 
+
+<h3>The Donoughmore Safeguards</h3>
+
+<p>The <strong>Committee on Ministers' Powers</strong>, known as the Donoughmore Committee, reported in the United Kingdom in 1932 and its recommendations remain the standard checklist.</p>
+
+<ul>
+ <li>The parent Act should define the limits of the power precisely and lay down provisions to guide the rule-making authority.</li>
+ <li>The jurisdiction of the courts should not be curtailed. As the Committee put it: "The rule of law requires that all regulations should be open to challenge in the Courts except when Parliament deliberately comes to the conclusion that it is essential in the public interest to create an exception and to confer on a Minister the power of legislating with immunity from challenge."</li>
+ <li>Departments should consult the outside interests on which the proposed rule-making would have a direct impact.</li>
+ <li>A uniform procedure should require all regulations to be numbered, printed, published and cited, with publication a condition of their coming into force.</li>
+ <li>Explanatory notes should accompany regulations so that people may know why a regulation is needed and how it will be applied, and an explanatory memorandum should accompany the enabling Bill stating what kinds of regulation are contemplated under it.</li>
+ <li>Delegation should be made to a public authority or officer and not to private persons or groups, and the power to impose penalties should not be delegated at all, penal consequences being provided by the legislature itself.</li>
+ <li>Parliamentary control and supervision should be strengthened. <strong>John E. Kershell</strong> holds that "the most appropriate institution to supervise the use of delegated legislative powers is Parliament", and <strong>Herman Finer</strong> adds the reason: if those who exercise delegated legislative or other authority are to be held accountable, it is not sufficient that they look only to their own consciences and to their professional group.</li>
+</ul>
+
+<h3>The Machinery in Three Countries</h3>
+
+<ul>
+ <li><strong>United Kingdom.</strong> A Special Orders Committee was set up in the House of Lords in 1925 to scrutinise statutory instruments requiring affirmative resolution. The Donoughmore Committee recommended in 1932 that Standing Orders of both Houses require a small standing committee each session to consider and report on every Bill proposing to confer law-making power on a Minister, and on every regulation and rule made under delegated power and laid before the House. The Select Committee on Statutory Instruments followed in the House of Commons in 1944, its terms of reference broadened by the Statutory Instruments Act 1946.</li>
+ <li><strong>United States.</strong> Scrutiny is diffused rather than concentrated, shared among numerous bodies: standing committees of Congress, committees on government operations in each House, and joint bodies.</li>
+ <li><strong>India.</strong> Committees on Subordinate Legislation operate in both Houses. In exceptional cases the enabling Bill may require rules to be laid on the table thirty days before they become operational. The committee has asserted the right to examine the whole range of subordinate legislation whether or not a rule is expressly required to be laid, and Parliament has the inherent right to modify any rule laid before it whether or not the enabling Act says so.</li>
+</ul>
+
+<h3>The Publicity Problem</h3>
+
+<p>The Indian committee's recommendations on publicity deserve attention because they address the defect that makes delegated legislation objectionable in practice, which is that citizens are bound by rules they cannot find or read. Government should examine every set of rules to see whether it is of importance to the general public; advance copies of such rules should go to state governments for publication; press communiques should explain the general purport and consequence of rules and orders; rules should be drafted in language easily understood by the public; and explanatory notes should be attached.</p>
+
+<p>The same committee has denounced the recurring abuses: restricting judicial review of delegated legislation, violation of the provisions of the parent Act, ambiguous working of the details of Acts, and unnecessary delay between the publication of an order and its being laid before the House.</p>
+
 <h3>Dangers</h3>
 
 <ul>
@@ -1224,6 +1338,33 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Judicial control.</strong> Courts strike down delegated legislation that is <em>ultra vires</em>, either because the parent Act did not authorise it, or because the parent Act itself exceeded constitutional limits by delegating essential legislative function. Rules may also fall for procedural failure, for unreasonableness, or for conflict with the Constitution.</li>
  <li><strong>Procedural control.</strong> Prior publication of draft rules, consultation with affected interests and expert bodies, and mandatory publication after making are the safeguards that operate before the rule bites rather than after.</li>
 </ul>
+
+
+<h2>Administrative Adjudication</h2>
+
+<p>Administrative adjudication is the determination of questions of law and fact by an administrative agency, and it is the third of the administration's powers alongside the executive and the quasi-legislative.</p>
+
+<h3>Issues or Disputes</h3>
+
+<p><strong>Marshall Dimock</strong> defines it as the investigation and settling of a matter on the basis of law and facts by an administrative agency, and his use of the word <em>issues</em> rather than <em>disputes</em> is deliberate and significant. It means administrative adjudication is possible where no dispute between parties exists but individual rights are nonetheless affected: when an applicant seeks a licence, the granting authority decides whether the conditions are fulfilled, and there is no opposing party. <strong>L.D. White</strong>, by contrast, treats a dispute as essential to the concept. The disagreement is not verbal, because Dimock's wider definition brings the vast field of permissions, registrations and entitlements within the reach of adjudicative safeguards, and White's does not.</p>
+
+<h3>Its Hybrid Character</h3>
+
+<p>Administrative adjudication differs both from ordinary administrative action and from judicial action, while carrying features of each. <strong>Rumki Basu</strong> states the position: "It is not pure administrative action, because it involves adjudication of some dispute regarding certain private rights or property. But at the same time, it is not a purely judicial decision, as is given by courts of law, because the adjudication of the dispute is an integral part of the administrative action which the administrative authority is taking in enforcing a public law or policy."</p>
+
+<p>Some critics hold that there is not much to distinguish administrative adjudication from the justice delivered by ordinary courts, and conclude that it should therefore be subject to the safeguards that attach to ordinary judicial proceedings. That is the strongest argument available for insisting on reasoned orders, disclosure and appeal in tribunals.</p>
+
+<h3>Why It Grew</h3>
+
+<ul>
+ <li>The state took up a large range of activities and enacted a huge volume of legislation, which generated a correspondingly large number of disputes involving technical issues in the social, economic and industrial spheres.</li>
+ <li>Law courts cannot deal with such disputes speedily, cheaply and effectively, and judicial procedure is cumbersome and not easily understood, where the tribunal's procedure is simple, brief and accessible.</li>
+ <li>Judges lack sufficient acquaintance with the technicalities of administration. The development of social control over education, medicine and comparable fields raises questions of technique and quality beyond the competence of judges and lawyers.</li>
+ <li>Loading additional work onto already over-burdened courts would damage their organisation and working.</li>
+ <li>Judges are often unwilling to observe the spirit of modern welfare legislation when deciding disputes under it. Only a technically qualified administrative agency can give due weight to social and economic policy and to the exigencies of administration.</li>
+</ul>
+
+<p><strong>Professor W.A. Robson</strong> connects the growth to the wider transformation: it followed the extension, through the nineteenth and twentieth centuries, of governmental functions into one new field after another, the progressive limitation of individual rights in the interest of the health, safety and general welfare of the community, and the development of collective control over conditions of life.</p>
 
 <h2>Administrative Tribunals</h2>
 
@@ -1319,6 +1460,25 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Limits</h3>
 
 <p>Review is of legality, not of merit. The court asks whether the decision was open to the authority, not whether it was the best decision available, and it does not substitute its own view on questions of policy, expediency or technical judgement. This is the boundary that makes review compatible with democracy, and it is also why judicial review cannot correct the most common administrative failures, which are delay, insensitivity and incompetence within the law. The remaining difficulties are practical: review is slow and expensive, available only after the injury and only to someone who knows a remedy exists, and the expansion of public interest litigation is a partial answer to exactly those defects.</p>
+
+
+<h2>Liability of the State and of Officials</h2>
+
+<p>A system of administrative law is only as good as the remedy it offers against the state itself, and here the three traditions diverge sharply.</p>
+
+<ul>
+ <li><strong>France.</strong> Under droit administratif the liability of the state for the wrongful acts of its employees is established, and the administrative courts developed it as a matter of principle rather than exception.</li>
+ <li><strong>United States.</strong> The federal government and the states can be sued for torts only to a very limited extent.</li>
+ <li><strong>India.</strong> The state may be sued on contracts. <strong>Article 300</strong> provides that the Union and the states may sue and be sued in the circumstances provided by the law in force before the Constitution came into effect. The position inherited was that the government could not be sued in tort in respect of its <em>sovereign</em> functions, and its officials could be sued only in respect of <em>non-sovereign</em> functions. This was the British position before 1947, and India assumed it at independence.</li>
+</ul>
+
+<p>The sovereign and non-sovereign distinction is the weak point of Indian administrative law, because it is a nineteenth-century category applied to a state that now runs railways, banks, hospitals and industries. The courts have narrowed it steadily by treating more and more activity as non-sovereign, but it survives as a defence, and its survival means the citizen's remedy against the state depends on a classification the state itself pleads.</p>
+
+<h3>Suits Against Public Officials</h3>
+
+<p>Public officials are personally liable for their administrative actions to differing extents. Heads of state and judicial officers generally enjoy immunity in respect of their functions. In the <strong>United States</strong> the President and state governors are immune from legal action during their terms of office, the immunity lapsing once the term is complete. In the <strong>United Kingdom</strong> the monarch has total immunity from legal liability for acts in a public or private capacity. In <strong>India</strong> the President and the governors are immune from legal action in respect of the exercise of their constitutional powers and duties, and from criminal proceedings during their term.</p>
+
+<p>Personal liability of the ordinary official is the practical counterpart of the rule of law's second meaning, and it is the mechanism Dicey most admired in the common law: an officer who exceeds his authority is stripped of it and answers as a private person for the wrong.</p>
 
 <h2>Administrative Discretion</h2>
 
