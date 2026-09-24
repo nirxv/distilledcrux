@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
+import SidebarNotes from '@/components/SidebarNotes';
 
 // ── Scroll-direction hook ────────────────────────────────────
 function useScrollDirection() {
@@ -245,6 +246,122 @@ type NavLink = { slug: string; title: string } | null;
  * every subject's note metadata to the browser on every note page to use one
  * subject's worth.
  */
+// ── Scroll rail ───────────────────────────────────────────────
+/**
+ * A reading rail down the right edge: one tick per heading, positioned where
+ * that heading sits in the document, and a thumb showing how far down the
+ * reader is. Clicking a tick jumps to its heading; clicking the thumb opens
+ * the contents panel. Ported from the history platform.
+ *
+ * Hidden below 1024px, where the edge belongs to the scroll gesture and the
+ * ticks would be smaller than a fingertip.
+ */
+function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: string }) {
+  const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
+  const [pct, setPct] = useState(0);
+  const [activeId, setActiveId] = useState('');
+  const [open, setOpen] = useState(false);
+  const [trackH, setTrackH] = useState(600);
+
+  useEffect(() => {
+    const doc = new DOMParser().parseFromString(contentHtml, 'text/html');
+    const out: { id: string; text: string; level: 2 | 3 }[] = [];
+    doc.querySelectorAll('h2[id], h3[id]').forEach(h => {
+      const id = h.getAttribute('id') || '';
+      const text = h.textContent?.trim() || '';
+      if (id && text) out.push({ id, text, level: h.tagName === 'H2' ? 2 : 3 });
+    });
+    setEntries(out);
+  }, [contentHtml]);
+
+  useEffect(() => {
+    const measure = () => setTrackH(window.innerHeight - 160);
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setPct(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+    };
+    measure(); onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', measure);
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', measure); };
+  }, []);
+
+  useEffect(() => {
+    if (!entries.length) return;
+    const obs = new IntersectionObserver(es => {
+      const vis = es.filter(e => e.isIntersecting);
+      if (vis.length) setActiveId(vis[0].target.id);
+    }, { rootMargin: '-60px 0px -60% 0px' });
+    entries.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    return () => obs.disconnect();
+  }, [entries]);
+
+  const jump = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+  };
+
+  if (!entries.length) return null;
+  const THUMB = 46;
+  const docH = typeof document !== 'undefined'
+    ? document.documentElement.scrollHeight - window.innerHeight : 1;
+
+  return (
+    <div className="nr-rail" aria-hidden="true">
+      <div className="nr-rail-track" style={{ height: trackH }}>
+        {entries.map(t => {
+          const el = typeof document !== 'undefined' ? document.getElementById(t.id) : null;
+          const top = docH > 0 && el ? (el.offsetTop / docH) * (trackH - THUMB) : 0;
+          const on = activeId === t.id;
+          return (
+            <button
+              key={t.id}
+              type="button"
+              className="nr-rail-tick"
+              onClick={() => jump(t.id)}
+              title={t.text}
+              style={{
+                top,
+                width: t.level === 2 ? 9 : 5,
+                height: t.level === 2 ? 2 : 1.5,
+                left: t.level === 2 ? 2.5 : 4.5,
+                background: on ? accent : `color-mix(in srgb, ${accent} ${t.level === 2 ? 45 : 22}%, transparent)`,
+                boxShadow: on ? `0 0 6px ${accent}` : 'none',
+              }}
+            />
+          );
+        })}
+        <button
+          type="button"
+          className="nr-rail-thumb"
+          onClick={() => setOpen(o => !o)}
+          title="Contents"
+          style={{ top: pct * (trackH - THUMB), height: THUMB, background: accent,
+                   boxShadow: `0 0 ${open ? 16 : 8}px color-mix(in srgb, ${accent} ${open ? 80 : 45}%, transparent)` }}
+        >
+          <span /><span /><span />
+        </button>
+      </div>
+
+      {open && (
+        <nav className="nr-rail-panel" aria-label="Contents">
+          <div className="nr-rail-panel-head">
+            <span>Contents</span>
+            <span>{Math.round(pct * 100)}%</span>
+          </div>
+          {entries.map(t => (
+            <button key={t.id} type="button"
+              className={'nr-rail-link' + (activeId === t.id ? ' on' : '') + (t.level === 3 ? ' sub' : '')}
+              onClick={() => { jump(t.id); setOpen(false); }}>
+              {t.text}
+            </button>
+          ))}
+        </nav>
+      )}
+    </div>
+  );
+}
+
 export default function NoteReader({
   slug, subject, initialContent = '', note, prev, next,
 }: {
@@ -376,6 +493,124 @@ export default function NoteReader({
         .note-content tr:nth-child(even) td { background: var(--bg2); }
         .note-content hr { border: none; border-top: 1px solid var(--border2); margin: 2.5rem 0; }
         .note-content mark { background: rgba(201,168,76,0.28); border-radius: 2px; padding: 0 1px; }
+
+          /* ── Scroll rail ──────────────────────────────────────────
+             Hidden below 1024px: at the edge of a touch screen this competes
+             with the scroll gesture, and a 2px tick is smaller than a
+             fingertip. */
+          .nr-rail { display: none; }
+          @media (min-width: 1024px) { .nr-rail { display: block; } }
+          .nr-rail-track {
+            position: fixed; right: 0; top: 96px; width: 14px; z-index: 90;
+            background: var(--bg2); border-left: 1px solid var(--border);
+          }
+          .nr-rail-tick {
+            position: absolute; padding: 0; border: none; border-radius: 2px;
+            cursor: pointer; transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+          }
+          .nr-rail-tick:hover { transform: scaleX(1.6); }
+          .nr-rail-thumb {
+            position: absolute; left: 3px; width: 8px; border: none; border-radius: 6px;
+            cursor: pointer; padding: 0; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 3px; transition: box-shadow 0.2s;
+          }
+          .nr-rail-thumb span { width: 4px; height: 1px; background: rgba(255,255,255,0.7); border-radius: 1px; }
+          .nr-rail-panel {
+            position: fixed; right: 24px; top: 96px; width: 260px;
+            max-height: calc(100vh - 140px); overflow-y: auto; z-index: 91;
+            background: var(--bg2); border: 1px solid var(--border2); border-radius: 10px;
+            padding: 0.75rem; box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+          }
+          .nr-rail-panel-head {
+            display: flex; justify-content: space-between; align-items: center;
+            font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--text3); margin-bottom: 0.5rem;
+          }
+          .nr-rail-link {
+            display: block; width: 100%; text-align: left; background: none; border: none;
+            cursor: pointer; padding: 0.26rem 0.3rem; border-radius: 5px;
+            font-family: var(--font-ui); font-size: 0.78rem; line-height: 1.45; color: var(--text2);
+          }
+          .nr-rail-link.sub { font-size: 0.72rem; color: var(--text3); padding-left: 0.9rem; }
+          .nr-rail-link:hover { background: var(--bg3); color: var(--text); }
+          .nr-rail-link.on { color: var(--accent); font-weight: 600; }
+
+          /* ── Scratch notes ────────────────────────────────────────
+             In the reading column by default, which is what a phone and a
+             tablet get. Only once the viewport is wide enough to hold a 220px
+             rail beside the 900px column does it move out to the left, where
+             it no longer interrupts the reading. */
+          .nr-notes-rail { margin: 0 0 2rem; }
+          @media (min-width: 1400px) {
+            .nr-notes-rail {
+              position: fixed; left: calc(50% - 690px); top: 150px; width: 220px;
+              max-height: calc(100vh - 190px); overflow-y: auto; margin: 0; z-index: 80;
+            }
+            .nr-notes-rail::-webkit-scrollbar { width: 3px; }
+            .nr-notes-rail::-webkit-scrollbar-track { background: transparent; }
+            .nr-notes-rail::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
+          }
+          .sb-section-label {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            gap: 8px; background: none; border: none; cursor: pointer; padding: 0;
+            font-size: 0.6rem; font-family: var(--font-mono); text-transform: uppercase;
+            letter-spacing: 0.18em; color: var(--text3); margin: 0 0 0.5rem;
+          }
+          .sb-section-label:hover { color: var(--text2); }
+          .sb-note-add {
+            width: 100%; display: flex; align-items: center; gap: 0.35rem; background: none;
+            border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent);
+            border-radius: 8px; padding: 0.5rem; font-size: 0.74rem; font-family: var(--font-ui);
+            color: var(--accent); cursor: pointer; margin-bottom: 0.6rem;
+            transition: background 0.15s, border-color 0.15s;
+          }
+          .sb-note-add:hover {
+            background: var(--accent-dim);
+            border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+            border-style: solid;
+          }
+          /* A warm tint and a soft edge, so a note reads as something the
+             reader put there rather than as another panel of the interface. */
+          .sb-note {
+            background: color-mix(in srgb, var(--gold) 7%, var(--bg2));
+            border: 1px solid color-mix(in srgb, var(--gold) 22%, transparent);
+            border-radius: 8px; padding: 0.6rem; margin-bottom: 0.6rem;
+            transition: border-color 0.15s, box-shadow 0.15s;
+          }
+          .sb-note:focus-within {
+            border-color: color-mix(in srgb, var(--gold) 50%, transparent);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 12%, transparent);
+          }
+          .sb-note-title, .sb-note-body {
+            width: 100%; background: none; border: none; outline: none; color: var(--text);
+            font-family: var(--font-ui); padding: 0; resize: none;
+          }
+          .sb-note-title {
+            font-size: 0.8rem; font-weight: 700; padding-bottom: 0.35rem; margin-bottom: 0.35rem;
+            border-bottom: 1px solid color-mix(in srgb, var(--gold) 15%, transparent);
+          }
+          .sb-note-body { font-size: 0.76rem; line-height: 1.6; min-height: 2.8em; }
+          .sb-note-title::placeholder, .sb-note-body::placeholder { color: var(--text3); font-weight: 400; }
+          /* Housekeeping, kept out of the way until the note is used. Always
+             visible on touch, where there is no hover to reveal it. */
+          .sb-note-foot {
+            display: flex; align-items: center; justify-content: space-between; gap: 0.35rem;
+            margin-top: 0.35rem; font-family: var(--font-mono); font-size: 0.56rem;
+            color: var(--text3); opacity: 0; transition: opacity 0.15s;
+          }
+          .sb-note:hover .sb-note-foot, .sb-note:focus-within .sb-note-foot { opacity: 1; }
+          @media (hover: none) { .sb-note-foot { opacity: 1; } }
+          .sb-note-foot button {
+            background: none; border: none; padding: 0; font-family: inherit; font-size: inherit;
+            color: var(--text3); cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em;
+          }
+          .sb-note-foot button:hover { color: #f87171; }
+          .sb-note-confirm { display: flex; gap: 0.6rem; }
+          .sb-note-confirm button:first-child { color: #f87171; font-weight: 700; }
+          .sb-note-scope {
+            font-size: 0.56rem; font-family: var(--font-mono); letter-spacing: 0.1em;
+            text-transform: uppercase; color: var(--text3); margin: 0.35rem 0 0; text-align: right;
+          }
       `}</style>
 
       {/* ── Header ── */}
@@ -431,17 +666,12 @@ export default function NoteReader({
               Ask AI
             </Link>
 
-            {/* Auth */}
-            {!authLoading && (
-              user ? (
-                <button onClick={() => firebaseSignOut(auth)} style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
-                  Sign out
-                </button>
-              ) : (
+            {/* Auth. Signing out belongs in the account menu rather than on a
+                reading toolbar, so only the signed-out case appears here. */}
+            {!authLoading && !user && (
                 <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', padding: '0.28rem 0.75rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-                  Sign in
-                </button>
-              )
+                Sign in
+              </button>
             )}
           </div>
         </div>
@@ -481,6 +711,8 @@ export default function NoteReader({
         </div>
       )}
 
+      {processedContent && <ScrollRail contentHtml={processedContent} accent={subjectColor} />}
+
       {/* ── Content ── */}
       <div style={{ padding: '2.5rem 2rem', position: 'relative' }} onMouseUp={handleMouseUp}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
@@ -503,6 +735,12 @@ export default function NoteReader({
 
           {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
+
+          {/* Scratch notes. In the column on narrow screens; the CSS lifts
+              this out to a fixed left rail once there is room beside it. */}
+          <div className="nr-notes-rail">
+            <SidebarNotes subject={subject} slug={slug} />
+          </div>
 
           {/* Note body */}
           <div style={{ position: 'relative' }}>
