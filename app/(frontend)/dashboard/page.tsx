@@ -32,7 +32,7 @@ const getTools = (optional: string | null) => {
     { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
     { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
     { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: `/notes/${slug}`, badge: 'Free', icon: 'notes' },
-    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
+    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise, with model answers.', href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
     { num: hasPyqs ? '05' : '04', label: 'Test Series', desc: 'Simulate exam conditions with PYQ-based timed tests and AI evaluation.', href: `/test?subject=${slug}`, badge: 'Free', icon: 'test' },
     ...(isGeo ? [{ num: hasPyqs ? '06' : '05', label: 'Map Practice', desc: 'Identify 131+ UPSC Geography locations - PYQ maps, category-wise practice.', href: '/geography/mapping', badge: 'Free', icon: 'mapping' }] : []),
   ];

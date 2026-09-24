@@ -44,7 +44,7 @@ export default function HomeToolsList() {
   const tools = [
     { label: 'AI Answer Evaluation', desc: 'Upload handwritten answers. Get marks, section feedback and a model answer calibrated to the UPSC rubric.', num: '01', href: '/evaluate' },
     { label: 'Syllabus-Mapped Notes', desc: 'Every topic, thinker, and debate structured for Mains written to be read before the exam.', num: '02', href: notesHref },
-    { label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: pyqHref },
+    { label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise. Model answers written the way toppers actually write.', num: '03', href: pyqHref },
     { label: 'AI Chat', desc: 'Ask anything from your syllabus. Structured answers with thinkers, arguments, and exam-ready language.', num: '04', href: '/chat' },
     { label: 'Test Series', desc: 'Topic-wise MCQs and Mains practice tests. Track your score, identify weak areas, and build exam stamina.', num: '05', href: '/test' },
   ];

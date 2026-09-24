@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://distilledcrux.com'),
   title: { default: 'Distilled Crux UPSC Optional Preparation', template: '%s | Distilled Crux' },
-  description: 'AI answer evaluation, curated notes, 1500+ PYQs and topper copies for UPSC Mains Optional Sociology, Anthropology, History, Geography and more.',
+  description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional Sociology, Anthropology, History, Geography and more.',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://distilledcrux.com' },
   icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Distilled Crux',
     title: 'Distilled Crux UPSC Optional Preparation',
-    description: 'AI answer evaluation, curated notes, 1500+ PYQs and topper copies for UPSC Mains Optional.',
+    description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional.',
     url: 'https://distilledcrux.com',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Distilled Crux UPSC Optional Preparation' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Distilled Crux UPSC Optional Preparation',
-    description: 'AI answer evaluation, curated notes, 1500+ PYQs and topper copies for UPSC Mains Optional.',
+    description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional.',
     images: ['/og-image.png'],
   },
 };
