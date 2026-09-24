@@ -87,7 +87,10 @@ const TOPICS = [
   "India: Transport & Regional Development",
 ];
 
-const YEARS = ["2025","2024","2023","2022","2021","2020","2019","2018","2017","2016","2015","2014","2013"];
+// Derived from the data: a hand-typed list silently drops a year the moment
+// a new paper is added, which is how 2026 shipped without being selectable.
+const YEARS = Array.from(new Set((questions as any[]).map(q => String(q.year))))
+  .sort((a, b) => b.localeCompare(a));
 
 export default function GeographyPYQsPage() {
   const router = useRouter();
