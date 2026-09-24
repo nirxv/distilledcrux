@@ -110,6 +110,15 @@ export const paper1Notes: PubAdminNote[] = [
     description: 'Nature and scope of public policy; Lowi\'s typology; the policy process; models of decision making: Simon, Lindblom, Etzioni, Dror; implementation and the implementation gap; evaluation; policy instruments',
     subtopics: ['Nature & Scope', 'Typologies of Policy', 'Agenda Setting', 'Models of Decision Making', 'Policy Implementation', 'Policy Evaluation', 'Policy Instruments'],
   },
+  {
+    slug: 'techniques-administrative-improvement',
+    title: 'Techniques of Administrative Improvement',
+    paper: 1,
+    section: 'Administrative Theory',
+    topic: 12,
+    description: 'Organisation and methods; work study: method study and work measurement; management by objectives; network analysis through PERT and CPM; operations research; cost-benefit analysis; management information systems; TQM and process re-engineering',
+    subtopics: ['Organisation & Methods', 'Work Study', 'Management by Objectives', 'PERT & CPM', 'Operations Research', 'Management Information Systems', 'TQM & Re-engineering'],
+  },
 ];
 
 // ── Paper II — Indian Administration ─────────────────────────

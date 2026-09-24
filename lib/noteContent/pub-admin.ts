@@ -3004,6 +3004,273 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The balanced conclusion, and the one that connects this topic back to the strong state debate, is that PPPs do not reduce the demands on the state but change them. They substitute contracting, regulating and monitoring for building and operating, and every one of those is an administrative capability that has to be built before it can be relied on.</p>
 `,
+ 'techniques-administrative-improvement': `<h2>What the Subject Covers</h2>
+
+<p>Techniques of administrative improvement are the systematic methods by which the work of government is examined and made to cost less, take less time or produce better results. The subject sits between administrative theory and administrative practice: the theory supplies the reasons for wanting efficiency, and the techniques supply the means of getting it. Its distinguishing feature is that it treats administrative work as something that can be measured, and therefore as something that can be improved by evidence rather than by exhortation.</p>
+
+<p>Two cautions belong at the start of any answer, because the strongest criticism of the field is that it forgets them. The first is that a technique is a means and carries no view about ends, so an efficient method of doing the wrong thing is a worse outcome than an inefficient method of doing the right one. The second is that techniques developed for repetitive industrial work transfer poorly to administrative work that is discretionary, judgemental and interactive, and the history of their application in government is largely a history of that mismatch being discovered.</p>
+
+<h3>Where the Techniques Came From</h3>
+
+<p>The lineage runs from <strong>Taylor's</strong> scientific management, which established that work could be studied, measured and redesigned, through the <strong>organisation and methods</strong> movement, which applied the same logic to office rather than factory work, to the quantitative techniques developed for military operations in the Second World War and afterwards extended to civil administration. Each wave promised more than it delivered, and each left behind a residue of method that is still used.</p>
+
+<h2>Organisation and Methods</h2>
+
+<p>Organisation and methods is the systematic examination of the structure, procedures and methods of an organisation with the object of achieving greater efficiency and economy. The two halves are distinct. <strong>Organisation</strong> concerns the structure: the allocation of functions between units, the number of levels, the span of control, the location of authority and the avoidance of duplication. <strong>Methods</strong> concerns the procedures: the sequence of steps through which work passes, the forms used, the records kept and the layout of the office in which the work is done.</p>
+
+<h3>Origin</h3>
+
+<p>The movement began in Britain, where a Treasury investigating unit was established after the First World War and an Organisation and Methods Division was set up in the Treasury in 1941 to secure efficiency in the wartime expansion of the civil service. In India the impetus came from two surveys. <strong>A.D. Gorwala's</strong> report on public administration in 1951 and <strong>Paul Appleby's</strong> survey of 1953 both found that procedures had accumulated without review and that no agency existed to examine them. Appleby recommended an organisation and methods service, and an <strong>O&amp;M Division was established in the Cabinet Secretariat in 1954</strong>. Its functions were later absorbed into the <strong>Department of Administrative Reforms and Public Grievances</strong>, and O&amp;M units were established in ministries and departments.</p>
+
+<h3>Functions</h3>
+
+<ul>
+ <li>Examining organisational structure to remove duplication, reduce levels and rationalise the distribution of functions.</li>
+ <li>Simplifying procedures by eliminating steps that serve no purpose, combining those that can be done together and reordering those done out of sequence.</li>
+ <li><strong>Forms design and control,</strong> since the form determines what information is collected and how often, and a proliferation of forms is one of the commonest sources of administrative cost.</li>
+ <li><strong>Records management,</strong> covering the creation, classification, retention, retrieval and disposal of files, including the weeding of records that have ceased to have value.</li>
+ <li><strong>Office layout and equipment,</strong> arranging the physical sequence of work so that files travel the shortest distance.</li>
+ <li>Work measurement, to establish how long tasks should take and therefore how many staff a unit requires.</li>
+ <li>Advising on delegation of financial and administrative powers, since a procedure cannot be shortened while every step requires approval from above.</li>
+</ul>
+
+<h3>Why It Declined</h3>
+
+<p>The O&amp;M movement in India achieved less than was hoped, for reasons that are instructive. Its units were staffed by generalists on short tenures who acquired no specialist competence. It was advisory, so its recommendations depended on acceptance by the very officials whose procedures it criticised. It concentrated on clerical procedure at a time when the growth in administrative cost was in programme delivery. And it examined method without touching purpose, so that a procedure could be streamlined without anyone asking whether the function it served was still required. The Second Administrative Reforms Commission's emphasis on process re-engineering, which asks precisely that question before redesigning anything, is the modern correction.</p>
+
+<h2>Work Study</h2>
+
+<p>Work study is the generic term for the techniques of method study and work measurement used in the examination of human work in all its contexts, leading systematically to the investigation of all the factors which affect the efficiency and economy of the situation being reviewed, in order to effect improvement. The definition is the <strong>International Labour Organisation's</strong>, and it is worth reproducing because it makes clear that work study is an examination of the situation, not of the worker.</p>
+
+<h3>The Two Branches</h3>
+
+<p><strong>Method study</strong> is the systematic recording and critical examination of existing and proposed ways of doing work, as a means of developing and applying easier and more effective methods and reducing costs. It asks how the work is done and how it could be done better.</p>
+
+<p><strong>Work measurement</strong> is the application of techniques designed to establish the time for a qualified worker to carry out a specified job at a defined level of performance. It asks how long the work should take, and it supplies the basis for staffing, scheduling and incentive schemes.</p>
+
+<p>The relation between them is sequential. Method study establishes the best method; work measurement establishes the time that method should take. Measuring a bad method merely institutionalises it, which is the most frequent error in application.</p>
+
+<h3>The Steps</h3>
+
+<p>The standard sequence is remembered as <strong>SREDIM</strong>, and questions frequently ask for it.</p>
+
+<ul>
+ <li><strong>Select</strong> the work to be studied, on economic grounds where cost is high, on technical grounds where a bottleneck exists, or on human grounds where the work is unsafe or disliked.</li>
+ <li><strong>Record</strong> the existing method, using charts and diagrams so that the facts are visible rather than remembered.</li>
+ <li><strong>Examine</strong> the record critically, questioning the purpose, place, sequence, person and means of every element: what is done and why, where it is done and why there, when it is done and why then, who does it and why that person, how it is done and why that way.</li>
+ <li><strong>Develop</strong> the improved method, by eliminating unnecessary elements, combining others, changing their sequence and simplifying what remains.</li>
+ <li><strong>Install</strong> the new method, which requires training, revised instructions and the consent of those who will operate it.</li>
+ <li><strong>Maintain</strong> the method by periodic check, since procedures drift back towards the familiar unless the new practice is audited.</li>
+</ul>
+
+<h3>Recording Techniques</h3>
+
+<ul>
+ <li><strong>The outline process chart,</strong> which records only the main operations and inspections and gives an overview of the whole process.</li>
+ <li><strong>The flow process chart,</strong> which records every operation, transport, inspection, delay and storage, and is the principal tool for exposing waiting time and unnecessary movement. In administrative work the delays between steps usually exceed the operations themselves by a wide margin, and the chart is what makes that visible.</li>
+ <li><strong>The flow diagram and string diagram,</strong> which plot movement on a scale drawing of the workplace, and which expose the cost of a poor office layout.</li>
+ <li><strong>The multiple activity chart,</strong> which records the activities of more than one worker or machine against a common time scale and exposes idle time caused by dependence.</li>
+ <li><strong>The two-handed process chart,</strong> used for short repetitive operations at a single workplace.</li>
+</ul>
+
+<h3>Work Measurement Techniques</h3>
+
+<ul>
+ <li><strong>Time study,</strong> in which a qualified observer times a sufficient number of cycles with a stopwatch, rates the worker's performance against a defined standard, and adds allowances for rest, personal needs and unavoidable delay to arrive at a standard time.</li>
+ <li><strong>Synthesis,</strong> which builds a time for a job from previously established times for its elements, avoiding fresh observation.</li>
+ <li><strong>Analytical estimating,</strong> used where work is not repetitive enough for time study, in which an experienced estimator assesses the time from knowledge of the elements.</li>
+ <li><strong>Activity sampling,</strong> in which a large number of instantaneous observations are made at random intervals and the proportion of observations showing a given activity estimates the proportion of total time spent on it. This is the technique best suited to office work, because it requires no continuous observation, it covers many workers at once, and it is far less intrusive than a stopwatch.</li>
+ <li><strong>Predetermined motion time systems,</strong> which build times from standard values for basic human motions, and which are of little use in administrative work.</li>
+</ul>
+
+<h3>Application to Administration</h3>
+
+<p>Work study transfers to government work that is repetitive and measurable: processing of applications, issue of certificates and licences, payment of claims, entry and verification of data, and the routine of record offices. It transfers badly to work that is judgemental, negotiated or interactive, because the output cannot be counted and the quality of an individual judgement is not a function of the time taken. The standing danger is that measurement drives out quality, since a unit judged on cases disposed per clerk will dispose of the easy cases and defer the difficult ones, which is the administrative equivalent of the creaming that <strong>Lipsky</strong> observed in street-level work.</p>
+
+<h2>Management by Objectives</h2>
+
+<p>Management by objectives was introduced by <strong>Peter Drucker</strong> in 1954 and developed as a system by <strong>George Odiorne</strong>. It is a process in which superior and subordinate jointly identify the organisation's common goals, define each individual's major areas of responsibility in terms of the results expected, and use those measures as guides for operating the unit and assessing the contribution of each member.</p>
+
+<h3>The Sequence</h3>
+
+<ul>
+ <li>Setting organisational objectives at the top, expressed as results rather than activities.</li>
+ <li>Cascading them so that each level's objectives contribute to the level above, which is the step that makes the system coherent and the step most often skipped.</li>
+ <li><strong>Joint setting of individual objectives</strong> by superior and subordinate, with agreed indicators, targets and timeframes. The participation is not a courtesy; it is what secures commitment and what elicits the subordinate's knowledge of what is achievable.</li>
+ <li>Agreeing the resources and authority the subordinate will have, without which the objective is a wish.</li>
+ <li>Periodic review during the cycle, so that objectives can be revised if circumstances change.</li>
+ <li>Appraisal against the agreed objectives at the end of the cycle, followed by the setting of the next cycle's objectives, which makes the process continuous.</li>
+</ul>
+
+<h3>Merits</h3>
+
+<ul>
+ <li>It shifts attention from activity to result, which in administration means from files disposed to outcomes achieved.</li>
+ <li>It clarifies what each person is responsible for, reducing the overlap and the gaps that afflict large hierarchies.</li>
+ <li>It makes appraisal objective, because performance is judged against a standard agreed in advance rather than against a superior's general impression.</li>
+ <li>It motivates through participation and through the clarity of a known target, and it locates the authority to decide means at the level that will be held accountable for results.</li>
+ <li>It supports decentralisation, since a superior who has agreed the result need not supervise the method.</li>
+</ul>
+
+<h3>Criticisms</h3>
+
+<ul>
+ <li><strong>The measurement bias.</strong> What can be quantified receives attention and what cannot is neglected, so that in a police force detections rise while public confidence is ignored, and in a hospital procedures increase while care declines.</li>
+ <li><strong>Short horizons,</strong> because annual objectives crowd out results that mature over several years, which is precisely the kind of result much public administration exists to produce.</li>
+ <li><strong>Goal displacement,</strong> where the indicator becomes the objective. The phenomenon is general enough to have a name, and the warning that a measure adopted as a target ceases to be a good measure is the most useful single caution in the field.</li>
+ <li><strong>Unsuitability where objectives are plural and contested,</strong> which describes most public agencies. A revenue department that must collect efficiently, deal fairly and not harass cannot reduce those to a single agreed set of numbers.</li>
+ <li><strong>Paperwork,</strong> since the system generates forms, reviews and documentation that consume the time it was meant to release.</li>
+ <li><strong>Dependence on a participative climate,</strong> without which the joint setting of objectives becomes the imposition of targets with a signature attached.</li>
+</ul>
+
+<p>The Indian application is worth noting. Performance agreements between ministries and departments, under which each department commits to a set of results at the start of the year and is scored against them at the end, are management by objectives applied at the level of the organisation rather than the individual, and they have met the familiar difficulties: soft targets, weighting that rewards the measurable, and a weak link between the score and any consequence.</p>
+
+<h2>Network Analysis: PERT and CPM</h2>
+
+<p>Network techniques are used to plan, schedule and control projects made up of many interdependent activities. A project is represented as a network in which activities and the dependencies between them are shown, and the analysis identifies the sequence that determines the project's duration.</p>
+
+<h3>Origins</h3>
+
+<p><strong>PERT</strong>, the Programme Evaluation and Review Technique, was developed in 1958 for the United States Navy's Polaris missile programme, a research and development project in which the duration of activities could not be known in advance. <strong>CPM</strong>, the Critical Path Method, was developed in 1957 by <strong>du Pont</strong> with <strong>Remington Rand</strong> for the scheduling of plant maintenance and construction, where durations were known from experience. The difference in origin explains the difference in method.</p>
+
+<h3>The Common Elements</h3>
+
+<ul>
+ <li>An <strong>activity</strong> is a task consuming time and resources. An <strong>event</strong> is a point in time marking the start or completion of activities and consuming neither.</li>
+ <li>The <strong>network</strong> shows activities and their precedence relations, so that no activity may begin until its predecessors are complete.</li>
+ <li>The <strong>earliest start</strong> and <strong>earliest finish</strong> of each activity are computed by a forward pass through the network; the <strong>latest start</strong> and <strong>latest finish</strong> by a backward pass from the project's required completion.</li>
+ <li><strong>Float</strong> or <strong>slack</strong> is the difference between the earliest and latest times, and it measures how far an activity may be delayed without delaying the project.</li>
+ <li>The <strong>critical path</strong> is the longest path through the network and the sequence of activities with zero float. It determines the project's duration, so a delay on it delays the project and a saving on it shortens the project, while effort spent on activities off the path changes nothing. This is the central managerial insight of the technique.</li>
+</ul>
+
+<h3>How They Differ</h3>
+
+<ul>
+ <li><strong>Time estimates.</strong> CPM uses a single deterministic estimate for each activity, appropriate where the work has been done before. PERT uses three estimates, <strong>optimistic</strong>, <strong>most likely</strong> and <strong>pessimistic</strong>, and computes an expected time as the optimistic plus four times the most likely plus the pessimistic, divided by six. The weighting reflects an assumed beta distribution and allows the probability of completing by a given date to be estimated.</li>
+ <li><strong>Orientation.</strong> PERT is event-oriented and CPM is activity-oriented, which affects how the network is drawn rather than what it tells you.</li>
+ <li><strong>Cost.</strong> CPM incorporates the relation between the time taken and the cost incurred, permitting <strong>crashing</strong>, the deliberate shortening of critical activities by applying extra resources at known extra cost until the marginal cost of time saved exceeds its value. PERT in its original form deals with time alone.</li>
+ <li><strong>Application.</strong> PERT suits research and development and novel projects where uncertainty is high; CPM suits repetitive construction and maintenance where durations are known.</li>
+</ul>
+
+<h3>Uses and Limits in Administration</h3>
+
+<p>Network analysis is directly applicable to public works, to the commissioning of plants and facilities, to election administration, to census operations, to disaster response planning and to the rollout of any programme with a fixed deadline and many dependencies. Its value is that it forces the dependencies to be stated explicitly before work begins, which is where most project delay originates, and it identifies where managerial attention will actually make a difference.</p>
+
+<p>The limits should be stated. The technique assumes the activities and their dependencies are known at the outset, which fails where the project's content changes as it proceeds. Time estimates in the public sector are frequently optimistic for reasons of approval rather than of ignorance, and no technique corrects a deliberate understatement. The network says nothing about resource constraints unless resource levelling is added, so a plan may be feasible in time and impossible in staff. And the principal causes of delay in Indian public projects, land acquisition, clearances and the release of funds, are external to the network and cannot be shortened by rescheduling within it.</p>
+
+<h2>Operations Research and Quantitative Techniques</h2>
+
+<p>Operations research is the application of scientific method to decision problems, usually by constructing a mathematical model of the situation and finding the values of the decision variables that optimise a stated objective subject to stated constraints. The techniques most often cited are these.</p>
+
+<ul>
+ <li><strong>Linear programming,</strong> which finds the allocation of limited resources that maximises or minimises a linear objective subject to linear constraints. Its administrative applications are in allocation of budgets among schemes, distribution of supplies among depots, and assignment of staff among tasks.</li>
+ <li><strong>The transportation and assignment models,</strong> special cases of linear programming used for distributing supplies from sources to destinations at least cost, and for matching people to posts.</li>
+ <li><strong>Queuing theory,</strong> which analyses waiting lines in terms of arrival rate, service rate and the number of service channels, and which yields the number of counters required to hold waiting time within a standard. It is the technique with the most direct citizen-facing application, in hospitals, ration shops, registration offices and passport centres.</li>
+ <li><strong>Inventory models,</strong> which determine the order quantity and reorder level that minimise the combined cost of holding and ordering, applicable to drugs, stationery, spares and food stocks.</li>
+ <li><strong>Simulation,</strong> which builds a model of a system and runs it under varying conditions where an analytical solution is unavailable, used for traffic, evacuation planning and epidemic modelling.</li>
+ <li><strong>Game theory,</strong> which analyses choice where the outcome depends on the decisions of others, applicable to negotiation, regulation and competitive bidding.</li>
+ <li><strong>Decision trees,</strong> which represent sequential decisions and chance events with their probabilities and payoffs, and which are useful where a decision must be taken before uncertainty is resolved.</li>
+</ul>
+
+<h3>Cost-Benefit and Cost-Effectiveness Analysis</h3>
+
+<p><strong>Cost-benefit analysis</strong> values all the costs and benefits of a proposal in money terms over its life, discounts them to present value, and accepts the proposal if benefits exceed costs. It is the standard appraisal technique for public investment and it forces two useful disciplines: that indirect and external effects be counted, and that effects distant in time be valued against effects near at hand.</p>
+
+<p>Its difficulties are well known and should be stated rather than assumed away. Many public benefits have no market price, so shadow prices must be imputed, and the imputation can determine the result. The choice of discount rate governs the treatment of future generations, and a rate that seems reasonable over five years extinguishes benefits fifty years out. Distribution is ignored, since a rupee of benefit counts equally whoever receives it, so a project may pass the test while making the poor worse off. And the analyst's estimates are made in an institutional setting that wants the project approved.</p>
+
+<p><strong>Cost-effectiveness analysis</strong> avoids the first difficulty by leaving benefits in their natural units and comparing the cost per unit of outcome, such as cost per child immunised or per kilometre of road. It cannot say whether a programme is worth doing, only which of several ways of doing it costs least, and it is therefore the appropriate technique where the objective has already been settled politically.</p>
+
+<h2>Management Information Systems</h2>
+
+<p>A management information system is an organised arrangement of people, procedures and technology that collects, processes, stores and distributes information to support decision-making and control in an organisation. The definition's emphasis on people and procedures is deliberate: an information system is not a computer, and the commonest cause of failure is treating it as one.</p>
+
+<h3>Levels of System</h3>
+
+<ul>
+ <li><strong>Transaction processing systems</strong> record the routine events of the organisation, such as payments, receipts, admissions and registrations. They supply the raw data on which everything above depends, and the quality of that data sets the ceiling for the whole structure.</li>
+ <li><strong>Management information systems</strong> proper summarise transaction data into periodic reports for middle managers, comparing performance against plan and exposing variance.</li>
+ <li><strong>Decision support systems</strong> are interactive, permitting a manager to model alternatives and ask what would follow if an assumption changed, and they are suited to semi-structured problems where judgement remains necessary.</li>
+ <li><strong>Executive information systems</strong> present a small number of indicators drawn from many sources for those at the top, with the ability to look behind any indicator at the detail underlying it.</li>
+</ul>
+
+<h3>What a Good System Requires</h3>
+
+<ul>
+ <li><strong>Relevance.</strong> Information should relate to a decision someone actually takes. The most common defect of administrative reporting is volume without relevance, so that reports are compiled and filed unread.</li>
+ <li><strong>Timeliness.</strong> Information arriving after the decision has been taken has no value, and a rough figure available now is usually worth more than a precise one available next quarter.</li>
+ <li><strong>Accuracy appropriate to the purpose,</strong> since precision beyond what the decision requires is a cost without a return.</li>
+ <li><strong>Exception reporting,</strong> so that attention is drawn to deviations rather than buried in comprehensive returns. This is the single most effective design principle for administrative systems.</li>
+ <li><strong>Integration,</strong> so that the same fact is captured once and used everywhere, rather than collected separately by each unit with divergent results.</li>
+ <li><strong>Security and privacy,</strong> which in government systems holding citizen data is a legal obligation as well as a design requirement.</li>
+</ul>
+
+<h3>Why Systems Fail</h3>
+
+<ul>
+ <li><strong>Computerising an unexamined process,</strong> which is the error process re-engineering exists to prevent. Automating a bad procedure produces a faster bad procedure and makes it harder to change.</li>
+ <li><strong>Data collected for compliance rather than use,</strong> so that field staff report what the format demands without regard to accuracy, and the resulting figures are internally consistent and factually wrong.</li>
+ <li><strong>Absence of ownership,</strong> where the system is treated as belonging to the technical department rather than to the managers who use it.</li>
+ <li><strong>Neglect of training and change management,</strong> so that staff maintain parallel manual records and the intended saving is never realised.</li>
+ <li><strong>Design by supplier,</strong> in which requirements are settled by the vendor's existing product rather than by the department's work.</li>
+</ul>
+
+<h2>Quality and Process Techniques</h2>
+
+<h3>Total Quality Management</h3>
+
+<p>Total quality management is an approach in which quality is made the responsibility of everyone rather than of an inspection department, is defined by the customer rather than by the producer, and is pursued through continuous incremental improvement rather than periodic overhaul. <strong>W. Edwards Deming</strong> supplied its intellectual basis, including the insistence that most defects originate in the system rather than in the worker, so that exhorting staff to do better without changing the system is futile, and the <strong>plan, do, check, act</strong> cycle of continuous improvement. <strong>Juran</strong> added the distinction between the vital few causes and the trivial many, and <strong>Crosby</strong> the proposition that quality is free because the cost of prevention is less than the cost of failure.</p>
+
+<p>Applied to administration the approach means defining the citizen as the customer, measuring service quality from the citizen's side rather than the department's, and empowering front-line staff to correct defects where they occur. Its difficulty in government is that the citizen is not only a customer but a bearer of rights and a subject of regulation, so the relationship is not one the language of the customer fully captures, and that the department often has no competitor whose standard defines what is acceptable.</p>
+
+<h3>Business Process Re-engineering</h3>
+
+<p><strong>Hammer and Champy</strong> defined re-engineering as the fundamental rethinking and radical redesign of business processes to achieve dramatic improvements in critical contemporary measures of performance such as cost, quality, service and speed. Each word in the definition is doing work. It is <strong>fundamental</strong> because it begins by asking why the process exists at all. It is <strong>radical</strong> because it redesigns from the ground rather than improving what exists. It aims at <strong>dramatic</strong> rather than marginal gains, which distinguishes it from continuous improvement. And its unit is the <strong>process</strong>, the end-to-end sequence that delivers something of value, rather than the department, which is why it cuts across organisational boundaries.</p>
+
+<p>Its application in Indian administration is visible wherever a service has been redesigned rather than merely computerised: single-window clearances that replace sequential approvals with parallel ones, the elimination of intermediate verification through authenticated digital records, and the removal of requirements to produce documents the state already holds. The corresponding failure is visible wherever a department has placed its existing forms online and called it e-governance.</p>
+
+<h3>Benchmarking and the Balanced Scorecard</h3>
+
+<p><strong>Benchmarking</strong> is the systematic comparison of an organisation's processes and performance against those of the best performers, whether within the same sector or outside it, in order to identify the practices that account for the difference. Its value in government is that it supplies an external standard where competition provides none, which is why comparisons between districts and between States have become a principal instrument of administrative improvement. The aggregate indices published for districts on health, education and nutrition indicators work on this logic.</p>
+
+<p>The <strong>balanced scorecard</strong> of <strong>Kaplan and Norton</strong> answers the criticism that financial measures alone are backward-looking, by supplementing them with measures on three further perspectives: the customer, internal processes, and learning and growth. Adapted to the public sector the financial perspective is subordinated, since money is a constraint rather than an objective, and the citizen or mission perspective occupies the top. Its contribution is the insistence that measures be linked by a causal logic, so that improvement in learning drives improvement in process, which drives improvement in service, rather than being an unconnected list of indicators.</p>
+
+<h2>Techniques in Indian Administration</h2>
+
+<ul>
+ <li><strong>E-office,</strong> which replaces the physical file with an electronic one, makes the movement of a file visible, permits parallel rather than sequential processing, and produces an audit trail of who held a file and for how long. Its significance is less the saving of paper than the exposure of delay, since a system that timestamps every action makes pendency undeniable.</li>
+ <li><strong>The Government e-Marketplace,</strong> which standardises public procurement on a common platform with published prices, reducing both transaction cost and the discretion in which procurement corruption resides.</li>
+ <li><strong>PRAGATI,</strong> a platform on which the Prime Minister reviews pending projects and grievances with Union secretaries and State chief secretaries present simultaneously, which uses video-conferencing and a common database to compress the escalation chain. It is a technique of coordination rather than of measurement, and it works on the principle that the presence of all parties at once removes the ability of each to attribute delay to another.</li>
+ <li><strong>Direct benefit transfer,</strong> which is a redesign of a process rather than an automation of one, eliminating the intermediate layers through which a benefit formerly passed.</li>
+ <li><strong>Outcome budgeting,</strong> which restates budgetary provision in terms of the results expected from it, and which is management by objectives applied to the budget document.</li>
+ <li><strong>Sevottam,</strong> the service delivery excellence framework, which combines the citizen's charter, a grievance redress mechanism and service delivery capability into an assessable standard, and which applies quality management ideas to public service.</li>
+</ul>
+
+<h2>The Standing Criticism</h2>
+
+<p>An answer on techniques should close on their limits, because that is where the examiner's interest usually lies.</p>
+
+<p>Techniques are silent about ends. They can tell an administration how to reach a destination faster and nothing about whether it should go there, and the appearance of rigour they lend to a decision can conceal the fact that the important choice was made before the analysis began, in the specification of the objective and the constraints.</p>
+
+<p>Techniques developed for production transfer imperfectly to administration, because administrative output is often a judgement rather than a product, because its quality is not observable at the moment of delivery, and because the citizen is not simply a customer. The measurement on which the techniques depend therefore captures the countable part of the work and misses the rest, and what is measured displaces what is not.</p>
+
+<p>Techniques have their own politics. Measurement redistributes power towards those who control the measure, and a system of targets shifts discretion from the front line to whoever sets the indicator. This is why the introduction of a technique is resisted for reasons that are rarely stated as such, and why a technically sound system fails for organisational reasons.</p>
+
+<p>The conclusion is not that the techniques should be abandoned but that they are instruments of a judgement they cannot replace. Their proper use is to inform the administrator who must still decide, to make visible what was previously assumed, and to expose the cost of a practice that has survived because nobody measured it. Used that way they are indispensable; used as substitutes for judgement they produce the precisely wrong answer efficiently.</p>
+
+<h2>Performance Management Systems</h2>
+
+<p>Performance management is the application of the objectives approach to the organisation as a whole, and it is the form in which these techniques have most recently entered Indian administration. A department agrees a set of results at the beginning of the year, weighted by priority, with success indicators and targets at several levels of achievement; performance is scored against them at the year's end; and the score is intended to inform decisions about resources and about the standing of the department.</p>
+
+<p>The <strong>Results Framework Document</strong> introduced for central departments followed this design. Each department stated its vision, mission, objectives and functions, translated the objectives into actions with success indicators, assigned weights, and set targets at excellent, very good, good, fair and poor levels. An independent body evaluated the achievement. The intended gains were that departments would state publicly what they proposed to achieve, that the statement would be specific enough to be assessed, and that attention would shift from expenditure to result.</p>
+
+<p>The difficulties encountered were those the literature predicts. Departments selected indicators they could control rather than those that mattered, since an indicator that depends on other agencies is a risk to the score. Targets were set against the department's own past rather than against need or against comparable performers. Weights were distributed so that a poor result on a central objective could be offset by good results on peripheral ones. And the consequence attached to a poor score was slight, which removed the incentive on which the whole design rested. The general lesson is the one that recurs through this subject: a measurement system changes behaviour only to the extent that something follows from the measurement, and if nothing follows, the system produces documents rather than results.</p>
+
+<h3>Organisational Development</h3>
+
+<p>Organisational development is distinguished from the techniques above by its object. Where work study addresses method and management by objectives addresses targets, organisational development addresses the organisation's capacity to solve its own problems, through planned intervention in its processes, culture and relationships using behavioural science knowledge. Its instruments are diagnostic surveys, team building, process consultation, role analysis and sensitivity training, and its practitioner is a facilitator rather than an expert supplying answers.</p>
+
+<p>Its relevance to administrative improvement is that it addresses the reason most technical reforms fail. A procedure can be redesigned by an analyst, but it will be operated by people whose habits, incentives and relationships were formed under the old one, and whose consent was not sought. Organisational development treats that consent as the object of the intervention rather than as an obstacle to it. Its limitation in government is that it requires continuity of leadership and a tolerance of open discussion about how the organisation actually works, neither of which is reliably present where tenures are short and hierarchy is steep.</p>`,
+
  'public-policy': `<h2>What Public Policy Is</h2>
 
 <p>Public policy is what government chooses to do or not to do. The formulation is <strong>Thomas Dye's</strong>, and its value lies in the second half: inaction is itself a policy choice, and a government that declines to regulate an industry or to legislate on a social question has made a decision with distributive consequences as real as any statute. The definition also locates policy in government rather than in the wider society, which distinguishes public policy from the policies of firms, associations and households.</p>
