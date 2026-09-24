@@ -13,7 +13,7 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   history: 'history',
 };
 
-const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science']);
+const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science', 'public-administration']);
 
 export default function HomeToolsList() {
   const [route, setRoute] = useState<string | null>(null);

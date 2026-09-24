@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef, Suspense } from 'react';
+import { useState, useEffect, useMemo, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import type { User } from 'firebase/auth';
@@ -71,7 +71,7 @@ const SUBJECTS: Record<SubjectId, {
     label: 'Pub Admin', icon: 'pubadmin',
     color: '#fb923c', dim: 'rgba(251,146,60,0.09)', border: 'rgba(251,146,60,0.25)',
     thinkerTerm: 'scholar',
-    dataFile: null,
+    dataFile: '/data/pubad-pyqs.json',
   },
 };
 
@@ -949,6 +949,13 @@ function TestPageInner() {
   const [mode, setMode] = useState<TestMode>('sectional');
 
   const [pyqs, setPyqs] = useState<PYQ[]>([]);
+  // Each subject's bank covers a different span, and the range used to be a
+  // hard-coded "2013-2024" that was wrong for any subject but the ones it was
+  // written for. Read it off whatever was actually loaded.
+  const pyqYears = useMemo(() => {
+    const ys = pyqs.map(q => q.year).filter(Boolean).sort();
+    return ys.length ? (ys[0] === ys[ys.length - 1] ? ys[0] : `${ys[0]}-${ys[ys.length - 1]}`) : '';
+  }, [pyqs]);
   const [loading, setLoading] = useState(false);
 
   const [includeMapQ, setIncludeMapQ] = useState(false);
@@ -1060,7 +1067,7 @@ function TestPageInner() {
           Start a Test
         </h1>
         <p style={{ color: 'var(--text2)', fontSize: '0.9rem', fontWeight: 500, marginBottom: '2.5rem', fontFamily: 'var(--font-ui)' }}>
-          Questions drawn from the full PYQ bank (2013-2024). Papers follow the exact UPSC Mains format.
+          Questions drawn from the full PYQ bank{pyqYears ? ` (${pyqYears})` : ''}. Papers follow the exact UPSC Mains format.
         </p>
 
         {/* Subject selector */}
