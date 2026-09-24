@@ -964,19 +964,11 @@
   "year": "2020",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
-  "question": "Explicate the ideological components of Gandhism.",
-  "marks": 20
- },
- {
-  "id": 122,
-  "year": "2020",
-  "paper": "Paper I",
-  "topic": "Indian Political Thought",
   "question": "Ambedkar's ideas on constitutionalism.",
   "marks": 10
  },
  {
-  "id": 123,
+  "id": 122,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -984,7 +976,7 @@
   "marks": 15
  },
  {
-  "id": 124,
+  "id": 123,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -992,7 +984,7 @@
   "marks": 10
  },
  {
-  "id": 125,
+  "id": 124,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1000,7 +992,7 @@
   "marks": 15
  },
  {
-  "id": 126,
+  "id": 125,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1008,7 +1000,7 @@
   "marks": 20
  },
  {
-  "id": 127,
+  "id": 126,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1016,7 +1008,7 @@
   "marks": 15
  },
  {
-  "id": 128,
+  "id": 127,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1024,7 +1016,7 @@
   "marks": 10
  },
  {
-  "id": 129,
+  "id": 128,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1032,7 +1024,7 @@
   "marks": 16
  },
  {
-  "id": 130,
+  "id": 129,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1040,7 +1032,7 @@
   "marks": 20
  },
  {
-  "id": 131,
+  "id": 130,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1048,7 +1040,7 @@
   "marks": 10
  },
  {
-  "id": 132,
+  "id": 131,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1056,7 +1048,7 @@
   "marks": 15
  },
  {
-  "id": 133,
+  "id": 132,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1064,7 +1056,7 @@
   "marks": 10
  },
  {
-  "id": 134,
+  "id": 133,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1072,7 +1064,7 @@
   "marks": 15
  },
  {
-  "id": 135,
+  "id": 134,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1080,7 +1072,7 @@
   "marks": 10
  },
  {
-  "id": 136,
+  "id": 135,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1088,7 +1080,7 @@
   "marks": 10
  },
  {
-  "id": 137,
+  "id": 136,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1096,7 +1088,7 @@
   "marks": 10
  },
  {
-  "id": 138,
+  "id": 137,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1104,7 +1096,7 @@
   "marks": 15
  },
  {
-  "id": 139,
+  "id": 138,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1112,7 +1104,7 @@
   "marks": 15
  },
  {
-  "id": 140,
+  "id": 139,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -1120,7 +1112,7 @@
   "marks": 15
  },
  {
-  "id": 141,
+  "id": 140,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1128,7 +1120,7 @@
   "marks": 15
  },
  {
-  "id": 142,
+  "id": 141,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1136,7 +1128,7 @@
   "marks": 20
  },
  {
-  "id": 143,
+  "id": 142,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1144,7 +1136,7 @@
   "marks": 15
  },
  {
-  "id": 144,
+  "id": 143,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1152,7 +1144,7 @@
   "marks": 10
  },
  {
-  "id": 145,
+  "id": 144,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1160,7 +1152,7 @@
   "marks": 10
  },
  {
-  "id": 146,
+  "id": 145,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1168,7 +1160,7 @@
   "marks": 15
  },
  {
-  "id": 147,
+  "id": 146,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1176,7 +1168,7 @@
   "marks": 10
  },
  {
-  "id": 148,
+  "id": 147,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1184,7 +1176,7 @@
   "marks": 15
  },
  {
-  "id": 149,
+  "id": 148,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1192,7 +1184,7 @@
   "marks": 20
  },
  {
-  "id": 150,
+  "id": 149,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1200,7 +1192,7 @@
   "marks": 15
  },
  {
-  "id": 151,
+  "id": 150,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1208,7 +1200,7 @@
   "marks": 15
  },
  {
-  "id": 152,
+  "id": 151,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1216,7 +1208,7 @@
   "marks": 20
  },
  {
-  "id": 153,
+  "id": 152,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1224,7 +1216,7 @@
   "marks": 20
  },
  {
-  "id": 154,
+  "id": 153,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1232,7 +1224,7 @@
   "marks": 10
  },
  {
-  "id": 155,
+  "id": 154,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1240,7 +1232,7 @@
   "marks": 15
  },
  {
-  "id": 156,
+  "id": 155,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1248,7 +1240,7 @@
   "marks": 20
  },
  {
-  "id": 157,
+  "id": 156,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1256,7 +1248,7 @@
   "marks": 20
  },
  {
-  "id": 158,
+  "id": 157,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1264,7 +1256,7 @@
   "marks": 20
  },
  {
-  "id": 159,
+  "id": 158,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1272,7 +1264,7 @@
   "marks": 20
  },
  {
-  "id": 160,
+  "id": 159,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1280,7 +1272,7 @@
   "marks": 15
  },
  {
-  "id": 161,
+  "id": 160,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1288,7 +1280,7 @@
   "marks": 10
  },
  {
-  "id": 162,
+  "id": 161,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1296,7 +1288,7 @@
   "marks": 10
  },
  {
-  "id": 163,
+  "id": 162,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1304,7 +1296,7 @@
   "marks": 15
  },
  {
-  "id": 164,
+  "id": 163,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1312,7 +1304,7 @@
   "marks": 15
  },
  {
-  "id": 165,
+  "id": 164,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1320,7 +1312,7 @@
   "marks": 20
  },
  {
-  "id": 166,
+  "id": 165,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1328,7 +1320,7 @@
   "marks": 10
  },
  {
-  "id": 167,
+  "id": 166,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1336,7 +1328,7 @@
   "marks": 15
  },
  {
-  "id": 168,
+  "id": 167,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1344,7 +1336,7 @@
   "marks": 10
  },
  {
-  "id": 169,
+  "id": 168,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1352,7 +1344,7 @@
   "marks": 10
  },
  {
-  "id": 170,
+  "id": 169,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1360,7 +1352,7 @@
   "marks": 20
  },
  {
-  "id": 171,
+  "id": 170,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1368,7 +1360,7 @@
   "marks": 15
  },
  {
-  "id": 172,
+  "id": 171,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1376,7 +1368,7 @@
   "marks": 10
  },
  {
-  "id": 173,
+  "id": 172,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1384,7 +1376,7 @@
   "marks": 10
  },
  {
-  "id": 174,
+  "id": 173,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1392,7 +1384,7 @@
   "marks": 20
  },
  {
-  "id": 175,
+  "id": 174,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1400,7 +1392,7 @@
   "marks": 15
  },
  {
-  "id": 176,
+  "id": 175,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1408,7 +1400,7 @@
   "marks": 10
  },
  {
-  "id": 177,
+  "id": 176,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1416,7 +1408,7 @@
   "marks": 15
  },
  {
-  "id": 178,
+  "id": 177,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1424,7 +1416,7 @@
   "marks": 15
  },
  {
-  "id": 179,
+  "id": 178,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -1432,7 +1424,7 @@
   "marks": 15
  },
  {
-  "id": 180,
+  "id": 179,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1440,7 +1432,7 @@
   "marks": 10
  },
  {
-  "id": 181,
+  "id": 180,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1448,7 +1440,7 @@
   "marks": 10
  },
  {
-  "id": 182,
+  "id": 181,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1456,7 +1448,7 @@
   "marks": 20
  },
  {
-  "id": 183,
+  "id": 182,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1464,7 +1456,7 @@
   "marks": 10
  },
  {
-  "id": 184,
+  "id": 183,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1472,7 +1464,7 @@
   "marks": 15
  },
  {
-  "id": 185,
+  "id": 184,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1480,7 +1472,7 @@
   "marks": 10
  },
  {
-  "id": 186,
+  "id": 185,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1488,7 +1480,7 @@
   "marks": 10
  },
  {
-  "id": 187,
+  "id": 186,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1496,7 +1488,7 @@
   "marks": 10
  },
  {
-  "id": 188,
+  "id": 187,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1504,7 +1496,7 @@
   "marks": 15
  },
  {
-  "id": 189,
+  "id": 188,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1512,7 +1504,7 @@
   "marks": 10
  },
  {
-  "id": 190,
+  "id": 189,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1520,7 +1512,7 @@
   "marks": 20
  },
  {
-  "id": 191,
+  "id": 190,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1528,7 +1520,7 @@
   "marks": 10
  },
  {
-  "id": 192,
+  "id": 191,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1536,7 +1528,7 @@
   "marks": 10
  },
  {
-  "id": 193,
+  "id": 192,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1544,7 +1536,7 @@
   "marks": 15
  },
  {
-  "id": 194,
+  "id": 193,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1552,7 +1544,7 @@
   "marks": 10
  },
  {
-  "id": 195,
+  "id": 194,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1560,7 +1552,7 @@
   "marks": 10
  },
  {
-  "id": 196,
+  "id": 195,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1568,7 +1560,7 @@
   "marks": 15
  },
  {
-  "id": 197,
+  "id": 196,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -1576,7 +1568,7 @@
   "marks": 10
  },
  {
-  "id": 198,
+  "id": 197,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1584,7 +1576,7 @@
   "marks": 10
  },
  {
-  "id": 199,
+  "id": 198,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1592,7 +1584,7 @@
   "marks": 10
  },
  {
-  "id": 200,
+  "id": 199,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1600,7 +1592,7 @@
   "marks": 15
  },
  {
-  "id": 201,
+  "id": 200,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1608,7 +1600,7 @@
   "marks": 10
  },
  {
-  "id": 202,
+  "id": 201,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1616,7 +1608,7 @@
   "marks": 15
  },
  {
-  "id": 203,
+  "id": 202,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1624,7 +1616,7 @@
   "marks": 10
  },
  {
-  "id": 204,
+  "id": 203,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1632,7 +1624,7 @@
   "marks": 10
  },
  {
-  "id": 205,
+  "id": 204,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1640,7 +1632,7 @@
   "marks": 10
  },
  {
-  "id": 206,
+  "id": 205,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1648,7 +1640,7 @@
   "marks": 10
  },
  {
-  "id": 207,
+  "id": 206,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1656,7 +1648,7 @@
   "marks": 10
  },
  {
-  "id": 208,
+  "id": 207,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Making of the Indian Constitution",
@@ -1664,7 +1656,7 @@
   "marks": 10
  },
  {
-  "id": 209,
+  "id": 208,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1672,7 +1664,7 @@
   "marks": 20
  },
  {
-  "id": 210,
+  "id": 209,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1680,7 +1672,7 @@
   "marks": 10
  },
  {
-  "id": 211,
+  "id": 210,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1688,7 +1680,7 @@
   "marks": 15
  },
  {
-  "id": 212,
+  "id": 211,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1696,7 +1688,7 @@
   "marks": 15
  },
  {
-  "id": 213,
+  "id": 212,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1704,7 +1696,7 @@
   "marks": 10
  },
  {
-  "id": 214,
+  "id": 213,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1712,7 +1704,7 @@
   "marks": 10
  },
  {
-  "id": 215,
+  "id": 214,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1720,7 +1712,7 @@
   "marks": 10
  },
  {
-  "id": 216,
+  "id": 215,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1728,7 +1720,7 @@
   "marks": 10
  },
  {
-  "id": 217,
+  "id": 216,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1736,7 +1728,7 @@
   "marks": 15
  },
  {
-  "id": 218,
+  "id": 217,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1744,7 +1736,7 @@
   "marks": 15
  },
  {
-  "id": 219,
+  "id": 218,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1752,7 +1744,7 @@
   "marks": 20
  },
  {
-  "id": 220,
+  "id": 219,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1760,7 +1752,7 @@
   "marks": 10
  },
  {
-  "id": 221,
+  "id": 220,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1768,7 +1760,7 @@
   "marks": 15
  },
  {
-  "id": 222,
+  "id": 221,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1776,7 +1768,7 @@
   "marks": 10
  },
  {
-  "id": 223,
+  "id": 222,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1784,7 +1776,7 @@
   "marks": 10
  },
  {
-  "id": 224,
+  "id": 223,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1792,7 +1784,7 @@
   "marks": 20
  },
  {
-  "id": 225,
+  "id": 224,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1800,7 +1792,7 @@
   "marks": 10
  },
  {
-  "id": 226,
+  "id": 225,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1808,7 +1800,7 @@
   "marks": 20
  },
  {
-  "id": 227,
+  "id": 226,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1816,7 +1808,7 @@
   "marks": 15
  },
  {
-  "id": 228,
+  "id": 227,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1824,7 +1816,7 @@
   "marks": 10
  },
  {
-  "id": 229,
+  "id": 228,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1832,7 +1824,7 @@
   "marks": 15
  },
  {
-  "id": 230,
+  "id": 229,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1840,7 +1832,7 @@
   "marks": 20
  },
  {
-  "id": 231,
+  "id": 230,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1848,7 +1840,7 @@
   "marks": 15
  },
  {
-  "id": 232,
+  "id": 231,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -1856,7 +1848,7 @@
   "marks": 10
  },
  {
-  "id": 233,
+  "id": 232,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1864,7 +1856,7 @@
   "marks": 20
  },
  {
-  "id": 234,
+  "id": 233,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1872,7 +1864,7 @@
   "marks": 15
  },
  {
-  "id": 235,
+  "id": 234,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1880,7 +1872,7 @@
   "marks": 10
  },
  {
-  "id": 236,
+  "id": 235,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1888,7 +1880,7 @@
   "marks": 15
  },
  {
-  "id": 237,
+  "id": 236,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1896,7 +1888,7 @@
   "marks": 15
  },
  {
-  "id": 238,
+  "id": 237,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1904,7 +1896,7 @@
   "marks": 10
  },
  {
-  "id": 239,
+  "id": 238,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1912,7 +1904,7 @@
   "marks": 15
  },
  {
-  "id": 240,
+  "id": 239,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1920,7 +1912,7 @@
   "marks": 15
  },
  {
-  "id": 241,
+  "id": 240,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1928,7 +1920,7 @@
   "marks": 10
  },
  {
-  "id": 242,
+  "id": 241,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1936,7 +1928,7 @@
   "marks": 15
  },
  {
-  "id": 243,
+  "id": 242,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1944,7 +1936,7 @@
   "marks": 15
  },
  {
-  "id": 244,
+  "id": 243,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1952,7 +1944,7 @@
   "marks": 20
  },
  {
-  "id": 245,
+  "id": 244,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1960,7 +1952,7 @@
   "marks": 15
  },
  {
-  "id": 246,
+  "id": 245,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1968,7 +1960,7 @@
   "marks": 20
  },
  {
-  "id": 247,
+  "id": 246,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1976,7 +1968,7 @@
   "marks": 15
  },
  {
-  "id": 248,
+  "id": 247,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1984,7 +1976,7 @@
   "marks": 20
  },
  {
-  "id": 249,
+  "id": 248,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -1992,7 +1984,7 @@
   "marks": 15
  },
  {
-  "id": 250,
+  "id": 249,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -2000,7 +1992,7 @@
   "marks": 15
  },
  {
-  "id": 251,
+  "id": 250,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -2008,7 +2000,7 @@
   "marks": 15
  },
  {
-  "id": 252,
+  "id": 251,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -2016,7 +2008,7 @@
   "marks": 10
  },
  {
-  "id": 253,
+  "id": 252,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -2024,7 +2016,7 @@
   "marks": 15
  },
  {
-  "id": 254,
+  "id": 253,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -2032,7 +2024,7 @@
   "marks": 10
  },
  {
-  "id": 255,
+  "id": 254,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2040,7 +2032,7 @@
   "marks": 20
  },
  {
-  "id": 256,
+  "id": 255,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2048,7 +2040,7 @@
   "marks": 15
  },
  {
-  "id": 257,
+  "id": 256,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2056,7 +2048,7 @@
   "marks": 10
  },
  {
-  "id": 258,
+  "id": 257,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2064,7 +2056,7 @@
   "marks": 20
  },
  {
-  "id": 259,
+  "id": 258,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2072,7 +2064,7 @@
   "marks": 20
  },
  {
-  "id": 260,
+  "id": 259,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2080,7 +2072,7 @@
   "marks": 15
  },
  {
-  "id": 261,
+  "id": 260,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2088,7 +2080,7 @@
   "marks": 15
  },
  {
-  "id": 262,
+  "id": 261,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2096,7 +2088,7 @@
   "marks": 15
  },
  {
-  "id": 263,
+  "id": 262,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2104,7 +2096,7 @@
   "marks": 10
  },
  {
-  "id": 264,
+  "id": 263,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2112,7 +2104,7 @@
   "marks": 20
  },
  {
-  "id": 265,
+  "id": 264,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2120,7 +2112,7 @@
   "marks": 10
  },
  {
-  "id": 266,
+  "id": 265,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2128,7 +2120,7 @@
   "marks": 15
  },
  {
-  "id": 267,
+  "id": 266,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2136,7 +2128,7 @@
   "marks": 20
  },
  {
-  "id": 268,
+  "id": 267,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2144,7 +2136,7 @@
   "marks": 20
  },
  {
-  "id": 269,
+  "id": 268,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2152,7 +2144,7 @@
   "marks": 15
  },
  {
-  "id": 270,
+  "id": 269,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -2160,7 +2152,7 @@
   "marks": 15
  },
  {
-  "id": 271,
+  "id": 270,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2168,7 +2160,7 @@
   "marks": 10
  },
  {
-  "id": 272,
+  "id": 271,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2176,7 +2168,7 @@
   "marks": 15
  },
  {
-  "id": 273,
+  "id": 272,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2184,7 +2176,7 @@
   "marks": 15
  },
  {
-  "id": 274,
+  "id": 273,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2192,7 +2184,7 @@
   "marks": 10
  },
  {
-  "id": 275,
+  "id": 274,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2200,7 +2192,7 @@
   "marks": 15
  },
  {
-  "id": 276,
+  "id": 275,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2208,7 +2200,7 @@
   "marks": 10
  },
  {
-  "id": 277,
+  "id": 276,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2216,7 +2208,7 @@
   "marks": 15
  },
  {
-  "id": 278,
+  "id": 277,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2224,7 +2216,7 @@
   "marks": 20
  },
  {
-  "id": 279,
+  "id": 278,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2232,7 +2224,7 @@
   "marks": 20
  },
  {
-  "id": 280,
+  "id": 279,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2240,7 +2232,7 @@
   "marks": 15
  },
  {
-  "id": 281,
+  "id": 280,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2248,7 +2240,7 @@
   "marks": 15
  },
  {
-  "id": 282,
+  "id": 281,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2256,7 +2248,7 @@
   "marks": 15
  },
  {
-  "id": 283,
+  "id": 282,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2264,7 +2256,7 @@
   "marks": 10
  },
  {
-  "id": 284,
+  "id": 283,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2272,7 +2264,7 @@
   "marks": 15
  },
  {
-  "id": 285,
+  "id": 284,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2280,7 +2272,7 @@
   "marks": 10
  },
  {
-  "id": 286,
+  "id": 285,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2288,7 +2280,7 @@
   "marks": 20
  },
  {
-  "id": 287,
+  "id": 286,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Statutory Institutions and Commissions",
@@ -2296,7 +2288,7 @@
   "marks": 10
  },
  {
-  "id": 288,
+  "id": 287,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2304,7 +2296,7 @@
   "marks": 10
  },
  {
-  "id": 289,
+  "id": 288,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2312,7 +2304,7 @@
   "marks": 15
  },
  {
-  "id": 290,
+  "id": 289,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2320,7 +2312,7 @@
   "marks": 20
  },
  {
-  "id": 291,
+  "id": 290,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2328,7 +2320,7 @@
   "marks": 15
  },
  {
-  "id": 292,
+  "id": 291,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2336,7 +2328,7 @@
   "marks": 15
  },
  {
-  "id": 293,
+  "id": 292,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2344,7 +2336,7 @@
   "marks": 20
  },
  {
-  "id": 294,
+  "id": 293,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2352,7 +2344,7 @@
   "marks": 10
  },
  {
-  "id": 295,
+  "id": 294,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2360,7 +2352,7 @@
   "marks": 10
  },
  {
-  "id": 296,
+  "id": 295,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2368,7 +2360,7 @@
   "marks": 15
  },
  {
-  "id": 297,
+  "id": 296,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2376,7 +2368,7 @@
   "marks": 10
  },
  {
-  "id": 298,
+  "id": 297,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2384,7 +2376,7 @@
   "marks": 10
  },
  {
-  "id": 299,
+  "id": 298,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2392,7 +2384,7 @@
   "marks": 10
  },
  {
-  "id": 300,
+  "id": 299,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2400,7 +2392,7 @@
   "marks": 15
  },
  {
-  "id": 301,
+  "id": 300,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2408,7 +2400,7 @@
   "marks": 10
  },
  {
-  "id": 302,
+  "id": 301,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -2416,7 +2408,7 @@
   "marks": 20
  },
  {
-  "id": 303,
+  "id": 302,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2424,7 +2416,7 @@
   "marks": 10
  },
  {
-  "id": 304,
+  "id": 303,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2432,7 +2424,7 @@
   "marks": 15
  },
  {
-  "id": 305,
+  "id": 304,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2440,7 +2432,7 @@
   "marks": 15
  },
  {
-  "id": 306,
+  "id": 305,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2448,7 +2440,7 @@
   "marks": 15
  },
  {
-  "id": 307,
+  "id": 306,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2456,7 +2448,7 @@
   "marks": 15
  },
  {
-  "id": 308,
+  "id": 307,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2464,7 +2456,7 @@
   "marks": 15
  },
  {
-  "id": 309,
+  "id": 308,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2472,7 +2464,7 @@
   "marks": 15
  },
  {
-  "id": 310,
+  "id": 309,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2480,7 +2472,7 @@
   "marks": 20
  },
  {
-  "id": 311,
+  "id": 310,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2488,7 +2480,7 @@
   "marks": 15
  },
  {
-  "id": 312,
+  "id": 311,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2496,7 +2488,7 @@
   "marks": 20
  },
  {
-  "id": 313,
+  "id": 312,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2504,7 +2496,7 @@
   "marks": 20
  },
  {
-  "id": 314,
+  "id": 313,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2512,7 +2504,7 @@
   "marks": 15
  },
  {
-  "id": 315,
+  "id": 314,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -2520,7 +2512,7 @@
   "marks": 10
  },
  {
-  "id": 316,
+  "id": 315,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2528,7 +2520,7 @@
   "marks": 15
  },
  {
-  "id": 317,
+  "id": 316,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2536,7 +2528,7 @@
   "marks": 15
  },
  {
-  "id": 318,
+  "id": 317,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2544,7 +2536,7 @@
   "marks": 20
  },
  {
-  "id": 319,
+  "id": 318,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2552,7 +2544,7 @@
   "marks": 20
  },
  {
-  "id": 320,
+  "id": 319,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2560,7 +2552,7 @@
   "marks": 15
  },
  {
-  "id": 321,
+  "id": 320,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2568,7 +2560,7 @@
   "marks": 15
  },
  {
-  "id": 322,
+  "id": 321,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2576,7 +2568,7 @@
   "marks": 15
  },
  {
-  "id": 323,
+  "id": 322,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2584,7 +2576,7 @@
   "marks": 15
  },
  {
-  "id": 324,
+  "id": 323,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2592,7 +2584,7 @@
   "marks": 15
  },
  {
-  "id": 325,
+  "id": 324,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2600,7 +2592,7 @@
   "marks": 15
  },
  {
-  "id": 326,
+  "id": 325,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2608,7 +2600,7 @@
   "marks": 10
  },
  {
-  "id": 327,
+  "id": 326,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -2616,7 +2608,7 @@
   "marks": 20
  },
  {
-  "id": 328,
+  "id": 327,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2624,7 +2616,7 @@
   "marks": 20
  },
  {
-  "id": 329,
+  "id": 328,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2632,7 +2624,7 @@
   "marks": 15
  },
  {
-  "id": 330,
+  "id": 329,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2640,7 +2632,7 @@
   "marks": 15
  },
  {
-  "id": 331,
+  "id": 330,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2648,7 +2640,7 @@
   "marks": 15
  },
  {
-  "id": 332,
+  "id": 331,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2656,7 +2648,7 @@
   "marks": 20
  },
  {
-  "id": 333,
+  "id": 332,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2664,7 +2656,7 @@
   "marks": 15
  },
  {
-  "id": 334,
+  "id": 333,
   "year": "2021",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2672,7 +2664,7 @@
   "marks": 20
  },
  {
-  "id": 335,
+  "id": 334,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2680,7 +2672,7 @@
   "marks": 20
  },
  {
-  "id": 336,
+  "id": 335,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2688,7 +2680,7 @@
   "marks": 15
  },
  {
-  "id": 337,
+  "id": 336,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2696,7 +2688,7 @@
   "marks": 20
  },
  {
-  "id": 338,
+  "id": 337,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2704,7 +2696,7 @@
   "marks": 15
  },
  {
-  "id": 339,
+  "id": 338,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2712,7 +2704,7 @@
   "marks": 10
  },
  {
-  "id": 340,
+  "id": 339,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2720,7 +2712,7 @@
   "marks": 20
  },
  {
-  "id": 341,
+  "id": 340,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2728,7 +2720,7 @@
   "marks": 15
  },
  {
-  "id": 342,
+  "id": 341,
   "year": "2015",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2736,7 +2728,7 @@
   "marks": 15
  },
  {
-  "id": 343,
+  "id": 342,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2744,7 +2736,7 @@
   "marks": 10
  },
  {
-  "id": 344,
+  "id": 343,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2752,7 +2744,7 @@
   "marks": 20
  },
  {
-  "id": 345,
+  "id": 344,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2760,7 +2752,7 @@
   "marks": 20
  },
  {
-  "id": 346,
+  "id": 345,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2768,7 +2760,7 @@
   "marks": 15
  },
  {
-  "id": 347,
+  "id": 346,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2776,7 +2768,7 @@
   "marks": 15
  },
  {
-  "id": 348,
+  "id": 347,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Party System",
@@ -2784,7 +2776,7 @@
   "marks": 15
  },
  {
-  "id": 349,
+  "id": 348,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2792,7 +2784,7 @@
   "marks": 20
  },
  {
-  "id": 350,
+  "id": 349,
   "year": "2024",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2800,7 +2792,7 @@
   "marks": 10
  },
  {
-  "id": 351,
+  "id": 350,
   "year": "2023",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2808,7 +2800,7 @@
   "marks": 10
  },
  {
-  "id": 352,
+  "id": 351,
   "year": "2022",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2816,7 +2808,7 @@
   "marks": 10
  },
  {
-  "id": 353,
+  "id": 352,
   "year": "2020",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2824,7 +2816,7 @@
   "marks": 15
  },
  {
-  "id": 354,
+  "id": 353,
   "year": "2019",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2832,7 +2824,7 @@
   "marks": 10
  },
  {
-  "id": 355,
+  "id": 354,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2840,7 +2832,7 @@
   "marks": 15
  },
  {
-  "id": 356,
+  "id": 355,
   "year": "2017",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2848,7 +2840,7 @@
   "marks": 10
  },
  {
-  "id": 357,
+  "id": 356,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2856,7 +2848,7 @@
   "marks": 15
  },
  {
-  "id": 358,
+  "id": 357,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2864,7 +2856,7 @@
   "marks": 15
  },
  {
-  "id": 359,
+  "id": 358,
   "year": "2014",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2872,7 +2864,7 @@
   "marks": 10
  },
  {
-  "id": 360,
+  "id": 359,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2880,7 +2872,7 @@
   "marks": 10
  },
  {
-  "id": 361,
+  "id": 360,
   "year": "2013",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -2888,7 +2880,7 @@
   "marks": 15
  },
  {
-  "id": 362,
+  "id": 361,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2896,7 +2888,7 @@
   "marks": 10
  },
  {
-  "id": 363,
+  "id": 362,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2904,7 +2896,7 @@
   "marks": 10
  },
  {
-  "id": 364,
+  "id": 363,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2912,7 +2904,7 @@
   "marks": 10
  },
  {
-  "id": 365,
+  "id": 364,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2920,7 +2912,7 @@
   "marks": 10
  },
  {
-  "id": 366,
+  "id": 365,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2928,7 +2920,7 @@
   "marks": 10
  },
  {
-  "id": 367,
+  "id": 366,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2936,7 +2928,7 @@
   "marks": 20
  },
  {
-  "id": 368,
+  "id": 367,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2944,7 +2936,7 @@
   "marks": 10
  },
  {
-  "id": 369,
+  "id": 368,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2952,7 +2944,7 @@
   "marks": 10
  },
  {
-  "id": 370,
+  "id": 369,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2960,7 +2952,7 @@
   "marks": 10
  },
  {
-  "id": 371,
+  "id": 370,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -2968,7 +2960,7 @@
   "marks": 10
  },
  {
-  "id": 372,
+  "id": 371,
   "year": "2025",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -2976,7 +2968,7 @@
   "marks": 10
  },
  {
-  "id": 373,
+  "id": 372,
   "year": "2024",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -2984,7 +2976,7 @@
   "marks": 15
  },
  {
-  "id": 374,
+  "id": 373,
   "year": "2023",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -2992,7 +2984,7 @@
   "marks": 10
  },
  {
-  "id": 375,
+  "id": 374,
   "year": "2021",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3000,7 +2992,7 @@
   "marks": 20
  },
  {
-  "id": 376,
+  "id": 375,
   "year": "2019",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3008,7 +3000,7 @@
   "marks": 15
  },
  {
-  "id": 377,
+  "id": 376,
   "year": "2018",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3016,7 +3008,7 @@
   "marks": 15
  },
  {
-  "id": 378,
+  "id": 377,
   "year": "2017",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3024,7 +3016,7 @@
   "marks": 10
  },
  {
-  "id": 379,
+  "id": 378,
   "year": "2015",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3032,7 +3024,7 @@
   "marks": 10
  },
  {
-  "id": 380,
+  "id": 379,
   "year": "2013",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -3040,7 +3032,7 @@
   "marks": 15
  },
  {
-  "id": 381,
+  "id": 380,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3048,7 +3040,7 @@
   "marks": 20
  },
  {
-  "id": 382,
+  "id": 381,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3056,7 +3048,7 @@
   "marks": 15
  },
  {
-  "id": 383,
+  "id": 382,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3064,7 +3056,7 @@
   "marks": 10
  },
  {
-  "id": 384,
+  "id": 383,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3072,7 +3064,7 @@
   "marks": 20
  },
  {
-  "id": 385,
+  "id": 384,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3080,7 +3072,7 @@
   "marks": 15
  },
  {
-  "id": 386,
+  "id": 385,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3088,7 +3080,7 @@
   "marks": 10
  },
  {
-  "id": 387,
+  "id": 386,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3096,7 +3088,7 @@
   "marks": 20
  },
  {
-  "id": 388,
+  "id": 387,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3104,7 +3096,7 @@
   "marks": 10
  },
  {
-  "id": 389,
+  "id": 388,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3112,7 +3104,7 @@
   "marks": 15
  },
  {
-  "id": 390,
+  "id": 389,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3120,7 +3112,7 @@
   "marks": 15
  },
  {
-  "id": 391,
+  "id": 390,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3128,7 +3120,7 @@
   "marks": 15
  },
  {
-  "id": 392,
+  "id": 391,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3136,7 +3128,7 @@
   "marks": 10
  },
  {
-  "id": 393,
+  "id": 392,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3144,7 +3136,7 @@
   "marks": 10
  },
  {
-  "id": 394,
+  "id": 393,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3152,7 +3144,7 @@
   "marks": 15
  },
  {
-  "id": 395,
+  "id": 394,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3160,7 +3152,7 @@
   "marks": 10
  },
  {
-  "id": 396,
+  "id": 395,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3168,7 +3160,7 @@
   "marks": 10
  },
  {
-  "id": 397,
+  "id": 396,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3176,7 +3168,7 @@
   "marks": 10
  },
  {
-  "id": 398,
+  "id": 397,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3184,7 +3176,7 @@
   "marks": 20
  },
  {
-  "id": 399,
+  "id": 398,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Politics of Representation and Participation",
@@ -3192,7 +3184,7 @@
   "marks": 20
  },
  {
-  "id": 400,
+  "id": 399,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3200,7 +3192,7 @@
   "marks": 15
  },
  {
-  "id": 401,
+  "id": 400,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3208,7 +3200,7 @@
   "marks": 20
  },
  {
-  "id": 402,
+  "id": 401,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3216,7 +3208,7 @@
   "marks": 20
  },
  {
-  "id": 403,
+  "id": 402,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3224,7 +3216,7 @@
   "marks": 10
  },
  {
-  "id": 404,
+  "id": 403,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3232,7 +3224,7 @@
   "marks": 15
  },
  {
-  "id": 405,
+  "id": 404,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3240,7 +3232,7 @@
   "marks": 10
  },
  {
-  "id": 406,
+  "id": 405,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3248,7 +3240,7 @@
   "marks": 10
  },
  {
-  "id": 407,
+  "id": 406,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3256,7 +3248,7 @@
   "marks": 10
  },
  {
-  "id": 408,
+  "id": 407,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3264,7 +3256,7 @@
   "marks": 15
  },
  {
-  "id": 409,
+  "id": 408,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3272,7 +3264,7 @@
   "marks": 10
  },
  {
-  "id": 410,
+  "id": 409,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3280,7 +3272,7 @@
   "marks": 20
  },
  {
-  "id": 411,
+  "id": 410,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3288,7 +3280,7 @@
   "marks": 10
  },
  {
-  "id": 412,
+  "id": 411,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Globalization",
@@ -3296,7 +3288,7 @@
   "marks": 20
  },
  {
-  "id": 413,
+  "id": 412,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3304,7 +3296,7 @@
   "marks": 10
  },
  {
-  "id": 414,
+  "id": 413,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3312,7 +3304,7 @@
   "marks": 10
  },
  {
-  "id": 415,
+  "id": 414,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3320,7 +3312,7 @@
   "marks": 10
  },
  {
-  "id": 416,
+  "id": 415,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3328,7 +3320,7 @@
   "marks": 10
  },
  {
-  "id": 417,
+  "id": 416,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3336,7 +3328,7 @@
   "marks": 15
  },
  {
-  "id": 418,
+  "id": 417,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3344,7 +3336,7 @@
   "marks": 15
  },
  {
-  "id": 419,
+  "id": 418,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3352,7 +3344,7 @@
   "marks": 15
  },
  {
-  "id": 420,
+  "id": 419,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3360,7 +3352,7 @@
   "marks": 15
  },
  {
-  "id": 421,
+  "id": 420,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3368,7 +3360,7 @@
   "marks": 10
  },
  {
-  "id": 422,
+  "id": 421,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3376,7 +3368,7 @@
   "marks": 20
  },
  {
-  "id": 423,
+  "id": 422,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3384,7 +3376,7 @@
   "marks": 15
  },
  {
-  "id": 424,
+  "id": 423,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3392,7 +3384,7 @@
   "marks": 10
  },
  {
-  "id": 425,
+  "id": 424,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3400,7 +3392,7 @@
   "marks": 20
  },
  {
-  "id": 426,
+  "id": 425,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3408,7 +3400,7 @@
   "marks": 10
  },
  {
-  "id": 427,
+  "id": 426,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3416,7 +3408,7 @@
   "marks": 15
  },
  {
-  "id": 428,
+  "id": 427,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3424,7 +3416,7 @@
   "marks": 20
  },
  {
-  "id": 429,
+  "id": 428,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3432,7 +3424,7 @@
   "marks": 15
  },
  {
-  "id": 430,
+  "id": 429,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3440,7 +3432,7 @@
   "marks": 10
  },
  {
-  "id": 431,
+  "id": 430,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3448,7 +3440,7 @@
   "marks": 10
  },
  {
-  "id": 432,
+  "id": 431,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3456,7 +3448,7 @@
   "marks": 10
  },
  {
-  "id": 433,
+  "id": 432,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3464,7 +3456,7 @@
   "marks": 15
  },
  {
-  "id": 434,
+  "id": 433,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3472,7 +3464,7 @@
   "marks": 15
  },
  {
-  "id": 435,
+  "id": 434,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3480,7 +3472,7 @@
   "marks": 15
  },
  {
-  "id": 436,
+  "id": 435,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -3488,7 +3480,7 @@
   "marks": 15
  },
  {
-  "id": 437,
+  "id": 436,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3496,7 +3488,7 @@
   "marks": 10
  },
  {
-  "id": 438,
+  "id": 437,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3504,7 +3496,7 @@
   "marks": 15
  },
  {
-  "id": 439,
+  "id": 438,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3512,7 +3504,7 @@
   "marks": 20
  },
  {
-  "id": 440,
+  "id": 439,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3520,7 +3512,7 @@
   "marks": 10
  },
  {
-  "id": 441,
+  "id": 440,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3528,7 +3520,7 @@
   "marks": 15
  },
  {
-  "id": 442,
+  "id": 441,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3536,7 +3528,7 @@
   "marks": 15
  },
  {
-  "id": 443,
+  "id": 442,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3544,7 +3536,7 @@
   "marks": 20
  },
  {
-  "id": 444,
+  "id": 443,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3552,7 +3544,7 @@
   "marks": 15
  },
  {
-  "id": 445,
+  "id": 444,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3560,7 +3552,7 @@
   "marks": 10
  },
  {
-  "id": 446,
+  "id": 445,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3568,7 +3560,7 @@
   "marks": 20
  },
  {
-  "id": 447,
+  "id": 446,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3576,7 +3568,7 @@
   "marks": 15
  },
  {
-  "id": 448,
+  "id": 447,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3584,7 +3576,7 @@
   "marks": 20
  },
  {
-  "id": 449,
+  "id": 448,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3592,7 +3584,7 @@
   "marks": 15
  },
  {
-  "id": 450,
+  "id": 449,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3600,7 +3592,7 @@
   "marks": 15
  },
  {
-  "id": 451,
+  "id": 450,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3608,7 +3600,7 @@
   "marks": 20
  },
  {
-  "id": 452,
+  "id": 451,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3616,7 +3608,7 @@
   "marks": 15
  },
  {
-  "id": 453,
+  "id": 452,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -3624,7 +3616,7 @@
   "marks": 15
  },
  {
-  "id": 454,
+  "id": 453,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3632,7 +3624,7 @@
   "marks": 15
  },
  {
-  "id": 455,
+  "id": 454,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3640,7 +3632,7 @@
   "marks": 10
  },
  {
-  "id": 456,
+  "id": 455,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3648,7 +3640,7 @@
   "marks": 15
  },
  {
-  "id": 457,
+  "id": 456,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3656,7 +3648,7 @@
   "marks": 20
  },
  {
-  "id": 458,
+  "id": 457,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3664,7 +3656,7 @@
   "marks": 20
  },
  {
-  "id": 459,
+  "id": 458,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3672,7 +3664,7 @@
   "marks": 10
  },
  {
-  "id": 460,
+  "id": 459,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3680,7 +3672,7 @@
   "marks": 20
  },
  {
-  "id": 461,
+  "id": 460,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3688,7 +3680,7 @@
   "marks": 15
  },
  {
-  "id": 462,
+  "id": 461,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3696,7 +3688,7 @@
   "marks": 20
  },
  {
-  "id": 463,
+  "id": 462,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3704,7 +3696,7 @@
   "marks": 15
  },
  {
-  "id": 464,
+  "id": 463,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3712,7 +3704,7 @@
   "marks": 15
  },
  {
-  "id": 465,
+  "id": 464,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3720,7 +3712,7 @@
   "marks": 10
  },
  {
-  "id": 466,
+  "id": 465,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3728,7 +3720,7 @@
   "marks": 15
  },
  {
-  "id": 467,
+  "id": 466,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3736,7 +3728,7 @@
   "marks": 15
  },
  {
-  "id": 468,
+  "id": 467,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3744,7 +3736,7 @@
   "marks": 20
  },
  {
-  "id": 469,
+  "id": 468,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3752,7 +3744,7 @@
   "marks": 15
  },
  {
-  "id": 470,
+  "id": 469,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3760,7 +3752,7 @@
   "marks": 15
  },
  {
-  "id": 471,
+  "id": 470,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3768,7 +3760,7 @@
   "marks": 15
  },
  {
-  "id": 472,
+  "id": 471,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3776,7 +3768,7 @@
   "marks": 20
  },
  {
-  "id": 473,
+  "id": 472,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3784,7 +3776,7 @@
   "marks": 15
  },
  {
-  "id": 474,
+  "id": 473,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3792,7 +3784,7 @@
   "marks": 10
  },
  {
-  "id": 475,
+  "id": 474,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3800,7 +3792,7 @@
   "marks": 15
  },
  {
-  "id": 476,
+  "id": 475,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3808,7 +3800,7 @@
   "marks": 10
  },
  {
-  "id": 477,
+  "id": 476,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Changing International Political Order",
@@ -3816,7 +3808,7 @@
   "marks": 10
  },
  {
-  "id": 478,
+  "id": 477,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3824,7 +3816,7 @@
   "marks": 15
  },
  {
-  "id": 479,
+  "id": 478,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3832,7 +3824,7 @@
   "marks": 15
  },
  {
-  "id": 480,
+  "id": 479,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3840,7 +3832,7 @@
   "marks": 20
  },
  {
-  "id": 481,
+  "id": 480,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3848,7 +3840,7 @@
   "marks": 15
  },
  {
-  "id": 482,
+  "id": 481,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3856,7 +3848,7 @@
   "marks": 10
  },
  {
-  "id": 483,
+  "id": 482,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3864,7 +3856,7 @@
   "marks": 20
  },
  {
-  "id": 484,
+  "id": 483,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3872,7 +3864,7 @@
   "marks": 15
  },
  {
-  "id": 485,
+  "id": 484,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3880,7 +3872,7 @@
   "marks": 15
  },
  {
-  "id": 486,
+  "id": 485,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3888,7 +3880,7 @@
   "marks": 20
  },
  {
-  "id": 487,
+  "id": 486,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3896,7 +3888,7 @@
   "marks": 15
  },
  {
-  "id": 488,
+  "id": 487,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3904,7 +3896,7 @@
   "marks": 15
  },
  {
-  "id": 489,
+  "id": 488,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3912,7 +3904,7 @@
   "marks": 20
  },
  {
-  "id": 490,
+  "id": 489,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3920,7 +3912,7 @@
   "marks": 15
  },
  {
-  "id": 491,
+  "id": 490,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3928,7 +3920,7 @@
   "marks": 15
  },
  {
-  "id": 492,
+  "id": 491,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3936,7 +3928,7 @@
   "marks": 15
  },
  {
-  "id": 493,
+  "id": 492,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -3944,7 +3936,7 @@
   "marks": 10
  },
  {
-  "id": 494,
+  "id": 493,
   "year": "2025",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3952,7 +3944,7 @@
   "marks": 15
  },
  {
-  "id": 495,
+  "id": 494,
   "year": "2023",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3960,7 +3952,7 @@
   "marks": 10
  },
  {
-  "id": 496,
+  "id": 495,
   "year": "2023",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3968,7 +3960,7 @@
   "marks": 10
  },
  {
-  "id": 497,
+  "id": 496,
   "year": "2022",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3976,7 +3968,7 @@
   "marks": 15
  },
  {
-  "id": 498,
+  "id": 497,
   "year": "2021",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3984,7 +3976,7 @@
   "marks": 10
  },
  {
-  "id": 499,
+  "id": 498,
   "year": "2020",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -3992,7 +3984,7 @@
   "marks": 20
  },
  {
-  "id": 500,
+  "id": 499,
   "year": "2019",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4000,7 +3992,7 @@
   "marks": 15
  },
  {
-  "id": 501,
+  "id": 500,
   "year": "2019",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4008,7 +4000,7 @@
   "marks": 10
  },
  {
-  "id": 502,
+  "id": 501,
   "year": "2018",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4016,7 +4008,7 @@
   "marks": 20
  },
  {
-  "id": 503,
+  "id": 502,
   "year": "2017",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4024,7 +4016,7 @@
   "marks": 15
  },
  {
-  "id": 504,
+  "id": 503,
   "year": "2016",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4032,7 +4024,7 @@
   "marks": 15
  },
  {
-  "id": 505,
+  "id": 504,
   "year": "2015",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4040,7 +4032,7 @@
   "marks": 20
  },
  {
-  "id": 506,
+  "id": 505,
   "year": "2014",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4048,7 +4040,7 @@
   "marks": 10
  },
  {
-  "id": 507,
+  "id": 506,
   "year": "2014",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -4056,7 +4048,7 @@
   "marks": 20
  },
  {
-  "id": 508,
+  "id": 507,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4064,7 +4056,7 @@
   "marks": 15
  },
  {
-  "id": 509,
+  "id": 508,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4072,7 +4064,7 @@
   "marks": 15
  },
  {
-  "id": 510,
+  "id": 509,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4080,7 +4072,7 @@
   "marks": 15
  },
  {
-  "id": 511,
+  "id": 510,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4088,7 +4080,7 @@
   "marks": 15
  },
  {
-  "id": 512,
+  "id": 511,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4096,7 +4088,7 @@
   "marks": 15
  },
  {
-  "id": 513,
+  "id": 512,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4104,7 +4096,7 @@
   "marks": 15
  },
  {
-  "id": 514,
+  "id": 513,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4112,7 +4104,7 @@
   "marks": 15
  },
  {
-  "id": 515,
+  "id": 514,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4120,7 +4112,7 @@
   "marks": 10
  },
  {
-  "id": 516,
+  "id": 515,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4128,7 +4120,7 @@
   "marks": 15
  },
  {
-  "id": 517,
+  "id": 516,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4136,7 +4128,7 @@
   "marks": 15
  },
  {
-  "id": 518,
+  "id": 517,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4144,7 +4136,7 @@
   "marks": 10
  },
  {
-  "id": 519,
+  "id": 518,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4152,7 +4144,7 @@
   "marks": 15
  },
  {
-  "id": 520,
+  "id": 519,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4160,7 +4152,7 @@
   "marks": 15
  },
  {
-  "id": 521,
+  "id": 520,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4168,7 +4160,7 @@
   "marks": 20
  },
  {
-  "id": 522,
+  "id": 521,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4176,7 +4168,7 @@
   "marks": 15
  },
  {
-  "id": 523,
+  "id": 522,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -4184,7 +4176,7 @@
   "marks": 15
  },
  {
-  "id": 524,
+  "id": 523,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4192,7 +4184,7 @@
   "marks": 10
  },
  {
-  "id": 525,
+  "id": 524,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4200,7 +4192,7 @@
   "marks": 20
  },
  {
-  "id": 526,
+  "id": 525,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4208,7 +4200,7 @@
   "marks": 20
  },
  {
-  "id": 527,
+  "id": 526,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4216,7 +4208,7 @@
   "marks": 10
  },
  {
-  "id": 528,
+  "id": 527,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4224,7 +4216,7 @@
   "marks": 15
  },
  {
-  "id": 529,
+  "id": 528,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4232,7 +4224,7 @@
   "marks": 15
  },
  {
-  "id": 530,
+  "id": 529,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4240,7 +4232,7 @@
   "marks": 10
  },
  {
-  "id": 531,
+  "id": 530,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4248,7 +4240,7 @@
   "marks": 10
  },
  {
-  "id": 532,
+  "id": 531,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4256,7 +4248,7 @@
   "marks": 15
  },
  {
-  "id": 533,
+  "id": 532,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4264,7 +4256,7 @@
   "marks": 10
  },
  {
-  "id": 534,
+  "id": 533,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4272,7 +4264,7 @@
   "marks": 15
  },
  {
-  "id": 535,
+  "id": 534,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4280,7 +4272,7 @@
   "marks": 10
  },
  {
-  "id": 536,
+  "id": 535,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4288,7 +4280,7 @@
   "marks": 15
  },
  {
-  "id": 537,
+  "id": 536,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4296,7 +4288,7 @@
   "marks": 20
  },
  {
-  "id": 538,
+  "id": 537,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4304,7 +4296,7 @@
   "marks": 15
  },
  {
-  "id": 539,
+  "id": 538,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4312,7 +4304,7 @@
   "marks": 10
  },
  {
-  "id": 540,
+  "id": 539,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4320,7 +4312,7 @@
   "marks": 20
  },
  {
-  "id": 541,
+  "id": 540,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4328,7 +4320,7 @@
   "marks": 10
  },
  {
-  "id": 542,
+  "id": 541,
   "year": "2016",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4336,7 +4328,7 @@
   "marks": 20
  },
  {
-  "id": 543,
+  "id": 542,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4344,7 +4336,7 @@
   "marks": 20
  },
  {
-  "id": 544,
+  "id": 543,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4352,7 +4344,7 @@
   "marks": 15
  },
  {
-  "id": 545,
+  "id": 544,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4360,7 +4352,7 @@
   "marks": 15
  },
  {
-  "id": 546,
+  "id": 545,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4368,7 +4360,7 @@
   "marks": 20
  },
  {
-  "id": 547,
+  "id": 546,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4376,7 +4368,7 @@
   "marks": 15
  },
  {
-  "id": 548,
+  "id": 547,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4384,7 +4376,7 @@
   "marks": 10
  },
  {
-  "id": 549,
+  "id": 548,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4392,7 +4384,7 @@
   "marks": 15
  },
  {
-  "id": 550,
+  "id": 549,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4400,7 +4392,7 @@
   "marks": 15
  },
  {
-  "id": 551,
+  "id": 550,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4408,7 +4400,7 @@
   "marks": 15
  },
  {
-  "id": 552,
+  "id": 551,
   "year": "2013",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -4416,7 +4408,7 @@
   "marks": 10
  },
  {
-  "id": 553,
+  "id": 552,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4424,7 +4416,7 @@
   "marks": 20
  },
  {
-  "id": 554,
+  "id": 553,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4432,7 +4424,7 @@
   "marks": 20
  },
  {
-  "id": 555,
+  "id": 554,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4440,7 +4432,7 @@
   "marks": 10
  },
  {
-  "id": 556,
+  "id": 555,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4448,7 +4440,7 @@
   "marks": 15
  },
  {
-  "id": 557,
+  "id": 556,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4456,7 +4448,7 @@
   "marks": 10
  },
  {
-  "id": 558,
+  "id": 557,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4464,7 +4456,7 @@
   "marks": 10
  },
  {
-  "id": 559,
+  "id": 558,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4472,7 +4464,7 @@
   "marks": 10
  },
  {
-  "id": 560,
+  "id": 559,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4480,7 +4472,7 @@
   "marks": 15
  },
  {
-  "id": 561,
+  "id": 560,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4488,7 +4480,7 @@
   "marks": 10
  },
  {
-  "id": 562,
+  "id": 561,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4496,7 +4488,7 @@
   "marks": 10
  },
  {
-  "id": 563,
+  "id": 562,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4504,7 +4496,7 @@
   "marks": 20
  },
  {
-  "id": 564,
+  "id": 563,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4512,7 +4504,7 @@
   "marks": 10
  },
  {
-  "id": 565,
+  "id": 564,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4520,7 +4512,7 @@
   "marks": 20
  },
  {
-  "id": 566,
+  "id": 565,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4528,7 +4520,7 @@
   "marks": 10
  },
  {
-  "id": 567,
+  "id": 566,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4536,7 +4528,7 @@
   "marks": 10
  },
  {
-  "id": 568,
+  "id": 567,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4544,7 +4536,7 @@
   "marks": 10
  },
  {
-  "id": 569,
+  "id": 568,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4552,7 +4544,7 @@
   "marks": 10
  },
  {
-  "id": 570,
+  "id": 569,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4560,7 +4552,7 @@
   "marks": 10
  },
  {
-  "id": 571,
+  "id": 570,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4568,7 +4560,7 @@
   "marks": 10
  },
  {
-  "id": 572,
+  "id": 571,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4576,7 +4568,7 @@
   "marks": 20
  },
  {
-  "id": 573,
+  "id": 572,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4584,7 +4576,7 @@
   "marks": 15
  },
  {
-  "id": 574,
+  "id": 573,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4592,7 +4584,7 @@
   "marks": 10
  },
  {
-  "id": 575,
+  "id": 574,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -4600,7 +4592,7 @@
   "marks": 20
  },
  {
-  "id": 576,
+  "id": 575,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4608,7 +4600,7 @@
   "marks": 10
  },
  {
-  "id": 577,
+  "id": 576,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4616,7 +4608,7 @@
   "marks": 15
  },
  {
-  "id": 578,
+  "id": 577,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4624,7 +4616,7 @@
   "marks": 15
  },
  {
-  "id": 579,
+  "id": 578,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4632,7 +4624,7 @@
   "marks": 20
  },
  {
-  "id": 580,
+  "id": 579,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4640,7 +4632,7 @@
   "marks": 10
  },
  {
-  "id": 581,
+  "id": 580,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4648,7 +4640,7 @@
   "marks": 10
  },
  {
-  "id": 582,
+  "id": 581,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4656,7 +4648,7 @@
   "marks": 10
  },
  {
-  "id": 583,
+  "id": 582,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4664,7 +4656,7 @@
   "marks": 10
  },
  {
-  "id": 584,
+  "id": 583,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4672,7 +4664,7 @@
   "marks": 15
  },
  {
-  "id": 585,
+  "id": 584,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India and the Non-Alignment Movement",
@@ -4680,7 +4672,7 @@
   "marks": 15
  },
  {
-  "id": 586,
+  "id": 585,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4688,7 +4680,7 @@
   "marks": 10
  },
  {
-  "id": 587,
+  "id": 586,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4696,7 +4688,7 @@
   "marks": 10
  },
  {
-  "id": 588,
+  "id": 587,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4704,7 +4696,7 @@
   "marks": 15
  },
  {
-  "id": 589,
+  "id": 588,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4712,7 +4704,7 @@
   "marks": 15
  },
  {
-  "id": 590,
+  "id": 589,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4720,7 +4712,7 @@
   "marks": 20
  },
  {
-  "id": 591,
+  "id": 590,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4728,7 +4720,7 @@
   "marks": 10
  },
  {
-  "id": 592,
+  "id": 591,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4736,7 +4728,7 @@
   "marks": 10
  },
  {
-  "id": 593,
+  "id": 592,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4744,7 +4736,7 @@
   "marks": 10
  },
  {
-  "id": 594,
+  "id": 593,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4752,7 +4744,7 @@
   "marks": 10
  },
  {
-  "id": 595,
+  "id": 594,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4760,7 +4752,7 @@
   "marks": 15
  },
  {
-  "id": 596,
+  "id": 595,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4768,7 +4760,7 @@
   "marks": 10
  },
  {
-  "id": 597,
+  "id": 596,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4776,7 +4768,7 @@
   "marks": 15
  },
  {
-  "id": 598,
+  "id": 597,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4784,7 +4776,7 @@
   "marks": 10
  },
  {
-  "id": 599,
+  "id": 598,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4792,7 +4784,7 @@
   "marks": 15
  },
  {
-  "id": 600,
+  "id": 599,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4800,7 +4792,7 @@
   "marks": 15
  },
  {
-  "id": 601,
+  "id": 600,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4808,7 +4800,7 @@
   "marks": 10
  },
  {
-  "id": 602,
+  "id": 601,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4816,7 +4808,7 @@
   "marks": 20
  },
  {
-  "id": 603,
+  "id": 602,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4824,7 +4816,7 @@
   "marks": 10
  },
  {
-  "id": 604,
+  "id": 603,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4832,7 +4824,7 @@
   "marks": 10
  },
  {
-  "id": 605,
+  "id": 604,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4840,7 +4832,7 @@
   "marks": 10
  },
  {
-  "id": 606,
+  "id": 605,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4848,7 +4840,7 @@
   "marks": 10
  },
  {
-  "id": 607,
+  "id": 606,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4856,7 +4848,7 @@
   "marks": 15
  },
  {
-  "id": 608,
+  "id": 607,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4864,7 +4856,7 @@
   "marks": 10
  },
  {
-  "id": 609,
+  "id": 608,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4872,7 +4864,7 @@
   "marks": 10
  },
  {
-  "id": 610,
+  "id": 609,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4880,7 +4872,7 @@
   "marks": 10
  },
  {
-  "id": 611,
+  "id": 610,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4888,7 +4880,7 @@
   "marks": 10
  },
  {
-  "id": 612,
+  "id": 611,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4896,7 +4888,7 @@
   "marks": 15
  },
  {
-  "id": 613,
+  "id": 612,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4904,7 +4896,7 @@
   "marks": 15
  },
  {
-  "id": 614,
+  "id": 613,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4912,7 +4904,7 @@
   "marks": 10
  },
  {
-  "id": 615,
+  "id": 614,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4920,7 +4912,7 @@
   "marks": 10
  },
  {
-  "id": 616,
+  "id": 615,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4928,7 +4920,7 @@
   "marks": 10
  },
  {
-  "id": 617,
+  "id": 616,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4936,7 +4928,7 @@
   "marks": 10
  },
  {
-  "id": 618,
+  "id": 617,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -4944,7 +4936,7 @@
   "marks": 15
  },
  {
-  "id": 619,
+  "id": 618,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4952,7 +4944,7 @@
   "marks": 15
  },
  {
-  "id": 620,
+  "id": 619,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4960,7 +4952,7 @@
   "marks": 15
  },
  {
-  "id": 621,
+  "id": 620,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4968,7 +4960,7 @@
   "marks": 10
  },
  {
-  "id": 622,
+  "id": 621,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4976,7 +4968,7 @@
   "marks": 15
  },
  {
-  "id": 623,
+  "id": 622,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4984,7 +4976,7 @@
   "marks": 10
  },
  {
-  "id": 624,
+  "id": 623,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -4992,7 +4984,7 @@
   "marks": 20
  },
  {
-  "id": 625,
+  "id": 624,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5000,7 +4992,7 @@
   "marks": 15
  },
  {
-  "id": 626,
+  "id": 625,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5008,7 +5000,7 @@
   "marks": 10
  },
  {
-  "id": 627,
+  "id": 626,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5016,7 +5008,7 @@
   "marks": 20
  },
  {
-  "id": 628,
+  "id": 627,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5024,7 +5016,7 @@
   "marks": 10
  },
  {
-  "id": 629,
+  "id": 628,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5032,7 +5024,7 @@
   "marks": 20
  },
  {
-  "id": 630,
+  "id": 629,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5040,7 +5032,7 @@
   "marks": 15
  },
  {
-  "id": 631,
+  "id": 630,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5048,7 +5040,7 @@
   "marks": 10
  },
  {
-  "id": 632,
+  "id": 631,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5056,7 +5048,7 @@
   "marks": 20
  },
  {
-  "id": 633,
+  "id": 632,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5064,7 +5056,7 @@
   "marks": 15
  },
  {
-  "id": 634,
+  "id": 633,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -5072,7 +5064,7 @@
   "marks": 10
  },
  {
-  "id": 635,
+  "id": 634,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5080,7 +5072,7 @@
   "marks": 15
  },
  {
-  "id": 636,
+  "id": 635,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5088,7 +5080,7 @@
   "marks": 20
  },
  {
-  "id": 637,
+  "id": 636,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5096,7 +5088,7 @@
   "marks": 15
  },
  {
-  "id": 638,
+  "id": 637,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5104,7 +5096,7 @@
   "marks": 15
  },
  {
-  "id": 639,
+  "id": 638,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5112,7 +5104,7 @@
   "marks": 15
  },
  {
-  "id": 640,
+  "id": 639,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5120,7 +5112,7 @@
   "marks": 15
  },
  {
-  "id": 641,
+  "id": 640,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5128,7 +5120,7 @@
   "marks": 20
  },
  {
-  "id": 642,
+  "id": 641,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5136,7 +5128,7 @@
   "marks": 10
  },
  {
-  "id": 643,
+  "id": 642,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5144,7 +5136,7 @@
   "marks": 20
  },
  {
-  "id": 644,
+  "id": 643,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5152,7 +5144,7 @@
   "marks": 15
  },
  {
-  "id": 645,
+  "id": 644,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5160,7 +5152,7 @@
   "marks": 15
  },
  {
-  "id": 646,
+  "id": 645,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5168,7 +5160,7 @@
   "marks": 20
  },
  {
-  "id": 647,
+  "id": 646,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5176,7 +5168,7 @@
   "marks": 20
  },
  {
-  "id": 648,
+  "id": 647,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5184,7 +5176,7 @@
   "marks": 15
  },
  {
-  "id": 649,
+  "id": 648,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5192,7 +5184,7 @@
   "marks": 15
  },
  {
-  "id": 650,
+  "id": 649,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5200,7 +5192,7 @@
   "marks": 20
  },
  {
-  "id": 651,
+  "id": 650,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5208,7 +5200,7 @@
   "marks": 15
  },
  {
-  "id": 652,
+  "id": 651,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5216,7 +5208,7 @@
   "marks": 15
  },
  {
-  "id": 653,
+  "id": 652,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5224,7 +5216,7 @@
   "marks": 15
  },
  {
-  "id": 654,
+  "id": 653,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5232,7 +5224,7 @@
   "marks": 15
  },
  {
-  "id": 655,
+  "id": 654,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5240,7 +5232,7 @@
   "marks": 15
  },
  {
-  "id": 656,
+  "id": 655,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5248,7 +5240,7 @@
   "marks": 15
  },
  {
-  "id": 657,
+  "id": 656,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5256,7 +5248,7 @@
   "marks": 20
  },
  {
-  "id": 658,
+  "id": 657,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5264,7 +5256,7 @@
   "marks": 10
  },
  {
-  "id": 659,
+  "id": 658,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5272,7 +5264,7 @@
   "marks": 20
  },
  {
-  "id": 660,
+  "id": 659,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5280,7 +5272,7 @@
   "marks": 15
  },
  {
-  "id": 661,
+  "id": 660,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5288,7 +5280,7 @@
   "marks": 20
  },
  {
-  "id": 662,
+  "id": 661,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5296,7 +5288,7 @@
   "marks": 15
  },
  {
-  "id": 663,
+  "id": 662,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5304,7 +5296,7 @@
   "marks": 10
  },
  {
-  "id": 664,
+  "id": 663,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5312,7 +5304,7 @@
   "marks": 10
  },
  {
-  "id": 665,
+  "id": 664,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5320,7 +5312,7 @@
   "marks": 20
  },
  {
-  "id": 666,
+  "id": 665,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5328,7 +5320,7 @@
   "marks": 20
  },
  {
-  "id": 667,
+  "id": 666,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5336,7 +5328,7 @@
   "marks": 15
  },
  {
-  "id": 668,
+  "id": 667,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -5344,7 +5336,7 @@
   "marks": 10
  },
  {
-  "id": 669,
+  "id": 668,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5352,7 +5344,7 @@
   "marks": 10
  },
  {
-  "id": 670,
+  "id": 669,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5360,7 +5352,7 @@
   "marks": 15
  },
  {
-  "id": 671,
+  "id": 670,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5368,7 +5360,7 @@
   "marks": 15
  },
  {
-  "id": 672,
+  "id": 671,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5376,7 +5368,7 @@
   "marks": 15
  },
  {
-  "id": 673,
+  "id": 672,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5384,7 +5376,7 @@
   "marks": 15
  },
  {
-  "id": 674,
+  "id": 673,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5392,7 +5384,7 @@
   "marks": 15
  },
  {
-  "id": 675,
+  "id": 674,
   "year": "2018",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5400,7 +5392,7 @@
   "marks": 15
  },
  {
-  "id": 676,
+  "id": 675,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5408,7 +5400,7 @@
   "marks": 10
  },
  {
-  "id": 677,
+  "id": 676,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5416,7 +5408,7 @@
   "marks": 15
  },
  {
-  "id": 678,
+  "id": 677,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5424,7 +5416,7 @@
   "marks": 15
  },
  {
-  "id": 679,
+  "id": 678,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5432,7 +5424,7 @@
   "marks": 20
  },
  {
-  "id": 680,
+  "id": 679,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5440,7 +5432,7 @@
   "marks": 10
  },
  {
-  "id": 681,
+  "id": 680,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5448,7 +5440,7 @@
   "marks": 15
  },
  {
-  "id": 682,
+  "id": 681,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India and the UN System",
@@ -5456,7 +5448,7 @@
   "marks": 10
  },
  {
-  "id": 683,
+  "id": 682,
   "year": "2025",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5464,7 +5456,7 @@
   "marks": 20
  },
  {
-  "id": 684,
+  "id": 683,
   "year": "2024",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5472,7 +5464,7 @@
   "marks": 15
  },
  {
-  "id": 685,
+  "id": 684,
   "year": "2023",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5480,7 +5472,7 @@
   "marks": 20
  },
  {
-  "id": 686,
+  "id": 685,
   "year": "2022",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5488,7 +5480,7 @@
   "marks": 15
  },
  {
-  "id": 687,
+  "id": 686,
   "year": "2021",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5496,7 +5488,7 @@
   "marks": 15
  },
  {
-  "id": 688,
+  "id": 687,
   "year": "2020",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5504,7 +5496,7 @@
   "marks": 15
  },
  {
-  "id": 689,
+  "id": 688,
   "year": "2019",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5512,7 +5504,7 @@
   "marks": 15
  },
  {
-  "id": 690,
+  "id": 689,
   "year": "2017",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5520,7 +5512,7 @@
   "marks": 20
  },
  {
-  "id": 691,
+  "id": 690,
   "year": "2016",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5528,7 +5520,7 @@
   "marks": 10
  },
  {
-  "id": 692,
+  "id": 691,
   "year": "2015",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5536,7 +5528,7 @@
   "marks": 15
  },
  {
-  "id": 693,
+  "id": 692,
   "year": "2014",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5544,7 +5536,7 @@
   "marks": 10
  },
  {
-  "id": 694,
+  "id": 693,
   "year": "2013",
   "paper": "Paper II",
   "topic": "India and the Nuclear Question",
@@ -5552,7 +5544,7 @@
   "marks": 10
  },
  {
-  "id": 695,
+  "id": 694,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5560,7 +5552,7 @@
   "marks": 10
  },
  {
-  "id": 696,
+  "id": 695,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5568,7 +5560,7 @@
   "marks": 15
  },
  {
-  "id": 697,
+  "id": 696,
   "year": "2025",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5576,7 +5568,7 @@
   "marks": 20
  },
  {
-  "id": 698,
+  "id": 697,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5584,7 +5576,7 @@
   "marks": 10
  },
  {
-  "id": 699,
+  "id": 698,
   "year": "2024",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5592,7 +5584,7 @@
   "marks": 20
  },
  {
-  "id": 700,
+  "id": 699,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5600,7 +5592,7 @@
   "marks": 15
  },
  {
-  "id": 701,
+  "id": 700,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5608,7 +5600,7 @@
   "marks": 15
  },
  {
-  "id": 702,
+  "id": 701,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5616,7 +5608,7 @@
   "marks": 15
  },
  {
-  "id": 703,
+  "id": 702,
   "year": "2023",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5624,7 +5616,7 @@
   "marks": 15
  },
  {
-  "id": 704,
+  "id": 703,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5632,7 +5624,7 @@
   "marks": 20
  },
  {
-  "id": 705,
+  "id": 704,
   "year": "2022",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5640,7 +5632,7 @@
   "marks": 15
  },
  {
-  "id": 706,
+  "id": 705,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5648,7 +5640,7 @@
   "marks": 15
  },
  {
-  "id": 707,
+  "id": 706,
   "year": "2021",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5656,7 +5648,7 @@
   "marks": 10
  },
  {
-  "id": 708,
+  "id": 707,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5664,7 +5656,7 @@
   "marks": 20
  },
  {
-  "id": 709,
+  "id": 708,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5672,7 +5664,7 @@
   "marks": 15
  },
  {
-  "id": 710,
+  "id": 709,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5680,7 +5672,7 @@
   "marks": 15
  },
  {
-  "id": 711,
+  "id": 710,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5688,7 +5680,7 @@
   "marks": 10
  },
  {
-  "id": 712,
+  "id": 711,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5696,7 +5688,7 @@
   "marks": 10
  },
  {
-  "id": 713,
+  "id": 712,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5704,7 +5696,7 @@
   "marks": 15
  },
  {
-  "id": 714,
+  "id": 713,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5712,7 +5704,7 @@
   "marks": 20
  },
  {
-  "id": 715,
+  "id": 714,
   "year": "2019",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5720,7 +5712,7 @@
   "marks": 15
  },
  {
-  "id": 716,
+  "id": 715,
   "year": "2018",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5728,7 +5720,7 @@
   "marks": 20
  },
  {
-  "id": 717,
+  "id": 716,
   "year": "2017",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5736,7 +5728,7 @@
   "marks": 10
  },
  {
-  "id": 718,
+  "id": 717,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5744,7 +5736,7 @@
   "marks": 20
  },
  {
-  "id": 719,
+  "id": 718,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5752,7 +5744,7 @@
   "marks": 15
  },
  {
-  "id": 720,
+  "id": 719,
   "year": "2015",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5760,7 +5752,7 @@
   "marks": 15
  },
  {
-  "id": 721,
+  "id": 720,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5768,7 +5760,7 @@
   "marks": 15
  },
  {
-  "id": 722,
+  "id": 721,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5776,7 +5768,7 @@
   "marks": 10
  },
  {
-  "id": 723,
+  "id": 722,
   "year": "2014",
   "paper": "Paper II",
   "topic": "Recent Developments in Indian Foreign Policy",
@@ -5784,7 +5776,7 @@
   "marks": 15
  },
  {
-  "id": 724,
+  "id": 723,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Political Theory",
@@ -5792,7 +5784,7 @@
   "marks": 10
  },
  {
-  "id": 725,
+  "id": 724,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Theories of the State",
@@ -5800,7 +5792,7 @@
   "marks": 10
  },
  {
-  "id": 726,
+  "id": 725,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -5808,7 +5800,7 @@
   "marks": 10
  },
  {
-  "id": 727,
+  "id": 726,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
@@ -5816,7 +5808,7 @@
   "marks": 10
  },
  {
-  "id": 728,
+  "id": 727,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -5824,7 +5816,7 @@
   "marks": 10
  },
  {
-  "id": 729,
+  "id": 728,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Rights",
@@ -5832,7 +5824,7 @@
   "marks": 20
  },
  {
-  "id": 730,
+  "id": 729,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -5840,7 +5832,7 @@
   "marks": 15
  },
  {
-  "id": 731,
+  "id": 730,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Democracy",
@@ -5848,7 +5840,7 @@
   "marks": 15
  },
  {
-  "id": 732,
+  "id": 731,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Political Ideologies",
@@ -5856,7 +5848,7 @@
   "marks": 20
  },
  {
-  "id": 733,
+  "id": 732,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Western Political Thinkers",
@@ -5864,7 +5856,7 @@
   "marks": 15
  },
  {
-  "id": 734,
+  "id": 733,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -5872,7 +5864,7 @@
   "marks": 15
  },
  {
-  "id": 735,
+  "id": 734,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Democracy",
@@ -5880,7 +5872,7 @@
   "marks": 20
  },
  {
-  "id": 736,
+  "id": 735,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Equality",
@@ -5888,7 +5880,7 @@
   "marks": 15
  },
  {
-  "id": 737,
+  "id": 736,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Political Thought",
@@ -5896,7 +5888,7 @@
   "marks": 15
  },
  {
-  "id": 738,
+  "id": 737,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -5904,7 +5896,7 @@
   "marks": 10
  },
  {
-  "id": 739,
+  "id": 738,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -5912,7 +5904,7 @@
   "marks": 10
  },
  {
-  "id": 740,
+  "id": 739,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -5920,7 +5912,7 @@
   "marks": 10
  },
  {
-  "id": 741,
+  "id": 740,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Grassroots Democracy",
@@ -5928,7 +5920,7 @@
   "marks": 10
  },
  {
-  "id": 742,
+  "id": 741,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Planning and Economic Development",
@@ -5936,7 +5928,7 @@
   "marks": 10
  },
  {
-  "id": 743,
+  "id": 742,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Nationalism",
@@ -5944,7 +5936,7 @@
   "marks": 20
  },
  {
-  "id": 744,
+  "id": 743,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Concept of Power, Hegemony, Ideology and Legitimacy",
@@ -5952,7 +5944,7 @@
   "marks": 15
  },
  {
-  "id": 745,
+  "id": 744,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -5960,7 +5952,7 @@
   "marks": 15
  },
  {
-  "id": 746,
+  "id": 745,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Party System",
@@ -5968,7 +5960,7 @@
   "marks": 20
  },
  {
-  "id": 747,
+  "id": 746,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Salient Features of the Indian Constitution",
@@ -5976,7 +5968,7 @@
   "marks": 15
  },
  {
-  "id": 748,
+  "id": 747,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Indian Politics: Caste, Religion and Ethnicity",
@@ -5984,7 +5976,7 @@
   "marks": 15
  },
  {
-  "id": 749,
+  "id": 748,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Federalism",
@@ -5992,7 +5984,7 @@
   "marks": 20
  },
  {
-  "id": 750,
+  "id": 749,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Principal Organs",
@@ -6000,7 +5992,7 @@
   "marks": 15
  },
  {
-  "id": 751,
+  "id": 750,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Social Movements",
@@ -6008,7 +6000,7 @@
   "marks": 15
  },
  {
-  "id": 752,
+  "id": 751,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Comparative Political",
@@ -6016,7 +6008,7 @@
   "marks": 10
  },
  {
-  "id": 753,
+  "id": 752,
   "year": "2026",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -6024,7 +6016,7 @@
   "marks": 10
  },
  {
-  "id": 754,
+  "id": 753,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -6032,7 +6024,7 @@
   "marks": 10
  },
  {
-  "id": 755,
+  "id": 754,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -6040,7 +6032,7 @@
   "marks": 10
  },
  {
-  "id": 756,
+  "id": 755,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -6048,7 +6040,7 @@
   "marks": 10
  },
  {
-  "id": 757,
+  "id": 756,
   "year": "2026",
   "paper": "Paper II",
   "topic": "State in Comparative Perspective",
@@ -6056,7 +6048,7 @@
   "marks": 20
  },
  {
-  "id": 758,
+  "id": 757,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contemporary Global Concerns",
@@ -6064,7 +6056,7 @@
   "marks": 15
  },
  {
-  "id": 759,
+  "id": 758,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -6072,7 +6064,7 @@
   "marks": 15
  },
  {
-  "id": 760,
+  "id": 759,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -6080,7 +6072,7 @@
   "marks": 20
  },
  {
-  "id": 761,
+  "id": 760,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Approaches to the Study of International Relations",
@@ -6088,7 +6080,7 @@
   "marks": 15
  },
  {
-  "id": 762,
+  "id": 761,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Key Concepts in International Relations",
@@ -6096,7 +6088,7 @@
   "marks": 15
  },
  {
-  "id": 763,
+  "id": 762,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Regionalisation of World Politics",
@@ -6104,7 +6096,7 @@
   "marks": 20
  },
  {
-  "id": 764,
+  "id": 763,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -6112,7 +6104,7 @@
   "marks": 15
  },
  {
-  "id": 765,
+  "id": 764,
   "year": "2026",
   "paper": "Paper II",
   "topic": "United Nations",
@@ -6120,7 +6112,7 @@
   "marks": 15
  },
  {
-  "id": 766,
+  "id": 765,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -6128,7 +6120,7 @@
   "marks": 10
  },
  {
-  "id": 767,
+  "id": 766,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -6136,7 +6128,7 @@
   "marks": 10
  },
  {
-  "id": 768,
+  "id": 767,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -6144,7 +6136,7 @@
   "marks": 10
  },
  {
-  "id": 769,
+  "id": 768,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -6152,7 +6144,7 @@
   "marks": 10
  },
  {
-  "id": 770,
+  "id": 769,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global South",
@@ -6160,7 +6152,7 @@
   "marks": 10
  },
  {
-  "id": 771,
+  "id": 770,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -6168,7 +6160,7 @@
   "marks": 20
  },
  {
-  "id": 772,
+  "id": 771,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -6176,7 +6168,7 @@
   "marks": 15
  },
  {
-  "id": 773,
+  "id": 772,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Evolution of the International Economic System",
@@ -6184,7 +6176,7 @@
   "marks": 15
  },
  {
-  "id": 774,
+  "id": 773,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -6192,7 +6184,7 @@
   "marks": 20
  },
  {
-  "id": 775,
+  "id": 774,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and South Asia",
@@ -6200,7 +6192,7 @@
   "marks": 15
  },
  {
-  "id": 776,
+  "id": 775,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India's Foreign Policy: Changing International Order",
@@ -6208,7 +6200,7 @@
   "marks": 15
  },
  {
-  "id": 777,
+  "id": 776,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -6216,7 +6208,7 @@
   "marks": 20
  },
  {
-  "id": 778,
+  "id": 777,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global Centres of Power",
@@ -6224,7 +6216,7 @@
   "marks": 15
  },
  {
-  "id": 779,
+  "id": 778,
   "year": "2026",
   "paper": "Paper II",
   "topic": "India and the Global South",
