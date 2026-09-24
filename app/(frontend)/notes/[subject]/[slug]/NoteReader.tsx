@@ -742,15 +742,84 @@ export default function NoteReader({
           .nr-rail-progress { height: 2px; background: var(--bg3); }
           .nr-rail-progress div { height: 100%; transition: width 0.1s; }
           .nr-rail-list { max-height: calc(100vh - 230px); overflow-y: auto; padding: 0.4rem 0; }
+          /* Find bar. Every colour comes from a token so the control follows the
+             theme; the old hard-coded slate left it dark on a light page. */
+          .nr-find-panel {
+            position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+            background: var(--bg2);
+            border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+            border-radius: 12px; padding: 10px 12px; min-width: 300px;
+            display: flex; align-items: center; gap: 8px;
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent),
+                        0 12px 48px rgba(0,0,0,0.8),
+                        0 0 24px color-mix(in srgb, var(--accent) 8%, transparent);
+          }
+          .nr-find-count {
+            font-family: var(--font-mono); font-size: 0.68rem; white-space: nowrap; flex-shrink: 0;
+            color: color-mix(in srgb, var(--accent) 80%, transparent);
+            background: var(--accent-dim); padding: 2px 8px; border-radius: 4px;
+            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+          }
+          .nr-find-none {
+            font-family: var(--font-mono); font-size: 0.68rem; color: var(--red);
+            white-space: nowrap; flex-shrink: 0;
+          }
+          .nr-find-nav {
+            display: flex; gap: 2px; padding-left: 8px; margin-left: 2px;
+            border-left: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+          }
+          .nr-find-step {
+            background: var(--accent-dim); border-radius: 6px; cursor: pointer;
+            border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+            color: var(--accent); padding: 3px 8px; font-size: 0.78rem; line-height: 1;
+            transition: all 0.15s;
+          }
+          .nr-find-step:disabled { background: transparent; border-color: transparent; color: var(--text3); cursor: default; }
+          .nr-find-esc {
+            background: var(--accent-dim); border-radius: 6px; cursor: pointer;
+            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+            color: var(--accent); padding: 3px 9px; font-size: 0.68rem;
+            font-family: var(--font-mono); margin-left: 2px; transition: all 0.15s;
+          }
+          .nr-find-fab {
+            position: fixed; bottom: 28px; right: 28px; z-index: 9998;
+            background: var(--bg2);
+            border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+            border-radius: 10px; padding: 9px 14px; cursor: pointer;
+            display: flex; align-items: center; gap: 7px;
+            color: var(--accent); font-size: 0.75rem;
+            font-family: var(--font-mono); letter-spacing: 0.04em;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            transition: border-color 0.15s, box-shadow 0.15s;
+          }
+          .nr-find-fab:hover {
+            border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+            box-shadow: 0 6px 26px rgba(0,0,0,0.7);
+          }
+          .nr-find-kbd {
+            opacity: 0.45; font-size: 0.62rem; padding: 1px 5px; border-radius: 3px;
+            background: var(--accent-dim);
+            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+          }
+          /* A shadow tuned for a dark ground turns into a smudge on white. */
+          [data-theme="light"] .nr-find-panel {
+            box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent),
+                        0 12px 40px rgba(15,23,42,0.16),
+                        0 0 24px color-mix(in srgb, var(--accent) 6%, transparent);
+          }
+          [data-theme="light"] .nr-find-fab { box-shadow: 0 4px 16px rgba(15,23,42,0.13); }
+          [data-theme="light"] .nr-find-fab:hover { box-shadow: 0 6px 22px rgba(15,23,42,0.18); }
           .nr-rail-link {
             width: 100%; display: flex; align-items: center; gap: 8px;
             background: none; border: none; border-left: 2px solid transparent;
             cursor: pointer; text-align: left; padding: 0.5rem 1rem;
-            color: var(--text); font-family: var(--font-ui); font-size: 0.8rem;
+            color: var(--text); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
             transition: background 0.15s, color 0.15s;
           }
           .nr-rail-link.sub {
-            padding: 0.4rem 1rem 0.4rem 1.7rem; font-size: 0.73rem; color: var(--text2);
+            padding: 0.4rem 1rem 0.4rem 1.7rem; font-size: 0.73rem; font-weight: 400; color: var(--text2);
           }
           .nr-rail-link:hover { background: var(--accent-dim); }
           .nr-rail-bullet { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
@@ -1060,38 +1129,36 @@ export default function NoteReader({
 
       {/* ── Note search bar ── */}
       {noteSearch.open && (
-        <div style={{ position: 'fixed', bottom: 28, right: 28, zIndex: 9999, background: 'rgba(10,14,26,0.97)', border: '1px solid rgba(67,97,238,0.45)', borderRadius: 12, boxShadow: '0 0 0 1px rgba(67,97,238,0.1), 0 12px 48px rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', minWidth: 300, backdropFilter: 'blur(20px)' }}>
-          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ color: 'rgba(99,152,255,0.7)', flexShrink: 0 }}>
+        <div className="nr-find-panel">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ color: 'color-mix(in srgb, var(--accent) 70%, transparent)', flexShrink: 0 }}>
             <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/>
             <path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
           <input autoFocus value={noteSearch.query} onChange={e => noteSearch.setQuery(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') noteSearch.jump(e.shiftKey ? -1 : 1); if (e.key === 'Escape') noteSearch.close(); }}
             placeholder="Find in note…"
-            style={{ flex: 1, background: 'none', border: 'none', outline: 'none', color: '#e8eaf6', fontSize: '0.9rem', fontWeight: 500, fontFamily: 'var(--font-body)', minWidth: 0 }}
+            style={{ flex: 1, background: 'none', border: 'none', outline: 'none', color: 'var(--text)', fontSize: '0.9rem', fontFamily: 'var(--font-body)', minWidth: 0 }}
           />
           {noteSearch.total > 0 && (
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 500, color: 'rgba(99,152,255,0.8)', whiteSpace: 'nowrap', flexShrink: 0, background: 'rgba(59,130,246,0.1)', padding: '2px 8px', borderRadius: 4, border: '1px solid rgba(59,130,246,0.2)' }}>
-              {noteSearch.current} / {noteSearch.total}
-            </span>
+            <span className="nr-find-count">{noteSearch.current} / {noteSearch.total}</span>
           )}
           {noteSearch.query.length >= 2 && noteSearch.total === 0 && (
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 500, color: '#f87171', whiteSpace: 'nowrap', flexShrink: 0 }}>no match</span>
+            <span className="nr-find-none">no match</span>
           )}
-          <div style={{ display: 'flex', gap: 2, borderLeft: '1px solid rgba(59,130,246,0.2)', paddingLeft: 8, marginLeft: 2 }}>
-            <button onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} style={{ background: noteSearch.total > 0 ? 'rgba(59,130,246,0.1)' : 'transparent', border: `1px solid ${noteSearch.total > 0 ? 'rgba(59,130,246,0.25)' : 'transparent'}`, borderRadius: 6, color: noteSearch.total > 0 ? '#60a5fa' : 'var(--text3)', cursor: noteSearch.total > 0 ? 'pointer' : 'default', padding: '3px 8px', fontSize: '0.78rem', lineHeight: 1 }}>↑</button>
-            <button onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} style={{ background: noteSearch.total > 0 ? 'rgba(59,130,246,0.1)' : 'transparent', border: `1px solid ${noteSearch.total > 0 ? 'rgba(59,130,246,0.25)' : 'transparent'}`, borderRadius: 6, color: noteSearch.total > 0 ? '#60a5fa' : 'var(--text3)', cursor: noteSearch.total > 0 ? 'pointer' : 'default', padding: '3px 8px', fontSize: '0.78rem', lineHeight: 1 }}>↓</button>
+          <div className="nr-find-nav">
+            <button onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} title="Previous (Shift+Enter)" className="nr-find-step">↑</button>
+            <button onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} title="Next (Enter)" className="nr-find-step">↓</button>
           </div>
-          <button onClick={noteSearch.close} style={{ background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,238,0.2)', borderRadius: 6, color: '#60a5fa', cursor: 'pointer', padding: '3px 9px', fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-mono)', marginLeft: 2 }}>esc</button>
+          <button onClick={noteSearch.close} className="nr-find-esc">esc</button>
         </div>
       )}
 
       {/* ── Search trigger ── */}
       {!noteSearch.open && (
-        <button onClick={() => noteSearch.setOpen(true)} title="Find in note (⌘F)" style={{ position: 'fixed', bottom: 28, right: 28, zIndex: 9998, background: 'rgba(10,14,26,0.95)', border: '1px solid rgba(67,97,238,0.3)', borderRadius: 10, padding: '9px 14px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 7, color: '#60a5fa', fontSize: '0.75rem', fontWeight: 500, fontFamily: 'var(--font-mono)', boxShadow: '0 4px 20px rgba(0,0,0,0.6)', backdropFilter: 'blur(12px)' }}>
+        <button onClick={() => noteSearch.setOpen(true)} title="Find in note (⌘F)" className="nr-find-fab">
           <svg width="13" height="13" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/><path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
           Find
-          <span style={{ opacity: 0.45, fontSize: '0.62rem', fontWeight: 500, background: 'rgba(59,130,246,0.1)', padding: '1px 5px', borderRadius: 3, border: '1px solid rgba(59,130,246,0.2)' }}>⌘F</span>
+          <span className="nr-find-kbd">⌘F</span>
         </button>
       )}
       </div>
