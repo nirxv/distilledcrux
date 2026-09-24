@@ -54,7 +54,7 @@ const CSS = `
   @keyframes fadeUp { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
 
   .db-page {
-    min-height: 100vh;
+    min-height: var(--page-min-h);
   }
 
   /* ── Header strip ── */

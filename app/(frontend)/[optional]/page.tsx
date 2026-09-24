@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ optional:
 }
 
 const CSS = `
-  .op-page { min-height: 100vh; }
+  .op-page { min-height: var(--page-min-h); }
 
   /* ── Hero ── */
   .op-hero {

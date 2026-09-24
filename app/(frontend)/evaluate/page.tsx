@@ -58,7 +58,7 @@ const CSS = `
 @keyframes spin     { to   { transform: rotate(360deg) } }
 @keyframes progress { from { width:0% } to { width:100% } }
 
-.ev-page { min-height:100vh; }
+.ev-page { min-height: var(--page-min-h); }
 
 .ev-header {
   max-width:1200px; margin:0 auto;

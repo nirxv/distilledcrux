@@ -7,7 +7,7 @@ import questions from '@/public/data/geography-pyqs.json';
 /* ─── Geography accent: dark green in light mode, lime-green in dark mode ─── */
 const CSS = `
 /* Accent tokens — overridden per theme */
-.pyq-wrap{min-height:100vh;padding:80px 0 96px;background:var(--bg);}
+.pyq-wrap{min-height: var(--page-min-h);padding:80px 0 96px;background:var(--bg);}
 .pyq-inner{max-width:860px;margin:0 auto;padding:0 2rem;}
 
 .pyq-filter-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px;}

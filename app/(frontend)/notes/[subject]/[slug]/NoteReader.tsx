@@ -1084,13 +1084,6 @@ export default function NoteReader({
             </svg>
             Ask AI
           </Link>
-
-          {/* Signing out belongs in the account menu, not on a reading bar. */}
-          {!authLoading && !user && (
-            <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', padding: '0.28rem 0.75rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-              Sign in
-            </button>
-          )}
         </div>
       </div>
 

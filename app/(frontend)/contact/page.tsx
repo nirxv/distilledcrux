@@ -4,7 +4,7 @@ import { SUPPORT_EMAIL, SUPPORT_MAILTO } from '@/lib/contact';
 import type { Metadata } from 'next';
 
 const CSS = `
-.ct-wrap{min-height:100vh;padding:100px 2rem 5rem;position:relative;overflow:hidden;}
+.ct-wrap{min-height: var(--page-min-h);padding:100px 2rem 5rem;position:relative;overflow:hidden;}
 .ct-orb1{position:absolute;border-radius:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(67,97,238,0.11) 0%,transparent 65%);top:-200px;right:-150px;filter:blur(80px);pointer-events:none;z-index:0;}
 .ct-orb2{position:absolute;border-radius:50%;width:500px;height:500px;background:radial-gradient(circle,rgba(45,212,191,0.07) 0%,transparent 65%);bottom:100px;left:-100px;filter:blur(80px);pointer-events:none;z-index:0;}
 .ct-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}

@@ -89,7 +89,7 @@ export default function LoginPage() {
 
   if (checking) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ minHeight: 'var(--page-min-h)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{
           width: 28, height: 28, borderRadius: '50%',
           border: '2px solid var(--border2)',
@@ -103,7 +103,7 @@ export default function LoginPage() {
 
   return (
     <div style={{
-      minHeight: '100vh',
+      minHeight: 'var(--page-min-h)',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: '2rem 1.5rem',
       position: 'relative', overflow: 'hidden',

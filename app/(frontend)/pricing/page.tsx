@@ -70,7 +70,7 @@ const faqs = [
 
 const CSS = `
 @keyframes fadeUp { from { opacity:0; transform:translateY(14px) } to { opacity:1; transform:translateY(0) } }
-.pr-page { min-height: 100vh; }
+.pr-page { min-height: var(--page-min-h); }
 .pr-header { max-width: 1200px; margin: 0 auto; padding: 120px 2rem 3.5rem; border-bottom: 1px solid var(--border); animation: fadeUp 0.3s ease; }
 .pr-kicker { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.5rem; }
 .pr-h1 { font-family: var(--font-body); font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.02; color: var(--text); margin-bottom: 1rem; }

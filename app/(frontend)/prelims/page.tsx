@@ -41,7 +41,7 @@ const marqueeItems = [
 ];
 
 const CSS = `
-  .pr { position: relative; min-height: 100vh; }
+  .pr { position: relative; min-height: var(--page-min-h); }
 
   /* ── Hero ── */
   .pr-hero {
@@ -300,17 +300,6 @@ const CSS = `
   }
 
   /* ── Footer ── */
-  .pr-footer {
-    border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto;
-    padding: 1.75rem 2rem; display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 1rem;
-  }
-  .pr-footer-logo { font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; color: var(--text); }
-  .pr-footer-logo em { font-style: normal; color: var(--accent); }
-  .pr-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
-  .pr-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
-  .pr-footer-link:hover { color: var(--text); }
-  .pr-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
@@ -325,8 +314,6 @@ const CSS = `
   @media (max-width: 580px) {
     .pr-subj-grid { grid-template-columns: 1fr 1fr; }
     .pr-hero-stat-row { gap: 1.5rem; }
-    .pr-footer { flex-direction: column; text-align: center; }
-    .pr-footer-links { justify-content: center; }
   }
   @media (max-width: 380px) {
     .pr-subj-grid { grid-template-columns: 1fr; }
@@ -553,17 +540,7 @@ export default function PrelimsPage() {
           </div>
         </div>
 
-        {/* ── Footer ── */}
-        <footer className="pr-footer">
-          <div className="pr-footer-logo">Distilled<em>Crux</em></div>
-          <div className="pr-footer-links">
-            <Link href="/privacy" className="pr-footer-link">Privacy</Link>
-            <Link href="/terms" className="pr-footer-link">Terms</Link>
-            <Link href="/refund" className="pr-footer-link">Refund</Link>
-            <Link href="/contact" className="pr-footer-link">Contact</Link>
-          </div>
-          <span className="pr-footer-copy">© {new Date().getFullYear()} Distilled Crux</span>
-        </footer>
+
 
       </div>
     </>

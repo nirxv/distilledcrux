@@ -107,7 +107,7 @@ function OnboardingInner() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ minHeight: 'var(--page-min-h)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{
           width: 32, height: 32, borderRadius: '50%',
           border: '2px solid var(--border2)',
@@ -121,7 +121,7 @@ function OnboardingInner() {
 
   return (
     <div style={{
-      minHeight: '100vh',
+      minHeight: 'var(--page-min-h)',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: '2rem 1.5rem',
     }}>

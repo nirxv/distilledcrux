@@ -17,6 +17,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import SessionTracker from '@/components/SessionTracker';
 import { AuthProvider } from '@/components/AuthProvider';
 
@@ -61,9 +62,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AuthProvider>
         <Navbar />
         <SessionTracker />
-        <main style={{ minHeight: '100vh', paddingTop: 60 }} id="main-layout">
-          {children}
-        </main>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <main style={{ flex: 1, paddingTop: 60 }} id="main-layout">
+            {children}
+          </main>
+          <Footer />
+        </div>
         </AuthProvider>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">{`

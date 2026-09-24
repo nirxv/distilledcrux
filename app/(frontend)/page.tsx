@@ -28,7 +28,7 @@ const marqueeItems = [
 ];
 
 const CSS = `
-  .lp { position: relative; min-height: 100vh; }
+  .lp { position: relative; min-height: var(--page-min-h); }
 
   .lp-hero {
     max-width: 1200px; margin: 0 auto;
@@ -247,16 +247,6 @@ const CSS = `
   .lp-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
   .lp-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
 
-  .lp-footer {
-    border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto;
-    padding: 1.75rem 2rem; display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 1rem;
-  }
-  .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
-  .lp-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
-  .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
-  .lp-footer-link:hover { color: var(--text); }
-  .lp-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); }
 
   /* ── Tablet ── */
   @media (max-width: 900px) {
@@ -338,11 +328,6 @@ const CSS = `
     .lp-cta-right .lp-btn-ghost { justify-content: center; }
 
     /* Footer */
-    .lp-footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; gap: 0.85rem; }
-    .lp-footer-links { justify-content: center; gap: 1.25rem; }
-    .lp-footer-link { font-size: 0.75rem; font-weight: 500; }
-    .lp-footer-copy { font-size: 0.7rem; font-weight: 500; }
-    .lp-footer-logo { font-size: 0.72rem; font-weight: 500; }
   }
 `;
 
@@ -522,16 +507,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className="lp-footer">
-          <div className="lp-footer-logo">DISTILLEDCRUX.COM</div>
-          <div className="lp-footer-links">
-            <Link href="/privacy" className="lp-footer-link">Privacy</Link>
-            <Link href="/terms" className="lp-footer-link">Terms</Link>
-            <Link href="/refund" className="lp-footer-link">Refund</Link>
-            <Link href="/contact" className="lp-footer-link">Contact</Link>
-          </div>
-          <span className="lp-footer-copy">© {new Date().getFullYear()} distilledcrux.com</span>
-        </footer>
+
 
       </div>
     </>

@@ -66,7 +66,7 @@ interface MCQ {
 
 /* ─── CSS ─────────────────────────────────────────────────────── */
 const CSS = `
-.mcq-wrap { min-height: 100vh; padding: 80px 0 96px; background: var(--bg); }
+.mcq-wrap { min-height: var(--page-min-h); padding: 80px 0 96px; background: var(--bg); }
 .mcq-inner {
   max-width: 1200px; margin: 0 auto; padding: 0 2rem;
   display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: start;

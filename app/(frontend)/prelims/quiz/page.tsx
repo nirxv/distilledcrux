@@ -7,7 +7,7 @@ const CSS = `
 @keyframes quiz-bar { from { width: 100%; } to { width: 0%; } }
 @keyframes quiz-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-.qz-wrap { min-height: 100vh; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 80px 1.5rem 80px; }
+.qz-wrap { min-height: var(--page-min-h); background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 80px 1.5rem 80px; }
 
 /* ── Intro screen ── */
 .qz-intro { max-width: 520px; width: 100%; text-align: center; animation: quiz-fade 0.25s ease; }

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import questions from '@/public/data/psir-pyqs.json';
 
 const CSS = `
-.pyq-wrap{min-height:100vh;padding:80px 0 96px;background:var(--bg);}
+.pyq-wrap{min-height: var(--page-min-h);padding:80px 0 96px;background:var(--bg);}
 .pyq-inner{max-width:860px;margin:0 auto;padding:0 2rem;}
 
 /* ── Dropdown filter bar ── */

@@ -52,6 +52,12 @@
   --radius-lg:  16px;
   --radius-xl:  24px;
   --radius-pill:999px;
+  /* The footer measures itself and overwrites --footer-h on mount; this is a
+     desktop-sized starting value so the first paint is close. Page wrappers
+     want the space left between the fixed navbar and the footer, not the whole
+     viewport, otherwise every one of them overflows by that much. */
+  --footer-h:      78px;
+  --page-min-h:    calc(100vh - 60px - var(--footer-h));
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }

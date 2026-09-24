@@ -461,7 +461,7 @@ function ChatContent() {
       <style>{`
         .pp-wrap {
           display: flex; flex-direction: column;
-          height: calc(100dvh - 60px);
+          height: calc(100dvh - 60px - var(--footer-h, 0px));
           background: var(--bg, #050508);
           overflow: hidden;
         }
