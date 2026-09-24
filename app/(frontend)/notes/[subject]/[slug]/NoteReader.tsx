@@ -573,8 +573,13 @@ export default function NoteReader({
           }
           .nr-main { flex: 1; min-width: 0; }
 
+          /* One sticky block from under the navbar to the foot of the
+             window. It used to stretch to the full page height with the
+             inner column sticky inside it, which clipped the top of the
+             sidebar against its own background as the page moved. */
           .nr-sidebar {
-            width: 0; min-width: 0; flex-shrink: 0; align-self: stretch;
+            width: 0; min-width: 0; flex-shrink: 0;
+            position: sticky; top: 60px; height: calc(100vh - 60px);
             overflow: hidden; background: var(--bg2);
             border-right: 1px solid transparent;
             transition: width 0.25s cubic-bezier(0.4,0,0.2,1),
@@ -584,12 +589,8 @@ export default function NoteReader({
           .nr-shell.with-sidebar .nr-sidebar {
             width: 240px; min-width: 240px; border-right-color: var(--border);
           }
-          /* Sticky rather than fixed, so it scrolls with the page until it
-             reaches the header and then holds, and always ends above the
-             viewport edge instead of slicing the last note. */
           .nr-sidebar-inner {
-            position: sticky; top: 60px; max-height: calc(100vh - 60px);
-            overflow-y: auto; overscroll-behavior: contain;
+            height: 100%; overflow-y: auto; overscroll-behavior: contain;
             padding: 1.25rem 1rem 2.5rem; width: 240px;
           }
           .nr-sidebar-inner::-webkit-scrollbar { width: 3px; }
@@ -876,7 +877,7 @@ export default function NoteReader({
       <div className="nr-main">
 
       {/* ── Header ── */}
-      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)' }}>
+      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100 }}>
         {/* Sidebar toggle */}
         <button type="button" className="nr-sb-toggle"
           onClick={() => setSidebarOpen(o => !o)}
