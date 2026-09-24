@@ -161,7 +161,7 @@ const CSS = `
   .pd-dashed { border:1px dashed var(--border); border-radius:8px; padding:2rem; text-align:center; color:var(--text3); font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; }
 `;
 
-function marksClass(m: number) {
+function marksClass(m: number | null) {
   return m === 10 ? 'm10' : m === 15 ? 'm15' : m === 20 ? 'm20' : '';
 }
 
@@ -235,7 +235,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
       const res = await fetch('/api/model-answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
-        body: JSON.stringify({ question: pyq.question, marks: pyq.marks, subject, topic: pyq.topic }),
+        body: JSON.stringify({ question: pyq.question, marks: pyq.marks ?? 10, subject, topic: pyq.topic }),
       });
       if (!res.ok) {
         // The route answers 403 for a reader without a subscription, so say
@@ -336,7 +336,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 <span className="pd-badge accent">{pyq.paper}</span>
                 {pyq.section && <span className="pd-badge">{pyq.section}</span>}
                 <span className="pd-badge accent">{pyq.year}</span>
-                <span className={`pd-badge ${marksClass(pyq.marks)}`}>{pyq.marks}M</span>
+                {pyq.marks ? <span className={`pd-badge ${marksClass(pyq.marks)}`}>{pyq.marks}M</span> : null}
                 <span className="pd-badge">{pyq.topic}</span>
                 {pyq.microtheme && <span className="pd-badge">{pyq.microtheme}</span>}
               </div>
@@ -351,7 +351,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 </svg>
                 Ask AI
               </Link>
-              <Link href={`/evaluate?question=${encodeURIComponent(pyq.question)}&marks=${pyq.marks}`} className="pd-btn-ghost">
+              <Link href={`/evaluate?question=${encodeURIComponent(pyq.question)}&marks=${pyq.marks ?? 10}`} className="pd-btn-ghost">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                 </svg>
@@ -385,7 +385,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {(generating || generated || modelAnswer) && (
               <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
-                <div className="pd-section-label">Model Answer · {pyq.marks} marks · {config.label} Optional</div>
+                <div className="pd-section-label">Model Answer{pyq.marks ? ` · ${pyq.marks} marks` : ''} · {config.label} Optional</div>
 
                 {generating && !modelAnswer && (
                   <div className="pd-generating">
@@ -538,7 +538,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                   {related.map(q => (
                     <Link key={q.id} href={`${base}/${q.id}`} className="pd-related-item">
                       {q.question.length > 90 ? q.question.slice(0, 90) + '…' : q.question}
-                      <div className="pd-related-year">{q.year} · {q.marks}M</div>
+                      <div className="pd-related-year">{q.year}{q.marks ? ` · ${q.marks}M` : ''}</div>
                     </Link>
                   ))}
                 </div>
@@ -551,7 +551,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
               {([
                 ['Year', pyq.year],
                 ['Paper', pyq.paper],
-                ['Marks', `${pyq.marks}M`],
+                pyq.marks ? ['Marks', `${pyq.marks}M`] : null,
                 ['Topic', pyq.topic],
                 pyq.section ? ['Section', pyq.section] : null,
                 pyq.microtheme ? ['Microtheme', pyq.microtheme] : null,

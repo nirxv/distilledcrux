@@ -8,7 +8,7 @@
  * --psir-*). The shared stylesheet reads only --pd-* variables, which each
  * subject aliases onto its ramp, so the component itself holds no colours.
  */
-export type PyqSubject = 'sociology' | 'anthropology' | 'polsci' | 'geography';
+export type PyqSubject = 'sociology' | 'anthropology' | 'polsci' | 'geography' | 'pub-admin';
 
 export type PyqSubjectConfig = {
   /** Path segment and the value sent to the answer and model-answer APIs. */
@@ -65,6 +65,17 @@ export const PYQ_SUBJECTS: Record<PyqSubject, PyqSubjectConfig> = {
     label: 'Geography',
     vars: ramp('geo', 'var(--geo-text-btn)'),
   },
+  'pub-admin': {
+    slug: 'pub-admin',
+    label: 'Public Administration',
+    vars: `
+      --pd-accent:        var(--accent);
+      --pd-accent-dim:    var(--accent-dim);
+      --pd-accent-border: rgba(67,97,238,0.22);
+      --pd-accent-border2:rgba(67,97,238,0.40);
+      --pd-on-accent:     #fff;
+    `,
+  },
 };
 
 /** The union of the four data files. Only id, year, paper, question, marks and
@@ -74,7 +85,7 @@ export type PYQ = {
   year: string;
   paper: string;
   question: string;
-  marks: number;
+  marks: number | null;
   topic: string;
   section?: string;
   microtheme?: string;
