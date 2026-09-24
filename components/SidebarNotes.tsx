@@ -8,7 +8,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * margin scribbles, they are worth nothing to anyone else, and storing them
  * server-side would mean a table and a sync story for something that is useful
  * the moment it is typed. The trade is that they do not follow the reader to
- * another device, which the UI says rather than leaving it to be discovered.
+ * another device.
  *
  * Keyed by subject and slug, so each note page has its own set.
  */
@@ -143,7 +143,6 @@ export default function SidebarNotes({ subject, slug }: { subject: string; slug:
             </div>
           ))}
 
-          {notes.length > 0 && <p className="sb-note-scope">Saved on this device</p>}
         </div>
       )}
     </section>

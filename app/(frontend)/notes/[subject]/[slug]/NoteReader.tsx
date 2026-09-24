@@ -602,7 +602,7 @@ export default function NoteReader({
             background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
             color: var(--text2); cursor: pointer; padding: 0.25rem 0.55rem;
             font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-            margin-bottom: 0.6rem; transition: border-color 0.15s, color 0.15s;
+            transition: border-color 0.15s, color 0.15s;
           }
           .nr-sb-toggle:hover { border-color: var(--border2); color: var(--text); }
 
@@ -828,10 +828,6 @@ export default function NoteReader({
           .sb-note-foot button:hover { color: #f87171; }
           .sb-note-confirm { display: flex; gap: 0.6rem; }
           .sb-note-confirm button:first-child { color: #f87171; font-weight: 700; }
-          .sb-note-scope {
-            font-size: 0.56rem; font-family: var(--font-mono); letter-spacing: 0.1em;
-            text-transform: uppercase; color: var(--text3); margin: 0.35rem 0 0; text-align: right;
-          }
       `}</style>
 
       {/* ── Sidebar ── */}
@@ -904,12 +900,11 @@ export default function NoteReader({
           <span style={{ color: 'var(--text2)', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' }}>{note.title}</span>
         </div>
 
-        <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: subjectColor, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 4, padding: '2px 7px' }}>
-          Paper {note.paper}
-        </span>
-        <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
-
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: subjectColor, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 4, padding: '2px 7px' }}>
+            Paper {note.paper}
+          </span>
+          <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
           <button
             onClick={() => setAnnotationMode(m => m === 'highlight' ? null : 'highlight')}
             style={{
