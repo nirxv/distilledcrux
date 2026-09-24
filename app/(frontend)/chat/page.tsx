@@ -8,6 +8,7 @@ import {
   SUGGESTED_QUESTIONS,
   SUBJECT_DISPLAY,
   SUBJECT_BOOKS,
+  SUBJECT_SHORT,
 } from '@/lib/subjectConfig';
 
 // ── Types ─────────────────────────────────────────────────────
@@ -137,6 +138,7 @@ function ChatContent() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const subjectDisplay = SUBJECT_DISPLAY[subject];
+  const subjectShort = SUBJECT_SHORT[subject];
   // Update greeting when subject changes (e.g. after auto-detect)
   // Re-set greeting when subject auto-detected
   useEffect(() => {
@@ -1003,7 +1005,7 @@ function ChatContent() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
-                placeholder={brainstormMode ? `Brainstorm a ${subjectDisplay} topic or question…` : pdfFile ? 'Ask about the PDF…' : `Ask me anything about ${subjectDisplay}…`}
+                placeholder={brainstormMode ? `Brainstorm ${subjectShort}…` : pdfFile ? 'Ask about the PDF…' : `Ask about ${subjectShort}…`}
                 rows={1}
                 onInput={(e) => {
                   const ta = e.currentTarget;

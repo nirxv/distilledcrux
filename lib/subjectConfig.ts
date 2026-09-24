@@ -257,6 +257,20 @@ export const SUGGESTED_QUESTIONS: Record<SubjectKey, { en: string[]; hi: string[
 };
 
 // ── Full subject display name for scope guard ─────────────────
+/**
+ * Short names for UI chrome where space is tight. The chat composer is a
+ * one-row textarea, so a placeholder longer than about 28 characters wraps
+ * onto a second line and is clipped. SUBJECT_DISPLAY keeps the full name for
+ * prose and for the model's system prompt.
+ */
+export const SUBJECT_SHORT: Record<SubjectKey, string> = {
+  sociology: 'Sociology',
+  anthropology: 'Anthropology',
+  polsci: 'PSIR',
+  geography: 'Geography',
+  'pub-admin': 'Pub Admin',
+};
+
 export const SUBJECT_DISPLAY: Record<SubjectKey, string> = {
   sociology: 'Sociology',
   anthropology: 'Anthropology',
