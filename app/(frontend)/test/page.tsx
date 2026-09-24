@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import type { User } from 'firebase/auth';
 import { geoMapData, GeoMapEntry } from '@/lib/geoMapData';
+import SubjectIcon from '@/components/SubjectIcon';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -811,43 +812,6 @@ function ScrollFab({ color }: { color: string }) {
 
 // ─── SVG Icon Components ──────────────────────────────────────────────────────
 
-function SubjectIcon({ id, color = 'currentColor', size = 14 }: { id: string; color?: string; size?: number }) {
-  const s = { width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 4, flexShrink: 0 } as React.CSSProperties;
-  if (id === 'sociology') return (
-    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
-      <circle cx="5" cy="5" r="2.5"/><circle cx="11" cy="5" r="2.5"/>
-      <path d="M1 13c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5" strokeLinecap="round"/>
-      <path d="M8 10.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.5 4 3.5" strokeLinecap="round"/>
-    </svg>
-  );
-  if (id === 'anthropology') return (
-    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
-      <circle cx="8" cy="5" r="3"/>
-      <path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4" strokeLinecap="round"/>
-      <path d="M6 5h4M8 3v4" strokeLinecap="round"/>
-    </svg>
-  );
-  if (id === 'psir') return (
-    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
-      <path d="M8 2v12M2 8h12" strokeLinecap="round"/>
-      <circle cx="8" cy="8" r="5.5"/>
-    </svg>
-  );
-  if (id === 'geography') return (
-    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
-      <circle cx="8" cy="8" r="6"/>
-      <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" strokeLinecap="round"/>
-    </svg>
-  );
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke={color} strokeWidth="1.5" style={s}>
-      <rect x="2" y="6" width="12" height="8" rx="1"/>
-      <path d="M5 6V4a3 3 0 0 1 6 0v2" strokeLinecap="round"/>
-      <line x1="8" y1="10" x2="8" y2="12" strokeLinecap="round"/>
-    </svg>
-  );
-}
-
 function MoodIcon({ mood, color }: { mood: string; color: string }) {
   const s = { width: 24, height: 24, flexShrink: 0 } as React.CSSProperties;
   if (mood === 'great') return (
@@ -1082,7 +1046,7 @@ function TestPageInner() {
                     cursor: noData ? 'not-allowed' : 'pointer',
                     opacity: noData ? 0.4 : 1,
                   }}>
-                  <SubjectIcon id={id} color={active ? s.color : 'var(--text3)'} /> {s.label}{noData ? ' (soon)' : ''}
+                  <SubjectIcon id={id} color={active ? s.color : 'var(--text3)'} size={14} style={{ marginRight: 4 }} /> {s.label}{noData ? ' (soon)' : ''}
                 </button>
               );
             })}
@@ -1225,7 +1189,7 @@ function TestPageInner() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', fontFamily: 'var(--font-ui)' }}>
               <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                <SubjectIcon id={subject} color={subMeta.color} /> {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
+                <SubjectIcon id={subject} color={subMeta.color} size={14} style={{ marginRight: 4 }} /> {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
               </span>
               <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500 }}>· {maxMarks}M</span>
             </div>

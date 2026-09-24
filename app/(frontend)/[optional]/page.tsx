@@ -4,41 +4,41 @@ import Link from 'next/link';
 
 const OPTIONALS: Record<string, {
   name: string; full: string; sub: string;
-  color: string; dim: string; border: string; glow: string; icon: string;
+  color: string; dim: string; border: string; glow: string;
   paper1: string; paper2: string;
   highlights: string[];
 }> = {
   sociology: {
     name: 'Sociology', full: 'Sociology Optional', sub: 'Social Structure, Change & Thinkers',
-    color: '#4361ee', dim: 'rgba(67,97,238,0.07)', border: 'rgba(67,97,238,0.22)', glow: 'rgba(67,97,238,0.15)', icon: '🧩',
+    color: '#4361ee', dim: 'rgba(67,97,238,0.07)', border: 'rgba(67,97,238,0.22)', glow: 'rgba(67,97,238,0.15)',
     paper1: 'Sociological Theory, Research Methods, Social Stratification & Social Change',
     paper2: 'Indian Society, Social Issues, Movements & Contemporary Challenges',
     highlights: ['Structural-functional, conflict and interpretive traditions', 'Thinkers: Marx, Weber, Durkheim, Parsons, Merton, Giddens', 'Indian society: caste, tribe, gender, village & agrarian systems', 'Social movements: peasant, women, environmental, Dalit', 'Contemporary India: globalisation, IT revolution, diaspora'],
   },
   anthropology: {
     name: 'Anthropology', full: 'Anthropology Optional', sub: 'Physical, Social & Applied Anthropology',
-    color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.22)', glow: 'rgba(45,212,191,0.14)', icon: '🧬',
+    color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.22)', glow: 'rgba(45,212,191,0.14)',
     paper1: 'Meaning, Scope & Development of Anthropology; Evolution; Genetics; Human Variation',
     paper2: 'Indian Anthropology, Tribal India, Applied Anthropology, Fossil Records',
     highlights: ['Biological & physical anthropology evolution, genetics, primatology', 'Archaeological anthropology fossil evidence, tools, culture', 'Social & cultural anthropology kinship, marriage, religion', 'Tribal India scheduled tribes, problems, development policy', 'Applied anthropology development, forensics, ethnobotany'],
   },
   polsci: {
     name: 'PSIR', full: 'PSIR Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
-    color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)', icon: '⚖️',
+    color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)',
     paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
     paper2: 'Comparative Politics & International Relations',
     highlights: ['Political theory liberalism, Marxism, feminism, post-colonialism', 'Indian Constitution federalism, fundamental rights, DPSPs', 'Political institutions Parliament, executive, judiciary, election commission', 'Comparative politics presidential vs parliamentary, federalism globally', 'International relations realism, liberalism, constructivism, IR theory'],
   },
   geography: {
     name: 'Geography', full: 'Geography Optional', sub: 'Physical, Human & Economic Geography',
-    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)', glow: 'var(--geo-dim)', icon: '🌍',
+    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)', glow: 'var(--geo-dim)',
     paper1: 'Physical Geography Geomorphology, Climatology, Oceanography, Biogeography',
     paper2: 'Human & Economic Geography, Regional Planning, India-specific Geography',
     highlights: ['Geomorphology plate tectonics, landforms, fluvial & aeolian processes', 'Climatology atmospheric circulation, monsoon, climate change', 'Oceanography currents, tides, marine resources', 'Human geography population, migration, settlement patterns', 'India geography agriculture, minerals, transport, regional development'],
   },
   'pub-admin': {
     name: 'Public Administration', full: 'Public Administration Optional', sub: 'Administrative Theory & Indian Administration',
-    color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.2)', glow: 'rgba(251,146,60,0.13)', icon: '📋',
+    color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.2)', glow: 'rgba(251,146,60,0.13)',
     paper1: 'Administrative Theory Organisation, Accountability, Comparative Admin',
     paper2: 'Indian Administration Union, State, District, Development Administration',
     highlights: ["Administrative theory Weber's bureaucracy, Taylor, Fayol, Simon", 'Organisation theory classical, human relations, systems, contingency', 'Accountability parliamentary control, CAG, RTI, lokpal', 'Indian administration civil services, central secretariat, cabinet', 'Development administration planning, decentralisation, e-governance'],
@@ -49,7 +49,7 @@ const BASE_TOOLS = [
   { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate', badge: null },
   { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
   { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
-  { num: '04', label: 'PYQ Bank', desc: '1500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
+  { num: '04', label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
 ];
 
 const MAP_TOOL = { num: '05', label: 'Map Practice', desc: 'Every UPSC Geography map question, year-wise. Identify locations, quiz yourself, track accuracy.', href: '/geography/mapping', badge: 'Free' };

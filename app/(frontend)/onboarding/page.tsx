@@ -4,13 +4,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { normalizeIndianMobile } from '@/lib/phone';
+import SubjectIcon from '@/components/SubjectIcon';
 
 const optionals = [
-  { id: 'sociology',          label: 'Sociology',           emoji: '👥', available: true },
-  { id: 'anthropology',       label: 'Anthropology',        emoji: '🧬', available: true },
-  { id: 'geography',          label: 'Geography',           emoji: '🌍', available: true },
-  { id: 'political-science',  label: 'PSIR',   emoji: '⚖️', available: true },
-  { id: 'public-administration', label: 'Public Administration', emoji: '🏛️', available: true },
+  { id: 'sociology',          label: 'Sociology', available: true },
+  { id: 'anthropology',       label: 'Anthropology', available: true },
+  { id: 'geography',          label: 'Geography', available: true },
+  { id: 'political-science',  label: 'PSIR', available: true },
+  { id: 'public-administration', label: 'Public Administration', available: true },
 ];
 
 function OnboardingInner() {
@@ -188,7 +189,7 @@ function OnboardingInner() {
                   position: 'relative',
                 }}
               >
-                <span style={{ fontSize: '1.75rem' }}>{opt.emoji}</span>
+                <SubjectIcon id={opt.id} size={28} />
                 <span style={{
                   color: isSelected ? 'var(--accent)' : 'var(--text)',
                   fontFamily: 'var(--font-ui)',

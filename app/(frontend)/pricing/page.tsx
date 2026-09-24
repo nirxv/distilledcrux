@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react';
 import { PLANS, rupees } from '@/lib/plans';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import SubjectIcon from '@/components/SubjectIcon';
 
 const OPTIONALS = [
-  { id: 'sociology',             label: 'Sociology',             emoji: '👥' },
-  { id: 'anthropology',          label: 'Anthropology',          emoji: '🧬' },
-  { id: 'geography',             label: 'Geography',             emoji: '🌍' },
-  { id: 'political-science',     label: 'PSIR',                  emoji: '⚖️' },
-  { id: 'public-administration', label: 'Public Administration', emoji: '🏛️' },
+  { id: 'sociology',             label: 'Sociology' },
+  { id: 'anthropology',          label: 'Anthropology' },
+  { id: 'geography',             label: 'Geography' },
+  { id: 'political-science',     label: 'PSIR' },
+  { id: 'public-administration', label: 'Public Administration' },
 ];
 
 const plans = [
@@ -34,7 +35,7 @@ const plans = [
       { label: 'Full platform access for 6 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
       { label: 'AI Chat: ask anything' },
-      { label: 'PYQ Bank 1500+ questions' },
+      { label: 'PYQ Bank 4500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
       { label: 'Performance analytics' },
@@ -48,7 +49,7 @@ const plans = [
       { label: 'Full platform access for 12 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
       { label: 'AI Chat: ask anything' },
-      { label: 'PYQ Bank 1500+ questions' },
+      { label: 'PYQ Bank 4500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
       { label: 'Topper Answer Copies', future: true },
       { label: 'Performance analytics' },
@@ -83,7 +84,7 @@ const CSS = `
 .pr-opt-btn { display: flex; align-items: center; gap: 7px; padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid var(--border2); background: var(--bg2); cursor: pointer; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2); transition: all 0.12s; }
 .pr-opt-btn:hover { border-color: var(--border3); color: var(--text); background: var(--bg3); }
 .pr-opt-btn.selected { border-color: rgba(67,97,238,0.5); background: rgba(67,97,238,0.08); color: var(--accent); }
-.pr-opt-emoji { font-size: 1rem; line-height: 1; }
+.pr-opt-emoji { line-height: 0; display: inline-flex; }
 .pr-opt-check { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .pr-selected-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; padding: 4px 12px; border-radius: 20px; background: rgba(67,97,238,0.06); border: 1px solid rgba(67,97,238,0.15); font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); }
 .pr-selected-badge strong { color: var(--accent); font-weight: 600; }
@@ -295,7 +296,7 @@ export default function PricingPage() {
                   onClick={() => setSelectedOptional(opt.id)}
                   className={`pr-opt-btn${isSelected ? ' selected' : ''}`}
                 >
-                  <span className="pr-opt-emoji">{opt.emoji}</span>
+                  <span className="pr-opt-emoji"><SubjectIcon id={opt.id} size={16} /></span>
                   <span>{opt.label}</span>
                   {isSelected && (
                     <span className="pr-opt-check">
@@ -310,7 +311,7 @@ export default function PricingPage() {
           </div>
           {selectedOptionalData ? (
             <div className="pr-selected-badge">
-              <span>{selectedOptionalData.emoji}</span>
+              <SubjectIcon id={selectedOptionalData.id} size={16} />
               Purchasing for <strong>{selectedOptionalData.label}</strong>
               {userOptional && userOptional !== selectedOptional && (
                 <span style={{ marginLeft: 6, opacity: 0.6 }}>

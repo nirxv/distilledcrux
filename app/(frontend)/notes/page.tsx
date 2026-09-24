@@ -2,20 +2,21 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import HomeToolsList from '@/components/HomeToolsList';
+import SubjectIcon from '@/components/SubjectIcon';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
   description:
-    'AI answer evaluation, curated notes, 1500+ PYQs and real topper copies built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
+    'AI answer evaluation, curated notes, 4500+ PYQs and real topper copies built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
   alternates: { canonical: 'https://distilledcrux.com' },
 };
 
 const optionals = [
-  { id: 'sociology',    name: 'Sociology',            sub: 'Social Structure, Change & Thinkers',       color: '#4361ee', dim: 'rgba(67,97,238,0.07)',  border: 'rgba(67,97,238,0.18)',  live: true,  icon: '🧩' },
-  { id: 'anthropology', name: 'Anthropology',          sub: 'Physical, Social & Applied Anthropology',   color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.18)', live: true,  icon: '🧬' },
-  { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true,  icon: '⚖️' },
-  { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true,  icon: '🌍' },
-  { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true,  icon: '📋' },
+  { id: 'sociology',    name: 'Sociology',            sub: 'Social Structure, Change & Thinkers',       color: '#4361ee', dim: 'rgba(67,97,238,0.07)',  border: 'rgba(67,97,238,0.18)',  live: true },
+  { id: 'anthropology', name: 'Anthropology',          sub: 'Physical, Social & Applied Anthropology',   color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.18)', live: true },
+  { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true },
+  { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true },
+  { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true },
 ];
 
 
@@ -150,7 +151,7 @@ const CSS = `
     transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
   }
   .lp-opt-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
-  .lp-opt-card-icon { font-size: 1.4rem; margin-bottom: 1.25rem; display: block; }
+  .lp-opt-card-icon { margin-bottom: 1.25rem; display: block; line-height: 0; }
   .lp-opt-card-name {
     font-family: var(--font-body); font-size: 1rem;
     font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em;
@@ -209,7 +210,7 @@ const CSS = `
     gap: 1px; background: var(--border);
     border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
   }
-  .lp-price-cell { background: var(--bg); padding: 2rem; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
+  .lp-price-cell { display: block; background: var(--bg); padding: 2rem; color: inherit; text-decoration: none; cursor: pointer; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
   .lp-price-cell:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
   .lp-price-cell.featured { background: var(--bg2); }
   .lp-price-plan {
@@ -302,7 +303,7 @@ const CSS = `
     /* Optionals: single column */
     .lp-opt-grid { grid-template-columns: 1fr; }
     .lp-opt-card { padding: 1.25rem 1.25rem; flex-direction: row; align-items: center; gap: 1rem; }
-    .lp-opt-card-icon { font-size: 1.5rem; margin-bottom: 0; flex-shrink: 0; }
+    .lp-opt-card-icon { margin-bottom: 0; flex-shrink: 0; line-height: 0; }
     .lp-opt-card-name { font-size: 0.95rem; margin-bottom: 0.15rem; }
     .lp-opt-card-sub { font-size: 0.72rem; font-weight: 500; margin-bottom: 0; flex: none; }
     .lp-opt-card-body { flex: 1; }
@@ -370,7 +371,7 @@ export default function Home() {
           </div>
           <div className="lp-hero-right">
             <p className="lp-hero-desc">
-              AI answer evaluation, syllabus notes, 1500+ PYQs and real topper copies 
+              AI answer evaluation, syllabus notes, 4500+ PYQs and real topper copies 
               built specifically for UPSC Mains Optional. No fluff.
             </p>
             <div className="lp-hero-actions">
@@ -384,7 +385,7 @@ export default function Home() {
             </div>
             <div className="lp-hero-stat-row">
               {[
-                { val: '1500+', label: 'PYQs' },
+                { val: '4500+', label: 'PYQs' },
                 { val: '5', label: 'Optionals' },
               ].map(s => (
                 <div key={s.label}>
@@ -421,7 +422,7 @@ export default function Home() {
           <div className="lp-opt-grid">
             {optionals.map((opt) => (
               <Link key={opt.id} href={"/" + opt.id} className="lp-opt-card">
-                <span className="lp-opt-card-icon">{opt.icon}</span>
+                <span className="lp-opt-card-icon"><SubjectIcon id={opt.id} size={24} /></span>
                 <div className="lp-opt-card-body">
                   <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
                   <div className="lp-opt-card-sub">{opt.sub}</div>
@@ -437,7 +438,7 @@ export default function Home() {
           </div>
           <a href="https://historyoptional.xyz" target="_blank" rel="noopener noreferrer" className="lp-history-card" style={{ marginTop: '1px' }}>
             <div className="lp-history-left">
-              <span style={{ fontSize: '1.5rem' }}>🏛️</span>
+              <SubjectIcon id="history" size={24} />
               <div>
                 <div className="lp-history-name">History Optional</div>
                 <div className="lp-history-sub">Paper I & II · Ancient to World History dedicated platform</div>
@@ -482,7 +483,7 @@ export default function Home() {
               { label: '6 Months', price: '₹3,999', period: 'per 6 months', desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
               { label: 'Yearly',   price: '₹5,999', period: 'per year',     desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
             ].map((p) => (
-              <div key={p.label} className={"lp-price-cell" + (p.tag === 'Most Popular' ? ' featured' : '')}>
+              <Link key={p.label} href="/pricing" className={"lp-price-cell" + (p.tag === 'Most Popular' ? ' featured' : '')}>
                 {p.tag && (
                   <div className="lp-price-tag" style={{ background: p.tagColor + '18', color: p.tagColor, border: "1px solid " + p.tagColor + "30" }}>
                     {p.tag}
@@ -492,7 +493,7 @@ export default function Home() {
                 <div style={{ display:"flex", alignItems:"center", gap:8 }}><div className="lp-price-amount">{p.price}</div>
                 <div className="lp-price-period">{p.period}</div></div>
                 <div className="lp-price-desc">{p.desc}</div>
-              </div>
+              </Link>
             ))}
           </div>
           <div style={{ marginTop: '1.25rem', textAlign: 'right' }}>
