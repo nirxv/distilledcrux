@@ -171,6 +171,16 @@ function useNoteSearch(containerRef: React.RefObject<HTMLElement | null>) {
   return { open, setOpen, query, setQuery, current, total, jump, close };
 }
 
+
+// ── Main NoteReader ───────────────────────────────────────────
+type NavLink = { slug: string; title: string } | null;
+
+/**
+ * The note, and its neighbours, come from the server. This used to import all
+ * five subject indexes to work out prev/next, which shipped roughly 82KB of
+ * every subject's note metadata to the browser on every note page to use one
+ * subject's worth.
+ */
 // ── Table of Contents ─────────────────────────────────────────
 function TableOfContents({ contentHtml }: { contentHtml: string }) {
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
@@ -237,15 +247,56 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
   );
 }
 
-// ── Main NoteReader ───────────────────────────────────────────
-type NavLink = { slug: string; title: string } | null;
+// ── Sidebar contents ──────────────────────────────────────────
+/** The same headings as the inline card, laid out for a 240px column. */
+function SidebarTOC({ contentHtml }: { contentHtml: string }) {
+  const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
+  const [activeId, setActiveId] = useState('');
 
-/**
- * The note, and its neighbours, come from the server. This used to import all
- * five subject indexes to work out prev/next, which shipped roughly 82KB of
- * every subject's note metadata to the browser on every note page to use one
- * subject's worth.
- */
+  useEffect(() => {
+    const doc = new DOMParser().parseFromString(contentHtml, 'text/html');
+    const out: { id: string; text: string; level: 2 | 3 }[] = [];
+    doc.querySelectorAll('h2[id], h3[id]').forEach(h => {
+      const id = h.getAttribute('id') || '';
+      const text = h.textContent?.trim() || '';
+      if (id && text) out.push({ id, text, level: h.tagName === 'H2' ? 2 : 3 });
+    });
+    setEntries(out);
+  }, [contentHtml]);
+
+  useEffect(() => {
+    if (!entries.length) return;
+    const obs = new IntersectionObserver(es => {
+      const vis = es.filter(e => e.isIntersecting);
+      if (vis.length) setActiveId(vis[0].target.id);
+    }, { rootMargin: '-60px 0px -60% 0px' });
+    entries.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    return () => obs.disconnect();
+  }, [entries]);
+
+  if (!entries.length) return null;
+  return (
+    <>
+      <div className="sb-section-label as-heading"><span>Contents</span></div>
+      <nav className="sb-toc">
+        {entries.map(t => (
+          <button
+            key={t.id}
+            type="button"
+            className={'sb-toc-link' + (t.level === 3 ? ' sub' : '') + (activeId === t.id ? ' on' : '')}
+            onClick={() => {
+              const el = document.getElementById(t.id);
+              if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+            }}
+          >
+            {t.text}
+          </button>
+        ))}
+      </nav>
+    </>
+  );
+}
+
 // ── Scroll rail ───────────────────────────────────────────────
 /**
  * A reading rail down the right edge: one tick per heading, positioned where
@@ -344,19 +395,45 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
       </div>
 
       {open && (
-        <nav className="nr-rail-panel" aria-label="Contents">
+        <div className="nr-rail-panel" role="dialog" aria-label="Contents">
           <div className="nr-rail-panel-head">
-            <span>Contents</span>
-            <span>{Math.round(pct * 100)}%</span>
-          </div>
-          {entries.map(t => (
-            <button key={t.id} type="button"
-              className={'nr-rail-link' + (activeId === t.id ? ' on' : '') + (t.level === 3 ? ' sub' : '')}
-              onClick={() => { jump(t.id); setOpen(false); }}>
-              {t.text}
+            <span className="nr-rail-dot" style={{ background: accent, boxShadow: `0 0 8px ${accent}` }} />
+            <span className="nr-rail-panel-title" style={{ color: accent }}>On this page</span>
+            <button type="button" className="nr-rail-close" onClick={() => setOpen(false)} aria-label="Close contents">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
             </button>
-          ))}
-        </nav>
+          </div>
+        
+          <div className="nr-rail-progress">
+            <div style={{ width: `${pct * 100}%`, background: accent, boxShadow: `0 0 8px ${accent}` }} />
+          </div>
+        
+          <nav className="nr-rail-list" aria-label="Headings">
+            {entries.map(t => {
+              const on = activeId === t.id;
+              return (
+                <button key={t.id} type="button"
+                  className={'nr-rail-link' + (t.level === 3 ? ' sub' : '') + (on ? ' on' : '')}
+                  onClick={() => { jump(t.id); setOpen(false); }}
+                  style={on ? { background: `color-mix(in srgb, ${accent} 12%, transparent)`, borderLeftColor: accent, color: accent } : undefined}>
+                  <span className="nr-rail-bullet" style={{
+                    background: on ? accent : `color-mix(in srgb, ${accent} ${t.level === 2 ? 40 : 25}%, transparent)`,
+                    boxShadow: on ? `0 0 6px ${accent}` : 'none',
+                  }} />
+                  <span className="nr-rail-text">{t.text}</span>
+                  <span className="nr-rail-arrow">→</span>
+                </button>
+              );
+            })}
+          </nav>
+        
+          <div className="nr-rail-foot">
+            <span>READ</span>
+            <span style={{ color: accent }}>{Math.round(pct * 100)}%</span>
+          </div>
+        </div>
       )}
     </div>
   );
@@ -382,6 +459,10 @@ export default function NoteReader({
   const noteSearch = useNoteSearch(noteContentRef);
   const headerVisible = useScrollDirection();
 
+  // Open on a desktop, closed on a phone, where 240px of sidebar would
+  // leave nothing for the note itself.
+  const [sidebarOpen, setSidebarOpen] = useState(
+    typeof window !== 'undefined' ? window.innerWidth > 1024 : true);
   const [highlights, setHighlights] = useState<Highlight[]>([]);
   const [selectedColor, setSelectedColor] = useState<'yellow'|'green'|'red'|'blue'>('yellow');
   const [showToolbar, setShowToolbar] = useState(false);
@@ -470,7 +551,7 @@ export default function NoteReader({
     : 'var(--accent)';
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 0 5rem' }}>
+    <div className={'nr-shell' + (sidebarOpen ? ' with-sidebar' : '')}>
       {/* ── Note CSS ── */}
       <style>{`
         .note-content h1 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 2rem 0 1rem; line-height: 1.3; letter-spacing: -0.02em; border-bottom: 2px solid ${subjectColor}; padding-bottom: 0.5rem; }
@@ -494,6 +575,80 @@ export default function NoteReader({
         .note-content hr { border: none; border-top: 1px solid var(--border2); margin: 2.5rem 0; }
         .note-content mark { background: rgba(201,168,76,0.28); border-radius: 2px; padding: 0 1px; }
 
+
+          /* ── Shell ────────────────────────────────────────────────
+             A two column reader: a sidebar that collapses to nothing and a
+             main column that takes the width back. Centred as a pair, so the
+             note does not jump sideways when the sidebar is toggled. */
+          .nr-shell {
+            display: flex; align-items: flex-start; gap: 0;
+            max-width: 900px; margin: 0 auto; padding: 0 0 5rem;
+            transition: max-width 0.25s cubic-bezier(0.4,0,0.2,1);
+          }
+          .nr-shell.with-sidebar { max-width: 1160px; }
+          .nr-main { flex: 1; min-width: 0; }
+
+          .nr-sidebar {
+            width: 0; min-width: 0; flex-shrink: 0; align-self: stretch;
+            overflow: hidden; background: var(--bg2);
+            border-right: 1px solid transparent;
+            transition: width 0.25s cubic-bezier(0.4,0,0.2,1),
+                        min-width 0.25s cubic-bezier(0.4,0,0.2,1),
+                        border-color 0.25s;
+          }
+          .nr-shell.with-sidebar .nr-sidebar {
+            width: 240px; min-width: 240px; border-right-color: var(--border);
+          }
+          /* Sticky rather than fixed, so it scrolls with the page until it
+             reaches the header and then holds, and always ends above the
+             viewport edge instead of slicing the last note. */
+          .nr-sidebar-inner {
+            position: sticky; top: 60px; max-height: calc(100vh - 60px);
+            overflow-y: auto; overscroll-behavior: contain;
+            padding: 1.25rem 1rem 2.5rem; width: 240px;
+          }
+          .nr-sidebar-inner::-webkit-scrollbar { width: 3px; }
+          .nr-sidebar-inner::-webkit-scrollbar-track { background: transparent; }
+          .nr-sidebar-inner::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
+
+          .nr-sb-toggle {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+            color: var(--text2); cursor: pointer; padding: 0.25rem 0.55rem;
+            font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+            margin-bottom: 0.6rem; transition: border-color 0.15s, color 0.15s;
+          }
+          .nr-sb-toggle:hover { border-color: var(--border2); color: var(--text); }
+
+          /* Below 1024px the sidebar floats over the note instead of taking
+             width from it, and a tap outside the toggle closes it again. */
+          @media (max-width: 1024px) {
+            .nr-shell, .nr-shell.with-sidebar { max-width: 900px; }
+            .nr-sidebar {
+              position: fixed; top: 60px; left: 0; z-index: 120;
+              height: calc(100vh - 60px); width: 0;
+              box-shadow: none; border-right: 1px solid transparent;
+            }
+            .nr-shell.with-sidebar .nr-sidebar {
+              width: 264px; min-width: 264px;
+              box-shadow: 8px 0 32px rgba(0,0,0,0.28);
+            }
+            .nr-sidebar-inner { position: static; max-height: 100%; width: 264px; }
+          }
+
+          /* ── Sidebar contents ── */
+          .sb-toc { display: block; margin-bottom: 0.4rem; }
+          .sb-toc-link {
+            display: block; width: 100%; text-align: left; background: none;
+            border: none; border-left: 2px solid transparent; cursor: pointer;
+            padding: 0.26rem 0.4rem; border-radius: 0 5px 5px 0;
+            font-family: var(--font-ui); font-size: 0.76rem; line-height: 1.45;
+            color: var(--text2); transition: background 0.15s, color 0.15s;
+          }
+          .sb-toc-link.sub { font-size: 0.71rem; color: var(--text3); padding-left: 1rem; }
+          .sb-toc-link:hover { background: var(--bg3); color: var(--text); }
+          .sb-toc-link.on { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+
           /* ── Scroll rail ──────────────────────────────────────────
              Hidden below 1024px: at the edge of a touch screen this competes
              with the scroll gesture, and a 2px tick is smaller than a
@@ -515,47 +670,71 @@ export default function NoteReader({
             align-items: center; justify-content: center; gap: 3px; transition: box-shadow 0.2s;
           }
           .nr-rail-thumb span { width: 4px; height: 1px; background: rgba(255,255,255,0.7); border-radius: 1px; }
+
+          /* ── Rail panel ── */
+          @keyframes nrPanelIn {
+            from { opacity: 0; transform: translateX(12px) scale(0.97); }
+            to   { opacity: 1; transform: translateX(0) scale(1); }
+          }
           .nr-rail-panel {
-            position: fixed; right: 24px; top: 96px; width: 260px;
-            max-height: calc(100vh - 140px); overflow-y: auto; z-index: 91;
-            background: var(--bg2); border: 1px solid var(--border2); border-radius: 10px;
-            padding: 0.75rem; box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+            position: fixed; right: 22px; top: 88px; width: 280px; z-index: 91;
+            background: var(--bg2); border: 1px solid var(--border2); border-radius: 12px;
+            overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.35);
+            animation: nrPanelIn 0.18s cubic-bezier(0.4,0,0.2,1);
           }
           .nr-rail-panel-head {
-            display: flex; justify-content: space-between; align-items: center;
-            font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em;
-            text-transform: uppercase; color: var(--text3); margin-bottom: 0.5rem;
+            display: flex; align-items: center; gap: 8px;
+            padding: 0.8rem 1rem 0.7rem; background: var(--bg3);
+            border-bottom: 1px solid var(--border);
           }
+          .nr-rail-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+          .nr-rail-panel-title {
+            flex: 1; font-size: 0.6rem; font-family: var(--font-mono);
+            letter-spacing: 0.18em; text-transform: uppercase;
+          }
+          .nr-rail-close {
+            background: none; border: none; color: var(--text3); cursor: pointer;
+            padding: 2px; display: flex; line-height: 0;
+          }
+          .nr-rail-close:hover { color: var(--text); }
+          .nr-rail-progress { height: 2px; background: var(--bg3); }
+          .nr-rail-progress div { height: 100%; transition: width 0.1s; }
+          .nr-rail-list { max-height: calc(100vh - 230px); overflow-y: auto; padding: 0.4rem 0; }
           .nr-rail-link {
-            display: block; width: 100%; text-align: left; background: none; border: none;
-            cursor: pointer; padding: 0.26rem 0.3rem; border-radius: 5px;
-            font-family: var(--font-ui); font-size: 0.78rem; line-height: 1.45; color: var(--text2);
+            width: 100%; display: flex; align-items: center; gap: 8px;
+            background: none; border: none; border-left: 2px solid transparent;
+            cursor: pointer; text-align: left; padding: 0.5rem 1rem;
+            color: var(--text); font-family: var(--font-ui); font-size: 0.8rem;
+            transition: background 0.15s, color 0.15s;
           }
-          .nr-rail-link.sub { font-size: 0.72rem; color: var(--text3); padding-left: 0.9rem; }
-          .nr-rail-link:hover { background: var(--bg3); color: var(--text); }
-          .nr-rail-link.on { color: var(--accent); font-weight: 600; }
+          .nr-rail-link.sub {
+            padding: 0.4rem 1rem 0.4rem 1.7rem; font-size: 0.73rem; color: var(--text2);
+          }
+          .nr-rail-link:hover { background: var(--accent-dim); }
+          .nr-rail-bullet { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+          .nr-rail-link.sub .nr-rail-bullet { width: 3px; height: 3px; }
+          .nr-rail-text { flex: 1; line-height: 1.4; }
+          .nr-rail-arrow {
+            font-size: 0.65rem; opacity: 0; transform: translateX(0);
+            transition: opacity 0.15s, transform 0.15s; color: var(--text3);
+          }
+          .nr-rail-link:hover .nr-rail-arrow { opacity: 1; transform: translateX(3px); }
+          .nr-rail-foot {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.55rem 1rem; border-top: 1px solid var(--border);
+            font-family: var(--font-mono); font-size: 0.58rem;
+            letter-spacing: 0.1em; color: var(--text3);
+          }
+          .nr-rail-foot span:last-child { font-size: 0.65rem; font-weight: 600; }
 
-          /* ── Scratch notes ────────────────────────────────────────
-             In the reading column by default, which is what a phone and a
-             tablet get. Only once the viewport is wide enough to hold a 220px
-             rail beside the 900px column does it move out to the left, where
-             it no longer interrupts the reading. */
-          .nr-notes-rail { margin: 0 0 2rem; }
-          @media (min-width: 1400px) {
-            .nr-notes-rail {
-              position: fixed; left: calc(50% - 690px); top: 150px; width: 220px;
-              max-height: calc(100vh - 190px); overflow-y: auto; margin: 0; z-index: 80;
-            }
-            .nr-notes-rail::-webkit-scrollbar { width: 3px; }
-            .nr-notes-rail::-webkit-scrollbar-track { background: transparent; }
-            .nr-notes-rail::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
-          }
+          /* ── Scratch notes ── */
           .sb-section-label {
             width: 100%; display: flex; align-items: center; justify-content: space-between;
             gap: 8px; background: none; border: none; cursor: pointer; padding: 0;
             font-size: 0.6rem; font-family: var(--font-mono); text-transform: uppercase;
-            letter-spacing: 0.18em; color: var(--text3); margin: 0 0 0.5rem;
+            letter-spacing: 0.18em; color: var(--text3); margin: 1.2rem 0 0.5rem;
           }
+          .sb-section-label.as-heading { cursor: default; margin-top: 0; }
           .sb-section-label:hover { color: var(--text2); }
           .sb-note-add {
             width: 100%; display: flex; align-items: center; gap: 0.35rem; background: none;
@@ -613,8 +792,30 @@ export default function NoteReader({
           }
       `}</style>
 
+      {/* ── Sidebar ── */}
+      <aside className="nr-sidebar" aria-label="Note sidebar">
+        <div className="nr-sidebar-inner">
+          {processedContent && <SidebarTOC contentHtml={processedContent} />}
+          <SidebarNotes subject={subject} slug={slug} />
+        </div>
+      </aside>
+
+      {/* ── Main column ── */}
+      <div className="nr-main">
+
       {/* ── Header ── */}
       <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: headerVisible ? 60 : -200, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)', transition: 'top 0.28s cubic-bezier(0.4,0,0.2,1)', opacity: headerVisible ? 1 : 0 }}>
+        {/* Sidebar toggle */}
+        <button type="button" className="nr-sb-toggle"
+          onClick={() => setSidebarOpen(o => !o)}
+          aria-expanded={sidebarOpen}
+          title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="1.8" y="2.5" width="12.4" height="11" rx="1.6" />
+            <line x1="6.3" y1="2.5" x2="6.3" y2="13.5" />
+          </svg>
+          <span>{sidebarOpen ? 'Hide' : 'Contents'}</span>
+        </button>
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
           <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
@@ -733,14 +934,9 @@ export default function NoteReader({
             </div>
           )}
 
+
           {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
-
-          {/* Scratch notes. In the column on narrow screens; the CSS lifts
-              this out to a fixed left rail once there is room beside it. */}
-          <div className="nr-notes-rail">
-            <SidebarNotes subject={subject} slug={slug} />
-          </div>
 
           {/* Note body */}
           <div style={{ position: 'relative' }}>
@@ -832,6 +1028,7 @@ export default function NoteReader({
           <span style={{ opacity: 0.45, fontSize: '0.62rem', fontWeight: 500, background: 'rgba(59,130,246,0.1)', padding: '1px 5px', borderRadius: 3, border: '1px solid rgba(59,130,246,0.2)' }}>⌘F</span>
         </button>
       )}
+      </div>
     </div>
   );
 }
