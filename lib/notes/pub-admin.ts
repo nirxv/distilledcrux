@@ -233,6 +233,15 @@ export const paper2Notes: PubAdminNote[] = [
     subtopics: ['Major Reform Committees', 'Second ARC Recommendations', 'E-Governance Initiatives', 'Right to Public Services', 'Grievance Redressal', 'Outcome Budgeting'],
   },
   {
+    slug: 'significant-issues-indian-administration',
+    title: 'Significant Issues in Indian Administration',
+    paper: 2,
+    section: 'Indian Administration',
+    topic: 14,
+    description: 'Ethics in public administration and the Second ARC; citizen-administration interface through RTI, charters, grievance redress and social audit; disaster management under the 2005 Act and the Sendai Framework; urban and metropolitan administration; climate change; technology, exclusion and data governance',
+    subtopics: ['Administrative Ethics', 'Citizen-Administration Interface', 'Disaster Management', 'Urban & Metropolitan Administration', 'Climate Change', 'Technology & Data Governance', 'The Regulatory State'],
+  },
+  {
     slug: 'rural-development-administration',
     title: 'Rural Development Administration',
     paper: 2,

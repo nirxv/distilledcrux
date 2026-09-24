@@ -6844,6 +6844,230 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Administrative reform in India has been most successful where it has bypassed the question of persuading the administration to improve, and has instead armed the citizen to demand it. That is not a complete answer, because a right cannot create a capacity that does not exist, and an entitlement delivered by an under-staffed and under-trained frontline produces litigation rather than services. The work that remains is the unglamorous half: the levels a file must climb, the tenure of an officer, the training that carries a consequence, the appraisal that discriminates, and the functionaries the third tier still does not have. Those are the reforms nobody announces, and they are the ones the diagnosis has pointed at since 1951.</p>
 `,
+ 'significant-issues-indian-administration': `<h2>What This Topic Covers</h2>
+
+<p>This is the part of the syllabus that deals with problems which cut across the established headings of Indian administration. They are not the business of any single ministry, they change faster than institutional structures do, and they are the subjects on which questions are most often set because they require a candidate to apply administrative theory to conditions the theory did not anticipate. The unifying thread is that each of them tests the capacity of a structure built for a developmental state to handle risks and expectations it was not designed for.</p>
+
+<h2>Ethics in Public Administration</h2>
+
+<p>Administrative ethics is the set of standards governing the conduct of those who exercise public authority. It is distinguished from law in that it governs conduct that is lawful but improper, and from personal morality in that it derives from the office rather than from the individual. Its necessity arises from discretion: where an official has no choice, rules suffice, and where the official chooses, only ethics governs the choice.</p>
+
+<h3>The Content of the Obligation</h3>
+
+<p>The <strong>Nolan Committee</strong> in Britain set out seven principles of public life which have become the standard statement: <strong>selflessness</strong>, acting solely in the public interest; <strong>integrity</strong>, avoiding obligation to others that might influence official duty; <strong>objectivity</strong>, deciding on merit; <strong>accountability</strong>, being answerable and submitting to scrutiny; <strong>openness</strong>, being as transparent as possible about decisions and restricting information only when the wider public interest demands; <strong>honesty</strong>; and <strong>leadership</strong>, promoting these principles by example. The value of the list in an answer is that it separates the obligations that are usually run together.</p>
+
+<p>The Indian framework rests on the <strong>All India Services Conduct Rules</strong> and the <strong>Central Civil Services Conduct Rules</strong>, which require every member to maintain absolute integrity, devotion to duty and nothing unbecoming of a public servant, and which regulate acceptance of gifts, private trade, and the acquisition of property. The <strong>Prevention of Corruption Act, 1988</strong>, amended in 2018, supplies the criminal law, the amendment having made the giving of a bribe a distinct offence, introduced liability of commercial organisations, and required prior approval before an investigation into a decision taken by a public servant in the discharge of official functions, which was intended to protect honest decision-making and is criticised as an obstacle to investigation.</p>
+
+<h3>The Second ARC on Ethics in Governance</h3>
+
+<p>The Second Administrative Reforms Commission devoted its fourth report to ethics in governance, and its analysis is the most useful Indian source. It located corruption not in individual moral failure alone but in the structure of opportunity: monopoly of a service, plus discretion in its grant, minus accountability for the decision, produces corruption regardless of who holds the post. Its recommendations followed from that diagnosis rather than from exhortation.</p>
+
+<ul>
+ <li>Reduce discretion by publishing criteria and by removing the requirement of permission where a declaration would serve.</li>
+ <li>Simplify and make transparent the procedures through which citizens deal with the state, since complexity itself creates the opportunity for rent.</li>
+ <li>Establish independent institutions to investigate, which produced the <strong>Lokpal and Lokayuktas Act, 2013</strong>, providing for a Lokpal at the Union level and Lokayuktas in the States, with an inquiry wing and a prosecution wing.</li>
+ <li>Protect those who report wrongdoing, addressed by the <strong>Whistle Blowers Protection Act, 2014</strong>, whose operation has been limited by amendments proposed and by the absence of rules.</li>
+ <li>Provide for confiscation of illegally acquired assets, so that the gain does not survive the prosecution.</li>
+ <li>Address the interface where corruption is experienced by ordinary citizens, which is the lower levels of the revenue, police and licensing machinery rather than the high-profile cases that attract attention.</li>
+</ul>
+
+<h3>Structural Questions</h3>
+
+<ul>
+ <li><strong>Conflict of interest</strong> is the area where Indian practice is least developed. Post-retirement employment, the acceptance of positions with entities an official formerly regulated, and the holding of interests in matters coming before the official are governed by rules of limited scope, and the cooling-off periods applied are short by comparison with other systems.</li>
+ <li><strong>Political and administrative accountability.</strong> The convention that the minister answers for policy and the official for execution breaks down where the official is required to implement a direction that is improper but lawful. The recommended remedy, that all directions be in writing, is simple and resisted for that reason.</li>
+ <li><strong>Ethics and efficiency.</strong> An audit and vigilance regime that treats every commercial loss as evidence of wrongdoing produces officials who avoid decisions rather than officials who decide honestly. The distinction between a bona fide error of judgement and a dishonest act is the single most important one for administrative morale, and the difficulty of drawing it in practice is why the 2018 amendment attempted to draw it in law.</li>
+ <li><strong>Codes and character.</strong> A code of conduct prescribes minimum behaviour and cannot produce the positive disposition that public service requires. The Second ARC's proposal for a code of ethics stating values rather than prohibitions, alongside the existing code of conduct, follows from this distinction.</li>
+</ul>
+
+<h2>The Citizen and the Administration</h2>
+
+<p>The relationship between citizen and administration has changed from one of supplicant and authority towards one of claimant and provider, and the administrative machinery has adapted unevenly. Four instruments define the current position.</p>
+
+<h3>The Right to Information</h3>
+
+<p>The <strong>Right to Information Act, 2005</strong> changed the default from secrecy to disclosure, obliging public authorities to publish categories of information on their own motion and to supply information on request within specified periods, with a graded appeal and an Information Commission at each level. Its administrative significance exceeds its legal one. The knowledge that a file may be inspected alters what is written in it, and the Act has been used most effectively not to expose large scandals but to obtain the individual records, of a ration entitlement or a pension claim, that a citizen needs to assert a right.</p>
+
+<p>The recurring difficulties are the volume of applications against the capacity of information officers, the number of vacancies on Information Commissions which produces long pendency, the breadth of the exemptions where claimed expansively, and the exposure of applicants where they seek information about local wrongdoing.</p>
+
+<h3>Citizen's Charters and Service Standards</h3>
+
+<p>A citizen's charter is a published statement of the services an organisation provides, the standards a citizen may expect, the means of redress when standards are not met, and the name of the official responsible. Charters were adopted across Indian departments from 1997, and their general failure is instructive: they were drafted without consulting either the citizens who would use them or the staff who would deliver them, they stated aspirations rather than commitments, they carried no consequence for breach, and they were not revised.</p>
+
+<p><strong>Sevottam</strong> was designed to correct this by making the charter one of three assessable components alongside a grievance redress mechanism and an assessment of service delivery capability, so that a charter is credible only where the capacity to honour it has been examined. Several States went further and enacted <strong>Right to Public Services</strong> legislation, which converts service standards into enforceable entitlements by specifying the service, the time limit and the officer liable, and by providing a penalty on the designated officer for default. This is the significant change, because a standard with a penalty attached behaves differently from a standard without one.</p>
+
+<h3>Grievance Redress</h3>
+
+<p>Grievance redress is the mechanism through which the administration learns that it has failed, and it is therefore a feedback system as much as a remedy. The centralised public grievance portals have made lodging a complaint easy and have made pendency visible. The persistent weaknesses are that a grievance is typically referred back to the office complained against, that disposal is recorded when a reply is sent rather than when the problem is solved, and that the data is used to report volumes rather than to identify the systemic defects that generate recurring complaints. A grievance system that classified complaints by cause and fed the classification into process redesign would be an instrument of administrative improvement; used as a tracking system it is only a postbox.</p>
+
+<h3>Social Audit</h3>
+
+<p>Social audit subjects a programme's records to examination by the community it serves, in a public assembly at which officials are present and must respond. It was given statutory footing under the employment guarantee legislation, under which the gram sabha conducts audits of works executed in its area, supported by an independent social audit unit at the State level. Its strength is that it verifies facts that no external auditor can check, whether the work was done and whether the persons on the muster roll worked. Its weakness is that it depends on the independence of the audit unit from the department it audits, and on the willingness of local officials to face the assembly, both of which vary widely.</p>
+
+<h2>Disaster Management</h2>
+
+<p>Disaster administration in India underwent a deliberate paradigm shift from a relief-centred and reactive approach towards a proactive approach covering prevention, mitigation and preparedness, with relief as one phase in a cycle rather than the whole of the response. The shift is the point most questions turn on, so it should be stated explicitly.</p>
+
+<h3>The Statutory Framework</h3>
+
+<p>The <strong>Disaster Management Act, 2005</strong> created a three-tier structure. The <strong>National Disaster Management Authority</strong>, chaired by the Prime Minister, lays down policies, plans and guidelines. The <strong>State Disaster Management Authority</strong>, chaired by the Chief Minister, does the same for the State. The <strong>District Disaster Management Authority</strong>, chaired by the District Magistrate or Collector with the elected head of the district local body as co-chair, is the level at which planning meets execution. A <strong>National Executive Committee</strong> of secretaries assists the national authority, the <strong>National Institute of Disaster Management</strong> provides training and research, and the <strong>National Disaster Response Force</strong> provides specialist response units. Financing is through the <strong>National and State Disaster Response Funds</strong> for immediate relief and the corresponding <strong>Mitigation Funds</strong> for measures taken before an event.</p>
+
+<p>The <strong>National Policy on Disaster Management, 2009</strong> set out the approach in full, emphasising a culture of prevention and preparedness, mainstreaming disaster risk reduction into development planning, and community-based disaster management. The last of these is the element most often neglected in practice and most often asked about, since the first response to any event is by those present, and a trained community is the only resource available in the hours before any force arrives.</p>
+
+<h3>The International Framework</h3>
+
+<p>The <strong>Sendai Framework for Disaster Risk Reduction 2015-2030</strong> supplies the current international standard, with four priorities for action: understanding disaster risk; strengthening disaster risk governance; investing in disaster risk reduction for resilience; and enhancing disaster preparedness for effective response and to build back better in recovery and reconstruction. Its significance is the shift of emphasis from managing disasters to managing risk, and the explicit recognition that the losses to be reduced include those to livelihoods and infrastructure rather than lives alone. India's ten-point agenda on disaster risk reduction, articulated at the Asian Ministerial Conference, aligns with this in emphasising that all development sectors must imbibe risk management, in the use of technology and risk mapping, and in learning from every disaster.</p>
+
+<h3>Community-Based Disaster Risk Management</h3>
+
+<p>Community-based disaster risk management treats the community as the primary actor rather than the recipient of relief. It involves participatory risk assessment in which residents map the hazards and the vulnerable in their own area, the preparation of a local plan, the formation and training of task forces for search, rescue, first aid and evacuation, the identification of safe shelters and routes, and regular mock drills. Its justification is that the period during which most lives are saved is before external help arrives, that local knowledge of who is vulnerable and where water rises first is not available in any district office, and that a plan prepared by those who will execute it is more likely to be executed. It addresses the gap the statutory structure leaves, since authorities at three levels can direct a response but cannot themselves be present everywhere at once.</p>
+
+<h3>Standing Weaknesses</h3>
+
+<ul>
+ <li><strong>Mitigation remains underfunded relative to relief,</strong> because expenditure on an event that has not occurred competes poorly with expenditure on one that has.</li>
+ <li><strong>Disaster risk reduction is not mainstreamed into development,</strong> so that construction proceeds in flood plains and on unstable slopes, and the development project creates the vulnerability the disaster machinery later addresses.</li>
+ <li><strong>Local capacity is thin,</strong> since the district authority depends on officials whose primary duties lie elsewhere and who are transferred frequently.</li>
+ <li><strong>Plans exist on paper without rehearsal,</strong> and an unrehearsed plan fails at the point where coordination is required.</li>
+ <li><strong>Recovery is treated as reconstruction of what existed,</strong> rather than as the opportunity to build back better, so the same vulnerability is restored.</li>
+ <li><strong>Vulnerability is unevenly assessed,</strong> and the persons most at risk, the elderly, the disabled, and those whose livelihood requires them to remain in the hazard zone, are the least served by a uniform response.</li>
+</ul>
+
+<h2>Urban Administration and the Metropolitan Problem</h2>
+
+<p>India's urban population is growing faster than the institutions meant to govern it, and the administration of large cities has become one of the sharpest problems in Indian administration. The difficulty is structural rather than financial alone.</p>
+
+<h3>Fragmented Authority</h3>
+
+<p>A metropolitan area is typically governed by a municipal corporation with elected councillors, a development authority under the State government controlling land and master planning, a water and sewerage board, a transport undertaking, a pollution control board, a police commissionerate under the State, and a number of parastatals, each with its own jurisdiction, budget and reporting line. No single authority is responsible for the city, and none can be held accountable for it. The elected mayor, in most States, holds a short term and limited executive power, while the commissioner is a State appointee answerable upward rather than to the council.</p>
+
+<p>The <strong>Seventy-fourth Amendment</strong> provided the corrective, requiring the constitution of <strong>Metropolitan Planning Committees</strong> under Article 243ZE to prepare a draft development plan for the metropolitan area as a whole, having regard to the plans of the municipalities and panchayats within it, to matters of common interest including coordinated spatial planning, sharing of water and other resources, and integrated development of infrastructure and environmental conservation. The corresponding <strong>District Planning Committee</strong> under Article 243ZD consolidates plans at the district level. Both have been constituted late and unevenly, and where constituted they have frequently lacked the technical staff and the authority to make their plans binding on the agencies whose actions they are meant to coordinate. The result is that the constitutional answer to fragmentation exists on paper while fragmentation continues in fact.</p>
+
+<h3>Finance</h3>
+
+<p>Municipal finances depend on property tax, user charges, and transfers from the State on the recommendation of the State Finance Commission. Property tax collection is well below potential because assessment registers are incomplete and valuations outdated; user charges recover a fraction of the cost of water supply and solid waste management; and State transfers are irregular in amount and timing, which makes multi-year planning impossible. A city government that cannot predict its revenue cannot borrow against it, which is why municipal bond issuance has remained small despite repeated policy encouragement. The chain from unreliable revenue to weak creditworthiness to dependence on grants to further weakening of own revenue effort is the central fiscal problem of Indian urban government.</p>
+
+<h3>The Smart Cities Approach</h3>
+
+<p>The <strong>Smart Cities Mission</strong>, launched in 2015, selected cities through a competition in which each prepared a proposal, and funded area-based development in a selected part of the city together with pan-city technology solutions, executed through a <strong>Special Purpose Vehicle</strong> constituted as a company with the State and the urban local body as promoters. <strong>AMRUT</strong> ran alongside it addressing basic infrastructure in a larger number of cities.</p>
+
+<p>The approach is defended on the ground that competition raised the quality of city planning, that the special purpose vehicle allowed execution free of municipal procedural delay, and that integrated command and control centres have improved traffic management, surveillance and the monitoring of civic services, with several proving useful during the pandemic for tracking cases and logistics.</p>
+
+<p>The criticisms are equally established and should be stated. Area-based development concentrates investment in a small portion of a city, which risks producing an enclave of good infrastructure within a city that remains as it was. The special purpose vehicle, being a company with a board rather than a committee of elected representatives, transfers decisions away from the elected municipal body and therefore works against the devolution the Seventy-fourth Amendment intended. And the emphasis on technology addresses the monitoring of services more readily than their provision, so that a command centre can display the location of every garbage truck in a city that still lacks the capacity to process its waste.</p>
+
+<h3>The Substantive Problems</h3>
+
+<ul>
+ <li><strong>Solid waste,</strong> where collection has improved but segregation at source and processing have not, so that the problem has been moved to the edge of the city rather than solved.</li>
+ <li><strong>Air quality,</strong> which is produced by sources spread across an airshed larger than any municipal boundary, and therefore requires a regional authority with power over transport, industry, construction and agricultural burning in several districts and sometimes several States.</li>
+ <li><strong>Water,</strong> where supply is intermittent, distribution losses are high, and groundwater depletion is uncosted.</li>
+ <li><strong>Housing and informal settlement,</strong> where the policy has shifted from clearance to in-situ upgrading, and where security of tenure is the variable that determines whether residents invest in their own dwellings.</li>
+ <li><strong>Transport,</strong> where investment in mass transit is not matched by integration of fares, routes and last-mile connectivity across the separate undertakings that operate them.</li>
+ <li><strong>Flooding,</strong> which is produced by the encroachment of drainage channels and the paving of recharge areas, and which is therefore a planning failure appearing as a disaster.</li>
+</ul>
+
+<h2>Environmental Administration and Climate Change</h2>
+
+<p>Environmental administration in India operates through the pollution control boards at the Union and State levels under the water and air legislation, the environmental clearance process under the Environment Protection Act, the forest and wildlife machinery, and the <strong>National Green Tribunal</strong>, which supplies a specialist forum with the power to order remediation and compensation.</p>
+
+<p>The <strong>National Action Plan on Climate Change</strong> organises the response through eight missions covering solar energy, enhanced energy efficiency, sustainable habitat, water, sustaining the Himalayan ecosystem, a green India, sustainable agriculture, and strategic knowledge for climate change, with State Action Plans prepared to translate these to the sub-national level. The administrative significance is that climate response is not a sector but a constraint on every sector, so the missions must be delivered by line departments whose primary objectives are different.</p>
+
+<h3>The Administrative Difficulties</h3>
+
+<ul>
+ <li><strong>Regulatory capacity.</strong> Pollution control boards are understaffed relative to the number of units they must monitor, and the technical posts sanctioned are frequently vacant, so monitoring is by self-reporting.</li>
+ <li><strong>The clearance process</strong> is criticised from both sides, as an obstacle to investment because of delay, and as ineffective because the environmental impact assessment is prepared by a consultant paid by the proponent and because compliance with clearance conditions is rarely audited after the project is built.</li>
+ <li><strong>Development against environment</strong> is presented as a trade-off at the level of an individual project, where the benefit is concentrated and immediate and the cost is diffuse and delayed, which biases every such decision in the same direction.</li>
+ <li><strong>Federal division.</strong> Forests and environment are in the Concurrent List while land, water and agriculture are with the States, so the instruments needed for climate adaptation are divided from the authority that sets climate policy.</li>
+ <li><strong>Adaptation is underattended relative to mitigation,</strong> although the administrative burden of climate change in India falls principally on adaptation: heat action plans, crop advisories, water rationing and the protection of coastal settlements.</li>
+</ul>
+
+<h2>Technology and Administration</h2>
+
+<h3>What Digitalisation Has Changed</h3>
+
+<p>The <strong>Digital India</strong> programme organised the state's use of technology around infrastructure as a utility, governance and services on demand, and digital empowerment of citizens. The consequences for administration have been substantial. Authenticated digital identity has permitted benefits to be transferred directly to accounts, removing intermediate custody of funds. Interoperable payment infrastructure has made small transfers costless. Records held by the state can be produced to the state electronically, removing the requirement that a citizen obtain a document from one office to submit to another. And the digitisation of land records, though incomplete, addresses the source of a large proportion of civil litigation.</p>
+
+<h3>The Problems That Follow</h3>
+
+<ul>
+ <li><strong>Exclusion.</strong> A system that authenticates entitlement digitally denies it when authentication fails, and failure is concentrated among the elderly, manual labourers whose fingerprints are worn, and residents of areas with poor connectivity. The administrative answer is a reliable exception-handling route with a human decision-maker, and the design failure is to treat exceptions as fraud rather than as the predictable tail of any biometric system.</li>
+ <li><strong>The digital divide,</strong> which is not only of access but of literacy and of language, so that an interface in English on a smartphone is unavailable to a substantial part of the population even where the network reaches them. The intermediation this creates, through common service centres and private operators, reintroduces at the counter the rent that digitisation was meant to remove.</li>
+ <li><strong>Cyber security,</strong> which has become an administrative rather than a technical question as government services, health records and payment systems have moved online. The vulnerability lies less in the infrastructure than in the practices of the officials who use it, and the low level of cyber awareness among staff is the weakness most frequently identified.</li>
+ <li><strong>Data governance and privacy.</strong> The <strong>Digital Personal Data Protection Act, 2023</strong> establishes obligations on those who process personal data, rights for the individuals whose data is processed, and a Data Protection Board. Its application to the state is the question of administrative significance, since the government is the largest processor of personal data in the country and the exemptions available to it determine how much of the framework actually binds it.</li>
+ <li><strong>Algorithmic decisions.</strong> Where eligibility is determined by a rule executed in software, the reasons for a decision may be unavailable to the official communicating it and to the citizen receiving it, which is inconsistent with the duty to give reasons. Administrative law has not yet adapted to this, and the requirement that a decision affecting rights be explicable is the principle that will have to be applied.</li>
+</ul>
+
+<h2>Other Contemporary Issues</h2>
+
+<h3>Migration</h3>
+
+<p>Internal migration, much of it circular between a rural home and an urban workplace, is the condition of a large part of the workforce, and administration is organised on the assumption of residence. A migrant is registered for entitlements where he is from and lives where he is not registered, so that ration, health, schooling and welfare entitlements are unavailable precisely where they are needed. Portability of entitlements addresses part of this, as does the registration of construction and other unorganised workers, but the administrative machinery at the destination is not funded for a population it does not count. The census undercounts short-duration migrants, so the planning data itself is deficient.</p>
+
+<h3>Public Health Administration</h3>
+
+<p>The pandemic exposed the structure of Indian health administration in a way that no report had. Public health is a State subject while the capacity for surveillance, procurement and regulation is largely at the Union level; the district health machinery had to coordinate with the revenue and police administration under emergency powers; and the reliance on the district collector as the coordinating authority demonstrated both the strength of a general-purpose field officer and the limits of one without specialist public health training. The persisting questions are the ratio of public health specialists to clinicians in the health cadres, the separation of public health functions from hospital management, the strengthening of primary care, and the regulation of a private sector that provides most outpatient care but is not part of the public health system.</p>
+
+<h3>Administrative Capacity</h3>
+
+<p><strong>Mission Karmayogi</strong>, the national programme for civil services capacity building approved in 2020, seeks to shift training from rule-based to role-based, defining the competencies each role requires and matching training to them, delivering it through an online platform available to all officials, and establishing a <strong>Capacity Building Commission</strong> to supervise the effort. Its premise is that the deficiency is of competence rather than of rules, and that a system which trains officials at entry and rarely thereafter cannot keep pace with the change in what their roles require. The questions it raises are whether competence frameworks can be made specific enough to be useful, whether online delivery reaches field officials whose difficulty is time rather than access, and whether training will be linked to posting and promotion, without which it remains an activity rather than a system.</p>
+
+<h2>The Common Thread</h2>
+
+<p>These issues appear disparate but they share a structure, and an answer that identifies it will be stronger than one that treats them separately.</p>
+
+<p>Each of them crosses jurisdictions that Indian administration divides. Air quality crosses municipal and State boundaries; disaster response crosses departments; migration crosses States; climate adaptation crosses every sector. The machinery is organised in vertical departments with clear hierarchies, and these problems are horizontal. The instruments developed to address that mismatch, the planning committee, the mission, the special purpose vehicle, the empowered group, are all attempts to construct horizontal authority without disturbing the vertical structure, and their common weakness is that coordination without authority over resources produces meetings rather than decisions.</p>
+
+<p>Each of them also requires the state to act before harm occurs, and administrative systems are built to respond after it does. Mitigation, preparedness, adaptation and prevention are all expenditures whose benefit is an event that does not happen, which is the hardest case to make in any budget and the first provision to be reduced.</p>
+
+<p>And each of them tests the citizen-facing capacity of the administration at the lowest level, since it is the municipal ward, the district authority and the primary health centre that must deliver, while the policy, the funding and the attention remain concentrated at the Union level. The persistent conclusion of every commission that has examined these questions is that the administrative reform that matters most is the strengthening of the level at which the citizen actually meets the state.</p>
+
+<h2>Inclusion and Representation in Administration</h2>
+
+<p>The composition of the administration is itself an administrative issue, because a service that does not reflect the society it governs is less able to understand it and less trusted by it. <strong>Representative bureaucracy</strong> is the doctrine that a public service should mirror the society in its social composition, and it is defended on two distinct grounds which an answer should separate. <strong>Passive representation</strong> is valued symbolically: the presence of a group in the service signals that the state belongs to it. <strong>Active representation</strong> is the further claim that officials drawn from a group will make decisions more favourable to its interests, which is empirically contested and normatively uncomfortable, since it implies that officials should not be neutral.</p>
+
+<p>Reservation in public employment under Articles 16(4) and 335 gives the Indian service its distinctive composition, and the administrative questions that arise are about implementation rather than principle: the persistence of unfilled reserved vacancies in technical and senior posts, the concentration of reserved appointments in lower grades, and the operation of reservation in promotion. Beyond reservation, the participation of women in the higher services has risen substantially at entry while remaining low in field postings in certain departments and in the police, where the proportion of women remains well below the targets States have themselves set. The administrative consequences are practical: the absence of women officers affects the reporting of crimes against women, and the absence of officials speaking a local language affects every interaction in a district where the service language differs from the spoken one.</p>
+
+<p><strong>Accessibility</strong> is the dimension most recently addressed. The obligation to make public buildings, transport and digital services usable by persons with disabilities converts an equity commitment into a set of specific administrative requirements: physical access audits, accessible formats for public information, and the design of digital services to a standard that assistive technology can read. Compliance has been uneven, and the difficulty is the familiar one that an obligation without an assessment and a consequence produces a policy rather than a change.</p>
+
+<h2>The Regulatory State</h2>
+
+<p>The growth of independent regulators is among the most significant structural changes in Indian administration since 1991, and it raises questions that the older framework of ministerial accountability does not answer. Regulators now govern telecommunications, electricity, insurance, pensions, securities, petroleum, competition, food safety and real estate, and they combine functions that constitutional theory keeps apart: they make rules, adjudicate disputes and enforce compliance.</p>
+
+<h3>Why They Were Created</h3>
+
+<ul>
+ <li><strong>Credible commitment.</strong> Private investment in infrastructure requires assurance that the terms will not be changed after the capital is sunk, and a regulator insulated from the government provides it where a ministry cannot.</li>
+ <li><strong>Separation of ownership from regulation,</strong> which becomes necessary the moment a state-owned incumbent competes with private entrants.</li>
+ <li><strong>Technical complexity,</strong> since tariff setting, spectrum allocation and prudential supervision require continuous specialist attention that a ministry organised for policy cannot supply.</li>
+ <li><strong>Consistency over time,</strong> because a regulator applying published principles produces a more predictable environment than a ministry responding to circumstance.</li>
+</ul>
+
+<h3>The Problems They Raise</h3>
+
+<ul>
+ <li><strong>Accountability.</strong> A body that is independent of the minister is by that fact removed from parliamentary accountability through the minister, and no substitute mechanism has been consistently established. Accountability to the legislature directly, through the tabling of reports and appearance before committees, is the usual proposal.</li>
+ <li><strong>Combination of functions.</strong> A regulator that frames a rule, prosecutes its breach and adjudicates the charge is judge in its own cause, and the remedy adopted in some sectors, of separating adjudication into an appellate tribunal, has been applied unevenly.</li>
+ <li><strong>Capture,</strong> both by the regulated industry, through information dependence and the prospect of post-retirement employment, and by the government, through appointments, the power to issue policy directions and control of the regulator's budget.</li>
+ <li><strong>Capacity,</strong> since regulators compete for specialist staff with the industries they regulate and generally lose, and vacancies at the top have left several bodies unable to constitute a quorum.</li>
+ <li><strong>Overlap,</strong> where the jurisdiction of a sector regulator meets that of the competition authority, or where two sector regulators claim the same transaction, producing forum shopping and inconsistent rulings.</li>
+</ul>
+
+<p>The Second ARC's recommendation that regulators be created by a common statutory framework rather than by separate statutes, with uniform provisions on selection, tenure, removal, funding and accountability, addresses most of these at once, and it remains unimplemented.</p>
+
+<h2>Coordination in Crisis</h2>
+
+<p>The Indian constitutional division places most subjects on which a crisis is handled with the States, while the resources, the specialist forces and much of the information are with the Union. The management of an epidemic, a cyclone or an internal security situation therefore depends on coordination rather than on command, and the instruments used are worth naming because questions ask for them.</p>
+
+<ul>
+ <li><strong>The Crisis Management Group</strong> and the machinery under the Disaster Management Act, which allow the Union to issue directions and deploy central forces at the request of a State.</li>
+ <li><strong>Inter-State Councils and zonal councils,</strong> which provide a forum for the resolution of disputes and the coordination of policy, and whose infrequency of meeting is the standing criticism.</li>
+ <li><strong>Centrally sponsored schemes,</strong> which achieve coordination by attaching conditions to money, and which are criticised for constraining State priorities in subjects constitutionally theirs.</li>
+ <li><strong>The district as the unit of convergence,</strong> where the collector coordinates departments that report vertically to separate State secretariats, which is the only level at which horizontal integration actually occurs and the reason the office has survived every proposal to dismantle it.</li>
+</ul>
+
+<p>The general lesson that runs through the contemporary issues is that coordination is the scarce administrative capacity in India, and that it is scarce because the structure is vertical while the problems are horizontal. Every instrument devised to supply it, from the planning committee to the mission to the empowered group, works to the extent that it carries authority over resources and fails to the extent that it does not.</p>`,
+
  'rural-development-administration': `
 <h2>Why This Is a Distinct Subject</h2>
 
