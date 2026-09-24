@@ -7,22 +7,6 @@ import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
 
 // ── Scroll-direction hook ────────────────────────────────────
-function useScrollDirection() {
-  const [visible, setVisible] = useState(true);
-  const lastY = useRef(0);
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      if (y < 80) { setVisible(true); lastY.current = y; return; }
-      setVisible(y < lastY.current);
-      lastY.current = y;
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-  return visible;
-}
-
 // ── Inject IDs into headings for TOC ────────────────────────
 function injectHeadingIds(html: string): string {
   let h2count = 0;
@@ -289,7 +273,8 @@ function SidebarTOC({ contentHtml }: { contentHtml: string }) {
               if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
             }}
           >
-            {t.text}
+            <span className="sb-toc-dot" />
+            <span>{t.text}</span>
           </button>
         ))}
       </nav>
@@ -457,7 +442,6 @@ export default function NoteReader({
 }) {
   const noteContentRef = useRef<HTMLDivElement>(null);
   const noteSearch = useNoteSearch(noteContentRef);
-  const headerVisible = useScrollDirection();
 
   // Open on a desktop, closed on a phone, where 240px of sidebar would
   // leave nothing for the note itself.
@@ -649,6 +633,63 @@ export default function NoteReader({
           .sb-toc-link:hover { background: var(--bg3); color: var(--text); }
           .sb-toc-link.on { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
 
+          /* ── Sidebar head ──
+             Where the reader is, before what is in the note. */
+          .sb-head { padding-bottom: 0.9rem; margin-bottom: 0.2rem; border-bottom: 1px solid var(--border); }
+          .sb-chip {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--bg3); border: 1px solid var(--border);
+            border-radius: 20px; padding: 3px 9px 3px 7px;
+            font-family: var(--font-mono); font-size: 0.55rem; font-weight: 500;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3);
+          }
+          .sb-chip-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+          .sb-title {
+            font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+            color: var(--text); line-height: 1.3; letter-spacing: -0.01em;
+            margin: 0.6rem 0 0.25rem;
+          }
+          .sb-sub {
+            font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+            color: var(--text3); margin: 0; line-height: 1.4;
+          }
+
+          /* A label with a rule running off it, so the sections read as
+             separated without needing a box around each. */
+          .sb-section-label::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--border2), transparent);
+          }
+
+          /* ── Contents ── */
+          .sb-toc-link { display: flex; align-items: flex-start; gap: 7px; }
+          .sb-toc-dot {
+            width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0;
+            margin-top: 0.45rem; background: var(--border2); transition: background 0.15s;
+          }
+          .sb-toc-link.sub .sb-toc-dot { width: 3px; height: 3px; }
+          .sb-toc-link:hover .sb-toc-dot { background: var(--text3); }
+          .sb-toc-link.on .sb-toc-dot { background: var(--accent); box-shadow: 0 0 5px var(--accent); }
+
+          /* ── Related ── */
+          .sb-related { display: flex; flex-direction: column; gap: 0.35rem; }
+          .sb-rel {
+            display: block; text-decoration: none; background: var(--bg3);
+            border: 1px solid var(--border); border-radius: 8px;
+            padding: 0.45rem 0.6rem; transition: border-color 0.15s, transform 0.15s;
+          }
+          .sb-rel:hover { border-color: var(--border2); transform: translateX(2px); }
+          .sb-rel-dir {
+            display: block; font-family: var(--font-mono); font-size: 0.52rem;
+            letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3);
+            margin-bottom: 2px;
+          }
+          .sb-rel-title {
+            display: block; font-family: var(--font-ui); font-size: 0.74rem;
+            font-weight: 500; color: var(--text2); line-height: 1.35;
+          }
+          .sb-rel:hover .sb-rel-title { color: var(--text); }
+
           /* ── Scroll rail ──────────────────────────────────────────
              Hidden below 1024px: at the edge of a touch screen this competes
              with the scroll gesture, and a 2px tick is smaller than a
@@ -795,7 +836,38 @@ export default function NoteReader({
       {/* ── Sidebar ── */}
       <aside className="nr-sidebar" aria-label="Note sidebar">
         <div className="nr-sidebar-inner">
+          {/* Where the reader is: subject and paper, then the note itself. */}
+          <div className="sb-head">
+            <span className="sb-chip">
+              <span className="sb-chip-dot" style={{ background: subjectColor }} />
+              {subject.replace('-', ' ')} · Paper {note.paper}
+            </span>
+            <h2 className="sb-title">{note.title}</h2>
+            <p className="sb-sub">{note.section}</p>
+          </div>
+
           {processedContent && <SidebarTOC contentHtml={processedContent} />}
+
+          {(prev || next) && (
+            <>
+              <div className="sb-section-label as-heading"><span>Related</span></div>
+              <nav className="sb-related">
+                {prev && (
+                  <Link className="sb-rel" href={`/notes/${subject}/${prev.slug}`}>
+                    <span className="sb-rel-dir">Previous</span>
+                    <span className="sb-rel-title">{prev.title}</span>
+                  </Link>
+                )}
+                {next && (
+                  <Link className="sb-rel" href={`/notes/${subject}/${next.slug}`}>
+                    <span className="sb-rel-dir">Next</span>
+                    <span className="sb-rel-title">{next.title}</span>
+                  </Link>
+                )}
+              </nav>
+            </>
+          )}
+
           <SidebarNotes subject={subject} slug={slug} />
         </div>
       </aside>
@@ -804,7 +876,7 @@ export default function NoteReader({
       <div className="nr-main">
 
       {/* ── Header ── */}
-      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: headerVisible ? 60 : -200, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)', transition: 'top 0.28s cubic-bezier(0.4,0,0.2,1)', opacity: headerVisible ? 1 : 0 }}>
+      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100, backdropFilter: 'blur(10px)' }}>
         {/* Sidebar toggle */}
         <button type="button" className="nr-sb-toggle"
           onClick={() => setSidebarOpen(o => !o)}
