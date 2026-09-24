@@ -580,12 +580,13 @@ export default function NoteReader({
              A two column reader: a sidebar that collapses to nothing and a
              main column that takes the width back. Centred as a pair, so the
              note does not jump sideways when the sidebar is toggled. */
+          /* Full width, so the sidebar sits against the edge of the window
+             rather than inside a centred box with a gutter to its left. The
+             measure is set on the note itself, further in. */
           .nr-shell {
             display: flex; align-items: flex-start; gap: 0;
-            max-width: 900px; margin: 0 auto; padding: 0 0 5rem;
-            transition: max-width 0.25s cubic-bezier(0.4,0,0.2,1);
+            width: 100%; margin: 0; padding: 0 0 5rem;
           }
-          .nr-shell.with-sidebar { max-width: 1160px; }
           .nr-main { flex: 1; min-width: 0; }
 
           .nr-sidebar {
@@ -623,7 +624,6 @@ export default function NoteReader({
           /* Below 1024px the sidebar floats over the note instead of taking
              width from it, and a tap outside the toggle closes it again. */
           @media (max-width: 1024px) {
-            .nr-shell, .nr-shell.with-sidebar { max-width: 900px; }
             .nr-sidebar {
               position: fixed; top: 60px; left: 0; z-index: 120;
               height: calc(100vh - 60px); width: 0;
