@@ -233,7 +233,7 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
 
 // ── Sidebar contents ──────────────────────────────────────────
 /** The same headings as the inline card, laid out for a 240px column. */
-function SidebarTOC({ contentHtml }: { contentHtml: string }) {
+function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNavigate?: () => void }) {
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
   const [activeId, setActiveId] = useState('');
 
@@ -269,8 +269,14 @@ function SidebarTOC({ contentHtml }: { contentHtml: string }) {
             type="button"
             className={'sb-toc-link' + (t.level === 3 ? ' sub' : '') + (activeId === t.id ? ' on' : '')}
             onClick={() => {
-              const el = document.getElementById(t.id);
-              if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+              // On a phone the panel covers the note and locks body scroll,
+              // so it has to be dismissed before the jump can land. Two frames
+              // lets the unlock commit first; on a desktop it is imperceptible.
+              onNavigate?.();
+              requestAnimationFrame(() => requestAnimationFrame(() => {
+                const el = document.getElementById(t.id);
+                if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+              }));
             }}
           >
             <span className="sb-toc-dot" />
@@ -447,6 +453,51 @@ export default function NoteReader({
   // leave nothing for the note itself.
   const [sidebarOpen, setSidebarOpen] = useState(
     typeof window !== 'undefined' ? window.innerWidth > 1024 : true);
+
+  // Below 1024px the sidebar floats over the note, which makes it a modal in
+  // every way except history. Back was the instinctive way to dismiss it and
+  // nothing was on the stack for it, so Back left the note altogether.
+  // Opening pushes an entry; Back pops that entry and only closes the panel.
+  const sidebarEntry = useRef(false);
+  const floating = () =>
+    typeof window !== 'undefined' && window.matchMedia('(max-width: 1024px)').matches;
+
+  const openSidebar = useCallback(() => {
+    setSidebarOpen(true);
+    if (floating() && !sidebarEntry.current) {
+      // Same URL, so popping it never moves the reader off the note.
+      window.history.pushState({ nrSidebar: true }, '');
+      sidebarEntry.current = true;
+    }
+  }, []);
+
+  const closeSidebar = useCallback(() => {
+    // Let the pop handler do the closing so the entry is always consumed,
+    // otherwise it lingers and the next Back is swallowed doing nothing.
+    if (sidebarEntry.current) window.history.back();
+    else setSidebarOpen(false);
+  }, []);
+
+  useEffect(() => {
+    const onPop = () => { sidebarEntry.current = false; setSidebarOpen(false); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && floating()) closeSidebar();
+    };
+    window.addEventListener('popstate', onPop);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('popstate', onPop);
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [closeSidebar]);
+
+  // The note behind a floating sidebar should not scroll under it.
+  useEffect(() => {
+    if (!sidebarOpen || !floating()) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [sidebarOpen]);
   const [highlights, setHighlights] = useState<Highlight[]>([]);
   const [selectedColor, setSelectedColor] = useState<'yellow'|'green'|'red'|'blue'>('yellow');
   const [showToolbar, setShowToolbar] = useState(false);
@@ -597,6 +648,16 @@ export default function NoteReader({
           .nr-sidebar-inner::-webkit-scrollbar-track { background: transparent; }
           .nr-sidebar-inner::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
 
+          /* Backdrop only exists where the sidebar floats; on a desktop the
+             sidebar takes width from the note and there is nothing to dim. */
+          .nr-backdrop { display: none; }
+
+          .nr-sb-close {
+            display: none; position: absolute; top: 0.6rem; right: 0.6rem; z-index: 2;
+            background: var(--bg3); border: 1px solid var(--border);
+            border-radius: 6px; color: var(--text2); cursor: pointer;
+            padding: 5px; line-height: 0;
+          }
           .nr-sb-toggle {
             display: inline-flex; align-items: center; gap: 5px;
             background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
@@ -618,7 +679,13 @@ export default function NoteReader({
               width: 264px; min-width: 264px;
               box-shadow: 8px 0 32px rgba(0,0,0,0.28);
             }
-            .nr-sidebar-inner { position: static; max-height: 100%; width: 264px; }
+            .nr-sidebar-inner { position: static; max-height: 100%; width: 264px; padding-top: 2.6rem; }
+            .nr-sb-close { display: block; }
+            .nr-shell.with-sidebar .nr-backdrop {
+              display: block; position: fixed; inset: 0; z-index: 110;
+              background: rgba(0,0,0,0.45);
+              -webkit-tap-highlight-color: transparent;
+            }
           }
 
           /* ── Sidebar contents ── */
@@ -900,8 +967,17 @@ export default function NoteReader({
       `}</style>
 
       {/* ── Sidebar ── */}
+      {/* Tap-anywhere-else to dismiss, which the floating panel never had. */}
+      <div className="nr-backdrop" onClick={closeSidebar} aria-hidden="true" />
       <aside className="nr-sidebar" aria-label="Note sidebar">
         <div className="nr-sidebar-inner">
+          {/* The header toggle scrolls out of reach on a phone, so the panel
+              carries its own close control. */}
+          <button type="button" className="nr-sb-close" onClick={closeSidebar} aria-label="Close sidebar">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+              <line x1="4" y1="4" x2="12" y2="12" /><line x1="12" y1="4" x2="4" y2="12" />
+            </svg>
+          </button>
           {/* Where the reader is: subject and paper, then the note itself. */}
           <div className="sb-head">
             <span className="sb-chip">
@@ -912,7 +988,12 @@ export default function NoteReader({
             <p className="sb-sub">{note.section}</p>
           </div>
 
-          {processedContent && <SidebarTOC contentHtml={processedContent} />}
+          {processedContent && (
+            <SidebarTOC
+              contentHtml={processedContent}
+              onNavigate={() => { if (floating()) closeSidebar(); }}
+            />
+          )}
 
           {(prev || next) && (
             <>
@@ -951,7 +1032,7 @@ export default function NoteReader({
         display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap' as const,
       }}>
         <button type="button" className="nr-sb-toggle"
-          onClick={() => setSidebarOpen(o => !o)}
+          onClick={() => (sidebarOpen ? closeSidebar() : openSidebar())}
           aria-expanded={sidebarOpen}
           title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}>
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
