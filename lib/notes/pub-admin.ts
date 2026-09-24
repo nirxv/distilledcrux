@@ -134,6 +134,15 @@ export const paper2Notes: PubAdminNote[] = [
     subtopics: ['Parliamentary System in India', 'Federal Features', 'Legislative Powers Distribution', 'Executive Powers Distribution', 'Financial Powers Distribution', 'Emergency Provisions'],
   },
   {
+    slug: 'public-sector-undertakings',
+    title: 'Public Sector Undertakings',
+    paper: 2,
+    section: 'Indian Administration',
+    topic: 13,
+    description: 'Rationale and the Industrial Policy Resolutions; forms of organisation: departmental undertaking, public corporation, government company; autonomy and accountability; the MOU system; Maharatna, Navratna and Miniratna; disinvestment and the 2021 policy',
+    subtopics: ['Rationale & Industrial Policy', 'Forms of Organisation', 'Autonomy & Accountability', 'MOU System', 'Maharatna & Navratna', 'Disinvestment', 'Pricing Policy'],
+  },
+  {
     slug: 'union-government-administration',
     title: 'Union Government and Administration',
     paper: 2,

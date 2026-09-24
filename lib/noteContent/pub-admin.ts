@@ -3771,6 +3771,220 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The conclusion an answer should reach is that the formal framework has been remarkably stable while the working balance has moved substantially, and that it has moved with the party system more than with any amendment. Indian federalism is best understood as a constitutional design whose centralising provisions are permanently available and only intermittently used, which makes the political conditions of their use as important a subject as the provisions themselves.</p>
 `,
+ 'public-sector-undertakings': `<h2>Why the Public Sector Was Built</h2>
+
+<p>The public sector in India was not an incidental growth but a deliberate instrument of a development strategy. At independence the private sector lacked the capital, the technology and the appetite for risk needed to establish heavy industry, the market for basic goods was thin, and the political settlement was committed to reducing concentration of economic power. Public ownership answered all three at once, and the enterprises were expected to do what no private investor would attempt.</p>
+
+<p>The objectives set for public undertakings were accordingly plural, and much of the later criticism of their performance follows from that plurality.</p>
+
+<ul>
+ <li><strong>Accelerating growth</strong> by mobilising savings and investing them in sectors with long gestation and low immediate returns, particularly steel, heavy engineering, fertilisers and power.</li>
+ <li><strong>Building the industrial base,</strong> so that basic and capital goods were produced domestically rather than imported, which was a strategic as much as an economic objective.</li>
+ <li><strong>Preventing concentration of economic power,</strong> in accordance with Article 39 of the Directive Principles, which requires that ownership and control of material resources be so distributed as best to subserve the common good and that the operation of the economic system does not result in concentration of wealth.</li>
+ <li><strong>Balanced regional development,</strong> by locating plants in backward areas where private capital would not go, which is why several of the largest undertakings sit in districts that were industrially empty.</li>
+ <li><strong>Employment generation,</strong> and employment of a particular kind, since public enterprises were expected to observe reservation policy and labour standards that the private sector did not.</li>
+ <li><strong>Import substitution and self-reliance,</strong> reducing dependence on foreign supply in sectors judged strategic.</li>
+ <li><strong>Generating surplus for reinvestment,</strong> which was the assumption that made the whole model fiscally coherent and which proved the weakest of them.</li>
+</ul>
+
+<h3>The Policy Framework</h3>
+
+<p>The <strong>Industrial Policy Resolution of 1948</strong> established the mixed economy and divided industry into four categories, reserving arms and ammunition, atomic energy and railways to the state, listing six industries in which new undertakings would be established by the state alone, leaving a further group subject to regulation, and leaving the rest to private enterprise.</p>
+
+<p>The <strong>Industrial Policy Resolution of 1956</strong>, adopted alongside the Second Five Year Plan and the Mahalanobis strategy, is the document that built the public sector as it came to exist. It classified industries into three schedules. <strong>Schedule A</strong> listed seventeen industries whose future development would be the exclusive responsibility of the state, including arms, atomic energy, iron and steel, heavy castings, heavy electrical plant, coal, mineral oils, aircraft, railways, shipbuilding, telephones and generation and distribution of electricity. <strong>Schedule B</strong> listed twelve industries which would be progressively state-owned, where the state would take the initiative but private enterprise could supplement it. <strong>Schedule C</strong> comprised the remainder, left to the private sector though subject to regulation. The Resolution also declared that the state would progressively assume a predominant and direct responsibility for setting up new industrial undertakings, which is the sentence that gave the public sector its commanding heights.</p>
+
+<p>The <strong>Industrial Policy Statement of 1991</strong> reversed the framework. The list of industries reserved for the public sector was cut from seventeen to eight and subsequently to a very small number; industrial licensing was abolished for most industries; the requirement of prior approval for large houses under the Monopolies and Restrictive Trade Practices Act was removed; and it was announced that the government would review the portfolio of public investments with a view to limiting it to strategic, high-technology and essential infrastructure areas, that chronically loss-making units would be referred to the Board for Industrial and Financial Reconstruction, and that a part of government shareholding would be disinvested. This is the point at which the public sector ceased to be an instrument of expansion and became a portfolio to be managed.</p>
+
+<h2>Forms of Organisation</h2>
+
+<p>The question of the appropriate form for a public enterprise is the oldest in the subject and the one most often examined. Each form represents a different resolution of the tension between the autonomy a commercial undertaking needs and the accountability that public money requires.</p>
+
+<h3>The Departmental Undertaking</h3>
+
+<p>The departmental undertaking is organised as a department or a branch of one, financed by annual appropriation from the treasury, subject to budgetary, accounting and audit controls applicable to government activity, staffed by civil servants, and headed by an official answerable to the minister. Railways, Posts, and the ordnance factories before their corporatisation were the principal examples.</p>
+
+<p><strong>Merits.</strong> Accountability is complete, since the undertaking is answerable to Parliament through the minister in the same way as any department. Revenue accrues directly to the treasury. The form is appropriate where the activity is strategic, where the undertaking is a natural monopoly providing an essential service, or where the object is regulation rather than profit.</p>
+
+<p><strong>Demerits.</strong> The undertaking has no financial autonomy, so it cannot retain surpluses or raise capital on its own account, and its expenditure is governed by rules designed for spending rather than earning. Decision-making is slow because commercial choices pass through administrative hierarchy. There is no insulation from political interference, since ministerial direction requires no formality. Personnel are governed by civil service rules rather than by the needs of the business, so specialist skills are hard to recruit and retain. And the incentive to efficiency is weak because losses are met from the budget, which is the soft budget constraint in its purest form.</p>
+
+<h3>The Public Corporation</h3>
+
+<p>The public corporation is created by a special statute of Parliament or a State legislature, which defines its powers, duties, functions and the extent of its autonomy. It is a body corporate with perpetual succession, can sue and be sued, holds property in its own name, and is financially independent in that it has its own funds and its expenditure is not subject to the ordinary budgetary process. The Life Insurance Corporation, the Food Corporation of India, the Damodar Valley Corporation and the Reserve Bank are examples.</p>
+
+<p><strong>Herbert Morrison</strong>, whose formulation of the British public corporation shaped the Indian debate, described the aim as a combination of public ownership, public accountability and business management for public ends. The corporation was to be free from parliamentary interference in day-to-day management while remaining accountable for policy and results.</p>
+
+<p><strong>Merits.</strong> Autonomy is conferred by statute and therefore cannot be withdrawn administratively. The corporation can frame its own personnel policy and pay, which allows it to recruit commercially. It combines public ownership with operational flexibility, and it is accountable to the legislature for policy without being answerable for every transaction.</p>
+
+<p><strong>Demerits.</strong> The form is rigid, since any change in powers or scope requires amendment of the statute, which is slow and politically costly. Autonomy has proved more formal than real, because governments exercise influence through appointments, through directions in the public interest which most statutes permit, and through control of capital. And the multiplicity of separate statutes has produced no common pattern, so that the degree of autonomy varies without principle from one corporation to another.</p>
+
+<h3>The Government Company</h3>
+
+<p>The government company is registered under the Companies Act, with not less than fifty-one per cent of the paid-up share capital held by the Union government, a State government or a combination of them. It is the form in which the overwhelming majority of Indian public undertakings are organised, and its dominance is the most consequential fact about the sector's governance.</p>
+
+<p><strong>Merits.</strong> It is easy to establish, since it requires only registration rather than legislation, and equally easy to modify by amending the articles. It enjoys the flexibility of company form in matters of personnel, procurement and commercial contracting. It permits joint ventures and the raising of capital from the market. And it can be adapted to a wide range of activities without the need for a tailored statute.</p>
+
+<p><strong>Demerits.</strong> The criticism is constitutional rather than managerial. The form evades the legislature, because a company can be created by executive decision without the legislature ever considering whether the state should enter that activity. Accountability is diluted, since the government as shareholder exercises control through directions to nominee directors, which is private control over a public function, and the minister's answerability is correspondingly reduced. The autonomy the form appears to confer is nominal, because the majority shareholder can replace the board. And the result is what has been called the worst of both worlds: the appearance of commercial independence without its substance, and public accountability without its machinery.</p>
+
+<h3>Choosing Between the Forms</h3>
+
+<p>The working principle is that the form should follow the function. Where the activity is strategic or sovereign, where uniformity and direct answerability matter more than commercial flexibility, the departmental form is appropriate. Where the undertaking provides an essential service as a monopoly and needs operational freedom within a defined public mandate, the corporation is appropriate. Where the undertaking competes in a market, the company form is appropriate. The Indian pattern has departed from this principle, since the company form was adopted for convenience of establishment rather than because the activity was commercial, and the consequence is a sector whose legal form implies an autonomy that its ownership structure does not permit.</p>
+
+<h2>Autonomy and Accountability</h2>
+
+<p>The central problem of public enterprise is that the two values it must serve pull against each other. Autonomy is required because commercial decisions must be taken quickly, on commercial criteria, by people who will be judged on results. Accountability is required because the capital is public, the enterprise often holds a monopoly, and its decisions have distributive consequences. Every device in the field is an attempt to hold the two together.</p>
+
+<h3>The Forms of Control</h3>
+
+<ul>
+ <li><strong>Parliamentary control</strong> operates through questions, debates on the budget and on the annual reports, and through committees. Its limits are that Parliament lacks the time and the technical capacity to examine large enterprises in detail, and that the convention restricting questions on day-to-day management is inconsistently observed.</li>
+ <li><strong>The Committee on Public Undertakings,</strong> constituted in 1964 on the recommendation of the Krishna Menon Committee, examines the reports and accounts of public undertakings and the reports of the Comptroller and Auditor General on them, and considers whether the affairs of the undertakings are being managed in accordance with sound business principles and prudent commercial practices. It is expressly barred from examining matters of major government policy as distinct from business or commercial functions, matters of day-to-day administration, and matters for consideration of which machinery is established by a special statute. Its value is that it is a specialist committee with continuity; its limitation is that it can examine only a small number of undertakings in a year and reports long after the events examined.</li>
+ <li><strong>Ministerial control</strong> operates through the administrative ministry, which approves capital budgets, appoints directors, issues policy directions and receives periodic reports. It is the most pervasive control and the least visible, and it is where the erosion of autonomy actually occurs.</li>
+ <li><strong>Audit</strong> by the <strong>Comptroller and Auditor General</strong> covers government companies through auditors appointed by the CAG, with power to conduct a supplementary audit and to comment on the accounts. Beyond financial and compliance audit, the CAG conducts performance audit examining economy, efficiency and effectiveness. The standing objection from managements is that audit applies a compliance standard to commercial risk-taking, so that a commercially reasonable decision which turns out badly is reported as an irregularity, and the effect is to discourage the very risk-taking that commercial autonomy exists to permit.</li>
+ <li><strong>Public and consumer control,</strong> through the Right to Information, consumer forums and the regulators established in telecom, electricity and petroleum, which has grown as the sector has moved from monopoly to competition.</li>
+</ul>
+
+<h3>The Memorandum of Understanding System</h3>
+
+<p>The most important institutional attempt to reconcile autonomy with accountability is the system of memoranda of understanding, introduced from 1987-88 following the recommendation of the <strong>Arjun Sengupta Committee</strong> on public enterprise policy. The memorandum is a negotiated agreement between the administrative ministry and the enterprise, setting out targets for the year and the commitments each side makes, and performance is scored against those targets at the year's end.</p>
+
+<p>The logic is a shift from control over inputs and processes to accountability for results. If the enterprise is judged on agreed outcomes, the ministry has no reason to supervise its daily decisions, and the manager gains the freedom to take them. The system introduced negotiated and measurable targets covering financial performance, production, and dynamic parameters such as research and human resource development, and it made the comparison between enterprises possible.</p>
+
+<p>The criticisms are well established and should be stated. Targets have been negotiated softly, so that the distribution of scores clusters at the favourable end and ceases to discriminate. The weighting of non-financial parameters allows an enterprise with poor financial results to score well. The memorandum does not bind the ministry in practice, since there is no consequence for a ministry that fails to deliver the approvals it promised. And the link between the score and any consequence, whether in managerial reward or in autonomy granted, has been weak, which removes the incentive the system was designed to create.</p>
+
+<h3>Graded Autonomy: Maharatna, Navratna and Miniratna</h3>
+
+<p>The graded autonomy scheme is the operational answer to the autonomy question, conferring delegated financial powers on profitable enterprises according to their size and record.</p>
+
+<p><strong>Navratna</strong> status was introduced in 1997 for enterprises judged capable of competing in the global market. Eligibility requires Miniratna Category I status, a schedule A classification, and a high composite score on six parameters covering net profit to net worth, manpower cost to cost of production, earnings before depreciation interest and taxes to capital employed, profit before interest and taxes to turnover, earnings per share and inter-sectoral performance. A Navratna board may invest in joint ventures and subsidiaries and undertake mergers and acquisitions up to specified limits, subject to a ceiling on net worth, and may establish offices abroad and raise capital from domestic markets.</p>
+
+<p><strong>Maharatna</strong> status was introduced in 2010 for the largest enterprises, to allow them to expand globally. Eligibility requires Navratna status, listing on an Indian stock exchange with the prescribed minimum public shareholding, and sustained performance over three years on turnover, net worth and net profit, together with significant global presence or international operations. The delegation is correspondingly larger, permitting investment up to a higher proportion of net worth on a single project.</p>
+
+<p><strong>Miniratna</strong> status has two categories, conferred on profit-making enterprises which have not defaulted in repayment of loans, and delegating capital expenditure powers within limits related to net worth.</p>
+
+<p>The scheme's merit is that it ties autonomy to demonstrated performance rather than conferring it uniformly. Its limitation is that the delegation is of financial powers only. The board's composition, the appointment of its chairman and functional directors, and the major decisions of the enterprise remain with the government, so an enterprise may have wide powers to invest and none to choose the people who will decide the investment.</p>
+
+<h2>Performance and Its Assessment</h2>
+
+<p>Judgement on the public sector depends on the criterion applied, and the argument between its defenders and its critics is usually an argument about which criterion is legitimate.</p>
+
+<h3>The Case on Achievement</h3>
+
+<ul>
+ <li>The industrial base in steel, heavy engineering, fertilisers, power generation, petroleum refining and defence production was built by public enterprise, and no private investment would have created it on that timescale.</li>
+ <li>Plants were located in backward regions, and the townships around them changed the economic geography of districts that had no industry.</li>
+ <li>Public enterprises trained a generation of engineers, technicians and managers, and were the source from which much private industrial capability was later drawn.</li>
+ <li>They applied reservation policy, recognised trade unions and maintained labour standards well before the private sector did, which makes their record a social achievement independent of their balance sheets.</li>
+ <li>They supplied basic goods at administered prices during periods when market pricing would have been inflationary, and continued supply in sectors and regions where commercial operation would have withdrawn.</li>
+</ul>
+
+<h3>The Case on Failure</h3>
+
+<ul>
+ <li><strong>Low returns on capital.</strong> The assumption that the sector would generate the surplus to finance the next round of investment did not hold, and enterprises became a claim on the budget rather than a contributor to it.</li>
+ <li><strong>Overstaffing,</strong> arising partly from employment being an objective in itself and partly from the impossibility of reducing establishment once created, which raised the cost of production and made restructuring politically impossible.</li>
+ <li><strong>Political interference</strong> in location, pricing, procurement and appointments, which meant that managers were held accountable for results they did not control.</li>
+ <li><strong>Administered pricing,</strong> under which prices were set below cost for reasons of policy and the resulting loss was attributed to the enterprise rather than to the subsidy it was in fact delivering.</li>
+ <li><strong>The soft budget constraint,</strong> the term is <strong>Kornai's</strong>, under which an enterprise that knows losses will be met has no incentive to avoid them, and which distinguishes public from private ownership more sharply than any question of managerial quality.</li>
+ <li><strong>Delay in project execution,</strong> with time and cost overruns arising from clearance procedures, land acquisition and the layering of approvals.</li>
+ <li><strong>Absence of exit.</strong> A loss-making enterprise could neither be closed nor sold, so capital remained locked in activities that had ceased to have a purpose, which is the single largest source of waste in the sector.</li>
+</ul>
+
+<p>The fair conclusion for an answer is that the two cases are not in contradiction. The sector achieved what it was built to achieve in the period when accumulation was the problem, and it performed badly against commercial criteria that were never the criteria on which it was designed. The failure was of adaptation rather than of conception: the framework of control appropriate to a monopoly delivering a plan was retained after the enterprises were placed in competition with private firms that operated under none of the same constraints.</p>
+
+<h3>The Sick Enterprise</h3>
+
+<p>The <strong>Board for Reconstruction of Public Sector Enterprises</strong> was constituted in 2004 to advise on measures for restructuring or reviving sick and loss-making central public sector enterprises, including cases for closure and sale. It examined a large number of references and recommended revival plans for many, and it was wound up in 2015 on the view that administrative ministries should take these decisions directly. The episode illustrates the standing difficulty: the technical judgement that an enterprise cannot be revived is rarely the binding constraint, because the political cost of closure falls on an identifiable workforce in an identifiable place while the benefit is diffuse.</p>
+
+<h2>Disinvestment and Privatisation</h2>
+
+<p>The distinction should be stated at the outset. <strong>Disinvestment</strong> is the sale of a part of the government's equity, leaving ownership and control with the state. <strong>Strategic sale</strong> or <strong>privatisation</strong> is the transfer of a substantial holding together with management control to a private party. The two have different objectives and different justifications, and conflating them weakens an answer.</p>
+
+<h3>The Arguments</h3>
+
+<p><strong>For.</strong> Capital locked in activities the state need not perform can be released for sectors where it is required. Exposure to market discipline and to the scrutiny of minority shareholders improves governance. The fiscal drain of loss-making units ends. Where the original justification has lapsed because private capacity now exists, continued state ownership has no purpose. And listing itself improves disclosure and board practice even where control is retained.</p>
+
+<p><strong>Against.</strong> Sale of profitable assets to meet a revenue deficit is the consumption of capital to finance current expenditure, which improves this year's accounts at the cost of a permanent income stream. Valuation is difficult where the assets include land acquired decades earlier at nominal cost, and undervaluation transfers public wealth to a private buyer. Privatisation of a monopoly without an effective regulator substitutes a private monopoly for a public one. The social obligations the enterprise discharged, in employment, in regional presence and in supply to unremunerative areas, are not assumed by the buyer. And the workforce bears the adjustment.</p>
+
+<h3>The Policy Sequence</h3>
+
+<ul>
+ <li>Disinvestment began in <strong>1991-92</strong> with the sale of minority holdings in selected enterprises to financial institutions and mutual funds, in bundles, which drew the criticism that the method neither realised full value nor improved governance.</li>
+ <li>The <strong>Rangarajan Committee</strong> in 1993 recommended a substantial reduction of government holding and set out the sectors in which majority ownership should be retained.</li>
+ <li>The <strong>Disinvestment Commission</strong> was constituted in 1996 under <strong>G.V. Ramakrishna</strong> to advise on the extent, mode and timing of disinvestment on a case by case basis, and it classified enterprises by their strategic importance and recommended the method appropriate to each.</li>
+ <li>A separate <strong>Department of Disinvestment</strong> was created in 1999, later the Ministry of Disinvestment, and it was renamed the <strong>Department of Investment and Public Asset Management</strong> in 2016, a change of title which signalled a shift from selling stakes to managing the government's investment portfolio as a whole.</li>
+ <li>Strategic sales with transfer of management were undertaken in the early 2000s in a number of enterprises, after which the policy moved back towards minority stake sales through public offers and the exchange-traded fund route.</li>
+ <li>The <strong>New Public Sector Enterprise Policy</strong> announced in 2021 set out the framework now in force. Sectors are classified as <strong>strategic</strong> and <strong>non-strategic</strong>. The strategic sectors named are atomic energy, space and defence; transport and telecommunications; power, petroleum, coal and other minerals; and banking, insurance and financial services. In strategic sectors the state will retain a bare minimum presence, and remaining enterprises will be privatised, merged or closed. In non-strategic sectors enterprises will be privatised, and where that is not feasible, closed.</li>
+ <li>The <strong>National Monetisation Pipeline</strong>, also announced in 2021, applies a different logic to the same objective. Rather than selling the enterprise, it leases the revenue rights of operating public assets such as roads, transmission lines, pipelines and station buildings to private operators for a period, with ownership reverting to the state. It monetises without privatising, and it raises the regulatory question of how service standards are enforced over the concession period.</li>
+</ul>
+
+<h3>Recent Instances</h3>
+
+<p><strong>The corporatisation of the Ordnance Factory Board</strong> in 2021 converted a departmental undertaking of forty-one factories into seven defence public sector undertakings organised by product vertical. The stated rationale was to give the factories functional autonomy, efficiency and the ability to innovate and compete, to make them accountable for their own profitability, and to end the position in which a departmental producer supplied a departmental buyer at cost-plus prices with no incentive to reduce cost. The change was opposed by the workforce on the ground that it was a step towards privatisation and that terms of service would erode, and the government gave assurances on the transfer of employees on deemed deputation with existing terms protected. The case is a good one for an answer on forms of organisation, because it is a live example of a shift from the departmental form to the company form undertaken for precisely the reasons the theory predicts.</p>
+
+<p><strong>Air India</strong> was transferred to the Tata group in January 2022 after repeated earlier attempts had failed, ending an accumulation of losses that had been met from the budget for years. <strong>The Life Insurance Corporation</strong> made an initial public offering in 2022, which did not transfer control but brought a statutory corporation under the disclosure requirements of a listed company, and which illustrates the distinction between disinvestment and privatisation cleanly.</p>
+
+<h2>Public Enterprises and the Regulatory State</h2>
+
+<p>The change in the sector's environment is better described as a shift from ownership to regulation than as a retreat of the state. Where the state once secured its objectives by owning the producer, it now secures them by regulating a market in which public and private firms compete. The Telecom Regulatory Authority, the Central and State Electricity Regulatory Commissions, the Petroleum and Natural Gas Regulatory Board and the Insurance Regulatory and Development Authority all date from this shift.</p>
+
+<p>Three problems follow, and they are the substance of most current questions.</p>
+
+<ul>
+ <li><strong>Competitive neutrality.</strong> A public enterprise competing with private firms carries obligations they do not, in employment, in procurement procedure, in audit and in social supply, while enjoying advantages they do not, in implicit guarantee and in access to public land. Neither the obligations nor the advantages are accounted for, so the comparison of performance is not a comparison of like with like.</li>
+ <li><strong>The regulator and the owner.</strong> Where the government both owns the incumbent and appoints the regulator, the independence of regulation is in question, and the remedy of separating the two has been adopted unevenly across sectors.</li>
+ <li><strong>Universal service.</strong> The obligations the public enterprise discharged without accounting for them must now be specified, costed and funded explicitly, through universal service obligations and viability gap funding, which is analytically the right treatment but administratively far harder than simply directing a state-owned firm to serve an unprofitable route.</li>
+</ul>
+
+<h2>The Way Forward</h2>
+
+<p>The recurring recommendations of committees and of the Second Administrative Reforms Commission converge on a small number of propositions, and an answer is stronger for stating them as a coherent position rather than as a list.</p>
+
+<ul>
+ <li><strong>Separate the roles of owner, policymaker and regulator.</strong> The administrative ministry cannot credibly set policy for a sector, regulate it and manage the largest participant in it. Vesting ownership in a separate holding entity, on the pattern adopted in several countries, is the structural remedy.</li>
+ <li><strong>Professionalise boards.</strong> Autonomy is meaningless while the government appoints the chairman, the functional directors and the independent directors, and while vacancies on boards remain unfilled for long periods. Selection through an independent process, fixed tenures and a majority of genuinely independent directors are the preconditions of every other reform.</li>
+ <li><strong>Account for social obligations explicitly.</strong> Where an enterprise is directed to supply below cost or to maintain uneconomic operations, the cost should be computed and compensated from the budget, so that commercial performance can be judged on commercial terms and the subsidy is visible to the legislature.</li>
+ <li><strong>Make the memorandum of understanding consequential.</strong> Targets should be set against external benchmarks rather than negotiated against the enterprise's own past, the ministry's obligations should be enforceable, and the score should determine both managerial reward and the degree of delegated autonomy.</li>
+ <li><strong>Provide for exit.</strong> A framework for closure that protects workers through retraining and settlement, while permitting the release of land and capital, is the condition of the sector's health, because the absence of exit is what converts a business failure into a permanent fiscal liability.</li>
+ <li><strong>Retain a considered strategic core.</strong> The case for public ownership remains where the activity is sovereign, where a natural monopoly cannot be adequately regulated, or where private provision would fail an essential public purpose. The 2021 policy adopts this reasoning; the question that remains is whether the classification of sectors as strategic reflects it, and whether the bare minimum presence retained in a strategic sector is sufficient to serve the purpose for which it is retained.</li>
+</ul>
+
+<h2>Pricing Policy</h2>
+
+<p>Pricing is where the plural objectives of a public enterprise become concrete, because the price at which it sells determines simultaneously its profitability, the distribution of benefit among consumers and the subsidy it silently delivers. Four principles compete.</p>
+
+<ul>
+ <li><strong>No profit no loss pricing,</strong> under which the price covers cost and nothing more. It appears equitable but provides nothing for replacement of assets or expansion, so it converts the enterprise into a permanent claimant on the budget for its own growth.</li>
+ <li><strong>Cost plus pricing,</strong> in which a fixed margin is added to cost. It guarantees a return but removes the incentive to reduce cost, since a higher cost yields a higher absolute margin. This is precisely the objection that was raised against the ordnance factories supplying the armed forces before corporatisation.</li>
+ <li><strong>Marginal cost pricing,</strong> which is efficient in the economist's sense because it equates price with the cost of the last unit, but which produces losses in any industry with large fixed costs and falling average cost, which describes most utilities.</li>
+ <li><strong>Return on capital employed,</strong> under which the price is set to yield a target return on the capital invested. This is the principle most commonly recommended, because it makes the enterprise self-financing and makes the return comparable across enterprises and with private alternatives.</li>
+</ul>
+
+<p>The Indian practice for long periods was <strong>administered pricing</strong>, in which prices for products such as petroleum, coal, steel and fertiliser were fixed by government below the level a commercial calculation would have produced. The consequence was analytically straightforward and politically convenient: the enterprise delivered a subsidy to consumers, the subsidy did not appear in the budget, and the resulting deficit appeared instead as the enterprise's inefficiency. The dismantling of the administered price mechanism in petroleum, and the move to explicit budgetary subsidy in fertiliser and in cooking fuel, is the correction of that concealment, and it illustrates the general principle that a social obligation should be funded visibly rather than imposed invisibly on a balance sheet.</p>
+
+<h2>Personnel and Industrial Relations</h2>
+
+<p>Personnel questions in public undertakings differ from those in the civil service in ways that recur in examination questions.</p>
+
+<p><strong>Recruitment and career.</strong> Departmental undertakings recruit through the public service machinery and their staff carry civil service conditions. Corporations and companies frame their own recruitment rules, and the larger ones run their own management training institutions, which has produced a distinct cadre of technical managers with careers inside a single enterprise. The weakness of this pattern is limited lateral mobility, so that an enterprise in decline traps the capability it has built.</p>
+
+<p><strong>The top management problem.</strong> The chairman and managing director and the functional directors are selected through the <strong>Public Enterprises Selection Board</strong>, constituted in 1987, which recommends appointments to the government. The standing criticisms are that tenures are short, often only the residue of a career before superannuation; that posts remain vacant for long periods pending appointment; and that a chief executive appointed for two or three years cannot be held accountable for decisions whose consequences appear after five. Fixed and adequate tenure is therefore the reform most often urged, and it costs nothing.</p>
+
+<p><strong>The generalist and the specialist.</strong> The presence of civil servants on boards as part-time official directors, and their appointment to executive positions, is defended on the ground that it supplies the link to government policy and is criticised on the ground that industrial management requires technical and commercial experience that a general administrative career does not provide. The compromise now generally accepted is that official directors should represent the owner's interest on policy while executive positions are filled on professional criteria.</p>
+
+<p><strong>Industrial relations.</strong> Public enterprises recognised unions early and developed elaborate machinery for negotiation, including periodic wage settlements negotiated at the national level for groups of enterprises. Wage parity across enterprises of very different profitability has been a persistent difficulty, since a settlement affordable to a profitable enterprise becomes an unbearable cost in a loss-making one, and the link between an enterprise's performance and its employees' earnings has accordingly been weak. Performance-related pay linked to the memorandum of understanding score was introduced to repair this, and its effect has been limited by the same softness in target-setting that weakened the memorandum itself.</p>
+
+<h2>Corporate Governance</h2>
+
+<p>The listing of public enterprises on stock exchanges subjected them to the same governance requirements as private companies, which has been one of the more effective disciplines applied to the sector. Listed enterprises must meet requirements on the composition of the board, including a prescribed proportion of independent directors, on the constitution of audit and nomination committees, on the timely disclosure of material information, and on the treatment of related party transactions. Minority shareholders acquired an interest in the enterprise's performance and a forum in which to press it.</p>
+
+<p>Two tensions follow. The first is the conflict between the government's position as majority shareholder and its duty to minority shareholders, which arises whenever the enterprise is directed to act for reasons of policy against its commercial interest, whether in supplying below cost, in acquiring another public enterprise to relieve the exchequer, or in declaring dividends to meet a fiscal target. The second is the persistent shortfall in the appointment of independent directors, since boards of public enterprises have frequently operated below the required strength, which disables the committees that depend on them and leaves the governance framework formally in place and practically inoperative.</p>
+
+<h2>The Theoretical Question</h2>
+
+<p>Behind the administrative debate lies a question about ownership itself. The <strong>property rights</strong> argument holds that public ownership performs worse because no individual bears the consequence of a decision: shares cannot be traded, so there is no market valuation of managerial performance, and no owner has the incentive to monitor. The <strong>public choice</strong> argument, associated with <strong>Niskanen</strong>, holds that the managers of public bodies maximise budget rather than surplus, so that the enterprise grows beyond its efficient size. <strong>Kornai's</strong> soft budget constraint explains the same behaviour without assuming self-interest, since an enterprise that will be rescued has no reason to avoid the loss that triggers the rescue.</p>
+
+<p>The counter-argument does not deny these mechanisms but denies that ownership is the variable that matters. <strong>Contestability</strong> theory holds that it is the presence of competition, not the identity of the owner, that disciplines a firm, so that a privatised monopoly performs no better than a public one. The empirical record is consistent with this: the clearest performance gains have followed the opening of a sector to competition, whether or not the incumbent was sold, while the transfer of a monopoly into private hands without a regulator has produced private rent rather than public benefit. For an answer the useful conclusion is that ownership and competition are separate questions, that the Indian reform since 1991 changed both at once, and that the credit for improved performance in telecommunications and aviation belongs largely to the first of the two.</p>`,
+
  'union-government-administration': `
 <h2>The Shape of the Union Executive</h2>
 
