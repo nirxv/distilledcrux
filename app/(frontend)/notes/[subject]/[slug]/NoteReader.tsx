@@ -876,9 +876,15 @@ export default function NoteReader({
       {/* ── Main column ── */}
       <div className="nr-main">
 
-      {/* ── Header ── */}
-      <div style={{ padding: '1.5rem 2rem 1rem', borderBottom: '1px solid var(--border)', position: 'sticky', top: 60, background: 'var(--bg)', zIndex: 100 }}>
-        {/* Sidebar toggle */}
+      {/* ── Header ──
+            One row, the way the history reader has it, rather than the three
+            stacked rows it was. It scrolls away with the note rather than
+            holding at the top; the sidebar is what stays. Wraps when narrow. */}
+      <div style={{
+        padding: '0.7rem 1.5rem', borderBottom: '1px solid var(--border)',
+        background: 'var(--bg)',
+        display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap' as const,
+      }}>
         <button type="button" className="nr-sb-toggle"
           onClick={() => setSidebarOpen(o => !o)}
           aria-expanded={sidebarOpen}
@@ -889,65 +895,57 @@ export default function NoteReader({
           </svg>
           <span>{sidebarOpen ? 'Hide' : 'Contents'}</span>
         </button>
-        {/* Breadcrumb */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginBottom: '0.6rem' }}>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', minWidth: 0 }}>
           <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
           <span>·</span>
           <Link href={`/notes/${subject}`} style={{ color: 'var(--text3)', textDecoration: 'none', textTransform: 'capitalize' }}>{subject}</Link>
           <span>·</span>
-          <span style={{ color: 'var(--text2)' }}>{note.title}</span>
+          <span style={{ color: 'var(--text2)', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' }}>{note.title}</span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' as const }}>
-            <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: subjectColor, background: `${subjectColor}18`, border: `1px solid ${subjectColor}30`, padding: '2px 8px', borderRadius: 3 }}>
-              Paper {note.paper}
-            </span>
-            <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
-          </div>
+        <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: subjectColor, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 4, padding: '2px 7px' }}>
+          Paper {note.paper}
+        </span>
+        <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
 
-          {/* Toolbar actions */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            {/* Highlight toggle */}
-            <button
-              onClick={() => setAnnotationMode(m => m === 'highlight' ? null : 'highlight')}
-              style={{
-                display: 'flex', alignItems: 'center', gap: 5,
-                background: annotationMode === 'highlight' ? 'rgba(201,168,76,0.1)' : 'transparent',
-                border: `1px solid ${annotationMode === 'highlight' ? 'rgba(201,168,76,0.35)' : 'var(--border)'}`,
-                color: annotationMode === 'highlight' ? '#c9a84c' : 'var(--text3)',
-                padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer',
-                fontSize: '0.72rem', fontFamily: 'var(--font-mono)',
-              }}
-            >
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-              </svg>
-              {annotationMode === 'highlight' ? 'Highlighting' : 'Highlight'}
-            </button>
-
-            {/* Ask AI */}
-            <Link href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`} style={{
+        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button
+            onClick={() => setAnnotationMode(m => m === 'highlight' ? null : 'highlight')}
+            style={{
               display: 'flex', alignItems: 'center', gap: 5,
-              background: 'rgba(67,97,238,0.08)', border: '1px solid rgba(67,97,238,0.22)',
-              color: 'rgba(123,147,247,0.9)', padding: '0.28rem 0.65rem',
-              borderRadius: 5, textDecoration: 'none',
-              fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-mono)',
-            }}>
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-              Ask AI
-            </Link>
+              background: annotationMode === 'highlight' ? 'rgba(201,168,76,0.1)' : 'transparent',
+              border: `1px solid ${annotationMode === 'highlight' ? 'rgba(201,168,76,0.35)' : 'var(--border)'}`,
+              color: annotationMode === 'highlight' ? '#c9a84c' : 'var(--text3)',
+              padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer',
+              fontSize: '0.72rem', fontFamily: 'var(--font-mono)',
+            }}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+            {annotationMode === 'highlight' ? 'Highlighting' : 'Highlight'}
+          </button>
 
-            {/* Auth. Signing out belongs in the account menu rather than on a
-                reading toolbar, so only the signed-out case appears here. */}
-            {!authLoading && !user && (
-                <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', padding: '0.28rem 0.75rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-                Sign in
-              </button>
-            )}
-          </div>
+          <Link href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`} style={{
+            display: 'flex', alignItems: 'center', gap: 5,
+            background: 'rgba(67,97,238,0.08)', border: '1px solid rgba(67,97,238,0.22)',
+            color: 'rgba(123,147,247,0.9)', padding: '0.28rem 0.65rem',
+            borderRadius: 5, textDecoration: 'none',
+            fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-mono)',
+          }}>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Ask AI
+          </Link>
+
+          {/* Signing out belongs in the account menu, not on a reading bar. */}
+          {!authLoading && !user && (
+            <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', padding: '0.28rem 0.75rem', borderRadius: 5, cursor: 'pointer', fontSize: '0.72rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+              Sign in
+            </button>
+          )}
         </div>
       </div>
 
