@@ -1,14 +1,5 @@
 [
  {
-  "id": 1,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Tribal situation in India",
-  "question": "Write short note in about 150 words: Describe ILO’s Convention No.169 (1989) on Indigenous and Tribal people. Is India a signatory to it?",
-  "marks": 10
- },
- {
   "id": 2,
   "year": "2012",
   "paper": "Paper II",
@@ -16,15 +7,6 @@
   "microtheme": "Tribal situation in India",
   "question": "Discuss the concept of ‘indigenous people’ as per the relevant UN convention. Are tribals of India indigenous people? Comment.",
   "marks": 20
- },
- {
-  "id": 3,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Tribal situation in India",
-  "question": "Write short note on ‘Concept of tribe and Indian census’ in about 150 words.",
-  "marks": 10
  },
  {
   "id": 4,
@@ -151,51 +133,6 @@
   "microtheme": "Linguistic variability",
   "question": "Write a note on Languages spoken by the scheduled tribes.",
   "marks": 20
- },
- {
-  "id": 18,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Agricultural practices of the Apatani. Write a short note.",
-  "marks": 10
- },
- {
-  "id": 19,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Artisan tribes of Jharkhand. Write a short note.",
-  "marks": 10
- },
- {
-  "id": 20,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Discuss the distribution of tribes in different geographical regions of India. Identify the distinct institutional features of tribal societies of these regions.",
-  "marks": 20
- },
- {
-  "id": 21,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "How can a balance be struck between livelihood concern and environmental degradation in the context of shifting cultivation?",
-  "marks": 15
- },
- {
-  "id": 22,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Cultural diversity and multiculturalism. Write a short note.",
-  "marks": 10
  },
  {
   "id": 23,
@@ -432,42 +369,6 @@
   "marks": 20
  },
  {
-  "id": 49,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Health & Nutrition",
-  "question": "Critically examine existing paradigms of holistic health for the marginalised sections of society drawing inferences from COVID-19 pandemic.",
-  "marks": 20
- },
- {
-  "id": 50,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Health & Nutrition",
-  "question": "Write short note on the following in about 150 words: Causes of stunting and wasting among tribal children.",
-  "marks": 10
- },
- {
-  "id": 51,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Health & Nutrition",
-  "question": "Examine the factors responsible for malnutrition in tribal India and suggest interventions required to overcome the problems.",
-  "marks": 15
- },
- {
-  "id": 52,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Health & Nutrition",
-  "question": "Describe the impact of displacement on the health and nutritional status of tribal communities.",
-  "marks": 20
- },
- {
   "id": 53,
   "year": "2008",
   "paper": "Paper II",
@@ -502,24 +403,6 @@
   "microtheme": "Health & Nutrition",
   "question": "Describe the socio-cultural factors related to the poor health conditions of the Indian tribal population. Suggest measures for improving these conditions.",
   "marks": 20
- },
- {
-  "id": 57,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Education",
-  "question": "Elucidate the problems and challenges in educational attainment of the Scheduled Tribes.",
-  "marks": 15
- },
- {
-  "id": 58,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Education",
-  "question": "Write a note in 150 words on Issues relating to tribal education.",
-  "marks": 10
  },
  {
   "id": 59,
@@ -666,15 +549,6 @@
   "marks": 20
  },
  {
-  "id": 75,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Indebtness",
-  "question": "Write a note in 150 words on Indebtedness among tribal communities.",
-  "marks": 10
- },
- {
   "id": 76,
   "year": "2009",
   "paper": "Paper II",
@@ -709,42 +583,6 @@
   "microtheme": "Indebtness",
   "question": "Write a note in 200 words: Indebtedness and land alienation among Indian tribes.",
   "marks": 20
- },
- {
-  "id": 80,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Other specific problems",
-  "question": "Custodians of natural resources are the tribals, but they are the most deprived. Critically examine how climate change will impact their survival in future.",
-  "marks": 20
- },
- {
-  "id": 81,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Other specific problems",
-  "question": "Write short note in about 150 words: Major problems of nomadic and semi-nomadic groups.",
-  "marks": 10
- },
- {
-  "id": 82,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Other specific problems",
-  "question": "Write short note in about 150 words: Issues of tribal agricultural labourers.",
-  "marks": 10
- },
- {
-  "id": 83,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Problems of Tribal Communities",
-  "microtheme": "Other specific problems",
-  "question": "What are the salient issues faced by pastoral communities in India? Discuss with suitable examples.",
-  "marks": 15
  },
  {
   "id": 84,
@@ -900,33 +738,6 @@
   "marks": 20
  },
  {
-  "id": 101,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Developmental projects impact",
-  "question": "Discuss the economic, social and developmental impacts on tribal communities with special reference to mining.",
-  "marks": 15
- },
- {
-  "id": 102,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Developmental projects impact",
-  "question": "Critically examine how the displacement of tribal communities due to hydroelectric river dam projects has affected the women in local context. Illustrate with suitable ethnographic examples.",
-  "marks": 15
- },
- {
-  "id": 103,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Developmental projects impact",
-  "question": "Discuss the problems involved in rehabilitation and resettlement of tribals displaced due to development projects in India.",
-  "marks": 15
- },
- {
   "id": 104,
   "year": "2020",
   "paper": "Paper II",
@@ -934,15 +745,6 @@
   "microtheme": "Developmental projects impact",
   "question": "Explain the impact of development-induced displacement among the tribal people in India with suitable examples.",
   "marks": 20
- },
- {
-  "id": 105,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Developmental projects impact",
-  "question": "What has been the Impact of development projects on the environment and livelihood of forest-dwelling tribes?",
-  "marks": 15
  },
  {
   "id": 106,
@@ -1008,24 +810,6 @@
   "marks": 20
  },
  {
-  "id": 113,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Development of forest policy and tribals",
-  "question": "Examine the impact of Forest Policies from 1878 to 2006 on land alienation and deprivation of rights of tribal communities in India.",
-  "marks": 15
- },
- {
-  "id": 114,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Development of forest policy and tribals",
-  "question": "Explain the impact of successive Land Acquisition Acts on tribal social organization.",
-  "marks": 20
- },
- {
   "id": 115,
   "year": "2018",
   "paper": "Paper II",
@@ -1059,15 +843,6 @@
   "topic": "Developmental Projects and Tribal Displacement",
   "microtheme": "Development of forest policy and tribals",
   "question": "Critically examine the forest policy in India right since the British period. Discuss its impact on tribal people.",
-  "marks": 20
- },
- {
-  "id": 119,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Development of forest policy and tribals",
-  "question": "Discuss the impact of the Forest Rights Act (2006) on the livelihood and culture of tribal people in India.",
   "marks": 20
  },
  {
@@ -1197,15 +972,6 @@
   "marks": 20
  },
  {
-  "id": 134,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Developmental Projects and Tribal Displacement",
-  "microtheme": "Impact of urbanisation and industrialization",
-  "question": "Write short notes on ‘Urbanization and tribal institutions’ in about 150 words.",
-  "marks": 10
- },
- {
   "id": 135,
   "year": "2016",
   "paper": "Paper II",
@@ -1323,33 +1089,6 @@
   "marks": 20
  },
  {
-  "id": 148,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "V & VI Scheduled Areas",
-  "question": "Write short note on the following in about 150 words: Status of Sixth Schedule Areas.",
-  "marks": 10
- },
- {
-  "id": 149,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "V & VI Scheduled Areas",
-  "question": "Write short note on the following in about 150 words: Scheduled areas.",
-  "marks": 10
- },
- {
-  "id": 150,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "V & VI Scheduled Areas",
-  "question": "Write short note in about 150 words: Role of the Governor in the Fifth Schedule areas.",
-  "marks": 10
- },
- {
   "id": 151,
   "year": "2020",
   "paper": "Paper II",
@@ -1404,24 +1143,6 @@
   "marks": 20
  },
  {
-  "id": 157,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "PESA",
-  "question": "How is PESA Act empowering local self-governance and impacting women’s political participation?",
-  "marks": 15
- },
- {
-  "id": 158,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "PESA",
-  "question": "Compare the functioning of traditional ‘Tribal Council’ with that of ‘Gram Sabha’ under PESA.",
-  "marks": 15
- },
- {
   "id": 159,
   "year": "2018",
   "paper": "Paper II",
@@ -1458,24 +1179,6 @@
   "marks": 15
  },
  {
-  "id": 163,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "Constitutional Safeguards - SCs",
-  "question": "Critically discuss the constitutional safeguards for the Scheduled Castes.",
-  "marks": 15
- },
- {
-  "id": 164,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "Problems - SCs",
-  "question": "Discuss the issues and solutions related to the Scheduled Caste and the Scheduled Tribe populations in India.",
-  "marks": 15
- },
- {
   "id": 165,
   "year": "2016",
   "paper": "Paper II",
@@ -1491,15 +1194,6 @@
   "topic": "Constitutional Safeguards and Exploitation",
   "microtheme": "Problems - SCs",
   "question": "Discuss the Social disabilities suffered by scheduled castes.",
-  "marks": 15
- },
- {
-  "id": 167,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "Constitutional Safeguards - STs",
-  "question": "What are the constitutional safeguards to protect the interests of the Indian tribes?",
   "marks": 15
  },
  {
@@ -1521,24 +1215,6 @@
   "marks": 20
  },
  {
-  "id": 170,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "OBCs",
-  "question": "Write short note on the following in about 150 words: Constitutional Safeguards for Backward Classes.",
-  "marks": 10
- },
- {
-  "id": 171,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "OBCs",
-  "question": "How are Other Backward Classes identified? Enumerating the important features, elucidate the recent changes in their social and economic life.",
-  "marks": 15
- },
- {
   "id": 172,
   "year": "2018",
   "paper": "Paper II",
@@ -1548,24 +1224,6 @@
   "marks": 10
  },
  {
-  "id": 173,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Constitutional Safeguards and Exploitation",
-  "microtheme": "OBCs",
-  "question": "Write a note in 150 words on Other Backward Class.",
-  "marks": 15
- },
- {
-  "id": 174,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Social Change and Contemporary Tribal Societies",
-  "microtheme": "Modern Democratic Institutions",
-  "question": "Critically examine the impact of modern democratic institutions on contemporary tribal societies. Illustrate with suitable ethnographic examples.",
-  "marks": 15
- },
- {
   "id": 175,
   "year": "2008",
   "paper": "Paper II",
@@ -1573,24 +1231,6 @@
   "microtheme": "Modern Democratic Institutions",
   "question": "How have modern democratic institutions influenced the Indian tribal societies? Assess.",
   "marks": 20
- },
- {
-  "id": 176,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Social Change and Contemporary Tribal Societies",
-  "microtheme": "Broad Developmental Programs",
-  "question": "Critically assess the existing plans and programmes meant for tribal welfare.",
-  "marks": 15
- },
- {
-  "id": 177,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Social Change and Contemporary Tribal Societies",
-  "microtheme": "Broad Developmental Programs",
-  "question": "Give a critical appraisal of any one tribal development programme during XIIth Five-Year plan. Give your suggestions for any improvement in the programme.",
-  "marks": 15
  },
  {
   "id": 178,
@@ -1636,42 +1276,6 @@
   "microtheme": "Specific Welfare Measures",
   "question": "Write a note on MADA, LAMPS, TRIFED.",
   "marks": 20
- },
- {
-  "id": 183,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Unrest among tribal communities",
-  "question": "Write an essay on the life history of tribal activist and freedom fighter Birsa Munda. What was the impact of his sacrifice on tribal society?",
-  "marks": 15
- },
- {
-  "id": 184,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Unrest among tribal communities",
-  "question": "Compare the nature of tribal movements between North-East and Central India. Briefly mention the current status of existing tribal movements in these areas.",
-  "marks": 10
- },
- {
-  "id": 185,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Unrest among tribal communities",
-  "question": "Identify the causes of tribal unrest with special reference to North-East India.",
-  "marks": 15
- },
- {
-  "id": 186,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Unrest among tribal communities",
-  "question": "What has been the contribution of tribal people to the Indian Independence movement?",
-  "marks": 15
  },
  {
   "id": 187,
@@ -1728,30 +1332,12 @@
   "marks": 20
  },
  {
-  "id": 193,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "The concept of ethnicity",
-  "question": "Distinguishing between ethnic identity and ethnicity, discuss the factors responsible for ethnic conflict in tribal areas.",
-  "marks": 15
- },
- {
   "id": 194,
   "year": "2020",
   "paper": "Paper II",
   "topic": "Ethnicity and Tribal Unrest",
   "microtheme": "The concept of ethnicity",
   "question": "Write short note on the Concept of Ethnicity in about 150 words.",
-  "marks": 10
- },
- {
-  "id": 195,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "The concept of ethnicity",
-  "question": "Write a note in 150 words on Ethnicity and regionalism.",
   "marks": 10
  },
  {
@@ -1800,15 +1386,6 @@
   "marks": 20
  },
  {
-  "id": 201,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Regionalism and demand for autonomy",
-  "question": "Write short note in about 150 words: Regionalism as an opportunity and threat to national integration.",
-  "marks": 10
- },
- {
   "id": 202,
   "year": "2020",
   "paper": "Paper II",
@@ -1845,15 +1422,6 @@
   "marks": 20
  },
  {
-  "id": 206,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Social change among the tribes",
-  "question": "Explain the social and religious consequences of contact between tribal and non-tribal populations.",
-  "marks": 15
- },
- {
   "id": 207,
   "year": "2013",
   "paper": "Paper II",
@@ -1879,24 +1447,6 @@
   "microtheme": "Social change among the tribes",
   "question": "Detribalization.",
   "marks": 20
- },
- {
-  "id": 210,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "Impact of Religions on Tribal Societies",
-  "microtheme": "Christianity",
-  "question": "Critically assess the impact of Christianity on tribal culture and identity.",
-  "marks": 15
- },
- {
-  "id": 211,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Impact of Religions on Tribal Societies",
-  "microtheme": "Christianity",
-  "question": "Write a note in 150 words on Impact of Christianity on Indian tribes.",
-  "marks": 10
  },
  {
   "id": 212,
@@ -1962,15 +1512,6 @@
   "marks": 20
  },
  {
-  "id": 219,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Impact of Religions on Tribal Societies",
-  "microtheme": "Buddhism",
-  "question": "Describe the impact of Buddhism on the tribal population of India.",
-  "marks": 15
- },
- {
   "id": 220,
   "year": "2016",
   "paper": "Paper II",
@@ -1995,24 +1536,6 @@
   "topic": "Impact of Religions on Tribal Societies",
   "microtheme": "Interlinked",
   "question": "Buddhism, Christianity and Scheduled Castes.",
-  "marks": 20
- },
- {
-  "id": 223,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Tribe and Nation State",
-  "microtheme": "Tribe and nation state",
-  "question": "Discuss with appropriate examples how tribal unrest may be understood as emerging out of an incompatibility between tribes and the nation-state.",
-  "marks": 20
- },
- {
-  "id": 224,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Tribe and Nation State",
-  "microtheme": "Tribe and nation state",
-  "question": "Critically evaluate the term ‘tribe’ (as used in India) as compared to the term ‘indigenous’ in some other countries.",
   "marks": 20
  },
  {
@@ -2052,42 +1575,6 @@
   "marks": 20
  },
  {
-  "id": 229,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "The concept of PTGs",
-  "question": "Critically discuss the recent welfare measures initiated by the Government for the Particularly Vulnerable Tribal Groups (PVTGs). Comment why PVTGs were erroneously called Primitive Tribal Groups (PTGs).",
-  "marks": 20
- },
- {
-  "id": 230,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "The concept of PTGs",
-  "question": "Elucidate the problems faced by Particularly Vulnerable Tribal Groups and the major formulation of special programmes challenges in the for their development.",
-  "marks": 20
- },
- {
-  "id": 231,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "The concept of PTGs",
-  "question": "Identify some special programmes for particularly vulnerable Tribal Groups (erstwhile PTGs).",
-  "marks": 15
- },
- {
-  "id": 232,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "The concept of PTGs",
-  "question": "Write a note in 150 words on Particularly Vulnerable Tribal Groups (earlier known as PTG).",
-  "marks": 10
- },
- {
   "id": 233,
   "year": "2016",
   "paper": "Paper II",
@@ -2112,15 +1599,6 @@
   "topic": "History and Administration of Tribal Areas",
   "microtheme": "The concept of PTGs",
   "question": "What are the special problems of the Primitive Tribal Groups (PTGs)? How far have the developmental programmes of the Government been able to address these?",
-  "marks": 20
- },
- {
-  "id": 236,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Elwin-Ghurye Debate",
-  "question": "Discuss the views of G. S. Ghurye and Verrier Elwin on the approach towards tribal populations. What are the policies of the Government of India towards Indian tribal populations?",
   "marks": 20
  },
  {
@@ -2149,24 +1627,6 @@
   "microtheme": "Elwin-Ghurye Debate",
   "question": "Critically evaluate various approaches to set the tribals within the mainstream of Indian civilization. In your opinion which approach is relevant in the modern context?",
   "marks": 20
- },
- {
-  "id": 240,
-  "year": "2021",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Role of NGOs",
-  "question": "Discuss the interventions made by the Non-Governmental Organizations for empowering tribal women.",
-  "marks": 15
- },
- {
-  "id": 241,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Role of NGOs",
-  "question": "Critically discuss the role of NGOs in tribal development.",
-  "marks": 15
  },
  {
   "id": 242,
@@ -2223,48 +1683,12 @@
   "marks": 15
  },
  {
-  "id": 248,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Programmes of tribal development",
-  "question": "Discuss the objectives of Integrated Tribal Development Projects (ITDPs). How far have these objectives been achieved?",
-  "marks": 20
- },
- {
-  "id": 249,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Programmes of tribal development",
-  "question": "Discuss the emergence, salient features and limitations of Tribal sub-plan.",
-  "marks": 15
- },
- {
   "id": 250,
   "year": "2014",
   "paper": "Paper II",
   "topic": "History and Administration of Tribal Areas",
   "microtheme": "Programmes of tribal development",
   "question": "Critically evaluate the National Tribal Policy.",
-  "marks": 15
- },
- {
-  "id": 251,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "Programmes of tribal development",
-  "question": "Elucidate the shifting terrains of: India’s tribal policies in colonial and post-colonial periods.",
-  "marks": 20
- },
- {
-  "id": 252,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "History of administration of tribal areas",
-  "question": "Explain how British policies impacted the major resources of the tribals.",
   "marks": 15
  },
  {
@@ -2331,15 +1755,6 @@
   "marks": 20
  },
  {
-  "id": 260,
-  "year": "2022",
-  "paper": "Paper II",
-  "topic": "Role of Anthropology in Tribal Development",
-  "microtheme": "Rural Development",
-  "question": "Briefly describe the anthropological perspective on development. How have anthropologists contributed in India’s rural development?",
-  "marks": 15
- },
- {
   "id": 261,
   "year": "2016",
   "paper": "Paper II",
@@ -2356,15 +1771,6 @@
   "microtheme": "Rural Development",
   "question": "Critically assess the role of anthropologists in rural development.",
   "marks": 20
- },
- {
-  "id": 263,
-  "year": "2017",
-  "paper": "Paper II",
-  "topic": "Role of Anthropology in Tribal Development",
-  "microtheme": "Tribal Development",
-  "question": "Discuss the role of anthropology in understanding the loss of livelihood of tribal communities due to economic and ecological factors.",
-  "marks": 15
  },
  {
   "id": 264,
@@ -2412,15 +1818,6 @@
   "marks": 20
  },
  {
-  "id": 269,
-  "year": "2023",
-  "paper": "Paper II",
-  "topic": "Role of Anthropology in Tribal Development",
-  "microtheme": "Broad",
-  "question": "Elucidate the role of anthropology in nation building. Illustrate with suitable examples.",
-  "marks": 15
- },
- {
   "id": 270,
   "year": "2012",
   "paper": "Paper II",
@@ -2439,33 +1836,6 @@
   "marks": 20
  },
  {
-  "id": 272,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Contributions of Anthropology",
-  "microtheme": "State & Religion",
-  "question": "Distinguish a ‘Theocratic State’ from a secular, liberal, democratic state. Illustrate your answer with examples from tribal and contemporary societies.",
-  "marks": 15
- },
- {
-  "id": 273,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Contributions of Anthropology",
-  "microtheme": "State & Religion",
-  "question": "Elucidate the difference between secularism, religiosity, religious fundamentalism and spiritualism from an anthropological perspective.",
-  "marks": 15
- },
- {
-  "id": 274,
-  "year": "2024",
-  "paper": "Paper II",
-  "topic": "Contributions of Anthropology",
-  "microtheme": "Ethnic & Political Movements",
-  "question": "Elucidate the resurgence of ethno nationalism from an anthropological lens.",
-  "marks": 15
- },
- {
   "id": 275,
   "year": "2016",
   "paper": "Paper II",
@@ -2482,15 +1852,6 @@
   "microtheme": "Ethnic & Political Movements",
   "question": "In what ways has anthropology contributed to the understanding of ethnic & political movements in India?",
   "marks": 60
- },
- {
-  "id": 277,
-  "year": "2019",
-  "paper": "Paper II",
-  "topic": "Contributions of Anthropology",
-  "microtheme": "Communalism",
-  "question": "Write a note in 150 words on Anthropological understanding of communalism.",
-  "marks": 10
  },
  {
   "id": 278,
@@ -2520,15 +1881,6 @@
   "marks": 20
  },
  {
-  "id": 281,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Meaning, Scope and Development of Anthropology",
-  "microtheme": "Meaning and scope",
-  "question": "\"Anthropology is the systematic, objective, and holistic study of humankind in all times and places.\" Elaborate the argument.",
-  "marks": 20
- },
- {
   "id": 282,
   "year": "2018",
   "paper": "Paper I",
@@ -2538,15 +1890,6 @@
   "marks": 10
  },
  {
-  "id": 283,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Meaning, Scope and Development of Anthropology",
-  "microtheme": "Meaning and scope",
-  "question": "Define Anthropology. Describe the major branches of Anthropology elaborating on any one branch.",
-  "marks": 20
- },
- {
   "id": 284,
   "year": "2014",
   "paper": "Paper I",
@@ -2554,15 +1897,6 @@
   "microtheme": "Meaning and scope",
   "question": "Critically examine the role of anthropology in Contemporary India.",
   "marks": 15
- },
- {
-  "id": 285,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Relationships with Other Disciplines",
-  "microtheme": "Scope and uniqueness",
-  "question": "Elaborate the scope of anthropology and elucidate the uniqueness in the field of other social sciences.",
-  "marks": 20
  },
  {
   "id": 286,
@@ -2601,24 +1935,6 @@
   "marks": 15
  },
  {
-  "id": 290,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Main Branches of Anthropology",
-  "microtheme": "Social and Cultural Anthropology",
-  "question": "Scope and relevance of Social and Cultural Anthropology.",
-  "marks": 10
- },
- {
-  "id": 291,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Main Branches of Anthropology",
-  "microtheme": "Linguistic Anthropology",
-  "question": "Mention the major branches of linguistic anthropology and discuss language use in social and cultural settings.",
-  "marks": 15
- },
- {
   "id": 292,
   "year": "2020",
   "paper": "Paper I",
@@ -2626,15 +1942,6 @@
   "microtheme": "All branches",
   "question": "How can synergising the core branches of anthropology reinvigorate the holistic spirit of the discipline?",
   "marks": 20
- },
- {
-  "id": 293,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Main Branches of Anthropology",
-  "microtheme": "Linguistic Anthropology",
-  "question": "Relationship between Linguistics and Social-Cultural Anthropology.",
-  "marks": 10
  },
  {
   "id": 294,
@@ -2671,42 +1978,6 @@
   "microtheme": "Linguistic Anthropology",
   "question": "Linguistic Anthropology.",
   "marks": 10
- },
- {
-  "id": 298,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Evolution and Emergence of Man",
-  "microtheme": "Biological and cultural factors",
-  "question": "Critically discuss the synergistic effect of biological and cultural factors in human evolution.",
-  "marks": 15
- },
- {
-  "id": 299,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Human Evolution and Emergence of Man",
-  "microtheme": "Hominization process",
-  "question": "What is the hominization process? Discuss the major trends in human evolution with the help of suitable examples and illustrations.",
-  "marks": 20
- },
- {
-  "id": 300,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Evolution and Emergence of Man",
-  "microtheme": "Evolutionary forces",
-  "question": "Discuss the role of evolutionary forces in creating human diversity.",
-  "marks": 20
- },
- {
-  "id": 301,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Human Evolution and Emergence of Man",
-  "microtheme": "Genetic mechanisms",
-  "question": "Explain the genetic mechanisms of micro and macro evolution.",
-  "marks": 15
  },
  {
   "id": 302,
@@ -2781,24 +2052,6 @@
   "marks": 10
  },
  {
-  "id": 310,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Characteristics of Primates",
-  "microtheme": "Primate social organisation",
-  "question": "Discuss different forms of primate social organisation.",
-  "marks": 15
- },
- {
-  "id": 311,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Characteristics of Primates",
-  "microtheme": "Erect posture",
-  "question": "The losses and gains of erect posture.",
-  "marks": 10
- },
- {
   "id": 312,
   "year": "2020",
   "paper": "Paper I",
@@ -2814,33 +2067,6 @@
   "topic": "Characteristics of Primates",
   "microtheme": "Locomotion patterns",
   "question": "Illustrate with examples the various types of locomotion pattern among non-human primates.",
-  "marks": 15
- },
- {
-  "id": 314,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Characteristics of Primates",
-  "microtheme": "Adaptive radiation",
-  "question": "Adaptive primate radiation.",
-  "marks": 10
- },
- {
-  "id": 315,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Characteristics of Primates",
-  "microtheme": "Bipedalism and erect posture",
-  "question": "Discuss the evolutionary significance of bipedalism and erect posture.",
-  "marks": 20
- },
- {
-  "id": 316,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Characteristics of Primates",
-  "microtheme": "Man and Apes",
-  "question": "Bring out the comparative anatomical features of man and apes. Discuss their evolutionary significance.",
   "marks": 15
  },
  {
@@ -2898,42 +2124,6 @@
   "marks": 10
  },
  {
-  "id": 323,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Phylogenetic Status of Fossil Hominids",
-  "microtheme": "Homo erectus",
-  "question": "Discuss the geographical distribution of Homo erectus. Taking into account its physical features, where does it fit in the human evolutionary line?",
-  "marks": 20
- },
- {
-  "id": 324,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Phylogenetic Status of Fossil Hominids",
-  "microtheme": "Australopithecines",
-  "question": "Discuss major species of Australopithecus discovered from South and East Africa. Describe the discovery, physical features, and significance of Taung baby.",
-  "marks": 20
- },
- {
-  "id": 325,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Phylogenetic Status of Fossil Hominids",
-  "microtheme": "Neanderthal man",
-  "question": "Should we still distinguish between 'classic' and 'progressive' Neanderthals? Discuss the controversy surrounding Neanderthal's position in human evolution.",
-  "marks": 15
- },
- {
-  "id": 326,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Phylogenetic Status of Fossil Hominids",
-  "microtheme": "Homo erectus",
-  "question": "What are the physical and cultural characteristics of Homo erectus? Discuss its phylogenetic status.",
-  "marks": 20
- },
- {
   "id": 327,
   "year": "2020",
   "paper": "Paper I",
@@ -2941,15 +2131,6 @@
   "microtheme": "Modern Homo sapiens",
   "question": "Critically evaluate the contesting theories of the emergence and dispersal of modern Homo sapiens.",
   "marks": 20
- },
- {
-  "id": 328,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Phylogenetic Status of Fossil Hominids",
-  "microtheme": "Neanderthal man",
-  "question": "\"Europeans are closer to Neanderthals.\" Critically discuss in view of the African origin of humankind.",
-  "marks": 15
  },
  {
   "id": 329,
@@ -2988,15 +2169,6 @@
   "marks": 10
  },
  {
-  "id": 333,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Biological Basis of Life",
-  "microtheme": "Gene expression",
-  "question": "Gene expression.",
-  "marks": 10
- },
- {
   "id": 334,
   "year": "2025",
   "paper": "Paper I",
@@ -3004,96 +2176,6 @@
   "microtheme": "Absolute dating",
   "question": "Fission track dating method and its applications.",
   "marks": 10
- },
- {
-  "id": 335,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Chronometric dating",
-  "question": "Chronometric dating.",
-  "marks": 10
- },
- {
-  "id": 336,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic",
-  "question": "Identify the major Mesolithic sites and describe the typo-technological features with special reference to India.",
-  "marks": 15
- },
- {
-  "id": 337,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Paleolithic",
-  "question": "Discuss the Paleolithic environment, in light of available evidence with special reference to India.",
-  "marks": 15
- },
- {
-  "id": 338,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Prehistoric sites",
-  "question": "Prehistoric significance of Rakhigarhi.",
-  "marks": 10
- },
- {
-  "id": 339,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Iron Age",
-  "question": "Cultural impact of Iron Age.",
-  "marks": 10
- },
- {
-  "id": 340,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic rock art",
-  "question": "Mesolithic rock art in Indian subcontinent.",
-  "marks": 10
- },
- {
-  "id": 341,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic",
-  "question": "Enumerate the evidence of animal domestication in Indian microlithic industry.",
-  "marks": 15
- },
- {
-  "id": 342,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Absolute dating",
-  "question": "Thermoluminescence (TL) dating.",
-  "marks": 10
- },
- {
-  "id": 343,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Neolithic",
-  "question": "Describe the features of early farming cultures and Neolithic of the Near East.",
-  "marks": 15
- },
- {
-  "id": 344,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic",
-  "question": "Discuss the salient features of different traditions of European Mesolithic.",
-  "marks": 15
  },
  {
   "id": 345,
@@ -3114,42 +2196,6 @@
   "marks": 15
  },
  {
-  "id": 347,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Prehistoric sites",
-  "question": "Olduvai Gorge.",
-  "marks": 10
- },
- {
-  "id": 348,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic",
-  "question": "Elucidate Mesolithic culture and associated rock art with examples from India.",
-  "marks": 15
- },
- {
-  "id": 349,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Relative dating",
-  "question": "Relative dating methods.",
-  "marks": 10
- },
- {
-  "id": 350,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Paleolithic",
-  "question": "Discuss briefly the major traditions in the Upper Paleolithic cultures of Europe.",
-  "marks": 15
- },
- {
   "id": 351,
   "year": "2018",
   "paper": "Paper I",
@@ -3166,24 +2212,6 @@
   "microtheme": "Absolute dating",
   "question": "Describe the principles of radiocarbon dating. Mention its limitations.",
   "marks": 15
- },
- {
-  "id": 353,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Dating methods",
-  "question": "What are dating methods? Discuss one absolute method and one relative method in detail.",
-  "marks": 15
- },
- {
-  "id": 354,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Prehistoric Archaeology and Cultural Evolution",
-  "microtheme": "Mesolithic",
-  "question": "Salient features of Mesolithic culture.",
-  "marks": 10
  },
  {
   "id": 355,
@@ -3249,71 +2277,8 @@
   "marks": 10
  },
  {
-  "id": 362,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Global cultural economy",
-  "question": "Critically examine Arjun Appadurai's conceptualization of the global cultural economy.",
-  "marks": 20
- },
- {
-  "id": 363,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Cultural lag",
-  "question": "Write notes in about 150 words: William Ogburn and Cultural lag.",
-  "marks": 10
- },
- {
-  "id": 364,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Attributes of culture",
-  "question": "Attributes of culture.",
-  "marks": 10
- },
- {
-  "id": 365,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Cultural relativism",
-  "question": "Discuss the historical and cultural contexts that led to superseding ethnocentrism with cultural relativism in anthropology.",
-  "marks": 15
- },
- {
-  "id": 366,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Cultural relativism",
-  "question": "Human rights and Cultural relativism.",
-  "marks": 10
- },
- {
   "id": 367,
   "year": "2020",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Cultural relativism",
-  "question": "Cultural Relativism.",
-  "marks": 10
- },
- {
-  "id": 368,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Nature of Culture",
-  "microtheme": "Concept of culture",
-  "question": "Discuss the development of the concept of culture in Anthropology.",
-  "marks": 15
- },
- {
-  "id": 369,
-  "year": "2017",
   "paper": "Paper I",
   "topic": "Nature of Culture",
   "microtheme": "Cultural relativism",
@@ -3339,42 +2304,6 @@
   "marks": 15
  },
  {
-  "id": 372,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Nature of Society",
-  "microtheme": "Social stratification",
-  "question": "Examine critically the concept of social stratification as a basis for sustaining social inequality.",
-  "marks": 20
- },
- {
-  "id": 373,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Nature of Society",
-  "microtheme": "Status, role, institution",
-  "question": "Radcliffe-Brown's ideas on status, role, and institution.",
-  "marks": 10
- },
- {
-  "id": 374,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Nature of Society",
-  "microtheme": "Status, role, institution",
-  "question": "Write a note in about 150 words: Radcliffe-Brown's ideas on status, role, and institution.",
-  "marks": 10
- },
- {
-  "id": 375,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Nature of Society",
-  "microtheme": "Social stratification",
-  "question": "Critically evaluate different types of social stratifications with suitable examples.",
-  "marks": 20
- },
- {
   "id": 376,
   "year": "2020",
   "paper": "Paper I",
@@ -3382,15 +2311,6 @@
   "microtheme": "Total institutions",
   "question": "Discuss Erving Goffman's concept of total institutions and its relevance in contemporary society.",
   "marks": 15
- },
- {
-  "id": 377,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Nature of Society",
-  "microtheme": "Social stratification",
-  "question": "Discuss social stratification according to any three major approaches.",
-  "marks": 20
  },
  {
   "id": 378,
@@ -3411,24 +2331,6 @@
   "marks": 15
  },
  {
-  "id": 380,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Marriage",
-  "microtheme": "Marriage regulations",
-  "question": "Discuss the role of marriage regulations in traditional societies in India for strengthening social solidarity.",
-  "marks": 20
- },
- {
-  "id": 381,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Marriage",
-  "microtheme": "Alliance theory",
-  "question": "Marriage Regulations and Alliance Theory.",
-  "marks": 10
- },
- {
   "id": 382,
   "year": "2018",
   "paper": "Paper I",
@@ -3436,15 +2338,6 @@
   "microtheme": "Mate acquisition",
   "question": "Ways of Acquiring Mate in Tribal Society.",
   "marks": 10
- },
- {
-  "id": 383,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Marriage",
-  "microtheme": "Preferential marriage",
-  "question": "Discuss the different forms of preferential marriage with suitable examples from tribal societies in India.",
-  "marks": 15
  },
  {
   "id": 384,
@@ -3472,24 +2365,6 @@
   "microtheme": "Live-in relationship",
   "question": "Where do you situate 'live-in relationship' within the institution of marriage?",
   "marks": 15
- },
- {
-  "id": 387,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Family",
-  "microtheme": "Urbanization and family",
-  "question": "Define urbanization and discuss its impact on family in India with examples.",
-  "marks": 15
- },
- {
-  "id": 388,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Family",
-  "microtheme": "Household and domestic group",
-  "question": "Write a note in about 150 words: Household and domestic group.",
-  "marks": 10
  },
  {
   "id": 389,
@@ -3546,66 +2421,12 @@
   "marks": 10
  },
  {
-  "id": 395,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Avoidance and joking relationships",
-  "question": "Critical perspective on avoidance and joking relationship.",
-  "marks": 10
- },
- {
-  "id": 396,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Kroeber and kinship",
-  "question": "Critically discuss A.L. Kroeber's contribution to kinship studies.",
-  "marks": 15
- },
- {
-  "id": 397,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Matrilineal descent",
-  "question": "Discuss how the rules of descent contradict the principles of residence in matrilineal society, mentioning suitable examples.",
-  "marks": 20
- },
- {
-  "id": 398,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Descent groups",
-  "question": "Write notes on: Descent Groups.",
-  "marks": 10
- },
- {
   "id": 399,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Kinship",
   "microtheme": "Kinship terminology",
   "question": "Kinship Terminology.",
-  "marks": 10
- },
- {
-  "id": 400,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Kinship terminology",
-  "question": "Elucidate the determinants of Kinship terminology.",
-  "marks": 15
- },
- {
-  "id": 401,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Kinship",
-  "microtheme": "Bilineal and bilateral descent",
-  "question": "Bilineal and Bilateral descent.",
   "marks": 10
  },
  {
@@ -3645,84 +2466,12 @@
   "marks": 10
  },
  {
-  "id": 406,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Kula",
-  "question": "Cultural relevance of the Kula.",
-  "marks": 10
- },
- {
-  "id": 407,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Globalization and indigenous communities",
-  "question": "Discuss the impact of globalization on the economic systems of indigenous communities.",
-  "marks": 15
- },
- {
-  "id": 408,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Kula Ring",
-  "question": "Critically examine various anthropological interpretations about the Kula Ring.",
-  "marks": 15
- },
- {
-  "id": 409,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Formalist vs substantivist",
-  "question": "Write a note in about 150 words: Debate between formalist and substantivist approaches.",
-  "marks": 10
- },
- {
-  "id": 410,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Modes of subsistence",
-  "question": "Write notes on Modes of Subsistence.",
-  "marks": 10
- },
- {
-  "id": 411,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Globalization and indigenous people",
-  "question": "Discuss how indigenous people encounter globalization.",
-  "marks": 20
- },
- {
-  "id": 412,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Pastoralism",
-  "question": "Pastoralism in India.",
-  "marks": 10
- },
- {
   "id": 413,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Economic Organization",
   "microtheme": "Hunting and gathering",
   "question": "Write the characteristics of the hunting and gathering economy.",
-  "marks": 15
- },
- {
-  "id": 414,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Economic Organization",
-  "microtheme": "Exchange systems",
-  "question": "With the help of appropriate examples, explain the various forms of the exchange system.",
   "marks": 15
  },
  {
@@ -3762,42 +2511,6 @@
   "marks": 20
  },
  {
-  "id": 419,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Political Organization and Social Control",
-  "microtheme": "Authority and political organization",
-  "question": "Authority and forms of political organization.",
-  "marks": 10
- },
- {
-  "id": 420,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Political Organization and Social Control",
-  "microtheme": "Social control mechanisms",
-  "question": "Discuss the mechanism of social control in different kinds of political systems.",
-  "marks": 20
- },
- {
-  "id": 421,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Political Organization and Social Control",
-  "microtheme": "Primate social organization",
-  "question": "Discuss different forms of primate social organization.",
-  "marks": 15
- },
- {
-  "id": 422,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Political Organization and Social Control",
-  "microtheme": "Power and legitimacy",
-  "question": "How do political organizations of simple societies establish power, authority, and legitimacy?",
-  "marks": 20
- },
- {
   "id": 423,
   "year": "2020",
   "paper": "Paper I",
@@ -3813,15 +2526,6 @@
   "topic": "Political Organization and Social Control",
   "microtheme": "Customary law",
   "question": "How does customary law function in tribal society? Discuss its different sources.",
-  "marks": 15
- },
- {
-  "id": 425,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Political Organization and Social Control",
-  "microtheme": "Band organization",
-  "question": "Mention the characteristic features of a band with suitable examples.",
   "marks": 15
  },
  {
@@ -3852,75 +2556,12 @@
   "marks": 20
  },
  {
-  "id": 429,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Levi-Strauss and myth",
-  "question": "How does Levi-Strauss look at the Tsimshian myth of Asdiwal? Critically discuss Levi-Strauss' theory of structuralism in the light of his study of mythologies.",
-  "marks": 15
- },
- {
-  "id": 430,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Clifford Geertz and religion",
-  "question": "How did Clifford Geertz look at religion? Differentiate between anthropological and psychological approaches to the study of religion.",
-  "marks": 15
- },
- {
-  "id": 431,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Shaman and sorcerer",
-  "question": "Write a note in about 150 words: Shaman, sorcerer, and medicine man.",
-  "marks": 10
- },
- {
-  "id": 432,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Animism and deep ecology",
-  "question": "Write notes on Animism and Deep Ecology in about 150 words.",
-  "marks": 10
- },
- {
-  "id": 433,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Anthropological approaches to religion",
-  "question": "Critically explain the anthropological approaches to religion.",
-  "marks": 15
- },
- {
   "id": 434,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Religion",
   "microtheme": "Science and magic",
   "question": "Difference between Science and Magic.",
-  "marks": 10
- },
- {
-  "id": 435,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Traditional forms of religion",
-  "question": "Discuss the different traditional forms of religion in tribal societies.",
-  "marks": 15
- },
- {
-  "id": 436,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Religion",
-  "microtheme": "Religion and magic",
-  "question": "Difference between religion and magic.",
   "marks": 10
  },
  {
@@ -3996,15 +2637,6 @@
   "marks": 15
  },
  {
-  "id": 445,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Classical evolutionism - Morgan",
-  "question": "Critically evaluate Lewis Morgan's classification of family.",
-  "marks": 15
- },
- {
   "id": 446,
   "year": "2015",
   "paper": "Paper I",
@@ -4012,24 +2644,6 @@
   "microtheme": "Classical evolutionism - Morgan",
   "question": "How did Morgan explain the evolution of marriage, family and Socio-Political organization and how did other evolutionists disagree with his explanation?",
   "marks": 20
- },
- {
-  "id": 447,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Historical particularism",
-  "question": "Discuss historical particularism as a critical development to classical evolutionism.",
-  "marks": 20
- },
- {
-  "id": 448,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Historical particularism - Boas",
-  "question": "Historical Particularism and Franz Boas.",
-  "marks": 10
  },
  {
   "id": 449,
@@ -4047,24 +2661,6 @@
   "topic": "Anthropological Theories",
   "microtheme": "Historical particularism",
   "question": "Historical Particularism.",
-  "marks": 10
- },
- {
-  "id": 451,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Structural functionalism and kinship",
-  "question": "How did Radcliffe-Brown and Levi-Strauss study kinship in terms of social structure?",
-  "marks": 15
- },
- {
-  "id": 452,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Structural functionalism",
-  "question": "Basic tenets of structural-functionalism.",
   "marks": 10
  },
  {
@@ -4095,48 +2691,12 @@
   "marks": 20
  },
  {
-  "id": 456,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Structuralism - Levi-Strauss",
-  "question": "Explain the structural analysis of kinship as proposed by Levi-Strauss.",
-  "marks": 15
- },
- {
   "id": 457,
   "year": "2016",
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": "Structuralism - binary opposites",
   "question": "How do the concepts of binary opposite and exchange figure in Levi-Strauss' structural analysis of Kinship?",
-  "marks": 15
- },
- {
-  "id": 458,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Culture and personality - Ruth Benedict",
-  "question": "Critically discuss the characteristics of the psychological types in the cultures of the American South-West as observed by Ruth Benedict.",
-  "marks": 20
- },
- {
-  "id": 459,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Culture and personality - Malinowski and Mead",
-  "question": "Critically discuss the controversies related to fieldwork of Bronislaw Malinowski and Margaret Mead.",
-  "marks": 20
- },
- {
-  "id": 460,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "National character studies",
-  "question": "Discuss political and methodological aspects of national character studies. Elucidate the contemporary relevance of such studies.",
   "marks": 15
  },
  {
@@ -4158,48 +2718,12 @@
   "marks": 15
  },
  {
-  "id": 463,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Culture and personality - Ruth Benedict",
-  "question": "Explain Ruth Benedict's patterns of culture.",
-  "marks": 20
- },
- {
-  "id": 464,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Neo-evolutionism",
-  "question": "Discuss the approaches of Leslie White, Julian Steward, and Marshall Sahlins in the light of cultural evolution.",
-  "marks": 15
- },
- {
   "id": 465,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": "Neo-evolutionism - Gordon Childe",
   "question": "Gordon Childe's Theory of Cultural Evolution.",
-  "marks": 10
- },
- {
-  "id": 466,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Neo-evolutionism - Steward",
-  "question": "Critically examine the Stewardian view of neo-evolutionism.",
-  "marks": 15
- },
- {
-  "id": 467,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Cultural materialism",
-  "question": "Cultural Materialism.",
   "marks": 10
  },
  {
@@ -4212,15 +2736,6 @@
   "marks": 15
  },
  {
-  "id": 469,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Thick description - Geertz",
-  "question": "Elucidate the concept of \"thick description\" of Clifford Geertz with a suitable example.",
-  "marks": 15
- },
- {
   "id": 470,
   "year": "2020",
   "paper": "Paper I",
@@ -4228,15 +2743,6 @@
   "microtheme": "Victor Turner - liminality",
   "question": "Victor Turner and Liminality.",
   "marks": 10
- },
- {
-  "id": 471,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Victor Turner and Clifford Geertz",
-  "question": "Examine critically the contributions of Victor Turner and Clifford Geertz in anthropology.",
-  "marks": 20
  },
  {
   "id": 472,
@@ -4275,15 +2781,6 @@
   "marks": 15
  },
  {
-  "id": 476,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Anthropological Theories",
-  "microtheme": "Postmodernism - Derrida",
-  "question": "Critically explain the notion of 'deconstruction' in the light of the postmodern works of Jacques Derrida.",
-  "marks": 20
- },
- {
   "id": 477,
   "year": "2015",
   "paper": "Paper I",
@@ -4300,15 +2797,6 @@
   "microtheme": "Linguistic anthropology perspectives",
   "question": "Describe briefly the theoretical perspectives in linguistic anthropology to explain the relationship of culture, language and thought.",
   "marks": 15
- },
- {
-  "id": 479,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Culture, Language and Communication",
-  "microtheme": "Glottochronology",
-  "question": "Write notes in about 150 words: Glottochronology.",
-  "marks": 10
  },
  {
   "id": 480,
@@ -4338,39 +2826,12 @@
   "marks": 15
  },
  {
-  "id": 483,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Culture, Language and Communication",
-  "microtheme": "Non-verbal communication",
-  "question": "Non-verbal communication.",
-  "marks": 10
- },
- {
   "id": 484,
   "year": "2025",
   "paper": "Paper I",
   "topic": "Research Methods in Anthropology",
   "microtheme": "Pedigree and genealogical analysis",
   "question": "Differentiate between Pedigree & Geniological Analysis. Discuss the history and application of these methods in anthropological studies.",
-  "marks": 15
- },
- {
-  "id": 485,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Fieldwork challenges",
-  "question": "Discuss the contemporary challenges in fieldwork method in anthropological research.",
-  "marks": 15
- },
- {
-  "id": 486,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Fieldwork tradition",
-  "question": "Write the historical development of fieldwork tradition in anthropology till recent times.",
   "marks": 15
  },
  {
@@ -4381,15 +2842,6 @@
   "microtheme": "Experiential ethnography",
   "question": "Experiential Ethnography.",
   "marks": 10
- },
- {
-  "id": 488,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Fieldwork characteristics",
-  "question": "Elucidate the basic characteristics of anthropological fieldwork methods.",
-  "marks": 15
  },
  {
   "id": 489,
@@ -4410,15 +2862,6 @@
   "marks": 10
  },
  {
-  "id": 491,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Sampling techniques",
-  "question": "Discuss the applicability of various sampling techniques in selecting the study group.",
-  "marks": 15
- },
- {
   "id": 492,
   "year": "2025",
   "paper": "Paper I",
@@ -4428,33 +2871,6 @@
   "marks": 10
  },
  {
-  "id": 493,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Data collection tools",
-  "question": "Discuss various tools of data collection in conducting anthropological research.",
-  "marks": 20
- },
- {
-  "id": 494,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Participant observation",
-  "question": "Evaluate participant observation in producing anthropological knowledge.",
-  "marks": 15
- },
- {
-  "id": 495,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Phenomenology",
-  "question": "Discuss phenomenology as a research method in anthropological studies.",
-  "marks": 15
- },
- {
   "id": 496,
   "year": "2018",
   "paper": "Paper I",
@@ -4462,15 +2878,6 @@
   "microtheme": "Case study method",
   "question": "How is case study method helpful in understanding social phenomena? Explain with suitable examples.",
   "marks": 20
- },
- {
-  "id": 497,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Questionnaire",
-  "question": "Questionnaire.",
-  "marks": 10
  },
  {
   "id": 498,
@@ -4500,51 +2907,6 @@
   "marks": 15
  },
  {
-  "id": 501,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Research Methods in Anthropology",
-  "microtheme": "Qualitative data analysis",
-  "question": "Describe various methods of qualitative data analysis. Highlight some popular computer softwares used in qualitative analysis.",
-  "marks": 20
- },
- {
-  "id": 502,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Heritability",
-  "question": "Heritability and its estimation.",
-  "marks": 10
- },
- {
-  "id": 503,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Karyotype analysis",
-  "question": "What is meant by karyotype? How does its analysis help in the diagnosis of chromosomal aberrations in man?",
-  "marks": 20
- },
- {
-  "id": 504,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Pedigree analysis",
-  "question": "Pedigree analysis in genetic counselling.",
-  "marks": 10
- },
- {
-  "id": 505,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic study methods",
-  "question": "Briefly describe the various methods used in the genetic study of man.",
-  "marks": 20
- },
- {
   "id": 506,
   "year": "2015",
   "paper": "Paper I",
@@ -4569,33 +2931,6 @@
   "topic": "Human Genetics",
   "microtheme": "Mendelian and non-Mendelian traits",
   "question": "Mendelian and non-Mendelian traits.",
-  "marks": 10
- },
- {
-  "id": 509,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Lethal and sublethal genes",
-  "question": "Lethal and sublethal genes.",
-  "marks": 10
- },
- {
-  "id": 510,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Multifactorial traits",
-  "question": "What is a multifactorial trait? Illustrate your answer with suitable human examples.",
-  "marks": 15
- },
- {
-  "id": 511,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Polygenic inheritance",
-  "question": "Polygenic Inheritance.",
   "marks": 10
  },
  {
@@ -4626,24 +2961,6 @@
   "marks": 10
  },
  {
-  "id": 515,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic equilibrium",
-  "question": "What assumptions must be met for a population to be in genetic equilibrium? Explain the importance of genetic equilibrium.",
-  "marks": 15
- },
- {
-  "id": 516,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic polymorphism",
-  "question": "Balanced and transient genetic polymorphism.",
-  "marks": 10
- },
- {
   "id": 517,
   "year": "2020",
   "paper": "Paper I",
@@ -4660,33 +2977,6 @@
   "microtheme": "Marriage and gene pool",
   "question": "How do marriage rules impact the gene pool of populations?",
   "marks": 15
- },
- {
-  "id": 519,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic polymorphism",
-  "question": "Differentiate between transient and balanced genetic polymorphisms. Illustrate your answer with suitable examples from human populations.",
-  "marks": 15
- },
- {
-  "id": 520,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Mutation",
-  "question": "Implications of mutation in evolution.",
-  "marks": 10
- },
- {
-  "id": 521,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Hardy-Weinberg Law",
-  "question": "Hardy-Weinberg Law.",
-  "marks": 10
  },
  {
   "id": 522,
@@ -4713,51 +3003,6 @@
   "topic": "Human Genetics",
   "microtheme": "Genetic load",
   "question": "What do you understand by 'Genetic Load' in a population? How is it measured and what are the important factors that can influence it?",
-  "marks": 15
- },
- {
-  "id": 525,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Single-gene mutation disorders",
-  "question": "Single-gene mutation disorders in man.",
-  "marks": 10
- },
- {
-  "id": 526,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic counselling",
-  "question": "What is genetic counselling? Briefly discuss various steps involved in it.",
-  "marks": 15
- },
- {
-  "id": 527,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Structural chromosomal aberrations",
-  "question": "Describe the causes of structural abnormalities of chromosomes with suitable examples.",
-  "marks": 15
- },
- {
-  "id": 528,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Genetic imprinting",
-  "question": "Genetic imprinting in human diseases.",
-  "marks": 10
- },
- {
-  "id": 529,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Human Genetics",
-  "microtheme": "Chromosomal aberrations",
-  "question": "\"Chromosomal aberrations can play havoc with the human body and mind.\" Explain with suitable examples.",
   "marks": 15
  },
  {
@@ -4833,24 +3078,6 @@
   "marks": 10
  },
  {
-  "id": 538,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Race and Racism",
-  "microtheme": "Race and ethnicity",
-  "question": "Race and Ethnicity.",
-  "marks": 10
- },
- {
-  "id": 539,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Race and Racism",
-  "microtheme": "Race as a concept",
-  "question": "Is race a valid and biologically meaningful concept?",
-  "marks": 10
- },
- {
   "id": 540,
   "year": "2020",
   "paper": "Paper I",
@@ -4860,30 +3087,12 @@
   "marks": 10
  },
  {
-  "id": 541,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Race and Racism",
-  "microtheme": "Racial classification",
-  "question": "With reference to the somatoscopic and morphometric characteristics commonly used for racial classification, make critical comments as to whether 'Race' is a valid concept.",
-  "marks": 20
- },
- {
   "id": 542,
   "year": "2018",
   "paper": "Paper I",
   "topic": "Race and Racism",
   "microtheme": "Race as a concept",
   "question": "Race is a Myth. Justify its Present-day Relevance.",
-  "marks": 10
- },
- {
-  "id": 543,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Race and Racism",
-  "microtheme": "Concept of race",
-  "question": "Concept of Race.",
   "marks": 10
  },
  {
@@ -4914,33 +3123,6 @@
   "marks": 20
  },
  {
-  "id": 547,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Genetic Markers and Population Variation",
-  "microtheme": "Hemoglobin",
-  "question": "Hemoglobin in health and disease.",
-  "marks": 10
- },
- {
-  "id": 548,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Genetic Markers and Population Variation",
-  "microtheme": "ABO and Rh blood groups",
-  "question": "Describe the genetics and inheritance patterns of the ABO and Rh blood groups in man.",
-  "marks": 15
- },
- {
-  "id": 549,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Genetic Markers and Population Variation",
-  "microtheme": "Blood group systems and HLA",
-  "question": "What do you understand by blood group systems? How is HLA system different from those based on red cell antigens?",
-  "marks": 15
- },
- {
   "id": 550,
   "year": "2016",
   "paper": "Paper I",
@@ -4959,24 +3141,6 @@
   "marks": 15
  },
  {
-  "id": 552,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Ecological Anthropology",
-  "microtheme": "Customary laws and environment",
-  "question": "Customary laws and Environmental conservation.",
-  "marks": 10
- },
- {
-  "id": 553,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Ecological Anthropology",
-  "microtheme": "Acclimatization",
-  "question": "What is acclimatization? Discuss adaptive responses to high altitude and cold climate.",
-  "marks": 20
- },
- {
   "id": 554,
   "year": "2020",
   "paper": "Paper I",
@@ -4984,15 +3148,6 @@
   "microtheme": "Biocultural responses",
   "question": "Describe the biocultural responses to extreme climatic events.",
   "marks": 15
- },
- {
-  "id": 555,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Ecological Anthropology",
-  "microtheme": "High altitude adaptation",
-  "question": "'Human adaptations are always bio-cultural in nature'. Discuss with reference to human adaptation to high-altitude climate.",
-  "marks": 20
  },
  {
   "id": 556,
@@ -5010,15 +3165,6 @@
   "topic": "Ecological Anthropology",
   "microtheme": "Allen's and Bergmann's rules",
   "question": "Do Allen's Rule and Bergmann's Rule hold for human populations? Explain with examples.",
-  "marks": 15
- },
- {
-  "id": 558,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Ecological Anthropology",
-  "microtheme": "High altitude adaptation",
-  "question": "Discuss the responses and acclimatization to high altitude stresses.",
   "marks": 15
  },
  {
@@ -5073,33 +3219,6 @@
   "topic": "Ecological Anthropology",
   "microtheme": "Growth and environment",
   "question": "\"Though human growth is under tight genetic control but it is influenced by various environmental factors\". Justify.",
-  "marks": 15
- },
- {
-  "id": 565,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Epidemiological Anthropology",
-  "microtheme": "Lifestyle diseases",
-  "question": "Critically comment on the lifestyle diseases and their impact on human health.",
-  "marks": 15
- },
- {
-  "id": 566,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Epidemiological Anthropology",
-  "microtheme": "Malnutrition",
-  "question": "Elucidate the different forms of malnutrition. Describe protein-calorie malnutrition with suitable examples.",
-  "marks": 15
- },
- {
-  "id": 567,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Epidemiological Anthropology",
-  "microtheme": "Health and lifestyle diseases",
-  "question": "What is meant by health? Is the burden of lifestyle diseases on the rise? Justify your answer with suitable examples.",
   "marks": 15
  },
  {
@@ -5175,51 +3294,6 @@
   "marks": 10
  },
  {
-  "id": 576,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Mixed-longitudinal method",
-  "question": "What is the mixed-longitudinal method of studying human growth? Discuss its merits and demerits.",
-  "marks": 15
- },
- {
-  "id": 577,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Heath-Carter somatotyping",
-  "question": "Why did Heath and Carter use anthropometric measurements instead of photographs to assess somatotype? Elaborate on their method.",
-  "marks": 20
- },
- {
-  "id": 578,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Pre-natal development",
-  "question": "Stages of human pre-natal development.",
-  "marks": 10
- },
- {
-  "id": 579,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Adolescent growth spurt",
-  "question": "Human adolescent growth spurt.",
-  "marks": 10
- },
- {
-  "id": 580,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Theories of ageing",
-  "question": "Discuss the physiological and evolutionary theories of aging.",
-  "marks": 15
- },
- {
   "id": 581,
   "year": "2020",
   "paper": "Paper I",
@@ -5238,24 +3312,6 @@
   "marks": 10
  },
  {
-  "id": 583,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Factors affecting growth",
-  "question": "Genetico-environmental factors affecting human growth.",
-  "marks": 15
- },
- {
-  "id": 584,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Methods of studying growth",
-  "question": "Discuss the methods of studying human growth with their merits and demerits.",
-  "marks": 15
- },
- {
   "id": 585,
   "year": "2018",
   "paper": "Paper I",
@@ -5263,24 +3319,6 @@
   "microtheme": "Elderly and senescence",
   "question": "Issues of elderly and senescence in developing and developed countries.",
   "marks": 10
- },
- {
-  "id": 586,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Sheldon's somatotyping",
-  "question": "Discuss Sheldon's method of somatotyping.",
-  "marks": 15
- },
- {
-  "id": 587,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Human Growth and Development",
-  "microtheme": "Methods of studying growth",
-  "question": "Describe the various methods of studying growth, highlighting their merits and demerits.",
-  "marks": 15
  },
  {
   "id": 588,
@@ -5373,33 +3411,6 @@
   "marks": 10
  },
  {
-  "id": 598,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Menopausal symptoms",
-  "question": "Menopausal symptoms.",
-  "marks": 10
- },
- {
-  "id": 599,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Menarche",
-  "question": "Critically evaluate the reasons for the reduction in age at menarche in human females over successive generations.",
-  "marks": 15
- },
- {
-  "id": 600,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Age at menarche",
-  "question": "Age at menarche.",
-  "marks": 10
- },
- {
   "id": 601,
   "year": "2015",
   "paper": "Paper I",
@@ -5418,15 +3429,6 @@
   "marks": 15
  },
  {
-  "id": 603,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Demographic theories",
-  "question": "Discuss the contemporary population problems in the light of various socio-cultural demographic theories.",
-  "marks": 20
- },
- {
   "id": 604,
   "year": "2013",
   "paper": "Paper I",
@@ -5434,33 +3436,6 @@
   "microtheme": "Demographic transition",
   "question": "Demographic transition.",
   "marks": 10
- },
- {
-  "id": 605,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Fertility and fecundity",
-  "question": "Discuss the bio-social determinants of fertility and fecundity.",
-  "marks": 15
- },
- {
-  "id": 606,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Fertility factors",
-  "question": "Discuss the biological factors influencing fertility in light of the relationship between fecundity and fertility.",
-  "marks": 15
- },
- {
-  "id": 607,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Fertility and Demography",
-  "microtheme": "Fertility and mortality factors",
-  "question": "Describe the biological and socio-ecological factors affecting fertility and mortality.",
-  "marks": 15
  },
  {
   "id": 608,
@@ -5508,60 +3483,6 @@
   "marks": 20
  },
  {
-  "id": 613,
-  "year": "2024",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Forensic anthropology",
-  "question": "Discuss the applications of forensic anthropology with suitable examples.",
-  "marks": 15
- },
- {
-  "id": 614,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "DNA technology",
-  "question": "Describe the practical applications of DNA technology in the current scenario.",
-  "marks": 15
- },
- {
-  "id": 615,
-  "year": "2023",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Personal identification",
-  "question": "Discuss various methods of personal identification based on skeletal remains.",
-  "marks": 15
- },
- {
-  "id": 616,
-  "year": "2022",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Anthropometry and equipment design",
-  "question": "Discuss how anthropological knowledge of the human body may be used in designing equipment and articles of human use.",
-  "marks": 15
- },
- {
-  "id": 617,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Disputed paternity",
-  "question": "How are the cases of disputed paternity solved? Discuss the recent techniques.",
-  "marks": 15
- },
- {
-  "id": 618,
-  "year": "2021",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Anthropometry and sports",
-  "question": "What is Anthropometry? Discuss its role in assessing the nutritional status and sports capability of a person.",
-  "marks": 15
- },
- {
   "id": 619,
   "year": "2020",
   "paper": "Paper I",
@@ -5569,33 +3490,6 @@
   "microtheme": "Ethics and genetic engineering",
   "question": "Ethics and Genetic Engineering.",
   "marks": 10
- },
- {
-  "id": 620,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Facial reconstruction",
-  "question": "Anthropological inputs in facial reconstruction.",
-  "marks": 10
- },
- {
-  "id": 621,
-  "year": "2019",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Applied human genetics",
-  "question": "'Applied human genetics has come to touch every sphere of human life.' Discuss in light of recent advances in molecular anthropology.",
-  "marks": 15
- },
- {
-  "id": 622,
-  "year": "2017",
-  "paper": "Paper I",
-  "topic": "Applications of Anthropology",
-  "microtheme": "Personal identification",
-  "question": "What are the methods of personal identification? Critically examine how personal identification helps in criminal investigations.",
-  "marks": 20
  },
  {
   "id": 623,
@@ -5922,7 +3816,3031 @@
   "paper": "Paper II"
  },
  {
-  "id": 715,
+  "id": 771,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Bilineal and bilateral descents",
+  "marks": 10
+ },
+ {
+  "id": 772,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Difference between religion and magic",
+  "marks": 10
+ },
+ {
+  "id": 773,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Basic tenets of structural-functionalism",
+  "marks": 10
+ },
+ {
+  "id": 774,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Non-verbal communication",
+  "marks": 10
+ },
+ {
+  "id": 775,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Questionnaire",
+  "marks": 10
+ },
+ {
+  "id": 776,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the development of the concept of culture in Anthropology.",
+  "marks": 20
+ },
+ {
+  "id": 777,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Elucidate the determinants of Kinship terminology.",
+  "marks": 15
+ },
+ {
+  "id": 778,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Marriage",
+  "microtheme": null,
+  "question": "Discuss the different forms of preferential marriage with suitable examples from tribal societies in India.",
+  "marks": 15
+ },
+ {
+  "id": 779,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Discuss the different traditional forms of religion in tribal societies.",
+  "marks": 20
+ },
+ {
+  "id": 780,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Mention the characteristic features of band with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 781,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Economic Organization",
+  "microtheme": null,
+  "question": "With the help of appropriate examples, explain the various forms of exchange system.",
+  "marks": 15
+ },
+ {
+  "id": 782,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Explain Ruth Benedict’s patterns of culture.",
+  "marks": 20
+ },
+ {
+  "id": 783,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Elucidate the basic characteristics of anthropological fieldwork methods.",
+  "marks": 15
+ },
+ {
+  "id": 784,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically examine the Stewardian view of neo-evolutionism.",
+  "marks": 15
+ },
+ {
+  "id": 785,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Hardy-Weinberg law",
+  "marks": 10
+ },
+ {
+  "id": 786,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Salient features of Mesolithic culture",
+  "marks": 10
+ },
+ {
+  "id": 787,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Race and Racism",
+  "microtheme": null,
+  "question": "Concept of race",
+  "marks": 10
+ },
+ {
+  "id": 788,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Age at menarche",
+  "marks": 10
+ },
+ {
+  "id": 789,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Anthropology and designing of equipments",
+  "marks": 10
+ },
+ {
+  "id": 790,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Define Anthropology.",
+  "marks": 20
+ },
+ {
+  "id": 791,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Bring out the comparative anatomical features of man and apes. Discuss their evolutionary significance.",
+  "marks": 15
+ },
+ {
+  "id": 792,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "What are dating methods? Discuss one absolute method and one relative method in detail.",
+  "marks": 15
+ },
+ {
+  "id": 793,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Briefly describe the various methods used in the genetic study of man.",
+  "marks": 20
+ },
+ {
+  "id": 794,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the responses and acclimatization to high altitude stresses.",
+  "marks": 15
+ },
+ {
+  "id": 795,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "Describe the biological and socio-ecological factors affecting fertility and mortality.",
+  "marks": 15
+ },
+ {
+  "id": 796,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "What are the methods of personal identification? Critically examine how personal identification helps in criminal investigations.",
+  "marks": 20
+ },
+ {
+  "id": 797,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "Describe the various methods of studying growth highlighting their merits and demerits.",
+  "marks": 15
+ },
+ {
+  "id": 798,
+  "year": "2017",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss Sheldon’s method of somatotyping.",
+  "marks": 15
+ },
+ {
+  "id": 799,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Neolithic cultures of South India.",
+  "marks": 10
+ },
+ {
+  "id": 800,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Austro-asiatic linguistic groups in India.",
+  "marks": 10
+ },
+ {
+  "id": 801,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Varnashram and the concept of Rina.",
+  "marks": 10
+ },
+ {
+  "id": 802,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Ethno-archaeology.",
+  "marks": 10
+ },
+ {
+  "id": 803,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "History and Administration of Tribal Areas",
+  "microtheme": null,
+  "question": "Nature-man-spirit complex.",
+  "marks": 10
+ },
+ {
+  "id": 804,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Contributions of Anthropology",
+  "microtheme": null,
+  "question": "Discuss the contribution of Nirmal Kumar Bose to the understanding of Indian society.",
+  "marks": 20
+ },
+ {
+  "id": 805,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe the salient features of chalcolithic cultures of the Deccan.",
+  "marks": 15
+ },
+ {
+  "id": 806,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Critically discuss the constitutional safeguards for the Scheduled Castes.",
+  "marks": 15
+ },
+ {
+  "id": 807,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Economic Organization",
+  "microtheme": null,
+  "question": "Discuss the impact of market economy on the Jajmani system.",
+  "marks": 20
+ },
+ {
+  "id": 808,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe the salient features of Ramapithecus. '",
+  "marks": 15
+ },
+ {
+  "id": 809,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the social, political and economic status of Muslims in India.",
+  "marks": 15
+ },
+ {
+  "id": 810,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Explain how Buddhism influenced the economic and cultural transformations of Indian society. 2.",
+  "marks": 20
+ },
+ {
+  "id": 811,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Describe various aspects of trade and religion of Harappan civilization.",
+  "marks": 15
+ },
+ {
+  "id": 812,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Social Change and Contemporary Tribal Societies",
+  "microtheme": null,
+  "question": "Discuss the impact of media as an instrument of social change.",
+  "marks": 15
+ },
+ {
+  "id": 813,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Indebtedness among tribal communities.",
+  "marks": 10
+ },
+ {
+  "id": 814,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Ethnicity and regionalism. .",
+  "marks": 10
+ },
+ {
+  "id": 815,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Other Backward Class.",
+  "marks": 10
+ },
+ {
+  "id": 816,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Particularly Vulnerable Tribal Groups (earlier known as PTG).",
+  "marks": 10
+ },
+ {
+  "id": 817,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Impact of Religions on Tribal Societies",
+  "microtheme": null,
+  "question": "‍ Impact of Christianity on Indian tribes. 10.",
+  "marks": 10
+ },
+ {
+  "id": 818,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Problems of Tribal Communities",
+  "microtheme": null,
+  "question": "Describe the impact of displacement on the health and nutritional status of tribal communities.",
+  "marks": 20
+ },
+ {
+  "id": 819,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the emergence, salient features and limitations of Tribal sub-plan.",
+  "marks": 15
+ },
+ {
+  "id": 820,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Give a critical evaluation of any one anthropological village study in India.",
+  "marks": 15
+ },
+ {
+  "id": 821,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Critically evaluate the term ‘tribe’ (as used in India) as compared to the term ‘indigenous’ in some other countries.",
+  "marks": 20
+ },
+ {
+  "id": 822,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the impact of Panchayati Raj institution on the empowerment of rural women in India.",
+  "marks": 15
+ },
+ {
+  "id": 823,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Role of Anthropology in Tribal Development",
+  "microtheme": null,
+  "question": "Give a critical appraisal of any one tribal development programme during XIIth Five-Year plan. Give your suggestions for any improvement in the programme.",
+  "marks": 15
+ },
+ {
+  "id": 824,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Give your assessment of the reasons for the imbalance in the sex-ratio in Inds 4 :",
+  "marks": 20
+ },
+ {
+  "id": 825,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Discuss the relevance of art and craft traditions in the understanding of Indian archaeology.",
+  "marks": 15
+ },
+ {
+  "id": 826,
+  "year": "2017",
+  "paper": "Paper II",
+  "topic": "Contributions of Anthropology",
+  "microtheme": null,
+  "question": "Discuss the contribution of anthropology in understanding the loss of livelihood of tribal communities due to economic and ecological factors.",
+  "marks": 15
+ },
+ {
+  "id": 827,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "The relationship between Linguistics and Social-Cultural Anthropology",
+  "marks": 10
+ },
+ {
+  "id": 828,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Cultural Relativism",
+  "marks": 10
+ },
+ {
+  "id": 829,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Pastoralism in India",
+  "marks": 10
+ },
+ {
+  "id": 830,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Cultural Materialism",
+  "marks": 10
+ },
+ {
+  "id": 831,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Relative Dating Methods",
+  "marks": 10
+ },
+ {
+  "id": 832,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the evolutionary significance of bipedalism and erect posture.",
+  "marks": 20
+ },
+ {
+  "id": 833,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Nature of Society",
+  "microtheme": null,
+  "question": "How did Radcliffe-Brown and Levi-Strauss study kinship in terms of social structure ?",
+  "marks": 15
+ },
+ {
+  "id": 834,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Elucidate Mesolithic culture and associated rock art with examples from India.",
+  "marks": 15
+ },
+ {
+  "id": 835,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss social stratification according to any three major approaches.",
+  "marks": 20
+ },
+ {
+  "id": 836,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "“Europeans are closer to Neanderthals.” Critically discuss in view of the African origin of humankind.",
+  "marks": 15
+ },
+ {
+  "id": 837,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Discuss briefly the major traditions in the Upper Palaeolithic culture of Europe.",
+  "marks": 15
+ },
+ {
+  "id": 838,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Race and Racism",
+  "microtheme": null,
+  "question": "With reference to the somatoscopic and morphometric characteristics commonly used for racial classification, make critical comments as to whether ‘Race’ is a valid concept.",
+  "marks": 20
+ },
+ {
+  "id": 839,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Critically explain the anthropological approaches to religion.",
+  "marks": 15
+ },
+ {
+  "id": 840,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Differentiate between transient and balanced genetic polymorphism. Illustrate your answer with suitable examples from human populations.",
+  "marks": 15
+ },
+ {
+  "id": 841,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "Adaptive primate radiation",
+  "marks": 10
+ },
+ {
+  "id": 842,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Implications of mutation in evolution",
+  "marks": 10
+ },
+ {
+  "id": 843,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Olduvai Gorge",
+  "marks": 10
+ },
+ {
+  "id": 844,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Anthropological inputs in facial reconstruction eet,",
+  "marks": 10
+ },
+ {
+  "id": 845,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "Genetico-environmental factors affecting human growth",
+  "marks": 10
+ },
+ {
+  "id": 846,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Examine critically the contributions of Victor Turner and Clifford Geertz in anthropology.",
+  "marks": 20
+ },
+ {
+  "id": 847,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "“Human adaptations are always bio-cultural in nature.” Discuss with reference to human adaptation to high-altitude climate.",
+  "marks": 15
+ },
+ {
+  "id": 848,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "Discuss the methods of studying human growth with their merits and demerits.",
+  "marks": 15
+ },
+ {
+  "id": 849,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss how indigenous people encounter globalization.",
+  "marks": 20
+ },
+ {
+  "id": 850,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "“Applied human genetics has come to touch every sphere of human life.” Discuss in light of recent advances in molecular anthropology.",
+  "marks": 15
+ },
+ {
+  "id": 851,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Evaluate participant observation in producing anthropological knowledge.",
+  "marks": 15
+ },
+ {
+  "id": 852,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Discuss with examples the Megalithic culture of India in the } archaeological context.",
+  "marks": 20
+ },
+ {
+  "id": 853,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "Discuss the bio-cultural factors influencing fertility in light of the relationship between fecundity and fertility.",
+  "marks": 15
+ },
+ {
+  "id": 854,
+  "year": "2019",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Discuss phenomenology as a research method in anthropological studies.",
+  "marks": 15
+ },
+ {
+  "id": 855,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "Phylogenetic position and morphological features of Ramapithecus.",
+  "marks": 10
+ },
+ {
+  "id": 856,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Social Change and Contemporary Tribal Societies",
+  "microtheme": null,
+  "question": "Ethno-archaeological analysis of hunting activities of contemporary tribal communities.",
+  "marks": 10
+ },
+ {
+  "id": 857,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Distribution of Tibeto-Burman group of languages in India.",
+  "marks": 10
+ },
+ {
+  "id": 858,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Use of doctrine of Karma and rebirth in justifying the Varna system.",
+  "marks": 10
+ },
+ {
+  "id": 859,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Economic Organization",
+  "microtheme": null,
+  "question": "The Jajmani system and contemporary market economy.",
+  "marks": 10
+ },
+ {
+  "id": 860,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Describe the Palaeolithic culture with special reference to Soanian tradition. Indicate the problems of describing the Indian Palaeolithic.",
+  "marks": 20
+ },
+ {
+  "id": 861,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Contributions of Anthropology",
+  "microtheme": null,
+  "question": "What has been the contribution of tribal people to the Indian Independence movement ?",
+  "marks": 15
+ },
+ {
+  "id": 862,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe the impact of Buddhism on the tribal populations of India.",
+  "marks": 15
+ },
+ {
+  "id": 863,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "What kind of society may be reconstructed from the archaeological evidences of Harappan culture ?",
+  "marks": 20
+ },
+ {
+  "id": 864,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Discuss the impact of media on the social life of Indian villages.",
+  "marks": 15
+ },
+ {
+  "id": 865,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Critically assess the existing plans and programmes meant for tribal welfare.",
+  "marks": 15
+ },
+ {
+  "id": 866,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Give an account of the contributions of Iravati Karve and B. S. Guha to the analysis of race and caste in India.",
+  "marks": 20
+ },
+ {
+  "id": 867,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "What has been the impact of development projects on the environment and livelihood of forest-dwelling tribes ?",
+  "marks": 15
+ },
+ {
+  "id": 868,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Identify some special programmes for particularly vulnerable Tribal Groups (erstwhile PTGs).",
+  "marks": 15
+ },
+ {
+  "id": 869,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Ethnicity and regionalism.",
+  "marks": 10
+ },
+ {
+  "id": 870,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Panchayati Raj as a facilitator of social inclusion in rural society.",
+  "marks": 10
+ },
+ {
+  "id": 871,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Anthropological understanding of communalism.",
+  "marks": 10
+ },
+ {
+  "id": 872,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Issues relating to tribal education.",
+  "marks": 10
+ },
+ {
+  "id": 873,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Distribution of Neolithic sites in India.",
+  "marks": 10
+ },
+ {
+  "id": 874,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Identify the theoretical concepts that have emerged out of village studies in India.",
+  "marks": 20
+ },
+ {
+  "id": 875,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Role of Anthropology in Tribal Development",
+  "microtheme": null,
+  "question": "Critically discuss the role of NGOs in tribal development.",
+  "marks": 15
+ },
+ {
+  "id": 876,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Describe the impact of industrialization on the economic and social aspects of : India’s villages.",
+  "marks": 15
+ },
+ {
+  "id": 877,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Discuss how the elements of Little and Great Traditions combine in the emergence of social/political/religious movements, giving any one example to illustrate the issue.",
+  "marks": 20
+ },
+ {
+  "id": 878,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Meaning, Scope and Development of Anthropology",
+  "microtheme": null,
+  "question": "Write about the role of colonial administration in the development of Anthropology in India.",
+  "marks": 15
+ },
+ {
+  "id": 879,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "What are the salient issues faced by pastoral communities in India ? Discuss with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 880,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Discuss with appropriate examples how tribal unrest may be understood as emerging out of an incompatibility between tribes and the nation-state.",
+  "marks": 20
+ },
+ {
+  "id": 881,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "What has been the impact of non-Hindu religions on the emancipation of Schedule Castes in India ?",
+  "marks": 15
+ },
+ {
+  "id": 882,
+  "year": "2019",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "What are the constitutional safeguards to protect the interests of the Indian tribes ?",
+  "marks": 15
+ },
+ {
+  "id": 883,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "Animism and Deep Ecology",
+  "marks": 10
+ },
+ {
+  "id": 884,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Marriage",
+  "microtheme": null,
+  "question": "Marriage Regulations and Alliance Theory",
+  "marks": 10
+ },
+ {
+  "id": 885,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Historical Particularism and Franz Boas",
+  "marks": 10
+ },
+ {
+  "id": 886,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "“The bio-cultural approach is the hallmark of Biological Anthropology.” Explain.",
+  "marks": 10
+ },
+ {
+  "id": 887,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Thermoluminescence (TL) dating",
+  "marks": 10
+ },
+ {
+  "id": 888,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "What are the physical and cultural characteristics of Homo erectus ? Discuss its phylogenetic status.",
+  "marks": 20
+ },
+ {
+  "id": 889,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Elucidate the concept of “thick description” of Clifford Geertz with a suitable example.",
+  "marks": 15
+ },
+ {
+  "id": 890,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Describe the features of early farming cultures and Neolithic of the Near East.",
+  "marks": 15
+ },
+ {
+  "id": 891,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Political Organization and Social Control",
+  "microtheme": null,
+  "question": "How do political organisations of simple societies establish power, authority and legitimacy ?",
+  "marks": 20
+ },
+ {
+  "id": 892,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Explain the genetic mechanisms of micro and macro evolution.",
+  "marks": 15
+ },
+ {
+  "id": 893,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Discuss the salient features of different traditions of European Mesolithic.",
+  "marks": 15
+ },
+ {
+  "id": 894,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Meaning, Scope and Development of Anthropology",
+  "microtheme": null,
+  "question": "Elaborate the scope of anthropology and elucidate its uniqueness in the field of other social sciences.",
+  "marks": 20
+ },
+ {
+  "id": 895,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Mention the major branches of linguistic anthropology and discuss language use in social and cultural settings.",
+  "marks": 15
+ },
+ {
+  "id": 896,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "“Chromosomal aberrations can play havoc with the human body and mind.” Explain with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 897,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "Human adolescent growth spurt",
+  "marks": 10
+ },
+ {
+  "id": 898,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "The losses and gains of erect posture",
+  "marks": 10
+ },
+ {
+  "id": 899,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Race and Racism",
+  "microtheme": null,
+  "question": "Is race a valid and biologically meaningful concept ?",
+  "marks": 10
+ },
+ {
+  "id": 900,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Descent Groups",
+  "marks": 10
+ },
+ {
+  "id": 901,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Economic Organization",
+  "microtheme": null,
+  "question": "Modes of Subsistence",
+  "marks": 10
+ },
+ {
+  "id": 902,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "What is acclimatization ? Discuss adaptive responses to high altitude and cold climate.",
+  "marks": 20
+ },
+ {
+  "id": 903,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "How are the cases of disputed paternity solved ? Discuss the recent techniques.",
+  "marks": 15
+ },
+ {
+  "id": 904,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Family",
+  "microtheme": null,
+  "question": "Critically evaluate Lewis Morgan’s classification of family.",
+  "marks": 15
+ },
+ {
+  "id": 905,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically evaluate different types of social stratifications with suitable examples.",
+  "marks": 20
+ },
+ {
+  "id": 906,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "Discuss the bio-social determinants of fertility and fecundity.",
+  "marks": 15
+ },
+ {
+  "id": 907,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "What is Anthropometry ? Discuss its role in assessing the nutritional | status and sports capability of a person.",
+  "marks": 15
+ },
+ {
+  "id": 908,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Discuss various tools of data collection in conducting anthropological research.",
+  "marks": 20
+ },
+ {
+  "id": 909,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the physiological and evolutionary theories of aging.",
+  "marks": 15
+ },
+ {
+  "id": 910,
+  "year": "2021",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Explain the structural analysis of kinship as proposed by Lévi-Strauss.",
+  "marks": 15
+ },
+ {
+  "id": 911,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Purushartha and righteous living today",
+  "marks": 10
+ },
+ {
+  "id": 912,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Relevance of tribe-caste continuum",
+  "marks": 10
+ },
+ {
+  "id": 913,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Harappan seals",
+  "marks": 10
+ },
+ {
+  "id": 914,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Caste and social capital",
+  "marks": 10
+ },
+ {
+  "id": 915,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Factionalism and politics in rural India",
+  "marks": 10
+ },
+ {
+  "id": 916,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Critically discuss the origin of Indus Valley Civilization. Mention the evidences of its endogenous origin from the pre-Harappan sites.",
+  "marks": 20
+ },
+ {
+  "id": 917,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Give the distribution and characteristic features of Upper Paleolithic culture in India.",
+  "marks": 15
+ },
+ {
+  "id": 918,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "Discuss the morphological features and phylogenetic position of Ramapithecus.",
+  "marks": 15
+ },
+ {
+  "id": 919,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "History and Administration of Tribal Areas",
+  "microtheme": null,
+  "question": "Explain the impact of the concept of nature-man-spirit complex on sustainable use of natural resources with suitable examples.",
+  "marks": 20
+ },
+ {
+  "id": 920,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "FTE | Examine the contributions of S. C. Roy in highlighting the role of customary laws in tribal life.",
+  "marks": 15
+ },
+ {
+  "id": 921,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Impact of Religions on Tribal Societies",
+  "microtheme": null,
+  "question": "Critically assess the impact of Christianity on tribal culture and identity.",
+  "marks": 15
+ },
+ {
+  "id": 922,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Discuss the contributions of N. K. Bose in understanding tribal communities and their place in Indian civilization.",
+  "marks": 20
+ },
+ {
+  "id": 923,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the role of Panchayati Raj Institutions in transforming traditional power hierarchy in rural India.",
+  "marks": 15
+ },
+ {
+  "id": 924,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Elucidate the problems and challenges in educational attainment of the Scheduled Tribes.",
+  "marks": 15
+ },
+ {
+  "id": 925,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Urbanization and tribal institutions",
+  "marks": 10
+ },
+ {
+  "id": 926,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Ethnic media and social awareness",
+  "marks": 10
+ },
+ {
+  "id": 927,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Cultural diversity and multiculturalism",
+  "marks": 10
+ },
+ {
+  "id": 928,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Concept of tribe and Indian census",
+  "marks": 10
+ },
+ {
+  "id": 929,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Politics of recognition and deprivation",
+  "marks": 10
+ },
+ {
+  "id": 930,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the impact of the Forest Rights Act (2006) on the livelihood and culture of tribal people in India.",
+  "marks": 20
+ },
+ {
+  "id": 931,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Examine the factors responsible for malnutrition in tribal India and suggest interventions required to overcome the problem.",
+  "marks": 15
+ },
+ {
+  "id": 932,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "Delineate the factors influencing fertility in Indian population.",
+  "marks": 15
+ },
+ {
+  "id": 933,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Explain the impact of successive Land Acquisition Acts on tribal social organization.",
+  "marks": 20
+ },
+ {
+  "id": 934,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the problems involved in rehabilitation and resettlement of tribals displaced due to development projects in India.",
+  "marks": 15
+ },
+ {
+  "id": 935,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the interventions made by the Non-Governmental Organizations for empowering tribal women.",
+  "marks": 15
+ },
+ {
+  "id": 936,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Examine how structural transformation in economy is affecting traditional social relationships in agrarian society.",
+  "marks": 20
+ },
+ {
+  "id": 937,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Delineate the constitutional safeguard for religious minorities in India.",
+  "marks": 15
+ },
+ {
+  "id": 938,
+  "year": "2021",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Identify the causes of tribal unrest with special reference to North-East India.",
+  "marks": 15
+ },
+ {
+  "id": 939,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Debate between formalist and substantivist approaches",
+  "marks": 10
+ },
+ {
+  "id": 940,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Mesolithic rock art in Indian subcontinent",
+  "marks": 10
+ },
+ {
+  "id": 941,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Radcliffe-Brown’s ideas on status, role and institution",
+  "marks": 10
+ },
+ {
+  "id": 942,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Pedigree analysis in genetic counselling",
+  "marks": 10
+ },
+ {
+  "id": 943,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Participatory Rural Appraisal (PRA) and Participatory Learning and Action (PLA)",
+  "marks": 10
+ },
+ {
+  "id": 944,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "“Anthropology is the systematic, objective and holistic study of human kind in all times and places”. Elaborate the argument.",
+  "marks": 20
+ },
+ {
+  "id": 945,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "Discuss different forms of primate social organisation.",
+  "marks": 15
+ },
+ {
+  "id": 946,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Discuss with suitable examples the typo-technological problems in Indian palaeolithic industry with reference to environmental hypotheses.",
+  "marks": 15
+ },
+ {
+  "id": 947,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Discuss how the rules of descent contradict the principles of residence in matrilineal society, mentioning suitable examples ?",
+  "marks": 20
+ },
+ {
+  "id": 948,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Enumerate the evidence of animal domestication in Indian microlithic industry.",
+  "marks": 15
+ },
+ {
+  "id": 949,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Human Evolution and Emergence of Man",
+  "microtheme": null,
+  "question": "Should we still distinguish between ‘classic’ and ‘progressive’ Neanderthals ? Discuss the controversy surrounding Neanderthal’s position in human evolution.",
+  "marks": 15
+ },
+ {
+  "id": 950,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "Why Heath and Carter used anthropometric measurements instead of photographs of an individual to assess the somatotype ? Elaborate their method.",
+  "marks": 20
+ },
+ {
+  "id": 951,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the historical and cultural contexts that led to superseding ethnocentrism with cultural relativism in anthropology.",
+  "marks": 15
+ },
+ {
+  "id": 952,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically examine various anthropological interpretations about the Kula Ring.",
+  "marks": 15
+ },
+ {
+  "id": 953,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Balanced and transient genetic polymorphism.",
+  "marks": 10
+ },
+ {
+  "id": 954,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Genetic imprinting in human diseases.",
+  "marks": 10
+ },
+ {
+  "id": 955,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Stages of human pre-natal development.",
+  "marks": 10
+ },
+ {
+  "id": 956,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Shaman, sorcerer and medicine man.",
+  "marks": 10
+ },
+ {
+  "id": 957,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Family",
+  "microtheme": null,
+  "question": "Household and domestic group.",
+  "marks": 10
+ },
+ {
+  "id": 958,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Nature of Society",
+  "microtheme": null,
+  "question": "Discuss the mechanism of social control in different kinds of political systems.",
+  "marks": 20
+ },
+ {
+  "id": 959,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Epidemiological Anthropology",
+  "microtheme": null,
+  "question": "What is meant by health ? Is the burden of life style diseases on the rise ? Justify your answer with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 960,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically evaluate the reasons of reduction in age at menarche in human females over the successive generations.",
+  "marks": 15
+ },
+ {
+  "id": 961,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the role of evolutionary forces in creating human diversity.",
+  "marks": 20
+ },
+ {
+  "id": 962,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Write the historical development of field work tradition in anthropology till recent times.",
+  "marks": 15
+ },
+ {
+  "id": 963,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Discuss the approaches of Leslie White, Julian Steward and Marshall Sahlins in the light of cultural evolution.",
+  "marks": 15
+ },
+ {
+  "id": 964,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "Discuss the contemporary population problems in the light of various socio-cultural demographic theories.",
+  "marks": 20
+ },
+ {
+  "id": 965,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "What do you understand by blood group systems ? How is HLA system different from those based on red cell antigens ?",
+  "marks": 15
+ },
+ {
+  "id": 966,
+  "year": "2022",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss how anthropological knowledge of the human body may be used in designing equipments and articles of human use. 15 .",
+  "marks": 15
+ },
+ {
+  "id": 967,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Pit-dwellers of Kashmir",
+  "marks": 10
+ },
+ {
+  "id": 968,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Varna and Buddhism",
+  "marks": 10
+ },
+ {
+  "id": 969,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Dharma versus Religion",
+  "marks": 10
+ },
+ {
+  "id": 970,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Safeguards for linguistic minorities in India",
+  "marks": 10
+ },
+ {
+  "id": 971,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Westernisation and Modernisation",
+  "marks": 10
+ },
+ {
+  "id": 972,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Contributions of Anthropology",
+  "microtheme": null,
+  "question": "Illustrate the contribution of Irawati Karve to Indian Anthropology. Make a special mention of her literary contribution.",
+  "marks": 20
+ },
+ {
+  "id": 973,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "What are the arguments for excluding Narmada Man from Homo erectus category?",
+  "marks": 15
+ },
+ {
+  "id": 974,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Critically describe Dr. B. R. Ambedkar’s argument on the origin of Indian caste system.",
+  "marks": 15
+ },
+ {
+  "id": 975,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Make a critical appraisal of Megalithic tradition in India with special reference to North-East India.",
+  "marks": 20
+ },
+ {
+  "id": 976,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Assess the contributions of 5. C. Dube in Indian village studies.",
+  "marks": 15
+ },
+ {
+  "id": 977,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe the methods adopted by Sir Herbert Hope Risley in classifying Indian populations. What are the criticisms against Risley’s classification?",
+  "marks": 15
+ },
+ {
+  "id": 978,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "“Globalisation, on one hand has provided opportunities and on the other hand thrown challenges to Indian villages.” Elucidate.",
+  "marks": 20
+ },
+ {
+  "id": 979,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe briefly the proto-history of Gujarat. Discuss the significance of Gujarat proto-history in international trade.",
+  "marks": 15
+ },
+ {
+  "id": 980,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Critically examine Indigenisation of Christianity’ in India.",
+  "marks": 15
+ },
+ {
+  "id": 981,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Regionalism as an opportunity and threat to national integration",
+  "marks": 10
+ },
+ {
+  "id": 982,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Issues of tribal agricultural labourers",
+  "marks": 10
+ },
+ {
+  "id": 983,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Major problems of nomadic and semi-nomadic groups",
+  "marks": 10
+ },
+ {
+  "id": 984,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Role of the Governor in the Fifth Schedule areas",
+  "marks": 10
+ },
+ {
+  "id": 985,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Austroasiatic languages",
+  "marks": 10
+ },
+ {
+  "id": 986,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Role of Anthropology in Tribal Development",
+  "microtheme": null,
+  "question": "Discuss the objectives of Integrated Tribal Development Projects (ITDPs). How far have these objectives been achieved?",
+  "marks": 20
+ },
+ {
+  "id": 987,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Compare the functioning of traditional ‘Tribal Council’ with that of ‘Gram Sabha’ under PESA.",
+  "marks": 15
+ },
+ {
+  "id": 988,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Explain how British policies impacted the major resources of the tribals.",
+  "marks": 15
+ },
+ {
+  "id": 989,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the views of G. S. Ghurye and Verrier Elwin on the approach towards tribal populations. What are the policies of the Government of India towards Indian tribal populations?",
+  "marks": 20
+ },
+ {
+  "id": 990,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Discuss the issues and solutions related to the Scheduled Caste and the Scheduled Tribe populations in India.",
+  "marks": 15
+ },
+ {
+  "id": 991,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Explain the social and religious consequences of contact between tribal and non-tribal populations.",
+  "marks": 15
+ },
+ {
+  "id": 992,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Compare the nature of tribal movements between North-East and Central India. Briefly mention the current status of existing tribal movements in these areas.",
+  "marks": 20
+ },
+ {
+  "id": 993,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Briefly describe the anthropological perspective on development. How have anthropologists contributed in India’s rural development?",
+  "marks": 15
+ },
+ {
+  "id": 994,
+  "year": "2022",
+  "paper": "Paper II",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "How can a balance be struck between livelihood concern and environmental degradation in the context of shifting cultivation?",
+  "marks": 15
+ },
+ {
+  "id": 995,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Scope and relevance of Social and Cultural Anthropology",
+  "marks": 10
+ },
+ {
+  "id": 996,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Cultural impact of Iron Age",
+  "marks": 10
+ },
+ {
+  "id": 997,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Race and Ethnicity",
+  "marks": 10
+ },
+ {
+  "id": 998,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "Customary laws and Environmental conservation",
+  "marks": 10
+ },
+ {
+  "id": 999,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Gene expression",
+  "marks": 10
+ },
+ {
+  "id": 1000,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss major species of Australopithecus discovered from South and East Africa. Describe the discovery, physical features and significance of Taung baby.",
+  "marks": 20
+ },
+ {
+  "id": 1001,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Ecological Anthropology",
+  "microtheme": null,
+  "question": "Discuss the Paleolithic environment in light of available evidences with special reference to India.",
+  "marks": 15
+ },
+ {
+  "id": 1002,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Elucidate the different forms of malnutrition. Describe protein-calorie malnutrition with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 1003,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Evolution and Emergence of Man",
+  "microtheme": null,
+  "question": "What is hominization process ? Discuss the major trends in human evolution with the help of suitable examples and illustrations.",
+  "marks": 20
+ },
+ {
+  "id": 1004,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "How did Clifford Geertz look at religion ? Differentiate between anthropological and psychological approaches to the study of religion.",
+  "marks": 15
+ },
+ {
+  "id": 1005,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Growth and Development",
+  "microtheme": null,
+  "question": "What is mixed-longitudinal method of studying human growth ? Discuss its merits and demerits.",
+  "marks": 15
+ },
+ {
+  "id": 1006,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Marriage",
+  "microtheme": null,
+  "question": "Discuss the role of marriage regulations in traditional societies in India for strengthening social solidarity.",
+  "marks": 20
+ },
+ {
+  "id": 1007,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss various methods of personal identification based on skeletal remains.",
+  "marks": 15
+ },
+ {
+  "id": 1008,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Identify the major Mesolithic sites and describe the typo-technological features with special reference to India.",
+  "marks": 15
+ },
+ {
+  "id": 1009,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Polygenic Inheritance",
+  "marks": 10
+ },
+ {
+  "id": 1010,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Prehistoric significance of Rakhigarhi",
+  "marks": 10
+ },
+ {
+  "id": 1011,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Glottochronology",
+  "marks": 10
+ },
+ {
+  "id": 1012,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Menopausal symptoms",
+  "marks": 10
+ },
+ {
+  "id": 1013,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "William Ogburn and Cultural lag",
+  "marks": 10
+ },
+ {
+  "id": 1014,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Critically discuss the controversies related to fieldwork of Bronislaw Malinowski and Margaret Mead.",
+  "marks": 20
+ },
+ {
+  "id": 1015,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the impact of globalization on the economic systems of indigenous communities.",
+  "marks": 15
+ },
+ {
+  "id": 1016,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Describe the practical applications of DNA technology in the current scenario.",
+  "marks": 15
+ },
+ {
+  "id": 1017,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Describe various methods of qualitative data analysis. Highlight some popular computer softwares used in qualitative analysis.",
+  "marks": 20
+ },
+ {
+  "id": 1018,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "What assumptions must be met for a population to be in genetic equilibrium ? Explain the importance of genetic equilibrium.",
+  "marks": 15
+ },
+ {
+  "id": 1019,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Discuss political and methodological aspects of national character studies. Elucidate the contemporary relevance of such studies.",
+  "marks": 15
+ },
+ {
+  "id": 1020,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically examine Arjun Appadurai’s conceptualization of global cultural economy.",
+  "marks": 20
+ },
+ {
+  "id": 1021,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Describe the causes of structural abnormalities of chromosomes with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 1022,
+  "year": "2023",
+  "paper": "Paper I",
+  "topic": "Kinship",
+  "microtheme": null,
+  "question": "Critically discuss A.L. Kroeber’s contribution to kinship studies.",
+  "marks": 15
+ },
+ {
+  "id": 1023,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Material culture and archaeology",
+  "marks": 10
+ },
+ {
+  "id": 1024,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Interface between Purushartha and Ashrama",
+  "marks": 10
+ },
+ {
+  "id": 1025,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Economic Organization",
+  "microtheme": null,
+  "question": "Jajmani system : continuity and change",
+  "marks": 10
+ },
+ {
+  "id": 1026,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Prehistoric rock arts from Uttarakhand",
+  "marks": 10
+ },
+ {
+  "id": 1027,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Religious pluralism and social solidarity",
+  "marks": 10
+ },
+ {
+  "id": 1028,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "“Tribes are backward Hindus.” Critically comment with reference to the contributions of G. S. Ghurye.",
+  "marks": 20
+ },
+ {
+  "id": 1029,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Indus Valley was the first settlement of the big civilization.” Comment critically.",
+  "marks": 15
+ },
+ {
+  "id": 1030,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the basic tenets of Jainism and its impact on Indian society.",
+  "marks": 15
+ },
+ {
+  "id": 1031,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Social Change and Contemporary Tribal Societies",
+  "microtheme": null,
+  "question": "“Sanskritization is a culture-bound concept.” Critically comment to assess the strength and limitation of this concept in developing a theoretical framework to study social change.",
+  "marks": 20
+ },
+ {
+  "id": 1032,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Prehistoric Archaeology and Cultural Evolution",
+  "microtheme": null,
+  "question": "Was Mesolithic culture the first step towards sedentary way of life? Illustrate your answer by citing suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 1033,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Social Change and Contemporary Tribal Societies",
+  "microtheme": null,
+  "question": "Critically examine the impact of modern democratic institutions on contemporary tribal societies. Illustrate with suitable ethnographic examples.",
+  "marks": 15
+ },
+ {
+  "id": 1034,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Elucidate the problems faced by Particularly Vulnerable Tribal Groups and the major challenges in the formulation of special programmes for their development.",
+  "marks": 20
+ },
+ {
+  "id": 1035,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Critically compare Risley’s and Sarkar’s approaches to the classification of peoples of India.",
+  "marks": 15
+ },
+ {
+  "id": 1036,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Is caste mobility a recent phenomenon? Discuss in the light of Indological and Empirical context.",
+  "marks": 15
+ },
+ {
+  "id": 1037,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Scheduled areas",
+  "marks": 10
+ },
+ {
+  "id": 1038,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Ramapithecus-Sivapithecus debate",
+  "marks": 10
+ },
+ {
+  "id": 1039,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Indian Villages",
+  "microtheme": null,
+  "question": "Village as little republic",
+  "marks": 10
+ },
+ {
+  "id": 1040,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Dravidian languages and their subgroups",
+  "marks": 10
+ },
+ {
+  "id": 1041,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Karma and Rebirth",
+  "marks": 10
+ },
+ {
+  "id": 1042,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Is annihilation of caste possible? Discuss the future of caste system in the light of various proactive measures taken by the Indian State.",
+  "marks": 20
+ },
+ {
+  "id": 1043,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Ethnicity and Tribal Unrest",
+  "microtheme": null,
+  "question": "Distinguishing between ethnic identity and ethnicity, discuss the factors responsible for ethnic conflict in tribal areas.",
+  "marks": 15
+ },
+ {
+  "id": 1044,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Phylogenetic Status of Fossil Hominids",
+  "microtheme": null,
+  "question": "“Siwalik deposits show a variety of Neogene fossil primates.” Critically examine.",
+  "marks": 15
+ },
+ {
+  "id": 1045,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Elucidate the shifting terrains of India’s tribal policies in colonial and post-colonial periods.",
+  "marks": 20
+ },
+ {
+  "id": 1046,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Problems of Tribal Communities",
+  "microtheme": null,
+  "question": "Critically examine how the displacement of tribal communities due to hydroelectric river dam projects has affected the women in local context. Illustrate with suitable ethnographic examples.",
+  "marks": 15
+ },
+ {
+  "id": 1047,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Role of Anthropology in Tribal Development",
+  "microtheme": null,
+  "question": "Elucidate the role of anthropology in nation building. Illustrate with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 1048,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the distribution of tribes in different geographical regions of India. Identify the distinct institutional features of tribal societies of these regions.",
+  "marks": 20
+ },
+ {
+  "id": 1049,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Critically evaluate the contributions of S. C. Roy to Indian anthropology.",
+  "marks": 15
+ },
+ {
+  "id": 1050,
+  "year": "2023",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "How are Other Backward Classes identified? Enumerating the important features, elucidate the recent changes in their social and economic life.",
+  "marks": 15
+ },
+ {
+  "id": 1051,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Attributes of culture",
+  "marks": 10
+ },
+ {
+  "id": 1052,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Harappan maritime trade",
+  "marks": 10
+ },
+ {
+  "id": 1053,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critical perspective on avoidance and joking relationship",
+  "marks": 10
+ },
+ {
+  "id": 1054,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Lethal and sublethal genes",
+  "marks": 10
+ },
+ {
+  "id": 1055,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Epidemiological Anthropology",
+  "microtheme": null,
+  "question": "Hemoglobin in health and disease",
+  "marks": 10
+ },
+ {
+  "id": 1056,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss historical particularism as a critical development to the classical evolutionism.",
+  "marks": 20
+ },
+ {
+  "id": 1057,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Describe the evidences of food production and domestication of animals with special reference to Mehrgarh. Throw light on its significance.",
+  "marks": 15
+ },
+ {
+  "id": 1058,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Epidemiological Anthropology",
+  "microtheme": null,
+  "question": "Critically comment on the lifestyle diseases and their impact on human health.",
+  "marks": 15
+ },
+ {
+  "id": 1059,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "What is meant by karyotype? How does its analysis help in diagnosis of the chromosomal aberrations in man?",
+  "marks": 20
+ },
+ {
+  "id": 1060,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Family",
+  "microtheme": null,
+  "question": "Define urbanization and discuss its impact on family in India with examples.",
+  "marks": 15
+ },
+ {
+  "id": 1061,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "Discuss the contemporary challenges in fieldwork method in anthropological research.",
+  "marks": 15
+ },
+ {
+  "id": 1062,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically discuss the characteristics of the psychological types in the cultures of the American South-West as observed by Ruth Benedict.",
+  "marks": 20
+ },
+ {
+  "id": 1063,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the Acheulian and Oldowan traditions of Indian Paleolithic cultures with suitable illustrations.",
+  "marks": 15
+ },
+ {
+  "id": 1064,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "What is genetic counselling? Briefly discuss various steps involved in it.",
+  "marks": 15
+ },
+ {
+  "id": 1065,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Chronometric dating",
+  "marks": 10
+ },
+ {
+  "id": 1066,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Cultural relevance of the Kula",
+  "marks": 10
+ },
+ {
+  "id": 1067,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Heritability and its estimation",
+  "marks": 10
+ },
+ {
+  "id": 1068,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Political Organization and Social Control",
+  "microtheme": null,
+  "question": "Authority and forms of political organization",
+  "marks": 10
+ },
+ {
+  "id": 1069,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Single-gene mutation disorders in man",
+  "marks": 10
+ },
+ {
+  "id": 1070,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Human Evolution and Emergence of Man",
+  "microtheme": null,
+  "question": "Discuss the geographical distribution of Homo erectus. Taking into account its physical features, where does it fit in human evolutionary line?",
+  "marks": 20
+ },
+ {
+  "id": 1071,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the applications of forensic anthropology with suitable examples.",
+  "marks": 15
+ },
+ {
+  "id": 1072,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "How does Lévi-Strauss look at the Tsimshian myth of Asdiwal? Critically discuss Lévi-Strauss’ theory of structuralism in the light of his study of mythologies.",
+  "marks": 15
+ },
+ {
+  "id": 1073,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Critically explain the notion of ‘deconstruction’ in the light of the postmodern works of Jacques Derrida.",
+  "marks": 20
+ },
+ {
+  "id": 1074,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "What is a multifactorial trait? Illustrate your answer with suitable human examples.",
+  "marks": 15
+ },
+ {
+  "id": 1075,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Discuss the applicability of various sampling techniques in selecting the study group.",
+  "marks": 15
+ },
+ {
+  "id": 1076,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Anthropological Theories",
+  "microtheme": null,
+  "question": "Examine critically the concept of social stratification as a basis for sustaining social inequality.",
+  "marks": 20
+ },
+ {
+  "id": 1077,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Human Genetics",
+  "microtheme": null,
+  "question": "Describe the genetics and inheritance patterns of the ABO and Rh blood groups in man.",
+  "marks": 15
+ },
+ {
+  "id": 1078,
+  "year": "2024",
+  "paper": "Paper I",
+  "topic": "Human Evolution and Emergence of Man",
+  "microtheme": null,
+  "question": "Critically discuss the synergistic effect of biological and cultural factors in human evolution.",
+  "marks": 15
+ },
+ {
+  "id": 1079,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Digitisation of rural economy",
+  "marks": 10
+ },
+ {
+  "id": 1080,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Origin of State Societies",
+  "marks": 10
+ },
+ {
+  "id": 1081,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Syro-Malabar Christians",
+  "marks": 10
+ },
+ {
+  "id": 1082,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Artisan tribes of Jharkhand",
+  "marks": 10
+ },
+ {
+  "id": 1083,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Causes of stunting and wasting among tribal children",
+  "marks": 10
+ },
+ {
+  "id": 1084,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Critically discuss. the recent welfare measures initiated by the Government for the Particularly Vulnerable Tribal Groups (PVTGs). Comment why PVTGs were erroneously called Primitive Tribal Groups (PTGs).",
+  "marks": 20
+ },
+ {
+  "id": 1085,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "How is PESA Act empowering local self-governance and impacting women’s political participation ?",
+  "marks": 15
+ },
+ {
+  "id": 1086,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Deconstruct the colonial history of Indian Anthropology highlighting the critical role played by the Indian Anthropologists in sustaining its autonomy.",
+  "marks": 15
+ },
+ {
+  "id": 1087,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Nature of Culture",
+  "microtheme": null,
+  "question": "Critically describe evidences from Rakhi Garhi and its linkages to Harappan civilization.",
+  "marks": 20
+ },
+ {
+  "id": 1088,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Social Change and Contemporary Tribal Societies",
+  "microtheme": null,
+  "question": "Compare and contrast the approaches of M.N. Srinivas and L.P. Vidyarthi to social change in village India.",
+  "marks": 15
+ },
+ {
+  "id": 1089,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Examine the impact of Forest Policies from 1878 to 2006 on land alienation and deprivation of rights of tribal communities in India.",
+  "marks": 15
+ },
+ {
+  "id": 1090,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Research Methods in Anthropology",
+  "microtheme": null,
+  "question": "What are the ethical concerns in biological socio-cultural anthropology because of recent advances in AI and genetic research ?",
+  "marks": 20
+ },
+ {
+  "id": 1091,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Write an essay on the life history of tribal activist and freedom fighter Birsa Munda. What was the impact of his sacrifice on tribal society ?",
+  "marks": 15
+ },
+ {
+  "id": 1092,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Fertility and Demography",
+  "microtheme": null,
+  "question": "What are the demographic challenges of India’s changing population dynamics in the next 50 years ?",
+  "marks": 15
+ },
+ {
+  "id": 1093,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "B.K. Roy Burman’s concept of ‘Buffer Zone’",
+  "marks": 10
+ },
+ {
+  "id": 1094,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe ILO’s Convention No. 169 (1989) on Indigenous and Tribal people. Is India a signatory to it ?",
+  "marks": 10
+ },
+ {
+  "id": 1095,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Agricultural practices of the Apatani",
+  "marks": 10
+ },
+ {
+  "id": 1096,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Status of Sixth Schedule Areas",
+  "marks": 10
+ },
+ {
+  "id": 1097,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Constitutional Safeguards and Exploitation",
+  "microtheme": null,
+  "question": "Constitutional Safeguards for Backward Classes",
+  "marks": 10
+ },
+ {
+  "id": 1098,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Custodians of natural resources are the tribals, but they are the most deprived. Critically examine how climate change will impact their survival in future.",
+  "marks": 20
+ },
+ {
+  "id": 1099,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Religion",
+  "microtheme": null,
+  "question": "Elucidate the difference between secularism, religiosity, religious fundamentalism and spiritualism from an anthropological perspective.",
+  "marks": 15
+ },
+ {
+  "id": 1100,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Contributions of Anthropology",
+  "microtheme": null,
+  "question": "Discuss the contribution of P.K. Bhowmick in decriminalising the status of the Lodha tribe.",
+  "marks": 15
+ },
+ {
+  "id": 1101,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Epidemiological Anthropology",
+  "microtheme": null,
+  "question": "Critically examine existing paradigms of holistic health for the marginalised sections of society drawing inferences from COVID-19 pandemic.",
+  "marks": 20
+ },
+ {
+  "id": 1102,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Caste System",
+  "microtheme": null,
+  "question": "Discuss the theories on origin of caste system and its criticism in India. : Differentiate between caste, class and race.",
+  "marks": 15
+ },
+ {
+  "id": 1103,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Elucidate the resurgence of ethno-nationalism from an anthropological lens.",
+  "marks": 15
+ },
+ {
+  "id": 1104,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Describe the important Paleolithic sites from South India with suitable examples. What is the significance of South Indian Paleolithic cultures?",
+  "marks": 20
+ },
+ {
+  "id": 1105,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Distinguish a ‘Theocratic State’ from a secular, liberal, democratic state. Illustrate your answer with examples from tribal and contemporary societies.",
+  "marks": 15
+ },
+ {
+  "id": 1106,
+  "year": "2024",
+  "paper": "Paper II",
+  "topic": "Tribal Situation in India",
+  "microtheme": null,
+  "question": "Discuss the economic, social and developmental impacts on tribal communities with special reference to mining.",
+  "marks": 15
+ },
+ {
+  "id": 1107,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Nature of Culture",
@@ -5931,7 +6849,7 @@
   "marks": 10
  },
  {
-  "id": 716,
+  "id": 1108,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Growth and Development",
@@ -5940,7 +6858,7 @@
   "marks": 10
  },
  {
-  "id": 717,
+  "id": 1109,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Culture, Language and Communication",
@@ -5949,7 +6867,7 @@
   "marks": 10
  },
  {
-  "id": 718,
+  "id": 1110,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Genetics",
@@ -5958,7 +6876,7 @@
   "marks": 10
  },
  {
-  "id": 719,
+  "id": 1111,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -5967,7 +6885,7 @@
   "marks": 10
  },
  {
-  "id": 720,
+  "id": 1112,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Growth and Development",
@@ -5976,7 +6894,7 @@
   "marks": 20
  },
  {
-  "id": 721,
+  "id": 1113,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Ecological Anthropology",
@@ -5985,7 +6903,7 @@
   "marks": 15
  },
  {
-  "id": 722,
+  "id": 1114,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Anthropological Theories",
@@ -5994,7 +6912,7 @@
   "marks": 15
  },
  {
-  "id": 723,
+  "id": 1115,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Political Organization and Social Control",
@@ -6003,7 +6921,7 @@
   "marks": 20
  },
  {
-  "id": 724,
+  "id": 1116,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Evolution and Emergence of Man",
@@ -6012,7 +6930,7 @@
   "marks": 15
  },
  {
-  "id": 725,
+  "id": 1117,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -6021,7 +6939,7 @@
   "marks": 15
  },
  {
-  "id": 726,
+  "id": 1118,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Phylogenetic Status of Fossil Hominids",
@@ -6030,7 +6948,7 @@
   "marks": 20
  },
  {
-  "id": 727,
+  "id": 1119,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Marriage",
@@ -6039,7 +6957,7 @@
   "marks": 15
  },
  {
-  "id": 728,
+  "id": 1120,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Genetics",
@@ -6048,7 +6966,7 @@
   "marks": 15
  },
  {
-  "id": 729,
+  "id": 1121,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Research Methods in Anthropology",
@@ -6057,7 +6975,7 @@
   "marks": 10
  },
  {
-  "id": 730,
+  "id": 1122,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Family",
@@ -6066,7 +6984,7 @@
   "marks": 10
  },
  {
-  "id": 731,
+  "id": 1123,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Family",
@@ -6075,7 +6993,7 @@
   "marks": 10
  },
  {
-  "id": 732,
+  "id": 1124,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Growth and Development",
@@ -6084,7 +7002,7 @@
   "marks": 10
  },
  {
-  "id": 733,
+  "id": 1125,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -6093,7 +7011,7 @@
   "marks": 10
  },
  {
-  "id": 734,
+  "id": 1126,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Genetics",
@@ -6102,7 +7020,7 @@
   "marks": 20
  },
  {
-  "id": 735,
+  "id": 1127,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Nature of Culture",
@@ -6111,7 +7029,7 @@
   "marks": 15
  },
  {
-  "id": 736,
+  "id": 1128,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Phylogenetic Status of Fossil Hominids",
@@ -6120,7 +7038,7 @@
   "marks": 15
  },
  {
-  "id": 737,
+  "id": 1129,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Research Methods in Anthropology",
@@ -6129,7 +7047,7 @@
   "marks": 20
  },
  {
-  "id": 738,
+  "id": 1130,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Fertility and Demography",
@@ -6138,7 +7056,7 @@
   "marks": 15
  },
  {
-  "id": 739,
+  "id": 1131,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Anthropological Theories",
@@ -6147,7 +7065,7 @@
   "marks": 15
  },
  {
-  "id": 740,
+  "id": 1132,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Anthropological Theories",
@@ -6156,7 +7074,7 @@
   "marks": 20
  },
  {
-  "id": 741,
+  "id": 1133,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Human Genetics",
@@ -6165,7 +7083,7 @@
   "marks": 15
  },
  {
-  "id": 742,
+  "id": 1134,
   "year": "2026",
   "paper": "Paper I",
   "topic": "Applications of Anthropology",
@@ -6174,7 +7092,7 @@
   "marks": 15
  },
  {
-  "id": 743,
+  "id": 1135,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Culture, Language and Communication",
@@ -6183,7 +7101,7 @@
   "marks": 10
  },
  {
-  "id": 744,
+  "id": 1136,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Human Evolution and Emergence of Man",
@@ -6192,7 +7110,7 @@
   "marks": 10
  },
  {
-  "id": 745,
+  "id": 1137,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Ethnicity and Tribal Unrest",
@@ -6201,7 +7119,7 @@
   "marks": 10
  },
  {
-  "id": 746,
+  "id": 1138,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
@@ -6210,7 +7128,7 @@
   "marks": 10
  },
  {
-  "id": 747,
+  "id": 1139,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
@@ -6219,7 +7137,7 @@
   "marks": 10
  },
  {
-  "id": 748,
+  "id": 1140,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Economic Organization",
@@ -6228,7 +7146,7 @@
   "marks": 20
  },
  {
-  "id": 749,
+  "id": 1141,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Developmental Projects and Tribal Displacement",
@@ -6237,7 +7155,7 @@
   "marks": 15
  },
  {
-  "id": 750,
+  "id": 1142,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -6246,16 +7164,16 @@
   "marks": 15
  },
  {
-  "id": 751,
+  "id": 1143,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Indian Villages",
   "microtheme": null,
-  "question": "Critically examine the salience of F. G. Bailey’s study on Bisipara village of Odisha.",
+  "question": "Critically examine the salience of F. G. Bailey’s study on Bisipara village of",
   "marks": 20
  },
  {
-  "id": 752,
+  "id": 1144,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Impact of Religions on Tribal Societies",
@@ -6264,7 +7182,7 @@
   "marks": 15
  },
  {
-  "id": 753,
+  "id": 1145,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -6273,7 +7191,7 @@
   "marks": 15
  },
  {
-  "id": 754,
+  "id": 1146,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
@@ -6282,7 +7200,7 @@
   "marks": 20
  },
  {
-  "id": 755,
+  "id": 1147,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Race and Racism",
@@ -6291,7 +7209,7 @@
   "marks": 15
  },
  {
-  "id": 756,
+  "id": 1148,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Problems of Tribal Communities",
@@ -6300,7 +7218,7 @@
   "marks": 15
  },
  {
-  "id": 757,
+  "id": 1149,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
@@ -6309,7 +7227,7 @@
   "marks": 10
  },
  {
-  "id": 758,
+  "id": 1150,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Phylogenetic Status of Fossil Hominids",
@@ -6318,7 +7236,7 @@
   "marks": 10
  },
  {
-  "id": 759,
+  "id": 1151,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Constitutional Safeguards and Exploitation",
@@ -6327,7 +7245,7 @@
   "marks": 10
  },
  {
-  "id": 760,
+  "id": 1152,
   "year": "2026",
   "paper": "Paper II",
   "topic": "History and Administration of Tribal Areas",
@@ -6336,7 +7254,7 @@
   "marks": 10
  },
  {
-  "id": 761,
+  "id": 1153,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
@@ -6345,7 +7263,7 @@
   "marks": 10
  },
  {
-  "id": 762,
+  "id": 1154,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
@@ -6354,7 +7272,7 @@
   "marks": 20
  },
  {
-  "id": 763,
+  "id": 1155,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Social Change and Contemporary Tribal Societies",
@@ -6363,7 +7281,7 @@
   "marks": 15
  },
  {
-  "id": 764,
+  "id": 1156,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
@@ -6372,7 +7290,7 @@
   "marks": 15
  },
  {
-  "id": 765,
+  "id": 1157,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
@@ -6381,7 +7299,7 @@
   "marks": 20
  },
  {
-  "id": 766,
+  "id": 1158,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Caste System",
@@ -6390,7 +7308,7 @@
   "marks": 15
  },
  {
-  "id": 767,
+  "id": 1159,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Developmental Projects and Tribal Displacement",
@@ -6399,7 +7317,7 @@
   "marks": 15
  },
  {
-  "id": 768,
+  "id": 1160,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
@@ -6408,7 +7326,7 @@
   "marks": 20
  },
  {
-  "id": 769,
+  "id": 1161,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Problems of Tribal Communities",
@@ -6417,7 +7335,7 @@
   "marks": 15
  },
  {
-  "id": 770,
+  "id": 1162,
   "year": "2026",
   "paper": "Paper II",
   "topic": "Constitutional Safeguards and Exploitation",
