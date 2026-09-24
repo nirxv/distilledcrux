@@ -3004,6 +3004,241 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The balanced conclusion, and the one that connects this topic back to the strong state debate, is that PPPs do not reduce the demands on the state but change them. They substitute contracting, regulating and monitoring for building and operating, and every one of those is an administrative capability that has to be built before it can be relied on.</p>
 `,
+ 'public-policy': `<h2>What Public Policy Is</h2>
+
+<p>Public policy is what government chooses to do or not to do. The formulation is <strong>Thomas Dye's</strong>, and its value lies in the second half: inaction is itself a policy choice, and a government that declines to regulate an industry or to legislate on a social question has made a decision with distributive consequences as real as any statute. The definition also locates policy in government rather than in the wider society, which distinguishes public policy from the policies of firms, associations and households.</p>
+
+<p><strong>James Anderson</strong> defines it as a purposive course of action followed by an actor or set of actors in dealing with a problem or matter of concern. Three elements are doing work here. Policy is purposive, so it is not the accidental sum of unconnected acts. It is a course of action rather than a single decision, so a policy is a pattern extending over time. And it responds to a problem, which means the definition of the problem is already part of the policy.</p>
+
+<p><strong>Harold Lasswell and Abraham Kaplan</strong> call policy a projected programme of goals, values and practices, a phrase which captures that policy is normative before it is technical. <strong>Carl Friedrich</strong> adds the element of constraint: policy is a proposed course of action in an environment of obstacles and opportunities, seeking to utilise the latter and overcome the former. <strong>Richard Rose</strong> stresses duration, calling policy a long series of more or less related activities rather than a discrete decision.</p>
+
+<p>Taken together these give the working understanding an answer should use. Public policy is an authoritative course of action, adopted by government, addressed to a problem defined in a particular way, pursued over time, and consequential for the distribution of values in society. <strong>David Easton's</strong> phrase, the authoritative allocation of values for a society, remains the most economical statement of what is at stake.</p>
+
+<h3>Policy, Decision and Programme</h3>
+
+<p>A decision is a choice among alternatives at a point in time. A policy is a standing disposition that generates many decisions. A programme is the organised means by which a policy is carried into effect, with a budget, a staff and a target group. The distinction matters in answers because much of what is criticised as policy failure is programme failure, and because a policy can survive the collapse of the programmes meant to deliver it.</p>
+
+<h3>Why the Study of Policy Arose</h3>
+
+<p>The policy orientation was announced by <strong>Lasswell</strong> in 1951 as a response to two dissatisfactions. Political science had become preoccupied with institutions and processes and had little to say about the substance of what government did. The social sciences generally had become fragmented, so that no discipline addressed a policy problem whole. Lasswell proposed the policy sciences as a field that would be contextual, problem-oriented and multi-disciplinary, and which would be normatively committed to what he called the policy sciences of democracy, meaning knowledge in the service of human dignity rather than of whoever holds power.</p>
+
+<p>Two distinctions from Lasswell recur in questions. <strong>Knowledge of the policy process</strong> is the empirical study of how policies are made. <strong>Knowledge in the policy process</strong> is the contribution of analysis to making them better. The first is a social science; the second is a craft with a client. Most difficulties in the field come from confusing the two, or from expecting the second to be governed by the standards of the first.</p>
+
+<p><strong>Yehezkel Dror</strong> gave the field its sharpest statement of purpose. The objective of the policy sciences, he wrote, is the improvement of policymaking as a system, not the making of particular policies. The unit of improvement is the metapolicy, meaning policy about how policy is made: the structures, procedures and capacities through which decisions are produced. This is why an answer on policy sciences that only discusses individual policies has missed the point.</p>
+
+<h3>The Field's Distinctive Claims</h3>
+
+<ul>
+ <li><strong>Contextuality.</strong> A policy problem cannot be understood apart from the social and historical setting that produced it, so the same instrument has different effects in different places.</li>
+ <li><strong>Problem orientation.</strong> The discipline organises itself around problems rather than around the boundaries of academic subjects.</li>
+ <li><strong>Multi-disciplinarity.</strong> Economics supplies the analysis of incentives, sociology the analysis of the target group, law the analysis of the instrument, and administration the analysis of delivery.</li>
+ <li><strong>Normative engagement.</strong> The field does not pretend that the choice of ends is outside its scope, which separates it from a purely technical policy analysis.</li>
+ <li><strong>Improvement of the system.</strong> The test of the policy sciences is whether the machinery of policymaking works better, not whether one decision came out well.</li>
+</ul>
+
+<h2>Typologies of Policy</h2>
+
+<p>Classification matters because the type of policy predicts the politics it will generate. <strong>Theodore Lowi's</strong> insight, stated as the proposition that policy determines politics, reversed the usual assumption that politics determines policy, and it is the single most cited idea in the field.</p>
+
+<h3>Lowi's Four Types</h3>
+
+<ul>
+ <li><strong>Distributive policies</strong> allocate benefits to specific groups at a cost spread thinly over everyone. Subsidies, grants and public works are examples. Because the cost is diffuse and the benefit concentrated, the politics is quiet, consensual and conducted through logrolling among legislators rather than open conflict.</li>
+ <li><strong>Regulatory policies</strong> impose restraints on the conduct of an identified group. Licensing, environmental standards and safety rules are examples. The politics is pluralist and conflictual, because the regulated group is identifiable and resists, while the beneficiaries are dispersed.</li>
+ <li><strong>Redistributive policies</strong> transfer resources deliberately from one broad class to another. Progressive taxation, land reform and social security are examples. The politics is ideological and elite-driven, involves peak associations rather than individual firms, and is the most conflictual of all because the stakes are visible on both sides.</li>
+ <li><strong>Constituent policies</strong> concern the machinery of government itself, such as the creation of agencies or the rules of procedure. The politics is largely intra-governmental and low in public salience, but the consequences are durable because they set the terms on which later policies are made.</li>
+</ul>
+
+<p>The value of the scheme in an answer is predictive. Told that a proposal is redistributive, one can anticipate that it will be resisted by organised interests, will require political capital at the highest level, and will be diluted in implementation. Told that it is distributive, one can anticipate that it will pass easily and that its evaluation will be neglected. The criticism of Lowi is that the categories are not watertight, since a single statute may be distributive in one provision and regulatory in another, and that the classification depends on perception, because a policy framed as regulatory may be experienced as redistributive by those it binds.</p>
+
+<h3>Other Distinctions</h3>
+
+<ul>
+ <li><strong>Substantive and procedural.</strong> Substantive policy concerns what government will do; procedural policy concerns how and by whom it will be done. Procedural policy is often the more contested, because control over procedure shapes outcomes without the appearance of taking sides.</li>
+ <li><strong>Material and symbolic.</strong> Material policies deliver tangible resources; symbolic policies deliver reassurance. <strong>Murray Edelman</strong> argued that much policy is symbolic, quieting demand through the appearance of action while leaving allocations unchanged, and that the distinction is rarely visible to those affected.</li>
+ <li><strong>Collective goods and private goods.</strong> Policies providing goods that cannot be withheld from non-payers, such as defence or clean air, face a free-rider problem and must be financed by compulsion.</li>
+ <li><strong>Liberal and conservative,</strong> distinguished by the presumption about government action, which is a weak classification analytically but the one most used in public debate.</li>
+</ul>
+
+<h2>The Policy Process</h2>
+
+<p>The stages heuristic, which divides the process into agenda setting, formulation, adoption, implementation and evaluation, is the standard organising device. Its usefulness is pedagogical, and its limits should be stated in any answer that uses it. The stages are not sequential in practice, since evaluation of an old policy is often the agenda setting for a new one; they are not separable, since formulation anticipates implementation; and the model has no causal content, so it describes a sequence without explaining why anything moves from one stage to the next. <strong>Sabatier</strong> called it a heuristic that had outlived its usefulness as a theory, while conceding its value as a way of organising the subject.</p>
+
+<h3>Agenda Setting</h3>
+
+<p>Agenda setting is the process by which a condition becomes a problem and a problem becomes a candidate for government action. <strong>Cobb and Elder</strong> distinguish the <strong>systemic agenda</strong>, consisting of all issues the political community perceives as meriting attention, from the <strong>institutional or formal agenda</strong>, the much shorter list of items actually under active consideration by decision-makers. The central political question is how an item moves from the first to the second, and who controls that movement.</p>
+
+<p><strong>Bachrach and Baratz</strong> supplied the answer that matters most for administration. Power is exercised not only in taking decisions but in preventing them, by confining the scope of decision-making to issues that are safe for those who hold power. This is the <strong>second face of power</strong>, and the resulting <strong>non-decision</strong> is the suppression of a challenge before it reaches the formal agenda. <strong>Schattschneider's</strong> formulation is the sharpest: organisation is itself the mobilisation of bias, because every institution suppresses some conflicts and organises others into politics.</p>
+
+<p><strong>John Kingdon's multiple streams</strong> framework is the most useful single model of agenda setting. Three streams flow independently through the system. The <strong>problem stream</strong> consists of conditions that come to be defined as problems, usually through indicators, focusing events or feedback from existing programmes. The <strong>policy stream</strong> is the reservoir of proposals circulating in the policy community, which are developed by specialists largely without reference to current problems. The <strong>political stream</strong> comprises the national mood, organised interests and changes of government. A <strong>policy window</strong> opens when the streams are coupled, usually by a <strong>policy entrepreneur</strong> who attaches a ready solution to a newly salient problem at a politically favourable moment. The model explains why solutions often precede problems, why timing matters more than merit, and why windows close quickly.</p>
+
+<h3>Formulation</h3>
+
+<p>Formulation is the development of acceptable courses of action for dealing with a problem. It involves defining the problem, identifying alternatives, estimating their consequences and selecting criteria for choice. Two points are worth making in answers. First, formulation is not confined to government, since alternatives are generated by think tanks, commissions, international agencies and interest groups. Second, the definition of the problem largely determines the range of acceptable solutions, so control over problem definition is the most consequential power in the process. A shortage of housing defined as a supply problem produces a construction programme; the same shortage defined as an affordability problem produces a subsidy; defined as a tenure problem it produces rent regulation.</p>
+
+<h3>Legitimation and Adoption</h3>
+
+<p>Adoption is the conversion of a proposal into an authoritative decision through legislation, executive order or regulation. Legitimation is the wider process by which the decision acquires the acceptance that makes compliance possible without coercion. A policy that is legally adopted but not legitimated faces resistance at every point of delivery, which is why consultation before adoption is not a formality but an investment in implementability.</p>
+
+<h2>Models of Policy Decision-Making</h2>
+
+<h3>The Rational-Comprehensive Model</h3>
+
+<p>The rational model requires the decision-maker to identify the problem, clarify and rank all relevant values and objectives, list all alternatives, calculate all consequences of each, and select the alternative that maximises attainment of the ranked objectives. It is a model of what perfect choice would look like, and it underlies cost-benefit analysis and most formal planning.</p>
+
+<p><strong>Herbert Simon's</strong> critique established the field's realism. The model demands knowledge that decision-makers do not have and cannot obtain: complete information about alternatives, complete knowledge of consequences, a consistent preference ordering, and unlimited computational capacity. Real decision-makers face <strong>bounded rationality</strong>, meaning rationality limited by incomplete information, cognitive limits and the cost of search. They therefore do not maximise; they <strong>satisfice</strong>, searching until they find an alternative that meets an acceptable threshold and then stopping. Simon's contribution is not that decision-makers are irrational but that rationality itself has to be understood as bounded, and that administrative theory is the theory of intended and bounded rationality.</p>
+
+<h3>Incrementalism</h3>
+
+<p><strong>Charles Lindblom's</strong> "The Science of Muddling Through" is the necessary counterpart. He argued that the rational model does not describe what decision-makers do and could not be followed if they tried. Instead they practise <strong>successive limited comparisons</strong>, which he later called <strong>disjointed incrementalism</strong>. Its features are these. Values and policy are chosen together rather than values first. Only alternatives differing marginally from the status quo are considered. For each alternative only a restricted number of consequences is examined. The problem is continually redefined as analysis proceeds. There is no single right solution, and the test of a good policy is agreement on the policy itself rather than agreement that it maximises an agreed objective. Analysis is serial and remedial, correcting past errors rather than reaching future goals.</p>
+
+<p>Lindblom defended incrementalism as both descriptive and normative. It economises on information, reduces the cost of error because small steps are reversible, and builds agreement in a plural society where consensus on ends is unattainable. He added the idea of <strong>partisan mutual adjustment</strong>, in which coordination is achieved not by a central plan but by many partisan participants adjusting to each other, which he argued often produces better outcomes than central direction.</p>
+
+<p>The criticisms are standard and should be stated. Incrementalism is conservative, since it takes the status quo as the point of departure and cannot produce fundamental change. It is unsuited to crises and to new problems where there is no precedent to increment from. It favours the organised, because partisan mutual adjustment reflects the existing distribution of power. And in developing societies where the status quo is the problem, an incremental method entrenches it. <strong>Dror's</strong> objection is the sharpest: incrementalism is appropriate only where existing policy is broadly satisfactory, where the problem is stable, and where means for dealing with it are continuous, and those conditions are precisely absent in the societies that most need policy improvement.</p>
+
+<h3>Mixed Scanning</h3>
+
+<p><strong>Amitai Etzioni</strong> proposed mixed scanning as a synthesis. Decisions are of two kinds. <strong>Fundamental decisions</strong> set basic directions and are taken after a broad scan of the main alternatives, though without the exhaustive detail the rational model demands. <strong>Incremental decisions</strong> are taken within the context set by fundamental ones and are examined in detail. His analogy is a weather satellite carrying two cameras: a wide-angle lens covering the whole sky at low resolution, and a zoom lens examining closely only those areas the first has flagged. The approach is more realistic than the rational model and less conservative than incrementalism, and it makes the allocation of scanning effort itself a decision. The criticism is that it does not specify how to decide which decisions are fundamental, which is the very judgement on which everything turns.</p>
+
+<h3>The Normative Optimum Model</h3>
+
+<p><strong>Dror</strong> rejected both the rational model as unattainable and incrementalism as an apology for inertia, and proposed an <strong>optimal model</strong> that is normative but feasible. Three features distinguish it. It is qualitative as well as quantitative, giving explicit place to judgement, creativity and what Dror called extrarational processes such as intuition and brainstorming. It includes <strong>metapolicymaking</strong>, meaning decisions about how decisions will be made, which is where the real gains lie. And it builds in systematic feedback and learning, treating policymaking as a system to be improved over time rather than a series of episodes.</p>
+
+<p>Dror's phases are worth reproducing because questions ask for them. <strong>Metapolicymaking</strong> covers processing values, processing reality, processing problems, surveying and designing the policymaking system, allocating problems, and determining the policymaking strategy. <strong>Policymaking</strong> proper covers sub-allocation of resources, establishing operational goals with priorities, establishing a set of other significant values, preparing a set of major alternatives, preparing reliable predictions of the benefits and costs of each, comparing them and identifying the best, and evaluating whether that best is good. <strong>Post-policymaking</strong> covers motivating the execution of the policy, executing it, and evaluating the process after execution. Communication and feedback channels interconnect all phases.</p>
+
+<h3>The Garbage Can Model</h3>
+
+<p><strong>Cohen, March and Olsen</strong> described decision-making in what they called <strong>organised anarchies</strong>, organisations with problematic preferences, unclear technology and fluid participation. In such settings a choice opportunity is a garbage can into which participants dump problems and solutions as they are generated. Decisions result from the confluence of four largely independent streams: problems, solutions, participants and choice opportunities. Solutions may exist before problems, and decisions may be made by <strong>oversight</strong>, where a choice is made before problems attach to it, or by <strong>flight</strong>, where problems leave the choice for a more attractive can. The model is a corrective to the assumption of purposiveness, and it describes universities, ministries and committees better than any rational account does.</p>
+
+<h3>Systems, Group, Elite and Institutional Models</h3>
+
+<ul>
+ <li><strong>The systems model,</strong> from <strong>Easton</strong>, treats policy as the output of a political system converting demands and supports from the environment into authoritative decisions, with feedback modifying subsequent inputs. Its value is that it locates policy in an environment; its weakness is that the conversion process is a black box.</li>
+ <li><strong>The group model</strong> treats policy as the equilibrium reached in the struggle among interest groups, so that policy shifts as the relative power of groups shifts. It explains lobbying and bargaining but underestimates the autonomy of officials.</li>
+ <li><strong>The elite model</strong> treats policy as the preferences of a governing elite, carried downward to the masses through administration, with change occurring incrementally and rarely through mass demand. It explains the persistence of policies that majorities do not favour.</li>
+ <li><strong>Institutionalism</strong> treats policy as the product of institutional structures, and the <strong>new institutionalism</strong> adds that institutions shape preferences rather than merely aggregating them. The concept of <strong>path dependence</strong>, in which early choices constrain later ones because of sunk costs and adaptive expectations, belongs here and explains why bad policies persist.</li>
+ <li><strong>Public choice</strong> applies economic assumptions of self-interested rationality to political actors, treating voters, politicians and bureaucrats as utility maximisers. <strong>Niskanen's</strong> budget-maximising bureaucrat and <strong>Dunleavy's</strong> bureau-shaping critique both belong to this literature, and it supplies the theoretical basis for much of New Public Management.</li>
+ <li><strong>Game theory</strong> analyses policy choice under conditions of interdependence, where the best course for each actor depends on what others do, and is most useful for international and regulatory questions.</li>
+</ul>
+
+<h2>Policy Implementation</h2>
+
+<p>Implementation is the stage at which policy meets administration, and it is the stage the discipline neglected longest. <strong>Pressman and Wildavsky's</strong> study of a federal employment programme in Oakland founded the field, and its subtitle states the finding: how great expectations in Washington are dashed in Oakland, or why it is amazing that federal programmes work at all. Their central analytical contribution is the arithmetic of <strong>clearance points</strong>. A programme requiring the agreement of many participants at many decision points will fail even when each participant is broadly cooperative, because the probability of completion is the product of the probabilities at each point. Seventy separate agreements each with a ninety per cent chance of success yield a very small chance of completion. The lesson is structural rather than motivational: complexity of joint action defeats programmes without anyone opposing them.</p>
+
+<h3>The Top-Down Approach</h3>
+
+<p>The top-down school takes the authoritative decision as its starting point and asks what conditions are needed for it to be carried out as intended. <strong>Sabatier and Mazmanian</strong> set out six conditions for effective implementation: clear and consistent objectives; an adequate causal theory linking the intervention to the outcome; an implementation structure that maximises compliance by officials and target groups; committed and skilful implementing officials; support from interest groups and legislators through the life of the programme; and the absence of changes in socio-economic conditions that undermine political support or the causal theory.</p>
+
+<p><strong>Hood</strong> set out the conditions for perfect implementation in a way that is useful precisely because it is unattainable: a unitary administrative system with a single line of authority; enforced uniform rules; perfect obedience and perfect information; no time pressure; adequate resources; and a valid causal theory. Listing the conditions shows that implementation deficit is the normal state, and that the question is how much deficit is tolerable rather than how to eliminate it.</p>
+
+<p><strong>Van Meter and Van Horn</strong> add the variable that most often explains outcomes: the amount of change required and the extent of goal consensus. Policies demanding marginal change with high consensus implement easily; policies demanding major change with low consensus rarely implement at all, whatever the administrative arrangements.</p>
+
+<h3>The Bottom-Up Approach</h3>
+
+<p><strong>Michael Lipsky's</strong> account of the <strong>street-level bureaucrat</strong> is the most important contribution from this side. Teachers, police officers, health workers and clerks who deal directly with citizens exercise wide discretion under conditions of chronically inadequate resources, ambiguous goals and demand that always exceeds supply. To cope they develop routines: rationing services, creaming by selecting the clients most likely to succeed, stereotyping to process cases quickly, and redefining their job to make the impossible manageable. Lipsky's conclusion is the one that matters for an answer: the decisions of street-level bureaucrats, the routines they establish and the devices they invent to cope with uncertainty effectively become the public policy they carry out. Policy is made at the point of delivery, not only at the point of decision.</p>
+
+<p><strong>Hjern and Porter's</strong> concept of the <strong>implementation structure</strong> completes the bottom-up case. The unit of analysis should not be the agency but the cluster of parts of many organisations, public and private, that actually deliver a programme. These structures cut across formal boundaries and are held together by negotiation rather than authority, which is why an organogram explains little about delivery.</p>
+
+<p><strong>Elmore's backward mapping</strong> is the practical technique this school yields. Instead of starting from the statute and tracing downward, the analyst starts from the specific behaviour at the lowest level that the policy seeks to change, identifies what ability and resources are needed at that point to produce it, and works upward asking what each higher level must supply. The method exposes requirements that forward mapping misses, and it is the basis of most field-informed programme design.</p>
+
+<h3>The Synthesis</h3>
+
+<p>The two approaches are now treated as complementary rather than rival. Top-down analysis is appropriate where a policy is dominant, resources are concentrated and the causal theory is well understood. Bottom-up analysis is appropriate where many actors share influence, where discretion at the point of delivery is unavoidable and where local variation is desirable. <strong>Sabatier's advocacy coalition framework</strong> is the fullest synthesis. It takes the policy subsystem rather than the individual programme as the unit, over a period of a decade or more, and treats it as composed of competing coalitions bound together by shared beliefs. Beliefs are structured in three layers: a <strong>deep core</strong> of fundamental normative commitments which almost never changes; a <strong>policy core</strong> of basic positions on the subsystem's problems, which changes only under substantial external perturbation; and <strong>secondary aspects</strong>, the instrumental decisions and information searches, which change readily through policy-oriented learning. The framework explains why technical evidence changes instruments but rarely changes direction, and why major shifts follow external shocks such as crises, changes of regime or changes in socio-economic conditions rather than accumulated evidence.</p>
+
+<h3>The Implementation Gap</h3>
+
+<p>The gap between intention and outcome has recurrent causes, which are worth listing because questions ask for them directly.</p>
+
+<ul>
+ <li><strong>Defective causal theory.</strong> The intervention does not in fact produce the outcome, however faithfully it is delivered. This is a formulation failure that appears as an implementation failure.</li>
+ <li><strong>Goal ambiguity and conflict.</strong> Statutes passed by coalitions often carry incompatible objectives deliberately, leaving the contradiction to be resolved by administrators who lack the authority to resolve it.</li>
+ <li><strong>Complexity of joint action.</strong> The clearance-point problem identified by Pressman and Wildavsky.</li>
+ <li><strong>Resource deficit,</strong> including not only funds but staff, skills, information and time, and particularly the mismatch between the time horizon of the problem and that of the budget cycle.</li>
+ <li><strong>Discretion at the point of delivery,</strong> which is necessary for responsiveness but permits drift from the policy's intent.</li>
+ <li><strong>Target group response.</strong> Those to be regulated or served adapt, evade or reinterpret, and a policy that assumes passive targets misreads its own environment.</li>
+ <li><strong>Weak monitoring,</strong> so that deviation is not detected in time to be corrected.</li>
+ <li><strong>Political discontinuity,</strong> where changes of minister or government withdraw the support on which a long programme depends.</li>
+</ul>
+
+<h2>Policy Evaluation</h2>
+
+<p>Evaluation is the assessment of a policy's content, implementation and effects. It is the stage that closes the loop, and it is the stage most often omitted. <strong>Anderson</strong> distinguishes evaluation as a political act, which uses the language of assessment to attack or defend, from evaluation as systematic inquiry, which applies explicit criteria and evidence. Both occur, and answers should not treat the first as a corruption of the second so much as the environment in which the second operates.</p>
+
+<h3>Types</h3>
+
+<ul>
+ <li><strong>Formative evaluation</strong> is conducted while a programme runs, to improve it. Its audience is the manager.</li>
+ <li><strong>Summative evaluation</strong> is conducted after completion, to judge worth and inform decisions about continuation. Its audience is the decision-maker.</li>
+ <li><strong>Process evaluation</strong> asks whether the programme was delivered as designed, to the intended group, at the intended standard.</li>
+ <li><strong>Impact or outcome evaluation</strong> asks what difference the programme made, which requires an estimate of what would have happened without it.</li>
+ <li><strong>Efficiency evaluation</strong> relates outcomes to costs, through cost-benefit or cost-effectiveness analysis.</li>
+ <li><strong>Meta-evaluation</strong> assesses the quality of evaluations themselves, and matters where evaluation has become a routine requirement rather than an inquiry.</li>
+</ul>
+
+<h3>Criteria</h3>
+
+<p><strong>William Dunn</strong> supplies the standard set of evaluative criteria, and an answer that applies them to a named programme is stronger than one that lists them. <strong>Effectiveness</strong> asks whether the valued outcome was achieved. <strong>Efficiency</strong> asks how much effort was required to achieve it. <strong>Adequacy</strong> asks to what extent achieving the outcome solved the problem. <strong>Equity</strong> asks whether costs and benefits were fairly distributed among groups. <strong>Responsiveness</strong> asks whether outcomes satisfy the preferences of the target group. <strong>Appropriateness</strong> asks whether the objectives themselves were worth pursuing, and it is the only criterion that questions the policy rather than its performance.</p>
+
+<h3>Difficulties</h3>
+
+<ul>
+ <li><strong>Attribution.</strong> Separating the programme's effect from everything else changing at the same time requires a counterfactual, and the designs that supply one, such as randomised allocation, are often infeasible or objectionable.</li>
+ <li><strong>Goal ambiguity.</strong> Where objectives are vague or multiple, there is no agreed standard against which to measure.</li>
+ <li><strong>Measurement.</strong> Outputs are easy to count and outcomes are hard, so evaluation drifts towards what is measurable, and the measurable displaces the important.</li>
+ <li><strong>Data.</strong> Administrative records are collected for accounting rather than evaluation, and independent data collection is expensive.</li>
+ <li><strong>Organisational resistance.</strong> Evaluation threatens budgets and reputations, so cooperation is rarely disinterested.</li>
+ <li><strong>Timing.</strong> Effects may take longer to appear than the political cycle allows, and an evaluation conducted early may find nothing where an effect later emerges.</li>
+ <li><strong>Use.</strong> The most common finding about evaluation is that its results are not used, or are used to justify decisions already taken.</li>
+</ul>
+
+<p><strong>Carol Weiss</strong> offered the most realistic account of use. Evaluation rarely produces the instrumental use its practitioners expect, in which a finding directly determines a decision. Its normal contribution is <strong>enlightenment</strong>: ideas and evidence percolate into the assumptions of the policy community over years, changing the terms in which problems are understood. This is a slower and less satisfying form of influence, but it is the one that actually operates, and it justifies evaluation even where no decision follows a report.</p>
+
+<h2>Policy Instruments</h2>
+
+<p>Instruments are the tools through which policy is given effect, and the choice among them is a policy decision in its own right. <strong>Christopher Hood's NATO</strong> scheme classifies them by the governing resource used. <strong>Nodality</strong> is the use of the government's position as a node in an information network, through information campaigns, advisories and disclosure requirements. <strong>Authority</strong> is the use of legal power, through regulation, licensing and prohibition. <strong>Treasure</strong> is the use of money, through subsidies, grants, taxes and loans. <strong>Organisation</strong> is the use of the government's own people and equipment, through direct provision.</p>
+
+<p>The scheme is valuable because it makes the choice explicit. The same objective, say reducing tobacco consumption, can be pursued through information, prohibition, taxation or state monopoly, and each choice carries a different distribution of costs, a different administrative burden and a different politics. The general finding is that governments over-rely on authority because it appears costless at the point of decision, while its enforcement costs fall on administration later. <strong>Salamon's</strong> later work on the new governance extends the analysis to indirect instruments such as contracts, vouchers and loan guarantees, and argues that the growth of these tools, delivered through third parties, is the most important change in modern public action and the one for which traditional administrative theory is least prepared.</p>
+
+<h2>Policy Networks and Governance</h2>
+
+<p>The study of policy has moved from a government-centred to a network-centred account. <strong>Policy communities</strong> are stable, restricted networks with shared values and frequent interaction, typically organised around a ministry and its client groups. <strong>Issue networks</strong>, the term is <strong>Heclo's</strong>, are open, unstable and large, with fluctuating participation and no shared understanding. The distinction predicts policy stability: where a tight community controls a sector, policy changes incrementally and insiders dominate; where an issue network prevails, policy is unpredictable and expertise is contested.</p>
+
+<p><strong>Rhodes</strong> extended this into the proposition that British government had become a set of self-organising, interorganisational networks characterised by interdependence, resource exchange and significant autonomy from the state, which he summarised as governing without government, or the hollowing out of the state. For Indian answers the corresponding phenomena are the growth of regulatory authorities, the delivery of programmes through societies and missions outside line departments, and the role of international agencies and domestic think tanks in supplying policy ideas.</p>
+
+<h2>Public Policy in India</h2>
+
+<h3>The Institutional Setting</h3>
+
+<p>Policy in India is made within a parliamentary and federal constitution, which has three consequences. Ministerial responsibility places formal authority in the political executive and locates the civil service as adviser and implementer, which makes the quality of the advisory relationship decisive. Federalism divides subjects between the Union and the States, so that policies in health, education, agriculture, police and land, which are the fields where most citizens encounter government, require concurrence rather than command. And judicial review supplies a further participant, since courts have increasingly entered the policy field through public interest litigation, at times supplying direction where the executive has not acted.</p>
+
+<p>The shift from the <strong>Planning Commission</strong> to <strong>NITI Aayog</strong> in 2015 changed the machinery of policy advice. The Commission combined a planning function with control over plan transfers to States, which gave it leverage but also made it a rival centre of financial authority. NITI Aayog was constituted without that financial power, as a policy think tank charged with fostering cooperative federalism through structured engagement with States, developing strategy at village level upward, and monitoring implementation. The intended gain is that advice is offered rather than imposed and that States become participants in formulation. The recurring criticism is that an advisory body without resources has limited traction on departments that control budgets, and that the abolition of plan transfers removed an instrument for addressing regional imbalance without putting an equivalent in its place.</p>
+
+<h3>Evidence and Data</h3>
+
+<p>The turn to evidence-based policy is visible in several developments. Outcome budgeting attempts to link expenditure to measurable results rather than to inputs. Independent evaluation of centrally sponsored schemes, undertaken by the Development Monitoring and Evaluation Office and its predecessors, has been institutionalised though its findings are unevenly used. Randomised evaluation has been applied to specific interventions in education and health, and has changed the design of some programmes. The <strong>National Data and Analytics Platform</strong> seeks to make government datasets usable for analysis, which addresses the standing problem that data exists but is not accessible in comparable form.</p>
+
+<p>The constraints are equally visible. Administrative data is collected for compliance rather than analysis, so quality is uneven. Evaluation capacity is concentrated at the Union level while delivery is with the States. And the political demand for evaluation is weak, because a rigorous evaluation of a flagship programme carries more risk for its sponsors than benefit.</p>
+
+<h3>Recurring Features of Indian Policy</h3>
+
+<ul>
+ <li><strong>Formulation is centralised and implementation is decentralised,</strong> which produces the classic implementation gap: a scheme designed for national uniformity meets local conditions for which it was not designed, and the discretion needed to adapt it is not formally available.</li>
+ <li><strong>Proliferation of schemes.</strong> The number of centrally sponsored schemes has repeatedly been found to exceed administrative capacity to monitor them, leading to periodic rationalisation exercises that are themselves followed by renewed proliferation.</li>
+ <li><strong>Symbolic legislation.</strong> Rights-based statutes in education, employment, food and information have expanded entitlements substantially, but the administrative and fiscal capacity to honour them has lagged, so that the gap between declared right and delivered service becomes the policy problem.</li>
+ <li><strong>Delivery reform through technology.</strong> Direct benefit transfer, biometric identification and digital payments have reduced leakage in some transfers, while raising questions of exclusion where authentication fails and of privacy where data is aggregated.</li>
+ <li><strong>Weak feedback.</strong> Grievance redress is the principal mechanism through which citizens report failure, and where it is weak the policy system lacks the information needed to correct itself.</li>
+</ul>
+
+<h2>Critiques of the Policy Sciences</h2>
+
+<p>Three criticisms recur and an answer should meet them rather than ignore them.</p>
+
+<p>The first is <strong>technocratic bias</strong>. By presenting policy questions as problems with optimal solutions, the field can remove from politics questions that are properly political, since the choice among competing values is not a technical matter and cannot be settled by analysis. Lasswell anticipated this in insisting that the policy sciences be sciences of democracy, but the discipline in practice has often been the servant of whoever commissions it.</p>
+
+<p>The second is <strong>the neglect of power</strong>. Models of the process describe stages and streams while saying little about who is excluded and how. The literature on non-decisions and on the mobilisation of bias exists precisely to supply this, and an answer that uses Cobb and Elder or Bachrach and Baratz alongside Kingdon will be stronger than one that uses Kingdon alone.</p>
+
+<p>The third is <strong>the problem of transfer</strong>. Models developed in one context are applied in another where the assumptions do not hold. Incrementalism assumes a satisfactory status quo, public choice assumes competitive markets and mobile citizens, and network governance assumes organised societal interests capable of self-regulation. In a developing society with large unorganised populations and weak state capacity, these assumptions require examination before the models are applied. This is the standing contribution of comparative public administration to policy studies, and the reason that the ecological approach remains relevant to the field.</p>`,
+
  'evolution-indian-administration': `
 <h2>Why the Past Matters Here</h2>
 

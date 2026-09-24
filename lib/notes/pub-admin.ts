@@ -101,6 +101,15 @@ export const paper1Notes: PubAdminNote[] = [
     description: 'Governance and good governance; new public management paradigm; e-governance; citizens\' charter; entrepreneurial government; performance management; public-private partnerships',
     subtopics: ['Governance & Good Governance', 'NPM Paradigm', 'E-Governance', 'Citizens\' Charter', 'Performance Management', 'Public-Private Partnerships'],
   },
+  {
+    slug: 'public-policy',
+    title: 'Public Policy',
+    paper: 1,
+    section: 'Administrative Theory',
+    topic: 11,
+    description: 'Nature and scope of public policy; Lowi\'s typology; the policy process; models of decision making: Simon, Lindblom, Etzioni, Dror; implementation and the implementation gap; evaluation; policy instruments',
+    subtopics: ['Nature & Scope', 'Typologies of Policy', 'Agenda Setting', 'Models of Decision Making', 'Policy Implementation', 'Policy Evaluation', 'Policy Instruments'],
+  },
 ];
 
 // ── Paper II — Indian Administration ─────────────────────────
