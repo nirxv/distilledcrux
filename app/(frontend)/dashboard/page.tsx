@@ -18,7 +18,9 @@ const OPTIONAL_TO_ROUTE: Record<string, string> = {
   'public-administration': 'pub-admin',
 };
 
-const PYQS_ENABLED = new Set(['sociology', 'anthropology', 'political-science', 'public-administration']);
+const PYQS_ENABLED = new Set([
+  'sociology', 'anthropology', 'political-science', 'public-administration', 'geography',
+]);
 
 const GEO_OPTIONAL = 'geography';
 
