@@ -35,12 +35,12 @@ const getTools = (optional: string | null, pyqCount: number | null) => {
     : 'Previous year questions, topic-wise, with model answers.';
   const isGeo = optional === GEO_OPTIONAL;
   return [
-    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', badge: null, icon: 'evaluate' },
-    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', badge: null, icon: 'chat' },
-    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: `/notes/${slug}`, badge: 'Free', icon: 'notes' },
-    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: pyqDesc, href: `/${slug}/pyqs`, badge: 'Free', icon: 'pyq' }] : []),
-    { num: hasPyqs ? '05' : '04', label: 'Test Series', desc: 'Simulate exam conditions with PYQ-based timed tests and AI evaluation.', href: optional ? `/test?optional=${optional}` : '/test', badge: 'Free', icon: 'test' },
-    ...(isGeo ? [{ num: hasPyqs ? '06' : '05', label: 'Map Practice', desc: 'Identify 131+ UPSC Geography locations - PYQ maps, category-wise practice.', href: '/geography/mapping', badge: 'Free', icon: 'mapping' }] : []),
+    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', icon: 'evaluate' },
+    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', icon: 'chat' },
+    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: `/notes/${slug}`, icon: 'notes' },
+    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: pyqDesc, href: `/${slug}/pyqs`, icon: 'pyq' }] : []),
+    { num: hasPyqs ? '05' : '04', label: 'Test Series', desc: 'Simulate exam conditions with PYQ-based timed tests and AI evaluation.', href: optional ? `/test?optional=${optional}` : '/test', icon: 'test' },
+    ...(isGeo ? [{ num: hasPyqs ? '06' : '05', label: 'Map Practice', desc: 'Identify 131+ UPSC Geography locations - PYQ maps, category-wise practice.', href: '/geography/mapping', icon: 'mapping' }] : []),
   ];
 };
 
@@ -140,14 +140,6 @@ const CSS = `
     font-family: var(--font-ui); font-size: 0.76rem; font-weight: 500;
     color: var(--text3); line-height: 1.6;
   }
-  .db-tool-badge {
-    position: absolute; top: 1.25rem; right: 1.25rem;
-    font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 2px 8px; border-radius: 4px;
-  }
-  .db-tool-badge.free { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.22); }
-  .db-tool-badge.premium { background: rgba(232,184,109,0.1); color: #e8b86d; border: 1px solid rgba(232,184,109,0.22); }
   .db-tool-arrow {
     margin-top: auto; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
     color: var(--text3); transition: color 0.15s, gap 0.15s;
@@ -267,7 +259,6 @@ const CSS = `
     .db-tool-card:last-child { border-bottom: none; }
     .db-tool-label { font-size:0.88rem; font-weight: 500; }
     .db-tool-desc { font-size:0.74rem; font-weight: 500; }
-    .db-tool-badge { top:1rem; right:1rem; }
 
     .db-sidebar-section { padding:1.25rem; }
 
@@ -480,11 +471,6 @@ export default function Dashboard() {
             <div className="db-tool-grid">
               {getTools(stats.optional, stats.pyqCount).map((tool) => (
                 <Link key={tool.label} href={tool.href} className="db-tool-card">
-                  {tool.badge && (
-                    <span className={`db-tool-badge ${tool.badge === 'Free' ? 'free' : 'premium'}`}>
-                      {tool.badge}
-                    </span>
-                  )}
                   <div className="db-tool-icon">
                     <ToolIcon icon={tool.icon} />
                   </div>
