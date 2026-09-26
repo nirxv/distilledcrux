@@ -762,11 +762,22 @@ export default function NoteReader({
             border: none; border-left: 2px solid transparent; cursor: pointer;
             padding: 0.26rem 0.4rem; border-radius: 0 5px 5px 0;
             font-family: var(--font-ui); font-size: 0.76rem; line-height: 1.45;
-            color: var(--text2); transition: background 0.15s, color 0.15s;
+            color: var(--text2); transition: background 0.15s, color 0.15s, border-left-color 0.15s;
           }
           .sb-toc-link.sub { font-size: 0.71rem; color: var(--text3); padding-left: 1rem; }
-          .sb-toc-link:hover { background: var(--bg3); color: var(--text); }
-          .sb-toc-link.on { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+          /* The rail panel on the right tints with the subject's colour; the
+             sidebar was hovering to a flat grey, so the two halves of the same
+             contents list did not look related. color-mix keeps the wash
+             translucent, which is what lets one value sit on both grounds. */
+          .sb-toc-link:hover {
+            background: color-mix(in srgb, ${subjectColor} 14%, transparent);
+            border-left-color: color-mix(in srgb, ${subjectColor} 45%, transparent);
+            color: var(--text);
+          }
+          .sb-toc-link.on {
+            color: ${subjectColor}; border-left-color: ${subjectColor};
+            background: color-mix(in srgb, ${subjectColor} 10%, transparent);
+          }
 
           /* ── Sidebar head ──
              Where the reader is, before what is in the note. */
@@ -803,8 +814,8 @@ export default function NoteReader({
             margin-top: 0.45rem; background: var(--border2); transition: background 0.15s;
           }
           .sb-toc-link.sub .sb-toc-dot { width: 3px; height: 3px; }
-          .sb-toc-link:hover .sb-toc-dot { background: var(--text3); }
-          .sb-toc-link.on .sb-toc-dot { background: var(--accent); box-shadow: 0 0 5px var(--accent); }
+          .sb-toc-link:hover .sb-toc-dot { background: ${subjectColor}; }
+          .sb-toc-link.on .sb-toc-dot { background: ${subjectColor}; box-shadow: 0 0 5px ${subjectColor}; }
 
           /* ── Related ── */
           .sb-related { display: flex; flex-direction: column; gap: 0.35rem; }
@@ -813,7 +824,11 @@ export default function NoteReader({
             border: 1px solid var(--border); border-radius: 8px;
             padding: 0.45rem 0.6rem; transition: border-color 0.15s, transform 0.15s;
           }
-          .sb-rel:hover { border-color: var(--border2); transform: translateX(2px); }
+          .sb-rel:hover {
+            background: color-mix(in srgb, ${subjectColor} 12%, var(--bg3));
+            border-color: color-mix(in srgb, ${subjectColor} 38%, transparent);
+            transform: translateX(2px);
+          }
           .sb-rel-dir {
             display: block; font-family: var(--font-mono); font-size: 0.52rem;
             letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3);
