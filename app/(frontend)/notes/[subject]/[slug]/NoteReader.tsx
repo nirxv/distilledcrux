@@ -578,12 +578,12 @@ export default function NoteReader({
    * markup for the rest of the note.
    */
   const applyHighlightsToContent = useCallback((html: string) => {
-    const colorMap = { yellow: 'rgba(201,168,76,0.35)', green: 'rgba(76,173,122,0.35)', red: 'rgba(201,76,76,0.35)', blue: 'rgba(76,139,201,0.35)' };
     let result = html;
     highlights.forEach(h => {
       const escaped = h.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const needle = new RegExp(escaped, 'g');
-      const mark = `<mark style="background:${colorMap[h.color]};border-radius:2px;padding:0 1px;">${h.text}</mark>`;
+      // A class, not an inline colour: the wash has to follow the theme.
+      const mark = `<mark class="pp-hl pp-hl-${h.color}">${h.text}</mark>`;
       result = result.replace(/>([^<]+)</g, (_m, text: string) => `>${text.replace(needle, mark)}<`);
     });
     return result;
@@ -608,6 +608,24 @@ export default function NoteReader({
     <div className={'nr-shell' + (sidebarOpen ? ' with-sidebar' : '')}>
       {/* ── Note CSS ── */}
       <style>{`
+        /* Highlights. The user-agent style for mark sets a black text colour,
+           and only the background was being overridden, so on the dark ground a
+           highlighted sentence became dark text on a dark wash. Colour is
+           inherited from the prose instead, and each theme gets its own alpha:
+           a tint that reads as a highlight on white reads as mud on near-black.
+           Dark is the default ground, as everywhere else here. */
+        .note-content mark.pp-hl {
+          color: inherit; border-radius: 2px; padding: 0 1px;
+          -webkit-box-decoration-break: clone; box-decoration-break: clone;
+        }
+        .note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.30); }
+        .note-content mark.pp-hl-green  { background: rgba(76,173,122,0.30); }
+        .note-content mark.pp-hl-red    { background: rgba(201,76,76,0.32); }
+        .note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
+        [data-theme="light"] .note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.42); }
+        [data-theme="light"] .note-content mark.pp-hl-green  { background: rgba(76,173,122,0.36); }
+        [data-theme="light"] .note-content mark.pp-hl-red    { background: rgba(201,76,76,0.30); }
+        [data-theme="light"] .note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
         .note-content h1 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 2rem 0 1rem; line-height: 1.3; letter-spacing: -0.02em; border-bottom: 2px solid ${subjectColor}; padding-bottom: 0.5rem; }
         .note-content h2 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--gold); margin: 2.5rem 0 0.75rem; position: relative; padding-left: 0.85rem; border-left: 3px solid var(--gold); }
         .note-content h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: ${subjectColor}; margin: 1.5rem 0 0.5rem; padding-left: 0.6rem; border-left: 2px solid ${subjectColor}; }
@@ -627,7 +645,7 @@ export default function NoteReader({
         .note-content td { padding: 0.6rem 1rem; border: 1px solid var(--border); color: var(--text); vertical-align: top; line-height: 1.65; }
         .note-content tr:nth-child(even) td { background: var(--bg2); }
         .note-content hr { border: none; border-top: 1px solid var(--border2); margin: 2.5rem 0; }
-        .note-content mark { background: rgba(201,168,76,0.28); border-radius: 2px; padding: 0 1px; }
+        .note-content mark { background: rgba(201,168,76,0.28); color: inherit; border-radius: 2px; padding: 0 1px; }
 
 
           /* ── Shell ────────────────────────────────────────────────
