@@ -12,10 +12,8 @@ export default function Navbar() {
   const { user, loading } = useAuth();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [navCollapsed, setNavCollapsed] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isChat = pathname === '/chat';
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -179,8 +177,8 @@ export default function Navbar() {
 
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 102,
-        height: isChat && navCollapsed ? 0 : 60,
-        overflow: isChat && navCollapsed ? 'hidden' : 'visible',
+        height: 60,
+        overflow: 'visible',
         background: theme === 'dark' ? 'rgba(5,5,8,1)' : 'rgba(248,248,252,1)',
         backdropFilter: 'none',
         WebkitBackdropFilter: 'none',
@@ -577,25 +575,6 @@ export default function Navbar() {
           )}
         </div>
       </div>
-
-      {/* Chat collapse button */}
-      {isChat && (
-        <button
-          onClick={() => setNavCollapsed(c => !c)}
-          title={navCollapsed ? 'Show navbar' : 'Hide navbar'}
-          style={{
-            position: 'fixed', top: navCollapsed ? 6 : 66, right: 14, zIndex: 300,
-            background: 'var(--bg3)', border: '1px solid var(--border2)',
-            borderRadius: 999, width: 24, height: 24,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', transition: 'top 0.2s ease',
-            fontSize: '0.55rem', fontWeight: 500, color: 'var(--text3)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.2)', padding: 0,
-          }}
-        >
-          {navCollapsed ? '▼' : '▲'}
-        </button>
-      )}
     </>
   );
 }
