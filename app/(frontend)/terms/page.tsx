@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
+import { PLANS, PLAN_ORDER, formatRupees } from "@/lib/plans";
 
 export const metadata: Metadata = {
   title: "Terms of Service Distilled Crux",
@@ -55,10 +56,15 @@ export default function TermsPage() {
 
         <h2 style={S.h2}>4. Subscription &amp; Payments</h2>
         <p style={S.p}>Premium subscription plans and their prices are:</p>
+        {/* From lib/plans, as on the refund page. Hardcoded here, this list
+            still quoted 3,999 and 5,999 long after checkout had moved to
+            1,999 and 2,999. */}
         <ul style={S.ul}>
-          <li style={S.li}>Daily ₹49 per day</li>
-          <li style={S.li}>6 Months ₹3,999 per 6 months</li>
-          <li style={S.li}>Yearly ₹5,999 per year</li>
+          {PLAN_ORDER.map((id) => (
+            <li key={id} style={S.li}>
+              {PLANS[id].label} {formatRupees(PLANS[id])} {PLANS[id].period}
+            </li>
+          ))}
         </ul>
         <p style={S.p}>
           All payments are processed securely by Razorpay. Prices are in Indian Rupees (INR)

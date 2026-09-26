@@ -23,14 +23,18 @@ export type Plan = {
   label: string;
   /** Sent to Razorpay as the order description. */
   orderLabel: string;
-  /** Reads after the price, e.g. "2,999 per year". */
+  /**
+   * Reads after the price, e.g. "2,999 one-time · 1 year". Every plan is a
+   * single charge that buys a fixed window; nothing here renews, so the copy
+   * must not say "per year" and invite a reader to expect a recurring bill.
+   */
   period: string;
 };
 
 export const PLANS: Record<PlanId, Plan> = {
-  daily:    { id: 'daily',    amountPaise: 4900,   days: 1,   label: 'Daily',    orderLabel: 'Daily Plan',    period: 'per day' },
-  sixmonth: { id: 'sixmonth', amountPaise: 199900, days: 180, label: '6 Months', orderLabel: '6 Month Plan',  period: 'per 6 months' },
-  yearly:   { id: 'yearly',   amountPaise: 299900, days: 365, label: 'Yearly',   orderLabel: 'Yearly Plan',   period: 'per year' },
+  daily:    { id: 'daily',    amountPaise: 4900,   days: 1,   label: 'Daily',    orderLabel: 'Daily Plan',    period: 'one-time · 24 hours' },
+  sixmonth: { id: 'sixmonth', amountPaise: 199900, days: 180, label: '6 Months', orderLabel: '6 Month Plan',  period: 'one-time · 6 months' },
+  yearly:   { id: 'yearly',   amountPaise: 299900, days: 365, label: 'Yearly',   orderLabel: 'Yearly Plan',   period: 'one-time · 1 year' },
 };
 
 export const PLAN_ORDER: PlanId[] = ['daily', 'sixmonth', 'yearly'];

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import HomeToolsList from '@/components/HomeToolsList';
 import SubjectIcon from '@/components/SubjectIcon';
+import { PLANS, formatRupees } from '@/lib/plans';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -467,9 +468,9 @@ export default function Home() {
           </div>
           <div className="lp-pricing-row">
             {[
-              { label: 'Daily',     price: '₹49',    period: 'per day',      desc: 'Exam-day sprints and last-minute revision.',    tag: null,           tagColor: '' },
-              { label: '6 Months', price: '₹1,999', period: 'per 6 months', desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
-              { label: 'Yearly',   price: '₹2,999', period: 'per year',     desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
+              { label: PLANS.daily.label,    price: formatRupees(PLANS.daily),    period: PLANS.daily.period,    desc: 'Exam-day sprints and last-minute revision.',    tag: null,           tagColor: '' },
+              { label: PLANS.sixmonth.label, price: formatRupees(PLANS.sixmonth), period: PLANS.sixmonth.period, desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
+              { label: PLANS.yearly.label,   price: formatRupees(PLANS.yearly),   period: PLANS.yearly.period,   desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
             ].map((p) => (
               <Link key={p.label} href="/pricing" className={"lp-price-cell" + (p.tag === 'Most Popular' ? ' featured' : '')}>
                 {p.tag && (
