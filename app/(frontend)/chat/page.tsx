@@ -299,6 +299,26 @@ function ChatContent() {
     if (id === chatId) startNewChat();
   }, [chatId, startNewChat]);
 
+  /**
+   * Size the composer to its text. An onInput handler alone only fired while
+   * the reader typed, so a question arriving any other way — the ?q= prefill
+   * that lands here from the notes and landing pages, a restored draft — was
+   * clipped to one line, and the box stayed tall after a send cleared it.
+   * Driving it off the value covers every path, and remeasuring on resize
+   * keeps it honest when the column reflows.
+   */
+  useEffect(() => {
+    const ta = inputRef.current;
+    if (!ta) return;
+    const fit = () => {
+      ta.style.height = 'auto';
+      ta.style.height = `${Math.min(ta.scrollHeight, 180)}px`;
+    };
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, [input]);
+
   // All hooks above safe to early-return now
   if (!authChecked) return null;
 
@@ -312,7 +332,6 @@ function ChatContent() {
     setInput('');
     setLoading(true);
     setThinkingSeconds(0);
-    if (inputRef.current) inputRef.current.style.height = 'auto';
 
     try {
       const response = await fetch('/api/chat', {
@@ -1007,11 +1026,6 @@ function ChatContent() {
                 onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
                 placeholder={brainstormMode ? `Brainstorm ${subjectShort}…` : pdfFile ? 'Ask about the PDF…' : `Ask about ${subjectShort}…`}
                 rows={1}
-                onInput={(e) => {
-                  const ta = e.currentTarget;
-                  ta.style.height = 'auto';
-                  ta.style.height = Math.min(ta.scrollHeight, 180) + 'px';
-                }}
               />
               <button
                 className={`pp-send-btn ${input.trim() && !loading ? 'active' : 'inactive'}`}
