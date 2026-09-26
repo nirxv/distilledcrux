@@ -5,10 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
-import { routeSlugForOptional } from '@/lib/optionals';
-
-/** Where the reader's optional is remembered between navigations. */
-const OPTIONAL_KEY = 'dc-optional';
+import { routeSlugForOptional, OPTIONAL_KEY, subscribeOptional } from '@/lib/optionals';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -63,6 +60,11 @@ export default function Navbar() {
     })();
     return () => { live = false; };
   }, [user]);
+
+  // Changing optional leaves the same Firebase user signed in and returns to
+  // the dashboard by client navigation, so the effect above never re-runs. The
+  // save says so directly instead.
+  useEffect(() => subscribeOptional(setOptional), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);

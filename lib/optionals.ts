@@ -44,3 +44,47 @@ export function routeSlugForOptional(optional: unknown): string | null {
 export function labelForOptional(optional: unknown): string | null {
   return isOptionalId(optional) ? OPTIONALS[optional].label : null;
 }
+
+/* ─── The reader's own optional, shared across the app ──────────────────── */
+
+/** Where the navbar remembers the optional between navigations. */
+export const OPTIONAL_KEY = 'dc-optional';
+
+/** Fired when the optional changes within this tab. */
+const OPTIONAL_EVENT = 'dc:optional-changed';
+
+/**
+ * Announce a newly chosen optional.
+ *
+ * Changing optional does not change the Firebase user, and onboarding returns
+ * to the dashboard by client navigation, so nothing the navbar watches would
+ * otherwise tell it to look again: the bar kept the previous subject's links
+ * until a full page load. The `storage` event covers a reader's other tabs but
+ * pointedly not the tab that wrote the value, hence the custom event too.
+ */
+export function publishOptional(next: string | null): void {
+  try {
+    if (next) localStorage.setItem(OPTIONAL_KEY, next);
+    else localStorage.removeItem(OPTIONAL_KEY);
+  } catch {
+    // Private browsing and blocked site data. The listener still fires, and
+    // the navbar's own fetch is the source of truth regardless.
+  }
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent(OPTIONAL_EVENT, { detail: next }));
+  }
+}
+
+/** Listen for optional changes, in this tab and in the reader's others. */
+export function subscribeOptional(onChange: (next: string | null) => void): () => void {
+  const fromCustom = (e: Event) => onChange((e as CustomEvent<string | null>).detail ?? null);
+  const fromStorage = (e: StorageEvent) => {
+    if (e.key === OPTIONAL_KEY) onChange(e.newValue);
+  };
+  window.addEventListener(OPTIONAL_EVENT, fromCustom);
+  window.addEventListener('storage', fromStorage);
+  return () => {
+    window.removeEventListener(OPTIONAL_EVENT, fromCustom);
+    window.removeEventListener('storage', fromStorage);
+  };
+}

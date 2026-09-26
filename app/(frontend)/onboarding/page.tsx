@@ -5,6 +5,7 @@ import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { normalizeIndianMobile } from '@/lib/phone';
 import SubjectIcon from '@/components/SubjectIcon';
+import { publishOptional } from '@/lib/optionals';
 
 const optionals = [
   { id: 'sociology',          label: 'Sociology', available: true },
@@ -90,6 +91,9 @@ function OnboardingInner() {
         body: JSON.stringify({ optional: selected, phone: number.phone }),
       });
       if (res.ok) {
+        // So the navbar rebuilds around the new optional now, rather than on
+        // the reader's next full page load.
+        publishOptional(selected);
         router.push('/dashboard');
       } else {
         const data = await res.json().catch(() => null);
