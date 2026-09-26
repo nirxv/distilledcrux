@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { auth } from '@/lib/firebase';
 import { PYQ_SUBJECTS, type PYQ, type PyqSubject } from './subjects';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
+import BrandMark from '@/components/BrandMark';
 
 type AnswerEntry = {
   id: string;
@@ -35,7 +36,7 @@ const CSS = `
   /* Question card */
   .pd-qcard {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2rem; margin-bottom:1.5rem;
+    padding:1.75rem 2.25rem 1.9rem 2rem; margin-bottom:1.5rem; position:relative;
     border-left:3px solid var(--pd-accent);
   }
   .pd-badges { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:1rem; }
@@ -79,7 +80,7 @@ const CSS = `
   /* Model answer */
   .pd-model-card {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2rem; position:relative; overflow:hidden;
+    padding:1.75rem 2.25rem 1.9rem 2rem; position:relative; overflow:hidden;
   }
   .pd-model-card::before {
     content:''; position:absolute; top:0; left:0; right:0; height:2px;
@@ -345,6 +346,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 {pyq.microtheme && <span className="pd-badge">{pyq.microtheme}</span>}
               </div>
               <p className="pd-question">{pyq.question}</p>
+              <BrandMark />
             </div>
 
             {/* Actions */}
@@ -391,6 +393,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
               <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
                 <div className="pd-section-label">Model Answer{pyq.marks ? ` · ${pyq.marks} marks` : ''} · {config.label} Optional</div>
 
+                <BrandMark />
                 {generating && !modelAnswer && (
                   <div className="pd-generating">
                     <div className="pd-dot" /><div className="pd-dot" /><div className="pd-dot" />

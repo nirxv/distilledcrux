@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import type { SubjectKey } from '@/lib/subjectConfig';
+import BrandMark from '@/components/BrandMark';
 import {
   SUGGESTED_QUESTIONS,
   SUBJECT_DISPLAY,
@@ -558,7 +559,7 @@ function ChatContent() {
           background: var(--bg2, #0d0d1a);
           border: 1px solid var(--border, #1a1a2e);
           border-radius: 4px 18px 18px 18px;
-          padding: 1rem 1.1rem 0.85rem;
+          padding: 1rem 1.1rem 1.35rem;
           color: var(--text, #e8e8f0);
           font-size: 0.88rem; font-weight: 500; line-height: 1.8; position: relative;
           box-shadow: 0 4px 24px rgba(0,0,0,0.4); word-break: break-word;
@@ -829,6 +830,7 @@ function ChatContent() {
             {messages.map((msg, i) => (
               <div key={i} className={`pp-msg-row ${msg.role}`} ref={msg.role === 'assistant' && i === messages.length - 1 ? lastAiRef : null}>
                 <div className={msg.role === 'user' ? 'pp-bubble-user' : 'pp-bubble-ai'}>
+                  {msg.role === 'assistant' && <BrandMark />}
                   {msg.role === 'user' ? (
                     <span>{msg.content}</span>
                   ) : msg.content === '__LIMIT_REACHED__' ? (
