@@ -6,33 +6,45 @@ import { OPTIONAL_KEY, subscribeOptional } from '@/lib/optionals';
 /**
  * The optional this reader picked, for anything that has to be built around it.
  *
- * localStorage is read first so a signed-in reader does not watch the page
- * rearrange itself on every navigation, then the profile confirms it, which is
- * what changes when they sign in as someone else. Changing optional does not
- * change the Firebase user and returns here by client navigation, so the save
- * announces itself and the subscription picks it up.
+ * The cached value is adopted on mount, before Firebase has said who is
+ * signed in. It used to wait for that, and worse: while onAuthStateChanged was
+ * still deciding, `user` is null, so the signed-out branch ran on every load
+ * and deleted the cache before anything could read it. A returning reader
+ * therefore watched the marketing bar sit there for the length of an auth
+ * round trip and a profile fetch, every single time.
  *
- * It was the navbar's, and the hero CTA needed the same three steps.
+ * Nothing writes the cache unless a reader is signed in, and signing out
+ * clears it, so a value being there is good enough to build on immediately.
+ * The profile still confirms it, which is what catches a reader who signed in
+ * as someone else, and the announcement catches a change of optional.
  */
 export function useOptional(): string | null {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const [optional, setOptional] = useState<string | null>(null);
 
+  // localStorage cannot be read while rendering without breaking hydration, so
+  // the cache is adopted in an effect — but on mount, not on auth.
   useEffect(() => {
-    // localStorage cannot be read while rendering without breaking hydration,
-    // so the cached value has to be adopted here. The cascading render this
-    // costs is one, on mount, and it is what buys a stable bar.
-    /* eslint-disable react-hooks/set-state-in-effect */
+    try {
+      const cached = localStorage.getItem(OPTIONAL_KEY);
+      /* eslint-disable-next-line react-hooks/set-state-in-effect */
+      if (cached) setOptional(cached);
+    } catch {
+      // Private browsing, or site data blocked. The profile fetch still runs.
+    }
+  }, []);
+
+  useEffect(() => {
+    // Firebase reports null for both "signed out" and "still looking", and
+    // acting on the second would throw away the cache we just adopted.
+    if (loading) return;
+
     if (!user) {
+      /* eslint-disable-next-line react-hooks/set-state-in-effect */
       setOptional(null);
       try { localStorage.removeItem(OPTIONAL_KEY); } catch {}
       return;
     }
-    try {
-      const cached = localStorage.getItem(OPTIONAL_KEY);
-      if (cached) setOptional(cached);
-    } catch {}
-    /* eslint-enable react-hooks/set-state-in-effect */
 
     let live = true;
     (async () => {
@@ -53,7 +65,7 @@ export function useOptional(): string | null {
       }
     })();
     return () => { live = false; };
-  }, [user]);
+  }, [user, loading]);
 
   useEffect(() => subscribeOptional(setOptional), []);
 
