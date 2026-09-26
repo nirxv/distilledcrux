@@ -5,6 +5,10 @@ import { usePathname, useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
+import { routeSlugForOptional } from '@/lib/optionals';
+
+/** Where the reader's optional is remembered between navigations. */
+const OPTIONAL_KEY = 'dc-optional';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -14,7 +18,51 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [optional, setOptional] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Which optional this reader picked, which decides what the navbar is for.
+   * Read from localStorage first so a signed-in reader does not watch the bar
+   * rearrange itself on every navigation, then confirmed against the profile,
+   * which is what changes when they switch optional or sign in as someone else.
+   */
+  useEffect(() => {
+    // localStorage cannot be read while rendering without breaking hydration,
+    // so the cached value has to be adopted here. The cascading render this
+    // costs is one, on mount, and it is what buys a stable bar.
+    /* eslint-disable react-hooks/set-state-in-effect */
+    if (!user) {
+      setOptional(null);
+      try { localStorage.removeItem(OPTIONAL_KEY); } catch {}
+      return;
+    }
+    try {
+      const cached = localStorage.getItem(OPTIONAL_KEY);
+      if (cached) setOptional(cached);
+    } catch {}
+    /* eslint-enable react-hooks/set-state-in-effect */
+
+    let live = true;
+    (async () => {
+      try {
+        const token = await user.getIdToken();
+        const res = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
+        if (!res.ok || !live) return;
+        const data = await res.json();
+        const next: string | null = data?.optional ?? null;
+        setOptional(next);
+        try {
+          if (next) localStorage.setItem(OPTIONAL_KEY, next);
+          else localStorage.removeItem(OPTIONAL_KEY);
+        } catch {}
+      } catch {
+        // An offline or failed lookup leaves whatever the cache said; the
+        // marketing navbar is the fallback, and it reaches everything anyway.
+      }
+    })();
+    return () => { live = false; };
+  }, [user]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -69,21 +117,48 @@ export default function Navbar() {
     return pathname === href;
   };
 
-  const NAV_LINKS = [
-    { href: '/', label: 'Home' },
-    { href: '/#optionals', label: 'Optionals' },
-    { href: '/#features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/evaluate', label: 'Evaluate' },
-    { href: '/test', label: 'Test Series' },
-    { href: '/chat', label: 'AI Chat', accent: true },
-  ];
+  /**
+   * Two navbars. Before a reader has an optional the bar is selling the
+   * product, so it keeps the marketing anchors. Once they have one it is a
+   * workspace, and it carries the things that only exist per subject — notes,
+   * that subject's PYQs, its map practice — which nothing in the old bar linked
+   * to at all.
+   *
+   * Home and Pricing stay in both. Dashboard is marked mobileOnly rather than
+   * dropped: the sheet has room for it, the desktop bar does not, so it moves
+   * into the avatar menu there. Seven items is the ceiling that keeps the
+   * spacing loose enough to read.
+   */
+  const slug = routeSlugForOptional(optional);
+
+  const NAV_LINKS: { href: string; label: string; accent?: boolean; mobileOnly?: boolean }[] = slug
+    ? [
+        { href: '/', label: 'Home' },
+        { href: `/notes/${slug}`, label: 'Notes' },
+        { href: `/${slug}/pyqs`, label: 'PYQs' },
+        ...(optional === 'geography' ? [{ href: '/geography/mapping', label: 'Maps' }] : []),
+        // /test reads ?optional=, the profile spelling, not the route slug.
+        { href: `/test?optional=${optional}`, label: 'Tests' },
+        { href: '/evaluate', label: 'Evaluate' },
+        { href: '/pricing', label: 'Pricing' },
+        { href: '/dashboard', label: 'Dashboard', mobileOnly: true },
+        { href: '/chat', label: 'AI Chat', accent: true },
+      ]
+    : [
+        { href: '/', label: 'Home' },
+        { href: '/#optionals', label: 'Optionals' },
+        { href: '/#features', label: 'Features' },
+        { href: '/pricing', label: 'Pricing' },
+        { href: '/dashboard', label: 'Dashboard' },
+        { href: '/evaluate', label: 'Evaluate' },
+        { href: '/test', label: 'Test Series' },
+        { href: '/chat', label: 'AI Chat', accent: true },
+      ];
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        .nav-desktop-links { display: flex; align-items: center; gap: 0.25rem; }
+        .nav-desktop-links { display: flex; align-items: center; gap: 0.35rem; }
         .nav-hamburger { display: none; }
         .nav-mobile-overlay {
           position: fixed; inset: 0; z-index: 100;
@@ -216,7 +291,7 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div className="nav-desktop-links">
-            {NAV_LINKS.map((item) => {
+            {NAV_LINKS.filter((item) => !item.mobileOnly).map((item) => {
               const active = isActive(item.href);
               if (item.accent) {
                 return (
@@ -337,6 +412,20 @@ export default function Navbar() {
                         {user.email}
                       </div>
                     </div>
+                    {/* Only once the subject nav has taken its place in the
+                        bar; before that Dashboard is still a top-level link. */}
+                    {slug && (
+                      <button onClick={() => { setDropdownOpen(false); router.push('/dashboard'); }}
+                        style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--bg3)')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                          <rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>
+                        </svg>
+                        Dashboard
+                      </button>
+                    )}
                     <button onClick={() => { setDropdownOpen(false); router.push('/onboarding?change=1'); }}
                       style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', borderRadius: 8, padding: '0.55rem 0.75rem', color: 'var(--text2)', fontFamily: 'var(--font-ui)', fontSize: '0.83rem', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.12s' }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--bg3)')}
