@@ -5,7 +5,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
-import { routeSlugForOptional, OPTIONAL_KEY, subscribeOptional } from '@/lib/optionals';
+import { routeSlugForOptional } from '@/lib/optionals';
+import { useOptional } from '@/components/useOptional';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,56 +16,9 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [optional, setOptional] = useState<string | null>(null);
+  const optional = useOptional();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  /**
-   * Which optional this reader picked, which decides what the navbar is for.
-   * Read from localStorage first so a signed-in reader does not watch the bar
-   * rearrange itself on every navigation, then confirmed against the profile,
-   * which is what changes when they switch optional or sign in as someone else.
-   */
-  useEffect(() => {
-    // localStorage cannot be read while rendering without breaking hydration,
-    // so the cached value has to be adopted here. The cascading render this
-    // costs is one, on mount, and it is what buys a stable bar.
-    /* eslint-disable react-hooks/set-state-in-effect */
-    if (!user) {
-      setOptional(null);
-      try { localStorage.removeItem(OPTIONAL_KEY); } catch {}
-      return;
-    }
-    try {
-      const cached = localStorage.getItem(OPTIONAL_KEY);
-      if (cached) setOptional(cached);
-    } catch {}
-    /* eslint-enable react-hooks/set-state-in-effect */
-
-    let live = true;
-    (async () => {
-      try {
-        const token = await user.getIdToken();
-        const res = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
-        if (!res.ok || !live) return;
-        const data = await res.json();
-        const next: string | null = data?.optional ?? null;
-        setOptional(next);
-        try {
-          if (next) localStorage.setItem(OPTIONAL_KEY, next);
-          else localStorage.removeItem(OPTIONAL_KEY);
-        } catch {}
-      } catch {
-        // An offline or failed lookup leaves whatever the cache said; the
-        // marketing navbar is the fallback, and it reaches everything anyway.
-      }
-    })();
-    return () => { live = false; };
-  }, [user]);
-
-  // Changing optional leaves the same Firebase user signed in and returns to
-  // the dashboard by client navigation, so the effect above never re-runs. The
-  // save says so directly instead.
-  useEffect(() => subscribeOptional(setOptional), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
