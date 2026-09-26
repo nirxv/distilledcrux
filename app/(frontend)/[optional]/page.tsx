@@ -46,14 +46,14 @@ const OPTIONALS: Record<string, {
 };
 
 const BASE_TOOLS = [
-  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate', badge: null },
-  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus structured answers with thinkers, arguments and exam-ready language.', href: '/chat', badge: null },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}`, badge: 'Free' },
-  { num: '04', label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs", badge: 'Free' },
+  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate' },
+  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus structured answers with thinkers, arguments and exam-ready language.', href: '/chat' },
+  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}` },
+  { num: '04', label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs" },
 ];
 
-const MAP_TOOL = { num: '05', label: 'Map Practice', desc: 'Every UPSC Geography map question, year-wise. Identify locations, quiz yourself, track accuracy.', href: '/geography/mapping', badge: 'Free' };
-const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: (opt: string) => `/test?optional=${opt}`, badge: 'Premium' };
+const MAP_TOOL = { num: '05', label: 'Map Practice', desc: 'Every UPSC Geography map question, year-wise. Identify locations, quiz yourself, track accuracy.', href: '/geography/mapping' };
+const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: (opt: string) => `/test?optional=${opt}` };
 
 const getTools = (optional: string) => optional === 'geography' ? [...BASE_TOOLS, MAP_TOOL, TEST_SERIES_TOOL] : [...BASE_TOOLS, TEST_SERIES_TOOL];
 
@@ -194,14 +194,6 @@ const CSS = `
     font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
   }
   .op-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
-  .op-tool-badge {
-    position: absolute; top: 1.75rem; right: 2rem;
-    font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 2px 9px; border-radius: 4px;
-  }
-  .op-tool-badge.free { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.22); }
-  .op-tool-badge.premium { background: rgba(232,184,109,0.1); color: #e8b86d; border: 1px solid rgba(232,184,109,0.22); }
 
   /* ── CTA ── */
   .op-cta {
@@ -248,7 +240,6 @@ const CSS = `
     .op-tool-row { padding:1.25rem; gap:1rem; }
     .op-tool-label { font-size:0.88rem; font-weight: 500; }
     .op-tool-desc { font-size:0.76rem; font-weight: 500; }
-    .op-tool-badge { top:1.25rem; right:1.25rem; }
 
     .op-cta { padding:2.5rem 1.25rem 3.5rem; gap:1.5rem; }
     .op-cta-h2 { font-size:clamp(1.5rem,8vw,2.2rem); }
@@ -362,11 +353,6 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
                   <div className="op-tool-label">{tool.label}</div>
                   <div className="op-tool-desc">{tool.desc}</div>
                 </div>
-                {tool.badge && (
-                  <span className={"op-tool-badge " + (tool.badge === 'Free' ? 'free' : 'premium')}>
-                    {tool.badge}
-                  </span>
-                )}
               </Link>
             ))}
           </div>
