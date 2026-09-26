@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { auth } from '@/lib/firebase';
 import { PYQ_SUBJECTS, type PYQ, type PyqSubject } from './subjects';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
-import BrandFrame from '@/components/BrandFrame';
 
 type AnswerEntry = {
   id: string;
@@ -36,7 +35,7 @@ const CSS = `
   /* Question card */
   .pd-qcard {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2rem; margin-bottom:1.5rem; position:relative; overflow:hidden;
+    padding:1.75rem 2rem; margin-bottom:1.5rem;
     border-left:3px solid var(--pd-accent);
   }
   .pd-badges { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:1rem; }
@@ -124,7 +123,7 @@ const CSS = `
   /* Upload */
   .pd-upload-card {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.5rem; margin-bottom:1.5rem; position:relative; overflow:hidden;
+    padding:1.5rem; margin-bottom:1.5rem;
   }
   .pd-upload-input {
     width:100%; background:var(--bg3); border:1px solid var(--border);
@@ -149,7 +148,6 @@ const CSS = `
   .pd-sidebar { position:sticky; top:90px; display:flex; flex-direction:column; gap:1rem; }
   .pd-sidebar-card {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:1.25rem;
-    position:relative; overflow:hidden;
   }
   .pd-related { display:flex; flex-direction:column; gap:0.5rem; }
   .pd-related-item {
@@ -338,7 +336,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {/* Question card */}
             <div className="pd-qcard">
-              <BrandFrame />
               <div className="pd-badges">
                 <span className="pd-badge accent">{pyq.paper}</span>
                 {pyq.section && <span className="pd-badge">{pyq.section}</span>}
@@ -392,7 +389,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {(generating || generated || modelAnswer) && (
               <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
-                <BrandFrame />
                 <div className="pd-section-label">Model Answer{pyq.marks ? ` · ${pyq.marks} marks` : ''} · {config.label} Optional</div>
 
                 {generating && !modelAnswer && (
@@ -427,7 +423,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {/* Submit answer */}
             <div className="pd-upload-card">
-              <BrandFrame />
               <div className="pd-section-label">Submit Your Answer</div>
               <input
                 className="pd-upload-input"
@@ -503,7 +498,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {/* Ask AI card */}
             <div className="pd-sidebar-card">
-              <BrandFrame />
               <div className="pd-section-label">AI Tutor</div>
               <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', fontWeight: 500, color: 'var(--text3)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
                 Ask the AI to explain this question, suggest an outline, cite relevant thinkers, or critique your draft answer.
@@ -520,7 +514,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
             {/* Topper's Copy — archived until real copies are close; see lib/features.ts */}
             {TOPPER_COPIES_LIVE && (
             <div className="pd-sidebar-card">
-              <BrandFrame />
               <div className="pd-section-label">Topper&apos;s Copy</div>
               <div style={{
                 border: '1px dashed var(--border)',
@@ -546,7 +539,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
             {/* Related questions */}
             {related.length > 0 && (
               <div className="pd-sidebar-card">
-              <BrandFrame />
                 <div className="pd-section-label">Same Topic</div>
                 <div className="pd-related">
                   {related.map(q => (
@@ -561,7 +553,6 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
             {/* Stats */}
             <div className="pd-sidebar-card">
-              <BrandFrame />
               <div className="pd-section-label">Question Info</div>
               {([
                 ['Year', pyq.year],
