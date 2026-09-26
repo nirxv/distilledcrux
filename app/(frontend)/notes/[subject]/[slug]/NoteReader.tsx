@@ -501,6 +501,7 @@ export default function NoteReader({
   const [highlights, setHighlights] = useState<Highlight[]>([]);
   const [selectedColor, setSelectedColor] = useState<'yellow'|'green'|'red'|'blue'>('yellow');
   const [showToolbar, setShowToolbar] = useState(false);
+  const pendingTextRef = useRef('');
   const [toolbarPos, setToolbarPos] = useState({ x: 0, y: 0 });
   const [annotationMode, setAnnotationMode] = useState<'highlight'|null>(null);
 
@@ -543,29 +544,47 @@ export default function NoteReader({
     if (!sel || sel.isCollapsed) { setShowToolbar(false); return; }
     const text = sel.toString().trim();
     if (!text) { setShowToolbar(false); return; }
+    // Held because the click that picks a colour may have already collapsed
+    // the selection by the time the handler runs.
+    pendingTextRef.current = text;
     const range = sel.getRangeAt(0);
     const rect = range.getBoundingClientRect();
     setToolbarPos({ x: rect.left + rect.width / 2 + window.scrollX, y: rect.top + window.scrollY - 50 });
     setShowToolbar(true);
   }, [annotationMode]);
 
+  /**
+   * Pressing a colour used to read the selection back out of the document,
+   * and by then there was none: mousedown on the button collapses it, so
+   * every click fell out at the isCollapsed guard and nothing happened. The
+   * text captured when the toolbar opened is what gets highlighted.
+   */
   const applyHighlight = useCallback((color: 'yellow'|'green'|'red'|'blue') => {
     const sel = window.getSelection();
-    if (!sel || sel.isCollapsed) return;
-    const text = sel.toString().trim();
+    const text = pendingTextRef.current || sel?.toString().trim() || '';
     if (!text) return;
     setHighlights(prev => [...prev, { id: Date.now().toString(), text, color }]);
-    sel.removeAllRanges();
+    pendingTextRef.current = '';
+    sel?.removeAllRanges();
     setShowToolbar(false);
   }, []);
 
-  // Apply highlights to rendered HTML
+  /**
+   * Paint the stored highlights back onto the rendered HTML.
+   *
+   * Only the text between tags is rewritten. Run over the whole string, the
+   * match could just as easily land inside an attribute — highlighting the
+   * word "style" or a stray number was enough to rewrite a tag and break the
+   * markup for the rest of the note.
+   */
   const applyHighlightsToContent = useCallback((html: string) => {
+    const colorMap = { yellow: 'rgba(201,168,76,0.35)', green: 'rgba(76,173,122,0.35)', red: 'rgba(201,76,76,0.35)', blue: 'rgba(76,139,201,0.35)' };
     let result = html;
     highlights.forEach(h => {
-      const colorMap = { yellow: 'rgba(201,168,76,0.35)', green: 'rgba(76,173,122,0.35)', red: 'rgba(201,76,76,0.35)', blue: 'rgba(76,139,201,0.35)' };
       const escaped = h.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      result = result.replace(new RegExp(escaped, 'g'), `<mark style="background:${colorMap[h.color]};border-radius:2px;padding:0 1px;">${h.text}</mark>`);
+      const needle = new RegExp(escaped, 'g');
+      const mark = `<mark style="background:${colorMap[h.color]};border-radius:2px;padding:0 1px;">${h.text}</mark>`;
+      result = result.replace(/>([^<]+)</g, (_m, text: string) => `>${text.replace(needle, mark)}<`);
     });
     return result;
   }, [highlights]);
@@ -1109,7 +1128,7 @@ export default function NoteReader({
       {showToolbar && (
         <div style={{ position: 'absolute', left: toolbarPos.x, top: toolbarPos.y, transform: 'translateX(-50%)', background: 'var(--bg)', border: '1px solid var(--border2)', borderRadius: 10, padding: '6px 8px', display: 'flex', gap: '5px', alignItems: 'center', zIndex: 200, boxShadow: '0 12px 40px rgba(0,0,0,0.7)' }}>
           {HIGHLIGHT_COLORS.map(c => (
-            <button key={c.id} onClick={() => applyHighlight(c.id as typeof selectedColor)} title={c.label} style={{ width: 20, height: 20, borderRadius: '50%', background: c.color, border: '2px solid transparent', cursor: 'pointer', transition: 'transform 0.12s' }}
+            <button key={c.id} onMouseDown={e => e.preventDefault()} onClick={() => applyHighlight(c.id as typeof selectedColor)} title={c.label} style={{ width: 20, height: 20, borderRadius: '50%', background: c.color, border: '2px solid transparent', cursor: 'pointer', transition: 'transform 0.12s' }}
               onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.25)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
             />
