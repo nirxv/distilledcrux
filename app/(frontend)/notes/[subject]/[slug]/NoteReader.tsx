@@ -1249,9 +1249,9 @@ export default function NoteReader({
           {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
 
-          {/* Note body. The bottom padding is the mark's own strip, so it
-              never lands beside the last line of the note. */}
-          <div style={{ position: 'relative', paddingBottom: '1.6rem' }}>
+          {/* Note body. The bottom padding is the mark's own strip plus a
+              blank row, so it never crowds the last line of the note. */}
+          <div style={{ position: 'relative', paddingBottom: '2.9rem' }}>
             <BrandMark />
             <div ref={noteContentRef} className="note-content"
               onClick={handleContentClick}

@@ -235,7 +235,7 @@ const CSS = `
 
 /* Results */
 .ev-results {
-  max-width:1200px; margin:0 auto; position:relative;
+  max-width:1200px; margin:0 auto; position:relative; padding-bottom:2.2rem;
   display:grid; grid-template-columns:1fr 320px;
   border-bottom:1px solid var(--border);
   animation:fadeUp 0.4s ease;

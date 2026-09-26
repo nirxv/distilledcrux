@@ -559,7 +559,7 @@ function ChatContent() {
           background: var(--bg2, #0d0d1a);
           border: 1px solid var(--border, #1a1a2e);
           border-radius: 4px 18px 18px 18px;
-          padding: 1rem 1.1rem 1.35rem;
+          padding: 1rem 1.1rem 2.5rem;
           color: var(--text, #e8e8f0);
           font-size: 0.88rem; font-weight: 500; line-height: 1.8; position: relative;
           box-shadow: 0 4px 24px rgba(0,0,0,0.4); word-break: break-word;

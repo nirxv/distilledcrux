@@ -36,7 +36,7 @@ const CSS = `
   /* Question card */
   .pd-qcard {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2.25rem 1.9rem 2rem; margin-bottom:1.5rem; position:relative;
+    padding:1.75rem 2.25rem 2.9rem 2rem; margin-bottom:1.5rem; position:relative;
     border-left:3px solid var(--pd-accent);
   }
   .pd-badges { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:1rem; }
@@ -80,7 +80,7 @@ const CSS = `
   /* Model answer */
   .pd-model-card {
     background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2.25rem 1.9rem 2rem; position:relative; overflow:hidden;
+    padding:1.75rem 2.25rem 2.9rem 2rem; position:relative; overflow:hidden;
   }
   .pd-model-card::before {
     content:''; position:absolute; top:0; left:0; right:0; height:2px;
