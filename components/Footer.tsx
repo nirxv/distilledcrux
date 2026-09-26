@@ -43,8 +43,27 @@ export default function Footer() {
         .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
         .lp-footer-links { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; }
         .lp-footer-logo { justify-self: start; }
-        .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
-        .lp-footer-link:hover { color: var(--text); }
+        /* --text and --text3 are the same colour in both themes, so a hover
+           that only swaps those tokens is invisible. Rest the links dimmed and
+           bring them to full strength under an underline that wipes in. */
+        .lp-footer-link {
+          position: relative;
+          font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500;
+          color: var(--text3); text-decoration: none;
+          opacity: 0.6; transition: opacity 0.18s ease;
+        }
+        .lp-footer-link::after {
+          content: ''; position: absolute; left: 0; right: 0; bottom: -3px;
+          height: 1px; background: currentColor;
+          transform: scaleX(0); transform-origin: right;
+          transition: transform 0.22s ease;
+        }
+        .lp-footer-link:hover, .lp-footer-link:focus-visible { opacity: 1; }
+        .lp-footer-link:hover::after,
+        .lp-footer-link:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+        @media (prefers-reduced-motion: reduce) {
+          .lp-footer-link, .lp-footer-link::after { transition: none; }
+        }
         /* Telegram, as on the history platform, but in this site's accent
            rather than its --info-* tokens, which do not exist here. */
         .lp-footer-tg {
