@@ -81,11 +81,28 @@ export default function GeoMappingMap({ entries, selectedName, onEntryClick, noL
   entries: GeoMapEntry[]; selectedName: string | null; onEntryClick: (name: string) => void;
   noLabels?: boolean; showGrid?: boolean; disableAutoZoom?: boolean;
 }) {
-  const tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png';
+  /**
+   * CARTO stopped serving its raster basemaps to unregistered callers: the
+   * tiles still return 200, but the image is a placeholder stamped "API KEY
+   * REQUIRED" rather than the map. With a key in the environment we keep the
+   * Voyager style; without one we fall back to Esri's light grey canvas, which
+   * needs no key.
+   *
+   * Both are label-free on purpose. This is an identification quiz, so a
+   * basemap that prints "Chilika Lake" next to the marker gives the answer
+   * away. Esri's ordering is {z}/{y}/{x}, not the usual {z}/{x}/{y}.
+   */
+  const cartoKey = process.env.NEXT_PUBLIC_CARTO_API_KEY;
+  const tileUrl = cartoKey
+    ? `https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png?api_key=${cartoKey}`
+    : 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+  const attribution = cartoKey
+    ? '&copy; OpenStreetMap &copy; CARTO'
+    : 'Tiles &copy; Esri';
   return (
     <div style={{ width: '100%', height: 420, border: '1.5px solid var(--border2)', borderRadius: 10, overflow: 'hidden', position: 'relative', zIndex: 0 }}>
       <MapContainer key={noLabels ? 'nl' : 'l'} bounds={INDIA_BOUNDS} style={{ width: '100%', height: '100%', background: 'var(--bg2)' }} zoomControl={true} scrollWheelZoom={true} attributionControl={false}>
-        <TileLayer url={tileUrl} attribution="&copy; OpenStreetMap &copy; CARTO" />
+        <TileLayer url={tileUrl} attribution={attribution} maxNativeZoom={cartoKey ? 20 : 16} maxZoom={20} />
         <FitBounds entries={entries} selectedName={selectedName} disableAutoZoom={disableAutoZoom} />
         {showGrid && <GraticuleGrid />}
         {entries.map((entry) => {
