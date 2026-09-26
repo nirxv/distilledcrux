@@ -502,6 +502,7 @@ export default function NoteReader({
   const [selectedColor, setSelectedColor] = useState<'yellow'|'green'|'red'|'blue'>('yellow');
   const [showToolbar, setShowToolbar] = useState(false);
   const pendingTextRef = useRef('');
+  const [selectionHighlighted, setSelectionHighlighted] = useState(false);
   const [toolbarPos, setToolbarPos] = useState({ x: 0, y: 0 });
   const [annotationMode, setAnnotationMode] = useState<'highlight'|null>(null);
 
@@ -547,11 +548,14 @@ export default function NoteReader({
     // Held because the click that picks a colour may have already collapsed
     // the selection by the time the handler runs.
     pendingTextRef.current = text;
+    // Whether this selection lands on an existing highlight, which is what
+    // decides if the toolbar offers to take one off.
+    setSelectionHighlighted(highlights.some(h => h.text.includes(text) || text.includes(h.text)));
     const range = sel.getRangeAt(0);
     const rect = range.getBoundingClientRect();
     setToolbarPos({ x: rect.left + rect.width / 2 + window.scrollX, y: rect.top + window.scrollY - 50 });
     setShowToolbar(true);
-  }, [annotationMode]);
+  }, [annotationMode, highlights]);
 
   /**
    * Pressing a colour used to read the selection back out of the document,
@@ -568,6 +572,32 @@ export default function NoteReader({
     sel?.removeAllRanges();
     setShowToolbar(false);
   }, []);
+
+  /** Take the highlight off whatever the selection covers. */
+  const removeHighlight = useCallback(() => {
+    const text = pendingTextRef.current || window.getSelection()?.toString().trim() || '';
+    if (!text) return;
+    setHighlights(prev => prev.filter(h => !(h.text.includes(text) || text.includes(h.text))));
+    pendingTextRef.current = '';
+    setSelectionHighlighted(false);
+    window.getSelection()?.removeAllRanges();
+    setShowToolbar(false);
+  }, []);
+
+  /**
+   * Clicking a highlight while highlighting is on takes it off, which is the
+   * shorter road than reselecting exactly the words that were marked. It is
+   * inert while highlighting is off, so reading a note cannot rub one out by
+   * accident.
+   */
+  const handleContentClick = useCallback((e: React.MouseEvent) => {
+    if (annotationMode !== 'highlight') return;
+    const mark = (e.target as HTMLElement).closest('mark.pp-hl');
+    const text = mark?.textContent?.trim();
+    if (!text) return;
+    setHighlights(prev => prev.filter(h => h.text !== text));
+    setShowToolbar(false);
+  }, [annotationMode]);
 
   /**
    * Paint the stored highlights back onto the rendered HTML.
@@ -1135,6 +1165,11 @@ export default function NoteReader({
             }} title={c.label} />
           ))}
           {highlights.length > 0 && (
+            <span style={{ marginLeft: '0.5rem', fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>
+              Click a highlight to remove it.
+            </span>
+          )}
+          {highlights.length > 0 && (
             <button onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }} style={{ marginLeft: '0.75rem', background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', cursor: 'pointer', padding: '2px 8px', borderRadius: 4, fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>
               Clear all
             </button>
@@ -1151,6 +1186,20 @@ export default function NoteReader({
               onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
             />
           ))}
+          {selectionHighlighted && (
+            <>
+              <div style={{ width: 1, height: 16, background: 'var(--border2)', margin: '0 2px' }} />
+              <button onMouseDown={e => e.preventDefault()} onClick={removeHighlight} title="Remove highlight"
+                style={{ background: 'none', border: 'none', color: 'var(--text3)', cursor: 'pointer', width: 20, height: 20, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text3)')}
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 20H9L4 15a2 2 0 0 1 0-3l8-8a2 2 0 0 1 3 0l5 5a2 2 0 0 1 0 3l-7 7"/><path d="M6 13l6 6"/>
+                </svg>
+              </button>
+            </>
+          )}
           <div style={{ width: 1, height: 16, background: 'var(--border2)', margin: '0 2px' }} />
           <button onClick={() => setShowToolbar(false)} style={{ background: 'none', border: 'none', color: 'var(--text3)', cursor: 'pointer', width: 20, height: 20, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1187,6 +1236,7 @@ export default function NoteReader({
           {/* Note body */}
           <div style={{ position: 'relative' }}>
             <div ref={noteContentRef} className="note-content"
+              onClick={handleContentClick}
               dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;">Content coming soon. Check back shortly.</p>' }}
               style={!user && !authLoading && displayContent ? { maxHeight: '140vh', overflow: 'hidden', pointerEvents: 'none', userSelect: 'none' } : undefined}
             />
