@@ -4,6 +4,7 @@ import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
 import { createServerClient } from '@/lib/supabase';
+import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
   SUBJECT_THINKER_BOOKS,
@@ -267,32 +268,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Malformed request body' }, { status: 400 });
   }
 
-  const SUBJECT_TO_OPTIONAL: Record<string, string> = {
-    sociology:    'sociology',
-    anthropology: 'anthropology',
-    polsci:       'political-science',
-    geography:    'geography',
-    'pub-admin':  'public-administration',
-  };
-  const subjectForAuth = (body.subject as string) ?? 'sociology';
-  const optionalForAuth = SUBJECT_TO_OPTIONAL[subjectForAuth] ?? subjectForAuth;
+  const optionalForAuth = optionalForSubject(body.subject);
 
   const user = token ? await verifyFirebaseToken(token) : null;
   const firebaseUid = user?.uid ?? '';
   const isOwner = Boolean(user?.email && user.email === OWNER_EMAIL);
 
-  let isPremium = false;
-  if (user && !isOwner) {
-    const { data: sub } = await supabase
-      .from('subscriptions')
-      .select('status')
-      .eq('firebase_uid', user.uid)
-      .eq('optional', optionalForAuth)
-      .eq('status', 'active')
-      .gt('expires_at', new Date().toISOString())
-      .maybeSingle();
-    isPremium = Boolean(sub);
-  }
+  const isPremium = user && !isOwner
+    ? await hasActiveSubscription(supabase, user.uid, optionalForAuth)
+    : false;
 
   // Server-derived. The client's x-fingerprint header is no longer trusted: it
   // was the whole free tier, and the client picked its own value.

@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth, signInWithGoogle, signInWithGoogleRedirect } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import { TOPPER_COPIES_LIVE } from '@/lib/features';
 
 const FEATURES = [
   { color: '#4361ee', label: 'AI Answer Evaluation' },
   { color: '#e8b86d', label: '4500+ PYQs' },
-  { color: '#2dd4bf', label: 'Topper Copies' },
+  ...(TOPPER_COPIES_LIVE ? [{ color: '#2dd4bf', label: 'Topper Copies' }] : []),
   { color: '#4ade80', label: 'Syllabus Notes' },
 ];
 

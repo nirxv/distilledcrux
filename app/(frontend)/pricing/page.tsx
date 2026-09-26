@@ -4,6 +4,7 @@ import { PLANS, rupees } from '@/lib/plans';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
+import { TOPPER_COPIES_LIVE } from '@/lib/features';
 
 const OPTIONALS = [
   { id: 'sociology',             label: 'Sociology' },
@@ -24,7 +25,7 @@ const plans = [
       { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank access' },
       { label: 'Syllabus-Mapped Notes' },
-      { label: 'Topper Answer Copies', future: true },
+      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
     ],
   },
   {
@@ -37,7 +38,7 @@ const plans = [
       { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank 4500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
-      { label: 'Topper Answer Copies', future: true },
+      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
       { label: 'Performance analytics' },
     ],
   },
@@ -51,7 +52,7 @@ const plans = [
       { label: 'AI Chat: ask anything' },
       { label: 'PYQ Bank 4500+ questions' },
       { label: 'Syllabus-Mapped Notes' },
-      { label: 'Topper Answer Copies', future: true },
+      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
       { label: 'Performance analytics' },
       { label: 'Priority support' },
       { label: 'Early access to new features' },
@@ -369,11 +370,8 @@ export default function PricingPage() {
                     <p className="pr-card-desc">{plan.desc}</p>
                     <ul className="pr-features">
                       {plan.features.map((f) => (
-                        <li key={f.label} className="pr-feature" style={f.future ? { opacity: 0.45 } : undefined}>
-                          <CheckIcon color={f.future ? 'var(--text3)' : plan.color} />{f.label}
-                          {f.future && (
-                            <span style={{ marginLeft: '6px', fontSize: '0.6rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text3)', border: '1px solid var(--border)', borderRadius: '4px', padding: '1px 6px', verticalAlign: 'middle' }}>Soon</span>
-                          )}
+                        <li key={f.label} className="pr-feature">
+                          <CheckIcon color={plan.color} />{f.label}
                         </li>
                       ))}
                     </ul>

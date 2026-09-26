@@ -5,6 +5,7 @@ import { debug } from "@/lib/debugLog";
 import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/uploadLimits";
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
+import { hasActiveSubscription, optionalForSubject } from "@/lib/entitlements";
 import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
 import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
 
@@ -23,29 +24,14 @@ export async function POST(req: NextRequest) {
 
   const token = req.headers.get("x-user-token") ?? "";
   const subjectField = (formData.get("subject") as string) || "sociology";
-  const OPTIONAL_BY_SUBJECT: Record<string, string> = {
-    sociology: "sociology", anthropology: "anthropology",
-    polsci: "political-science", geography: "geography",
-    "pub-admin": "public-administration",
-  };
-  const optionalForEval = OPTIONAL_BY_SUBJECT[subjectField] ?? subjectField;
+  const optionalForEval = optionalForSubject(subjectField);
 
   const user = token ? await verifyFirebaseToken(token) : null;
   const isOwner = Boolean(user?.email && user.email === process.env.OWNER_EMAIL);
 
-  let isPremium = false;
-  if (user && !isOwner) {
-    const sb = createServerClient();
-    const { data: sub } = await sb
-      .from("subscriptions")
-      .select("status")
-      .eq("firebase_uid", user.uid)
-      .eq("optional", optionalForEval)
-      .eq("status", "active")
-      .gt("expires_at", new Date().toISOString())
-      .maybeSingle();
-    isPremium = Boolean(sub);
-  }
+  const isPremium = user && !isOwner
+    ? await hasActiveSubscription(createServerClient(), user.uid, optionalForEval)
+    : false;
 
   // Identity is resolved server-side. The client's x-fingerprint header is no
   // longer consulted: it was the entire free tier, and the client chose it.

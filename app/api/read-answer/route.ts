@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { rejectUpload, IMAGE_TYPES } from '@/lib/uploadLimits';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
+import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
 
 export const maxDuration = 60;
 
@@ -61,25 +62,8 @@ export async function POST(req: NextRequest) {
   // Usage gate — optional-scoped subscription check
   if (verifiedUid !== OWNER_UID) {
     const sb = createServerClient();
-    let isPremium = false;
-
-    const MAP: Record<string, string> = {
-      sociology: 'sociology', anthropology: 'anthropology',
-      polsci: 'political-science', geography: 'geography', 'pub-admin': 'public-administration',
-    };
-    const subj = (formData.get('subject') as string) || 'sociology';
-    const optionalForRead = MAP[subj] ?? subj;
-
-    const nowISO = new Date().toISOString();
-    const { data: sub } = await sb
-      .from('subscriptions')
-      .select('id')
-      .eq('firebase_uid', verifiedUid)
-      .eq('optional', optionalForRead)
-      .eq('status', 'active')
-      .gt('expires_at', nowISO)
-      .maybeSingle();
-    if (sub) isPremium = true;
+    const optionalForRead = optionalForSubject(formData.get('subject'));
+    const isPremium = await hasActiveSubscription(sb, verifiedUid, optionalForRead);
 
     if (!isPremium) {
       const { data: usage } = await sb.from('usage_tracking').select('eval_count').eq('firebase_uid', verifiedUid).maybeSingle();

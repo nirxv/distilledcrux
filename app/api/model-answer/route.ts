@@ -5,6 +5,7 @@ import { createServerClient } from '@/lib/supabase';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { getSubjectConfig, writingRules, DEFAULT_SUBJECT } from '@/lib/subjects';
 import { checkRateLimit, clientIp } from '@/lib/rateLimit';
+import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
 
 /**
  * A model answer for one PYQ, streamed as plain text.
@@ -55,22 +56,17 @@ export async function POST(req: NextRequest) {
       { status: 429 });
   }
 
+  // Scoped to the optional this question belongs to. A subscription buys one
+  // optional, so an anthropology reader asking for a sociology answer is as
+  // unentitled as a reader with no subscription at all.
   const db = createServerClient();
-  let premium = user.email != null && user.email === process.env.OWNER_EMAIL;
-  if (!premium) {
-    const { data } = await db
-      .from('subscriptions')
-      .select('id')
-      .eq('firebase_uid', user.uid)
-      .eq('status', 'active')
-      .gt('expires_at', new Date().toISOString())
-      .limit(1)
-      .maybeSingle();
-    premium = Boolean(data);
-  }
+  const subject = String(body.subject ?? DEFAULT_SUBJECT);
+  const premium =
+    (user.email != null && user.email === process.env.OWNER_EMAIL) ||
+    (await hasActiveSubscription(db, user.uid, optionalForSubject(subject, DEFAULT_SUBJECT)));
   if (!premium) return NextResponse.json({ error: 'premium_required' }, { status: 403 });
 
-  const config = getSubjectConfig(String(body.subject ?? DEFAULT_SUBJECT));
+  const config = getSubjectConfig(subject);
   const marks = markBand(body.marks);
   const topic = typeof body.topic === 'string' ? body.topic.slice(0, 120) : '';
 

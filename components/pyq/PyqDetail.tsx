@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { auth } from '@/lib/firebase';
 import { PYQ_SUBJECTS, type PYQ, type PyqSubject } from './subjects';
+import { TOPPER_COPIES_LIVE } from '@/lib/features';
 
 type AnswerEntry = {
   id: string;
@@ -205,13 +206,16 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
     const unsub = auth.onAuthStateChanged(async user => {
       if (!user) return;
       const token = await user.getIdToken();
-      fetch('/api/sub-status', { headers: { 'x-user-token': token } })
+      // Scoped to this page's subject: a subscription buys one optional, and
+      // the model-answer route enforces exactly that, so an unscoped check here
+      // would promise a full answer the server then refuses.
+      fetch(`/api/sub-status?subject=${subject}`, { headers: { 'x-user-token': token } })
         .then(r => r.json())
         .then(d => setIsPremium(d.active === true))
         .catch(() => {});
     });
     return () => unsub();
-  }, []);
+  }, [subject]);
 
   // Community answers
   useEffect(() => {
@@ -507,7 +511,8 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
               </Link>
             </div>
 
-            {/* Topper's Copy */}
+            {/* Topper's Copy — archived until real copies are close; see lib/features.ts */}
+            {TOPPER_COPIES_LIVE && (
             <div className="pd-sidebar-card">
               <div className="pd-section-label">Topper&apos;s Copy</div>
               <div style={{
@@ -529,6 +534,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
                 </div>
               </div>
             </div>
+            )}
 
             {/* Related questions */}
             {related.length > 0 && (
