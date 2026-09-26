@@ -5,6 +5,7 @@ import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
+import BrandFrame from '@/components/BrandFrame';
 
 // ── Scroll-direction hook ────────────────────────────────────
 // ── Inject IDs into headings for TOC ────────────────────────
@@ -1248,8 +1249,10 @@ export default function NoteReader({
           {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
 
-          {/* Note body */}
-          <div style={{ position: 'relative' }}>
+          {/* Note body. The padding is what the rails sit in; without it they
+              would run over the prose rather than around it. */}
+          <div style={{ position: 'relative', padding: '0.5rem 1.4rem', overflow: 'hidden' }}>
+            <BrandFrame />
             <div ref={noteContentRef} className="note-content"
               onClick={handleContentClick}
               dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;">Content coming soon. Check back shortly.</p>' }}

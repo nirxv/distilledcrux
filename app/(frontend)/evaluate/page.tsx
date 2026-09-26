@@ -3,6 +3,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import BrandFrame from '@/components/BrandFrame';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface SectionMark { awarded: number; out_of: number; reasoning: string }
@@ -234,7 +235,7 @@ const CSS = `
 
 /* Results */
 .ev-results {
-  max-width:1200px; margin:0 auto;
+  max-width:1200px; margin:0 auto; position:relative;
   display:grid; grid-template-columns:1fr 320px;
   border-bottom:1px solid var(--border);
   animation:fadeUp 0.4s ease;
@@ -758,6 +759,7 @@ export default function EvaluatePage() {
             <span className="ev-question-bar-text">{question}</span>
           </div>
           <div className="ev-results">
+            <BrandFrame />
             <div className="ev-main-col">
               <div className="ev-result-section">
                 <div className="ev-result-lbl">What the question demands</div>
