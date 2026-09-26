@@ -31,23 +31,20 @@ export default function Footer() {
   return (
     <footer className="lp-footer" ref={ref}>
       <style>{`
+        /* Height matches the navbar's 60px so the two bars frame the page
+           evenly; both include their 1px border under the global border-box. */
         .lp-footer {
           border-top: 1px solid var(--border);
-          padding: 1.75rem 2.25rem;
+          height: 60px; padding: 0 2.25rem;
           display: grid; grid-template-columns: 1fr auto 1fr;
           align-items: center; gap: 1rem;
         }
-        .lp-footer-mid {
-          display: flex; align-items: center; justify-content: center;
-          gap: 1.75rem; flex-wrap: wrap;
-        }
         .lp-footer-end { display: flex; justify-content: flex-end; }
         .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
-        .lp-footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+        .lp-footer-links { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; }
         .lp-footer-logo { justify-self: start; }
         .lp-footer-link { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
         .lp-footer-link:hover { color: var(--text); }
-        .lp-footer-copy { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); }
         /* Telegram, as on the history platform, but in this site's accent
            rather than its --info-* tokens, which do not exist here. */
         .lp-footer-tg {
@@ -64,24 +61,20 @@ export default function Footer() {
           border-color: color-mix(in srgb, var(--accent) 60%, transparent);
         }
         @media (max-width: 900px) {
-          .lp-footer { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 1.5rem 1.25rem; gap: 0.85rem; }
+          .lp-footer { grid-template-columns: 1fr; justify-items: center; text-align: center; height: auto; padding: 1.5rem 1.25rem; gap: 0.85rem; }
           .lp-footer-end { justify-content: center; }
           .lp-footer-links { justify-content: center; gap: 1.25rem; }
           .lp-footer-link { font-size: 0.75rem; font-weight: 500; }
-          .lp-footer-copy { font-size: 0.7rem; font-weight: 500; }
           .lp-footer-logo { font-size: 0.72rem; font-weight: 500; }
         }
       `}</style>
       <div className="lp-footer-logo">DISTILLEDCRUX.COM</div>
 
-      <div className="lp-footer-mid">
-        <div className="lp-footer-links">
-          <Link href="/privacy" className="lp-footer-link">Privacy</Link>
-          <Link href="/terms" className="lp-footer-link">Terms</Link>
-          <Link href="/refund" className="lp-footer-link">Refund</Link>
-          <Link href="/contact" className="lp-footer-link">Contact</Link>
-        </div>
-        <span className="lp-footer-copy">© {new Date().getFullYear()} distilledcrux.com</span>
+      <div className="lp-footer-links">
+        <Link href="/privacy" className="lp-footer-link">Privacy</Link>
+        <Link href="/terms" className="lp-footer-link">Terms</Link>
+        <Link href="/refund" className="lp-footer-link">Refund</Link>
+        <Link href="/contact" className="lp-footer-link">Contact</Link>
       </div>
 
       <div className="lp-footer-end">
