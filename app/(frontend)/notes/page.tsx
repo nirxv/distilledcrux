@@ -4,6 +4,7 @@ import Script from 'next/script';
 import HomeToolsList from '@/components/HomeToolsList';
 import SubjectIcon from '@/components/SubjectIcon';
 import { PLANS, formatRupees } from '@/lib/plans';
+import HeroOptionalLink from '@/components/HeroOptionalLink';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -362,12 +363,7 @@ export default function Home() {
             </p>
             <div className="lp-hero-actions">
               <Link href="/login" className="lp-btn-primary">Start free →</Link>
-              <Link href="#optionals" className="lp-btn-ghost">
-                Pick your optional
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 2l5 5-5 5M2 7h10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <HeroOptionalLink />
             </div>
             <div className="lp-hero-stat-row">
               {[

@@ -35,7 +35,7 @@ export default function SociologyNotesPage() {
         Sociology Optional
       </h1>
       <p style={{ color: 'var(--text2)', fontSize: '0.9rem', fontWeight: 500, marginBottom: '3rem' }}>
-        {paper1Notes.length + paper2Notes.length} topics · Paper I & II · Free for all aspirants
+        {paper1Notes.length + paper2Notes.length} topics · Paper I & II
       </p>
 
       {/* Paper I */}
