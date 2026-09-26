@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
+import { pyqCountForOptional } from '@/lib/pyqCounts';
 
 export async function GET(req: NextRequest) {
   const token = req.headers.get('x-user-token');
@@ -43,6 +44,10 @@ export async function GET(req: NextRequest) {
     ? Math.floor((Date.now() - new Date(joinedAt).getTime()) / (1000 * 60 * 60 * 24))
     : 0;
 
+  // Counted here rather than in the page: the reader only ever sees their own
+  // optional's bank, and the data files have no business in the client bundle.
+  const pyqCount = await pyqCountForOptional(optional);
+
   return NextResponse.json({
     optional,
     phone,
@@ -53,5 +58,6 @@ export async function GET(req: NextRequest) {
     expiresAt,
     joinedAt,
     daysSinceJoin,
+    pyqCount,
   });
 }
