@@ -20,7 +20,6 @@ export const maxDuration = 60;
 const RATE_LIMIT = 20;
 const RATE_WINDOW_SECONDS = 10 * 60;
 const CHAT_FREE_LIMIT = 3;
-const OWNER_EMAIL = process.env.OWNER_EMAIL!;
 
 // ── Voyage AI embed (voyage-4-lite, 1024 dims) ───────────────
 async function localEmbedBatch(texts: string[]): Promise<number[][]> {
@@ -238,9 +237,8 @@ export async function POST(req: NextRequest) {
 
   const user = token ? await verifyFirebaseToken(token) : null;
   const firebaseUid = user?.uid ?? '';
-  const isOwner = Boolean(user?.email && user.email === OWNER_EMAIL);
 
-  const isPremium = user && !isOwner
+  const isPremium = user
     ? await hasActiveSubscription(supabase, user.uid, optionalForAuth)
     : false;
 
@@ -248,7 +246,7 @@ export async function POST(req: NextRequest) {
   // was the whole free tier, and the client picked its own value.
   const identity = resolveUsageIdentity(req, user?.uid ?? null);
 
-  if (!isOwner && !isPremium) {
+  if (!isPremium) {
     const used = await readUsage(identity, 'chat_count');
     if (used >= CHAT_FREE_LIMIT) {
       return NextResponse.json({ error: 'limit_reached' }, { status: 403 });
@@ -521,7 +519,7 @@ export async function POST(req: NextRequest) {
           // Count the call. Anonymous ones are counted too; this was gated on
           // firebaseUid, so an anonymous caller incremented nothing and the
           // free limit could never be reached.
-          if (!isOwner && !isPremium) {
+          if (!isPremium) {
             try {
               await recordUsage(identity, 'chat_count');
             } catch (incErr) {

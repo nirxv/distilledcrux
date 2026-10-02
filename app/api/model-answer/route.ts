@@ -61,9 +61,7 @@ export async function POST(req: NextRequest) {
   // unentitled as a reader with no subscription at all.
   const db = createServerClient();
   const subject = String(body.subject ?? DEFAULT_SUBJECT);
-  const premium =
-    (user.email != null && user.email === process.env.OWNER_EMAIL) ||
-    (await hasActiveSubscription(db, user.uid, optionalForSubject(subject, DEFAULT_SUBJECT)));
+  const premium = await hasActiveSubscription(db, user.uid, optionalForSubject(subject, DEFAULT_SUBJECT));
   if (!premium) return NextResponse.json({ error: 'premium_required' }, { status: 403 });
 
   const config = getSubjectConfig(subject);

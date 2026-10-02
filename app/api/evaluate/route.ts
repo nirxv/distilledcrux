@@ -27,9 +27,8 @@ export async function POST(req: NextRequest) {
   const optionalForEval = optionalForSubject(subjectField);
 
   const user = token ? await verifyFirebaseToken(token) : null;
-  const isOwner = Boolean(user?.email && user.email === process.env.OWNER_EMAIL);
 
-  const isPremium = user && !isOwner
+  const isPremium = user
     ? await hasActiveSubscription(createServerClient(), user.uid, optionalForEval)
     : false;
 
@@ -37,7 +36,7 @@ export async function POST(req: NextRequest) {
   // longer consulted: it was the entire free tier, and the client chose it.
   const identity = resolveUsageIdentity(req, user?.uid ?? null);
 
-  if (!isOwner && !isPremium) {
+  if (!isPremium) {
     const used = await readUsage(identity, "eval_count");
     if (used >= FREE_EVAL_LIMIT) {
       return NextResponse.json({ error: "limit_reached" }, { status: 403 });
@@ -778,7 +777,7 @@ If no corrections are needed, return the original model_answer unchanged with co
     // Count the call. Anonymous ones are counted too; this was gated on a
     // verified token, so an anonymous caller incremented nothing and the free
     // limit could never actually be reached.
-    if (!isOwner && !isPremium) {
+    if (!isPremium) {
       try {
         await recordUsage(identity, "eval_count");
       } catch (incErr) {
