@@ -62,19 +62,52 @@ export async function readUsage(identity: UsageIdentity, counter: Counter): Prom
  * Records one use. Anonymous calls are counted too, which is the half that was
  * missing: without it the limit could never be reached without signing in.
  *
+ * `fingerprint` is the table's primary key and cannot be null. The upsert this
+ * replaces wrote only `firebase_uid` for a signed-in reader, so the first use
+ * of every account without an existing row failed the not-null check. supabase
+ * returns errors rather than throwing them, so nobody noticed: from 15 Sep no
+ * new account was ever counted, and its free tier never ran out. A first row
+ * for an account now carries a fingerprint derived from the uid, and every
+ * write checks its error and throws, so the callers' catch blocks log it.
+ *
  * Read-then-write races only ever undercount by one under concurrency. A
  * Postgres function doing `count = count + 1` would close that, and is worth
  * doing when the free tier is worth more than a single call.
  */
 export async function recordUsage(identity: UsageIdentity, counter: Counter): Promise<void> {
   const supabase = createServerClient();
-  const current = await readUsage(identity, counter);
-  await supabase.from('usage_tracking').upsert(
-    {
-      [identity.column]: identity.value,
-      [counter]: current + 1,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: identity.column },
-  );
+  const updated_at = new Date().toISOString();
+
+  const increment = async (): Promise<boolean> => {
+    const { data: row, error } = await supabase
+      .from('usage_tracking')
+      .select(counter)
+      .eq(identity.column, identity.value)
+      .maybeSingle();
+    if (error) throw error;
+    if (!row) return false;
+
+    const current = (row as Record<string, number>)[counter] ?? 0;
+    const { error: updateError } = await supabase
+      .from('usage_tracking')
+      .update({ [counter]: current + 1, updated_at })
+      .eq(identity.column, identity.value);
+    if (updateError) throw updateError;
+    return true;
+  };
+
+  if (await increment()) return;
+
+  const { error } = await supabase.from('usage_tracking').insert({
+    fingerprint: identity.column === 'fingerprint' ? identity.value : `uid_${identity.value}`,
+    firebase_uid: identity.column === 'firebase_uid' ? identity.value : null,
+    [counter]: 1,
+    updated_at,
+  });
+  // A concurrent first call inserted the row between our read and our insert.
+  if (error?.code === '23505') {
+    await increment();
+    return;
+  }
+  if (error) throw error;
 }
