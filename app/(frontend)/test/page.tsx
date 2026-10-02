@@ -926,7 +926,7 @@ function TestPageInner() {
 
   const [navH, setNavH] = useState(60);
 
-  // Auth
+  // Profile: open on the reader's own optional
   useEffect(() => {
     if (!user) return;
     (async () => {
@@ -935,13 +935,32 @@ function TestPageInner() {
         const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
         if (r.ok) {
           const d = await r.json();
-          setIsPremium(!!d.subscribed);
           const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
           if (mapped && SUBJECTS[mapped].dataFile) setSubject(mapped);
         }
       } catch { /* ignore */ }
     })();
   }, [user]);
+
+  // Premium, for the subject on screen. This used to read `subscribed` off
+  // /api/user-profile, which has never returned one, so every subscriber saw
+  // the paywall. A subscription buys one optional and the evaluate route
+  // checks exactly that, so the question is asked per subject.
+  useEffect(() => {
+    if (!user) return;
+    let live = true;
+    (async () => {
+      try {
+        const token = await user.getIdToken();
+        const r = await fetch(`/api/sub-status?subject=${subject}`, { headers: { 'x-user-token': token } });
+        const d = await r.json();
+        if (live) setIsPremium(d.active === true);
+      } catch {
+        if (live) setIsPremium(false);
+      }
+    })();
+    return () => { live = false; };
+  }, [user, subject]);
 
   // Nav height
   useEffect(() => {
