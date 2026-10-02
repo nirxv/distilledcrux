@@ -5,6 +5,7 @@ import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { resolveUsageIdentity, readUsage, recordUsage } from '@/lib/usageIdentity';
 import { createServerClient } from '@/lib/supabase';
 import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
+import { searchBook, searchDiverse } from '@/lib/vectorStore';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
   SUBJECT_THINKER_BOOKS,
@@ -40,9 +41,9 @@ async function localEmbedBatch(texts: string[]): Promise<number[][]> {
   return data.data.map((d: { embedding: number[] }) => d.embedding);
 }
 
-// ── RAG: fetch book context from Supabase ────────────────────
+// ── RAG: fetch book context from Qdrant ──────────────────────
 // Returns empty string gracefully if:
-//   a) embed service is down / cold-starting
+//   a) embed service or Qdrant is down
 //   b) no books embedded yet for this subject
 //   c) similarity too low (books don't cover this topic)
 async function getBookContext(
@@ -51,49 +52,14 @@ async function getBookContext(
   bookTitle?: string,
 ): Promise<string> {
   try {
-    const supabase = createServerClient();
     const filter = bookTitle && bookTitle !== 'all' ? bookTitle : null;
 
     const [embedding] = await localEmbedBatch([query]);
 
-    let results;
-    if (!filter) {
-      // All books for this subject — use diverse RPC (per-book top-3)
-      // subject column lets Postgres filter to only this subject's chunks
-      results = await Promise.all([
-        supabase.rpc('match_book_chunks_diverse', {
-          query_embedding: embedding,
-          per_book_count: 3,
-          filter_subject: subject,   // Supabase fn must accept this param
-        }),
-      ]);
-    } else {
-      results = await Promise.all([
-        supabase.rpc('match_book_chunks', {
-          query_embedding: embedding,
-          match_count: 12,
-          filter_book: filter,
-        }),
-      ]);
-    }
-
-    const seen = new Set<unknown>();
-    const allChunks: { id: unknown; content: string; book_title: string; author: string; similarity: number }[] = [];
-    for (const result of results) {
-      if (result.error) console.error('Supabase RPC error:', result.error);
-      for (const chunk of result.data ?? []) {
-        if (!seen.has(chunk.id)) {
-          seen.add(chunk.id);
-          allChunks.push({
-            id: chunk.id,
-            content: chunk.content,
-            book_title: chunk.book_title,
-            author: chunk.author,
-            similarity: chunk.similarity,
-          });
-        }
-      }
-    }
+    // All books: each book's top 3 for this subject. One book: its top 12.
+    const allChunks = filter
+      ? await searchBook(embedding, filter, { limit: 12 })
+      : await searchDiverse(embedding, subject, { perBook: 3 });
 
     if (allChunks.length === 0) return '';
 
