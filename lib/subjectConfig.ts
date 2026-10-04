@@ -376,7 +376,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       books: [
         { value: 'Majid Husain — Human Geography', label: 'Majid Husain — Human Geography' },
         { value: 'Majid Husain — Evolution of Geographical Thought', label: 'Majid Husain — Geographical Thought' },
-        { value: 'Majid Husain — World Geography', label: 'Majid Husain — World Geography' },
+        { value: 'Majid Husain — Indian and World Geography', label: 'Majid Husain — Indian and World Geography' },
       ],
     },
     {
