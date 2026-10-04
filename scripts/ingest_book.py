@@ -15,7 +15,8 @@ instead of its flat text, so those never get in:
      vocabulary, so "socio-economic" keeps its hyphen and "move-ment" loses it.
   3. With --profile ignou, the parts of a unit that are not prose are left
      out: the Structure list, Check Your Progress boxes and their answers,
-     reading lists and video links, plus the course's credit pages.
+     reading lists and video links, plus the course's credit pages. With
+     --profile ncert, each chapter's exercises and project work are.
   4. The text is cut into passages of about 250 words that start and end on
      sentence boundaries and overlap by up to 50 words, never across files.
   5. Passages that are reference lists, index or contents pages, or too
@@ -30,7 +31,7 @@ and writes them to Qdrant with new ids after the current highest one.
 
 Usage:
   python3 scripts/ingest_book.py "<book title>" <subject> --author "<author>" \
-      [--profile ignou|plain] [--out DIR] [--upload [--replace]] PDF_OR_DIR...
+      [--profile ignou|ncert|plain] [--out DIR] [--upload [--replace]] PDF_OR_DIR...
 
   The title must match the value in lib/subjectConfig.ts SUBJECT_BOOKS,
   because single-book chat filters on it exactly. Directories are searched
@@ -62,15 +63,21 @@ SUBJECTS = {'sociology', 'anthropology', 'geography', 'polsci', 'pub-admin'}
 class Seg:
     """A run of text on one baseline, split wherever the gap between spans
     is wide enough that the two sides belong to different columns."""
-    __slots__ = ('page', 'x0', 'y0', 'x1', 'y1', 'text', 'size', 'bold')
+    __slots__ = ('page', 'block', 'x0', 'y0', 'x1', 'y1', 'text', 'size', 'bold')
 
-    def __init__(self, page, spans):
-        self.page = page
+    def __init__(self, page, spans, block=None):
+        self.page, self.block = page, block
         self.x0 = min(s['bbox'][0] for s in spans)
         self.y0 = min(s['bbox'][1] for s in spans)
         self.x1 = max(s['bbox'][2] for s in spans)
         self.y1 = max(s['bbox'][3] for s in spans)
-        self.text = ''.join(s['text'] for s in spans).strip()
+        # Spans that touch belong to one word (a small-caps heading is set as
+        # "L" + "ANDFORMS"); a gap wider than a fifth of the type is a space.
+        text = spans[0]['text']
+        for a, b in zip(spans, spans[1:]):
+            gap = b['bbox'][0] - a['bbox'][2]
+            text += (' ' if gap > 0.2 * b['size'] and not text.endswith(' ') and not b['text'].startswith(' ') else '') + b['text']
+        self.text = re.sub(r'\s+', ' ', text).strip()
         chars = [(len(s['text'].strip()), s) for s in spans]
         total = sum(n for n, _ in chars) or 1
         self.size = max(s['size'] for s in spans)
@@ -78,27 +85,59 @@ class Seg:
 
 
 def page_segments(page, pno):
+    """Some PDFs draw a heading several times over, slightly offset, for a
+    bold or outlined look, which reads back as "W W W W WORLD ORLD ORLD". A
+    character already drawn at the same spot is dropped, so one copy is left."""
+    seen = set()
+
+    def dup(c, x, y):
+        kx, ky = round(x), round(y)
+        return any((c, kx + dx, ky + dy) in seen for dx in (-1, 0, 1) for dy in (-1, 0, 1))
     segs = []
-    for b in page.get_text('dict')['blocks']:
+    for bi, b in enumerate(page.get_text('rawdict')['blocks']):
         if b['type'] != 0:
             continue
         for line in b['lines']:
-            # Superscript footnote markers ("Mill⁵") would otherwise glue to
-            # the word before them.
-            spans = [s for s in line['spans'] if s['text'].strip()
-                     and not (s['flags'] & 1 and re.fullmatch(r'[\d*†‡,]{1,4}', s['text'].strip()))]
-            if not spans:
-                continue
             # Horizontal text only: rotated lines are margin furniture.
             if abs(line['dir'][1]) > 0.1:
                 continue
+            spans = []
+            for sp in line['spans']:
+                chars = []
+                for ch in sp['chars']:
+                    if ch['c'].strip():
+                        if dup(ch['c'], *ch['origin']): continue
+                        seen.add((ch['c'], round(ch['origin'][0]), round(ch['origin'][1])))
+                    chars.append(ch)
+                text = ''.join(ch['c'] for ch in chars)
+                # Some fonts map plain letters into the private-use area
+                # (U+F055 for "U"). Symbol fonts are left alone: there U+F061 is α.
+                if 'Symbol' not in sp['font']:
+                    text = re.sub('[\uf020-\uf07e]', lambda m: chr(ord(m.group(0)) - 0xf000), text)
+                ink = [ch for ch in chars if ch['c'].strip()]
+                if not ink:
+                    continue
+                # Superscript footnote markers ("Mill⁵") would glue to the word
+                # before them, so they go; after a number they are an exponent.
+                if sp['flags'] & 1 and re.fullmatch(r'[\d*†‡,]{1,4}', text.strip()):
+                    if spans and spans[-1]['text'].rstrip()[-1:].isdigit() and text.strip().isdigit():
+                        text = text.strip().translate(SUPERSCRIPT)
+                    else:
+                        continue
+                spans.append({'bbox': (ink[0]['bbox'][0], sp['bbox'][1], ink[-1]['bbox'][2], sp['bbox'][3]),
+                              'text': text, 'size': sp['size'], 'flags': sp['flags'], 'font': sp['font']})
+            if not spans:
+                continue
             run = [spans[0]]
-            for s in spans[1:]:
-                if s['bbox'][0] - run[-1]['bbox'][2] > 25:
-                    segs.append(Seg(pno, run)); run = []
-                run.append(s)
-            segs.append(Seg(pno, run))
+            for sp in spans[1:]:
+                if sp['bbox'][0] - run[-1]['bbox'][2] > 25:
+                    segs.append(Seg(pno, run, bi)); run = []
+                run.append(sp)
+            segs.append(Seg(pno, run, bi))
     return segs
+
+
+SUPERSCRIPT = str.maketrans('0123456789', '⁰¹²³⁴⁵⁶⁷⁸⁹')
 
 
 def norm(t):
@@ -124,12 +163,14 @@ def text_column(segs):
 
 def drop_furniture(pages, dims, log):
     """Running heads, margin titles, footers and page numbers: text at an edge
-    of the page that repeats on at least three pages of the same file. Large
-    type is exempt: "UNIT 4" opens a page at its top edge in every unit."""
+    of the page that repeats on at least three pages of the book. Large type
+    is exempt ("UNIT 4" opens a page at its top edge in every unit), and so
+    are section headings that happen to fall at the top of a page."""
     sizes = collections.Counter()
     for segs in pages:
         for s in segs: sizes[round(s.size)] += len(s.text)
-    big = (sizes.most_common(1)[0][0] if sizes else 11) + 3
+    body = sizes.most_common(1)[0][0] if sizes else 11
+    big = body + 3
     cols = [text_column(segs) for segs in pages]
     seen = collections.defaultdict(set)
     for segs, col in zip(pages, cols):
@@ -142,8 +183,11 @@ def drop_furniture(pages, dims, log):
         keep = []
         for s in segs:
             W, H = dims[s.page]
-            z = edge_zone(s, W, H, col) if s.size < big else None
-            if z and (len(seen[(z, norm(s.text))]) >= 3 or re.fullmatch(r'[\divxlcIVXLC]{1,6}', s.text)):
+            z = edge_zone(s, W, H, col) if s.size < big and not KEEP_AT_EDGE.match(s.text) else None
+            # Small type needs only two sightings: a short chapter shows its
+            # running head on just two pages.
+            need = 2 if s.size <= 0.85 * body else 3
+            if z and (len(seen[(z, norm(s.text))]) >= need or re.fullmatch(r'[\divxlcIVXLC]{1,6}', s.text)):
                 log['running head / page number'][norm(s.text)[:70]] += 1
                 continue
             keep.append(s)
@@ -151,24 +195,64 @@ def drop_furniture(pages, dims, log):
     return out
 
 
+def blocks_of(segs):
+    """Group segments by the PDF's text block, so a boxed aside or a table
+    inside a column is read whole instead of line by line with the text
+    beside it. Each block: (x0, y0, x1, y1, segments in reading order)."""
+    groups = collections.defaultdict(list)
+    for s in segs: groups[s.block].append(s)
+    out = []
+    for g in groups.values():
+        g.sort(key=lambda s: (round(s.y0), s.x0))
+        out.append((min(s.x0 for s in g), min(s.y0 for s in g), max(s.x1 for s in g), max(s.y1 for s in g), g))
+    return out
+
+
 def reading_order(segs, W):
     """Single-column pages top to bottom; on two-column pages, each band
-    between full-width lines is read left column first, then right."""
+    between full-width blocks is read left column first, then right. Text is
+    taken a block at a time."""
     mid = W / 2
-    left = [s for s in segs if s.x1 <= mid + 10 and len(s.text) > 25]
+    # A chapter's first page can have only its title in the left column, so
+    # the right column alone decides; single-column body text never starts
+    # right of the middle.
+    left = [s for s in segs if s.x1 <= mid + 10]
     right = [s for s in segs if s.x0 >= mid - 10 and len(s.text) > 25]
-    if len(left) < 5 or len(right) < 5:
-        return sorted(segs, key=lambda s: (round(s.y0), s.x0))
-    spanning = sorted((s for s in segs if s.x0 < mid - 10 and s.x1 > mid + 10), key=lambda s: s.y0)
-    cols = [s for s in segs if not (s.x0 < mid - 10 and s.x1 > mid + 10)]
-    out, top = [], -1e9
+    if len(left) < 2 or len(right) < 3:
+        return [s for b in sorted(blocks_of(segs), key=lambda b: (round(b[1]), b[0])) for s in b[4]]
+    # A chapter's title comes first wherever it sits (above the right
+    # column, or halfway down the left), together with the small letters of
+    # a small-caps title.
+    sizes = sorted(s.size for s in segs)
+    large = 1.4 * sizes[len(sizes) // 2]
+    title = {id(s) for s in segs if s.size >= large and len(s.text) >= 3}
+    grew = True
+    while grew:
+        grew = False
+        for s in segs:
+            if id(s) not in title and any(id(c) in title and touching(c, s) for c in segs):
+                title.add(id(s)); grew = True
+    out = sorted((s for s in segs if id(s) in title), key=lambda s: (round(s.y0), s.x0))
+    blocks = blocks_of([s for s in segs if id(s) not in title])
+
+    def spans_mid(b): return b[0] < mid - 10 and b[2] > mid + 10
+    spanning = sorted((b for b in blocks if spans_mid(b)), key=lambda b: b[1])
+    cols = [b for b in blocks if not spans_mid(b)]
+    top = -1e9
     for cut in spanning + [None]:
-        bottom = cut.y0 if cut else 1e9
-        band = [s for s in cols if top <= s.y0 < bottom]
-        out += sorted((s for s in band if (s.x0 + s.x1) / 2 < mid), key=lambda s: (round(s.y0), s.x0))
-        out += sorted((s for s in band if (s.x0 + s.x1) / 2 >= mid), key=lambda s: (round(s.y0), s.x0))
-        if cut: out.append(cut); top = cut.y0 + 0.1
+        bottom = cut[1] if cut else 1e9
+        band = [b for b in cols if top <= b[1] < bottom]
+        for side in (lambda b: (b[0] + b[2]) / 2 < mid, lambda b: (b[0] + b[2]) / 2 >= mid):
+            for b in sorted((b for b in band if side(b)), key=lambda b: (round(b[1]), b[0])):
+                out += b[4]
+        if cut: out += cut[4]; top = cut[1] + 0.1
     return out
+
+
+def touching(a, b):
+    """Same line and no real gap: pieces of one word or heading."""
+    gap = max(a.x0, b.x0) - min(a.x1, b.x1)
+    return abs((a.y0 + a.y1) / 2 - (b.y0 + b.y1) / 2) <= 3 and gap <= 0.5 * max(a.size, b.size)
 
 
 def rows_of(segs):
@@ -176,14 +260,25 @@ def rows_of(segs):
     a keyword and its definition) into one row."""
     rows = []
     for s in segs:
-        if rows and abs((rows[-1][-1].y0 + rows[-1][-1].y1) / 2 - (s.y0 + s.y1) / 2) <= 3 and s.x0 > rows[-1][-1].x0:
+        # Compared with the row's first piece, so a small-caps heading's large
+        # and small letters, which do not share a top edge, still join up.
+        # Pieces in very different sizes join only if they touch, so a title
+        # never swallows the body line level with it in the next column.
+        if rows and abs((rows[-1][0].y0 + rows[-1][0].y1) / 2 - (s.y0 + s.y1) / 2) <= 3 and (
+                (s.block == rows[-1][0].block and max(s.size, rows[-1][0].size) <= 1.3 * min(s.size, rows[-1][0].size))
+                or any(touching(r, s) for r in rows[-1])):
             rows[-1].append(s)
         else:
             rows.append([s])
     out = []
     for r in rows:
         r.sort(key=lambda s: s.x0)
-        out.append({'page': r[0].page, 'text': re.sub(r'\s+', ' ', ' '.join(s.text for s in r)).strip(),
+        # Pieces that touch are one word split across draws ("Common Pr" +
+        # "operty"); a visible gap is a space.
+        text = r[0].text
+        for prev, s in zip(r, r[1:]):
+            text += ('' if s.x0 - prev.x1 < 0.15 * s.size else ' ') + s.text
+        out.append({'page': r[0].page, 'text': re.sub(r'\s+', ' ', text).strip(),
                     'size': max(s.size for s in r), 'bold': all(s.bold for s in r),
                     'y0': min(s.y0 for s in r), 'y1': max(s.y1 for s in r)})
     return out
@@ -207,30 +302,101 @@ SKIP_SECTION = re.compile(
 ANSWER_SPACE = re.compile(r'(?:\.\s?){8,}|…{3,}|_{6,}')
 QUESTION = re.compile(r'^(?:\(?[0-9]{1,2}[.)]|\(?[ivx]{1,4}[.)]|\(?[a-e][.)]|Note\b)', re.I)
 URL = re.compile(r'https?://\S+|www\.\S+')
+FIG_CAPTION = re.compile(r'^(?:Fig(?:ure)?|Plate|Map)\.?\s?\d+(?:\.\d+)?\s?[:.–-]', re.I)
+KEEP_AT_EDGE = re.compile(r'^(?:Check Your Progress|\d{1,2}\.\d{1,2}\.?\s+[A-Za-z])', re.I)
 
 
-def read_file(path, profile, log):
-    doc = fitz.open(path)
-    dims = {i: (p.rect.width, p.rect.height) for i, p in enumerate(doc)}
-    pages = [page_segments(p, i) for i, p in enumerate(doc)]
-    if profile == 'ignou':
-        kept = []
-        for segs in pages:
-            low = ' '.join(s.text for s in segs).lower()
-            if sum(sig in low for sig in BOILERPLATE) >= 2 or (
-                    'indira gandhi national open university' in low and len(low) < 400):
-                log['credit / cover page'][f'{Path(path).name} p{segs[0].page + 1 if segs else "?"}'] += 1
-                kept.append([])
-            else:
-                kept.append(segs)
-        pages = kept
+def is_credit_page(segs):
+    low = ' '.join(s.text for s in segs).lower()
+    return sum(sig in low for sig in BOILERPLATE) >= 2 or (
+        'indira gandhi national open university' in low and len(low) < 400)
+
+
+def read_book(files, profile, log):
+    """Every file's rows, with running heads judged across the whole book:
+    a short NCERT chapter has too few pages to show its head three times."""
+    pages, dims, owner = [], [], []
+    for fi, f in enumerate(files):
+        doc = fitz.open(f)
+        for i, p in enumerate(doc):
+            segs = page_segments(p, len(pages))
+            if profile == 'ignou' and segs and is_credit_page(segs):
+                log['credit / cover page'][f'{Path(f).name} p{i + 1}'] += 1
+                segs = []
+            pages.append(segs); dims.append((p.rect.width, p.rect.height)); owner.append(fi)
+        doc.close()
     pages = drop_furniture(pages, dims, log)
-    rows = []
-    for segs in pages:
+    per_file = [[] for _ in files]
+    for g, segs in enumerate(pages):
+        if profile == 'ncert' and any(s.text.startswith('This unit deals with') for s in segs):
+            log['NCERT unit opener page']['UNIT … This unit deals with …'] += 1
+            continue
         if segs:
-            rows += rows_of(reading_order(segs, dims[segs[0].page][0]))
-    doc.close()
-    return rows
+            per_file[owner[g]] += rows_of(reading_order(segs, dims[g][0]))
+    return [tidy_rows(rows, log) for rows in per_file]
+
+
+def tidy_rows(rows, log):
+    """A drop cap is its own row ("A" then "fter weathering…"): put it back.
+    Letter-spaced ornaments ("C H A P T E R") go."""
+    if not rows: return rows
+    base = body_size(rows)
+    out, carry = [], ''
+    for r in rows:
+        t = r['text']
+        if re.fullmatch(r'[A-Z]', t) and r['size'] >= 1.8 * base:
+            carry = t; continue
+        if re.fullmatch(r'(?:[A-Z] ){3,}[A-Z]', t):
+            log['ornament']['C H A P T E R'] += 1; continue
+        if carry:
+            if re.match(r'[a-z]', t): r = {**r, 'text': carry + t}
+            else: out.append({**r, 'text': carry})
+            carry = ''
+        out.append(r)
+    return out
+
+
+def shifted_font(t):
+    """Text from a font whose codes are offset by 29 ("&KDQJHV" for
+    "Changes"), as in some NCERT charts: few real words as read, mostly real
+    words once shifted back."""
+    toks = re.findall(r'[^\s]{4,}', t)
+    if len(toks) < 2: return False
+    def share(ws): return sum(w.lower().strip('.,;:()') in WORDS for w in ws) / len(ws)
+    back = [''.join(chr(ord(c) + 29) if 0x21 <= ord(c) <= 0x5d else c for c in w) for w in toks]
+    return share(toks) < 0.2 and share(back) >= 0.4
+
+
+SMALL_WORDS = set('a an and as at by for from in into of on or the to with its'.split())
+
+
+def smart_title(t, first=True):
+    """Title case for a heading set in capitals; anything else is kept.
+    first=False for the second line of a heading, whose opening word is not
+    the title's first."""
+    t = re.sub(r'\s+', ' ', t).strip(' *')
+    letters = [c for c in t if c.isalpha()]
+    if not letters or sum(c.isupper() for c in letters) < 0.8 * len(letters):
+        return t
+    words = t.lower().split(' ')
+    return ' '.join(w if ((i or not first) and w in SMALL_WORDS) else '-'.join(p[:1].upper() + p[1:] for p in w.split('-'))
+                    for i, w in enumerate(words))
+
+
+def ncert_label(path, rows):
+    """'Chapter 6: Landforms and Their Evolution', from the file name and the
+    large type that opens the chapter's first page."""
+    m = re.search(r'(\d{2})$', Path(path).stem)
+    chapter = f'Chapter {int(m.group(1))}' if m else Path(path).stem
+    if not rows: return chapter
+    base, first = body_size(rows), [r for r in rows if r['page'] == rows[0]['page']]
+    big = [r for r in first if r['size'] >= base + 4 and len(r['text']) >= 3
+           and not re.fullmatch(r'(?i)(?:unit|chapter)[- ]?[\divxl]*', r['text'])]
+    big = [r for r in sorted(big, key=lambda r: r['y0']) if r['y0'] - big[0]['y0'] < 120][:4] if big else []
+    parts = []
+    for r in sorted(big, key=lambda r: r['y0']):
+        if smart_title(r['text']): parts.append(smart_title(r['text'], first=not parts))
+    return f'{chapter}: {" ".join(parts)}' if parts else chapter
 
 
 def body_size(rows):
@@ -246,7 +412,7 @@ def to_groups(rows, profile, log):
     if not rows: return []
     base = body_size(rows)
     groups, items, label = [], [], None
-    skip, i, skipped, skip_title = None, 0, [], ''
+    skip, i, skipped, skip_title, caption = None, 0, [], '', 0
 
     while i < len(rows):
         r = rows[i]; t = r['text']; i += 1
@@ -261,8 +427,10 @@ def to_groups(rows, profile, log):
                 title += ' ' + rows[i]['text']; i += 1
             title = re.sub(r'\s+', ' ', title).strip(' *')
             if items: groups.append((label, items))
-            label = f'Unit {um.group(1)}: {title.title()}' if title else f'Unit {um.group(1)}'
+            label = f'Unit {um.group(1)}: {smart_title(title)}' if title else f'Unit {um.group(1)}'
             items, skip = [('head', label)], None
+            continue
+        if skip == 'rest':                 # NCERT exercises run to the chapter's end
             continue
         if skip:
             if skip == 'structure':
@@ -279,6 +447,12 @@ def to_groups(rows, profile, log):
             if len(skipped) > 40:   # long skips are worth a look in the review
                 log['long skips (rows: first … last)'][f"{skip_title} ({len(skipped)} rows): {skipped[0][:50]} … {skipped[-1][:60]}"] += 1
             skip = None
+        if profile == 'ncert' and re.fullmatch(r'(?i)(?:unit|chapter)[- ]?[\divxl]+', t.strip()):
+            continue                       # "Unit-III", "Chapter-4" above the title
+        if profile == 'ncert' and re.fullmatch(r'(?:EXERCISES?|Exercises?|PROJECT WORK|Project Work)', t.strip()):
+            log['NCERT section left out'][t.strip().title()] += 1
+            skip, skipped, skip_title = 'rest', [], t.strip()
+            continue
         if profile == 'ignou':
             title = head.group(2) if head else t
             if t.strip() == 'Structure' and (r['bold'] or big):
@@ -291,6 +465,13 @@ def to_groups(rows, profile, log):
                 log['contributor note']['* Dr. …'] += 1; continue
         if re.fullmatch(r'[.\s…_·-]{3,}', t) or not re.search(r'[A-Za-z]', t):
             continue
+        if shifted_font(t):
+            log['chart labels in a broken font']['&KDQJHV… (Changes…)'] += 1; continue
+        if FIG_CAPTION.match(t) and r['size'] <= base:
+            caption = r['size']; log['figure caption']['Figure n.n: …'] += 1; continue
+        if caption and r['size'] <= caption + 0.1 and r['size'] < base - 0.5:
+            continue                       # the caption's second line
+        caption = 0
         if re.search(r'Photograph Source|Image Source|^Source\s*:\s*(?:https?|www)', t, re.I):
             log['caption source']['Photograph Source: …'] += 1; continue
         if URL.fullmatch(t.strip()):
@@ -462,10 +643,15 @@ def course_of(path):
     return m[-1].replace(' ', '-') if m else None
 
 
-def build(files, profile, log):
+def build(files, profile, log, labels=None):
     per_file = []
-    for f in files:
-        per_file.append((f, course_of(f.relative_to(f.anchor)), to_groups(read_file(f, profile, log), profile, log)))
+    for f, rows in zip(files, read_book(files, profile, log)):
+        groups = to_groups(rows, profile, log)
+        if profile == 'ncert' and groups:
+            groups = [(ncert_label(f, rows), items) for _, items in groups]
+        if labels and f.stem in labels:
+            groups = [(labels[f.stem], items) for _, items in groups]
+        per_file.append((f, course_of(f.relative_to(f.anchor)), groups))
     V, Hy = vocab_of([it for _, _, groups in per_file for _, items in groups for it in items])
     chunks = []
     for f, course, groups in per_file:
@@ -611,8 +797,10 @@ def main():
     ap.add_argument('title'); ap.add_argument('subject', choices=sorted(SUBJECTS))
     ap.add_argument('inputs', nargs='+')
     ap.add_argument('--author', required=True)
-    ap.add_argument('--profile', choices=['ignou', 'plain'], default='plain')
+    ap.add_argument('--profile', choices=['ignou', 'ncert', 'plain'], default='plain')
     ap.add_argument('--out', default=str(ROOT.parent / 'dc-books' / 'out'))
+    ap.add_argument('--label', action='append', default=[], metavar='FILE=LABEL',
+                    help='override the unit or chapter label of one file (by name, without .pdf)')
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--replace', action='store_true')
     a = ap.parse_args()
@@ -620,7 +808,7 @@ def main():
     files = collect(a.inputs)
     if not files: sys.exit('no PDFs found')
     log = collections.defaultdict(collections.Counter)
-    chunks = build(files, a.profile, log)
+    chunks = build(files, a.profile, log, dict(x.split('=', 1) for x in a.label))
     slug = re.sub(r'[^a-z0-9]+', '-', a.title.lower()).strip('-')
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     if a.upload:
