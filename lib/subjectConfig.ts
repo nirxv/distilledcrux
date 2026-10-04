@@ -123,8 +123,8 @@ export const SUBJECT_THINKER_BOOKS: Record<SubjectKey, Record<string, string[]>>
     'Ratzel': ['political geography'],
     'Mackinder': ['democratic ideals and reality', 'the geographical pivot of history'],
     'Savindra Singh': ['geomorphology', 'climatology', 'physical geography'],
-    'Majid Husain': ['geography of india', 'world geography', 'human geography'],
-    'Khullar': ['india a comprehensive geography'],
+    'Majid Husain': ['geography of india', 'indian and world geography', 'world geography', 'human geography'],
+    'Khullar': ['india a comprehensive geography', 'india: a comprehensive geography'],
   },
 
   'pub-admin': {
@@ -383,7 +383,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       group: 'India',
       books: [
         { value: 'Majid Husain — Geography of India', label: 'Majid Husain — Geography of India', soon: true },
-        { value: 'Khullar — India: A Comprehensive Geography', label: 'Khullar — India Geography', soon: true },
+        { value: 'Khullar — India: A Comprehensive Geography', label: 'Khullar — India Geography' },
         { value: 'NCERT — Fundamentals of Physical Geography (Class XI)', label: 'NCERT XI — Physical Geography' },
         { value: 'NCERT — India: Physical Environment (Class XI)', label: 'NCERT XI — India: Physical Environment' },
         { value: 'NCERT — Fundamentals of Human Geography (Class XII)', label: 'NCERT XII — Human Geography' },

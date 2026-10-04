@@ -44,6 +44,7 @@ VOYAGE_API_KEY, QDRANT_URL and QDRANT_API_KEY in .env.local.
 """
 import argparse
 import collections
+import itertools
 import html
 import json
 import os
@@ -94,7 +95,9 @@ def page_segments(page, pno):
         kx, ky = round(x), round(y)
         return any((c, kx + dx, ky + dy) in seen for dx in (-1, 0, 1) for dy in (-1, 0, 1))
     segs = []
-    for bi, b in enumerate(page.get_text('rawdict')['blocks']):
+    # Without the image flag: a scanned page's picture would otherwise be
+    # copied into every extraction.
+    for bi, b in enumerate(page.get_text('rawdict', flags=fitz.TEXTFLAGS_RAWDICT & ~fitz.TEXT_PRESERVE_IMAGES)['blocks']):
         if b['type'] != 0:
             continue
         for line in b['lines']:
@@ -315,7 +318,7 @@ def is_credit_page(segs):
 def read_book(files, profile, log):
     """Every file's rows, with running heads judged across the whole book:
     a short NCERT chapter has too few pages to show its head three times."""
-    pages, dims, owner = [], [], []
+    pages, dims, owner, heads = [], [], [], []
     for fi, f in enumerate(files):
         doc = fitz.open(f)
         for i, p in enumerate(doc):
@@ -323,17 +326,79 @@ def read_book(files, profile, log):
             if profile == 'ignou' and segs and is_credit_page(segs):
                 log['credit / cover page'][f'{Path(f).name} p{i + 1}'] += 1
                 segs = []
-            pages.append(segs); dims.append((p.rect.width, p.rect.height)); owner.append(fi)
+            H = p.rect.height
+            if profile == 'scan':
+                # A scan's watermark lines and running head sit in fixed bands
+                # at the top and bottom; OCR spells them differently on every
+                # page, so they are cut by position rather than by repetition.
+                # The head is kept aside to name the chapter.
+                band = lambda s: (s.y0 + s.y1) / 2 / H
+                heads.append(' '.join(s.text for s in sorted(segs, key=lambda s: s.x0) if 0.025 <= band(s) < SCAN_TOP))
+                cut = [s for s in segs if band(s) < SCAN_TOP or band(s) > SCAN_BOTTOM]
+                for s in cut: log['scan margin (watermark, running head)'][norm(s.text)[:50]] += 1
+                segs = [s for s in segs if SCAN_TOP <= band(s) <= SCAN_BOTTOM]
+            pages.append(segs); dims.append((p.rect.width, H)); owner.append(fi)
         doc.close()
     pages = drop_furniture(pages, dims, log)
+    labels = chapter_labels(heads, log) if profile == 'scan' else [None] * len(pages)
     per_file = [[] for _ in files]
     for g, segs in enumerate(pages):
         if profile == 'ncert' and any(s.text.startswith('This unit deals with') for s in segs):
             log['NCERT unit opener page']['UNIT … This unit deals with …'] += 1
             continue
         if segs:
-            per_file[owner[g]] += rows_of(reading_order(segs, dims[g][0]))
+            per_file[owner[g]] += [{**r, 'label': labels[g]} for r in rows_of(reading_order(segs, dims[g][0]))]
     return [tidy_rows(rows, log) for rows in per_file]
+
+
+SCAN_TOP, SCAN_BOTTOM = 0.064, 0.955
+WATERMARK = re.compile(r'\S*(?:upscpdf|upsepdt|t\.me/|UPSC_?PDF|https?:|ttps?:|nttps)\S*|\bWebsite\s*[=>➡:~-]*', re.I)
+
+
+def chapter_labels(heads, log):
+    """Name each scanned page's chapter from the running heads. Right-hand
+    pages carry the chapter's title and left-hand pages the book's; OCR
+    spells both a little differently each time, so variants are matched to
+    the most common spelling. A page without its own chapter head (a
+    left-hand page, a chapter opener) takes the next one that has it."""
+    import difflib
+    def clean(h):
+        h = WATERMARK.sub(' ', h)
+        h = re.sub(r'[^A-Za-z&,\- ]', ' ', h)
+        return re.sub(r'\s+', ' ', h).strip().upper()
+    raw = [clean(h) for h in heads]
+    counts = collections.Counter(h for h in raw if len(h) >= 4)
+    book = counts.most_common(1)[0][0] if counts else ''
+    canon, order = {}, [h for h, _ in counts.most_common()]
+    for h in order:
+        best = next((c for c in order if counts[c] >= counts[h] and c != h
+                     and difflib.SequenceMatcher(None, h, c).ratio() >= 0.8), None)
+        canon[h] = canon.get(best, best) if best else h
+    page = [canon.get(h) if h and canon.get(h) != book and counts[canon.get(h)] >= 2 else None for h in raw]
+    out, nxt = [None] * len(page), None
+    for i in range(len(page) - 1, -1, -1):
+        nxt = page[i] or nxt
+        out[i] = nxt
+    last = None                                   # pages after the final head
+    for i, lab in enumerate(out):
+        last = lab or last
+        out[i] = lab or last
+    # A misread head can name the wrong chapter for a page or two: a short run
+    # whose chapter already came earlier is folded into the run before it.
+    runs = [[lab, len(list(g))] for lab, g in itertools.groupby(out)]
+    seen, fixed = set(), []
+    for k, (lab, n) in enumerate(runs):
+        if fixed and n <= 2 and (lab in seen or (k + 1 < len(runs) and runs[k + 1][0] == fixed[-1][0])):
+            log['chapter head misread, page folded in'][f'{lab} → {fixed[-1][0]}'] += n
+            fixed[-1][1] += n
+        elif fixed and fixed[-1][0] == lab:
+            fixed[-1][1] += n
+        else:
+            fixed.append([lab, n]); seen.add(lab)
+    out = [smart_title(lab) if lab else None for lab, n in fixed for _ in range(n)]
+    for lab, n in collections.Counter(out).most_common():
+        log['chapter (pages)'][f'{lab} ({n})'] += 1
+    return out
 
 
 def tidy_rows(rows, log):
@@ -365,6 +430,34 @@ def shifted_font(t):
     def share(ws): return sum(w.lower().strip('.,;:()') in WORDS for w in ws) / len(ws)
     back = [''.join(chr(ord(c) + 29) if 0x21 <= ord(c) <= 0x5d else c for c in w) for w in toks]
     return share(toks) < 0.2 and share(back) >= 0.4
+
+
+def is_word(w):
+    """In the dictionary, allowing for the inflections it leaves out."""
+    lw = w.lower()
+    if lw in WORDS: return True
+    if '-' in lw: return all(is_word(p) for p in lw.split('-') if p)
+    for suf, rep_ in (('ies', 'y'), ('es', ''), ('s', ''), ('ed', ''), ('ed', 'e'), ('d', ''), ('ing', ''), ('ing', 'e'), ('ly', '')):
+        if lw.endswith(suf) and len(lw) > len(suf) + 2:
+            stem = lw[:-len(suf)]
+            if stem + rep_ in WORDS: return True
+            if suf in ('ed', 'ing') and len(stem) > 3 and stem[-1] == stem[-2] and stem[:-1] in WORDS: return True  # incurred
+    return False
+
+
+def ocr_garbage(t):
+    """A row OCR made from a shaded box, a map or a figure: several tokens,
+    few of them words, and the capitals and symbols of map labels. A line of
+    prose with a couple of misread words is kept."""
+    toks = [w.strip('.,;:()[]"“”‘’\'!?') for w in t.split()]
+    toks = [w for w in toks if w]
+    if len(toks) < 3: return False
+    ok = sum(1 for w in toks if is_word(w) or re.fullmatch(r'[A-Z][a-z]+', w) or re.fullmatch(r'[\d,.%–-]+', w))
+    share = ok / len(toks)
+    letters = [c for c in t if c.isalpha()]
+    upper = sum(c.isupper() for c in letters) / max(1, len(letters))
+    symbols = sum(1 for c in t if not (c.isalnum() or c.isspace() or c in ".,;:'’-()")) / max(1, len(t))
+    return share < 0.2 or (share < 0.45 and (upper >= 0.5 or symbols >= 0.08))
 
 
 SMALL_WORDS = set('a an and as at by for from in into of on or the to with its'.split())
@@ -447,6 +540,19 @@ def to_groups(rows, profile, log):
             if len(skipped) > 40:   # long skips are worth a look in the review
                 log['long skips (rows: first … last)'][f"{skip_title} ({len(skipped)} rows): {skipped[0][:50]} … {skipped[-1][:60]}"] += 1
             skip = None
+        if profile == 'scan':
+            t = WATERMARK.sub(' ', t).strip()
+            if not t: continue
+            if re.fullmatch(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?)', t):
+                log['scan section left out'][t.title()] += 1
+                skip, skipped, skip_title = 'rest', [], t
+                continue
+            if ocr_garbage(t):
+                log['OCR garbage row (shaded box, figure)'][t[:50]] += 1; continue
+            toks = t.split()
+            if len(toks) >= 4 and sum(bool(re.fullmatch(r'[\d,.:;|*\]\[()%-]+', w)) for w in toks) >= 0.5 * len(toks):
+                log['table row (mostly numbers)'][t[:50]] += 1; continue
+            r = {**r, 'text': t}
         if profile == 'ncert' and re.fullmatch(r'(?i)(?:unit|chapter)[- ]?[\divxl]+', t.strip()):
             continue                       # "Unit-III", "Chapter-4" above the title
         if profile == 'ncert' and re.fullmatch(r'(?:EXERCISES?|Exercises?|PROJECT WORK|Project Work)', t.strip()):
@@ -498,6 +604,100 @@ def basic(t):
     return t
 
 
+# Slips OCR makes on a printed page. Every change is logged for review.
+RUPEE = re.compile(r'(?<![\w₹])[F€%]\s?(?=\d[\d,]*(?:\.\d+)?\s?(?:crores?|lakhs?|billion|million|thousand)\b)')
+FUNC = ('the', 'and', 'from', 'with', 'for', 'of', 'to', 'in', 'on', 'is', 'as', 'at', 'by')
+MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 'ongoing', 'inbuilt', 'infrastructure'}
+# Letter shapes OCR confuses; a misread word is fixed when exactly one swap
+# makes a word ("animais" → "animals", "iniand" → "inland").
+OCR_CONFUSIONS = [('i', 'l'), ('l', 'i'), ('t', 'l'), ('l', 't'), ('e', 'c'), ('c', 'e'), ('rn', 'm'), ('m', 'rn'),
+                  ('li', 'h'), ('h', 'li'), ('ii', 'u'), ('cl', 'd'), ('vv', 'w'), ('f', 't'), ('t', 'f'), ('n', 'u'), ('u', 'n')]
+
+
+def ocr_fix(t, V, log):
+    def known(w):
+        return is_word(w) or V[w.lower()] >= 3 or w.lower() in MODERN
+
+    def rupee(m):
+        log['OCR fix: rupee sign']['F/€/% → ₹'] += 1; return '₹'
+    t = RUPEE.sub(rupee, t)
+    t = re.sub(r'(?<=\d)\](?=[\s.,;:)]|$)|£(?=\d{3})', '1', t)        # "201]", "£970s"
+
+    def bracket(m):                                  # "mil]" → "mill", "oi]" → "oil"
+        c = m.group(0)[:-1] + 'l'
+        if known(c):
+            log['OCR fix: ] for l'][f'{m.group(0)} → {c}'] += 1; return c
+        return m.group(0)
+    t = re.sub(r'(?<![\w\]])[A-Za-z]+\](?![\w\]])', bracket, t)
+
+    def speck(m):                                    # "There are.about", "plant more. trees"
+        w = m.group(1)
+        if w.lower() in ABBR: return m.group(0)
+        log['OCR fix: speck read as a full stop'][f'{w}.{m.group(2)}…'] += 1
+        return w + ' '
+    t = re.sub(r'(?<![\w.])([a-z]{2,})\.\s?(?=([a-z]{2,}))', speck, t)
+    t = re.sub(r'(?<=[a-z])[‘’](?=[a-z]{2,}\b)', ' ', t)    # "raising‘of"
+
+    def bang(m):                                     # "soi!" → "soil"
+        w = m.group(0); c = w.replace('!', 'l')
+        if known(c):
+            log['OCR fix: ! for l'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w!])[A-Za-z]*[a-z]![a-z]*(?![\w!])', bang, t)
+
+    def confusion(m):                                # "animais" → "animals", "tocated" → "located"
+        w = m.group(0)
+        if known(w) or V[w.lower()] >= 2 or not w.islower() or w in MODERN: return w
+        if any(w.startswith(f) and is_word(w[len(f):]) and len(w) - len(f) >= 3 for f in FUNC):
+            return w                                 # "ofher" is "of her", for unglue
+        found = set()
+        for a, b in OCR_CONFUSIONS:
+            i = w.find(a)
+            while i >= 0:
+                c = w[:i] + b + w[i + len(a):]
+                # The fix must be a word this book prints correctly elsewhere;
+                # the dictionary alone offers "scabed" for "seabed".
+                if is_word(c) and V[c] >= 3: found.add(c)
+                i = w.find(a, i + 1)
+        if len(found) == 1:
+            c = found.pop(); log['OCR fix: misread letter'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w-])[a-z]{4,}(?![\w-])', confusion, t)
+
+    def double_l(m):                                 # "milion", "rainfal", "smal": one l of two lost
+        w = m.group(0)
+        if is_word(w) or w in MODERN or len(w) < 3: return w
+        found = {c for i in range(len(w)) if w[i] == 'l' for c in [w[:i] + 'l' + w[i:]] if is_word(c) and V[c] >= 3}
+        if len(found) == 1:
+            c = found.pop(); log['OCR fix: lost l of ll'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w-])[a-z]*l[a-z]*(?![\w-])', double_l, t)
+
+    def unglue(m):                                   # "ofIndian", "problemof"
+        w = m.group(0)
+        # Names and acronyms are left alone (Menon, Paterson, LANDSAT), as is
+        # anything the book itself spells this way more than once.
+        if known(w) or w.isupper() or V[w.lower()] >= 2: return w
+        camel = re.search(r'[a-z][A-Z]', w)
+        lw = w.lower()
+        for f in FUNC:
+            rest = w[len(f):]
+            if lw.startswith(f) and len(rest) >= 4 and (rest.lower() in WORDS or is_word(rest) or re.fullmatch(r'[A-Z][a-z]{3,}', rest)) \
+                    and (w[:len(f)].islower()):
+                log['OCR fix: words run together'][f'{w} → {w[:len(f)]} {rest}'] += 1
+                return w[:len(f)] + ' ' + rest
+        for f in ('of', 'in', 'is', 'and', 'the', 'for'):
+            rest = w[:-len(f)]
+            # A capitalised word splits only where the book uses the first
+            # part on its own ("Krishnais", not "Gramin" or "Dhanis").
+            if lw.endswith(f) and len(rest) >= 4 and is_word(rest) and not camel \
+                    and (rest.islower() or V[rest.lower()] >= 3):
+                log['OCR fix: words run together'][f'{w} → {rest} {w[-len(f):]}'] += 1
+                return rest + ' ' + w[-len(f):]
+        return w
+    return re.sub(r'(?<![\w-])[A-Za-z]{5,}(?![\w-])', unglue, t)
+
+
 def vocab_of(items):
     v, h = collections.Counter(), collections.Counter()
     for _, t in items:
@@ -511,7 +711,9 @@ def join_rows(rows_text, V, Hy, log):
     word was split by the layout or is really hyphenated."""
     out = rows_text[0]
     for nxt in rows_text[1:]:
-        m, n = re.search(r'([A-Za-z]+)-$', out), re.match(r'([a-z]+)', nxt)
+        # Only the tail matters; searching the whole paragraph each time made
+        # a long scanned chapter quadratic.
+        m, n = re.search(r'([A-Za-z]+)-$', out[-80:]), re.match(r'([a-z]+)', nxt)
         if m and n:
             left, right = m.group(1), n.group(1)
             joined, hyph = (left + right).lower(), f'{left}-{right}'.lower()
@@ -644,13 +846,21 @@ def course_of(path):
 
 
 def build(files, profile, log, labels=None):
+    fix = (lambda t: ocr_fix(t, V, log)) if profile == 'scan' else (lambda t: t)
     per_file = []
     for f, rows in zip(files, read_book(files, profile, log)):
-        groups = to_groups(rows, profile, log)
+        if profile == 'scan':                      # one group per chapter
+            groups = []
+            for lab, run in itertools.groupby(rows, key=lambda r: r.get('label')):
+                groups += [(lab, items) for _, items in to_groups(list(run), profile, log)]
+        else:
+            groups = to_groups(rows, profile, log)
         if profile == 'ncert' and groups:
             groups = [(ncert_label(f, rows), items) for _, items in groups]
         if labels and f.stem in labels:
             groups = [(labels[f.stem], items) for _, items in groups]
+        elif labels:                               # renaming a chapter label
+            groups = [(labels.get(lab, lab), items) for lab, items in groups]
         per_file.append((f, course_of(f.relative_to(f.anchor)), groups))
     V, Hy = vocab_of([it for _, _, groups in per_file for _, items in groups for it in items])
     chunks = []
@@ -661,7 +871,7 @@ def build(files, profile, log, labels=None):
 
             def close_para():
                 if para:
-                    units.extend(('sent', s) for s in sentences(finish(basic(join_rows(para, V, Hy, log)))))
+                    units.extend(('sent', s) for s in sentences(fix(finish(basic(join_rows(para, V, Hy, log))))))
                     para.clear()
             for kind, t in items:
                 if kind == 'head':
@@ -782,7 +992,7 @@ def report(chunks, log, files, title, path):
     L += ['', '## Left out while reading', '']
     for rule, c in log.items():
         L.append(f'- **{rule}**: {sum(c.values())}')
-        for k, n in c.most_common(25): L.append(f'  - {n} × {k}')
+        for k, n in c.most_common(2000 if rule.startswith(('OCR fix: words', 'OCR fix: misread')) else 25): L.append(f'  - {n} × {k}')
     L += ['', '## Junk passages', '']
     for c in chunks:
         if c['junk_reason']: L.append(f"- [{c['junk_reason']}] {c['source']}: {c['text'][:160]}…")
@@ -797,10 +1007,10 @@ def main():
     ap.add_argument('title'); ap.add_argument('subject', choices=sorted(SUBJECTS))
     ap.add_argument('inputs', nargs='+')
     ap.add_argument('--author', required=True)
-    ap.add_argument('--profile', choices=['ignou', 'ncert', 'plain'], default='plain')
+    ap.add_argument('--profile', choices=['ignou', 'ncert', 'scan', 'plain'], default='plain')
     ap.add_argument('--out', default=str(ROOT.parent / 'dc-books' / 'out'))
     ap.add_argument('--label', action='append', default=[], metavar='FILE=LABEL',
-                    help='override the unit or chapter label of one file (by name, without .pdf)')
+                    help='override the label of one file (by name, without .pdf), or rename a label (OLD=NEW)')
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--replace', action='store_true')
     a = ap.parse_args()
