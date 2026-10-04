@@ -148,7 +148,7 @@ export const SUBJECT_THINKER_BOOKS: Record<SubjectKey, Record<string, string[]>>
     'Santhanam': ['report of the committee on prevention of corruption'],
     'Kothari': ['report of the committee on recruitment policy and selection methods'],
     'Avasthi': ['public administration'],
-    'Maheshwari': ['indian administration'],
+    'Maheshwari': ['indian administration', 'public administration'],
     'Arora': ['indian public administration'],
   },
 };
@@ -397,7 +397,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       books: [
         { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I', soon: true },
         { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II', soon: true },
-        { value: 'Avasthi & Maheshwari — Public Administration', label: 'Avasthi & Maheshwari', soon: true },
+        { value: 'Avasthi & Maheshwari — Public Administration (4th ed., 1969)', label: 'Avasthi & Maheshwari (1969 ed.)' },
         { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya', soon: true },
       ],
     },

@@ -352,6 +352,8 @@ def read_book(files, profile, log):
 
 
 SCAN_TOP, SCAN_BOTTOM = 0.064, 0.955
+# A footnote's reference: "1 White, L. D. : Introduction to…", "* Tead, Ordway :".
+FOOTNOTE = re.compile(r"^(?:\d{1,2}|[*†‡§])\s*[A-Z][A-Za-z'’-]+,\s*(?:(?:[A-Z]\.\s*){1,3}|[A-Z][a-z]+\s*[:;,])")
 WATERMARK = re.compile(r'\S*(?:upscpdf|upsepdt|t\.me/|UPSC_?PDF|https?:|ttps?:|nttps)\S*|\bWebsite\s*[=>➡:~-]*', re.I)
 
 
@@ -549,6 +551,8 @@ def to_groups(rows, profile, log):
                 continue
             if ocr_garbage(t):
                 log['OCR garbage row (shaded box, figure)'][t[:50]] += 1; continue
+            if FOOTNOTE.match(t) or (len(t) < 140 and re.search(r'\bIbid\b|\bop\.\s?cit\b|\bloc\.\s?cit\b', t)):
+                log['footnote'][t[:50]] += 1; continue
             toks = t.split()
             if len(toks) >= 4 and sum(bool(re.fullmatch(r'[\d,.:;|*\]\[()%-]+', w)) for w in toks) >= 0.5 * len(toks):
                 log['table row (mostly numbers)'][t[:50]] += 1; continue
@@ -607,7 +611,13 @@ def basic(t):
 # Slips OCR makes on a printed page. Every change is logged for review.
 RUPEE = re.compile(r'(?<![\w₹])[F€%]\s?(?=\d[\d,]*(?:\.\d+)?\s?(?:crores?|lakhs?|billion|million|thousand)\b)')
 FUNC = ('the', 'and', 'from', 'with', 'for', 'of', 'to', 'in', 'on', 'is', 'as', 'at', 'by')
-MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 'ongoing', 'inbuilt', 'infrastructure'}
+THE = {'tlie': 'the', 'tlic': 'the', 'thc': 'the', 'tbe': 'the', 'lhe': 'the', 'tiie': 'the', 'Tlie': 'The',
+       'Thc': 'The', 'Tbe': 'The', 'Ihe': 'The', 'aud': 'and'}
+# Words the dictionary lacks that must not be split or "corrected": modern
+# words, British spellings, names that end like a function word.
+MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 'ongoing', 'inbuilt', 'infrastructure',
+          'offence', 'offences', 'defence', 'defences', 'licence', 'licences', 'pretence', 'zealand', 'finland', 'iceland',
+          'holland', 'scotland', 'ireland', 'thailand', 'swaziland', 'nagaland', 'jharkhand', 'uttarakhand'}
 # Letter shapes OCR confuses; a misread word is fixed when exactly one swap
 # makes a word ("animais" → "animals", "iniand" → "inland").
 OCR_CONFUSIONS = [('i', 'l'), ('l', 'i'), ('t', 'l'), ('l', 't'), ('e', 'c'), ('c', 'e'), ('rn', 'm'), ('m', 'rn'),
@@ -622,6 +632,16 @@ def ocr_fix(t, V, log):
         log['OCR fix: rupee sign']['F/€/% → ₹'] += 1; return '₹'
     t = RUPEE.sub(rupee, t)
     t = re.sub(r'(?<=\d)\](?=[\s.,;:)]|$)|£(?=\d{3})', '1', t)        # "201]", "£970s"
+    t = re.sub(r'\s?\^', '', t)                                          # "Ibid.^", "Sinifieftnce ^"
+
+    def star(m):                                     # ‘welfare of man* → ’ ; a footnote star goes
+        before = t[max(0, m.start() - 80):m.start()]
+        return '’' if before.rfind('‘') > before.rfind('’') else ''
+    t = re.sub(r'(?<=[A-Za-z.,”’)\d])\*+(?=[\s.,;:)]|$)', star, t)
+
+    def the(m):                                      # "tlie", "thc", "tbe" — the most-read word misread
+        log['OCR fix: misread "the"/"and"'][f'{m.group(0)} → {THE[m.group(0)]}'] += 1; return THE[m.group(0)]
+    t = re.sub(r'(?<![\w-])(?:' + '|'.join(THE) + r')(?![\w-])', the, t)
 
     def bracket(m):                                  # "mil]" → "mill", "oi]" → "oil"
         c = m.group(0)[:-1] + 'l'
@@ -677,7 +697,11 @@ def ocr_fix(t, V, log):
         w = m.group(0)
         # Names and acronyms are left alone (Menon, Paterson, LANDSAT), as is
         # anything the book itself spells this way more than once.
-        if known(w) or w.isupper() or V[w.lower()] >= 2: return w
+        pair = next((f for f in FUNC if w.lower().startswith(f) and w.lower()[len(f):] in FUNC + ('a', 'an')), None)
+        if pair and not is_word(w):                  # "ofthe", "inthe": however often the book has it
+            log['OCR fix: words run together'][f'{w} → {w[:len(pair)]} {w[len(pair):]}'] += 1
+            return w[:len(pair)] + ' ' + w[len(pair):]
+        if known(w) or w.isupper() or V[w.lower()] >= 2 or w.lower() in MODERN: return w
         camel = re.search(r'[a-z][A-Z]', w)
         lw = w.lower()
         for f in FUNC:
@@ -709,6 +733,8 @@ def vocab_of(items):
 def join_rows(rows_text, V, Hy, log):
     """Join a paragraph's rows, deciding at each line-end hyphen whether the
     word was split by the layout or is really hyphenated."""
+    # OCR leaves a mark after a line-end hyphen ("depart-*", "-^").
+    rows_text = [re.sub(r'-[*^]$', '-', r) for r in rows_text]
     out = rows_text[0]
     for nxt in rows_text[1:]:
         # Only the tail matters; searching the whole paragraph each time made
@@ -1011,10 +1037,15 @@ def main():
     ap.add_argument('--out', default=str(ROOT.parent / 'dc-books' / 'out'))
     ap.add_argument('--label', action='append', default=[], metavar='FILE=LABEL',
                     help='override the label of one file (by name, without .pdf), or rename a label (OLD=NEW)')
+    ap.add_argument('--scan-margins', default=None, metavar='TOP,BOTTOM',
+                    help='scan profile: page fractions cut at the top and bottom (default 0.064,0.955)')
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--replace', action='store_true')
     a = ap.parse_args()
 
+    if a.scan_margins:
+        global SCAN_TOP, SCAN_BOTTOM
+        SCAN_TOP, SCAN_BOTTOM = (float(x) for x in a.scan_margins.split(','))
     files = collect(a.inputs)
     if not files: sys.exit('no PDFs found')
     log = collections.defaultdict(collections.Counter)
