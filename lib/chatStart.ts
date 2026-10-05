@@ -20,7 +20,13 @@ export type Goal = 'understand' | 'pyq' | 'compare' | 'scholars' | 'revise' | 'm
 
 export type StepId = 'goal' | 'topic' | 'focus' | 'angle' | 'question' | 'dimension' | 'revision';
 
-export type Picked = { id: number; year: number; marks: number; question: string };
+/** A past question to answer. Papers before 2016 often print no marks. */
+export type Picked = { id: number; year: number; marks: number | null; question: string };
+
+/** What the chat is sent when a reader picks a past question to answer. */
+export function pyqPrompt(q: Picked): string {
+  return `Answer this PYQ (${q.year}${q.marks ? `, ${q.marks} marks` : ''}): ${q.question}`;
+}
 
 export type StartState = {
   goal: Goal | null;
@@ -154,7 +160,7 @@ export function compose(s: StartState, subject: SubjectKey): string {
     }
     case 'pyq':
     case 'mentor':
-      if (s.pyq) return `Answer this PYQ (${s.pyq.year}, ${s.pyq.marks} marks): ${s.pyq.question}`;
+      if (s.pyq) return pyqPrompt(s.pyq);
       return '';
     case 'compare': {
       if (topics.length < 2) return topic ? `Compare ${topic} and …` : '';

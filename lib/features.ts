@@ -10,22 +10,19 @@
 export const TOPPER_COPIES_LIVE = false;
 
 /**
- * Parts of the chat page that are built and waiting on data this site does
- * not have yet. The chat came over from historyoptional.xyz, where each of
- * these has something behind it; here each would point at nothing.
+ * Parts of the chat page that came over from historyoptional.xyz.
  *
- * - Topic PYQs: the past questions filed under a notes topic. The PYQ files
- *   tag questions with their own topic names, which match the notes for only
- *   part of the bank (a small part in Sociology and Geography), so a topic's
- *   list would be mostly empty or wrong. Gates "Answer a past question", the
- *   mentor start (which begins from a past question), the PYQ line in
- *   Worth knowing and the PYQ follow-up.
+ * - Topic PYQs: the past questions filed under a notes topic. Live from step
+ *   8, once every question was placed on the notes topic it is answered from
+ *   (lib/pyqNotes.json, served by /api/chat/related). Gates "Answer a past
+ *   question", the mentor start (which begins from a past question), the PYQ
+ *   line in Worth knowing and the PYQ follow-up.
  * - Flashcards: there are no flashcards on this site yet. Gates the card
  *   count in Worth knowing and the Flashcards link in the chat sidebar.
- * - Syllabus tracker: now live (see below). Gates the coverage ring in the
+ * - Syllabus tracker: live (see below). Gates the coverage ring in the
  *   sidebar and "Mark it done".
  */
-export const CHAT_TOPIC_PYQS_LIVE = false;
+export const CHAT_TOPIC_PYQS_LIVE = true;
 export const FLASHCARDS_LIVE = false;
 // On from step 7: topics are ticked off on the note reader and in the chat,
 // kept per device and synced to the account (hooks/useSyllabusTracker,

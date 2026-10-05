@@ -9,7 +9,7 @@ import { auth } from '@/lib/firebase';
 import { fixSentenceSpacing } from '@/lib/textSpacing';
 import { notesForSubject } from '@/lib/notes';
 import { detectTopic } from '@/lib/detectTopic';
-import { compose, formatFor, EMPTY_START, SCHOLARS, type StartState } from '@/lib/chatStart';
+import { compose, formatFor, pyqPrompt, EMPTY_START, SCHOLARS, type StartState } from '@/lib/chatStart';
 import { SUBJECT_BOOKS, SUBJECT_DISPLAY, type SubjectKey } from '@/lib/subjectConfig';
 import { CHAT_TOPIC_PYQS_LIVE, FLASHCARDS_LIVE, SYLLABUS_TRACKER_LIVE } from '@/lib/features';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
@@ -351,7 +351,7 @@ function FollowUps({ slug, asked, wasMains, langHi, subject, onSend }: {
     items.push({
       key: 'pyq',
       label: langHi ? `इस पर ${pyq.year} का PYQ हल करें` : `Try the ${pyq.year} PYQ on this`,
-      go: () => onSend(`Answer this PYQ (${pyq.year}, ${pyq.marks} marks): ${pyq.question}`, 'mains'),
+      go: () => onSend(pyqPrompt(pyq), 'mains'),
     });
   } else {
     const label = langHi ? 'इसे और सरल भाषा में समझाएँ' : 'Explain it more simply';
@@ -918,7 +918,7 @@ function ChatContent() {
 
   const answerPyq = (q: RelatedPyq) => {
     setPanel(null);
-    sendMessage(`Answer this PYQ (${q.year}, ${q.marks} marks): ${q.question}`, { format: 'mains' });
+    sendMessage(pyqPrompt(q), { format: 'mains' });
   };
 
   // How much of this optional's syllabus is ticked off, for the sidebar card.

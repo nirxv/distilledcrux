@@ -6,6 +6,8 @@
  * picks out what a page needs and only that is sent.
  */
 
+import NOTE_PYQS from './pyqNotes.json';
+
 export type PyqSubject = 'sociology' | 'anthropology' | 'polsci' | 'geography' | 'pub-admin';
 
 export type Pyq = {
@@ -123,4 +125,24 @@ export async function loadPyqs(subject: PyqSubject): Promise<{ questions: Pyq[];
   const loaded = { questions, topics };
   cache.set(subject, loaded);
   return loaded;
+}
+
+/**
+ * The questions filed under one notes topic, newest first.
+ *
+ * The files' own `topic` names are the bank's, and they match the notes only
+ * in part: Sociology files every thinker under "Sociological Thinkers", where
+ * the notes give Marx, Durkheim and Weber a topic each, and Geography's
+ * "Geomorphology" spans three notes topics. So each question was read and
+ * placed on the notes topic it is answered from, a second one where it needs
+ * two about equally, and none where no topic fits (Geography's map question).
+ * That reading is lib/pyqNotes.json; tests/pyqNotes.test.mts keeps it in step
+ * with the PYQ files and the notes.
+ */
+export async function pyqsForNote(subject: PyqSubject, slug: string): Promise<Pyq[]> {
+  const ids = (NOTE_PYQS as Record<string, { topics: Record<string, number[]> }>)[subject]?.topics[slug];
+  if (!ids?.length) return [];
+  const want = new Set(ids);
+  const { questions } = await loadPyqs(subject);
+  return questions.filter((q) => want.has(q.id));
 }

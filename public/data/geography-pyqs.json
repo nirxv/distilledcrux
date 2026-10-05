@@ -5,7 +5,7 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
-  "subpart": "b",
+  "subpart": "a",
   "question": "Differences between Normal cycle and Arid cycle of Davis.",
   "marks": 10,
   "topic": "Geomorphology"
@@ -16,7 +16,7 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
-  "subpart": "c",
+  "subpart": "b",
   "question": "Differentiate Storm Surges and Seiches.",
   "marks": 10,
   "topic": "Oceanography"
@@ -27,7 +27,7 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
-  "subpart": "d",
+  "subpart": "c",
   "question": "Uniqueness of fauna in the Notogean realm.",
   "marks": 10,
   "topic": "Biogeography"
@@ -38,7 +38,7 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
-  "subpart": "e",
+  "subpart": "d",
   "question": "Impact of Pleistocene Ice Age on the crust of the Earth.",
   "marks": 10,
   "topic": "Geomorphology"
@@ -49,7 +49,7 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
-  "subpart": "f",
+  "subpart": "e",
   "question": "Types of endemic plants and their degree of vulnerability to extinction.",
   "marks": 10,
   "topic": "Disasters & Hazards"
@@ -72,7 +72,7 @@
   "section": "A",
   "question_no": "2",
   "subpart": "b",
-  "question": "What are the characteristics that make CFC a serious threat to the ecosystem? Give examples.",
+  "question": "What are the characteristics that make CHC a serious threat to the ecosystem? Give examples.",
   "marks": 15,
   "topic": "Biogeography"
  },
@@ -198,12 +198,23 @@
   "topic": "Geographical Thought & Methods"
  },
  {
-  "id": 459,
+  "id": 2045,
   "year": "2013",
   "paper": "Paper I",
   "section": "B",
   "question_no": "6",
   "subpart": "a",
+  "question": "What is Geriatrics? What are the problems associated with Geriatric population?",
+  "marks": 20,
+  "topic": "Population & Settlement"
+ },
+ {
+  "id": 459,
+  "year": "2013",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "b",
   "question": "Discuss the changing pattern of production and export of Coffee in the world.",
   "marks": 10,
   "topic": "Economic Geography"
@@ -214,7 +225,7 @@
   "paper": "Paper I",
   "section": "B",
   "question_no": "6",
-  "subpart": "b",
+  "subpart": "c",
   "question": "What are the basic postulates in the Central Place Model of Christaller?",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
@@ -226,7 +237,7 @@
   "section": "B",
   "question_no": "7",
   "subpart": "a",
-  "question": "'Urban Solid Waste management poses the greatest challenges in Metropolitan planning.' Elaborate.",
+  "question": "“Urban Solid Waste Management poses the greatest challenge in Metropolitan planning.” Elaborate.",
   "marks": 20,
   "topic": "Population & Settlement"
  },
@@ -248,7 +259,7 @@
   "section": "B",
   "question_no": "7",
   "subpart": "c",
-  "question": "Explain the parameters for the assessment and the spatial pattern of the Human Development Index in the world.",
+  "question": "Explain the parameters for assessment and the spatial pattern of Human Development Index in the world.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -259,7 +270,7 @@
   "section": "B",
   "question_no": "8",
   "subpart": "a",
-  "question": "'Urban Geography is nothing but the city \"in\" area and city \"as\" area.' Elaborate.",
+  "question": "“Urban Geography is nothing but city “in” area and city “as” area.” Elaborate.",
   "marks": 25,
   "topic": "Population & Settlement"
  },
@@ -273,6 +284,17 @@
   "question": "Analyse the causes for changes in the pattern of world trade.",
   "marks": 25,
   "topic": "Economic Geography"
+ },
+ {
+  "id": 1966,
+  "year": "2013",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "1",
+  "subpart": "a",
+  "question": "On the outline map of India provided to you, mark the location of all of the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Mishmi Hills (ii) Lipulekh Pass (iii) Beas River (iv) Rihand Dam (v) Amarnath",
+  "marks": 10,
+  "topic": "India: Physical"
  },
  {
   "id": 466,
@@ -359,7 +381,7 @@
   "question_no": "3",
   "subpart": "a",
   "question": "Distributional pattern of industries in India does not provide requisite basis for division of the country into distinct industrial regions. Elaborate.",
-  "marks": 25,
+  "marks": 20,
   "topic": "Industries"
  },
  {
@@ -380,7 +402,7 @@
   "section": "A",
   "question_no": "3",
   "subpart": "c",
-  "question": "What do you understand by 'Young India'? How can the present state of population composition be converted into an asset for the country?",
+  "question": "What do you understand by ‘Young India’? How can the present state of population composition be converted into an asset for the country?",
   "marks": 15,
   "topic": "Population & Settlement"
  },
@@ -402,7 +424,7 @@
   "section": "A",
   "question_no": "4",
   "subpart": "b",
-  "question": "Define agricultural productivity. Examine the measures to enhance agricultural productivity in rain-fed areas of India.",
+  "question": "Define agricultural productivity. Mention the methods of its measurement and bring out the disparities in its regional distribution.",
   "marks": 15,
   "topic": "Agriculture"
  },
@@ -413,119 +435,163 @@
   "section": "A",
   "question_no": "4",
   "subpart": "c",
-  "question": "Explain the problems in realization of benefits of globalization and liberalization in industrial development in India.",
+  "question": "Discuss the problems in realization of benefits of globalization and liberalization in industrial sector of India.",
   "marks": 15,
   "topic": "Economic Geography"
  },
  {
-  "id": 479,
+  "id": 1967,
+  "year": "2013",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "a",
+  "question": "City-regions as territorial unit for regional planning and development",
+  "marks": 10,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 1968,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "b",
-  "question": "Mention the space relationship of India with neighbouring countries.",
+  "question": "Snags in the Food Security Policy of India",
   "marks": 10,
-  "topic": "India: Physical"
+  "topic": "India: Agriculture & Resources"
  },
  {
-  "id": 480,
+  "id": 1969,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "c",
-  "question": "Point out the ethnic disparities in the North-East India.",
+  "question": "Demographic dividend and its implications on Indian socio-economic environment",
   "marks": 10,
-  "topic": "Population & Settlement"
+  "topic": "India: Population & Urbanization"
  },
  {
-  "id": 481,
+  "id": 1970,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "d",
-  "question": "Discuss the significance of the Brahmaputra river system in India.",
+  "question": "Planning and development of ‘Tribal Regions’ in India",
   "marks": 10,
-  "topic": "India: Physical"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 482,
+  "id": 1971,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "e",
-  "question": "Discuss the major characteristics of fishing in India.",
+  "question": "On the outline map of India provided to you, mark the location of all of the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Rajgir (ii) Sindri (iii) National Highway No. 24 (iv) Churk (v) Indira Gandhi Canal",
   "marks": 10,
-  "topic": "Geographical Thought & Methods"
+  "topic": "India: Physical"
  },
  {
-  "id": 483,
+  "id": 1972,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "6",
   "subpart": "a",
-  "question": "Discuss the problems of soil degradation in India and suggest measures to address this problem.",
+  "question": "Write a note on geopolitics of the Indian Ocean realm.",
   "marks": 20,
-  "topic": "Environmental Geography"
+  "topic": "India: Physical"
  },
  {
-  "id": 484,
+  "id": 1973,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "6",
   "subpart": "b",
-  "question": "Give an account of the development of renewable resources of India.",
+  "question": "Comment on the basis of creation of new States in India in 2000.",
   "marks": 15,
-  "topic": "India: Physical"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 485,
+  "id": 1974,
+  "year": "2013",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "c",
+  "question": "Enumerate the basic indicators of development and explain their application in identification of the spatial diversity in development in India.",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 1975,
+  "year": "2013",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "a",
+  "question": "Write a note on the emergence of National Settlement System in colonial India and discuss the factors contributing to urbanization in post-independence period.",
+  "marks": 20,
+  "topic": "India: Population & Urbanization"
+ },
+ {
+  "id": 1976,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "7",
   "subpart": "b",
-  "question": "Evaluate the impact of technology on resource utilization in India.",
+  "question": "Define slums and explain their problems.",
   "marks": 15,
-  "topic": "Environmental Geography"
+  "topic": "India: Population & Urbanization"
  },
  {
-  "id": 486,
+  "id": 1977,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "7",
   "subpart": "c",
-  "question": "Explain the origin, dimension and implications of Sino-Indian border dispute.",
+  "question": "Discuss the objectives of ‘Vision 2020’ in creation of viable village complex in India for ‘Inclusive Rural Development’ programme.",
   "marks": 15,
-  "topic": "India: Physical"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 487,
+  "id": 1978,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "8",
   "subpart": "a",
-  "question": "Discuss the major forest types of India and explain the significant causes of deforestation.",
-  "marks": 25,
-  "topic": "Environmental Geography"
+  "question": "Identify the earthquake-prone zones and suggest strategy for their management.",
+  "marks": 20,
+  "topic": "Disasters & Hazards"
  },
  {
-  "id": 488,
+  "id": 1979,
   "year": "2013",
   "paper": "Paper II",
   "section": "B",
   "question_no": "8",
   "subpart": "b",
-  "question": "Critically examine the issues of regional development and planning in India.",
-  "marks": 25,
-  "topic": "India: Physical"
+  "question": "Describe the impact of linguistic diversity on the development of various regions of India.",
+  "marks": 15,
+  "topic": "India: Population & Urbanization"
+ },
+ {
+  "id": 1980,
+  "year": "2013",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "8",
+  "subpart": "c",
+  "question": "Describe how urbanization creates air and water pollution in India.",
+  "marks": 15,
+  "topic": "India: Population & Urbanization"
  },
  {
   "id": 489,
@@ -534,53 +600,53 @@
   "section": "A",
   "question_no": "1",
   "subpart": "a",
-  "question": "Define the term 'meander' and describe the basic characteristics of entrenched meander and ingrown meander.",
+  "question": "Define the term ‘meander’ and describe the basic characteristics of entrenched meander and ingrown meander.",
   "marks": 10,
   "topic": "Geomorphology"
  },
  {
-  "id": 490,
+  "id": 1981,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "b",
-  "question": "Define zoogeographic region. Also describe the basic faunal makeup of the Neo-Arctic zoogeographic region.",
+  "question": "Discuss the salient features of ‘sirocco’ and ‘mistral’.",
   "marks": 10,
-  "topic": "Biogeography"
+  "topic": "Climatology"
  },
  {
-  "id": 491,
+  "id": 1982,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "c",
-  "question": "Give an account of recent observations on coral bleaching with reference to Clive Wilkinson's report.",
+  "question": "Give an account of the nature of biosphere as an ecosystem.",
   "marks": 10,
-  "topic": "Oceanography"
+  "topic": "Biogeography"
  },
  {
-  "id": 492,
+  "id": 1983,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "d",
-  "question": "Explain the relevance of bottom-up and top-down approaches in the development of the agrarian economy.",
+  "question": "State the uniqueness of the Eurasian Steppe Biome.",
   "marks": 10,
-  "topic": "Geographical Thought & Methods"
+  "topic": "Biogeography"
  },
  {
-  "id": 493,
+  "id": 1984,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "e",
-  "question": "Critically analyze the application of models in Geography.",
+  "question": "Illustrate the origin and nature of Sargasso Sea and Lagoon.",
   "marks": 10,
-  "topic": "Geographical Thought & Methods"
+  "topic": "Oceanography"
  },
  {
   "id": 494,
@@ -589,16 +655,49 @@
   "section": "A",
   "question_no": "2",
   "subpart": "a",
-  "question": "State the concept of plate tectonics. How does it help in explaining the formation of the Himalayas and the Appalachian Mountains?",
+  "question": "State the concept of plate tectonics. How does it help in explaining the formation of the Himalayas and Appalachian Mountains?",
   "marks": 20,
   "topic": "Geomorphology"
+ },
+ {
+  "id": 1985,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "2",
+  "subpart": "b",
+  "question": "Describe the origin and development of thunderstorms with examples.",
+  "marks": 15,
+  "topic": "Climatology"
+ },
+ {
+  "id": 498,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "2",
+  "subpart": "c",
+  "question": "Enumerate the major causes of increasing degradation of environment in hills and hillslopes, and state its down-valley impact.",
+  "marks": 15,
+  "topic": "Environmental Geography"
+ },
+ {
+  "id": 497,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "a",
+  "question": "Discuss the nature and origin of Indian monsoon and recent techniques of its prediction.",
+  "marks": 20,
+  "topic": "Climatology"
  },
  {
   "id": 495,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
-  "question_no": "2",
+  "question_no": "3",
   "subpart": "b",
   "question": "State the concept of erosion surfaces and highlight the factors responsible for their development.",
   "marks": 15,
@@ -609,495 +708,506 @@
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
-  "question_no": "2",
+  "question_no": "3",
   "subpart": "c",
-  "question": "Give a critical account of the reasons and consequences of marine pollution.",
+  "question": "Give a critical account of reasons and consequences of marine pollution.",
   "marks": 15,
   "topic": "Oceanography"
  },
  {
-  "id": 497,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "a",
-  "question": "Discuss the nature and origin of the Indian monsoon and recent techniques for its prediction.",
-  "marks": 20,
-  "topic": "Climatology"
- },
- {
-  "id": 498,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "b",
-  "question": "Enumerate the major causes of increasing degradation of the environment in hills and hillslopes, and state its down-valley impact.",
-  "marks": 15,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 499,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "c",
-  "question": "Critically examine the basis and limits of environmental determinism as a philosophy of human geography.",
-  "marks": 15,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 500,
+  "id": 1986,
   "year": "2014",
   "paper": "Paper I",
   "section": "A",
   "question_no": "4",
   "subpart": "a",
-  "question": "Discuss the significance of the concept of 'Cultural Landscape' as advocated by Carl O. Sauer.",
+  "question": "Explain weathering and mass wasting, and describe their geomorphic significance.",
   "marks": 20,
+  "topic": "Geomorphology"
+ },
+ {
+  "id": 490,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "4",
+  "subpart": "b",
+  "question": "Define zoogeographic region. Also describe the basic faunal makeup of the Neo-Arctic zoogeographic region.",
+  "marks": 15,
+  "topic": "Biogeography"
+ },
+ {
+  "id": 491,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "4",
+  "subpart": "c",
+  "question": "Give an account of recent observations on coral bleaching with reference to Clive Wilkinson’s Report.",
+  "marks": 15,
+  "topic": "Oceanography"
+ },
+ {
+  "id": 1987,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "a",
+  "question": "Elaborate the concept of mental map.",
+  "marks": 10,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 1988,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "b",
+  "question": "Give an account of food security issues in developing countries.",
+  "marks": 10,
+  "topic": "Economic Geography"
+ },
+ {
+  "id": 1989,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "c",
+  "question": "Discuss the factors responsible for counter-urbanisation.",
+  "marks": 10,
+  "topic": "Population & Settlement"
+ },
+ {
+  "id": 492,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "d",
+  "question": "Explain the relevance of bottom-up and top-down approaches in the development of agrarian economy.",
+  "marks": 10,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 493,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "e",
+  "question": "Critically analyse application of models in Geography.",
+  "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
  {
   "id": 501,
   "year": "2014",
   "paper": "Paper I",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "b",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "a",
   "question": "Explain the necessary conditions of takeoff and subsequent stages of development of a nation as propounded by Rostow.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 502,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "c",
-  "question": "Discuss the contribution of geographers to the development of radical geography.",
-  "marks": 15,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 503,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "a",
-  "question": "'The population growth in developed countries is not in accordance with Malthusian Theory.' Comment.",
-  "marks": 10,
-  "topic": "Population & Settlement"
  },
  {
   "id": 504,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
-  "question_no": "5",
+  "question_no": "6",
   "subpart": "b",
   "question": "Discuss environmental and economic problems associated with coal production.",
-  "marks": 10,
+  "marks": 15,
   "topic": "Environmental Geography"
  },
  {
-  "id": 505,
+  "id": 502,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
-  "question_no": "5",
+  "question_no": "6",
   "subpart": "c",
-  "question": "Explain the need for and methods of waste management in urban areas.",
-  "marks": 10,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 506,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "d",
-  "question": "'Rural sustainability has to be explored as a component of sustainable development.' Elaborate.",
-  "marks": 10,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 507,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "e",
-  "question": "Write a note on Intensive subsistence farming.",
-  "marks": 10,
-  "topic": "Agriculture"
+  "question": "Discuss the contribution of geographers in the development of radical geography.",
+  "marks": 15,
+  "topic": "Geographical Thought & Methods"
  },
  {
   "id": 508,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
-  "question_no": "6",
+  "question_no": "7",
   "subpart": "a",
   "question": "Giving suitable examples, describe the importance of system analysis in geographical studies.",
-  "marks": 20,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 509,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "6",
-  "subpart": "b",
-  "question": "Discuss the concept of 'hierarchy of settlements' in the context of India.",
-  "marks": 15,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 510,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "6",
-  "subpart": "c",
-  "question": "Describe the patterns of world energy production and consumption.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
  {
-  "id": 511,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "7",
-  "subpart": "a",
-  "question": "Discuss the nature and impact of major international trading blocs.",
-  "marks": 20,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 512,
+  "id": 506,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
   "question_no": "7",
   "subpart": "b",
-  "question": "Analyze the factors responsible for the growth of slums in metropolitan cities of the world.",
-  "marks": 15,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 513,
-  "year": "2014",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "7",
-  "subpart": "c",
-  "question": "Analyze the issues of population change and its impact on environment.",
-  "marks": 15,
+  "question": "“Rural sustainability is necessary for urban sustainability.” Discuss the statement in the backdrop of integrated development approach.",
+  "marks": 20,
   "topic": "Environmental Geography"
  },
  {
-  "id": 514,
+  "id": 1990,
+  "year": "2014",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "c",
+  "question": "“Indo-Gangetic hearth is considered to be one of the world’s richest cultural realms.” Examine.",
+  "marks": 15,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 1991,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
   "question_no": "8",
   "subpart": "a",
-  "question": "Explain the concept of Green Revolution and evaluate its impact on the agricultural geography of the world.",
-  "marks": 25,
-  "topic": "Agriculture"
+  "question": "Explain the qualitative and quantitative methods of delineation of the sphere of urban influence.",
+  "marks": 20,
+  "topic": "Population & Settlement"
  },
  {
-  "id": 515,
+  "id": 1992,
   "year": "2014",
   "paper": "Paper I",
   "section": "B",
   "question_no": "8",
   "subpart": "b",
-  "question": "Describe the spatial pattern of industries and their shifting trends in the world.",
-  "marks": 25,
-  "topic": "Geographical Thought & Methods"
+  "question": "“World is passing through a global resource dilemma.” Comment.",
+  "marks": 15,
+  "topic": "Economic Geography"
  },
  {
-  "id": 516,
+  "id": 1993,
   "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "1",
-  "subpart": "b",
-  "question": "Explain the topographic characteristics of the Narmada river basin.",
-  "marks": 10,
-  "topic": "Geomorphology"
- },
- {
-  "id": 517,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "1",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "8",
   "subpart": "c",
-  "question": "Discuss the distribution and characteristics of saline soils in India.",
+  "question": "“Food productivity with purity of ecosystem is the need of the hour.” Elaborate.",
+  "marks": 15,
+  "topic": "Agriculture"
+ },
+ {
+  "id": 1994,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "1",
+  "subpart": "a",
+  "question": "On the outline map of India provided to you, mark the location of all of the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Guru Shikhar (ii) Bhor Ghat (iii) Shravanabelagola (iv) Kalibangan (v) Ganga Sagar",
   "marks": 10,
   "topic": "India: Physical"
  },
  {
-  "id": 518,
+  "id": 1995,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "1",
+  "subpart": "b",
+  "question": "Explain how eco-tourism activities could be important livelihood options in the Himalayan and North-Eastern regions of the country.",
+  "marks": 10,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 1996,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "1",
+  "subpart": "c",
+  "question": "How is drainage pattern determined by the water divide?",
+  "marks": 10,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 1997,
   "year": "2014",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "d",
-  "question": "Account for the distribution of the coal reserves in India.",
+  "question": "Location of thermal power plants and coal fields in India are not mutually conducive. Analyse.",
   "marks": 10,
-  "topic": "Industries"
+  "topic": "India: Industries & Economy"
  },
  {
-  "id": 519,
+  "id": 1998,
   "year": "2014",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "e",
-  "question": "Examine the pattern of Urbanization in India.",
-  "marks": 10,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 520,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "2",
-  "subpart": "a",
-  "question": "Assess the impact of the Green Revolution on the spatial pattern of agricultural production in India.",
-  "marks": 20,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 521,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "2",
-  "subpart": "b",
-  "question": "Discuss the measures for sustainable development of tribal areas in India.",
-  "marks": 15,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 522,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "2",
-  "subpart": "c",
-  "question": "Explain the significance of the Western Ghats as an ecological zone.",
-  "marks": 15,
-  "topic": "India: Physical"
- },
- {
-  "id": 523,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "a",
-  "question": "Analyse the causes for changes in the pattern of internal trade in India.",
-  "marks": 20,
-  "topic": "Economic Geography"
- },
- {
-  "id": 524,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "b",
-  "question": "Examine the environmental problems associated with the rapid growth of metropolitan cities in India.",
-  "marks": 15,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 525,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "c",
-  "question": "Give an account of river water disputes in India.",
-  "marks": 15,
-  "topic": "India: Physical"
- },
- {
-  "id": 526,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "a",
-  "question": "Bring out the causes for the more frequent occurrence of landslides in the Himalayas than in the Western Ghats.",
-  "marks": 20,
-  "topic": "India: Physical"
- },
- {
-  "id": 527,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "b",
-  "question": "Explain the factors responsible for the growth of IT industry in India.",
-  "marks": 15,
-  "topic": "Industries"
- },
- {
-  "id": 528,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "c",
-  "question": "Assess the performance of planning in India with reference to regional imbalances.",
-  "marks": 15,
-  "topic": "India: Population & Urbanization"
- },
- {
-  "id": 529,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "b",
-  "question": "Discuss the geopolitical implications of the Doklam dispute in the context of Indo-China relations.",
-  "marks": 10,
-  "topic": "India: Physical"
- },
- {
-  "id": 530,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "c",
-  "question": "Discuss the impact of the Chipko Movement on the environment of the Himalayan region.",
-  "marks": 10,
-  "topic": "Environmental Geography"
- },
- {
-  "id": 531,
-  "year": "2014",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "d",
-  "question": "Write a note on the social forestry programme in India.",
+  "question": "Why has agro and social forestry has failed to achieve its objectives?",
   "marks": 10,
   "topic": "India: Agriculture & Resources"
  },
  {
-  "id": 532,
+  "id": 1999,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "2",
+  "subpart": "a",
+  "question": "Bring out the distribution of Laterite soils in India and their specific use for agriculture.",
+  "marks": 20,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 2000,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "2",
+  "subpart": "b",
+  "question": "Suggest the measures of wild-life conservation with reference to extinction of rare species.",
+  "marks": 15,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 2001,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "2",
+  "subpart": "c",
+  "question": "Describe the problems of agro-based industries in India in general and cotton textiles in particular.",
+  "marks": 15,
+  "topic": "India: Industries & Economy"
+ },
+ {
+  "id": 2002,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "a",
+  "question": "Highlight the socio-economic and ecological roles of River Cauvery in its riverine tract.",
+  "marks": 20,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 2003,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "b",
+  "question": "Discuss the problems and prospects of National Waterway No. 1.",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 2004,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "c",
+  "question": "Explain the concept of ‘Make in India’ and indicate the essential inputs for its success.",
+  "marks": 15,
+  "topic": "India: Industries & Economy"
+ },
+ {
+  "id": 2005,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "4",
+  "subpart": "a",
+  "question": "Describe the salient climatological characteristics of Rayalaseema region.",
+  "marks": 20,
+  "topic": "India: Climate"
+ },
+ {
+  "id": 2006,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "4",
+  "subpart": "b",
+  "question": "‘In spite of various negative impacts of Green Revolution, there is a demand for New Green Revolution’. Elaborate.",
+  "marks": 15,
+  "topic": "India: Agriculture & Resources"
+ },
+ {
+  "id": 2007,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "4",
+  "subpart": "c",
+  "question": "What are the desired possible changes in our trade policy to promote the development of cottage industry?",
+  "marks": 15,
+  "topic": "India: Industries & Economy"
+ },
+ {
+  "id": 2008,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "a",
+  "question": "On the outline map of India provided to you, mark the location of all of the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Mundra Port (ii) Chandipur (iii) Mahendragiri (iv) Hazira (v) Vembanad Lake",
+  "marks": 10,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 2009,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "b",
+  "question": "Highlight the implications of declining child sex ratio in India.",
+  "marks": 10,
+  "topic": "India: Population & Urbanization"
+ },
+ {
+  "id": 2010,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "c",
+  "question": "Analyse the feasibility of ‘Smart Towns’ Development in India.",
+  "marks": 10,
+  "topic": "India: Population & Urbanization"
+ },
+ {
+  "id": 2011,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "d",
+  "question": "Comment on the criteria of identifying Drought Prone Areas in India.",
+  "marks": 10,
+  "topic": "Disasters & Hazards"
+ },
+ {
+  "id": 2012,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "e",
-  "question": "Discuss the significance of the Indian Ocean in the context of India's foreign trade.",
+  "question": "Bring out the role of terrain in determining India’s political influence over neighbouring countries.",
   "marks": 10,
-  "topic": "Oceanography"
+  "topic": "India: Physical"
  },
  {
-  "id": 533,
+  "id": 2013,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "6",
   "subpart": "a",
-  "question": "Evaluate the role of transport in the economic development of India.",
+  "question": "Discuss the trends in emigration focusing on its major thrust.",
   "marks": 20,
-  "topic": "Transport & Trade"
+  "topic": "India: Population & Urbanization"
  },
  {
-  "id": 534,
+  "id": 2014,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "6",
   "subpart": "b",
-  "question": "Give a critical account of the development of irrigation in India.",
+  "question": "Account for the multiple problems of urban agglomerations.",
   "marks": 15,
-  "topic": "Agriculture"
+  "topic": "India: Population & Urbanization"
  },
  {
-  "id": 535,
+  "id": 2015,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "6",
   "subpart": "c",
-  "question": "Explain the causes of regional disparity in the level of development in India.",
+  "question": "Evaluate the Backward Regions Grant Fund Programme.",
   "marks": 15,
   "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 536,
+  "id": 2016,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "7",
   "subpart": "a",
-  "question": "Discuss the problems and prospects of dry farming in India.",
+  "question": "How can a meaningful skill development programme contribute to the economic growth of hill areas?",
   "marks": 20,
-  "topic": "Agriculture"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 537,
+  "id": 2017,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "7",
   "subpart": "b",
-  "question": "Examine the pattern of spatial distribution of population in India.",
+  "question": "Differentiate between the ‘intensity’ and ‘magnitude’ of an earthquake and explain its varying impact in different parts of India.",
   "marks": 15,
-  "topic": "Geographical Thought & Methods"
+  "topic": "Disasters & Hazards"
  },
  {
-  "id": 538,
+  "id": 2018,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "7",
   "subpart": "c",
-  "question": "Critically examine the New Economic Policy of 1991 and its impact on the spatial pattern of industries in India.",
+  "question": "Discuss the implications of India’s strategic location with reference to the Indian Ocean.",
   "marks": 15,
-  "topic": "Geographical Thought & Methods"
+  "topic": "India: Physical"
  },
  {
-  "id": 539,
+  "id": 2019,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "8",
   "subpart": "a",
-  "question": "Discuss the concept of integrated rural development in India.",
-  "marks": 25,
-  "topic": "Population & Settlement"
+  "question": "India is involved in a number of border disputes. Explain the reasons and remedies.",
+  "marks": 20,
+  "topic": "India: Physical"
  },
  {
-  "id": 540,
+  "id": 2020,
   "year": "2014",
   "paper": "Paper II",
   "section": "B",
   "question_no": "8",
   "subpart": "b",
-  "question": "Explain the significance of tourism in regional development of India.",
-  "marks": 25,
-  "topic": "India: Transport & Regional Development"
+  "question": "Discuss the concept of Command Area Development and evaluate its success with reference to Indira Gandhi Canal.",
+  "marks": 15,
+  "topic": "India: Agriculture & Resources"
+ },
+ {
+  "id": 2021,
+  "year": "2014",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "8",
+  "subpart": "c",
+  "question": "How has an inappropriate urban land use policy accounted for undesirable development in and around metropolitan cities?",
+  "marks": 15,
+  "topic": "India: Population & Urbanization"
  },
  {
   "id": 541,
@@ -1117,42 +1227,42 @@
   "section": "A",
   "question_no": "1",
   "subpart": "b",
-  "question": "Discuss how frontogenesis contributes to weather instability.",
+  "question": "Discuss as to how frontogenesis contributes to weather instability.",
   "marks": 10,
   "topic": "Climatology"
  },
  {
-  "id": 543,
+  "id": 2022,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "c",
-  "question": "Write a note on deep and shallow ecology.",
+  "question": "Describe the characteristics of different types of pelagic deposits.",
   "marks": 10,
-  "topic": "Biogeography"
+  "topic": "Oceanography"
  },
  {
-  "id": 544,
+  "id": 2023,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "d",
-  "question": "What is Potential Evapotranspiration? Explain how it is used in assessing the water balance in an area.",
+  "question": "Explain the characteristics of ecological succession.",
   "marks": 10,
-  "topic": "Climatology"
+  "topic": "Biogeography"
  },
  {
-  "id": 545,
+  "id": 2024,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "1",
   "subpart": "e",
-  "question": "Discuss the methods of conserving biodiversity for sustainable development.",
+  "question": "Comment on the impact of environmental education on quality of life.",
   "marks": 10,
-  "topic": "Biogeography"
+  "topic": "Environmental Geography"
  },
  {
   "id": 546,
@@ -1166,26 +1276,37 @@
   "topic": "Geomorphology"
  },
  {
-  "id": 547,
+  "id": 544,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "2",
   "subpart": "b",
-  "question": "Discuss the basis of Koppen's climatic classification. Bring out the salient characteristics of the 'Cs' type of climate.",
-  "marks": 20,
+  "question": "What is Potential Evapotranspiration? Explain how it is used in assessing the water balance in an area.",
+  "marks": 15,
   "topic": "Climatology"
  },
  {
-  "id": 548,
+  "id": 545,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "2",
   "subpart": "c",
-  "question": "Classify soils based on their zonal distribution and describe the characteristics of pedocals.",
+  "question": "Discuss the methods of conserving biodiversity for sustainable development.",
   "marks": 15,
-  "topic": "Geographical Thought & Methods"
+  "topic": "Biogeography"
+ },
+ {
+  "id": 547,
+  "year": "2015",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "a",
+  "question": "Discuss the basis of Köppen’s climatic classification. Bring out the salient characteristics of ‘Cs’ type of climate.",
+  "marks": 20,
+  "topic": "Climatology"
  },
  {
   "id": 549,
@@ -1193,18 +1314,29 @@
   "paper": "Paper I",
   "section": "A",
   "question_no": "3",
-  "subpart": "a",
-  "question": "Explain with examples as to how channel dynamics have been responsible for the development of alluvial fans and cones.",
+  "subpart": "b",
+  "question": "Explain with examples as to how channel dynamics has been responsible for the development of alluvial fans and cones.",
   "marks": 15,
   "topic": "Geomorphology"
+ },
+ {
+  "id": 548,
+  "year": "2015",
+  "paper": "Paper I",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "c",
+  "question": "Classify soils based on their zonal distribution and describe the characteristics of pedocals.",
+  "marks": 15,
+  "topic": "Geographical Thought & Methods"
  },
  {
   "id": 550,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
-  "question_no": "3",
-  "subpart": "b",
+  "question_no": "4",
+  "subpart": "a",
   "question": "Explain the different stages of ecological adaptation of man and bring out the changing balance between man and environment.",
   "marks": 20,
   "topic": "Environmental Geography"
@@ -1214,44 +1346,22 @@
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
-  "question_no": "3",
-  "subpart": "c",
-  "question": "'Present-day landforms bear more complexity than simplicity.' Elucidate.",
-  "marks": 15,
-  "topic": "Geomorphology"
- },
- {
-  "id": 552,
-  "year": "2015",
-  "paper": "Paper I",
-  "section": "A",
-  "question_no": "4",
-  "subpart": "a",
-  "question": "Discuss the bases and mechanisms of ocean floor spreading.",
-  "marks": 20,
-  "topic": "Oceanography"
- },
- {
-  "id": 553,
-  "year": "2015",
-  "paper": "Paper I",
-  "section": "A",
   "question_no": "4",
   "subpart": "b",
-  "question": "'There is a rejuvenation of environmentalism as a paradigm in geographical studies.' Comment.",
-  "marks": 20,
+  "question": "“Present-day landforms bear more complexity than simplicity.” Elucidate.",
+  "marks": 15,
   "topic": "Geomorphology"
  },
  {
-  "id": 554,
+  "id": 2025,
   "year": "2015",
   "paper": "Paper I",
   "section": "A",
   "question_no": "4",
   "subpart": "c",
-  "question": "'Vital statistics are necessary ingredients for development planning.' Elaborate.",
+  "question": "Explain the meridional circulation of the atmosphere and its importance in world climate.",
   "marks": 15,
-  "topic": "Geographical Thought & Methods"
+  "topic": "Climatology"
  },
  {
   "id": 555,
@@ -1260,7 +1370,7 @@
   "section": "B",
   "question_no": "5",
   "subpart": "a",
-  "question": "'The welfare face of geography makes it an inter-disciplinary subject.' Elaborate.",
+  "question": "“The welfare face of geography makes it an inter-disciplinary subject.” Elaborate.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -1271,7 +1381,7 @@
   "section": "B",
   "question_no": "5",
   "subpart": "b",
-  "question": "'Energy mix is a step towards sustainability.' Discuss.",
+  "question": "“Energy mix is a step towards sustainability.” Discuss.",
   "marks": 10,
   "topic": "Environmental Geography"
  },
@@ -1282,7 +1392,7 @@
   "section": "B",
   "question_no": "5",
   "subpart": "c",
-  "question": "Discuss Nelson's method of functional classification of towns.",
+  "question": "Discuss Nelson’s method of functional classification of towns.",
   "marks": 10,
   "topic": "Population & Settlement"
  },
@@ -1293,7 +1403,7 @@
   "section": "B",
   "question_no": "5",
   "subpart": "d",
-  "question": "'Marx's view on population is more humanistic.' Comment.",
+  "question": "“Marx’s view on population is more humanistic.” Comment.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -1304,7 +1414,7 @@
   "section": "B",
   "question_no": "5",
   "subpart": "e",
-  "question": "'Development planning has a component of environmental cost.' Discuss.",
+  "question": "“Development planning has a component of environmental cost.” Discuss.",
   "marks": 10,
   "topic": "Environmental Geography"
  },
@@ -1315,7 +1425,7 @@
   "section": "B",
   "question_no": "6",
   "subpart": "a",
-  "question": "'Regional synthesis is the crux of geographical studies.' Elaborate.",
+  "question": "“Regional synthesis is the crux of geographical studies.” Elaborate.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -1326,7 +1436,7 @@
   "section": "B",
   "question_no": "6",
   "subpart": "b",
-  "question": "'Man-induced famines are becoming more common than nature-induced ones.' Comment.",
+  "question": "“Man-induced famines are becoming more common than nature-induced ones.” Comment.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -1348,7 +1458,7 @@
   "section": "B",
   "question_no": "7",
   "subpart": "a",
-  "question": "Discuss the relevance of Von Thunen's model on agricultural location in the contemporary context.",
+  "question": "Discuss the relevance of Von Thunen’s model on agricultural location in the contemporary context.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -1359,163 +1469,174 @@
   "section": "B",
   "question_no": "7",
   "subpart": "b",
-  "question": "'Cultural regions are the most suited units to study the diversity of an area.' Comment.",
+  "question": "“Cultural regions are the most suited units to study the diversity of an area.” Comment.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 2026,
+  "year": "2015",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "c",
+  "question": "Discuss the approaches to the study of behavioural geography.",
+  "marks": 15,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 553,
+  "year": "2015",
+  "paper": "Paper I",
+  "section": "B",
+  "question_no": "8",
+  "subpart": "a",
+  "question": "“There is a rejuvenation of environmentalism as a paradigm in geographical studies.” Comment.",
+  "marks": 20,
+  "topic": "Geomorphology"
  },
  {
   "id": 565,
   "year": "2015",
   "paper": "Paper I",
   "section": "B",
-  "question_no": "7",
-  "subpart": "c",
-  "question": "'Geographical traits lead to regional imbalances.' Examine.",
+  "question_no": "8",
+  "subpart": "b",
+  "question": "“Geographical traits lead to regional imbalances.” Examine.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
  {
-  "id": 566,
+  "id": 554,
   "year": "2015",
   "paper": "Paper I",
   "section": "B",
   "question_no": "8",
+  "subpart": "c",
+  "question": "“Vital statistics are necessary ingredients for development planning.” Elaborate.",
+  "marks": 15,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 2027,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "1",
   "subpart": "a",
-  "question": "Discuss the changing pattern of world iron and steel industry with reference to new industrial locations.",
-  "marks": 20,
-  "topic": "Industries"
+  "question": "On the outline map of India provided to you, mark the locations of all the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Tharangambadi (ii) Namcha Barwa (iii) Narcodam (iv) Khajjiar (v) Chunchanakatte",
+  "marks": 10,
+  "topic": "India: Physical"
  },
  {
-  "id": 567,
-  "year": "2015",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "8",
-  "subpart": "b",
-  "question": "Bring out the significance of a systems approach in the study of inter-relationships in geography.",
-  "marks": 15,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 568,
-  "year": "2015",
-  "paper": "Paper I",
-  "section": "B",
-  "question_no": "8",
-  "subpart": "c",
-  "question": "Critically examine the factors responsible for uneven distribution of population in the world.",
-  "marks": 15,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 569,
+  "id": 2028,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "b",
-  "question": "'Age-sex pyramid is representative of the history of a region.' Explain.",
+  "question": "Why does the pharmaceutical industry concentrate largely in the western region of the country?",
   "marks": 10,
-  "topic": "Geographical Thought & Methods"
+  "topic": "India: Industries & Economy"
  },
  {
-  "id": 570,
+  "id": 2029,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "c",
-  "question": "'Mono-functional towns are economically vulnerable.' Discuss.",
+  "question": "Explain the pattern of winter rainfall in India.",
   "marks": 10,
-  "topic": "Population & Settlement"
+  "topic": "India: Climate"
  },
  {
-  "id": 571,
+  "id": 2030,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "d",
-  "question": "Explain how change in land use can promote eco-development at different levels in the country.",
+  "question": "Discuss the relationship of watershed approach to village level planning.",
   "marks": 10,
-  "topic": "Agriculture"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 572,
+  "id": 2031,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "1",
   "subpart": "e",
-  "question": "Discuss the social and spatial ramifications of increasing longevity.",
+  "question": "How does natural vegetation affect the formation of in situ soils?",
   "marks": 10,
-  "topic": "Geographical Thought & Methods"
+  "topic": "India: Physical"
  },
  {
-  "id": 573,
+  "id": 2032,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "2",
   "subpart": "a",
-  "question": "Bring out the factors responsible for regional variation in the distribution of rainfall in India.",
+  "question": "Account for the geographical distribution of groundwater resources of India. How serious is its depletion in recent decades?",
   "marks": 20,
-  "topic": "Climatology"
+  "topic": "India: Agriculture & Resources"
  },
  {
-  "id": 574,
+  "id": 2033,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "2",
   "subpart": "b",
-  "question": "Discuss the nature and extent of the Continental Shelf of India and its resource potential.",
+  "question": "Why is the traditional crafts industry in India on the decline?",
   "marks": 15,
-  "topic": "Oceanography"
+  "topic": "India: Industries & Economy"
  },
  {
-  "id": 575,
+  "id": 2034,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "2",
   "subpart": "c",
-  "question": "Give an account of the distribution and production of manganese in India.",
-  "marks": 15,
-  "topic": "India: Physical"
- },
- {
-  "id": 576,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "a",
-  "question": "Examine the recent trends in the distribution of population in India with special reference to the urbanization process.",
-  "marks": 20,
-  "topic": "Population & Settlement"
- },
- {
-  "id": 577,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "b",
-  "question": "Explain how the surface configuration of the Deccan Plateau influences the drainage pattern.",
-  "marks": 15,
-  "topic": "India: Physical"
- },
- {
-  "id": 578,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "3",
-  "subpart": "c",
-  "question": "Discuss the scope of replication of 'White Revolution' in India.",
+  "question": "Explain how modernization of Indian agriculture is affected by unfavourable institutional factors with suitable examples.",
   "marks": 15,
   "topic": "India: Agriculture & Resources"
+ },
+ {
+  "id": 2035,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "a",
+  "question": "Distinguish between ‘agricultural productivity’ and ‘agricultural efficiency’, and bring out the disparity in regional distribution of agricultural efficiency.",
+  "marks": 20,
+  "topic": "India: Agriculture & Resources"
+ },
+ {
+  "id": 2036,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "b",
+  "question": "With the help of a map, indicate the principal areas of dryland farming in the country and account for farmers’ suicides mainly in those areas.",
+  "marks": 15,
+  "topic": "India: Agriculture & Resources"
+ },
+ {
+  "id": 2037,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "A",
+  "question_no": "3",
+  "subpart": "c",
+  "question": "Evaluate the contribution of Communication and Information Technology to the development of economy and society, and examine the relevance of the recently launched ‘Digital India’ programme.",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
  },
  {
   "id": 579,
@@ -1540,125 +1661,169 @@
   "topic": "Climatology"
  },
  {
-  "id": 581,
+  "id": 578,
   "year": "2015",
   "paper": "Paper II",
   "section": "A",
   "question_no": "4",
   "subpart": "c",
-  "question": "Outline the Government of India's strategies of conservation of the Western Ghats.",
+  "question": "Discuss the scope of replication of ‘White Revolution’ in India.",
   "marks": 15,
-  "topic": "Environmental Geography"
+  "topic": "India: Agriculture & Resources"
  },
  {
-  "id": 582,
+  "id": 2038,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "a",
+  "question": "On the outline map of India provided to you, mark the locations of all the following. Write in your QCA Booklet the significance of these locations, whether physical/commercial/economic/ecological/environmental/cultural, in not more than 30 words for each entry: (i) Nokrek (ii) Gorakhnath Peak (iii) Indrakiladri Peak (iv) Polavaram (v) Anaimudi",
+  "marks": 10,
+  "topic": "India: Physical"
+ },
+ {
+  "id": 569,
   "year": "2015",
   "paper": "Paper II",
   "section": "B",
   "question_no": "5",
   "subpart": "b",
-  "question": "Give a reasoned account of river water disputes related to the River Krishna.",
+  "question": "“Age-sex pyramid is representative of the history of a region.” Explain.",
   "marks": 10,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 570,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "c",
+  "question": "“Mono-functional towns are economically vulnerable.” Discuss.",
+  "marks": 10,
+  "topic": "Population & Settlement"
+ },
+ {
+  "id": 571,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "d",
+  "question": "Explain how change in land use can promote eco-development at different levels in the country.",
+  "marks": 10,
+  "topic": "Agriculture"
+ },
+ {
+  "id": 572,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "5",
+  "subpart": "e",
+  "question": "Discuss the social and spatial ramifications of increasing longevity.",
+  "marks": 10,
+  "topic": "Geographical Thought & Methods"
+ },
+ {
+  "id": 2039,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "a",
+  "question": "Decentralized planning through the strengthening of the Panchayat system is the focus of planning in India in recent times. Suggest a blueprint for an integrated regional development plan.",
+  "marks": 20,
   "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 2040,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "b",
+  "question": "In population planning, the thrust of the Government has been ‘planning the population’ not ‘plan for the population’. Elaborate.",
+  "marks": 15,
+  "topic": "India: Population & Urbanization"
+ },
+ {
+  "id": 2041,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "6",
+  "subpart": "c",
+  "question": "Is planning for a cluster of villages a viable option, when planning for backward areas of the country? Discuss with suitable examples.",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 2042,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "a",
+  "question": "Reduction in regional disparities has been one of the priority goals of national planning in India. How the proposed new Smart urban centres may contribute to the process?",
+  "marks": 20,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 2043,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "b",
+  "question": "How has India’s ‘Look East’ policy taken shape in the past two decades and how it may affect India’s external trade?",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
+ },
+ {
+  "id": 2044,
+  "year": "2015",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "7",
+  "subpart": "c",
+  "question": "Indian island territories are vulnerable to the sea level rise. Explain.",
+  "marks": 15,
+  "topic": "India: Climate"
  },
  {
   "id": 583,
   "year": "2015",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "5",
-  "subpart": "c",
+  "question_no": "8",
+  "subpart": "a",
   "question": "Discuss the concept of multi-level planning as practised in India, and explain the implications of 73rd and 74th Constitutional Amendments in this respect.",
-  "marks": 10,
+  "marks": 20,
   "topic": "India: Population & Urbanization"
  },
  {
-  "id": 584,
+  "id": 582,
   "year": "2015",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "5",
-  "subpart": "d",
-  "question": "Assess the economic significance of the National Waterways of India.",
-  "marks": 10,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 585,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "5",
-  "subpart": "e",
-  "question": "Examine the strategy for tribal development in India.",
-  "marks": 10,
-  "topic": "India: Physical"
- },
- {
-  "id": 586,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "6",
-  "subpart": "a",
-  "question": "Examine the spatial distribution of iron and steel industry in India.",
-  "marks": 20,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 587,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "6",
+  "question_no": "8",
   "subpart": "b",
-  "question": "Explain the basis of agricultural regionalization in India.",
+  "question": "Give a reasoned account of river water disputes related to the River Krishna.",
   "marks": 15,
-  "topic": "Agriculture"
+  "topic": "India: Transport & Regional Development"
  },
  {
-  "id": 588,
+  "id": 581,
   "year": "2015",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "6",
+  "question_no": "8",
   "subpart": "c",
-  "question": "Critically examine the theories of Industrial location with reference to India.",
+  "question": "Outline the Government of India’s strategies of conservation of the Western Ghats.",
   "marks": 15,
-  "topic": "Industries"
- },
- {
-  "id": 589,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "7",
-  "subpart": "a",
-  "question": "Discuss the impact of post-independence agricultural policies on the spatial patterns of agricultural development in India.",
-  "marks": 20,
-  "topic": "Geographical Thought & Methods"
- },
- {
-  "id": 590,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "7",
-  "subpart": "b",
-  "question": "Evaluate the role of sea ports in the economic development of India.",
-  "marks": 15,
-  "topic": "Transport & Trade"
- },
- {
-  "id": 591,
-  "year": "2015",
-  "paper": "Paper II",
-  "section": "B",
-  "question_no": "7",
-  "subpart": "c",
-  "question": "Discuss the factors responsible for the uneven distribution of industries in India.",
-  "marks": 15,
-  "topic": "Industries"
+  "topic": "Environmental Geography"
  },
  {
   "id": 1361,
@@ -1678,7 +1843,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "b",
-  "question": "Differentiate between insolation and temperature and _ explain anomalous temperature.",
+  "question": "Differentiate between insolation and temperature and explain anomalous temperature.",
   "marks": 10,
   "topic": "Climatology"
  },
@@ -1788,7 +1953,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Bring out the various ecological problems associated with | the exploitation and use of oceans and their resources.",
+  "question": "Bring out the various ecological problems associated with the exploitation and use of oceans and their resources.",
   "marks": 20,
   "topic": "Oceanography"
  },
@@ -1898,7 +2063,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "What is a ‘region’ ? Describe ‘Thiessen’ polygon method of regional ——delimitation.",
+  "question": "What is a ‘region’? Describe ‘Thiessen’ polygon method of regional delimitation.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -1953,7 +2118,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "b",
-  "question": "“Linkages between resource-endowed regions and resource-utilizing regions determine the pattern of international trade.”",
+  "question": "“Linkages between resource-endowed regions and resource-utilizing regions determine the pattern of international trade.” Elaborate with suitable examples.",
   "marks": 15,
   "topic": "Transport & Trade"
  },
@@ -1964,7 +2129,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "In what ways can geographers contribute towards optimal land use planning in a region ?",
+  "question": "In what ways can geographers contribute towards optimal land use planning in a region?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -2272,7 +2437,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "a",
-  "question": "* Write a note on pseudovolcanic features.",
+  "question": "Write a note on pseudovolcanic features.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -2404,7 +2569,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "b",
-  "question": "“Climate, slope gradient and rock structure influence the avulsion of -channels.” Explain.",
+  "question": "“Climate, slope gradient and rock structure influence the avulsion of channels.” Explain.",
   "marks": 15,
   "topic": "Climatology"
  },
@@ -2910,7 +3075,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Distinguish between intrazonal and azonal soils, Describe in brief the characteristics and importance of azonal soils.",
+  "question": "Distinguish between intrazonal and azonal soils. Describe in brief the characteristics and importance of azonal soils.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -2932,7 +3097,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "a",
-  "question": "Evaluate how far Kober’s geosynclinal theory explains the mountain building process, 2) '",
+  "question": "Evaluate how far Kober’s geosynclinal theory explains the mountain building process.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -2987,7 +3152,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "c",
-  "question": "“Controlling population growth is the sustainable solution to environmental problems.”",
+  "question": "“Controlling population growth is the sustainable solution to environmental problems.” Express your views with suitable arguments.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -3020,7 +3185,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "c",
-  "question": "Diseuss the causes of degradation of tropical rainforests and suggest remedial measures for their prevention, conservation and development.",
+  "question": "Discuss the causes of degradation of tropical rainforests and suggest remedial measures for their prevention, conservation and development.",
   "marks": 15,
   "topic": "Biogeography"
  },
@@ -3097,7 +3262,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "b",
-  "question": "Citing examples from Asia and Europe, comment upon the contexts within which pronatalist population policies are advanced. What could be the implications of these policies on women's workforce participation ?",
+  "question": "Citing examples from Asia and Europe, comment upon the contexts within which pronatalist population policies are advanced. What could be the implications of these policies on women's workforce participation?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -3108,7 +3273,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "Comment upon the contributions of 0.0, Smith in outlining ‘welfare’ as a key focus in the geographies of social well-being.",
+  "question": "Comment upon the contributions of D.M. Smith in outlining ‘welfare’ as a key focus in the geographies of social well-being.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -3119,7 +3284,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "“Famine is a social phenomena rooted in institutional anc political 5 economic arrangements, which determine access to food by different * classes and strata.” Comment.",
+  "question": "“Famine is a social phenomena rooted in institutional and political economic arrangements, which determine access to food by different classes and strata.” Comment.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -3130,7 +3295,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "b",
-  "question": "Provide a brief outline of ideas related to “sense of place” as propounded by Yi-Fu Tuan and Relph in the humanistic geography that emerged in i the 1970's.",
+  "question": "Provide a brief outline of ideas related to “sense of place” as propounded by Yi-Fu Tuan and Relph in the humanistic geography that emerged in the 1970's.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -3207,7 +3372,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "Why setting up of Water Management Boards ts a controversial issue in India?",
+  "question": "Why setting up of Water Management Boards is a controversial issue in India?",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -3218,7 +3383,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Keeping the recent developments in view, how can the energy crisis of India be . circumvented by harnessing non-conventional energy resources ?",
+  "question": "Keeping the recent developments in view, how can the energy crisis of India be circumvented by harnessing non-conventional energy resources?",
   "marks": 10,
   "topic": "India: Agriculture & Resources"
  },
@@ -3229,7 +3394,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "a",
-  "question": "Distinguish the geographical aspects of North-Western lava plateau and Chotanagpur plateau of peninsular India,",
+  "question": "Distinguish the geographical aspects of North-Western lava plateau and Chotanagpur plateau of peninsular India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3262,7 +3427,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "a",
-  "question": "Examine the ongoing process of agricultural diversification and its implications for food security in India, 20)",
+  "question": "Examine the ongoing process of agricultural diversification and its implications for food security in India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3284,7 +3449,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "c",
-  "question": "Critically assess the vanishing cthnic linguistic plurality of India.",
+  "question": "Critically assess the vanishing ethnic linguistic plurality of India.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -3295,7 +3460,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Examine the diving forces of changing urban morphology of million-plus cities of India with suitable examples.",
+  "question": "Examine the driving forces of changing urban morphology of million-plus cities of India with suitable examples.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3350,7 +3515,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "c",
-  "question": "Make a critical appraisal of the factors affecting river water quality India.",
+  "question": "Make a critical appraisal of the factors affecting river water quality in India.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -3361,7 +3526,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "d",
-  "question": "Examine the role of people’s participation in successful decentralised planning im India.",
+  "question": "Examine the role of people’s participation in successful decentralised planning in India.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -3372,7 +3537,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "e",
-  "question": "Describe the socie-spatial consequences of the recent Nipah viral encephalitis in ‘ India.",
+  "question": "Describe the socio-spatial consequences of the recent Nipah viral encephalitis in India.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -3383,7 +3548,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "lustrate with suitable examples the endeavours undertaken in augmenting conservation of water and vegetation in India.",
+  "question": "Illustrate with suitable examples the endeavours undertaken in augmenting conservation of water and vegetation in India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3449,7 +3614,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "Describe the changing regional morphology of rural settlements in India,",
+  "question": "Describe the changing regional morphology of rural settlements in India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3460,7 +3625,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "b",
-  "question": "Startups may play important role in giving fillip to economic growth in India. | Illustrate with examples.",
+  "question": "Startups may play important role in giving fillip to economic growth in India. Illustrate with examples.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -3471,7 +3636,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "Is the land boundary of India with its neighbouring countries a cultural divide or divided culture ? Explain with suitable examples.",
+  "question": "Is the land boundary of India with its neighbouring countries a cultural divide or divided culture? Explain with suitable examples.",
   "marks": 15,
   "topic": "India: Transport & Regional Development"
  },
@@ -3691,7 +3856,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "HDI has brought about a paradigm shift in the way people think about the development process.",
+  "question": "HDI has brought about a paradigm shift in the way people think about the development process. Critically examine the inherent limitations of HDI.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -3812,7 +3977,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "Why is the Indian Monsoon erratic in nature ? Explain.",
+  "question": "Why is the Indian Monsoon erratic in nature? Explain.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -3900,7 +4065,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Discuss the political aspects of Himalaya. Explain how it has affected 06... geo-strategy, geo-politics and regional consciousness of Indian federalism.",
+  "question": "Discuss the political aspects of Himalaya. Explain how it has affected the geo-strategy, geo-politics and regional consciousness of Indian federalism.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -3922,7 +4087,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "c",
-  "question": "Ri Explain the present status of age-structure and availability of workforce in India.",
+  "question": "Explain the present status of age-structure and availability of workforce in India.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -3955,7 +4120,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "c",
-  "question": "Correlate the price of land, vertical growth of cities and the growth of slums in large cities of India. 10 5 .",
+  "question": "Correlate the price of land, vertical growth of cities and the growth of slums in large cities of India.",
   "marks": 10,
   "topic": "India: Population & Urbanization"
  },
@@ -3988,7 +4153,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "“Intrabasins linkages of rivers are more feasible economically, socially and ; ecologically”. Discuss with suitable examples from India.",
+  "question": "“Intrabasins linkages of rivers are more feasible economically, socially and ecologically”. Discuss with suitable examples from India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -4010,7 +4175,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "Explain the relevance of green tourism for sustainable development of mountain : environment in India.",
+  "question": "Explain the relevance of green tourism for sustainable development of mountain environment in India.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -4043,7 +4208,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "c",
-  "question": "Analyse the incentive oriented programmes for removing regional imbalances in. socio-economic development of India.",
+  "question": "Analyse the incentive oriented programmes for removing regional imbalances in socio-economic development of India.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -4285,7 +4450,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "e",
-  "question": "Write a note on the relevance of von Thiinen’s agricultural location theory in - the present context.",
+  "question": "Write a note on the relevance of von Thünen’s agricultural location theory in the present context.",
   "marks": 10,
   "topic": "Economic Geography"
  },
@@ -4428,7 +4593,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Has the regional aspiration of the people of Jammu and Kashmir been addressed through re-organisation of the state ? Make an assessment.",
+  "question": "Has the regional aspiration of the people of Jammu and Kashmir been addressed through re-organisation of the state? Make an assessment.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -4505,7 +4670,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Border area development is an important national priority. What are the resilient steps needed for peaceful borders ?",
+  "question": "Border area development is an important national priority. What are the resilient steps needed for peaceful borders?",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -4538,7 +4703,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "a",
-  "question": "The success of Panchayati Raj depends upon meaningful participation of people at ' grassroot level. Examine.",
+  "question": "The success of Panchayati Raj depends upon meaningful participation of people at grassroot level. Examine.",
   "marks": 10,
   "topic": "India: Population & Urbanization"
  },
@@ -4571,7 +4736,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "d",
-  "question": "The pattern of growing ecological foot-prints is uneven nature. Analyse with reference to land resources in India.",
+  "question": "The pattern of growing ecological foot-prints is uneven in nature. Analyse with reference to land resources in India.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -4604,7 +4769,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "b",
-  "question": "Avalanche is a major hazard in the Himalayas. What are its causes and mitigation measures ?",
+  "question": "Avalanche is a major hazard in the Himalayas. What are its causes and mitigation measures?",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -4681,7 +4846,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "What kind of skill promotion programmes have been initiated for job deficient regions in India ? Explain.",
+  "question": "What kind of skill promotion programmes have been initiated for job deficient regions in India? Explain.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -4703,7 +4868,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "b",
-  "question": "What are the important factors responsible for airmass modifications ?",
+  "question": "What are the important factors responsible for airmass modifications?",
   "marks": 10,
   "topic": "Climatology"
  },
@@ -4725,7 +4890,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Gene pool centres are ‘Good Hope’ for biodiversity conservation.-Elucidate.",
+  "question": "Gene pool centres are ‘Good Hope’ for biodiversity conservation. Elucidate.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -4747,7 +4912,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "a",
-  "question": "The concept of Plate tectonics has been derived from the isostasy and continental — - drift theory. Elaborate citing suitable examples.",
+  "question": "The concept of Plate tectonics has been derived from the isostasy and continental drift theory. Elaborate citing suitable examples.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -4813,7 +4978,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "With suitable examples, elaborate human ecological adaptations. Explain its impacts - on ecology and environment in various parts of the world.",
+  "question": "With suitable examples, elaborate human ecological adaptations. Explain its impacts on ecology and environment in various parts of the world.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -4857,7 +5022,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "b",
-  "question": "How is energy transition seen as an instrument for achieving zero carbon by 2050 ?",
+  "question": "How is energy transition seen as an instrument for achieving zero carbon by 2050?",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -4945,7 +5110,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "b",
-  "question": "Boundaries are important in geopolitics. Explain. What issues develop from the inclusionary and exclusionary aspects of borders ?",
+  "question": "Boundaries are important in geopolitics. Explain. What issues develop from the inclusionary and exclusionary aspects of borders?",
   "marks": 15,
   "topic": "Transport & Trade"
  },
@@ -4967,7 +5132,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "Why is radicalism seen as a major paradigm shift in geography ? Explain its causes, approaches and criticism.",
+  "question": "Why is radicalism seen as a major paradigm shift in geography? Explain its causes, approaches and criticism.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -5198,7 +5363,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "Explain the impact of tropical cyclones and western disturbances on the _ Climate of India.",
+  "question": "Explain the impact of tropical cyclones and western disturbances on the climate of India.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -5308,7 +5473,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "b",
-  "question": "What are the high altitude environmental hazards ? Explain with suitable examples.",
+  "question": "What are the high altitude environmental hazards? Explain with suitable examples.",
   "marks": 10,
   "topic": "Disasters & Hazards"
  },
@@ -5319,7 +5484,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "What is pollution dome ? Discuss its formation and impacts.",
+  "question": "What is pollution dome? Discuss its formation and impacts.",
   "marks": 10,
   "topic": "Environmental Geography"
  },
@@ -5363,7 +5528,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "b",
-  "question": "Explain how various aspects of channel morphology are used in transportation, settlement and land use planning, flood control and flood management ?",
+  "question": "Explain how various aspects of channel morphology are used in transportation, settlement and land use planning, flood control and flood management?",
   "marks": 15,
   "topic": "Population & Settlement"
  },
@@ -5374,7 +5539,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "c",
-  "question": "What is the relationship between ocean currents and global surface wind systems ? Explain with examples how does the gyre in the Northern Hemisphere differ from the one in the Southern Hemisphere.",
+  "question": "What is the relationship between ocean currents and global surface wind systems? Explain with examples how does the gyre in the Northern Hemisphere differ from the one in the Southern Hemisphere.",
   "marks": 15,
   "topic": "Oceanography"
  },
@@ -5429,7 +5594,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "b",
-  "question": "Describe how short term variations in temperature are related to the processes . receiving energy from the sun to the Earth’s surface and dissipating it to the atmosphere. '",
+  "question": "Describe how short term variations in temperature are related to the processes of receiving energy from the sun to the Earth’s surface and dissipating it to the atmosphere.",
   "marks": 15,
   "topic": "Climatology"
  },
@@ -5572,7 +5737,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "How migration is affected by push and pull factors ? Explain how these factors play a role in understanding new settlement patterns.",
+  "question": "How migration is affected by push and pull factors? Explain how these factors play a role in understanding new settlement patterns.",
   "marks": 20,
   "topic": "Population & Settlement"
  },
@@ -5594,7 +5759,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "Discuss the concept of ‘Rank-Size-Rule’ given by G. K. Zipf. Is this rule relevant in Indian context ?",
+  "question": "Discuss the concept of ‘Rank-Size-Rule’ given by G. K. Zipf. Is this rule relevant in Indian context?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -5616,7 +5781,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "b",
-  "question": "Why has extreme particulate pollution remained a festering issue in Delhi NCR region ?",
+  "question": "Why has extreme particulate pollution remained a festering issue in Delhi NCR region?",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -5627,7 +5792,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "How do physiography and climate of India explain the biological diversity of the country ?",
+  "question": "How do physiography and climate of India explain the biological diversity of the country?",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -5638,7 +5803,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "The process of desertification. 18803 to soil desiccation and soil loss. : Explain.",
+  "question": "The process of desertification leads to soil desiccation and soil loss. Explain.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -5671,7 +5836,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "c",
-  "question": "* Groundwater contamination in the fast expanding urban landscape of India appears to have become a major public health issue. Discuss.",
+  "question": "Groundwater contamination in the fast expanding urban landscape of India appears to have become a major public health issue. Discuss.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -5704,7 +5869,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "c",
-  "question": "Soils of India, are clear reflections of the structure and process. Comment. .",
+  "question": "Soils of India, are clear reflections of the structure and process. Comment.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -5759,7 +5924,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "b",
-  "question": "Can the Panchayat Raj institutions play a role in grassroot level planning in India ? If yes, discuss how.",
+  "question": "Can the Panchayat Raj institutions play a role in grassroot level planning in India? If yes, discuss how.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -5781,7 +5946,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "d",
-  "question": "How would decline in Total Fertility Rate (TFR) below the replacement level, in many states of India affect the future population structure of the country ?",
+  "question": "How would decline in Total Fertility Rate (TFR) below the replacement level, in many states of India affect the future population structure of the country?",
   "marks": 10,
   "topic": "India: Population & Urbanization"
  },
@@ -5803,7 +5968,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "Why do disparities in development and incomes between regions persist in large countries like India ? How does the recent ADP plan address the issue ?",
+  "question": "Why do disparities in development and incomes between regions persist in large countries like India? How does the recent ADP plan address the issue?",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -5825,7 +5990,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "Examine the role of high population concentration in Indian slums in making them more vulnerable during pandemic conditions like the",
+  "question": "Examine the role of high population concentration in Indian slums in making them more vulnerable during pandemic conditions like the COVID-19.",
   "marks": 15,
   "topic": "India: Population & Urbanization"
  },
@@ -5858,7 +6023,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "c",
-  "question": "What are the drivers of urban sprawl around the major cities of the country ? How have new investments in transport projects supported sprawl development ?",
+  "question": "What are the drivers of urban sprawl around the major cities of the country? How have new investments in transport projects supported sprawl development?",
   "marks": 15,
   "topic": "India: Transport & Regional Development"
  },
@@ -5869,7 +6034,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "How do agro-climatic and land capability indicators assist in macro-agricultural regionalisation of India ? Illustrate with an appropriate map.",
+  "question": "How do agro-climatic and land capability indicators assist in macro-agricultural regionalisation of India? Illustrate with an appropriate map.",
   "marks": 20,
   "topic": "India: Agriculture & Resources"
  },
@@ -5902,7 +6067,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "a",
-  "question": "What is “Geostrophic Wind” ? Explain the relationship between barometric slope and air circulation.",
+  "question": "What is “Geostrophic Wind”? Explain the relationship between barometric slope and air circulation.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -5913,7 +6078,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "b",
-  "question": "What is ocean ranching ? How are aqua-cowboys related to such activities?",
+  "question": "What is ocean ranching? How are aqua-cowboys related to such activities?",
   "marks": 10,
   "topic": "Oceanography"
  },
@@ -5935,7 +6100,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Deep Ecology’ as a concept different from ‘Shallow Ecology’ ? Explain.",
+  "question": "How is ‘Deep Ecology’ as a concept different from ‘Shallow Ecology’? Explain.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -5946,7 +6111,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "e",
-  "question": "What are the environmental implications of economic geology ? Discuss.",
+  "question": "What are the environmental implications of economic geology? Discuss.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -5979,7 +6144,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "c",
-  "question": "How are ocean currents generated ? Discuss their effects on coastal climates with special reference to the Pacific Ocean.",
+  "question": "How are ocean currents generated? Discuss their effects on coastal climates with special reference to the Pacific Ocean.",
   "marks": 15,
   "topic": "Oceanography"
  },
@@ -5990,7 +6155,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "a",
-  "question": "What are the causes of origin of local winds ? Discuss their significance on prevailing weather and climate in various regions, with suitable examples.",
+  "question": "What are the causes of origin of local winds? Discuss their significance on prevailing weather and climate in various regions, with suitable examples.",
   "marks": 20,
   "topic": "Climatology"
  },
@@ -6012,7 +6177,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "c",
-  "question": "What are the factors affecting regional ecological changes ? How do these affect human health ?",
+  "question": "What are the factors affecting regional ecological changes? How do these affect human health?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -6023,7 +6188,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Give an account of marine resources and their economic significance. How has marine pollution affected such resources ?",
+  "question": "Give an account of marine resources and their economic significance. How has marine pollution affected such resources?",
   "marks": 20,
   "topic": "Environmental Geography"
  },
@@ -6045,7 +6210,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "c",
-  "question": "How does inversion of temperature occur ? Explain its significance on local weather with suitable examples.",
+  "question": "How does inversion of temperature occur? Explain its significance on local weather with suitable examples.",
   "marks": 15,
   "topic": "Climatology"
  },
@@ -6122,7 +6287,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "b",
-  "question": "What is the relation between gender equity and human development ? Provide a list of commonly used gender related indices.",
+  "question": "What is the relation between gender equity and human development? Provide a list of commonly used gender related indices.",
   "marks": 15,
   "topic": "Population & Settlement"
  },
@@ -6133,7 +6298,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "Explain population, resource use and development nexus in the Limits to Growth Model. Why has this model been criticized intensively ?",
+  "question": "Explain population, resource use and development nexus in the Limits to Growth Model. Why has this model been criticized intensively?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -6144,7 +6309,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "Explain with suitable diagrams A. Losch’s model of the Theory of Location related to Central Places. Why has this been criticized ?",
+  "question": "Explain with suitable diagrams A. Losch’s model of the Theory of Location related to Central Places. Why has this been criticized?",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -6155,7 +6320,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "b",
-  "question": "How can Sustainable Land Management (SLM) harmonise the complimentary goals of environmental, economic and social opportunities ? Discuss.",
+  "question": "How can Sustainable Land Management (SLM) harmonise the complimentary goals of environmental, economic and social opportunities? Discuss.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -6254,7 +6419,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "a",
-  "question": "Examine the environmental challenges caused by the solid waste in metropolitan regions of India and discuss the efforts to overcome it,",
+  "question": "Examine the environmental challenges caused by the solid waste in metropolitan regions of India and discuss the efforts to overcome it.",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -6507,7 +6672,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "a",
-  "question": "What are ‘truncated spurs’ ? Where and how are they formed ?",
+  "question": "What are ‘truncated spurs’? Where and how are they formed?",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -6606,7 +6771,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "b",
-  "question": "Tagg | “Soil erosion is creeping death.” Explaining the statement, suggest various soil conservation measures.",
+  "question": "“Soil erosion is creeping death.” Explaining the statement, suggest various soil conservation measures.",
   "marks": 15,
   "topic": "Geomorphology"
  },
@@ -6628,7 +6793,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "How is carbon neutrality essential for future environmental conservation ? Describe various efforts taken by nations in this regard.",
+  "question": "How is carbon neutrality essential for future environmental conservation? Describe various efforts taken by nations in this regard.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -6639,7 +6804,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "b",
-  "question": "What is a Yazoo stream ? Why are Yazoo basins the areas of repeated flooding ? Give examples of Yazoo stream/areas from various parts of the world.",
+  "question": "What is a Yazoo stream? Why are Yazoo basins the areas of repeated flooding? Give examples of Yazoo stream/areas from various parts of the world.",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -6694,7 +6859,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "d",
-  "question": "There is a need for gender-sensitive regional development. Elaborate. ..",
+  "question": "There is a need for gender-sensitive regional development. Elaborate.",
   "marks": 10,
   "topic": "Geographical Thought & Methods"
  },
@@ -6749,7 +6914,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "' Explain the basis of D. Whittlesey’s classification of agricultural regions of the world.",
+  "question": "Explain the basis of D. Whittlesey’s classification of agricultural regions of the world.",
   "marks": 20,
   "topic": "Agriculture"
  },
@@ -6760,7 +6925,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "b",
-  "question": "What is Transnationalism ? Why has the scale and scope of transnational linkages of diaspora multiplied in recent times ?",
+  "question": "What is Transnationalism? Why has the scale and scope of transnational linkages of diaspora multiplied in recent times?",
   "marks": 15,
   "topic": "Geographical Thought & Methods"
  },
@@ -6782,7 +6947,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "What is complementary region ? With reference to hierarchy of settlements, describe the different types of complementary regions as proposed by Christaller.",
+  "question": "What is complementary region? With reference to hierarchy of settlements, describe the different types of complementary regions as proposed by Christaller.",
   "marks": 20,
   "topic": "Population & Settlement"
  },
@@ -6820,23 +6985,12 @@
   "topic": "India: Physical"
  },
  {
-  "id": 1830,
-  "year": "2024",
-  "paper": "Paper II",
-  "section": "A",
-  "question_no": "Q1",
-  "subpart": "b",
-  "question": "20\" N road 20° N \\ ¢ ~ e .",
-  "marks": 10,
-  "topic": "India: Physical"
- },
- {
   "id": 1831,
   "year": "2024",
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q1",
-  "subpart": "c",
+  "subpart": "b",
   "question": "Discuss the basis of various explanations for the formation of Shiwalik.",
   "marks": 10,
   "topic": "India: Physical"
@@ -6847,7 +7001,7 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q1",
-  "subpart": "d",
+  "subpart": "c",
   "question": "Conservation and breeding centres are important components of the Action Plan for Vulture Conservation, 2020-2025. Why?",
   "marks": 10,
   "topic": "India: Physical"
@@ -6857,10 +7011,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "A",
-  "question_no": "Q2",
-  "subpart": "a",
+  "question_no": "Q1",
+  "subpart": "d",
   "question": "North-Eastern States of India are geopolitically sensitive and strategically significant. Explain.",
-  "marks": 20,
+  "marks": 10,
   "topic": "India: Physical"
  },
  {
@@ -6869,9 +7023,9 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q2",
-  "subpart": "b",
+  "subpart": "a",
   "question": "Institutional factors are playing a dominant role in controlling the agricultural prosperity in India. Justify with evidences.",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Physical"
  },
  {
@@ -6880,8 +7034,8 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q2",
-  "subpart": "c",
-  "question": "The Indian Space Policy, 2023 supports the commercial presence in space.",
+  "subpart": "b",
+  "question": "The Indian Space Policy, 2023 supports the commercial presence in space. In what ways will it benefit the socio-economic development and security of India?",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -6890,10 +7044,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "A",
-  "question_no": "Q3",
-  "subpart": "a",
+  "question_no": "Q2",
+  "subpart": "c",
   "question": "Discuss the process of formation of conurbations in India and describe their problems.",
-  "marks": 20,
+  "marks": 15,
   "topic": "India: Physical"
  },
  {
@@ -6902,9 +7056,9 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q3",
-  "subpart": "b",
+  "subpart": "a",
   "question": "India has wide-ranging regional disparities in economic development. Explain the patterns, implications and challenges.",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Physical"
  },
  {
@@ -6913,7 +7067,7 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q3",
-  "subpart": "c",
+  "subpart": "b",
   "question": "Discuss the variations in nature of glaciers in India and the emerging issues due to climate change.",
   "marks": 15,
   "topic": "India: Physical"
@@ -6923,10 +7077,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "A",
-  "question_no": "Q4",
-  "subpart": "a",
+  "question_no": "Q3",
+  "subpart": "c",
   "question": "Domestic tourism in India has immense local resource potential. Discuss the reasons and its various dimensions.",
-  "marks": 20,
+  "marks": 15,
   "topic": "India: Physical"
  },
  {
@@ -6935,9 +7089,9 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q4",
-  "subpart": "b",
+  "subpart": "a",
   "question": "Migration is the reflection of regional disparities. What socio-economic and demographic consequences are experienced at the place of origin and destination?",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Population & Urbanization"
  },
  {
@@ -6946,7 +7100,7 @@
   "paper": "Paper II",
   "section": "A",
   "question_no": "Q4",
-  "subpart": "c",
+  "subpart": "b",
   "question": "In spite of various tribal area development programmes in India, tribal areas still lag behind. Discuss critically with examples.",
   "marks": 15,
   "topic": "India: Physical"
@@ -6955,11 +7109,11 @@
   "id": 1842,
   "year": "2024",
   "paper": "Paper II",
-  "section": "B",
-  "question_no": "Q5",
-  "subpart": "a",
+  "section": "A",
+  "question_no": "Q4",
+  "subpart": "c",
   "question": "Water scarcity is an important cause of disputes and conflicts in India. Suggest innovative methods for location-based solutions.",
-  "marks": 10,
+  "marks": 15,
   "topic": "India: Physical"
  },
  {
@@ -6968,7 +7122,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q5",
-  "subpart": "b",
+  "subpart": "a",
   "question": "How are geographic factors influencing the distribution of high annual rainfall in certain parts of India?",
   "marks": 10,
   "topic": "India: Physical"
@@ -6979,7 +7133,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q5",
-  "subpart": "c",
+  "subpart": "b",
   "question": "Indian population belongs to large number of races. Discuss the spatial distribution of major races.",
   "marks": 10,
   "topic": "India: Population & Urbanization"
@@ -6990,7 +7144,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q5",
-  "subpart": "d",
+  "subpart": "c",
   "question": "Examine the transitional role of technology on Indian agriculture sector.",
   "marks": 10,
   "topic": "India: Physical"
@@ -7001,7 +7155,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q5",
-  "subpart": "e",
+  "subpart": "d",
   "question": "Describe the area-specific strategies for the development of drought-prone areas in India.",
   "marks": 10,
   "topic": "India: Physical"
@@ -7011,10 +7165,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "Q6",
-  "subpart": "a",
+  "question_no": "Q5",
+  "subpart": "e",
   "question": "Examine the relationship between seaports and regional development in India.",
-  "marks": 20,
+  "marks": 10,
   "topic": "India: Transport & Regional Development"
  },
  {
@@ -7023,9 +7177,9 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q6",
-  "subpart": "b",
+  "subpart": "a",
   "question": "Industrial waste is diversified. Discuss the potentials and challenges associated with it.",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Industries & Economy"
  },
  {
@@ -7034,7 +7188,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q6",
-  "subpart": "c",
+  "subpart": "b",
   "question": "How is cultural background of States of India reflected in the attributes of sex and age structure?",
   "marks": 15,
   "topic": "India: Physical"
@@ -7044,10 +7198,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "Q7",
-  "subpart": "a",
-  "question": "Discuss the targets of focused interventions of the Jal Shakti Abhiyan : Catch the Rain, 2024 in rural and urban areas.",
-  "marks": 20,
+  "question_no": "Q6",
+  "subpart": "c",
+  "question": "Discuss the targets of focused interventions of the Jal Shakti Abhiyan: Catch the Rain, 2024 in rural and urban areas.",
+  "marks": 15,
   "topic": "India: Physical"
  },
  {
@@ -7056,9 +7210,9 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q7",
-  "subpart": "b",
+  "subpart": "a",
   "question": "India is playing a very significant role in world affairs. Examine the stands taken by India in important global and regional summits.",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Physical"
  },
  {
@@ -7067,7 +7221,7 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q7",
-  "subpart": "c",
+  "subpart": "b",
   "question": "The 73rd Constitutional Amendment Act devolved functions, finances and functionaries for planning of rural areas in India. Discuss the major achievements with examples.",
   "marks": 15,
   "topic": "India: Physical"
@@ -7077,10 +7231,10 @@
   "year": "2024",
   "paper": "Paper II",
   "section": "B",
-  "question_no": "Q8",
-  "subpart": "a",
+  "question_no": "Q7",
+  "subpart": "c",
   "question": "How do small and fragmented landholdings affect the agro-ecological system in rural India? What are the resilient steps needed to overcome this issue?",
-  "marks": 20,
+  "marks": 15,
   "topic": "India: Physical"
  },
  {
@@ -7089,9 +7243,9 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q8",
-  "subpart": "b",
+  "subpart": "a",
   "question": "How can morphology of Indian towns be described historically? Discuss the major features of the first planned city in India after independence.",
-  "marks": 15,
+  "marks": 20,
   "topic": "India: Physical"
  },
  {
@@ -7100,10 +7254,21 @@
   "paper": "Paper II",
   "section": "B",
   "question_no": "Q8",
-  "subpart": "c",
+  "subpart": "b",
   "question": "Health is the outcome of interaction between physical setting, cultural traits and ecological connection. Explain.",
   "marks": 15,
   "topic": "India: Physical"
+ },
+ {
+  "id": 2046,
+  "year": "2024",
+  "paper": "Paper II",
+  "section": "B",
+  "question_no": "Q8",
+  "subpart": "c",
+  "question": "What are the major regional rapid transit systems developed in India? How are urban problems being addressed by them?",
+  "marks": 15,
+  "topic": "India: Transport & Regional Development"
  },
  {
   "id": 1856,
@@ -7442,7 +7607,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "How does Himalayan ecosystem regulate the cropping pattern and agricultural activities in Himalayan region of India ? Discuss.",
+  "question": "How does Himalayan ecosystem regulate the cropping pattern and agricultural activities in Himalayan region of India? Discuss.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -7475,7 +7640,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "b",
-  "question": "Why are coral reefs in India most important with respect to its dynamic ecosystem ? Explore.",
+  "question": "Why are coral reefs in India most important with respect to its dynamic ecosystem? Explore.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -7486,7 +7651,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "c",
-  "question": "How does the agricultural sector of India confront with the contemporary physical and politico-economic changes in the different regions of the country ? Elucidate.",
+  "question": "How does the agricultural sector of India confront with the contemporary physical and politico-economic changes in the different regions of the country? Elucidate.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -7497,7 +7662,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "a",
-  "question": "Why is the pattern of population distribution of scheduled castes and scheduled tribes different in India ? Compare their socio-economic problems with examples.",
+  "question": "Why is the pattern of population distribution of scheduled castes and scheduled tribes different in India? Compare their socio-economic problems with examples.",
   "marks": 20,
   "topic": "India: Population & Urbanization"
  },
@@ -7508,7 +7673,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "b",
-  "question": "Highlight the characteristics of land utilisation in Eastern Ghats region of India. What are the recent threats to land utilisation method in the region ?",
+  "question": "Highlight the characteristics of land utilisation in Eastern Ghats region of India. What are the recent threats to land utilisation method in the region?",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -7541,7 +7706,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "b",
-  "question": "Why cottage industries in India are an integral part of Indian socio-economic structure ? Assess this with reference to different types of cottage industries in rural India.",
+  "question": "Why cottage industries in India are an integral part of Indian socio-economic structure? Assess this with reference to different types of cottage industries in rural India.",
   "marks": 15,
   "topic": "India: Industries & Economy"
  },
@@ -7563,7 +7728,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "a",
-  "question": "How can rural-urban fringe be delineated ? Explain with suitable examples from India.",
+  "question": "How can rural-urban fringe be delineated? Explain with suitable examples from India.",
   "marks": 10,
   "topic": "India: Physical"
  },
@@ -7618,7 +7783,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "Describe the causes of the phenomenon of ‘urban heat island’. What are the effective measures to deal with this phenomenon in India ?",
+  "question": "Describe the causes of the phenomenon of ‘urban heat island’. What are the effective measures to deal with this phenomenon in India?",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -7640,7 +7805,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "c",
-  "question": "What are the key features of sex-ratio of population in India ? Evaluate the impacts of child sex-ratio on general sex-ratio in the country.",
+  "question": "What are the key features of sex-ratio of population in India? Evaluate the impacts of child sex-ratio on general sex-ratio in the country.",
   "marks": 15,
   "topic": "India: Population & Urbanization"
  },
@@ -7651,7 +7816,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "Explain the factors that contribute to droughts in India with specific reference to food production, distribution and availability. Can Indian agricultural policies resolve the issue ?",
+  "question": "Explain the factors that contribute to droughts in India with specific reference to food production, distribution and availability. Can Indian agricultural policies resolve the issue?",
   "marks": 20,
   "topic": "India: Physical"
  },
@@ -7662,7 +7827,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "b",
-  "question": "What are the causes and consequences of land degradation due to desertification in India ? Examine with reference to various regional issues.",
+  "question": "What are the causes and consequences of land degradation due to desertification in India? Examine with reference to various regional issues.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -7706,7 +7871,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "With reference to international boundaries of India, discuss the related issues, giving suitable examples. 15 | 7 .. SLPM-B-GEG TREE vee ae Sir, aga - ee ee ees sot wea: tater? \"sy. sp 6 25311 SEGUE: ew Te TMA eS nga eg 0 nal Sere See ee ag yr Ae Pe ae eS all age ms a eS ae?",
+  "question": "With reference to international boundaries of India, discuss the related issues, giving suitable examples.",
   "marks": 15,
   "topic": "India: Physical"
  },
@@ -7717,7 +7882,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "a",
-  "question": "What is ‘Helical’ flow ? How Helical flow accounts for meander modifications ?",
+  "question": "What is ‘Helical’ flow? How Helical flow accounts for meander modifications?",
   "marks": 10,
   "topic": "Geomorphology"
  },
@@ -7739,7 +7904,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "c",
-  "question": "How are seamounts and Guyots the same and different ? Comment.",
+  "question": "How are seamounts and Guyots the same and different? Comment.",
   "marks": 10,
   "topic": "Geomorphology"
  },
@@ -7750,7 +7915,7 @@
   "section": "A",
   "question_no": "Q1",
   "subpart": "d",
-  "question": "Solum’ as a concept different from ‘Pedon’ ? Describe.",
+  "question": "How a ‘Solum’ as a concept different from ‘Pedon’? Describe.",
   "marks": 10,
   "topic": "Geomorphology"
  },
@@ -7838,7 +8003,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "How does the annual variations in temperature and precipitation influence plants growth, development and distribution ? How do animals cope up with variations in climate ?",
+  "question": "How does the annual variations in temperature and precipitation influence plants growth, development and distribution? How do animals cope up with variations in climate?",
   "marks": 20,
   "topic": "Climatology"
  },
@@ -7849,7 +8014,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "b",
-  "question": "Examine the importance of axis of dilation of airmasses in frontogenesis and the origin of Temperate cyclones. 15.",
+  "question": "Examine the importance of axis of dilation of airmasses in frontogenesis and the origin of Temperate cyclones.",
   "marks": 15,
   "topic": "Climatology"
  },
@@ -7959,7 +8124,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "What are the main concerns of radical geography ? Describe the salient features and objectives of radicalism in geography.",
+  "question": "What are the main concerns of radical geography? Describe the salient features and objectives of radicalism in geography.",
   "marks": 20,
   "topic": "Geographical Thought & Methods"
  },
@@ -7992,7 +8157,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "a",
-  "question": "What are the principles of urban planning ? Critically analyse town planning in India in the post independence period.",
+  "question": "What are the principles of urban planning? Critically analyse town planning in India in the post independence period.",
   "marks": 20,
   "topic": "Population & Settlement"
  },
@@ -8003,7 +8168,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "b",
-  "question": "What are the approaches of human development ? Describe in detail the measures for computing human development index.",
+  "question": "What are the approaches of human development? Describe in detail the measures for computing human development index.",
   "marks": 15,
   "topic": "Population & Settlement"
  },
@@ -8014,7 +8179,7 @@
   "section": "B",
   "question_no": "Q8",
   "subpart": "c",
-  "question": "Explain the Rimland Theory with reference to ongoing geopolitical scenario in the world. 15 .",
+  "question": "Explain the Rimland Theory with reference to ongoing geopolitical scenario in the world.",
   "marks": 15,
   "topic": "Transport & Trade"
  },
@@ -8091,7 +8256,7 @@
   "section": "A",
   "question_no": "Q2",
   "subpart": "c",
-  "question": "Explain the global supply chain for the fertilizer industry in India. How do international prices of key inputs affect domestic production ?",
+  "question": "Explain the global supply chain for the fertilizer industry in India. How do international prices of key inputs affect domestic production?",
   "marks": 15,
   "topic": "India: Agriculture & Resources"
  },
@@ -8102,7 +8267,7 @@
   "section": "A",
   "question_no": "Q3",
   "subpart": "a",
-  "question": "Examine the causes and consequences of crop diversification in India. How can crop diversification contribute to sustainable agriculture ?",
+  "question": "Examine the causes and consequences of crop diversification in India. How can crop diversification contribute to sustainable agriculture?",
   "marks": 20,
   "topic": "India: Agriculture & Resources"
  },
@@ -8135,7 +8300,7 @@
   "section": "A",
   "question_no": "Q4",
   "subpart": "a",
-  "question": "Analyse the spatial distribution of India’s automobile industry. How have the clusters like Chennai, Pune and Gurugram emerged as key auto-hubs ?",
+  "question": "Analyse the spatial distribution of India’s automobile industry. How have the clusters like Chennai, Pune and Gurugram emerged as key auto-hubs?",
   "marks": 20,
   "topic": "India: Industries & Economy"
  },
@@ -8168,7 +8333,7 @@
   "section": "B",
   "question_no": "Q5",
   "subpart": "a",
-  "question": "Analyse the consequences of circular migration in India. How does it influence both rural development and the urban economy ?",
+  "question": "Analyse the consequences of circular migration in India. How does it influence both rural development and the urban economy?",
   "marks": 10,
   "topic": "India: Population & Urbanization"
  },
@@ -8223,7 +8388,7 @@
   "section": "B",
   "question_no": "Q6",
   "subpart": "a",
-  "question": "Examine the trends in fertility rates across Indian states over time. How are they projected to evolve by 2050 ?",
+  "question": "Examine the trends in fertility rates across Indian states over time. How are they projected to evolve by 2050?",
   "marks": 20,
   "topic": "India: Population & Urbanization"
  },
@@ -8256,7 +8421,7 @@
   "section": "B",
   "question_no": "Q7",
   "subpart": "a",
-  "question": "Why is it difficult to improve the quality of air during the winter season in the Gangetic plain ? Critically evaluate with suitable examples.",
+  "question": "Why is it difficult to improve the quality of air during the winter season in the Gangetic plain? Critically evaluate with suitable examples.",
   "marks": 20,
   "topic": "India: Physical"
  },

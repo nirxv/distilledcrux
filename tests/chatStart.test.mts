@@ -1,4 +1,5 @@
 import { compose, stepsFor, stepComplete, formatFor, list, goalsFor, sectionsFor, notesIn, EMPTY_START, type StartState } from '../lib/chatStart';
+import { CHAT_TOPIC_PYQS_LIVE } from '../lib/features';
 
 let fails = 0;
 const eq = (name: string, got: unknown, want: unknown) => {
@@ -27,6 +28,9 @@ eq('understand, narrowed and angled',
 eq('a PYQ is quoted with its year and marks',
   soc(s({ goal: 'pyq', topics: ['karl-marx'], pyq: { id: 1, year: 2019, marks: 20, question: 'Discuss alienation.' } })),
   'Answer this PYQ (2019, 20 marks): Discuss alienation.');
+eq('a PYQ from a paper that printed no marks leaves them out',
+  soc(s({ goal: 'pyq', topics: ['karl-marx'], pyq: { id: 2, year: 2004, marks: null, question: 'Alienation.' } })),
+  'Answer this PYQ (2004): Alienation.');
 eq('a PYQ goal writes nothing until a question is picked',
   soc(s({ goal: 'pyq', topics: ['karl-marx'] })), '');
 eq('compare shows the gap while one topic is chosen',
@@ -53,8 +57,11 @@ console.log('\nsubjects');
 eq('every optional has sections, each with topics',
   (['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'] as const)
     .every((sub) => sectionsFor(sub).length > 0 && sectionsFor(sub).every((sec) => notesIn(sub, sec).length > 0)), true);
-eq('the past-question goals wait for topic PYQs',
-  goalsFor('sociology').map((g) => g.id), ['understand', 'compare', 'scholars', 'revise']);
+eq('the past-question goals follow the topic PYQs switch',
+  goalsFor('sociology').map((g) => g.id),
+  CHAT_TOPIC_PYQS_LIVE
+    ? ['understand', 'pyq', 'compare', 'scholars', 'revise', 'mentor']
+    : ['understand', 'compare', 'scholars', 'revise']);
 
 console.log('\nsteps');
 eq('compare needs two topics', stepComplete('topic', s({ goal: 'compare', topics: ['karl-marx'] })), false);

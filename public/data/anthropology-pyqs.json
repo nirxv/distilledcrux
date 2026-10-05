@@ -171,15 +171,6 @@
   "marks": 10
  },
  {
-  "id": 27,
-  "year": "2012",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Write a note in 150 words on Commodification of Tribal Art.",
-  "marks": 20
- },
- {
   "id": 28,
   "year": "2012",
   "paper": "Paper II",
@@ -213,15 +204,6 @@
   "topic": "Tribal Situation in India",
   "microtheme": "Socio-economic characteristics",
   "question": "Discuss the relevance of traditional wisdom and knowledge of the tribes with reference to health in the present-day context.",
-  "marks": 20
- },
- {
-  "id": 32,
-  "year": "2008",
-  "paper": "Paper II",
-  "topic": "Tribal Situation in India",
-  "microtheme": "Socio-economic characteristics",
-  "question": "Write a note on Tribes as Indigenous Cultures.",
   "marks": 20
  },
  {
@@ -860,7 +842,7 @@
   "paper": "Paper II",
   "topic": "Developmental Projects and Tribal Displacement",
   "microtheme": "Development of forest policy and tribals",
-  "question": "Explain the difficulties experienced by scheduled tribes with regard to implementation of ‘the Reorganisation of Forest Rights Act, 2006’.",
+  "question": "Explain the difficulties experienced by scheduled tribes with regard to implementation of the ‘Recognition of Forest Rights Act, 2006’.",
   "marks": 15
  },
  {
@@ -1202,7 +1184,7 @@
   "paper": "Paper II",
   "topic": "Constitutional Safeguards and Exploitation",
   "microtheme": "Constitutional Safeguards - STs",
-  "question": "Write a note in 150 words on Tribe and schedule tribe.",
+  "question": "Write a note in 150 words on Tribe and scheduled tribe.",
   "marks": 10
  },
  {
@@ -1440,15 +1422,6 @@
   "marks": 20
  },
  {
-  "id": 209,
-  "year": "2004",
-  "paper": "Paper II",
-  "topic": "Ethnicity and Tribal Unrest",
-  "microtheme": "Social change among the tribes",
-  "question": "Detribalization.",
-  "marks": 20
- },
- {
   "id": 212,
   "year": "2009",
   "paper": "Paper II",
@@ -1573,15 +1546,6 @@
   "microtheme": "Tribe and nation state",
   "question": "What suggestions would you like to make as an anthropologist for bringing the tribal peoples in the national mainstream? Without obliterating their separate identity.",
   "marks": 20
- },
- {
-  "id": 233,
-  "year": "2016",
-  "paper": "Paper II",
-  "topic": "History and Administration of Tribal Areas",
-  "microtheme": "The concept of PTGs",
-  "question": "Identify some special programmes for PVTGs.",
-  "marks": 15
  },
  {
   "id": 234,
@@ -1850,7 +1814,7 @@
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
   "microtheme": "Ethnic & Political Movements",
-  "question": "In what ways has anthropology contributed to the understanding of ethnic & political movements in India?",
+  "question": "In what ways has anthropology contributed to the understanding of ethnic and political movements in India?",
   "marks": 60
  },
  {
@@ -2156,8 +2120,8 @@
   "paper": "Paper I",
   "topic": "Phylogenetic Status of Fossil Hominids",
   "microtheme": "Homo erectus",
-  "question": "Describe the salient characteristics & geographical distribution of Homo erectus.",
-  "marks": 15
+  "question": "Describe the salient characteristics and geographical distribution of Homo erectus.",
+  "marks": 20
  },
  {
   "id": 332,
@@ -2264,7 +2228,7 @@
   "paper": "Paper I",
   "topic": "Nature of Culture",
   "microtheme": "Culture as integrated system",
-  "question": "Critically examine the drawbacks in assuming culture as an 'integrated-closed system in understanding of contemporary society.",
+  "question": "Critically examine the drawbacks in assuming culture as an 'integrated-closed' system in understanding of contemporary society.",
   "marks": 15
  },
  {
@@ -2282,7 +2246,7 @@
   "paper": "Paper I",
   "topic": "Nature of Culture",
   "microtheme": "Cultural relativism",
-  "question": "Cultural Relativism.",
+  "question": "Human rights and Cultural relativism.",
   "marks": 10
  },
  {
@@ -2491,6 +2455,15 @@
   "microtheme": "Formalist vs substantivist",
   "question": "Critically examine the Formalists and Substantivists' views on the applicability of economic laws in the study of primitive societies.",
   "marks": 20
+ },
+ {
+  "id": 1163,
+  "year": "2015",
+  "paper": "Paper I",
+  "topic": "Culture, Language and Communication",
+  "microtheme": null,
+  "question": "Explain the difference between emic and etic, and how does the difference derive from the study of language?",
+  "marks": 10
  },
  {
   "id": 417,
@@ -2760,7 +2733,7 @@
   "topic": "Anthropological Theories",
   "microtheme": "Geertz vs Turner - symbolic",
   "question": "What made Geertz's Interpretive Anthropology distinct from Turner's symbolic anthropology? What does each of them mean by the terms 'Symbol' and 'Symbolic'?",
-  "marks": 25
+  "marks": 20
  },
  {
   "id": 474,
@@ -2778,7 +2751,7 @@
   "topic": "Anthropological Theories",
   "microtheme": "Postmodernism and social justice",
   "question": "How the theories of postmodernism are relevant in promoting social justice and empowerment of marginalised communities?",
-  "marks": 15
+  "marks": 20
  },
  {
   "id": 477,
@@ -2831,7 +2804,7 @@
   "paper": "Paper I",
   "topic": "Research Methods in Anthropology",
   "microtheme": "Pedigree and genealogical analysis",
-  "question": "Differentiate between Pedigree & Geniological Analysis. Discuss the history and application of these methods in anthropological studies.",
+  "question": "Differentiate between pedigree and genealogical analyses. Discuss the history and application of these methods in anthropological studies.",
   "marks": 15
  },
  {
@@ -3213,15 +3186,6 @@
   "marks": 15
  },
  {
-  "id": 564,
-  "year": "2013",
-  "paper": "Paper I",
-  "topic": "Ecological Anthropology",
-  "microtheme": "Growth and environment",
-  "question": "\"Though human growth is under tight genetic control but it is influenced by various environmental factors\". Justify.",
-  "marks": 15
- },
- {
   "id": 568,
   "year": "2020",
   "paper": "Paper I",
@@ -3335,7 +3299,7 @@
   "paper": "Paper I",
   "topic": "Human Growth and Development",
   "microtheme": "Heath-Carter somatotyping",
-  "question": "What is an Anthropometric Somatotype? Describe Heath & Carter's method of somatotyping.",
+  "question": "What is an Anthropometric Somatotype? Describe Heath and Carter's method of somatotyping.",
   "marks": 20
  },
  {
@@ -3755,7 +3719,7 @@
  {
   "topic": "Constitutional Safeguards and Exploitation",
   "microtheme": "OBC lists",
-  "question": "Trace the history and describe the methods of formulating the lists of OBCs, the State and National levels.",
+  "question": "Trace the history and describe the methods of formulating the lists of OBCs, both at the State and National levels.",
   "marks": 15,
   "id": 652,
   "year": "2025",
@@ -3992,7 +3956,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": "Symbolic & Interpretive Anthropology",
-  "question": "Define Anthropology.",
+  "question": "Define Anthropology. Describe the major branches of Anthropology elaborating on any one branch.",
   "marks": 20
  },
  {
@@ -4154,7 +4118,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": null,
-  "question": "Describe the salient features of Ramapithecus. '",
+  "question": "Describe the salient features of Ramapithecus.",
   "marks": 15
  },
  {
@@ -4172,7 +4136,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Socio-Economic Characteristics",
-  "question": "Explain how Buddhism influenced the economic and cultural transformations of Indian society. 2.",
+  "question": "Explain how Buddhism influenced the economic and cultural transformations of Indian society.",
   "marks": 20
  },
  {
@@ -4208,7 +4172,7 @@
   "paper": "Paper II",
   "topic": "Ethnicity and Tribal Unrest",
   "microtheme": "Tribal Unrest & Regionalism",
-  "question": "Ethnicity and regionalism. .",
+  "question": "Ethnicity and regionalism.",
   "marks": 10
  },
  {
@@ -4235,7 +4199,7 @@
   "paper": "Paper II",
   "topic": "Impact of Religions on Tribal Societies",
   "microtheme": "Impact of Christianity on Tribals",
-  "question": "‍ Impact of Christianity on Indian tribes. 10.",
+  "question": "Impact of Christianity on Indian tribes.",
   "marks": 10
  },
  {
@@ -4298,7 +4262,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": null,
-  "question": "Give your assessment of the reasons for the imbalance in the sex-ratio in Inds 4 :",
+  "question": "Give your assessment of the reasons for the imbalance in the sex-ratio in India.",
   "marks": 20
  },
  {
@@ -4379,7 +4343,7 @@
   "paper": "Paper I",
   "topic": "Nature of Society",
   "microtheme": "Society & Social Structure",
-  "question": "How did Radcliffe-Brown and Levi-Strauss study kinship in terms of social structure ?",
+  "question": "How did Radcliffe-Brown and Levi-Strauss study kinship in terms of social structure?",
   "marks": 15
  },
  {
@@ -4478,7 +4442,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": "Forensic anthropology - facial reconstruction",
-  "question": "Anthropological inputs in facial reconstruction eet,",
+  "question": "Anthropological inputs in facial reconstruction",
   "marks": 10
  },
  {
@@ -4550,7 +4514,7 @@
   "paper": "Paper I",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
   "microtheme": null,
-  "question": "Discuss with examples the Megalithic culture of India in the } archaeological context.",
+  "question": "Discuss with examples the Megalithic culture of India in the archaeological context.",
   "marks": 20
  },
  {
@@ -4631,7 +4595,7 @@
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
   "microtheme": null,
-  "question": "What has been the contribution of tribal people to the Indian Independence movement ?",
+  "question": "What has been the contribution of tribal people to the Indian Independence movement?",
   "marks": 15
  },
  {
@@ -4649,7 +4613,7 @@
   "paper": "Paper II",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
   "microtheme": null,
-  "question": "What kind of society may be reconstructed from the archaeological evidences of Harappan culture ?",
+  "question": "What kind of society may be reconstructed from the archaeological evidences of Harappan culture?",
   "marks": 20
  },
  {
@@ -4685,7 +4649,7 @@
   "paper": "Paper II",
   "topic": "Ecological Anthropology",
   "microtheme": "Development Anthropology",
-  "question": "What has been the impact of development projects on the environment and livelihood of forest-dwelling tribes ?",
+  "question": "What has been the impact of development projects on the environment and livelihood of forest-dwelling tribes?",
   "marks": 15
  },
  {
@@ -4766,7 +4730,7 @@
   "paper": "Paper II",
   "topic": "Indian Villages",
   "microtheme": "Indian Village as Social System",
-  "question": "Describe the impact of industrialization on the economic and social aspects of : India’s villages.",
+  "question": "Describe the impact of industrialization on the economic and social aspects of India’s villages.",
   "marks": 15
  },
  {
@@ -4793,7 +4757,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal Distribution in India",
-  "question": "What are the salient issues faced by pastoral communities in India ? Discuss with suitable examples.",
+  "question": "What are the salient issues faced by pastoral communities in India? Discuss with suitable examples.",
   "marks": 15
  },
  {
@@ -4811,7 +4775,7 @@
   "paper": "Paper II",
   "topic": "Religion",
   "microtheme": null,
-  "question": "What has been the impact of non-Hindu religions on the emancipation of Schedule Castes in India ?",
+  "question": "What has been the impact of non-Hindu religions on the emancipation of Schedule Castes in India?",
   "marks": 15
  },
  {
@@ -4820,7 +4784,7 @@
   "paper": "Paper II",
   "topic": "Constitutional Safeguards and Exploitation",
   "microtheme": "Constitutional Safeguards - SCs",
-  "question": "What are the constitutional safeguards to protect the interests of the Indian tribes ?",
+  "question": "What are the constitutional safeguards to protect the interests of the Indian tribes?",
   "marks": 15
  },
  {
@@ -4874,7 +4838,7 @@
   "paper": "Paper I",
   "topic": "Phylogenetic Status of Fossil Hominids",
   "microtheme": "Homo erectus culture",
-  "question": "What are the physical and cultural characteristics of Homo erectus ? Discuss its phylogenetic status.",
+  "question": "What are the physical and cultural characteristics of Homo erectus? Discuss its phylogenetic status.",
   "marks": 20
  },
  {
@@ -4901,7 +4865,7 @@
   "paper": "Paper I",
   "topic": "Political Organization and Social Control",
   "microtheme": "Power, Authority & Legitimacy",
-  "question": "How do political organisations of simple societies establish power, authority and legitimacy ?",
+  "question": "How do political organisations of simple societies establish power, authority and legitimacy?",
   "marks": 20
  },
  {
@@ -4973,7 +4937,7 @@
   "paper": "Paper I",
   "topic": "Race and Racism",
   "microtheme": "Race as a concept",
-  "question": "Is race a valid and biologically meaningful concept ?",
+  "question": "Is race a valid and biologically meaningful concept?",
   "marks": 10
  },
  {
@@ -5000,7 +4964,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": null,
-  "question": "What is acclimatization ? Discuss adaptive responses to high altitude and cold climate.",
+  "question": "What is acclimatization? Discuss adaptive responses to high altitude and cold climate.",
   "marks": 20
  },
  {
@@ -5009,7 +4973,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": null,
-  "question": "How are the cases of disputed paternity solved ? Discuss the recent techniques.",
+  "question": "How are the cases of disputed paternity solved? Discuss the recent techniques.",
   "marks": 15
  },
  {
@@ -5045,7 +5009,7 @@
   "paper": "Paper I",
   "topic": "Human Growth and Development",
   "microtheme": null,
-  "question": "What is Anthropometry ? Discuss its role in assessing the nutritional | status and sports capability of a person.",
+  "question": "What is Anthropometry? Discuss its role in assessing the nutritional status and sports capability of a person.",
   "marks": 15
  },
  {
@@ -5162,7 +5126,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal Distribution in India",
-  "question": "FTE | Examine the contributions of S. C. Roy in highlighting the role of customary laws in tribal life.",
+  "question": "Examine the contributions of S. C. Roy in highlighting the role of customary laws in tribal life.",
   "marks": 15
  },
  {
@@ -5405,7 +5369,7 @@
   "paper": "Paper I",
   "topic": "Kinship",
   "microtheme": "Rules & Forms of Marriage",
-  "question": "Discuss how the rules of descent contradict the principles of residence in matrilineal society, mentioning suitable examples ?",
+  "question": "Discuss how the rules of descent contradict the principles of residence in matrilineal society, mentioning suitable examples?",
   "marks": 20
  },
  {
@@ -5423,7 +5387,7 @@
   "paper": "Paper I",
   "topic": "Human Evolution and Emergence of Man",
   "microtheme": "Organic Evolution: Theories",
-  "question": "Should we still distinguish between ‘classic’ and ‘progressive’ Neanderthals ? Discuss the controversy surrounding Neanderthal’s position in human evolution.",
+  "question": "Should we still distinguish between ‘classic’ and ‘progressive’ Neanderthals? Discuss the controversy surrounding Neanderthal’s position in human evolution.",
   "marks": 15
  },
  {
@@ -5432,7 +5396,7 @@
   "paper": "Paper I",
   "topic": "Human Growth and Development",
   "microtheme": "Heath-Carter somatotyping",
-  "question": "Why Heath and Carter used anthropometric measurements instead of photographs of an individual to assess the somatotype ? Elaborate their method.",
+  "question": "Why Heath and Carter used anthropometric measurements instead of photographs of an individual to assess the somatotype? Elaborate their method.",
   "marks": 20
  },
  {
@@ -5513,7 +5477,7 @@
   "paper": "Paper I",
   "topic": "Epidemiological Anthropology",
   "microtheme": null,
-  "question": "What is meant by health ? Is the burden of life style diseases on the rise ? Justify your answer with suitable examples.",
+  "question": "What is meant by health? Is the burden of life style diseases on the rise? Justify your answer with suitable examples.",
   "marks": 15
  },
  {
@@ -5567,7 +5531,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": null,
-  "question": "What do you understand by blood group systems ? How is HLA system different from those based on red cell antigens ?",
+  "question": "What do you understand by blood group systems? How is HLA system different from those based on red cell antigens?",
   "marks": 15
  },
  {
@@ -5576,7 +5540,7 @@
   "paper": "Paper I",
   "topic": "Anthropological Theories",
   "microtheme": null,
-  "question": "Discuss how anthropological knowledge of the human body may be used in designing equipments and articles of human use. 15 .",
+  "question": "Discuss how anthropological knowledge of the human body may be used in designing equipments and articles of human use.",
   "marks": 15
  },
  {
@@ -5666,7 +5630,7 @@
   "paper": "Paper II",
   "topic": "Indian Villages",
   "microtheme": "Village studies",
-  "question": "Assess the contributions of 5. C. Dube in Indian village studies.",
+  "question": "Assess the contributions of S. C. Dube in Indian village studies.",
   "marks": 15
  },
  {
@@ -5702,7 +5666,7 @@
   "paper": "Paper II",
   "topic": "Religion",
   "microtheme": null,
-  "question": "Critically examine Indigenisation of Christianity’ in India.",
+  "question": "Critically examine ‘Indigenisation of Christianity’ in India.",
   "marks": 15
  },
  {
@@ -5909,7 +5873,7 @@
   "paper": "Paper I",
   "topic": "Human Evolution and Emergence of Man",
   "microtheme": "Organic Evolution: Theories",
-  "question": "What is hominization process ? Discuss the major trends in human evolution with the help of suitable examples and illustrations.",
+  "question": "What is hominization process? Discuss the major trends in human evolution with the help of suitable examples and illustrations.",
   "marks": 20
  },
  {
@@ -5918,7 +5882,7 @@
   "paper": "Paper I",
   "topic": "Religion",
   "microtheme": "Anthropological approaches to religion",
-  "question": "How did Clifford Geertz look at religion ? Differentiate between anthropological and psychological approaches to the study of religion.",
+  "question": "How did Clifford Geertz look at religion? Differentiate between anthropological and psychological approaches to the study of religion.",
   "marks": 15
  },
  {
@@ -5927,7 +5891,7 @@
   "paper": "Paper I",
   "topic": "Human Growth and Development",
   "microtheme": "Longitudinal method",
-  "question": "What is mixed-longitudinal method of studying human growth ? Discuss its merits and demerits.",
+  "question": "What is mixed-longitudinal method of studying human growth? Discuss its merits and demerits.",
   "marks": 15
  },
  {
@@ -6044,7 +6008,7 @@
   "paper": "Paper I",
   "topic": "Human Genetics",
   "microtheme": "Hardy-Weinberg Equilibrium",
-  "question": "What assumptions must be met for a population to be in genetic equilibrium ? Explain the importance of genetic equilibrium.",
+  "question": "What assumptions must be met for a population to be in genetic equilibrium? Explain the importance of genetic equilibrium.",
   "marks": 15
  },
  {
@@ -6107,7 +6071,7 @@
   "paper": "Paper II",
   "topic": "Economic Organization",
   "microtheme": null,
-  "question": "Jajmani system : continuity and change",
+  "question": "Jajmani system: continuity and change",
   "marks": 10
  },
  {
@@ -6143,7 +6107,7 @@
   "paper": "Paper II",
   "topic": "Nature of Culture",
   "microtheme": "Culture vs Civilization",
-  "question": "Indus Valley was the first settlement of the big civilization.” Comment critically.",
+  "question": "“Indus Valley was the first settlement of the big civilization.” Comment critically.",
   "marks": 15
  },
  {
@@ -6638,7 +6602,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal Distribution in India",
-  "question": "Critically discuss. the recent welfare measures initiated by the Government for the Particularly Vulnerable Tribal Groups (PVTGs). Comment why PVTGs were erroneously called Primitive Tribal Groups (PTGs).",
+  "question": "Critically discuss the recent welfare measures initiated by the Government for the Particularly Vulnerable Tribal Groups (PVTGs). Comment why PVTGs were erroneously called Primitive Tribal Groups (PTGs).",
   "marks": 20
  },
  {
@@ -6647,7 +6611,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": null,
-  "question": "How is PESA Act empowering local self-governance and impacting women’s political participation ?",
+  "question": "How is PESA Act empowering local self-governance and impacting women’s political participation?",
   "marks": 15
  },
  {
@@ -6692,7 +6656,7 @@
   "paper": "Paper II",
   "topic": "Research Methods in Anthropology",
   "microtheme": "Fieldwork Tradition in Anthropology",
-  "question": "What are the ethical concerns in biological socio-cultural anthropology because of recent advances in AI and genetic research ?",
+  "question": "What are the ethical concerns in biological and socio-cultural anthropology because of recent advances in AI and genetic research?",
   "marks": 20
  },
  {
@@ -6701,7 +6665,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal Distribution in India",
-  "question": "Write an essay on the life history of tribal activist and freedom fighter Birsa Munda. What was the impact of his sacrifice on tribal society ?",
+  "question": "Write an essay on the life history of tribal activist and freedom fighter Birsa Munda. What was the impact of his sacrifice on tribal society?",
   "marks": 15
  },
  {
@@ -6710,7 +6674,7 @@
   "paper": "Paper II",
   "topic": "Fertility and Demography",
   "microtheme": null,
-  "question": "What are the demographic challenges of India’s changing population dynamics in the next 50 years ?",
+  "question": "What are the demographic challenges of India’s changing population dynamics in the next 50 years?",
   "marks": 15
  },
  {
@@ -6728,7 +6692,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal situation in India",
-  "question": "Describe ILO’s Convention No. 169 (1989) on Indigenous and Tribal people. Is India a signatory to it ?",
+  "question": "Describe ILO’s Convention No. 169 (1989) on Indigenous and Tribal people. Is India a signatory to it?",
   "marks": 10
  },
  {
@@ -6800,7 +6764,7 @@
   "paper": "Paper II",
   "topic": "Caste System",
   "microtheme": "Theories of Origin of Caste",
-  "question": "Discuss the theories on origin of caste system and its criticism in India. : Differentiate between caste, class and race.",
+  "question": "Discuss the theories on origin of caste system and its criticism in India. Differentiate between caste, class and race.",
   "marks": 15
  },
  {
@@ -7142,7 +7106,7 @@
   "paper": "Paper II",
   "topic": "Economic Organization",
   "microtheme": null,
-  "question": "What are the major debates related to the concept of jajmani system ?",
+  "question": "What are the major debates related to the concept of jajmani system?",
   "marks": 20
  },
  {
@@ -7151,7 +7115,7 @@
   "paper": "Paper II",
   "topic": "Developmental Projects and Tribal Displacement",
   "microtheme": "Impact of Development Projects",
-  "question": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan aims to meet some of the Sustainable Development Goals’. Discuss.",
+  "question": "‘Dharti Aaba Janjatiya Gram Utkarsh Abhiyan aims to meet some of the Sustainable Development Goals’. Discuss.",
   "marks": 15
  },
  {
@@ -7160,7 +7124,7 @@
   "paper": "Paper II",
   "topic": "Prehistoric Archaeology and Cultural Evolution",
   "microtheme": null,
-  "question": "What are the evidences available regarding crops and domesticated animals of Indus Valley Civilization ? What are the views of the scholars regarding Indus script ?",
+  "question": "What are the evidences available regarding crops and domesticated animals of Indus Valley Civilization? What are the views of the scholars regarding Indus script?",
   "marks": 15
  },
  {
@@ -7169,7 +7133,7 @@
   "paper": "Paper II",
   "topic": "Indian Villages",
   "microtheme": "Significance of Village Study",
-  "question": "Critically examine the salience of F. G. Bailey’s study on Bisipara village of",
+  "question": "Critically examine the salience of F. G. Bailey’s study on Bisipara village of Odisha.",
   "marks": 20
  },
  {
@@ -7205,7 +7169,7 @@
   "paper": "Paper II",
   "topic": "Race and Racism",
   "microtheme": "Typological vs Population Concept",
-  "question": "Why the classifications of Indian populations, based on somatometric and somatoscopic characteristics failed to develop a common understanding of the population diversity ?",
+  "question": "Why the classifications of Indian populations, based on somatometric and somatoscopic characteristics failed to develop a common understanding of the population diversity?",
   "marks": 15
  },
  {
@@ -7286,7 +7250,7 @@
   "paper": "Paper II",
   "topic": "Tribal Situation in India",
   "microtheme": "Tribal situation in India",
-  "question": "Write an account on the prevalence of sickle cell disease among the tribal populations of India. What are the initiatives undertaken by the affected states to tackle with this disease ?",
+  "question": "Write an account on the prevalence of sickle cell disease among the tribal populations of India. What are the initiatives undertaken by the affected states to tackle with this disease?",
   "marks": 15
  },
  {
@@ -7295,7 +7259,7 @@
   "paper": "Paper II",
   "topic": "Contributions of Anthropology",
   "microtheme": null,
-  "question": "Assess the contribution of colonial scholars’ in studying the tribal populations of North-East India.",
+  "question": "Assess the contribution of colonial scholars in studying the tribal populations of North-East India.",
   "marks": 20
  },
  {
@@ -7304,7 +7268,7 @@
   "paper": "Paper II",
   "topic": "Caste System",
   "microtheme": "Structure & Characteristics of Caste",
-  "question": "Does caste as a social category exist among the non-Hindu communities in India ? Illustrate your answer with suitable examples.",
+  "question": "Does caste as a social category exist among the non-Hindu communities in India? Illustrate your answer with suitable examples.",
   "marks": 15
  },
  {
@@ -7331,7 +7295,7 @@
   "paper": "Paper II",
   "topic": "Problems of Tribal Communities",
   "microtheme": null,
-  "question": "What are the major challenges tribal communities are facing in contemporary India ?",
+  "question": "What are the major challenges tribal communities are facing in contemporary India?",
   "marks": 15
  },
  {
@@ -7340,7 +7304,7 @@
   "paper": "Paper II",
   "topic": "Constitutional Safeguards and Exploitation",
   "microtheme": null,
-  "question": "What are the provisions given in the Constitution of India for the safeguard of the Scheduled Caste populations ?",
+  "question": "What are the provisions given in the Constitution of India for the safeguard of the Scheduled Caste populations?",
   "marks": 15
  }
 ]

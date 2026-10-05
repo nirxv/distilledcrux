@@ -293,7 +293,7 @@ export default function StartFlow({ langHi, subject, state, onChange, subscribed
             aria-pressed={state.pyq?.id === q.id}
             onClick={() => onChange({ ...state, pyq: state.pyq?.id === q.id ? null : q })}
           >
-            <span className="ch-pyq-meta">{q.year} · {q.marks} {langHi ? 'अंक' : 'marks'}</span>
+            <span className="ch-pyq-meta">{q.year}{q.marks ? ` · ${q.marks} ${langHi ? 'अंक' : 'marks'}` : ''}</span>
             <span className="ch-pyq-text">{q.question}</span>
           </button>
         ))}
