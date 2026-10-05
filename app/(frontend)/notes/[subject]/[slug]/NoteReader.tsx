@@ -5,7 +5,6 @@ import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
-import BrandMark from '@/components/BrandMark';
 
 // ── Scroll-direction hook ────────────────────────────────────
 // ── Inject IDs into headings for TOC ────────────────────────
@@ -1249,10 +1248,8 @@ export default function NoteReader({
           {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
 
-          {/* Note body. The bottom padding is the mark's own strip plus a
-              blank row, so it never crowds the last line of the note. */}
-          <div style={{ position: 'relative', paddingBottom: '2.9rem' }}>
-            <BrandMark />
+          {/* Note body */}
+          <div style={{ position: 'relative' }}>
             <div ref={noteContentRef} className="note-content"
               onClick={handleContentClick}
               dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;">Content coming soon. Check back shortly.</p>' }}
