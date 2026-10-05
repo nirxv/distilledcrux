@@ -14,12 +14,13 @@ const SUBJECTS: SubjectKey[] = ['sociology', 'anthropology', 'polsci', 'geograph
  * the way the chat page does it; Esc or the key hint takes the suggestion.
  *
  * A reader with an optional is shown that optional's questions; anyone else
- * a mix from all five, each sent to its own subject's chat.
+ * a mix from all five, each sent to its own subject's chat. A subject's own
+ * page passes `subject`, which wins over both.
  */
-export default function HomeAsk() {
+export default function HomeAsk({ subject }: { subject?: SubjectKey } = {}) {
   const router = useRouter();
   const optional = useOptional();
-  const own = routeSlugForOptional(optional) as SubjectKey | null;
+  const own = subject ?? (routeSlugForOptional(optional) as SubjectKey | null);
   const [value, setValue] = useState('');
   const [hint, setHint] = useState(0);
   const [typed, setTyped] = useState({ text: '', n: 0 });

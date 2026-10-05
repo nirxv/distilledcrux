@@ -1,383 +1,350 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
+import SubjectIcon from '@/components/SubjectIcon';
+import HomeAsk from '@/components/home/HomeAsk';
+import SyllabusTabs, { type SyllabusPaper } from '@/components/optional/SyllabusTabs';
+import { notesForSubject } from '@/lib/notes';
+import { pyqSummaryForOptional } from '@/lib/pyqCounts';
+import { SUBJECT_BOOKS, type SubjectKey } from '@/lib/subjectConfig';
 
-const OPTIONALS: Record<string, {
-  name: string; full: string; sub: string;
-  color: string; dim: string; border: string; glow: string;
-  paper1: string; paper2: string;
-  highlights: string[];
-}> = {
+/**
+ * A subject's front door: what the optional covers, its syllabus as a list of
+ * notes to open, the books its AI reads from, and the latest questions UPSC
+ * set. Static; every number on it is counted from the data at build time.
+ */
+
+type Subject = {
+  name: string;
+  /** The hero's title, where the full name would run to two lines. */
+  title?: string;
+  optional: string;
+  about: (since: number | null) => string;
+};
+
+const since = (y: number | null) => (y ? `past questions going back to ${y}` : 'the past questions');
+
+const SUBJECTS: Record<string, Subject> = {
   sociology: {
-    name: 'Sociology', full: 'Sociology Optional', sub: 'Social Structure, Change & Thinkers',
-    color: '#4361ee', dim: 'rgba(67,97,238,0.07)', border: 'rgba(67,97,238,0.22)', glow: 'rgba(67,97,238,0.15)',
-    paper1: 'Sociological Theory, Research Methods, Social Stratification & Social Change',
-    paper2: 'Indian Society, Social Issues, Movements & Contemporary Challenges',
-    highlights: ['Structural-functional, conflict and interpretive traditions', 'Thinkers: Marx, Weber, Durkheim, Parsons, Merton, Giddens', 'Indian society: caste, tribe, gender, village & agrarian systems', 'Social movements: peasant, women, environmental, Dalit', 'Contemporary India: globalisation, IT revolution, diaspora'],
+    name: 'Sociology', optional: 'sociology',
+    about: (y) => `From Marx, Weber and Durkheim to caste, kinship and the Indian village. Both papers, ${since(y)}, and an AI that has read the standard books.`,
   },
   anthropology: {
-    name: 'Anthropology', full: 'Anthropology Optional', sub: 'Physical, Social & Applied Anthropology',
-    color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.22)', glow: 'rgba(45,212,191,0.14)',
-    paper1: 'Meaning, Scope & Development of Anthropology; Evolution; Genetics; Human Variation',
-    paper2: 'Indian Anthropology, Tribal India, Applied Anthropology, Fossil Records',
-    highlights: ['Biological & physical anthropology evolution, genetics, primatology', 'Archaeological anthropology fossil evidence, tools, culture', 'Social & cultural anthropology kinship, marriage, religion', 'Tribal India scheduled tribes, problems, development policy', 'Applied anthropology development, forensics, ethnobotany'],
+    name: 'Anthropology', optional: 'anthropology',
+    about: (y) => `From fossils and human evolution to kinship, religion and tribal India. Both papers, ${since(y)}, and an AI that has read the standard books.`,
   },
   polsci: {
-    name: 'PSIR', full: 'PSIR Political Science & IR Optional', sub: 'IR, Comparative Politics & Indian Polity',
-    color: '#f87171', dim: 'rgba(248,113,113,0.07)', border: 'rgba(248,113,113,0.2)', glow: 'rgba(248,113,113,0.13)',
-    paper1: 'Political Theory, Indian Government & Politics, Political Institutions',
-    paper2: 'Comparative Politics & International Relations',
-    highlights: ['Political theory liberalism, Marxism, feminism, post-colonialism', 'Indian Constitution federalism, fundamental rights, DPSPs', 'Political institutions Parliament, executive, judiciary, election commission', 'Comparative politics presidential vs parliamentary, federalism globally', 'International relations realism, liberalism, constructivism, IR theory'],
+    name: 'PSIR', optional: 'political-science',
+    about: (y) => `From Plato and Rawls to the Constitution, the UN and India’s neighbours. Both papers, ${since(y)}, and an AI that has read the standard books.`,
   },
   geography: {
-    name: 'Geography', full: 'Geography Optional', sub: 'Physical, Human & Economic Geography',
-    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)', glow: 'var(--geo-dim)',
-    paper1: 'Physical Geography Geomorphology, Climatology, Oceanography, Biogeography',
-    paper2: 'Human & Economic Geography, Regional Planning, India-specific Geography',
-    highlights: ['Geomorphology plate tectonics, landforms, fluvial & aeolian processes', 'Climatology atmospheric circulation, monsoon, climate change', 'Oceanography currents, tides, marine resources', 'Human geography population, migration, settlement patterns', 'India geography agriculture, minerals, transport, regional development'],
+    name: 'Geography', optional: 'geography',
+    about: (y) => `From landforms, climate and the oceans to India’s farms, cities and regions. Both papers, ${since(y)}, map practice, and an AI that has read the standard books.`,
   },
   'pub-admin': {
-    name: 'Public Administration', full: 'Public Administration Optional', sub: 'Administrative Theory & Indian Administration',
-    color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.2)', glow: 'rgba(251,146,60,0.13)',
-    paper1: 'Administrative Theory Organisation, Accountability, Comparative Admin',
-    paper2: 'Indian Administration Union, State, District, Development Administration',
-    highlights: ["Administrative theory Weber's bureaucracy, Taylor, Fayol, Simon", 'Organisation theory classical, human relations, systems, contingency', 'Accountability parliamentary control, CAG, RTI, lokpal', 'Indian administration civil services, central secretariat, cabinet', 'Development administration planning, decentralisation, e-governance'],
+    name: 'Public Administration', title: 'Pub-Ad', optional: 'public-administration',
+    about: (y) => `From Weber and Simon to the district collector and the CAG. Both papers, ${since(y)}, and an AI that has read the standard books.`,
   },
 };
 
-const BASE_TOOLS = [
-  { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers get marks, section-wise feedback and a model answer calibrated to the UPSC rubric.', href: '/evaluate' },
-  { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus structured answers with thinkers, arguments and exam-ready language.', href: '/chat' },
-  { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains. Written to be read before the exam.', href: (opt: string) => `/notes/${opt}` },
-  { num: '04', label: 'PYQ Bank', desc: '4500+ previous year questions, topic-wise, with model answers written the way toppers actually write them.', href: (opt: string) => "/" + opt + "/pyqs" },
-];
-
-const MAP_TOOL = { num: '05', label: 'Map Practice', desc: 'Every UPSC Geography map question, year-wise. Identify locations, quiz yourself, track accuracy.', href: '/geography/mapping' };
-const TEST_SERIES_TOOL = { num: '06', label: 'Test Series', desc: 'Full-length and sectional tests calibrated to UPSC pattern. Track your score, identify weak areas.', href: (opt: string) => `/test?optional=${opt}` };
-
-const getTools = (optional: string) => optional === 'geography' ? [...BASE_TOOLS, MAP_TOOL, TEST_SERIES_TOOL] : [...BASE_TOOLS, TEST_SERIES_TOOL];
-
 export function generateStaticParams() {
-  return Object.keys(OPTIONALS).map((slug) => ({ optional: slug }));
+  return Object.keys(SUBJECTS).map((optional) => ({ optional }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ optional: string }> }): Promise<Metadata> {
   const { optional } = await params;
-  const opt = OPTIONALS[optional];
-  if (!opt) return { title: 'Not Found' };
+  const s = SUBJECTS[optional];
+  if (!s) return { title: 'Not Found' };
   return {
-    title: `${opt.full} Distilled Crux`,
-    description: `AI-powered preparation for UPSC ${opt.full}. Notes, PYQs, answer evaluation and AI chat for ${opt.name}.`,
+    title: `${s.name} Optional`,
+    description: `UPSC ${s.name} optional: notes for every topic, past questions, answer evaluation and an AI that has read the standard books.`,
     alternates: { canonical: `https://distilledcrux.com/${optional}` },
   };
 }
 
-const CSS = `
-  .op-page { min-height: var(--page-min-h); }
+/** "Author — Title" as the corpus names a book, split for display. */
+function splitBook(value: string): { author: string; title: string } {
+  const [author, ...rest] = value.split(' — ');
+  return rest.length ? { author, title: rest.join(' — ') } : { author: '', title: value };
+}
 
-  /* ── Hero ── */
-  .op-hero {
-    max-width: 1200px; margin: 0 auto;
-    padding: 120px 2rem 60px;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: end;
-    border-bottom: 1px solid var(--border);
-  }
-  .op-breadcrumb {
-    display: flex; align-items: center; gap: 6px;
-    font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3);
-    margin-bottom: 2rem;
-  }
-  .op-breadcrumb a { color: var(--text3); text-decoration: none; transition: color 0.15s; }
-  .op-breadcrumb a:hover { color: var(--text); }
-  .op-kicker {
-    font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
-    margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px;
-  }  .op-h1 {
-    font-family: var(--font-body);
-    font-size: clamp(2.8rem, 6vw, 4.8rem);
-    font-weight: 700; line-height: 1.02;
-    letter-spacing: -0.035em; color: var(--text);
-  }
-  .op-h1 em { font-style: italic; }
-  .op-right-desc {
-    font-family: var(--font-ui); font-size: 1rem;
-    color: var(--text2); line-height: 1.8; margin-bottom: 2.5rem; max-width: 380px;
-  }
-  .op-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
-  .op-btn-primary {
-    font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600;
-    background: var(--text); color: var(--bg);
-    padding: 12px 28px; border-radius: 6px;
-    text-decoration: none; transition: opacity 0.15s;
-  }
-  .op-btn-primary:hover { opacity: 0.85; }
-  .op-btn-secondary {
-    font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3);
-    text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s;
-  }
-  .op-btn-secondary:hover { color: var(--text); }
-
-
-  /* ── Section wrapper ── */
-  .op-section {
-    max-width: 1200px; margin: 0 auto;
-    padding: 4.5rem 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .op-section-header {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 2rem; align-items: start; margin-bottom: 3rem;
-  }
-  .op-section-label {
-    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
-    margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
-  }  .op-section-h2 {
-    font-family: var(--font-body); font-size: clamp(1.7rem, 2.8vw, 2.4rem);
-    font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
-  }
-  .op-section-h2 em { font-style: italic; }
-  .op-section-desc { font-family: var(--font-ui); font-size: 0.92rem; color: var(--text2); line-height: 1.8; padding-top: 0.5rem; }
-
-  /* ── Syllabus ── */
-  .op-syllabus-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-    margin-bottom: 1px;
-  }
-  .op-paper-cell { background: var(--bg); padding: 2rem; }
-  .op-paper-label {
-    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.75rem;
-  }
-  .op-paper-text { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text2); line-height: 1.7; }
-  .op-highlights {
-    display: flex; flex-direction: column;
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .op-highlight-row {
-    display: flex; align-items: flex-start; gap: 1.25rem;
-    padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
-    background: var(--bg); transition: background 0.15s;
-  }
-  .op-highlight-row:last-child { border-bottom: none; }
-  .op-highlight-row:hover { background: var(--bg2); }
-  .op-highlight-num {
-    font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500;
-    color: var(--text3); letter-spacing: 0.06em;
-    padding-top: 3px; flex-shrink: 0; width: 20px;
-  }
-  .op-highlight-text { font-family: var(--font-ui); font-size: 0.84rem; font-weight: 500; color: var(--text2); line-height: 1.6; }
-
-  /* ── Tools ── */
-  .op-tools-list {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .op-tool-row {
-    background: var(--bg); padding: 1.75rem 2rem;
-    display: flex; align-items: flex-start; gap: 1.5rem;
-    text-decoration: none; transition: background 0.18s; position: relative;
-  }
-  .op-tool-row:hover { background: var(--bg2); }
-  .op-tool-num {
-    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
-    color: var(--text3); letter-spacing: 0.06em;
-    padding-top: 4px; flex-shrink: 0; width: 24px;
-  }
-  .op-tool-label {
-    font-family: var(--font-body); font-size: 0.95rem;
-    font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
-  }
-  .op-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
-
-  /* ── CTA ── */
-  .op-cta {
-    max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 6rem;
-    display: grid; grid-template-columns: 1fr auto;
-    align-items: center; gap: 3rem;
-  }
-  .op-cta-h2 {
-    font-family: var(--font-body);
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-    font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
-  }
-  .op-cta-h2 em { font-style: italic; }
-  .op-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
-  .op-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
-
-  @media (max-width: 900px) {
-    .op-hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 100px; }
-    .op-right-desc { max-width: 100%; }
-    .op-section-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
-    .op-syllabus-grid { grid-template-columns: 1fr; }
-    .op-tools-list { grid-template-columns: 1fr; }
-    .op-cta { grid-template-columns: 1fr; }
-    .op-cta-right { flex-direction: row; flex-wrap: wrap; }
-  }
-  @media (max-width: 640px) {
-    .op-hero { padding:88px 1.25rem 2.5rem; gap:1.5rem; }
-    .op-h1 { font-size:clamp(2.4rem,11vw,3.2rem); }
-    .op-kicker { font-size:0.62rem; font-weight: 500; letter-spacing:0.14em; }
-    .op-breadcrumb { font-size:0.68rem; font-weight: 500; margin-bottom:1.5rem; }
-    .op-right-desc { font-size:0.88rem; font-weight: 500; line-height:1.75; margin-bottom:2rem; }
-    .op-actions { gap:0.85rem; }
-    .op-btn-primary { padding:11px 22px; font-size:0.85rem; font-weight: 500; }
-    .op-section { padding:2.5rem 1.25rem; }
-    .op-section-label { font-size:0.6rem; font-weight: 500; }
-    .op-section-h2 { font-size:clamp(1.4rem,7vw,2rem); }
-    .op-section-desc { font-size:0.85rem; font-weight: 500; }
-
-    .op-paper-cell { padding:1.25rem; }
-    .op-paper-text { font-size:0.82rem; font-weight: 500; }
-    .op-highlight-row { padding:0.85rem 1.25rem; gap:1rem; }
-    .op-highlight-text { font-size:0.8rem; font-weight: 500; }
-
-    .op-tool-row { padding:1.25rem; gap:1rem; }
-    .op-tool-label { font-size:0.88rem; font-weight: 500; }
-    .op-tool-desc { font-size:0.76rem; font-weight: 500; }
-
-    .op-cta { padding:2.5rem 1.25rem 3.5rem; gap:1.5rem; }
-    .op-cta-h2 { font-size:clamp(1.5rem,8vw,2.2rem); }
-    .op-cta-sub { font-size:0.82rem; font-weight: 500; }
-    .op-cta-right { flex-direction:column; width:100%; gap:0.65rem; }
-    .op-btn-primary { text-align:center; display:block; }
-  }
-`;
+const Arrow = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+const Glyph = ({ d }: { d: string }) => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>
+);
 
 export default async function OptionalPage({ params }: { params: Promise<{ optional: string }> }) {
   const { optional } = await params;
-  const opt = OPTIONALS[optional];
-  if (!opt) notFound();
-  const tools = getTools(optional);
+  const subject = SUBJECTS[optional];
+  if (!subject) notFound();
+  const slug = optional as SubjectKey;
+
+  const notes = notesForSubject(slug);
+  const papers: SyllabusPaper[] = ([1, 2] as const).map((paper) => {
+    const sections: SyllabusPaper['sections'] = [];
+    for (const n of notes.filter((x) => x.paper === paper)) {
+      let sec = sections.find((s) => s.name === n.section);
+      if (!sec) { sec = { name: n.section, notes: [] }; sections.push(sec); }
+      sec.notes.push({ slug: n.slug, title: n.title, topic: n.topic, subtopics: n.subtopics ?? [] });
+    }
+    return { paper, sections };
+  }).filter((p) => p.sections.length);
+
+  const bookGroups = (SUBJECT_BOOKS[slug] ?? [])
+    .map((g) => ({ group: g.group, books: g.books.filter((b) => !b.soon).map((b) => splitBook(b.value)) }))
+    .filter((g) => g.books.length);
+  const bookCount = bookGroups.reduce((n, g) => n + g.books.length, 0);
+
+  const pyqs = await pyqSummaryForOptional(subject.optional);
+  const first = notes[0];
+  const tint = { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` };
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: CSS }} />
-
-      <div className="op-page">
+      <style dangerouslySetInnerHTML={{ __html: OP_CSS }} />
+      <div className="op ds" style={tint}>
 
         {/* ── Hero ── */}
-        <div className="op-hero">
-          <div>
-            <div className="op-breadcrumb">
-              <Link href="/">Home</Link>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <Link href="/#optionals">Optionals</Link>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <span>{opt.name}</span>
-            </div>
-            <div className="op-kicker">UPSC Mains · {opt.name} Optional</div>
-            <h1 className="op-h1">
-              {opt.name}.<br />
-              <em style={{ color: opt.color }}>Built to score.</em>
-            </h1>
-          </div>
-
-          <div>
-            <p className="op-right-desc">
-              {opt.sub} every topic, every thinker, every past question.
-              AI-calibrated to the actual UPSC rubric.
-            </p>
-            <div className="op-actions">
-              <Link href="/login" className="op-btn-primary">Start free →</Link>
-              <Link href="/dashboard" className="op-btn-secondary">
-                Go to Dashboard
-                <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                  <path d="M2 6.5h9M6.5 2l4.5 4.5-4.5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+        <section className="op-hero">
+          <div className="ds-container op-hero-grid">
+            <div className="op-hero-copy">
+              <Link href="/#optionals" className="ds-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+                All optionals
               </Link>
+              <div className="op-title">
+                <span className="op-icon" aria-hidden="true"><SubjectIcon id={slug} size={28} /></span>
+                <h1 className="ds-h1">{subject.title ?? subject.name}</h1>
+              </div>
+              <p className="ds-lede">{subject.about(pyqs?.firstYear ?? null)}</p>
+              <ul className="op-facts">
+                <li><strong>{notes.length}</strong> topics</li>
+                {pyqs && <li><strong>{pyqs.count.toLocaleString('en-IN')}</strong> past questions</li>}
+                <li><strong>{bookCount}</strong> standard books</li>
+              </ul>
+              <div className="op-actions">
+                <Link href={`/notes/${slug}`} className="ds-btn ds-btn-solid ds-btn-lg">Read the notes<Arrow /></Link>
+                <Link href={`/${slug}/pyqs`} className="ds-btn ds-btn-line ds-btn-lg">Past questions</Link>
+              </div>
             </div>
 
+            <div className="op-ask ds-card">
+              <span className="op-ask-label">Ask the {subject.name} AI</span>
+              <HomeAsk subject={slug} />
+              <p className="op-ask-note">It answers from the {bookCount} books below and shows you the passage it used.</p>
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* ── Syllabus ── */}
-        <div className="op-section">
-          <div className="op-section-header">
-            <div>
-              <div className="op-section-label">Syllabus</div>
-              <h2 className="op-section-h2">What you&apos;ll<br /><em style={{ color: opt.color }}>cover.</em></h2>
+        <section className="op-section">
+          <div className="ds-container">
+            <div className="op-head">
+              <h2 className="ds-h2">The syllabus, topic by topic</h2>
+              <p className="ds-lede">Tap a topic to read its notes. They are free, and you do not need to sign in.</p>
             </div>
-            <p className="op-section-desc">
-              Two papers, fully mapped. Every topic on the UPSC syllabus notes and PYQs organised exactly the way the paper is structured.
-            </p>
+            <SyllabusTabs subject={slug} papers={papers} />
           </div>
+        </section>
 
-          <div className="op-syllabus-grid">
-            <div className="op-paper-cell">
-              <div className="op-paper-label" style={{ color: opt.color }}>Paper I</div>
-              <div className="op-paper-text">{opt.paper1}</div>
-            </div>
-            <div className="op-paper-cell">
-              <div className="op-paper-label" style={{ color: opt.color }}>Paper II</div>
-              <div className="op-paper-text">{opt.paper2}</div>
-            </div>
-          </div>
-
-          <div className="op-highlights" style={{ marginTop: '1px' }}>
-            {opt.highlights.map((h, i) => (
-              <div key={h} className="op-highlight-row">
-                <span className="op-highlight-num">0{i + 1}</span>
-                <span className="op-highlight-text">{h}</span>
+        {/* ── Books ── */}
+        {bookGroups.length > 0 && (
+          <section className="op-section">
+            <div className="ds-container">
+              <div className="op-head">
+                <h2 className="ds-h2">The books the AI reads from</h2>
+                <p className="ds-lede">When you ask the {subject.name} AI something, it searches these and puts a chip beside every line it took from one, so you can open the passage and check.</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ── Tools ── */}
-        <div className="op-section">
-          <div className="op-section-header">
-            <div>
-              <div className="op-section-label">Your Tools</div>
-              <h2 className="op-section-h2">Everything<br /><em style={{ color: opt.color }}>you need.</em></h2>
+              <ul className="op-books">
+                {bookGroups.flatMap((g) => g.books.map((b) => (
+                  <li key={`${b.author}${b.title}`} className="op-book">
+                    <span className="op-book-group">{g.group}</span>
+                    <span className="op-book-title">{b.title}</span>
+                    <span className="op-book-author">{b.author || 'IGNOU course material'}</span>
+                  </li>
+                )))}
+              </ul>
             </div>
-            <p className="op-section-desc">
-              Six tools, one goal more marks in your {opt.name} paper. Each one built specifically for how UPSC actually tests this subject.
-            </p>
-          </div>
+          </section>
+        )}
 
-          <div className="op-tools-list">
-            {tools.map((tool) => (
-              <Link
-                key={tool.label}
-                href={typeof tool.href === 'function' ? tool.href(optional) : tool.href}
-                className="op-tool-row"
-              >
-                <span className="op-tool-num">{tool.num}</span>
-                <div>
-                  <div className="op-tool-label">{tool.label}</div>
-                  <div className="op-tool-desc">{tool.desc}</div>
-                </div>
+        {/* ── Latest PYQs ── */}
+        {pyqs && pyqs.latest.length > 0 && (
+          <section className="op-section">
+            <div className="ds-container">
+              <div className="op-head">
+                <h2 className="ds-h2">What UPSC asked most recently</h2>
+                <p className="ds-lede">From the {pyqs.latest[0].year} paper. There are {pyqs.count.toLocaleString('en-IN')} questions here in all, sorted by topic.</p>
+              </div>
+              <div className="op-pyqs">
+                {pyqs.latest.map((q) => (
+                  <Link key={q.id} href={`/${slug}/pyqs/${q.id}`} className="op-pyq ds-card ds-card-link">
+                    <span className="op-pyq-meta">
+                      <strong>{q.year}</strong> · {q.paper}{q.marks ? ` · ${q.marks} marks` : ''}
+                    </span>
+                    <span className="op-pyq-q">{q.question}</span>
+                    <span className="op-pyq-go">Open the question<Arrow /></span>
+                  </Link>
+                ))}
+              </div>
+              <div className="op-more"><Link href={`/${slug}/pyqs`} className="ds-btn ds-btn-ghost">See all {pyqs.count.toLocaleString('en-IN')} questions<Arrow /></Link></div>
+            </div>
+          </section>
+        )}
+
+        {/* ── More tools ── */}
+        <section className="op-section">
+          <div className="ds-container">
+            <div className="op-head">
+              <h2 className="ds-h2">When you are ready to write</h2>
+            </div>
+            <div className="op-tools">
+              <Link href="/evaluate" className="op-tool ds-card ds-card-link">
+                <span className="op-tool-icon"><Glyph d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" /></span>
+                <span className="op-tool-title">Get an answer marked</span>
+                <span className="op-tool-text">Upload a photo of a handwritten answer and see the marks, what it missed and a model answer.</span>
               </Link>
-            ))}
+              <Link href={`/test?optional=${subject.optional}`} className="op-tool ds-card ds-card-link">
+                <span className="op-tool-icon"><Glyph d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></span>
+                <span className="op-tool-title">Take a test</span>
+                <span className="op-tool-text">A short test on one topic, to find out what stayed with you.</span>
+              </Link>
+              {slug === 'geography' && (
+                <Link href="/geography/mapping" className="op-tool ds-card ds-card-link">
+                  <span className="op-tool-icon"><Glyph d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14" /></span>
+                  <span className="op-tool-title">Practise the maps</span>
+                  <span className="op-tool-text">Every map question UPSC has set, with a quiz mode.</span>
+                </Link>
+              )}
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* ── CTA ── */}
-        <div className="op-cta">
-          <div>
-            <h2 className="op-cta-h2">
-              Ready to ace<br /><em style={{ color: opt.color }}>{opt.name}?</em>
-            </h2>
-            <p className="op-cta-sub">Start free no card needed. Upgrade when you&apos;re ready to go unlimited.</p>
-          </div>
-          <div className="op-cta-right">
-            <Link href="/login" className="op-btn-primary">Start Preparing Free →</Link>
-            <Link href="/dashboard" className="op-btn-secondary">
-              Go to Dashboard
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2 6.5h9M6.5 2l4.5 4.5-4.5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
-        </div>
-
+        {/* ── Close ── */}
+        {first && (
+          <section className="op-section op-close">
+            <div className="ds-container ds-narrow op-close-inner">
+              <Image src="/mascot/owl-reading.svg" alt="" width={104} height={90} className="op-close-owl" />
+              <h2 className="ds-h2">Not sure where to begin?</h2>
+              <p className="ds-lede">Start at the top, with {first.title}. It takes an evening, and the rest of the syllabus builds on it.</p>
+              <Link href={`/notes/${slug}/${first.slug}`} className="ds-btn ds-btn-solid ds-btn-lg">Open {first.title}<Arrow /></Link>
+            </div>
+          </section>
+        )}
       </div>
     </>
   );
 }
+
+const OP_CSS = `
+.op { background: var(--bg); }
+
+/* Hero, in the subject's own colour */
+.op-hero {
+  padding: clamp(28px, 5vh, 56px) 0 clamp(40px, 7vh, 72px);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--w) 75%, var(--bg)) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.op-hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--space-10); align-items: center; }
+.op-hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+.op-title { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-2); }
+.op-title .ds-h1 { font-size: clamp(2.1rem, 4.2vw, 3.3rem); }
+.op-icon { width: 60px; height: 60px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 18px; background: var(--ds-card); color: var(--t); box-shadow: var(--elev-1); border: 1px solid var(--border); }
+.op-facts { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); font-size: 0.95rem; color: var(--text2); }
+.op-facts strong { color: var(--t); font-weight: 800; }
+.op-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+.op-ask { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); box-shadow: var(--elev-2); }
+.op-ask-label { font-weight: 700; font-size: 1.02rem; }
+.op-ask .ha { box-shadow: none; }
+.op-ask-note { font-size: 0.86rem; color: var(--text3); line-height: 1.55; }
+
+/* Sections */
+.op-section { padding: clamp(44px, 8vh, 88px) 0; border-top: 1px solid var(--border); }
+.op-hero + .op-section { border-top: none; }
+.op-head { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6); max-width: 720px; }
+
+/* Syllabus */
+.sy-tabs {
+  display: inline-flex; gap: 4px; padding: 4px; margin-bottom: var(--space-6);
+  border-radius: var(--radius-full); background: var(--ds-soft); border: 1px solid var(--border);
+}
+.sy-tab { display: inline-flex; align-items: baseline; gap: var(--space-2); padding: 9px 18px; border: none; border-radius: var(--radius-full); background: none; color: var(--text2); font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.18s, color 0.18s, box-shadow 0.18s; }
+.sy-tab span { font-size: 0.8rem; font-weight: 500; color: var(--text3); }
+.sy-tab.on { background: var(--ds-card); color: var(--text); box-shadow: var(--elev-1); }
+.sy-sections { display: flex; flex-direction: column; }
+/* A section is a row: its name on the left, its topics in a grid beside it. */
+.sy-section { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: var(--space-6); padding: var(--space-6) 0; border-top: 1px solid var(--border); }
+.sy-section:first-child { border-top: none; padding-top: 0; }
+.sy-section-head { display: flex; flex-direction: column; gap: 2px; padding-top: var(--space-2); }
+.sy-section-name { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+.sy-section-count { font-size: 0.84rem; color: var(--t); font-weight: 600; }
+.sy-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.sy-topic {
+  display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4);
+  background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  color: var(--text); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.sy-topic:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-1); }
+.sy-n { width: 28px; height: 28px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-circle); background: var(--w); color: var(--t); font-size: 0.8rem; font-weight: 700; }
+.sy-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.sy-title { font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
+.sy-subs { font-size: 0.8rem; color: var(--text3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sy-go { color: var(--text3); flex-shrink: 0; transition: color 0.15s, transform 0.15s; }
+.sy-topic:hover .sy-go { color: var(--t); transform: translateX(2px); }
+
+/* Books: one even grid, each card naming its group */
+.op-books { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.op-book {
+  position: relative; display: flex; flex-direction: column; gap: 2px; padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6);
+  background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+}
+.op-book::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: color-mix(in srgb, var(--t) 75%, transparent); }
+.op-book-group { font-size: 0.74rem; font-weight: 600; color: var(--text3); margin-bottom: var(--space-1); }
+.op-book-title { font-weight: 700; font-size: 0.96rem; line-height: 1.4; color: var(--text); }
+.op-book-author { font-size: 0.86rem; color: var(--text2); }
+
+/* Latest PYQs */
+.op-pyqs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+.op-pyq { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); }
+.op-pyq-meta { font-size: 0.82rem; color: var(--text3); }
+.op-pyq-meta strong { color: var(--t); }
+.op-pyq-q { flex: 1; font-size: 0.98rem; line-height: 1.55; color: var(--text); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.op-pyq-go { display: inline-flex; align-items: center; gap: var(--space-1); font-size: 0.86rem; font-weight: 700; color: var(--accent-text); }
+.op-more { display: flex; justify-content: center; margin-top: var(--space-5); }
+
+/* Tools */
+.op-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); }
+.op-tool { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); }
+.op-tool-icon { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-1); border-radius: var(--radius-lg); background: var(--w); color: var(--t); }
+.op-tool-title { font-weight: 700; font-size: 1.02rem; }
+.op-tool-text { font-size: 0.92rem; line-height: 1.6; color: var(--text2); }
+
+/* Close */
+.op-close-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); }
+.op-close-owl { width: auto; height: 90px; }
+
+@media (max-width: 960px) {
+  .op-hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .sy-section { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+  .sy-section-head { flex-direction: row; align-items: baseline; gap: var(--space-2); padding-top: 0; }
+  .op-books { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .op-pyqs { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .op-title { gap: var(--space-3); }
+  .op-icon { width: 50px; height: 50px; border-radius: 14px; }
+  .op-actions { width: 100%; flex-direction: column; }
+  .op-actions .ds-btn { width: 100%; }
+  .op-ask { padding: var(--space-4); }
+  .sy-tabs { display: flex; }
+  .sy-tab { flex: 1; justify-content: center; padding: 9px 10px; }
+  .sy-list { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+  .sy-topic { padding: var(--space-3); }
+  .op-books { grid-template-columns: minmax(0, 1fr); }
+  .op-pyq { padding: var(--space-4); }
+  .op-close-inner .ds-btn { width: 100%; white-space: normal; text-align: center; line-height: 1.3; padding-top: 12px; padding-bottom: 12px; }
+}
+`;

@@ -44,3 +44,42 @@ export async function pyqCountForOptional(optional: string | null): Promise<numb
     return null;
   }
 }
+
+export type PyqPeek = { id: string; year: number; paper: string; marks: number | null; question: string };
+
+const summaries = new Map<string, { count: number; firstYear: number | null; latest: PyqPeek[] }>();
+
+/**
+ * What a subject's page says about its PYQ bank: how many questions, how far
+ * back they go, and the most recent few to show. Server-only, like the count.
+ */
+export async function pyqSummaryForOptional(optional: string, latest = 3): Promise<{ count: number; firstYear: number | null; latest: PyqPeek[] } | null> {
+  const cached = summaries.get(optional);
+  if (cached) return cached;
+  const load = LOADERS[optional];
+  if (!load) return null;
+  try {
+    const rows = (await load()).default as Record<string, unknown>[];
+    const peeks: PyqPeek[] = rows
+      .map((r) => ({
+        id: String(r.id),
+        year: Number(r.year),
+        paper: String(r.paper ?? ''),
+        marks: Number.isFinite(Number(r.marks)) ? Number(r.marks) : null,
+        question: String(r.question ?? '').trim(),
+      }))
+      .filter((p) => Number.isFinite(p.year) && p.question.length > 20);
+    const years = peeks.map((p) => p.year);
+    const summary = {
+      count: rows.length,
+      firstYear: years.length ? Math.min(...years) : null,
+      // Newest paper first; within it, Paper I before Paper II, in file order.
+      latest: [...peeks].sort((a, b) => b.year - a.year || a.paper.localeCompare(b.paper)).slice(0, latest),
+    };
+    summaries.set(optional, summary);
+    return summary;
+  } catch (e) {
+    console.error(`[pyqCounts] could not summarise ${optional}:`, e);
+    return null;
+  }
+}
