@@ -152,6 +152,7 @@ export const SUBJECT_THINKER_BOOKS: Record<SubjectKey, Record<string, string[]>>
     'Arora': ['indian public administration'],
     'Bhattacharya': ['new horizons of public administration'],
     'Prasad': ['administrative thinkers'],
+    'Basu': ['public administration: an introduction to concepts and theories', 'public administration'],
   },
 };
 
@@ -407,7 +408,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
       group: 'Thinkers & Concepts',
       books: [
         { value: 'D. Ravindra Prasad — Administrative Thinkers', label: 'Ravindra Prasad — Admin Thinkers' },
-        { value: 'Rumki Basu — Public Administration: Concepts and Theories', label: 'Rumki Basu — Pub Admin', soon: true },
+        { value: 'Rumki Basu — Public Administration: An Introduction to Concepts and Theories (1st ed.)', label: 'Rumki Basu (1st ed.)' },
       ],
     },
     {

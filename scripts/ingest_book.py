@@ -31,7 +31,9 @@ and writes them to Qdrant with new ids after the current highest one.
 
 Usage:
   python3 scripts/ingest_book.py "<book title>" <subject> --author "<author>" \
-      [--profile ignou|ncert|plain] [--out DIR] [--upload [--replace]] PDF_OR_DIR...
+      [--profile ignou|ncert|scan|plain] [--out DIR] [--label FILE=LABEL | OLD=NEW]...
+      [--scan-margins TOP,BOTTOM] [--chapters TSV] [--page-footnotes]
+      [--upload [--replace]] PDF_OR_DIR...
 
   The title must match the value in lib/subjectConfig.ts SUBJECT_BOOKS,
   because single-book chat filters on it exactly. Directories are searched
@@ -149,6 +151,23 @@ def norm(t):
     return re.sub(r'\s+', ' ', re.sub(r'\d+', '#', t.lower())).strip()
 
 
+def line_texts(segs):
+    """Each segment's whole printed line: OCR splits a justified line into
+    pieces at wide gaps, and a lone "the" from a page's last line is not a
+    footer."""
+    out = {}
+    for s in segs:
+        mates = [t for t in segs if abs((t.y0 + t.y1) - (s.y0 + s.y1)) / 2 <= 0.4 * min(t.y1 - t.y0, s.y1 - s.y0)]
+        out[id(s)] = ' '.join(t.text for t in sorted(mates, key=lambda t: t.x0))
+    return out
+
+
+def body_line(t):
+    """A line of running text, not a head: long, and mostly lower case."""
+    letters = [c for c in t if c.isalpha()]
+    return len(t) >= 45 and sum(c.islower() for c in letters) >= 0.6 * len(letters)
+
+
 def edge_zone(s, W, H, col):
     """Which edge of the page a segment sits at, if any. The sides count only
     outside the page's text column, so a list marker or section number at the
@@ -185,11 +204,14 @@ def drop_furniture(pages, dims, log):
             if z and s.size < big: seen[(z, norm(s.text))].add(s.page)
     out = []
     for segs, col in zip(pages, cols):
-        keep = []
+        keep, lines = [], line_texts(segs)
         for s in segs:
             W, H = dims[s.page]
             z = edge_zone(s, W, H, col) if s.size < big and not KEEP_AT_EDGE.match(s.text) \
                 and not BACK_MATTER.fullmatch(s.text.strip()) else None
+            if z in ('top', 'bottom') and not s.text.strip().isdigit() and (
+                    body_line(lines[id(s)]) or (s.text.strip().islower() and lines[id(s)].strip() != s.text.strip())):
+                z = None
             # Small type needs only two sightings: a short chapter shows its
             # running head on just two pages.
             need = 2 if s.size <= 0.85 * body else 3
@@ -252,6 +274,45 @@ def reading_order(segs, W):
             for b in sorted((b for b in band if side(b)), key=lambda b: (round(b[1]), b[0])):
                 out += b[4]
         if cut: out += cut[4]; top = cut[1] + 0.1
+    return out
+
+
+def scan_order(segs):
+    """A scanned page, read line by line. OCR splits a justified line into
+    pieces at wide gaps, with tops a point or two apart and sizes that follow
+    each word's own height; read by block and size, a short line's right half
+    looks like a second column, or a title."""
+    lines = []
+    for s in sorted(segs, key=lambda s: (s.y0 + s.y1) / 2):
+        c, h = (s.y0 + s.y1) / 2, s.y1 - s.y0
+        if lines and abs(c - lines[-1][0]) <= 0.4 * min(h, lines[-1][1]):
+            lines[-1][2].append(s)
+        else:
+            lines.append([c, h, [s]])
+    return [[s for s in sorted(g, key=lambda s: s.x0)] for _, _, g in lines]
+
+
+def gutter(segs, W):
+    """How much of a page's text crosses its middle, at the emptiest point
+    between 40% and 60% of its width: near 0 where two columns leave a
+    gutter, 0.2 or more on a single-column page however OCR splits its
+    lines. None for a page with too little text to tell."""
+    body = [s for s in segs if len(s.text) >= 12]
+    if len(body) < 10: return None
+    return min(sum(s.x0 < x < s.x1 for s in body) / len(body) for x in range(int(0.4 * W), int(0.6 * W) + 1, 2))
+
+
+def scan_rows(segs):
+    """Rows of a scanned page: one per printed line, sized by its longest
+    piece rather than its tallest word."""
+    out = []
+    for g in scan_order(segs):
+        text = g[0].text
+        for prev, s in zip(g, g[1:]):
+            text += ('' if s.x0 - prev.x1 < 0.15 * s.size else ' ') + s.text
+        main = max(g, key=lambda s: len(s.text))
+        out.append({'page': g[0].page, 'text': re.sub(r'\s+', ' ', text).strip(), 'size': main.size,
+                    'bold': all(s.bold for s in g), 'y0': min(s.y0 for s in g), 'y1': max(s.y1 for s in g)})
     return out
 
 
@@ -339,7 +400,10 @@ def read_book(files, profile, log):
                 openers.append(segs)
                 heads.append(' '.join(s.text for s in sorted(segs, key=lambda s: s.x0) if 0.025 <= band(s) < SCAN_TOP))
                 # A notes heading opening a page can sit as high as the head.
-                inside = lambda s: SCAN_TOP <= band(s) <= SCAN_BOTTOM or BACK_MATTER.fullmatch(s.text.strip())
+                # So can a page's first line of text, on a page set higher.
+                lines = line_texts(segs)
+                inside = lambda s: SCAN_TOP <= band(s) <= SCAN_BOTTOM or BACK_MATTER.fullmatch(s.text.strip()) \
+                    or body_line(lines[id(s)])
                 for s in segs:
                     if not inside(s): log['scan margin (watermark, running head)'][norm(s.text)[:50]] += 1
                 segs = [s for s in segs if inside(s)]
@@ -362,18 +426,60 @@ def read_book(files, profile, log):
         # A chapter list from the book's contents beats running heads:
         # "first page<TAB>title", pages counted from 1 in the input.
         labels = [next((t for p0, t in reversed(CHAPTERS) if p0 <= g + 1), None) for g in range(len(pages))]
+    if profile == 'scan':
+        # A two-column book (most pages show a gutter) is read by column and
+        # block throughout: its single-column pages are figure and table
+        # pages. A single-column book is read line by line, except a page
+        # that plainly has two columns.
+        gut = [gutter(segs, dims[g][0]) for g, segs in enumerate(pages)]
+        known = sorted(x for x in gut if x is not None)
+        two_col_book = bool(known) and known[len(known) // 2] < 0.1
     per_file = [[] for _ in files]
     for g, segs in enumerate(pages):
         if profile == 'ncert' and any(s.text.startswith('This unit deals with') for s in segs):
             log['NCERT unit opener page']['UNIT … This unit deals with …'] += 1
             continue
         if segs:
-            per_file[owner[g]] += [{**r, 'label': labels[g]} for r in rows_of(reading_order(segs, dims[g][0]))]
+            if profile == 'scan' and not two_col_book and not (gut[g] is not None and gut[g] < 0.05):
+                rows = scan_rows(segs)
+            else:
+                rows = rows_of(reading_order(segs, dims[g][0]))
+            if profile == 'scan' and PAGE_FOOTNOTES: rows = drop_footnotes(rows, log)
+            per_file[owner[g]] += [{**r, 'label': labels[g]} for r in rows]
     return [tidy_rows(rows, log) for rows in per_file]
+
+
+CITATION = re.compile(r'\b(?:1[89]\d\d|ibid|op\.\s?cit|pp?\.\s?\d|Press\b|Vol\.|Journal\b)', re.I)
+# Without its number (furniture removal takes a "38." that recurs at page
+# feet), a note needs plainer signs of a source in its first two rows.
+SOURCE = re.compile(r'\b(?:ibid|op\.\s?cit|pp?\.\s?\d|Press\b|Publish(?:ers?|ing)\b|Vol\.|Journal\b|Inc\.|Ltd\b)', re.I)
+
+
+def drop_footnotes(rows, log):
+    """A scanned page's footnotes: rows at its foot below a wider gap than
+    the page's line spacing, citing a source ("8. The Task Force Report on
+    Regulatory Commissions, p. 20."). OCR sizes each word by its own height,
+    so type size alone cannot find them."""
+    rows = [r for r in rows if re.search(r'[A-Za-z0-9]', r['text'])]
+    steps = sorted(b['y0'] - a['y0'] for a, b in zip(rows, rows[1:]) if b['y0'] > a['y0'])
+    if len(steps) < 5: return rows
+    line = steps[len(steps) // 2]
+    best, gap = None, 0
+    for k in range(max(1, len(rows) - 12), len(rows)):
+        g = rows[k]['y0'] - rows[k - 1]['y0']
+        if g < 1.6 * line or g <= gap: continue
+        tail = ' '.join(r['text'] for r in rows[k:])
+        numbered = re.match(r'(?:\d{1,2}\s?[.,]|[*†‡§])\s*\S', rows[k]['text'])
+        if (numbered and CITATION.search(tail)) or SOURCE.search(' '.join(r['text'] for r in rows[k:k + 2])):
+            best, gap = k, g
+    if best is None: return rows
+    for x in rows[best:]: log['footnote (page foot)'][x['text'][:50]] += 1
+    return rows[:best]
 
 
 SCAN_TOP, SCAN_BOTTOM = 0.064, 0.955
 CHAPTERS = []
+PAGE_FOOTNOTES = False          # --page-footnotes: drop_footnotes on every page
 # A chapter's closing list of notes or readings, left out to the chapter's end.
 BACK_MATTER = re.compile(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?|NOTES'
                          r'|Bibliography|Notes[\s,.]+(?:\S{1,4}[\s,.]+){1,2}Re\S{6,9})')
@@ -682,6 +788,13 @@ def ocr_fix(t, V, log):
     t = RUPEE.sub(rupee, t)
     t = re.sub(r'(?<=\d)\](?=[\s.,;:)]|$)|£(?=\d{3})', '1', t)        # "201]", "£970s"
     t = re.sub(r'\s?\^', '', t)                                          # "Ibid.^", "Sinifieftnce ^"
+
+    def note(m):                                     # a note number set on the line: "World.38", "theory12"
+        if re.search(r'\b(?:No|Nos|Vol|Fig|Art|Sec|Para|Ch|pp?|Rs|Table|Schedule|Section|Article|Chapter)$', m.string[:m.start()]):
+            return m.group(0)                        # "No.4", "Article.2" are numbers in their own right
+        log['OCR fix: note number on the line'][re.sub(r'\d', '#', m.group(0))] += 1; return m.group(1)
+    t = re.sub(r'(?<=[A-Za-z)])([.,;:’”"\']{1,3})\d{1,2}\.?(?=\s|$)', note, t)
+    t = re.sub(r'(?<=[a-z]{3})()\d{1,2}(?=[\s.,;:]|$)', note, t)
 
     def star(m):                                     # ‘welfare of man* → ’ ; a footnote star goes
         before = t[max(0, m.start() - 80):m.start()]
@@ -1146,9 +1259,13 @@ def main():
                     help='scan profile: page fractions cut at the top and bottom (default 0.064,0.955)')
     ap.add_argument('--chapters', metavar='TSV',
                     help='chapter list: "first page<TAB>title" per line, pages counted from 1 in the input PDF')
+    ap.add_argument('--page-footnotes', action='store_true',
+                    help='scan profile: the book has footnotes at the page foot; leave them out')
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--replace', action='store_true')
     a = ap.parse_args()
+    global PAGE_FOOTNOTES
+    PAGE_FOOTNOTES = a.page_footnotes
 
     if a.chapters:
         CHAPTERS.extend(sorted((int(p0), t.strip()) for p0, t in
