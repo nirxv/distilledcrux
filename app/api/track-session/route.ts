@@ -4,7 +4,8 @@ import { checkRateLimit } from '@/lib/rateLimit';
 
 export const runtime = 'nodejs';
 
-const BOT_UA = /bot|crawler|spider|crawling|googlebot|bingbot|ahrefsbot|semrushbot|mj12bot|dotbot|rogerbot|facebookexternalhit|python|curl|wget|axios|node-fetch|go-http-client|java|ruby|scrapy/i;
+// HeadlessChrome: automated browsers that do not set navigator.webdriver.
+const BOT_UA = /bot|crawler|spider|crawling|headlesschrome|googlebot|bingbot|ahrefsbot|semrushbot|mj12bot|dotbot|rogerbot|facebookexternalhit|python|curl|wget|axios|node-fetch|go-http-client|java|ruby|scrapy/i;
 
 // 3 requests per 10s per visitor. This was an in-memory Map, so it counted
 // per lambda instead of per visitor, and once it held 10,000 entries it evicted

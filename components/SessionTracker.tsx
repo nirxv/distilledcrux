@@ -4,6 +4,20 @@ import { usePathname } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 
 // ---------------------------------------------------------------------------
+// Who counts as a visitor
+// ---------------------------------------------------------------------------
+/**
+ * Local dev writes to the production database, and an automated browser
+ * (puppeteer, Playwright: navigator.webdriver is set) gets a fresh
+ * fingerprint on every launch, so each test run left a new visitor row.
+ * Neither is a reader.
+ */
+function shouldTrack(): boolean {
+  if (navigator.webdriver) return false;
+  return !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+}
+
+// ---------------------------------------------------------------------------
 // Visitor ID — triple persistence: localStorage + cookie + FingerprintJS
 // FingerprintJS is loaded lazily, only when no cached ID exists
 // ---------------------------------------------------------------------------
@@ -113,11 +127,13 @@ export default function SessionTracker() {
 
   // Resolve visitor ID once on mount
   useEffect(() => {
+    if (!shouldTrack()) return;
     getVisitorId().then(id => { visitorIdRef.current = id; });
   }, []);
 
   // Fire on every page navigation
   useEffect(() => {
+    if (!shouldTrack()) return;
     if (lastPath.current === pathname) return;
     lastPath.current = pathname;
 
@@ -132,6 +148,7 @@ export default function SessionTracker() {
 
   // Heartbeat — interval + tab-switch + page-close
   useEffect(() => {
+    if (!shouldTrack()) return;
     const interval = setInterval(async () => {
       const id = visitorIdRef.current ?? await getVisitorId();
       pingHeartbeat(id);
