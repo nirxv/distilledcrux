@@ -17,7 +17,6 @@ import type { Metadata, Viewport } from 'next';
  * discarded, so React's hydration never matched the DOM and the admin crashed
  * with "This page couldn't load".
  */
-import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -74,13 +73,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
         </AuthProvider>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
-        <Script id="gtag-init" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        `}</Script>
       </body>
     </html>
   );

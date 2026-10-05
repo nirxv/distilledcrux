@@ -11,14 +11,15 @@ const securityHeaders = [
       "default-src 'self'",
       // No 'unsafe-eval'. The only thing that wanted it was pdf.js, which now
       // runs with isEvalSupported:false in app/evaluate. Checked the rest:
-      // gtag.js needs no eval, and Razorpay's checkout.js has one new Function
-      // in a try/catch globalThis polyfill that never runs in a real browser.
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://checkout.razorpay.com",
+      // Razorpay's checkout.js has one new Function in a try/catch globalThis
+      // polyfill that never runs in a real browser. Google Analytics is gone:
+      // its tag only ever carried the placeholder ID G-XXXXXXXXXX.
+      "script-src 'self' 'unsafe-inline' https://apis.google.com https://checkout.razorpay.com",
       "worker-src 'self' blob:",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https:",
-      "connect-src 'self' https://api.anthropic.com https://*.supabase.co https://www.google-analytics.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://ip-api.com",
+      "connect-src 'self' https://api.anthropic.com https://*.supabase.co https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://ip-api.com",
       "frame-src 'self' https://*.firebaseapp.com https://accounts.google.com https://api.razorpay.com https://checkout.razorpay.com",
       "base-uri 'self'",
       "form-action 'self' https://*.firebaseapp.com https://accounts.google.com",
