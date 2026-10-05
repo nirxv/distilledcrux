@@ -304,6 +304,9 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
         { value: 'Srinivas — Social Change in Modern India', label: 'Srinivas — Social Change in Modern India' },
         { value: 'Beteille — Caste Class and Power', label: 'Beteille — Caste Class and Power' },
         { value: 'Desai — Social Background of Indian Nationalism', label: 'Desai — Social Background' },
+        // Both indexed under these exact titles; they were searchable but missing from the list.
+        { value: 'Yogendra Singh — Modernization of Indian Tradition', label: 'Yogendra Singh — Modernization of Indian Tradition' },
+        { value: 'Ram Ahuja — Social Problems in India', label: 'Ram Ahuja — Social Problems in India' },
       ],
     },
   ],
