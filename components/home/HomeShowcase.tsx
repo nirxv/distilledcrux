@@ -149,13 +149,13 @@ export default function HomeShowcase() {
     {
       key: 'notes', tab: 'Notes', title: 'Notes you can finish the night before.',
       text: 'Every topic in both papers, cut down to what an answer actually uses: the thinkers, the debates and the examples.',
-      points: ['Free to read, no sign-up needed', 'Laid out the way the syllabus is', 'Ask the AI about anything you are reading'],
+      points: ['Free with your account', 'Laid out the way the syllabus is', 'Ask the AI about anything you are reading'],
       cta: 'Read the notes', href: slug ? `/notes/${slug}` : '/notes', wash: 'var(--wash-anthropology)', preview: <NotesPreview />,
     },
     {
       key: 'pyq', tab: 'PYQs', title: 'See what UPSC keeps asking.',
       text: 'Every past question for your optional, sorted by topic. Pick one, see how a good answer goes, then write your own.',
-      points: ['Filter by year, paper and marks', 'Model answers when you want one', 'Free to browse'],
+      points: ['Filter by year, paper and marks', 'Model answers when you want one', 'Free with your account'],
       cta: 'Browse PYQs', href: slug ? `/${slug}/pyqs` : '#optionals', wash: 'var(--warning-wash)', preview: <PyqPreview />,
     },
     {

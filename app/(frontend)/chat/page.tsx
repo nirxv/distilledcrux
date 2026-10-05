@@ -480,6 +480,14 @@ function ChatContent() {
   const [chatRestored, setChatRestored] = useState(false);
 
   const { user, access, canChat, incrementChat } = useChatAccess(subject);
+
+  // Signing in is required to use the chat, as it always has been here: a
+  // signed-out visitor goes to the login page, which brings them back to
+  // this address, question and all.
+  useEffect(() => {
+    if (user !== null) return;
+    window.location.href = `/login?next=${encodeURIComponent(window.location.pathname + window.location.search)}`;
+  }, [user]);
   const usageLoading = access.loading;
   const subscribed = access.subscribed;
   const [modal, setModal] = useState<'login' | 'limit' | null>(null);
@@ -1123,6 +1131,10 @@ function ChatContent() {
   );
 
   const panelOwnerSources = (i: number) => panel?.owner === i && panel.content.kind === 'sources';
+
+  // Nothing to show until sign-in has settled, and nothing at all while a
+  // signed-out visitor is on the way to the login page.
+  if (!user) return <OwlLoader size="page" label="Loading the chat" />;
 
   return (
     <>

@@ -256,9 +256,9 @@ export async function POST(req: NextRequest) {
     ? await hasActiveSubscription(supabase, user.uid, optionalForAuth)
     : false;
 
-  // Free chats need an account, as on history-optional. The page asks a
-  // signed-out reader to sign in before it sends anything, so this only turns
-  // away callers that skip the page.
+  // Using the chat needs an account. The page sends a signed-out visitor to
+  // the login page before anything can be asked, so this only turns away
+  // callers that skip the page.
   if (!isPremium && !user) {
     return NextResponse.json({ error: 'login_required' }, { status: 401 });
   }

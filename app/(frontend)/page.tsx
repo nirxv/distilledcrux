@@ -152,7 +152,7 @@ export default async function Home() {
           <div className="ds-container">
             <div className="hm-head">
               <h2 className="ds-h2">One payment, and nothing renews behind your back</h2>
-              <p className="ds-lede">Notes and past questions are free for everyone. A plan gets you unlimited AI chat and answer evaluation for your optional.</p>
+              <p className="ds-lede">Notes and past questions are free with an account. A plan gets you unlimited AI chat and answer evaluation for your optional.</p>
             </div>
             <div className="hm-plans">
               {PLAN_ORDER.map((id) => {

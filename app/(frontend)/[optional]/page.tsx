@@ -144,7 +144,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
           <div className="ds-container">
             <div className="op-head">
               <h2 className="ds-h2">The whole syllabus, one topic at a time</h2>
-              <p className="ds-lede">Tap any topic to open its notes. They’re free, and you don’t need an account to read them.</p>
+              <p className="ds-lede">Tap any topic to open its notes. They’re free with your account.</p>
             </div>
             <SyllabusTabs subject={slug} papers={papers} />
           </div>
