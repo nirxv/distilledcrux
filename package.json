@@ -7,7 +7,8 @@
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096\" next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "tsx tests/chatStart.test.mts && tsx tests/chatStream.test.mts && tsx tests/chatMentor.test.mts && tsx tests/chatSuggestions.test.mts && tsx tests/citationGate.test.mts && tsx tests/detectTopic.test.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",
@@ -19,14 +20,17 @@
     "@payloadcms/db-postgres": "^3.89.0",
     "@payloadcms/next": "^3.89.0",
     "@payloadcms/richtext-lexical": "^3.89.0",
+    "@react-pdf/renderer": "^4.9.0",
     "@supabase/supabase-js": "^2.109.0",
     "@types/leaflet": "^1.9.22",
     "@untitledui/icons": "^0.0.22",
+    "dompurify": "^3.4.16",
     "firebase": "^12.16.0",
     "firebase-admin": "^13.10.0",
     "graphql": "^16.14.2",
     "groq-sdk": "^1.5.0",
     "leaflet": "^1.9.4",
+    "marked": "^18.0.14",
     "next": "16.2.12",
     "payload": "^3.89.0",
     "pdfjs-dist": "^4.10.38",
@@ -47,6 +51,7 @@
     "tailwindcss": "^4.3.3",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-react-aria-components": "^2.2.0",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

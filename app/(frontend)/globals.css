@@ -174,3 +174,56 @@ body {
   border-color: rgba(21,128,61,0.22);
   color: #15803d;
 }
+
+/* ── Shared scale and semantic tokens ────────────────────────────────
+   Added with the chat redesign, which comes from historyoptional.xyz and is
+   written in that site's vocabulary: a spacing scale, elevations, and a text
+   colour plus a wash for each meaning (success, premium, ...). The values are
+   history-optional's, except the accent family, which follows this site's
+   blue. */
+:root {
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-2-5: 10px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --radius-2xl:    12px;
+  --radius-full: 9999px;
+  --radius-circle:  50%;
+
+  --bg-raised:     #0a0a0a;
+  --bg-sunken:     #101010;
+  --border-subtle: #171717;
+  --accent-text:   var(--accent3);
+  --accent-on:     #ffffff;
+  --accent-wash:   #0e1d57;
+  --elev-1: 0 0 0 1px rgba(255,255,255,0.06), 0 2px 8px rgba(0,0,0,0.50);
+  --elev-2: 0 0 0 1px rgba(255,255,255,0.08), 0 8px 28px rgba(0,0,0,0.60);
+  --elev-3: 0 0 0 1px rgba(255,255,255,0.10), 0 16px 52px rgba(0,0,0,0.70);
+  --success-text: #33a066; --success-wash: #0e2519;
+  --warning-text: #c37f18; --warning-wash: #2a1f10;
+  --danger-text:  #df8075; --danger-wash:  #4a211c;
+  --info-text:    #6b9dd8; --info-wash:    #1a2e44;
+  --premium-text: #ae8829; --premium-wash: #27200f;
+}
+[data-theme="light"] {
+  --bg-raised:     #ffffff;
+  --bg-sunken:     #f1f1f1;
+  --border-subtle: #e4e4e4;
+  --accent-text:   var(--accent2);
+  --accent-on:     #ffffff;
+  --accent-wash:   #e6eafb;
+  --elev-1: 0 1px 2px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.07);
+  --elev-2: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.10);
+  --elev-3: 0 4px 8px rgba(0,0,0,0.07), 0 16px 48px rgba(0,0,0,0.14);
+  --success-text: #25774b; --success-wash: #e2f6eb;
+  --warning-text: #905e12; --warning-wash: #f8f0e6;
+  --danger-text:  #b5382a; --danger-wash:  #f7e7e5;
+  --info-text:    #2d66a7; --info-wash:    #e2ecf7;
+  --premium-text: #80651e; --premium-wash: #f6f1e2;
+}

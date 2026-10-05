@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 130" role="img" aria-label="The History Optional owl, reading">
+  <style>
+    .eyes { animation: read 2.2s ease-in-out infinite; }
+    @keyframes read { 0%, 100% { transform: translateX(-2.5px); } 50% { transform: translateX(2.5px); } }
+    .spark { animation: glint 1.4s ease-in-out infinite; transform-origin: 128px 28px; }
+    @keyframes glint { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.85); } }
+    @media (prefers-reduced-motion: reduce) { .eyes, .spark { animation: none; } }
+  </style>
+  <defs>
+    <clipPath id="rL"><circle cx="56" cy="50" r="12"/></clipPath>
+    <clipPath id="rR"><circle cx="90" cy="50" r="12"/></clipPath>
+    <g id="rsil">
+      <path d="M40 30 L33 6 Q51 14 60 20 Q73 17 86 20 Q95 14 113 6 L106 30 Q118 46 116 70 Q112 100 88 110 Q73 114 58 110 Q34 100 30 70 Q28 46 40 30 Z"/>
+      <path d="M20 88 L73 96 L126 88 L122 118 L73 124 L24 118 Z"/>
+    </g>
+  </defs>
+  <use href="#rsil" fill="#000" stroke="#000" stroke-width="10" stroke-linejoin="round" opacity=".10" transform="translate(0 3)"/>
+  <use href="#rsil" fill="#fff" stroke="#fff" stroke-width="10" stroke-linejoin="round"/>
+
+  <path d="M40 30 L33 6 Q51 14 60 20 Q73 17 86 20 Q95 14 113 6 L106 30 Q118 46 116 70 Q112 100 88 110 Q73 114 58 110 Q34 100 30 70 Q28 46 40 30 Z" fill="#15151c"/>
+  <path d="M46 28 Q59 20 73 21" stroke="#3a3a4e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M73 36 Q60 24 47 29 Q34 36 36 52 Q38 68 55 70 Q66 70 73 63 Q80 70 91 70 Q108 68 110 52 Q112 36 99 29 Q86 24 73 36 Z" fill="#262634"/>
+
+  <!-- eyes, cast down at the page -->
+  <circle cx="56" cy="50" r="12" fill="#fff"/>
+  <circle cx="90" cy="50" r="12" fill="#fff"/>
+  <g class="eyes">
+    <g clip-path="url(#rL)"><circle cx="56" cy="56" r="7.5" fill="#4f6de2"/><circle cx="56" cy="57" r="4" fill="#0b0b10"/><circle cx="58" cy="54" r="1.6" fill="#fff"/></g>
+    <g clip-path="url(#rR)"><circle cx="90" cy="56" r="7.5" fill="#4f6de2"/><circle cx="90" cy="57" r="4" fill="#0b0b10"/><circle cx="92" cy="54" r="1.6" fill="#fff"/></g>
+  </g>
+  <g clip-path="url(#rL)"><path d="M42 50 Q56 54 70 48 L70 34 L42 34 Z" fill="#262634"/></g>
+  <g clip-path="url(#rR)"><path d="M76 48 Q90 54 104 50 L104 34 L76 34 Z" fill="#262634"/></g>
+  <path d="M44.5 49.5 Q56 53.5 67.5 48.5" stroke="#0b0b10" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M78.5 48.5 Q90 53.5 101.5 49.5" stroke="#0b0b10" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M45 49 Q40 48 37.5 44" stroke="#0b0b10" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M101 49 Q106 48 108.5 44" stroke="#0b0b10" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M73 58 L79 64 L75 73 L67 64.5 Z" fill="#e8b84b"/>
+
+  <!-- open book -->
+  <path d="M20 88 L73 96 L73 124 L24 118 Z" fill="#4f6de2"/>
+  <path d="M126 88 L73 96 L73 124 L122 118 Z" fill="#3d57bf"/>
+  <path d="M24 86 L73 93 L73 119 L28 113 Z" fill="#fff7e6"/>
+  <path d="M122 86 L73 93 L73 119 L118 113 Z" fill="#fbefd4"/>
+  <g stroke="#d9c7a0" stroke-width="1.6" stroke-linecap="round">
+    <path d="M32 93 L66 98"/><path d="M32 99 L66 104"/><path d="M32 105 L60 109"/>
+    <path d="M114 93 L80 98"/><path d="M114 99 L80 104"/><path d="M114 105 L86 109"/>
+  </g>
+  <!-- wing tips over the pages -->
+  <path d="M22 84 Q16 94 26 100 Q34 96 32 86 Z" fill="#0e0e14"/>
+  <path d="M124 84 Q130 94 120 100 Q112 96 114 86 Z" fill="#0e0e14"/>
+
+  <g class="spark" stroke="#f5a524" stroke-width="4" stroke-linecap="round">
+    <path d="M124 30 L132 22"/><path d="M128 40 L140 38"/><path d="M118 22 L120 11"/>
+  </g>
+</svg>
