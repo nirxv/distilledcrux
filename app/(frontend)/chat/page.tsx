@@ -12,6 +12,7 @@ import { detectTopic } from '@/lib/detectTopic';
 import { compose, formatFor, EMPTY_START, SCHOLARS, type StartState } from '@/lib/chatStart';
 import { SUBJECT_BOOKS, SUBJECT_DISPLAY, type SubjectKey } from '@/lib/subjectConfig';
 import { CHAT_TOPIC_PYQS_LIVE, FLASHCARDS_LIVE, SYLLABUS_TRACKER_LIVE } from '@/lib/features';
+import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { takeStages, type StageEvent } from '@/lib/chatStream';
 import { suggestions, nextSuggestion, graphemes } from '@/lib/chatSuggestions';
 import ChatSidebar from '@/components/chat/ChatSidebar';
@@ -480,6 +481,8 @@ function ChatContent() {
   const [chatRestored, setChatRestored] = useState(false);
 
   const { user, access, canChat, incrementChat } = useChatAccess(subject);
+  // Syllabus ticks, for the coverage card and "Mark it done" (lib/features.ts).
+  const tracker = useSyllabusTracker();
 
   // Signing in is required to use the chat, as it always has been here: a
   // signed-out visitor goes to the login page, which brings them back to
@@ -918,8 +921,8 @@ function ChatContent() {
     sendMessage(`Answer this PYQ (${q.year}, ${q.marks} marks): ${q.question}`, { format: 'mains' });
   };
 
-  // The syllabus tracker is not live yet (lib/features.ts).
-  const syllabusDone = 0;
+  // How much of this optional's syllabus is ticked off, for the sidebar card.
+  const syllabusDone = tracker.countCompleted(notesForSubject(subject).map(n => topicKey(subject, n.slug)));
   const remaining = Math.max(0, access.limit - access.used);
   const who = SCHOLARS[subject];
   const askedSoFar = thread.filter(m => m.role === 'user').map(m => m.content);
@@ -1270,8 +1273,8 @@ function ChatContent() {
                           key={`worth-${slug}`}
                           slug={slug}
                           langHi={langHi}
-                          done={!SYLLABUS_TRACKER_LIVE}
-                          onMarkDone={() => {}}
+                          done={!SYLLABUS_TRACKER_LIVE || !tracker.ready || tracker.isCompleted(topicKey(subject, slug))}
+                          onMarkDone={() => tracker.toggle(topicKey(subject, slug))}
                           onShowPyqs={r => showPyqs(i, r)}
                         />
                       )}

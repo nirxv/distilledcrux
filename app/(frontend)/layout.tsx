@@ -21,6 +21,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SessionTracker from '@/components/SessionTracker';
+import ProgressSync from '@/components/ProgressSync';
 import { AuthProvider } from '@/components/AuthProvider';
 
 export const viewport: Viewport = {
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AuthProvider>
         <Navbar />
         <SessionTracker />
+        <ProgressSync />
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <main style={{ flex: 1, paddingTop: 60 }} id="main-layout">
             {children}

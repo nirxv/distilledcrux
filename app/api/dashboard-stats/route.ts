@@ -11,6 +11,20 @@ import { routeSlugForOptional } from '@/lib/optionals';
  * a given date: from the last ten years' papers, and one with marks, so it can
  * go straight to the evaluator.
  */
+/**
+ * What the dashboard needs to report coverage: each topic's question ids, by
+ * paper. Ids rather than questions, so this stays a few kilobytes.
+ */
+async function pyqIndex(slug: string | null) {
+  if (!slug || !isPyqSubject(slug)) return null;
+  const { questions, topics } = await loadPyqs(slug);
+  return topics.map((t) => ({
+    name: t.name,
+    p1: questions.filter((q) => q.topic === t.name && q.paper === 'Paper I').map((q) => q.id),
+    p2: questions.filter((q) => q.topic === t.name && q.paper === 'Paper II').map((q) => q.id),
+  }));
+}
+
 async function questionOfTheDay(slug: string | null) {
   if (!slug || !isPyqSubject(slug)) return null;
   const { questions } = await loadPyqs(slug);
@@ -67,11 +81,15 @@ export async function GET(req: NextRequest) {
   // Counted here rather than in the page: the reader only ever sees their own
   // optional's bank, and the data files have no business in the client bundle.
   const slug = routeSlugForOptional(optional);
-  const [pyqCount, todayQuestion] = await Promise.all([
+  const [pyqCount, todayQuestion, pyqTopics] = await Promise.all([
     pyqCountForOptional(optional),
     questionOfTheDay(slug).catch(() => null),
+    pyqIndex(slug).catch(() => null),
   ]);
-  const notesCount = slug ? notesForSubject(slug).length : 0;
+  const notes = slug ? notesForSubject(slug) : [];
+  const notesCount = notes.length;
+  // The syllabus in order, for what is done and what comes next.
+  const syllabus = notes.map((n) => ({ slug: n.slug, title: n.title, paper: n.paper, topic: n.topic }));
 
   return NextResponse.json({
     optional,
@@ -87,5 +105,7 @@ export async function GET(req: NextRequest) {
     pyqCount,
     notesCount,
     todayQuestion,
+    syllabus,
+    pyqTopics,
   });
 }

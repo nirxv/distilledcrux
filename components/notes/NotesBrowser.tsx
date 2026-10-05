@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 
 export type BrowserNote = {
   slug: string; title: string; topic: number; paper: 1 | 2; section: string;
@@ -16,6 +17,9 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
   const [paper, setPaper] = useState<1 | 2>(1);
   const [query, setQuery] = useState('');
   const q = query.trim().toLowerCase();
+  const tracker = useSyllabusTracker();
+  const done = (n: BrowserNote) => tracker.ready && tracker.isCompleted(topicKey(subject, n.slug));
+  const doneCount = tracker.ready ? notes.filter(done).length : 0;
 
   const papers = ([1, 2] as const).filter((p) => notes.some((n) => n.paper === p));
   const count = (p: 1 | 2) => notes.filter((n) => n.paper === p).length;
@@ -65,6 +69,13 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
         )}
       </div>
 
+      {!q && doneCount > 0 && (
+        <div className="nb2-progress">
+          <span><strong>{doneCount} of {notes.length}</strong> topics done{doneCount === notes.length ? ', the whole syllabus' : ''}</span>
+          <span className="nb2-progress-bar"><span style={{ width: `${(doneCount / notes.length) * 100}%` }} /></span>
+        </div>
+      )}
+
       {q && (
         <p className="nb2-found" aria-live="polite">
           {shown.length
@@ -85,13 +96,20 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
           <section key={sec.key} className="nb2-section">
             <div className="nb2-section-head">
               <h2 className="nb2-section-name">{sec.name}</h2>
-              <span className="nb2-section-meta">{q ? `Paper ${sec.paper === 1 ? 'I' : 'II'} · ` : ''}{sec.notes.length} {sec.notes.length === 1 ? 'topic' : 'topics'}</span>
+              <span className="nb2-section-meta">
+                {q ? `Paper ${sec.paper === 1 ? 'I' : 'II'} · ` : ''}{sec.notes.length} {sec.notes.length === 1 ? 'topic' : 'topics'}
+                {doneCount > 0 && sec.notes.some(done) ? ` · ${sec.notes.filter(done).length} done` : ''}
+              </span>
             </div>
             <div className="nb2-cards">
               {sec.notes.map((n) => (
-                <Link key={n.slug} href={`/notes/${subject}/${n.slug}`} className="nb2-card">
+                <Link key={n.slug} href={`/notes/${subject}/${n.slug}`} className={`nb2-card${done(n) ? ' done' : ''}`}>
                   <span className="nb2-card-top">
-                    <span className="nb2-n">{n.topic}</span>
+                    <span className="nb2-n" aria-label={done(n) ? `Topic ${n.topic}, done` : undefined}>
+                      {done(n)
+                        ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                        : n.topic}
+                    </span>
                     <span className="nb2-title">{n.title}</span>
                   </span>
                   <span className="nb2-desc">{n.description}</span>

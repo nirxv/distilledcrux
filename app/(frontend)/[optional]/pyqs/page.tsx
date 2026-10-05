@@ -123,6 +123,8 @@ const PYQ_LIST_CSS = `
 .pq-card:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-2); }
 .pq-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-size: 0.82rem; color: var(--text3); }
 .pq-paper { font-weight: 700; color: var(--t); }
+.pq-done { padding: 1px 9px; border-radius: var(--radius-full); background: var(--success-wash); color: var(--success-text); font-weight: 700; }
+.pq-status-done { color: var(--success-text); font-weight: 600; }
 .pq-marks { margin-left: auto; padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); color: var(--text2); font-weight: 600; }
 .pq-q { margin: 0; font-size: 1.04rem; font-weight: 500; line-height: 1.6; }
 .pq-q a { color: var(--text); text-decoration: none; }

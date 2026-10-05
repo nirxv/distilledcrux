@@ -7,6 +7,7 @@ import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
 import Mascot from '@/components/Mascot';
 import { rememberNote } from '@/lib/lastNote';
+import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 
 const SUBJECT_NAME: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology', polsci: 'PSIR', geography: 'Geography', 'pub-admin': 'Public Administration',
@@ -561,6 +562,10 @@ export default function NoteReader({
   const [annotationMode, setAnnotationMode] = useState<'highlight'|null>(null);
 
   const [user, setUser] = useState<User | null>(null);
+  // Ticking a topic off; it shows on the subject's notes page and the dashboard.
+  const tracker = useSyllabusTracker();
+  const doneKey = topicKey(subject, slug);
+  const isDone = tracker.ready && tracker.isCompleted(doneKey);
   const [authLoading, setAuthLoading] = useState(true);
 
   const processedContent = injectHeadingIds(initialContent);
@@ -776,6 +781,15 @@ export default function NoteReader({
         </nav>
 
         <div className="nr-bar-actions">
+          {user && tracker.ready && (
+            <button type="button" className={`nr-pill${isDone ? ' on done' : ''}`} onClick={() => tracker.toggle(doneKey)} aria-pressed={isDone}
+              title={isDone ? 'Done. Tap to untick' : 'Mark this topic done'}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                {isDone ? <><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.8 2.8L16.5 9.5" /></> : <circle cx="12" cy="12" r="9" />}
+              </svg>
+              <span>{isDone ? 'Done' : 'Mark done'}</span>
+            </button>
+          )}
           <button type="button"
             className={`nr-pill${annotationMode === 'highlight' ? ' on gold' : ''}`}
             onClick={() => setAnnotationMode(m => m === 'highlight' ? null : 'highlight')}
@@ -881,6 +895,19 @@ export default function NoteReader({
               </div>
             )}
           </div>
+
+          {/* Finished it: tick it off here, at the point of finishing */}
+          {user && tracker.ready && !gated && displayContent && (
+            <div className={`nr-finish${isDone ? ' done' : ''}`}>
+              <span className="nr-finish-text">
+                <strong>{isDone ? 'You’ve marked this topic done' : 'Finished this topic?'}</strong>
+                <span>{isDone ? 'It counts towards your syllabus on the dashboard.' : 'Tick it off and it counts towards your syllabus on the dashboard.'}</span>
+              </span>
+              <button type="button" className={`ds-btn ds-btn-sm ${isDone ? 'ds-btn-ghost' : 'ds-btn-solid'}`} onClick={() => tracker.toggle(doneKey)}>
+                {isDone ? 'Untick' : 'Mark it done'}
+              </button>
+            </div>
+          )}
 
           {/* A way on from the end of the note */}
           {!gated && displayContent && (
@@ -1143,6 +1170,13 @@ const NR_CSS = `
 .nr-gate-card p { margin: 0 0 var(--space-2); font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
 .nr-gate-btn { width: 100%; }
 
+.nr-finish { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-10); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--ds-card); border: 1px solid var(--border); }
+.nr-finish.done { background: var(--success-wash); border-color: color-mix(in srgb, var(--success-text) 30%, transparent); }
+.nr-finish-text { display: flex; flex-direction: column; gap: 2px; }
+.nr-finish-text strong { color: var(--text); font-size: 1rem; }
+.nr-finish-text span { color: var(--text2); font-size: 0.92rem; }
+.nr-finish + .nr-ask { margin-top: var(--space-3); }
+.nr-pill.on.done { color: var(--success-text); border-color: color-mix(in srgb, var(--success-text) 40%, transparent); background: var(--success-wash); }
 .nr-ask { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-10); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); color: var(--accent-text); text-decoration: none; transition: transform 0.15s; }
 .nr-ask:hover { transform: translateY(-1px); }
 .nr-ask svg { flex-shrink: 0; }
@@ -1223,6 +1257,8 @@ const NR_CSS = `
   .note-content { font-size: 1.02rem; }
   .note-content h2 { font-size: 1.28rem; }
   .nr-ask { padding: var(--space-4); }
+  .nr-finish { flex-direction: column; align-items: stretch; padding: var(--space-4); }
+  .nr-finish .ds-btn { justify-content: center; }
   .nr-pager { grid-template-columns: minmax(0, 1fr); }
   .nr-pager-link.next { text-align: left; align-items: flex-start; }
   .nr-find-fab kbd { display: none; }

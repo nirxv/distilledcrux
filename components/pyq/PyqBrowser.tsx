@@ -3,6 +3,7 @@ import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type R
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import type { Pyq, PyqTopic } from '@/lib/pyqs';
+import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
 
 type Filters = { q: string; paper: '' | '1' | '2'; topic: string; year: string; marks: string };
 const EMPTY: Filters = { q: '', paper: '', topic: '', year: '', marks: '' };
@@ -68,6 +69,8 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
   const listRef = useRef<HTMLDivElement>(null);
   const sentinel = useRef<HTMLDivElement>(null);
   const pendingScroll = useRef<number | null>(null);
+  const attempts = useAttemptedPyqs();
+  const wasAttempted = (x: Pyq) => attempts.ready && attempts.isAttempted(pyqKey(subject, x.id));
 
   // Back from a question used to return to the first batch alone, so the
   // browser had nowhere to scroll to and the reader lost their place. The
@@ -214,6 +217,10 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
         <span>
           {filtered.length.toLocaleString('en-IN')} {filtered.length === 1 ? 'question' : 'questions'}
           {f.topic && <> on <strong>{f.topic}</strong></>}
+          {attempts.ready && (() => {
+            const n = filtered.filter(wasAttempted).length;
+            return n > 0 ? <span className="pq-status-done"> · {n.toLocaleString('en-IN')} attempted</span> : null;
+          })()}
         </span>
         {filteredAtAll && <button type="button" className="pq-reset" onClick={() => update(EMPTY)}>Clear filters</button>}
       </div>
@@ -238,9 +245,10 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
               </h2>
               <div className="pq-cards">
                 {g.items.map((x) => (
-                  <article key={x.id} className="pq-card">
+                  <article key={x.id} className={`pq-card${wasAttempted(x) ? ' done' : ''}`}>
                     <div className="pq-meta">
                       <span className="pq-paper">{x.paper}</span>
+                      {wasAttempted(x) && <span className="pq-done">Attempted</span>}
                       {x.section && <span>{x.section}</span>}
                       {x.marks && <span className="pq-marks">{x.marks} marks</span>}
                     </div>

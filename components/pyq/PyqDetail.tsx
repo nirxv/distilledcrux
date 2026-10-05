@@ -7,6 +7,7 @@ import { sanitizeHtml } from '@/lib/sanitizeHtml';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
 import type { Pyq } from '@/lib/pyqs';
 import { listKey } from './PyqBrowser';
+import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
 
 type AnswerEntry = {
   id: string;
@@ -58,6 +59,11 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
   const [generating, setGenerating] = useState(false);
   const [generated, setGenerated] = useState(false);
   const [isPremium, setIsPremium] = useState(false);
+  const [signedIn, setSignedIn] = useState(false);
+  // Marking a question attempted; it counts towards the dashboard's coverage.
+  const attempts = useAttemptedPyqs();
+  const attemptKey = pyqKey(subject, pyq.id);
+  const attempted = attempts.ready && attempts.isAttempted(attemptKey);
   const [paywalled, setPaywalled] = useState(false);
 
   const [answers, setAnswers] = useState<AnswerEntry[]>([]);
@@ -73,6 +79,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
   // Premium check
   useEffect(() => {
     const unsub = auth.onAuthStateChanged(async user => {
+      setSignedIn(Boolean(user));
       if (!user) return;
       const token = await user.getIdToken();
       // Scoped to this page's subject: a subscription buys one optional, and
@@ -218,6 +225,16 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 </button>
               )}
             </div>
+
+            {signedIn && attempts.ready && (
+              <label className={`pd-attempt${attempted ? ' on' : ''}`}>
+                <input type="checkbox" checked={attempted} onChange={() => attempts.toggle(attemptKey)} />
+                <span className="pd-attempt-box" aria-hidden="true">
+                  {attempted && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>}
+                </span>
+                <span>{attempted ? 'You’ve attempted this question' : 'I’ve attempted this question'}</span>
+              </label>
+            )}
 
             {paywalled && (
               <div className="pd-card pd-locked">
@@ -402,7 +419,13 @@ const CSS = `
 .pd-topic:hover { border-color: var(--t); }
 .pd-micro { font-size: 0.84rem; color: var(--text3); }
 
-.pd-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6); }
+.pd-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+.pd-attempt { display: inline-flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); font-size: 0.94rem; font-weight: 600; color: var(--text2); cursor: pointer; }
+.pd-attempt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.pd-attempt-box { width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--border3); border-radius: 6px; background: var(--ds-card); color: #fff; transition: background 0.15s, border-color 0.15s; }
+.pd-attempt.on { color: var(--success-text); }
+.pd-attempt.on .pd-attempt-box { background: var(--success-text); border-color: var(--success-text); }
+.pd-attempt input:focus-visible + .pd-attempt-box { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .pd-card { background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-6); }
 .pd-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-3); }

@@ -22,12 +22,15 @@ export const TOPPER_COPIES_LIVE = false;
  *   Worth knowing and the PYQ follow-up.
  * - Flashcards: there are no flashcards on this site yet. Gates the card
  *   count in Worth knowing and the Flashcards link in the chat sidebar.
- * - Syllabus tracker: there is nowhere to tick a topic off yet. Gates the
- *   coverage ring in the sidebar and "Mark it done".
+ * - Syllabus tracker: now live (see below). Gates the coverage ring in the
+ *   sidebar and "Mark it done".
  */
 export const CHAT_TOPIC_PYQS_LIVE = false;
 export const FLASHCARDS_LIVE = false;
-export const SYLLABUS_TRACKER_LIVE = false;
+// On from step 7: topics are ticked off on the note reader and in the chat,
+// kept per device and synced to the account (hooks/useSyllabusTracker,
+// components/ProgressSync).
+export const SYLLABUS_TRACKER_LIVE = true;
 
 /**
  * Prelims practice. The three pages under /prelims advertise a 10,000-question

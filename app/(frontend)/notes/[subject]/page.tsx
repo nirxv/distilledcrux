@@ -115,6 +115,11 @@ const NOTES_INDEX_CSS = `
 .nb2-tab span { min-width: 24px; padding: 1px 7px; border-radius: var(--radius-full); background: var(--ds-card); font-size: 0.78rem; font-weight: 600; color: var(--text3); }
 .nb2-tab.on { background: var(--ds-card); color: var(--text); box-shadow: var(--elev-1); }
 .nb2-tab.on span { background: var(--w); color: var(--t); }
+.nb2-progress { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-4); margin: 0 0 var(--space-2); font-size: 0.95rem; color: var(--text2); }
+.nb2-progress strong { color: var(--text); }
+.nb2-progress-bar { flex: 1 1 200px; max-width: 360px; height: 6px; border-radius: var(--radius-full); background: var(--ds-soft); overflow: hidden; }
+.nb2-progress-bar span { display: block; height: 100%; border-radius: inherit; background: var(--success-text); }
+.nb2-card.done .nb2-n { background: var(--success-wash); color: var(--success-text); }
 .nb2-found { margin: 0 0 var(--space-4); font-size: 0.95rem; color: var(--text2); }
 .nb2-ask { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-5); margin-bottom: var(--space-6); max-width: 560px; }
 .nb2-ask-title { font-weight: 700; color: var(--accent-text); }

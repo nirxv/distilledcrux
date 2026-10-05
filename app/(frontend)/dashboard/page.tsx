@@ -8,6 +8,8 @@ import OwlLoader from '@/components/OwlLoader';
 import SubjectIcon from '@/components/SubjectIcon';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
 import { readLastNote, type LastNote } from '@/lib/lastNote';
+import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
+import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
 
 /** Kept in step with CHAT_FREE_LIMIT in app/api/chat/route.ts. */
 const CHAT_FREE_LIMIT = 3;
@@ -29,7 +31,37 @@ interface Stats {
   pyqCount: number | null;
   notesCount: number;
   todayQuestion: TodayQuestion | null;
+  syllabus: { slug: string; title: string; paper: 1 | 2; topic: number }[];
+  pyqTopics: { name: string; p1: number[]; p2: number[] }[] | null;
 }
+
+/** A thin ring showing a share done, with the percentage in the middle. */
+function Ring({ value, total }: { value: number; total: number }) {
+  const pct = total ? value / total : 0;
+  const r = 30, c = 2 * Math.PI * r;
+  return (
+    <span className="db-ring" aria-hidden="true">
+      <svg width="76" height="76" viewBox="0 0 76 76">
+        <circle cx="38" cy="38" r={r} fill="none" strokeWidth="7" className="db-ring-track" />
+        <circle cx="38" cy="38" r={r} fill="none" strokeWidth="7" strokeLinecap="round" className="db-ring-fill"
+          strokeDasharray={`${c * pct} ${c}`} transform="rotate(-90 38 38)" />
+      </svg>
+      <span>{Math.round(pct * 100)}%</span>
+    </span>
+  );
+}
+
+function Bar({ label, value, total }: { label: string; value: number; total: number }) {
+  return (
+    <div className="db-pbar">
+      <div className="db-pbar-top"><span>{label}</span><span>{value} of {total}</span></div>
+      <div className="db-bar"><span style={{ width: `${total ? (value / total) * 100 : 0}%` }} className="good" /></div>
+    </div>
+  );
+}
+
+/** Days since an ISO date, or null when there is none. */
+const daysSince = (iso?: string) => (iso ? Math.floor((Date.now() - new Date(iso).getTime()) / 86_400_000) : null);
 
 type LastChat = { id: string; title: string; updatedAt: number };
 
@@ -93,6 +125,8 @@ export default function Dashboard() {
   const [reloadKey, setReloadKey] = useState(0);
   const [lastNote, setLastNote] = useState<LastNote | null>(null);
   const [lastChat, setLastChat] = useState<LastChat | null>(null);
+  const tracker = useSyllabusTracker();
+  const attempts = useAttemptedPyqs();
 
   useEffect(() => {
     if (authLoading) return;
@@ -157,6 +191,53 @@ export default function Dashboard() {
   const tq = stats.todayQuestion;
   const tint = { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` };
 
+  // ── Progress, from the reader's own ticks (synced across devices) ──
+  const syllabus = stats.syllabus ?? [];
+  const isDone = (n: { slug: string }) => tracker.isCompleted(topicKey(slug, n.slug));
+  const doneNotes = tracker.ready ? syllabus.filter(isDone) : [];
+  const byPaper = (p: 1 | 2) => ({ done: doneNotes.filter(n => n.paper === p).length, total: syllabus.filter(n => n.paper === p).length });
+  const nextNote = tracker.ready ? syllabus.find(n => !isDone(n)) : undefined;
+  // The topic finished longest ago, if that was a month or more back.
+  const coldNote = tracker.ready
+    ? doneNotes
+        .map(n => ({ n, days: daysSince(tracker.progress.completionDates?.[topicKey(slug, n.slug)]) }))
+        .filter((x): x is { n: typeof x.n; days: number } => x.days !== null && x.days >= 30)
+        .sort((a, b) => b.days - a.days)[0]
+    : undefined;
+
+  const pyqTopics = stats.pyqTopics ?? [];
+  const tried = (id: number) => attempts.ready && attempts.isAttempted(pyqKey(slug, id));
+  const pyqPaper = (key: 'p1' | 'p2') => {
+    const ids = pyqTopics.flatMap(t => t[key]);
+    return { done: ids.filter(tried).length, total: ids.length };
+  };
+  const pyqDone = pyqPaper('p1').done + pyqPaper('p2').done;
+  const pyqTotal = pyqPaper('p1').total + pyqPaper('p2').total;
+  // Topics with real weight in the bank that the reader has not touched.
+  const untouched = attempts.ready
+    ? pyqTopics.filter(t => t.p1.length + t.p2.length >= 5 && ![...t.p1, ...t.p2].some(tried))
+        .sort((a, b) => (b.p1.length + b.p2.length) - (a.p1.length + a.p2.length))
+    : [];
+
+  const syllabusLine = doneNotes.length === 0
+    ? 'Tick topics off on the notes as you finish them, and they add up here.'
+    : doneNotes.length === syllabus.length
+      ? 'The whole syllabus is done. Time to revise.'
+      : `${syllabus.length - doneNotes.length} topics to go.`;
+  const pyqLine = pyqDone === 0
+    ? 'Mark questions as attempted when you answer them, and your coverage shows here.'
+    : untouched.length
+      ? `Not started yet: ${untouched.slice(0, 3).map(t => t.name).join(', ')}.`
+      : 'Every topic has at least one question attempted.';
+
+  // What the progress suggests doing, after the reader's own resume points.
+  const extras: { key: string; icon: string; title: string; sub: string; href: string }[] = [];
+  if (coldNote) extras.push({ key: 'cold', icon: 'notes', title: `Revise ${coldNote.n.title}`, sub: `You finished it ${coldNote.days} days ago`, href: `/notes/${slug}/${coldNote.n.slug}` });
+  if (nextNote && doneNotes.length > 0) extras.push({ key: 'next', icon: 'notes', title: `Next in the syllabus: ${nextNote.title}`, sub: `Paper ${nextNote.paper === 1 ? 'I' : 'II'}, topic ${nextNote.topic}`, href: `/notes/${slug}/${nextNote.slug}` });
+  if (pyqDone > 0 && untouched[0]) extras.push({ key: 'pyq', icon: 'pyq', title: `Try a question on ${untouched[0].name}`, sub: `${untouched[0].p1.length + untouched[0].p2.length} past questions, none attempted yet`, href: `/${slug}/pyqs?topic=${encodeURIComponent(untouched[0].name)}` });
+  const resumeCount = (lastNote ? 1 : 0) + (lastChat ? 1 : 0);
+  const shownExtras = extras.slice(0, Math.max(0, 3 - resumeCount));
+
   const tools = [
     { key: 'notes', title: 'Notes', count: stats.notesCount ? `${stats.notesCount} topics` : null, desc: 'Every topic in the syllabus, cut to what an answer uses.', href: `/notes/${slug}` },
     { key: 'pyq', title: 'Past questions', count: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} questions` : null, desc: 'By year, paper and topic, each one ready to answer.', href: `/${slug}/pyqs` },
@@ -197,7 +278,7 @@ export default function Dashboard() {
         <div className="ds-container db-grid">
           <main className="db-main">
             {/* What to do, from what is actually here. Nothing pads it out. */}
-            {(tq || lastNote || lastChat) && (
+            {(tq || lastNote || lastChat || shownExtras.length > 0) && (
               <section className="db-section">
                 <h2 className="db-h2">For today</h2>
 
@@ -219,7 +300,7 @@ export default function Dashboard() {
                   </article>
                 )}
 
-                {(lastNote || lastChat) && (
+                {(lastNote || lastChat || shownExtras.length > 0) && (
                   <div className="db-resume">
                     {lastNote && (
                       <Link href={`/notes/${lastNote.subject}/${lastNote.slug}`} className="db-resume-item">
@@ -241,8 +322,54 @@ export default function Dashboard() {
                         <Arrow />
                       </Link>
                     )}
+                    {shownExtras.map(x => (
+                      <Link key={x.key} href={x.href} className="db-resume-item">
+                        <span className="db-resume-icon"><Glyph name={x.icon} /></span>
+                        <span className="db-resume-text">
+                          <strong>{x.title}</strong>
+                          <span>{x.sub}</span>
+                        </span>
+                        <Arrow />
+                      </Link>
+                    ))}
                   </div>
                 )}
+              </section>
+            )}
+
+            {syllabus.length > 0 && (
+              <section className="db-section">
+                <h2 className="db-h2">Your progress</h2>
+                <div className="db-progress">
+                  <div className="db-pcard">
+                    <div className="db-pcard-top">
+                      <Ring value={doneNotes.length} total={syllabus.length} />
+                      <div>
+                        <h3>Syllabus</h3>
+                        <p className="db-pcard-big">{doneNotes.length} of {syllabus.length} topics done</p>
+                      </div>
+                    </div>
+                    <Bar label="Paper I" value={byPaper(1).done} total={byPaper(1).total} />
+                    <Bar label="Paper II" value={byPaper(2).done} total={byPaper(2).total} />
+                    <p className="db-pcard-line">{syllabusLine}</p>
+                    <Link href={`/notes/${slug}`} className="db-change">Open the notes <Arrow /></Link>
+                  </div>
+                  {pyqTotal > 0 && (
+                    <div className="db-pcard">
+                      <div className="db-pcard-top">
+                        <Ring value={pyqDone} total={pyqTotal} />
+                        <div>
+                          <h3>Past questions</h3>
+                          <p className="db-pcard-big">{pyqDone.toLocaleString('en-IN')} of {pyqTotal.toLocaleString('en-IN')} attempted</p>
+                        </div>
+                      </div>
+                      <Bar label="Paper I" value={pyqPaper('p1').done} total={pyqPaper('p1').total} />
+                      <Bar label="Paper II" value={pyqPaper('p2').done} total={pyqPaper('p2').total} />
+                      <p className="db-pcard-line">{pyqLine}</p>
+                      <Link href={`/${slug}/pyqs`} className="db-change">Open the past questions <Arrow /></Link>
+                    </div>
+                  )}
+                </div>
               </section>
             )}
 
@@ -351,6 +478,22 @@ const CSS = `
 .db-resume-text strong { color: var(--text); font-size: 0.98rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .db-resume-text span { font-size: 0.84rem; color: var(--text3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+.db-progress { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.db-pcard { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.db-pcard-top { display: flex; align-items: center; gap: var(--space-4); }
+.db-pcard h3 { margin: 0; font-size: 0.92rem; font-weight: 700; color: var(--text2); }
+.db-pcard-big { margin: 2px 0 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.01em; }
+.db-pcard-line { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--text2); }
+.db-pcard .db-change { margin-top: auto; }
+.db-ring { position: relative; width: 76px; height: 76px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; }
+.db-ring svg { position: absolute; inset: 0; }
+.db-ring-track { stroke: var(--ds-soft); }
+.db-ring-fill { stroke: var(--success-text); transition: stroke-dasharray 0.6s ease; }
+.db-ring > span { font-size: 0.95rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.db-pbar-top { display: flex; justify-content: space-between; gap: var(--space-2); font-size: 0.86rem; color: var(--text2); margin-bottom: 4px; }
+.db-pbar-top span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
+.db-pbar .db-bar { margin-bottom: 0; }
+.db-bar span.good { background: var(--success-text); }
 .db-tools { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-3); }
 .db-tools > * { grid-column: span 2; }
 /* Five tools: notes and past questions take the wider top row. */
@@ -395,6 +538,7 @@ const CSS = `
 }
 @media (max-width: 960px) {
   .db-grid { grid-template-columns: minmax(0, 1fr); }
+  .db-progress { grid-template-columns: minmax(0, 1fr); }
   .db-aside { position: static; }
 }
 @media (max-width: 640px) {
