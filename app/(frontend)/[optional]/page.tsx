@@ -23,28 +23,28 @@ type Subject = {
   about: (since: number | null) => string;
 };
 
-const since = (y: number | null) => (y ? `past questions going back to ${y}` : 'the past questions');
+const since = (y: number | null) => (y ? `past questions back to ${y}` : 'the past questions');
 
 const SUBJECTS: Record<string, Subject> = {
   sociology: {
     name: 'Sociology', optional: 'sociology',
-    about: (y) => `From Marx, Weber and Durkheim to caste, kinship and the Indian village. Both papers, ${since(y)}, and an AI that has read the standard books.`,
+    about: (y) => `Marx, Weber and Durkheim, then caste, kinship and the Indian village. Notes for both papers, ${since(y)}, and an AI that has read the same books you’re reading.`,
   },
   anthropology: {
     name: 'Anthropology', optional: 'anthropology',
-    about: (y) => `From fossils and human evolution to kinship, religion and tribal India. Both papers, ${since(y)}, and an AI that has read the standard books.`,
+    about: (y) => `Fossils and human evolution in one paper, tribal India in the other. Notes for both, ${since(y)}, and an AI that knows its Majumdar from its Hasnain.`,
   },
   polsci: {
     name: 'PSIR', optional: 'political-science',
-    about: (y) => `From Plato and Rawls to the Constitution, the UN and India’s neighbours. Both papers, ${since(y)}, and an AI that has read the standard books.`,
+    about: (y) => `Plato and Rawls, then the Constitution, the UN and India’s neighbours. Notes for both papers, ${since(y)}, and an AI you can argue Rawls with.`,
   },
   geography: {
     name: 'Geography', optional: 'geography',
-    about: (y) => `From landforms, climate and the oceans to India’s farms, cities and regions. Both papers, ${since(y)}, map practice, and an AI that has read the standard books.`,
+    about: (y) => `Landforms, climate and the oceans, then India’s farms, cities and regions. Notes for both papers, ${since(y)}, map practice, and an AI that has read Khullar cover to cover.`,
   },
   'pub-admin': {
     name: 'Public Administration', title: 'Pub-Ad', optional: 'public-administration',
-    about: (y) => `From Weber and Simon to the district collector and the CAG. Both papers, ${since(y)}, and an AI that has read the standard books.`,
+    about: (y) => `Weber and Simon in Paper I, the district collector and the CAG in Paper II. Notes for both, ${since(y)}, and an AI that has read everything from Avasthi to the IGNOU blocks.`,
   },
 };
 
@@ -134,7 +134,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
             <div className="op-ask ds-card">
               <span className="op-ask-label">Ask the {subject.name} AI</span>
               <HomeAsk subject={slug} />
-              <p className="op-ask-note">It answers from the {bookCount} books below and shows you the passage it used.</p>
+              <p className="op-ask-note">Ask it whatever you’re stuck on. It answers from the {bookCount} books further down this page and shows you the passage it used.</p>
             </div>
           </div>
         </section>
@@ -143,8 +143,8 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
         <section className="op-section">
           <div className="ds-container">
             <div className="op-head">
-              <h2 className="ds-h2">The syllabus, topic by topic</h2>
-              <p className="ds-lede">Tap a topic to read its notes. They are free, and you do not need to sign in.</p>
+              <h2 className="ds-h2">The whole syllabus, one topic at a time</h2>
+              <p className="ds-lede">Tap any topic to open its notes. They’re free, and you don’t need an account to read them.</p>
             </div>
             <SyllabusTabs subject={slug} papers={papers} />
           </div>
@@ -155,8 +155,8 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
           <section className="op-section">
             <div className="ds-container">
               <div className="op-head">
-                <h2 className="ds-h2">The books the AI reads from</h2>
-                <p className="ds-lede">When you ask the {subject.name} AI something, it searches these and puts a chip beside every line it took from one, so you can open the passage and check.</p>
+                <h2 className="ds-h2">The books behind the answers</h2>
+                <p className="ds-lede">These are the books the {subject.name} AI actually reads. When it uses one, you’ll see a small chip next to the line, and you can open the exact passage.</p>
               </div>
               <ul className="op-books">
                 {bookGroups.flatMap((g) => g.books.map((b) => (
@@ -176,8 +176,8 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
           <section className="op-section">
             <div className="ds-container">
               <div className="op-head">
-                <h2 className="ds-h2">What UPSC asked most recently</h2>
-                <p className="ds-lede">From the {pyqs.latest[0].year} paper. There are {pyqs.count.toLocaleString('en-IN')} questions here in all, sorted by topic.</p>
+                <h2 className="ds-h2">What UPSC asked in {pyqs.latest[0].year}</h2>
+                <p className="ds-lede">Three from the latest paper. All {pyqs.count.toLocaleString('en-IN')} are here, sorted by topic, whenever you want to practise.</p>
               </div>
               <div className="op-pyqs">
                 {pyqs.latest.map((q) => (
@@ -199,24 +199,24 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
         <section className="op-section">
           <div className="ds-container">
             <div className="op-head">
-              <h2 className="ds-h2">When you are ready to write</h2>
+              <h2 className="ds-h2">When you’re ready to write</h2>
             </div>
             <div className="op-tools">
               <Link href="/evaluate" className="op-tool ds-card ds-card-link">
                 <span className="op-tool-icon"><Glyph d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" /></span>
                 <span className="op-tool-title">Get an answer marked</span>
-                <span className="op-tool-text">Upload a photo of a handwritten answer and see the marks, what it missed and a model answer.</span>
+                <span className="op-tool-text">Write an answer by hand, take a photo, and see the marks, what it missed and a model answer.</span>
               </Link>
               <Link href={`/test?optional=${subject.optional}`} className="op-tool ds-card ds-card-link">
                 <span className="op-tool-icon"><Glyph d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></span>
                 <span className="op-tool-title">Take a test</span>
-                <span className="op-tool-text">A short test on one topic, to find out what stayed with you.</span>
+                <span className="op-tool-text">A short test on one topic, to see what actually stayed with you.</span>
               </Link>
               {slug === 'geography' && (
                 <Link href="/geography/mapping" className="op-tool ds-card ds-card-link">
                   <span className="op-tool-icon"><Glyph d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14" /></span>
                   <span className="op-tool-title">Practise the maps</span>
-                  <span className="op-tool-text">Every map question UPSC has set, with a quiz mode.</span>
+                  <span className="op-tool-text">Every map question UPSC has set, with a quiz to test yourself.</span>
                 </Link>
               )}
             </div>
@@ -229,7 +229,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
             <div className="ds-container ds-narrow op-close-inner">
               <Image src="/mascot/owl-reading.svg" alt="" width={104} height={90} className="op-close-owl" />
               <h2 className="ds-h2">Not sure where to begin?</h2>
-              <p className="ds-lede">Start at the top, with {first.title}. It takes an evening, and the rest of the syllabus builds on it.</p>
+              <p className="ds-lede">Start at the top, with {first.title}. It sets up the words and ideas the rest of the syllabus keeps coming back to.</p>
               <Link href={`/notes/${slug}/${first.slug}`} className="ds-btn ds-btn-solid ds-btn-lg">Open {first.title}<Arrow /></Link>
             </div>
           </section>
