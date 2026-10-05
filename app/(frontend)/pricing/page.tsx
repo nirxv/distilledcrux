@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { PLANS, rupees } from '@/lib/plans';
+import Link from 'next/link';
+import { PLANS, PLAN_ORDER, rupees, type PlanId } from '@/lib/plans';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
-import { TOPPER_COPIES_LIVE } from '@/lib/features';
+import Mascot from '@/components/Mascot';
+import { routeSlugForOptional } from '@/lib/optionals';
 
 const OPTIONALS = [
   { id: 'sociology',             label: 'Sociology' },
@@ -14,163 +16,39 @@ const OPTIONALS = [
   { id: 'public-administration', label: 'Public Administration' },
 ];
 
-const plans = [
-  {
-    id: 'daily', label: 'Daily', price: rupees(PLANS.daily), period: PLANS.daily.period, tag: null,
-    desc: 'Perfect for exam-day sprints and last-minute revision.',
-    color: '#2dd4bf',
-    features: [
-      { label: 'Full platform access for 24 hours' },
-      { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat: ask anything' },
-      { label: 'PYQ Bank access' },
-      { label: 'Syllabus-Mapped Notes' },
-      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
-    ],
-  },
-  {
-    id: 'sixmonth', label: '6 Months', price: rupees(PLANS.sixmonth), period: PLANS.sixmonth.period, tag: null,
-    desc: 'Best for focused preparation cycles leading up to Mains.',
-    color: '#e8b86d',
-    features: [
-      { label: 'Full platform access for 6 months' },
-      { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat: ask anything' },
-      { label: 'PYQ Bank 4500+ questions' },
-      { label: 'Syllabus-Mapped Notes' },
-      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
-      { label: 'Performance analytics' },
-    ],
-  },
-  {
-    id: 'yearly', label: 'Yearly', price: rupees(PLANS.yearly), period: PLANS.yearly.period, tag: 'Most chosen',
-    desc: 'Full-year coverage from Prelims to Mains interview prep.',
-    color: '#4361ee',
-    features: [
-      { label: 'Full platform access for 12 months' },
-      { label: 'AI Answer Evaluation (unlimited)' },
-      { label: 'AI Chat: ask anything' },
-      { label: 'PYQ Bank 4500+ questions' },
-      { label: 'Syllabus-Mapped Notes' },
-      ...(TOPPER_COPIES_LIVE ? [{ label: 'Topper Answer Copies' }] : []),
-      { label: 'Performance analytics' },
-      { label: 'Priority support' },
-      { label: 'Early access to new features' },
-    ],
-  },
+/**
+ * The plans differ only in how long they last, so each card says what the
+ * time is for, and the one list of what Premium opens sits below them. The
+ * cards used to repeat that list three times, with lines that were not true:
+ * "PYQ Bank access" (past questions are free with an account), "4500+
+ * questions" (the bank across all five optionals, not the one bought) and
+ * "Performance analytics" (there is none).
+ */
+const PLAN_COPY: Record<PlanId, { blurb: string; cta: string; perMonth?: string }> = {
+  daily:    { blurb: 'For a test day, or one last push before the paper.', cta: 'Get a day' },
+  sixmonth: { blurb: 'One focused run up to Mains.', cta: 'Get 6 months', perMonth: `about ₹${Math.round(rupees(PLANS.sixmonth) / 6)} a month` },
+  yearly:   { blurb: 'A full year, enough for the whole run to Mains.', cta: 'Get a year', perMonth: `about ₹${Math.round(rupees(PLANS.yearly) / 12)} a month` },
+};
+
+const COMPARE: { what: string; free: string; premium: string }[] = [
+  { what: 'Notes for every topic in the syllabus', free: 'Included', premium: 'Included' },
+  { what: 'Past questions, with search and filters', free: 'Included', premium: 'Included' },
+  { what: 'Timed tests', free: 'Included', premium: 'Included' },
+  { what: 'AI chat', free: '3 questions', premium: 'Unlimited' },
+  { what: 'Chat modes: books, mentor, brainstorm and your own PDF', free: '—', premium: 'Included' },
+  { what: 'Answer evaluation', free: '1 answer', premium: 'Unlimited' },
+  { what: 'Model answers to past questions', free: '—', premium: 'Included' },
+  { what: 'Test answers corrected', free: '—', premium: 'Included' },
 ];
 
 const faqs = [
-  { q: 'Is there a free tier?', a: 'Yes. 3 free AI chats, no card required.' },
-  { q: 'Can I switch plans?', a: 'After your current plan expires you can pick any plan. Plans are non-auto-renewing.' },
-  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography, and Public Administration. History is at historyoptional.xyz.' },
-  { q: 'Can I buy for multiple optionals?', a: 'Each optional requires a separate purchase. Your active subscription is tied to the optional you select at checkout.' },
-  { q: 'What payment methods are accepted?', a: 'UPI, debit/credit cards, net banking via Razorpay.' },
+  { q: 'Is there a free tier?', a: 'Yes. A free account opens every note and past question, three AI chats and one answer evaluation. No card needed.' },
+  { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
+  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
+  { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
+  { q: 'What payment methods are accepted?', a: 'UPI, debit and credit cards, and net banking, through Razorpay.' },
   { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages. Contact us within 7 days.' },
 ];
-
-const CSS = `
-@keyframes fadeUp { from { opacity:0; transform:translateY(14px) } to { opacity:1; transform:translateY(0) } }
-.pr-page { min-height: var(--page-min-h); }
-.pr-header { max-width: 1200px; margin: 0 auto; padding: 120px 2rem 3.5rem; border-bottom: 1px solid var(--border); animation: fadeUp 0.3s ease; }
-.pr-kicker { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.5rem; }
-.pr-h1 { font-family: var(--font-body); font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.02; color: var(--text); margin-bottom: 1rem; }
-.pr-h1 em { font-style: italic; color: var(--accent); }
-.pr-tagline { font-family: var(--font-ui); font-size: 0.92rem; color: var(--text3); max-width: 480px; line-height: 1.7; }
-.pr-optional-wrap { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem; border-bottom: 1px solid var(--border); }
-/* No leading rule. The flex row and its gap existed only to seat that
-   pseudo-element, so they go with it. */
-.pr-section-label { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.25rem; }
-.pr-optional-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.pr-opt-btn { display: flex; align-items: center; gap: 7px; padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid var(--border2); background: var(--bg2); cursor: pointer; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2); transition: all 0.12s; }
-.pr-opt-btn:hover { border-color: var(--border3); color: var(--text); background: var(--bg3); }
-.pr-opt-btn.selected { border-color: rgba(67,97,238,0.5); background: rgba(67,97,238,0.08); color: var(--accent); }
-.pr-opt-emoji { line-height: 0; display: inline-flex; }
-.pr-opt-check { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.pr-selected-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; padding: 4px 12px; border-radius: 20px; background: rgba(67,97,238,0.06); border: 1px solid rgba(67,97,238,0.15); font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); }
-.pr-selected-badge strong { color: var(--accent); font-weight: 600; }
-.pr-optional-hint { margin-top: 1.25rem; padding: 0.75rem 1rem; border-radius: 8px; background: rgba(232,184,109,0.06); border: 1px solid rgba(232,184,109,0.2); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); display: flex; align-items: center; gap: 8px; }
-.pr-grid-wrap { max-width: 1200px; margin: 0 auto; padding: 3.5rem 2rem; border-bottom: 1px solid var(--border); }
-.pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.pr-card { background: var(--bg); border-right: 1px solid var(--border); display: flex; flex-direction: column; transition: background 0.15s; position: relative; }
-.pr-card:last-child { border-right: none; }
-.pr-card:hover { background: var(--bg2); }
-.pr-card.featured { background: var(--bg2); }
-.pr-card-accent { height: 2px; width: 100%; }
-.pr-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
-.pr-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-.pr-card-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3); }
-.pr-card-badge { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 9px; border-radius: 3px; }
-.pr-card-price { margin-bottom: 0.3rem; }
-.pr-card-amount { font-family: var(--font-body); font-size: 3rem; font-weight: 700; letter-spacing: -0.05em; color: var(--text); line-height: 1; }
-.pr-card-currency { font-family: var(--font-ui); font-size: 1.2rem; font-weight: 600; vertical-align: super; line-height: 0; margin-right: 1px; }
-.pr-card-period { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--text3); margin-bottom: 1.25rem; }
-.pr-card-desc { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2); line-height: 1.6; padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
-.pr-features { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; margin-bottom: 1.75rem; }
-.pr-feature { display: flex; align-items: flex-start; gap: 8px; font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text2); line-height: 1.4; }
-.pr-feature svg { flex-shrink: 0; margin-top: 1px; }
-.pr-btn { display: block; width: 100%; padding: 0.8rem 1rem; border-radius: 7px; font-family: var(--font-ui); font-size: 0.85rem; font-weight: 600; text-align: center; cursor: pointer; border: none; transition: opacity 0.15s, transform 0.12s; letter-spacing: 0.01em; }
-.pr-btn:hover:not(:disabled) { opacity: 0.85; transform: translateY(-1px); }
-.pr-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.pr-btn-outline { background: transparent; border: 1px solid var(--border3); color: var(--text2); }
-.pr-btn-outline:hover:not(:disabled) { color: var(--text); background: var(--bg3); opacity: 1; transform: translateY(-1px); }
-.pr-btn-need-optional { background: var(--bg3) !important; color: var(--text3) !important; border: 1px dashed var(--border2) !important; cursor: not-allowed !important; }
-.pr-error { max-width: 1200px; margin: 0 auto; padding: 0 2rem 1.5rem; font-family: var(--font-ui); font-size: 0.83rem; font-weight: 500; }
-.pr-error-inner { background: rgba(248,113,113,0.07); border: 1px solid rgba(248,113,113,0.22); border-radius: 6px; padding: 0.7rem 1.1rem; color: #f87171; }
-.pr-faq { max-width: 1200px; margin: 0 auto; border-bottom: 1px solid var(--border); }
-.pr-faq-header { padding: 1.75rem 2rem 1.25rem; display: flex; align-items: center; gap: 10px; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); border-bottom: 1px solid var(--border); }
-.pr-faq-grid { display: grid; grid-template-columns: 1fr 1fr; }
-.pr-faq-item { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
-.pr-faq-item:nth-child(even) { border-right: none; }
-.pr-faq-item:nth-last-child(-n+2) { border-bottom: none; }
-.pr-faq-q { font-family: var(--font-body); font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; letter-spacing: -0.01em; }
-.pr-faq-a { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
-.pr-cta { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-.pr-cta-h2 { font-family: var(--font-body); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1; margin-bottom: 0.4rem; }
-.pr-cta-h2 em { font-style: italic; color: var(--accent); }
-.pr-cta-sub { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text3); }
-.pr-cta-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
-.pr-cta-link { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; padding: 9px 20px; border-radius: 6px; text-decoration: none; background: var(--text); color: var(--bg); transition: opacity 0.15s; }
-.pr-cta-link:hover { opacity: 0.88; }
-.pr-cta-ghost { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text3); text-decoration: none; transition: color 0.15s; }
-.pr-cta-ghost:hover { color: var(--text); }
-.pr-rzp-note { max-width: 1200px; margin: 0 auto; padding: 0 2rem 1.5rem; font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); display: flex; align-items: center; gap: 6px; }
-@media(max-width:900px){
-  .pr-grid { grid-template-columns: 1fr; }
-  .pr-card { border-right: none; border-bottom: 1px solid var(--border); }
-  .pr-card:last-child { border-bottom: none; }
-  .pr-faq-grid { grid-template-columns: 1fr; }
-  .pr-faq-item { border-right: none; }
-  .pr-faq-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
-  .pr-faq-item:last-child { border-bottom: none; }
-  .pr-cta { flex-direction: column; align-items: flex-start; }
-}
-@media(max-width:640px){
-  .pr-header { padding:88px 1.25rem 2.5rem; }
-  .pr-h1 { font-size:clamp(2rem,10vw,3rem); }
-  .pr-tagline { font-size:0.85rem; font-weight: 500; }
-  .pr-optional-wrap { padding: 2rem 1.25rem; }
-  .pr-grid-wrap { padding:2rem 1.25rem; }
-  .pr-card-body { padding:1.5rem 1.25rem; }
-  .pr-card-amount { font-size:2.4rem; }
-  .pr-btn { padding:0.85rem; font-size:0.88rem; font-weight: 500; }
-  .pr-faq-item { padding:1.25rem; }
-  .pr-cta { padding:2rem 1.25rem; }
-  .pr-cta-actions { width:100%; flex-direction:column; }
-  .pr-cta-link { text-align:center; padding:0.85rem; }
-  .pr-error { padding:0 1.25rem 1rem; }
-  .pr-rzp-note { padding: 0 1.25rem 1rem; }
-}
-`;
-
-function CheckIcon({ color }: { color: string }) {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <circle cx="7" cy="7" r="7" fill={color} fillOpacity="0.14" />
-      <path d="M3.5 7l2.5 2.5 4-4.5" stroke={color} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 declare global {
   interface Window {
@@ -178,12 +56,16 @@ declare global {
   }
 }
 
+const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
 export default function PricingPage() {
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [rzpReady, setRzpReady] = useState(false);
   const [selectedOptional, setSelectedOptional] = useState<string | null>(null);
   const [userOptional, setUserOptional] = useState<string | null>(null);
+  const [signedIn, setSignedIn] = useState(false);
+  const [activeUntil, setActiveUntil] = useState<string | null>(null);
 
   useEffect(() => {
     if (window.Razorpay) { setRzpReady(true); return; }
@@ -196,6 +78,7 @@ export default function PricingPage() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser: User | null) => {
+      setSignedIn(Boolean(firebaseUser));
       if (!firebaseUser) return;
       try {
         const token = await firebaseUser.getIdToken();
@@ -209,11 +92,28 @@ export default function PricingPage() {
     return () => unsubscribe();
   }, []);
 
+  // Whether the reader already holds a plan for the optional picked, so the
+  // page can say that buying again adds time rather than starting over.
+  useEffect(() => {
+    const user = auth.currentUser;
+    if (!user || !selectedOptional) return;
+    let live = true;
+    (async () => {
+      try {
+        const token = await user.getIdToken();
+        const res = await fetch(`/api/sub-status?subject=${encodeURIComponent(selectedOptional)}`, { headers: { 'x-user-token': token } });
+        const d = await res.json();
+        if (live) setActiveUntil(d.active && d.expiresAt ? d.expiresAt : null);
+      } catch { if (live) setActiveUntil(null); }
+    })();
+    return () => { live = false; };
+  }, [selectedOptional, signedIn]);
+
   const handlePurchase = async (planId: string) => {
     setError(null);
     const user = auth.currentUser;
     if (!user) { window.location.href = '/login?next=/pricing'; return; }
-    if (!selectedOptional) { setError('Please select your optional subject above before purchasing.'); return; }
+    if (!selectedOptional) { setError('Pick your optional above before choosing a plan.'); return; }
     setLoading(planId);
     try {
       const token = await user.getIdToken();
@@ -226,7 +126,7 @@ export default function PricingPage() {
       if (!orderRes.ok) throw new Error(orderData.error ?? 'Order creation failed');
 
       const optLabel = OPTIONALS.find(o => o.id === selectedOptional)?.label ?? selectedOptional;
-      const planLabel = plans.find(p => p.id === planId)?.label ?? planId;
+      const planLabel = PLANS[planId as PlanId]?.label ?? planId;
 
       const rzp = new window.Razorpay({
         key: orderData.keyId,
@@ -235,7 +135,7 @@ export default function PricingPage() {
         // The brand the reader is buying from on this site. Checkout is the
         // only surface this reaches: Razorpay's own emails, the card statement
         // and the UPI merchant name all keep the account's registered name,
-        // which is why the note under the button says so.
+        // which is why the note under the plans says so.
         name: 'Distilled Crux',
         image: 'https://www.distilledcrux.com/apple-icon.png',
         description: `${optLabel} ${planLabel} Plan`,
@@ -273,159 +173,197 @@ export default function PricingPage() {
     }
   };
 
-  const selectedOptionalData = OPTIONALS.find(o => o.id === selectedOptional);
+  const selected = OPTIONALS.find(o => o.id === selectedOptional);
+  const profileLabel = OPTIONALS.find(o => o.id === userOptional)?.label;
+  const slug = routeSlugForOptional(selectedOptional);
+  const tint = slug ? { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` } : undefined;
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <div className="pr-page">
-
-        <div className="pr-header">
-          <div className="pr-kicker">Pricing</div>
-          <h1 className="pr-h1">Simple, transparent <em>pricing.</em></h1>
-          <p className="pr-tagline">One optional per subscription. No hidden fees. No auto-renewals.</p>
-        </div>
-
-        <div className="pr-optional-wrap">
-          <div className="pr-section-label">Step 1: Select your optional</div>
-          <div className="pr-optional-grid">
-            {OPTIONALS.map((opt) => {
-              const isSelected = selectedOptional === opt.id;
-              return (
-                <button
-                  key={opt.id}
-                  onClick={() => setSelectedOptional(opt.id)}
-                  className={`pr-opt-btn${isSelected ? ' selected' : ''}`}
-                >
-                  <span className="pr-opt-emoji"><SubjectIcon id={opt.id} size={16} /></span>
-                  <span>{opt.label}</span>
-                  {isSelected && (
-                    <span className="pr-opt-check">
-                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                        <path d="M1.5 4l2 2 3-3" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  )}
-                </button>
-              );
-            })}
+      <div className="pr ds" style={tint}>
+        <header className="pr-hero">
+          <div className="ds-container">
+            <h1 className="ds-h1 pr-h1">Plans and pricing</h1>
+            <p className="ds-lede pr-lede">
+              Notes and past questions are free with your account. Premium opens everything else for one optional, for as long as you buy. Nothing renews on its own.
+            </p>
           </div>
-          {selectedOptionalData ? (
-            <div className="pr-selected-badge">
-              <SubjectIcon id={selectedOptionalData.id} size={16} />
-              Purchasing for <strong>{selectedOptionalData.label}</strong>
-              {userOptional && userOptional !== selectedOptional && (
-                <span style={{ marginLeft: 6, opacity: 0.6 }}>
-                  (your current optional is {OPTIONALS.find(o => o.id === userOptional)?.label})
-                </span>
-              )}
-            </div>
-          ) : (
-            <div className="pr-optional-hint">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <circle cx="7" cy="7" r="6.5" stroke="#e8b86d" strokeOpacity="0.6"/>
-                <path d="M7 4v3.5" stroke="#e8b86d" strokeWidth="1.3" strokeLinecap="round"/>
-                <circle cx="7" cy="10" r="0.7" fill="#e8b86d"/>
-              </svg>
-              Select your optional above, then pick a plan below.
-            </div>
-          )}
-        </div>
+        </header>
 
-        {error && (
-          <div className="pr-error">
-            <div className="pr-error-inner">{error}</div>
-          </div>
-        )}
+        <div className="ds-container">
+          <section className="pr-step">
+            <h2 className="pr-h2">Which optional is this for?</h2>
+            <div className="pr-opts" role="radiogroup" aria-label="Optional">
+              {OPTIONALS.map((opt) => {
+                const on = selectedOptional === opt.id;
+                const s = routeSlugForOptional(opt.id);
+                return (
+                  <button key={opt.id} type="button" role="radio" aria-checked={on}
+                    onClick={() => { setSelectedOptional(opt.id); setError(null); }}
+                    className={`pr-opt${on ? ' on' : ''}`}
+                    style={s ? { ['--t' as string]: `var(--tint-${s})`, ['--w' as string]: `var(--wash-${s})` } : undefined}>
+                    <SubjectIcon id={opt.id} size={18} />
+                    <span>{opt.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+            {selected && activeUntil && (
+              <p className="pr-note good">You’re on Premium for {selected.label} until {fmtDate(activeUntil)}. Buying again adds the time on top.</p>
+            )}
+            {selected && profileLabel && userOptional !== selectedOptional && (
+              <p className="pr-note">Your profile is set to {profileLabel}. A plan works for the optional on your profile, so switch to {selected.label} from your dashboard once you’ve bought it.</p>
+            )}
+          </section>
 
-        <div className="pr-grid-wrap">
-          <div className="pr-section-label" style={{ marginBottom: '1.5rem' }}>Step 2: Choose a plan</div>
-          <div className="pr-grid">
-            {plans.map((plan) => {
-              const isFeatured = plan.id === 'yearly';
-              const isYearly = plan.id === 'yearly';
-              const isLoading = loading === plan.id;
-              const needsOptional = !selectedOptional;
-              const badgeBg = isFeatured ? 'rgba(67,97,238,0.15)' : 'rgba(232,184,109,0.12)';
-              const badgeColor = isFeatured ? '#7b93f7' : '#e8b86d';
+          {error && <div className="pr-error" role="alert">{error}</div>}
+
+          <section className="pr-plans">
+            {PLAN_ORDER.map((id) => {
+              const plan = PLANS[id];
+              const copy = PLAN_COPY[id];
+              const featured = id === 'yearly';
+              const busy = loading === id;
               return (
-                <div key={plan.id} className={`pr-card${isFeatured ? ' featured' : ''}`}>
-                  <div className="pr-card-accent" style={{ background: plan.color }} />
-                  <div className="pr-card-body">
-                    <div className="pr-card-top">
-                      <span className="pr-card-label">{plan.label}</span>
-                      {plan.tag && (
-                        <span className="pr-card-badge" style={{ background: badgeBg, color: badgeColor }}>
-                          {plan.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="pr-card-price">
-                      <div className="pr-card-amount">
-                        <span className="pr-card-currency">₹</span>
-                        {plan.price.toLocaleString('en-IN')}
-                      </div>
-                    </div>
-                    <div className="pr-card-period">{plan.period}</div>
-                    <p className="pr-card-desc">{plan.desc}</p>
-                    <ul className="pr-features">
-                      {plan.features.map((f) => (
-                        <li key={f.label} className="pr-feature">
-                          <CheckIcon color={plan.color} />{f.label}
-                        </li>
-                      ))}
-                    </ul>
-                    <button
-                      onClick={() => needsOptional
-                        ? setError('Please select your optional subject above first.')
-                        : handlePurchase(plan.id)
-                      }
-                      disabled={!!loading || !rzpReady}
-                      className={needsOptional ? 'pr-btn pr-btn-need-optional' : isFeatured ? 'pr-btn' : 'pr-btn pr-btn-outline'}
-                      style={needsOptional ? undefined : isFeatured ? { background: plan.color, color: '#fff' } : isYearly ? { borderColor: 'rgba(232,184,109,0.3)', color: '#e8b86d' } : undefined}
-                    >
-                      {isLoading ? 'Opening checkout…' : !rzpReady ? 'Loading…' : needsOptional ? '↑ Select optional first' : 'Get started →'}
-                    </button>
+                <article key={id} className={`pr-plan${featured ? ' featured' : ''}`}>
+                  <div className="pr-plan-top">
+                    <h3 className="pr-plan-name">{plan.label}</h3>
+                    {featured && <span className="pr-tag">Most chosen</span>}
                   </div>
-                </div>
+                  <div className="pr-price"><span>₹</span>{rupees(plan).toLocaleString('en-IN')}</div>
+                  <div className="pr-period">{plan.period}{copy.perMonth ? ` · ${copy.perMonth}` : ''}</div>
+                  <p className="pr-blurb">{copy.blurb}</p>
+                  <button type="button"
+                    className={`ds-btn ${featured ? 'ds-btn-solid' : 'ds-btn-line'} pr-buy`}
+                    onClick={() => handlePurchase(id)}
+                    disabled={!!loading || !rzpReady || !selectedOptional}>
+                    {busy ? 'Opening checkout…' : !rzpReady ? 'Loading…' : !selectedOptional ? 'Pick your optional first' : `${copy.cta}${selected ? ` of ${selected.label}` : ''}`}
+                  </button>
+                </article>
               );
             })}
-          </div>
-        </div>
+          </section>
 
-        <div className="pr-rzp-note">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="5.5" stroke="currentColor" strokeOpacity="0.4"/>
-            <path d="M6 3.5v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-            <circle cx="6" cy="8.5" r="0.6" fill="currentColor"/>
-          </svg>
-          Payment is processed by Razorpay. Your card statement and Razorpay’s receipt will show “History Optional”, the venture Distilled Crux is a product of.
-        </div>
+          <p className="pr-rzp">
+            Payment is processed by Razorpay. Your card statement and Razorpay’s receipt will show “History Optional”, the venture Distilled Crux is a product of.
+          </p>
 
-        <div className="pr-faq">
-          <div className="pr-faq-header">Common questions</div>
-          <div className="pr-faq-grid">
-            {faqs.map((item) => (
-              <div key={item.q} className="pr-faq-item">
-                <div className="pr-faq-q">{item.q}</div>
-                <div className="pr-faq-a">{item.a}</div>
+          <section className="pr-compare-wrap">
+            <h2 className="pr-h2">What Premium opens</h2>
+            <div className="pr-compare" role="table" aria-label="Free account and Premium compared">
+              <div className="pr-row pr-row-head" role="row">
+                <span role="columnheader" />
+                <span role="columnheader">Free account</span>
+                <span role="columnheader" className="pr-col-premium">Premium</span>
               </div>
-            ))}
-          </div>
-        </div>
+              {COMPARE.map((r) => (
+                <div key={r.what} className="pr-row" role="row">
+                  <span role="cell" className="pr-what">{r.what}</span>
+                  <span role="cell" className={r.free === '—' ? 'pr-none' : ''}>{r.free}</span>
+                  <span role="cell" className="pr-col-premium">{r.premium}</span>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        <div className="pr-cta">
-          <div>
-            <h2 className="pr-cta-h2">Still unsure? <em>Start free.</em></h2>
-            <p className="pr-cta-sub">3 AI chats, no card. See the platform before committing.</p>
-          </div>
-          <div className="pr-cta-actions">
-            <a href="/dashboard" className="pr-cta-link">Go to dashboard →</a>
-            <a href="/" className="pr-cta-ghost">Back to home ↗</a>
-          </div>
-        </div>
+          <section className="pr-faq">
+            <h2 className="pr-h2">Common questions</h2>
+            <div className="pr-faq-list">
+              {faqs.map((f) => (
+                <details key={f.q} className="pr-faq-item">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
 
+          <section className="pr-close">
+            <Mascot pose="peek" width={92} />
+            <div className="pr-close-text">
+              <h2>Not sure yet?</h2>
+              <p>Start with the free account: every note, every past question, three chats and one evaluation.</p>
+            </div>
+            <Link href={signedIn ? '/dashboard' : '/login?next=/dashboard'} className="ds-btn ds-btn-line">
+              {signedIn ? 'Go to your dashboard' : 'Sign in free'}
+            </Link>
+          </section>
+        </div>
       </div>
     </>
   );
 }
+
+const CSS = `
+.pr { background: var(--bg); min-height: var(--page-min-h); padding-bottom: clamp(48px, 9vh, 96px); }
+.pr-hero { padding: clamp(32px, 6vh, 64px) 0 clamp(16px, 3vh, 28px); background: linear-gradient(180deg, color-mix(in srgb, var(--accent-dim) 60%, var(--bg)) 0%, var(--bg) 100%); }
+.pr-h1 { font-size: clamp(2.1rem, 4.6vw, 3.2rem); margin: 0 0 var(--space-3); }
+.pr-lede { max-width: 640px; }
+.pr-h2 { margin: 0 0 var(--space-4); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+
+.pr-step { padding: var(--space-4) 0 var(--space-6); }
+.pr-opts { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.pr-opt { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 var(--space-4); border-radius: var(--radius-full); border: 1.5px solid var(--border2); background: var(--ds-card); color: var(--text); font: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: border-color 0.15s, background 0.15s, color 0.15s; }
+.pr-opt svg { color: var(--t); }
+.pr-opt:hover { border-color: color-mix(in srgb, var(--t) 50%, transparent); }
+.pr-opt.on { border-color: var(--t); background: var(--w); color: var(--t); }
+.pr-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pr-note { margin: var(--space-4) 0 0; max-width: 720px; padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--warning-wash); color: var(--text); font-size: 0.92rem; line-height: 1.55; }
+.pr-note.good { background: var(--success-wash); }
+.pr-error { margin: 0 0 var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--danger-wash); border: 1px solid color-mix(in srgb, var(--danger-text) 30%, transparent); color: var(--danger-text); font-size: 0.92rem; }
+
+.pr-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); align-items: stretch; }
+.pr-plan { display: flex; flex-direction: column; padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.pr-plan.featured { border: 2px solid var(--accent); box-shadow: var(--elev-2); }
+.pr-plan-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-4); }
+.pr-plan-name { margin: 0; font-size: 1.1rem; font-weight: 800; }
+.pr-tag { padding: 3px 12px; border-radius: var(--radius-full); background: var(--accent); color: var(--accent-on); font-size: 0.8rem; font-weight: 700; }
+.pr-price { font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--text); }
+.pr-price span { margin-right: 2px; font-size: 1.5rem; font-weight: 700; vertical-align: 0.6em; }
+.pr-period { margin-top: var(--space-2); font-size: 0.9rem; color: var(--text3); }
+.pr-blurb { flex: 1; margin: var(--space-4) 0 var(--space-5); font-size: 0.98rem; line-height: 1.6; color: var(--text2); }
+.pr-buy { width: 100%; justify-content: center; min-height: 48px; }
+.pr-buy:disabled { opacity: 0.55; cursor: not-allowed; }
+.pr-rzp { margin: var(--space-4) 0 0; font-size: 0.86rem; line-height: 1.55; color: var(--text3); }
+
+.pr-compare-wrap { padding-top: var(--space-10); }
+.pr-compare { max-width: 860px; border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); overflow: hidden; }
+.pr-row { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-3); padding: var(--space-3) var(--space-5); border-top: 1px solid var(--border); align-items: center; font-size: 0.95rem; }
+.pr-row:first-child { border-top: none; }
+.pr-row-head { background: var(--ds-soft); font-size: 0.88rem; font-weight: 700; color: var(--text2); }
+.pr-what { color: var(--text); }
+.pr-none { color: var(--text3); }
+.pr-col-premium { font-weight: 700; color: var(--accent-text); }
+.pr-row-head .pr-col-premium { color: var(--accent-text); }
+
+.pr-faq { padding-top: var(--space-10); max-width: 860px; }
+.pr-faq-list { border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); overflow: hidden; }
+.pr-faq-item { border-top: 1px solid var(--border); }
+.pr-faq-item:first-child { border-top: none; }
+.pr-faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-4) var(--space-5); font-weight: 700; cursor: pointer; list-style: none; }
+.pr-faq-item summary::-webkit-details-marker { display: none; }
+.pr-faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 500; color: var(--text3); transition: transform 0.2s; }
+.pr-faq-item[open] summary::after { transform: rotate(45deg); }
+.pr-faq-item p { margin: 0; padding: 0 var(--space-5) var(--space-4); line-height: 1.65; color: var(--text2); }
+
+.pr-close { display: flex; align-items: center; gap: var(--space-5); margin-top: var(--space-10); padding: var(--space-6); border-radius: var(--radius-xl); background: var(--ds-card); border: 1px solid var(--border); max-width: 860px; }
+.pr-close-text { flex: 1; min-width: 0; }
+.pr-close-text h2 { margin: 0 0 4px; font-size: 1.2rem; font-weight: 800; }
+.pr-close-text p { margin: 0; color: var(--text2); line-height: 1.55; }
+
+@media (max-width: 900px) {
+  .pr-plans { grid-template-columns: minmax(0, 1fr); }
+  .pr-plan.featured { order: -1; }
+}
+@media (max-width: 640px) {
+  .pr-opts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pr-opt { justify-content: center; padding: 0 var(--space-2); font-size: 0.9rem; }
+  .pr-opt:last-child { grid-column: 1 / -1; }
+  .pr-plan { padding: var(--space-5) var(--space-4); }
+  .pr-row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); padding: var(--space-3) var(--space-4); font-size: 0.88rem; }
+  .pr-close { flex-direction: column; text-align: center; }
+  .pr-close .ds-btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .pr-faq-item summary::after { transition: none; } }
+`;
