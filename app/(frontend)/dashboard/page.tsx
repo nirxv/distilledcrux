@@ -1,52 +1,25 @@
 'use client';
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState, Suspense, type ReactNode } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/components/AuthProvider';
+import Mascot from '@/components/Mascot';
+import OwlLoader from '@/components/OwlLoader';
+import SubjectIcon from '@/components/SubjectIcon';
+import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
+import { readLastNote, type LastNote } from '@/lib/lastNote';
 
-const SUBJECT_LABEL: Record<string, string> = {
-  sociology: 'Sociology', anthropology: 'Anthropology',
-  geography: 'Geography', 'political-science': 'PSIR',
-  'public-administration': 'Public Administration',
-};
+/** Kept in step with CHAT_FREE_LIMIT in app/api/chat/route.ts. */
+const CHAT_FREE_LIMIT = 3;
+/** Where the chat keeps its conversations on this device. */
+const CHAT_HISTORY_KEY = 'pp_chat_history_v1';
 
-const OPTIONAL_TO_ROUTE: Record<string, string> = {
-  sociology: 'sociology',
-  anthropology: 'anthropology',
-  geography: 'geography',
-  'political-science': 'polsci',
-  'public-administration': 'pub-admin',
-};
-
-const PYQS_ENABLED = new Set([
-  'sociology', 'anthropology', 'political-science', 'public-administration', 'geography',
-]);
-
-const GEO_OPTIONAL = 'geography';
-
-const getTools = (optional: string | null, pyqCount: number | null) => {
-  const slug = OPTIONAL_TO_ROUTE[optional ?? ''] ?? optional ?? 'sociology';
-  const hasPyqs = PYQS_ENABLED.has(optional ?? '');
-  // The real size of this reader's own bank, counted server-side. Until it
-  // arrives, say nothing about the number rather than quoting the whole
-  // five-optional total as if one subscription reached it.
-  const pyqDesc = pyqCount
-    ? `${pyqCount.toLocaleString('en-IN')} previous year questions, topic-wise, with model answers.`
-    : 'Previous year questions, topic-wise, with model answers.';
-  const isGeo = optional === GEO_OPTIONAL;
-  return [
-    { num: '01', label: 'AI Answer Evaluation', desc: 'Upload handwritten answers marks, section feedback, and a model answer.', href: '/evaluate', icon: 'evaluate' },
-    { num: '02', label: 'AI Chat', desc: 'Ask anything from your syllabus thinker-backed, exam-ready answers.', href: '/chat', icon: 'chat' },
-    { num: '03', label: 'Syllabus Notes', desc: 'Every topic, every thinker, every debate structured for Mains.', href: `/notes/${slug}`, icon: 'notes' },
-    ...(hasPyqs ? [{ num: '04', label: 'PYQ Bank', desc: pyqDesc, href: `/${slug}/pyqs`, icon: 'pyq' }] : []),
-    { num: hasPyqs ? '05' : '04', label: 'Test Series', desc: 'Simulate exam conditions with PYQ-based timed tests and AI evaluation.', href: optional ? `/test?optional=${optional}` : '/test', icon: 'test' },
-    ...(isGeo ? [{ num: hasPyqs ? '06' : '05', label: 'Map Practice', desc: 'Identify 131+ UPSC Geography locations - PYQ maps, category-wise practice.', href: '/geography/mapping', icon: 'mapping' }] : []),
-  ];
-};
+interface TodayQuestion { id: number; question: string; year: string; paper: string; marks: number | null; topic: string }
 
 interface Stats {
   optional: string | null;
   chatCount: number;
+  evalCount: number;
   isPremium: boolean;
   plan: string | null;
   expiresAt: string | null;
@@ -54,284 +27,52 @@ interface Stats {
   daysSinceJoin: number;
   lastActive: string | null;
   pyqCount: number | null;
+  notesCount: number;
+  todayQuestion: TodayQuestion | null;
 }
 
-const CSS = `
-  @keyframes spin { to { transform: rotate(360deg) } }
-  @keyframes fadeUp { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
+type LastChat = { id: string; title: string; updatedAt: number };
 
-  .db-page {
-    min-height: var(--page-min-h);
-  }
-
-  /* ── Header strip ── */
-  .db-header {
-    max-width: 1200px; margin: 0 auto;
-    padding: 100px 2rem 0;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 3rem;
-    animation: fadeUp 0.3s ease;
-  }
-  .db-kicker {
-    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
-    margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px;
-  }  .db-h1 {
-    font-family: var(--font-body);
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; color: var(--text);
-    margin-bottom: 0.5rem;
-  }
-  .db-h1 em { font-style: italic; }
-  .db-sub {
-    font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
-    color: var(--text3); margin-top: 0.5rem;
-  }
-
-  /* ── Two-col layout ── */
-  .db-body {
-    max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 340px;
-    gap: 0; 
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ── Tools list (left col) ── */
-  .db-tools {
-    border-right: 1px solid var(--border);
-    animation: fadeUp 0.35s ease;
-  }
-  .db-tools-label {
-    padding: 2rem 2rem 1rem;
-    font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3);
-    display: flex; align-items: center; gap: 10px;
-    border-bottom: 1px solid var(--border);
-  }
-  /* Card grid */
-  .db-tool-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-  }
-  .db-tool-card {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    text-decoration: none;
-    background: var(--bg);
-    transition: background 0.15s;
-    position: relative;
-    display: flex; flex-direction: column; gap: 0.9rem;
-  }
-  .db-tool-card:nth-child(even) { border-right: none; }
-  .db-tool-card:nth-last-child(-n+2) { border-bottom: none; }
-  .db-tool-card:hover { background: var(--bg2); }
-  .db-tool-icon {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: var(--bg3); border: 1px solid var(--border2);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text3); flex-shrink: 0;
-  }
-  .db-tool-card:hover .db-tool-icon { color: var(--text2); border-color: var(--border3); }
-  .db-tool-label {
-    font-family: var(--font-body); font-size: 0.9rem;
-    font-weight: 700; color: var(--text); margin-bottom: 0.2rem; letter-spacing: -0.01em;
-  }
-  .db-tool-desc {
-    font-family: var(--font-ui); font-size: 0.76rem; font-weight: 500;
-    color: var(--text3); line-height: 1.6;
-  }
-  .db-tool-arrow {
-    margin-top: auto; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
-    color: var(--text3); transition: color 0.15s, gap 0.15s;
-    display: flex; align-items: center; gap: 4px;
-  }
-  .db-tool-card:hover .db-tool-arrow { color: var(--text2); gap: 7px; }
-
-  /* ── Sidebar (right col) ── */
-  .db-sidebar { animation: fadeUp 0.4s ease; }
-
-  .db-sidebar-section {
-    padding: 1.75rem 1.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .db-sidebar-label {
-    font-family: var(--font-ui); font-size: 0.6rem; font-weight: 500;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3);
-    margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;
-  }
-  /* Stat rows */
-  .db-stat-list { display: flex; flex-direction: column; gap: 0; }
-  .db-stat-row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.65rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .db-stat-row:last-child { border-bottom: none; }
-  .db-stat-key { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); }
-  .db-stat-val { font-family: var(--font-body); font-size: 0.88rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
-
-  /* Plan badge */
-  .db-plan-free {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 1rem; flex-wrap: wrap;
-  }
-  .db-plan-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
-  .db-plan-desc { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-top: 2px; }
-  .db-upgrade-btn {
-    font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
-    background: var(--text); color: var(--bg);
-    padding: 8px 18px; border-radius: 6px;
-    text-decoration: none; transition: opacity 0.15s; flex-shrink: 0;
-  }
-  .db-upgrade-btn:hover { opacity: 0.82; }
-  .db-pro-badge {
-    display: flex; align-items: center; gap: 10px;
-  }
-  .db-pro-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; color: #e8b86d; }
-  .db-pro-exp { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-top: 2px; }
-  .db-active-pill {
-    font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    background: rgba(74,222,128,0.1); color: #4ade80;
-    border: 1px solid rgba(74,222,128,0.22);
-    padding: 3px 9px; border-radius: 4px;
-  }
-
-  /* Usage bar */
-  .db-usage-label {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 10px;
-  }
-  .db-usage-text { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text2); }
-  .db-usage-link {
-    font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
-    color: var(--text); text-decoration: none; 
-    display: flex; align-items: center; gap: 4px;
-  }
-  .db-usage-link:hover { opacity: 0.75; }
-  .db-bar-track { height: 4px; border-radius: 99px; background: var(--border); overflow: hidden; }
-  .db-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s ease; }
-
-  /* Quick actions */
-  .db-actions { display: flex; flex-direction: column; gap: 6px; }
-  .db-action-link {
-    font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text2);
-    text-decoration: none; padding: 8px 0;
-    display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    transition: color 0.15s;
-  }
-  .db-action-link:last-child { border-bottom: none; }
-  .db-action-link:hover { color: var(--text); }
-  .db-action-arrow { color: var(--text3); font-size: 0.78rem; font-weight: 500; }
-
-  /* ── Footer CTA ── */
-  .db-footer-cta {
-    max-width: 1200px; margin: 0 auto;
-    padding: 3.5rem 2rem 5rem;
-    display: flex; align-items: center; justify-content: space-between; gap: 2rem;
-    flex-wrap: wrap;
-    animation: fadeUp 0.5s ease;
-  }
-  .db-footer-h2 {
-    font-family: var(--font-body); font-size: clamp(1.4rem, 2.5vw, 2rem);
-    font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
-  }
-  .db-footer-h2 em { font-style: italic; }
-  .db-footer-sub { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text3); margin-top: 0.4rem; }
-
-  @media (max-width: 900px) {
-    .db-body { grid-template-columns: 1fr; }
-    .db-tools { border-right: none; }
-    .db-sidebar-section { padding: 1.5rem; }
-  }
-  @media (max-width: 640px) {
-    .db-header { padding:88px 1.25rem 2rem; padding-bottom:2rem; }
-    .db-h1 { font-size:clamp(1.9rem,9vw,2.6rem); }
-    .db-kicker { font-size:0.6rem; font-weight: 500; }
-    .db-sub { font-size:0.8rem; font-weight: 500; }
-
-    .db-tools-label { padding:1.25rem 1.25rem 0.85rem; }
-
-    .db-tool-grid { grid-template-columns: 1fr; }
-    .db-tool-card { border-right: none !important; padding:1.25rem; }
-    .db-tool-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
-    .db-tool-card:last-child { border-bottom: none; }
-    .db-tool-label { font-size:0.88rem; font-weight: 500; }
-    .db-tool-desc { font-size:0.74rem; font-weight: 500; }
-
-    .db-sidebar-section { padding:1.25rem; }
-
-    .db-footer-cta { padding:2.5rem 1.25rem 4rem; }
-    .db-footer-h2 { font-size:clamp(1.5rem,7vw,2rem); }
-    .db-footer-sub { font-size:0.82rem; font-weight: 500; }
-    .db-footer-actions { flex-direction:column; gap:0.65rem; }
-    .db-footer-btn { text-align:center; }
-  }
-`;
-
-function ToolIcon({ icon }: { icon: string }) {
-  switch (icon) {
-    case 'evaluate': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="2" width="14" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.3"/>
-        <path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    )
-    case 'chat': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M15 3H3a1 1 0 00-1 1v8a1 1 0 001 1h2.5l2.5 3 2.5-3H15a1 1 0 001-1V4a1 1 0 00-1-1z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
-        <path d="M6 7.5h6M6 10.5h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-      </svg>
-    )
-    case 'notes': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="3" y="2" width="12" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
-        <path d="M6 6h6M6 9h6M6 12h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-      </svg>
-    )
-    case 'pyq': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.3"/>
-        <path d="M9 5.5v.01M9 8c0-1 1.5-1.5 1.5-3a1.5 1.5 0 10-3 0" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-        <circle cx="9" cy="12.5" r="0.75" fill="currentColor"/>
-      </svg>
-    )
-    case 'topper': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M9 2l1.8 3.6L15 6.3l-3 2.9.7 4.1L9 11.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L9 2z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
-      </svg>
-    )
-    case 'prelims': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="3" width="14" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
-        <circle cx="5.5" cy="7" r="1" fill="currentColor"/>
-        <circle cx="5.5" cy="11" r="1" fill="currentColor"/>
-        <path d="M8 7h5M8 11h5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-      </svg>
-    )
-    case 'test': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="3" width="14" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
-        <path d="M5 7h8M5 10h5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-        <path d="M11 10.5l1.5 1.5 2.5-2.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    )
-    case 'mapping': return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M6.5 2.5L2 5v10.5l4.5-2.5 5 2.5 4.5-2.5V3L11.5 5.5l-5-3z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
-        <path d="M6.5 2.5v10.5M11.5 5.5v10.5" stroke="currentColor" strokeWidth="1.3"/>
-      </svg>
-    )
-    default: return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.3"/>
-      </svg>
-    )
+/** The newest conversation held in this optional, from the chat's own store. */
+function readLastChat(slug: string): LastChat | null {
+  try {
+    const list = JSON.parse(localStorage.getItem(CHAT_HISTORY_KEY) ?? '[]') as { id: string; title: string; updatedAt: number; subject?: string }[];
+    if (!Array.isArray(list)) return null;
+    const c = list.find((x) => x && x.id && (!x.subject || x.subject === slug));
+    return c ? { id: c.id, title: c.title || 'Your last chat', updatedAt: c.updatedAt } : null;
+  } catch {
+    return null;
   }
 }
 
-function PaymentSuccessToast({ onShow }: { onShow: () => void }) {
+function ago(ms: number) {
+  const days = Math.floor((Date.now() - ms) / 86_400_000);
+  if (days <= 0) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 30) return `${days} days ago`;
+  return new Date(ms).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+}
+
+const fmtDate = (iso: string | null) =>
+  iso ? new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+
+const Arrow = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+
+const ICON: Record<string, ReactNode> = {
+  notes: <path d="M7 3h8l4 4v14H7zM15 3v4h4M10 12h6M10 16h6" />,
+  pyq: <><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01" /></>,
+  chat: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
+  evaluate: <><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></>,
+  test: <><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5M9 2h6" /></>,
+  map: <><path d="M9 4L3 6.5v13L9 17l6 3 6-2.5v-13L15 7z" /><path d="M9 4v13M15 7v13" /></>,
+};
+const Glyph = ({ name }: { name: string }) => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICON[name]}</svg>
+);
+
+function PaymentSuccess({ onShow }: { onShow: () => void }) {
   const searchParams = useSearchParams();
   useEffect(() => {
     if (searchParams.get('payment') === 'success') {
@@ -347,13 +88,15 @@ export default function Dashboard() {
   const { user, loading: authLoading } = useAuth();
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
-  const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
+  const [celebrate, setCelebrate] = useState(false);
   const [failed, setFailed] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
+  const [lastNote, setLastNote] = useState<LastNote | null>(null);
+  const [lastChat, setLastChat] = useState<LastChat | null>(null);
 
   useEffect(() => {
     if (authLoading) return;
-    if (!user) { router.push('/login'); return; }
+    if (!user) { router.push('/login?next=/dashboard'); return; }
     (async () => {
       // A failure used to be swallowed and left stats null, and the render
       // below returned null for null stats, so a logged-in user whose stats
@@ -370,6 +113,14 @@ export default function Dashboard() {
           // no number is sent to onboarding rather than shown the dashboard.
           if (!data.optional || !data.phone) { router.push('/onboarding'); return; }
           setStats(data);
+          // What this device remembers: read once the optional is known, since
+          // a note or chat from another optional is not where to pick up.
+          const slug = routeSlugForOptional(data.optional);
+          if (slug) {
+            const note = readLastNote();
+            setLastNote(note && note.subject === slug ? note : null);
+            setLastChat(readLastChat(slug));
+          }
         }
       } catch {
         setFailed(true);
@@ -378,212 +129,285 @@ export default function Dashboard() {
     })();
   }, [user, authLoading, router, reloadKey]);
 
-  if (loading) return (
-    <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
-      <div style={{ width: 28, height: 28, borderRadius: '50%', border: '2px solid var(--border)', borderTopColor: 'var(--text)', animation: 'spin 0.7s linear infinite' }} />
-    </div>
-  );
+  if (loading) return <OwlLoader size="page" label="Loading your dashboard" />;
 
   if (!stats) return (
-    <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.85rem', padding: '2rem', textAlign: 'center' }}>
-      <div style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 700, color: 'var(--text)' }}>
-        {failed ? 'Could not load your dashboard' : 'Nothing to show yet'}
+    <div className="ds" style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-3)', padding: '2rem', textAlign: 'center' }}>
+      <Mascot pose="peek" width={110} />
+      <div style={{ fontSize: '1.2rem', fontWeight: 800 }}>
+        {failed ? 'Your dashboard didn’t load' : 'Nothing to show yet'}
       </div>
-      <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.85rem', fontWeight: 500, color: 'var(--text3)', maxWidth: '30rem', lineHeight: 1.6 }}>
-        {failed
-          ? 'Your stats did not come back. This is usually a connection problem.'
-          : 'Your study stats will appear here once you start using the app.'}
-      </div>
+      <p style={{ margin: 0, maxWidth: '28rem', color: 'var(--text2)', lineHeight: 1.6 }}>
+        {failed ? 'It’s usually the connection. Try again in a moment.' : 'Your study will show up here once you start.'}
+      </p>
       {failed && (
-        <button
-          onClick={() => { setLoading(true); setReloadKey(k => k + 1); }}
-          style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 600, background: 'var(--accent)', color: '#fff', padding: '8px 18px', borderRadius: 6, border: 'none', cursor: 'pointer' }}
-        >
+        <button type="button" className="ds-btn ds-btn-solid" onClick={() => { setLoading(true); setReloadKey(k => k + 1); }}>
           Try again
         </button>
       )}
     </div>
   );
 
+  const slug = routeSlugForOptional(stats.optional) ?? 'sociology';
+  const optLabel = labelForOptional(stats.optional) ?? 'your optional';
   const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || 'there';
   const hour = new Date().getHours();
-  const greeting = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : 'Evening';
-  const optLabel = SUBJECT_LABEL[stats.optional ?? ''] ?? stats.optional ?? '';
-  const joinDate = stats.joinedAt
-    ? new Date(stats.joinedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
-    : '';
-  const expDate = stats.expiresAt
-    ? new Date(stats.expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
-    : null;
+  const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const chatsLeft = Math.max(0, CHAT_FREE_LIMIT - stats.chatCount);
+  const tq = stats.todayQuestion;
+  const tint = { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` };
 
-  const usedPct = stats.isPremium ? 100 : Math.min((stats.chatCount / 3) * 100, 100);
-  const barColor = stats.isPremium ? '#4ade80' : usedPct >= 100 ? '#f87171' : usedPct >= 66 ? '#f59e0b' : 'var(--text)';
+  const tools = [
+    { key: 'notes', title: 'Notes', count: stats.notesCount ? `${stats.notesCount} topics` : null, desc: 'Every topic in the syllabus, cut to what an answer uses.', href: `/notes/${slug}` },
+    { key: 'pyq', title: 'Past questions', count: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} questions` : null, desc: 'By year, paper and topic, each one ready to answer.', href: `/${slug}/pyqs` },
+    { key: 'chat', title: 'AI chat', count: null, desc: 'Ask anything. It answers from the standard books and shows you where.', href: `/chat?subject=${slug}` },
+    { key: 'evaluate', title: 'Evaluate', count: null, desc: 'Upload a handwritten answer and get it marked, part by part.', href: '/evaluate' },
+    { key: 'test', title: 'Tests', count: null, desc: 'Timed papers built from past questions, marked like the real thing.', href: `/test?optional=${stats.optional}` },
+    ...(slug === 'geography' ? [{ key: 'map', title: 'Map practice', count: null, desc: 'Locate the places UPSC asks about, category by category.', href: '/geography/mapping' }] : []),
+  ];
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-
       <Suspense fallback={null}>
-        <PaymentSuccessToast onShow={() => { setShowPaymentSuccess(true); setTimeout(() => setShowPaymentSuccess(false), 5000); }} />
+        <PaymentSuccess onShow={() => setCelebrate(true)} />
       </Suspense>
 
-      {/* Payment success toast */}
-      {showPaymentSuccess && (
-        <div style={{
-          position: 'fixed', top: 80, right: 24, zIndex: 9999,
-          background: 'var(--bg2)', border: '1px solid rgba(74,222,128,0.35)',
-          borderRadius: 10, padding: '14px 20px',
-          display: 'flex', alignItems: 'center', gap: 12,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-          animation: 'fadeUp 0.25s ease',
-          maxWidth: 340,
-        }}>
-          <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'rgba(74,222,128,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#4ade80" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </div>
-          <div>
-            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>Payment successful!</div>
-            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)' }}>Your premium access is now active.</div>
-          </div>
-          <button onClick={() => setShowPaymentSuccess(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', marginLeft: 'auto', padding: 4, lineHeight: 1 }}>✕</button>
-        </div>
-      )}
-
-      <div className="db-page">
-
-        {/* ── Header ── */}
-        <div className="db-header">
-          <div className="db-kicker">{optLabel} Optional · Dashboard</div>
-          <h1 className="db-h1">
-            {greeting},<br />
-            <em>{firstName}.</em>
-          </h1>
-          <p className="db-sub">Member since {joinDate} · {user?.email}</p>
-        </div>
-
-        {/* ── Body: tools left, sidebar right ── */}
-        <div className="db-body">
-
-          {/* Tools */}
-          <div className="db-tools">
-            <div className="db-tools-label">Your Tools</div>
-            <div className="db-tool-grid">
-              {getTools(stats.optional, stats.pyqCount).map((tool) => (
-                <Link key={tool.label} href={tool.href} className="db-tool-card">
-                  <div className="db-tool-icon">
-                    <ToolIcon icon={tool.icon} />
-                  </div>
-                  <div>
-                    <div className="db-tool-label">{tool.label}</div>
-                    <div className="db-tool-desc">{tool.desc}</div>
-                  </div>
-                  <div className="db-tool-arrow">Open →</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="db-sidebar">
-
-            {/* Plan */}
-            <div className="db-sidebar-section">
-              <div className="db-sidebar-label">Plan</div>
-              {stats.isPremium ? (
-                <div className="db-pro-badge">
-                  <div>
-                    <div className="db-pro-name">Distilled Crux Pro{stats.plan ? ` · ${stats.plan}` : ''}</div>
-                    {expDate && <div className="db-pro-exp">Active until {expDate}</div>}
-                  </div>
-                  <span className="db-active-pill">Active</span>
+      <div className="db ds" style={tint}>
+        <header className="db-hero">
+          <div className="ds-container">
+            {celebrate && (
+              <div className="db-celebrate" role="status">
+                <Mascot pose="celebrate" width={96} />
+                <div className="db-celebrate-text">
+                  <strong>You’re on Premium</strong>
+                  <span>Everything for {optLabel} is open now: unlimited chats and evaluations, model answers, and the chat’s book and mentor modes.</span>
                 </div>
-              ) : (
-                <div className="db-plan-free">
-                  <div>
-                    <div className="db-plan-name">Free Plan</div>
-                    <div className="db-plan-desc">3 AI chats · Limited access</div>
-                  </div>
-                  <Link href="/pricing" className="db-upgrade-btn">Upgrade →</Link>
-                </div>
-              )}
-            </div>
-
-            {/* Usage */}
-            {!stats.isPremium && (
-              <div className="db-sidebar-section">
-                <div className="db-sidebar-label">AI Chat Usage</div>
-                <div className="db-usage-label">
-                  <span className="db-usage-text">{stats.chatCount} of 3 used</span>
-                  <Link href="/pricing" className="db-usage-link">Get unlimited →</Link>
-                </div>
-                <div className="db-bar-track">
-                  <div className="db-bar-fill" style={{ width: `${usedPct}%`, background: barColor }} />
-                </div>
+                <button type="button" className="db-celebrate-x" onClick={() => setCelebrate(false)} aria-label="Dismiss">✕</button>
               </div>
             )}
-
-            {/* Stats */}
-            <div className="db-sidebar-section">
-              <div className="db-sidebar-label">Account</div>
-              <div className="db-stat-list">
-                <div className="db-stat-row">
-                  <span className="db-stat-key">Optional</span>
-                  <span className="db-stat-val">{optLabel}</span>
-                </div>
-                <div className="db-stat-row">
-                  <span className="db-stat-key">Days active</span>
-                  <span className="db-stat-val">{stats.daysSinceJoin}</span>
-                </div>
-                <div className="db-stat-row">
-                  <span className="db-stat-key">AI chats</span>
-                  <span className="db-stat-val">{stats.isPremium ? '∞' : stats.chatCount}</span>
-                </div>
-                <div className="db-stat-row">
-                  <span className="db-stat-key">Status</span>
-                  <span className="db-stat-val" style={{ color: stats.isPremium ? '#4ade80' : 'var(--text3)' }}>
-                    {stats.isPremium ? 'Pro' : 'Free'}
-                  </span>
-                </div>
-              </div>
+            <h1 className="ds-h1 db-h1">{greeting}, {firstName}</h1>
+            <div className="db-chips">
+              <span className="db-chip"><SubjectIcon id={slug} size={16} />{optLabel} optional</span>
+              <span className={`db-chip${stats.isPremium ? ' gold' : ''}`}>{stats.isPremium ? 'Premium' : 'Free plan'}</span>
             </div>
+          </div>
+        </header>
 
-            {/* Quick actions */}
-            <div className="db-sidebar-section">
-              <div className="db-sidebar-label">Quick Actions</div>
-              <div className="db-actions">
-                {[
-                  { label: 'Ask AI', href: '/chat' },
-                  { label: 'Evaluate an answer', href: '/evaluate' },
-                  ...(PYQS_ENABLED.has(stats.optional ?? '') ? [{ label: 'Browse PYQs', href: `/${OPTIONAL_TO_ROUTE[stats.optional ?? ''] ?? stats.optional ?? 'sociology'}/pyqs` }] : []),
-                  { label: 'Read notes', href: '/notes' },
-                  { label: 'Change optional', href: '/onboarding?change=1' },
-                ].map((a) => (
-                  <Link key={a.href} href={a.href} className="db-action-link">
-                    {a.label}
-                    <span className="db-action-arrow">→</span>
+        <div className="ds-container db-grid">
+          <main className="db-main">
+            {/* What to do, from what is actually here. Nothing pads it out. */}
+            {(tq || lastNote || lastChat) && (
+              <section className="db-section">
+                <h2 className="db-h2">For today</h2>
+
+                {tq && (
+                  <article className="db-today">
+                    <div className="db-today-head">
+                      <span className="db-today-label">A question to try</span>
+                      <span className="db-today-meta">{tq.year} · {tq.paper}{tq.marks ? ` · ${tq.marks} marks` : ''}</span>
+                    </div>
+                    <Link href={`/${slug}/pyqs/${tq.id}`} className="db-today-q">{tq.question}</Link>
+                    <div className="db-today-actions">
+                      <Link href={`/evaluate?question=${encodeURIComponent(tq.question)}${tq.marks ? `&marks=${tq.marks}` : ''}`} className="ds-btn ds-btn-solid ds-btn-sm">
+                        Write an answer
+                      </Link>
+                      <Link href={`/chat?subject=${slug}&q=${encodeURIComponent(tq.question)}`} className="ds-btn ds-btn-line ds-btn-sm">
+                        Ask the AI how to approach it
+                      </Link>
+                    </div>
+                  </article>
+                )}
+
+                {(lastNote || lastChat) && (
+                  <div className="db-resume">
+                    {lastNote && (
+                      <Link href={`/notes/${lastNote.subject}/${lastNote.slug}`} className="db-resume-item">
+                        <span className="db-resume-icon"><Glyph name="notes" /></span>
+                        <span className="db-resume-text">
+                          <strong>Pick up {lastNote.title}</strong>
+                          <span>{lastNote.section} · opened {ago(lastNote.at)}</span>
+                        </span>
+                        <Arrow />
+                      </Link>
+                    )}
+                    {lastChat && (
+                      <Link href={`/chat?c=${encodeURIComponent(lastChat.id)}`} className="db-resume-item">
+                        <span className="db-resume-icon"><Glyph name="chat" /></span>
+                        <span className="db-resume-text">
+                          <strong>Carry on with “{lastChat.title}”</strong>
+                          <span>Your last chat · {ago(lastChat.updatedAt)}</span>
+                        </span>
+                        <Arrow />
+                      </Link>
+                    )}
+                  </div>
+                )}
+              </section>
+            )}
+
+            <section className="db-section">
+              <h2 className="db-h2">Everything for {optLabel}</h2>
+              <div className={`db-tools${tools.length === 5 ? ' five' : ''}`}>
+                {tools.map((t) => (
+                  <Link key={t.key} href={t.href} className="db-tool">
+                    <span className="db-tool-top">
+                      <span className="db-tool-icon"><Glyph name={t.key} /></span>
+                      {t.count && <span className="db-tool-count">{t.count}</span>}
+                    </span>
+                    <span className="db-tool-title">{t.title}</span>
+                    <span className="db-tool-desc">{t.desc}</span>
                   </Link>
                 ))}
               </div>
+            </section>
+          </main>
+
+          <aside className="db-aside">
+            <div className="db-card">
+              {stats.isPremium ? (
+                <>
+                  <div className="db-plan-row">
+                    <h2 className="db-card-title">Premium</h2>
+                    <span className="db-active">Active</span>
+                  </div>
+                  <p className="db-card-text">
+                    {stats.plan ? `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan for ${optLabel}` : `For ${optLabel}`}
+                    {fmtDate(stats.expiresAt) ? `, until ${fmtDate(stats.expiresAt)}.` : '.'}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className="db-card-title">Free plan</h2>
+                  <div className="db-usage">
+                    <div className="db-usage-row">
+                      <span>AI chats</span>
+                      <span>{stats.chatCount >= CHAT_FREE_LIMIT ? 'All used' : `${chatsLeft} of ${CHAT_FREE_LIMIT} left`}</span>
+                    </div>
+                    <div className="db-bar"><span style={{ width: `${Math.min(100, (stats.chatCount / CHAT_FREE_LIMIT) * 100)}%` }} className={stats.chatCount >= CHAT_FREE_LIMIT ? 'full' : ''} /></div>
+                    <div className="db-usage-row">
+                      <span>Evaluation</span>
+                      <span>{stats.evalCount >= 1 ? 'Used' : '1 free, not used yet'}</span>
+                    </div>
+                  </div>
+                  <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers and the chat’s book and mentor modes.</p>
+                  <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">See plans</Link>
+                </>
+              )}
             </div>
 
-          </div>
+            <div className="db-card">
+              <h2 className="db-card-title">Your account</h2>
+              <div className="db-facts">
+                <div><span>Optional</span><span>{optLabel}</span></div>
+                {stats.joinedAt && <div><span>Joined</span><span>{fmtDate(stats.joinedAt)}</span></div>}
+                <div><span>Email</span><span className="db-email">{user?.email}</span></div>
+              </div>
+              <Link href="/onboarding?change=1" className="db-change">Change optional <Arrow /></Link>
+              {stats.isPremium && (
+                <p className="db-card-note">Your plan stays with {optLabel}. A different optional would be on the free plan.</p>
+              )}
+            </div>
+          </aside>
         </div>
-
-        {/* ── Footer CTA ── */}
-        {!stats.isPremium && (
-          <div className="db-footer-cta">
-            <div>
-              <h2 className="db-footer-h2">Ready to go<br /><em>unlimited?</em></h2>
-              <p className="db-footer-sub">Unlock all tools, unlimited AI chats, topper copies and more.</p>
-            </div>
-            <Link href="/pricing" className="db-upgrade-btn" style={{ fontSize: '0.88rem', fontWeight: 500, padding: '11px 24px' }}>
-              See Plans →
-            </Link>
-          </div>
-        )}
-
       </div>
     </>
   );
 }
+
+const CSS = `
+.db { background: var(--bg); min-height: var(--page-min-h); padding-bottom: clamp(48px, 9vh, 96px); }
+.db-hero { padding: clamp(28px, 5vh, 52px) 0 clamp(20px, 3vh, 28px); background: linear-gradient(180deg, color-mix(in srgb, var(--w) 70%, var(--bg)) 0%, var(--bg) 100%); }
+.db-h1 { font-size: clamp(2rem, 4.4vw, 3rem); margin: 0 0 var(--space-3); }
+.db-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.db-chip { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 12px; border-radius: var(--radius-full); background: var(--ds-card); border: 1px solid var(--border); font-size: 0.88rem; font-weight: 600; color: var(--text2); }
+.db-chip svg { color: var(--t); }
+.db-chip.gold { color: var(--premium-text); background: var(--premium-wash); border-color: color-mix(in srgb, var(--premium-text) 30%, transparent); }
+
+.db-celebrate { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-5); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--ds-card); border: 1px solid color-mix(in srgb, var(--premium-text) 35%, transparent); box-shadow: var(--elev-2); animation: dbIn 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.db-celebrate-text { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.db-celebrate-text strong { font-size: 1.15rem; font-weight: 800; }
+.db-celebrate-text span { color: var(--text2); line-height: 1.55; }
+.db-celebrate-x { align-self: flex-start; width: 30px; height: 30px; flex-shrink: 0; border: none; border-radius: 50%; background: var(--ds-soft); color: var(--text3); cursor: pointer; }
+@keyframes dbIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+.db-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-6); align-items: start; }
+.db-main { display: flex; flex-direction: column; gap: var(--space-8); min-width: 0; }
+.db-h2 { margin: 0 0 var(--space-4); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+
+.db-today { padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); }
+.db-today-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px var(--space-3); margin-bottom: var(--space-3); }
+.db-today-label { font-size: 0.92rem; font-weight: 700; color: var(--t); }
+.db-today-meta { font-size: 0.86rem; color: var(--text3); }
+.db-today-q { display: block; margin-bottom: var(--space-5); font-size: clamp(1.1rem, 2vw, 1.28rem); font-weight: 600; line-height: 1.5; color: var(--text); text-decoration: none; }
+.db-today-q:hover { color: var(--accent-text); }
+.db-today-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.db-resume { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+.db-resume-item { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); color: var(--text3); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; min-width: 0; }
+.db-resume-item:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-1); color: var(--t); }
+.db-resume-icon { width: 40px; height: 40px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--w); color: var(--t); }
+.db-resume-text { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.db-resume-text strong { color: var(--text); font-size: 0.98rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.db-resume-text span { font-size: 0.84rem; color: var(--text3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.db-tools { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-3); }
+.db-tools > * { grid-column: span 2; }
+/* Five tools: notes and past questions take the wider top row. */
+.db-tools.five > :nth-child(-n+2) { grid-column: span 3; }
+.db-tool { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.db-tool:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-2); transform: translateY(-1px); }
+.db-tool-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-1); }
+.db-tool-icon { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--w); color: var(--t); }
+.db-tool-count { padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); font-size: 0.8rem; font-weight: 600; color: var(--text2); }
+.db-tool-title { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+.db-tool-desc { font-size: 0.9rem; line-height: 1.55; color: var(--text2); }
+
+.db-aside { display: flex; flex-direction: column; gap: var(--space-4); position: sticky; top: 84px; }
+.db-card { padding: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.db-card-title { margin: 0 0 var(--space-3); font-size: 1.05rem; font-weight: 800; }
+.db-plan-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.db-plan-row .db-card-title { margin: 0; color: var(--premium-text); }
+.db-active { padding: 2px 10px; border-radius: var(--radius-full); background: var(--success-wash); color: var(--success-text); font-size: 0.8rem; font-weight: 700; }
+.db-card-text { margin: var(--space-3) 0 0; font-size: 0.92rem; line-height: 1.6; color: var(--text2); }
+.db-card-btn { width: 100%; justify-content: center; margin-top: var(--space-4); }
+.db-usage { display: flex; flex-direction: column; gap: var(--space-2); }
+.db-usage-row { display: flex; justify-content: space-between; gap: var(--space-3); font-size: 0.92rem; }
+.db-usage-row span:first-child { color: var(--text2); }
+.db-usage-row span:last-child { font-weight: 600; }
+.db-bar { height: 6px; margin-bottom: var(--space-2); border-radius: var(--radius-full); background: var(--ds-soft); overflow: hidden; }
+.db-bar span { display: block; height: 100%; border-radius: inherit; background: var(--accent); transition: width 0.6s ease; }
+.db-bar span.full { background: var(--danger-text); }
+.db-facts { display: flex; flex-direction: column; }
+.db-facts div { display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) 0; border-top: 1px solid var(--border); font-size: 0.92rem; }
+.db-facts div:first-child { border-top: none; padding-top: 0; }
+.db-facts span:first-child { color: var(--text2); flex-shrink: 0; }
+.db-facts span:last-child { font-weight: 600; text-align: right; min-width: 0; }
+.db-email { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.db-change { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--space-3); font-size: 0.92rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
+.db-change:hover { text-decoration: underline; text-underline-offset: 3px; }
+.db-card-note { margin: var(--space-2) 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--text3); }
+
+@media (max-width: 1100px) {
+  .db-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .db-tools > *, .db-tools.five > :nth-child(-n+2) { grid-column: span 1; }
+  .db-tools.five > :last-child { grid-column: span 2; }
+}
+@media (max-width: 960px) {
+  .db-grid { grid-template-columns: minmax(0, 1fr); }
+  .db-aside { position: static; }
+}
+@media (max-width: 640px) {
+  .db-today { padding: var(--space-5) var(--space-4); }
+  .db-today-actions .ds-btn { width: 100%; justify-content: center; }
+  .db-resume { grid-template-columns: minmax(0, 1fr); }
+  .db-tool { padding: var(--space-4); gap: 4px; }
+  .db-tool-top { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+  .db-tool-desc { display: none; }
+  .db-tool-icon { width: 38px; height: 38px; }
+  .db-celebrate { flex-direction: column; align-items: flex-start; }
+  .db-celebrate-x { position: absolute; right: var(--space-4); }
+  .db-celebrate { position: relative; }
+}
+@media (prefers-reduced-motion: reduce) { .db-tool, .db-celebrate { transition: none; animation: none; } .db-tool:hover { transform: none; } }
+`;

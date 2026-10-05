@@ -6,6 +6,7 @@ import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
 import Mascot from '@/components/Mascot';
+import { rememberNote } from '@/lib/lastNote';
 
 const SUBJECT_NAME: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology', polsci: 'PSIR', geography: 'Geography', 'pub-admin': 'Public Administration',
@@ -572,6 +573,11 @@ export default function NoteReader({
   const handleSignIn = async () => {
     try { await signInWithGoogle(); } catch (e) { console.error(e); }
   };
+
+  // The dashboard offers to pick up here.
+  useEffect(() => {
+    rememberNote({ subject, slug, title: note.title, section: note.section, at: Date.now() });
+  }, [subject, slug, note.title, note.section]);
 
   // Persist highlights to localStorage
   useEffect(() => {
