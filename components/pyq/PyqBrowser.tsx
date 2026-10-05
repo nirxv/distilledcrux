@@ -1,5 +1,5 @@
 'use client';
-import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import type { Pyq, PyqTopic } from '@/lib/pyqs';
@@ -12,6 +12,9 @@ const BATCH = 40;
 
 /** Where the question page's back link returns to, filters and all. */
 export const listKey = (subject: string) => `dc-pyq-list:${subject}`;
+
+/** How far down a given list (path and filters) the reader was. */
+const posKey = () => `dc-pyq-pos:${window.location.pathname}${window.location.search}`;
 
 type Props = { subject: string; subjectName: string; questions: Pyq[]; topics: PyqTopic[] };
 
@@ -64,6 +67,34 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
   const [shown, setShown] = useState(BATCH);
   const listRef = useRef<HTMLDivElement>(null);
   const sentinel = useRef<HTMLDivElement>(null);
+  const pendingScroll = useRef<number | null>(null);
+
+  // Back from a question used to return to the first batch alone, so the
+  // browser had nowhere to scroll to and the reader lost their place. The
+  // batches loaded and the scroll position are kept when a question is
+  // opened, and put back here before the first paint.
+  useLayoutEffect(() => {
+    try {
+      const key = posKey();
+      const saved = JSON.parse(sessionStorage.getItem(key) ?? 'null') as { shown?: number; y?: number; at?: number } | null;
+      // Used once, and only soon after: a list reopened later from the navbar
+      // should start at the top, not wherever a question was opened.
+      sessionStorage.removeItem(key);
+      if (saved && typeof saved.shown === 'number' && typeof saved.y === 'number' && Date.now() - (saved.at ?? 0) < 30 * 60_000) {
+        pendingScroll.current = saved.y;
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setShown(Math.max(BATCH, saved.shown));
+      }
+    } catch { /* no saved place: start at the top */ }
+  }, []);
+  useLayoutEffect(() => {
+    if (pendingScroll.current === null) return;
+    window.scrollTo(0, pendingScroll.current);
+    pendingScroll.current = null;
+  }, [shown]);
+  const rememberPlace = () => {
+    try { sessionStorage.setItem(posKey(), JSON.stringify({ shown, y: Math.round(window.scrollY), at: Date.now() })); } catch { /* storage blocked */ }
+  };
 
   const update = (next: Partial<Filters>) => {
     const merged = { ...f, ...next };
@@ -214,14 +245,14 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
                       {x.marks && <span className="pq-marks">{x.marks} marks</span>}
                     </div>
                     <h3 className="pq-q">
-                      <Link href={`/${subject}/pyqs/${x.id}`}>{highlight(x.question, q)}</Link>
+                      <Link href={`/${subject}/pyqs/${x.id}`} onClick={rememberPlace}>{highlight(x.question, q)}</Link>
                     </h3>
                     <div className="pq-foot">
                       <button type="button" className={`pq-topic${f.topic === x.topic ? ' on' : ''}`} onClick={() => pickTopic(x.topic)}
                         title={`Every question on ${x.topic}`}>
                         {x.topic}
                       </button>
-                      <Link className="pq-write"
+                      <Link className="pq-write" onClick={rememberPlace}
                         href={`/evaluate?question=${encodeURIComponent(x.question)}${x.marks ? `&marks=${x.marks}` : ''}`}>
                         Write an answer
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
