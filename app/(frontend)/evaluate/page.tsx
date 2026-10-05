@@ -9,6 +9,7 @@ import EvalProgress, { ReadProgress, applyEvalStage, applyReadStage, type EvalSt
 import { readProgress } from '@/lib/progressStream';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
 import { isPdf, toAnswerPages } from '@/lib/answerImages';
+import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface SectionMark { awarded: number; out_of: number; reasoning: string }
@@ -140,13 +141,33 @@ export default function EvaluatePage() {
   const [readStartedAt, setReadStartedAt] = useState(0)
   const [showTranscript, setShowTranscript] = useState(false)
 
+  // A refresh used to land on an empty form, losing the transcript (the slow,
+  // metered step) or the evaluation on screen. Photos cannot go in a
+  // snapshot, so a refresh on the review step keeps the transcript and marks
+  // from it, which /api/evaluate accepts without the images. A request in
+  // flight is lost either way; the reader returns to the step before it.
+  useRefreshSafe(
+    'dc_evaluate_v1',
+    { showTranscript, question, marks, transcript, result, limitReached },
+    (saved) => {
+      setShowTranscript(saved.showTranscript)
+      setQuestion(saved.question)
+      setMarks(saved.marks)
+      setTranscript(saved.transcript)
+      setResult(saved.result)
+      setLimitReached(saved.limitReached)
+    },
+  )
+
   // Every PYQ page links here as /evaluate?question=...&marks=..., but nothing
   // read those params, so the question and marks were silently dropped and the
   // student had to retype the question they had just clicked on.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const q = params.get('question')
-    if (q) setQuestion(q)
+    // A refresh restores the page as it was; the link's question only fills
+    // an empty form, so it does not overwrite one the reader has edited.
+    if (q) setQuestion(prev => prev || q)
     const m = params.get('marks')
     if (m && (MARKS_OPTIONS as readonly string[]).includes(m)) setMarks(m)
   }, [])
@@ -315,6 +336,7 @@ export default function EvaluatePage() {
   const reset = () => {
     setResult(null); setFiles([]); setPreviews([]); setPageImages([]); setQuestion('')
     setError(null); setLimitReached(false); setTranscript(''); setShowTranscript(false)
+    clearRefreshSafe('dc_evaluate_v1')
   }
 
   const subjectLabel = labelForOptional(optionalId)

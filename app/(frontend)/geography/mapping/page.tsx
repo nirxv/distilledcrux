@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { geoMapData, geoMapYears, GEO_CATEGORIES, GeoCategory, GeoMapEntry } from '@/lib/geoMapData';
 import OwlLoader from '@/components/OwlLoader';
+import { useRefreshSafe } from '@/hooks/useRefreshSafe';
 
 const GeoMappingMap = dynamic(() => import('@/components/GeoMappingMap'), {
   ssr: false,
@@ -166,6 +167,18 @@ export default function GeoMappingPage() {
   const [search, setSearch] = useState('');
   const [quizYear, setQuizYear] = useState<number | 'all'>('all');
   const [quizCategory, setQuizCategory] = useState<GeoCategory | 'all'>('all');
+
+  // A refresh used to drop the reader back on the topic view with every
+  // section shut. The view, the open sections, the place picked and the quiz
+  // filters are kept for the tab instead.
+  useRefreshSafe(
+    'dc_mapping_v1',
+    { viewMode, openSections: [...openSections], selectedName, quizYear, quizCategory },
+    (v) => {
+      setViewMode(v.viewMode); setOpenSections(new Set(v.openSections)); setSelectedName(v.selectedName);
+      setQuizYear(v.quizYear); setQuizCategory(v.quizCategory);
+    },
+  );
 
   const entriesByCategory = useMemo(() => {
     const map: Record<string, GeoMapEntry[]> = {};

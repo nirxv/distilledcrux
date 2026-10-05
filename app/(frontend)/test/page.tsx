@@ -8,6 +8,7 @@ import { geoMapData, GeoMapEntry } from '@/lib/geoMapData';
 import SubjectIcon from '@/components/SubjectIcon';
 import OwlLoader from '@/components/OwlLoader';
 import { toAnswerPages } from '@/lib/answerImages';
+import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -109,17 +110,25 @@ function buildPaper(pool: PYQ[], mode: TestMode, withMap: boolean): QBlockData[]
 
 // ─── Timer ────────────────────────────────────────────────────────────────────
 
-function useTimer(totalSec: number, running: boolean, onEnd: () => void) {
-  const [rem, setRem] = useState(totalSec);
-  const ref = useRef<ReturnType<typeof setInterval> | null>(null);
-  useEffect(() => { setRem(totalSec); }, [totalSec]);
+/**
+ * Counts down to a fixed end time rather than ticking a number down once a
+ * second. A refresh mid-test restores the same deadline, so the clock carries
+ * on from where it was instead of restarting at the full time, and a tab the
+ * browser throttled in the background still shows the true time left.
+ * endedAt freezes it on submit, for the time-used figure in the results.
+ */
+function useTimer(totalSec: number, deadline: number | null, endedAt: number | null, onEnd: () => void) {
+  const [now, setNow] = useState(() => Date.now());
+  const onEndRef = useRef(onEnd);
+  useEffect(() => { onEndRef.current = onEnd; });
+  const running = deadline !== null && endedAt === null;
   useEffect(() => {
     if (!running) return;
-    ref.current = setInterval(() => {
-      setRem(p => { if (p <= 1) { clearInterval(ref.current!); onEnd(); return 0; } return p - 1; });
-    }, 1000);
-    return () => clearInterval(ref.current!);
-  }, [running, onEnd]);
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, [running]);
+  const rem = deadline === null ? totalSec : Math.max(0, Math.ceil((deadline - (endedAt ?? now)) / 1000));
+  useEffect(() => { if (running && rem === 0) onEndRef.current(); }, [running, rem]);
   const fmt = (s: number) => {
     const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
     return h > 0
@@ -181,6 +190,15 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
   const [transcript, setTranscript] = useState('');
   const [evalData, setEvalData] = useState<Record<string, unknown> | null>(null);
   const [error, setError] = useState('');
+
+  // A transcript or an evaluation is a paid step; a refresh should not throw
+  // it away. Kept per question for the tab. Photos cannot be kept, so only a
+  // finished transcript or result comes back, never a half-run upload.
+  useRefreshSafe(
+    `dc_test_mentor_v1:${marks}:${question.slice(0, 120)}`,
+    { step: step === 'transcript' || step === 'done' ? step : 'idle' as OcrStep, transcript, evalData },
+    (m) => { setStep(m.step); setTranscript(m.transcript); setEvalData(m.evalData); },
+  );
 
   function handleUpload() {
     if (!user) { onSignIn(); return; }
@@ -496,7 +514,26 @@ function TestPageInner() {
 
   const [blocks, setBlocks] = useState<QBlockData[]>([]);
   const [rubrics, setRubrics] = useState<Record<number, RubricState>>({});
-  const [timerOn, setTimerOn] = useState(false);
+  // The test's end time, and when it was submitted; see useTimer.
+  const [deadline, setDeadline] = useState<number | null>(null);
+  const [endedAt, setEndedAt] = useState<number | null>(null);
+  // Set once the reader or a restored test has chosen the optional, so the
+  // profile's optional, which arrives later, does not replace it.
+  const subjectChosen = useRef(Boolean(urlSubject));
+
+  // A refresh mid-test used to throw the paper away: the questions are drawn
+  // at random, so they could not even be found again. The whole test is kept
+  // for the tab instead, deadline included, so the clock carries on.
+  useRefreshSafe(
+    'dc_test_v1',
+    { phase, subject, paper, mode, includeMapQ, blocks, mapEntries, mapScore, rubrics, deadline, endedAt },
+    (t) => {
+      setPhase(t.phase); setSubject(t.subject); setPaper(t.paper); setMode(t.mode);
+      setIncludeMapQ(t.includeMapQ); setBlocks(t.blocks); setMapEntries(t.mapEntries);
+      setMapScore(t.mapScore); setRubrics(t.rubrics); setDeadline(t.deadline); setEndedAt(t.endedAt);
+      if (t.phase !== 'config') subjectChosen.current = true;
+    },
+  );
 
   // Sign-in, then back to this test with the same optional chosen.
   const goSignIn = useCallback(() => {
@@ -507,13 +544,14 @@ function TestPageInner() {
   useEffect(() => {
     if (!user || urlSubject) return;
     (async () => {
+      if (subjectChosen.current) return;
       try {
         const token = await user.getIdToken();
         const r = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
         if (r.ok) {
           const d = await r.json();
           const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
-          if (mapped) setSubject(mapped);
+          if (mapped && !subjectChosen.current) setSubject(mapped);
         }
       } catch { /* ignore */ }
     })();
@@ -542,12 +580,15 @@ function TestPageInner() {
   // Load PYQs when subject changes
   useEffect(() => {
     if (subject !== 'geography') setIncludeMapQ(false);
+    if (phase !== 'config') return;
     setLoading(true);
     fetch(SUBJECTS[subject].dataFile)
       .then(r => r.json())
       .then(d => { setPyqs(d); setLoading(false); })
       .catch(() => { setPyqs([]); setLoading(false); });
-  }, [subject]);
+    // Phase too: a test restored after a refresh skips the load, and the
+    // setup it returns to needs this optional's questions.
+  }, [subject, phase]);
 
   // Each phase starts at the top of the page.
   useEffect(() => { window.scrollTo(0, 0); }, [phase]);
@@ -555,8 +596,8 @@ function TestPageInner() {
   // Timing
   const totalMins = mode === 'full' ? 180 : 105;
   const maxMarks = mode === 'full' ? 250 : 150;
-  const handleSubmit = useCallback(() => { setTimerOn(false); setPhase('results'); }, []);
-  const { rem, display } = useTimer(totalMins * 60, timerOn, handleSubmit);
+  const handleSubmit = useCallback(() => { setEndedAt(Date.now()); setPhase('results'); }, []);
+  const { rem, display } = useTimer(totalMins * 60, deadline, endedAt, handleSubmit);
   const urgency = rem < 300;
   const mapAllowed = subject === 'geography' && (paper === 'Paper II' || paper === 'both');
   const withMap = includeMapQ && mapAllowed;
@@ -577,7 +618,8 @@ function TestPageInner() {
     }
     setMapScore(0);
     setRubrics({});
-    setTimerOn(true);
+    setDeadline(Date.now() + totalMins * 60 * 1000);
+    setEndedAt(null);
     setPhase('test');
   }
 
@@ -618,7 +660,7 @@ function TestPageInner() {
               <div className="ts-pills" role="radiogroup" aria-label="Optional">
                 {(Object.keys(SUBJECTS) as SubjectId[]).map(id => (
                   <button key={id} type="button" role="radio" aria-checked={subject === id}
-                    className={`ts-pill${subject === id ? ' on' : ''}`} onClick={() => setSubject(id)}
+                    className={`ts-pill${subject === id ? ' on' : ''}`} onClick={() => { subjectChosen.current = true; setSubject(id); }}
                     style={{ ['--t' as string]: `var(--tint-${id})`, ['--w' as string]: `var(--wash-${id})` }}>
                     <SubjectIcon id={id} size={16} />{SUBJECTS[id].label}
                   </button>
@@ -744,7 +786,7 @@ function TestPageInner() {
         {renderBlocks(true)}
 
         <div className="ts-end">
-          <button type="button" className="ds-btn ds-btn-solid" onClick={() => setPhase('config')}>Sit another paper</button>
+          <button type="button" className="ds-btn ds-btn-solid" onClick={() => { clearRefreshSafe('dc_test_v1'); setDeadline(null); setEndedAt(null); setPhase('config'); }}>Sit another paper</button>
           <Link href={`/${subject}`} className="ds-btn ds-btn-line">Back to {SUBJECTS[subject].label}</Link>
         </div>
       </div>
