@@ -43,6 +43,7 @@ Needs PyMuPDF (pip install pymupdf) and requests; --upload also needs
 VOYAGE_API_KEY, QDRANT_URL and QDRANT_API_KEY in .env.local.
 """
 import argparse
+import bisect
 import collections
 import itertools
 import html
@@ -52,6 +53,7 @@ import random
 import re
 import sys
 import time
+import unicodedata
 from pathlib import Path
 
 import fitz  # PyMuPDF
@@ -186,7 +188,8 @@ def drop_furniture(pages, dims, log):
         keep = []
         for s in segs:
             W, H = dims[s.page]
-            z = edge_zone(s, W, H, col) if s.size < big and not KEEP_AT_EDGE.match(s.text) else None
+            z = edge_zone(s, W, H, col) if s.size < big and not KEEP_AT_EDGE.match(s.text) \
+                and not BACK_MATTER.fullmatch(s.text.strip()) else None
             # Small type needs only two sightings: a short chapter shows its
             # running head on just two pages.
             need = 2 if s.size <= 0.85 * body else 3
@@ -335,9 +338,11 @@ def read_book(files, profile, log):
                 band = lambda s: (s.y0 + s.y1) / 2 / H
                 openers.append(segs)
                 heads.append(' '.join(s.text for s in sorted(segs, key=lambda s: s.x0) if 0.025 <= band(s) < SCAN_TOP))
-                cut = [s for s in segs if band(s) < SCAN_TOP or band(s) > SCAN_BOTTOM]
-                for s in cut: log['scan margin (watermark, running head)'][norm(s.text)[:50]] += 1
-                segs = [s for s in segs if SCAN_TOP <= band(s) <= SCAN_BOTTOM]
+                # A notes heading opening a page can sit as high as the head.
+                inside = lambda s: SCAN_TOP <= band(s) <= SCAN_BOTTOM or BACK_MATTER.fullmatch(s.text.strip())
+                for s in segs:
+                    if not inside(s): log['scan margin (watermark, running head)'][norm(s.text)[:50]] += 1
+                segs = [s for s in segs if inside(s)]
             pages.append(segs); dims.append((p.rect.width, H)); owner.append(fi)
         doc.close()
     pages = drop_furniture(pages, dims, log)
@@ -369,6 +374,9 @@ def read_book(files, profile, log):
 
 SCAN_TOP, SCAN_BOTTOM = 0.064, 0.955
 CHAPTERS = []
+# A chapter's closing list of notes or readings, left out to the chapter's end.
+BACK_MATTER = re.compile(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?|NOTES'
+                         r'|Bibliography|Notes[\s,.]+(?:\S{1,4}[\s,.]+){1,2}Re\S{6,9})')
 # A footnote's reference: "1 White, L. D. : Introduction to…", "* Tead, Ordway :".
 FOOTNOTE = re.compile(r"^(?:\d{1,2}|[*†‡§])\s*[A-Z][A-Za-z'’-]+,\s*(?:(?:[A-Z]\.\s*){1,3}|[A-Z][a-z]+\s*[:;,])")
 WATERMARK = re.compile(r'\S*(?:upscpdf|upsepdt|t\.me/|UPSC_?PDF|https?:|ttps?:|nttps)\S*|\bWebsite\s*[=>➡:~-]*', re.I)
@@ -557,8 +565,11 @@ def to_groups(rows, profile, log):
             items, skip = [('head', label)], None
             continue
         if skip == 'rest':                 # NCERT exercises run to the chapter's end
-            if profile == 'scan' and (r['size'] >= 1.8 * base or re.match(r'(?i)chapter\b', t)):
-                skip = None                # a scanned chapter's notes end where the next chapter opens
+            # A scanned chapter's notes end where the next chapter opens; with a
+            # chapter list that is the end of this group ("Vide Book II, / Chapter IX"
+            # in Kautilya's notes is not an opener).
+            if profile == 'scan' and not CHAPTERS and (r['size'] >= 1.8 * base or re.match(r'(?i)chapter\b', t)):
+                skip = None
             else:
                 continue
         if skip:
@@ -579,7 +590,7 @@ def to_groups(rows, profile, log):
         if profile == 'scan':
             t = WATERMARK.sub(' ', t).strip()
             if not t: continue
-            if re.fullmatch(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?|NOTES)', t):
+            if BACK_MATTER.fullmatch(t):
                 log['scan section left out'][t.title()] += 1
                 skip, skipped, skip_title = 'rest', [], t
                 continue
@@ -630,6 +641,7 @@ LIG = {'ﬀ': 'ff', 'ﬁ': 'fi', 'ﬂ': 'fl', 'ﬃ': 'ffi', 'ﬄ': 'ffl', 'ﬅ':
 WORDS = set()
 if os.path.exists('/usr/share/dict/words'):
     WORDS = {w.strip().lower() for w in open('/usr/share/dict/words')}
+SORTED_WORDS = sorted(WORDS)
 PREFIXES = set('self non anti pre post semi multi inter co neo ex quasi pan sub super ultra cross counter intra '
                'extra socio macro micro mid pro well ill sino indo afro euro'.split())
 
@@ -646,16 +658,19 @@ def basic(t):
 RUPEE = re.compile(r'(?<![\w₹])[F€%]\s?(?=\d[\d,]*(?:\.\d+)?\s?(?:crores?|lakhs?|billion|million|thousand)\b)')
 FUNC = ('the', 'and', 'from', 'with', 'for', 'of', 'to', 'in', 'on', 'is', 'as', 'at', 'by')
 THE = {'tlie': 'the', 'tlic': 'the', 'thc': 'the', 'tbe': 'the', 'lhe': 'the', 'tiie': 'the', 'Tlie': 'The',
-       'Thc': 'The', 'Tbe': 'The', 'Ihe': 'The', 'aud': 'and'}
+       'Thc': 'The', 'Tbe': 'The', 'Ihe': 'The', 'aud': 'and',
+       # e read as c in short words, too short for the letter-swap check below
+       'bcen': 'been', 'cach': 'each', 'morc': 'more', 'onc': 'one', 'shc': 'she', 'sce': 'see', 'usc': 'use',
+       'thcy': 'they', 'thcm': 'them', 'thcir': 'their', 'thesc': 'these', 'thosc': 'those', 'whcre': 'where'}
 # Words the dictionary lacks that must not be split or "corrected": modern
 # words, British spellings, names that end like a function word.
 MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 'ongoing', 'inbuilt', 'infrastructure',
-          'offence', 'offences', 'defence', 'defences', 'licence', 'licences', 'pretence', 'zealand', 'finland', 'iceland',
+          'feet', 'teeth', 'offence', 'offences', 'defence', 'defences', 'licence', 'licences', 'pretence', 'zealand', 'finland', 'iceland',
           'holland', 'scotland', 'ireland', 'thailand', 'swaziland', 'nagaland', 'jharkhand', 'uttarakhand'}
 # Letter shapes OCR confuses; a misread word is fixed when exactly one swap
 # makes a word ("animais" → "animals", "iniand" → "inland").
 OCR_CONFUSIONS = [('i', 'l'), ('l', 'i'), ('t', 'l'), ('l', 't'), ('e', 'c'), ('c', 'e'), ('rn', 'm'), ('m', 'rn'),
-                  ('li', 'h'), ('h', 'li'), ('ii', 'u'), ('cl', 'd'), ('vv', 'w'), ('f', 't'), ('t', 'f'), ('n', 'u'), ('u', 'n')]
+                  ('li', 'h'), ('h', 'li'), ('ii', 'u'), ('cl', 'd'), ('vv', 'w'), ('f', 't'), ('t', 'f'), ('n', 'u'), ('u', 'n'), ('n', 'm')]
 
 
 def ocr_fix(t, V, log):
@@ -674,7 +689,7 @@ def ocr_fix(t, V, log):
     t = re.sub(r'(?<=[A-Za-z.,”’)\d])\*+(?=[\s.,;:)]|$)', star, t)
 
     def the(m):                                      # "tlie", "thc", "tbe" — the most-read word misread
-        log['OCR fix: misread "the"/"and"'][f'{m.group(0)} → {THE[m.group(0)]}'] += 1; return THE[m.group(0)]
+        log['OCR fix: misread "the"/"and"/short word'][f'{m.group(0)} → {THE[m.group(0)]}'] += 1; return THE[m.group(0)]
     t = re.sub(r'(?<![\w-])(?:' + '|'.join(THE) + r')(?![\w-])', the, t)
 
     def bracket(m):                                  # "mil]" → "mill", "oi]" → "oil"
@@ -699,11 +714,31 @@ def ocr_fix(t, V, log):
         return w
     t = re.sub(r'(?<![\w!])[A-Za-z]*[a-z]![a-z]*(?![\w!])', bang, t)
 
+    def accent(m):                                   # "péople": a speck over a letter
+        w = m.group(0); c = unicodedata.normalize('NFKD', w).encode('ascii', 'ignore').decode()
+        if is_word(c.lower()) and V[c.lower()] >= 3:
+            log['OCR fix: speck read as an accent'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w-])[A-Za-z]*[À-ÖØ-öø-ÿ][A-Za-z]*(?![\w-])', accent, t)
+
+    def cap_i(m):                                    # "Iong" → "long"
+        w = m.group(0); c = 'l' + w[1:]
+        if known(w) or V[w.lower()] >= 2: return w
+        found = {x for x in [c] + [c[:i] + 'e' + c[i + 1:] for i, ch in enumerate(c) if ch == 'c'] if is_word(x) and V[x] >= 3}
+        if len(found) == 1:                          # "Icarn" → "learn"
+            c = found.pop(); log['OCR fix: I for l'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w-])I[a-z]{2,}(?![\w-])', cap_i, t)
+
     def confusion(m):                                # "animais" → "animals", "tocated" → "located"
         w = m.group(0)
-        if known(w) or V[w.lower()] >= 2 or not w.islower() or w in MODERN: return w
-        if any(w.startswith(f) and is_word(w[len(f):]) and len(w) - len(f) >= 3 for f in FUNC):
-            return w                                 # "ofher" is "of her", for unglue
+        if is_word(w) or not w.islower() or w in MODERN: return w
+        # "ofher" is "of her", for unglue, unless the swap is a word the book
+        # prints often ("inpact" is "impact", not "in pact").
+        glued = any(w.startswith(f) and is_word(w[len(f):]) and len(w) - len(f) >= 3 for f in FUNC)
+        # A word the book repeats may be a term of its own (Riggs's "clects"),
+        # unless the swap gives a word it prints far more often ("socicty").
+        need = 3 if V[w] < 2 else 5 * V[w]
         found = set()
         for a, b in OCR_CONFUSIONS:
             i = w.find(a)
@@ -711,10 +746,16 @@ def ocr_fix(t, V, log):
                 c = w[:i] + b + w[i + len(a):]
                 # The fix must be a word this book prints correctly elsewhere;
                 # the dictionary alone offers "scabed" for "seabed".
-                if is_word(c) and V[c] >= 3: found.add(c)
+                if is_word(c) and V[c] >= max(need, 10 if glued else 0): found.add(c)
                 i = w.find(a, i + 1)
         if len(found) == 1:
             c = found.pop(); log['OCR fix: misread letter'][f'{w} → {c}'] += 1; return c
+        if not found and not glued and V[w] < 2:
+            # e read as c is common enough on some scans to trust a word the
+            # book prints more than once ("betwecn", "alicnation").
+            found = {c for i, ch in enumerate(w) if ch == 'c' for c in [w[:i] + 'e' + w[i + 1:]] if is_word(c) and V[c] >= 2}
+            if len(found) == 1:
+                c = found.pop(); log['OCR fix: e read as c'][f'{w} → {c}'] += 1; return c
         return w
     t = re.sub(r'(?<![\w-])[a-z]{4,}(?![\w-])', confusion, t)
 
@@ -752,12 +793,20 @@ def ocr_fix(t, V, log):
         if pair and not is_word(w):                  # "ofthe", "inthe": however often the book has it
             log['OCR fix: words run together'][f'{w} → {w[:len(pair)]} {w[len(pair):]}'] += 1
             return w[:len(pair)] + ' ' + w[len(pair):]
+        if w.startswith('of') and not is_word(w) and w.lower() not in MODERN and (
+                is_word(w[2:].lower()) or re.fullmatch(r'[A-Z][a-z]{3,}', w[2:])):
+            log['OCR fix: words run together'][f'{w} → of {w[2:]}'] += 1    # "ofadministration", however often
+            return 'of ' + w[2:]
         if known(w) or w.isupper() or V[w.lower()] >= 2 or w.lower() in MODERN: return w
         camel = re.search(r'[a-z][A-Z]', w)
         lw = w.lower()
+        # "incongruency" is a form of a dictionary word, not "in congruency".
+        stem = lw[:len(lw) - 3]
+        at = bisect.bisect_left(SORTED_WORDS, stem)
+        derived = len(lw) >= 8 and at < len(SORTED_WORDS) and SORTED_WORDS[at].startswith(stem)
         for f in FUNC:
             rest = w[len(f):]
-            if lw.startswith(f) and len(rest) >= 4 and (rest.lower() in WORDS or is_word(rest) or re.fullmatch(r'[A-Z][a-z]{3,}', rest)) \
+            if lw.startswith(f) and not derived and len(rest) >= 4 and (rest.lower() in WORDS or is_word(rest) or re.fullmatch(r'[A-Z][a-z]{3,}', rest)) \
                     and (w[:len(f)].islower()):
                 log['OCR fix: words run together'][f'{w} → {w[:len(f)]} {rest}'] += 1
                 return w[:len(f)] + ' ' + rest
@@ -770,7 +819,12 @@ def ocr_fix(t, V, log):
                 log['OCR fix: words run together'][f'{w} → {rest} {w[-len(f):]}'] += 1
                 return rest + ' ' + w[-len(f):]
         return w
-    return re.sub(r'(?<![\w-])[A-Za-z]{5,}(?![\w-])', unglue, t)
+    t = re.sub(r'(?<![\w-])[A-Za-z]{5,}(?![\w-])', unglue, t)
+
+    def short(m):                                    # "ofa", "ofan", "itis"
+        w = m.group(0); fixed = w[:2] + ' ' + w[2:]
+        log['OCR fix: words run together'][f'{w} → {fixed}'] += 1; return fixed
+    return re.sub(r'(?<![\w-])(?:[Oo]fan?|[Ii]tis)(?![\w-])', short, t)
 
 
 def vocab_of(items):
