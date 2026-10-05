@@ -1,10 +1,77 @@
 'use client';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User } from 'firebase/auth';
 import SidebarNotes from '@/components/SidebarNotes';
+import Mascot from '@/components/Mascot';
+
+const SUBJECT_NAME: Record<string, string> = {
+  sociology: 'Sociology', anthropology: 'Anthropology', polsci: 'PSIR', geography: 'Geography', 'pub-admin': 'Public Administration',
+};
+
+// Below this width the sidebar floats over the note instead of sitting beside it.
+const FLOATING_QUERY = '(max-width: 1024px)';
+const subscribeWidth = (cb: () => void) => {
+  const mq = window.matchMedia(FLOATING_QUERY);
+  mq.addEventListener('change', cb);
+  return () => mq.removeEventListener('change', cb);
+};
+
+/** Minutes to read a note at an unhurried 200 words a minute. */
+function readingMinutes(html: string): number {
+  const words = html.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+// ── Current section ──────────────────────────────────────────
+/**
+ * The section being read: the last heading that has passed under the navbar.
+ * An observer only hears about headings crossing its band, so a jump (End, a
+ * tick on the rail) skipped them all and left the old one lit.
+ */
+function useActiveHeading(entries: { id: string }[]) {
+  const [activeId, setActiveId] = useState('');
+  useEffect(() => {
+    if (!entries.length) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      // Looked up each time: highlighting re-renders the note, and a heading
+      // held from before is detached and reports a top of 0.
+      let id = entries[0].id;
+      for (const { id: hid } of entries) {
+        const el = document.getElementById(hid);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= 130) id = hid; else break;
+      }
+      setActiveId(id);
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { window.removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); };
+  }, [entries]);
+  return activeId;
+}
+
+// ── Reading progress ─────────────────────────────────────────
+/** A thin bar under the navbar that fills as the reader goes down the note. */
+function ReadingProgress() {
+  const [pct, setPct] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setPct(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); };
+  }, []);
+  return <div className="nr-progress" aria-hidden="true"><span style={{ transform: `scaleX(${pct})` }} /></div>;
+}
 
 // ── Scroll-direction hook ────────────────────────────────────
 // ── Inject IDs into headings for TOC ────────────────────────
@@ -168,7 +235,6 @@ type NavLink = { slug: string; title: string } | null;
 // ── Table of Contents ─────────────────────────────────────────
 function TableOfContents({ contentHtml }: { contentHtml: string }) {
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
-  const [activeId, setActiveId] = useState('');
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -184,44 +250,33 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
     setEntries(toc);
   }, [contentHtml]);
 
-  useEffect(() => {
-    if (!entries.length) return;
-    const observer = new IntersectionObserver(obs => {
-      const visible = obs.filter(e => e.isIntersecting);
-      if (visible.length > 0) setActiveId(visible[0].target.id);
-    }, { rootMargin: '-60px 0px -60% 0px', threshold: 0 });
-    entries.forEach(({ id }) => { const el = document.getElementById(id); if (el) observer.observe(el); });
-    return () => observer.disconnect();
-  }, [entries]);
+  const activeId = useActiveHeading(entries);
 
   if (!entries.length) return null;
   let h2i = 0;
   return (
-    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 8, padding: open ? '1rem 1.25rem' : '0.6rem 1.25rem', marginBottom: '2rem', maxWidth: 760, transition: 'padding 0.2s' }}>
-      <button onClick={() => setOpen(o => !o)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', background: 'none', border: 'none', cursor: 'pointer', padding: '0.15rem 0', marginBottom: open ? '0.75rem' : 0 }}>
-        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text3)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ transition: 'transform 0.2s', transform: open ? 'rotate(0deg)' : 'rotate(-90deg)' }}>
-            <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          Table of Contents
-        </span>
-        <span style={{ fontSize: '0.65rem', fontWeight: 500, color: 'var(--text3)', opacity: 0.55, fontFamily: 'var(--font-ui)' }}>{open ? '▲ hide' : '▼ show'}</span>
+    <div className={`nr-toc${open ? ' open' : ''}`}>
+      <button type="button" className="nr-toc-toggle" onClick={() => setOpen(o => !o)} aria-expanded={open}>
+        <span>On this page</span>
+        <span className="nr-toc-count">{entries.filter(e => e.level === 2).length} sections</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nr-toc-chev" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
       </button>
       {open && (
-        <nav>
+        <nav className="nr-toc-list">
           {entries.map(entry => {
             if (entry.level === 2) h2i++;
             const isActive = activeId === entry.id;
             return (
               <a key={entry.id} href={'#' + entry.id}
+                className={`nr-toc-link${entry.level === 3 ? ' sub' : ''}${isActive ? ' on' : ''}`}
                 onClick={e => {
                   e.preventDefault();
                   const el = document.getElementById(entry.id);
                   if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
                 }}
-                style={{ display: 'block', padding: entry.level === 2 ? '0.28rem 0' : '0.22rem 0', fontSize: entry.level === 2 ? '0.82rem' : '0.76rem', color: isActive ? 'var(--accent)' : entry.level === 2 ? 'var(--text2)' : 'var(--text3)', textDecoration: 'none', borderLeft: entry.level === 3 ? '2px solid var(--border2)' : 'none', marginLeft: entry.level === 3 ? '0.5rem' : 0, paddingLeft: entry.level === 3 ? '0.75rem' : 0, fontFamily: 'var(--font-ui)', fontWeight: entry.level === 2 ? 500 : 400, lineHeight: 1.5 }}
               >
-                {entry.level === 2 ? `${h2i}. ` : '- '}{entry.text}
+                {entry.level === 2 && <span className="nr-toc-n">{h2i}</span>}
+                <span>{entry.text}</span>
               </a>
             );
           })}
@@ -235,7 +290,6 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
 /** The same headings as the inline card, laid out for a 240px column. */
 function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNavigate?: () => void }) {
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
-  const [activeId, setActiveId] = useState('');
 
   useEffect(() => {
     const doc = new DOMParser().parseFromString(contentHtml, 'text/html');
@@ -248,21 +302,25 @@ function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNaviga
     setEntries(out);
   }, [contentHtml]);
 
+  const activeId = useActiveHeading(entries);
+
+  // A long list runs past the bottom of the panel; keep the current section
+  // in view as the reader goes down the note.
+  const navRef = useRef<HTMLElement>(null);
   useEffect(() => {
-    if (!entries.length) return;
-    const obs = new IntersectionObserver(es => {
-      const vis = es.filter(e => e.isIntersecting);
-      if (vis.length) setActiveId(vis[0].target.id);
-    }, { rootMargin: '-60px 0px -60% 0px' });
-    entries.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el); });
-    return () => obs.disconnect();
-  }, [entries]);
+    const nav = navRef.current;
+    const box = nav?.closest<HTMLElement>('.nr-sidebar-inner');
+    const on = nav?.querySelector<HTMLElement>('.sb-toc-link.on');
+    if (!box || !on) return;
+    const b = on.getBoundingClientRect(), c = box.getBoundingClientRect();
+    if (b.top < c.top + 40 || b.bottom > c.bottom - 40) box.scrollTop += b.top - c.top - c.height / 3;
+  }, [activeId]);
 
   if (!entries.length) return null;
   return (
     <>
       <div className="sb-section-label as-heading"><span>Contents</span></div>
-      <nav className="sb-toc">
+      <nav className="sb-toc" ref={navRef}>
         {entries.map(t => (
           <button
             key={t.id}
@@ -301,7 +359,6 @@ function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNaviga
 function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: string }) {
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
   const [pct, setPct] = useState(0);
-  const [activeId, setActiveId] = useState('');
   const [open, setOpen] = useState(false);
   const [trackH, setTrackH] = useState(600);
 
@@ -328,15 +385,7 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
     return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', measure); };
   }, []);
 
-  useEffect(() => {
-    if (!entries.length) return;
-    const obs = new IntersectionObserver(es => {
-      const vis = es.filter(e => e.isIntersecting);
-      if (vis.length) setActiveId(vis[0].target.id);
-    }, { rootMargin: '-60px 0px -60% 0px' });
-    entries.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el); });
-    return () => obs.disconnect();
-  }, [entries]);
+  const activeId = useActiveHeading(entries);
 
   const jump = (id: string) => {
     const el = document.getElementById(id);
@@ -449,10 +498,14 @@ export default function NoteReader({
   const noteContentRef = useRef<HTMLDivElement>(null);
   const noteSearch = useNoteSearch(noteContentRef);
 
-  // Open on a desktop, closed on a phone, where 240px of sidebar would
-  // leave nothing for the note itself.
-  const [sidebarOpen, setSidebarOpen] = useState(
-    typeof window !== 'undefined' ? window.innerWidth > 1024 : true);
+  // Open on a desktop, closed on a phone, where the sidebar would leave
+  // nothing for the note itself. Until the reader picks, the width decides.
+  // The server can't know the width, so it renders null and CSS applies the
+  // default; guessing here put an open panel over the note on every phone
+  // until the page hydrated, and then React threw the markup away.
+  const [sidebarChoice, setSidebarOpen] = useState<boolean | null>(null);
+  const wide = useSyncExternalStore(subscribeWidth, () => !window.matchMedia(FLOATING_QUERY).matches, () => null);
+  const sidebarOpen = sidebarChoice ?? wide;
 
   // Below 1024px the sidebar floats over the note, which makes it a modal in
   // every way except history. Back was the instinctive way to dismiss it and
@@ -460,7 +513,7 @@ export default function NoteReader({
   // Opening pushes an entry; Back pops that entry and only closes the panel.
   const sidebarEntry = useRef(false);
   const floating = () =>
-    typeof window !== 'undefined' && window.matchMedia('(max-width: 1024px)').matches;
+    typeof window !== 'undefined' && window.matchMedia(FLOATING_QUERY).matches;
 
   const openSidebar = useCallback(() => {
     setSidebarOpen(true);
@@ -630,423 +683,15 @@ export default function NoteReader({
     );
   }
 
-  const subjectColor = subject === 'sociology' ? '#4361ee'
-    : subject === 'geography' ? 'var(--geo)'
-    : 'var(--accent)';
+  const subjectName = SUBJECT_NAME[subject] ?? subject;
+  const minutes = readingMinutes(initialContent);
+  const tint = { ['--t' as string]: `var(--tint-${subject})`, ['--w' as string]: `var(--wash-${subject})` };
+  const gated = !user && !authLoading && Boolean(displayContent);
 
   return (
-    <div className={'nr-shell' + (sidebarOpen ? ' with-sidebar' : '')}>
-      {/* ── Note CSS ── */}
-      <style>{`
-        /* Highlights. The user-agent style for mark sets a black text colour,
-           and only the background was being overridden, so on the dark ground a
-           highlighted sentence became dark text on a dark wash. Colour is
-           inherited from the prose instead, and each theme gets its own alpha:
-           a tint that reads as a highlight on white reads as mud on near-black.
-           Dark is the default ground, as everywhere else here. */
-        .note-content mark.pp-hl {
-          color: inherit; border-radius: 2px; padding: 0 1px;
-          -webkit-box-decoration-break: clone; box-decoration-break: clone;
-        }
-        .note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.30); }
-        .note-content mark.pp-hl-green  { background: rgba(76,173,122,0.30); }
-        .note-content mark.pp-hl-red    { background: rgba(201,76,76,0.32); }
-        .note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
-        [data-theme="light"] .note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.42); }
-        [data-theme="light"] .note-content mark.pp-hl-green  { background: rgba(76,173,122,0.36); }
-        [data-theme="light"] .note-content mark.pp-hl-red    { background: rgba(201,76,76,0.30); }
-        [data-theme="light"] .note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
-        .note-content h1 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 2rem 0 1rem; line-height: 1.3; letter-spacing: -0.02em; border-bottom: 2px solid ${subjectColor}; padding-bottom: 0.5rem; }
-        .note-content h2 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--gold); margin: 2.5rem 0 0.75rem; position: relative; padding-left: 0.85rem; border-left: 3px solid var(--gold); }
-        .note-content h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: ${subjectColor}; margin: 1.5rem 0 0.5rem; padding-left: 0.6rem; border-left: 2px solid ${subjectColor}; }
-        .note-content h4 { font-size: 0.78rem; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin: 1.25rem 0 0.4rem; }
-        .note-content p  { margin-bottom: 0.9rem; color: var(--text); line-height: 1.85; font-size: 1rem; }
-        .note-content ul, .note-content ol { margin: 0.5rem 0 1rem 1.5rem; }
-        .note-content li { margin-bottom: 0.5rem; color: var(--text); line-height: 1.75; font-size: 1rem; }
-        .note-content li::marker { color: ${subjectColor}; }
-        .note-content ul ul { margin-top: 0.3rem; margin-bottom: 0.3rem; }
-        .note-content ul ul li::marker { color: var(--gold); }
-        .note-content strong { color: var(--text); font-weight: 700; }
-        .note-content em { color: var(--text2); font-style: italic; }
-        .note-content blockquote { border-left: 3px solid var(--gold); padding: 0.85rem 1.25rem; margin: 1.5rem 0; background: rgba(232,184,109,0.06); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text2); }
-        .note-content table { display: block; width: 100%; max-width: 100%; border-collapse: collapse; margin: 1.75rem 0; font-size: 0.875rem; font-weight: 500; border-radius: 6px; border: 1px solid var(--border2); overflow-x: auto; }
-        .note-content table > * { display: table; width: 100%; }
-        .note-content th { background: var(--bg3); color: var(--gold); padding: 0.7rem 1rem; text-align: left; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border2); }
-        .note-content td { padding: 0.6rem 1rem; border: 1px solid var(--border); color: var(--text); vertical-align: top; line-height: 1.65; }
-        .note-content tr:nth-child(even) td { background: var(--bg2); }
-        .note-content hr { border: none; border-top: 1px solid var(--border2); margin: 2.5rem 0; }
-        .note-content mark { background: rgba(201,168,76,0.28); color: inherit; border-radius: 2px; padding: 0 1px; }
-
-
-          /* ── Shell ────────────────────────────────────────────────
-             A two column reader: a sidebar that collapses to nothing and a
-             main column that takes the width back. Centred as a pair, so the
-             note does not jump sideways when the sidebar is toggled. */
-          /* Full width, so the sidebar sits against the edge of the window
-             rather than inside a centred box with a gutter to its left. The
-             measure is set on the note itself, further in. */
-          .nr-shell {
-            display: flex; align-items: flex-start; gap: 0;
-            width: 100%; margin: 0; padding: 0 0 5rem;
-          }
-          .nr-main { flex: 1; min-width: 0; }
-
-          /* One sticky block from under the navbar to the foot of the
-             window. It used to stretch to the full page height with the
-             inner column sticky inside it, which clipped the top of the
-             sidebar against its own background as the page moved. */
-          .nr-sidebar {
-            width: 0; min-width: 0; flex-shrink: 0;
-            position: sticky; top: 60px; height: calc(100vh - 60px);
-            overflow: hidden; background: var(--bg2);
-            border-right: 1px solid transparent;
-            transition: width 0.25s cubic-bezier(0.4,0,0.2,1),
-                        min-width 0.25s cubic-bezier(0.4,0,0.2,1),
-                        border-color 0.25s;
-          }
-          .nr-shell.with-sidebar .nr-sidebar {
-            width: 240px; min-width: 240px; border-right-color: var(--border);
-          }
-          .nr-sidebar-inner {
-            height: 100%; overflow-y: auto; overscroll-behavior: contain;
-            padding: 1.25rem 1rem 2.5rem; width: 240px;
-          }
-          .nr-sidebar-inner::-webkit-scrollbar { width: 3px; }
-          .nr-sidebar-inner::-webkit-scrollbar-track { background: transparent; }
-          .nr-sidebar-inner::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
-
-          /* Backdrop only exists where the sidebar floats; on a desktop the
-             sidebar takes width from the note and there is nothing to dim. */
-          .nr-backdrop { display: none; }
-
-          .nr-sb-close {
-            display: none; position: absolute; top: 0.6rem; right: 0.6rem; z-index: 2;
-            background: var(--bg3); border: 1px solid var(--border);
-            border-radius: 6px; color: var(--text2); cursor: pointer;
-            padding: 5px; line-height: 0;
-          }
-          .nr-sb-toggle {
-            display: inline-flex; align-items: center; gap: 5px;
-            background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
-            color: var(--text2); cursor: pointer; padding: 0.25rem 0.55rem;
-            font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-            transition: border-color 0.15s, color 0.15s;
-          }
-          .nr-sb-toggle:hover { border-color: var(--border2); color: var(--text); }
-
-          /* Below 1024px the sidebar floats over the note instead of taking
-             width from it, and a tap outside the toggle closes it again. */
-          @media (max-width: 1024px) {
-            .nr-sidebar {
-              position: fixed; top: 60px; left: 0; z-index: 120;
-              height: calc(100vh - 60px); width: 0;
-              box-shadow: none; border-right: 1px solid transparent;
-            }
-            .nr-shell.with-sidebar .nr-sidebar {
-              width: 264px; min-width: 264px;
-              box-shadow: 8px 0 32px rgba(0,0,0,0.28);
-            }
-            .nr-sidebar-inner { position: static; max-height: 100%; width: 264px; padding-top: 2.6rem; }
-            .nr-sb-close { display: block; }
-            .nr-shell.with-sidebar .nr-backdrop {
-              display: block; position: fixed; inset: 0; z-index: 110;
-              background: rgba(0,0,0,0.45);
-              -webkit-tap-highlight-color: transparent;
-            }
-          }
-
-          /* ── Sidebar contents ── */
-          .sb-toc { display: block; margin-bottom: 0.4rem; }
-          .sb-toc-link {
-            display: block; width: 100%; text-align: left; background: none;
-            border: none; border-left: 2px solid transparent; cursor: pointer;
-            padding: 0.26rem 0.4rem; border-radius: 0 5px 5px 0;
-            font-family: var(--font-ui); font-size: 0.76rem; line-height: 1.45;
-            color: var(--text2); transition: background 0.15s, color 0.15s, border-left-color 0.15s;
-          }
-          .sb-toc-link.sub { font-size: 0.71rem; color: var(--text3); padding-left: 1rem; }
-          /* The rail panel on the right tints with the subject's colour; the
-             sidebar was hovering to a flat grey, so the two halves of the same
-             contents list did not look related. color-mix keeps the wash
-             translucent, which is what lets one value sit on both grounds. */
-          .sb-toc-link:hover {
-            background: color-mix(in srgb, ${subjectColor} 14%, transparent);
-            border-left-color: color-mix(in srgb, ${subjectColor} 45%, transparent);
-            color: var(--text);
-          }
-          .sb-toc-link.on {
-            color: ${subjectColor}; border-left-color: ${subjectColor};
-            background: color-mix(in srgb, ${subjectColor} 10%, transparent);
-          }
-
-          /* ── Sidebar head ──
-             Where the reader is, before what is in the note. */
-          .sb-head { padding-bottom: 0.9rem; margin-bottom: 0.2rem; border-bottom: 1px solid var(--border); }
-          .sb-chip {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--bg3); border: 1px solid var(--border);
-            border-radius: 20px; padding: 3px 9px 3px 7px;
-            font-family: var(--font-mono); font-size: 0.55rem; font-weight: 500;
-            letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3);
-          }
-          .sb-chip-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-          .sb-title {
-            font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
-            color: var(--text); line-height: 1.3; letter-spacing: -0.01em;
-            margin: 0.6rem 0 0.25rem;
-          }
-          .sb-sub {
-            font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-            color: var(--text3); margin: 0; line-height: 1.4;
-          }
-
-          /* A label with a rule running off it, so the sections read as
-             separated without needing a box around each. */
-          .sb-section-label::after {
-            content: ''; flex: 1; height: 1px;
-            background: linear-gradient(90deg, var(--border2), transparent);
-          }
-
-          /* ── Contents ── */
-          .sb-toc-link { display: flex; align-items: flex-start; gap: 7px; }
-          .sb-toc-dot {
-            width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0;
-            margin-top: 0.45rem; background: var(--border2); transition: background 0.15s;
-          }
-          .sb-toc-link.sub .sb-toc-dot { width: 3px; height: 3px; }
-          .sb-toc-link:hover .sb-toc-dot { background: ${subjectColor}; }
-          .sb-toc-link.on .sb-toc-dot { background: ${subjectColor}; box-shadow: 0 0 5px ${subjectColor}; }
-
-          /* ── Related ── */
-          .sb-related { display: flex; flex-direction: column; gap: 0.35rem; }
-          .sb-rel {
-            display: block; text-decoration: none; background: var(--bg3);
-            border: 1px solid var(--border); border-radius: 8px;
-            padding: 0.45rem 0.6rem; transition: border-color 0.15s, transform 0.15s;
-          }
-          .sb-rel:hover {
-            background: color-mix(in srgb, ${subjectColor} 12%, var(--bg3));
-            border-color: color-mix(in srgb, ${subjectColor} 38%, transparent);
-            transform: translateX(2px);
-          }
-          .sb-rel-dir {
-            display: block; font-family: var(--font-mono); font-size: 0.52rem;
-            letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3);
-            margin-bottom: 2px;
-          }
-          .sb-rel-title {
-            display: block; font-family: var(--font-ui); font-size: 0.74rem;
-            font-weight: 500; color: var(--text2); line-height: 1.35;
-          }
-          .sb-rel:hover .sb-rel-title { color: var(--text); }
-
-          /* ── Scroll rail ──────────────────────────────────────────
-             Hidden below 1024px: at the edge of a touch screen this competes
-             with the scroll gesture, and a 2px tick is smaller than a
-             fingertip. */
-          .nr-rail { display: none; }
-          @media (min-width: 1024px) { .nr-rail { display: block; } }
-          .nr-rail-track {
-            position: fixed; right: 0; top: 96px; width: 14px; z-index: 90;
-            background: var(--bg2); border-left: 1px solid var(--border);
-          }
-          .nr-rail-tick {
-            position: absolute; padding: 0; border: none; border-radius: 2px;
-            cursor: pointer; transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
-          }
-          .nr-rail-tick:hover { transform: scaleX(1.6); }
-          .nr-rail-thumb {
-            position: absolute; left: 3px; width: 8px; border: none; border-radius: 6px;
-            cursor: pointer; padding: 0; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; gap: 3px; transition: box-shadow 0.2s;
-          }
-          .nr-rail-thumb span { width: 4px; height: 1px; background: rgba(255,255,255,0.7); border-radius: 1px; }
-
-          /* ── Rail panel ── */
-          @keyframes nrPanelIn {
-            from { opacity: 0; transform: translateX(12px) scale(0.97); }
-            to   { opacity: 1; transform: translateX(0) scale(1); }
-          }
-          .nr-rail-panel {
-            position: fixed; right: 22px; top: 88px; width: 280px; z-index: 91;
-            background: var(--bg2); border: 1px solid var(--border2); border-radius: 12px;
-            overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.35);
-            animation: nrPanelIn 0.18s cubic-bezier(0.4,0,0.2,1);
-          }
-          .nr-rail-panel-head {
-            display: flex; align-items: center; gap: 8px;
-            padding: 0.8rem 1rem 0.7rem; background: var(--bg3);
-            border-bottom: 1px solid var(--border);
-          }
-          .nr-rail-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-          .nr-rail-panel-title {
-            flex: 1; font-size: 0.6rem; font-family: var(--font-mono);
-            letter-spacing: 0.18em; text-transform: uppercase;
-          }
-          .nr-rail-close {
-            background: none; border: none; color: var(--text3); cursor: pointer;
-            padding: 2px; display: flex; line-height: 0;
-          }
-          .nr-rail-close:hover { color: var(--text); }
-          .nr-rail-progress { height: 2px; background: var(--bg3); }
-          .nr-rail-progress div { height: 100%; transition: width 0.1s; }
-          .nr-rail-list { max-height: calc(100vh - 230px); overflow-y: auto; padding: 0.4rem 0; }
-          /* Find bar. Every colour comes from a token so the control follows the
-             theme; the old hard-coded slate left it dark on a light page. */
-          .nr-find-panel {
-            position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-            background: var(--bg2);
-            border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-            border-radius: 12px; padding: 10px 12px; min-width: 300px;
-            display: flex; align-items: center; gap: 8px;
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent),
-                        0 12px 48px rgba(0,0,0,0.8),
-                        0 0 24px color-mix(in srgb, var(--accent) 8%, transparent);
-          }
-          .nr-find-count {
-            font-family: var(--font-mono); font-size: 0.68rem; white-space: nowrap; flex-shrink: 0;
-            color: color-mix(in srgb, var(--accent) 80%, transparent);
-            background: var(--accent-dim); padding: 2px 8px; border-radius: 4px;
-            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-          }
-          .nr-find-none {
-            font-family: var(--font-mono); font-size: 0.68rem; color: var(--red);
-            white-space: nowrap; flex-shrink: 0;
-          }
-          .nr-find-nav {
-            display: flex; gap: 2px; padding-left: 8px; margin-left: 2px;
-            border-left: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-          }
-          .nr-find-step {
-            background: var(--accent-dim); border-radius: 6px; cursor: pointer;
-            border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-            color: var(--accent); padding: 3px 8px; font-size: 0.78rem; line-height: 1;
-            transition: all 0.15s;
-          }
-          .nr-find-step:disabled { background: transparent; border-color: transparent; color: var(--text3); cursor: default; }
-          .nr-find-esc {
-            background: var(--accent-dim); border-radius: 6px; cursor: pointer;
-            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-            color: var(--accent); padding: 3px 9px; font-size: 0.68rem;
-            font-family: var(--font-mono); margin-left: 2px; transition: all 0.15s;
-          }
-          .nr-find-fab {
-            position: fixed; bottom: 28px; right: 28px; z-index: 9998;
-            background: var(--bg2);
-            border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-            border-radius: 10px; padding: 9px 14px; cursor: pointer;
-            display: flex; align-items: center; gap: 7px;
-            color: var(--accent); font-size: 0.75rem;
-            font-family: var(--font-mono); letter-spacing: 0.04em;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            transition: border-color 0.15s, box-shadow 0.15s;
-          }
-          .nr-find-fab:hover {
-            border-color: color-mix(in srgb, var(--accent) 60%, transparent);
-            box-shadow: 0 6px 26px rgba(0,0,0,0.7);
-          }
-          .nr-find-kbd {
-            opacity: 0.45; font-size: 0.62rem; padding: 1px 5px; border-radius: 3px;
-            background: var(--accent-dim);
-            border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-          }
-          /* A shadow tuned for a dark ground turns into a smudge on white. */
-          [data-theme="light"] .nr-find-panel {
-            box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent),
-                        0 12px 40px rgba(15,23,42,0.16),
-                        0 0 24px color-mix(in srgb, var(--accent) 6%, transparent);
-          }
-          [data-theme="light"] .nr-find-fab { box-shadow: 0 4px 16px rgba(15,23,42,0.13); }
-          [data-theme="light"] .nr-find-fab:hover { box-shadow: 0 6px 22px rgba(15,23,42,0.18); }
-          .nr-rail-link {
-            width: 100%; display: flex; align-items: center; gap: 8px;
-            background: none; border: none; border-left: 2px solid transparent;
-            cursor: pointer; text-align: left; padding: 0.5rem 1rem;
-            color: var(--text); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
-            transition: background 0.15s, color 0.15s;
-          }
-          .nr-rail-link.sub {
-            padding: 0.4rem 1rem 0.4rem 1.7rem; font-size: 0.73rem; font-weight: 400; color: var(--text2);
-          }
-          .nr-rail-link:hover { background: var(--accent-dim); }
-          .nr-rail-bullet { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-          .nr-rail-link.sub .nr-rail-bullet { width: 3px; height: 3px; }
-          .nr-rail-text { flex: 1; line-height: 1.4; }
-          .nr-rail-arrow {
-            font-size: 0.65rem; opacity: 0; transform: translateX(0);
-            transition: opacity 0.15s, transform 0.15s; color: var(--text3);
-          }
-          .nr-rail-link:hover .nr-rail-arrow { opacity: 1; transform: translateX(3px); }
-          .nr-rail-foot {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0.55rem 1rem; border-top: 1px solid var(--border);
-            font-family: var(--font-mono); font-size: 0.58rem;
-            letter-spacing: 0.1em; color: var(--text3);
-          }
-          .nr-rail-foot span:last-child { font-size: 0.65rem; font-weight: 600; }
-
-          /* ── Scratch notes ── */
-          .sb-section-label {
-            width: 100%; display: flex; align-items: center; justify-content: space-between;
-            gap: 8px; background: none; border: none; cursor: pointer; padding: 0;
-            font-size: 0.6rem; font-family: var(--font-mono); text-transform: uppercase;
-            letter-spacing: 0.18em; color: var(--text3); margin: 1.2rem 0 0.5rem;
-          }
-          .sb-section-label.as-heading { cursor: default; margin-top: 0; }
-          .sb-section-label:hover { color: var(--text2); }
-          .sb-note-add {
-            width: 100%; display: flex; align-items: center; gap: 0.35rem; background: none;
-            border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent);
-            border-radius: 8px; padding: 0.5rem; font-size: 0.74rem; font-family: var(--font-ui);
-            color: var(--accent); cursor: pointer; margin-bottom: 0.6rem;
-            transition: background 0.15s, border-color 0.15s;
-          }
-          .sb-note-add:hover {
-            background: var(--accent-dim);
-            border-color: color-mix(in srgb, var(--accent) 55%, transparent);
-            border-style: solid;
-          }
-          /* A warm tint and a soft edge, so a note reads as something the
-             reader put there rather than as another panel of the interface. */
-          .sb-note {
-            background: color-mix(in srgb, var(--gold) 7%, var(--bg2));
-            border: 1px solid color-mix(in srgb, var(--gold) 22%, transparent);
-            border-radius: 8px; padding: 0.6rem; margin-bottom: 0.6rem;
-            transition: border-color 0.15s, box-shadow 0.15s;
-          }
-          .sb-note:focus-within {
-            border-color: color-mix(in srgb, var(--gold) 50%, transparent);
-            box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 12%, transparent);
-          }
-          .sb-note-title, .sb-note-body {
-            width: 100%; background: none; border: none; outline: none; color: var(--text);
-            font-family: var(--font-ui); padding: 0; resize: none;
-          }
-          .sb-note-title {
-            font-size: 0.8rem; font-weight: 700; padding-bottom: 0.35rem; margin-bottom: 0.35rem;
-            border-bottom: 1px solid color-mix(in srgb, var(--gold) 15%, transparent);
-          }
-          .sb-note-body { font-size: 0.76rem; line-height: 1.6; min-height: 2.8em; }
-          .sb-note-title::placeholder, .sb-note-body::placeholder { color: var(--text3); font-weight: 400; }
-          /* Housekeeping, kept out of the way until the note is used. Always
-             visible on touch, where there is no hover to reveal it. */
-          .sb-note-foot {
-            display: flex; align-items: center; justify-content: space-between; gap: 0.35rem;
-            margin-top: 0.35rem; font-family: var(--font-mono); font-size: 0.56rem;
-            color: var(--text3); opacity: 0; transition: opacity 0.15s;
-          }
-          .sb-note:hover .sb-note-foot, .sb-note:focus-within .sb-note-foot { opacity: 1; }
-          @media (hover: none) { .sb-note-foot { opacity: 1; } }
-          .sb-note-foot button {
-            background: none; border: none; padding: 0; font-family: inherit; font-size: inherit;
-            color: var(--text3); cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em;
-          }
-          .sb-note-foot button:hover { color: #f87171; }
-          .sb-note-confirm { display: flex; gap: 0.6rem; }
-          .sb-note-confirm button:first-child { color: #f87171; font-weight: 700; }
-      `}</style>
+    <div className={'nr-shell ds' + (sidebarOpen === null ? ' sb-auto' : sidebarOpen ? ' with-sidebar' : '')} style={tint}>
+      <style>{NR_CSS}</style>
+      <ReadingProgress />
 
       {/* ── Sidebar ── */}
       {/* Tap-anywhere-else to dismiss, which the floating panel never had. */}
@@ -1063,8 +708,8 @@ export default function NoteReader({
           {/* Where the reader is: subject and paper, then the note itself. */}
           <div className="sb-head">
             <span className="sb-chip">
-              <span className="sb-chip-dot" style={{ background: subjectColor }} />
-              {subject.replace('-', ' ')} · Paper {note.paper}
+              <span className="sb-chip-dot" />
+              {subjectName} · Paper {note.paper === 1 ? 'I' : 'II'}
             </span>
             <h2 className="sb-title">{note.title}</h2>
             <p className="sb-sub">{note.section}</p>
@@ -1079,7 +724,7 @@ export default function NoteReader({
 
           {(prev || next) && (
             <>
-              <div className="sb-section-label as-heading"><span>Related</span></div>
+              <div className="sb-section-label as-heading"><span>Before and after</span></div>
               <nav className="sb-related">
                 {prev && (
                   <Link className="sb-rel" href={`/notes/${subject}/${prev.slug}`}>
@@ -1104,240 +749,478 @@ export default function NoteReader({
       {/* ── Main column ── */}
       <div className="nr-main">
 
-      {/* ── Header ──
-            One row, the way the history reader has it, rather than the three
-            stacked rows it was. It scrolls away with the note rather than
-            holding at the top; the sidebar is what stays. Wraps when narrow. */}
-      <div style={{
-        padding: '0.7rem 1.5rem', borderBottom: '1px solid var(--border)',
-        background: 'var(--bg)',
-        display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap' as const,
-      }}>
-        <button type="button" className="nr-sb-toggle"
-          onClick={() => (sidebarOpen ? closeSidebar() : openSidebar())}
-          aria-expanded={sidebarOpen}
-          title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}>
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      {/* ── Toolbar ──
+            One row. It scrolls away with the note; the sidebar is what stays. */}
+      <div className="nr-bar">
+        <button type="button" className={`nr-pill nr-sb-toggle${sidebarOpen ? ' on' : ''}`}
+          onClick={() => (sidebarOpen ?? !floating() ? closeSidebar() : openSidebar())}
+          aria-expanded={sidebarOpen ?? undefined}
+          title="Show or hide the contents">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="1.8" y="2.5" width="12.4" height="11" rx="1.6" />
             <line x1="6.3" y1="2.5" x2="6.3" y2="13.5" />
           </svg>
-          <span>{sidebarOpen ? 'Hide' : 'Contents'}</span>
+          <span>Contents</span>
         </button>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', minWidth: 0 }}>
-          <Link href="/notes" style={{ color: 'var(--text3)', textDecoration: 'none' }}>Notes</Link>
-          <span>·</span>
-          <Link href={`/notes/${subject}`} style={{ color: 'var(--text3)', textDecoration: 'none', textTransform: 'capitalize' }}>{subject}</Link>
-          <span>·</span>
-          <span style={{ color: 'var(--text2)', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' }}>{note.title}</span>
-        </div>
+        <nav className="nr-crumbs" aria-label="Breadcrumb">
+          <Link href="/notes">Notes</Link>
+          <span aria-hidden="true">›</span>
+          <Link href={`/notes/${subject}`}>{subjectName}</Link>
+        </nav>
 
-        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <span style={{ fontSize: '0.62rem', fontFamily: 'var(--font-ui)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: subjectColor, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 4, padding: '2px 7px' }}>
-            Paper {note.paper}
-          </span>
-          <span style={{ fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>{note.section}</span>
-          <button
+        <div className="nr-bar-actions">
+          <button type="button"
+            className={`nr-pill${annotationMode === 'highlight' ? ' on gold' : ''}`}
             onClick={() => setAnnotationMode(m => m === 'highlight' ? null : 'highlight')}
-            style={{
-              display: 'flex', alignItems: 'center', gap: 5,
-              background: annotationMode === 'highlight' ? 'rgba(201,168,76,0.1)' : 'transparent',
-              border: `1px solid ${annotationMode === 'highlight' ? 'rgba(201,168,76,0.35)' : 'var(--border)'}`,
-              color: annotationMode === 'highlight' ? '#c9a84c' : 'var(--text3)',
-              padding: '0.28rem 0.65rem', borderRadius: 5, cursor: 'pointer',
-              fontSize: '0.72rem', fontFamily: 'var(--font-mono)',
-            }}
+            aria-pressed={annotationMode === 'highlight'}
           >
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
             </svg>
-            {annotationMode === 'highlight' ? 'Highlighting' : 'Highlight'}
+            <span>{annotationMode === 'highlight' ? 'Highlighting' : 'Highlight'}</span>
           </button>
-
-          <Link href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`} style={{
-            display: 'flex', alignItems: 'center', gap: 5,
-            background: 'rgba(67,97,238,0.08)', border: '1px solid rgba(67,97,238,0.22)',
-            color: 'rgba(123,147,247,0.9)', padding: '0.28rem 0.65rem',
-            borderRadius: 5, textDecoration: 'none',
-            fontSize: '0.72rem', fontWeight: 500, fontFamily: 'var(--font-mono)',
-          }}>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <Link className="nr-pill accent" href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
-            Ask AI
+            <span>Ask the AI</span>
           </Link>
         </div>
       </div>
 
-      {/* ── Highlight color picker (when in highlight mode) ── */}
+      {/* ── Highlight colours (when highlighting) ── */}
       {annotationMode === 'highlight' && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 2rem', borderBottom: '1px solid var(--border)', background: 'rgba(201,168,76,0.04)' }}>
-          <span style={{ fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', marginRight: '0.25rem' }}>Color:</span>
-          {HIGHLIGHT_COLORS.map(c => (
-            <button key={c.id} onClick={() => setSelectedColor(c.id as typeof selectedColor)} style={{
-              width: 18, height: 18, borderRadius: '50%', background: c.color, border: selectedColor === c.id ? '2px solid rgba(255,255,255,0.7)' : '2px solid transparent',
-              outline: selectedColor === c.id ? `2px solid ${c.color}` : 'none', outlineOffset: '1px', cursor: 'pointer', transition: 'transform 0.12s',
-            }} title={c.label} />
-          ))}
+        <div className="nr-hlbar">
+          <span className="nr-hlbar-label">Select some text, then pick a colour.</span>
+          <div className="nr-hlbar-colours">
+            {HIGHLIGHT_COLORS.map(c => (
+              <button key={c.id} type="button" onClick={() => setSelectedColor(c.id as typeof selectedColor)}
+                className={`nr-swatch${selectedColor === c.id ? ' on' : ''}`}
+                style={{ ['--sw' as string]: c.color }} title={c.label} aria-label={c.label} />
+            ))}
+          </div>
+          {highlights.length > 0 && <span className="nr-hlbar-note">Tap a highlight to remove it.</span>}
           {highlights.length > 0 && (
-            <span style={{ marginLeft: '0.5rem', fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)' }}>
-              Click a highlight to remove it.
-            </span>
-          )}
-          {highlights.length > 0 && (
-            <button onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }} style={{ marginLeft: '0.75rem', background: 'none', border: '1px solid var(--border)', color: 'var(--text3)', cursor: 'pointer', padding: '2px 8px', borderRadius: 4, fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>
+            <button type="button" className="nr-hlbar-clear" onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }}>
               Clear all
             </button>
           )}
         </div>
       )}
 
-      {/* ── Float highlight toolbar ── */}
+      {/* ── Floating highlight toolbar ── */}
       {showToolbar && (
-        <div style={{ position: 'absolute', left: toolbarPos.x, top: toolbarPos.y, transform: 'translateX(-50%)', background: 'var(--bg)', border: '1px solid var(--border2)', borderRadius: 10, padding: '6px 8px', display: 'flex', gap: '5px', alignItems: 'center', zIndex: 200, boxShadow: '0 12px 40px rgba(0,0,0,0.7)' }}>
+        <div className="nr-float" style={{ left: toolbarPos.x, top: toolbarPos.y }}>
           {HIGHLIGHT_COLORS.map(c => (
-            <button key={c.id} onMouseDown={e => e.preventDefault()} onClick={() => applyHighlight(c.id as typeof selectedColor)} title={c.label} style={{ width: 20, height: 20, borderRadius: '50%', background: c.color, border: '2px solid transparent', cursor: 'pointer', transition: 'transform 0.12s' }}
-              onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.25)')}
-              onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-            />
+            <button key={c.id} type="button" onMouseDown={e => e.preventDefault()} onClick={() => applyHighlight(c.id as typeof selectedColor)}
+              title={c.label} aria-label={`Highlight in ${c.label}`} className="nr-float-swatch" style={{ ['--sw' as string]: c.color }} />
           ))}
           {selectionHighlighted && (
             <>
-              <div style={{ width: 1, height: 16, background: 'var(--border2)', margin: '0 2px' }} />
-              <button onMouseDown={e => e.preventDefault()} onClick={removeHighlight} title="Remove highlight"
-                style={{ background: 'none', border: 'none', color: 'var(--text3)', cursor: 'pointer', width: 20, height: 20, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text3)')}
-              >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <span className="nr-float-rule" />
+              <button type="button" onMouseDown={e => e.preventDefault()} onClick={removeHighlight} title="Remove highlight" aria-label="Remove highlight" className="nr-float-btn">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 20H9L4 15a2 2 0 0 1 0-3l8-8a2 2 0 0 1 3 0l5 5a2 2 0 0 1 0 3l-7 7"/><path d="M6 13l6 6"/>
                 </svg>
               </button>
             </>
           )}
-          <div style={{ width: 1, height: 16, background: 'var(--border2)', margin: '0 2px' }} />
-          <button onClick={() => setShowToolbar(false)} style={{ background: 'none', border: 'none', color: 'var(--text3)', cursor: 'pointer', width: 20, height: 20, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span className="nr-float-rule" />
+          <button type="button" onClick={() => setShowToolbar(false)} className="nr-float-btn" aria-label="Close">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
       )}
 
-      {processedContent && <ScrollRail contentHtml={processedContent} accent={subjectColor} />}
+      {processedContent && <ScrollRail contentHtml={processedContent} accent="var(--t)" />}
 
       {/* ── Content ── */}
-      <div style={{ padding: '2.5rem 2rem', position: 'relative' }} onMouseUp={handleMouseUp}>
-        <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          {/* Title */}
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            {note.title}
-          </h1>
-          <p style={{ color: 'var(--text3)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)', marginBottom: '2rem', lineHeight: 1.6 }}>
-            {note.description}
-          </p>
-
-          {/* Subtopics */}
-          {note.subtopics && (
-            <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' as const, marginBottom: '2rem' }}>
-              {note.subtopics.map(st => (
-                <span key={st} style={{ fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-ui)', color: 'var(--text3)', background: 'var(--bg2)', border: '1px solid var(--border)', padding: '3px 10px', borderRadius: 20 }}>{st}</span>
-              ))}
+      <div className="nr-content" onMouseUp={handleMouseUp}>
+        <article className="nr-article">
+          <header className="nr-head">
+            <div className="nr-meta">
+              <span className="nr-paper">Paper {note.paper === 1 ? 'I' : 'II'}</span>
+              <span>{note.section}</span>
+              {initialContent && <span>{minutes} min read</span>}
             </div>
-          )}
+            <h1 className="nr-title">{note.title}</h1>
+            <p className="nr-desc">{note.description}</p>
+            {note.subtopics && note.subtopics.length > 0 && (
+              <div className="nr-subs">
+                {note.subtopics.map(st => <span key={st}>{st}</span>)}
+              </div>
+            )}
+          </header>
 
-
-          {/* TOC */}
           {processedContent && <TableOfContents contentHtml={processedContent} />}
 
           {/* Note body */}
-          <div style={{ position: 'relative' }}>
+          <div className="nr-body">
             <div ref={noteContentRef} className="note-content"
               onClick={handleContentClick}
-              dangerouslySetInnerHTML={{ __html: displayContent || '<p style="color:var(--text3);font-family:var(--font-ui);font-size:0.9rem; font-weight: 500;">Content coming soon. Check back shortly.</p>' }}
-              style={!user && !authLoading && displayContent ? { maxHeight: '140vh', overflow: 'hidden', pointerEvents: 'none', userSelect: 'none' } : undefined}
+              dangerouslySetInnerHTML={{ __html: displayContent || '<p class="nr-empty">These notes are on their way. Check back soon.</p>' }}
+              style={gated ? { maxHeight: '140vh', overflow: 'hidden', pointerEvents: 'none', userSelect: 'none' } : undefined}
             />
 
             {/* Sign-in gate (only if there's actual content) */}
-            {!user && !authLoading && displayContent && (
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '2.5rem', paddingTop: '6rem', background: 'linear-gradient(to bottom, transparent 0%, var(--bg) 38%)', pointerEvents: 'auto' }}>
-                <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '1.5rem 2rem', textAlign: 'center', maxWidth: 360 }}>
-                  <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>🔒</div>
-                  <div style={{ fontFamily: 'var(--font-ui)', fontWeight: 700, color: 'var(--text)', fontSize: '0.95rem', marginBottom: '0.4rem' }}>Sign in to continue reading</div>
-                  <div style={{ color: 'var(--text3)', fontSize: '0.78rem', fontWeight: 500, marginBottom: '1.1rem', lineHeight: 1.5 }}>Free account full notes, highlights & progress tracking.</div>
-                  <button onClick={handleSignIn} style={{ background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: 8, padding: '0.55rem 1.5rem', fontFamily: 'var(--font-ui)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', width: '100%' }}>
-                    Sign in free →
-                  </button>
+            {gated && (
+              <div className="nr-gate">
+                <div className="nr-gate-card">
+                  <Mascot pose="reading" width={76} />
+                  <div className="nr-gate-title">Sign in to keep reading</div>
+                  <p>A free account opens the whole note, and keeps your highlights and notes with you.</p>
+                  <button type="button" onClick={handleSignIn} className="ds-btn ds-btn-solid nr-gate-btn">Sign in free</button>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Related topics */}
-          {note.subtopics && displayContent && (
-            <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-              <div style={{ fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text3)', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>Subtopics covered</div>
-              <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '0.5rem' }}>
-                {note.subtopics.map(st => (
-                  <span key={st} style={{ display: 'inline-block', padding: '0.35rem 0.85rem', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text2)', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 20, fontFamily: 'var(--font-ui)' }}>
-                    {st}
-                  </span>
-                ))}
-              </div>
-            </div>
+          {/* A way on from the end of the note */}
+          {!gated && displayContent && (
+            <Link href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`} className="nr-ask">
+              <span className="nr-ask-text">
+                <strong>Still unsure about something here?</strong>
+                <span>Ask the {subjectName} AI. It answers from the standard books and shows you the page.</span>
+              </span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </Link>
           )}
 
-          {/* Prev / Next nav */}
-          <div style={{ marginTop: '3.5rem', display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
-            {prev ? (
-              <Link href={`/notes/${subject}/${prev.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: '1rem 1.25rem', borderRadius: 10, textDecoration: 'none', background: 'var(--bg2)', border: '1px solid var(--border)', flex: 1, maxWidth: '48%', transition: 'border-color 0.15s' }}>
-                <span style={{ fontSize: '0.58rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.16em', color: `${subjectColor}80`, display: 'flex', alignItems: 'center', gap: 5 }}>← Previous</span>
-                <span style={{ fontSize: '0.88rem', color: 'var(--text)', fontFamily: 'var(--font-display)', fontWeight: 600, lineHeight: 1.35 }}>{prev.title}</span>
-              </Link>
-            ) : <div style={{ flex: 1 }} />}
-            {next ? (
-              <Link href={`/notes/${subject}/${next.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: '1rem 1.25rem', borderRadius: 10, textDecoration: 'none', background: 'var(--bg2)', border: '1px solid var(--border)', flex: 1, maxWidth: '48%', alignItems: 'flex-end', transition: 'border-color 0.15s' }}>
-                <span style={{ fontSize: '0.58rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.16em', color: `${subjectColor}80`, display: 'flex', alignItems: 'center', gap: 5 }}>Next →</span>
-                <span style={{ fontSize: '0.88rem', color: 'var(--text)', fontFamily: 'var(--font-display)', fontWeight: 600, lineHeight: 1.35, textAlign: 'right' }}>{next.title}</span>
-              </Link>
-            ) : <div style={{ flex: 1 }} />}
-          </div>
-        </div>
+          {/* Prev / Next */}
+          {(prev || next) && (
+            <nav className="nr-pager" aria-label="More notes">
+              {prev ? (
+                <Link href={`/notes/${subject}/${prev.slug}`} className="nr-pager-link">
+                  <span className="nr-pager-dir">← Previous</span>
+                  <span className="nr-pager-title">{prev.title}</span>
+                </Link>
+              ) : <span />}
+              {next ? (
+                <Link href={`/notes/${subject}/${next.slug}`} className="nr-pager-link next">
+                  <span className="nr-pager-dir">Next →</span>
+                  <span className="nr-pager-title">{next.title}</span>
+                </Link>
+              ) : <span />}
+            </nav>
+          )}
+        </article>
       </div>
 
-      {/* ── Note search bar ── */}
+      {/* ── Find in note ── */}
       {noteSearch.open && (
         <div className="nr-find-panel">
-          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ color: 'color-mix(in srgb, var(--accent) 70%, transparent)', flexShrink: 0 }}>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" style={{ color: 'var(--text3)', flexShrink: 0 }}>
             <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/>
             <path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
           <input autoFocus value={noteSearch.query} onChange={e => noteSearch.setQuery(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') noteSearch.jump(e.shiftKey ? -1 : 1); if (e.key === 'Escape') noteSearch.close(); }}
-            placeholder="Find in note…"
-            style={{ flex: 1, background: 'none', border: 'none', outline: 'none', color: 'var(--text)', fontSize: '0.9rem', fontFamily: 'var(--font-body)', minWidth: 0 }}
+            placeholder="Find in this note"
+            aria-label="Find in this note"
           />
           {noteSearch.total > 0 && (
-            <span className="nr-find-count">{noteSearch.current} / {noteSearch.total}</span>
+            <span className="nr-find-count">{noteSearch.current} of {noteSearch.total}</span>
           )}
           {noteSearch.query.length >= 2 && noteSearch.total === 0 && (
-            <span className="nr-find-none">no match</span>
+            <span className="nr-find-none">Not found</span>
           )}
           <div className="nr-find-nav">
-            <button onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} title="Previous (Shift+Enter)" className="nr-find-step">↑</button>
-            <button onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} title="Next (Enter)" className="nr-find-step">↓</button>
+            <button type="button" onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} title="Previous (Shift+Enter)" aria-label="Previous match" className="nr-find-step">↑</button>
+            <button type="button" onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} title="Next (Enter)" aria-label="Next match" className="nr-find-step">↓</button>
           </div>
-          <button onClick={noteSearch.close} className="nr-find-esc">esc</button>
+          <button type="button" onClick={noteSearch.close} className="nr-find-esc" aria-label="Close">✕</button>
         </div>
       )}
 
-      {/* ── Search trigger ── */}
-      {!noteSearch.open && (
-        <button onClick={() => noteSearch.setOpen(true)} title="Find in note (⌘F)" className="nr-find-fab">
-          <svg width="13" height="13" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/><path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-          Find
-          <span className="nr-find-kbd">⌘F</span>
+      {!noteSearch.open && !gated && (
+        <button type="button" onClick={() => noteSearch.setOpen(true)} title="Find in this note (⌘F)" className="nr-find-fab">
+          <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/><path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+          <span>Find</span>
+          <kbd>⌘F</kbd>
         </button>
       )}
       </div>
     </div>
   );
 }
+
+const NR_CSS = `
+/* Highlights. The user-agent style for mark sets a black text colour, so
+   colour is inherited from the prose, and each theme gets its own alpha: a
+   tint that reads as a highlight on white reads as mud on near-black. */
+.note-content mark.pp-hl { color: inherit; border-radius: 3px; padding: 0 1px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.30); }
+.note-content mark.pp-hl-green  { background: rgba(76,173,122,0.30); }
+.note-content mark.pp-hl-red    { background: rgba(201,76,76,0.32); }
+.note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
+[data-theme="light"] .note-content mark.pp-hl-yellow { background: rgba(201,168,76,0.42); }
+[data-theme="light"] .note-content mark.pp-hl-green  { background: rgba(76,173,122,0.36); }
+[data-theme="light"] .note-content mark.pp-hl-red    { background: rgba(201,76,76,0.30); }
+[data-theme="light"] .note-content mark.pp-hl-blue   { background: rgba(76,139,201,0.32); }
+
+/* ── The note's own type ── */
+.note-content { font-size: 1.06rem; line-height: 1.8; color: var(--text); overflow-wrap: break-word; }
+.note-content h1 { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; margin: 2.4rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--t); }
+.note-content h2 { font-size: 1.42rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; margin: 2.8rem 0 0.9rem; padding-left: 14px; border-left: 4px solid var(--t); scroll-margin-top: 90px; }
+.note-content h3 { font-size: 1.14rem; font-weight: 700; line-height: 1.4; color: var(--t); margin: 1.9rem 0 0.6rem; scroll-margin-top: 90px; }
+.note-content h4 { font-size: 1.02rem; font-weight: 700; line-height: 1.45; color: var(--text); margin: 1.5rem 0 0.4rem; }
+.note-content p { margin: 0 0 1rem; }
+.note-content > :first-child { margin-top: 0; }
+.note-content ul, .note-content ol { margin: 0.4rem 0 1.1rem 1.4rem; padding: 0; }
+/* .ds clears list styles for its own lists; the note's are real lists. */
+.note-content ul { list-style: disc; }
+.note-content ol { list-style: decimal; }
+.note-content ul ul { list-style: circle; }
+.note-content li { margin-bottom: 0.45rem; }
+.note-content li::marker { color: var(--t); }
+.note-content ul ul, .note-content ol ol { margin-top: 0.3rem; margin-bottom: 0.3rem; }
+.note-content strong { font-weight: 700; }
+.note-content em { color: var(--text2); }
+.note-content a { color: var(--accent-text); }
+.note-content blockquote { margin: 1.6rem 0; padding: 1rem 1.25rem; background: var(--w); border-left: 4px solid var(--t); border-radius: 0 12px 12px 0; color: var(--text); }
+.note-content blockquote p:last-child { margin-bottom: 0; }
+.note-content table { display: block; width: 100%; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1.8rem 0; font-size: 0.92rem; border: 1px solid var(--border2); border-radius: 12px; }
+.note-content table > * { display: table; width: 100%; }
+.note-content th { background: var(--ds-soft); padding: 0.7rem 1rem; text-align: left; font-weight: 700; border-bottom: 1px solid var(--border2); }
+.note-content td { padding: 0.65rem 1rem; border-top: 1px solid var(--border); vertical-align: top; line-height: 1.65; }
+.note-content tr:nth-child(even) td { background: color-mix(in srgb, var(--ds-soft) 60%, transparent); }
+.note-content hr { border: none; border-top: 1px solid var(--border2); margin: 2.5rem 0; }
+.note-content mark { background: rgba(201,168,76,0.28); color: inherit; border-radius: 3px; padding: 0 1px; }
+.nr-empty { color: var(--text3); }
+
+/* ── Reading progress ── */
+.nr-progress { position: fixed; top: 60px; left: 0; right: 0; height: 3px; z-index: 101; pointer-events: none; }
+.nr-progress span { display: block; height: 100%; background: var(--t); transform-origin: left; transition: transform 0.1s linear; }
+
+/* ── Shell: a sidebar that collapses to nothing, and the note ── */
+.nr-shell { display: flex; align-items: flex-start; width: 100%; padding: 0 0 5rem; background: var(--bg); }
+.nr-main { flex: 1; min-width: 0; }
+.nr-sidebar {
+  width: 0; min-width: 0; flex-shrink: 0;
+  position: sticky; top: 60px; height: calc(100vh - 60px);
+  overflow: hidden; background: var(--ds-soft); border-right: 1px solid transparent;
+  transition: width 0.25s cubic-bezier(0.4,0,0.2,1), min-width 0.25s cubic-bezier(0.4,0,0.2,1), border-color 0.25s;
+}
+.nr-shell.with-sidebar .nr-sidebar { width: 268px; min-width: 268px; border-right-color: var(--border); }
+/* Before hydration, and until the reader toggles it: open beside the note on
+   a desktop, closed on anything narrower. */
+@media (min-width: 1025px) {
+  .nr-shell.sb-auto .nr-sidebar { width: 268px; min-width: 268px; border-right-color: var(--border); }
+  .nr-shell.sb-auto .nr-sb-toggle { color: var(--t); border-color: color-mix(in srgb, var(--t) 40%, transparent); background: var(--w); }
+}
+.nr-sidebar-inner { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding: var(--space-5) var(--space-4) var(--space-10); width: 268px; }
+.nr-backdrop { display: none; }
+.nr-sb-close { display: none; position: absolute; top: 0.7rem; right: 0.7rem; z-index: 2; width: 32px; height: 32px; align-items: center; justify-content: center; background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-full); color: var(--text2); cursor: pointer; }
+@media (max-width: 1024px) {
+  .nr-sidebar { position: fixed; top: 60px; left: 0; z-index: 120; height: calc(100vh - 60px); width: 0; }
+  .nr-shell.with-sidebar .nr-sidebar { width: 300px; min-width: 300px; max-width: 86vw; box-shadow: var(--elev-3); }
+  .nr-sidebar-inner { width: 300px; max-width: 86vw; padding-top: 3rem; }
+  .nr-sb-close { display: inline-flex; }
+  .nr-shell.with-sidebar .nr-backdrop { display: block; position: fixed; inset: 0; z-index: 110; background: color-mix(in srgb, var(--bg) 55%, transparent); -webkit-tap-highlight-color: transparent; }
+}
+
+/* ── Sidebar contents ── */
+.sb-head { padding-bottom: var(--space-4); margin-bottom: var(--space-2); border-bottom: 1px solid var(--border); }
+.sb-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 8px; border-radius: var(--radius-full); background: var(--ds-card); border: 1px solid var(--border); font-size: 0.74rem; font-weight: 600; color: var(--text2); }
+.sb-chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--t); flex-shrink: 0; }
+.sb-title { font-size: 1.02rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.3; margin: var(--space-3) 0 var(--space-1); }
+.sb-sub { font-size: 0.8rem; color: var(--text3); margin: 0; line-height: 1.4; }
+.sb-section-label {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: none; border: none; cursor: pointer; padding: 0; margin: var(--space-5) 0 var(--space-2);
+  font-size: 0.74rem; font-weight: 700; color: var(--text3);
+}
+.sb-section-label.as-heading { cursor: default; }
+.sb-section-label:hover { color: var(--text2); }
+.sb-toc { display: flex; flex-direction: column; gap: 1px; }
+.sb-toc-link {
+  display: flex; align-items: flex-start; gap: 8px; width: 100%; text-align: left;
+  background: none; border: none; border-radius: var(--radius-md); cursor: pointer;
+  padding: 6px 8px; font-size: 0.85rem; line-height: 1.4; color: var(--text2);
+  transition: background 0.15s, color 0.15s;
+}
+.sb-toc-link.sub { font-size: 0.8rem; color: var(--text3); padding-left: 22px; }
+.sb-toc-link:hover { background: var(--ds-card); color: var(--text); }
+.sb-toc-link.on { background: var(--w); color: var(--t); font-weight: 600; }
+.sb-toc-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem; background: var(--border3); }
+.sb-toc-link.sub .sb-toc-dot { width: 4px; height: 4px; }
+.sb-toc-link.on .sb-toc-dot, .sb-toc-link:hover .sb-toc-dot { background: var(--t); }
+.sb-related { display: flex; flex-direction: column; gap: 6px; }
+.sb-rel { display: block; text-decoration: none; background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 8px 10px; transition: border-color 0.15s; }
+.sb-rel:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); }
+.sb-rel-dir { display: block; font-size: 0.72rem; font-weight: 600; color: var(--text3); margin-bottom: 2px; }
+.sb-rel-title { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.35; }
+
+/* ── Scratch notes (components/SidebarNotes) ── */
+.sb-note-add { width: 100%; display: flex; align-items: center; gap: 6px; background: none; border: 1.5px dashed color-mix(in srgb, var(--accent) 35%, transparent); border-radius: var(--radius-md); padding: 8px 10px; font-size: 0.84rem; color: var(--accent-text); cursor: pointer; margin-bottom: var(--space-2); transition: background 0.15s, border-color 0.15s; }
+.sb-note-add:hover { background: var(--accent-dim); border-style: solid; }
+.sb-note { background: color-mix(in srgb, var(--premium-text) 6%, var(--ds-card)); border: 1px solid color-mix(in srgb, var(--premium-text) 22%, transparent); border-radius: var(--radius-md); padding: 10px; margin-bottom: var(--space-2); transition: border-color 0.15s, box-shadow 0.15s; }
+.sb-note:focus-within { border-color: color-mix(in srgb, var(--premium-text) 50%, transparent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--premium-text) 12%, transparent); }
+.sb-note-title, .sb-note-body { width: 100%; background: none; border: none; outline: none; color: var(--text); padding: 0; resize: none; font-family: var(--font-ui); }
+.sb-note-title { font-size: 0.88rem; font-weight: 700; padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid color-mix(in srgb, var(--premium-text) 15%, transparent); }
+.sb-note-body { font-size: 0.84rem; line-height: 1.6; min-height: 2.8em; }
+.sb-note-title::placeholder, .sb-note-body::placeholder { color: var(--text3); font-weight: 400; }
+.sb-note-foot { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 6px; font-size: 0.72rem; color: var(--text3); opacity: 0; transition: opacity 0.15s; }
+.sb-note:hover .sb-note-foot, .sb-note:focus-within .sb-note-foot { opacity: 1; }
+@media (hover: none) { .sb-note-foot { opacity: 1; } }
+.sb-note-foot button { background: none; border: none; padding: 0; font: inherit; color: var(--text3); cursor: pointer; }
+.sb-note-foot button:hover { color: var(--danger-text); }
+.sb-note-confirm { display: flex; gap: 10px; }
+.sb-note-confirm button:first-child { color: var(--danger-text); font-weight: 700; }
+
+/* ── Toolbar ── */
+.nr-bar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-3); padding: var(--space-3) var(--space-6); border-bottom: 1px solid var(--border); }
+.nr-pill {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 var(--space-3);
+  border-radius: var(--radius-full); border: 1px solid var(--border2); background: var(--ds-card);
+  color: var(--text2); font-size: 0.86rem; font-weight: 600; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.nr-pill:hover { color: var(--text); border-color: var(--border3); }
+.nr-pill.on { color: var(--t); border-color: color-mix(in srgb, var(--t) 40%, transparent); background: var(--w); }
+.nr-pill.on.gold { color: var(--premium-text); border-color: color-mix(in srgb, var(--premium-text) 40%, transparent); background: var(--premium-wash); }
+.nr-pill.accent { color: var(--accent-text); border-color: color-mix(in srgb, var(--accent) 35%, transparent); background: var(--accent-dim); }
+.nr-crumbs { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 0.86rem; color: var(--text3); }
+.nr-crumbs a { color: var(--text2); text-decoration: none; white-space: nowrap; }
+.nr-crumbs a:hover { color: var(--accent-text); }
+.nr-bar-actions { margin-left: auto; display: flex; align-items: center; gap: var(--space-2); }
+
+/* ── Highlight colours ── */
+.nr-hlbar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); padding: var(--space-3) var(--space-6); border-bottom: 1px solid var(--border); background: var(--premium-wash); font-size: 0.86rem; color: var(--text2); }
+.nr-hlbar-colours { display: flex; gap: 8px; }
+.nr-swatch { width: 22px; height: 22px; border-radius: 50%; background: var(--sw); border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--border2); cursor: pointer; transition: transform 0.12s; }
+.nr-swatch:hover { transform: scale(1.12); }
+.nr-swatch.on { box-shadow: 0 0 0 2px var(--sw); }
+.nr-hlbar-note { color: var(--text3); }
+.nr-hlbar-clear { margin-left: auto; background: none; border: 1px solid var(--border2); border-radius: var(--radius-full); padding: 3px 12px; font-size: 0.8rem; color: var(--text2); cursor: pointer; }
+.nr-float {
+  position: absolute; transform: translateX(-50%); z-index: 200;
+  display: flex; align-items: center; gap: 6px; padding: 6px 8px;
+  background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-full); box-shadow: var(--elev-3);
+}
+.nr-float-swatch { width: 22px; height: 22px; border-radius: 50%; background: var(--sw); border: none; cursor: pointer; transition: transform 0.12s; }
+.nr-float-swatch:hover { transform: scale(1.2); }
+.nr-float-rule { width: 1px; height: 16px; background: var(--border2); }
+.nr-float-btn { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: none; color: var(--text3); cursor: pointer; }
+.nr-float-btn:hover { color: var(--text); background: var(--ds-soft); }
+
+/* ── The note ── */
+.nr-content { padding: var(--space-8) var(--space-6) 0; }
+.nr-article { max-width: 740px; margin: 0 auto; }
+.nr-head { margin-bottom: var(--space-6); }
+.nr-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 0.86rem; color: var(--text3); margin-bottom: var(--space-3); }
+.nr-paper { padding: 2px 10px; border-radius: var(--radius-full); background: var(--w); color: var(--t); font-weight: 700; }
+.nr-title { font-size: clamp(1.9rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 var(--space-3); }
+.nr-desc { font-size: 1.08rem; line-height: 1.65; color: var(--text2); margin: 0 0 var(--space-4); }
+.nr-subs { display: flex; flex-wrap: wrap; gap: 6px; }
+.nr-subs span { padding: 3px 11px; border-radius: var(--radius-full); border: 1px solid var(--border); background: var(--ds-card); font-size: 0.8rem; color: var(--text2); }
+
+.nr-toc { margin: 0 0 var(--space-6); border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); overflow: hidden; }
+.nr-toc-toggle { width: 100%; display: flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-4); border: none; background: none; cursor: pointer; font-size: 0.95rem; font-weight: 700; color: var(--text); text-align: left; }
+.nr-toc-count { margin-left: auto; font-size: 0.82rem; font-weight: 500; color: var(--text3); }
+.nr-toc-chev { color: var(--text3); transition: transform 0.2s; }
+.nr-toc.open .nr-toc-chev { transform: rotate(180deg); }
+.nr-toc-list { display: flex; flex-direction: column; gap: 1px; padding: 0 var(--space-2) var(--space-3); border-top: 1px solid var(--border); padding-top: var(--space-2); }
+.nr-toc-link { display: flex; align-items: baseline; gap: 10px; padding: 6px 10px; border-radius: var(--radius-md); color: var(--text2); text-decoration: none; font-size: 0.92rem; line-height: 1.45; }
+.nr-toc-link:hover { background: var(--ds-soft); color: var(--text); }
+.nr-toc-link.sub { padding-left: 38px; font-size: 0.86rem; color: var(--text3); }
+.nr-toc-link.on { color: var(--t); font-weight: 600; }
+/* With the sidebar open beside the note, its list already does this job. */
+@media (min-width: 1025px) { .nr-shell.with-sidebar .nr-toc, .nr-shell.sb-auto .nr-toc { display: none; } }
+.nr-toc-n { min-width: 18px; font-size: 0.8rem; font-weight: 700; color: var(--t); }
+
+.nr-body { position: relative; }
+.nr-gate { position: absolute; bottom: 0; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; padding: 7rem 0 2.5rem; background: linear-gradient(to bottom, transparent 0%, var(--bg) 40%); pointer-events: auto; }
+.nr-gate-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); max-width: 380px; padding: var(--space-6); text-align: center; background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-xl); box-shadow: var(--elev-3); }
+.nr-gate-title { font-size: 1.15rem; font-weight: 800; }
+.nr-gate-card p { margin: 0 0 var(--space-2); font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
+.nr-gate-btn { width: 100%; }
+
+.nr-ask { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-10); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); color: var(--accent-text); text-decoration: none; transition: transform 0.15s; }
+.nr-ask:hover { transform: translateY(-1px); }
+.nr-ask svg { flex-shrink: 0; }
+.nr-ask-text { display: flex; flex-direction: column; gap: 2px; }
+.nr-ask-text strong { color: var(--text); font-size: 1rem; }
+.nr-ask-text span { color: var(--text2); font-size: 0.92rem; }
+
+.nr-pager { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-6); }
+.nr-pager-link { display: flex; flex-direction: column; gap: 4px; padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); border: 1px solid var(--border); background: var(--ds-card); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.nr-pager-link:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-1); }
+.nr-pager-link.next { text-align: right; align-items: flex-end; }
+.nr-pager-dir { font-size: 0.82rem; font-weight: 600; color: var(--t); }
+.nr-pager-title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+
+/* ── Scroll rail (desktop) ── */
+.nr-rail { display: none; }
+@media (min-width: 1024px) { .nr-rail { display: block; } }
+.nr-rail-track { position: fixed; right: 0; top: 96px; width: 14px; z-index: 90; background: var(--ds-soft); border-left: 1px solid var(--border); }
+.nr-rail-tick { position: absolute; padding: 0; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s, box-shadow 0.2s, transform 0.15s; }
+.nr-rail-tick:hover { transform: scaleX(1.6); }
+.nr-rail-thumb { position: absolute; left: 3px; width: 8px; border: none; border-radius: 6px; cursor: pointer; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; transition: box-shadow 0.2s; }
+.nr-rail-thumb span { width: 4px; height: 1px; background: rgba(255,255,255,0.75); border-radius: 1px; }
+@keyframes nrPanelIn { from { opacity: 0; transform: translateX(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+.nr-rail-panel { position: fixed; right: 24px; top: 88px; width: 290px; z-index: 91; background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--elev-3); animation: nrPanelIn 0.18s cubic-bezier(0.4,0,0.2,1); }
+.nr-rail-panel-head { display: flex; align-items: center; gap: 8px; padding: 12px 14px 10px; border-bottom: 1px solid var(--border); }
+.nr-rail-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.nr-rail-panel-title { flex: 1; font-size: 0.86rem; font-weight: 700; }
+.nr-rail-close { background: none; border: none; color: var(--text3); cursor: pointer; padding: 4px; display: flex; line-height: 0; border-radius: 50%; }
+.nr-rail-close:hover { color: var(--text); background: var(--ds-soft); }
+.nr-rail-progress { height: 3px; background: var(--ds-soft); }
+.nr-rail-progress div { height: 100%; transition: width 0.1s; }
+.nr-rail-list { max-height: calc(100vh - 230px); overflow-y: auto; padding: 6px 0; }
+.nr-rail-link { width: 100%; display: flex; align-items: center; gap: 8px; background: none; border: none; border-left: 2px solid transparent; cursor: pointer; text-align: left; padding: 8px 14px; color: var(--text); font-size: 0.86rem; font-weight: 500; transition: background 0.15s, color 0.15s; }
+.nr-rail-link.sub { padding: 6px 14px 6px 26px; font-size: 0.8rem; font-weight: 400; color: var(--text2); }
+.nr-rail-link:hover { background: var(--ds-soft); }
+.nr-rail-bullet { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.nr-rail-link.sub .nr-rail-bullet { width: 4px; height: 4px; }
+.nr-rail-text { flex: 1; line-height: 1.4; }
+.nr-rail-arrow { font-size: 0.75rem; opacity: 0; transition: opacity 0.15s, transform 0.15s; color: var(--text3); }
+.nr-rail-link:hover .nr-rail-arrow { opacity: 1; transform: translateX(3px); }
+.nr-rail-foot { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text3); }
+.nr-rail-foot span:last-child { font-weight: 700; }
+
+/* ── Find in note ── */
+.nr-find-panel {
+  position: fixed; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); right: 24px; z-index: 300;
+  display: flex; align-items: center; gap: 8px; min-width: 320px; max-width: calc(100vw - 32px);
+  padding: 8px 8px 8px 14px; background: var(--ds-card); border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: var(--radius-full); box-shadow: var(--elev-3);
+}
+.nr-find-panel input { flex: 1; min-width: 0; background: none; border: none; outline: none; color: var(--text); font-size: 0.95rem; }
+.nr-find-count { font-size: 0.8rem; font-weight: 600; white-space: nowrap; color: var(--accent-text); background: var(--accent-dim); padding: 2px 10px; border-radius: var(--radius-full); }
+.nr-find-none { font-size: 0.8rem; color: var(--danger-text); white-space: nowrap; }
+.nr-find-nav { display: flex; gap: 2px; }
+.nr-find-step, .nr-find-esc { width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: var(--ds-soft); color: var(--text2); cursor: pointer; font-size: 0.85rem; }
+.nr-find-step:disabled { opacity: 0.4; cursor: default; }
+.nr-find-fab {
+  position: fixed; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); right: 24px; z-index: 299;
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px;
+  background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-full);
+  color: var(--text2); font-size: 0.86rem; font-weight: 600; cursor: pointer; box-shadow: var(--elev-2);
+  transition: border-color 0.15s, color 0.15s;
+}
+.nr-find-fab:hover { color: var(--accent-text); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.nr-find-fab kbd { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text3); padding: 1px 7px; border: 1px solid var(--border2); border-radius: var(--radius-full); }
+@media (min-width: 1024px) { .nr-find-fab, .nr-find-panel { right: 34px; } }
+
+/* ── Phones ── */
+@media (max-width: 640px) {
+  .nr-bar { padding: var(--space-2) var(--space-4); }
+  .nr-crumbs { display: none; }
+  .nr-pill span { display: none; }
+  .nr-pill { width: 38px; padding: 0; justify-content: center; }
+  .nr-pill.accent { width: auto; padding: 0 var(--space-3); }
+  .nr-pill.accent span { display: inline; }
+  .nr-hlbar { padding: var(--space-3) var(--space-4); }
+  .nr-content { padding: var(--space-6) var(--space-4) 0; }
+  .note-content { font-size: 1.02rem; }
+  .note-content h2 { font-size: 1.28rem; }
+  .nr-ask { padding: var(--space-4); }
+  .nr-pager { grid-template-columns: minmax(0, 1fr); }
+  .nr-pager-link.next { text-align: left; align-items: flex-start; }
+  .nr-find-fab kbd { display: none; }
+  .nr-find-panel { left: 16px; right: 16px; min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .nr-sidebar, .nr-progress span, .nr-ask { transition: none; } }
+`;
