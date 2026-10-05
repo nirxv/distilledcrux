@@ -27,9 +27,10 @@ const BRACKET = /\([A-Z][a-zA-Z.\s]+?,\s*[^)]+?\)/;
 
 /**
  * Inline RAG citations: the claim is already tied to a retrieved passage. The
- * prompt asks for [Source #N], and models write [Source N] about as often.
+ * prompt asks for [Source #N]; models write [Source N] about as often, and in
+ * a Hindi answer sometimes translate the word to स्रोत.
  */
-const SOURCE_CITATION = /\bSources?\s*#?\s*\d+/;
+const SOURCE_CITATION = /(?:\bSources?|स्रोत)\s*#?\s*[\d०-९]+/;
 
 /**
  * Audits one sentence against one subject's lists.

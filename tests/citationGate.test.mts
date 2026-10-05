@@ -50,6 +50,10 @@ eq('initials do not split the name apart',
   soc('P.A. Sorokin argues mobility has no direction.'),
   null);
 
+eq('a Hindi स्रोत #N citation is exempt too',
+  soc('Sorokin argues mobility is channelled through institutions [स्रोत #2].'),
+  'Sorokin argues mobility is channelled through institutions [स्रोत #2].');
+
 console.log('\ncreateSentenceGate');
 {
   const out: string[] = [];

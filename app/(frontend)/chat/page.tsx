@@ -22,6 +22,7 @@ import WorthKnowing from '@/components/chat/WorthKnowing';
 import Mascot from '@/components/Mascot';
 import OwlLoader from '@/components/OwlLoader';
 import { parseMentorSections } from '@/lib/chatMentor';
+import { linkifyCitations } from '@/lib/chatCitations';
 import { useChatAccess } from '@/hooks/useChatAccess';
 
 type Message = {
@@ -190,71 +191,6 @@ function formatTable(text: string): string {
   return result;
 }
 
-// "Source #2", "Sources 1 and 3", "Sources #1, #4"
-const CITE_CORE = String.raw`Sources?\s*#?\s*\d+(?:\s*(?:,|and|&)\s*#?\s*\d+)*`;
-// A citation the model set apart: 【Source 2】, [Sources #1, #3], (Source #2; Source #4)
-const CITE_GROUP = new RegExp(String.raw`\s*[【\[(（]\s*(${CITE_CORE}(?:\s*[,;]\s*(?:and\s+)?${CITE_CORE})*)\s*[】\])）]`, 'gi');
-// One closing a clause: "...the frontier, Source #2."
-const CITE_TRAILING = new RegExp(String.raw`\s*,?\s*\b(${CITE_CORE})\b(?=\s*(?:[.,;:!?]|<br|</|$))`, 'gi');
-const CITE_BARE = new RegExp(String.raw`\b${CITE_CORE}\b`, 'gi');
-// A citation that is part of the sentence ("according to Source 2") stays as
-// words; turning it into an icon would leave "according to (i)".
-const CITE_IN_PROSE = /\b(?:to|in|from|by|see|per|as|of|and|with|cf\.?)\s*$/i;
-
-/** "Khullar — India: A Comprehensive Geography" -> "Khullar"; a title with no author part stays whole. */
-function shortSource(s: Source): string {
-  const parts = s.book_title.split(/\s+[—–-]\s+/);
-  if (parts.length > 1) return parts[0];
-  if (s.author && !/^(unknown|ignou)$/i.test(s.author)) return s.author;
-  return s.book_title;
-}
-
-const escAttr = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-/**
- * Citations render as a small (i) after the claim instead of "[Source 2]" in
- * the running text. Hovering shows the book; clicking opens the passage in the
- * side panel, found through data-citation by the answer's click handler.
- */
-function linkifyCitations(html: string, sources: Source[]): string {
-  if (!sources.length) return html;
-  const icons: number[][] = [];
-  const numbers = (s: string) =>
-    Array.from(s.matchAll(/\d+/g), m => parseInt(m[0], 10)).filter(n => n >= 1 && n <= sources.length);
-  const hold = (match: string, nums: number[]) => {
-    if (!nums.length) return match;
-    icons.push(nums);
-    return `\u0000${icons.length - 1}\u0000`;
-  };
-
-  html = html.replace(CITE_GROUP, (match, inner: string) => hold(match, numbers(inner)));
-  html = html.replace(CITE_TRAILING, (match, core: string, offset: number, all: string) =>
-    CITE_IN_PROSE.test(all.slice(Math.max(0, offset - 12), offset)) ? match : hold(match, numbers(core)));
-  // Mid-sentence references keep the old inline link.
-  html = html.replace(CITE_BARE, (match) => {
-    const nums = numbers(match);
-    return nums.length ? `<span class="chat-citation" data-citation="${nums.join(',')}">${match}</span>` : match;
-  });
-
-  // Back-to-back citations become one icon; an icon sits flush against the
-  // punctuation that follows it.
-  html = html.replace(/\u0000(\d+)\u0000(?:\s*\u0000(\d+)\u0000)+/g, (run) => {
-    const ids = Array.from(run.matchAll(/\u0000(\d+)\u0000/g), m => Number(m[1]));
-    icons[ids[0]] = [...new Set(ids.flatMap(id => icons[id]))].sort((a, b) => a - b);
-    return `\u0000${ids[0]}\u0000`;
-  });
-  html = html.replace(/(\u0000\d+\u0000)\s+(?=[.,;:!?])/g, '$1');
-
-  return html.replace(/\u0000(\d+)\u0000/g, (_, id: string) => {
-    const nums = icons[Number(id)];
-    const cited = nums.map(n => sources[n - 1]);
-    const names = [...new Set(cited.map(shortSource))];
-    const books = [...new Set(cited.map(s => s.book_title))].join(' · ');
-    const label = `${nums.length > 1 ? 'Sources' : 'Source'} ${nums.join(', ')}: ${books}`;
-    const more = names.length > 1 ? `<span class="chat-cite-more">+${names.length - 1}</span>` : '';
-    return `<button type="button" class="chat-cite" data-citation="${nums.join(',')}" title="${escAttr(books)}" aria-label="${escAttr(label)}"><span class="chat-cite-name">${escAttr(names[0])}</span>${more}</button>`;
-  });
-}
 
 function formatMessage(text: string, sources: Source[] = []) {
   // Also applied server-side; repeated here so answers already saved in

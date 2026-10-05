@@ -202,7 +202,7 @@ ${bookTitle && bookTitle !== 'all'
 }`;
 
   const langSuffix = lang === 'hi'
-    ? '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in Hindi (Devanagari script). Every single word in Hindi. Transliterate technical terms. Thinker names and concepts use Hindi equivalents.'
+    ? '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in Hindi (Devanagari script). Every single word in Hindi. Transliterate technical terms. Thinker names and concepts use Hindi equivalents. The one exception is citation markers: write them exactly as [Source #1] or [Source #1, #3], in English with Western digits, never translated, so they can be linked to their passages.'
     : '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in English.';
 
   return basePrompt + langSuffix;
@@ -419,7 +419,7 @@ export async function POST(req: NextRequest) {
             const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
             const builtMessages = messages.map((m: { role: string; content: string }, i: number) => {
               if (i === messages.length - 1 && m.role === 'user') {
-                return { role: m.role, content: m.content + '\n\n[IMPORTANT: Respond entirely in Hindi (Devanagari script)]' };
+                return { role: m.role, content: m.content + '\n\n[IMPORTANT: Respond entirely in Hindi (Devanagari script), keeping citation markers as [Source #N]]' };
               }
               return { role: m.role, content: m.content };
             });

@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx tests/chatStart.test.mts && tsx tests/chatStream.test.mts && tsx tests/chatMentor.test.mts && tsx tests/chatSuggestions.test.mts && tsx tests/citationGate.test.mts && tsx tests/detectTopic.test.mts"
+    "test": "tsx tests/chatStart.test.mts && tsx tests/chatStream.test.mts && tsx tests/chatMentor.test.mts && tsx tests/chatSuggestions.test.mts && tsx tests/citationGate.test.mts && tsx tests/chatCitations.test.mts && tsx tests/detectTopic.test.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",

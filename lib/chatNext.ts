@@ -25,7 +25,7 @@ Write it the way the aspirant would type it: plain words, under 80 characters, o
 
 function excerpt(answer: string): string {
   return answer
-    .replace(/\(?Source #\d+\)?/g, '')
+    .replace(/[[(（【]?\s*(?:Sources?|स्रोत)\s*#?\s*[\d०-९]+(?:\s*(?:,|and|और|&)\s*#?\s*[\d०-९]+)*\s*[\])）】]?/gi, '')
     .replace(/[#*_>|`]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
