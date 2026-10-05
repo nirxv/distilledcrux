@@ -5,13 +5,55 @@ import { debug } from "@/lib/debugLog";
 import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/uploadLimits";
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
-import { hasActiveSubscription, optionalForSubject } from "@/lib/entitlements";
+import { hasActiveSubscription, optionalForSubject, profileOptional } from "@/lib/entitlements";
+import { routeSlugForOptional } from "@/lib/optionals";
 import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
 import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
 
 const FREE_EVAL_LIMIT = 1;
 
+type Emit = (event: Record<string, unknown>) => void;
+
+/**
+ * The evaluate page asks for progress with an x-eval-stages header and gets
+ * newline-delimited JSON: a {"type":"stage"} line as each real step finishes,
+ * then one {"type":"result"} line carrying the status and body the plain
+ * response would have had. Its waiting screen ticks those steps; it used to
+ * advance a checklist every six seconds whether or not anything had happened.
+ *
+ * Every other caller sends no header and gets exactly the JSON it always did.
+ */
 export async function POST(req: NextRequest) {
+  if (req.headers.get("x-eval-stages") !== "1") return evaluate(req, () => {});
+
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    async start(controller) {
+      const line = (o: object) => controller.enqueue(encoder.encode(JSON.stringify(o) + "\n"));
+      let result: { status: number; body: unknown };
+      try {
+        const res = await evaluate(req, (event) => line({ type: "stage", ...event }));
+        let body: unknown = null;
+        try { body = await res.json(); } catch { /* an empty body stays null */ }
+        result = { status: res.status, body };
+      } catch (err) {
+        console.error("Evaluation error:", err);
+        result = { status: 500, body: { error: "Failed to evaluate answer. Please try again." } };
+      }
+      line({ type: "result", ...result });
+      controller.close();
+    },
+  });
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      "X-Accel-Buffering": "no",
+    },
+  });
+}
+
+async function evaluate(req: NextRequest, emit: Emit): Promise<Response> {
   // One parse. This used to clone the request and parse the multipart body a
   // second time just to read `subject` before the auth check, so every upload
   // was decoded twice.
@@ -23,13 +65,18 @@ export async function POST(req: NextRequest) {
   }
 
   const token = req.headers.get("x-user-token") ?? "";
-  const subjectField = (formData.get("subject") as string) || "sociology";
-  const optionalForEval = optionalForSubject(subjectField);
-
   const user = token ? await verifyFirebaseToken(token) : null;
+  const db = createServerClient();
 
-  const isPremium = user
-    ? await hasActiveSubscription(createServerClient(), user.uid, optionalForEval)
+  // A signed-in reader's answer is marked in the optional on their profile,
+  // and only a subscription to that optional lifts the free limit. A reader
+  // who paid for one subject and switched to another is on the free tier for
+  // the new one, whatever subject the request names.
+  const profileOpt = user ? await profileOptional(db, user.uid) : null;
+  const subjectField = (profileOpt && routeSlugForOptional(profileOpt)) || (formData.get("subject") as string) || "sociology";
+
+  const isPremium = user && profileOpt
+    ? await hasActiveSubscription(db, user.uid, optionalForSubject(subjectField))
     : false;
 
   // Identity is resolved server-side. The client's x-fingerprint header is no
@@ -79,6 +126,7 @@ export async function POST(req: NextRequest) {
     if (imageContents.length === 0 && !extractedText) {
       return NextResponse.json({ error: "No images or PDF provided" }, { status: 400 });
     }
+    emit({ id: "read", pages: imageContents.length, typed: Boolean(extractedText) });
 
     // ── Helper: Groq fetch with fallback key ─────────────────────
     const groqFetch = async (body: object, key: string) =>
@@ -134,17 +182,20 @@ export async function POST(req: NextRequest) {
 
     // ── PASS 0.5: Generate reference answer (internal, never shown to user) ──
     // Runs before evaluation so Pass 1 can judge the student's answer
-    // against what a strong answer actually looks like.
-    let referenceAnswer = "";
-    try {
-      const refBulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
-      const refRes = await callWithFallback({
-        model: "openai/gpt-oss-120b",
-        messages: [
-          { role: "system", content: assemblePrompt(subjectConfig.systemPromptTemplate, rosterStr, "", subjectConfig.label, lang) },
-          {
-            role: "user",
-            content: `Generate a strong internal reference answer for this UPSC ${subjectConfig.label} question. This will be used only to calibrate evaluation — it will NOT be shown to the student.
+    // against what a strong answer actually looks like. It needs only the
+    // question, so it runs beside the OCR and RAG below; it used to be awaited
+    // first, adding its whole latency to every evaluation.
+    const referenceTask = (async () => {
+      let referenceAnswer = "";
+      try {
+        const refBulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
+        const refRes = await callWithFallback({
+          model: "openai/gpt-oss-120b",
+          messages: [
+            { role: "system", content: assemblePrompt(subjectConfig.systemPromptTemplate, rosterStr, "", subjectConfig.label, lang) },
+            {
+              role: "user",
+              content: `Generate a strong internal reference answer for this UPSC ${subjectConfig.label} question. This will be used only to calibrate evaluation — it will NOT be shown to the student.
 
 Question: ${question} (${marks} marks)
 
@@ -154,22 +205,24 @@ Write a complete model answer as flowing prose:
 - Conclusion (2-3 sentences): Takes a clear theoretical position, resolves the intro tension, no new material.
 
 Target ~${marks === "10" ? "200" : marks === "15" ? "300" : "400"} words. Be specific — name real thinkers with real arguments from ${subjectConfig.label}. No generic statements.`,
-          },
-        ],
-        temperature: 0.3,
-        max_tokens: 1500,
-      });
+            },
+          ],
+          temperature: 0.3,
+          max_tokens: 1500,
+        });
 
-      if (refRes.ok) {
-        const refData = await refRes.json();
-        referenceAnswer = refData.choices?.[0]?.message?.content?.trim() || "";
-        debug("Pass 0.5 reference answer generated:", referenceAnswer.slice(0, 200));
-      } else {
-        debug("Pass 0.5 skipped (rate limited or failed) — evaluating without reference");
+        if (refRes.ok) {
+          const refData = await refRes.json();
+          referenceAnswer = refData.choices?.[0]?.message?.content?.trim() || "";
+          debug("Pass 0.5 reference answer generated:", referenceAnswer.slice(0, 200));
+        } else {
+          debug("Pass 0.5 skipped (rate limited or failed) — evaluating without reference");
+        }
+      } catch (refErr) {
+        debug("Pass 0.5 error (non-fatal):", refErr);
       }
-    } catch (refErr) {
-      debug("Pass 0.5 error (non-fatal):", refErr);
-    }
+      return referenceAnswer;
+    })().then((ref) => { emit({ id: "reference", ok: Boolean(ref) }); return ref; });
 
     // ── PASS 0 + RAG: Run OCR and RAG fetch in parallel ──────────
     let finalTranscript = extractedText;
@@ -289,8 +342,16 @@ Go page by page. Do not rush. Every word matters.`;
       }
     })();
 
-    // Run both in parallel — saves 3-5s
-    const [ocrResult, ragContext] = await Promise.all([ocrTask, ragTask]);
+    const words = (t: string) => (t.trim() ? t.trim().split(/\s+/).length : 0);
+    const ocrTracked = ocrTask.then((t) => {
+      // Zero words means the transcription failed and Pass 1 reads the pages
+      // itself, which the page says rather than claiming a word count.
+      emit({ id: "transcribed", words: words(t || "") });
+      return t;
+    });
+
+    // All three run in parallel.
+    const [ocrResult, ragContext, referenceAnswer] = await Promise.all([ocrTracked, ragTask, referenceTask]);
 
     // ── Assembled system prompt — uses real ragContext now ─────────────────
     const ASSEMBLED_PROMPT = assemblePrompt(
@@ -431,6 +492,7 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
       };
     });
 
+    emit({ id: "marking" });
     const cotHaikuRes = await anthropicClient.messages.create({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 2400,
@@ -448,6 +510,7 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
       ],
     });
 
+    emit({ id: "marked" });
     const cotReasoning = cotHaikuRes.content
       .filter((b) => b.type === "text")
       .map((b) => (b as { type: "text"; text: string }).text)
@@ -470,6 +533,7 @@ If your reasoning's STEP 1B found any "FACTUAL ERROR" entries, make sure each on
 Do not re-evaluate beyond what STEP 8 already corrected. Faithfully convert your reasoning into JSON.
 Return ONLY the JSON object, no preamble, no markdown fences.`;
 
+    emit({ id: "scoring" });
     const response = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
@@ -521,6 +585,7 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
     if (!evaluation) {
       return NextResponse.json({ error: "Evaluation failed to produce a result. Please try again." }, { status: 500 });
     }
+    emit({ id: "scored" });
     const eval_ = evaluation as any;
     if (!eval_.section_marks || typeof eval_.section_marks !== "object") {
       console.error("Pass 2 returned without valid section_marks. Keys present:", Object.keys(eval_), "| raw section_marks value:", JSON.stringify(eval_.section_marks));
@@ -617,6 +682,7 @@ Return ONLY a JSON object with these exact fields:
 
 Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were missing. Quote exactly which part of the answer was weak. No generic advice like "cite more thinkers" — say WHICH ${subjectConfig.thinkerTerm} and WHAT argument. All citations must come from the verified book passages only.`;
 
+    emit({ id: "feedback" });
     try {
       const pass3Res = await callWithFallback({
         model: "openai/gpt-oss-120b",
@@ -640,6 +706,7 @@ Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were miss
         if (pass3.body) evaluation.body = pass3.body;
         if (pass3.thinkers_to_cite?.length) evaluation.thinkers_to_cite = pass3.thinkers_to_cite;
         debug("Pass 3 feedback merged successfully");
+        emit({ id: "feedback_done" });
 
         // ── PASS 4: Rich model answer ─────────────────────────────
         const bulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
@@ -673,6 +740,7 @@ ${rosterStr}
 - No bullet under 4 sentences.
 - NEVER open with a generic definition. The model answer intro MUST open with a theoretical debate between named thinkers.`;
 
+        emit({ id: "finishing" });
         try {
           const pass4Res = await callWithFallback({
             model: "openai/gpt-oss-120b",
@@ -773,6 +841,8 @@ If no corrections are needed, return the original model_answer unchanged with co
     } catch (p3err) {
       debug("Pass 3 error (non-fatal):", p3err);
     }
+    emit({ id: "feedback_done" });
+    emit({ id: "finished" });
 
     // Count the call. Anonymous ones are counted too; this was gated on a
     // verified token, so an anonymous caller incremented nothing and the free

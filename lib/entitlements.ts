@@ -63,3 +63,24 @@ export async function hasActiveSubscription(
   }
   return Boolean(data);
 }
+
+/**
+ * The optional on the reader's profile, which is the one their answers are
+ * marked in. Evaluation reads this rather than the subject the page sends: a
+ * subscription covers the optional it was bought for, so a reader who pays
+ * for sociology and later switches to PSIR is on the free tier for PSIR, and
+ * a request naming sociology must not let them past it. Null when there is no
+ * profile or the lookup fails, which entitles no one.
+ */
+export async function profileOptional(db: SupabaseClient, firebaseUid: string): Promise<string | null> {
+  const { data, error } = await db
+    .from('user_profiles')
+    .select('optional')
+    .eq('firebase_uid', firebaseUid)
+    .maybeSingle();
+  if (error) {
+    console.error('[entitlements] profile lookup failed:', error.message);
+    return null;
+  }
+  return typeof data?.optional === 'string' && data.optional ? data.optional : null;
+}

@@ -1,8 +1,13 @@
 'use client';
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import Mascot from '@/components/Mascot';
+import EvalProgress, { ReadProgress, applyEvalStage, applyReadStage, type EvalStages, type ReadStages } from '@/components/EvalProgress';
+import { readProgress } from '@/lib/progressStream';
+import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface SectionMark { awarded: number; out_of: number; reasoning: string }
@@ -22,21 +27,6 @@ interface Evaluation {
   word_count_rating:   'short' | 'appropriate' | 'long'
 }
 
-// onboarding IDs → subjects registry IDs
-// user_profiles stores 'political-science' and 'public-administration'
-// but subjects registry uses 'polsci' and 'pub-admin'
-const OPTIONAL_ID_MAP: Record<string, string> = {
-  'political-science':     'polsci',
-  'public-administration': 'pub-admin',
-}
-const OPTIONAL_LABEL: Record<string, string> = {
-  sociology:              'Sociology',
-  anthropology:           'Anthropology',
-  geography:              'Geography',
-  'political-science':    'PSIR',
-  'public-administration':'Public Administration',
-}
-
 // An image is sent to the server as-is, so it must fit the server's per-file
 // ceiling. A PDF never leaves the browser: it is rasterised to JPEG pages
 // first, so only the source file is bounded here.
@@ -44,422 +34,138 @@ const MAX_IMAGE_SIZE = 8 * 1024 * 1024
 const MAX_PDF_SIZE = 20 * 1024 * 1024
 const MARKS_OPTIONS = ['10', '15', '20']
 
-const CHECKPOINTS = [
-  'Reading handwriting',
-  'Analysing structure',
-  'Evaluating arguments',
-  'Scoring sections',
-  'Writing model answer',
-]
+const isPdf = (f: File) => f.type === 'application/pdf'
+const countWords = (t: string) => (t.trim() ? t.trim().split(/\s+/).length : 0)
 
-// ── CSS ───────────────────────────────────────────────────────────────────────
-const CSS = `
-@keyframes fadeUp   { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
-@keyframes spin     { to   { transform: rotate(360deg) } }
-@keyframes progress { from { width:0% } to { width:100% } }
-
-.ev-page { min-height: var(--page-min-h); }
-
-.ev-header {
-  max-width:1200px; margin:0 auto;
-  padding: 100px 2rem 3rem;
-  border-bottom: 1px solid var(--border);
-  animation: fadeUp 0.3s ease;
-}
-.ev-kicker {
-  font-family:var(--font-ui); font-size:0.65rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  margin-bottom:1.5rem; display:flex; align-items:center; gap:10px;
-}
-.ev-h1 {
-  font-family:var(--font-body); font-size:clamp(2.2rem,5vw,3.8rem);
-  font-weight:700; letter-spacing:-0.035em; line-height:1.02; color:var(--text);
-  margin-bottom:0.75rem;
-}
-.ev-h1 em { font-style:italic; color:var(--accent3); }
-.ev-tagline { font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; color:var(--text3); line-height:1.7; }
-.ev-optional-pill {
-  display:inline-flex; align-items:center; gap:7px;
-  margin-top:1rem; padding:5px 12px; border-radius:5px;
-  background:var(--accent-dim); border:1px solid var(--accent-glow);
-  font-family:var(--font-ui); font-size:0.75rem; color:var(--accent3); font-weight:600;
-}
-.ev-optional-dot { width:6px; height:6px; border-radius:50%; background:var(--accent3); }
-
-/* Body 2-col */
-.ev-body {
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:1fr 360px;
-  border-bottom:1px solid var(--border);
-  animation:fadeUp 0.35s ease;
-}
-.ev-form-col { border-right:1px solid var(--border); }
-
-.ev-section-label {
-  padding:1.5rem 2rem 1.25rem;
-  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  display:flex; align-items:center; gap:10px;
-  border-bottom:1px solid var(--border);
+/**
+ * A page shrunk to 1600px wide JPEG before it is sent. A phone photo is
+ * several megabytes and a request over the host's body limit never reached
+ * the route; 1600px keeps handwriting legible to the reader model.
+ */
+async function compressImage(file: File, maxWidth = 1600, quality = 0.82): Promise<File> {
+  if (isPdf(file)) return file
+  return new Promise((resolve) => {
+    const img = new Image()
+    const url = URL.createObjectURL(file)
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      const scale = Math.min(1, maxWidth / img.width)
+      const w = Math.round(img.width * scale)
+      const h = Math.round(img.height * scale)
+      const canvas = document.createElement('canvas')
+      canvas.width = w; canvas.height = h
+      canvas.getContext('2d')!.drawImage(img, 0, 0, w, h)
+      canvas.toBlob(
+        (blob) => resolve(blob ? new File([blob], file.name.replace(/\.\w+$/, '') + '.jpg', { type: 'image/jpeg' }) : file),
+        'image/jpeg', quality,
+      )
+    }
+    // A format the browser cannot draw (HEIC in most) goes as it is.
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(file) }
+    img.src = url
+  })
 }
 
-/* Upload */
-.ev-upload-zone {
-  margin:1.75rem 2rem;
-  border:1px solid var(--border2); border-radius:8px;
-  background:var(--bg2); padding:2rem; text-align:center;
-  cursor:pointer; transition:border-color 0.15s, background 0.15s; position:relative;
-}
-.ev-upload-zone:hover, .ev-upload-zone.drag { border-color:var(--accent); background:var(--bg3); }
-.ev-upload-icon {
-  width:40px; height:40px; border-radius:8px;
-  background:var(--bg3); border:1px solid var(--border2);
-  display:flex; align-items:center; justify-content:center;
-  margin:0 auto 1rem; color:var(--text3);
-}
-.ev-upload-title { font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; color:var(--text2); margin-bottom:0.3rem; }
-.ev-upload-sub   { font-family:var(--font-ui); font-size:0.75rem; font-weight: 500; color:var(--text3); }
-.ev-upload-input { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
-
-.ev-previews { display:flex; gap:0.5rem; flex-wrap:wrap; padding:0 2rem 1.5rem; }
-.ev-preview-wrap { position:relative; display:inline-block; }
-.ev-preview-thumb { width:72px; height:72px; border-radius:6px; object-fit:cover; border:1px solid var(--border2); }
-.ev-preview-rm {
-  position:absolute; top:-6px; right:-6px;
-  width:18px; height:18px; border-radius:50%;
-  background:var(--bg4); border:1px solid var(--border2);
-  color:var(--text3); font-size:11px; cursor:pointer;
-  display:flex; align-items:center; justify-content:center; transition:color 0.1s;
-}
-.ev-preview-rm:hover { color:var(--text); }
-
-.ev-field { padding:0 2rem 1.5rem; }
-.ev-field-label {
-  font-family:var(--font-ui); font-size:0.72rem; font-weight: 500;
-  letter-spacing:0.08em; text-transform:uppercase; color:var(--text3);
-  margin-bottom:0.6rem; display:block;
-}
-.ev-textarea {
-  width:100%; resize:vertical; min-height:90px;
-  background:var(--bg2); border:1px solid var(--border2);
-  border-radius:6px; padding:0.75rem 1rem;
-  font-family:var(--font-ui); font-size:0.85rem; font-weight: 500; color:var(--text);
-  line-height:1.6; outline:none; transition:border-color 0.15s; box-sizing:border-box;
-  white-space:pre-wrap;
-}
-.ev-textarea:focus { border-color:var(--border3); }
-.ev-textarea::placeholder { color:var(--text3); }
-
-.ev-marks-row {
-  display:flex; border:1px solid var(--border2); border-radius:6px;
-  overflow:hidden; width:fit-content;
-}
-.ev-marks-cell {
-  padding:0.5rem 1.25rem;
-  font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
-  color:var(--text2); cursor:pointer; border-right:1px solid var(--border2);
-  transition:background 0.12s, color 0.12s; background:var(--bg2);
-}
-.ev-marks-cell:last-child { border-right:none; }
-.ev-marks-cell:hover { background:var(--bg3); color:var(--text); }
-.ev-marks-cell.active { background:var(--accent-dim); color:var(--accent3); }
-
-.ev-submit-wrap { padding:1.5rem 2rem 2rem; }
-.ev-submit {
-  width:100%; padding:0.85rem;
-  font-family:var(--font-ui); font-size:0.88rem; font-weight:600;
-  background:var(--text); color:var(--bg);
-  border:none; border-radius:7px; cursor:pointer;
-  transition:opacity 0.15s; letter-spacing:0.01em;
-}
-.ev-submit:hover:not(:disabled) { opacity:0.88; }
-.ev-submit:disabled { opacity:0.4; cursor:not-allowed; }
-.ev-err {
-  margin:0 2rem 1rem;
-  background:rgba(248,113,113,0.07); border:1px solid rgba(248,113,113,0.2);
-  border-radius:6px; padding:0.65rem 1rem;
-  font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:#f87171;
+// Convert PDF pages to JPEG files client-side using pdf.js
+async function convertPdfToImages(file: File): Promise<File[]> {
+  const pdfjsLib = await import('pdfjs-dist')
+  const workerUrl = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url)
+  pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl.toString()
+  const arrayBuffer = await file.arrayBuffer()
+  // isEvalSupported is what makes pdf.js want 'unsafe-eval' in the CSP. It
+  // only enables a font-rendering fast path, and these pages are rasterised
+  // to JPEG for an OCR model, so turning it off costs nothing here.
+  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, isEvalSupported: false }).promise
+  const imageFiles: File[] = []
+  for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
+    const page = await pdf.getPage(i)
+    const viewport = page.getViewport({ scale: 2 }) // 2x = ~150dpi equivalent
+    const canvas = document.createElement('canvas')
+    canvas.width = viewport.width
+    canvas.height = viewport.height
+    await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise
+    const blob = await new Promise<Blob>(res => canvas.toBlob(b => res(b!), 'image/jpeg', 0.92))
+    imageFiles.push(new File([blob], `page-${i}.jpg`, { type: 'image/jpeg' }))
+  }
+  return imageFiles
 }
 
-/* Sidebar */
-.ev-sidebar { padding:0; }
-.ev-sidebar-block { padding:1.75rem; border-bottom:1px solid var(--border); }
-.ev-sidebar-lbl {
-  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  margin-bottom:1.25rem; display:flex; align-items:center; gap:10px;
-}
-.ev-step-row { display:flex; gap:0.75rem; margin-bottom:1rem; }
-.ev-step-row:last-child { margin-bottom:0; }
-.ev-step-num { font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent3); min-width:18px; }
-.ev-step-text { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.55; }
-.ev-step-text strong { color:var(--text2); font-weight:600; display:block; margin-bottom:2px; }
-.ev-tip { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.65; }
-.ev-tip strong { color:var(--text2); font-weight:600; }
-
-/* Upgrade banner */
-.ev-upgrade {
-  margin:1.5rem 2rem;
-  padding:1.25rem 1.5rem;
-  border:1px solid var(--accent-glow); border-radius:8px;
-  background:var(--accent-dim);
-}
-.ev-upgrade-title { font-family:var(--font-body); font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.35rem; letter-spacing:-0.01em; }
-.ev-upgrade-sub { font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; color:var(--text3); line-height:1.6; margin-bottom:1rem; }
-.ev-upgrade-btn {
-  display:inline-block; padding:0.6rem 1.25rem; border-radius:6px;
-  background:var(--text); color:var(--bg);
-  font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
-  text-decoration:none; transition:opacity 0.15s;
-}
-.ev-upgrade-btn:hover { opacity:0.88; }
-
-/* Loading */
-.ev-loading {
-  max-width:1200px; margin:0 auto;
-  padding:5rem 2rem; text-align:center;
-  animation:fadeUp 0.3s ease;
-}
-.ev-loading-title { font-family:var(--font-body); font-size:1.6rem; font-weight:700; color:var(--text); letter-spacing:-0.02em; margin-bottom:0.5rem; }
-.ev-loading-sub { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); margin-bottom:2.5rem; }
-.ev-progress-track { max-width:320px; margin:0 auto 2rem; height:2px; background:var(--border2); border-radius:2px; overflow:hidden; }
-.ev-progress-bar { height:100%; background:var(--accent); animation:progress linear forwards; }
-.ev-checkpoints { display:flex; flex-direction:column; gap:0.6rem; max-width:240px; margin:0 auto; }
-.ev-checkpoint { display:flex; align-items:center; gap:10px; font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text3); transition:color 0.3s; }
-.ev-checkpoint.done { color:var(--text2); }
-.ev-checkpoint.active { color:var(--accent3); }
-.ev-cp-dot { width:6px; height:6px; border-radius:50%; background:var(--border2); flex-shrink:0; transition:background 0.3s; }
-.ev-checkpoint.done .ev-cp-dot   { background:var(--text3); }
-.ev-checkpoint.active .ev-cp-dot { background:var(--accent3); }
-
-/* Results */
-.ev-results {
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:1fr 320px;
-  border-bottom:1px solid var(--border);
-  animation:fadeUp 0.4s ease;
-}
-.ev-score-col { border-left:1px solid var(--border); }
-.ev-score-block { padding:1.75rem; border-bottom:1px solid var(--border); }
-.ev-score-lbl {
-  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  margin-bottom:1.25rem; display:flex; align-items:center; gap:10px;
-}
-.ev-score-big { font-family:var(--font-body); font-size:3.5rem; font-weight:700; letter-spacing:-0.05em; color:var(--text); line-height:1; margin-bottom:0.25rem; }
-.ev-score-denom { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); }
-.ev-score-bar-track { height:3px; background:var(--border2); border-radius:2px; margin-top:1rem; overflow:hidden; }
-.ev-score-bar-fill { height:100%; border-radius:2px; transition:width 0.8s ease; }
-.ev-ss-row { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1.75rem; border-bottom:1px solid var(--border); font-family:var(--font-ui); font-size:0.8rem; font-weight: 500; }
-.ev-ss-row:last-child { border-bottom:none; }
-.ev-ss-name { color:var(--text2); }
-.ev-ss-score { color:var(--text); font-weight:600; }
-.ev-ss-reason { color:var(--text3); font-size:0.72rem; font-weight: 500; margin-top:2px; }
-.ev-score-actions { padding:1.75rem; display:flex; flex-direction:column; gap:0.75rem; }
-.ev-btn-ghost {
-  padding:0.75rem; border-radius:6px; font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
-  background:transparent; color:var(--text2); border:1px solid var(--border2); cursor:pointer;
-  transition:background 0.12s, color 0.12s; text-align:center; width:100%;
-}
-.ev-btn-ghost:hover { background:var(--bg2); color:var(--text); }
-.ev-btn-model-answer {
-  padding:0.85rem; border-radius:6px; font-family:var(--font-ui); font-size:0.88rem; font-weight:700;
-  background:var(--accent-dim); color:var(--accent3); border:1px solid var(--accent-glow); cursor:pointer;
-  transition:background 0.12s, color 0.12s; text-align:center; width:100%; display:block; text-decoration:none;
-  letter-spacing:0.02em;
-}
-.ev-btn-model-answer:hover { background:var(--accent); color:#fff; }
-
-.ev-main-col { padding:0; }
-.ev-result-section { border-bottom:1px solid var(--border); padding:1.75rem 2rem; }
-.ev-result-section:last-child { border-bottom:none; }
-.ev-result-lbl {
-  font-family:var(--font-ui); font-size:0.62rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  margin-bottom:1rem; display:flex; align-items:center; gap:10px;
-}
-.ev-demand-item { display:flex; align-items:flex-start; gap:8px; font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.6; margin-bottom:0.4rem; }
-.ev-demand-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:8px; }
-.ev-feedback-grid { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
-.ev-fb-col-label { padding:0.6rem 1rem; font-family:var(--font-ui); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid var(--border); }
-.ev-fb-col.strengths .ev-fb-col-label { color:#4ade80; }
-.ev-fb-col.weaknesses .ev-fb-col-label { color:#f87171; }
-.ev-fb-col.weaknesses { border-left:1px solid var(--border); }
-.ev-fb-items { padding:0.75rem 1rem; display:flex; flex-direction:column; gap:0.5rem; }
-.ev-fb-item { font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6; display:flex; gap:7px; align-items:flex-start; }
-.ev-fb-item::before { content:''; display:inline-block; width:4px; height:4px; border-radius:50%; flex-shrink:0; margin-top:8px; }
-.ev-fb-col.strengths .ev-fb-item::before { background:#4ade80; }
-.ev-fb-col.weaknesses .ev-fb-item::before { background:#f87171; }
-.ev-suggestions { display:flex; flex-direction:column; gap:0.5rem; margin-top:1rem; }
-.ev-suggestion { font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6; padding:0.6rem 0.9rem; background:var(--bg2); border-radius:5px; border-left:2px solid var(--accent-dim); }
-.ev-overall { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
-.ev-thinkers { display:flex; flex-direction:column; gap:0.75rem; }
-.ev-thinker { padding:0.9rem 1.1rem; border:1px solid var(--border2); border-radius:6px; background:var(--bg2); border-left:2px solid var(--accent); }
-.ev-thinker-name { font-family:var(--font-ui); font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:2px; }
-.ev-thinker-work { font-size:0.82rem; font-weight: 500; color:var(--text3); margin-bottom:4px; }
-.ev-thinker-arg  { font-size:0.92rem; color:var(--text2); line-height:1.6; }
-.ev-question-bar {
-  max-width:1200px; margin:0 auto;
-  padding:1rem 2rem;
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:flex-start; gap:0.75rem;
-  background:var(--bg2);
-}
-.ev-question-bar-label {
-  font-family:var(--font-ui); font-size:0.6rem; font-weight: 500;
-  letter-spacing:0.18em; text-transform:uppercase; color:var(--text3);
-  white-space:nowrap; padding-top:2px; flex-shrink:0;
-}
-.ev-question-bar-text {
-  font-family:var(--font-ui); font-size:0.92rem; color:var(--text2); line-height:1.6;
-}
-.ev-model-answer { display:flex; flex-direction:column; gap:1rem; }
-.ev-ma-part-label { font-family:var(--font-ui); font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:0.35rem; }
-.ev-ma-text { font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.8; }
-.ev-ma-body-item { display:flex; gap:8px; align-items:flex-start; font-family:var(--font-ui); font-size:0.95rem; color:var(--text2); line-height:1.7; margin-bottom:0.5rem; }
-.ev-ma-body-item::before { content:''; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--accent3); flex-shrink:0; margin-top:8px; }
-.ev-wc-badge { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; padding:3px 10px; border-radius:4px; margin-top:0.5rem; }
-.ev-wc-badge.short       { background:rgba(248,113,113,0.1); color:#f87171; }
-.ev-wc-badge.appropriate { background:rgba(74,222,128,0.1);  color:#4ade80; }
-.ev-wc-badge.long        { background:rgba(251,191,36,0.1);  color:#fbbf24; }
-
-/* Transcript review screen */
-.ev-transcript-page {
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:1fr 360px;
-  border-bottom:1px solid var(--border);
-  animation:fadeUp 0.35s ease;
-}
-.ev-transcript-col { border-right:1px solid var(--border); }
-.ev-transcript-info {
-  padding:1.5rem 1.75rem; background:rgba(251,191,36,0.05);
-  border:1px solid rgba(251,191,36,0.15); border-radius:8px;
-  margin:1.75rem 2rem 0; font-family:var(--font-ui); font-size:0.8rem; font-weight: 500;
-  color:var(--text3); line-height:1.65;
-}
-.ev-transcript-info strong { color:#fbbf24; }
-.ev-tarea-tall { min-height:320px; }
-.ev-ocr-loading {
-  margin:1.75rem 2rem; padding:1.5rem;
-  background:var(--bg2); border:1px solid var(--border2); border-radius:8px;
-  display:flex; align-items:center; gap:12px;
-  font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3);
-}
-.ev-ocr-spinner {
-  width:16px; height:16px; border-radius:50%;
-  border:2px solid var(--border2); border-top-color:var(--accent3);
-  animation:spin 0.7s linear infinite; flex-shrink:0;
-}
-@media(max-width:900px){
-  .ev-transcript-page { grid-template-columns:1fr; }
-  .ev-transcript-col  { border-right:none; border-bottom:1px solid var(--border); }
-}
-@media(max-width:640px){
-  .ev-transcript-info { margin:1.25rem; }
-  .ev-tarea-tall { min-height:220px; }
-  .ev-ocr-loading { margin:1.25rem; }
+function scoreTone(pct: number) {
+  if (pct >= 0.7) return 'var(--success-text)'
+  if (pct >= 0.5) return 'var(--warning-text)'
+  return 'var(--danger-text)'
 }
 
-@media(max-width:900px){
-  .ev-body    { grid-template-columns:1fr; }
-  .ev-form-col{ border-right:none; border-bottom:1px solid var(--border); }
-  .ev-results { grid-template-columns:1fr; }
-  .ev-score-col { border-left:none; border-top:1px solid var(--border); }
-  .ev-feedback-grid { grid-template-columns:1fr; }
-  .ev-fb-col.weaknesses { border-left:none; border-top:1px solid var(--border); }
-}
-@media(max-width:640px){
-  .ev-header { padding:88px 1.25rem 2rem; }
-  .ev-h1 { font-size:clamp(1.9rem,9vw,2.6rem); margin-bottom:0.5rem; }
-  .ev-tagline { font-size:0.82rem; font-weight: 500; }
-  .ev-kicker { font-size:0.6rem; font-weight: 500; }
-
-  .ev-section-label { padding:1.25rem 1.25rem 1rem; }
-  .ev-upload-zone { margin:1.25rem; padding:1.5rem 1rem; }
-  .ev-previews { padding:0 1.25rem 1.25rem; }
-  .ev-field { padding:0 1.25rem 1.25rem; }
-  .ev-submit-wrap { padding:1.25rem 1.25rem 1.75rem; }
-  .ev-err { margin:0 1.25rem 0.75rem; }
-
-  .ev-marks-row { width:100%; }
-  .ev-marks-cell { flex:1; text-align:center; padding:0.65rem 0.5rem; }
-
-  .ev-sidebar-block { padding:1.25rem; }
-
-  .ev-loading { padding:3rem 1.25rem; }
-  .ev-loading-title { font-size:1.3rem; }
-
-  .ev-question-bar { padding:0.75rem 1.25rem; }
-  .ev-result-section { padding:1.25rem; }
-  .ev-result-lbl { font-size:0.6rem; font-weight: 500; margin-bottom:0.75rem; }
-  .ev-fb-col-label { padding:0.5rem 0.85rem; }
-  .ev-fb-items { padding:0.6rem 0.85rem; }
-  .ev-fb-item { font-size:0.88rem; font-weight: 500; }
-  .ev-overall { font-size:0.92rem; }
-  .ev-suggestion { font-size:0.88rem; font-weight: 500; padding:0.5rem 0.75rem; }
-  .ev-thinker { padding:0.75rem 1rem; }
-  .ev-thinker-name { font-size:0.92rem; }
-  .ev-ma-text { font-size:0.92rem; }
-  .ev-ma-body-item { font-size:0.92rem; }
-
-  .ev-score-block { padding:1.25rem; }
-  .ev-score-big { font-size:2.8rem; }
-  .ev-score-lbl { padding:1.25rem 1.25rem 0.6rem; }
-  .ev-ss-row { padding:0.65rem 1.25rem; font-size:0.78rem; font-weight: 500; }
-  .ev-score-actions { padding:1.25rem; }
-  .ev-btn-ghost { padding:0.65rem; font-size:0.8rem; font-weight: 500; }
-
-  .ev-upgrade { margin:1.25rem; padding:1rem 1.25rem; }
-}
-`
-
-function scoreColor(pct: number) {
-  if (pct >= 0.7) return '#4ade80'
-  if (pct >= 0.5) return '#fbbf24'
-  return '#f87171'
+const WORD_RATING: Record<Evaluation['word_count_rating'], string> = {
+  short: 'on the short side',
+  appropriate: 'about the right length',
+  long: 'on the long side',
 }
 
-function SectionCard({ label, data }: {
-  label: string
-  data: { what_was_written?: string; strengths: string[]; weaknesses?: string[]; analysis?: string; suggestions?: string[] }
-}) {
+function MarksPicker({ marks, setMarks }: { marks: string; setMarks: (m: string) => void }) {
   return (
-    <div className="ev-result-section">
-      <div className="ev-result-lbl">{label}</div>
-      {data.what_was_written && (
-        <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.95rem', color:'var(--text3)', marginBottom:'1rem', fontStyle:'italic', lineHeight:1.7 }}>
-          &ldquo;{data.what_was_written}&rdquo;
-        </p>
-      )}
-      {((data.strengths?.length ?? 0) > 0 || (data.weaknesses?.length ?? 0) > 0) && (
-        <div className="ev-feedback-grid" style={{ marginBottom: data.suggestions?.length ? '1rem' : 0 }}>
-          <div className="ev-fb-col strengths">
-            <div className="ev-fb-col-label">Strengths</div>
-            <div className="ev-fb-items">
-              {data.strengths.length
-                ? data.strengths.map((s,i) => <div key={i} className="ev-fb-item">{s}</div>)
-                : <div className="ev-fb-item" style={{color:'var(--text3)'}}>None noted</div>}
-            </div>
-          </div>
-          <div className="ev-fb-col weaknesses">
-            <div className="ev-fb-col-label">Weaknesses</div>
-            <div className="ev-fb-items">
-              {(data.weaknesses ?? []).length
-                ? (data.weaknesses ?? []).map((w,i) => <div key={i} className="ev-fb-item">{w}</div>)
-                : <div className="ev-fb-item" style={{color:'var(--text3)'}}>None noted</div>}
-            </div>
-          </div>
-        </div>
-      )}
-      {data.analysis && <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.95rem', color:'var(--text3)', lineHeight:1.75, marginBottom: data.suggestions?.length ? '0.75rem' : 0 }}>{data.analysis}</p>}
-      {(data.suggestions ?? []).length > 0 && (
-        <div className="ev-suggestions">
-          {(data.suggestions ?? []).map((s,i) => <div key={i} className="ev-suggestion">{s}</div>)}
-        </div>
-      )}
+    <div className="ev-marks" role="radiogroup" aria-label="Marks">
+      {MARKS_OPTIONS.map(m => (
+        <button key={m} type="button" role="radio" aria-checked={marks === m}
+          className={`ev-mark${marks === m ? ' on' : ''}`} onClick={() => setMarks(m)}>
+          {m} marks
+        </button>
+      ))}
     </div>
   )
 }
+
+function Points({ items, tone, empty }: { items?: string[]; tone: 'good' | 'fix'; empty: string }) {
+  const list = items ?? []
+  return (
+    <ul className={`ev-points ${tone}`}>
+      {list.length ? list.map((s, i) => <li key={i}>{s}</li>) : <li className="none">{empty}</li>}
+    </ul>
+  )
+}
+
+function SectionCard({ label, mark, data }: {
+  label: string
+  mark?: SectionMark
+  data: { what_was_written?: string; strengths?: string[]; weaknesses?: string[]; analysis?: string; suggestions?: string[] }
+}) {
+  const hasPoints = (data.strengths?.length ?? 0) > 0 || (data.weaknesses?.length ?? 0) > 0
+  return (
+    <section className="ev-block">
+      <div className="ev-block-head">
+        <h2>{label}</h2>
+        {mark && <span className="ev-block-mark">{mark.awarded} / {mark.out_of}</span>}
+      </div>
+      {data.what_was_written && <blockquote className="ev-quote">{data.what_was_written}</blockquote>}
+      {hasPoints && (
+        <div className="ev-cols">
+          <div>
+            <h3 className="ev-col-title good">What worked</h3>
+            <Points items={data.strengths} tone="good" empty="Nothing stood out here yet." />
+          </div>
+          <div>
+            <h3 className="ev-col-title fix">What to fix</h3>
+            <Points items={data.weaknesses} tone="fix" empty="Nothing to fix here." />
+          </div>
+        </div>
+      )}
+      {data.analysis && <p className="ev-analysis">{data.analysis}</p>}
+      {(data.suggestions ?? []).length > 0 && (
+        <div className="ev-tries">
+          <h3 className="ev-col-title">Try this next time</h3>
+          {(data.suggestions ?? []).map((s, i) => <p key={i} className="ev-try">{s}</p>)}
+        </div>
+      )}
+    </section>
+  )
+}
+
+const UploadIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" /></svg>
+)
+const PdfIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>
+)
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function EvaluatePage() {
@@ -469,21 +175,23 @@ export default function EvaluatePage() {
   const [profileLoading, setProfileLoading] = useState(true)
   const [files, setFiles]             = useState<File[]>([])
   const [previews, setPreviews]       = useState<string[]>([])
+  // The pages as they were read: PDFs rendered, photos shrunk. Marking sends
+  // these rather than the originals, which could be a 20MB PDF.
+  const [pageImages, setPageImages]   = useState<File[]>([])
   const [question, setQuestion]       = useState('')
   const [marks, setMarks]             = useState('15')
   const [drag, setDrag]               = useState(false)
   const [loading, setLoading]         = useState(false)
-  const [cpStep, setCpStep]           = useState(-1)
+  const [evalStages, setEvalStages]   = useState<EvalStages>({})
+  const [evalStartedAt, setEvalStartedAt] = useState(0)
   const [result, setResult]           = useState<Evaluation | null>(null)
   const [error, setError]             = useState<string | null>(null)
   const [limitReached, setLimitReached] = useState(false)
   const [transcript, setTranscript]   = useState('')
   const [ocrLoading, setOcrLoading]   = useState(false)
+  const [readStages, setReadStages]   = useState<ReadStages>({})
+  const [readStartedAt, setReadStartedAt] = useState(0)
   const [showTranscript, setShowTranscript] = useState(false)
-  const inputRef                      = useRef<HTMLInputElement>(null)
-  const timerRef                      = useRef<NodeJS.Timeout | null>(null)
-  const [elapsed, setElapsed]         = useState(0)
-  const elapsedRef                    = useRef<NodeJS.Timeout | null>(null)
 
   // Every PYQ page links here as /evaluate?question=...&marks=..., but nothing
   // read those params, so the question and marks were silently dropped and the
@@ -512,34 +220,30 @@ export default function EvaluatePage() {
     return () => unsub()
   }, [])
 
-  // Checkpoint ticker during loading
-  useEffect(() => {
-    if (!loading) { setCpStep(-1); setElapsed(0); if (elapsedRef.current) clearInterval(elapsedRef.current); return }
-    setCpStep(0)
-    setElapsed(0)
-    elapsedRef.current = setInterval(() => setElapsed(s => s + 1), 1000)
-    let step = 0
-    timerRef.current = setInterval(() => {
-      step++
-      if (step < CHECKPOINTS.length) setCpStep(step)
-      else clearInterval(timerRef.current!)
-    }, 6000)
-    return () => { clearInterval(timerRef.current!); if (elapsedRef.current) clearInterval(elapsedRef.current) }
-  }, [loading])
+  // Each new screen starts at its top.
+  useEffect(() => { window.scrollTo(0, 0) }, [showTranscript, result, limitReached])
+
+  // Sign-in, then back here with the question and marks still filled in.
+  const goSignIn = () => {
+    const params = new URLSearchParams()
+    if (question.trim()) params.set('question', question.trim())
+    params.set('marks', marks)
+    router.push(`/login?next=${encodeURIComponent(`/evaluate?${params}`)}`)
+  }
 
   const addFiles = useCallback((newFiles: File[]) => {
     const valid = newFiles.filter(f =>
-      f.type === 'application/pdf'
-        ? f.size <= MAX_PDF_SIZE
-        : f.type.startsWith('image/') && f.size <= MAX_IMAGE_SIZE
+      isPdf(f) ? f.size <= MAX_PDF_SIZE : f.type.startsWith('image/') && f.size <= MAX_IMAGE_SIZE
     )
     if (valid.length < newFiles.length) {
-      setError('Some files were skipped. Images must be under 8MB and PDFs under 20MB.')
+      setError('Some files were skipped. Photos must be under 8 MB and PDFs under 20 MB.')
+    } else {
+      setError(null)
     }
     if (!valid.length) return
     setFiles(prev => [...prev, ...valid].slice(0, 10))
     valid.forEach(f => {
-      if (f.type === 'application/pdf') {
+      if (isPdf(f)) {
         setPreviews(prev => [...prev, '__pdf__'].slice(0, 10))
       } else {
         const reader = new FileReader()
@@ -547,96 +251,75 @@ export default function EvaluatePage() {
         reader.readAsDataURL(f)
       }
     })
-  }, []) // eslint-disable-line
+  }, [])
 
-  // ── Triggered only when user clicks "Read answer →" ──────────────────────
-  // Convert PDF pages to JPEG blobs client-side using pdf.js
-  const convertPdfToImages = async (file: File): Promise<File[]> => {
-    const pdfjsLib = await import('pdfjs-dist')
-    const workerUrl = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url)
-    pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl.toString()
-    const arrayBuffer = await file.arrayBuffer()
-    // isEvalSupported is what makes pdf.js want 'unsafe-eval' in the CSP. It
-    // only enables a font-rendering fast path, and these pages are rasterised
-    // to JPEG for an OCR model, so turning it off costs nothing here.
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, isEvalSupported: false }).promise
-    const imageFiles: File[] = []
-    for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
-      const page = await pdf.getPage(i)
-      const viewport = page.getViewport({ scale: 2 }) // 2x = ~150dpi equivalent
-      const canvas = document.createElement('canvas')
-      canvas.width = viewport.width
-      canvas.height = viewport.height
-      await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise
-      const blob = await new Promise<Blob>(res => canvas.toBlob(b => res(b!), 'image/jpeg', 0.92))
-      imageFiles.push(new File([blob], `page-${i}.jpg`, { type: 'image/jpeg' }))
-    }
-    return imageFiles
-  }
+  const subjectId = routeSlugForOptional(optionalId)
 
   const handleReadAnswer = async () => {
     if (!files.length) return
+    if (!user) { goSignIn(); return }
     setOcrLoading(true)
-    setShowTranscript(false)
     setTranscript('')
-    setQuestion('')
     setError(null)
+    setReadStartedAt(Date.now())
+    setReadStages({ preparing: { files: files.length, pdf: files.some(isPdf) }, askQuestion: !question.trim() })
 
     try {
-      // Convert any PDFs to images first
-      const allImageFiles: File[] = []
+      // PDFs become page images; photos are shrunk to a size the route accepts.
+      const pages: File[] = []
       for (const f of files) {
-        if (f.type === 'application/pdf') {
-          const pages = await convertPdfToImages(f)
-          allImageFiles.push(...pages)
-        } else if (f.type.startsWith('image/')) {
-          allImageFiles.push(f)
-        }
+        if (isPdf(f)) pages.push(...await convertPdfToImages(f))
+        else if (f.type.startsWith('image/')) pages.push(f)
       }
-
-      if (!allImageFiles.length) {
-        setError('No readable files found. Please upload JPG/PNG images or a PDF.')
-        setOcrLoading(false)
+      const compressed = await Promise.all(pages.map(f => compressImage(f)))
+      if (!compressed.length) {
+        setError('No readable files found. Upload JPG or PNG photos, or a PDF.')
         return
       }
+      setPageImages(compressed)
+      setReadStages(s => ({ ...s, prepared: { pages: compressed.length } }))
 
       const fd = new FormData()
-      allImageFiles.forEach((f, i) => fd.append('files', f, `page-${i+1}.jpg`))
+      compressed.forEach((f, i) => fd.append('files', f, `page-${i + 1}.jpg`))
+      // The route checks the subscription against the optional on the
+      // profile; the subject goes along for routes that want it named.
+      if (subjectId) fd.append('subject', subjectId)
+      if (question.trim()) fd.append('hasQuestion', '1')
 
-      const headers: Record<string, string> = {}
-      if (user) {
-        const tok = await user.getIdToken()
-        headers['x-user-token'] = tok
-      }
+      const tok = await user.getIdToken()
+      const res = await fetch('/api/read-answer', { method: 'POST', headers: { 'x-user-token': tok, 'x-ocr-stages': '1' }, body: fd })
+      const { status, body } = await readProgress(res, e => setReadStages(s => applyReadStage(s, e)))
+      const data = (body ?? {}) as { error?: string; question?: string; transcript?: string }
 
-      const res = await fetch('/api/read-answer', { method: 'POST', headers, body: fd })
-      const data = await res.json()
-
-      if (!res.ok) {
-        console.error('read-answer failed:', res.status, data)
-        setError(data.error ?? 'Failed to read answer sheet.')
-        setOcrLoading(false)
+      if (status >= 400) {
+        if (data.error === 'limit_reached') { setLimitReached(true); return }
+        console.error('read-answer failed:', status, data)
+        // The review screen still opens, so the answer can be typed instead.
+        setError(`${data.error ?? 'We could not read the answer sheet.'} You can type or paste your answer below instead.`)
+        setShowTranscript(true)
         return
       }
 
-      if (data.question) setQuestion(data.question)
+      if (!question.trim() && data.question) {
+        setQuestion(data.question)
+        // A sheet headed "(15 marks)" is marked out of 15 without being told.
+        const m = data.question.match(/\b(10|15|20)\s*marks?\b/i)
+        if (m) setMarks(m[1])
+      }
       setTranscript(data.transcript ?? '')
+      setShowTranscript(true)
     } catch (e) {
       console.error('read-answer exception:', e)
-      setError('Network error. Please try again.')
+      setError('The connection dropped while reading. You can type or paste your answer below instead.')
+      setShowTranscript(true)
     } finally {
       setOcrLoading(false)
-      setShowTranscript(true)
     }
   }
 
   const removeFile = (i: number) => {
-    setFiles(prev => {
-      const next = prev.filter((_,idx) => idx !== i)
-      if (next.length === 0) { setShowTranscript(false); setTranscript('') }
-      return next
-    })
-    setPreviews(prev => prev.filter((_,idx) => idx !== i))
+    setFiles(prev => prev.filter((_, idx) => idx !== i))
+    setPreviews(prev => prev.filter((_, idx) => idx !== i))
   }
 
   const onDrop = useCallback((e: React.DragEvent) => {
@@ -645,24 +328,21 @@ export default function EvaluatePage() {
   }, [addFiles])
 
   const handleSubmit = async () => {
-    if (!user) { router.push('/login?next=/evaluate'); return }
-    if (!files.length) { setError('Upload at least one image'); return }
-    if (!question.trim()) { setError('Enter the question'); return }
+    if (!user) { goSignIn(); return }
+    if (!question.trim()) { setError('Add the question first.'); return }
+    if (!transcript.trim() && !pageImages.length && !files.length) { setError('Upload your answer, or type it in, first.'); return }
+    if (!subjectId) {
+      setError('We could not tell which optional you take. Finish setting up your profile, or refresh the page.')
+      return
+    }
     setError(null); setResult(null); setLoading(true)
+    setEvalStages({}); setEvalStartedAt(Date.now())
 
     try {
       const token = await user.getIdToken()
-
-      // Map onboarding ID → subjects registry ID
-      if (!optionalId) {
-        setError('Could not detect your optional subject. Please complete onboarding or refresh.')
-        setLoading(false)
-        return
-      }
-      const subjectId = OPTIONAL_ID_MAP[optionalId] ?? optionalId
-
       const fd = new FormData()
-      files.forEach(f => fd.append('files', f))
+      const evalFiles = pageImages.length ? pageImages : files.filter(f => !isPdf(f))
+      evalFiles.forEach((f, i) => fd.append('files', f, `page-${i + 1}.jpg`))
       fd.append('question', question.trim())
       fd.append('marks', marks)
       fd.append('subject', subjectId)
@@ -671,395 +351,451 @@ export default function EvaluatePage() {
 
       const res = await fetch('/api/evaluate', {
         method: 'POST',
-        headers: { 'x-user-token': token },
+        headers: { 'x-user-token': token, 'x-eval-stages': '1' },
         body: fd,
       })
-      const data = await res.json()
+      const { status, body } = await readProgress(res, e => setEvalStages(s => applyEvalStage(s, e)))
+      const data = body as (Evaluation & { error?: string }) | null
 
-      if (!res.ok) {
-        if (data.error === 'limit_reached') { setLimitReached(true); return }
-        setError(data.error ?? 'Evaluation failed')
+      if (status >= 400 || !data) {
+        if (data?.error === 'limit_reached') { setLimitReached(true); return }
+        setError(data?.error ?? 'The evaluation failed. Please try again.')
         return
       }
       setResult(data)
     } catch {
-      setError('Network error. Please try again.')
+      setError('The connection dropped while marking. Please try again.')
     } finally {
       setLoading(false)
     }
   }
 
   const reset = () => {
-    setResult(null); setFiles([]); setPreviews([]); setQuestion('')
+    setResult(null); setFiles([]); setPreviews([]); setPageImages([]); setQuestion('')
     setError(null); setLimitReached(false); setTranscript(''); setShowTranscript(false)
   }
 
-  const subjectLabel = optionalId ? (OPTIONAL_LABEL[optionalId] ?? optionalId) : null
+  const subjectLabel = labelForOptional(optionalId)
+  const signedOut = !profileLoading && !user
   const pct = result ? result.marks / result.marks_out_of : 0
+  const tint = subjectId ? { ['--t' as string]: `var(--tint-${subjectId})`, ['--w' as string]: `var(--wash-${subjectId})` } : undefined
+
+  const pagesStrip = previews.length > 0 && (
+    <div className="ev-thumbs">
+      {previews.map((src, i) => (
+        <div key={i} className="ev-thumb">
+          {src === '__pdf__'
+            ? <div className="ev-thumb-pdf"><PdfIcon /><span>{files[i]?.name ?? 'PDF'}</span></div>
+            // eslint-disable-next-line @next/next/no-img-element
+            : <img src={src} alt={`Page ${i + 1}`} />}
+          <span className="ev-thumb-n">{i + 1}</span>
+          {!showTranscript && (
+            <button type="button" className="ev-thumb-rm" onClick={() => removeFile(i)} aria-label={`Remove page ${i + 1}`}>×</button>
+          )}
+        </div>
+      ))}
+    </div>
+  )
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <div className="ev-page">
+      <div className="ev ds" style={tint}>
 
-        {/* Header */}
-        <div className="ev-header">
-          <div className="ev-kicker">AI Answer Evaluation</div>
-          <h1 className="ev-h1">Upload. Get <em>evaluated.</em></h1>
-          <p className="ev-tagline">Handwritten answer → marks, section-wise feedback, thinkers to cite, and a model answer.</p>
-          {subjectLabel && (
-            <div className="ev-optional-pill">
-              <div className="ev-optional-dot" />
-              {subjectLabel} Optional
-            </div>
-          )}
-        </div>
+        {ocrLoading && <ReadProgress stages={readStages} startedAt={readStartedAt} />}
+        {loading && <EvalProgress stages={evalStages} startedAt={evalStartedAt} />}
 
-        {/* Loading */}
-        {loading && (
-          <div className="ev-loading">
-            <div className="ev-loading-title">Evaluating your answer…</div>
-            <div className="ev-loading-sub">This takes 45-55 seconds ({elapsed}s)</div>
-            <div className="ev-progress-track">
-              <div className="ev-progress-bar" style={{ animationDuration:'32s' }} />
-            </div>
-            <div className="ev-checkpoints">
-              {CHECKPOINTS.map((cp, i) => (
-                <div key={cp} className={`ev-checkpoint${i < cpStep ? ' done' : i === cpStep ? ' active' : ''}`}>
-                  <div className="ev-cp-dot" />{cp}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Limit reached */}
-        {limitReached && !loading && (
-          <div className="ev-body" style={{ display:'block' }}>
-            <div style={{ padding:'3rem 2rem', maxWidth:540 }}>
-              <div className="ev-result-lbl">Free limit reached</div>
-              <p style={{ fontFamily:'var(--font-body)', fontSize:'1.5rem', fontWeight:700, color:'var(--text)', letterSpacing:'-0.02em', marginBottom:'0.5rem' }}>
-                You&apos;ve used your free evaluation.
-              </p>
-              <p style={{ fontFamily:'var(--font-ui)', fontSize:'0.85rem', fontWeight: 500, color:'var(--text3)', lineHeight:1.7, marginBottom:'1.5rem' }}>
-                Upgrade to get unlimited evaluations, AI chat, PYQ bank access, and more.
-              </p>
-              <a href="/pricing" className="ev-upgrade-btn">See plans →</a>
-              <button onClick={reset} className="ev-btn-ghost" style={{ marginTop:'1rem', padding:'0.6rem 1.25rem', width:'auto' }}>← Back</button>
-            </div>
-          </div>
-        )}
-
-        {/* Results */}
-        {result && !loading && (
-          <>
-          <div className="ev-question-bar">
-            <span className="ev-question-bar-label">Question</span>
-            <span className="ev-question-bar-text">{question}</span>
-          </div>
-          <div className="ev-results">
-            <div className="ev-main-col">
-              <div className="ev-result-section">
-                <div className="ev-result-lbl">What the question demands</div>
-                {result.demand_of_question.map((d,i) => <div key={i} className="ev-demand-item">{d}</div>)}
+        {/* ── Limit reached ── */}
+        {limitReached ? (
+          <div className="ds-container">
+            <div className="ev-limit">
+              <Mascot pose="peek" width={120} />
+              <h1 className="ev-limit-title">You&apos;ve used your free evaluation</h1>
+              <p>Premium marks every answer you write, and opens model answers and the chat&apos;s book, mentor and brainstorm modes.</p>
+              <div className="ev-limit-actions">
+                <Link href="/pricing" className="ds-btn ds-btn-solid">See plans</Link>
+                <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Back</button>
               </div>
+            </div>
+          </div>
 
-              <SectionCard label="Introduction" data={result.introduction} />
+        /* ── Results ── */
+        ) : result ? (
+          <div className="ds-container ev-results">
+            <div className="ev-qbar">
+              <span>Question{result.marks_out_of ? ` · ${result.marks_out_of} marks` : ''}</span>
+              <p>{question}</p>
+            </div>
 
-              <div className="ev-result-section">
-                <div className="ev-result-lbl">Body</div>
-                <div className="ev-feedback-grid" style={{ marginBottom: result.body.suggestions?.length ? '1rem' : 0 }}>
-                  <div className="ev-fb-col strengths">
-                    <div className="ev-fb-col-label">Strengths</div>
-                    <div className="ev-fb-items">
-                      {result.body.strengths.length
-                        ? result.body.strengths.map((s,i) => <div key={i} className="ev-fb-item">{s}</div>)
-                        : <div className="ev-fb-item" style={{color:'var(--text3)'}}>None noted</div>}
-                    </div>
+            <div className="ev-res-grid">
+              <aside className="ev-score">
+                <div className="ev-score-card">
+                  <div className="ev-score-num" style={{ color: scoreTone(pct) }}>
+                    {result.marks}<span>/ {result.marks_out_of}</span>
                   </div>
-                  <div className="ev-fb-col weaknesses">
-                    <div className="ev-fb-col-label">Weaknesses</div>
-                    <div className="ev-fb-items">
-                      {result.body.weaknesses.length
-                        ? result.body.weaknesses.map((w,i) => <div key={i} className="ev-fb-item">{w}</div>)
-                        : <div className="ev-fb-item" style={{color:'var(--text3)'}}>None noted</div>}
-                    </div>
+                  <div className="ev-score-pct">{Math.round(pct * 100)}% of the marks</div>
+                  <div className="ev-score-bar"><span style={{ width: `${Math.min(100, pct * 100)}%`, background: scoreTone(pct) }} /></div>
+
+                  <div className="ev-sections">
+                    {(['introduction', 'body', 'conclusion', 'presentation'] as const).map(k => {
+                      const s = result.section_marks[k]
+                      const p = s.out_of ? s.awarded / s.out_of : 0
+                      return (
+                        <div key={k} className="ev-sec">
+                          <div className="ev-sec-top">
+                            <span className="ev-sec-name">{k}</span>
+                            <span className="ev-sec-score">{s.awarded} / {s.out_of}</span>
+                          </div>
+                          <div className="ev-sec-bar"><span style={{ width: `${Math.min(100, p * 100)}%`, background: scoreTone(p) }} /></div>
+                          {s.reasoning && <p className="ev-sec-why">{s.reasoning}</p>}
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  <div className="ev-score-actions">
+                    <Link href={`/chat?q=${encodeURIComponent(question)}${subjectId ? `&subject=${subjectId}` : ''}`} className="ds-btn ds-btn-solid">
+                      Ask the AI for a model answer
+                    </Link>
+                    <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Check another answer</button>
                   </div>
                 </div>
-                {result.body.suggestions?.length > 0 && (
-                  <div className="ev-suggestions">
-                    {result.body.suggestions.map((s,i) => <div key={i} className="ev-suggestion">{s}</div>)}
-                  </div>
+              </aside>
+
+              <div className="ev-feedback">
+                <section className="ev-block ev-overall">
+                  <h2>Overall</h2>
+                  <p>{result.overall_feedback}</p>
+                  {result.word_count > 0 && (
+                    <span className={`ev-wc ${result.word_count_rating}`}>
+                      {result.word_count} words, {WORD_RATING[result.word_count_rating] ?? result.word_count_rating}
+                    </span>
+                  )}
+                </section>
+
+                {result.demand_of_question?.length > 0 && (
+                  <section className="ev-block">
+                    <h2>What the question asks for</h2>
+                    <ul className="ev-demand">
+                      {result.demand_of_question.map((d, i) => <li key={i}>{d}</li>)}
+                    </ul>
+                  </section>
+                )}
+
+                <SectionCard label="Introduction" mark={result.section_marks.introduction} data={result.introduction} />
+                <SectionCard label="Body" mark={result.section_marks.body} data={result.body} />
+                <SectionCard label="Conclusion" mark={result.section_marks.conclusion} data={result.conclusion} />
+
+                {result.thinkers_to_cite?.length > 0 && (
+                  <section className="ev-block">
+                    <h2>Thinkers you could cite</h2>
+                    <div className="ev-thinkers">
+                      {result.thinkers_to_cite.map((t, i) => (
+                        <div key={i} className="ev-thinker">
+                          <div className="ev-thinker-name">{t.name}</div>
+                          {t.work && <div className="ev-thinker-work">{t.work}</div>}
+                          <p>{t.argument}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
                 )}
               </div>
-
-              <SectionCard label="Conclusion" data={result.conclusion} />
-
-              <div className="ev-result-section">
-                <div className="ev-result-lbl">Overall feedback</div>
-                <p className="ev-overall">{result.overall_feedback}</p>
-                <div className={`ev-wc-badge ${result.word_count_rating}`}>
-                  {result.word_count} words {result.word_count_rating}
-                </div>
-              </div>
-
-              {result.thinkers_to_cite?.length > 0 && (
-                <div className="ev-result-section">
-                  <div className="ev-result-lbl">Thinkers to cite</div>
-                  <div className="ev-thinkers">
-                    {result.thinkers_to_cite.map((t,i) => (
-                      <div key={i} className="ev-thinker">
-                        <div className="ev-thinker-name">{t.name}</div>
-                        {t.work && <div className="ev-thinker-work">{t.work}</div>}
-                        <div className="ev-thinker-arg">{t.argument}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-
-            </div>
-
-            <div className="ev-score-col">
-              <div className="ev-score-block">
-                <div className="ev-score-lbl">Score</div>
-                <div className="ev-score-big" style={{ color: scoreColor(pct) }}>
-                  {result.marks}
-                  <span style={{ fontSize:'1.5rem', color:'var(--text3)', fontFamily:'var(--font-ui)', fontWeight:400 }}>/{result.marks_out_of}</span>
-                </div>
-                <div className="ev-score-denom">{Math.round(pct * 100)}% of total marks</div>
-                <div className="ev-score-bar-track">
-                  <div className="ev-score-bar-fill" style={{ width:`${pct*100}%`, background: scoreColor(pct) }} />
-                </div>
-              </div>
-              <div className="ev-score-lbl" style={{ padding:'1.5rem 1.75rem 0.75rem', marginBottom:0 }}>Section breakdown</div>
-              {(['introduction','body','conclusion','presentation'] as const).map(k => {
-                const s = result.section_marks[k]
-                return (
-                  <div key={k} className="ev-ss-row">
-                    <div>
-                      <div className="ev-ss-name" style={{ textTransform:'capitalize' }}>{k}</div>
-                      <div className="ev-ss-reason">{s.reasoning}</div>
-                    </div>
-                    <div className="ev-ss-score">{s.awarded}/{s.out_of}</div>
-                  </div>
-                )
-              })}
-              <div className="ev-score-actions">
-                <a
-                  href={`/chat?q=${encodeURIComponent(question)}`}
-                  className="ev-btn-model-answer"
-                >
-                  Get model answer →
-                </a>
-                <button className="ev-btn-ghost" onClick={reset}>Evaluate another →</button>
-              </div>
             </div>
           </div>
-        </>
-        )}
 
-        {/* Upload form */}
-        {!loading && !result && !limitReached && !showTranscript && (
-          <div className="ev-body">
-            <div className="ev-form-col">
-              <div className="ev-section-label">Answer images</div>
+        /* ── Review what was read ── */
+        ) : showTranscript ? (
+          <div className="ds-container ev-grid ev-top">
+            <section className="ev-card">
+              <h1 className="ev-card-title">Check what we read</h1>
+              <p className="ev-card-lede">This text is what gets marked. Read it through once and fix any name, date or term the reader got wrong.</p>
 
-              <div
-                className={`ev-upload-zone${drag ? ' drag' : ''}`}
-                onDragOver={e => { e.preventDefault(); setDrag(true) }}
-                onDragLeave={() => setDrag(false)}
-                onDrop={onDrop}
-              >
-                <div className="ev-upload-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path d="M9 2v10M5 6l4-4 4 4M3 14h12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div className="ev-upload-title">Drop images here or click to browse</div>
-                <div className="ev-upload-sub">JPG, PNG, WEBP or PDF max 20MB, up to 10 pages</div>
-                <input ref={inputRef} type="file" accept="image/*,application/pdf" multiple className="ev-upload-input"
-                  onChange={e => { addFiles(Array.from(e.target.files ?? [])); e.target.value = '' }} />
-              </div>
+              {error && <div className="ev-err" role="alert">{error}</div>}
 
-              {previews.length > 0 && (
-                <div className="ev-previews">
-                  {previews.map((src, i) => (
-                    <div key={i} className="ev-preview-wrap">
-                      {src === '__pdf__'
-                ? <div className="ev-preview-thumb" style={{ display:'flex', alignItems:'center', justifyContent:'center', background:'var(--bg3)', fontSize:'0.65rem', fontWeight: 500, color:'var(--text3)', fontFamily:'var(--font-ui)', flexDirection:'column', gap:3 }}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.3"/><path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
-                    PDF
-                  </div>
-                : <img src={src} alt={`page ${i+1}`} className="ev-preview-thumb" />
-              }
-                      <button className="ev-preview-rm" onClick={() => removeFile(i)}>×</button>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {files.length > 0 && !ocrLoading && (
-                <div className="ev-submit-wrap">
-                  <button className="ev-submit" onClick={handleReadAnswer}>
-                    Read answer →
-                  </button>
-                </div>
-              )}
-
-              {ocrLoading && (
-                <div className="ev-ocr-loading">
-                  <div className="ev-ocr-spinner" />
-                  Reading handwriting… this takes a few seconds
-                </div>
-              )}
-
-              {error && <div className="ev-err">{error}</div>}
-            </div>
-
-            <div className="ev-sidebar">
-              <div className="ev-sidebar-block">
-                <div className="ev-sidebar-lbl">How it works</div>
-                {[
-                  { n:'01', title:'Upload images', sub:'Photograph your handwritten answer up to 10 pages.' },
-                  { n:'02', title:'Review transcript', sub:'We OCR your answer check and fix any misreads before submitting.' },
-                  { n:'03', title:'Get evaluated', sub:'Marks, section feedback, thinkers to cite, and a model answer.' },
-                ].map(s => (
-                  <div key={s.n} className="ev-step-row">
-                    <div className="ev-step-num">{s.n}</div>
-                    <div className="ev-step-text"><strong>{s.title}</strong>{s.sub}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="ev-sidebar-block">
-                <div className="ev-sidebar-lbl">Tips</div>
-                <div className="ev-tip">
-                  <strong>Images or PDF.</strong> Upload JPG/PNG photos of your answer sheet, or a scanned PDF up to 10 pages.<br/><br/>
-                  <strong>Good lighting matters.</strong> Shoot in daylight, avoid shadows. Blurry images reduce accuracy.<br/><br/>
-                  <strong>Review before submitting.</strong> After upload, you&apos;ll see the OCR transcript fix any thinker names or dates before we evaluate.
-                </div>
-              </div>
-
-              {!profileLoading && subjectLabel && (
-                <div className="ev-sidebar-block">
-                  <div className="ev-sidebar-lbl">Your optional</div>
-                  <div className="ev-tip">
-                    Evaluation is calibrated for <strong>{subjectLabel}</strong> thinker roster, rubric weights, and model answers are all subject-specific.
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Transcript review screen */}
-        {!loading && !result && !limitReached && showTranscript && (
-          <div className="ev-transcript-page">
-            <div className="ev-transcript-col">
-              <div className="ev-section-label">Review before submitting</div>
-
-              <div className="ev-transcript-info">
-                <strong>Check carefully before submitting.</strong> OCR can misread thinker names, dates, and technical terms.
-                Fix any errors below this is what the AI will evaluate.
-              </div>
-
-              <div className="ev-field" style={{ paddingTop:'1.5rem' }}>
-                <label className="ev-field-label">Question</label>
-                <textarea
-                  className="ev-textarea"
-                  value={question}
-                  onChange={e => setQuestion(e.target.value)}
-                  placeholder="Question will appear here edit if needed"
-                  rows={3}
-                />
-              </div>
+              <label className="ev-field">
+                <span className="ev-label">Question</span>
+                <textarea className="ev-input" value={question} onChange={e => setQuestion(e.target.value)}
+                  placeholder="Type or paste the question" rows={3} />
+              </label>
 
               <div className="ev-field">
-                <label className="ev-field-label">Answer transcript edit any OCR errors</label>
-                <textarea
-                  className="ev-textarea ev-tarea-tall"
-                  value={transcript}
-                  onChange={e => setTranscript(e.target.value)}
-                  placeholder="OCR transcript will appear here…"
-                />
+                <span className="ev-label">Marks</span>
+                <MarksPicker marks={marks} setMarks={setMarks} />
               </div>
 
-              <div className="ev-field">
-                <label className="ev-field-label">Marks</label>
-                <div className="ev-marks-row">
-                  {MARKS_OPTIONS.map(m => (
-                    <div key={m} className={`ev-marks-cell${marks === m ? ' active' : ''}`} onClick={() => setMarks(m)}>
-                      {m}M
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <label className="ev-field">
+                <span className="ev-label-row">
+                  <span className="ev-label">Your answer</span>
+                  <span className="ev-count">{countWords(transcript)} words</span>
+                </span>
+                <textarea className="ev-input ev-tall" value={transcript} onChange={e => setTranscript(e.target.value)}
+                  placeholder="Your answer as we read it appears here. You can also type or paste it." />
+              </label>
 
-              {error && <div className="ev-err">{error}</div>}
-
-              <div className="ev-submit-wrap" style={{ display:'flex', gap:'0.75rem' }}>
-                <button
-                  className="ev-btn-ghost"
-                  style={{ width:'auto', padding:'0.85rem 1.25rem' }}
-                  onClick={() => { setShowTranscript(false); setTranscript(''); setFiles([]); setPreviews([]) }}
-                >
-                  ← Re-upload
+              <div className="ev-actions">
+                <button type="button" className="ds-btn ds-btn-line"
+                  onClick={() => { setShowTranscript(false); setTranscript(''); setFiles([]); setPreviews([]); setPageImages([]); setError(null) }}>
+                  Upload again
                 </button>
-                <button
-                  className="ev-submit"
-                  onClick={handleSubmit}
-                  disabled={loading || profileLoading || !question.trim()}
-                >
-                  {profileLoading ? 'Loading…' : 'Looks good evaluate →'}
+                <button type="button" className="ds-btn ds-btn-solid ev-go" onClick={handleSubmit}
+                  disabled={loading || profileLoading || !question.trim()}>
+                  {profileLoading ? 'One moment…' : 'Mark my answer'}
                 </button>
               </div>
-            </div>
+            </section>
 
-            <div className="ev-sidebar">
-              <div className="ev-sidebar-block">
-                <div className="ev-sidebar-lbl">What to check</div>
-                {[
-                  { n:'01', title:'Thinker names', sub:'OCR often misreads scholar names check every name carefully.' },
-                  { n:'02', title:'Dates and years', sub:'Numbers can get transposed verify all dates in the transcript.' },
-                  { n:'03', title:'Technical terms', sub:'Subject-specific vocabulary may be garbled fix before evaluating.' },
-                ].map(s => (
-                  <div key={s.n} className="ev-step-row">
-                    <div className="ev-step-num">{s.n}</div>
-                    <div className="ev-step-text"><strong>{s.title}</strong>{s.sub}</div>
-                  </div>
-                ))}
-              </div>
-
+            <aside className="ev-aside">
               {previews.length > 0 && (
-                <div className="ev-sidebar-block">
-                  <div className="ev-sidebar-lbl">Your pages ({previews.length})</div>
-                  <div style={{ display:'flex', flexWrap:'wrap', gap:'0.5rem' }}>
-                    {previews.map((src, i) => (
-                      <div key={i}>
-                        {src === '__pdf__'
-                          ? <div style={{ width:56, height:56, borderRadius:5, background:'var(--bg3)', border:'1px solid var(--border2)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'0.6rem', fontWeight: 500, color:'var(--text3)', fontFamily:'var(--font-ui)' }}>PDF</div>
-                          : <img src={src} alt={`p${i+1}`} style={{ width:56, height:56, borderRadius:5, objectFit:'cover', border:'1px solid var(--border2)' }} />
-                        }
-                      </div>
-                    ))}
-                  </div>
+                <div className="ev-side">
+                  <h2>Your pages</h2>
+                  {pagesStrip}
                 </div>
               )}
-
-              {!profileLoading && subjectLabel && (
-                <div className="ev-sidebar-block">
-                  <div className="ev-sidebar-lbl">Your optional</div>
-                  <div className="ev-tip">
-                    Evaluation is calibrated for <strong>{subjectLabel}</strong>.
-                  </div>
-                </div>
-              )}
-            </div>
+              <div className="ev-side">
+                <h2>What to check</h2>
+                <p>Names are where handwriting readers slip most, so look at every thinker and scholar first. Then dates and numbers, whose digits can swap, and terms particular to {subjectLabel ?? 'your optional'}.</p>
+              </div>
+            </aside>
           </div>
+
+        /* ── Upload ── */
+        ) : (
+          <>
+            <header className="ev-hero">
+              <div className="ds-container">
+                <h1 className="ds-h1 ev-h1">Get your answer checked</h1>
+                <p className="ds-lede ev-lede">
+                  Upload a photo or PDF of a handwritten answer. You get marks for each part, what worked, what to fix, and the thinkers it could have cited.
+                </p>
+                {subjectLabel && <span className="ev-subject"><span />Marked as {subjectLabel} optional</span>}
+              </div>
+            </header>
+
+            <div className="ds-container ev-grid">
+              <section className="ev-card">
+                <label className="ev-field">
+                  <span className="ev-label">Question</span>
+                  <textarea className="ev-input" value={question} onChange={e => setQuestion(e.target.value)} rows={3}
+                    placeholder="Type or paste the question. Leave it empty and we'll read it off the top of your page." />
+                </label>
+
+                <div className="ev-field">
+                  <span className="ev-label">Marks</span>
+                  <MarksPicker marks={marks} setMarks={setMarks} />
+                </div>
+
+                {signedOut ? (
+                  <div className="ev-signin">
+                    <Mascot pose="peek" width={84} />
+                    <div className="ev-signin-text">
+                      <strong>Sign in to have your answer checked</strong>
+                      <span>Your first evaluation is free.</span>
+                    </div>
+                    <button type="button" className="ds-btn ds-btn-solid" onClick={goSignIn}>Sign in</button>
+                  </div>
+                ) : (
+                  <>
+                    <div className="ev-field">
+                      <span className="ev-label">Your answer</span>
+                      <label
+                        className={`ev-drop${drag ? ' drag' : ''}`}
+                        onDragOver={e => { e.preventDefault(); setDrag(true) }}
+                        onDragLeave={() => setDrag(false)}
+                        onDrop={onDrop}
+                      >
+                        <span className="ev-drop-icon"><UploadIcon /></span>
+                        <span className="ev-drop-title">Drop your pages here, or <u>choose files</u></span>
+                        <span className="ev-drop-sub">Photos or a PDF, up to 10 pages</span>
+                        <input type="file" accept="image/*,application/pdf" multiple className="ev-drop-input"
+                          onChange={e => { addFiles(Array.from(e.target.files ?? [])); e.target.value = '' }} />
+                      </label>
+                    </div>
+
+                    {pagesStrip}
+                    {error && <div className="ev-err" role="alert">{error}</div>}
+
+                    <button type="button" className="ds-btn ds-btn-solid ev-go ev-go-full" onClick={handleReadAnswer} disabled={!files.length || ocrLoading}>
+                      Read my answer
+                    </button>
+                  </>
+                )}
+              </section>
+
+              <aside className="ev-aside">
+                <div className="ev-side">
+                  <h2>How it works</h2>
+                  <ol className="ev-how">
+                    <li><span>1</span><div><strong>Upload your pages</strong><p>Photos or a scanned PDF, up to 10 pages.</p></div></li>
+                    <li><span>2</span><div><strong>Check what we read</strong><p>We transcribe the handwriting, and you fix anything it got wrong.</p></div></li>
+                    <li><span>3</span><div><strong>Get it marked</strong><p>Marks for the introduction, body, conclusion and presentation, with feedback on each.</p></div></li>
+                  </ol>
+                </div>
+                <div className="ev-side">
+                  <h2>For a clean read</h2>
+                  <p>Shoot in daylight from straight above, one page to a photo, with the whole page in frame. Blur and shadows are where names get misread.</p>
+                </div>
+              </aside>
+            </div>
+          </>
         )}
       </div>
     </>
   )
 }
+
+// ── CSS ───────────────────────────────────────────────────────────────────────
+const CSS = `
+.ev { background: var(--bg); min-height: var(--page-min-h); padding-bottom: clamp(48px, 9vh, 96px); }
+.ev-hero { padding: clamp(28px, 5vh, 56px) 0 clamp(20px, 3vh, 32px); background: linear-gradient(180deg, color-mix(in srgb, var(--accent-dim) 60%, var(--bg)) 0%, var(--bg) 100%); }
+.ev-h1 { font-size: clamp(2rem, 4.4vw, 3rem); margin: 0 0 var(--space-2); }
+.ev-lede { max-width: 640px; }
+.ev-subject { display: inline-flex; align-items: center; gap: 8px; margin-top: var(--space-4); padding: 5px 14px 5px 12px; border-radius: var(--radius-full); background: var(--ds-card); border: 1px solid var(--border); font-size: 0.86rem; font-weight: 600; color: var(--text2); }
+.ev-subject span { width: 8px; height: 8px; border-radius: 50%; background: var(--t, var(--accent)); }
+
+.ev-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-6); align-items: start; }
+.ev-top { padding-top: clamp(24px, 4vh, 40px); }
+.ev-card { padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); min-width: 0; }
+.ev-card-title { margin: 0 0 var(--space-2); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
+.ev-card-lede { margin: 0 0 var(--space-5); color: var(--text2); line-height: 1.6; }
+
+.ev-field { display: block; margin-bottom: var(--space-5); }
+.ev-label { display: block; margin-bottom: var(--space-2); font-size: 0.92rem; font-weight: 700; color: var(--text); }
+.ev-label-row { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.ev-count { font-size: 0.84rem; color: var(--text3); font-variant-numeric: tabular-nums; }
+.ev-input { width: 100%; box-sizing: border-box; resize: vertical; padding: var(--space-3) var(--space-4); background: var(--bg); border: 1.5px solid var(--border2); border-radius: var(--radius-lg); color: var(--text); font: inherit; font-size: 0.98rem; line-height: 1.6; outline: none; transition: border-color 0.15s, box-shadow 0.15s; white-space: pre-wrap; }
+.ev-input:focus { border-color: color-mix(in srgb, var(--accent) 65%, transparent); box-shadow: 0 0 0 4px var(--accent-glow); }
+.ev-input::placeholder { color: var(--text3); }
+.ev-tall { min-height: 340px; }
+
+.ev-marks { display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--radius-full); background: var(--ds-soft); border: 1px solid var(--border); }
+.ev-mark { padding: 8px 18px; border: none; border-radius: var(--radius-full); background: none; color: var(--text2); font: inherit; font-size: 0.92rem; font-weight: 700; cursor: pointer; transition: background 0.18s, color 0.18s, box-shadow 0.18s; }
+.ev-mark.on { background: var(--ds-card); color: var(--text); box-shadow: var(--elev-1); }
+
+.ev-drop { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: var(--space-8) var(--space-4); border: 1.5px dashed var(--border3); border-radius: var(--radius-xl); background: var(--bg); text-align: center; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.ev-drop:hover, .ev-drop.drag { border-color: var(--accent); background: var(--accent-dim); }
+.ev-drop:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ev-drop-icon { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); border-radius: 14px; background: var(--accent-dim); color: var(--accent-text); }
+.ev-drop-title { font-size: 1rem; font-weight: 600; color: var(--text); }
+.ev-drop-title u { color: var(--accent-text); text-underline-offset: 3px; }
+.ev-drop-sub { font-size: 0.88rem; color: var(--text3); }
+.ev-drop-input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+.ev-thumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: calc(-1 * var(--space-2)) 0 var(--space-5); }
+.ev-thumb { position: relative; width: 76px; height: 96px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border2); background: var(--ds-soft); }
+.ev-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ev-thumb-pdf { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 6px; color: var(--text3); }
+.ev-thumb-pdf span { max-width: 100%; font-size: 0.66rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.ev-thumb-n { position: absolute; left: 5px; bottom: 5px; min-width: 18px; padding: 0 5px; border-radius: var(--radius-full); background: color-mix(in srgb, var(--bg) 85%, transparent); font-size: 0.7rem; font-weight: 700; text-align: center; color: var(--text); }
+.ev-thumb-rm { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: color-mix(in srgb, var(--bg) 85%, transparent); color: var(--text); font-size: 0.95rem; line-height: 1; cursor: pointer; }
+.ev-side .ev-thumbs { margin: 0; }
+.ev-side .ev-thumb { width: 64px; height: 82px; }
+
+.ev-err { margin: 0 0 var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--danger-wash); border: 1px solid color-mix(in srgb, var(--danger-text) 30%, transparent); color: var(--danger-text); font-size: 0.92rem; line-height: 1.5; }
+.ev-go { min-height: 50px; padding: 0 var(--space-6); font-size: 1rem; }
+.ev-go-full { width: 100%; }
+.ev-go:disabled { opacity: 0.5; cursor: not-allowed; }
+.ev-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.ev-actions .ds-btn-line { min-height: 50px; flex-shrink: 0; }
+.ev-actions .ev-go { flex: 1; min-width: 220px; }
+
+.ev-signin { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-5); border-radius: var(--radius-xl); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); }
+.ev-signin-text { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.ev-signin-text strong { font-size: 1.02rem; color: var(--text); }
+.ev-signin-text span { font-size: 0.92rem; color: var(--text2); }
+
+.ev-aside { display: flex; flex-direction: column; gap: var(--space-4); position: sticky; top: 84px; }
+.ev-side { padding: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ev-side h2 { margin: 0 0 var(--space-3); font-size: 1rem; font-weight: 800; }
+.ev-side p { margin: 0; font-size: 0.92rem; line-height: 1.6; color: var(--text2); }
+.ev-how { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.ev-how li { display: flex; gap: var(--space-3); }
+.ev-how li > span { width: 26px; height: 26px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--accent-dim); color: var(--accent-text); font-size: 0.82rem; font-weight: 800; }
+.ev-how strong { display: block; font-size: 0.94rem; margin-bottom: 2px; }
+.ev-how p { font-size: 0.88rem; }
+
+/* Results */
+.ev-results { padding-top: clamp(24px, 4vh, 40px); }
+.ev-qbar { margin-bottom: var(--space-5); padding: var(--space-4) var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ev-qbar span { display: block; margin-bottom: 4px; font-size: 0.84rem; font-weight: 600; color: var(--text3); }
+.ev-qbar p { margin: 0; font-size: 1.08rem; font-weight: 600; line-height: 1.55; }
+.ev-res-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: var(--space-6); align-items: start; }
+.ev-score { grid-column: 2; grid-row: 1; position: sticky; top: 84px; }
+.ev-feedback { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.ev-score-card { padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); }
+.ev-score-num { font-size: 3.6rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+.ev-score-num span { margin-left: 6px; font-size: 1.4rem; font-weight: 600; letter-spacing: 0; color: var(--text3); }
+.ev-score-pct { margin-top: var(--space-2); font-size: 0.92rem; color: var(--text2); }
+.ev-score-bar, .ev-sec-bar { height: 6px; margin-top: var(--space-3); border-radius: var(--radius-full); background: var(--ds-soft); overflow: hidden; }
+.ev-score-bar span, .ev-sec-bar span { display: block; height: 100%; border-radius: inherit; transition: width 0.8s ease; }
+.ev-sections { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--border); }
+.ev-sec-top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.ev-sec-name { font-weight: 700; text-transform: capitalize; }
+.ev-sec-score { font-weight: 700; font-variant-numeric: tabular-nums; }
+.ev-sec-bar { height: 4px; margin-top: 6px; }
+.ev-sec-why { margin: 6px 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--text3); }
+.ev-score-actions { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-6); }
+.ev-score-actions .ds-btn { width: 100%; justify-content: center; min-height: 46px; }
+
+.ev-block { padding: var(--space-5) var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ev-block h2 { margin: 0 0 var(--space-3); font-size: 1.15rem; font-weight: 800; letter-spacing: -0.01em; }
+.ev-block-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.ev-block-mark { padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); font-size: 0.86rem; font-weight: 700; color: var(--text2); font-variant-numeric: tabular-nums; }
+.ev-overall p { margin: 0; font-size: 1rem; line-height: 1.75; }
+.ev-wc { display: inline-block; margin-top: var(--space-3); padding: 3px 12px; border-radius: var(--radius-full); font-size: 0.86rem; font-weight: 600; }
+.ev-wc.short { background: var(--danger-wash); color: var(--danger-text); }
+.ev-wc.appropriate { background: var(--success-wash); color: var(--success-text); }
+.ev-wc.long { background: var(--warning-wash); color: var(--warning-text); }
+.ev-demand { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 6px; list-style: disc; }
+.ev-demand li { line-height: 1.6; color: var(--text); }
+.ev-demand li::marker { color: var(--accent); }
+.ev-quote { margin: 0 0 var(--space-4); padding: var(--space-3) var(--space-4); border-left: 3px solid var(--border3); background: var(--ds-soft); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-style: italic; line-height: 1.65; color: var(--text2); }
+.ev-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-5); }
+.ev-col-title { margin: 0 0 var(--space-2); font-size: 0.92rem; font-weight: 700; color: var(--text); }
+.ev-col-title.good { color: var(--success-text); }
+.ev-col-title.fix { color: var(--danger-text); }
+.ev-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.ev-points li { position: relative; padding-left: 16px; line-height: 1.6; font-size: 0.95rem; }
+.ev-points li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; }
+.ev-points.good li::before { background: var(--success-text); }
+.ev-points.fix li::before { background: var(--danger-text); }
+.ev-points li.none { color: var(--text3); }
+.ev-points li.none::before { background: var(--border3); }
+.ev-analysis { margin: var(--space-4) 0 0; line-height: 1.7; color: var(--text2); }
+.ev-tries { margin-top: var(--space-4); }
+.ev-try { margin: 0 0 var(--space-2); padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: var(--accent-dim); line-height: 1.6; font-size: 0.95rem; }
+.ev-thinkers { display: flex; flex-direction: column; gap: var(--space-3); }
+.ev-thinker { padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg); }
+.ev-thinker-name { font-weight: 700; }
+.ev-thinker-work { margin-top: 2px; font-size: 0.86rem; color: var(--text3); }
+.ev-thinker p { margin: 6px 0 0; line-height: 1.6; color: var(--text2); }
+
+.ev-limit { max-width: 520px; margin: clamp(32px, 8vh, 80px) auto 0; padding: var(--space-8) var(--space-6); text-align: center; background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); display: flex; flex-direction: column; align-items: center; }
+.ev-limit-title { margin: var(--space-4) 0 var(--space-2); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
+.ev-limit p { margin: 0 0 var(--space-5); color: var(--text2); line-height: 1.6; }
+.ev-limit-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 960px) {
+  .ev-grid, .ev-res-grid { grid-template-columns: minmax(0, 1fr); }
+  .ev-aside, .ev-score { position: static; }
+  .ev-score { grid-column: 1; grid-row: 1; }
+  .ev-feedback { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 640px) {
+  .ev-card { padding: var(--space-5) var(--space-4); }
+  .ev-marks { display: flex; }
+  .ev-mark { flex: 1; padding: 8px 6px; }
+  .ev-drop { padding: var(--space-6) var(--space-3); }
+  .ev-tall { min-height: 260px; }
+  .ev-actions { flex-direction: column-reverse; }
+  .ev-actions .ds-btn { width: 100%; justify-content: center; }
+  .ev-signin { flex-direction: column; text-align: center; }
+  .ev-signin .ds-btn { width: 100%; justify-content: center; }
+  .ev-block { padding: var(--space-4); }
+  .ev-cols { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .ev-score-card { padding: var(--space-5) var(--space-4); }
+  .ev-score-num { font-size: 3rem; }
+  .ev-qbar p { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .ev-score-bar span, .ev-sec-bar span { transition: none; } }
+`
