@@ -299,8 +299,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Indian Sociology',
       books: [
-        { value: 'IGNOU Sociology Paper 1', label: 'IGNOU Sociology Paper I', soon: true },
-        { value: 'IGNOU Sociology Paper 2', label: 'IGNOU Sociology Paper II', soon: true },
+        { value: 'IGNOU Sociology Paper 1', label: 'IGNOU Sociology Paper I' },
+        { value: 'IGNOU Sociology Paper 2', label: 'IGNOU Sociology Paper II' },
         { value: 'Srinivas — Social Change in Modern India', label: 'Srinivas — Social Change in Modern India' },
         { value: 'Beteille — Caste Class and Power', label: 'Beteille — Caste Class and Power' },
         { value: 'Desai — Social Background of Indian Nationalism', label: 'Desai — Social Background' },
@@ -324,8 +324,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'IGNOU',
       books: [
-        { value: 'IGNOU Anthropology Paper 1', label: 'IGNOU Anthropology Paper I', soon: true },
-        { value: 'IGNOU Anthropology Paper 2', label: 'IGNOU Anthropology Paper II', soon: true },
+        { value: 'IGNOU Anthropology Paper 1', label: 'IGNOU Anthropology Paper I' },
+        { value: 'IGNOU Anthropology Paper 2', label: 'IGNOU Anthropology Paper II' },
       ],
     },
     {
@@ -341,8 +341,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Core Theory',
       books: [
-        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I', soon: true },
-        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II', soon: true },
+        { value: 'IGNOU Political Science Paper 1', label: 'IGNOU PSIR Paper I' },
+        { value: 'IGNOU Political Science Paper 2', label: 'IGNOU PSIR Paper II' },
         { value: 'O.P. Gauba — An Introduction to Political Theory', label: 'O.P. Gauba — Political Theory' },
         { value: 'Heywood — Political Theory', label: 'Heywood — Political Theory' },
         { value: 'Heywood — Politics', label: 'Heywood — Politics' },
@@ -398,8 +398,8 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
     {
       group: 'Core Theory',
       books: [
-        { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I', soon: true },
-        { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II', soon: true },
+        { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I' },
+        { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II' },
         { value: 'Avasthi & Maheshwari — Public Administration (4th ed., 1969)', label: 'Avasthi & Maheshwari (1969 ed.)' },
         { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya' },
       ],

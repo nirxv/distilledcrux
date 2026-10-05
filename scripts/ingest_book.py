@@ -35,6 +35,9 @@ Usage:
       [--scan-margins TOP,BOTTOM] [--chapters TSV] [--page-footnotes]
       [--upload [--replace]] PDF_OR_DIR...
 
+  IGNOU units take their labels from a titles.json beside the PDFs
+  ({"Unit-04.pdf": "Unit 4: Scientific Management Approach"}) when there is one.
+
   The title must match the value in lib/subjectConfig.ts SUBJECT_BOOKS,
   because single-book chat filters on it exactly. Directories are searched
   for PDFs, and all files are read in natural order (Unit-2 before Unit-10).
@@ -359,9 +362,12 @@ BOILERPLATE = ['expert committee', 'course preparation team', 'print production'
                'all rights reserved', 'isbn', 'secretarial assistance', 'cover design', 'laser typeset',
                'printed and published', 'faculty members']
 NUM_HEAD = re.compile(r'^(\d{1,2}(?:\.\d{1,2}){1,2})\.?\s+(\S.{1,110})$')
-UNIT_HEAD = re.compile(r'^UNIT\s+(\d{1,2})\b\s*(.*)$', re.I)
+UNIT_HEAD = re.compile(r'^[\'‘’"`.,\s]*(?i:UNIT)\s*[-–:.]?\s*(\d{1,2}|[BOS]\d?|\d[BOS])\b\s*[-–:.]?\s*(.*)$')
+OCR_DIGIT = str.maketrans("BOS", "805")     # "UNIT 4", "UNIT-3:", "UNIT: 5."; "UNIT B" in an old scan is Unit 8
+STRUCT_ENTRY = re.compile(r'^(\d{1,2}\.\d{1,2})(?:\.\d{1,2})?\s')
 SKIP_SECTION = re.compile(
     r'^(?:references?|suggested (?:further )?readings?|further readings?|select(?:ed)? references|'
+    r'references?,? (?:and|&) (?:further|suggested|other) read(?:ings?|ing)|activities|'
     r'bibliography|(?:some )?useful books|books? for further reading|readings|'
     r'instructional videos? recommendations?|check your progress(?: exercises)?|'
     r'answers? to (?:the )?check your progress(?: exercises)?|specimen answers.*|'
@@ -370,7 +376,7 @@ ANSWER_SPACE = re.compile(r'(?:\.\s?){8,}|…{3,}|_{6,}')
 QUESTION = re.compile(r'^(?:\(?[0-9]{1,2}[.)]|\(?[ivx]{1,4}[.)]|\(?[a-e][.)]|Note\b)', re.I)
 URL = re.compile(r'https?://\S+|www\.\S+')
 FIG_CAPTION = re.compile(r'^(?:Fig(?:ure)?|Plate|Map)\.?\s?\d+(?:\.\d+)?\s?[:.–-]', re.I)
-KEEP_AT_EDGE = re.compile(r'^(?:Check Your Progress|\d{1,2}\.\d{1,2}\.?\s+[A-Za-z])', re.I)
+KEEP_AT_EDGE = re.compile(r'^(?:Check Your Progress|\d{1,2}\.\d{1,2}\.?\s+[A-Za-z]|UNIT\s*[-–:.]?\s*\d{1,2}\b)', re.I)
 
 
 def is_credit_page(segs):
@@ -653,21 +659,29 @@ def to_groups(rows, profile, log):
     base = body_size(rows)
     groups, items, label = [], [], None
     skip, i, skipped, skip_title, caption = None, 0, [], '', 0
+    struct_first, struct_at = None, 0
 
     while i < len(rows):
         r = rows[i]; t = r['text']; i += 1
         big = r['size'] >= base + 1.5
         head = NUM_HEAD.match(t) if (big or r['bold']) and len(t) < 120 else None
-        um = UNIT_HEAD.match(t) if r['size'] >= base + 3 else None
+        # Newer units set the title in bold capitals at body size.
+        caps = r['bold'] and r['size'] >= base - 0.5 and t[:4].isupper()
+        um = UNIT_HEAD.match(t) if r['size'] >= base + 3 or caps else None
         if um:
             # The unit's title can run over the next rows at the same size.
             title = um.group(2)
-            while i < len(rows) and rows[i]['size'] >= base + 3 and not NUM_HEAD.match(rows[i]['text']) \
-                    and not UNIT_HEAD.match(rows[i]['text']) and len(title) < 150:
+            while i < len(rows) and (rows[i]['size'] >= base + 3 or (caps and rows[i]['bold'] and rows[i]['size'] == r['size']
+                                                                     and rows[i]['text'].isupper())) \
+                    and not NUM_HEAD.match(rows[i]['text']) and not UNIT_HEAD.match(rows[i]['text']) \
+                    and rows[i]['text'].strip() != 'Structure' and len(title) < 150:
                 title += ' ' + rows[i]['text']; i += 1
-            title = re.sub(r'\s+', ' ', title).strip(' *')
+            title = re.sub(r'\s+', ' ', re.sub(r'_{2,}', ' ', title)).strip(' *')
             if items: groups.append((label, items))
-            label = f'Unit {um.group(1)}: {smart_title(title)}' if title else f'Unit {um.group(1)}'
+            n = int(um.group(1).translate(OCR_DIGIT))
+            label = f'Unit {n}: {smart_title(title)}' if title else f'Unit {n}'
+            label = re.sub(r'(\w)- (\w)', r'\1-\2', label)                    # "Decision- Making"
+            label = re.sub(r'\(([a-z]{2,6})\)', lambda m: f'({m.group(1).upper()})', label)   # "(SHRM)"
             items, skip = [('head', label)], None
             continue
         if skip == 'rest':                 # NCERT exercises run to the chapter's end
@@ -680,12 +694,25 @@ def to_groups(rows, profile, log):
                 continue
         if skip:
             if skip == 'structure':
-                ends = head and r['size'] >= base + 2
+                # The list's first entry ("9.0 Learning Outcome") comes again as
+                # the unit's first heading; older units also set it larger.
+                m = STRUCT_ENTRY.match(t)
+                if m and struct_first is None:
+                    struct_first = m.group(1); skipped.append(t); continue
+                ends = (head and r['size'] >= base + 2) or bool(m and m.group(1) == struct_first)
+                if not ends and len(skipped) >= 60:
+                    # No end found: put back everything after the list's own rows.
+                    keep = next((k for k, x in enumerate(skipped) if not STRUCT_ENTRY.match(x) and len(x) >= 60), len(skipped))
+                    log['IGNOU Structure list without an end (rows put back)'][skipped[0][:40]] += 1
+                    i = struct_at + keep; skip = None; continue
             else:
                 # A section ends at the next heading. A Check Your Progress box
                 # can also end with the prose simply resuming: a full line that
                 # is neither a question nor answer space, after answer space.
-                ends = (head and big) or (big and r['bold'] and len(t) < 100) or (
+                ends = (head and (big or r['bold'])) or (big and r['bold'] and len(t) < 100) or (
+                    # a box whose answer space OCR lost ends at the next bold heading
+                    skip == 'box' and len(skipped) >= 2 and r['bold'] and len(t) < 80
+                    and not QUESTION.match(t) and not re.match(r'(?i)(?:answers?|check your progress)', t)) or (
                     skip == 'box' and skipped and ANSWER_SPACE.search(skipped[-1])
                     and not ANSWER_SPACE.search(t) and not QUESTION.match(t) and len(t) >= 40)
             if not ends:
@@ -717,7 +744,8 @@ def to_groups(rows, profile, log):
         if profile == 'ignou':
             title = head.group(2) if head else t
             if t.strip() == 'Structure' and (r['bold'] or big):
-                skip, skipped, skip_title = 'structure', [], 'Structure'; log['IGNOU section left out']['Structure (unit contents list)'] += 1; continue
+                skip, skipped, skip_title = 'structure', [], 'Structure'; struct_first, struct_at = None, i
+                log['IGNOU section left out']['Structure (unit contents list)'] += 1; continue
             box = re.match(r'^Check Your Progress\b', t, re.I) and r['bold'] and not head
             if box or SKIP_SECTION.match(title.strip()):
                 skip, skipped, skip_title = 'box' if box else 'section', [], title.strip()[:40]
@@ -767,7 +795,8 @@ THE = {'tlie': 'the', 'tlic': 'the', 'thc': 'the', 'tbe': 'the', 'lhe': 'the', '
        'Thc': 'The', 'Tbe': 'The', 'Ihe': 'The', 'aud': 'and',
        # e read as c in short words, too short for the letter-swap check below
        'bcen': 'been', 'cach': 'each', 'morc': 'more', 'onc': 'one', 'shc': 'she', 'sce': 'see', 'usc': 'use',
-       'thcy': 'they', 'thcm': 'them', 'thcir': 'their', 'thesc': 'these', 'thosc': 'those', 'whcre': 'where'}
+       'thcy': 'they', 'thcm': 'them', 'thcir': 'their', 'thesc': 'these', 'thosc': 'those', 'whcre': 'where',
+       'oftlie': 'of the', 'oftlle': 'of the', 'intlie': 'in the', 'tlie': 'the', 'tlle': 'the', 'Tlle': 'The'}
 # Words the dictionary lacks that must not be split or "corrected": modern
 # words, British spellings, names that end like a function word.
 MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 'ongoing', 'inbuilt', 'infrastructure',
@@ -776,7 +805,9 @@ MODERN = {'online', 'onboard', 'onsite', 'offshore', 'byproduct', 'byproducts', 
 # Letter shapes OCR confuses; a misread word is fixed when exactly one swap
 # makes a word ("animais" → "animals", "iniand" → "inland").
 OCR_CONFUSIONS = [('i', 'l'), ('l', 'i'), ('t', 'l'), ('l', 't'), ('e', 'c'), ('c', 'e'), ('rn', 'm'), ('m', 'rn'),
-                  ('li', 'h'), ('h', 'li'), ('ii', 'u'), ('cl', 'd'), ('vv', 'w'), ('f', 't'), ('t', 'f'), ('n', 'u'), ('u', 'n'), ('n', 'm')]
+                  ('li', 'h'), ('h', 'li'), ('ii', 'u'), ('cl', 'd'), ('vv', 'w'), ('f', 't'), ('t', 'f'), ('n', 'u'), ('u', 'n'), ('n', 'm'),
+                  # older OCR layers (IGNOU's 1990s courses): "tlle", "nlay", "froin", "conunon", "tenns", "fiom"
+                  ('ll', 'h'), ('lz', 'h'), ('nl', 'm'), ('ln', 'm'), ('in', 'm'), ('un', 'm'), ('nn', 'rm'), ('i', 'r')]
 
 
 def ocr_fix(t, V, log):
@@ -812,12 +843,26 @@ def ocr_fix(t, V, log):
         return m.group(0)
     t = re.sub(r'(?<![\w\]])[A-Za-z]+\](?![\w\]])', bracket, t)
 
+    def inner(m):                                    # "philosopl~y", "philosopl.ry", "res~onsiveness"
+        w = m.group(0); i = re.search(r'[~.,\'^`]', w).start()
+        if w[:i].lower() in ABBR or is_word(w[:i]) and is_word(w[i + 1:]): return w
+        if w[i] in '\'’' and re.fullmatch(r'(?:t|s|ll|re|ve|d|m)', w[i + 1:], re.I): return w    # "doesn't", "Weber's"
+        cands = set()
+        for a, b in ((i, i + 1), (i - 1, i + 1), (i, i + 2), (i - 1, i + 2)):
+            for x in [''] + list('abcdefghijklmnopqrstuvwxyz') + ['rn', 'th']:
+                c = w[:max(a, 0)] + x + w[b:]
+                if c.isalpha() and is_word(c.lower()) and V[c.lower()] >= 3: cands.add(c)
+        if len(cands) == 1:
+            c = cands.pop(); log['OCR fix: letter read as a mark'][f'{w} → {c}'] += 1; return c
+        return w
+    t = re.sub(r'(?<![\w])[A-Za-z]{2,}[~^`][A-Za-z]{1,}|(?<![\w.])[a-z]{3,}[.,\'][a-z]{1,2}[a-z]*(?=[\s,;:.)]|$)', inner, t)
+
     def speck(m):                                    # "There are.about", "plant more. trees"
         w = m.group(1)
         if w.lower() in ABBR: return m.group(0)
         log['OCR fix: speck read as a full stop'][f'{w}.{m.group(2)}…'] += 1
         return w + ' '
-    t = re.sub(r'(?<![\w.])([a-z]{2,})\.\s?(?=([a-z]{2,}))', speck, t)
+    t = re.sub(r'(?<![\w.])([a-z]{2,})\.\s?(?!(?:i{1,3}|iv|vi{0,3}|ix|x{1,3})\b)(?=([a-z]{2,}))', speck, t)
     t = re.sub(r'(?<=[a-z])[‘’](?=[a-z]{2,}\b)', ' ', t)    # "raising‘of"
 
     def bang(m):                                     # "soi!" → "soil"
@@ -852,15 +897,19 @@ def ocr_fix(t, V, log):
         # A word the book repeats may be a term of its own (Riggs's "clects"),
         # unless the swap gives a word it prints far more often ("socicty").
         need = 3 if V[w] < 2 else 5 * V[w]
-        found = set()
-        for a, b in OCR_CONFUSIONS:
-            i = w.find(a)
-            while i >= 0:
-                c = w[:i] + b + w[i + len(a):]
-                # The fix must be a word this book prints correctly elsewhere;
-                # the dictionary alone offers "scabed" for "seabed".
-                if is_word(c) and V[c] >= max(need, 10 if glued else 0): found.add(c)
-                i = w.find(a, i + 1)
+
+        def swaps(x):
+            for a, b in OCR_CONFUSIONS:
+                i = x.find(a)
+                while i >= 0:
+                    yield x[:i] + b + x[i + len(a):]
+                    i = x.find(a, i + 1)
+        # The fix must be a word this book prints correctly elsewhere; the
+        # dictionary alone offers "scabed" for "seabed".
+        one = set(swaps(w))
+        found = {c for c in one if is_word(c) and V[c] >= max(need, 10 if glued else 0)}
+        if not found and not glued:                  # two slips in one word: "wliicli", "tllc"
+            found = {c for x in one for c in swaps(x) if c != w and is_word(c) and V[c] >= max(need, 5)}
         if len(found) == 1:
             c = found.pop(); log['OCR fix: misread letter'][f'{w} → {c}'] += 1; return c
         if not found and not glued and V[w] < 2:
@@ -906,7 +955,10 @@ def ocr_fix(t, V, log):
         if pair and not is_word(w):                  # "ofthe", "inthe": however often the book has it
             log['OCR fix: words run together'][f'{w} → {w[:len(pair)]} {w[len(pair):]}'] += 1
             return w[:len(pair)] + ' ' + w[len(pair):]
-        if w.startswith('of') and not is_word(w) and w.lower() not in MODERN and (
+        if w.startswith('of') and not is_word(w) and is_word('of' + w[1:]) and V['of' + w[1:]] >= 2:
+            log['OCR fix: lost letter'][f'{w} → of{w[1:]}'] += 1       # "ofice" is "office"
+            return 'of' + w[1:]
+        if w.startswith('of') and not is_word(w) and w.lower() not in MODERN and len(w) >= 6 and (
                 is_word(w[2:].lower()) or re.fullmatch(r'[A-Z][a-z]{3,}', w[2:])):
             log['OCR fix: words run together'][f'{w} → of {w[2:]}'] += 1    # "ofadministration", however often
             return 'of ' + w[2:]
@@ -920,15 +972,15 @@ def ocr_fix(t, V, log):
         for f in FUNC:
             rest = w[len(f):]
             if lw.startswith(f) and not derived and len(rest) >= 4 and (rest.lower() in WORDS or is_word(rest) or re.fullmatch(r'[A-Z][a-z]{3,}', rest)) \
-                    and (w[:len(f)].islower()):
+                    and (w[:len(f)].islower()) and (len(f) > 2 or V[rest.lower()] >= 2 or rest[0].isupper()):
                 log['OCR fix: words run together'][f'{w} → {w[:len(f)]} {rest}'] += 1
                 return w[:len(f)] + ' ' + rest
         for f in ('of', 'in', 'is', 'and', 'the', 'for'):
             rest = w[:-len(f)]
             # A capitalised word splits only where the book uses the first
             # part on its own ("Krishnais", not "Gramin" or "Dhanis").
-            if lw.endswith(f) and len(rest) >= 4 and is_word(rest) and not camel \
-                    and (rest.islower() or V[rest.lower()] >= 3):
+            if lw.endswith(f) and len(rest) >= 4 and is_word(rest) and not camel and V[rest.lower()] >= 1 \
+                    and not (f == 'in' and is_word(lw + 'g')) and (rest.islower() or V[rest.lower()] >= 3):
                 log['OCR fix: words run together'][f'{w} → {rest} {w[-len(f):]}'] += 1
                 return rest + ' ' + w[-len(f):]
         return w
@@ -1089,16 +1141,37 @@ def course_of(path):
     return m[-1].replace(' ', '-') if m else None
 
 
+def is_scanned(f):
+    """A scanned PDF with an OCR layer: its first text page is a full-page
+    picture (IGNOU's older courses are)."""
+    with fitz.open(f) as d:
+        for p in list(d)[:3]:
+            area = p.rect.width * p.rect.height
+            if any(r.width * r.height > 0.7 * area for img in p.get_images() for r in p.get_image_rects(img[0])):
+                return True
+    return False
+
+
 def build(files, profile, log, labels=None):
-    fix = (lambda t: ocr_fix(t, V, log)) if profile == 'scan' else (lambda t: t)
+    scanned = {f for f in files if profile == 'scan' or (profile == 'ignou' and is_scanned(f))}
     per_file = []
     for f, rows in zip(files, read_book(files, profile, log)):
+        if profile == 'ignou' and f not in scanned:
+            # An OCR layer drawn over page tiles, not one page picture: its
+            # misreadings ("tlie", "witli") give it away.
+            ws = re.findall(r'(?<![\w-])[a-z]{3,}(?![\w-])', ' '.join(r['text'] for r in rows))
+            if ws and sum(not is_word(w) for w in ws) > 0.03 * len(ws): scanned.add(f)
         if profile == 'scan':                      # one group per chapter
             groups = []
             for lab, run in itertools.groupby(rows, key=lambda r: r.get('label')):
                 groups += [(lab, items) for _, items in to_groups(list(run), profile, log)]
         else:
             groups = to_groups(rows, profile, log)
+        if profile == 'ignou' and (f.parent / 'titles.json').exists():
+            # eGyanKosh's own unit titles, saved beside the course's PDFs when
+            # they were fetched: an old scan's OCR can lose "UNIT 9" or the title.
+            title = json.loads((f.parent / 'titles.json').read_text()).get(f.name)
+            if title: groups = [(title, items) for _, items in groups]
         if profile == 'ncert' and groups:
             groups = [(ncert_label(f, rows), items) for _, items in groups]
         if labels and f.stem in labels:
@@ -1109,6 +1182,7 @@ def build(files, profile, log, labels=None):
     V, Hy = vocab_of([it for _, _, groups in per_file for _, items in groups for it in items])
     chunks = []
     for f, course, groups in per_file:
+        fix = (lambda t: ocr_fix(t, V, log)) if f in scanned else (lambda t: t)
         for label, items in groups:
             source = ' · '.join(x for x in (course, label) if x) or f.stem
             units, para = [], []
