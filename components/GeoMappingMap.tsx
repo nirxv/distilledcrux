@@ -100,7 +100,8 @@ export default function GeoMappingMap({ entries, selectedName, onEntryClick, noL
     ? '&copy; OpenStreetMap &copy; CARTO'
     : 'Tiles &copy; Esri';
   return (
-    <div style={{ width: '100%', height: 420, border: '1.5px solid var(--border2)', borderRadius: 10, overflow: 'hidden', position: 'relative', zIndex: 0 }}>
+    // The page sets --geo-map-h to give phones a shorter map.
+    <div style={{ width: '100%', height: 'var(--geo-map-h, 420px)', border: '1px solid var(--border2)', borderRadius: 14, overflow: 'hidden', position: 'relative', zIndex: 0 }}>
       <MapContainer key={noLabels ? 'nl' : 'l'} bounds={INDIA_BOUNDS} style={{ width: '100%', height: '100%', background: 'var(--bg2)' }} zoomControl={true} scrollWheelZoom={true} attributionControl={false}>
         <TileLayer url={tileUrl} attribution={attribution} maxNativeZoom={cartoKey ? 20 : 16} maxZoom={20} />
         <FitBounds entries={entries} selectedName={selectedName} disableAutoZoom={disableAutoZoom} />
