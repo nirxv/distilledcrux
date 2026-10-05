@@ -29,9 +29,9 @@ const plans = [
     ],
   },
   {
-    id: 'sixmonth', label: '6 Months', price: rupees(PLANS.sixmonth), period: PLANS.sixmonth.period, tag: 'Most Popular',
+    id: 'sixmonth', label: '6 Months', price: rupees(PLANS.sixmonth), period: PLANS.sixmonth.period, tag: null,
     desc: 'Best for focused preparation cycles leading up to Mains.',
-    color: '#4361ee',
+    color: '#e8b86d',
     features: [
       { label: 'Full platform access for 6 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
@@ -43,9 +43,9 @@ const plans = [
     ],
   },
   {
-    id: 'yearly', label: 'Yearly', price: rupees(PLANS.yearly), period: PLANS.yearly.period, tag: 'Best Value',
+    id: 'yearly', label: 'Yearly', price: rupees(PLANS.yearly), period: PLANS.yearly.period, tag: 'Most chosen',
     desc: 'Full-year coverage from Prelims to Mains interview prep.',
-    color: '#e8b86d',
+    color: '#4361ee',
     features: [
       { label: 'Full platform access for 12 months' },
       { label: 'AI Answer Evaluation (unlimited)' },
@@ -342,7 +342,7 @@ export default function PricingPage() {
           <div className="pr-section-label" style={{ marginBottom: '1.5rem' }}>Step 2: Choose a plan</div>
           <div className="pr-grid">
             {plans.map((plan) => {
-              const isFeatured = plan.id === 'sixmonth';
+              const isFeatured = plan.id === 'yearly';
               const isYearly = plan.id === 'yearly';
               const isLoading = loading === plan.id;
               const needsOptional = !selectedOptional;

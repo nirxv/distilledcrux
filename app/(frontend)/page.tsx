@@ -1,339 +1,63 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
-import HomeToolsList from '@/components/HomeToolsList';
 import SubjectIcon from '@/components/SubjectIcon';
-import { PLANS, formatRupees } from '@/lib/plans';
-import HeroOptionalLink from '@/components/HeroOptionalLink';
+import HomeAsk from '@/components/home/HomeAsk';
+import { HeroActions } from '@/components/home/HomeLinks';
+import HomeShowcase from '@/components/home/HomeShowcase';
+import { PLANS, PLAN_ORDER, formatRupees } from '@/lib/plans';
+import { notesForSubject } from '@/lib/notes';
+import { pyqCountForOptional } from '@/lib/pyqCounts';
+import { SUBJECT_BOOKS } from '@/lib/subjectConfig';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
   description:
-    'AI answer evaluation, curated notes, 4500+ PYQs and real topper copies built for UPSC Mains Optional. History, Sociology, Anthropology and more.',
+    'Notes, every past question, answer evaluation and an AI tutor that reads the standard books, for UPSC Mains Sociology, Anthropology, PSIR, Geography and Public Administration.',
   alternates: { canonical: 'https://distilledcrux.com' },
 };
 
-const optionals = [
-  { id: 'sociology',    name: 'Sociology',            sub: 'Social Structure, Change & Thinkers',       color: '#4361ee', dim: 'rgba(67,97,238,0.07)',  border: 'rgba(67,97,238,0.18)',  live: true },
-  { id: 'anthropology', name: 'Anthropology',          sub: 'Physical, Social & Applied Anthropology',   color: '#2dd4bf', dim: 'rgba(45,212,191,0.07)', border: 'rgba(45,212,191,0.18)', live: true },
-  { id: 'polsci',       name: 'PSIR',     sub: 'IR, Comparative Politics & Indian Polity',  color: '#f87171', dim: 'rgba(248,113,113,0.07)',border: 'rgba(248,113,113,0.18)',live: true },
-  { id: 'geography',    name: 'Geography',             sub: 'Physical, Human & Economic Geography',      color: '#4ade80', dim: 'rgba(74,222,128,0.07)', border: 'rgba(74,222,128,0.18)', live: true },
-  { id: 'pub-admin',    name: 'Public Administration', sub: 'Administrative Theory & Indian Admin',      color: '#fb923c', dim: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)', live: true },
-  { id: 'history',      name: 'History Optional',      sub: 'Paper I & II · Ancient to World History',   color: '#e8b86d', dim: 'rgba(232,184,109,0.07)', border: 'rgba(232,184,109,0.18)', live: true, external: 'https://historyoptional.xyz' },
+type Optional = { id: string; optional: string; name: string; sub: string };
+
+const OPTIONALS: Optional[] = [
+  { id: 'sociology', optional: 'sociology', name: 'Sociology', sub: 'Marx to Srinivas, and Indian society' },
+  { id: 'anthropology', optional: 'anthropology', name: 'Anthropology', sub: 'From fossils to tribal India' },
+  { id: 'polsci', optional: 'political-science', name: 'PSIR', sub: 'Plato to India’s foreign policy' },
+  { id: 'geography', optional: 'geography', name: 'Geography', sub: 'Plate tectonics to India’s regions' },
+  { id: 'pub-admin', optional: 'public-administration', name: 'Public Administration', sub: 'Weber to the district collector' },
 ];
 
+const PLAN_NOTE: Record<string, string> = {
+  daily: 'For the last few days before the exam.',
+  sixmonth: 'For the months leading up to Mains.',
+  yearly: 'For the whole cycle, from Prelims to the interview.',
+};
 
-
-const marqueeItems = [
-  'AI Answer Evaluation', 'Sociology Optional', 'Anthropology Optional', 'PYQ Bank',
-  'Syllabus Notes', 'AI Chat', 'PSIR', 'Geography Optional', 'Public Administration',
+const STEPS = [
+  { title: 'Read a topic in the evening', text: 'Open the notes for whatever you are on today. Ask the AI about the bits that don’t click.' },
+  { title: 'Look at what UPSC has asked on it', text: 'The past questions on that topic show you which way the examiners tend to come at it.' },
+  { title: 'Write one answer and get it marked', text: 'Take a photo of it, upload it, and see where the marks went and where they didn’t.' },
 ];
 
-const CSS = `
-  .lp { position: relative; min-height: var(--page-min-h); }
+const Arrow = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
 
-  .lp-hero {
-    max-width: 1200px; margin: 0 auto;
-    padding: 140px 2rem 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: end;
-    border-bottom: 1px solid var(--border);
-  }
-  .lp-hero-kicker {
-    font-family: var(--font-ui);
-    font-size: 0.68rem; font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text3);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }  .lp-hero-h1 {
-    font-family: var(--font-body);
-    font-size: clamp(3rem, 6.5vw, 5.2rem);
-    font-weight: 700;
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    color: var(--text);
-    margin-bottom: 2rem;
-  }
-  .lp-hero-h1 em { font-style: italic; color: var(--accent); }
-  .lp-hero-desc {
-    font-family: var(--font-ui);
-    font-size: 1rem;
-    color: var(--text2);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    max-width: 380px;
-  }
-  .lp-hero-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
-  .lp-btn-primary {
-    font-family: var(--font-ui);
-    font-size: 0.88rem; font-weight: 600;
-    background: var(--text); color: var(--bg);
-    padding: 12px 28px; border-radius: 6px;
-    text-decoration: none; letter-spacing: 0.01em;
-    transition: opacity 0.15s;
-  }
-  .lp-btn-primary:hover { opacity: 0.85; }
-  .lp-btn-ghost {
-    font-family: var(--font-ui);
-    font-size: 0.88rem; font-weight: 500; color: var(--text3);
-    text-decoration: none;
-    display: flex; align-items: center; gap: 6px;
-    transition: color 0.15s;
-  }
-  .lp-btn-ghost:hover { color: var(--text); }
-  .lp-hero-stat-row {
-    display: flex; gap: 2.5rem;
-    margin-top: 3.5rem; padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-  .lp-hero-stat-val {
-    font-family: var(--font-body);
-    font-size: 1.75rem; font-weight: 700;
-    color: var(--text); letter-spacing: -0.03em;
-    line-height: 1; margin-bottom: 4px;
-  }
-  .lp-hero-stat-label {
-    font-family: var(--font-ui);
-    font-size: 0.72rem; font-weight: 500; color: var(--text3);
-    letter-spacing: 0.04em; text-transform: uppercase;
-  }
+export default async function Home() {
+  // Counted from the data at build time, so the numbers stay true as
+  // questions and notes are added.
+  const counts = await Promise.all(OPTIONALS.map(async (o) => ({
+    id: o.id,
+    topics: notesForSubject(o.id).length,
+    pyqs: (await pyqCountForOptional(o.optional)) ?? 0,
+  })));
+  const byId = Object.fromEntries(counts.map((c) => [c.id, c]));
+  const totalPyqs = counts.reduce((n, c) => n + c.pyqs, 0);
+  const totalTopics = counts.reduce((n, c) => n + c.topics, 0);
+  const totalBooks = Object.values(SUBJECT_BOOKS).flat().flatMap((g) => g.books).filter((b) => !b.soon).length;
+  const round = (n: number) => `${(Math.floor(n / 100) * 100).toLocaleString('en-IN')}+`;
 
-  .lp-marquee-wrap {
-    overflow: hidden; border-bottom: 1px solid var(--border);
-    padding: 10px 0; background: var(--bg2);
-    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-  }
-  .lp-marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
-  .lp-marquee-track:hover { animation-play-state: paused; }
-  .lp-marquee-item { display: flex; align-items: center; gap: 0.6rem; padding: 0 2.5rem; flex-shrink: 0; }
-  .lp-marquee-sep { font-family: var(--font-body); font-size: 0.65rem; font-weight: 500; color: var(--border3); }
-  .lp-marquee-text { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text3); letter-spacing: 0.03em; }
-
-  .lp-section {
-    max-width: 1200px; margin: 0 auto;
-    padding: 5rem 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .lp-section-header {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 2rem; align-items: start; margin-bottom: 3.5rem;
-  }
-  .lp-section-label {
-    font-family: var(--font-ui);
-    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--text3);
-    margin-bottom: 1rem;
-    display: flex; align-items: center; gap: 10px;
-  }  .lp-section-h2 {
-    font-family: var(--font-body);
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700; letter-spacing: -0.03em;
-    color: var(--text); line-height: 1.1;
-  }
-  .lp-section-h2 em { font-style: italic; color: var(--accent); }
-  .lp-section-desc {
-    font-family: var(--font-ui); font-size: 0.92rem;
-    color: var(--text2); line-height: 1.8; padding-top: 0.5rem;
-  }
-
-  .lp-opt-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .lp-opt-card {
-    background: var(--bg); padding: 1.75rem;
-    text-decoration: none; display: flex; flex-direction: column;
-    transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
-  }
-  .lp-opt-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
-  .lp-opt-card-icon { margin-bottom: 1.25rem; display: block; line-height: 0; }
-  .lp-opt-card-name {
-    font-family: var(--font-body); font-size: 1rem;
-    font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em;
-  }
-  .lp-opt-card-sub {
-    font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500;
-    color: var(--text3); line-height: 1.5; margin-bottom: 1.25rem; flex: 1;
-  }
-  .lp-opt-card-body { display: flex; flex-direction: column; flex: 1; }
-  .lp-opt-card-arrow {
-    font-family: var(--font-ui); font-size: 0.72rem;
-    font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-    display: flex; align-items: center; gap: 6px; margin-top: auto;
-  }
-
-  .lp-history-card {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-top: 1px; padding: 1.25rem 1.75rem;
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: 12px; text-decoration: none; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; gap: 1.5rem;
-  }
-  .lp-history-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
-  .lp-history-left { display: flex; align-items: center; gap: 1rem; }
-  .lp-history-name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: #e8b86d; margin-bottom: 2px; }
-  .lp-history-sub { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); }
-  .lp-history-link {
-    font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600;
-    color: #e8b86d; display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;
-  }
-
-  .lp-tools-list {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .lp-tool-item {
-    background: var(--bg); padding: 1.75rem 2rem;
-    display: flex; align-items: flex-start; gap: 1.5rem;
-    transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
-    color: inherit;
-  }
-  .lp-tool-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .lp-tool-item:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
-  .lp-tool-num {
-    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
-    color: var(--text3); letter-spacing: 0.06em;
-    padding-top: 4px; flex-shrink: 0; width: 24px;
-  }
-  .lp-tool-label {
-    font-family: var(--font-body); font-size: 0.95rem;
-    font-weight: 700; color: var(--text); margin-bottom: 0.35rem; letter-spacing: -0.01em;
-  }
-  .lp-tool-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text3); line-height: 1.65; }
-
-  .lp-pricing-row {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .lp-price-cell { display: block; background: var(--bg); padding: 2rem; color: inherit; text-decoration: none; cursor: pointer; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
-  .lp-price-cell:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
-  .lp-price-cell.featured { background: var(--bg2); }
-  .lp-price-plan {
-    font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--text3); margin-bottom: 0.75rem;
-  }
-  .lp-price-amount {
-    font-family: var(--font-body); font-size: 2rem;
-    font-weight: 700; letter-spacing: -0.04em;
-    color: var(--text); line-height: 1; margin-bottom: 0;
-  }
-  .lp-price-period { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; color: var(--text3); margin-bottom: 1rem; }
-  .lp-price-desc { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text2); line-height: 1.5; }
-  .lp-price-tag {
-    display: inline-block; font-family: var(--font-ui); font-size: 0.62rem;
-    font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 2px 10px; border-radius: 4px; margin-bottom: 0.85rem;
-  }
-
-  .lp-cta {
-    max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 6rem;
-    display: grid; grid-template-columns: 1fr auto;
-    align-items: center; gap: 3rem;
-  }
-  .lp-cta-h2 {
-    font-family: var(--font-body);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 700; letter-spacing: -0.03em; color: var(--text); line-height: 1.1;
-  }
-  .lp-cta-h2 em { font-style: italic; color: var(--accent); }
-  .lp-cta-sub { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text3); margin-top: 0.75rem; }
-  .lp-cta-right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; flex-shrink: 0; }
-
-
-  /* ── Tablet ── */
-  @media (max-width: 900px) {
-    .lp-hero {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding-top: 100px;
-      padding-bottom: 3rem;
-    }
-    .lp-hero-desc { max-width: 100%; }
-    .lp-section-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2.5rem; }
-    .lp-opt-grid { grid-template-columns: repeat(2, 1fr); }
-    .lp-tools-list { grid-template-columns: 1fr; }
-    .lp-pricing-row { grid-template-columns: 1fr; }
-    .lp-cta { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem 5rem; }
-    .lp-cta-right { flex-direction: row; flex-wrap: wrap; }
-  }
-
-  /* ── Mobile ── */
-  @media (max-width: 640px) {
-    /* Hero: tighter, full-bleed feel */
-    .lp-hero {
-      padding: 88px 1.25rem 2.5rem;
-      gap: 1.5rem;
-    }
-    .lp-hero-kicker { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.14em; gap: 8px; }
-    .lp-hero-h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); margin-bottom: 1.25rem; }
-    .lp-hero-desc { font-size: 0.9rem; font-weight: 500; line-height: 1.75; margin-bottom: 2rem; }
-    .lp-hero-actions { gap: 0.85rem; }
-    .lp-btn-primary { padding: 11px 22px; font-size: 0.85rem; font-weight: 500; }
-    .lp-btn-ghost { font-size: 0.82rem; font-weight: 500; }
-    .lp-hero-stat-row { gap: 2rem; margin-top: 2.5rem; padding-top: 1.5rem; }
-    .lp-hero-stat-val { font-size: 1.5rem; }
-    .lp-hero-stat-label { font-size: 0.68rem; font-weight: 500; }
-
-    /* Marquee: faster on narrow screens */
-    .lp-marquee-wrap { padding: 8px 0; }
-    .lp-marquee-text { font-size: 0.72rem; font-weight: 500; }
-
-    /* Sections */
-    .lp-section { padding: 3rem 1.25rem; }
-    .lp-section-label { font-size: 0.6rem; font-weight: 500; }
-    .lp-section-h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
-    .lp-section-desc { font-size: 0.85rem; font-weight: 500; line-height: 1.7; }
-
-    /* Optionals: single column */
-    .lp-opt-grid { grid-template-columns: 1fr; }
-    .lp-opt-card { padding: 1.25rem 1.25rem; flex-direction: row; align-items: center; gap: 1rem; }
-    .lp-opt-card-icon { margin-bottom: 0; flex-shrink: 0; line-height: 0; }
-    .lp-opt-card-name { font-size: 0.95rem; margin-bottom: 0.15rem; }
-    .lp-opt-card-sub { font-size: 0.72rem; font-weight: 500; margin-bottom: 0; flex: none; }
-    .lp-opt-card-body { flex: 1; }
-    .lp-opt-card-arrow { margin-top: 0; font-size: 0.7rem; font-weight: 500; }
-
-    /* History card */
-    .lp-history-card { padding: 1rem 1.25rem; }
-    .lp-history-name { font-size: 0.9rem; font-weight: 500; }
-    .lp-history-sub { font-size: 0.7rem; font-weight: 500; }
-    .lp-history-link { font-size: 0.72rem; font-weight: 500; }
-
-    /* Tools: full width, more compact */
-    .lp-tool-item { padding: 1.25rem 1.25rem; gap: 1rem; }
-    .lp-tool-num { font-size: 0.6rem; font-weight: 500; width: 20px; }
-    .lp-tool-label { font-size: 0.88rem; font-weight: 500; }
-    .lp-tool-desc { font-size: 0.77rem; font-weight: 500; line-height: 1.6; }
-
-    /* Pricing: compact cells */
-    .lp-price-cell { padding: 1.5rem 1.25rem; }
-    .lp-price-amount { font-size: 1.75rem; }
-    .lp-price-plan { font-size: 0.62rem; font-weight: 500; }
-    .lp-price-desc { font-size: 0.78rem; font-weight: 500; }
-
-    /* CTA */
-    .lp-cta { padding: 3rem 1.25rem 4rem; gap: 1.5rem; }
-    .lp-cta-h2 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
-    .lp-cta-sub { font-size: 0.82rem; font-weight: 500; }
-    .lp-cta-right { flex-direction: column; gap: 0.65rem; width: 100%; }
-    .lp-cta-right .lp-btn-primary { text-align: center; width: 100%; display: block; padding: 14px; }
-    .lp-cta-right .lp-btn-ghost { justify-content: center; }
-
-    /* Footer */
-  }
-`;
-
-export default function Home() {
   return (
     <>
       <Script id="schema-org" type="application/ld+json">
@@ -342,171 +66,218 @@ export default function Home() {
           '@type': 'WebPage',
           name: 'Distilled Crux UPSC Optional Preparation',
           url: 'https://distilledcrux.com',
-          description: 'AI answer evaluation, notes, PYQs for UPSC optionals',
+          description: 'Notes, PYQs, answer evaluation and an AI tutor for UPSC optionals',
         })}
       </Script>
+      <style dangerouslySetInnerHTML={{ __html: HOME_CSS }} />
 
-      <style dangerouslySetInnerHTML={{ __html: CSS }} />
-
-      <div className="lp">
-
-        <div className="lp-hero">
-          <div className="lp-hero-left">
-            <div className="lp-hero-kicker">UPSC Mains · Optional Subjects</div>
-            <h1 className="lp-hero-h1">
-              Your optional.<br />
-              <em>Built to score.</em>
+      <div className="hm ds">
+        {/* ── Hero ── */}
+        <section className="hm-hero">
+          <div className="ds-container ds-narrow hm-hero-inner">
+            <Image src="/mascot/owl.svg" alt="" width={112} height={106} priority className="hm-owl" />
+            <h1 className="ds-h1">
+              Your optional, <em className="hm-mark">distilled.<svg viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11c34-6 70-8 108-5 30 2 63 3 106-3" /></svg></em>
             </h1>
-          </div>
-          <div className="lp-hero-right">
-            <p className="lp-hero-desc">
-              AI answer evaluation, syllabus notes, 4500+ PYQs and real topper copies 
-              built specifically for UPSC Mains Optional. No fluff.
+            <p className="ds-lede hm-lede">
+              Notes for every topic, every past question, and an AI that has read your standard books and shows
+              you the page it is quoting. For Sociology, Anthropology, PSIR, Geography and Public Administration.
             </p>
-            <div className="lp-hero-actions">
-              <Link href="/login" className="lp-btn-primary">Start free →</Link>
-              <HeroOptionalLink />
+            <HomeAsk />
+            <HeroActions />
+          </div>
+          <div className="ds-container hm-cards">
+            <HomeShowcase />
+          </div>
+          <p className="hm-proof ds-container">
+            Right now there are <b>{round(totalPyqs)} past questions</b>, <b>{totalTopics} topics</b> and <b>{totalBooks} standard books</b> in here.
+          </p>
+        </section>
+
+        {/* ── Optionals ── */}
+        <section id="optionals" className="hm-section">
+          <div className="ds-container">
+            <div className="hm-head">
+              <h2 className="ds-h2">Which optional is yours?</h2>
+              <p className="ds-lede">Everything after this is about that one subject: its notes, its past questions, its books.</p>
             </div>
-            <div className="lp-hero-stat-row">
-              {[
-                { val: '4500+', label: 'PYQs' },
-                { val: '5', label: 'Optionals' },
-              ].map(s => (
-                <div key={s.label}>
-                  <div className="lp-hero-stat-val">{s.val}</div>
-                  <div className="lp-hero-stat-label">{s.label}</div>
-                </div>
+            <div className="hm-opts">
+              {OPTIONALS.map((o) => {
+                const c = byId[o.id];
+                return (
+                  <Link key={o.id} href={`/${o.id}`} className="hm-opt ds-card ds-card-link" style={{ ['--t' as string]: `var(--tint-${o.id})`, ['--w' as string]: `var(--wash-${o.id})` }}>
+                    <span className="hm-opt-icon" aria-hidden="true"><SubjectIcon id={o.id} size={22} /></span>
+                    <span className="hm-opt-body">
+                      <span className="hm-opt-name">{o.name}</span>
+                      <span className="hm-opt-sub">{o.sub}</span>
+                      <span className="hm-opt-meta">{c.topics} topics · {c.pyqs.toLocaleString('en-IN')} PYQs</span>
+                    </span>
+                    <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
+                  </Link>
+                );
+              })}
+              <a href="https://historyoptional.xyz" target="_blank" rel="noopener noreferrer" className="hm-opt ds-card ds-card-link" style={{ ['--t' as string]: 'var(--tint-history)', ['--w' as string]: 'var(--wash-history)' }}>
+                <span className="hm-opt-icon" aria-hidden="true"><SubjectIcon id="history" size={22} /></span>
+                <span className="hm-opt-body">
+                  <span className="hm-opt-name">History</span>
+                  <span className="hm-opt-sub">Harappa to the Cold War, on its own site</span>
+                  <span className="hm-opt-meta">historyoptional.xyz ↗</span>
+                </span>
+                <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── How it works ── */}
+        <section className="hm-section">
+          <div className="ds-container">
+            <div className="hm-head">
+              <h2 className="ds-h2">A good way to use it</h2>
+            </div>
+            <ol className="hm-steps">
+              {STEPS.map((s, i) => (
+                <li key={s.title} className="hm-step">
+                  <span className="hm-step-n">{i + 1}</span>
+                  <span className="ds-h3">{s.title}</span>
+                  <span className="hm-step-text">{s.text}</span>
+                </li>
               ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="lp-marquee-wrap">
-          <div className="lp-marquee-track">
-            {[...marqueeItems, ...marqueeItems].map((item, i) => (
-              <span key={i} className="lp-marquee-item">
-                <span className="lp-marquee-sep">·</span>
-                <span className="lp-marquee-text">{item}</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <section id="optionals" className="lp-section">
-          <div className="lp-section-header">
-            <div>
-              <div className="lp-section-label">Choose your optional</div>
-              <h2 className="lp-section-h2">One subject.<br /><em>Total mastery.</em></h2>
-            </div>
-            <p className="lp-section-desc">
-              Pick your subject and get a platform built exactly for it 
-              notes, PYQs, evaluation and AI chat calibrated to your syllabus.
-            </p>
-          </div>
-          <div className="lp-opt-grid">
-            {optionals.map((opt) =>
-              opt.external ? (
-                <a key={opt.id} href={opt.external} target="_blank" rel="noopener noreferrer" className="lp-opt-card">
-                  <span className="lp-opt-card-icon"><SubjectIcon id={opt.id} size={24} /></span>
-                  <div className="lp-opt-card-body">
-                    <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
-                    <div className="lp-opt-card-sub">{opt.sub}</div>
-                    <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
-                      historyoptional.xyz
-                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-              ) : (
-                <Link key={opt.id} href={"/" + opt.id} className="lp-opt-card">
-                  <span className="lp-opt-card-icon"><SubjectIcon id={opt.id} size={24} /></span>
-                  <div className="lp-opt-card-body">
-                    <div className="lp-opt-card-name" style={{ color: opt.color }}>{opt.name}</div>
-                    <div className="lp-opt-card-sub">{opt.sub}</div>
-                    <div className="lp-opt-card-arrow" style={{ color: opt.color }}>
-                      Explore
-                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              )
-            )}
+            </ol>
           </div>
         </section>
 
-        <section id="features" className="lp-section">
-          <div className="lp-section-header">
-            <div>
-              <div className="lp-section-label">What's inside</div>
-              <h2 className="lp-section-h2">Everything you need.<br /><em>Nothing you don't.</em></h2>
+        {/* ── Pricing ── */}
+        <section className="hm-section">
+          <div className="ds-container">
+            <div className="hm-head">
+              <h2 className="ds-h2">One payment, and nothing renews behind your back</h2>
+              <p className="ds-lede">Notes and past questions are free for everyone. A plan gets you unlimited AI chat and answer evaluation for your optional.</p>
             </div>
-            <p className="lp-section-desc">
-              Every tool on Distilled Crux exists for one reason getting you more marks in your optional paper.
-            </p>
-          </div>
-          <HomeToolsList />
-        </section>
-
-        <section className="lp-section">
-          <div className="lp-section-header">
-            <div>
-              <div className="lp-section-label">Pricing</div>
-              <h2 className="lp-section-h2">Transparent plans.<br /><em>No surprises.</em></h2>
+            <div className="hm-plans">
+              {PLAN_ORDER.map((id) => {
+                const p = PLANS[id];
+                return (
+                  <Link key={id} href="/pricing" className={`hm-plan ds-card ds-card-link${id === 'yearly' ? ' featured' : ''}`}>
+                    {id === 'yearly' && <span className="ds-tag">Most chosen</span>}
+                    <span className="hm-plan-name">{p.label}</span>
+                    <span className="hm-plan-price">{formatRupees(p)}</span>
+                    <span className="hm-plan-period">{p.period}</span>
+                    <span className="hm-plan-text">{PLAN_NOTE[id]}</span>
+                  </Link>
+                );
+              })}
             </div>
-            <p className="lp-section-desc">
-              Pay only for what you need. Daily access to full-year coverage 
-              no auto-renewals, no hidden fees.
-            </p>
-          </div>
-          <div className="lp-pricing-row">
-            {[
-              { label: PLANS.daily.label,    price: formatRupees(PLANS.daily),    period: PLANS.daily.period,    desc: 'Exam-day sprints and last-minute revision.',    tag: null,           tagColor: '' },
-              { label: PLANS.sixmonth.label, price: formatRupees(PLANS.sixmonth), period: PLANS.sixmonth.period, desc: 'Focused preparation leading up to Mains.',      tag: 'Most Popular', tagColor: '#4361ee' },
-              { label: PLANS.yearly.label,   price: formatRupees(PLANS.yearly),   period: PLANS.yearly.period,   desc: 'Full-year coverage from Prelims to interview.', tag: 'Best Value',   tagColor: '#e8b86d' },
-            ].map((p) => (
-              <Link key={p.label} href="/pricing" className={"lp-price-cell" + (p.tag === 'Most Popular' ? ' featured' : '')}>
-                {p.tag && (
-                  <div className="lp-price-tag" style={{ background: p.tagColor + '18', color: p.tagColor, border: "1px solid " + p.tagColor + "30" }}>
-                    {p.tag}
-                  </div>
-                )}
-                <div className="lp-price-plan">{p.label}</div>
-                <div style={{ display:"flex", alignItems:"center", gap:8 }}><div className="lp-price-amount">{p.price}</div>
-                <div className="lp-price-period">{p.period}</div></div>
-                <div className="lp-price-desc">{p.desc}</div>
-              </Link>
-            ))}
-          </div>
-          <div style={{ marginTop: '1.25rem', textAlign: 'right' }}>
-            <Link href="/pricing" style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', fontWeight: 500, color: 'var(--accent)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-              Full pricing details →
-            </Link>
+            <div className="hm-plans-more"><Link href="/pricing" className="ds-btn ds-btn-ghost">See what each plan includes<Arrow /></Link></div>
           </div>
         </section>
 
-        <div className="lp-cta">
-          <div>
-            <h2 className="lp-cta-h2">Ready to crack<br /><em>your optional?</em></h2>
-            <p className="lp-cta-sub">Start free no card needed. Upgrade when you're ready.</p>
+        {/* ── Close ── */}
+        <section className="hm-section hm-close">
+          <div className="ds-container ds-narrow hm-close-inner">
+            <Image src="/mascot/owl-reading.svg" alt="" width={110} height={95} className="hm-close-owl" />
+            <h2 className="ds-h2">Start with tonight’s topic</h2>
+            <p className="ds-lede">Open the notes for whatever you are reading today and see if it helps. It is free, and there is no card to enter.</p>
+            <HeroActions />
           </div>
-          <div className="lp-cta-right">
-            <Link href="/login" className="lp-btn-primary">Start Preparing Free →</Link>
-            <Link href="#optionals" className="lp-btn-ghost">
-              Browse optionals
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2 6.5h9M6.5 2l4.5 4.5-4.5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
-        </div>
-
-
-
+        </section>
       </div>
     </>
   );
 }
+
+const HOME_CSS = `
+.hm { background: var(--bg); }
+.hm em { font-style: normal; color: var(--accent-text); }
+/* A marker stroke under the word, drawn by hand rather than set as a line. */
+.hm-mark { position: relative; display: inline-block; white-space: nowrap; }
+.hm-mark svg { position: absolute; left: 0; right: 0; bottom: -0.12em; width: 100%; height: 0.3em; overflow: visible; }
+.hm-mark path { fill: none; stroke: color-mix(in srgb, var(--accent) 45%, transparent); stroke-width: 6; stroke-linecap: round; }
+
+/* Hero */
+.hm-hero { padding: clamp(36px, 7vh, 80px) 0 clamp(48px, 8vh, 80px); }
+.hm-hero-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); }
+.hm-owl { width: auto; height: clamp(80px, 11vh, 106px); }
+.hm-lede { max-width: 620px; margin: 0 auto var(--space-2); }
+.hm-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-2) var(--space-4); margin-top: var(--space-1); }
+.hm-proof {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-8); font-size: 0.98rem; color: var(--text2); text-align: center;
+}
+.hm-proof { display: block; max-width: 760px; line-height: 1.7; }
+.hm-proof b { color: var(--text); font-weight: 700; }
+
+.hm-cards { margin-top: clamp(32px, 6vh, 56px); }
+/* As wide as the navbar, a little wider than the page text. */
+.hm-cards.ds-container { max-width: 1248px; }
+
+/* Sections */
+.hm-section { padding: clamp(48px, 9vh, 96px) 0; border-top: 1px solid var(--border); }
+.hm-head { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-8); max-width: 680px; }
+
+/* Optionals */
+.hm-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.hm-opt { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-5); }
+.hm-opt-icon {
+  width: 46px; height: 46px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-lg); background: var(--w); color: var(--t);
+}
+.hm-opt-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.hm-opt-name { font-weight: 700; font-size: 1.06rem; color: var(--text); }
+.hm-opt-sub { font-size: 0.88rem; color: var(--text2); line-height: 1.5; }
+.hm-opt-meta { font-family: var(--font-ui); font-size: 0.78rem; color: var(--t); font-weight: 600; margin-top: var(--space-2); }
+.hm-opt-go { color: var(--text3); transition: color 0.15s, transform 0.15s; padding-top: 2px; }
+.hm-opt:hover .hm-opt-go { color: var(--t); transform: translateX(2px); }
+
+/* Steps */
+.hm-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); counter-reset: none; }
+.hm-step { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border-left: 2px solid var(--border); }
+.hm-step-n {
+  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-1);
+  border-radius: var(--radius-circle); background: var(--accent); color: var(--accent-on); font-family: var(--font-ui); font-weight: 700; font-size: 0.9rem;
+}
+.hm-step-text { font-size: 0.92rem; line-height: 1.6; color: var(--text2); }
+
+/* Plans */
+.hm-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.hm-plan { position: relative; display: flex; flex-direction: column; gap: 2px; padding: var(--space-6) var(--space-5); }
+.hm-plan.featured { border-color: color-mix(in srgb, var(--accent) 50%, transparent); box-shadow: 0 0 0 3px var(--accent-dim); }
+.hm-plan .ds-tag { position: absolute; top: var(--space-4); right: var(--space-4); }
+.hm-plan-name { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; color: var(--text3); }
+.hm-plan-price { font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; color: var(--text); margin-top: var(--space-1); }
+.hm-plan-period { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); }
+.hm-plan-text { font-size: 0.9rem; color: var(--text2); margin-top: var(--space-3); }
+.hm-plans-more { display: flex; justify-content: center; margin-top: var(--space-5); }
+
+/* Close */
+.hm-close-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); }
+.hm-close-owl { width: auto; height: 95px; }
+
+/* Tablet */
+@media (max-width: 960px) {
+  .hm-opts { grid-template-columns: repeat(2, 1fr); }
+  .hm-steps, .hm-plans { grid-template-columns: 1fr; }
+  .hm-step { border-left: none; border-top: 2px solid var(--border); padding: var(--space-4) 0; flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: var(--space-3); }
+  .hm-step-text { flex-basis: 100%; }
+  .hm-plans { max-width: 520px; margin: 0 auto; }
+}
+
+/* Phone */
+@media (max-width: 640px) {
+  .hm-hero { padding-top: var(--space-6); }
+  .hm-hero-inner { gap: var(--space-3); }
+  .hm-owl { height: 76px; }
+  .hm-actions { width: 100%; flex-direction: column; }
+  .hm-actions .ds-btn-solid { width: 100%; }
+  .hm-proof { margin-top: var(--space-6); font-size: 0.9rem; }
+  .hm-head { margin-bottom: var(--space-5); }
+  .hm-opts { grid-template-columns: 1fr; gap: var(--space-3); }
+  .hm-opt { padding: var(--space-4); }
+  /* A plan is one compact row on a phone: name and price, then its line. */
+  .hm-plan { flex-direction: row; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-2); padding: var(--space-4); }
+  .hm-plan-name { flex-basis: 100%; }
+  .hm-plan-price { font-size: 1.6rem; margin-top: 0; }
+  .hm-plan-text { flex-basis: 100%; margin-top: var(--space-1); }
+  .hm-plan .ds-tag { top: var(--space-3); right: var(--space-3); }
+}
+`;

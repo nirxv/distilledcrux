@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 /**
@@ -29,87 +30,56 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="lp-footer" ref={ref}>
-      <style>{`
-        /* Height matches the navbar's 60px so the two bars frame the page
-           evenly; both include their 1px border under the global border-box. */
-        .lp-footer {
-          border-top: 1px solid var(--border);
-          height: 60px; padding: 0 2.25rem;
-          display: grid; grid-template-columns: 1fr auto 1fr;
-          align-items: center; gap: 1rem;
-        }
-        .lp-footer-end { display: flex; justify-content: flex-end; }
-        .lp-footer-logo { font-family: var(--font-monument, 'Neue Haas Grotesk', system-ui); font-size: 0.78rem; font-weight: 900; color: var(--text); letter-spacing: 0.06em; }
-        .lp-footer-links { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; }
-        .lp-footer-logo { justify-self: start; }
-        /* --text and --text3 are the same colour in both themes, so a hover
-           that only swaps those tokens is invisible. Rest the links dimmed and
-           bring them to full strength under an underline that wipes in. */
-        .lp-footer-link {
-          position: relative;
-          font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500;
-          color: var(--text3); text-decoration: none;
-          opacity: 0.6; transition: opacity 0.18s ease;
-        }
-        .lp-footer-link::after {
-          content: ''; position: absolute; left: 0; right: 0; bottom: -3px;
-          height: 1px; background: currentColor;
-          transform: scaleX(0); transform-origin: right;
-          transition: transform 0.22s ease;
-        }
-        .lp-footer-link:hover, .lp-footer-link:focus-visible { opacity: 1; }
-        .lp-footer-link:hover::after,
-        .lp-footer-link:focus-visible::after { transform: scaleX(1); transform-origin: left; }
-        @media (prefers-reduced-motion: reduce) {
-          .lp-footer-link, .lp-footer-link::after { transition: none; }
-        }
-        /* Telegram, as on the history platform, but in this site's accent
-           rather than its --info-* tokens, which do not exist here. */
-        .lp-footer-tg {
-          display: inline-flex; align-items: center; gap: 6px;
-          padding: 5px 10px; border-radius: 8px;
-          background: var(--accent-dim);
-          border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-          color: var(--accent); text-decoration: none;
-          font-family: var(--font-ui); font-size: 0.69rem; font-weight: 600;
-          letter-spacing: 0.03em; transition: background 0.18s, border-color 0.18s;
-        }
-        .lp-footer-tg:hover {
-          background: color-mix(in srgb, var(--accent) 18%, transparent);
-          border-color: color-mix(in srgb, var(--accent) 60%, transparent);
-        }
-        @media (max-width: 900px) {
-          .lp-footer { grid-template-columns: 1fr; justify-items: center; text-align: center; height: auto; padding: 1.5rem 1.25rem; gap: 0.85rem; }
-          .lp-footer-end { justify-content: center; }
-          .lp-footer-links { justify-content: center; gap: 1.25rem; }
-          .lp-footer-link { font-size: 0.75rem; font-weight: 500; }
-          .lp-footer-logo { font-size: 0.72rem; font-weight: 500; }
-        }
-      `}</style>
-      <div className="lp-footer-logo">DISTILLEDCRUX.COM</div>
+    <footer className="ds-footer ds" ref={ref}>
+      <style>{FOOTER_CSS}</style>
+      <div className="ds-footer-inner">
+        <Link href="/" className="ds-footer-brand">
+          <Image src="/mascot/owl.svg" alt="" width={26} height={25} />
+          <span>Distilled Crux</span>
+        </Link>
 
-      <div className="lp-footer-links">
-        <Link href="/privacy" className="lp-footer-link">Privacy</Link>
-        <Link href="/terms" className="lp-footer-link">Terms</Link>
-        <Link href="/refund" className="lp-footer-link">Refund</Link>
-        <Link href="/contact" className="lp-footer-link">Contact</Link>
-      </div>
+        <nav className="ds-footer-links" aria-label="Footer">
+          <Link href="/#optionals">Optionals</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/refund">Refund</Link>
+        </nav>
 
-      <div className="lp-footer-end">
-        <a
-          className="lp-footer-tg"
-          href="https://t.me/distilledcrux"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Join Telegram"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z" />
-          </svg>
-          Join Telegram
-        </a>
+        <div className="ds-footer-end">
+          <a className="ds-footer-tg" href="https://t.me/distilledcrux" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z" />
+            </svg>
+            Telegram
+          </a>
+        </div>
       </div>
     </footer>
   );
 }
+
+const FOOTER_CSS = `
+.ds-footer { border-top: 1px solid var(--border); background: var(--bg); }
+.ds-footer-inner {
+  max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-6);
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: var(--space-4);
+}
+.ds-footer-brand { display: inline-flex; align-items: center; gap: var(--space-2); justify-self: start; color: var(--text); text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+.ds-footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-1) var(--space-5); }
+.ds-footer-links a { color: var(--text2); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+.ds-footer-links a:hover { color: var(--accent-text); }
+.ds-footer-end { justify-self: end; }
+.ds-footer-tg {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 var(--space-3);
+  border: 1px solid var(--border2); border-radius: var(--radius-md); background: var(--ds-card);
+  color: var(--text2); text-decoration: none; font-size: 0.86rem; transition: border-color 0.15s, color 0.15s;
+}
+.ds-footer-tg:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent-text); }
+@media (max-width: 860px) {
+  .ds-footer-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: var(--space-6) var(--space-4) calc(var(--space-6) + env(safe-area-inset-bottom, 0px)); }
+  .ds-footer-brand, .ds-footer-end { justify-self: center; }
+  .ds-footer-links { gap: var(--space-2) var(--space-4); }
+}
+`;

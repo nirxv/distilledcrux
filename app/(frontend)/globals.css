@@ -227,3 +227,128 @@ body {
   --info-text:    #2d66a7; --info-wash:    #e2ecf7;
   --premium-text: #80651e; --premium-wash: #f6f1e2;
 }
+
+/* ── Per-optional tints ───────────────────────────────────────────────
+   A soft colour for each optional, for its icon, its cards and its pages.
+   The light values hold 4.5:1 on white and the dark ones on black. */
+:root {
+  --tint-sociology:    #9d9df0; --wash-sociology:    #1c1c3a;
+  --tint-anthropology: #48a8a5; --wash-anthropology: #133130;
+  --tint-polsci:       #df8075; --wash-polsci:       #3f1d19;
+  --tint-geography:    #7ba64a; --wash-geography:    #213015;
+  --tint-pub-admin:    #c9892a; --wash-pub-admin:    #2a1f10;
+  --tint-history:      #ae8829; --wash-history:      #27200f;
+}
+[data-theme="light"] {
+  --tint-sociology:    #4f46c8; --wash-sociology:    #eeedfb;
+  --tint-anthropology: #2f6e6c; --wash-anthropology: #dff0ef;
+  --tint-polsci:       #b5382a; --wash-polsci:       #f7e7e5;
+  --tint-geography:    #516d31; --wash-geography:    #e6efda;
+  --tint-pub-admin:    #905e12; --wash-pub-admin:    #f8efe2;
+  --tint-history:      #80651e; --wash-history:      #f6f1e2;
+}
+
+/* ── Design system ────────────────────────────────────────────────────
+   The redesign takes the chat page as its guide: a paper ground, raised
+   cards with a thin border, one blue accent, grey for what is secondary,
+   and tighter corners than this site used before. The type is sans-serif
+   throughout; serif is kept for the few places that truly need it.
+   --font-body is pointed at the sans stack inside .ds, so everything that
+   asks for the body font gets Inter.
+
+   Pages move over one at a time. A redesigned page wraps itself in .ds,
+   which carries those values for its subtree; the site shell (navbar,
+   footer) carries it too. Pages not yet redesigned keep the old values.
+   Once every page is over, the .ds values move to :root and the class goes. */
+.ds {
+  --font-body: var(--font-ui);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-pill: 20px;
+  --text2: #c4c4c4;
+  --text3: #858585;
+  --ds-card: var(--bg-raised);
+  --ds-soft: color-mix(in srgb, var(--text) 3%, var(--bg-raised));
+  color: var(--text);
+  font-family: var(--font-body);
+}
+[data-theme="light"] .ds { --text2: #3d3d3d; --text3: #6b6b6b; }
+.ds button, .ds input, .ds textarea, .ds select { font-family: var(--font-body); }
+
+.ds-container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 var(--space-6); }
+.ds-narrow { max-width: 780px; }
+
+/* Type */
+.ds-kicker { display: inline-flex; align-items: center; gap: var(--space-2); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; color: var(--accent-text); }
+.ds-h1 { font-family: var(--font-body); font-weight: 800; font-size: clamp(2.2rem, 4.8vw, 3.6rem); line-height: 1.08; letter-spacing: -0.035em; color: var(--text); }
+.ds-h2 { font-family: var(--font-body); font-weight: 800; font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.2; letter-spacing: -0.025em; color: var(--text); }
+.ds-h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; line-height: 1.35; letter-spacing: -0.01em; color: var(--text); }
+.ds-lede { font-size: clamp(1rem, 1.6vw, 1.12rem); line-height: 1.7; color: var(--text2); }
+.ds-muted { color: var(--text3); }
+.ds-meta { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); }
+
+/* Buttons */
+.ds-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: 42px; padding: 0 var(--space-5);
+  /* Pill-shaped, the friendlier shape Quizlet's buttons use. */
+  border-radius: var(--radius-full); border: 1px solid transparent;
+  font-family: var(--font-body); font-size: 0.92rem; font-weight: 700; line-height: 1;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.15s;
+}
+.ds-btn:active { transform: translateY(1px); }
+.ds-btn-solid { background: var(--accent); color: var(--accent-on); }
+.ds-btn-solid:hover { background: color-mix(in srgb, var(--accent) 88%, var(--text)); }
+.ds-btn-line { background: var(--ds-card); color: var(--text); border-color: var(--border2); }
+.ds-btn-line:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent-text); }
+.ds-btn-ghost { background: none; color: var(--text2); padding: 0 var(--space-3); }
+.ds-btn-ghost:hover { color: var(--accent-text); }
+.ds-btn-sm { min-height: 34px; padding: 0 var(--space-3); font-size: 0.84rem; font-weight: 600; }
+.ds-btn-lg { min-height: 50px; padding: 0 var(--space-6); font-size: 1rem; }
+.ds-btn:focus-visible, .ds-card-link:focus-visible, .ds-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* The one back button, everywhere. */
+.ds-back {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: 34px; padding: 0 var(--space-3) 0 var(--space-2);
+  background: var(--ds-card); color: var(--text2);
+  border: 1px solid var(--border2); border-radius: var(--radius-full);
+  font-family: var(--font-body); font-size: 0.86rem; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.ds-back:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent-text); }
+
+/* Cards */
+.ds-card { background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ds-card-soft { background: var(--ds-soft); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ds-card-link { display: block; color: inherit; text-decoration: none; transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
+.ds-card-link:hover { border-color: color-mix(in srgb, var(--accent) 40%, transparent); transform: translateY(-2px); box-shadow: var(--elev-2); }
+
+/* Chips and tags */
+.ds-chip {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: 34px; padding: var(--space-1) var(--space-3);
+  background: var(--ds-card); color: var(--text);
+  border: 1px solid var(--border2); border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: 0.86rem; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.ds-chip:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.ds-chip.on { background: var(--accent-dim); color: var(--accent-text); border-color: var(--accent); }
+.ds-tag {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  padding: 2px var(--space-2); border-radius: var(--radius-pill);
+  font-family: var(--font-ui); font-size: 0.74rem; font-weight: 600;
+  background: var(--accent-dim); color: var(--accent-text);
+}
+
+@media (max-width: 640px) {
+  .ds-container { padding: 0 var(--space-4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ds-btn, .ds-card-link, .ds-chip, .ds-back { transition: none; }
+  .ds-card-link:hover { transform: none; }
+}

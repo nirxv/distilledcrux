@@ -1349,12 +1349,15 @@ const CHAT_CSS = `
 /* The chat is a full-screen app. With the footer below it the window could
    scroll, which slid the sidebar under the fixed navbar, so the footer is
    hidden here. This stylesheet only exists on /chat. */
-.lp-footer { display: none !important; }
+.ds-footer { display: none !important; }
 /* The layout's wrapper keeps a 100vh floor for ordinary pages; under the chat
    it added scroll on phones, where 100vh is taller than the visible window. */
 div:has(> #main-layout) { min-height: 0 !important; }
 
 .ch-wrap {
+  /* Sans-serif, like the rest of the site: everything here that asks for
+     the body font gets Inter. */
+  --font-body: var(--font-ui);
   --ch-ground: var(--bg);
   --ch-card: var(--bg-raised);
   --ch-soft: color-mix(in srgb, var(--text) 3%, var(--bg-raised));
