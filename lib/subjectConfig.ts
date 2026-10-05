@@ -150,6 +150,7 @@ export const SUBJECT_THINKER_BOOKS: Record<SubjectKey, Record<string, string[]>>
     'Avasthi': ['public administration'],
     'Maheshwari': ['indian administration', 'public administration'],
     'Arora': ['indian public administration'],
+    'Bhattacharya': ['new horizons of public administration'],
   },
 };
 
@@ -398,7 +399,7 @@ export const SUBJECT_BOOKS: Record<SubjectKey, { group: string; books: { value: 
         { value: 'IGNOU Public Administration Paper 1', label: 'IGNOU Pub Admin Paper I', soon: true },
         { value: 'IGNOU Public Administration Paper 2', label: 'IGNOU Pub Admin Paper II', soon: true },
         { value: 'Avasthi & Maheshwari — Public Administration (4th ed., 1969)', label: 'Avasthi & Maheshwari (1969 ed.)' },
-        { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya', soon: true },
+        { value: 'Mohit Bhattacharya — New Horizons of Public Administration', label: 'Mohit Bhattacharya' },
       ],
     },
     {

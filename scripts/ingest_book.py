@@ -318,7 +318,7 @@ def is_credit_page(segs):
 def read_book(files, profile, log):
     """Every file's rows, with running heads judged across the whole book:
     a short NCERT chapter has too few pages to show its head three times."""
-    pages, dims, owner, heads = [], [], [], []
+    pages, dims, owner, heads, openers = [], [], [], [], []
     for fi, f in enumerate(files):
         doc = fitz.open(f)
         for i, p in enumerate(doc):
@@ -333,6 +333,7 @@ def read_book(files, profile, log):
                 # page, so they are cut by position rather than by repetition.
                 # The head is kept aside to name the chapter.
                 band = lambda s: (s.y0 + s.y1) / 2 / H
+                openers.append(segs)
                 heads.append(' '.join(s.text for s in sorted(segs, key=lambda s: s.x0) if 0.025 <= band(s) < SCAN_TOP))
                 cut = [s for s in segs if band(s) < SCAN_TOP or band(s) > SCAN_BOTTOM]
                 for s in cut: log['scan margin (watermark, running head)'][norm(s.text)[:50]] += 1
@@ -340,7 +341,22 @@ def read_book(files, profile, log):
             pages.append(segs); dims.append((p.rect.width, H)); owner.append(fi)
         doc.close()
     pages = drop_furniture(pages, dims, log)
-    labels = chapter_labels(heads, log) if profile == 'scan' else [None] * len(pages)
+    if profile == 'scan':
+        # A chapter opens on a page with display type: its title, or the word
+        # CHAPTER. Measured against the book's body size.
+        sizes = collections.Counter()
+        for segs in openers:
+            for sg in segs: sizes[round(sg.size)] += len(sg.text)
+        body = sizes.most_common(1)[0][0] if sizes else 10
+        opens = [any((sg.size >= 1.8 * body and len(sg.text) >= 6) or re.match(r'(?i)chapter\b', sg.text) for sg in segs)
+                 for segs in openers]
+        labels = chapter_labels(heads, opens, log)
+    else:
+        labels = [None] * len(pages)
+    if CHAPTERS:
+        # A chapter list from the book's contents beats running heads:
+        # "first page<TAB>title", pages counted from 1 in the input.
+        labels = [next((t for p0, t in reversed(CHAPTERS) if p0 <= g + 1), None) for g in range(len(pages))]
     per_file = [[] for _ in files]
     for g, segs in enumerate(pages):
         if profile == 'ncert' and any(s.text.startswith('This unit deals with') for s in segs):
@@ -352,17 +368,20 @@ def read_book(files, profile, log):
 
 
 SCAN_TOP, SCAN_BOTTOM = 0.064, 0.955
+CHAPTERS = []
 # A footnote's reference: "1 White, L. D. : Introduction to…", "* Tead, Ordway :".
 FOOTNOTE = re.compile(r"^(?:\d{1,2}|[*†‡§])\s*[A-Z][A-Za-z'’-]+,\s*(?:(?:[A-Z]\.\s*){1,3}|[A-Z][a-z]+\s*[:;,])")
 WATERMARK = re.compile(r'\S*(?:upscpdf|upsepdt|t\.me/|UPSC_?PDF|https?:|ttps?:|nttps)\S*|\bWebsite\s*[=>➡:~-]*', re.I)
 
 
-def chapter_labels(heads, log):
+def chapter_labels(heads, opens, log):
     """Name each scanned page's chapter from the running heads. Right-hand
     pages carry the chapter's title and left-hand pages the book's; OCR
     spells both a little differently each time, so variants are matched to
-    the most common spelling. A page without its own chapter head (a
-    left-hand page, a chapter opener) takes the next one that has it."""
+    the most common spelling. A page without its own chapter head keeps the
+    chapter of the page before, unless it opens a chapter: then it takes the
+    next head that follows. (Taking the next head everywhere put a chapter's
+    last page, and its notes, into the chapter after.)"""
     import difflib
     def clean(h):
         h = WATERMARK.sub(' ', h)
@@ -377,20 +396,23 @@ def chapter_labels(heads, log):
                      and difflib.SequenceMatcher(None, h, c).ratio() >= 0.8), None)
         canon[h] = canon.get(best, best) if best else h
     page = [canon.get(h) if h and canon.get(h) != book and counts[canon.get(h)] >= 2 else None for h in raw]
-    out, nxt = [None] * len(page), None
+    ahead, nxt = [None] * len(page), None
     for i in range(len(page) - 1, -1, -1):
         nxt = page[i] or nxt
-        out[i] = nxt
-    last = None                                   # pages after the final head
-    for i, lab in enumerate(out):
-        last = lab or last
-        out[i] = lab or last
+        ahead[i] = nxt
+    out, cur = [None] * len(page), None
+    for i in range(len(page)):
+        if page[i]: cur = page[i]
+        elif opens[i] or cur is None: cur = ahead[i] or cur
+        out[i] = cur
     # A misread head can name the wrong chapter for a page or two: a short run
     # whose chapter already came earlier is folded into the run before it.
     runs = [[lab, len(list(g))] for lab, g in itertools.groupby(out)]
     seen, fixed = set(), []
     for k, (lab, n) in enumerate(runs):
-        if fixed and n <= 2 and (lab in seen or (k + 1 < len(runs) and runs[k + 1][0] == fixed[-1][0])):
+        # A chapter never comes back, so a short run of one already seen is a
+        # misread head (and the headless pages after it).
+        if fixed and ((lab in seen and n <= 6) or (n <= 2 and k + 1 < len(runs) and runs[k + 1][0] == fixed[-1][0])):
             log['chapter head misread, page folded in'][f'{lab} → {fixed[-1][0]}'] += n
             fixed[-1][1] += n
         elif fixed and fixed[-1][0] == lab:
@@ -434,11 +456,20 @@ def shifted_font(t):
     return share(toks) < 0.2 and share(back) >= 0.4
 
 
-def is_word(w):
-    """In the dictionary, allowing for the inflections it leaves out."""
+BRITISH = [('isation', 'ization'), ('ising', 'izing'), ('ised', 'ized'), ('ises', 'izes'), ('ise', 'ize'),
+           ('yse', 'yze'), ('our', 'or'), ('tre', 'ter'), ('ogramme', 'ogram'), ('ence', 'ense'), ('lled', 'led'),
+           ('lling', 'ling'), ('ae', 'e'), ('oe', 'e')]
+
+
+def is_word(w, _british=True):
+    """In the dictionary, allowing for the inflections it leaves out and for
+    British spellings of an American dictionary ("organisation", "centre")."""
     lw = w.lower()
     if lw in WORDS: return True
-    if '-' in lw: return all(is_word(p) for p in lw.split('-') if p)
+    if _british:
+        for gb, us in BRITISH:
+            if gb in lw and is_word(lw.replace(gb, us), _british=False): return True
+    if '-' in lw: return all(is_word(p, _british) for p in lw.split('-') if p)
     for suf, rep_ in (('ies', 'y'), ('es', ''), ('s', ''), ('ed', ''), ('ed', 'e'), ('d', ''), ('ing', ''), ('ing', 'e'), ('ly', '')):
         if lw.endswith(suf) and len(lw) > len(suf) + 2:
             stem = lw[:-len(suf)]
@@ -526,7 +557,10 @@ def to_groups(rows, profile, log):
             items, skip = [('head', label)], None
             continue
         if skip == 'rest':                 # NCERT exercises run to the chapter's end
-            continue
+            if profile == 'scan' and (r['size'] >= 1.8 * base or re.match(r'(?i)chapter\b', t)):
+                skip = None                # a scanned chapter's notes end where the next chapter opens
+            else:
+                continue
         if skip:
             if skip == 'structure':
                 ends = head and r['size'] >= base + 2
@@ -545,7 +579,7 @@ def to_groups(rows, profile, log):
         if profile == 'scan':
             t = WATERMARK.sub(' ', t).strip()
             if not t: continue
-            if re.fullmatch(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?)', t):
+            if re.fullmatch(r'(?:REFERENCES?|SELECTED READINGS?|SUGGESTED READINGS?|BIBLIOGRAPHY|FURTHER READINGS?|NOTES)', t):
                 log['scan section left out'][t.title()] += 1
                 skip, skipped, skip_title = 'rest', [], t
                 continue
@@ -683,6 +717,23 @@ def ocr_fix(t, V, log):
             c = found.pop(); log['OCR fix: misread letter'][f'{w} → {c}'] += 1; return c
         return w
     t = re.sub(r'(?<![\w-])[a-z]{4,}(?![\w-])', confusion, t)
+
+    def drop_cap(m):                                 # a chapter's large first letter OCR missed: "raditionally"
+        w = m.group(0)
+        if is_word(w) or V[w] > 1 or w in MODERN: return w
+        found = {c for c in (L + w for L in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') if V[c.lower()] >= 5}
+        if len(found) == 1:
+            c = found.pop(); log['OCR fix: lost first letter (drop cap)'][f'{w} → {c}'] += 1; return c
+        return w
+    def at_start(m):                                 # a sentence start, or straight after a title-case word
+        before = m.string[max(0, m.start() - 40):m.start()]
+        return drop_cap(m) if (not before.strip() or re.search(r'(?:[.!?:]”?|\b[A-Z][a-z]{2,})\s$', before)) else m.group(0)
+    t = re.sub(r'(?<![\w-])[a-z]{4,}(?![\w-])', at_start, t)
+
+    def ornament(m):                                 # "SS raditionally": the initial's scrap goes too
+        fixed = drop_cap(re.match(r'.+', m.group(2)))
+        return fixed if fixed != m.group(2) else m.group(0)
+    t = re.sub(r'\b[A-Z]{1,3} ([a-z]{4,})(?![\w-])', lambda m: ornament(re.match(r'(.*) (.*)', m.group(0))), t)
 
     def double_l(m):                                 # "milion", "rainfal", "smal": one l of two lost
         w = m.group(0)
@@ -1039,10 +1090,15 @@ def main():
                     help='override the label of one file (by name, without .pdf), or rename a label (OLD=NEW)')
     ap.add_argument('--scan-margins', default=None, metavar='TOP,BOTTOM',
                     help='scan profile: page fractions cut at the top and bottom (default 0.064,0.955)')
+    ap.add_argument('--chapters', metavar='TSV',
+                    help='chapter list: "first page<TAB>title" per line, pages counted from 1 in the input PDF')
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--replace', action='store_true')
     a = ap.parse_args()
 
+    if a.chapters:
+        CHAPTERS.extend(sorted((int(p0), t.strip()) for p0, t in
+                               (l.split('\t', 1) for l in Path(a.chapters).read_text().splitlines() if l.strip())))
     if a.scan_margins:
         global SCAN_TOP, SCAN_BOTTOM
         SCAN_TOP, SCAN_BOTTOM = (float(x) for x in a.scan_margins.split(','))
