@@ -28,3 +28,12 @@ export const TOPPER_COPIES_LIVE = false;
 export const CHAT_TOPIC_PYQS_LIVE = false;
 export const FLASHCARDS_LIVE = false;
 export const SYLLABUS_TRACKER_LIVE = false;
+
+/**
+ * Prelims practice. The three pages under /prelims advertise a 10,000-question
+ * bank, 25 years of explained papers and a weakness radar, and show three
+ * placeholder questions whose explanations tell the developer where to put the
+ * real data. Nothing on the site links there; until there is a question bank,
+ * every /prelims URL is a 404. The pages are kept for when there is.
+ */
+export const PRELIMS_LIVE = false;
