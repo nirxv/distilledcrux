@@ -1,10 +1,13 @@
 'use client';
-import { useState, useEffect, useRef, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
+import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import type { User } from 'firebase/auth';
 import { geoMapData, GeoMapEntry } from '@/lib/geoMapData';
 import SubjectIcon from '@/components/SubjectIcon';
+import OwlLoader from '@/components/OwlLoader';
+import { toAnswerPages } from '@/lib/answerImages';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -24,9 +27,12 @@ interface PYQ {
   microtheme?: string;
 }
 
-interface QGroup {
+/** One numbered question: short notes (Q1, Q5) or three sub-parts. */
+interface QBlockData {
   qNum: number;
-  questions: PYQ[];   // sub-parts of one Q block
+  compulsory: boolean;
+  shortNotes: boolean;
+  questions: PYQ[];
 }
 
 interface RubricState {
@@ -38,42 +44,12 @@ interface RubricState {
 
 // ─── Subject meta ─────────────────────────────────────────────────────────────
 
-const SUBJECTS: Record<SubjectId, {
-  label: string; icon: string;
-  color: string; dim: string; border: string;
-  thinkerTerm: string;
-  dataFile: string | null;     // null = PYQ file not yet available
-}> = {
-  sociology: {
-    label: 'Sociology', icon: 'sociology',
-    color: '#4361ee', dim: 'rgba(67,97,238,0.09)', border: 'rgba(67,97,238,0.28)',
-    thinkerTerm: 'thinker',
-    dataFile: '/data/sociology-pyqs.json',
-  },
-  anthropology: {
-    label: 'Anthropology', icon: 'anthropology',
-    color: '#2dd4bf', dim: 'rgba(45,212,191,0.09)', border: 'rgba(45,212,191,0.28)',
-    thinkerTerm: 'anthropologist',
-    dataFile: '/data/anthropology-pyqs.json',
-  },
-  polsci: {
-    label: 'PSIR', icon: 'psir',
-    color: '#f87171', dim: 'rgba(248,113,113,0.09)', border: 'rgba(248,113,113,0.25)',
-    thinkerTerm: 'thinker',
-    dataFile: '/data/psir-pyqs.json',
-  },
-  geography: {
-    label: 'Geography', icon: 'geography',
-    color: 'var(--geo)', dim: 'var(--geo-dim)', border: 'var(--geo-border)',
-    thinkerTerm: 'scholar',
-    dataFile: '/data/geography-pyqs.json',
-  },
-  'pub-admin': {
-    label: 'Pub Admin', icon: 'pubadmin',
-    color: '#fb923c', dim: 'rgba(251,146,60,0.09)', border: 'rgba(251,146,60,0.25)',
-    thinkerTerm: 'scholar',
-    dataFile: '/data/pubad-pyqs.json',
-  },
+const SUBJECTS: Record<SubjectId, { label: string; optional: string; dataFile: string }> = {
+  sociology:    { label: 'Sociology',             optional: 'sociology',             dataFile: '/data/sociology-pyqs.json' },
+  anthropology: { label: 'Anthropology',          optional: 'anthropology',          dataFile: '/data/anthropology-pyqs.json' },
+  polsci:       { label: 'PSIR',                  optional: 'political-science',     dataFile: '/data/psir-pyqs.json' },
+  geography:    { label: 'Geography',             optional: 'geography',             dataFile: '/data/geography-pyqs.json' },
+  'pub-admin':  { label: 'Public Administration', optional: 'public-administration', dataFile: '/data/pubad-pyqs.json' },
 };
 
 const OPTIONAL_TO_SUBJECT: Record<string, SubjectId> = {
@@ -94,7 +70,7 @@ function rubricOutOf(marks: number): { intro: number; body: number; conc: number
 }
 function rubricTotal(r: RubricState) { return r.intro + r.body + r.conc + r.pres; }
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// ─── Building a paper ─────────────────────────────────────────────────────────
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -104,31 +80,31 @@ function shuffle<T>(arr: T[]): T[] {
   }
   return a;
 }
-function pick<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n); }
 
-// UPSC Sociology/Anthropology pattern:
-//  Q1 compulsory: 5 × 10M short notes (50M total) or 1 × 60M essay
-//  Q2-Q5: each group = 2×20M subparts  (sectional) or mix
-// We'll do: sectional = 4 Qs (Q1 compulsory short-notes + Q2,Q3,Q4 each 2×20M + 1×10M)
-// Full paper = 8 Qs across Paper I + Paper II
-
-function buildCompulsoryQ(pool: PYQ[], count = 5): PYQ[] {
-  // Q1: short notes (10M each); count=4 when map Q1(a) is included
-  const tens = pool.filter(q => q.marks === 10);
-  return pick(tens, count);
-}
-
-function buildQGroup(pool: PYQ[], qNum: number): QGroup {
+/**
+ * The UPSC optional paper: Q1 and Q5 compulsory, each five short notes of
+ * ten marks (Geography Paper II's Q1 carries the map instead of two of
+ * them); every other question three parts, 20 + 20 + 10. A sectional test is
+ * Section A alone.
+ *
+ * One set of used ids runs across the whole paper. Each block used to keep
+ * its own, so the same question could turn up twice; Q5 was built like an
+ * ordinary question though the paper called it compulsory; and with the map,
+ * Q1 came to 60 marks.
+ */
+function buildPaper(pool: PYQ[], mode: TestMode, withMap: boolean): QBlockData[] {
   const used = new Set<number>();
-  function pickUniq(marks: number, n: number): PYQ[] {
-    const c = shuffle(pool.filter(q => q.marks === marks && !used.has(q.id))).slice(0, n);
-    c.forEach(q => used.add(q.id));
-    return c;
-  }
-  // Each Q: 2×20M + 1×10M = 50M
-  const twenties = pickUniq(20, 2);
-  const ten = pickUniq(10, 1);
-  return { qNum, questions: [...twenties, ...ten].filter(Boolean) };
+  const take = (marks: number, n: number) => {
+    const picked = shuffle(pool.filter(q => q.marks === marks && !used.has(q.id))).slice(0, n);
+    picked.forEach(q => used.add(q.id));
+    return picked;
+  };
+  const notes = (qNum: number, count: number): QBlockData => ({ qNum, compulsory: true, shortNotes: true, questions: take(10, count) });
+  const parts = (qNum: number): QBlockData => ({ qNum, compulsory: false, shortNotes: false, questions: [...take(20, 2), ...take(10, 1)] });
+
+  const sectionA = [notes(1, withMap ? 3 : 5), parts(2), parts(3), parts(4)];
+  if (mode === 'sectional') return sectionA;
+  return [...sectionA, notes(5, 5), parts(6), parts(7), parts(8)];
 }
 
 // ─── Timer ────────────────────────────────────────────────────────────────────
@@ -153,143 +129,82 @@ function useTimer(totalSec: number, running: boolean, onEnd: () => void) {
   return { rem, display: fmt(rem) };
 }
 
-// ─── RubricScorer ─────────────────────────────────────────────────────────────
+// ─── Self-marking ─────────────────────────────────────────────────────────────
 
-function RubricScorer({ marks, value, onChange, color }: {
+function RubricScorer({ marks, value, onChange }: {
   marks: number;
   value?: RubricState;
   onChange: (r: RubricState) => void;
-  color: string;
 }) {
   const out = rubricOutOf(marks);
   const cur = value ?? { intro: 0, body: 0, conc: 0, pres: 0 };
   const total = rubricTotal(cur);
-  const pct = Math.round((total / marks) * 100);
   const criteria = [
-    { key: 'intro' as const, label: 'Introduction', desc: 'Theoretical framing, named thinker', max: out.intro },
+    { key: 'intro' as const, label: 'Introduction', desc: 'A framing and a named thinker', max: out.intro },
     { key: 'body'  as const, label: 'Body',          desc: 'Arguments, evidence, thinkers cited', max: out.body  },
-    { key: 'conc'  as const, label: 'Conclusion',    desc: 'Synthesis, clear position',           max: out.conc  },
-    { key: 'pres'  as const, label: 'Presentation',  desc: 'Structure, word count, legibility',   max: out.pres  },
+    { key: 'conc'  as const, label: 'Conclusion',    desc: 'A synthesis and a clear position', max: out.conc  },
+    { key: 'pres'  as const, label: 'Presentation',  desc: 'Structure, length, legibility', max: out.pres  },
   ];
   return (
-    <div style={{ background: 'var(--bg3)', borderRadius: 8, padding: '1rem', marginTop: '0.75rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-        <span style={{ fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>
-          Self Evaluation
-        </span>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700,
-          color: pct >= 70 ? 'var(--green)' : pct >= 50 ? 'var(--gold)' : 'var(--red)' }}>
-          {total.toFixed(1)} / {marks}
-        </span>
+    <div className="ts-rubric">
+      <div className="ts-rubric-head">
+        <span>Mark it yourself</span>
+        <span className="ts-rubric-total">{total.toFixed(1)} / {marks}</span>
       </div>
       {criteria.map(c => (
-        <div key={c.key} style={{ marginBottom: '0.65rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.2rem' }}>
-            <div>
-              <span style={{ fontSize: '0.78rem', color: 'var(--text)', fontWeight: 500 }}>{c.label}</span>
-              <span style={{ fontSize: '0.68rem', fontWeight: 500, color: 'var(--text3)', marginLeft: '0.4rem', fontFamily: 'var(--font-ui)' }}>{c.desc}</span>
-            </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 500, fontFamily: 'var(--font-mono)', color: 'var(--text2)' }}>
-              {cur[c.key].toFixed(1)}/{c.max}
-            </span>
-          </div>
-          <div style={{ position: 'relative', height: 7, background: 'var(--bg4)', borderRadius: 4 }}>
-            <div style={{
-              position: 'absolute', left: 0, top: 0, height: '100%', borderRadius: 4,
-              width: `${(cur[c.key] / c.max) * 100}%`,
-              background: `linear-gradient(90deg, ${color}, ${color}88)`,
-              transition: 'width 0.2s',
-            }} />
-            <input type="range" min={0} max={c.max} step={0.5} value={cur[c.key]}
-              onChange={e => onChange({ ...cur, [c.key]: parseFloat(e.target.value) })}
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer', margin: 0 }} />
-            <div style={{
-              position: 'absolute', top: '50%', transform: 'translate(-50%, -50%)',
-              left: `${(cur[c.key] / c.max) * 100}%`,
-              width: 13, height: 13, borderRadius: '50%',
-              background: color, boxShadow: `0 0 6px ${color}80`,
-              border: '2px solid rgba(0,0,0,0.2)',
-              pointerEvents: 'none', transition: 'left 0.2s',
-            }} />
-          </div>
-        </div>
+        <label key={c.key} className="ts-rubric-row">
+          <span className="ts-rubric-label">
+            <strong>{c.label}</strong>
+            <span>{c.desc}</span>
+          </span>
+          <input type="range" min={0} max={c.max} step={0.5} value={cur[c.key]}
+            onChange={e => onChange({ ...cur, [c.key]: parseFloat(e.target.value) })}
+            aria-label={`${c.label}, out of ${c.max}`} />
+          <span className="ts-rubric-val">{cur[c.key].toFixed(1)} / {c.max}</span>
+        </label>
       ))}
-      <div style={{ marginTop: '0.6rem', height: 3, background: 'var(--bg4)', borderRadius: 2 }}>
-        <div style={{ height: '100%', borderRadius: 2, width: `${pct}%`,
-          background: pct >= 70 ? 'var(--green)' : pct >= 50 ? 'var(--gold)' : 'var(--red)',
-          transition: 'width 0.3s' }} />
-      </div>
     </div>
   );
 }
 
-// ─── AI Mentor Panel ──────────────────────────────────────────────────────────
+// ─── Answer correction (Premium) ─────────────────────────────────────────────
 
 type OcrStep = 'idle' | 'ocr' | 'transcript' | 'evaluating' | 'done' | 'error';
 
-async function pdfToImages(file: File): Promise<File[]> {
-  const pdfjs = await import('pdfjs-dist');
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
-  const buf = await file.arrayBuffer();
-  const pdf = await pdfjs.getDocument({ data: buf }).promise;
-  const images: File[] = [];
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const viewport = page.getViewport({ scale: 2 });
-    const canvas = document.createElement('canvas');
-    canvas.width = viewport.width; canvas.height = viewport.height;
-    await page.render({ canvasContext: canvas.getContext('2d')!, viewport, canvas } as Parameters<typeof page.render>[0]).promise;
-    const blob = await new Promise<Blob | null>(res => canvas.toBlob(res, 'image/jpeg', 0.85));
-    if (blob) images.push(new File([blob], `page-${i}.jpg`, { type: 'image/jpeg' }));
-  }
-  return images;
-}
-
-function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
+function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }: {
   question: string; marks: number; subjectId: SubjectId;
-  isPremium: boolean; user: User | null;
+  isPremium: boolean; user: User | null; onSignIn: () => void;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [step, setStep] = useState<OcrStep>('idle');
-  const [ocrMsg, setOcrMsg] = useState('');
   const [images, setImages] = useState<File[]>([]);
-  const [previews, setPreviews] = useState<string[]>([]);
   const [transcript, setTranscript] = useState('');
   const [evalData, setEvalData] = useState<Record<string, unknown> | null>(null);
   const [error, setError] = useState('');
-  const [panelOpen, setPanelOpen] = useState(false);
-  const color = SUBJECTS[subjectId].color;
 
   function handleUpload() {
-    if (!user) { alert('Sign in to use AI evaluation.'); return; }
+    if (!user) { onSignIn(); return; }
     if (!isPremium) { window.location.href = '/pricing'; return; }
     fileRef.current?.click();
   }
 
   async function handleFiles(files: FileList | null) {
     if (!files || !files.length) return;
-    let arr: File[] = [];
-    for (const f of Array.from(files)) {
-      if (f.type === 'application/pdf') { arr = arr.concat(await pdfToImages(f)); }
-      else arr.push(f);
-    }
-    setImages(arr);
-    setPreviews(arr.map(f => URL.createObjectURL(f)));
-    setPanelOpen(true);
     setStep('ocr');
     setError(''); setTranscript(''); setEvalData(null);
     try {
+      const pages = await toAnswerPages(Array.from(files));
+      setImages(pages);
       const token = await user?.getIdToken() ?? '';
       const fd = new FormData();
-      arr.forEach(f => fd.append('files', f));
-      setOcrMsg(`Sending ${arr.length} page${arr.length > 1 ? 's' : ''} to OCR…`);
+      pages.forEach((f, i) => fd.append('files', f, `page-${i + 1}.jpg`));
       const r = await fetch('/api/ocr', { method: 'POST', headers: { 'x-user-token': token }, body: fd });
       const data = await r.json();
-      if (!r.ok || data.error) throw new Error(data.error || 'OCR failed');
+      if (!r.ok || data.error) throw new Error(data.error || 'We could not read the page.');
       setTranscript(data.text ?? '');
       setStep('transcript');
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'OCR failed');
+      setError(e instanceof Error ? e.message : 'We could not read the page.');
       setStep('error');
     }
   }
@@ -301,614 +216,274 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user }: {
     try {
       const token = await user?.getIdToken() ?? '';
       const fd = new FormData();
-      images.forEach(f => fd.append('files', f));
+      images.forEach((f, i) => fd.append('files', f, `page-${i + 1}.jpg`));
       fd.append('question', question);
       fd.append('marks', String(marks));
       fd.append('extractedText', transcript);
       fd.append('subject', subjectId);
       const r = await fetch('/api/evaluate', { method: 'POST', headers: { 'x-user-token': token }, body: fd });
       const data = await r.json();
-      if (!r.ok || data.error) { setError(data.error || 'Evaluation failed.'); setStep('error'); return; }
+      if (!r.ok || data.error) { setError(data.error === 'limit_reached' ? 'Your free evaluation is used. Premium checks every answer.' : data.error || 'The evaluation failed.'); setStep('error'); return; }
       setEvalData(data); setStep('done');
-    } catch { setError('Network error. Please try again.'); setStep('error'); }
+    } catch { setError('The connection dropped. Please try again.'); setStep('error'); }
   }
+
+  const reset = () => { setStep('idle'); setImages([]); setTranscript(''); setEvalData(null); setError(''); };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const d = evalData as Record<string, any> | null;
-
-  function gaugeMood(pct: number) {
-    if (pct >= 75) return { mood: 'great', color: 'var(--green)', label: 'Strong answer!' };
-    if (pct >= 50) return { mood: 'ok', color: color, label: 'Decent a few gaps to close.' };
-    if (pct >= 30) return { mood: 'meh', color: 'var(--gold)', label: 'Learn from mistakes keep going.' };
-    return { mood: 'bad', color: 'var(--red)', label: 'Needs significant work.' };
-  }
+  // The evaluate route names this thinkers_to_cite; the panel read the
+  // history site's historians_to_cite, so no suggestion was ever shown.
+  const thinkers = (d?.thinkers_to_cite ?? d?.historians_to_cite ?? []) as { name: string; work?: string; argument: string }[];
 
   return (
-    <div style={{ marginTop: '1rem' }}>
-      <input ref={fileRef} type="file" accept="image/*,application/pdf" multiple style={{ display: 'none' }}
-        onChange={e => handleFiles(e.target.files)} />
-      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
-        <button onClick={handleUpload} style={{
-          display: 'flex', alignItems: 'center', gap: '0.45rem',
-          background: isPremium ? `${color}18` : 'var(--bg3)',
-          border: `1px solid ${color}50`, borderRadius: 6,
-          padding: '0.45rem 0.9rem', color: isPremium ? color : 'var(--text3)',
-          fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)',
-        }}>
-          {isPremium ? <><UploadIcon /> Get the Answer Corrected</> : <><LockIcon /> Get the Answer Corrected</>}
+    <div className="ts-mentor">
+      <input ref={fileRef} type="file" accept="image/*,application/pdf" multiple hidden
+        onChange={e => { handleFiles(e.target.files); e.target.value = ''; }} />
+      {step === 'idle' && (
+        <button type="button" className={`ds-btn ds-btn-sm ${isPremium ? 'ds-btn-line' : 'ds-btn-ghost'} ts-mentor-btn`} onClick={handleUpload}>
+          {isPremium ? (
+            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" /></svg>Have this answer checked</>
+          ) : (
+            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>Have it checked with Premium</>
+          )}
         </button>
-        {step !== 'idle' && step !== 'ocr' && step !== 'evaluating' && (
-          <button onClick={() => { setStep('idle'); setImages([]); setPreviews([]); setTranscript(''); setEvalData(null); setError(''); setPanelOpen(false); }} style={{
-            background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
-            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', fontWeight: 500, cursor: 'pointer',
-          }}>Re-upload</button>
-        )}
-        {(step === 'done' || step === 'transcript') && (
-          <button onClick={() => setPanelOpen(o => !o)} style={{
-            background: 'none', border: '1px solid var(--border2)', borderRadius: 6,
-            padding: '0.35rem 0.65rem', color: 'var(--text3)', fontSize: '0.75rem', fontWeight: 500, cursor: 'pointer',
-          }}>{panelOpen ? 'Hide' : 'Show'}</button>
-        )}
-      </div>
+      )}
 
-      {panelOpen && (
-        <div style={{ marginTop: '0.85rem', background: `${color}06`, border: `1px solid ${color}25`, borderRadius: 10, padding: '1.25rem' }}>
-          <style>{`@keyframes spin-ai { to { transform: rotate(360deg); } }`}</style>
-
-          {(step === 'ocr' || step === 'evaluating') && (
-            <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
-              <div style={{ width: 28, height: 28, border: `3px solid ${color}30`, borderTopColor: color, borderRadius: '50%', animation: 'spin-ai 0.8s linear infinite', margin: '0 auto 0.5rem' }} />
-              <div style={{ color, fontSize: '0.85rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
-                {step === 'ocr' ? ocrMsg || 'Reading your handwriting…' : 'Evaluating your answer… (~30s)'}
-              </div>
-            </div>
-          )}
-
-          {step === 'transcript' && (
-            <div>
-              {previews.length > 0 && (
-                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.85rem', flexWrap: 'wrap' }}>
-                  {previews.map((src, i) => (
-                    <img key={i} src={src} alt={`Page ${i + 1}`} onClick={() => window.open(src, '_blank')}
-                      style={{ height: 64, width: 'auto', borderRadius: 4, border: '1px solid var(--border)', objectFit: 'cover', cursor: 'pointer' }} />
-                  ))}
-                </div>
-              )}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                <div>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>OCR Transcript</div>
-                  <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)' }}>Review and fix errors before evaluating</div>
-                </div>
-                <span style={{ background: 'var(--green-dim)', color: 'var(--green)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: 4, padding: '2px 8px', fontSize: '0.68rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> OCR Done</span>
-              </div>
-              <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={10}
-                style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 6, padding: '0.65rem 0.8rem', color: 'var(--text)', fontSize: '0.84rem', fontWeight: 500, resize: 'vertical', outline: 'none', fontFamily: 'inherit', lineHeight: 1.65 }} />
-              <div style={{ marginTop: '0.75rem', display: 'flex', justifyContent: 'flex-end' }}>
-                <button onClick={runEval} style={{ background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-                  Evaluate →
-                </button>
-              </div>
-            </div>
-          )}
-
-          {step === 'error' && (
-            <div>
-              <div style={{ color: 'var(--red)', fontSize: '0.85rem', fontWeight: 500, marginBottom: '0.5rem', fontFamily: 'var(--font-ui)' }}>{error}</div>
-              {transcript && (
-                <div>
-                  <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={6}
-                    style={{ width: '100%', boxSizing: 'border-box', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 6, padding: '0.6rem 0.75rem', color: 'var(--text)', fontSize: '0.84rem', fontWeight: 500, resize: 'vertical', outline: 'none', fontFamily: 'inherit' }} />
-                  <button onClick={runEval} style={{ marginTop: '0.5rem', background: color, color: '#fff', border: 'none', borderRadius: 6, padding: '0.5rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-                    Evaluate →
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-
-          {step === 'done' && d && ((() => {
-            const marks_v = d.marks as number ?? 0;
-            const out_of = d.marks_out_of as number ?? marks;
-            const pct = Math.round((marks_v / out_of) * 100);
-            const g = gaugeMood(pct);
-            const sm = d.section_marks as Record<string, { awarded: number; out_of: number; reasoning: string }> | undefined;
-            return (
-              <div style={{ fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.7 }}>
-                {/* Score strip */}
-                <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', padding: '0.75rem', background: 'var(--bg3)', borderRadius: 6, marginBottom: '0.75rem' }}>
-                  <div>
-                    <div style={{ color: 'var(--text3)', fontSize: '0.65rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: 'var(--font-ui)' }}>AI Score</div>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1.4rem', fontWeight: 700, color }}>
-                      {marks_v} <span style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text3)' }}>/ {out_of}</span>
-                    </div>
-                  </div>
-                  {sm && Object.entries(sm).map(([k, v]) => (
-                    <div key={k}>
-                      <div style={{ color: 'var(--text3)', fontSize: '0.65rem', fontWeight: 500, textTransform: 'capitalize', fontFamily: 'var(--font-ui)' }}>{k}</div>
-                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', fontWeight: 500 }}>{v.awarded}/{v.out_of}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Gauge */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', background: 'var(--bg3)', borderRadius: 6, padding: '0.75rem 1rem', marginBottom: '0.75rem' }}>
-                  <MoodIcon mood={g.mood} color={g.color} />
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.4rem', flexWrap: 'wrap' }}>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.92rem', fontWeight: 700, color: g.color }}>{marks_v}</span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', fontWeight: 500, color: 'var(--text3)' }}>/{out_of}</span>
-                      <span style={{ fontSize: '0.74rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>{g.label}</span>
-                    </div>
-                    <div style={{ position: 'relative', height: 6, borderRadius: 3, background: 'linear-gradient(90deg, var(--red), var(--gold), var(--green))' }}>
-                      <div style={{ position: 'absolute', top: -8, left: `${pct}%`, width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent', borderTop: '6px solid var(--text)', transform: 'translateX(-50%)' }} />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Disclaimer */}
-                <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start', background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.25)', borderRadius: 6, padding: '0.6rem 0.8rem', marginBottom: '1rem' }}>
-                  <WarnIcon />
-                  <div style={{ fontSize: '0.74rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)', lineHeight: 1.55 }}>
-                    <strong style={{ color: 'var(--gold)' }}>AI scores are directional, not definitive.</strong>{' '}
-                    Focus on the qualitative feedback below demand gaps and missing thinkers are far more useful than any number.
-                  </div>
-                </div>
-
-                {d.overall_feedback && (
-                  <div style={{ marginBottom: '1rem' }}>
-                    <div style={{ color, fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>Mentor Feedback</div>
-                    <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{String(d.overall_feedback)}</p>
-                  </div>
-                )}
-
-                {d.body && ((() => {
-                  const b = d.body as { strengths?: string[]; weaknesses?: string[] };
-                  return (
-                    <div style={{ marginBottom: '1rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                      <div style={{ background: 'var(--green-dim)', border: '1px solid rgba(74,222,128,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--green)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CheckIcon size={10} /> Strengths</div>
-                        {(b.strengths ?? []).map((s, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', fontWeight: 500, lineHeight: 1.5 }}>{s}</div>)}
-                      </div>
-                      <div style={{ background: 'var(--red-dim)', border: '1px solid rgba(248,113,113,0.15)', borderRadius: 6, padding: '0.6rem 0.75rem' }}>
-                        <div style={{ color: 'var(--red)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}><CrossIcon size={10} /> Weaknesses</div>
-                        {(b.weaknesses ?? []).map((w, i) => <div key={i} style={{ color: 'var(--text2)', marginBottom: '0.3rem', fontSize: '0.8rem', fontWeight: 500, lineHeight: 1.5 }}>{w}</div>)}
-                      </div>
-                    </div>
-                  );
-                })() as React.ReactNode)}
-
-                {Array.isArray(d.historians_to_cite) && (d.historians_to_cite as unknown[]).length > 0 && (
-                  <div style={{ marginBottom: '1rem' }}>
-                    <div style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.35rem', fontFamily: 'var(--font-ui)' }}>
-                      {SUBJECTS[subjectId].thinkerTerm === 'anthropologist' ? 'Anthropologists to Cite' : 'Thinkers to Cite'}
-                    </div>
-                    {(d.historians_to_cite as { name: string; work?: string; argument: string }[]).map((h, i) => (
-                      <div key={i} style={{ padding: '0.4rem 0.6rem', background: 'var(--gold-dim)', borderRadius: 4, marginBottom: '0.25rem', borderLeft: `2px solid ${color}60` }}>
-                        <span style={{ color: 'var(--gold)', fontWeight: 600 }}>{h.name}</span>
-                        {h.work && <span style={{ color: 'var(--text3)', fontStyle: 'italic', fontSize: '0.8rem', fontWeight: 500 }}> · {h.work}</span>}
-                        <div style={{ color: 'var(--text2)', marginTop: '0.1rem', fontSize: '0.8rem', fontWeight: 500 }}>{h.argument}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {d.model_answer && ((() => {
-                  const ma = d.model_answer as { introduction?: string; body?: string[]; conclusion?: string };
-                  return (
-                    <details>
-                      <summary style={{ color, cursor: 'pointer', fontSize: '0.82rem', fontWeight: 600, fontFamily: 'var(--font-ui)' }}>View Model Answer</summary>
-                      <div style={{ marginTop: '0.75rem', padding: '0.75rem', background: 'var(--bg3)', borderRadius: 6 }}>
-                        {ma.introduction && <div style={{ marginBottom: '0.75rem' }}>
-                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Introduction</div>
-                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{ma.introduction}</p>
-                        </div>}
-                        {Array.isArray(ma.body) && ma.body.map((b, i) => (
-                          <div key={i} style={{ paddingLeft: '0.75rem', borderLeft: `2px solid ${color}40`, marginBottom: '0.5rem', color: 'var(--text2)', fontSize: '0.84rem' }}>{b}</div>
-                        ))}
-                        {ma.conclusion && <div style={{ marginTop: '0.5rem' }}>
-                          <div style={{ color: 'var(--text3)', fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.2rem', fontFamily: 'var(--font-ui)' }}>Conclusion</div>
-                          <p style={{ color: 'var(--text2)', margin: 0, fontSize: '0.84rem', fontWeight: 500 }}>{ma.conclusion}</p>
-                        </div>}
-                      </div>
-                    </details>
-                  );
-                })() as React.ReactNode)}
-              </div>
-            );
-          })() as React.ReactNode)}
+      {(step === 'ocr' || step === 'evaluating') && (
+        <div className="ts-mentor-wait">
+          <OwlLoader size="small" label={step === 'ocr' ? 'Reading your page' : 'Marking your answer'} />
+          <span>{step === 'ocr' ? 'Reading your page…' : 'Marking your answer, usually under a minute…'}</span>
         </div>
       )}
+
+      {(step === 'transcript' || (step === 'error' && transcript)) && (
+        <div className="ts-mentor-card">
+          {error && <p className="ts-err">{error}</p>}
+          <div className="ts-mentor-title">Check what we read</div>
+          <p className="ts-mentor-sub">Fix any name or date the reader got wrong; this text is what gets marked.</p>
+          <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={8} className="ts-textarea" />
+          <div className="ts-mentor-actions">
+            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>Upload again</button>
+            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={runEval}>Mark this answer</button>
+          </div>
+        </div>
+      )}
+
+      {step === 'error' && !transcript && (
+        <div className="ts-mentor-card">
+          <p className="ts-err">{error}</p>
+          <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={reset}>Try again</button>
+        </div>
+      )}
+
+      {step === 'done' && d && (() => {
+        const got = Number(d.marks ?? 0);
+        const outOf = Number(d.marks_out_of ?? marks);
+        const sm = d.section_marks as Record<string, { awarded: number; out_of: number }> | undefined;
+        const body = d.body as { strengths?: string[]; weaknesses?: string[] } | undefined;
+        const ma = d.model_answer as { introduction?: string; body?: string[]; conclusion?: string } | undefined;
+        return (
+          <div className="ts-mentor-card">
+            <div className="ts-mentor-score">
+              <div><span className="ts-score-num">{got}</span><span className="ts-score-of"> / {outOf}</span></div>
+              {sm && (
+                <div className="ts-score-parts">
+                  {Object.entries(sm).map(([k, v]) => <span key={k}><b>{k}</b> {v.awarded}/{v.out_of}</span>)}
+                </div>
+              )}
+            </div>
+            <p className="ts-mentor-note">The number is a guide; the feedback is the useful part.</p>
+            {d.overall_feedback && <p className="ts-mentor-feedback">{String(d.overall_feedback)}</p>}
+            {body && (
+              <div className="ts-cols">
+                <div>
+                  <div className="ts-col-title good">What worked</div>
+                  <ul className="ts-points good">{(body.strengths ?? []).map((s, i) => <li key={i}>{s}</li>)}</ul>
+                </div>
+                <div>
+                  <div className="ts-col-title fix">What to fix</div>
+                  <ul className="ts-points fix">{(body.weaknesses ?? []).map((w, i) => <li key={i}>{w}</li>)}</ul>
+                </div>
+              </div>
+            )}
+            {thinkers.length > 0 && (
+              <div className="ts-thinkers">
+                <div className="ts-col-title">Thinkers you could cite</div>
+                {thinkers.map((h, i) => (
+                  <div key={i} className="ts-thinker"><strong>{h.name}</strong>{h.work && <span> · {h.work}</span>}<p>{h.argument}</p></div>
+                ))}
+              </div>
+            )}
+            {ma && (ma.introduction || ma.body?.length) && (
+              <details className="ts-model">
+                <summary>See a model answer</summary>
+                {ma.introduction && <p>{ma.introduction}</p>}
+                {Array.isArray(ma.body) && ma.body.map((b, i) => <p key={i} className="ts-model-point">{b}</p>)}
+                {ma.conclusion && <p>{ma.conclusion}</p>}
+              </details>
+            )}
+            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>Check a different answer</button>
+          </div>
+        );
+      })()}
     </div>
   );
 }
 
-// ─── Question Card ─────────────────────────────────────────────────────────────
+// ─── Questions ────────────────────────────────────────────────────────────────
 
-function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPremium, user }: {
+function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPremium, user, onSignIn }: {
   q: PYQ; label: string; isResults: boolean;
   rubric?: RubricState; onRubric: (r: RubricState) => void;
-  subjectId: SubjectId; isPremium: boolean; user: User | null;
+  subjectId: SubjectId; isPremium: boolean; user: User | null; onSignIn: () => void;
 }) {
-  const { color, dim, border } = SUBJECTS[subjectId];
-  const wordTarget = q.marks === 10 ? '~150' : q.marks === 20 ? '~250' : '~200';
+  const words = q.marks === 10 ? 150 : 250;
   return (
-    <div style={{ paddingBottom: '1.25rem', marginBottom: '1.25rem', borderBottom: '1px solid var(--border)' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.6rem', flexWrap: 'wrap', gap: '0.4rem' }}>
-        <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <span style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--text)', fontFamily: 'var(--font-ui)', minWidth: '1.4rem' }}>({label})</span>
-          <span style={{ background: dim, color, border: `1px solid ${border}`, fontSize: '0.65rem', fontFamily: 'var(--font-mono)', padding: '1px 6px', borderRadius: 3 }}>{q.topic}</span>
-          <span style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>{q.year}</span>
-        </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', whiteSpace: 'nowrap' }}>[{q.marks} Marks]</span>
+    <div className="ts-q">
+      <div className="ts-q-top">
+        <span className="ts-q-label">({label})</span>
+        <span className="ts-q-marks">{q.marks} marks</span>
       </div>
-
-      <p style={{ color: 'var(--text)', fontSize: '0.92rem', lineHeight: 1.75, marginBottom: '0.75rem', fontFamily: 'var(--font-body)' }}>{q.question}</p>
-
-      {!isResults && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg3)', border: '1px dashed var(--border2)', borderRadius: 6, padding: '0.6rem 0.9rem', color: 'var(--text3)', fontSize: '0.8rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
-          <span>✏️</span>
-          <span>Write your answer on paper · {wordTarget} words</span>
-        </div>
-      )}
-
+      <p className="ts-q-text">{q.question}</p>
+      <div className="ts-q-meta">
+        <span className="ts-q-topic">{q.topic}</span>
+        <span>{q.year}</span>
+        {!isResults && <span>Write on paper, about {words} words</span>}
+      </div>
       {isResults && (
         <>
-          <RubricScorer marks={q.marks} value={rubric} onChange={onRubric} color={color} />
-          <AIMentorPanel question={q.question} marks={q.marks} subjectId={subjectId} isPremium={isPremium} user={user} />
+          <RubricScorer marks={q.marks} value={rubric} onChange={onRubric} />
+          <AIMentorPanel question={q.question} marks={q.marks} subjectId={subjectId} isPremium={isPremium} user={user} onSignIn={onSignIn} />
         </>
       )}
     </div>
   );
 }
 
-// ─── Compulsory Q1 Block ──────────────────────────────────────────────────────
-
-function CompulsoryBlock({ questions, isResults, rubrics, onRubric, subjectId, isPremium, user, mapEntries }: {
-  questions: PYQ[]; isResults: boolean;
-  rubrics: Record<number, RubricState>; onRubric: (id: number, r: RubricState) => void;
-  subjectId: SubjectId; isPremium: boolean; user: User | null;
-  mapEntries?: GeoMapEntry[];
-}) {
-  const { color, border } = SUBJECTS[subjectId];
-  const hasMap = mapEntries && mapEntries.length > 0;
-  const mapMarks = hasMap ? 20 : 0;
-  const totalPossible = questions.reduce((s, q) => s + q.marks, 0) + mapMarks;
-  const totalScored = isResults ? questions.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) : 0;
-  return (
-    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
-      <div style={{ padding: '0.75rem 1.25rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg3)', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.1</span>
-          <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
-        </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
-          {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks Total`}
-        </span>
-      </div>
-      <div style={{ padding: '1.25rem' }}>
-        {hasMap && (
-          <MapSubBlock entries={mapEntries!} isResults={isResults} color={color} border={border} />
-        )}
-        <p style={{ color: 'var(--text)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
-          Write short notes on the following in about <strong>150 words</strong> each:
-        </p>
-        {questions.map((q, i) => (
-          <QuestionCard key={q.id} q={q} label={String.fromCharCode(hasMap ? 98 + i : 97 + i)}
-            isResults={isResults} rubric={rubrics[q.id]} onRubric={r => onRubric(q.id, r)}
-            subjectId={subjectId} isPremium={isPremium} user={user} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ─── Map Sub-Block — renders as (a) inside CompulsoryBlock ───────────────────
-
-function MapSubBlock({ entries, isResults, color, border }: {
-  entries: GeoMapEntry[]; isResults: boolean; color: string; border: string;
+function MapPart({ entries, isResults, score, onScore }: {
+  entries: GeoMapEntry[]; isResults: boolean; score: number; onScore: (n: number) => void;
 }) {
   const [revealed, setRevealed] = useState<Set<number>>(new Set());
-  const [mapScore, setMapScore] = useState(0);
-
   const toggle = (i: number) => setRevealed(prev => {
     const n = new Set(prev);
-    n.has(i) ? n.delete(i) : n.add(i);
+    if (n.has(i)) n.delete(i); else n.add(i);
     return n;
   });
 
   return (
-    <div style={{ marginBottom: '1.5rem', borderBottom: '1px solid var(--border)', paddingBottom: '1.5rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>(a)</span>
-          <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>MAP · PAPER II</span>
-        </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
-          {isResults ? `${mapScore} / 20 Marks` : '20 Marks · 10 locations × 2M'}
-        </span>
+    <div className="ts-q">
+      <div className="ts-q-top">
+        <span className="ts-q-label">(a)</span>
+        <span className="ts-q-marks">20 marks</span>
       </div>
-
-      <div style={{ padding: '1.25rem' }}>
-        <p style={{ color: 'var(--text)', fontSize: '0.9rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '1.25rem', fontFamily: 'var(--font-body)' }}>
-          On the outline map of India provided to you, mark the location of the following places and write their significance in not more than <strong>30 words</strong> each:
-        </p>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
-          {entries.map((e, i) => (
-            <div key={i} style={{ border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
-              <div
-                onClick={() => isResults && toggle(i)}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: '0.75rem',
-                  padding: '0.6rem 1rem', cursor: isResults ? 'pointer' : 'default',
-                  background: revealed.has(i) ? `${color}10` : 'var(--bg3)',
-                }}
-              >
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color, fontWeight: 600, minWidth: 20 }}>{i + 1}.</span>
-                <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.88rem', color: 'var(--text)', fontWeight: 500, flex: 1 }}>{e.name}</span>
-                <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)', whiteSpace: 'nowrap' }}>{e.category}</span>
-                {isResults && (
-                  <svg viewBox="0 0 12 12" fill="none" stroke="var(--text3)" strokeWidth="1.8" strokeLinecap="round"
-                    style={{ width: 12, height: 12, flexShrink: 0, transform: revealed.has(i) ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
-                    <path d="M2 4l4 4 4-4"/>
-                  </svg>
-                )}
+      <p className="ts-q-text">On the outline map of India, mark the location of the following places and write their significance in not more than 30 words each:</p>
+      <div className="ts-places">
+        {entries.map((e, i) => (
+          <div key={i} className={`ts-place${revealed.has(i) ? ' open' : ''}`}>
+            <button type="button" className="ts-place-row" onClick={() => isResults && toggle(i)} disabled={!isResults} aria-expanded={isResults ? revealed.has(i) : undefined}>
+              <span className="ts-place-n">{i + 1}</span>
+              <span className="ts-place-name">{e.name}</span>
+              <span className="ts-place-cat">{e.category}</span>
+              {isResults && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="ts-place-chev"><path d="M6 9l6 6 6-6" /></svg>}
+            </button>
+            {isResults && revealed.has(i) && (
+              <div className="ts-place-more">
+                <span>{e.lat}°N, {e.lng}°E</span>
+                <p>{e.significance}</p>
               </div>
-              {isResults && revealed.has(i) && (
-                <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid var(--border)', background: 'var(--bg2)' }}>
-                  <div style={{ fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.3rem' }}>
-                    Coordinates: {e.lat}°N, {e.lng}°E
-                  </div>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-body)', lineHeight: 1.6 }}>
-                    {e.significance}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {isResults && (
-          <div style={{ background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem 1.25rem' }}>
-            <div style={{ fontSize: '0.78rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              Self-Evaluate: Map Score (20M total · 2M per location)
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-              <input
-                type="range" min={0} max={20} step={1} value={mapScore}
-                onChange={e => setMapScore(Number(e.target.value))}
-                style={{ flex: 1, minWidth: 120, accentColor: color }}
-              />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.1rem', fontWeight: 700, color, minWidth: 50, textAlign: 'right' }}>
-                {mapScore} / 20
-              </span>
-            </div>
-            <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', fontFamily: 'var(--font-ui)', marginTop: '0.4rem' }}>
-              1M correct location on map · 1M significance note (30 words)
-            </div>
+            )}
           </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-// ─── Regular Q Block ──────────────────────────────────────────────────────────
-
-function QBlock({ group, isResults, rubrics, onRubric, subjectId, isPremium, user }: {
-  group: QGroup; isResults: boolean;
-  rubrics: Record<number, RubricState>; onRubric: (id: number, r: RubricState) => void;
-  subjectId: SubjectId; isPremium: boolean; user: User | null;
-}) {
-  const { color, border } = SUBJECTS[subjectId];
-  const totalPossible = group.questions.reduce((s, q) => s + q.marks, 0);
-  const totalScored = isResults ? group.questions.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) : 0;
-  return (
-    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, marginBottom: '1.5rem', overflow: 'hidden' }}>
-      <div style={{ padding: '0.75rem 1.25rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg3)', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>Q.{group.qNum}</span>
-          {group.qNum === 5 && (
-            <span style={{ fontSize: '0.68rem', color, background: `${color}18`, padding: '1px 6px', borderRadius: 3, border: `1px solid ${border}`, fontFamily: 'var(--font-ui)' }}>COMPULSORY</span>
-          )}
-        </div>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)' }}>
-          {isResults ? `${totalScored.toFixed(1)} / ${totalPossible} Marks` : `${totalPossible} Marks`}
-        </span>
-      </div>
-      <div style={{ padding: '1.25rem' }}>
-        {group.questions.map((q, i) => (
-          <QuestionCard key={q.id} q={q} label={String.fromCharCode(97 + i)}
-            isResults={isResults} rubric={rubrics[q.id]} onRubric={r => onRubric(q.id, r)}
-            subjectId={subjectId} isPremium={isPremium} user={user} />
         ))}
       </div>
+      {isResults && (
+        <label className="ts-map-score">
+          <span>Your map mark <small>1 for each place marked right, 1 for each note</small></span>
+          <input type="range" min={0} max={20} step={1} value={score} onChange={e => onScore(Number(e.target.value))} aria-label="Map mark out of 20" />
+          <strong>{score} / 20</strong>
+        </label>
+      )}
     </div>
   );
 }
 
-// ─── Instructions Header ──────────────────────────────────────────────────────
+function QBlock({ block, isResults, rubrics, onRubric, subjectId, isPremium, user, onSignIn, mapEntries, mapScore, onMapScore }: {
+  block: QBlockData; isResults: boolean;
+  rubrics: Record<number, RubricState>; onRubric: (id: number, r: RubricState) => void;
+  subjectId: SubjectId; isPremium: boolean; user: User | null; onSignIn: () => void;
+  mapEntries?: GeoMapEntry[]; mapScore: number; onMapScore: (n: number) => void;
+}) {
+  const withMap = Boolean(mapEntries && mapEntries.length);
+  const totalPossible = block.questions.reduce((s, q) => s + q.marks, 0) + (withMap ? 20 : 0);
+  const totalScored = block.questions.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) + (withMap ? mapScore : 0);
+  return (
+    <section className="ts-block">
+      <div className="ts-block-head">
+        <h3>Question {block.qNum}</h3>
+        {block.compulsory && <span className="ts-chip">Compulsory</span>}
+        <span className="ts-block-marks">{isResults ? `${totalScored.toFixed(1)} / ${totalPossible}` : `${totalPossible} marks`}</span>
+      </div>
+      {block.shortNotes && (
+        <p className="ts-block-lead">{withMap ? 'Answer all parts.' : 'Write short notes on the following in about 150 words each:'}</p>
+      )}
+      {withMap && <MapPart entries={mapEntries!} isResults={isResults} score={mapScore} onScore={onMapScore} />}
+      {withMap && <p className="ts-block-lead">Write short notes on the following in about 150 words each:</p>}
+      {block.questions.map((q, i) => (
+        <QuestionCard key={q.id} q={q} label={String.fromCharCode((withMap ? 98 : 97) + i)}
+          isResults={isResults} rubric={rubrics[q.id]} onRubric={r => onRubric(q.id, r)}
+          subjectId={subjectId} isPremium={isPremium} user={user} onSignIn={onSignIn} />
+      ))}
+    </section>
+  );
+}
 
-function InstructionsHeader({ subject, mode, paper, totalMins, maxMarks }: {
+function PaperHeader({ subject, mode, paper, totalMins, maxMarks }: {
   subject: SubjectId; mode: TestMode; paper: PaperChoice; totalMins: number; maxMarks: number;
 }) {
   const s = SUBJECTS[subject];
   const hrs = Math.floor(totalMins / 60);
   const mins = totalMins % 60;
-  const timeStr = hrs > 0 ? `${hrs} Hour${hrs > 1 ? 's' : ''}${mins > 0 ? ` ${mins} Minutes` : ''}` : `${totalMins} Minutes`;
+  const timeStr = hrs > 0 ? `${hrs} hour${hrs > 1 ? 's' : ''}${mins > 0 ? ` ${mins} minutes` : ''}` : `${totalMins} minutes`;
   const isFull = mode === 'full';
-  const paperLabel = paper === 'both' ? 'Paper I + Paper II' : paper;
-  const title = isFull
-    ? `${s.label} Optional Full Test (${paperLabel})`
-    : `${s.label} Optional Sectional Test (${paperLabel})`;
+  const paperLabel = paper === 'both' ? 'Paper I and II' : paper;
   return (
-    <div style={{ border: '1px solid var(--border)', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem', background: 'var(--bg2)' }}>
-      <div style={{ textAlign: 'center', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '1.25rem' }}>
-        <div style={{ fontSize: '0.68rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.3rem', fontFamily: 'var(--font-ui)' }}>
-          Distilled Crux · Practice Test Series
-        </div>
-        <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>{title}</div>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-          <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
-            <span style={{ color: 'var(--text3)' }}>Time: </span><strong>{timeStr}</strong>
-          </div>
-          <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
-            <span style={{ color: 'var(--text3)' }}>Maximum Marks: </span><strong>{maxMarks}</strong>
-          </div>
-        </div>
+    <div className="ts-paper">
+      <div className="ts-paper-title">{s.label} optional · {isFull ? 'Full test' : 'Sectional test'} · {paperLabel}</div>
+      <div className="ts-paper-facts">
+        <span>Time allowed: <strong>{timeStr}</strong></span>
+        <span>Maximum marks: <strong>{maxMarks}</strong></span>
       </div>
-      <div style={{ fontSize: '0.82rem', fontWeight: 500, color: 'var(--text2)', lineHeight: 2, fontFamily: 'var(--font-ui)' }}>
+      <ul className="ts-paper-rules">
         {isFull ? (
           <>
-            <div>There are <strong>EIGHT questions</strong> divided in <strong>TWO SECTIONS</strong>.</div>
-            <div>Candidate has to attempt <strong>FIVE questions in all.</strong></div>
-            <div>Question Nos. <strong>1 and 5 are compulsory</strong> and out of remaining, <strong>THREE are to be attempted choosing at least ONE from each Section.</strong></div>
+            <li>There are <strong>eight</strong> questions in <strong>two sections</strong>. Attempt <strong>five</strong> in all.</li>
+            <li>Questions <strong>1 and 5 are compulsory</strong>. Of the rest, attempt <strong>three</strong>, at least one from each section.</li>
           </>
         ) : (
           <>
-            <div>There are <strong>FOUR questions</strong> in this section.</div>
-            <div>Candidate has to attempt <strong>THREE questions in all.</strong></div>
-            <div>Question No. <strong>1 is compulsory</strong> and out of remaining, <strong>TWO are to be attempted.</strong></div>
+            <li>There are <strong>four</strong> questions. Attempt <strong>three</strong> in all.</li>
+            <li>Question <strong>1 is compulsory</strong>. Of the rest, attempt <strong>two</strong>.</li>
           </>
         )}
-        <div>The number of marks carried by a question/part is indicated against it.</div>
-        <div>Word limit in questions, wherever specified, should be adhered to.</div>
-      </div>
+        <li>The marks for each question or part are shown against it. Keep to the word limits.</li>
+      </ul>
     </div>
-  );
-}
-
-// ─── Scroll FAB ───────────────────────────────────────────────────────────────
-
-function ScrollFab({ color }: { color: string }) {
-  const [hidden, setHidden] = useState(false);
-  useEffect(() => {
-    const q1 = document.getElementById('q1-anchor');
-    if (!q1) return;
-    const obs = new IntersectionObserver(([e]) => setHidden(!e.isIntersecting), { threshold: 0 });
-    obs.observe(q1);
-    return () => obs.disconnect();
-  }, []);
-  return (
-    <>
-      <style>{`
-        @keyframes bounceY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
-        @keyframes glowPulse { 0%,100%{box-shadow:0 0 8px 2px ${color}40,0 4px 20px rgba(0,0,0,0.4)} 50%{box-shadow:0 0 18px 5px ${color}80,0 4px 20px rgba(0,0,0,0.4)} }
-        .dc-fab { animation: glowPulse 2s ease-in-out infinite; transition: opacity 0.3s; }
-        .dc-fab.hidden { opacity: 0 !important; pointer-events: none !important; }
-      `}</style>
-      <button className={`dc-fab${hidden ? ' hidden' : ''}`}
-        onClick={() => window.scrollBy({ top: 500, behavior: 'smooth' })}
-        style={{ position: 'fixed', bottom: 28, left: '50%', transform: 'translateX(-50%)', zIndex: 50, display: 'flex', alignItems: 'center', gap: 8, background: 'var(--bg2)', color, border: `1.5px solid ${color}60`, borderRadius: 999, padding: '10px 22px', cursor: 'pointer', fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 600 }}>
-        <span>Scroll for results</span>
-        <svg style={{ animation: 'bounceY 1.2s ease-in-out infinite' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
-    </>
-  );
-}
-
-
-// ─── SVG Icon Components ──────────────────────────────────────────────────────
-
-function MoodIcon({ mood, color }: { mood: string; color: string }) {
-  const s = { width: 24, height: 24, flexShrink: 0 } as React.CSSProperties;
-  if (mood === 'great') return (
-    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
-      <circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2" strokeLinecap="round"/>
-      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
-    </svg>
-  );
-  if (mood === 'ok') return (
-    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
-      <circle cx="12" cy="12" r="9"/><line x1="9" y1="14" x2="15" y2="14" strokeLinecap="round"/>
-      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
-    </svg>
-  );
-  if (mood === 'meh') return (
-    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
-      <circle cx="12" cy="12" r="9"/><path d="M9 15s1-1 3-1 3 1 3 1" strokeLinecap="round"/>
-      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
-    </svg>
-  );
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" style={s}>
-      <circle cx="12" cy="12" r="9"/><path d="M9 16s1.5-2 3-2 3 2 3 2" strokeLinecap="round"/>
-      <circle cx="9" cy="10" r="1" fill={color}/><circle cx="15" cy="10" r="1" fill={color}/>
-    </svg>
-  );
-}
-
-function CheckIcon({ size = 12 }: { size?: number }) {
-  return (
-    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-      style={{ width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 3 }}>
-      <polyline points="2 6 5 9 10 3"/>
-    </svg>
-  );
-}
-
-function CrossIcon({ size = 12 }: { size?: number }) {
-  return (
-    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      style={{ width: size, height: size, display: 'inline-block', verticalAlign: 'middle', marginRight: 3 }}>
-      <line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>
-    </svg>
-  );
-}
-
-function WarnIcon() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" stroke="var(--gold)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-      style={{ width: 16, height: 16, flexShrink: 0, marginTop: 2 }}>
-      <path d="M10 2L2 17h16L10 2z"/>
-      <line x1="10" y1="8" x2="10" y2="12"/><circle cx="10" cy="15" r="0.8" fill="var(--gold)" stroke="none"/>
-    </svg>
-  );
-}
-
-function UploadIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-      style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 5 }}>
-      <path d="M8 10V3M5 6l3-3 3 3"/><path d="M3 13h10"/>
-    </svg>
-  );
-}
-
-function LockIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-      style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 5 }}>
-      <rect x="3" y="8" width="10" height="7" rx="1.5"/>
-      <path d="M5 8V6a3 3 0 0 1 6 0v2"/>
-    </svg>
-  );
-}
-
-function NoteIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke="var(--gold)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-      style={{ width: 15, height: 15, flexShrink: 0 }}>
-      <rect x="2" y="2" width="12" height="12" rx="1.5"/>
-      <line x1="5" y1="6" x2="11" y2="6"/><line x1="5" y1="9" x2="9" y2="9"/>
-    </svg>
   );
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 function TestPageInner() {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [isPremium, setIsPremium] = useState(false);
 
   const [phase, setPhase] = useState<Phase>('config');
   // Pre-select from ?optional= URL param if valid
   const urlOptional = searchParams.get('optional');
   const urlSubject = urlOptional && urlOptional in OPTIONAL_TO_SUBJECT ? OPTIONAL_TO_SUBJECT[urlOptional] : null;
-  const [subject, setSubject] = useState<SubjectId>(urlSubject && SUBJECTS[urlSubject].dataFile ? urlSubject : 'sociology');
+  const [subject, setSubject] = useState<SubjectId>(urlSubject ?? 'sociology');
   const [paper, setPaper] = useState<PaperChoice>('Paper I');
   const [mode, setMode] = useState<TestMode>('sectional');
 
@@ -917,18 +492,20 @@ function TestPageInner() {
 
   const [includeMapQ, setIncludeMapQ] = useState(false);
   const [mapEntries, setMapEntries] = useState<GeoMapEntry[]>([]);
+  const [mapScore, setMapScore] = useState(0);
 
-  const [compQ, setCompQ] = useState<PYQ[]>([]);
-  const [groups, setGroups] = useState<QGroup[]>([]);
-
+  const [blocks, setBlocks] = useState<QBlockData[]>([]);
   const [rubrics, setRubrics] = useState<Record<number, RubricState>>({});
   const [timerOn, setTimerOn] = useState(false);
 
-  const [navH, setNavH] = useState(60);
+  // Sign-in, then back to this test with the same optional chosen.
+  const goSignIn = useCallback(() => {
+    router.push(`/login?next=${encodeURIComponent(`/test?optional=${SUBJECTS[subject].optional}`)}`);
+  }, [router, subject]);
 
   // Profile: open on the reader's own optional
   useEffect(() => {
-    if (!user) return;
+    if (!user || urlSubject) return;
     (async () => {
       try {
         const token = await user.getIdToken();
@@ -936,11 +513,11 @@ function TestPageInner() {
         if (r.ok) {
           const d = await r.json();
           const mapped = OPTIONAL_TO_SUBJECT[d.optional as string];
-          if (mapped && SUBJECTS[mapped].dataFile) setSubject(mapped);
+          if (mapped) setSubject(mapped);
         }
       } catch { /* ignore */ }
     })();
-  }, [user]);
+  }, [user, urlSubject]);
 
   // Premium, for the subject on screen. This used to read `subscribed` off
   // /api/user-profile, which has never returned one, so every subscriber saw
@@ -962,349 +539,408 @@ function TestPageInner() {
     return () => { live = false; };
   }, [user, subject]);
 
-  // Nav height
-  useEffect(() => {
-    const nav = document.querySelector('nav, header') as HTMLElement | null;
-    if (nav) setNavH(nav.offsetHeight);
-  }, []);
-
   // Load PYQs when subject changes
   useEffect(() => {
-    const meta = SUBJECTS[subject];
     if (subject !== 'geography') setIncludeMapQ(false);
-    if (!meta.dataFile) { setPyqs([]); return; }
     setLoading(true);
-    fetch(meta.dataFile)
+    fetch(SUBJECTS[subject].dataFile)
       .then(r => r.json())
       .then(d => { setPyqs(d); setLoading(false); })
       .catch(() => { setPyqs([]); setLoading(false); });
   }, [subject]);
 
+  // Each phase starts at the top of the page.
+  useEffect(() => { window.scrollTo(0, 0); }, [phase]);
+
   // Timing
   const totalMins = mode === 'full' ? 180 : 105;
   const maxMarks = mode === 'full' ? 250 : 150;
-  function handleSubmit() { setTimerOn(false); setPhase('results'); }
+  const handleSubmit = useCallback(() => { setTimerOn(false); setPhase('results'); }, []);
   const { rem, display } = useTimer(totalMins * 60, timerOn, handleSubmit);
   const urgency = rem < 300;
-
-  const subMeta = SUBJECTS[subject];
-
-  function getPool(): PYQ[] {
-    if (paper === 'both') return pyqs;
-    return pyqs.filter(q => q.paper === paper);
-  }
+  const mapAllowed = subject === 'geography' && (paper === 'Paper II' || paper === 'both');
+  const withMap = includeMapQ && mapAllowed;
 
   function startTest() {
-    const pool = getPool();
-    const q1 = buildCompulsoryQ(pool, includeMapQ && subject === 'geography' ? 4 : 5);
-    const g2 = buildQGroup(pool, 2);
-    const g3 = buildQGroup(pool, 3);
-    const g4 = buildQGroup(pool, 4);
-
-    setCompQ(q1);
-    setGroups(mode === 'full'
-      ? [g2, g3, g4, buildQGroup(pool, 5), buildQGroup(pool, 6), buildQGroup(pool, 7), buildQGroup(pool, 8)]
-      : [g2, g3, g4]);
-
-    // Pick 10 random map entries (unique names)
-    if (includeMapQ && subject === 'geography') {
+    if (authLoading) return;
+    if (!user) { goSignIn(); return; }
+    const pool = paper === 'both' ? pyqs : pyqs.filter(q => q.paper === paper);
+    setBlocks(buildPaper(pool, mode, withMap));
+    if (withMap) {
       const seen = new Set<string>();
-      const pool10 = shuffle(geoMapData).filter(e => {
+      setMapEntries(shuffle(geoMapData).filter(e => {
         if (seen.has(e.name)) return false;
         seen.add(e.name); return true;
-      }).slice(0, 10);
-      setMapEntries(pool10);
+      }).slice(0, 10));
     } else {
       setMapEntries([]);
     }
-
+    setMapScore(0);
     setRubrics({});
     setTimerOn(true);
     setPhase('test');
   }
 
-  const hasData = pyqs.length > 0 && !loading;
-  const canStart = hasData;
+  const canStart = pyqs.length > 0 && !loading;
+  const tint = { ['--t' as string]: `var(--tint-${subject})`, ['--w' as string]: `var(--wash-${subject})` };
+  const onRubric = (id: number, r: RubricState) => setRubrics(p => ({ ...p, [id]: r }));
+
+  const renderBlocks = (isResults: boolean) => {
+    const sectionB = blocks.findIndex(b => b.qNum === 5);
+    return blocks.map((b, i) => (
+      <div key={b.qNum}>
+        {mode === 'full' && (i === 0 || i === sectionB) && <h2 className={`ts-section${i === 0 ? ' first' : ''}`}>Section {i === 0 ? 'A' : 'B'}</h2>}
+        <QBlock block={b} isResults={isResults} rubrics={rubrics} onRubric={onRubric}
+          subjectId={subject} isPremium={isPremium} user={user} onSignIn={goSignIn}
+          mapEntries={b.qNum === 1 && mapEntries.length ? mapEntries : undefined}
+          mapScore={mapScore} onMapScore={setMapScore} />
+      </div>
+    ));
+  };
 
   // ── CONFIG ─────────────────────────────────────────────────────────────────
 
   if (phase === 'config') {
     return (
-      <div style={{ maxWidth: 700, margin: '0 auto', padding: '2.5rem 1.5rem 6rem' }}>
-        <style>{`
-          .dc-sub-btn { transition: all 0.15s; }
-          .dc-sub-btn:hover { filter: brightness(1.1); }
-          .dc-mode-btn { transition: all 0.15s; }
-          .dc-mode-btn:hover { border-color: var(--border3) !important; }
-        `}</style>
-
-        <div style={{ fontSize: '0.68rem', fontWeight: 500, fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text3)', marginBottom: '0.5rem' }}>Distilled Crux · Practice</div>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.3rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-          Start a Test
-        </h1>
-        <p style={{ color: 'var(--text2)', fontSize: '0.9rem', fontWeight: 500, marginBottom: '2.5rem', fontFamily: 'var(--font-ui)' }}>
-          Questions drawn from the full PYQ bank. Papers follow the exact UPSC Mains format.
-        </p>
-
-        {/* Subject selector */}
-        <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Optional Subject</div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {(Object.entries(SUBJECTS) as [SubjectId, typeof SUBJECTS[SubjectId]][]).map(([id, s]) => {
-              const active = subject === id;
-              const noData = !s.dataFile;
-              return (
-                <button key={id} className="dc-sub-btn"
-                  onClick={() => { if (!noData) setSubject(id); }}
-                  style={{
-                    padding: '0.5rem 1rem', borderRadius: 20, fontFamily: 'var(--font-ui)', fontSize: '0.85rem',
-                    border: active ? `1.5px solid ${s.color}` : '1px solid var(--border)',
-                    background: active ? s.dim : 'var(--bg2)',
-                    color: active ? s.color : noData ? 'var(--text3)' : 'var(--text2)',
-                    fontWeight: active ? 600 : 400,
-                    cursor: noData ? 'not-allowed' : 'pointer',
-                    opacity: noData ? 0.4 : 1,
-                  }}>
-                  <SubjectIcon id={id} color={active ? s.color : 'var(--text3)'} size={14} style={{ marginRight: 4 }} /> {s.label}{noData ? ' (soon)' : ''}
-                </button>
-              );
-            })}
+      <div className="ts ds" style={tint}>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <header className="ts-hero">
+          <div className="ds-container">
+            <h1 className="ds-h1 ts-h1">Sit a practice paper</h1>
+            <p className="ds-lede ts-lede">Real past questions in the Mains format, against the clock. Write on paper, then mark yourself against the rubric, or have answers checked.</p>
           </div>
-        </div>
+        </header>
 
-        {/* Paper selector */}
-        <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Paper</div>
-          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-            {(['Paper I', 'Paper II', 'both'] as PaperChoice[]).map(p => {
-              const active = paper === p;
-              return (
-                <button key={p} className="dc-mode-btn"
-                  onClick={() => setPaper(p)}
-                  style={{
-                    flex: 1, minWidth: 100, padding: '0.75rem 1rem', borderRadius: 8, fontFamily: 'var(--font-ui)', fontSize: '0.85rem', textAlign: 'left',
-                    border: active ? `1.5px solid ${subMeta.color}` : '1px solid var(--border)',
-                    background: active ? subMeta.dim : 'var(--bg2)',
-                    color: active ? 'var(--text)' : 'var(--text2)',
-                    fontWeight: active ? 600 : 400, cursor: 'pointer',
-                  }}>
-                  {p === 'both' ? 'Both Papers' : p}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        <div className="ds-container ts-grid">
+          <section className="ts-card">
+            <div className="ts-field">
+              <span className="ts-label">Optional</span>
+              <div className="ts-pills" role="radiogroup" aria-label="Optional">
+                {(Object.keys(SUBJECTS) as SubjectId[]).map(id => (
+                  <button key={id} type="button" role="radio" aria-checked={subject === id}
+                    className={`ts-pill${subject === id ? ' on' : ''}`} onClick={() => setSubject(id)}
+                    style={{ ['--t' as string]: `var(--tint-${id})`, ['--w' as string]: `var(--wash-${id})` }}>
+                    <SubjectIcon id={id} size={16} />{SUBJECTS[id].label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        {/* Map question toggle — geography only, Paper II or both */}
-        {subject === 'geography' && (paper === 'Paper II' || paper === 'both') && (
-          <div style={{ marginBottom: '2rem' }}>
-            <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Map Question</div>
-            <button
-              onClick={() => setIncludeMapQ(v => !v)}
-              style={{
-                display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%',
-                padding: '0.75rem 1rem', borderRadius: 8, textAlign: 'left', cursor: 'pointer',
-                border: includeMapQ ? `1.5px solid ${subMeta.color}` : '1px solid var(--border)',
-                background: includeMapQ ? subMeta.dim : 'var(--bg2)',
-              }}>
-              <div style={{
-                width: 16, height: 16, borderRadius: 3, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                border: includeMapQ ? `2px solid ${subMeta.color}` : '2px solid var(--border3)',
-                background: includeMapQ ? subMeta.color : 'transparent',
-              }}>
-                {includeMapQ && (
-                  <svg viewBox="0 0 10 10" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 10, height: 10 }}>
-                    <polyline points="1.5 5 4 7.5 8.5 2.5"/>
-                  </svg>
-                )}
+            <div className="ts-field">
+              <span className="ts-label">Paper</span>
+              <div className="ts-seg" role="radiogroup" aria-label="Paper">
+                {(['Paper I', 'Paper II', 'both'] as PaperChoice[]).map(p => (
+                  <button key={p} type="button" role="radio" aria-checked={paper === p}
+                    className={`ts-seg-btn${paper === p ? ' on' : ''}`} onClick={() => setPaper(p)}>
+                    {p === 'both' ? 'Both papers' : p}
+                  </button>
+                ))}
               </div>
-              <div>
-                <div style={{ fontSize: '0.88rem', fontWeight: includeMapQ ? 600 : 400, color: includeMapQ ? 'var(--text)' : 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
-                  Include Map Question (Q.1a · Paper II)
-                </div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>
-                  10 locations · 20 marks · self-eval rubric + significance reveal
-                </div>
+            </div>
+
+            <div className="ts-field">
+              <span className="ts-label">Format</span>
+              <div className="ts-formats" role="radiogroup" aria-label="Format">
+                {([
+                  { id: 'sectional' as TestMode, title: 'Sectional', facts: '1 hr 45 min · 150 marks', desc: 'Section A: four questions, attempt three.' },
+                  { id: 'full' as TestMode, title: 'Full paper', facts: '3 hours · 250 marks', desc: 'Both sections: eight questions, attempt five.' },
+                ]).map(m => (
+                  <button key={m.id} type="button" role="radio" aria-checked={mode === m.id}
+                    className={`ts-format${mode === m.id ? ' on' : ''}`} onClick={() => setMode(m.id)}>
+                    <span className="ts-format-title">{m.title}</span>
+                    <span className="ts-format-facts">{m.facts}</span>
+                    <span className="ts-format-desc">{m.desc}</span>
+                  </button>
+                ))}
               </div>
+            </div>
+
+            {mapAllowed && (
+              <label className="ts-switch">
+                <input type="checkbox" checked={includeMapQ} onChange={e => setIncludeMapQ(e.target.checked)} />
+                <span className="ts-switch-track" aria-hidden="true" />
+                <span className="ts-switch-text">
+                  <strong>Include the map question</strong>
+                  <span>Ten places to mark on India’s outline, 20 marks, as Question 1(a) of Paper II.</span>
+                </span>
+              </label>
+            )}
+
+            <button type="button" className="ds-btn ds-btn-solid ts-start" onClick={startTest} disabled={!canStart && !!user}>
+              {loading ? 'Loading questions…' : !user && !authLoading ? 'Sign in to start' : 'Start the paper'}
             </button>
-          </div>
-        )}
+          </section>
 
-        {/* Mode selector */}
-        <div style={{ marginBottom: '2rem' }}>
-          <div style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', fontFamily: 'var(--font-ui)' }}>Test Format</div>
-          {([
-            { id: 'sectional' as TestMode, title: 'Sectional Test', sub: '105 min · 150 marks · 4 questions', desc: 'Q1 compulsory + attempt 2 of 3 remaining. Focused practice.' },
-            { id: 'full'      as TestMode, title: 'Full-Length Test', sub: '3 hours · 250 marks · 8 questions',  desc: 'Complete paper Q1 & Q5 compulsory + 3 more.' },
-          ]).map(m => (
-            <button key={m.id} className="dc-mode-btn"
-              onClick={() => setMode(m.id)}
-              style={{
-                display: 'flex', alignItems: 'center', gap: '1rem', width: '100%',
-                padding: '0.85rem 1.1rem', borderRadius: 8, textAlign: 'left',
-                border: mode === m.id ? `1.5px solid ${subMeta.color}` : '1px solid var(--border)',
-                background: mode === m.id ? subMeta.dim : 'var(--bg2)',
-                cursor: 'pointer', marginBottom: '0.5rem',
-              }}>
-              <div style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0,
-                border: mode === m.id ? `2px solid ${subMeta.color}` : '2px solid var(--border3)',
-                background: mode === m.id ? subMeta.color : 'transparent' }} />
-              <div>
-                <div style={{ fontSize: '0.9rem', fontWeight: mode === m.id ? 600 : 400, color: mode === m.id ? 'var(--text)' : 'var(--text2)', fontFamily: 'var(--font-ui)' }}>
-                  {m.title}<span style={{ marginLeft: '0.5rem', fontSize: '0.72rem', color: 'var(--text3)', fontWeight: 400 }}>{m.sub}</span>
-                </div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', marginTop: '0.1rem', fontFamily: 'var(--font-ui)' }}>{m.desc}</div>
-              </div>
-            </button>
-          ))}
+          <aside className="ts-aside">
+            <div className="ts-side">
+              <h2>How it works</h2>
+              <ol className="ts-how">
+                <li><span>1</span><div><strong>Write on paper</strong><p>The questions appear with a timer. Answer by hand, as in the hall.</p></div></li>
+                <li><span>2</span><div><strong>Mark it</strong><p>When time is up, or you finish, mark each answer against the rubric.</p></div></li>
+                <li><span>3</span><div><strong>Have answers checked</strong><p>Upload a photo of any answer and the AI marks it. That part is Premium.</p></div></li>
+              </ol>
+            </div>
+          </aside>
         </div>
-
-        {/* Info banner */}
-        <div style={{ background: 'var(--gold-dim)', border: '1px solid rgba(232,184,109,0.2)', borderRadius: 8, padding: '0.7rem 1rem', marginBottom: '1.75rem', color: 'var(--text2)', fontSize: '0.8rem', fontWeight: 500, display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-ui)' }}>
-          <NoteIcon />
-          <span>
-            Q1 is always compulsory 5 short notes (10M each = 50M). Remaining questions are 2×20M + 1×10M each.
-            {includeMapQ && ' · Map Q.1(a) adds 10 locations × 2M = 20M (Paper II compulsory).'}
-          </span>
-        </div>
-
-        {/* Start button */}
-        <button
-          onClick={() => {
-            if (!user) { alert('Please sign in to start a test.'); return; }
-            if (!canStart) return;
-            startTest();
-          }}
-          style={{
-            background: canStart ? subMeta.color : 'var(--bg3)',
-            color: canStart ? '#fff' : 'var(--text3)',
-            border: 'none', borderRadius: 8, padding: '0.9rem 2.5rem',
-            fontSize: '0.95rem', fontWeight: 600, cursor: canStart ? 'pointer' : 'not-allowed',
-            fontFamily: 'var(--font-ui)', transition: 'filter 0.15s',
-          }}
-          onMouseOver={e => { if (canStart) (e.currentTarget as HTMLButtonElement).style.filter = 'brightness(1.1)'; }}
-          onMouseOut={e => { (e.currentTarget as HTMLButtonElement).style.filter = ''; }}
-        >
-          {loading ? 'Loading PYQs…' : 'Begin Test →'}
-        </button>
-
-        {!user && (
-          <p style={{ marginTop: '0.75rem', color: 'var(--text3)', fontSize: '0.8rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>
-            <a href="/login" style={{ color: subMeta.color, textDecoration: 'none' }}>Sign in</a> to generate a test paper.
-          </p>
-        )}
       </div>
     );
   }
 
-  // ── TEST PHASE ──────────────────────────────────────────────────────────────
+  // ── TEST ───────────────────────────────────────────────────────────────────
 
   if (phase === 'test') {
     const progressPct = ((totalMins * 60 - rem) / (totalMins * 60)) * 100;
     return (
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem 6rem' }}>
-        {/* Sticky timer */}
-        <div style={{ position: 'sticky', top: navH, zIndex: 90, background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '0.6rem 0' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', fontFamily: 'var(--font-ui)' }}>
-              <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                <SubjectIcon id={subject} color={subMeta.color} size={14} style={{ marginRight: 4 }} /> {subMeta.label} {mode === 'full' ? 'Full Test' : 'Sectional'}
-              </span>
-              <span style={{ color: 'var(--text3)', fontSize: '0.72rem', fontWeight: 500 }}>· {maxMarks}M</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.3rem', fontWeight: 700, color: urgency ? 'var(--red)' : 'var(--text)' }}>
-                {display}
-              </span>
-              <button onClick={handleSubmit} style={{ background: '#e05c2a', color: '#fff', border: 'none', borderRadius: 6, padding: '0.4rem 1rem', fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-                Submit
-              </button>
-            </div>
+      <div className="ts ds" style={tint}>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <div className="ts-bar">
+          <div className="ds-container ts-bar-in">
+            <span className="ts-bar-what"><SubjectIcon id={subject} size={16} />{SUBJECTS[subject].label} · {mode === 'full' ? 'Full paper' : 'Sectional'}</span>
+            <span className={`ts-clock${urgency ? ' late' : ''}`} aria-live="off">{display}</span>
+            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={handleSubmit}>I’m done</button>
           </div>
-          <div style={{ height: 2, background: 'var(--border)', marginTop: '0.5rem', borderRadius: 1 }}>
-            <div style={{ height: '100%', borderRadius: 1, width: `${progressPct}%`, background: urgency ? 'var(--red)' : subMeta.color, transition: 'width 1s linear, background 0.3s' }} />
+          <div className="ts-bar-progress"><span style={{ width: `${progressPct}%` }} className={urgency ? 'late' : ''} /></div>
+        </div>
+        <div className="ds-container ts-paper-wrap">
+          <PaperHeader subject={subject} mode={mode} paper={paper} totalMins={totalMins} maxMarks={maxMarks} />
+          {renderBlocks(false)}
+          <div className="ts-end">
+            <button type="button" className="ds-btn ds-btn-solid" onClick={handleSubmit}>I’m done, mark my paper</button>
           </div>
-        </div>
-
-        <div style={{ marginTop: '1.5rem' }}>
-          <InstructionsHeader subject={subject} mode={mode} paper={paper} totalMins={totalMins} maxMarks={maxMarks} />
-        </div>
-
-        <div id="q1-anchor">
-          <CompulsoryBlock questions={compQ} isResults={false} rubrics={rubrics} onRubric={() => {}} subjectId={subject} isPremium={isPremium} user={user} mapEntries={mapEntries.length > 0 ? mapEntries : undefined} />
-        </div>
-
-        {groups.map(g => (
-          <QBlock key={g.qNum} group={g} isResults={false} rubrics={rubrics} onRubric={() => {}} subjectId={subject} isPremium={isPremium} user={user} />
-        ))}
-      </div>
-    );
-  }
-
-  // ── RESULTS PHASE ───────────────────────────────────────────────────────────
-
-  if (phase === 'results') {
-    const allQs = [...compQ, ...groups.flatMap(g => g.questions)];
-    const written = allQs.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0);
-    const pct = Math.round((written / maxMarks) * 100);
-
-    return (
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1.5rem 6rem' }}>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.25rem', letterSpacing: '-0.02em' }}>Test Results</h1>
-        <p style={{ color: 'var(--text2)', fontSize: '0.88rem', fontWeight: 500, marginBottom: '2rem', fontFamily: 'var(--font-ui)' }}>
-          Use the rubric sliders to self-evaluate. Premium users can upload answer images for AI Mentor evaluation.
-        </p>
-
-        <ScrollFab color={subMeta.color} />
-
-        {/* Score card */}
-        <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '1.5rem', marginBottom: '2rem', display: 'flex', gap: '2.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
-          <div>
-            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Self Score</div>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem' }}>
-              <span style={{ fontSize: '2.2rem', fontWeight: 700, fontFamily: 'var(--font-mono)', color: subMeta.color }}>{written.toFixed(1)}</span>
-              <span style={{ color: 'var(--text3)', fontSize: '0.88rem', fontWeight: 500, fontFamily: 'var(--font-ui)' }}>/ {maxMarks}</span>
-            </div>
-          </div>
-          <div>
-            <div style={{ color: 'var(--text3)', fontSize: '0.7rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, fontFamily: 'var(--font-ui)' }}>Time Used</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>{Math.floor((totalMins * 60 - rem) / 60)}m</div>
-          </div>
-          <div style={{ flex: 1, minWidth: 140 }}>
-            <div style={{ height: 8, background: 'var(--bg3)', borderRadius: 4 }}>
-              <div style={{ height: '100%', borderRadius: 4, width: `${Math.min(pct, 100)}%`, background: pct >= 60 ? 'var(--green)' : pct >= 40 ? 'var(--gold)' : 'var(--red)', transition: 'width 1s' }} />
-            </div>
-            <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text3)', marginTop: 4, fontFamily: 'var(--font-ui)' }}>{pct}% of total marks</div>
-          </div>
-        </div>
-
-        <div id="q1-anchor">
-          <CompulsoryBlock questions={compQ} isResults={true} rubrics={rubrics} onRubric={(id, r) => setRubrics(p => ({ ...p, [id]: r }))} subjectId={subject} isPremium={isPremium} user={user} mapEntries={mapEntries.length > 0 ? mapEntries : undefined} />
-        </div>
-
-        {groups.map(g => (
-          <QBlock key={g.qNum} group={g} isResults={true} rubrics={rubrics} onRubric={(id, r) => setRubrics(p => ({ ...p, [id]: r }))} subjectId={subject} isPremium={isPremium} user={user} />
-        ))}
-
-        <div style={{ textAlign: 'center', marginTop: '3rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button onClick={() => setPhase('config')} style={{ background: subMeta.color, color: '#fff', border: 'none', borderRadius: 8, padding: '0.85rem 2rem', fontSize: '0.95rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-            Start Another Test
-          </button>
-          <button onClick={() => window.location.href = `/${subject}`} style={{ background: 'var(--bg2)', color: 'var(--text)', border: '1px solid var(--border)', borderRadius: 8, padding: '0.85rem 2rem', fontSize: '0.95rem', cursor: 'pointer', fontFamily: 'var(--font-ui)' }}>
-            Back to {subMeta.label}
-          </button>
         </div>
       </div>
     );
   }
 
-  return null;
+  // ── RESULTS ────────────────────────────────────────────────────────────────
+
+  const allQs = blocks.flatMap(b => b.questions);
+  const written = allQs.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) + (mapEntries.length ? mapScore : 0);
+  const pct = Math.round((written / maxMarks) * 100);
+  const used = Math.floor((totalMins * 60 - rem) / 60);
+
+  return (
+    <div className="ts ds" style={tint}>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="ds-container ts-paper-wrap ts-results">
+        <h1 className="ts-results-title">Mark your paper</h1>
+        <p className="ts-results-lede">Mark only the questions you attempted. Slide each part of the rubric to what your answer earned{isPremium ? ', or upload a photo of it to have it checked.' : '.'}</p>
+
+        <div className="ts-summary">
+          <div>
+            <span className="ts-summary-label">Your mark</span>
+            <span className="ts-summary-num">{written.toFixed(1)}<small> / {maxMarks}</small></span>
+          </div>
+          <div>
+            <span className="ts-summary-label">Time used</span>
+            <span className="ts-summary-num">{used}<small> min</small></span>
+          </div>
+          <div className="ts-summary-bar">
+            <span className="ts-summary-label">{Math.min(pct, 100)}% of the marks</span>
+            <div className="ts-meter"><span style={{ width: `${Math.min(pct, 100)}%` }} /></div>
+          </div>
+        </div>
+
+        {renderBlocks(true)}
+
+        <div className="ts-end">
+          <button type="button" className="ds-btn ds-btn-solid" onClick={() => setPhase('config')}>Sit another paper</button>
+          <Link href={`/${subject}`} className="ds-btn ds-btn-line">Back to {SUBJECTS[subject].label}</Link>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function TestPage() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<OwlLoader size="page" label="Loading the test" />}>
       <TestPageInner />
     </Suspense>
   );
 }
+
+const CSS = `
+.ts { background: var(--bg); min-height: var(--page-min-h); padding-bottom: clamp(48px, 9vh, 96px); }
+.ts-hero { padding: clamp(28px, 5vh, 52px) 0 clamp(16px, 3vh, 28px); background: linear-gradient(180deg, color-mix(in srgb, var(--w) 70%, var(--bg)) 0%, var(--bg) 100%); }
+.ts-h1 { font-size: clamp(2rem, 4.4vw, 3rem); margin: 0 0 var(--space-2); }
+.ts-lede { max-width: 640px; }
+
+.ts-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-6); align-items: start; }
+.ts-card { padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); min-width: 0; }
+.ts-field { margin-bottom: var(--space-5); }
+.ts-label { display: block; margin-bottom: var(--space-2); font-size: 0.92rem; font-weight: 700; }
+.ts-pills { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.ts-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 var(--space-4); border: 1.5px solid var(--border2); border-radius: var(--radius-full); background: var(--bg); color: var(--text); font: inherit; font-size: 0.92rem; font-weight: 600; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.ts-pill svg { color: var(--t); }
+.ts-pill:hover { border-color: color-mix(in srgb, var(--t) 50%, transparent); }
+.ts-pill.on { border-color: var(--t); background: var(--w); color: var(--t); }
+.ts-seg { display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--radius-full); background: var(--ds-soft); border: 1px solid var(--border); }
+.ts-seg-btn { padding: 8px 18px; border: none; border-radius: var(--radius-full); background: none; color: var(--text2); font: inherit; font-size: 0.92rem; font-weight: 700; cursor: pointer; transition: background 0.18s, color 0.18s, box-shadow 0.18s; }
+.ts-seg-btn.on { background: var(--ds-card); color: var(--text); box-shadow: var(--elev-1); }
+.ts-formats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.ts-format { display: flex; flex-direction: column; gap: 3px; padding: var(--space-4); border: 1.5px solid var(--border2); border-radius: var(--radius-lg); background: var(--bg); color: var(--text); font: inherit; text-align: left; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.ts-format:hover { border-color: color-mix(in srgb, var(--t) 50%, transparent); }
+.ts-format.on { border-color: var(--t); background: var(--w); }
+.ts-format-title { font-size: 1rem; font-weight: 800; }
+.ts-format.on .ts-format-title { color: var(--t); }
+.ts-format-facts { font-size: 0.88rem; font-weight: 600; color: var(--text2); }
+.ts-format-desc { font-size: 0.86rem; color: var(--text3); line-height: 1.5; }
+.ts-pill:focus-visible, .ts-seg-btn:focus-visible, .ts-format:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.ts-switch { display: flex; align-items: flex-start; gap: var(--space-3); margin-bottom: var(--space-5); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--ds-soft); cursor: pointer; }
+.ts-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.ts-switch-track { position: relative; width: 40px; height: 24px; flex-shrink: 0; margin-top: 2px; border-radius: var(--radius-full); background: var(--border3); transition: background 0.15s; }
+.ts-switch-track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: var(--elev-1); transition: transform 0.15s; }
+.ts-switch input:checked + .ts-switch-track { background: var(--t); }
+.ts-switch input:checked + .ts-switch-track::after { transform: translateX(16px); }
+.ts-switch input:focus-visible + .ts-switch-track { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ts-switch-text { display: flex; flex-direction: column; gap: 2px; font-size: 0.9rem; color: var(--text2); line-height: 1.5; }
+.ts-switch-text strong { color: var(--text); }
+.ts-start { width: 100%; justify-content: center; min-height: 50px; font-size: 1rem; }
+.ts-start:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.ts-aside { position: sticky; top: 84px; }
+.ts-side { padding: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ts-side h2 { margin: 0 0 var(--space-3); font-size: 1rem; font-weight: 800; }
+.ts-how { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.ts-how li { display: flex; gap: var(--space-3); }
+.ts-how li > span { width: 26px; height: 26px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--w); color: var(--t); font-size: 0.82rem; font-weight: 800; }
+.ts-how strong { display: block; font-size: 0.94rem; margin-bottom: 2px; }
+.ts-how p { margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--text2); }
+
+/* The paper */
+.ts-bar { position: sticky; top: 60px; z-index: 40; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.ts-bar-in { display: flex; align-items: center; gap: var(--space-4); padding-top: var(--space-2); padding-bottom: var(--space-2); }
+.ts-bar-what { display: inline-flex; align-items: center; gap: 8px; flex: 1; min-width: 0; font-size: 0.92rem; font-weight: 600; color: var(--text2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-bar-what svg { color: var(--t); flex-shrink: 0; }
+.ts-clock { font-size: 1.4rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.ts-clock.late { color: var(--danger-text); }
+.ts-bar-progress { height: 3px; background: var(--ds-soft); }
+.ts-bar-progress span { display: block; height: 100%; background: var(--t); transition: width 1s linear; }
+.ts-bar-progress span.late { background: var(--danger-text); }
+.ts-paper-wrap { max-width: 900px; padding-top: var(--space-6); }
+.ts-paper { margin-bottom: var(--space-6); padding: var(--space-5) var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ts-paper-title { font-size: 1.15rem; font-weight: 800; text-align: center; }
+.ts-paper-facts { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-2) var(--space-6); margin: var(--space-2) 0 var(--space-4); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border); font-size: 0.92rem; color: var(--text2); }
+.ts-paper-rules { margin: 0; padding-left: 1.2rem; list-style: disc; display: flex; flex-direction: column; gap: 6px; font-size: 0.94rem; line-height: 1.6; color: var(--text2); }
+.ts-paper-rules strong { color: var(--text); }
+.ts-section { margin: var(--space-8) 0 var(--space-3); font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; }
+.ts-section.first { margin-top: 0; }
+
+.ts-block { margin-bottom: var(--space-5); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
+.ts-block-head { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-5); background: var(--ds-soft); border-bottom: 1px solid var(--border); }
+.ts-block-head h3 { margin: 0; font-size: 1.02rem; font-weight: 800; }
+.ts-chip { padding: 2px 10px; border-radius: var(--radius-full); background: var(--w); color: var(--t); font-size: 0.78rem; font-weight: 700; }
+.ts-block-marks { margin-left: auto; font-size: 0.9rem; font-weight: 700; color: var(--text2); font-variant-numeric: tabular-nums; }
+.ts-block-lead { margin: var(--space-4) var(--space-5) 0; font-weight: 600; line-height: 1.55; }
+.ts-q { padding: var(--space-4) var(--space-5); border-top: 1px solid var(--border); }
+.ts-block-head + .ts-q { border-top: none; }
+.ts-block-lead + .ts-q { border-top: none; }
+.ts-q-top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: 4px; }
+.ts-q-label { font-weight: 800; color: var(--t); }
+.ts-q-marks { font-size: 0.86rem; font-weight: 700; color: var(--text2); white-space: nowrap; }
+.ts-q-text { margin: 0 0 var(--space-2); font-size: 1.02rem; line-height: 1.65; }
+.ts-q-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px var(--space-3); font-size: 0.84rem; color: var(--text3); }
+.ts-q-topic { padding: 1px 10px; border-radius: var(--radius-full); background: var(--ds-soft); color: var(--text2); }
+.ts-end { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); margin-top: var(--space-8); }
+
+.ts-places { display: flex; flex-direction: column; gap: 6px; margin-top: var(--space-3); }
+.ts-place { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+.ts-place-row { width: 100%; display: flex; align-items: center; gap: var(--space-3); padding: 10px var(--space-4); border: none; background: var(--bg); color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.ts-place-row:disabled { cursor: default; }
+.ts-place.open .ts-place-row { background: var(--w); }
+.ts-place-n { min-width: 18px; font-weight: 800; color: var(--t); }
+.ts-place-name { flex: 1; min-width: 0; font-weight: 600; }
+.ts-place-cat { padding: 1px 10px; border-radius: var(--radius-full); background: var(--ds-soft); font-size: 0.8rem; color: var(--text2); white-space: nowrap; }
+.ts-place-chev { color: var(--text3); transition: transform 0.2s; }
+.ts-place.open .ts-place-chev { transform: rotate(180deg); }
+.ts-place-more { padding: var(--space-3) var(--space-4); border-top: 1px solid var(--border); font-size: 0.92rem; }
+.ts-place-more span { font-size: 0.82rem; color: var(--text3); }
+.ts-place-more p { margin: 4px 0 0; line-height: 1.6; color: var(--text2); }
+.ts-map-score { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); margin-top: var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--ds-soft); }
+.ts-map-score span { font-weight: 700; font-size: 0.92rem; }
+.ts-map-score small { display: block; font-weight: 400; font-size: 0.8rem; color: var(--text3); }
+.ts-map-score strong { font-variant-numeric: tabular-nums; }
+
+/* Marking */
+.ts-results-title { margin: 0 0 var(--space-2); font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; }
+.ts-results-lede { margin: 0 0 var(--space-5); color: var(--text2); line-height: 1.6; max-width: 720px; }
+.ts-summary { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); margin-bottom: var(--space-6); padding: var(--space-5) var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); }
+.ts-summary > div { display: flex; flex-direction: column; gap: 2px; }
+.ts-summary-label { font-size: 0.86rem; color: var(--text3); }
+.ts-summary-num { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.ts-summary-num small { font-size: 1rem; font-weight: 600; color: var(--text3); }
+.ts-summary-bar { flex: 1; min-width: 200px; }
+.ts-meter { height: 8px; border-radius: var(--radius-full); background: var(--ds-soft); overflow: hidden; }
+.ts-meter span { display: block; height: 100%; background: var(--t); border-radius: inherit; transition: width 0.6s ease; }
+.ts-rubric { margin-top: var(--space-3); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--ds-soft); }
+.ts-rubric-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2); font-weight: 700; font-size: 0.92rem; }
+.ts-rubric-total { font-size: 1.05rem; color: var(--t); font-variant-numeric: tabular-nums; }
+.ts-rubric-row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 70px; align-items: center; gap: var(--space-3); padding: 6px 0; }
+.ts-rubric-label { display: flex; flex-direction: column; min-width: 0; }
+.ts-rubric-label strong { font-size: 0.9rem; }
+.ts-rubric-label span { font-size: 0.8rem; color: var(--text3); }
+.ts-rubric-row input, .ts-map-score input { width: 100%; accent-color: var(--t); cursor: pointer; }
+.ts-rubric-val { text-align: right; font-size: 0.86rem; font-weight: 600; color: var(--text2); font-variant-numeric: tabular-nums; }
+
+.ts-mentor { margin-top: var(--space-3); }
+.ts-mentor-btn svg { flex-shrink: 0; }
+.ts-mentor-wait { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); color: var(--text2); font-size: 0.92rem; }
+.ts-mentor-card { margin-top: var(--space-2); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg); }
+.ts-mentor-title { font-weight: 800; }
+.ts-mentor-sub { margin: 2px 0 var(--space-3); font-size: 0.88rem; color: var(--text2); }
+.ts-textarea { width: 100%; box-sizing: border-box; resize: vertical; padding: var(--space-3); border: 1.5px solid var(--border2); border-radius: var(--radius-md); background: var(--ds-card); color: var(--text); font: inherit; font-size: 0.94rem; line-height: 1.6; outline: none; }
+.ts-textarea:focus { border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
+.ts-mentor-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-3); }
+.ts-err { margin: 0 0 var(--space-3); color: var(--danger-text); font-size: 0.9rem; }
+.ts-mentor-score { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2) var(--space-5); }
+.ts-score-num { font-size: 1.8rem; font-weight: 800; color: var(--t); }
+.ts-score-of { color: var(--text3); font-weight: 600; }
+.ts-score-parts { display: flex; flex-wrap: wrap; gap: var(--space-3); font-size: 0.86rem; color: var(--text2); }
+.ts-score-parts b { text-transform: capitalize; font-weight: 600; color: var(--text); }
+.ts-mentor-note { margin: 4px 0 var(--space-3); font-size: 0.84rem; color: var(--text3); }
+.ts-mentor-feedback { margin: 0 0 var(--space-3); line-height: 1.65; }
+.ts-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-4); margin-bottom: var(--space-3); }
+.ts-col-title { margin-bottom: 4px; font-size: 0.9rem; font-weight: 700; }
+.ts-col-title.good { color: var(--success-text); }
+.ts-col-title.fix { color: var(--danger-text); }
+.ts-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ts-points li { position: relative; padding-left: 14px; font-size: 0.9rem; line-height: 1.55; }
+.ts-points li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 6px; height: 6px; border-radius: 50%; }
+.ts-points.good li::before { background: var(--success-text); }
+.ts-points.fix li::before { background: var(--danger-text); }
+.ts-thinkers { margin-bottom: var(--space-3); }
+.ts-thinker { margin-top: 6px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--ds-soft); font-size: 0.9rem; }
+.ts-thinker span { color: var(--text3); }
+.ts-thinker p { margin: 2px 0 0; color: var(--text2); line-height: 1.55; }
+.ts-model { margin-bottom: var(--space-3); }
+.ts-model summary { cursor: pointer; font-weight: 700; color: var(--accent-text); }
+.ts-model p { margin: var(--space-2) 0 0; line-height: 1.65; color: var(--text2); }
+.ts-model-point { padding-left: var(--space-3); border-left: 2px solid var(--w); }
+
+@media (max-width: 960px) {
+  .ts-grid { grid-template-columns: minmax(0, 1fr); }
+  .ts-aside { position: static; }
+}
+@media (max-width: 640px) {
+  .ts-card { padding: var(--space-5) var(--space-4); }
+  .ts-formats { grid-template-columns: minmax(0, 1fr); }
+  .ts-seg { display: flex; }
+  .ts-seg-btn { flex: 1; padding: 8px 6px; font-size: 0.86rem; }
+  .ts-bar-what { display: none; }
+  .ts-bar-in { justify-content: space-between; }
+  .ts-paper { padding: var(--space-4); }
+  .ts-block-head { padding: var(--space-3) var(--space-4); }
+  .ts-q { padding: var(--space-4); }
+  .ts-block-lead { margin: var(--space-4) var(--space-4) 0; }
+  .ts-rubric-row { grid-template-columns: minmax(0, 1fr) 64px; }
+  .ts-rubric-row input { grid-column: 1 / -1; grid-row: 2; }
+  .ts-map-score { grid-template-columns: minmax(0, 1fr) auto; }
+  .ts-map-score input { grid-column: 1 / -1; grid-row: 2; }
+  .ts-cols { grid-template-columns: minmax(0, 1fr); }
+  .ts-summary { padding: var(--space-4); gap: var(--space-4); }
+  .ts-end .ds-btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .ts-bar-progress span, .ts-meter span, .ts-switch-track, .ts-switch-track::after { transition: none; } }
+`;
