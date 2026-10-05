@@ -1,10 +1,12 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
-import { useParams } from 'next/navigation';
+import { useState, useEffect, useRef, type MouseEvent } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
-import { PYQ_SUBJECTS, type PYQ, type PyqSubject } from './subjects';
+import { sanitizeHtml } from '@/lib/sanitizeHtml';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
+import type { Pyq } from '@/lib/pyqs';
+import { listKey } from './PyqBrowser';
 
 type AnswerEntry = {
   id: string;
@@ -14,177 +16,43 @@ type AnswerEntry = {
   created_at: string;
 };
 
-/**
- * Structural only. Every colour comes from a --pd-* variable that the subject
- * config aliases onto that subject's accent ramp, so this block is shared
- * verbatim by all four subjects instead of being copied and re-tinted.
- */
-const CSS = `
-  .pd-wrap { min-height:100vh; padding:80px 0 96px; background:var(--bg); }
-  .pd-inner {
-    max-width:1100px; margin:0 auto; padding:0 2rem;
-    display:grid; grid-template-columns:1fr 300px; gap:2rem; align-items:start;
-  }
-  @media(max-width:768px){ .pd-inner{grid-template-columns:1fr;} .pd-sidebar{position:static!important;} }
+type Peek = { id: number; question: string } | null;
 
-  /* Breadcrumb */
-  .pd-crumb { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:0.72rem; font-weight: 500; color:var(--text3); margin-bottom:1.5rem; }
-  .pd-crumb a { color:var(--text3); text-decoration:none; transition:color 0.15s; }
-  .pd-crumb a:hover { color:var(--text); }
+type Props = {
+  subject: string;
+  subjectName: string;
+  pyq: Pyq;
+  related: Pyq[];
+  prev: Peek;
+  next: Peek;
+  topicCount: number;
+};
 
-  /* Question card */
-  .pd-qcard {
-    background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2rem; margin-bottom:1.5rem;
-    border-left:3px solid var(--pd-accent);
-  }
-  .pd-badges { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:1rem; }
-  .pd-badge {
-    font-family:var(--font-mono); font-size:0.6rem; font-weight: 500; padding:2px 9px;
-    border-radius:3px; border:1px solid var(--border); background:var(--bg3); color:var(--text3);
-  }
-  .pd-badge.accent { background:var(--pd-accent-dim); border-color:var(--pd-accent-border); color:var(--pd-accent); }
-  .pd-badge.m10 { background:rgba(74,222,128,0.06); border-color:rgba(74,222,128,0.15); color:#4ade80; }
-  .pd-badge.m15 { background:rgba(251,191,36,0.06); border-color:rgba(251,191,36,0.15); color:#fbbf24; }
-  .pd-badge.m20 { background:rgba(248,113,113,0.06); border-color:rgba(248,113,113,0.15); color:#f87171; }
-  [data-theme="light"] .pd-badge.m10 { background:rgba(21,128,61,0.07); border-color:rgba(21,128,61,0.22); color:#15803d; }
-  [data-theme="light"] .pd-badge.m15 { background:rgba(180,83,9,0.07); border-color:rgba(180,83,9,0.22); color:#b45309; }
-  [data-theme="light"] .pd-badge.m20 { background:rgba(185,28,28,0.07); border-color:rgba(185,28,28,0.22); color:#b91c1c; }
-  .pd-question { font-family:var(--font-body); font-size:1.05rem; color:var(--text); line-height:1.75; }
-
-  /* Action row */
-  .pd-actions { display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem; }
-  .pd-btn-primary {
-    display:inline-flex; align-items:center; gap:6px;
-    font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
-    background:var(--pd-accent); color:var(--pd-on-accent);
-    padding:8px 18px; border-radius:6px; border:none; cursor:pointer; transition:opacity 0.15s;
-    text-decoration:none;
-  }
-  .pd-btn-primary:hover { opacity:0.88; }
-  .pd-btn-ghost {
-    display:inline-flex; align-items:center; gap:6px;
-    font-family:var(--font-ui); font-size:0.82rem; font-weight:600;
-    background:transparent; color:var(--text2);
-    padding:8px 18px; border-radius:6px; border:1px solid var(--border); cursor:pointer; transition:all 0.15s;
-    text-decoration:none;
-  }
-  .pd-btn-ghost:hover { border-color:var(--pd-accent-border); color:var(--pd-accent); background:var(--pd-accent-dim); }
-
-  .pd-section-label {
-    font-family:var(--font-mono); font-size:0.58rem; font-weight: 500; letter-spacing:0.18em;
-    text-transform:uppercase; color:var(--text3); margin-bottom:1rem;
-  }
-
-  /* Model answer */
-  .pd-model-card {
-    background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.75rem 2rem; position:relative; overflow:hidden;
-  }
-  .pd-model-card::before {
-    content:''; position:absolute; top:0; left:0; right:0; height:2px;
-    background:linear-gradient(90deg, var(--pd-accent) 0%, var(--pd-accent-border) 60%, transparent 100%);
-  }
-  .pd-model-prose { font-family:var(--font-body); font-size:0.95rem; color:var(--text2); line-height:1.85; }
-  .pd-model-prose h3 { font-family:var(--font-ui); font-size:0.9rem; color:var(--text); margin:1.25rem 0 0.5rem; font-weight:700; }
-  .pd-model-prose strong { color:var(--text); font-weight:700; }
-  .pd-model-prose .bullet { display:flex; gap:8px; margin:0.35rem 0; }
-  .pd-model-prose .bullet::before { content:'·'; color:var(--pd-accent); flex-shrink:0; font-size:1rem; line-height:1.6; }
-  .pd-model-blur { mask-image:linear-gradient(to bottom, #000 55%, transparent 100%); -webkit-mask-image:linear-gradient(to bottom, #000 55%, transparent 100%); }
-  .pd-paywall {
-    position:absolute; left:0; right:0; bottom:0;
-    display:flex; flex-direction:column; align-items:center; gap:0.5rem;
-    background:linear-gradient(to bottom, rgba(5,5,8,0) 0%, var(--bg) 40%);
-    padding:2rem;
-  }
-  [data-theme="light"] .pd-paywall { background:linear-gradient(to bottom, rgba(248,248,252,0) 0%, var(--bg) 40%); }
-  .pd-paywall-text { font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; color:var(--text3); margin:0; }
-
-  .pd-generating {
-    display:flex; align-items:center; gap:8px; padding:1.5rem 0;
-    font-family:var(--font-mono); font-size:0.72rem; font-weight: 500; color:var(--text3); letter-spacing:0.06em;
-  }
-  .pd-dot { width:6px; height:6px; border-radius:50%; background:var(--pd-accent);
-    animation:pd-dot 1.2s ease-in-out infinite; }
-  .pd-dot:nth-child(2){ animation-delay:0.15s; }
-  .pd-dot:nth-child(3){ animation-delay:0.3s; }
-  @keyframes pd-dot { 0%,100%{opacity:0.25;} 50%{opacity:1;} }
-
-  /* Prev / next */
-  .pd-nav { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:2rem; }
-  .pd-nav-btn {
-    display:inline-flex; align-items:center; gap:6px;
-    font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text2);
-    padding:7px 14px; border:1px solid var(--border); border-radius:6px;
-    text-decoration:none; transition:all 0.15s;
-  }
-  .pd-nav-btn:hover { border-color:var(--pd-accent-border); color:var(--pd-accent); background:var(--pd-accent-dim); }
-
-  /* Upload */
-  .pd-upload-card {
-    background:var(--bg2); border:1px solid var(--border); border-radius:12px;
-    padding:1.5rem; margin-bottom:1.5rem;
-  }
-  .pd-upload-input {
-    width:100%; background:var(--bg3); border:1px solid var(--border);
-    border-radius:6px; padding:0.6rem 0.8rem; color:var(--text);
-    font-family:var(--font-ui); font-size:0.84rem; font-weight: 500; outline:none; box-sizing:border-box;
-    margin-bottom:0.6rem;
-  }
-  .pd-upload-input:focus { border-color:var(--pd-accent-border2); }
-
-  .pd-answer-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:0.75rem; }
-  .pd-answer-card {
-    background:var(--bg2); border:1px solid var(--border); border-radius:8px;
-    padding:1rem 1.1rem; text-decoration:none; display:block; transition:background 0.15s;
-  }
-  .pd-answer-card:hover { background:var(--bg3); border-color:var(--pd-accent-border); }
-  .pd-answer-icon { font-size:1.1rem; margin-bottom:0.4rem; }
-  .pd-answer-name { font-family:var(--font-ui); font-size:0.82rem; color:var(--text); font-weight:600;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px; }
-  .pd-answer-meta { font-family:var(--font-mono); font-size:0.62rem; font-weight: 500; color:var(--text3); }
-
-  /* Sidebar */
-  .pd-sidebar { position:sticky; top:90px; display:flex; flex-direction:column; gap:1rem; }
-  .pd-sidebar-card {
-    background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:1.25rem;
-  }
-  .pd-related { display:flex; flex-direction:column; gap:0.5rem; }
-  .pd-related-item {
-    display:block; padding:0.6rem 0.75rem; border:1px solid var(--border); border-radius:6px;
-    text-decoration:none; font-family:var(--font-ui); font-size:0.78rem; font-weight: 500; color:var(--text2); line-height:1.5;
-    transition:all 0.15s;
-  }
-  .pd-related-item:hover { border-color:var(--pd-accent-border); background:var(--pd-accent-dim); color:var(--pd-accent); }
-  .pd-related-year { font-family:var(--font-mono); font-size:0.6rem; font-weight: 500; color:var(--text3); margin-top:3px; }
-
-  .pd-empty { text-align:center; padding:3rem 1rem; color:var(--text3); font-family:var(--font-ui); font-size:0.88rem; font-weight: 500; }
-  .pd-dashed { border:1px dashed var(--border); border-radius:8px; padding:2rem; text-align:center; color:var(--text3); font-family:var(--font-ui); font-size:0.82rem; font-weight: 500; }
-`;
-
-function marksClass(m: number | null) {
-  return m === 10 ? 'm10' : m === 15 ? 'm15' : m === 20 ? 'm20' : '';
-}
-
+/** The model's markdown, escaped first so nothing it writes becomes markup. */
 function formatModelAnswer(text: string) {
-  return text
+  const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return sanitizeHtml(escaped
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/^[-•] (.+)$/gm, '<div class="bullet">$1</div>')
     .replace(/\n\n/g, '<br/><br/>')
-    .replace(/\n/g, '<br/>');
+    .replace(/\n/g, '<br/>'));
 }
 
-const Chevron = ({ dir }: { dir: 'l' | 'r' }) => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-    <path d={dir === 'l' ? 'M7.5 3l-3 3 3 3' : 'M4.5 3l3 3-3 3'} stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+const short = (q: string, n = 90) => (q.length > n ? `${q.slice(0, n - 1).trimEnd()}…` : q);
+
+const Arrow = ({ back }: { back?: boolean }) => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d={back ? 'M19 12H5M11 6l-6 6 6 6' : 'M5 12h14M13 6l6 6-6 6'} />
   </svg>
 );
+const Lock = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+);
 
-export default function PyqDetail({ subject, questions }: { subject: PyqSubject; questions: PYQ[] }) {
-  const config = PYQ_SUBJECTS[subject];
-  const { id } = useParams<{ id: string }>();
-  const pyq = questions.find(q => q.id === parseInt(id));
+export default function PyqDetail({ subject, subjectName, pyq, related, prev, next, topicCount }: Props) {
+  const router = useRouter();
+  const base = `/${subject}/pyqs`;
 
   const [modelAnswer, setModelAnswer] = useState('');
   const [generating, setGenerating] = useState(false);
@@ -194,6 +62,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
   const [answers, setAnswers] = useState<AnswerEntry[]>([]);
   const [loadingAnswers, setLoadingAnswers] = useState(true);
+  const [showUpload, setShowUpload] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadErr, setUploadErr] = useState<string | null>(null);
   const [uploadOk, setUploadOk] = useState(false);
@@ -219,16 +88,15 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
   // Community answers
   useEffect(() => {
-    if (!pyq) return;
     fetch(`/api/pyq-answers?pyq_id=${pyq.id}&subject=${subject}`)
       .then(r => r.json())
       .then(d => setAnswers(d.answers ?? []))
       .catch(() => {})
       .finally(() => setLoadingAnswers(false));
-  }, [pyq?.id, subject]);
+  }, [pyq.id, subject]);
 
   const generateModelAnswer = async () => {
-    if (!pyq || generating) return;
+    if (generating) return;
     setGenerating(true);
     setGenerated(false);
     setPaywalled(false);
@@ -248,7 +116,7 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
         if (reason?.error === 'premium_required') {
           setPaywalled(true);
         } else {
-          setModelAnswer(reason?.error || 'Could not generate an answer. Please try again.');
+          setModelAnswer(reason?.error || 'Could not write a model answer just now. Please try again.');
         }
         setGenerating(false);
         return;
@@ -272,17 +140,19 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
 
   const handleUpload = async () => {
     setUploadErr(null);
-    if (!file) { setUploadErr('Select a PDF file.'); return; }
-    if (!displayName.trim()) { setUploadErr('Enter your name.'); return; }
-    if (!pyq) return;
+    if (!file) { setUploadErr('Choose a PDF of your answer first.'); return; }
+    if (!displayName.trim()) { setUploadErr('Add the name to show with it.'); return; }
     setUploading(true);
     const form = new FormData();
     form.append('pyq_id', String(pyq.id));
     form.append('subject', subject);
     form.append('display_name', displayName.trim());
     form.append('file', file);
-    const res = await fetch('/api/pyq-answers', { method: 'POST', body: form });
-    const data = await res.json();
+    // The route records a signed-in uploader against the answer; it never got
+    // the token, so every upload was anonymous. Signed out still works.
+    const token = auth.currentUser ? await auth.currentUser.getIdToken().catch(() => '') : '';
+    const res = await fetch('/api/pyq-answers', { method: 'POST', body: form, headers: token ? { 'x-user-token': token } : undefined });
+    const data = await res.json().catch(() => ({ error: 'Upload failed.' }));
     if (!res.ok || data.error) {
       setUploadErr(data.error ?? 'Upload failed.');
     } else {
@@ -291,287 +161,334 @@ export default function PyqDetail({ subject, questions }: { subject: PyqSubject;
       setDisplayName('');
       if (fileRef.current) fileRef.current.value = '';
       setUploadOk(true);
-      setTimeout(() => setUploadOk(false), 3500);
+      setShowUpload(false);
+      setTimeout(() => setUploadOk(false), 4000);
     }
     setUploading(false);
   };
 
-  // Related: same topic, different question
-  const related = questions.filter(q => q.topic === pyq?.topic && q.id !== pyq?.id).slice(0, 5);
+  // Back to the list as the reader left it, filters and all.
+  const backToList = (e: MouseEvent) => {
+    let saved: string | null = null;
+    try { saved = sessionStorage.getItem(listKey(subject)); } catch { /* storage blocked */ }
+    if (saved && saved !== base) { e.preventDefault(); router.push(saved); }
+  };
 
-  // Prev / next in full list
-  const allIds = questions.map(q => q.id);
-  const idx = allIds.indexOf(pyq?.id ?? -1);
-  const prevId = idx > 0 ? allIds[idx - 1] : null;
-  const nextId = idx < allIds.length - 1 ? allIds[idx + 1] : null;
-
-  const base = `/${subject}/pyqs`;
-
-  if (!pyq) return (
-    <div className="pd-wrap" data-subject={subject}>
-      <style dangerouslySetInnerHTML={{ __html: `.pd-wrap[data-subject="${subject}"]{${config.vars}}` + CSS }} />
-      <div className="pd-empty">
-        Question not found.{' '}
-        <Link href={base} style={{ color: 'var(--pd-accent)' }}>← Back to PYQs</Link>
-      </div>
-    </div>
-  );
+  const evaluateHref = `/evaluate?question=${encodeURIComponent(pyq.question)}${pyq.marks ? `&marks=${pyq.marks}` : ''}`;
+  const tint = { ['--t' as string]: `var(--tint-${subject})`, ['--w' as string]: `var(--wash-${subject})` };
+  const preview = !isPremium && generated;
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `.pd-wrap[data-subject="${subject}"]{${config.vars}}` + CSS }} />
-      <div className="pd-wrap" data-subject={subject}>
-        <div className="pd-inner">
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="pd ds" style={tint}>
+        <div className="ds-container pd-grid">
+          <div className="pd-main">
+            <Link href={base} className="ds-back" onClick={backToList}>
+              <Arrow back />
+              {subjectName} PYQs
+            </Link>
 
-          {/* ── Left column ── */}
-          <div>
-            {/* Breadcrumb */}
-            <div className="pd-crumb">
-              <Link href="/">Home</Link>
-              <Chevron dir="r" />
-              <Link href={base}>{config.label} PYQs</Link>
-              <Chevron dir="r" />
-              <span style={{ color: 'var(--text2)' }}>{pyq.topic}</span>
-            </div>
-
-            {/* Question card */}
-            <div className="pd-qcard">
-              <div className="pd-badges">
-                <span className="pd-badge accent">{pyq.paper}</span>
-                {pyq.section && <span className="pd-badge">{pyq.section}</span>}
-                <span className="pd-badge accent">{pyq.year}</span>
-                {pyq.marks ? <span className={`pd-badge ${marksClass(pyq.marks)}`}>{pyq.marks}M</span> : null}
-                <span className="pd-badge">{pyq.topic}</span>
-                {pyq.microtheme && <span className="pd-badge">{pyq.microtheme}</span>}
+            <article className="pd-qcard">
+              <div className="pd-meta">
+                <span className="pd-paper">{pyq.paper}</span>
+                <span>{pyq.year}</span>
+                {pyq.section && <span>{pyq.section}</span>}
+                {pyq.marks && <span className="pd-marks">{pyq.marks} marks</span>}
               </div>
-              <p className="pd-question">{pyq.question}</p>
-            </div>
+              <h1 className="pd-question">{pyq.question}</h1>
+              <div className="pd-tags">
+                <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-topic" title={`Every question on ${pyq.topic}`}>
+                  {pyq.topic}
+                </Link>
+                {pyq.microtheme && pyq.microtheme.toLowerCase() !== pyq.topic.toLowerCase() && <span className="pd-micro">{pyq.microtheme}</span>}
+              </div>
+            </article>
 
-            {/* Actions */}
             <div className="pd-actions">
-              <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(pyq.question)}`} className="pd-btn-primary">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-                Ask AI
+              <Link href={evaluateHref} className="ds-btn ds-btn-solid">
+                Write an answer
               </Link>
-              <Link href={`/evaluate?question=${encodeURIComponent(pyq.question)}&marks=${pyq.marks ?? 10}`} className="pd-btn-ghost">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                </svg>
-                Submit Answer
+              <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(pyq.question)}&topic=${encodeURIComponent(pyq.topic)}`} className="ds-btn ds-btn-line">
+                Ask the AI how to approach it
               </Link>
-              {!generated && !generating && (
-                <button className="pd-btn-ghost" onClick={generateModelAnswer}>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                  </svg>
-                  Model Answer
+              {!generated && !generating && !paywalled && (
+                <button type="button" className="ds-btn ds-btn-ghost" onClick={generateModelAnswer}>
+                  Show a model answer
                 </button>
               )}
             </div>
 
-            {/* Model Answer */}
             {paywalled && (
-              <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
-                <div className="pd-section-label">Model Answer</div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6rem', padding: '1.5rem 1rem', textAlign: 'center' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                  <p className="pd-paywall-text">
-                    Model answers are part of Premium.
-                  </p>
-                  <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', fontWeight: 500, padding: '7px 16px' }}>
-                    See plans →
-                  </Link>
+              <div className="pd-card pd-locked">
+                <span className="pd-lock"><Lock /></span>
+                <div>
+                  <div className="pd-card-title">Model answers come with Premium</div>
+                  <p>Premium writes a full answer to any question, at its word limit, with the thinkers and examples it should cite.</p>
                 </div>
+                <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">See plans</Link>
               </div>
             )}
 
             {(generating || generated || modelAnswer) && (
-              <div className="pd-model-card" style={{ marginBottom: '1.5rem' }}>
-                <div className="pd-section-label">Model Answer{pyq.marks ? ` · ${pyq.marks} marks` : ''} · {config.label} Optional</div>
+              <section className="pd-card pd-model">
+                <div className="pd-card-head">
+                  <h2 className="pd-card-title">Model answer</h2>
+                  <span>{pyq.marks ? `${pyq.marks} marks · ` : ''}{subjectName}</span>
+                </div>
 
                 {generating && !modelAnswer && (
-                  <div className="pd-generating">
-                    <div className="pd-dot" /><div className="pd-dot" /><div className="pd-dot" />
-                    Generating…
+                  <div className="pd-writing">
+                    <span className="pd-dot" /><span className="pd-dot" /><span className="pd-dot" />
+                    Writing it out
                   </div>
                 )}
 
                 {modelAnswer && (
-                  <div style={{ position: 'relative' }}>
+                  <div className="pd-model-body">
                     <div
-                      className={`pd-model-prose${!isPremium && generated && modelAnswer.length > 600 ? ' pd-model-blur' : ''}`}
-                      style={{ maxHeight: !isPremium && generated ? '260px' : 'none', overflow: 'hidden' }}
-                      dangerouslySetInnerHTML={{ __html: formatModelAnswer(
-                        !isPremium && generated ? modelAnswer.slice(0, 600) + '…' : modelAnswer
-                      )}}
+                      className={`pd-prose${preview && modelAnswer.length > 600 ? ' pd-fade' : ''}`}
+                      style={{ maxHeight: preview ? '260px' : 'none', overflow: 'hidden' }}
+                      dangerouslySetInnerHTML={{ __html: formatModelAnswer(preview ? modelAnswer.slice(0, 600) + '…' : modelAnswer) }}
                     />
-                    {!isPremium && generated && (
+                    {preview && (
                       <div className="pd-paywall">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        <p className="pd-paywall-text">Full model answer available on Premium</p>
-                        <Link href="/pricing" className="pd-btn-primary" style={{ fontSize: '0.8rem', fontWeight: 500, padding: '7px 16px' }}>
-                          Upgrade →
-                        </Link>
+                        <span className="pd-lock"><Lock /></span>
+                        <p>The full answer comes with Premium.</p>
+                        <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">See plans</Link>
                       </div>
                     )}
                   </div>
                 )}
-              </div>
+              </section>
             )}
 
-            {/* Submit answer */}
-            <div className="pd-upload-card">
-              <div className="pd-section-label">Submit Your Answer</div>
-              <input
-                className="pd-upload-input"
-                placeholder="Your name"
-                value={displayName}
-                onChange={e => setDisplayName(e.target.value)}
-              />
-              <input
-                ref={fileRef}
-                type="file"
-                accept="application/pdf"
-                onChange={e => setFile(e.target.files?.[0] ?? null)}
-                style={{ color: 'var(--text2)', fontSize: '0.82rem', fontWeight: 500, marginBottom: '0.6rem', display: 'block' }}
-              />
-              {uploadErr && <div style={{ color: 'var(--red,#f87171)', fontSize: '0.8rem', fontWeight: 500, marginBottom: '0.5rem' }}>{uploadErr}</div>}
-              {uploadOk && <div style={{ color: '#4ade80', fontSize: '0.8rem', fontWeight: 500, marginBottom: '0.5rem' }}>✓ Submitted!</div>}
-              <button
-                className="pd-btn-primary"
-                onClick={handleUpload}
-                disabled={uploading}
-                style={{ opacity: uploading ? 0.6 : 1 }}
-              >
-                {uploading ? 'Uploading…' : 'Submit PDF'}
-              </button>
-            </div>
-
-            {/* Community answers */}
-            <div>
-              <div className="pd-section-label">
-                Community Answers{answers.length > 0 ? ` · ${answers.length}` : ''}
+            <section className="pd-community">
+              <div className="pd-sec-head">
+                <h2>
+                  Answers from other aspirants
+                  {answers.length > 0 && <span>{answers.length}</span>}
+                </h2>
+                {!showUpload && (
+                  <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => setShowUpload(true)}>
+                    Share yours
+                  </button>
+                )}
               </div>
-              {loadingAnswers ? (
-                <div className="pd-generating">
-                  <div className="pd-dot" /><div className="pd-dot" /><div className="pd-dot" />
+
+              {uploadOk && <p className="pd-ok" role="status">Thanks, your answer is up.</p>}
+
+              {showUpload && (
+                <div className="pd-card pd-upload">
+                  <p className="pd-upload-intro">Upload a PDF of your handwritten or typed answer. Others writing this question will see it with your name.</p>
+                  <div className="pd-upload-row">
+                    <input
+                      className="pd-input"
+                      placeholder="Name to show"
+                      value={displayName}
+                      onChange={e => setDisplayName(e.target.value)}
+                      aria-label="Name to show with your answer"
+                    />
+                    <label className={`pd-file${file ? ' chosen' : ''}`}>
+                      <input
+                        ref={fileRef}
+                        type="file"
+                        accept="application/pdf"
+                        onChange={e => setFile(e.target.files?.[0] ?? null)}
+                      />
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>
+                      <span>{file ? file.name : 'Choose a PDF, up to 5 MB'}</span>
+                    </label>
+                  </div>
+                  {uploadErr && <p className="pd-err" role="alert">{uploadErr}</p>}
+                  <div className="pd-upload-actions">
+                    <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={handleUpload} disabled={uploading}>
+                      {uploading ? 'Uploading…' : 'Upload answer'}
+                    </button>
+                    <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={() => { setShowUpload(false); setUploadErr(null); }}>
+                      Cancel
+                    </button>
+                  </div>
                 </div>
+              )}
+
+              {loadingAnswers ? (
+                <div className="pd-writing"><span className="pd-dot" /><span className="pd-dot" /><span className="pd-dot" /></div>
               ) : answers.length === 0 ? (
-                <div className="pd-dashed">No answers yet. Be the first to submit.</div>
+                !showUpload && <p className="pd-none">Nobody has shared an answer to this one yet.</p>
               ) : (
-                <div className="pd-answer-grid">
+                <div className="pd-answers">
                   {answers.map(ans => (
-                    <a key={ans.id} href={ans.public_url} target="_blank" rel="noopener noreferrer" className="pd-answer-card">
-                      <div className="pd-answer-icon">📄</div>
-                      <div className="pd-answer-name">{ans.display_name}</div>
-                      <div className="pd-answer-meta">
-                        Answer #{ans.answer_number} · {new Date(ans.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
-                      </div>
+                    <a key={ans.id} href={ans.public_url} target="_blank" rel="noopener noreferrer" className="pd-answer">
+                      <span className="pd-answer-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>
+                      </span>
+                      <span className="pd-answer-text">
+                        <span className="pd-answer-name">{ans.display_name}</span>
+                        <span className="pd-answer-meta">
+                          Answer {ans.answer_number} · {new Date(ans.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </span>
+                      </span>
                     </a>
                   ))}
                 </div>
               )}
-            </div>
+            </section>
 
-            {/* Prev / Next */}
-            <div className="pd-nav">
-              {prevId ? (
-                <Link href={`${base}/${prevId}`} className="pd-nav-btn">
-                  <Chevron dir="l" />
-                  Prev
-                </Link>
-              ) : <span />}
-              <Link href={base} className="pd-nav-btn">All PYQs</Link>
-              {nextId ? (
-                <Link href={`${base}/${nextId}`} className="pd-nav-btn">
-                  Next
-                  <Chevron dir="r" />
-                </Link>
-              ) : <span />}
-            </div>
+            {(prev || next) && (
+              <nav className="pd-pager" aria-label="More questions">
+                {prev ? (
+                  <Link href={`${base}/${prev.id}`} className="pd-pager-link">
+                    <span className="pd-pager-dir"><Arrow back /> Previous</span>
+                    <span className="pd-pager-q">{short(prev.question, 80)}</span>
+                  </Link>
+                ) : <span />}
+                {next ? (
+                  <Link href={`${base}/${next.id}`} className="pd-pager-link next">
+                    <span className="pd-pager-dir">Next <Arrow /></span>
+                    <span className="pd-pager-q">{short(next.question, 80)}</span>
+                  </Link>
+                ) : <span />}
+              </nav>
+            )}
           </div>
 
-          {/* ── Sidebar ── */}
-          <div className="pd-sidebar">
-
-            {/* Ask AI card */}
-            <div className="pd-sidebar-card">
-              <div className="pd-section-label">AI Tutor</div>
-              <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.8rem', fontWeight: 500, color: 'var(--text3)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
-                Ask the AI to explain this question, suggest an outline, cite relevant thinkers, or critique your draft answer.
-              </p>
-              <Link
-                href={`/chat?subject=${subject}&q=${encodeURIComponent(pyq.question)}&topic=${encodeURIComponent(pyq.topic)}`}
-                className="pd-btn-primary"
-                style={{ width: '100%', justifyContent: 'center', boxSizing: 'border-box' }}
-              >
-                Open in AI Chat →
-              </Link>
-            </div>
-
-            {/* Topper's Copy — archived until real copies are close; see lib/features.ts */}
-            {TOPPER_COPIES_LIVE && (
-            <div className="pd-sidebar-card">
-              <div className="pd-section-label">Topper&apos;s Copy</div>
-              <div style={{
-                border: '1px dashed var(--border)',
-                borderRadius: '8px',
-                padding: '1.25rem',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '0.5rem',
-                textAlign: 'center',
-              }}>
-                <span style={{ fontSize: '1.4rem' }}>🏆</span>
-                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text)' }}>
-                  Coming Soon
-                </div>
-                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 500, color: 'var(--text3)', lineHeight: 1.6 }}>
-                  Topper&apos;s answer copies for this question will be added here. Check back soon.
-                </div>
-              </div>
-            </div>
-            )}
-
-            {/* Related questions */}
+          <aside className="pd-aside">
             {related.length > 0 && (
-              <div className="pd-sidebar-card">
-                <div className="pd-section-label">Same Topic</div>
+              <div className="pd-side">
+                <h2 className="pd-side-title">More on {pyq.topic}</h2>
                 <div className="pd-related">
                   {related.map(q => (
-                    <Link key={q.id} href={`${base}/${q.id}`} className="pd-related-item">
-                      {q.question.length > 90 ? q.question.slice(0, 90) + '…' : q.question}
-                      <div className="pd-related-year">{q.year}{q.marks ? ` · ${q.marks}M` : ''}</div>
+                    <Link key={q.id} href={`${base}/${q.id}`} className="pd-rel">
+                      <span className="pd-rel-q">{short(q.question)}</span>
+                      <span className="pd-rel-meta">{q.year} · {q.paper}{q.marks ? ` · ${q.marks} marks` : ''}</span>
                     </Link>
                   ))}
                 </div>
+                {topicCount > related.length + 1 && (
+                  <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
+                    All {topicCount} questions on this topic <Arrow />
+                  </Link>
+                )}
               </div>
             )}
 
-            {/* Stats */}
-            <div className="pd-sidebar-card">
-              <div className="pd-section-label">Question Info</div>
-              {([
-                ['Year', pyq.year],
-                ['Paper', pyq.paper],
-                pyq.marks ? ['Marks', `${pyq.marks}M`] : null,
-                ['Topic', pyq.topic],
-                pyq.section ? ['Section', pyq.section] : null,
-                pyq.microtheme ? ['Microtheme', pyq.microtheme] : null,
-              ].filter(Boolean) as string[][]).map(([k, v]) => (
-                <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '5px 0', borderBottom: '1px solid var(--border)', gap: '1rem' }}>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', fontWeight: 500, color: 'var(--text3)', flexShrink: 0 }}>{k}</span>
-                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 500, color: 'var(--text2)', textAlign: 'right' }}>{v}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
+            {/* Topper's Copy — archived until real copies are close; see lib/features.ts */}
+            {TOPPER_COPIES_LIVE && (
+              <div className="pd-side">
+                <h2 className="pd-side-title">Topper&apos;s copy</h2>
+                <p className="pd-side-text">Answer copies from toppers for this question will be added here.</p>
+              </div>
+            )}
+          </aside>
         </div>
       </div>
     </>
   );
 }
+
+const CSS = `
+.pd { background: var(--bg); min-height: var(--page-min-h); padding: clamp(20px, 3.5vh, 36px) 0 clamp(48px, 9vh, 96px); }
+.pd-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-8); align-items: start; }
+.pd-main { min-width: 0; }
+
+.pd-qcard { margin: var(--space-4) 0 var(--space-4); padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); }
+.pd-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; font-size: 0.88rem; color: var(--text3); margin-bottom: var(--space-3); }
+.pd-paper { padding: 2px 10px; border-radius: var(--radius-full); background: var(--w); color: var(--t); font-weight: 700; }
+.pd-marks { margin-left: auto; padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); color: var(--text2); font-weight: 600; }
+.pd-question { margin: 0 0 var(--space-4); font-size: clamp(1.18rem, 2.2vw, 1.42rem); font-weight: 600; line-height: 1.5; letter-spacing: -0.01em; color: var(--text); }
+.pd-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.pd-topic { padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid color-mix(in srgb, var(--t) 35%, transparent); background: var(--w); color: var(--t); font-size: 0.84rem; font-weight: 600; text-decoration: none; }
+.pd-topic:hover { border-color: var(--t); }
+.pd-micro { font-size: 0.84rem; color: var(--text3); }
+
+.pd-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6); }
+
+.pd-card { background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-6); }
+.pd-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-3); }
+.pd-card-head span { font-size: 0.86rem; color: var(--text3); }
+.pd-card-title { margin: 0; font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; }
+.pd-locked { display: flex; align-items: center; gap: var(--space-4); }
+.pd-locked p { margin: 4px 0 0; font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
+.pd-locked .ds-btn { margin-left: auto; flex-shrink: 0; }
+.pd-lock { width: 44px; height: 44px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--premium-wash); color: var(--premium-text); }
+
+.pd-model-body { position: relative; }
+.pd-prose { font-size: 1rem; line-height: 1.8; color: var(--text); }
+.pd-prose h3 { font-size: 1.02rem; font-weight: 700; color: var(--t); margin: 1.2rem 0 0.4rem; }
+.pd-prose strong { font-weight: 700; }
+.pd-prose .bullet { display: flex; gap: 10px; margin: 0.3rem 0; }
+.pd-prose .bullet::before { content: ''; width: 6px; height: 6px; margin-top: 0.7em; border-radius: 50%; background: var(--t); flex-shrink: 0; }
+.pd-fade { mask-image: linear-gradient(to bottom, #000 45%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%); }
+.pd-paywall { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding-top: var(--space-3); text-align: center; }
+.pd-paywall p { margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--text); }
+.pd-writing { display: flex; align-items: center; gap: 8px; padding: var(--space-3) 0; font-size: 0.92rem; color: var(--text3); }
+.pd-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--t); animation: pdDot 1.2s ease-in-out infinite; }
+.pd-dot:nth-child(2) { animation-delay: 0.15s; }
+.pd-dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes pdDot { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+
+.pd-community { padding-top: var(--space-6); border-top: 1px solid var(--border); }
+.pd-sec-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-4); }
+.pd-sec-head h2 { display: flex; align-items: center; gap: var(--space-2); margin: 0; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; }
+.pd-sec-head h2 span { min-width: 26px; padding: 1px 8px; border-radius: var(--radius-full); background: var(--w); color: var(--t); font-size: 0.8rem; font-weight: 700; text-align: center; }
+.pd-none { margin: 0; color: var(--text3); font-size: 0.95rem; }
+.pd-ok { margin: 0 0 var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--success-wash); color: var(--success-text); font-weight: 600; font-size: 0.92rem; }
+.pd-upload { margin-bottom: var(--space-5); }
+.pd-upload-intro { margin: 0 0 var(--space-4); font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
+.pd-upload-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--space-2); }
+.pd-input { height: 44px; padding: 0 var(--space-4); border: 1px solid var(--border2); border-radius: var(--radius-full); background: var(--bg); color: var(--text); font: inherit; font-size: 0.95rem; outline: none; min-width: 0; }
+.pd-input:focus { border-color: color-mix(in srgb, var(--accent) 60%, transparent); box-shadow: 0 0 0 4px var(--accent-glow); }
+.pd-file { position: relative; display: flex; align-items: center; gap: var(--space-2); height: 44px; padding: 0 var(--space-4); border: 1.5px dashed var(--border3); border-radius: var(--radius-full); color: var(--text2); font-size: 0.92rem; cursor: pointer; min-width: 0; }
+.pd-file span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.pd-file input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.pd-file:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pd-file.chosen { border-style: solid; border-color: color-mix(in srgb, var(--t) 45%, transparent); color: var(--t); background: var(--w); }
+.pd-err { margin: var(--space-3) 0 0; color: var(--danger-text); font-size: 0.9rem; }
+.pd-upload-actions { display: flex; gap: var(--space-2); margin-top: var(--space-4); }
+.pd-answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); }
+.pd-answer { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--ds-card); text-decoration: none; transition: border-color 0.15s; min-width: 0; }
+.pd-answer:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); }
+.pd-answer-icon { width: 36px; height: 36px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--w); color: var(--t); }
+.pd-answer-text { display: flex; flex-direction: column; min-width: 0; }
+.pd-answer-name { font-weight: 600; color: var(--text); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.pd-answer-meta { font-size: 0.8rem; color: var(--text3); }
+
+.pd-pager { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-3); margin-top: var(--space-8); }
+.pd-pager-link { display: flex; flex-direction: column; gap: 6px; padding: var(--space-4) var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.pd-pager-link:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-1); }
+.pd-pager-link.next { text-align: right; align-items: flex-end; }
+.pd-pager-dir { display: inline-flex; align-items: center; gap: 6px; font-size: 0.84rem; font-weight: 600; color: var(--t); }
+.pd-pager-q { font-size: 0.92rem; line-height: 1.45; color: var(--text); }
+
+.pd-aside { position: sticky; top: 84px; display: flex; flex-direction: column; gap: var(--space-4); padding-top: 50px; }
+.pd-side { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); }
+.pd-side-title { margin: 0 0 var(--space-3); font-size: 1rem; font-weight: 800; line-height: 1.35; }
+.pd-side-text { margin: 0; font-size: 0.9rem; color: var(--text2); }
+.pd-related { display: flex; flex-direction: column; }
+.pd-rel { display: flex; flex-direction: column; gap: 4px; padding: var(--space-3) 0; border-top: 1px solid var(--border); text-decoration: none; }
+.pd-rel:first-child { border-top: none; padding-top: 0; }
+.pd-rel-q { font-size: 0.9rem; line-height: 1.5; color: var(--text); }
+.pd-rel:hover .pd-rel-q { color: var(--t); }
+.pd-rel-meta { font-size: 0.78rem; color: var(--text3); }
+.pd-side-all { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--space-3); font-size: 0.88rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
+.pd-side-all:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 960px) {
+  .pd-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .pd-aside { position: static; padding-top: 0; }
+}
+@media (max-width: 640px) {
+  .pd-qcard { padding: var(--space-5) var(--space-4); }
+  .pd-actions { flex-direction: column; align-items: stretch; }
+  .pd-actions .ds-btn { justify-content: center; }
+  .pd-card { padding: var(--space-4); }
+  .pd-locked { flex-direction: column; align-items: flex-start; }
+  .pd-locked .ds-btn { margin-left: 0; }
+  .pd-upload-row { grid-template-columns: minmax(0, 1fr); }
+  .pd-pager { grid-template-columns: minmax(0, 1fr); }
+  .pd-pager-link.next { text-align: left; align-items: flex-start; }
+  .pd-sec-head h2 { font-size: 1.08rem; }
+}
+@media (prefers-reduced-motion: reduce) { .pd-dot { animation: none; } }
+`;
