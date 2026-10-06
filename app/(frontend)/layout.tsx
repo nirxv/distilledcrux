@@ -37,7 +37,6 @@ export const metadata: Metadata = {
   description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional Sociology, Anthropology, History, Geography and more.',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://distilledcrux.com' },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
   openGraph: {
     type: 'website',
     siteName: 'Distilled Crux',
