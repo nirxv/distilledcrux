@@ -233,7 +233,7 @@ const CP_CSS = `
   box-shadow: var(--elev-3);
   animation: cpRise 0.14s ease-out;
 }
-.cp-input { display: flex; align-items: center; gap: var(--space-3); padding: 0 var(--space-4); height: 56px; border-bottom: 1px solid var(--border); color: var(--text3); }
+.cp-input { flex-shrink: 0; display: flex; align-items: center; gap: var(--space-3); padding: 0 var(--space-4); height: 56px; border-bottom: 1px solid var(--border); color: var(--text3); }
 .cp-input input { flex: 1; min-width: 0; height: 100%; border: none; outline: none; background: none; color: var(--text); font-size: 1.02rem; }
 .cp-input input::placeholder { color: var(--text3); }
 .cp kbd {
@@ -241,7 +241,7 @@ const CP_CSS = `
   padding: 1px 6px; border: 1px solid var(--border2); border-radius: var(--radius-xs); background: var(--ds-soft);
 }
 .cp-input kbd { cursor: pointer; }
-.cp-list { flex: 1; overflow-y: auto; padding: var(--space-2); overscroll-behavior: contain; }
+.cp-list { flex: 1; min-height: 0; overflow-y: auto; padding: var(--space-2); overscroll-behavior: contain; }
 .cp-group { font-family: var(--font-ui); font-size: 0.74rem; font-weight: 600; color: var(--text3); padding: var(--space-3) var(--space-2) var(--space-1); }
 .cp-item {
   width: 100%; display: flex; align-items: center; gap: var(--space-3);
@@ -255,7 +255,7 @@ const CP_CSS = `
 .cp-label { font-size: 0.94rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cp-hint { font-family: var(--font-ui); font-size: 0.76rem; color: var(--text3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cp-enter { color: var(--accent-text); font-family: var(--font-ui); font-size: 0.85rem; }
-.cp-foot { display: flex; gap: var(--space-4); padding: var(--space-2) var(--space-4); border-top: 1px solid var(--border); font-family: var(--font-ui); font-size: 0.74rem; color: var(--text3); }
+.cp-foot { flex-shrink: 0; display: flex; gap: var(--space-4); padding: var(--space-2) var(--space-4); border-top: 1px solid var(--border); font-family: var(--font-ui); font-size: 0.74rem; color: var(--text3); }
 .cp-foot kbd { margin-right: 3px; }
 @keyframes cpFade { from { opacity: 0; } }
 @keyframes cpRise { from { opacity: 0; transform: translateY(6px) scale(0.99); } }
