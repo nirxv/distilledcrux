@@ -425,6 +425,9 @@ function ChatContent() {
   // Set once the subject has been settled for this visit, by the URL or by
   // reopening a saved chat, so the profile lookup does not overrule it.
   const subjectSetRef = useRef(Boolean(rawSubject && SUBJECTS.includes(rawSubject)));
+  // Whether the subject is settled, by the URL or the profile, so a question
+  // sent on arrival goes to the right optional.
+  const [subjectReady, setSubjectReady] = useState(Boolean(rawSubject && SUBJECTS.includes(rawSubject)));
   // Notes pages link here with ?topic=<note title>; a known title starts the
   // guided flow on that topic.
   const topicNote = useMemo(
@@ -507,6 +510,7 @@ function ChatContent() {
         const mapped = SUBJECT_BY_OPTIONAL[(await res.json())?.optional];
         if (live && mapped && !subjectSetRef.current) setSubject(mapped);
       } catch { /* the default subject stays */ }
+      if (live) setSubjectReady(true);
     })();
     return () => { live = false; };
   }, [user]);
@@ -664,9 +668,10 @@ function ChatContent() {
     if (!chatRestored) return;
     const url = new URL(window.location.href);
     if (hasConversation) {
-      if (url.searchParams.get(CHAT_PARAM) === chatId && !url.searchParams.has('q') && !url.searchParams.has('topic')) return;
+      if (url.searchParams.get(CHAT_PARAM) === chatId && !url.searchParams.has('q') && !url.searchParams.has('topic') && !url.searchParams.has('send')) return;
       url.searchParams.delete('q');
       url.searchParams.delete('topic');
+      url.searchParams.delete('send');
       url.searchParams.set(CHAT_PARAM, chatId);
     } else {
       if (!url.searchParams.has(CHAT_PARAM)) return;
@@ -904,6 +909,18 @@ function ChatContent() {
       setProgress(NO_PROGRESS);
     }
   };
+
+  // The home page's ask box sends its question on arrival (?send=1); other
+  // links only put theirs in the box, to be added to. Once, after the saved
+  // chats are read, the account is known and the subject is settled. A
+  // signed-out visitor is sent to log in first and comes back to this address.
+  const autoSendRef = useRef(searchParams.get('send') === '1' && initialQ.trim() !== '');
+  useEffect(() => {
+    if (!autoSendRef.current || !chatRestored || usageLoading || !access.signedIn || !subjectReady) return;
+    autoSendRef.current = false;
+    void sendMessage(initialQ);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chatRestored, usageLoading, access.signedIn, subjectReady]);
 
   const getPrecedingQuestion = (idx: number): string | undefined => {
     for (let i = idx - 1; i >= 0; i--) if (thread[i].role === 'user') return thread[i].content;
