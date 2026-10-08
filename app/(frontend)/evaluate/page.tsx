@@ -25,8 +25,6 @@ interface Evaluation {
   section_marks:       { introduction: SectionMark; body: SectionMark; conclusion: SectionMark; presentation: SectionMark }
   marks:               number
   marks_out_of:        number
-  word_count:          number
-  word_count_rating:   'short' | 'appropriate' | 'long'
 }
 
 // An image is sent to the server as-is, so it must fit the server's per-file
@@ -36,18 +34,13 @@ const MAX_IMAGE_SIZE = 8 * 1024 * 1024
 const MAX_PDF_SIZE = 20 * 1024 * 1024
 const MARKS_OPTIONS = ['10', '15', '20']
 
-const countWords = (t: string) => (t.trim() ? t.trim().split(/\s+/).length : 0)
+/** About how long an answer of each size should run. The answer's own count is not shown: read off a photo, it was often wrong. */
+const IDEAL_WORDS: Record<number, number> = { 10: 150, 15: 200, 20: 250 }
 
 function scoreTone(pct: number) {
   if (pct >= 0.7) return 'var(--success-text)'
   if (pct >= 0.5) return 'var(--warning-text)'
   return 'var(--danger-text)'
-}
-
-const WORD_RATING: Record<Evaluation['word_count_rating'], string> = {
-  short: 'on the short side',
-  appropriate: 'about the right length',
-  long: 'on the long side',
 }
 
 function MarksPicker({ marks, setMarks }: { marks: string; setMarks: (m: string) => void }) {
@@ -430,10 +423,8 @@ export default function EvaluatePage() {
                 <section className="ev-block ev-overall">
                   <h2>Overall</h2>
                   <p>{result.overall_feedback}</p>
-                  {result.word_count > 0 && (
-                    <span className={`ev-wc ${result.word_count_rating}`}>
-                      {result.word_count} words, {WORD_RATING[result.word_count_rating] ?? result.word_count_rating}
-                    </span>
+                  {IDEAL_WORDS[result.marks_out_of] && (
+                    <span className="ev-wc">Ideal length: about {IDEAL_WORDS[result.marks_out_of]} words</span>
                   )}
                 </section>
 
@@ -491,7 +482,7 @@ export default function EvaluatePage() {
               <label className="ev-field">
                 <span className="ev-label-row">
                   <span className="ev-label">Your answer</span>
-                  <span className="ev-count">{countWords(transcript)} words</span>
+                  <span className="ev-count">About {IDEAL_WORDS[Number(marks)]} words is ideal</span>
                 </span>
                 <textarea className="ev-input ev-tall" value={transcript} onChange={e => setTranscript(e.target.value)}
                   placeholder="Your answer as we read it appears here. You can also type or paste it." />
@@ -706,10 +697,7 @@ const CSS = `
 .ev-block-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
 .ev-block-mark { padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); font-size: 0.86rem; font-weight: 700; color: var(--text2); font-variant-numeric: tabular-nums; }
 .ev-overall p { margin: 0; font-size: 1rem; line-height: 1.75; }
-.ev-wc { display: inline-block; margin-top: var(--space-3); padding: 3px 12px; border-radius: var(--radius-full); font-size: 0.86rem; font-weight: 600; }
-.ev-wc.short { background: var(--danger-wash); color: var(--danger-text); }
-.ev-wc.appropriate { background: var(--success-wash); color: var(--success-text); }
-.ev-wc.long { background: var(--warning-wash); color: var(--warning-text); }
+.ev-wc { display: inline-block; margin-top: var(--space-3); padding: 3px 12px; border-radius: var(--radius-full); background: var(--ds-soft); color: var(--text2); font-size: 0.86rem; font-weight: 600; }
 .ev-demand { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 6px; list-style: disc; }
 .ev-demand li { line-height: 1.6; color: var(--text); }
 .ev-demand li::marker { color: var(--accent); }
