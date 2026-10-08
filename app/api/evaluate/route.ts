@@ -12,6 +12,26 @@ import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subje
 
 const FREE_EVAL_LIMIT = 1;
 
+/**
+ * Said on every pass. history-optional's October evaluations showed all three
+ * faults: students blamed for words the handwriting reader garbled, rubric
+ * notes such as "BAND 2M applies" in the reasons shown to them, and book
+ * passages cited as "Source 1", which the student never sees.
+ */
+const studentNote = (thinker: string) => `
+
+WRITING FOR THE STUDENT
+- The answer may have been read from a photo of handwriting by a machine, so the transcript can hold reading errors: garbled words, wrong letters, words from another language, or names that look invented. Treat these as reading errors, not the student's mistakes. Never quote them back to the student or criticise them, and judge the answer on what can be understood. Call a ${thinker} misattributed or invented only when the name is clearly written and the claim attached to it is wrong.
+- Do not take marks for spelling, or for sentences that look broken or incomplete: either can be a reading error. When you quote the student, pick a phrase that reads cleanly.
+- Write every reason and every piece of feedback in plain language for the student. Never mention bands or band values (such as "BAND 2M"), tallies, STRONG/WEAK/NONE counts, step numbers, checklists, or the rubric itself.
+- Any book passages you were given are for your own checking. Never refer to them as "Source 1", "स्रोत 1", "passage 2" or by any number; name the book or the ${thinker} instead.`;
+
+/** Mostly Devanagari: the answer was written in Hindi. */
+const writtenInHindi = (t: string) => {
+  const letters = (t.match(/\p{L}/gu) ?? []).length;
+  return letters > 40 && (t.match(/[\u0900-\u097F]/g) ?? []).length / letters > 0.5;
+};
+
 type Emit = (event: Record<string, unknown>) => void;
 
 /**
@@ -353,15 +373,20 @@ Go page by page. Do not rush. Every word matters.`;
     // All three run in parallel.
     const [ocrResult, ragContext, referenceAnswer] = await Promise.all([ocrTracked, ragTask, referenceTask]);
 
+    if (ocrResult) finalTranscript = ocrResult;
+    // Feedback comes in the language the answer was written in, when there is
+    // a transcript to tell: the page always sends lang "en", so a Hindi answer
+    // was marked and explained in English. Without one, lang decides.
+    const outLang = finalTranscript.trim() ? (writtenInHindi(finalTranscript) ? "hi" : "en") : lang;
+
     // ── Assembled system prompt — uses real ragContext now ─────────────────
     const ASSEMBLED_PROMPT = assemblePrompt(
       subjectConfig.systemPromptTemplate,
       rosterStr,
       ragContext,
       subjectConfig.label,
-      lang,
-    );
-    if (ocrResult) finalTranscript = ocrResult;
+      outLang,
+    ) + studentNote(subjectConfig.thinkerTerm);
 
         // ── PASS 1: Chain-of-thought reasoning ─────────────────────
     const introMax = marks === "10" ? "1.5" : marks === "15" ? "2" : "3";
@@ -378,7 +403,7 @@ Question: ${question}
 Marks: ${marks}
 
 ${finalTranscript
-  ? "The student's handwritten answer has been transcribed for you below. Use this transcript as the PRIMARY source — it is more reliable than reading the images yourself. The images are provided only as visual reference for presentation/handwriting quality.\n\nTRANSCRIPT:\n" + finalTranscript
+  ? "The student's answer is given below as text, usually read from photos by a machine; you do not see the photos. Mark the answer on this transcript, remembering it can contain reading errors.\n\nTRANSCRIPT:\n" + finalTranscript
   : "The images show the student's handwritten answer sheet (" + imageContents.length + " page" + (imageContents.length > 1 ? "s" : "") + "). Read ALL pages carefully before evaluating."}
 
 ${referenceAnswer ? `REFERENCE ANSWER (for calibration only — not shown to student):
@@ -453,8 +478,8 @@ BAND ${concMax}M (ONLY): takes a clear position AND links back to intro debate �
 RULE: You MUST pick one of the three values above. No marks between bands allowed.
 → CONCLUSION BAND CHOSEN: [write mark]
 
-== STEP 6: PRESENTATION (max ${presMax}M) — judge from BOTH the image pages AND the transcribed text ==
-[ ] Handwriting is legible and neat — not scratchy or cramped (YES/NO) [judge from images]
+== STEP 6: PRESENTATION (max ${presMax}M) — ${finalTranscript ? "judge from the transcript" : "judge from BOTH the image pages AND the transcribed text"} ==
+${finalTranscript ? "[ ] Handwriting: you have only the text, not the pages, so you cannot judge it, and garbled words are not the student's handwriting — mark this YES" : "[ ] Handwriting is legible and neat — not scratchy or cramped (YES/NO) [judge from images]"}
 [ ] Answer uses headings, underlining, numbered points, or labelled diagrams/flowcharts ([DRAWING: ...] markers) for structure (YES/NO) [judge from images and transcript]
 [ ] No significant factual errors found in STEP 1B (YES/NO) [use your STEP 1B findings — any FACTUAL ERROR means NO]
 Each YES = ${presMax === "1.5" ? "0.5" : "1"}M. Total checked = PRESENTATION MARK.
@@ -530,7 +555,8 @@ ${cotReasoning}
 Now convert this into the exact JSON format from your system prompt.
 If your reasoning's STEP 8 self-audit made any CORRECTION to a band, tally, or total, use the CORRECTED values in the JSON — not the original STEP 3-7 values that were corrected. Use the "FINAL TOTAL (after audit)" as the marks total, and the post-correction section bands as section_marks.
 If your reasoning's STEP 1B found any "FACTUAL ERROR" entries, make sure each one appears as a [FACTUAL ERROR] weakness in the section it belongs to (introduction/body/conclusion) — do not drop them.
-Do not re-evaluate beyond what STEP 8 already corrected. Faithfully convert your reasoning into JSON.
+Do not re-evaluate beyond what STEP 8 already corrected. Faithfully convert your reasoning into JSON.${outLang === "hi" ? "\nEvery text field in the JSON must be in Hindi (Devanagari), including each section's reasoning, even where your reasoning above is in English: translate it." : ""}
+Each section's reasoning is read by the student: plain language, no bands, tallies or rubric terms.
 Return ONLY the JSON object, no preamble, no markdown fences.`;
 
     emit({ id: "scoring" });
@@ -543,7 +569,12 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
           { role: "user", content: jsonPrompt },
         ],
         temperature: 0.1,
-        max_tokens: 4000,
+        // gpt-oss counts its hidden reasoning against max_tokens. At 4000 a
+        // long reasoning run cut the JSON off before section_marks, and the
+        // answer was shown as 0 marks. This pass only converts reasoning
+        // already done, so it reasons little and has more room.
+        max_tokens: 6000,
+        reasoning_effort: "low",
         response_format: { type: "json_object" },
     });
 
@@ -669,7 +700,7 @@ Now write RICH, SPECIFIC qualitative feedback grounded only in the verified book
 
 Return ONLY a JSON object with these exact fields:
 {
-  "overall_feedback": "3-4 sentences only. Sentence 1: the one thing the student genuinely got right — quote their exact words. Sentence 2: the single most important gap — name the specific ${subjectConfig.thinkerTerm} and argument that was missing and why it mattered. Sentence 3: one concrete thing to do differently next time — name the exact ${subjectConfig.thinkerTerm}, their exact argument, and where it should appear. No generic advice. NEVER mention marks, numbers, scores, bands, or any suggestion of what score a change would produce.",
+  "overall_feedback": "3-4 sentences only. Sentence 1: the one thing the student genuinely got right — quote their exact words, choosing a phrase that reads cleanly rather than one with garbled words. Sentence 2: the single most important gap — name the specific ${subjectConfig.thinkerTerm} and argument that was missing and why it mattered. Sentence 3: one concrete thing to do differently next time — name the exact ${subjectConfig.thinkerTerm}, their exact argument, and where it should appear. No generic advice. NEVER mention marks, numbers, scores, bands, or any suggestion of what score a change would produce.",
   "body": {
     "strengths": ["specific strength 1 referencing exactly what student wrote", "specific strength 2 if any"],
     "weaknesses": ["[missed demand]: exactly what was missed and which ${subjectConfig.thinkerTerm} fills this gap", "[too descriptive]: where student listed facts without arguing — quote the specific part", "[needs ${subjectConfig.thinkerTerm}]: which specific ${subjectConfig.thinkerTerm} with which specific argument was needed here"],
@@ -707,140 +738,15 @@ Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were miss
         if (pass3.thinkers_to_cite?.length) evaluation.thinkers_to_cite = pass3.thinkers_to_cite;
         debug("Pass 3 feedback merged successfully");
         emit({ id: "feedback_done" });
-
-        // ── PASS 4: Rich model answer ─────────────────────────────
-        const bulletCount = marks === "10" ? "4-5" : marks === "15" ? "6-8" : "9-12";
-        const pass4Prompt = `Write a model answer for this UPSC ${subjectConfig.label} question.
-
-Question: ${question} (${marks} marks)
-
-Return ONLY a JSON object:
-{
-  "model_answer": {
-    "introduction": "2-3 sentences. MUST open with a theoretical/conceptual debate — name at least one ${subjectConfig.thinkerTerm} with their specific thesis. Preview the argument. Never start with a definition.",
-    "body": [
-      "Bullet 1: Bold theme heading — specific evidence/concept/case — named ${subjectConfig.thinkerTerm} + their exact argument — analytical sentence linking to the question. Minimum 4 sentences.",
-      "Bullet 2: same structure",
-      "... ${bulletCount} bullets total"
-    ],
-    "conclusion": "2-3 sentences that: (1) resolve the specific theoretical tension from the intro by name — affirm, qualify or reject a named ${subjectConfig.thinkerTerm}'s position based on the evidence presented in the body, (2) synthesise the 2-3 strongest body threads into one overarching argument, (3) end with a statement of significance tied to THIS question specifically. No new material, no generic summary."
-  }
-}
-
-CITATION RULES — NON-NEGOTIABLE:
-- You may ONLY cite thinkers from this VERIFIED ROSTER for ${subjectConfig.label}:
-${rosterStr}
-
-- If RAG passages are available above, you MUST ground arguments in those passages. Quote or closely paraphrase — do NOT invent arguments.
-- If no RAG available, cite ONLY thinkers whose core argument you are CERTAIN of for this subject. When in doubt, hedge: "X broadly argues..." — never fabricate specifics.
-- DO NOT cite a thinker on a topic outside their known domain (e.g. do not attribute Mead's I-Me distinction to Simmel or Giddens; do not cite Bipan Chandra on ancient India).
-- DO NOT invent book titles not listed in the roster above.
-- Every bullet MUST name a specific thinker from the roster above WITH their specific argument — "thinkers argue" without a name = not acceptable.
-- Every bullet MUST cite specific evidence: concept, work, empirical case, or theoretical framework.
-- No bullet under 4 sentences.
-- NEVER open with a generic definition. The model answer intro MUST open with a theoretical debate between named thinkers.`;
-
-        emit({ id: "finishing" });
-        try {
-          const pass4Res = await callWithFallback({
-            model: "openai/gpt-oss-120b",
-            messages: [
-              { role: "system", content: ASSEMBLED_PROMPT },
-              { role: "user", content: pass4Prompt },
-            ],
-            temperature: 0.3,
-            max_tokens: 4500,
-            response_format: { type: "json_object" },
-          });
-
-          if (pass4Res.ok) {
-            const pass4Data = await pass4Res.json();
-            let pass4Content = pass4Data.choices[0].message.content;
-            pass4Content = pass4Content.replace(/```json|```/g, "").trim();
-            const pass4 = JSON.parse(pass4Content);
-            if (pass4.model_answer) {
-              evaluation.model_answer = pass4.model_answer;
-              debug("Pass 4 model answer merged successfully");
-
-              // ── PASS 5: Model answer integrity checker ─────────────
-              // Strips wrong attributions, off-roster thinkers, vague claims
-              const rosterNames = subjectConfig.thinkerRoster.map(t => t.name);
-              const pass5Prompt = `You are a strict UPSC ${subjectConfig.label} fact-checker. Below is a model answer generated for a student. Your job is to audit it and return a corrected version.
-
-SUBJECT: ${subjectConfig.label}
-QUESTION: ${question}
-
-VERIFIED THINKER ROSTER (ONLY these thinkers are allowed in the model answer for this subject):
-${rosterStr}
-
-MODEL ANSWER TO AUDIT:
-${JSON.stringify(evaluation.model_answer, null, 2)}
-
-AUDIT RULES — apply every single one:
-1. WRONG ATTRIBUTION: If a thinker is credited with a concept/argument that actually belongs to a DIFFERENT thinker in the roster (e.g. "Simmel's I-Me distinction" when it is Mead's; "Durkheim's Protestant Ethic" when it is Weber's), correct the attribution to the right thinker, or remove the claim entirely.
-2. OFF-ROSTER THINKER: If a thinker's name appears in the model answer but is NOT in the roster above, remove that thinker entirely. Rewrite the sentence using a roster thinker with a similar argument, or remove the sentence.
-3. VAGUE CLAIM: If a thinker is named but no specific argument, concept, or work is mentioned (e.g. "Weber discusses this topic"), either add their specific known argument from the roster or remove the vague mention.
-4. FABRICATED BOOK TITLE: If a book title is cited that is NOT in the roster's known works, remove the title. Keep the thinker name and argument if they are otherwise correct.
-5. CROSS-DOMAIN ERROR: If a thinker is cited on a topic outside their known domain (per the roster), remove or reassign.
-6. INTRO CHECK: If the introduction opens with a generic definition rather than a theoretical debate between named roster thinkers, rewrite it to open with a debate.
-
-Return ONLY a JSON object with exactly this structure (same structure as the model_answer, corrected):
-{
-  "model_answer": {
-    "introduction": "corrected introduction string",
-    "body": ["corrected bullet 1", "corrected bullet 2", "..."],
-    "conclusion": "corrected conclusion string"
-  },
-  "corrections_made": ["brief description of each correction, e.g. 'Removed Simmel as originator of I-Me — corrected to Mead'"]
-}
-
-If no corrections are needed, return the original model_answer unchanged with corrections_made as an empty array.`;
-
-              try {
-                const pass5Res = await callWithFallback({
-                  model: "openai/gpt-oss-120b",
-                  messages: [
-                    { role: "system", content: ASSEMBLED_PROMPT },
-                    { role: "user", content: pass5Prompt },
-                  ],
-                  temperature: 0.1,
-                  max_tokens: 4000,
-                  response_format: { type: "json_object" },
-                });
-
-                if (pass5Res.ok) {
-                  const pass5Data = await pass5Res.json();
-                  let pass5Content = pass5Data.choices[0].message.content;
-                  pass5Content = pass5Content.replace(/```json|```/g, "").trim();
-                  const pass5 = JSON.parse(pass5Content);
-                  if (pass5.model_answer) {
-                    evaluation.model_answer = pass5.model_answer;
-                    if (pass5.corrections_made?.length) {
-                      debug("Pass 5 corrections applied:", pass5.corrections_made);
-                    } else {
-                      debug("Pass 5 audit passed — no corrections needed");
-                    }
-                  }
-                } else {
-                  debug("Pass 5 skipped (rate limited) — using unchecked Pass 4 model answer");
-                }
-              } catch (p5err) {
-                debug("Pass 5 error (non-fatal):", p5err);
-              }
-              // ── END PASS 5 ────────────────────────────────────────
-            }
-          } else {
-            debug("Pass 4 skipped (rate limited) — using Pass 2 model answer");
-          }
-        } catch (p4err) {
-          debug("Pass 4 error (non-fatal):", p4err);
-        }
       } else {
         debug("Pass 3 skipped (rate limited or failed) — using Pass 2 feedback");
       }
     } catch (p3err) {
       debug("Pass 3 error (non-fatal):", p3err);
     }
+    // The model answer is Pass 2's. Passes 4 and 5, a longer model answer and
+    // a fact-check of it, were dropped: the evaluate page has not shown a model
+    // answer since August, and the two took marking to ~54 s of the 60 s limit.
     emit({ id: "feedback_done" });
     emit({ id: "finished" });
 

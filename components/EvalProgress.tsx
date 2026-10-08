@@ -134,7 +134,6 @@ export type EvalStages = {
   scored?: true;
   feedback?: true;
   feedback_done?: true;
-  finishing?: true;
   finished?: true;
 };
 
@@ -149,7 +148,6 @@ export function applyEvalStage(s: EvalStages, e: { id?: string } & Record<string
     case 'scored':        return { ...s, scored: true };
     case 'feedback':      return { ...s, feedback: true };
     case 'feedback_done': return { ...s, feedback_done: true };
-    case 'finishing':     return { ...s, finishing: true };
     case 'finished':      return { ...s, finished: true };
     default:              return s;
   }
@@ -186,7 +184,6 @@ function evalRows(s: EvalStages): Row[] {
     step('marking', s.marking, s.marked, 'Marking against the UPSC rubric', 'Marked against the UPSC rubric', 'Mark against the UPSC rubric'),
     step('scoring', s.scoring, s.scored, 'Scoring introduction, body, conclusion and presentation', 'Scored each section', 'Score each section'),
     step('feedback', s.feedback, s.feedback_done, 'Writing your feedback', 'Feedback written', 'Write your feedback'),
-    step('finishing', s.finishing, s.finished, 'Running final checks', 'Final checks done', 'Final checks'),
   ];
 }
 
