@@ -4,13 +4,13 @@ import LegalDoc from "@/components/LegalDoc";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for distilledcrux.com how we collect, use, and protect your data.",
+  description: "Privacy Policy for distilledcrux.com: how we collect, use and protect your data.",
   alternates: { canonical: "https://distilledcrux.com/privacy" },
 };
 
 export default function PrivacyPage() {
   return (
-    <LegalDoc current="privacy" title="Privacy Policy" updated="Last updated: 29 July 2026 · Effective: 29 July 2026">
+    <LegalDoc current="privacy" title="Privacy Policy" updated="Last updated: 8 October 2026 · Effective: 8 October 2026">
       <p>
         This Privacy Policy describes how Distilled Crux (<strong>distilledcrux.com</strong>,
         &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects information when you use our website
@@ -23,7 +23,9 @@ export default function PrivacyPage() {
         <li>Email address and name (when you sign in via Google OAuth)</li>
         <li>Mobile number (required during onboarding)</li>
         <li>Answer scripts and evaluation content you upload</li>
-        <li>Payment information processed by Razorpay; we do not store card details</li>
+        <li>Questions you ask the AI chat</li>
+        <li>Your study progress, such as the syllabus topics you tick and the PYQs you attempt</li>
+        <li>Payment information, which Razorpay processes. We do not store card details</li>
       </ul>
       <h3>Information collected automatically</h3>
       <ul>
@@ -52,8 +54,17 @@ export default function PrivacyPage() {
       <h2>4. Sharing of Information</h2>
       <p>We do not sell your personal data. We share data only with:</p>
       <ul>
-        <li><strong>Razorpay</strong> payment processing</li>
-        <li><strong>Google</strong> OAuth sign-in</li>
+        <li><strong>Razorpay</strong>, to process payments</li>
+        <li><strong>Google</strong>, for sign-in</li>
+        <li>
+          <strong>AI providers</strong>, to check your answers and reply in the chat. We send
+          only what a request needs. Your answers, as photos, PDFs or typed text, go to Mistral
+          AI, Google (Gemini), Anthropic (Claude) and Groq to be read and marked. Your chat
+          questions go to
+          Anthropic and Groq for the reply, and to Voyage AI to search the books for it. These
+          providers process the content to return a result, under their own terms.
+        </li>
+        <li><strong>Supabase and Vercel</strong>, which host our database and website</li>
         <li>Law enforcement, if required by applicable Indian law</li>
       </ul>
 
