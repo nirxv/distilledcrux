@@ -14,7 +14,8 @@ const securityHeaders = [
       // Razorpay's checkout.js has one new Function in a try/catch globalThis
       // polyfill that never runs in a real browser. Google Analytics is gone:
       // its tag only ever carried the placeholder ID G-XXXXXXXXXX.
-      "script-src 'self' 'unsafe-inline' https://apis.google.com https://checkout.razorpay.com",
+      // checkout.js loads Razorpay's risk-detection bundle from cdn.razorpay.com.
+      "script-src 'self' 'unsafe-inline' https://apis.google.com https://checkout.razorpay.com https://cdn.razorpay.com",
       "worker-src 'self' blob:",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
