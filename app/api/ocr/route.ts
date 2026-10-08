@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rejectUpload, IMAGE_TYPES } from '@/lib/uploadLimits';
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
+import { mostlyDevanagari, readHindi } from "@/lib/hindiReader";
 
 export const maxDuration = 60;
 
@@ -86,7 +87,13 @@ Output the transcription now:`;
     }
 
     const data = await res.json();
-    const text: string = data.choices?.[0]?.message?.content?.trim() ?? "";
+    let text: string = data.choices?.[0]?.message?.content?.trim() ?? "";
+    // An answer written in Hindi is read again, page by page, with Mistral OCR.
+    // The test page has its question already, so only the answer is kept.
+    if (mostlyDevanagari(text)) {
+      const hindi = await readHindi(imageContents);
+      if (hindi) text = hindi.text;
+    }
 
     return NextResponse.json({ text });
   } catch (err) {

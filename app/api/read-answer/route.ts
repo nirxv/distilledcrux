@@ -3,6 +3,7 @@ import { rejectUpload, IMAGE_TYPES } from '@/lib/uploadLimits';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
 import { hasActiveSubscription, profileOptional } from '@/lib/entitlements';
+import { mostlyDevanagari, readHindi } from '@/lib/hindiReader';
 
 export const maxDuration = 60;
 
@@ -181,14 +182,22 @@ Return ONLY the transcribed answer text. No explanation, no preamble.`;
             .catch((err) => { console.error('read-answer question call failed:', err); return ''; })
             .then((q) => { emit({ id: 'question_done', found: Boolean(stripHtml(q)) }); return q; })
         : Promise.resolve(''),
-      mistral(imageBlocks, transcriptPrompt, 8000)       // transcript: all pages
-        .then((t) => { emit({ id: 'transcribed', words: words(stripHtml(t)) }); return t; }),
+      mistral(imageBlocks, transcriptPrompt, 8000),      // transcript: all pages
     ]);
 
-    return NextResponse.json({
-      question:   stripHtml(questionRaw),
-      transcript: stripHtml(transcriptRaw),
-    });
+    let question = stripHtml(questionRaw);
+    let transcript = stripHtml(transcriptRaw);
+    // An answer written in Hindi is read again, page by page, with Mistral OCR.
+    if (mostlyDevanagari(transcript)) {
+      const hindi = await readHindi(imageBlocks.map((b) => b.image_url));
+      if (hindi) {
+        transcript = hindi.text;
+        if (wantQuestion && hindi.question) question = hindi.question;
+      }
+    }
+    emit({ id: 'transcribed', words: words(transcript) });
+
+    return NextResponse.json({ question, transcript });
 
   } catch (err) {
     console.error('read-answer route error:', err);
