@@ -352,3 +352,14 @@ body {
   .ds-btn, .ds-card-link, .ds-chip, .ds-back { transition: none; }
   .ds-card-link:hover { transform: none; }
 }
+
+/* The owl is the brand, so browsers don't offer it for saving: no "Save image"
+   or "Copy image" on right-click, no dragging it out, no long-press menu on
+   phones. Clicks pass through to whatever holds it, such as the logo link. */
+img[src*="mascot"] {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
