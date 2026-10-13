@@ -49,6 +49,26 @@ export function prefersRedirectSignIn(): boolean {
   return IN_APP_BROWSER.test(navigator.userAgent || '') || isMobile();
 }
 
+/**
+ * Browsers built into other apps where Google refuses to sign anyone in
+ * ("Error 403: disallowed_useragent"): Android WebViews, which is what
+ * Telegram, WhatsApp and most apps open links in, the Facebook family's
+ * browsers, and iOS WKWebViews, whose user agent lacks the Safari token that
+ * Safari, Chrome and Firefox on iOS all send. Sending these readers to Google
+ * only shows them Google's error page, so /login tells them to open the site
+ * in their own browser instead.
+ */
+const GOOGLE_BLOCKED = /; wv\)|FBAN|FBAV|FB_IAB|Instagram|LinkedInApp|Line\/|MicroMessenger|Snapchat|Telegram/i;
+
+export function googleBlocksThisBrowser(): boolean {
+  if (typeof window === 'undefined') return false;
+  const ua = navigator.userAgent || '';
+  if (GOOGLE_BLOCKED.test(ua)) return true;
+  return /iPhone|iPad|iPod/.test(ua) && !/Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\//.test(ua);
+}
+
+export const isAndroid = () => typeof navigator !== 'undefined' && /Android/i.test(navigator.userAgent || '');
+
 // Popup failures that mean "this browser can't do popups", not "the user said no".
 const POPUP_UNSUPPORTED = new Set([
   'auth/popup-blocked',
@@ -66,6 +86,14 @@ export async function signInWithGoogleRedirect(): Promise<void> {
  * the page is navigating away and the caller should not touch state afterwards.
  */
 export async function signInWithGoogle(): Promise<'popup' | 'redirect'> {
+  // In an app's built-in browser Google would only show its own error page,
+  // so the reader is taken to /login, which explains how to open the site in
+  // a real browser, and comes back here once signed in.
+  if (googleBlocksThisBrowser() && window.location.pathname !== '/login') {
+    const here = window.location.pathname + window.location.search;
+    window.location.assign(`/login?next=${encodeURIComponent(here)}`);
+    return 'redirect';
+  }
   if (prefersRedirectSignIn()) {
     await signInWithGoogleRedirect();
     return 'redirect';

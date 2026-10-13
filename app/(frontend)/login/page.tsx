@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { auth, signInWithGoogle, signInWithGoogleRedirect } from '@/lib/firebase';
+import { auth, signInWithGoogle, signInWithGoogleRedirect, googleBlocksThisBrowser, isAndroid } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import Mascot from '@/components/Mascot';
 import OwlLoader from '@/components/OwlLoader';
@@ -32,6 +32,22 @@ export default function LoginPage() {
   const [popupFailed, setPopupFailed] = useState(false);
   const [checking, setChecking] = useState(true);
   const [headed, setHeaded] = useState<string | null>(null);
+  // Telegram, WhatsApp and other apps open links in a built-in browser where
+  // Google refuses to sign anyone in. The server can't know, but it only ever
+  // renders the loader, and the card appears after the client's auth check.
+  const [inApp] = useState<'android' | 'other' | null>(() => (googleBlocksThisBrowser() ? (isAndroid() ? 'android' : 'other') : null));
+  const [copied, setCopied] = useState(false);
+
+  const pageUrl = () => window.location.href;
+  // Asks Android to open this page in Chrome, or in the default browser if
+  // Chrome is missing.
+  const chromeIntent = () => {
+    const u = new URL(pageUrl());
+    return `intent://${u.host}${u.pathname}${u.search}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(u.href)};end`;
+  };
+  const copyLink = async () => {
+    try { await navigator.clipboard.writeText(pageUrl()); setCopied(true); } catch { setCopied(false); }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
@@ -117,7 +133,20 @@ export default function LoginPage() {
           New here? Signing in with Google makes your free account.
         </p>
 
-        <button type="button" className="lg-google" onClick={handleGoogleSignIn} disabled={signingIn}>
+        {inApp && (
+          <div className="lg-inapp" role="note">
+            <strong>Open this page in {inApp === 'android' ? 'Chrome' : 'Safari or Chrome'} to sign in</strong>
+            <p>Google doesn’t allow signing in inside the browser built into Telegram, WhatsApp and other apps.</p>
+            {inApp === 'android' ? (
+              <a className="lg-inapp-go" href={chromeIntent()}>Open in Chrome</a>
+            ) : (
+              <p>Tap the <b>⋯</b> or share button at the top or bottom of this screen, then choose <b>Open in Safari</b> or <b>Open in browser</b>.</p>
+            )}
+            <button type="button" className="lg-inapp-copy" onClick={copyLink}>{copied ? 'Link copied, paste it in your browser' : 'Copy the link instead'}</button>
+          </div>
+        )}
+
+        <button type="button" className={`lg-google${inApp ? ' lg-google-quiet' : ''}`} onClick={handleGoogleSignIn} disabled={signingIn}>
           {signingIn ? (
             <><span className="lg-spin" aria-hidden="true" />Signing in…</>
           ) : (
@@ -169,6 +198,12 @@ const CSS = `
 .lg-fallback { margin-top: var(--space-4); font-size: 0.9rem; color: var(--text2); }
 .lg-fallback p { margin: 0 0 var(--space-2); }
 .lg-fallback button { background: none; border: none; padding: 0; font: inherit; font-weight: 700; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lg-inapp { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-5); padding: var(--space-4); border: 1.5px solid color-mix(in srgb, var(--warning-text) 45%, transparent); border-radius: var(--radius-lg); background: var(--warning-wash); color: var(--text); font-size: 0.92rem; line-height: 1.55; }
+.lg-inapp strong { font-size: 1rem; }
+.lg-inapp p { margin: 0; color: var(--text2); }
+.lg-inapp-go { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 var(--space-5); border-radius: var(--radius-full); background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+.lg-inapp-copy { background: none; border: none; padding: 0; font: inherit; font-weight: 700; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lg-google-quiet { opacity: 0.7; }
 .lg-error { margin: var(--space-4) 0 0; color: var(--danger-text); font-size: 0.92rem; }
 .lg-free { display: flex; flex-direction: column; gap: 2px; width: 100%; margin-top: var(--space-6); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--ds-soft); font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
 .lg-free strong { color: var(--text); }
