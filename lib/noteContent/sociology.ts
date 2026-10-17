@@ -855,7 +855,7 @@ export const sociologyNoteContent: Record<string, string> = {
   </tr>
 </table>
 
-<p>All three forms coexist in real societies. Weber noted: "In Indian politics, we see rational-legal authority all over, but some elements of traditionalism and charisma remain." Modern state rules through a combination of rational-legal and charismatic legitimacy.</p>
+<p>All three forms coexist in real societies. Applied to Indian politics, Weber's scheme shows rational-legal authority all over, with some elements of traditionalism and charisma remaining. Modern state rules through a combination of rational-legal and charismatic legitimacy.</p>
 
 <h2>Rationality and Rationalisation</h2>
 
@@ -1993,7 +1993,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>Critique of Mead's Theory of Self Specifically</h3>
 <ul>
-  <li><strong>Anne Kaspar</strong>: Mead's ideas about the social self may be more applicable to men than to women. Women are more likely to experience inherent conflicts between the meanings they derive from personal experience and those prescribed by culture: particularly in balancing family responsibilities and paid employment. The self Mead describes is implicitly gendered male.</li>
+  <li><strong>Anne Kasper</strong>: Mead's ideas about the social self may be more applicable to men than to women. Women are more likely to experience inherent conflicts between the meanings they derive from personal experience and those prescribed by culture: particularly in balancing family responsibilities and paid employment. The self Mead describes is implicitly gendered male.</li>
   <li><strong>No biological element (vs Freud and Piaget)</strong>: Mead's view is completely social, allowing no biological element at all. Critics who side with Freud (drives rooted in the body) or Piaget (development tied to biological maturity) find this one-sided.</li>
   <li><strong>Origin of "I" unspecified</strong>: Mead never explained where the "I" comes from. If the "Me" is formed through socialisation, what generates the spontaneous, creative "I"? This leaves a theoretical gap that Mead himself acknowledged.</li>
   <li><strong>William James</strong>: Discussed multiple types of empirical selves (material, social, spiritual). Individuals may have multiple selves and show different sides to different groups: a complexity Mead's framework underestimates.</li>
@@ -2297,7 +2297,7 @@ export const sociologyNoteContent: Record<string, string> = {
     <td>Studies similarities: looks for patterns. Theda Skocpol: Chinese, Russian, and French revolutions all involved simultaneous state breakdown and peasant rebellion</td>
   </tr>
 </table>
-<p><em>"What is sociology today is history for tomorrow; history is past sociology and sociology is present history."</em>: Charles Tilly. Philip Abrams: "Sociology is deeply historical by its very nature."</p>
+<p><em>"What is sociology today is history for tomorrow; history is past sociology and sociology is present history."</em>: a maxim often quoted in introductory texts. Philip Abrams: "Sociology is deeply historical by its very nature."</p>
 
 <h3>Sociology and Economics</h3>
 <table>
@@ -2506,7 +2506,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Feyerabend is regarded as the "worst enemy of the scientific method." His position: the notion of a universal scientific method is unrealistic.</p>
 <ul>
   <li>Scientists actually proceed by intuition, mystical ideas, dream experience, hunches, myths, induction, and conjectural approaches. Scientists go by <strong>"anything goes."</strong></li>
-  <li>Kevin Durbar estimated that 30-40% of scientific discoveries were serendipitous: Newton and gravity, Nobel and blasting gelatin, Pasteur and the chicken cholera vaccine.</li>
+  <li>Kevin Dunbar's studies of working laboratories found unexpected results to be very common, and many discoveries were serendipitous: Newton and gravity, Nobel and blasting gelatin, Pasteur and the chicken cholera vaccine.</li>
   <li>Therefore, science is just another ideology in society: like religion or magic. The dominance of science would be authoritarian and unjustified.</li>
   <li>Demarcating science from pseudoscience is impossible since scientists themselves use any method available.</li>
 </ul>
@@ -2517,7 +2517,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Feminist Critique of Science</h3>
 <ul>
   <li>Objectivity does not exist: much scientific knowledge is <em>gendered knowledge</em>.</li>
-  <li>Freud's Oedipus Complex presents women as objects to be claimed: androcentric. Carl Jung corrected this with the Electra Complex.</li>
+  <li>Freud's Oedipus Complex presents women as objects to be claimed: androcentric. Carl Jung proposed the Electra Complex as a female counterpart, a term Freud rejected.</li>
   <li>Darwin argued evolution made man "superior" to woman. Spencer echoed this. Antoinette Brown Blackwell became the first published feminist critique of Darwin: calling his claims unscientific.</li>
   <li>The narrative of "active sperm and passive egg" obscures the causal role of the egg in fertilisation: a scientific claim shaped by gender bias.</li>
 </ul>
@@ -2643,7 +2643,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Problems of Objectivity at Every Stage of Research</h3>
 <ul>
   <li><strong>Choice of topic</strong>: Marxists reveal values by focusing on inequality; feminists by focusing on domestic violence. Weber: values enter at the stage of topic selection itself. This is called <em>value relevance</em>.</li>
-  <li><strong>Getting funded</strong>: If Cavitas funds research, the researcher must match findings with their interests.</li>
+  <li><strong>Getting funded</strong>: If a corporation or interest group funds research, the researcher may be pressed to match findings with its interests.</li>
   <li><strong>Choosing techniques</strong>: Selection of questions for questionnaires; some excluded, some included. These choices reflect the researcher's theoretical assumptions.</li>
   <li><strong>Interpretation of data</strong>: Data does not speak for itself. The development of cults can be evidence for or against secularisation depending on the researcher's standpoint. Feminists find patriarchal oppression; Marxists find class exploitation.</li>
   <li><strong>Recording findings</strong>: What is included in the final report is itself a value-laden choice.</li>
@@ -4018,8 +4018,8 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Roy Wallis classifies NRMs into three types:</p>
 <ul>
-  <li><strong>World-affirming</strong>: do not reject the mainstream world; show people how to extract maximum from it by unlocking their potential. Like paid enlightenment or self-help therapy. Examples: Zen, Transcendental Meditation, ISKCON, Scientology.</li>
-  <li><strong>World-rejecting</strong>: see the outside world as inherently evil or corrupt; encourage followers to remove themselves and live in a commune. Often accused of brainwashing. Examples: Millenarian movements (People's Temple of Jim Jones; Heaven's Gate: both committed mass suicide).</li>
+  <li><strong>World-affirming</strong>: do not reject the mainstream world; show people how to extract maximum from it by unlocking their potential. Like paid enlightenment or self-help therapy. Examples: Zen, Transcendental Meditation, Scientology.</li>
+  <li><strong>World-rejecting</strong>: see the outside world as inherently evil or corrupt; encourage followers to remove themselves and live in a commune. Often accused of brainwashing. Examples: ISKCON (Hare Krishna), Millenarian movements (People's Temple of Jim Jones; Heaven's Gate: both committed mass suicide).</li>
   <li><strong>World-accommodating</strong>: more traditionally religious; members remain actively involved in mainstream society while seeking spiritual enrichment; more about helping members cope with ordinary life than maxing out spiritual growth.</li>
 </ul>
 
@@ -4529,7 +4529,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Unlike political parties, interest groups do not aim to form government: they seek to influence political parties and state departments. When an interest group seeks governmental aid in achieving its own ends and succeeds in influencing governmental policy to its advantage, it becomes a pressure group.</p>
 
-<p><strong>Robert McKenzie's two types:</strong></p>
+<p><strong>Two common types:</strong></p>
 <ul>
   <li><strong>Protective groups</strong>: Defend the interests of a particular section of society (trade unions, CII). Zero-sum game.</li>
   <li><strong>Promotional groups</strong>: Support a particular cause rather than guard the interests of a particular group (Greenpeace, PETA). Membership is larger and more open.</li>
@@ -4876,6 +4876,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Male control over female sexuality: virginity and chastity as female virtues</li>
   <li>Women as primary source of domestic labour: unpaid and unrecognised</li>
   <li>Violence: private, public, workplace, mental, and physical</li>
+  <li>The state: a systematic bias towards men's interests in its policies and actions</li>
 </ul>
 
 <h3>Indian Legal Milestones</h3>
@@ -4891,7 +4892,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Diversity in family forms is growing: no single dominant model</li>
   <li>Marriage is losing appeal; rising divorces and separations; sanctity of marriage declining; law has made divorce easier; stigma of divorce vanishing</li>
   <li>Giddens: "forever love" changing into "love till further notice", plastic love</li>
-  <li>Colin Bell: modified or dispersed extended family, common residence may not exist but kinship ties are maintained via internet, telephone, and air travel (frequency less but quality more)</li>
+  <li>Eugene Litwak: modified extended family (Willmott: dispersed extended family), common residence may not exist but kinship ties are maintained via internet, telephone, and air travel (frequency less but quality more)</li>
   <li>William Goode: achieved status and individualism are rising, working against familial norms and conventional role bargains</li>
   <li>Bade Thorne: "cereal packet image" problem, the monolithic image of the ideal family obscures the reality of a plurality of family forms</li>
   <li>Elizabeth Roberts and Wilmott and Young: industrialisation actually led to growth of the extended family through shared childcare and mutual help, a direct counter to Parsons</li>
@@ -5533,7 +5534,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Communalism: The Dark Side of Colonial Religious Politics</h3>
 <p>A critical negative legacy of colonial rule was the sharpening of Hindu-Muslim communal identity. Colonial administrators followed a policy of "divide and rule": encouraging separate Muslim electorates (Indian Councils Act 1909, Morley-Minto Reforms), creating the All-India Muslim League (1906) as a counterweight to the Congress, and using communal riots to demonstrate that Indians could not govern themselves.</p>
 
-<p>Bipin Chandra argues that communalism was in fact a product of colonialism and modern politics, not of "ancient hatreds." Pre-colonial Indian society was characterised by everyday syncretism at the level of popular culture: shared saints and shrines, common festivals, and caste identities that cut across religious boundaries. Colonial census operations that required individuals to identify by religious community, separate electorates that made religion a basis for political representation, and colonial historiography that periodised Indian history as "Hindu," "Muslim," and "British" periods: all reinforced a view of religious communities as primordially distinct and conflicting.</p>
+<p>Bipan Chandra argues that communalism was in fact a product of colonialism and modern politics, not of "ancient hatreds." Pre-colonial Indian society was characterised by everyday syncretism at the level of popular culture: shared saints and shrines, common festivals, and caste identities that cut across religious boundaries. Colonial census operations that required individuals to identify by religious community, separate electorates that made religion a basis for political representation, and colonial historiography that periodised Indian history as "Hindu," "Muslim," and "British" periods: all reinforced a view of religious communities as primordially distinct and conflicting.</p>
 
 <h2>Colonial Historiography and Its Critique</h2>
 
@@ -6514,12 +6515,12 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Definition and Nature</h3>
 
-<p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests, generally at the expense of others: using social-religious traditions to serve vested political and economic interests. Bipin Chandra defines communalism as the belief that because people follow different religions they have different secular (social, political, economic) interests which are incompatible and antagonistic. Communalism is therefore distinct from religiosity: one can be deeply religious without being communal, and communal leaders often have only a cynical relationship to their professed religion.</p>
+<p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests, generally at the expense of others: using social-religious traditions to serve vested political and economic interests. Bipan Chandra defines communalism as the belief that because a group of people follow a particular religion they have, as a result, common secular (social, political, economic) interests. Communalism is therefore distinct from religiosity: one can be deeply religious without being communal, and communal leaders often have only a cynical relationship to their professed religion.</p>
 
-<p>Bipin Chandra identifies three stages of communalism:</p>
+<p>Bipan Chandra identifies three stages of communalism:</p>
 <ul>
-  <li><strong>Liberal Communalism</strong>: members of a religious community have similar religious interests but different and compatible secular interests. The community organises around religious concerns (festivals, personal law) without generating antagonism toward others.</li>
-  <li><strong>Communal Communalism</strong>: members of a religious community believe they have different secular interests from members of other communities, but these communities can coexist.</li>
+  <li><strong>First stage</strong>: the belief that people who follow the same religion have common secular (political, economic, social and cultural) interests. This is the root of communal ideology, even before it generates antagonism toward others.</li>
+  <li><strong>Liberal Communalism</strong>: members of a religious community believe their secular interests differ from those of other communities, but hold that these interests can be reconciled and the communities can coexist.</li>
   <li><strong>Extreme Communalism</strong>: the belief that two religious communities have such fundamentally different and antagonistic secular interests that they cannot coexist. This is the logic of the Two-Nation Theory (Hindus and Muslims are two separate nations) that culminated in Partition.</li>
 </ul>
 
@@ -6912,8 +6913,8 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>The dominant debate in Indian Marxist political economy has been whether Indian agriculture has completed a transition to capitalism or remains characterised by feudal or semi-feudal production relations. Three positions have been advanced:</p>
 
 <ul>
-  <li><strong>Fully capitalist (Ashok Rudra, AK Ghosh)</strong>: most Indian agriculture now operates on capitalist principles: farmers hire wage labour; produce for the market; invest in inputs for profit. The persistence of labour attachment and patron-client relations are residual features, not structural.</li>
-  <li><strong>Semifeudal (Utsa Patnaik, Amit Bhaduri)</strong>: the persistence of debt bondage, interlocked factor markets (where the same landlord is simultaneously lender, employer, and buyer of produce), and extra-economic coercion mean that feudal relations of production persist within a capitalist framework. Bhaduri's analysis of the "backward agriculture" in East India showed landlords earning more from moneylending than from hiring wage labour: preventing the adoption of new technology because it would reduce the income from debt bondage.</li>
+  <li><strong>Capitalist (Utsa Patnaik, Paresh Chattopadhyay)</strong>: most Indian agriculture now operates on capitalist principles: farmers hire wage labour; produce for the market; invest in inputs for profit. The persistence of labour attachment and patron-client relations are residual features, not structural. Against this, Ashok Rudra, with Majid and Talib, found no distinct class of capitalist farmers in Punjab.</li>
+  <li><strong>Semifeudal (Amit Bhaduri)</strong>: the persistence of debt bondage, interlocked factor markets (where the same landlord is simultaneously lender, employer, and buyer of produce), and extra-economic coercion mean that feudal relations of production persist within a capitalist framework. Bhaduri's analysis of the "backward agriculture" in East India showed landlords earning more from moneylending than from hiring wage labour: preventing the adoption of new technology because it would reduce the income from debt bondage.</li>
   <li><strong>Articulation of modes (Jan Breman, Tom Brass)</strong>: different modes of production coexist in different regions and sectors of Indian agriculture: full capitalism in Punjab, semi-feudal relations in parts of Bihar, and transitional forms in between. The coexistence is not a sign of incomplete transition but a structural feature of Indian capitalism.</li>
 </ul>
 
@@ -7108,7 +7109,7 @@ The sexual division of labour in India is continuously reproduced through the ki
   <li>Original slums formed through land squatting by rural migrants seeking urban employment</li>
   <li>Slums created when the erstwhile middle class moved away, leaving older housing to deteriorate</li>
   <li>Slums created around sources of employment that offer low remuneration: proximity to work overrides quality of housing</li>
-  <li>TB Ramachandran: Indian cities are fundamentally unplanned, with land use patterns developing organically around economic activities without adequate housing infrastructure</li>
+  <li>Unplanned growth: many Indian cities have grown without planning, with land use patterns developing organically around economic activities without adequate housing infrastructure</li>
   <li>MSA Rao: mohalla culture, migrants cluster with kin and caste fellows, producing dense slum settlements with high social solidarity but poor physical conditions</li>
   <li>Demographic dynamism: expansionist modernity and declining agriculture push rural surplus population into cities without commensurate housing supply</li>
 </ul>
@@ -7136,7 +7137,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 <table>
   <tr><th>Approach</th><th>Core Argument</th><th>Critique</th></tr>
   <tr><td><strong>Marxist</strong></td><td>Slum is a conscious creation of the political and economic dominant class; need to give entire population similar homes</td><td>Does not address immediate practical needs; oversimplifies market mechanisms</td></tr>
-  <tr><td><strong>Welfarist</strong></td><td>Tear down slums, remake them (Rajiv Awas Yojana)</td><td>Geeta Diwan Verma: remade houses are sub-let by residents and pave way for corruption; Wirth: need is to change culture, not just houses</td></tr>
+  <tr><td><strong>Welfarist</strong></td><td>Tear down slums, remake them (Rajiv Awas Yojana)</td><td>Gita Dewan Verma: remade houses are sub-let by residents and pave way for corruption; Wirth: need is to change culture, not just houses</td></tr>
   <tr><td><strong>Community Development</strong></td><td>Identify local leaders, change way of life and occupation; enable self-help</td><td>Kalpana Sharma found in Dharavi that CDA is successful in the long term; most effective but slow</td></tr>
   <tr><td><strong>Humanitarian</strong></td><td>Give people assurance of tenure; they'll develop good practices themselves</td><td>Assumes causality runs from security to improvement; may not work without complementary support</td></tr>
   <tr><td><strong>Modernisation</strong></td><td>Slums are temporary; with modernity, slum dwellers will become landowners</td><td>Ignores structural causes; empirically refuted by persistence of slums in highly developed cities</td></tr>
@@ -7297,7 +7298,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>TN Madan argues that secularism is a minority viewpoint in India: of Hindu elites who have internalised Enlightenment values but who represent neither the majority of Hindus nor Muslim, Christian, or Sikh communities for whom religion is not separable from public life. For Madan, secularism in India is therefore "an impossible project." Ashis Nandy similarly argues that Western secularism cannot solve Indian communalism: it requires privatising religion in societies where religion is inseparably public. Partha Chatterjee and Amartya Sen respond that however imperfectly realised, the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
 
-<p>Communalism has been the central threat to India's secular polity. Bipin Chandra identifies three stages: liberal communalism (common religious interests, compatible secular interests); communal communalism (different but coexisting secular interests); and extreme communalism (fundamentally antagonistic secular interests, the logic of the Two-Nation Theory). Colonial divide-and-rule policy, separate electorates (Morley-Minto 1909), the trauma of Partition, political mobilisation of religious grievances, and the growth of Hindu nationalism have all contributed to communal politics in independent India.</p>
+<p>Communalism has been the central threat to India's secular polity. Bipan Chandra identifies three stages: the belief that co-religionists share common secular interests; liberal communalism (different but reconcilable secular interests); and extreme communalism (fundamentally antagonistic secular interests, the logic of the Two-Nation Theory). Colonial divide-and-rule policy, separate electorates (Morley-Minto 1909), the trauma of Partition, political mobilisation of religious grievances, and the growth of Hindu nationalism have all contributed to communal politics in independent India.</p>
 
 <h2>Caste Associations and Their Sociological Significance</h2>
 
@@ -7629,11 +7630,11 @@ The sexual division of labour in India is continuously reproduced through the ki
 </ul>
 
 <h3>Environment and Sustainability</h3>
-<p>Ecological consequences of India's development model are severe: deforestation; river pollution (Ganga and Yamuna among world's most polluted); air pollution (13 of world's 20 most polluted cities are in India); soil degradation; climate vulnerability. DN Dhanagre's concept of "growth with justice" provides an evaluative framework combining economic growth with equity and ecological integrity. True sustainability requires changing patterns of production and consumption, not merely improving technological efficiency. Eco-feminist movements (Chipko, Appiko, NBA) have had women at their forefront, demonstrating that sustainability is inseparable from gender equality.</p>
+<p>Ecological consequences of India's development model are severe: deforestation; river pollution (Ganga and Yamuna among world's most polluted); air pollution (13 of world's 20 most polluted cities are in India); soil degradation; climate vulnerability. The idea of "growth with justice" provides an evaluative framework combining economic growth with equity and ecological integrity. True sustainability requires changing patterns of production and consumption, not merely improving technological efficiency. Eco-feminist movements (Chipko, Appiko, NBA) have had women at their forefront, demonstrating that sustainability is inseparable from gender equality.</p>
 
 <h2>B. Poverty, Deprivation, and Inequality</h2>
 <p>Amartya Sen's foundational insight is that "poverty is more than an economic problem." Sen's Capability Approach defines poverty as the deprivation of basic capabilities: the ability to live a long and healthy life, to be educated, to participate in political and social life. Social causes include caste-based disabilities, conspicuous spending obligations (dowry, elaborate marriages, funerals), and social exclusion from public goods. Economic causes include unequal land distribution, low wages, and rural indebtedness. Political causes include skewed policies favouring influential constituencies and poor accountability. Globalisation-related causes include sidelining of cottage industries and the race to the bottom in labour standards.</p>
-<p>Consequences of poverty: culture of poverty (Oscar Lewis) transmitting values and behaviours across generations including present-time orientation, fatalism, and apathy; malnutrition with India's stunting and wasting rates among the worst in the world; illiteracy as children are pulled out of school for labour; social deviance including crime and Naxalism as responses to structural exclusion. Andre Beteille in "Pollution and Poverty" argues poverty is more contagious than pollution, passing through barriers of caste, religion, and region. Bhalla and Chadha's study of 200 villages in Punjab found per capita income of rich farmers was 200 times higher than that of poor farmers after the Green Revolution, demonstrating that development itself deepens structured inequality.</p>
+<p>Consequences of poverty: culture of poverty (Oscar Lewis) transmitting values and behaviours across generations including present-time orientation, fatalism, and apathy; malnutrition with India's stunting and wasting rates among the worst in the world; illiteracy as children are pulled out of school for labour; social deviance including crime and Naxalism as responses to structural exclusion. Bhalla and Chadha's study of Punjab cultivators found the gains of the Green Revolution unevenly shared, with many marginal and small farmers still poor, suggesting that development can deepen structured inequality.</p>
 <p>Government programmes operate through four channels: wage employment (MNREGA); self-employment (PM Mudra Yojana); food security (NFSA, PDS, Mid-Day Meal, POSHAN Abhiyan); and social security (Ayushman Bharat, NSAP pensions). Sen and Jean Dreze in <em>An Uncertain Glory</em> argue that poverty alleviation requires not just economic growth but active social provisioning in health, education, and nutrition, combined with democratic participation and RTI-based accountability.</p>
 
 <h2>C. Violence Against Women</h2>
@@ -7655,7 +7656,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 </table>
 
 <h2>D. Communalism and Secularism</h2>
-<p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests at the expense of others. Bipin Chandra identifies three stages: liberal communalism (compatible but different interests); communal communalism (different but coexisting interests); and extreme communalism (fundamentally antagonistic interests, the logic of the Two-Nation Theory that produced Partition). Consequences include communal riots producing deaths, displacement, and chronic inter-community distrust; forced migration and ghettoisation of minorities; permanent fear and insecurity; hindrance to class-based social solidarity; and electoral politics structured around religious identity rather than development performance. The Indian Constitution's secular framework of principled distance (Rajeev Bhargava) treats all religions equally while preventing any religion from dictating state policy. TN Madan's "impossible project" argument and Ashis Nandy's critique of Western secularism point to the difficulty of implementing a constitutional ideal where religion is deeply public. Partha Chatterjee and Amartya Sen respond that the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
+<p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests at the expense of others. Bipan Chandra identifies three stages: the belief that co-religionists share common secular interests; liberal communalism (different but reconcilable interests); and extreme communalism (fundamentally antagonistic interests, the logic of the Two-Nation Theory that produced Partition). Consequences include communal riots producing deaths, displacement, and chronic inter-community distrust; forced migration and ghettoisation of minorities; permanent fear and insecurity; hindrance to class-based social solidarity; and electoral politics structured around religious identity rather than development performance. The Indian Constitution's secular framework of principled distance (Rajeev Bhargava) treats all religions equally while preventing any religion from dictating state policy. TN Madan's "impossible project" argument and Ashis Nandy's critique of Western secularism point to the difficulty of implementing a constitutional ideal where religion is deeply public. Partha Chatterjee and Amartya Sen respond that the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
 
 <h2>E. Other Emerging Challenges</h2>
 <p>The digital divide compounds traditional social exclusion. India has over 800 million internet users (2023) but access is profoundly unequal across urban/rural, gender, caste, and class lines. COVID-19 exposed this starkly when poor children were excluded from online education while middle-class children shifted seamlessly.</p>
