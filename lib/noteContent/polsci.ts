@@ -141,6 +141,28 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Political theory remains a dynamic and evolving field because political ideas are closely connected with the lives of individuals and societies and necessarily evolve in response to changing historical circumstances and new forms of political conflict.</p>
 
+<h3>The Decline of Political Theory</h3>
+
+<p>In the 1950s several scholars declared that political theory, in the classical sense of reasoned argument about the ends of political life, had declined or even died. The claim was not that nobody wrote about politics. It was that the great tradition running from Plato to Marx had stopped producing new normative theory, and that the study of politics was being taken over by empirical science on one side and by the history of ideas on the other.</p>
+
+<ul>
+  <li><strong>David Easton, The Political System (1953):</strong> Easton argued that political theory had sunk into historicism, by which he meant the retelling and interpretation of past ideas instead of the building of systematic, causal theory about how political systems actually work. Theory was living on intellectual capital inherited from earlier centuries. His remedy was a general empirical theory, which he later developed as systems analysis.</li>
+  <li><strong>Alfred Cobban, "The Decline of Political Theory" (1953):</strong> In this article in Political Science Quarterly, Cobban complained that theorists no longer addressed the political problems of their own time. The great theorists of the past wrote to influence practice, while modern academics wrote commentaries on them. He blamed the retreat into history and the ambition to turn politics into a value-free science.</li>
+  <li><strong>Peter Laslett, Philosophy, Politics and Society (1956):</strong> In his introduction to this collection Laslett wrote that "for the moment, anyway, political philosophy is dead", and he traced its death mainly to logical positivism.</li>
+</ul>
+
+<h4>Causes of the decline</h4>
+
+<ul>
+  <li><strong>Logical positivism:</strong> The Vienna Circle and A. J. Ayer's Language, Truth and Logic (1936) held that a statement is meaningful only if it is true by definition or can be verified by observation. A value judgement such as "this law is unjust" is neither, so Ayer treated it as an expression of feeling (emotivism). Normative theory was reduced to the statement of preferences, and philosophers turned to the analysis of language.</li>
+  <li><strong>Behaviouralism:</strong> The behavioural revolution in American political science prized measurement, verification and value neutrality, and dismissed classical theory as armchair speculation.</li>
+  <li><strong>Post-war consensus:</strong> Agreement on welfare capitalism in the West, and the experience of fascism and Stalinism, made grand normative visions look both unnecessary and dangerous. Daniel Bell captured this mood in The End of Ideology (1960).</li>
+</ul>
+
+<h4>Assessment and revival</h4>
+
+<p>The obituary proved premature. In the same years Hannah Arendt (The Human Condition, 1958), Michael Oakeshott, Friedrich Hayek (The Constitution of Liberty, 1960) and Isaiah Berlin ("Two Concepts of Liberty", 1958) produced major works of political theory, and Leo Strauss (Natural Right and History, 1953) attacked the fact-value distinction on which the positivist case rested. In "Does Political Theory Still Exist?" (1962) Berlin answered Laslett: political theory survives as long as people disagree about the ends of life, and only a society in which all ends were agreed would be left with purely technical questions. From the late 1960s the post-behavioural revolt, marked by Easton's own Credo of Relevance (1969), brought values back, and John Rawls's A Theory of Justice (1971) is taken as the sign of revival. What declined was one style of theorising, not the questions political theory asks.</p>
+
   `,
 
   'theories-of-state': `
@@ -203,6 +225,31 @@ export const polsciNoteContent: Record<string, string> = {
 <p>At one extreme, classical liberals argue for a minimal state limited to maintaining law and order, enforcing contracts, and protecting against external threats. This is called the nightwatchman state, associated with John Locke. Individuals should enjoy maximum freedom, and economic and social life should be left to the market and private actors. The New Right strongly supports this position, arguing that less state intervention leads to greater efficiency and individual freedom.</p>
 
 <p>In the twentieth century, the role of the state expanded significantly with the rise of the welfare state. Governments began to intervene to reduce poverty and inequality by providing services such as education, healthcare, and social security. Modern economies also require economic management by a central authority, leading to managed capitalism in most Western societies. A more extreme form is seen in collectivist systems involving state control over the entire economy, as in communist countries such as the Soviet Union where private property was abolished and the economy centrally planned. The most extreme form is found in the totalitarian state, where the state controls not only the economy but also education, culture, media, and personal life. There is no space for opposition, and mechanisms like elections and free media are either absent or controlled. Examples include Nazi Germany and the Soviet Union under Stalin. Totalitarianism effectively destroys civil society and eliminates individual freedom.</p>
+
+<h3>The Neo-liberal Theory of the State</h3>
+
+<p>The neo-liberal or New Right theory of the state revives classical liberalism against the Keynesian welfare state. Its core claim is that the state should be minimal or limited: it should uphold the rule of law, protect property, enforce contracts and defend the country, and leave the allocation of resources to the market. The theory gained ground in the 1970s, when stagflation and fiscal strain seemed to show that the interventionist state had failed, and it became government policy under Margaret Thatcher in Britain (from 1979) and Ronald Reagan in the United States (from 1981).</p>
+
+<ul>
+  <li><strong>F. A. Hayek:</strong> In The Road to Serfdom (1944) and The Constitution of Liberty (1960), Hayek argued that no planner can gather the dispersed knowledge that the price system uses, so the market is a spontaneous order that nobody designed. The state's task is to maintain the rule of law: general, abstract rules known in advance, within which individuals pursue their own ends.</li>
+  <li><strong>Milton Friedman:</strong> In Capitalism and Freedom (1962) the state is a rule-maker and umpire. Economic freedom is a condition of political freedom, because the market disperses the power that a planned economy concentrates.</li>
+  <li><strong>Robert Nozick:</strong> Anarchy, State, and Utopia (1974) argues that a minimal state can arise from the state of nature through protective associations without violating anyone's rights, but that any more extensive state, including one that redistributes through taxation, does violate them.</li>
+  <li><strong>Public choice theory:</strong> James Buchanan and Gordon Tullock (The Calculus of Consent, 1962) apply the economist's assumption of self-interest to politics. Voters, politicians and officials maximise their own utility, so government failure is as real as market failure. William Niskanen (1971) argued that bureaucrats maximise their budgets, producing an oversupply of public services. The state grows because organised interests and officials gain from its growth, not because citizens need it.</li>
+  <li><strong>Overload thesis:</strong> In the 1970s writers such as Anthony King argued that electoral competition makes parties promise more than governments can deliver, so the state becomes overloaded and society ungovernable.</li>
+</ul>
+
+<p><strong>India:</strong> The 1991 reforms, adopted under P. V. Narasimha Rao and Manmohan Singh during a balance of payments crisis, moved India in this direction: the New Industrial Policy of 1991 abolished licensing for most industries and disinvestment began. The Fiscal Responsibility and Budget Management Act (2003) bound governments to fiscal discipline. Yet India never adopted a minimal state: rights-based welfare such as MGNREGA (2005) and the National Food Security Act (2013) expanded alongside market reform.</p>
+
+<h4>Critique</h4>
+
+<ul>
+  <li><strong>A strong state, not a small one:</strong> Andrew Gamble (The Free Economy and the Strong State, 1988) showed that Thatcherism combined a free economy with a strong state in policing, trade union law and central control. Markets have to be created, guarded and enforced by the state.</li>
+  <li><strong>Markets are made:</strong> Karl Polanyi (The Great Transformation, 1944) had already argued that laissez-faire was itself planned by the state, and that society protects itself against a self-regulating market.</li>
+  <li><strong>Inequality and class power:</strong> David Harvey (A Brief History of Neoliberalism, 2005) reads neoliberalism as a project to restore the power of economic elites, and wealth became more concentrated wherever it was applied.</li>
+  <li><strong>Crisis and development:</strong> Deregulated finance collapsed in 2008 and was rescued by states. The East Asian economies grew through active developmental states, and Amartya Sen stresses that their spread of basic education and health care came before rapid growth.</li>
+</ul>
+
+<p>The theory is right that states can fail and that incentives matter. In practice, however, neoliberalism changed the tasks of the state more than it reduced its size.</p>
 
 <h2>Sovereignty: Meaning and Development</h2>
 
@@ -272,6 +319,20 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>A theory of state is closely linked with ideology. Each ideology develops its own understanding of the state based on its core principles. Liberalism focuses on individual freedom, Marxism on class relations, and feminism on gender justice. The liberal theory of the state, the Marxian theory of the state, the feminist theory of the state, the fascist theory of the state, and the postmodern theory of the state are each best understood as sub-components within their respective larger ideological frameworks. Students are advised to study the topic of theories of the state alongside the topic of ideologies for a holistic understanding of how these perspectives are grounded in deeper philosophical commitments about power, society, and justice.</p>
 
+<h3>Feminist Theory of the State</h3>
+
+<p>Feminist theories of the state ask whether the state is neutral between men and women or is itself an expression of patriarchy. Liberal, pluralist and Marxist theories analysed the state in terms of individuals, groups or classes and were silent about gender. Feminists add that the classical line between the public sphere of the state and the private sphere of the family has hidden the power men exercise at home, and that it is the state, through family and criminal law, that draws this line.</p>
+
+<ul>
+  <li><strong>Liberal feminism:</strong> The state is broadly neutral, or can be made so. Women's subordination comes from unequal laws and exclusion from public life, so the remedy is to use the state through the vote, legal reform, anti-discrimination law and equal pay, as Betty Friedan's National Organization for Women (1966) did. Radical critics reply that this trusts a state that men built.</li>
+  <li><strong>Radical feminism:</strong> The state is patriarchal. Catharine MacKinnon, in Toward a Feminist Theory of the State (1989), argues that "the state is male" in the feminist sense: its claim to objectivity and neutrality is the male point of view presented as the general one, so the law sees and treats women the way men see and treat them. Rape law that asks whether the woman resisted defines consent from the man's side. Carole Pateman, in The Sexual Contract (1988), argues that the social contract of Hobbes, Locke and Rousseau, presented as an agreement among free individuals, rests on a prior sexual contract that secured men's right over women. Modern civil society is therefore a fraternal patriarchy.</li>
+  <li><strong>Socialist feminism:</strong> The state serves both capitalism and patriarchy. It regulates the family so that women's unpaid domestic work reproduces the labour force, and the post-war welfare state built its benefits around the male breadwinner and the dependent wife.</li>
+  <li><strong>Postmodern feminism:</strong> Wendy Brown, in States of Injury (1995), argues that the state's masculinism is not a single essence but works through several dimensions at once, liberal, capitalist, prerogative (police and military) and bureaucratic, and warns that seeking protection from the state can deepen women's dependence on it.</li>
+  <li><strong>State feminism:</strong> Scandinavian scholars such as Helga Hernes (1987) described a woman-friendly welfare state, and Australian feminists who entered the bureaucracy were called femocrats. The state appears here as a site of struggle, not a fixed male institution.</li>
+</ul>
+
+<p><strong>India:</strong> In the Mathura case the Supreme Court acquitted two policemen accused of raping a young tribal girl in a police station, reasoning that she had raised no alarm and bore no marks of resistance. The protest that followed produced the Criminal Law (Amendment) Act, 1983, which shifted the burden of proof in custodial rape. Feminist pressure has since drawn the state into the private sphere through the Vishaka guidelines (1997), the Protection of Women from Domestic Violence Act (2005) and the Sexual Harassment of Women at Workplace Act (2013). Yet the Bharatiya Nyaya Sanhita (2023) carried over the marital rape exception from the Indian Penal Code, and the 106th Amendment (2023), which reserves one-third of seats in the Lok Sabha and state assemblies for women, operates only after the delimitation that follows the next census. As of 2026 that reservation had not yet taken effect. The Indian case shows the state as both target and instrument of feminist politics.</p>
+
   `,
   'justice': `
 <h2>Justice as a Political and Moral Concept</h2>
@@ -281,6 +342,30 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Justice is a moral concept because it establishes standards of right and wrong in social life. It is simultaneously political because it is tied to power and to the institutions that exercise it. In many modern discussions, justice functions as the standard by which political institutions are evaluated. Rawls described justice as the first virtue of social institutions, just as truth is the first virtue of systems of thought. Efficient or stable institutions cannot be defended if they are fundamentally unjust. This formulation sets the tone of contemporary political philosophy: justice is not a decorative value but a test of legitimacy.</p>
 
 <p>Justice is also described as an architectonic concept in political science, meaning it is a foundational or organising concept that structures and gives shape to other political values. Liberty refers to the condition in which an individual is free to think, act, and express themselves without unnecessary restrictions. Equality refers to the principle that all human beings possess equal moral worth and should be treated with equal respect by the state and society. Rights are justified claims or entitlements that individuals possess against the state or society, enabling them to live with dignity and freedom. Justice usually requires balancing these values. Liberty without constraint can turn into domination of the weak by the strong, while equality without liberty can lead to excessive state paternalism or authoritarianism. Justice provides the framework to reconcile these competing values, ensuring that freedom is exercised without undermining the freedom of others and that equality is pursued without destroying individual autonomy.</p>
+
+<h3>Greek Conceptions of Justice and Rawls</h3>
+
+<p><strong>Plato:</strong> In the Republic Plato rejects the conventional views of justice voiced in the dialogue, such as Cephalus's telling the truth and paying one's debts, Polemarchus's helping friends and harming enemies, and Thrasymachus's claim that justice is the interest of the stronger. For Plato justice is a virtue of the soul and of the state alike. The soul has three parts, reason, spirit and appetite, and the ideal state three classes, philosopher-rulers, auxiliaries and producers. Justice is the harmony that results when each part and each class performs its own function and does not meddle with the others.</p>
+
+<p><strong>Aristotle:</strong> In the Nicomachean Ethics (Book V) Aristotle separates general justice, which is lawfulness or complete virtue towards others, from particular justice, which concerns fair shares. Distributive justice divides honours, offices and goods in proportion to merit, a proportionate equality in which equals receive equal shares and unequals unequal shares. Corrective justice restores the balance between parties after a transaction or a wrong, by arithmetical equality, whatever the standing of the persons. In the Politics he notes that democrats measure desert by free birth and oligarchs by wealth, while he measures it by contribution to the good life of the polis.</p>
+
+<table>
+  <thead>
+    <tr><th>Aspect</th><th>Plato and Aristotle</th><th>Rawls</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Basis</td><td>Teleological: justice follows from a conception of the good life and of human nature</td><td>Deontological: the right is prior to the good, and principles are chosen without a shared conception of the good</td></tr>
+    <tr><td>Seat of justice</td><td>A virtue of the person as well as of the polis</td><td>The first virtue of social institutions, applied to the basic structure of society</td></tr>
+    <tr><td>Equality</td><td>Natural inequality accepted: Plato's fixed classes, Aristotle's natural slaves and exclusion of women from citizenship</td><td>All persons are free and equal moral persons</td></tr>
+    <tr><td>Desert</td><td>Shares follow merit or virtue</td><td>Natural talents are arbitrary from a moral point of view and do not by themselves deserve larger shares</td></tr>
+    <tr><td>Method</td><td>Knowledge of the Good (Plato) or practical wisdom about the polis (Aristotle)</td><td>A hypothetical contract in the original position behind a veil of ignorance</td></tr>
+    <tr><td>Role of the state</td><td>To make citizens virtuous</td><td>To stay neutral among reasonable comprehensive doctrines (Political Liberalism, 1993)</td></tr>
+  </tbody>
+</table>
+
+<p>There are also points of contact. Rawls, like Plato, makes justice the first virtue of the political order, and both judge a whole social structure rather than isolated acts. Aristotle's proportionate equality and Rawls's difference principle both accept that unequal shares can be just, though Aristotle justifies them by merit and Rawls only by their benefit to the least advantaged.</p>
+
+<p><strong>Assessment:</strong> The Greek view grounds justice in a thick idea of the good and in a hierarchy that modern democrats reject. Rawls's view is egalitarian and suits a plural society, but critics find it thin. Communitarians revive the Greek side against him: Alasdair MacIntyre (After Virtue, 1981) argues that justice cannot be defined apart from the virtues and shared practices of a community, and Michael Sandel argues that debates about justice cannot avoid questions of the good. Martha Nussbaum's capabilities approach is openly Aristotelian. In India, the doctrine of reasonable classification under Article 14, which allows unequals to be treated differently on an intelligible basis, echoes Aristotle's proportionate equality.</p>
 
 <h2>Dimensions of Justice</h2>
 
@@ -321,6 +406,22 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Rawls consciously places his theory within the Kantian deontological tradition. He rejects utilitarianism because it allows the rights and interests of some individuals to be overridden in pursuit of aggregate welfare. Instead, Rawls argues that every individual possesses an inviolability founded on justice, meaning that human dignity and basic rights cannot be traded off for social or economic advantages. Any theory that permits the sacrifice of individuals for collective gain fails to meet the requirements of justice.</p>
 
 <p>Another key feature of Rawls' methodology is his emphasis on a purely procedural approach to justice. He argues that principles of justice should emerge from a fair and rational decision-making process rather than from pre-existing moral doctrines or ideological biases. If the procedure through which principles are chosen is fair and rational, the resulting principles can also be considered just. For this purpose, Rawls revives the tradition of the social contract, which had declined in influence as liberal political theory came to be dominated by utilitarianism. Contracts are voluntary agreements expressing the rational consent of participants. Rawls argues that if individuals are placed in a fair situation where no one has unfair advantages, they will choose principles of justice acceptable to all.</p>
+
+<h3>Pure Procedural Justice and Ambedkar's Egalitarian Justice</h3>
+
+<p>In A Theory of Justice (section 14) Rawls distinguishes three kinds of procedural justice. Perfect procedural justice has an independent standard of a fair result and a procedure sure to reach it, as when the person who cuts a cake takes the last piece. Imperfect procedural justice has an independent standard but no procedure certain to meet it, as in a criminal trial that may convict the innocent. Pure procedural justice has no independent standard: a fair procedure, properly followed, makes the result fair whatever it is, as in fair gambling. Justice as fairness is pure procedural at two levels. The principles are just because they are chosen in a fair original position, and once the basic structure satisfies them, the resulting distribution of income and wealth is just whatever it turns out to be. The unit of the theory is the free and equal individual, and the veil of ignorance deliberately hides caste, class and religion.</p>
+
+<p>B. R. Ambedkar starts from the other end. His justice is substantive and historical. Hindu society is a system of graded inequality, so justice cannot come from a fair procedure applied to persons assumed to be equal already. In Annihilation of Caste (1936) and in his speech of 25 November 1949 he defined the goal as liberty, equality and fraternity held together as a trinity, and warned that one man one vote without one man one value would mean a life of contradictions. Justice for him required the end of caste itself, and an active state to bring it about.</p>
+
+<ul>
+  <li><strong>Starting point:</strong> Rawls reasons about an ideal, well-ordered society and abstracts from social identity. Ambedkar reasons from actual injustice, the exclusion of untouchables from wells, temples and schools, and treats caste as the structure to be dismantled.</li>
+  <li><strong>Unit:</strong> Rawls's parties are individuals. Ambedkar sees groups whose members are wronged because of the group they are born into, which is why he defended group safeguards and minority rights.</li>
+  <li><strong>Procedure and outcome:</strong> For Rawls a fair procedure legitimates whatever results. For Ambedkar a procedure laid over graded inequality reproduces it, so outcomes such as the presence of Dalits in services and legislatures must be checked and corrected.</li>
+  <li><strong>Society as well as state:</strong> Rawls applies justice to the basic institutions of society. Ambedkar held that in India society was more oppressive than the state, so justice must reach custom, religion and everyday social relations, and fraternity matters as much as liberty and equality.</li>
+  <li><strong>Remedy:</strong> Rawls offers fair equality of opportunity and the difference principle. Ambedkar wrote compensatory discrimination into the Constitution: abolition of untouchability (Article 17), reservation in public posts (Article 16(4)), promotion of the educational and economic interests of the Scheduled Castes and Scheduled Tribes (Article 46) and reserved seats in the legislatures (Articles 330 and 332).</li>
+</ul>
+
+<p><strong>Assessment:</strong> The contrast should not be overdrawn. The difference principle judges institutions by the position of the least advantaged, and fair equality of opportunity goes beyond formal non-discrimination, so both can be read as supporting reservation. But Rawls's justice stays procedural and individualist, while Ambedkar's is egalitarian in a fuller sense: it measures justice by whether the historically excluded actually share in power, dignity and resources. When the Supreme Court in Indra Sawhney (1992) accepted caste as a basis for identifying backward classes, it adopted an Ambedkarite rather than a Rawlsian premise. Critics warn that group-based justice can harden the identities it seeks to dissolve.</p>
 
 <h2>Reflective Equilibrium</h2>
 
@@ -568,6 +669,21 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Communitarian thinkers like Walzer criticise abstract debates and argue that both liberty and equality must be understood within social context and shared values. His idea of complex equality tries to prevent dominance rather than enforce strict equality. Feminist perspectives highlight that both liberty and equality are often defined in male-centric ways. Without addressing gender inequalities, especially in the private sphere, formal liberty is meaningless for women. Equality is necessary to make liberty real for all.</p>
 
 <p>From a multicultural perspective, the relationship between liberty and equality is understood in terms of recognition of cultural diversity. Multicultural theorists argue that treating everyone identically in the name of equality may undermine liberty for minority groups. If the state imposes uniform laws, language, or cultural norms, minorities may lose the freedom to practise their own way of life. Thus, formal equality can sometimes lead to cultural domination. Will Kymlicka argues that true liberty requires group-differentiated rights. Minority communities may need special protections such as language rights, cultural autonomy, or exemptions from general laws to preserve their identity. In this view, equality does not mean identical treatment but equitable recognition of differences.</p>
+
+<h3>"The Freedom of the Pike is Death to the Minnows"</h3>
+
+<p>The line appears in Isaiah Berlin's "Two Concepts of Liberty", his inaugural lecture at Oxford on 31 October 1958, in the form "freedom for the pike is death for the minnows". Berlin set it in quotation marks as a familiar saying, and it is commonly associated with R. H. Tawney. The pike is a predatory fish and the minnow a small one, so the image means that unrestricted freedom for the strong destroys the weak. In a society of unequal power, unchecked liberty becomes the liberty of the powerful to dominate everyone else.</p>
+
+<p>Berlin used the saying while defending negative liberty. He accepted that the liberty of some must be restrained to secure the liberty of others, and that offering rights to people who are hungry, illiterate and sick mocks their condition. But he insisted on clarity: when liberty is curtailed for the sake of equality or justice, a real loss of liberty occurs and should be called that. In his words, "liberty is liberty, not equality or fairness or justice". For Berlin the pike and the minnows show that values conflict, not that liberty and equality are one value.</p>
+
+<ul>
+  <li><strong>Liberty and equality as complementary:</strong> Tawney's Equality (1931) argued that the freedom of the strong to exploit is not freedom for all, and that a large measure of equality is a condition of liberty, not its enemy. Laski likewise held that political liberty is unreal where economic power is concentrated. The pike's freedom is what egalitarian liberals want the state to restrain, through labour law, progressive taxation and public services.</li>
+  <li><strong>Liberty and equality as rivals:</strong> Lord Acton judged that in the French Revolution the passion for equality made vain the hope of freedom, and Hayek and Nozick treat enforced equality as a threat to liberty. For them the real pike is the redistributive state.</li>
+  <li><strong>Marxist reading:</strong> Formal freedom of contract between the owner of capital and the propertyless worker is the pike's freedom. Anatole France mocked the law that, in its majestic equality, forbids rich and poor alike to sleep under bridges.</li>
+  <li><strong>Rawls:</strong> Basic liberties have priority, but inequalities are allowed only if they benefit the least advantaged, and the fair value of political liberties must be protected from the influence of wealth.</li>
+</ul>
+
+<p><strong>India:</strong> The Constitution restrains the pike. Article 23 prohibits forced labour and Article 24 the employment of children in factories, mines and hazardous work. Article 38(2), added by the 44th Amendment (1978), directs the state to minimise inequalities in income, and Article 39(b) and (c) aim to prevent the concentration of wealth. The Bonded Labour System (Abolition) Act (1976) and minimum wage laws limit freedom of contract for the same reason. In Minerva Mills (1980) the Supreme Court held that the Constitution rests on a balance between the Fundamental Rights and the Directive Principles, that is, between liberty and equality.</p>
   `,
   'rights': `
 <h2>Rights in Political Theory</h2>
@@ -615,6 +731,25 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Civil rights ensure individual freedom and protect individuals from arbitrary interference by the state, including freedoms such as speech, religion, and personal liberty. These are classified as first-generation rights. Political rights enable individuals to participate in the political life of the state, including the right to vote, contest elections, and hold public office. Socio-economic rights relate to the material conditions necessary for a dignified life, including rights to education, health, work, and social security. These are classified as second-generation rights because they require positive action by the state.</p>
 
 <p>Negative rights require others, especially the state, to abstain from interfering with an individual's freedom. Rights such as freedom of speech and religion imply that the state should not restrict individual choices in these areas. Positive rights require active intervention by the state to ensure that individuals can enjoy certain basic conditions of life. They are rights to receive benefits and impose a duty on the state to allocate resources and create enabling conditions. Without positive rights, negative rights may remain formal, and without negative rights, individual freedom may be undermined.</p>
+
+<h3>The Right to Property</h3>
+
+<p>No right has divided political theorists more than the right to property. For one tradition it guarantees independence, security and liberty. For another it is the root of inequality and of power over others. Its significance in political theory lies here: a thinker's view of property largely decides his view of the state, of liberty and of equality.</p>
+
+<ul>
+  <li><strong>Plato and Aristotle:</strong> Plato denied private property and family to the guardians so that rulers would not be corrupted by private interest. Aristotle defended private ownership with common use, arguing that people care more for what is their own and that property makes generosity possible.</li>
+  <li><strong>Locke:</strong> In the Second Treatise of Government (1690) property is a natural right. By mixing his labour with what nature gives in common, a person makes it his own, provided he leaves enough and as good for others and lets nothing spoil. Money removes the spoilage limit and permits unequal accumulation. Government exists to preserve property, a term Locke used broadly for lives, liberties and estates.</li>
+  <li><strong>Rousseau:</strong> In the Discourse on the Origin of Inequality (1755) the first man who enclosed a piece of land, declared it his and found people simple enough to believe him was the real founder of civil society, and with property came inequality, crime and war. In The Social Contract (1762) he accepts property under the general will but wants no citizen rich enough to buy another and none so poor as to be forced to sell himself.</li>
+  <li><strong>Proudhon:</strong> What is Property? (1840) answered that property is theft, meaning income drawn from ownership without labour, such as rent and interest, while it defended possession for use.</li>
+  <li><strong>Marx and Engels:</strong> The Communist Manifesto (1848) sums up communist theory as the abolition of private property, meaning bourgeois ownership of the means of production, which lets owners appropriate the labour of others, not personal belongings.</li>
+  <li><strong>Tawney:</strong> The Acquisitive Society (1920) distinguished property used by its owner in work from functionless property that yields income without service.</li>
+  <li><strong>Nozick:</strong> Under the entitlement theory (1974), holdings acquired justly and transferred voluntarily are inviolable, so taxation of earnings is on a par with forced labour.</li>
+  <li><strong>Macpherson:</strong> He traced liberal property to possessive individualism (1962) and proposed a new idea of property as the individual's right not to be excluded from the use of society's productive resources.</li>
+</ul>
+
+<p><strong>India:</strong> The Constitution first made property a Fundamental Right under Articles 19(1)(f) and 31. Land reform laws clashed with it, leading to the First Amendment (1951) and the Ninth Schedule, and to Golaknath (1967) and Kesavananda Bharati (1973). The 44th Amendment (1978) deleted both articles and made property a constitutional right under Article 300A: no person shall be deprived of his property save by authority of law. In Vidya Devi (2020) the Supreme Court called it a human right as well as a constitutional right. The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act (2013) requires social impact assessment and, for many projects, the consent of landowners. In Property Owners Association v State of Maharashtra (5 November 2024) a nine-judge bench held by majority that not every privately owned resource is a material resource of the community under Article 39(b).</p>
+
+<p>Property is thus less a single right than a bundle of claims that every society limits. Liberals stress its link with liberty, socialists its link with domination.</p>
 
 <h2>Generations of Rights</h2>
 
@@ -881,6 +1016,26 @@ export const polsciNoteContent: Record<string, string> = {
 <p>There is also widespread concern about declining citizen trust in democratic institutions across many established democracies. Citizens increasingly perceive political parties and elected representatives as primarily serving the interests of narrow elites rather than the public, leading to voter apathy, political disengagement, and the growth of anti-establishment sentiment. The transformation of political communication through digital media and social platforms has reinforced this dynamic, accelerating political polarisation, amplifying misinformation, and substituting spectacle and emotional appeal for substantive deliberation. The resulting condition is sometimes described as audience democracy, in which citizens are passive spectators of political performance rather than active participants in collective self-governance.</p>
 
 <p>The structural influence of corporate power and private wealth on democratic politics represents a further challenge. The dependence of political parties and candidates on large private donors, the revolving door between government service and corporate employment, and the capacity of wealthy interests to shape legislative agendas through lobbying and media ownership all undermine the democratic ideal of political equality. These conditions tend to produce what Dahl later called deformed polyarchy, a system in which the formal mechanisms of democratic competition coexist with systematic inequalities of political influence that render genuine popular governance increasingly difficult to achieve.</p>
+
+<h3>The Self-Limiting State</h3>
+
+<p>Democracy gives power to the majority, but a majority can be as arbitrary as a monarch. Tocqueville (Democracy in America, 1835 and 1840) and Mill (On Liberty, 1859) warned of the tyranny of the majority, and Lord Acton (1887) that power tends to corrupt and absolute power corrupts absolutely. Contemporary democracies succeed when the state, although elected, limits its own power: it binds itself by a constitution, submits to courts and independent bodies, respects rights, and gives up office when it loses. This is constitutionalism, the principle of limited government under law.</p>
+
+<p>James Madison stated the problem in Federalist No. 51 (1788): in framing a government to be administered by men over men, the great difficulty is that the government must first be enabled to control the governed and then be obliged to control itself. His answer, building on Montesquieu's The Spirit of the Laws (1748), was that ambition must be made to counteract ambition through the separation of powers and checks and balances. Jon Elster (Ulysses and the Sirens, 1979) compares a constitution to Ulysses tying himself to the mast: the people bind their future majorities against passions they can foresee.</p>
+
+<ul>
+  <li><strong>Written constitution and rights:</strong> basic liberties are placed beyond the reach of ordinary majorities.</li>
+  <li><strong>Separation of powers and judicial review:</strong> courts can strike down laws and executive acts that exceed constitutional limits.</li>
+  <li><strong>Federalism and local government:</strong> power is dispersed between levels of government.</li>
+  <li><strong>Independent institutions:</strong> election commissions, auditors, a free press and rights to information check the government of the day.</li>
+  <li><strong>Norms of restraint:</strong> Steven Levitsky and Daniel Ziblatt (How Democracies Die, 2018) argue that democracies rest on two unwritten guardrails, mutual toleration of opponents and institutional forbearance, the restrained use of legal powers.</li>
+</ul>
+
+<p>When self-limitation fails, the result is what Fareed Zakaria called illiberal democracy (1997): elected governments that use their majorities to capture courts, media and electoral bodies. Such democracies usually die through legal steps rather than coups.</p>
+
+<p><strong>India:</strong> Ambedkar urged Indians to cultivate constitutional morality and to give up unconstitutional methods once constitutional ones were available. Kesavananda Bharati (1973) placed the basic structure beyond Parliament's amending power, and Indira Nehru Gandhi v Raj Narain (1975) struck down the clause of the 39th Amendment that put the Prime Minister's election beyond judicial scrutiny. After the Emergency of 1975-77 the 44th Amendment (1978) replaced "internal disturbance" with "armed rebellion" as a ground for a national emergency, required the cabinet's written advice for a proclamation, and kept Articles 20 and 21 enforceable even during an emergency. S. R. Bommai (1994) made President's Rule subject to judicial review, and on 15 February 2024 a five-judge bench unanimously struck down the electoral bond scheme as a violation of voters' right to information under Article 19(1)(a).</p>
+
+<p><strong>Assessment:</strong> Self-limitation has its own tensions. Judicial limits can turn into judicial supremacy, the counter-majoritarian difficulty identified by Alexander Bickel (The Least Dangerous Branch, 1962), and limits work only where rulers and citizens accept them. Constitutional text did not prevent the Emergency. Restraint ultimately rests on a political culture of constitutional morality, competitive elections and an alert public, which is why the 1977 election that voted out the Emergency government mattered as much as any judgment.</p>
   `,
 
   'power-hegemony-ideology': `
@@ -889,6 +1044,38 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Politics is in its most fundamental character the study of power. Political activity is the exercise of power, and political science is the systematic inquiry into its nature, distribution, and justification. The study of power raises several foundational questions that have divided political thinkers since the classical period. Is power widely dispersed across society, as pluralists maintain, or is it concentrated in the hands of a privileged minority, as elitists and Marxists argue? Is the exercise of power in its deepest nature benign, enabling communities to achieve collective goals, or is it inherently coercive, bound to domination and the suppression of weaker interests? These questions are further complicated by the difficulty of defining power itself. Power is what W.B. Gallie would call an essentially contested concept - a concept for which no universally accepted definition exists and on which permanent disagreement is inevitable given its centrality to competing political visions.</p>
 
 <p>A useful preliminary distinction is between power and authority. Power is the capacity to achieve desired outcomes or to influence the behaviour of others, whether through persuasion, incentives, or force. Authority is power that is accepted as legitimate and rightful. Those who exercise authority do not need to rely on coercion because they are believed to have the right to rule. This transforms raw power into a more stable and socially accepted form of governance. Both power and authority connect to the concept of legitimacy, which refers to the belief that political rule is exercised in a justified and rightful manner. Legitimacy ensures that people obey not out of fear but out of a sense of duty. Without it, governments must depend increasingly on coercion, which is both costly and inherently unstable.</p>
+
+<h3>Power, Authority and Legitimacy</h3>
+
+<p>Max Weber defined power as the probability that one actor in a social relationship can carry out his own will despite resistance. Authority is power accepted as rightful by those subject to it, so that commands are obeyed because they are thought to deserve obedience. Legitimacy is the quality that turns power into authority: the belief, or the justified claim, that a ruler has the right to rule. In "Politics as a Vocation" (1919) Weber described the state as a human community that successfully claims the monopoly of the legitimate use of physical force within a given territory. Rousseau had made the same point in The Social Contract (1762): the strongest is never strong enough to remain master unless he turns strength into right and obedience into duty.</p>
+
+<h4>Weber's three types of authority</h4>
+
+<p>In Economy and Society (published 1922) Weber classified legitimate domination by the ground on which obedience is claimed.</p>
+
+<ul>
+  <li><strong>Traditional authority:</strong> rests on the sanctity of custom and inherited status, as with hereditary monarchs, chiefs and patriarchs. Obedience is owed to the person whom tradition designates.</li>
+  <li><strong>Charismatic authority:</strong> rests on devotion to the extraordinary qualities of a leader, such as a prophet, hero or revolutionary, as with Gandhi in the national movement. It is unstable and, after the leader, is routinised into traditional or legal forms.</li>
+  <li><strong>Legal-rational authority:</strong> rests on impersonal rules made by correct procedure. Obedience is owed to the office, not the person, and its typical form is modern bureaucracy. India's Constitution, elections run by the Election Commission and the civil services are examples.</li>
+</ul>
+
+<p>These are ideal types and real regimes mix them, as when Nehru's charisma worked within a parliamentary constitution.</p>
+
+<h4>Legitimacy as a social construct</h4>
+
+<p>For Weber legitimacy is empirical: a regime is legitimate if people believe it to be. Legitimacy is therefore socially constructed. It is produced by tradition, ritual, symbols, education and performance, and it can be built up or lost. This makes the concept usable in research, but at a cost: a regime that manufactured belief through propaganda would have to count as legitimate.</p>
+
+<p>David Beetham, in The Legitimation of Power (1991), objected that Weber reduced legitimacy to belief in legitimacy. Power is legitimate not because people believe in it but because it can be justified in terms of their beliefs. He set out three conditions, each with its own failure:</p>
+
+<ul>
+  <li><strong>Legal validity:</strong> power is acquired and exercised according to established rules. Its breach is illegitimacy.</li>
+  <li><strong>Justifiability:</strong> the rules can be justified by beliefs shared by rulers and ruled about the rightful source of authority and the common interest. Where they cannot, there is a legitimacy deficit.</li>
+  <li><strong>Expressed consent:</strong> the ruled show their consent through actions such as voting or taking oaths. Its withdrawal is delegitimation.</li>
+</ul>
+
+<h4>Why legitimacy matters and how it is maintained</h4>
+
+<p>Legitimacy adds positive value to authority. It turns obedience into political obligation, lowers the cost of rule because less coercion is needed, and gives a government a reserve of support in bad times, what David Easton called diffuse support as against specific support for particular policies. Seymour Martin Lipset (Political Man, 1960) argued that stability depends on both legitimacy, the belief that existing institutions are the most appropriate for the society, and effectiveness, actual performance. In modern societies legitimacy is maintained by free and fair elections, the rule of law and constitutional limits, protection of rights, accountability and transparency, effective delivery of security and welfare, and the inclusion of minorities and weaker groups. The Emergency of 1975-77 was legally proclaimed yet lost legitimacy, and the 1977 election restored it through consent. Legitimacy is thus partly a social construct, since it lives in beliefs and practices, but not only that, since those beliefs can be judged by whether power meets standards of legality, justification and consent.</p>
 
 <h2>The Three Faces of Power</h2>
 
@@ -917,6 +1104,20 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Pluralism offers the most direct challenge to elite theory by arguing that power in modern democracies is not concentrated in any single group or class but is distributed across a multiplicity of competing interests, organisations, and coalitions. Robert Dahl's empirical study of New Haven provided the most influential pluralist account. Finding that different groups prevailed in different policy areas and that no single coalition dominated across all issues, Dahl concluded that American democracy approximated what he called polyarchy - not ideal democracy in the classical sense, but a system in which many groups compete for influence, citizens possess formal rights of participation, and no single elite achieves permanent dominance. Polyarchy is characterised by institutional features including the rule of law, separation of powers, judicial independence, fundamental rights, and freedom of the press - conditions that together ensure the openness of the political system to multiple competing claims.</p>
 
 <p>Dahl later revised his optimistic conclusions significantly. He acknowledged that not all groups possess equal resources, that corporate and business interests enjoy structural advantages that translate into disproportionate political influence, and that formal political equality does not produce substantive equality of influence. He described this revised picture as deformed polyarchy - a system that formally allows competition but is systematically biased in favour of economically powerful interests, converging with Marxist concerns about the relationship between economic power and political outcomes and with Mills's analysis of elite concentration. Pluralism remains valuable as a corrective to the view that power is always unified and concentrated, but its critics argue that it systematically understates the degree to which structural inequalities - of wealth, organisation, access, and information - shape political outcomes in ways that are invisible to the first face of power analysis.</p>
+
+<h3>Macpherson's View of Power</h3>
+
+<p>C. B. Macpherson set out his theory of power in Democratic Theory: Essays in Retrieval (1973). He argued that liberal theory uses the word power in two different senses and slides between them. The descriptive sense, going back to Hobbes, treats a person's power as his present means to obtain some future good, which includes power over other people. The ethical or developmental sense, found in Mill and T. H. Green, treats power as the ability to use and develop one's distinctively human capacities, such as rational understanding, moral judgement, aesthetic creation and friendship.</p>
+
+<ul>
+  <li><strong>Developmental power:</strong> a person's ability to use and develop his own human capacities. It is measured by the absence of impediments to that development, above all lack of adequate means of life and lack of access to the means of labour.</li>
+  <li><strong>Extractive power:</strong> the ability to use the capacities of others for one's own benefit. It is power over others.</li>
+  <li><strong>Net transfer of powers:</strong> under capitalism the means of labour are owned by a few. Those without them must sell their capacity to labour, and part of what that labour produces passes to the owners. There is thus a continuous net transfer of powers from workers to the owners of capital, which raises the extractive power of the owners and lowers the developmental power of the workers.</li>
+</ul>
+
+<p>Liberal democracy, Macpherson argued, makes two claims: to maximise individual utilities through the market and to maximise human powers in the developmental sense. Market society achieves the first at the cost of the second, because it maximises extractive power. A democracy worth the name must therefore end the net transfer and equalise developmental power.</p>
+
+<p>Macpherson's view differs from the mainstream concepts of power. Dahl measures power over decisions and Lukes power over preferences, but both treat power as power over others. Macpherson adds power to, the capacity for self-development, and asks whether the economic structure distributes it fairly. His view anticipates Amartya Sen's capability approach. Critics object that the idea of a net transfer rests on Marx's theory of exploitation, which many economists reject, that the line between using others' capacities and fair exchange is hard to draw, and that he says little about the institutions that would replace the market. In India, the Bonded Labour System (Abolition) Act (1976) and the employment guarantee under MGNREGA (2005) can be read as attempts to curb extractive power and widen developmental power.</p>
 
 <h2>Gramsci's Concept of Hegemony</h2>
 
@@ -973,6 +1174,29 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Power, hegemony, and ideology are analytically distinct but deeply interconnected concepts that together constitute a comprehensive account of political domination. Power in its most visible form is decision-making authority; in its second face it is agenda control; in its third face it is consciousness formation. Ideology is the content of this third face - the systematic set of beliefs and values through which consciousness is shaped to consent to existing arrangements. Hegemony is the process through which ideology becomes embedded in the cultural common sense of a society, moving from the explicit positions of a ruling class to the unexamined assumptions of everyday life.</p>
 
 <p>The practical implications of this conceptual cluster are significant for both the analysis and the critique of political power. If domination operates not only through force and formal institutions but through the production of consent, the naturalisation of contingent arrangements, and the shaping of what people want and believe, then resistance to domination requires more than challenging coercive power or capturing state institutions. It requires the construction of alternative forms of consciousness, the creation of counter-hegemonic cultures, the development of new common sense, and the formation of subaltern organic intellectuals capable of giving coherent articulation and strategic direction to the experiences and interests of dominated groups. Gramsci's contribution was to show that this cultural and intellectual struggle is not peripheral to politics but is, in conditions of advanced capitalism, its most decisive terrain.</p>
+
+<h3>Habermas and the Legitimation Crisis</h3>
+
+<p>Jürgen Habermas, of the second generation of the Frankfurt School, set out his theory in Legitimation Crisis (1973). He asked why late capitalism, which had largely tamed the economic crises Marx predicted, still faced instability. His answer was that state intervention moves the contradictions of capitalism out of the economy and into politics and culture.</p>
+
+<p>In liberal capitalism the market seemed to legitimate itself: distribution looked like the result of fair exchange, not of anyone's decision. In late capitalism the state manages the economy, provides welfare and plans growth, so distribution becomes visibly political and the state is held responsible for it. Yet the state must also protect private accumulation. It secures mass loyalty through formal democracy combined with what Habermas called civil privatism, the withdrawal of citizens into consumption, career and family, rewarded by rising living standards.</p>
+
+<p>Habermas identified four crisis tendencies:</p>
+
+<ul>
+  <li><strong>Economic crisis:</strong> the economy fails to produce enough consumable value.</li>
+  <li><strong>Rationality crisis:</strong> the administrative system cannot make the rational decisions needed to steer the economy, because it is pulled between the demands of capital and of voters.</li>
+  <li><strong>Legitimation crisis:</strong> the political system cannot keep the mass loyalty it needs, because it has raised expectations it cannot meet and its interventions reveal distribution as a political choice.</li>
+  <li><strong>Motivation crisis:</strong> the socio-cultural system no longer supplies the motives, such as the achievement ethic and civil privatism, on which the system depends.</li>
+</ul>
+
+<p>The state can try to buy loyalty with welfare and consumer goods, but conviction cannot be produced on demand. In Habermas's words, "there is no administrative production of meaning". In The Theory of Communicative Action (1981) he described this as the colonisation of the lifeworld, the sphere of communication and shared meaning, by the systems of money and power. In Between Facts and Norms (1992) he located legitimacy in democratic procedures of free public deliberation, through which citizens can see themselves as the authors of the laws they obey.</p>
+
+<h4>Tools of legitimation: consent or indoctrination</h4>
+
+<p>States legitimate themselves through constitutional procedure and elections, through performance in delivering growth, security and welfare, through ideology and nationalism, and through symbols and rituals such as Republic Day. Critical theorists stress that consent is often produced. James O'Connor (The Fiscal Crisis of the State, 1973) argued that the capitalist state must serve both accumulation and legitimation, two functions that pull against each other. Gramsci's hegemony and Althusser's ideological state apparatuses describe consent built through schools, religion and the media, and Edward Herman and Noam Chomsky (Manufacturing Consent, 1988) showed how ownership, advertising and reliance on official sources filter the news in liberal democracies.</p>
+
+<p>Consent and indoctrination are therefore two ends of a range rather than opposites. Legitimacy is an essential element of lasting rule, but legitimacy manufactured by indoctrination is fragile because it cannot survive open questioning. The communist regimes of Eastern Europe, which had controlled education and the media for decades, collapsed in 1989-91 once coercion faltered. In India, the press censorship and propaganda of the Emergency did not prevent the defeat of the ruling party in 1977. The 2008 financial crisis, when states rescued banks and then imposed austerity, is often read through Habermas's thesis, as trust in governments and parties fell across Western democracies.</p>
   `,
 
   'political-ideologies': `
@@ -999,6 +1223,27 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Hannah Arendt associated ideology above all with totalitarianism. In her analysis of Nazism and Stalinism, ideology was not merely a mistaken worldview but a claim to total explanatory power, a system that derives all conclusions from a single premise, claims to have uncovered the iron laws of history or nature, and treats the entire world as raw material for carrying them out. Ideological certainty of this kind justifies terror and the suppression of dissent, since those who refuse the official truth are enemies of history itself.</p>
 
 <p>Karl Popper likewise criticised ideological thinking as a mark of the closed society, a society that suppresses criticism and enforces conformity in the name of a single monopolistic truth. For Popper, only the open society, which institutionalises criticism, trial and error, and the competition of ideas, is capable of genuine knowledge and progress. Rigid ideologies lead to dogmatism and ultimately to authoritarianism.</p>
+
+<h3>Karl Popper: The Open Society and Its Enemies</h3>
+
+<p>Karl Popper wrote The Open Society and Its Enemies (1945) in New Zealand during the Second World War as a defence of liberal democracy against fascism and communism. Its first volume, The Spell of Plato, and its second, The High Tide of Prophecy, on Hegel and Marx, trace the intellectual roots of totalitarianism. A companion work, The Poverty of Historicism (published as articles in 1944-45 and as a book in 1957), sets out the method behind the attack.</p>
+
+<ul>
+  <li><strong>Historicism:</strong> Popper's name for the belief that the main task of social science is historical prediction, achieved by discovering the laws or trends that govern the course of history. He denied that there are such laws. The course of history depends on the growth of human knowledge, and since we cannot know today what we will know tomorrow, we cannot predict history. Theories that claim to do so cannot be falsified, which in Popper's philosophy of science marks them as unscientific.</li>
+  <li><strong>Plato:</strong> Popper read the Republic as a programme to arrest change and restore a closed, tribal society, with a ruling caste, censorship, the noble lie and a justice that means keeping to one's station. Plato, he argued, betrayed the critical spirit of Socrates.</li>
+  <li><strong>Hegel:</strong> Popper accused Hegel of reviving historicism as a dialectic of history that culminated in, and justified, the Prussian state, preparing the ground for modern nationalism and totalitarianism.</li>
+  <li><strong>Marx:</strong> Popper respected Marx's humanitarian protest against exploitation but called him a false prophet. The claim that history moves inevitably towards socialism is historicist, and when its predictions failed, Marxists reinterpreted the theory to fit the facts, making it unfalsifiable.</li>
+</ul>
+
+<p>Against these enemies Popper defined the open society as one in which individuals face personal decisions and institutions permit free criticism, in contrast to the closed society, which is tribal, collectivist and governed by unquestioned taboos. Its method is critical rationalism: all knowledge is provisional and grows by conjecture and refutation. Three political conclusions follow.</p>
+
+<ul>
+  <li><strong>Piecemeal social engineering:</strong> reform should proceed by small, testable steps against the most urgent concrete evils, such as poverty, unemployment and disease, rather than by utopian engineering that remakes society from a blueprint of the ultimate good. Small mistakes can be corrected, while utopian projects must silence critics.</li>
+  <li><strong>Democracy redefined:</strong> Plato asked who should rule. Popper replaced this with the question of how institutions can be arranged so that bad rulers are prevented from doing too much damage. Democracy is the system in which a government can be removed without bloodshed.</li>
+  <li><strong>The paradox of tolerance:</strong> unlimited tolerance leads to the disappearance of tolerance, so an open society may refuse to tolerate movements that reject argument and preach violence.</li>
+</ul>
+
+<p><strong>Assessment:</strong> The book became a classic of Cold War liberalism. Classicists and Hegel scholars accused Popper of reading Plato and Hegel anachronistically, as if they were twentieth-century totalitarians, and Marxists replied that he attacked a caricature of dialectics. The left found piecemeal engineering too conservative to address structural injustice. Popper was not a market fundamentalist, however: he held that unrestrained capitalism must give way to economic interventionism to protect the economically weak. His defence of criticism, falsifiability and the peaceful removal of governments remains relevant whenever rulers claim to know the direction of history.</p>
 
 <h2>Ideology, Truth and Power</h2>
 
@@ -1206,6 +1451,23 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Structural Marxism, associated mainly with Louis Althusser's For Marx, rejected the humanist reading of Marx. Althusser posited an epistemological break between the early Marx of alienation and human essence and the mature Marx of Capital, which alone was properly scientific. He accepted but modified the base-superstructure model, rejecting economic determinism in favour of a multi-structural approach: society consists of economic, political, ideological and cultural structures, and historical change may begin in any of them, the Russian Revolution, for example, was partly a political crisis, not an economic inevitability. Althusser also introduced the distinction between the Repressive State Apparatus, police, army, courts, prisons, which work mainly by force, and Ideological State Apparatuses, schools, family, religion, media, culture, which work mainly through ideas and consent. These institutions reproduce capitalism by producing obedient subjects who accept the system as normal: schools teach not only knowledge but discipline, punctuality, hierarchy and competition. Structural Marxism explains domination through structures rather than individual intentions.</p>
 
+<h3>Marcuse: Eros and Civilization</h3>
+
+<p>Herbert Marcuse joined Freud to Marx in Eros and Civilization: A Philosophical Inquiry into Freud (1955). His starting point was Freud's Civilization and Its Discontents (1930). Freud held that human beings are driven by the pleasure principle, but civilisation requires them to obey the reality principle: to delay and renounce gratification and divert instinctual energy into work. Repression is therefore the permanent price of civilisation, and unhappiness its necessary companion. Freud also set Eros, the life instinct, against the death instinct.</p>
+
+<p>Marcuse kept Freud's categories but historicised them, turning Freud's pessimistic conclusion into a theory of liberation, much as Marx had set Hegel's dialectic right side up.</p>
+
+<ul>
+  <li><strong>Basic and surplus repression:</strong> basic repression is the control of instinct that any civilisation needs in order to survive. Surplus repression is the additional control required by a particular system of social domination. Freud had mistaken the second for the first.</li>
+  <li><strong>The performance principle:</strong> the reality principle is not eternal. Each society has its own form of it, and in capitalism it is the performance principle, which organises life around competitive economic performance and alienated labour and turns the body into an instrument of work. Sexuality is narrowed to genital and reproductive forms so that the rest of the body is free for labour.</li>
+  <li><strong>Scarcity and abundance:</strong> Freud justified repression by scarcity. Marcuse argued that modern technology has largely overcome scarcity, so the working day could be shortened and surplus repression removed. A non-repressive civilisation, in which work approaches play and Eros shapes social relations, has become historically possible.</li>
+  <li><strong>Phantasy and the Great Refusal:</strong> imagination and art preserve the memory of gratification and refuse the existing order. Marcuse contrasted Prometheus, the culture-hero of toil and productivity, with Orpheus and Narcissus, images of joy and fulfilment.</li>
+</ul>
+
+<p>Why, then, does liberation not happen? In One-Dimensional Man (1964) Marcuse answered with the idea of repressive desublimation: advanced capitalism permits more sexual and cultural freedom, but in commercialised forms that increase satisfaction with the system and weaken the urge to change it. Freedom itself becomes an instrument of control.</p>
+
+<p><strong>Assessment:</strong> In the epilogue to Eros and Civilization Marcuse attacked neo-Freudian revisionists such as Erich Fromm and Karen Horney for turning psychoanalysis into a therapy of adjustment, and Fromm replied that Marcuse misread Freud. Marxists objected that he replaced class struggle with instinct and, in his later work, looked to students, marginal groups and Third World movements rather than the working class as agents of change. Others found a non-repressive civilisation utopian. Yet the book shaped the New Left and the student revolts of 1968, and it opened the way to later critiques of consumerism and of control through pleasure rather than force.</p>
+
 <h2>The Contemporary Relevance of Marxism</h2>
 
 <p>Marxism has been one of the most influential traditions in modern political thought, so influential that followers treated Marx as a prophet, while critics called him a god that failed, pointing to the authoritarianism and economic inefficiency of regimes built in his name. The greatest blow came with the collapse of the communist regimes of Eastern Europe and the Soviet Union, followed by globalisation and neoliberalism, and Fukuyama's "end of history."</p>
@@ -1276,15 +1538,29 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>After suffrage was won, the movement weakened, as many believed legal and political equality would automatically end women's subordination. It did not: women continued to face inequality in family, work, sexuality, culture and social expectation. Feminism revived in the 1960s with the second wave. Betty Friedan's The Feminine Mystique (1963) exposed the dissatisfaction of middle-class housewives confined to domestic roles; Kate Millett's Sexual Politics and Germaine Greer's The Female Eunuch expanded the meaning of politics by showing that family, sexuality and personal life are also sites of power, giving rise to the idea that the personal is political. By the 1990s feminism was a well-established global ideology, but it had also become more diverse and fragmented, as critics argued that earlier feminism reflected the experiences of white, middle-class Western women. New strands emerged, black, postcolonial, postmodern, ecofeminism, transfeminism, moving feminism from a single demand for equality to an engagement with the diversity of women's experience across race, class, caste, sexuality, nationality and culture.</p>
 
+<h3>Mary Wollstonecraft: The First Systematic Feminist Critique</h3>
+
+<p>Mary Wollstonecraft (1759-1797) wrote A Vindication of the Rights of Men (1790), a reply to Burke's Reflections on the Revolution in France, and then A Vindication of the Rights of Woman (1792), which she dedicated to Talleyrand, whose plan for national education in France offered girls only a domestic training. Her work is the first systematic feminist critique because it applied the principles of the Enlightenment, reason, natural rights and human improvement, consistently to women, and showed that their subordination was a social product, not a fact of nature.</p>
+
+<ul>
+  <li><strong>Reason and one standard of virtue:</strong> Women possess reason as men do, and virtue, which rests on reason, must be the same for both sexes. What passes for female virtue, delicacy, sensibility and the wish to please, is the product of a false education that keeps women in a state of perpetual childhood. She wanted women to gain power not over men but over themselves.</li>
+  <li><strong>Critique of Rousseau:</strong> In Emile (1762) Rousseau prescribed for Sophie an education designed to make her pleasing and useful to men, obedient and dependent. Wollstonecraft argued that such training produces either slaves or coquettes, and turned Rousseau's own principle against him: if education forms character, women's weakness is the result of their education, not of their nature. She attacked conduct writers such as James Fordyce and John Gregory on the same ground.</li>
+  <li><strong>Education:</strong> She proposed a national system of free day schools in which boys and girls of all classes would be taught together in their early years, so that women could think for themselves and become rational companions, mothers and citizens.</li>
+  <li><strong>Marriage:</strong> Marriage should be a friendship between equals, not the dependence of a wife on a husband she married for support. A woman who is merely an ornament or a dependant cannot be a good mother or a virtuous citizen.</li>
+  <li><strong>Independence and citizenship:</strong> Women need economic independence through occupations such as medicine and business, and she hinted that women ought to have representatives in government instead of being governed without any share in its deliberations.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Wollstonecraft founded liberal feminism and anticipated J. S. Mill's The Subjection of Women (1869). Critics note that she wrote mainly for middle-class women, accepted motherhood as women's chief civic duty, and stayed within a reason-centred liberalism that later radical feminists found too narrow. Carole Pateman called the resulting tension Wollstonecraft's dilemma: women demand the same citizenship as men while also asking that their distinct work as mothers be valued. In India, similar arguments appeared in Tarabai Shinde's Stri Purush Tulana (1882), and the girls' schools that Savitribai and Jyotirao Phule opened in Pune from 1848 rested on the same faith in education.</p>
+
 <h2>The Three Waves of Feminism</h2>
 
-<p>First-wave feminism (nineteenth and early twentieth centuries) focused on legal and political equality, the vote, property rights, access to education and equal citizenship, and was largely shaped by liberal ideas of equality and individual rights. Its major figures include Mary Wollstonecraft, J. S. Mill, Harriet Taylor, Elizabeth Cady Stanton and Emmeline Pankhurst. Second-wave feminism (1960s–70s) argued that the vote had not ended women's oppression and shifted focus from formal equality to liberation in family, work, sexuality, culture and private life. Radical feminism became prominent, challenging patriarchy, gender roles, sexual domination and the public-private split; key thinkers include Millett, Greer and Simone de Beauvoir, while Betty Friedan voiced the liberal strand. Third-wave feminism (from the 1990s) focused on the internal differences among women, rejecting the treatment of women as a single homogeneous group. Its central concern was the politics of difference, women experience patriarchy differently depending on their social location, and it includes black, postcolonial, postmodern, ecofeminist and transfeminist strands.</p>
+<p>First-wave feminism (nineteenth and early twentieth centuries) focused on legal and political equality, the vote, property rights, access to education and equal citizenship, and was largely shaped by liberal ideas of equality and individual rights. Its major figures include Mary Wollstonecraft, J. S. Mill, Harriet Taylor, Elizabeth Cady Stanton and Emmeline Pankhurst. Second-wave feminism (1960s and 1970s) argued that the vote had not ended women's oppression and shifted focus from formal equality to liberation in family, work, sexuality, culture and private life. Radical feminism became prominent, challenging patriarchy, gender roles, sexual domination and the public-private split; key thinkers include Millett, Greer and Simone de Beauvoir, while Betty Friedan voiced the liberal strand. Third-wave feminism (from the 1990s) focused on the internal differences among women, rejecting the treatment of women as a single homogeneous group. Its central concern was the politics of difference, women experience patriarchy differently depending on their social location, and it includes black, postcolonial, postmodern, ecofeminist and transfeminist strands.</p>
 
 <h2>The Personal is Political</h2>
 
 <p>One of feminism's most important contributions is the claim that the personal is political, associated with Carol Hanisch and central to radical feminism. Traditional political theory separated the public-political sphere (state, law, politics, economy) from the private-personal sphere (family, marriage, domestic life), treating politics as something that happens only in public and the family as natural, emotional and non-political. Feminists challenged this division, arguing that the family is also a site of power: decisions about housework, sexuality, reproduction, mobility and property are deeply political because they involve control, dependence and hierarchy. Issues treated as private, marriage, domestic labour, sexuality, reproductive rights, child care, violence within the family, are not merely individual matters but reflect wider structures of power and inequality. Kate Millett defined politics as power-structured relationships in which one group controls another: the relationship between husband and wife is as political as that between state and citizen.</p>
 
-<p>The public-private separation, feminists argue, has historically excluded women from politics: confined to the family, their concerns were dismissed as private and ignored by political theory, a tradition reaching back to Aristotle, who separated the household from the polis and denied women full citizenship. Susan Moller Okin, in Justice, Gender, and the Family (1989), argued that the family cannot be treated as outside justice: injustice within the family reproduces injustice in society, as children learn gender roles at home and come to treat gender hierarchy as natural. She also observed that the state does intervene in the family through marriage, divorce, inheritance and personal laws, the problem is not absence of intervention but that it reflects male perspectives. Catherine MacKinnon went further, arguing that the state itself often appears male: her analysis of American rape laws showed them riddled with loopholes because they were framed from male assumptions about sexuality, consent and violence. The personal is political thereby brought domestic labour, sexual violence, reproductive rights, marriage, family and care work into political analysis.</p>
+<p>The public-private separation, feminists argue, has historically excluded women from politics: confined to the family, their concerns were dismissed as private and ignored by political theory, a tradition reaching back to Aristotle, who separated the household from the polis and denied women full citizenship. Susan Moller Okin, in Justice, Gender, and the Family (1989), argued that the family cannot be treated as outside justice: injustice within the family reproduces injustice in society, as children learn gender roles at home and come to treat gender hierarchy as natural. She also observed that the state does intervene in the family through marriage, divorce, inheritance and personal laws, the problem is not absence of intervention but that it reflects male perspectives. Catharine MacKinnon went further, arguing that the state itself often appears male: her analysis of American rape laws showed them riddled with loopholes because they were framed from male assumptions about sexuality, consent and violence. The personal is political thereby brought domestic labour, sexual violence, reproductive rights, marriage, family and care work into political analysis.</p>
 
 <h2>Sex and Gender</h2>
 
@@ -1788,6 +2064,33 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>That is the only way to serve the country. I know of no better.</p>
 
+<h3>Ambedkar on Democracy and State Socialism</h3>
+
+<p><strong>Democracy:</strong> Ambedkar treated democracy not only as a form of government but as a way of social life. In a lecture at the Poona District Law Library in 1952 he defined it as a form and a method of government whereby revolutionary changes in the economic and social life of the people are brought about without bloodshed. He named the conditions on which it depends:</p>
+
+<ul>
+  <li>no glaring inequalities in society, such as a privileged class set against a suppressed class</li>
+  <li>the existence of an opposition</li>
+  <li>equality in law and in administration</li>
+  <li>observance of constitutional morality</li>
+  <li>no tyranny of the majority over the minority</li>
+  <li>a functioning moral order in society</li>
+  <li>an alert public conscience</li>
+</ul>
+
+<p><strong>State socialism:</strong> His fullest economic programme is in States and Minorities (1947), a memorandum submitted to the Constituent Assembly on behalf of the All India Scheduled Castes Federation. It proposed:</p>
+
+<ul>
+  <li>state ownership and management of key industries, and state ownership of basic industries run by the state or by public corporations</li>
+  <li>insurance as a state monopoly, with compulsory life insurance for every adult citizen</li>
+  <li>agriculture as a state industry: the state would acquire agricultural land, paying compensation in debentures, divide it into farms of standard size and let them to groups of village families to cultivate collectively, without distinction of caste or creed, so that there would be no landlord, no tenant and no landless labourer</li>
+  <li>state provision of the capital needed for farming, such as water, draught animals, implements, manure and seeds</li>
+</ul>
+
+<p>His reasons were both economic and democratic. State socialism was needed for the rapid industrialisation of India, which private enterprise could not achieve, or could achieve only by producing the inequalities of wealth that private capitalism had produced in Europe. Fundamental rights mean little to the unemployed and the landless, who must surrender their rights to obtain work from a private employer, and unregulated private enterprise in effect lets private persons govern others. His distinctive proposal was to establish state socialism by the law of the Constitution, so that no legislative majority or executive could suspend or abolish it. He wanted state socialism without dictatorship and parliamentary democracy without economic exploitation.</p>
+
+<p><strong>Assessment:</strong> The plan was not adopted. In the Constituent Assembly Ambedkar himself opposed K. T. Shah's amendment to describe India as a socialist state, arguing in November 1948 that the social and economic organisation of society should be decided by the people according to time and circumstances, and that fixing it in the Constitution would destroy democracy. His economic ideals survived in the Directive Principles, especially Article 39(b) and (c), which he presented as the ideal of economic democracy. His socialism differed from Marxism in rejecting violence and the dictatorship of the proletariat, and from Nehru's in insisting that caste, not only class, had to be broken. Critics see a tension between placing socialism beyond the reach of majorities and his faith in democracy, a tension he resolved in favour of democracy by 1948.</p>
+
 <h2>M. N. Roy: Radical Humanism and Freedom</h2>
 
 <p>M. N. Roy was one of the most intellectually adventurous figures of modern Indian political thought. M. N. Roy's original name was Narendra Nath Bhattacharya. He was born in 1887, in erstwhile Bengal. His father, Dinabandhu Bhattacharya, was head pandit of a local school. Roy was one of the most learned and original Indians of the freedom struggle, but he could not become a successful mass politician.</p>
@@ -1926,11 +2229,11 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>To summarize Sophist teachings, their emphasis was how one can get ahead in politics, and utilize the power to achieve personal goals.</p>
 
-<p>For sophists, virtue (excellence) is the ability to acquire things that give oneself pleasure. Thus, the art of speaking well (rhetori</p>
+<p>For sophists, virtue (excellence) is the ability to acquire things that give oneself pleasure. Thus, the art of speaking well (rhetoric) was at the centre of their teaching.</p>
 
 <h2>Plato: Justice, the Ideal State and the Philosopher-King</h2>
 
-<p>Born around 428 BCE in Athens and grew up during the famous Peloponnesian War (430 BCE - 401 BCE), a student of Socrates, and the teacher of Aristotle, Plato wrote on a wide variety of topics including Politics, Philosophy, Cosmology, and Epistemology.</p>
+<p>Born around 428 BCE in Athens and grew up during the famous Peloponnesian War (431 BCE - 404 BCE), a student of Socrates, and the teacher of Aristotle, Plato wrote on a wide variety of topics including Politics, Philosophy, Cosmology, and Epistemology.</p>
 
 <p>Plato belonged to an aristocratic family, which was also a part of the oligarchy that ruled Athens for a short time.</p>
 
@@ -1947,6 +2250,44 @@ export const polsciNoteContent: Record<string, string> = {
 <p>It is also important to note here that all of this, did not weaken the faith of Plato that philosophy can alter the human condition.</p>
 
 <p>If Socrates is known as the father of Philosophy (Ethics), who described the meaning of the 'good life', Plato is known as the 'father of political philosophy' since he was the 1st person (in the Western worl</p>
+
+<h3>Plato's Theory of Justice</h3>
+
+<p>The Republic (around 375 BCE) asks what justice is and whether the just life is better than the unjust one. Plato first has Socrates reject the conventional views of his day.</p>
+
+<ul>
+  <li><strong>Cephalus:</strong> justice is telling the truth and paying one's debts. But returning a weapon to a friend who has gone mad cannot be just.</li>
+  <li><strong>Polemarchus:</strong> justice is helping friends and harming enemies. But harming anyone makes him worse, which a just man cannot do.</li>
+  <li><strong>Thrasymachus:</strong> justice is the interest of the stronger. But a true ruler, like a doctor, serves those in his care.</li>
+  <li><strong>Glaucon:</strong> justice is a compromise of the weak, and the Ring of Gyges suggests that anyone who could act unseen would act unjustly.</li>
+</ul>
+
+<p>Plato's own answer treats the state as the individual writ large. The state arises because no one is self-sufficient, and it works best when each person does the one task for which nature has fitted him. This principle of specialisation produces three classes, which correspond to the three parts of the soul.</p>
+
+<table>
+  <thead>
+    <tr><th>Class</th><th>Part of the soul</th><th>Virtue</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Rulers (guardians)</td><td>Reason</td><td>Wisdom</td></tr>
+    <tr><td>Auxiliaries (soldiers)</td><td>Spirit</td><td>Courage</td></tr>
+    <tr><td>Producers (farmers, artisans, traders)</td><td>Appetite</td><td>Temperance</td></tr>
+  </tbody>
+</table>
+
+<p>Temperance, the agreement about who should rule, is shared by all classes. Justice is the fourth virtue, which holds the other three together. In the state each class does its own work and does not meddle in the work of others. In the individual reason rules, spirit supports it and appetite obeys. Injustice is meddling, when one part usurps another's place. Plato's justice is thus a moral principle of harmony and functional specialisation, a matter of duties rather than rights, and an inner virtue rather than an external rule of law.</p>
+
+<h3>The Ideal State and the Philosopher-King</h3>
+
+<ul>
+  <li><strong>Philosopher-king:</strong> in Book V Plato argues that cities will have no rest from their troubles until philosophers become kings or kings become philosophers. Only the philosopher knows the Form of the Good, as the allegory of the cave (Book VII) shows, and ruling is a skill, like steering a ship (Book VI).</li>
+  <li><strong>Education:</strong> a state-run system trains the rulers: music and gymnastics until about 20, mathematics to 30, dialectic to 35 and practical service to 50, after which the best rule in turn. Women of ability may become guardians. The myth of the metals, the 'noble lie', tells citizens that god mixed gold into rulers, silver into auxiliaries and iron and bronze into producers, while children may rise or fall by merit.</li>
+  <li><strong>Communism:</strong> guardians and auxiliaries own no private property and have no separate families, so that political power is separated from economic and family interest.</li>
+  <li><strong>Decline:</strong> in Book VIII the ideal state degenerates in stages into timocracy, oligarchy, democracy and tyranny.</li>
+  <li><strong>Second-best state:</strong> in the Statesman and the Laws, Plato accepts that philosopher-kings are rarely found and describes a state governed by law, with a mixed constitution combining monarchy and democracy.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Aristotle (Politics, Book II) objected that excessive unity destroys the state, which is by nature a plurality, and that property held in common is cared for least. Karl Popper, in The Open Society and Its Enemies (1945), read the Republic as a blueprint for a closed, totalitarian society. Liberal critics add that the individual has no rights or consent and that poets are censored. Plato's lasting claim is that power should be exercised by the competent for the good of the whole. The case for insulating bodies such as India's Election Commission and Reserve Bank from day-to-day politics echoes it, while democracy rejects rule by the wise without the consent of the governed.</p>
 
 <h2>Aristotle: Politics, Constitution and the Best Regime</h2>
 
@@ -2028,7 +2369,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Similar to Socrates and Plato, Aristotle believed that man is a social animal, and that state is a natural institution.</p>
 
-<p>This is reflected in the following Aristotelian quotes. "Man is by nature political (social) animal" "State comes into existence for sake of life and continues for the sake of good life" "State is highest of all associations" "One who can live without state is either a beast or God, he cannot be a man" "State is a union of family and religious" For Aristotle, the primary function of the state is to assist in human happiness.</p>
+<p>This is reflected in the following Aristotelian quotes. "Man is by nature political (social) animal" "State comes into existence for sake of life and continues for the sake of good life" "State is highest of all associations" "One who can live without state is either a beast or God, he cannot be a man" "State is a union of families and villages" For Aristotle, the primary function of the state is to assist in human happiness.</p>
 
 <p>Human beings, above all, are political animals and politics is the highest expression of human sociability.</p>
 
@@ -2057,6 +2398,63 @@ export const polsciNoteContent: Record<string, string> = {
 <p>However, according to the needs of man, the state comes first. Teleologically, the state is the final end towards which human life aims.</p>
 
 <p>Thus, the state is our end goal (telos), and other communities are subordinate to it. Thus, state is prior to individual.</p>
+
+<h3>Classification of Constitutions and the Polity</h3>
+
+<p>For Aristotle a constitution (politeia) is the arrangement of the offices of a city, above all of the supreme authority, and in a sense the way of life of the city. A citizen is one who shares in deliberative and judicial office, so that good citizenship means ruling and being ruled in turn. His Lyceum collected the constitutions of 158 Greek states, of which only the Constitution of the Athenians survives, and this comparative method makes him the father of comparative politics.</p>
+
+<p>In Book III of the Politics he classifies constitutions by two criteria: the number of rulers (one, few or many) and the end they serve (the common good or their own interest).</p>
+
+<table>
+  <thead>
+    <tr><th>Rulers</th><th>True form (common good)</th><th>Perverted form (rulers' interest)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>One</td><td>Monarchy</td><td>Tyranny</td></tr>
+    <tr><td>Few</td><td>Aristocracy</td><td>Oligarchy</td></tr>
+    <tr><td>Many</td><td>Polity</td><td>Democracy</td></tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Wealth, not number:</strong> the real difference between oligarchy and democracy is that one is rule by the rich and the other rule by the poor. Oligarchy would remain oligarchy even if the rich were many.</li>
+  <li><strong>Ranking:</strong> the best forms are those in which men of outstanding virtue rule. Of the perverted forms, tyranny is the worst, oligarchy next, and democracy the most tolerable.</li>
+  <li><strong>Polity:</strong> a mixture of oligarchy and democracy, for example combining election with selection by lot, or a moderate property qualification for office. It is the best practicable constitution for most states because it rests on a large middle class, which is neither arrogant like the rich nor envious like the poor, is readiest to follow reason and holds the balance between the two extremes. Polity is the golden mean of the Ethics applied to politics.</li>
+  <li><strong>Rule of law:</strong> law is reason free from passion, so the rule of law is preferable to the rule of any individual, and even the best rulers should be guardians of the laws. The many, though individually ordinary, may judge better collectively, as a feast to which many contribute is better than one provided by a single host.</li>
+  <li><strong>Three elements:</strong> every constitution has a deliberative element, an element of offices (magistracies) and a judicial element, a division that anticipates the separation of powers.</li>
+</ul>
+
+<p><strong>Contribution to constitutional democracy:</strong> the mixed constitution passed through Polybius and Cicero to Montesquieu and the framers of the American Constitution, whose checks and balances blend popular and restraining elements. Aristotle's preference for the rule of law over the will of rulers is the core of constitutionalism, his idea of citizenship as active participation shaped civic republicanism, and his link between a large middle class and stability reappears in S. M. Lipset's Political Man (1960). The Indian Constitution follows this logic when it combines elected legislatures with an independent judiciary and bodies such as the Election Commission and the CAG, and when Article 14 places everyone under the law. The limits are plain: his citizenship excluded women, slaves and manual workers, and he defended natural slavery.</p>
+
+<h3>Revolution and Proportionate Equality (Politics, Book V)</h3>
+
+<p>Book V of the Politics is the first systematic study of political instability. Aristotle's general answer is that 'everywhere inequality is a cause of revolution', meaning inequality that is out of proportion to what people believe they deserve. Men revolt when they feel denied the equality, or the superiority, that they think is their due.</p>
+
+<p>The root lies in rival ideas of justice. Aristotle distinguishes numerical equality, the same share for everyone, from proportionate equality, shares in proportion to worth. Democrats argue that those equal in one respect, free birth, are equal in all. Oligarchs argue that those unequal in one respect, wealth, are unequal in all. Each holds a partial idea of justice and pushes it too far, so the excluded side rebels. His own standard is proportionate equality, treating equals equally and unequals unequally in proportion to merit, though a stable state combines both kinds.</p>
+
+<ul>
+  <li><strong>General cause:</strong> a state of mind, the desire of the inferior for equality and of the superior for more than equality.</li>
+  <li><strong>Objects:</strong> gain and honour, or the avoidance of loss and dishonour.</li>
+  <li><strong>Particular causes:</strong> insolence and profiteering by rulers, fear, contempt, the disproportionate growth of one part of the state, the excessive power of an individual, election intrigues, neglect of small changes, and differences of race or origin among citizens.</li>
+  <li><strong>By constitution:</strong> democracies fall when demagogues attack the rich, oligarchies when they oppress the masses or quarrel among themselves, and aristocracies when too few share in honours.</li>
+  <li><strong>Remedies:</strong> strict obedience to law even in small matters, no tricks to deceive the people, short terms of office, no disproportionate rise of any individual, no profit from office, a balance between rich and poor through a strong middle class, and above all education in the spirit of the constitution.</li>
+</ul>
+
+<p><strong>Conception of equality:</strong> in the Nicomachean Ethics (Book V) Aristotle separates distributive justice, which divides honours and wealth by geometrical proportion according to merit, from corrective justice, which restores arithmetical balance between parties after a wrong, whoever they are. In politics, offices should go to those who contribute most to the purpose of the state, civic virtue, just as the best flutes should go to the best flute players and not to the well born. His equality holds only among equals, for he accepted natural inequality between masters and slaves and between men and women. Indian equality law follows the proportionate idea: Article 14 permits reasonable classification, and reservations under Articles 15(4) and 16(4) treat unequally placed groups differently to reach substantive equality. The thesis also explains modern unrest: the Planning Commission's Expert Group on development challenges in extremist-affected areas (2008) traced Naxalism to land alienation, displacement and social exclusion.</p>
+
+<h3>Greek Justice and Rawls Compared</h3>
+
+<p>John Rawls's A Theory of Justice (1971) opens by calling justice 'the first virtue of social institutions, as truth is of systems of thought'. Plato and Aristotle would agree that justice is the master virtue of a political order, but they reach it from very different premises.</p>
+
+<ul>
+  <li><strong>Common ground:</strong> both traditions judge society as a whole, Plato through the order of classes and Rawls through the basic structure. Both reason from an ideal, Plato's city in speech and Rawls's original position. Both accept justified inequality: Aristotle's proportionate equality and Rawls's difference principle, which permits inequalities that benefit the least advantaged.</li>
+  <li><strong>Teleology versus deontology:</strong> Greek justice follows from a substantive idea of the good, virtue and the flourishing life. Rawls holds that the right is prior to the good, and in Political Liberalism (1993) he seeks principles that citizens holding different comprehensive doctrines can share.</li>
+  <li><strong>Nature versus equal persons:</strong> Plato's metals and Aristotle's natural slaves assume natural hierarchy. Rawls begins from free and equal persons and treats the distribution of natural talents as arbitrary from a moral point of view, so desert cannot justify the shares of social goods, whereas Aristotle distributes by merit.</li>
+  <li><strong>Whole versus individual:</strong> Plato subordinates the individual to the harmony of the whole. For Rawls each person possesses 'an inviolability founded on justice that even the welfare of society as a whole cannot override', and the principle of equal basic liberties takes priority over the second principle.</li>
+  <li><strong>Knowledge versus procedure:</strong> Plato entrusts justice to the philosopher's knowledge. Rawls derives it from a fair procedure, the agreement of parties behind a veil of ignorance, tested by reflective equilibrium.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Rawls is closer to modern democratic values of equal citizenship and rights. The Greek view has returned through communitarian critics such as Alasdair MacIntyre (After Virtue, 1981) and Michael Sandel, who argue that justice cannot be separated from a shared idea of the good, and through Martha Nussbaum's explicitly Aristotelian capabilities approach. The Indian Constitution's promise of justice, social, economic and political, and its directive to promote the interests of the weaker sections (Article 46) stand closer to Rawls's concern for the least advantaged than to Greek hierarchy.</p>
 
 <h2>Machiavelli: Power, Statecraft and Political Realism</h2>
 
@@ -3639,7 +4037,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Over a period of time, the conflict arose when state tried to bring land reforms. These reforms violated the right to property. This led to a long battle, where the government claimed that rights can be compromised to give effect to directive principles whereas court held that the fundamental rights cannot be limited.</p>
 
-<p>This conflict was solved by the 44th Amendment, passed in 1978. The amendment removed the right to property from the list of fundamental rights articles 19(1)(f) and Article 31 were repealed. The right to property was transferred to a legal right under Article 300A, which states that no person shall be deprived of his property except by authority of law. This change made the right non-justiciable under the scope of Fundamental Rights but still protected it as a constitutional right (since it's mentioned in constitution).</p>
+<p>This conflict was solved by the 44th Amendment, passed in 1978. The amendment removed the right to property from the list of fundamental rights articles 19(1)(f) and Article 31 were repealed. The right to property was transferred to a legal right under Article 300A, which states that no person shall be deprived of his property except by authority of law. This change took it out of the Fundamental Rights, so it can no longer be enforced through a writ petition under Article 32, but it remains a constitutional right that can be enforced in the High Courts under Article 226 and in the ordinary courts.</p>
 
 <h2>Parliamentary System</h2>
 
@@ -3827,6 +4225,21 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The fundamental logic is the difference between amendment and rewriting of the constitution. Even when constitution is amended, we should be able to understand the original constitution. Parliament cannot be equated with constituent assembly. Judiciary clarified that even when amendment is passed in both the houses with unanimity and absolute majority, then also amendment has to pass the test of basic structure. Parliament represents political majority whereas constituent assembly represented general will / popular sovereignty.</p>
 
 <p>We can say that such an activism by judiciary was indeed desirable because executive was bent on destroying the constitution. Given the challenging times, judicial activism was needed against the overreach by executive. This innovation by Indian judiciary has ensured the survival of democracy in India. Had Judiciary not intervened, India would have gone in the way of other third world countries. Hence it was a necessary evil.</p>
+
+<h3>Constitutional Morality</h3>
+
+<p>Constitutional morality means fidelity to the spirit and core values of the Constitution, not merely to its letter. It has two senses. The procedural sense is respect for constitutional forms and self-restraint by those who hold power. The substantive sense, developed by the Supreme Court, treats the Constitution's values of liberty, equality, dignity and fraternity as a standard against which laws, customs and the conduct of officials are judged.</p>
+
+<p>The term comes from George Grote's History of Greece, which described the Athenians' reverence for the forms of their constitution combined with freedom to criticise those in authority. Ambedkar quoted Grote on 4 November 1948 while moving the Draft Constitution. Arguing that the form of administration had to be written into the Constitution, because a constitution can be perverted merely by changing the form of administration, he warned that "Constitutional morality is not a natural sentiment. It has to be cultivated", and that "Democracy in India is only a top-dressing on an Indian soil, which is essentially undemocratic." In his speech of 25 November 1949 he added that in politics, hero-worship is a sure road to degradation and eventual dictatorship.</p>
+
+<ul>
+  <li><strong>Manoj Narula v. Union of India (2014):</strong> a Constitution Bench declined to add a disqualification for ministers facing criminal charges, since only Parliament can do so, but held that constitutional morality and constitutional trust expect the Prime Minister and Chief Ministers not to appoint persons charged with serious crimes or corruption. Constitutional morality, it said, means bowing to the norms of the Constitution and not acting arbitrarily or against the rule of law.</li>
+  <li><strong>Government of NCT of Delhi v. Union of India (2018):</strong> the Court held that the Lieutenant Governor is bound by the aid and advice of the elected council of ministers outside the reserved subjects of public order, police and land, and that constitutional morality requires high functionaries to work in harmony within the constitutional scheme.</li>
+  <li><strong>Navtej Singh Johar v. Union of India (2018):</strong> reading down Section 377 of the IPC to decriminalise consensual same-sex relations between adults, the Court held that constitutional morality must prevail over social or majoritarian morality.</li>
+  <li><strong>Indian Young Lawyers Association v. State of Kerala (2018):</strong> in the Sabarimala case a 4:1 majority struck down the exclusion of women aged 10 to 50 from the temple. Justice Indu Malhotra dissented, arguing that in a plural society constitutional morality also requires respect for religious beliefs and practices. In November 2019, hearing review petitions, the Court referred the wider questions to a larger bench.</li>
+</ul>
+
+<p><strong>Assessment:</strong> the doctrine lets the Court protect minorities and individual dignity against majoritarian pressure, and it holds office-holders to standards that the text cannot spell out. Critics reply that it is undefined and subjective, that it widens judicial discretion until judges substitute their own values for those of elected legislatures, and that Ambedkar meant a habit to be cultivated by political actors rather than a judicial test. The resistance to the Sabarimala verdict shows that it cannot be imposed by courts alone and has to take root in parties, officials and citizens.</p>
   `,
   'principal-organs-union-state': `
 <h2>Union Executive</h2>
@@ -4098,7 +4511,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>1] As a protector of constitution: Initially Supreme Court was passive, but later on because of executive overreach, Supreme Court became active towards its obligations. The doctrine of basic structure was invented by SC to check emasculation of the constitution by executive which was bent on diluting the essential features of the constitution itself.</p>
 
-<p>2] Guardian of Fundamental Rights: Initially SC did not appear as a 'sentinel qui vive' (Guard with arms) of the FRs, allowed executive to dilute the FRs for the implementation of DPSPs. Emergency was the darkest hour in the history of Supreme Court. When Supreme Court's action was needed the most, it failed to protect the rights of the people. One of the blots on SC is the judgement in Habeous Corpus case. (ADM Jabalpur Vs Shrikant Shukla case). After emergency, there have been change in the approach, 1st reflected in Maneka Gandhi case 1978. It overruled its judgement in AK Gopalan case, held that the doctrine of due process of law is inherent in the doctrine of procedure established by law. Because of activist judges like P N Bhagawati, Supreme Court instituted PIL (Public Interest Litigations), which strengthened the rights of the weaker section. Since then, working with civil society, judiciary has strengthened human rights in India. Supreme Court has interpreted the meaning of Right to Life liberally to provide various rights.</p>
+<p>2] Guardian of Fundamental Rights: Initially SC did not appear as a 'sentinel qui vive' (Guard with arms) of the FRs, allowed executive to dilute the FRs for the implementation of DPSPs. Emergency was the darkest hour in the history of Supreme Court. When Supreme Court's action was needed the most, it failed to protect the rights of the people. One of the blots on SC is the judgement in Habeas Corpus case. (ADM Jabalpur Vs Shivkant Shukla case). After emergency, there have been change in the approach, 1st reflected in Maneka Gandhi case 1978. It overruled its judgement in AK Gopalan case, held that the doctrine of due process of law is inherent in the doctrine of procedure established by law. Because of activist judges like P N Bhagawati, Supreme Court instituted PIL (Public Interest Litigations), which strengthened the rights of the weaker section. Since then, working with civil society, judiciary has strengthened human rights in India. Supreme Court has interpreted the meaning of Right to Life liberally to provide various rights.</p>
 
 <p>Though SC has strengthened the rights in India, but it has not been able to bring any concrete change in the situation. e.g. Supreme Court's judgement in Sabarimala case could not be implemented on the ground because of lack of support from the governments as well as civil society.</p>
 
@@ -4132,6 +4545,22 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Another controversy is that that doctrine came into effect by affirmative vote of the single judges. 6 were against and 7 were in favor.</p>
 
 <p>2nd school of thought: It is true that judiciary has gone beyond the constitution, yet the doctrine of basic structure acted as a blessing in disguise. Executive was bent on emasculating constitution of its vital features. If judiciary had not done this, India would have gone in the direction of other 3rd world countries. (Zia Mody - TEN GREAT JUDGEMENTS THAT CHANGED INDIA). Acc to Zia Modi, uncertain democracy was preferable over certain authoritarianism. There is no need to give the exhaustive list rather it should be as a safety valve.</p>
+
+<h3>Advisory Jurisdiction under Article 143</h3>
+
+<p>Under Article 143(1), if it appears to the President that a question of law or fact of public importance has arisen or is likely to arise, the President may refer it to the Supreme Court, which may, after such hearing as it thinks fit, report its opinion. Under Article 143(2), the President may refer disputes arising from pre-Constitution treaties, agreements and similar instruments, which the proviso to Article 131 keeps out of the Court's original jurisdiction, and here the Court shall report its opinion. A bench of at least five judges hears references (Article 145(3)), and since the President acts on ministerial advice, the Union government in practice decides to refer.</p>
+
+<ul>
+  <li><strong>Advisory, not adjudicatory:</strong> there are no parties and no decree, and the opinion does not bind the President. Whether it binds courts under Article 141 has been debated, but in practice it is followed and carries great weight.</li>
+  <li><strong>Power to decline:</strong> the word 'may' in clause (1) lets the Court refuse. In Ismail Faruqui v. Union of India (1994) it declined to answer the Ayodhya reference of 1993, which asked whether a temple had existed on the disputed site, and in 2025 it returned two of the fourteen referred questions unanswered. Under clause (2) the Court must answer.</li>
+  <li><strong>No appeal in disguise:</strong> in the Cauvery reference (1991) the Court held that Article 143 cannot be used to ask it to review its own decisions. In the Natural Resources Allocation reference (2012) it stressed that it was not sitting in appeal over the 2G judgment, while advising that auction is not a constitutional requirement for every natural resource.</li>
+</ul>
+
+<p><strong>Major references:</strong> Delhi Laws Act (1951) on the limits of delegated legislation, Kerala Education Bill (1958) on the rights of minority educational institutions, Berubari Union (1960), which held that ceding territory required a constitutional amendment and led to the Ninth Amendment, Keshav Singh (1964) on legislative privilege and the courts, Special Courts Bill (1978), the Third Judges case (1998), which settled the collegium of the Chief Justice and the four senior-most judges, the Gujarat elections reference (2002), and the Punjab Termination of Agreements Act, held unconstitutional in 2016.</p>
+
+<p>The latest reference followed the April 2025 judgment in State of Tamil Nadu v. Governor of Tamil Nadu. The President put fourteen questions on the powers of Governors and the President over state Bills. Several opposition parties called it an appeal in disguise against that judgment, but a five-judge bench headed by Chief Justice B. R. Gavai gave its opinion on 20 November 2025, holding that courts cannot impose timelines for assent or grant deemed assent.</p>
+
+<p><strong>Assessment:</strong> the jurisdiction lets the government settle constitutional doubts before acting, as in Berubari, whereas the United States Supreme Court has refused to give advisory opinions since 1793. The risks are that the Court is drawn into political controversies, as with Ayodhya, and that governments use references to reopen judgments they dislike, which is why the Court guards its power to decline.</p>
 
 <h2>State Executive</h2>
 
@@ -4260,7 +4689,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Many of the Governor related provisions were not extensively written down by the constituent assembly. It was left to the constitutional conventions. The system relied on the good faith. However, it was prone to misuse and it extensively happened. The provision needed a correction and Supreme Court have done that.</p>
 
-<p>However, by prescribing a timeline, Supreme Court has crossed its mandate and gathered more power for itself. Such intervention is not sustainable in the long term. On a Presidential reference, a five-judge Constitution Bench held on 20 November 2025 that courts cannot fix timelines or grant deemed assent, that the Governor has three options (assent, reserve the Bill for the President, or withhold assent and return it to the legislature), and that after prolonged, unexplained inaction a court may only direct the Governor to decide, without touching the merits. An urgent discussion on the outdated provisions of Constitution is still needed, starting with the office of Governor. Reference</p>
+<p>However, by prescribing a timeline, Supreme Court has crossed its mandate and gathered more power for itself. Such intervention is not sustainable in the long term. On a Presidential reference, a five-judge Constitution Bench held on 20 November 2025 that courts cannot fix timelines or grant deemed assent, that the Governor has three options (assent, reserve the Bill for the President, or withhold assent and return it to the legislature), and that after prolonged, unexplained inaction a court may only direct the Governor to decide, without touching the merits. An urgent discussion on the outdated provisions of Constitution is still needed, starting with the office of Governor.</p>
 
 <p>Governors can do great good if they are good governors. They can do great harm if they are bad governors. - Soli Sorabjee in his book 'Sage or Saboteur'</p>
 
@@ -4360,7 +4789,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Since 91st AA, which limits ministerial posts, it has become a way to bypass 91st AA by offering such posts like parliamentary secretaries which are not technically ministerial posts.</p>
 
-<p>Another problem is, lot of arbitrariness prevails. In context of disqualifying, there is a huge variation from state to state. e.g. in 2108, parliamentary secretaries appointed by AAP govt. in Delhi were disqualified, whereas many other states continue to have posts but have not been disqualified.</p>
+<p>Another problem is, lot of arbitrariness prevails. In context of disqualifying, there is a huge variation from state to state. e.g. in 2018, twenty AAP MLAs in Delhi were disqualified for having been appointed parliamentary secretaries (the Delhi High Court later set the order aside), whereas many other states continue to have such posts without disqualification.</p>
 
 <p>President who shall act according to the opinion of Election Commission.</p>
 
@@ -4455,6 +4884,19 @@ export const polsciNoteContent: Record<string, string> = {
   <li>In USA privileges are not codified but there is no system of punishment for the breach of privilege whereas in India journalists have been imprisoned for years together.</li>
   <li>Recently Australia has codified the privileges.</li>
 </ul>
+
+<h3>State Legislative Councils</h3>
+
+<p>Article 168 allows a state legislature to have a second chamber, the Legislative Council (Vidhan Parishad). Under Article 169, Parliament may by law create or abolish a Council if the Legislative Assembly passes a resolution to that effect by a majority of its total membership and two-thirds of the members present and voting. Such a law is not an amendment of the Constitution for the purposes of Article 368, and Parliament is not bound to act on the resolution. As of 2026 six states have a Council: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh. Jammu and Kashmir lost its Council in the 2019 reorganisation, and the Assemblies of Rajasthan, Assam, Odisha and West Bengal have passed resolutions for Councils on which Parliament has not acted.</p>
+
+<ul>
+  <li><strong>Composition (Article 171):</strong> the Council may not exceed one-third of the Assembly's strength or fall below 40 members. About one-third are elected by local bodies, one-twelfth by graduates of three years' standing, one-twelfth by teachers of three years' standing in secondary schools and above, and one-third by the MLAs from among persons who are not members of the Assembly. The rest, about one-sixth, are nominated by the Governor for knowledge or experience in literature, science, art, the cooperative movement and social service. It is a permanent body, and one-third of its members retire every second year.</li>
+  <li><strong>Ordinary Bills (Article 197):</strong> the Council can hold up a Bill passed by the Assembly for three months, and for one more month if the Assembly passes it again, after which it is deemed passed. There is no joint sitting, so the Assembly always prevails.</li>
+  <li><strong>Money Bills (Article 198):</strong> they can be introduced only in the Assembly, and the Council must return them within 14 days with recommendations that the Assembly may reject.</li>
+  <li><strong>Other limits:</strong> the Council of Ministers is responsible only to the Assembly (Article 164(2)). Members of the Council take no part in electing the President or the state's members of the Rajya Sabha, and the Council has no effective say in ratifying constitutional amendments. Its very existence depends on the will of the Assembly.</li>
+</ul>
+
+<p><strong>Relevance:</strong> supporters see the Council as a revising chamber that checks hasty legislation, gives a voice to teachers, graduates and local bodies, and brings in experts who would not contest direct elections. Critics answer that it can only delay, that it is costly, and that parties use it to accommodate defeated candidates and loyalists. Andhra Pradesh shows how even a delaying power can provoke conflict. N. T. Rama Rao's government abolished the Council in 1985, it was revived in 2007, and in January 2020 the Assembly voted to abolish it again after the Council sent the government's three-capitals Bills to a select committee, a resolution withdrawn in November 2021. Because its creation and abolition follow the convenience of the ruling party, the Council has not become a settled institution, which supports the view that it is a house without effective powers.</p>
 
 <h2>High Courts</h2>
 
@@ -4768,6 +5210,32 @@ export const polsciNoteContent: Record<string, string> = {
 </ul>
 
 <p>However, despite positive developments, challenges, such as social and cultural biases, limited access to resources and education, lack of support systems, and entrenched patriarchal norms, persist. Overcoming these obstacles through capacity-building programs, awareness campaigns, and women empowerment initiatives is crucial to further enhance women's participation and influence in local governance.</p>
+
+<h3>Impediments to Women's Participation and Proxy Leadership</h3>
+
+<p>Article 243D reserves not less than one-third of panchayat seats and chairperson posts for women, allotted by rotation, and many states, beginning with Bihar in 2006, have raised the share to one-half. Presence has not always meant power. The most visible failure is proxy leadership, in which a husband or male relative, the 'pradhan pati', 'sarpanch pati' or 'mukhiya pati', attends meetings, deals with officials and signs papers on behalf of the elected woman, often with the acceptance of officials and villagers.</p>
+
+<ul>
+  <li><strong>Patriarchal norms:</strong> purdah, restrictions on mobility, the expectation that men speak in public, and domestic and care burdens that leave little time for meetings.</li>
+  <li><strong>Low literacy and training:</strong> limited knowledge of rules, budgets and records makes women dependent on the panchayat secretary and male relatives.</li>
+  <li><strong>Economic dependence:</strong> women rarely own land or control income, and election costs are met by the family.</li>
+  <li><strong>Caste and class:</strong> Dalit and Adivasi women heads face non-cooperation from dominant-caste members, no-confidence motions and violence.</li>
+  <li><strong>Rotation of reserved seats:</strong> a woman usually gets a single term in a reserved seat, which limits experience and encourages men to field wives as placeholders until the seat is de-reserved.</li>
+  <li><strong>Eligibility rules:</strong> two-child norms, upheld in Javed v. State of Haryana (2003), and minimum educational qualifications, upheld in Rajbala v. State of Haryana (2015), weigh most heavily on poor and Dalit women.</li>
+  <li><strong>Weak devolution:</strong> where panchayats lack funds, functions and functionaries, the office seems unimportant and is easily handed over to men.</li>
+</ul>
+
+<p>Proxy leadership defeats the purpose of reservation, which is to give women voice and agency, and it breaks the chain of accountability, since the elected woman is legally answerable for decisions taken by someone else. Ending it is therefore part of making grassroots democracy real rather than formal.</p>
+
+<ul>
+  <li><strong>Penalties:</strong> an advisory committee of the Ministry of Panchayati Raj, reporting in 2025, recommended exemplary penalties where proxy leadership is proven.</li>
+  <li><strong>Public visibility:</strong> oath-taking before the gram sabha, and barring relatives from official meetings, make it clear who holds office.</li>
+  <li><strong>Capacity building:</strong> training under the Rashtriya Gram Swaraj Abhiyan, mentoring by experienced women representatives and digital tools.</li>
+  <li><strong>Collective support:</strong> mahila sabhas before gram sabha meetings, and self-help group networks such as Kerala's Kudumbashree (1998), which have given many women a route into panchayat politics.</li>
+  <li><strong>Structural change:</strong> keeping a seat reserved for two terms, removing two-child and education barriers, and real devolution of funds and functions.</li>
+</ul>
+
+<p>The evidence suggests that proxy rule weakens with experience. Raghabendra Chattopadhyay and Esther Duflo (Econometrica, 2004) found that panchayats headed by women in West Bengal and Rajasthan invested more in public goods that women prioritised, such as drinking water.</p>
   `,
   'statutory-commissions': `
 <h2>Election Commission</h2>
@@ -5062,6 +5530,24 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The NCBC was originally constituted under the National Commission for Backward Classes Act 1993. It was given constitutional status by the Constitution (One Hundred and Second Amendment) Act 2018, which inserted Article 338B providing for a Commission for the socially and educationally backward classes. The Commission consists of a Chairperson, a Vice-Chairperson and three other members.</p>
 
 <p>Under Article 338B, the functions of the NCBC mirror those of the NCSC and NCST: to investigate and monitor all matters relating to the safeguards provided for the socially and educationally backward classes under the Constitution, any law or any government order, and to evaluate the working of those safeguards; to inquire into specific complaints concerning the deprivation of rights and safeguards of these classes; to participate in and advise on the planning process for their socio-economic development and evaluate its progress under the Union and the states; to present annual and other reports to the President on the working of the safeguards; to recommend measures for the effective implementation of the safeguards and for the protection, welfare and socio-economic development of these classes; and to discharge such other functions as the President may specify by rules.</p>
+
+<h3>How Empowered is the NCBC?</h3>
+
+<p>Under the 1993 Act the NCBC's main task was to examine requests for inclusion in the central list of backward classes and to hear complaints of over-inclusion or under-inclusion, and its advice was ordinarily binding on the Union. The 102nd Amendment (2018) gave the Commission constitutional status, and the 1993 Act was repealed.</p>
+
+<ul>
+  <li><strong>Powers under Article 338B:</strong> while investigating or inquiring into complaints it has the powers of a civil court, to summon persons, require documents, receive evidence on affidavit and requisition public records. The Union and every state must consult it on all major policy matters affecting the socially and educationally backward classes, and its reports are laid before Parliament with a memorandum of the action taken.</li>
+  <li><strong>Article 342A:</strong> the same amendment provided that the President would notify the backward classes after consulting the Governor, and that only Parliament could alter the list.</li>
+  <li><strong>Jaishri Patil v. Chief Minister, Maharashtra (2021):</strong> a five-judge bench struck down Maharashtra's 2018 law giving Marathas a separate quota, because no exceptional circumstance justified breaching the 50 per cent ceiling of Indra Sawhney, and it refused to refer the ceiling to a larger bench. By 3:2 it also held that after the 102nd Amendment only the Union could identify backward classes, leaving the states merely to recommend.</li>
+  <li><strong>105th Amendment (2021):</strong> Parliament restored the states' power to prepare and maintain their own lists under a new Article 342A(3), confined the presidential list to Union purposes, and exempted state lists from the duty to consult the NCBC.</li>
+  <li><strong>Ram Singh v. Union of India (2015):</strong> the Court quashed the March 2014 notification adding Jats to the central list in nine states, because the Union had overridden the NCBC's finding that Jats were not backward and relied on outdated data. Caste may be a starting point, it held, but backwardness must be social and cannot rest on caste or self-perception alone.</li>
+</ul>
+
+<h3>Dominant Castes and the Demand for Backward Status</h3>
+
+<p>In the last decade numerically strong, landowning communities, dominant castes in M. N. Srinivas's sense, have agitated for backward status: Patidars in Gujarat (2015), Jats in Haryana (2016), Marathas in Maharashtra and Kapus in Andhra Pradesh. Their demands grow out of agrarian distress, shrinking holdings and scarce jobs, and out of relative deprivation when they compare themselves with OBC groups that have gained from reservation. The 10 per cent EWS quota of the 103rd Amendment (2019) met part of the upper-caste demand but not that of groups seeking OBC status.</p>
+
+<p><strong>Assessment:</strong> on paper the NCBC is empowered, with constitutional status, civil-court powers and mandatory consultation. In practice its advice does not bind the government, since 2021 it has no say over state lists, where most dominant-caste claims are decided by state commissions, and it lacks fresh caste data, which no census has published since 1931. In the contests over Jats and Marathas the effective check has come from the courts, through the demand for quantifiable data and the 50 per cent ceiling, rather than from the Commission.</p>
   `,
 
   'federalism': `
@@ -5110,6 +5596,20 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Alfred Stepan described India's asymmetrical arrangement as demos-enabling and America's symmetrical model as demos-constraining, with demos meaning the people. The Indian design, in which Rajya Sabha representation follows population, is considered more democratic because it ensures that citizens are not disadvantaged by living in a large or small state. In his view, developing countries should look to India's model rather than America's.</p>
 
 <p>Article 3 is sometimes cited as a non-federal feature of the Indian Constitution, but this reading is mistaken.</p>
+
+<h3>Delimitation, Census 2027 and the North-South Debate</h3>
+
+<p>Delimitation fixes the number of seats each state has in the Lok Sabha and its Assembly and draws constituency boundaries. Article 81 requires that the ratio between seats and population be, so far as practicable, the same for every state, and Articles 82 and 170 require readjustment after each census. Delimitation Commissions were set up in 1952, 1963, 1973 and 2002.</p>
+
+<ul>
+  <li><strong>The freeze:</strong> the 42nd Amendment (1976) froze the allocation of seats among states on the 1971 Census until the 2001 Census, so that states which controlled population would not lose seats. The 84th Amendment (2001) extended the freeze until the figures of the first census taken after 2026 are published, while allowing constituencies within each state to be redrawn. The Kuldip Singh Commission did this on 2001 Census figures, and its orders took effect in 2008.</li>
+  <li><strong>Census 2027:</strong> the census due in 2021 was postponed because of the pandemic. Census 2027 is the first census after 2026, so its figures will end the freeze. It will also count caste, and its figures will govern the seats reserved for SCs and STs.</li>
+  <li><strong>Link to women's reservation:</strong> under Article 334A, inserted by the 106th Amendment (2023), one-third reservation for women in the Lok Sabha and the Assemblies takes effect only after a delimitation based on the first census published after the Act. In April 2026 the government introduced the Constitution (131st Amendment) Bill to let Parliament choose the census used for delimitation, so that 2011 figures could be used and women's reservation could start sooner, with a companion Delimitation Bill proposing to raise the Lok Sabha's maximum size from 550 to 850. On 17 April 2026 the amendment received 298 votes to 230 in the Lok Sabha, short of the two-thirds majority required, so Census 2027 remains the basis.</li>
+</ul>
+
+<p><strong>The North-South question:</strong> southern states such as Kerala, Tamil Nadu, Karnataka, Andhra Pradesh and Telangana reduced fertility early, while Uttar Pradesh, Bihar, Madhya Pradesh and Rajasthan grew faster. A strictly population-based reallocation would shift seats northwards, and southern parties argue that this would penalise good governance and reduce their voice in a Union to whose revenues they contribute heavily. The grievance builds on the Fifteenth Finance Commission's use of the 2011 Census, which it partly offset with a demographic performance criterion. Against this stands the democratic principle of equal value for each vote, since a member from a populous northern state now represents far more voters than one from Kerala.</p>
+
+<p><strong>Options:</strong> extending the freeze again, enlarging the Lok Sabha so that no state loses seats (the new Lok Sabha chamber seats 888), capping the change any state can suffer, strengthening the Rajya Sabha as a house of the states, or delinking women's reservation from delimitation. Because delimitation decides the balance of power within the Union, a settlement needs consensus between the Union and the states rather than a narrow parliamentary majority.</p>
 
 <h2>Centre-State Relations</h2>
 
@@ -5182,6 +5682,20 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The parliamentary axis signifies a strong centre, while the federal axis signifies strong states. When a single party commands an absolute majority at the centre, the parliamentary axis dominates, as under Nehru, Indira Gandhi and the Modi government of the last ten years. When coalition politics, which embodies regionalisation, takes over, the federal axis becomes prominent.</p>
 
 <p>Federalism in India has thus evolved continuously with the changing complexion of the party system.</p>
+
+<h3>Article 293 and State Borrowing</h3>
+
+<p>Article 293 governs borrowing by the states. Under clause (1) a state may borrow only within India, on the security of its Consolidated Fund, within limits set by its own legislature. Under clause (2) the Union may lend to states or guarantee their loans. Under clause (3) a state that still owes any part of a loan made or guaranteed by the Union cannot raise a new loan without the Union's consent, and under clause (4) that consent may carry conditions. States cannot borrow abroad directly.</p>
+
+<ul>
+  <li><strong>Practice:</strong> since almost every state owes money to the Union, clause (3) gives the Union a veto over state borrowing. Each year the Union Ministry of Finance fixes a net borrowing ceiling for each state, usually around 3 per cent of its GSDP, in line with Finance Commission recommendations and the states' own fiscal responsibility laws, most of which followed the Twelfth Finance Commission.</li>
+  <li><strong>Conditional consent:</strong> in 2020-21 the Union raised the ceiling from 3 to 5 per cent of GSDP but tied part of the extra room to reforms such as One Nation One Ration Card, ease of doing business, urban local body finances and the power sector. The Fifteenth Finance Commission also linked additional borrowing to power sector reform.</li>
+  <li><strong>Off-budget borrowing:</strong> since 2022 the Union has counted borrowing by state companies and special purpose vehicles serviced from the budget, such as Kerala's KIIFB, and some Public Account liabilities, against state ceilings.</li>
+</ul>
+
+<p><strong>Kerala's suit:</strong> on 8 December 2023 Kerala filed an original suit under Article 131 challenging its 2023 ceiling, the 2018 amendment to the Union's FRBM Act that introduced the idea of general government debt, and the inclusion of its state companies and Public Account in the limit. The Union agreed to additional borrowing of Rs 13,608 crore, but on 1 April 2024 a bench of Justices Surya Kant and K. V. Viswanathan refused further interim relief and referred the suit to a five-judge Constitution Bench for the first authoritative reading of Article 293. The questions include whether Article 293 gives states an enforceable right to borrow, how far the Union may regulate that right, and whether liabilities of state companies and the Public Account fall within clause (3).</p>
+
+<p><strong>Implications for federalism:</strong> the Union defends its control as necessary for macroeconomic stability, for keeping general government debt within the 60 per cent of GDP ceiling (40 per cent for the Union and 20 per cent for the states) proposed by the N. K. Singh FRBM Review Committee (2017), and for exposing hidden liabilities. States see fiscal centralisation, in which consent to borrow becomes a lever to push the Union's priorities, a form of the bargaining federalism that M. P. Singh describes, with disputes sharpest in opposition-ruled states such as Kerala. The Union, moreover, needs no one's consent for its own borrowing. A rule-based framework agreed in a forum such as the Inter-State Council, an independent fiscal council, and an authoritative judicial reading of Article 293 would make borrowing limits a matter of rules rather than discretion.</p>
 
 <h2>Cooperative vs Competitive Federalism</h2>
 
@@ -5276,6 +5790,19 @@ export const polsciNoteContent: Record<string, string> = {
   <li>Even after the States Reorganisation Commission accepted the case for Telangana, Nehru rejected it, offering a 'gentleman's promise' instead, the real reason being that Telangana was dominated by communists.</li>
   <li>Linguistic reorganisation served the ambitions of particular castes to consolidate political power, producing dominant castes in different states who could then form their own governments.</li>
 </ul>
+
+<h3>Jammu and Kashmir after 2019</h3>
+
+<ul>
+  <li><strong>Abrogation and reorganisation:</strong> on 5 August 2019 a Presidential Order applied the whole Constitution to the state and Article 370 was rendered inoperative, ending its separate constitution and Article 35A. The Jammu and Kashmir Reorganisation Act 2019, in force from 31 October 2019, split the state into two Union Territories, Jammu and Kashmir with a legislature and Ladakh without one. The change was made while the state was under President's rule, with a communications blackout and the preventive detention of political leaders, including former chief ministers.</li>
+  <li><strong>Judicial validation:</strong> on 11 December 2023 a five-judge bench of the Supreme Court unanimously upheld the abrogation (In Re: Article 370 of the Constitution). It held that Article 370 was a temporary provision, that the state had no internal sovereignty after accession, and that the President's power under Article 370(3) survived the dissolution of the state's Constituent Assembly. It upheld the creation of Ladakh under Article 3 but did not decide whether a state could be reduced to a Union Territory, recording the Union's assurance that statehood would be restored. It directed elections by 30 September 2024 and asked that statehood be restored as soon as possible.</li>
+  <li><strong>Delimitation:</strong> a commission chaired by Justice Ranjana Prakash Desai fixed 90 Assembly seats in 2022, 43 in the Jammu division and 47 in the Kashmir division, with 24 seats for Pakistan-occupied areas left vacant. Seven seats are reserved for SCs and nine for STs, the first ST reservation in the Assembly. The Lieutenant Governor may also nominate two women if women are inadequately represented, two Kashmiri migrants and one person displaced from Pakistan-occupied Kashmir. Valley parties saw Jammu's larger gain as a shift of power.</li>
+  <li><strong>The 2024 election:</strong> held in three phases between 18 September and 1 October 2024, with a turnout of about 64 per cent. The National Conference won 42 seats, the BJP 29 (all in the Jammu division), the Congress 6 and the PDP 3. Omar Abdullah was sworn in on 16 October 2024 as the Union Territory's first chief minister.</li>
+  <li><strong>Limited powers and statehood:</strong> under the 2019 Act police and public order lie outside the Assembly's competence and with the Lieutenant Governor, producing two centres of power. As of October 2026 statehood had not been restored and remained the main demand of almost every party. In Ladakh, the Leh Apex Body and the Kargil Democratic Alliance seek statehood and Sixth Schedule safeguards, and talks broke down after Sonam Wangchuk was detained under the National Security Act in September 2025.</li>
+  <li><strong>Security and new parties:</strong> militancy shifted towards the Jammu region, and the Pahalgam attack of 22 April 2025 killed 26 civilians. New parties such as the Apni Party (2020) and Ghulam Nabi Azad's Democratic Progressive Azad Party (2022) emerged, while the National Conference and the PDP joined the People's Alliance for Gupkar Declaration (2020) to seek the restoration of special status.</li>
+</ul>
+
+<p><strong>Assessment:</strong> supporters argue that integration extended national laws, reservations and rights to the region and that high turnout shows democratic renewal. Critics point out that a state was dismantled without the consent of its legislature, that downgrading it to a Union Territory sets a troubling precedent for federalism, and that civil liberties were curtailed, which led the Supreme Court in Anuradha Bhasin v. Union of India (2020) to require that internet shutdowns be necessary, proportionate and published.</p>
 
 <h2>Inter-state Disputes</h2>
 
@@ -5474,6 +6001,35 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The economy has now moved into middle income status, and India will face the challenge of escaping what economists call the middle income trap, the difficulty that countries face when cheap labour advantages are exhausted before high-skill industries have been built. The steps needed to sustain rapid and inclusive growth are well known. India must first tackle corruption, which imposes a tax on every transaction and diverts resources from productive use. It must end red tapism, so that doing business does not require endless clearances. It must invest in human capital, since a young population can be a dividend only if it is educated and healthy. It needs factor market reforms in land and labour, which remain the two most politically difficult reforms. It must expand job opportunities, especially for the educated young. Finally, it must rehabilitate state capacity, because markets need a competent state to enforce contracts, regulate competition and provide public goods.</p>
 
 <p>The deeper question is not the rate of overall growth but the pattern of growth. Economic liberalisation has not wiped out the stark regional inequality of India. Poverty has actually remained concentrated in the BIMARU states, Bihar, Madhya Pradesh, Rajasthan and Uttar Pradesh, whose weak infrastructure and poor governance have kept them from sharing in the national prosperity. Bimal Jalan, in his book Emerging India: Economics, Politics and Reforms, warned that a growth that bypasses the poorest states cannot be regarded as a genuine national success. The conclusion that emerges from the entire debate is that the reforms made India richer, but the next phase of reform must be about making growth reach everyone: education in every village, jobs for every young person, and dignity for every worker.</p>
+
+<h3>Liberalisation and Indian Agriculture</h3>
+
+<p>The reforms of 1991 targeted industry, trade and finance, and agriculture was not liberalised directly. It felt the reforms indirectly, through prices, public spending, credit and integration with world markets, and the outcome was mixed.</p>
+
+<ul>
+  <li><strong>Gains:</strong> devaluation and lower industrial protection improved agriculture's terms of trade in the 1990s and helped exports of rice, cotton, spices and marine products, and India became the world's largest rice exporter in the 2010s. Horticulture, dairy, poultry and fisheries grew faster than cereals. Private investment entered seeds and agribusiness, and Bt cotton, approved in 2002, raised cotton output sharply.</li>
+  <li><strong>Falling public investment:</strong> fiscal compression in the 1990s cut public investment in irrigation, research and extension, and agricultural growth slowed between the mid-1990s and the mid-2000s.</li>
+  <li><strong>Credit:</strong> following the Narasimham Committee (1991), banks moved away from directed rural lending and closed rural branches, pushing many small farmers back to moneylenders and input dealers.</li>
+  <li><strong>World prices:</strong> the WTO Agreement on Agriculture (1995) and the removal of quantitative restrictions on imports by 2001 exposed farmers to world markets. Cheap edible oil imports hurt oilseed growers, and the fall in world cotton prices around 2000 coincided with distress in Vidarbha and Andhra Pradesh.</li>
+  <li><strong>Costlier inputs:</strong> phosphatic and potassic fertilisers were decontrolled in 1992, and seeds, pesticides, diesel and power became dearer.</li>
+</ul>
+
+<p>Utsa Patnaik (The Republic of Hunger, 2004) argued that deflationary policies cut rural purchasing power and food absorption, and P. Sainath's reporting made farmer suicides the public face of the crisis. The state responded with the National Commission on Farmers chaired by M. S. Swaminathan (2004-06), which urged a minimum support price at least 50 per cent above the weighted average cost of production, the farm loan waiver of 2008, MGNREGA (2005), crop insurance under the PM Fasal Bima Yojana (2016) and income support of Rs 6,000 a year under PM-KISAN (2019). The three farm laws of 2020, meant to free agricultural markets, were repealed by Parliament in November 2021 after a year-long protest led by farmers from Punjab, Haryana and western Uttar Pradesh, and the demand for a legal guarantee of MSP continues.</p>
+
+<h3>Causes of the Agrarian Crisis</h3>
+
+<ul>
+  <li><strong>Small holdings:</strong> in the Agriculture Census 2015-16 about 86 per cent of holdings were small or marginal and the average holding was 1.08 hectares, too small for a viable income.</li>
+  <li><strong>Water and climate:</strong> about half the net sown area is rain-fed, groundwater is falling in Punjab and Haryana, and droughts, floods and heat waves are becoming more frequent.</li>
+  <li><strong>Costs and prices:</strong> input costs rise faster than output prices, prices are volatile, and MSP procurement is concentrated on wheat and rice in a few states. The Shanta Kumar Committee (2015) found that only about 6 per cent of farmers sold to procurement agencies.</li>
+  <li><strong>Debt:</strong> the NSS Situation Assessment Survey of 2019 found about half of agricultural households in debt, much of it owed to informal lenders.</li>
+  <li><strong>Markets and infrastructure:</strong> regulated mandis dominated by commission agents, weak storage and cold chains, and recurrent price crashes for perishables.</li>
+  <li><strong>Tenancy and land records:</strong> tenants and sharecroppers without title are shut out of institutional credit, insurance and compensation.</li>
+  <li><strong>Lack of exit:</strong> agriculture still employs around 45 per cent of the workforce but produces under a fifth of gross value added, so incomes per worker stay low.</li>
+  <li><strong>Consumer bias:</strong> export bans and stock limits used to keep food cheap depress farm prices, and an OECD and ICRIER study (2018) found that Indian farmers had been implicitly taxed.</li>
+</ul>
+
+<p>The crisis is thus structural rather than cyclical. Loan waivers and higher support prices give relief, but lasting solutions need public investment in irrigation and research, crop diversification, farmer producer organisations, secure tenancy, better markets and the creation of non-farm jobs.</p>
   `,
 
   'caste-religion-ethnicity': `
@@ -5520,6 +6076,25 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The mobilisation of Dalits goes back to the pre-independence years and represents an assertion of the ex-untouchable communities against their historical exploitation. Three broad strategies can be distinguished. The first is co-option, the strategy of the Congress era, in which Dalit leaders such as Babu Jagjivan Ram preferred to work within the dominant party and secure positions and benefits through it. The second is autonomy, the strategy associated with Ambedkar, who insisted that while the Dalits should pursue constitutional methods, they must remain an independent political force and not be absorbed into any party dominated by the upper castes. The success of this approach is exemplified by Mayawati, who built the Bahujan Samaj Party into a formidable political force in Uttar Pradesh. Ajay Bose, in his biography of Mayawati, argues that her politics represents the fullest realisation of the Ambedkarite model of autonomous Dalit assertion. The third strategy is radicalism, inspired by the Marxist idea of struggle and revolution, though Ambedkar himself rejected the Marxist frame as inadequate to the specific reality of caste.</p>
 
 <p>The contemporary Dalit movement has acquired a new edge. Writing in the context of the Bhima Koregaon incident, scholars have described a New Dalit Challenge, in which the younger generation of Dalits no longer contents itself with formal constitutional recognition. It rejects the managerial style by which the upper castes sought to co-opt Dalits into the symbolic order without any real shift in power or resources. The new Dalits are building cultural and political counter-hegemony, moving beyond the politics of mere survival to challenge the writing of history and the terms of public memory. C. P. Bhambri, while welcoming the growth of Dalit consciousness, has counselled that the Dalit movement must form alliances with progressive and secular forces if it is to transform the structures of inequality rather than merely capture shares of power.</p>
+
+<h3>The Caste Census</h3>
+
+<p>Colonial censuses enumerated caste from the late nineteenth century, and 1931 was the last census to publish a full caste count. Independent India counted only Scheduled Castes and Scheduled Tribes, partly from a fear that counting caste would entrench it. As a result the Mandal Commission (1980) had to project the OBC share of 52 per cent from 1931 data. The Socio-Economic and Caste Census of 2011 collected caste information, but its caste data were never released.</p>
+
+<ul>
+  <li><strong>Bihar's survey:</strong> Bihar conducted its own caste survey, upheld by the Patna High Court on 1 August 2023, and released the results on 2 October 2023: Extremely Backward Classes 36.01 per cent, Other Backward Classes 27.13 per cent, Scheduled Castes 19.65 per cent, Scheduled Tribes 1.68 per cent and the unreserved 15.52 per cent. The state then raised reservation to 65 per cent in November 2023, but the Patna High Court struck the increase down on 20 June 2024.</li>
+  <li><strong>The national decision:</strong> a caste census became a central opposition demand in the 2024 Lok Sabha campaign. On 30 April 2025 the Cabinet Committee on Political Affairs decided to include caste in the next census, and Census 2027 will record each person's jati, the first caste count since 1931. Population enumeration is scheduled for February 2027 in most of the country.</li>
+</ul>
+
+<p><strong>How it may meet people's aspirations:</strong></p>
+
+<ul>
+  <li><strong>Evidence for reservation:</strong> courts demand quantifiable data for quotas, and the Jaishri Patil judgment (2021) refused to let states breach the 50 per cent ceiling without exceptional justification. A caste count supplies such data and will reopen the debate on the ceiling itself.</li>
+  <li><strong>Reaching the most backward:</strong> the Rohini Commission, set up in October 2017 to sub-categorise the central OBC list, reported on 31 July 2023, and in State of Punjab v. Davinder Singh (1 August 2024) a seven-judge bench, by 6:1, allowed states to sub-classify Scheduled Castes on the basis of empirical data. Caste data make such targeting possible for groups such as the Extremely Backward Classes and Mahadalits.</li>
+  <li><strong>Representation and recognition:</strong> data on the shares of each group in jobs, education, land and wealth turn claims of exclusion into measurable facts and give invisible groups recognition, the politics of recognition that Charles Taylor describes.</li>
+</ul>
+
+<p><strong>Concerns:</strong> critics fear that counting caste will harden identities and reward caste mobilisation, fuel competing demands for quotas, including from dominant castes, and produce unreliable data because of self-reporting, synonyms and thousands of sub-castes, the reason given for withholding the 2011 data. A caste count can inform policy, but the aspirations behind it, for jobs, education and dignity, depend on growth and public provision, which no enumeration can supply by itself.</p>
 
 <h2>Religion & Communalism</h2>
 
@@ -5590,6 +6165,30 @@ export const polsciNoteContent: Record<string, string> = {
 <p>India's ethnic diversity has found its most concrete political expression in regionalism. The states of India are, for the most part, linguistic states, created after the States Reorganisation Act of 1956 and the subsequent reorganisation of Punjab and parts of the south. The linguistic reorganisation of states was followed by the creation of new states within the north-east, and, after long movements, of Telangana in 2014. The demand for states is best understood not as a threat to national unity but as a claim within the constitutional framework, an assertion by a linguistic or cultural group that its identity deserves recognition in the form of autonomous political space.</p>
 
 <p>Regionalism can take several forms. It can be a movement for the creation of a new state, as in the Telangana and Vidarbha movements. It can take the form of regional parties, which contest elections on a platform of regional development and pride, such as the Dravidian parties of Tamil Nadu, the Telugu Desam Party, and the regional parties of the north-east. India is thus a union of states in which federalism and linguistic diversity are not merely legal arrangements but expressions of the ethnic pluralism of the society. The successful accommodation of linguistic and regional identities within the Indian Union stands in contrast to the experience of several multi-ethnic states that fragmented along ethnic lines, and it rests on the constitutional principle that no single culture or language can dominate the public life of the union.</p>
+
+<h3>Relative Deprivation and Ethnic Conflict</h3>
+
+<p>Ted Robert Gurr, in Why Men Rebel (1970), defined relative deprivation as the perceived gap between value expectations, the goods and conditions people believe they are entitled to, and value capabilities, what they think they can actually get and keep. The more intense and widespread the gap, the greater the potential for collective violence. Gurr identified three patterns: decremental deprivation, when expectations stay constant while capabilities fall, aspirational deprivation, when expectations rise while capabilities stay constant, and progressive deprivation, when both rise until capabilities suddenly fall. Deprivation is always measured against a reference group, so ethnic groups compare their position with that of rivals, what Frances Stewart later called horizontal inequality.</p>
+
+<ul>
+  <li><strong>Assam:</strong> fears that migrants would take land, jobs and trade fuelled the Assam movement (1979-85) and still drive nativist politics.</li>
+  <li><strong>Manipur:</strong> both sides feel deprived. The Meitei majority is concentrated in the valley, about a tenth of the state's area, and cannot buy land in the protected hills, while the Kuki-Zo and Naga tribes feel excluded from the power and development concentrated in the valley.</li>
+  <li><strong>Gorkhaland and dominant castes:</strong> Gorkhas resent cultural and economic marginalisation within West Bengal, and Jats, Marathas and Patidars compare themselves with OBCs who have gained from reservation.</li>
+</ul>
+
+<p>The theory explains grievance better than mobilisation. Many deprived groups never rebel, and resource mobilisation theorists such as Charles Tilly, and instrumentalists such as Paul Brass, stress organisation and the role of elites in turning grievance into conflict.</p>
+
+<h3>Types of Ethnic Conflict in Twenty-First-Century India</h3>
+
+<ul>
+  <li><strong>Sovereignty claims:</strong> the Naga movement, under a ceasefire with the NSCN (IM) since 1997 and the Framework Agreement of 3 August 2015, remains unsettled over a separate flag and constitution and the demand to unite the Naga areas of Manipur, Assam and Arunachal Pradesh, which those states oppose.</li>
+  <li><strong>Autonomy and homeland movements:</strong> the Bodo accords of 1993, 2003 and January 2020, the last creating the Bodoland Territorial Region and ending the armed movement, and the Gorkhaland agitation, which won the Gorkhaland Territorial Administration (2011) and revived in 2017 with a long shutdown in Darjeeling after the state moved to make Bengali compulsory in schools.</li>
+  <li><strong>Inter-ethnic violence:</strong> the Bodo-Muslim riots in Kokrajhar (2012) and the conflict in Manipur since 3 May 2023. A Manipur High Court order of 20 April 2023 asking the state to consider the Meitei demand for Scheduled Tribe status provoked a tribal solidarity march, after which violence between Meiteis and Kuki-Zo killed at least 258 people and displaced about 60,000 by November 2024. Kuki-Zo legislators demanded a separate administration, Chief Minister N. Biren Singh resigned on 9 February 2025 and President's rule followed on 13 February. An elected government returned on 4 February 2026 under Yumnam Khemchand Singh, after which fresh clashes broke out between Kuki and Naga communities.</li>
+  <li><strong>Nativist conflict:</strong> the Assam NRC, whose final list of 31 August 2019 left out about 19 lakh people, and opposition in Assam to the Citizenship (Amendment) Act 2019, whose rules were notified on 11 March 2024, because its 2014 cut-off contradicts the 1971 cut-off of the Assam Accord. Myron Weiner's Sons of the Soil (1978) explains such conflicts as clashes between migrants and local middle classes competing for jobs.</li>
+  <li><strong>Religious-ethnic violence:</strong> riots such as Muzaffarnagar (2013) and north-east Delhi (2020), which fit Donald Horowitz's treatment of religious communities as ethnic groups.</li>
+</ul>
+
+<p>Conflict in the North-East is especially hard to resolve because homelands overlap, so that one group's autonomy threatens another's territory, as Naga integration threatens Manipur's territorial integrity. Colonial isolation, migration, porous borders, underdevelopment and the long use of AFSPA add to the difficulty. The state has relied on the Sixth Schedule, special provisions such as Articles 371A (Nagaland), 371C (Manipur) and 371G (Mizoram), negotiated accords and the Act East Policy, combining firmness against secession with accommodation.</p>
 
 <h2>Reservations Policy</h2>
 
@@ -5707,7 +6306,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>A different kind of party has appeared in the form of the Aam Aadmi Party, which may be understood as a byproduct of globalisation. The AAP phenomenon is not unique to India: parallel examples include the Pakistan Tehreek-e-Insaf, the Syriza party in Greece, the Workers' Party in Brazil, and the people's movements of Hong Kong. Globalisation has increased inequalities, and it has also intensified democratic consciousness and the demand for good governance. The AAP was formed in 2012 out of the anti-corruption movement, and it presents itself as anti-politics and anti-ideology, opposed to power politics as ordinarily practised. Its leaders declare that they have entered politics not for power but for change, and that they require power in order to change the system from within, since pressure from outside has proved ineffective. The party rejects the high-command culture of the older parties, adopts a bottom-up approach, and insists upon intraparty democracy: no two members of the same family may contest elections or serve on the executive council, and members possess the right to recall members of the executive council. Whether such experiments can be sustained beyond their founding generation, and whether they can escape the very pathologies of leadership and power that they set out to abolish, remains one of the open questions of the evolving party system.</p>
 
 <p>Milan Vaishnav has observed that the rise of regional political parties is an eternal theme of Indian politics, a permanent feature rather than a passing phase. Regional parties operate within a limited geographic area and draw upon language, minority religion and regional culture as their bases of support; their number in India is much larger than in most political systems because of the immense variety of the country's social and linguistic composition. Sudha Pai has insisted that regional parties are rooted in the regional ground and should not be seen merely as a byproduct of regionalism, but as a phenomenon in their own right, the product of linguistic reorganisation, the decline of the Congress system and uneven development across regions. The electoral scale of this system was registered in the 2024 general election, in which the electorate numbered approximately 97.7 crore, the votes polled approximately 64.5 crore, and the turnout stood at 66 per cent, figures that make the Indian party system the largest democratic exercise of its kind in the world.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Regional Parties</h2>
 
@@ -5732,7 +6330,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Bidwai and other analysts have catalogued the reasons for this marginalisation. Because of their shifting stands during the Indian freedom struggle, the left could never fully gain the trust of the Indian masses. Neither then nor now has the left presented a serious understanding of the peculiar circumstances of Indian politics, remaining dependent upon imported doctrines instead of developing an indigenous analysis. The principle of democratic centralism, which discourages dissent and internal debate, weakened the left, and the Indian left reproduced the high-command culture it criticised in other parties. Left leaders lacked grassroots bases, most having been recruited from universities rather than from movements. The left's agenda was successively appropriated by others: the Congress took over the Indian form of socialism, and the AAP took over the role of a new left, leaving the older left parties without a distinctive political space. There was a lack of internal solidarity among the various left parties, which fought each other as much as their common opponents. The essential genius of left politics, the politics of social movements and radical democracy, was abandoned as the left confined itself to electoral politics and to the pursuit of governmental office. Despite its theoretical rejection of identity politics, the Indian left itself practised the politics of religion and caste rather than the politics of class and development. Globalisation made left ideology appear redundant: it did not meet the ambitions and aspirations of the educated Indian youth, and it created a footloose workforce that is extraordinarily difficult to organise into trade unions. The left's foreign policy was equally redundant, consisting of anti-globalisation, anti-Americanism and a pro-Chinese posture, while its claim to be the true heir of non-alignment merely inherited, without renewing, the foreign policy framework of the Congress. And the left lost its great stronghold of West Bengal because, while in power, it used force against its own constituency and favoured its adversarial class, the corporate class, in pursuit of industrial investment.</p>
 
 <p>The Indian left, if it is to recover, requires introspection. It would be far better served by returning to the original idea of left politics: the politics of social movements, radical democracy, the organisation of the exploited sections of society and the patient work for their rights. The lesson of the BJP's rise and the left's decline is that parties prosper when they speak to the lived anxieties and aspirations of the people, and that a politics which confines itself to electoral calculation, imported doctrine or the defence of inherited positions will, sooner or later, be swept aside by a politics which addresses the deeper currents of the democratic transformation.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Coalition Politics</h2>
 
@@ -5755,7 +6352,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>India can learn useful lessons from countries such as Germany, which exhibit a sound coalition culture, and can incorporate some of their features rather than basing the Indian parliamentary system entirely upon the Westminster model. In Germany, the Chancellor enjoys a stronger status than the Prime Minister of the British model. The principal problem of coalition politics is political instability, and the German system addresses it through the constructive vote of no-confidence, under which a government can be removed only if a successor government has already been agreed upon; a mere vote of no-confidence without an alternative government is constitutionally ineffective. This dramatically raises the cost of defection and instability. India could also consider the Japanese model, in which the Prime Minister is elected by the members of the lower house, giving the head of government a parliamentary mandate that is less easily destabilised by coalition partners. The shift to a Chancellor-style model is particularly apt for coalition conditions, because in coalition politics the position of the Prime Minister becomes weak; coalition partners acquire huge bargaining power, and the role of the Prime Minister is reduced to that of a manager of the coalition rather than a leader of the government. In the Chancellor system this is avoided: the Chancellor determines the policy direction of the different departments, the ministries are required to work according to the policy so directed, and the cabinet system comes into play only when there is a conflict between two ministries that requires collective resolution.</p>
 
 <p>The former Prime Minister Manmohan Singh used to lament that India lacks coalition dharma, that is, the ethos and discipline of coalition governance. To cultivate that ethos, India should institutionalise the practice of steering committees and regular consultative mechanisms in which all members of the coalition participate. If the core party practises greater transparency, there will be less scope for bargaining by smaller parties, since decisions will not be taken behind closed doors where leverage is exercised privately. There is also a need to reform the anti-defection laws, so that coalition partners cannot be destabilised by the poaching of legislators. Mechanisms must be strengthened to check corruption among members of Parliament, electoral reform is needed to reduce the influence of money and muscle power and of caste and religion in Indian politics, and, above all, there is a need to introduce ethics into politics. A coalition system without coalition culture will always be a system of instability; a coalition system with a developed culture of accommodation, consultation and transparency can become a mature and representative form of democratic government, and it is the task of institutional design and of political leadership to bring that culture into being.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Pressure Groups</h2>
 
@@ -5768,7 +6364,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Robert Hardgrave and Stanley Kochanek have highlighted the changing nature of pressure groups in India. Since the 1990s, pressure group politics in India has been shifting from state-dominated pluralism to a more powerful and autonomous pressure group politics. The process of liberalisation and globalisation has given pressure groups a new legitimacy: as the state retreated from direct control of the economy, organised interests acquired greater room to operate, and the government increasingly incorporated different interest groups into the very institutions of policy making. Bodies such as the National Advisory Council, the National Security Advisory Board and now the NITI Aayog have drawn civil society and expert opinion into the policy process, institutionalising a consultative relationship between the state and organised interests that was earlier largely absent. There has been a substantial increase in the power of business groups, which now participate not only in domestic policy making but also in the conduct of international economic diplomacy; business groups are regularly part of the delegations that accompany the government on foreign visits, and the tradition of organising parallel business summits alongside political summits has become a regular feature of India's engagement with the world. Foreign lobbies and advocacy groups likewise exercise greater pressure and influence than before, so that Indian policy making now takes place within a transnational field of organised interests.</p>
 
 <p>At the same time, the older patterns persist. Communal pressure groups, the pressure groups of the corporate sector and the organised lobbies of rich farmers continue to play a dominant role in Indian politics. India still does not possess a dominant women's organisation comparable to the mass organisations of some other countries. Environmental lobbies, student unions and trade unions continue to function largely as junior partners of political parties rather than as independent centres of pressure, and many pressure groups, primarily of the left wing, have been banned under the Unlawful Activities (Prevention) Act. The state, moreover, continues to be the dominant actor in India, and at times it has not been tolerant towards certain pressure groups: a highly disputed report of the Intelligence Bureau pointed out that many NGOs were engaged in anti-national propaganda and that their activities had been detrimental to India's growth. The picture that emerges is of a pressure group system in transition: the liberalising economy and the globalising polity have created new space for organised interests, particularly business, professional and advocacy groups, while the older balance of state dominance, party mediation and communal mobilisation remains substantially intact, and the boundary between legitimate interest articulation and alleged sedition continues to be drawn and redrawn by a state suspicious of organisations it cannot control.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Electoral Behaviour</h2>
 
@@ -5785,7 +6380,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The survey research of the Lokniti programme, operating as part of the Centre for the Study of Developing Societies, has identified the longer-term structural trends in Indian electoral behaviour. Caste and religion remain the major long-term determinants of electoral choice, shaping the base of party support in ways that short-term campaign effects rarely disturb. Yet, in a striking finding, corruption and anti-incumbency do not appear to matter as much as the retrospective theories of voting would predict: voters who punish the corrupt and the incumbents are the exception rather than the rule. And there is little difference in the electoral preferences of men and women or of rural and urban voters, so that the standard sociological cleavages of gender and residence do not, in the Indian case, map onto clear differences of party choice. Yogendra Yadav has characterised the deeper movement of Indian politics as a shift from identity politics to identity-plus politics: voters have not abandoned caste and community identity as the basis of political choice, but they have increasingly combined identity with an insistence upon development and governance, so that the successful party must now satisfy the demands of both recognition and distribution.</p>
 
 <p>Prannoy Roy, Ashok Lahiri and David Butler, in their compendium of Indian elections, concluded that the voting behaviour of Indians is many times more mature than the voting behaviour of voters in western countries, a judgement based on the consistency, discrimination and responsiveness that Indian voters have displayed across successive elections. M.P. Singh has argued that the credit for the success of India's democracy belongs to the great common sense shown by ordinary voters. No election verdict in India, on this view, has ever been wrong; voters have always opted for the best possible option available to them, and the recurrent stability of the system, through crises that have destroyed democracies elsewhere, is the proof of their political maturity. The conclusion that emerges from the study of Indian electoral behaviour is that the voter, far from being the passive subject of manipulation by parties, caste leaders and money power, is an active, intelligent and increasingly sophisticated political actor, whose participation, in such vast numbers and with such evident seriousness, is the deepest foundation of the Indian democratic experiment.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Profile of Legislators</h2>
 
@@ -5796,7 +6390,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The second phase, the phase of transition, was brought about by the state reorganisation, the Green Revolution and the deepening of democracy. These processes produced a rise of the intermediate castes, a phenomenon described by Yogendra Yadav as the first democratic upsurge, in which the lower and intermediate castes, mobilised through agrarian prosperity and the political space created by the reorganisation of the states, entered the political arena in large numbers. In this phase, the OBCs became the most dominant section of the legislature. In terms of profession, agriculturalists now formed the majority, followed by members drawn from social service; the earlier pattern, in which professionals entered politics from established careers, gave way to a new pattern in which politics became a full-time profession and a source of livelihood. The trend began under the influence of the Jayaprakash Narayan movement and the Sanjay Gandhi Youth Congress, which drew young people into politics at the moment of career formation, so that politics became for them not a retirement from a profession but the profession itself. The number of graduates from foreign universities declined sharply in this phase. Yet nothing changed with respect to the representation of minorities and women: the representation of women stagnated at around 8 to 10 per cent of the total seats, and the under-representation of minorities persisted.</p>
 
 <p>The third phase, the phase of plebeianisation, has been explained by Yogendra Yadav through the term the second democratic upsurge, in which the lower classes, the Dalits and the most marginalised sections entered politics as active and assertive participants. Parliament in this phase continues to be dominated by the OBCs, and in terms of profession, by agriculturalists and social workers. There has been little change with respect to women and minority representation, which remains stuck at the same modest levels. The number of graduates has, however, increased, so that the educational level of members has risen even as their social origins have become more plebeian. And since the 1990s, Parliament has witnessed an increasing presence of persons with criminal backgrounds, a phenomenon known as the criminalisation of Indian politics, in which candidates with pending criminal cases have come to constitute a substantial and growing proportion of legislators. The profile of Parliament has thus moved from an elite assembly of nationalist professionals, through a transitional assembly dominated by the agrarian intermediate castes, to a plebeian assembly in which the lower orders of society are represented in numbers, but which is shadowed by the growing entanglement of politics with crime and money. The mirror that Parliament holds up to Indian society reflects both the remarkable democratisation of the country, the entry into power of groups that were for centuries excluded, and the unresolved problems of gender, minority representation and the criminalisation of public life.</p>
-</｜｜DSML｜｜_command>
   `,
   'social-movements': `
 <p>Civil liberties are those rights which are regarded as indispensable to civilised existence, rights whose possession makes it possible for the individual to live a life of dignity and security within the state. The category comprehends the right to life, liberty and property, equality before law, and protection against arbitrary detention. The philosophical foundation of civil rights lies in liberalism, whose great concern is to check the arbitrary exercise of executive power and to secure the rule of law. On this account, civil liberties exist not as gifts of the state but as claims of the individual against the state, and the entire apparatus of constitutional rights may be read as the institutionalisation of this liberal concern.</p>
@@ -5828,7 +6421,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Upendra Baxi has offered a sharp critique of the character of the Indian human rights movement. According to him, there is no human rights movement in India; what we find instead is a human rights industry. The advocacy groups are staffed by management graduates rather than social activists, and they operate with a corporate approach rather than an attitude of social service. They lack legitimacy because their approach is biased: they raise human rights issues concerning members of the armed forces, but are hardly vocal about the violation of the rights of innocent civilians by militant organisations, or about the killing of members of the armed forces and paramilitary forces by militant groups. The movement, on this view, has become selective in its compassion and professionalised in its methods, and has thereby lost the moral authority which a genuine mass movement might command.</p>
 
 <p>Nandita Haksar, a lifelong human rights activist, has insisted that the human rights movement in India must work within defined limits. The Indian state does not tolerate activism which goes beyond the perimeter of national discourse; whenever the government adopts a policy of zero tolerance towards terrorists, it ends in zero tolerance towards human rights. The state is unwilling to countenance any questioning of its national security practices, and the space for dissent is correspondingly narrow. It must be acknowledged that so long as India continues to suffer threats to its territorial integrity, there will always be a justification for laws such as the AFSPA. But to enhance its credibility, the government must reform the NHRC, give it greater power with respect to violations of human rights even by members of the armed forces, ensure discipline among enforcement agencies, and undertake police reform, prison reform, judicial reform and criminal justice system reform. Without such institutional renovation, the commitment to human rights will remain an aspiration rather than an achievement.</p>
-</｜｜DSML｜｜_command>
 
 <p>The idea of human rights has a long pedigree in political thought. Locke argued that individuals in the state of nature are born with certain pre-existing natural rights, above all the right to life, liberty and property. Yet this classical definition has often been criticised for construing human rights too narrowly, and a need has been felt for a broader conceptualisation which would also cover the social, economic and cultural conditions of a dignified existence. The modern human rights movement, in India as elsewhere, is an attempt to give institutional form to this wider understanding, and the institutional architecture of the Indian human rights regime must be understood as the product of this debate.</p>
 
@@ -5880,6 +6472,20 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Later studies told a different story. A study conducted by the Ministry of Panchayati Raj showed that reservation is creating a favourable environment for women. There are examples of women resisting the efforts of male members to dictate terms; they have refused to be mouthpieces and asserted their autonomous view. Women's reservation has contributed not only to political empowerment but, most importantly, to cognitive and psychological empowerment. Families are now more inclined to send their girl children to school, and on the basis of these studies there emerged a strong case for extending reservation to Parliament and the state legislatures. Studies conducted by the UNDP show that women have not only empowered themselves but have also empowered the panchayats; panchayats headed by women representatives performed much better than those headed by men, and women took the issues of basic services, such as drinking water, more seriously and efficiently. The UNDP awarded Fatima Bi, a woman chairperson of a panchayat in Kurnool district of Andhra Pradesh, for her remarkable work in creating self-help groups among women, thereby providing a source of livelihood to a large number of extremely poor women. Despite this progress, the most important concern remains the capacity building of women representatives, and for this reason the government should continue programmes such as the Panchayat Mahila Evam Yuva Sashaktikaran Abhiyan.</p>
 
+<h3>Women and the Anti-Arrack Movement in Andhra Pradesh (1992-93)</h3>
+
+<p>The anti-arrack movement was a largely spontaneous campaign by rural women in Andhra Pradesh against the sale of arrack, a cheap distilled liquor. It began in 1992 in Dubagunta village in Nellore district, among women attending classes under the Total Literacy Campaign. Lessons in the literacy primers about families ruined by drink led the women to discuss their own experience of husbands who spent their wages on arrack, ran up debts and beat their wives.</p>
+
+<ul>
+  <li><strong>Grievance:</strong> arrack shops were licensed through state auctions, and excise revenue was a major source of state income, so the state itself had a stake in a trade that was impoverishing poor households.</li>
+  <li><strong>Methods:</strong> women gathered in groups to close arrack shops, destroyed stocks, disrupted the auctions of arrack licences, picketed, and shamed or fined men who drank. The movement had no single leader or party, and it spread from Nellore to many districts, helped by coverage in the Telugu press and support from Left, Dalit and women's organisations.</li>
+  <li><strong>Outcome:</strong> the Congress government banned arrack in 1993. N. T. Rama Rao's Telugu Desam Party promised total prohibition, won the December 1994 election and imposed it in 1995, but Chandrababu Naidu repealed prohibition in 1997, citing leakages within the state and from across its borders.</li>
+</ul>
+
+<p><strong>Significance of women's role:</strong> the movement was led by poor rural women, many of them Dalit or from backward castes, rather than by the urban middle class. It linked a private problem, drinking and domestic violence, to public policy, showing that the personal is political. It revealed women as an electoral constituency that parties could not ignore, and it showed how literacy can become a tool of collective action. Comparable mobilisations include the Meira Paibi women of Manipur against alcohol and drugs, and Bihar adopted prohibition in 2016 in response to demands from rural women.</p>
+
+<p><strong>Limits:</strong> prohibition proved hard to enforce, bootlegging and revenue losses led to its repeal, and the movement faded once its single demand was met, leaving the deeper structures of patriarchy and poverty in place.</p>
+
 <p>Environmental movements in India revolve around two great issues: development and democracy. Environmental movements around the world have challenged the dominant model of development, but in India the environmental movement is distinctive in being led by the weakest sections of society. Its major participants are tribals and those whose lives depend upon nature. India has a long history of environmental movements; indeed, the tribal revolts against British rule were some of the earliest environmental movements anywhere, for they were fought largely over the dispossession of forest communities from the resources on which their subsistence depended.</p>
 
 <h2>Environmentalist Movements</h2>
@@ -5924,6 +6530,19 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>The social movements of the underprivileged in India have taken two great streams: the movements of adivasis and tribal communities, directed against dispossession of land and forest, the denial of cultural autonomy and the imposition of an alien administrative order; and the movements of Dalits, directed against the caste order and the accumulated humiliation and exploitation which it licensed. Since the end of the Cold War, ethnic movements and ethnic conflicts have become the most prominent form of political conflict across the world, and in India both tribal and Dalit assertion have increasingly taken the form of identity movements. Horowitz observes that since the 1990s research on ethnic issues has become the core field of social science research, and the Indian experience, with its immense diversity of ethnic, tribal and caste communities, has been central to that research.</p>
 
+<h3>The Anti-Sterlite Movement in Tuticorin</h3>
+
+<p>The anti-Sterlite movement was a long campaign by the people of Thoothukudi (Tuticorin) in Tamil Nadu against the copper smelter of Sterlite, a unit of the Vedanta group, which operated there from the 1990s. Residents, fishers and farmers complained of air and water pollution, sulphur dioxide emissions and illness. The Madras High Court ordered the plant's closure in 2010, but in 2013 the Supreme Court let it run while fining the company Rs 100 crore for polluting the environment, and a gas leak the same year brought renewed protest.</p>
+
+<ul>
+  <li><strong>2018 escalation:</strong> plans to double capacity from 4 lakh to 8 lakh tonnes a year set off sustained protests. On the hundredth day, 22 May 2018, a march to the district Collectorate was met with police firing on 22 and 23 May that killed thirteen people, and internet services were shut down in three districts for five days.</li>
+  <li><strong>Closure:</strong> on 28 May 2018 the Tamil Nadu government ordered the permanent closure of the plant.</li>
+  <li><strong>Litigation:</strong> the National Green Tribunal set aside the closure in December 2018, but the Supreme Court overturned that order in February 2019 because the Tribunal lacked jurisdiction. The Madras High Court upheld the closure in August 2020. During the second wave of the pandemic the Supreme Court allowed the plant to produce medical oxygen (April 2021), and in 2024 it dismissed Vedanta's appeal, keeping the plant shut.</li>
+  <li><strong>Accountability:</strong> the Justice Aruna Jagadeesan Commission of Inquiry reported in 2022 that the firing was unprovoked and that police had fired on fleeing protesters.</li>
+</ul>
+
+<p><strong>Critical analysis:</strong> the movement is an example of the environmentalism of the poor described by Ramachandra Guha and Joan Martinez-Alier, in which health and livelihood, not conservation alone, drive protest. Its broad base of fishers, farmers, traders and students, and its use of the courts alongside mass mobilisation, won a rare outcome: the permanent closure of a major plant, upheld by the courts in line with the principle that the right to life under Article 21 includes a clean environment. It also exposed the failure of regulation, since the plant had long been allowed to operate despite violations, and the violence of the state's response to dissent against a large investment. Critics point to the loss of jobs in the plant and its ancillary units and to India's shift from net exporter to net importer of refined copper after 2018. The lesson is that development requires independent regulators, transparent monitoring and the consent of affected communities, so that the choice does not reduce to pollution or closure.</p>
+
 <h2>Tribal & Dalit Movements</h2>
 
 <p>Ethnicity may be defined as a sort of collective consciousness which can arise from common descent, language, religion or history. Ethnicity lies at the core of the idea of the nation, yet there can also be multi-ethnic nations. While the European nations have been relatively homogeneous, built upon common language, India and the United States are multi-ethnic nations. Homogenous nations are cultural or natural nations, whereas multi-ethnic nations are political nations; they have to be built politically. The Indian Constitution sought to convert India into a nation through federalism, secularism and the welfare state, and the Indian model of nation-building has been called the salad bowl model, in contrast to the American melting pot model. James Manor, in his book Ethnic Politics in India, suggests four ways of understanding ethnicity in India: religion, language, race and caste. For Prof. S.D. Muni, ethnicity is not a challenge to territorial integrity because the identity markers of Indians are not permanent; they are fluid and can be changed by the political class as convenience dictates. If sections of Indians can be united on the basis of language, that unity can equally be broken on the basis of caste or religion.</p>
@@ -5966,7 +6585,6 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The shift from comparative government to comparative politics was more than a change of label. Politics denotes processes, and when we study social, economic, cultural and psychological forces along with the formal and institutional structures of rule, the field of inquiry widens considerably. Comparative government was essentially a study of constitutions, legal codes and the organs of the state; comparative politics incorporates the study of civil society, political culture, informal power and the entire range of non-state actors which shape political life.</p>
 
 <p>Thus, along with constitutions and laws, comparative politics includes the study of civil society, culture, public opinion, political participation and the deep social cleavages which underlie formal institutions. The older approach treated the state as a fixed constitutional template; the newer approach understands the political system as a living process in which institutions, interests and ideas interact continuously. It is this enlarged conception of the political which defines the boundary of comparative politics as a distinct and mature field of study.</p>
-</｜｜DSML｜｜_command>
 
 <h2>Traditional & Modern Approaches</h2>
 
@@ -6003,6 +6621,57 @@ export const polsciNoteContent: Record<string, string> = {
 <h3>The Cultural Approach and Civic Culture</h3>
 
 <p>In their influential work The Civic Culture, Gabriel Almond and Sidney Verba introduced a cultural approach to comparative politics. They distinguished three ideal types of political culture: parochial, subject and participant. In a parochial culture, people have little to no awareness of or involvement with the political system; in a subject culture, citizens are aware of the political system and its outputs but have limited influence over inputs; and in a participant culture, citizens actively engage in shaping policies as well as responding to outcomes. Almond and Verba found that the civic culture, a mixture of all three orientations with the participant element dominant, is the ideal political culture for a stable democracy. Civic culture offers stability through moderation, ensuring that citizens are engaged enough to hold their rulers accountable but deferential enough to accept the outcome of the democratic process. Political culture thus came to be recognised as a decisive variable in explaining why some democracies endure and others collapse.</p>
+
+<h3>Successive Waves of Criticism of the Institutional Approach</h3>
+
+<p>The institutional approach is the oldest method of comparative politics. It studies the formal rules and organs of the state: constitutions, legislatures, executives, courts, federal arrangements and electoral laws. Its classic works include Woodrow Wilson's Congressional Government (1885), James Bryce's Modern Democracies (1921) and Herman Finer's The Theory and Practice of Modern Government (1932). Criticism of this approach has come not once but in successive waves, each attacking it from a different direction, and each time the approach has returned in a revised form.</p>
+
+<ul>
+  <li><strong>The behavioural wave (1950s and 1960s):</strong> Roy Macridis, in The Study of Comparative Government (1955), charged traditional comparative government with being essentially non-comparative, descriptive, parochial, static and monographic. It described the constitutions of a few Western states one by one, explained little and ignored the informal processes through which power actually works. David Easton's The Political System (1953) and the work of Gabriel Almond replaced the state with the political system, and attention moved from institutions to behaviour, attitudes, groups and functions.</li>
+  <li><strong>The Marxist and dependency wave (1960s and 1970s):</strong> Marxists argued that formal institutions mask the class power that operates through them, and dependency theorists added that the politics of post-colonial states cannot be explained by their constitutions when their economies are shaped by the global capitalist system. On this view, both institutionalism and behaviouralism took the Western liberal state as the norm.</li>
+  <li><strong>The new institutionalist response (1980s):</strong> institutions returned through a critique of behaviouralism itself. James March and Johan Olsen, in 'The New Institutionalism: Organizational Factors in Political Life' (1984), argued that institutions shape the preferences and conduct of actors rather than merely reflecting them, and Theda Skocpol's essay in Bringing the State Back In (1985) treated the state as an autonomous actor. Peter Hall and Rosemary Taylor (1996) later identified three new institutionalisms: historical, rational choice and sociological.</li>
+  <li><strong>Criticism of the new institutionalism:</strong> critics argue that its historical variant, with its stress on path dependence, explains stability better than change, that its rational choice variant reduces institutions to strategic calculation, and that its sociological variant stretches the term institution to cover almost any norm or habit. Feminist institutionalists argue that institutions are gendered, embedding male norms in apparently neutral rules. Students of informal institutions, such as Gretchen Helmke and Steven Levitsky (2004), show that unwritten rules of patronage, kinship and clientelism often matter more than formal design, particularly in the Global South.</li>
+</ul>
+
+<p>India shows why each wave arose. The Constitution created a parliamentary system on the Westminster model, but its working could not be read from the text alone. W.H. Morris-Jones described three idioms of Indian politics, the modern, the traditional and the saintly, and Rajni Kothari's account of the 'Congress system' (1964) showed how a dominant party absorbed conflict through its internal factions. Yet the institutionalist revival also fits India: the Election Commission, the Supreme Court and the federal structure have shaped political outcomes in their own right. The lesson of the successive waves is that institutions are neither the whole of politics nor a mere reflection of society. Each critique has corrected the approach rather than ended it.</p>
+
+<h3>The Psychological Approach</h3>
+
+<p>The psychological approach explains political behaviour through the minds of political actors: their motives, emotions, attitudes and personalities. It holds that institutions and structures work only through the people who staff and obey them, so comparison must also ask why leaders seek power, why citizens obey or rebel, and why some societies accept authoritarian rule. It grew out of the early twentieth-century reaction against the legal and rationalist study of politics and fed directly into the behavioural movement.</p>
+
+<ul>
+  <li><strong>Graham Wallas:</strong> in Human Nature in Politics (1908), Wallas attacked the assumption that political man is a rational calculator of interests. He argued that impulse, habit, instinct and emotional symbols such as party names and flags drive much political behaviour.</li>
+  <li><strong>Harold Lasswell:</strong> in Psychopathology and Politics (1930), Lasswell used case histories of political figures to argue that political man displaces private motives onto public objects and rationalises them in terms of the public interest, summed up in his formula p } d } r = P. Power and Personality (1948) extended the argument to the power-seeking personality.</li>
+  <li><strong>Theodor Adorno and colleagues:</strong> The Authoritarian Personality (1950), written with Else Frenkel-Brunswik, Daniel Levinson and Nevitt Sanford, used the F-scale to link a rigid and punitive upbringing to deference towards authority, hostility to out-groups and receptivity to fascism.</li>
+  <li><strong>Lucian Pye:</strong> in Politics, Personality, and Nation Building: Burma's Search for Identity (1962), Pye argued that the insecurity and distrust learned in Burmese childhood, and the identity crisis of a society in transition, hindered the building of a modern state. His psycho-cultural approach carried the psychological method into the study of developing countries.</li>
+  <li><strong>Survey research:</strong> Almond and Verba's The Civic Culture (1963) measured cognitive, affective and evaluative orientations across whole populations in five nations, linking the psychological approach to the study of political culture.</li>
+</ul>
+
+<p>The approach has also been applied to India. Erik Erikson's Gandhi's Truth (1969) read Gandhi's non-violence through his personal development, and Ashis Nandy's The Intimate Enemy (1983) examined the psychological damage that colonialism did to both coloniser and colonised. The approach helps explain charismatic leadership, mass mobilisation and the appeal of populist and authoritarian leaders.</p>
+
+<p>Critics raise four objections. It is reductionist, since it explains collective outcomes from individual traits and neglects institutions, class and history. Its psychoanalytic claims are hard to verify. Its national character studies, such as Ruth Benedict's The Chrysanthemum and the Sword (1946), slide into stereotype. And its standards of a healthy or mature personality often reflect Western norms. Most comparativists therefore use it to supplement structural and institutional explanation rather than to replace it.</p>
+
+<h3>Political Socialisation in Open and Closed Societies</h3>
+
+<p>Political socialisation is the process through which individuals acquire political values, beliefs, attitudes and knowledge, and through which a political culture passes from one generation to the next. Herbert Hyman popularised the term in Political Socialization (1959), and David Easton and Jack Dennis, in Children in the Political System (1969), showed how support for the political system is learned in childhood. Almond and Powell treated socialisation as an input function of every political system and distinguished manifest socialisation, the direct teaching of political content, from latent socialisation, the indirect transfer of attitudes towards authority in the family, school and workplace. Its agents are the family, school, peer group, religious bodies, mass media, political parties and the state itself.</p>
+
+<p>The distinction between open and closed societies comes from Henri Bergson's The Two Sources of Morality and Religion (1932) and was given its political meaning by Karl Popper in The Open Society and Its Enemies (1945). An open society permits criticism and peaceful change, while a closed society treats its order as fixed and beyond question. The two socialise their citizens in sharply different ways.</p>
+
+<table>
+  <thead>
+    <tr><th>Basis</th><th>Open societies</th><th>Closed societies</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Agents</td><td>Many autonomous agents compete: families, schools, religious bodies, free media, parties and civil society</td><td>The ruling party and the state control or penetrate every agent</td></tr>
+    <tr><td>Content</td><td>Plural and contested values, with civic education that encourages critical judgement</td><td>A single official ideology taught as truth, often built around a leader cult</td></tr>
+    <tr><td>Method</td><td>Largely latent and voluntary</td><td>Manifest indoctrination through party youth bodies, censorship and propaganda</td></tr>
+    <tr><td>Outcome</td><td>Diverse orientations, closest to Almond and Verba's participant culture</td><td>Outward conformity, subject orientations and hidden private dissent</td></tr>
+  </tbody>
+</table>
+
+<p>In closed societies the state sets out to remake the citizen. Carl Friedrich and Zbigniew Brzezinski, in Totalitarian Dictatorship and Autocracy (1956), listed an official ideology and a monopoly of mass communications among the defining features of totalitarianism. The Soviet Union socialised the young through the Young Pioneers and the Komsomol, Nazi Germany through the Hitler Youth, and Mao's China mobilised the Red Guards during the Cultural Revolution (1966-76). North Korea still organises socialisation around the cult of its ruling family. Yet the record shows the limits of indoctrination. The collapse of the communist regimes in 1989-91 and the youth-led protests in Iran after 2022 came from generations raised under these systems.</p>
+
+<p>Open societies are not free of manipulation. Louis Althusser called the school the dominant ideological state apparatus of capitalist society, and Gramscian scholars argue that consent to the existing order is manufactured through culture and the media. Digital platforms now add echo chambers and disinformation. India is an open society in which family, caste, religion and region compete with schools, a plural media and party organisations as agents of socialisation, and the recurring debates over school textbooks and online misinformation show that the contest over socialisation continues within a democracy.</p>
 
 <h2>Political Economy Perspective</h2>
 
@@ -6091,6 +6760,22 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>While comparative politics seeks to find answers by comparing states, many modern concepts of state and politics carry the imprint of the West, and their application to the developing world requires caution. European state formation, for example, often involved centralisation, war-making and nation-building over several centuries; in many post-colonial societies, the sequence was reversed, with the state arriving before the nation and with territory fixed by colonial boundaries rather than by wars of consolidation. Western secularism emerged from church-state conflict, whereas there was no such conflict in India, where the opposite problem arose: a state which must negotiate the co-existence of multiple religious communities. Western class politics, similarly, cannot fully explain caste, tribe, ethnicity and community politics in India and other post-colonial societies, where social stratification follows lines which the Eurocentric categories of class analysis were never designed to capture. Therefore, modern constructs are useful but not sufficient. While we should not reject them completely, we must use them critically, supplementing them with indigenous categories and with attention to the specific histories and social structures of the societies under study.</p>
 
+<h3>Extractive Capitalism</h3>
+
+<p>Extractive capitalism describes a pattern of accumulation in which profit and state revenue come mainly from extracting natural resources or rents rather than from productive investment, industrial upgrading and broad-based employment. Oil, gas, minerals, timber and plantation crops are taken from the land and exported with little processing, so that wealth flows to a narrow group of firms, foreign investors and state elites while the costs fall on local communities and the environment. The idea has roots in the colonial export economy, which dependency theorists described as an enclave serving the metropole, and in David Harvey's notion of accumulation by dispossession (The New Imperialism, 2003).</p>
+
+<ul>
+  <li><strong>Extractivism and neo-extractivism:</strong> Latin American scholars such as Eduardo Gudynas use extractivism for development models built on large-scale resource export. Under the 'pink tide' governments of Bolivia, Ecuador and Venezuela, neo-extractivism used resource rents to fund social programmes but left the dependence on primary exports in place.</li>
+  <li><strong>The resource curse:</strong> Richard Auty coined the term in 1993 for the paradox that resource-rich countries often grow more slowly than resource-poor ones. Terry Lynn Karl's The Paradox of Plenty (1997) traced how oil booms weakened petro-states, and the 'Dutch disease', named after the effect of gas discoveries on the Netherlands, describes how resource exports raise the value of the currency and damage manufacturing.</li>
+  <li><strong>The rentier state:</strong> Hossein Mahdavy (1970) and Hazem Beblawi and Giacomo Luciani (1987) described states that live on external rents rather than taxes. Because such states need not tax their citizens, they face weaker demands for representation, and Michael Ross ('Does Oil Hinder Democracy?', 2001) linked oil wealth to authoritarian rule.</li>
+  <li><strong>Extractive institutions:</strong> Daron Acemoglu and James Robinson, in Why Nations Fail (2012), contrast extractive political and economic institutions, which concentrate power and wealth in a narrow elite, with inclusive ones. Acemoglu, Robinson and Simon Johnson received the 2024 Nobel Memorial Prize in Economic Sciences for their work on institutions and prosperity.</li>
+  <li><strong>New frontiers:</strong> Shoshana Zuboff's The Age of Surveillance Capitalism (2019) extends the idea of extraction to personal data, which platform firms harvest and sell as predictions of behaviour.</li>
+</ul>
+
+<p>Extractive capitalism shapes the state in developing societies. Rents fund patronage and coercion, the state can become an agent of the extracting firms, and conflicts over land feed insurgency, as in the Niger Delta and the eastern Democratic Republic of the Congo. In India the mineral belt of central and eastern India overlaps with Adivasi homelands and with the Maoist insurgency. In Orissa Mining Corporation v. Ministry of Environment and Forests (2013) the Supreme Court asked the gram sabhas of the Niyamgiri hills to decide whether Vedanta's bauxite mining project would affect their religious and forest rights, and all twelve gram sabhas consulted rejected it. Adivasi communities continue to protest against coal mining in the Hasdeo Arand forests of Chhattisgarh. PESA 1996, the Forest Rights Act 2006 and the District Mineral Foundations created by the Mines and Minerals (Development and Regulation) Amendment Act 2015 are attempts to give affected communities a voice and a share of the gains.</p>
+
+<p>The resource curse is not destiny. Norway saves its oil revenue in a sovereign wealth fund, and Botswana has used diamond income to sustain a stable multiparty democracy. Critics of extractive capitalism therefore point less to resources as such than to the institutions and global commodity chains through which they are exploited.</p>
+
 <h2>Changing Nature of the State</h2>
 
 <p>The state is an essentially dynamic entity, and the comparative study of the state is in large part the study of its transformation. The classical model of the state, most powerfully articulated in the European tradition from Bodin and Hobbes to Weber, presented it as a sovereign, territorial and centralised authority which enjoys a monopoly of legitimate violence within its borders. This model has been subjected to sustained pressure from globalisation, which weakens state control over capital, information, migration and even security; from the rise of supranational and subnational authorities, which erode the exclusive character of state power; and from technological change, which transforms the very instruments through which the state governs.</p>
@@ -6121,6 +6806,43 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Maurice Duverger has given the Duverger law, which tells us the relationship between the electoral system and the party system. If a country has a simple majoritarian type of electoral system, it will have a two-party system; if a country has proportional representation, it will have a multi-party system. India, however, is an exception to the Duverger law, since a multi-party system exists with a simple majoritarian electoral system. Duverger also gave a structural analysis of political parties: on the basis of organisation, membership and finance there are two types of parties, the cadre party and the mass party, and he identified four types of internal party structures, including the caucus, the branch, the cell and the militia, each associated with a particular type of party organisation.</p>
 
 <p>Giovanni Sartori emphasised that the nature of a party system is determined not merely by the number of parties but by the number of parties with systemic relevance, that is, those capable of influencing government formation and policy. He distinguished between parties that merely exist and parties that matter, and his criterion of relevance is what separates the effective party system from the merely descriptive counting of parties. In established Western democracies, political parties are typically institutionalised and operate within a framework of internal democracy, transparency and financial accountability; they often have clear ideological foundations and are less dependent on individual leaders, which ensures continuity beyond personal leadership changes. In many developing or non-Western countries, by contrast, political parties often exhibit a blend of modern organisational structures and traditional practices: parties combine formal constitutions and election machinery with personalist leadership, kinship networks, caste and communal loyalties, and the distinction between party, movement and faction is frequently blurred.</p>
+
+<h3>Clientelism</h3>
+
+<p>Clientelism is the exchange of material benefits for political support through personal and unequal relationships between patrons and clients. A patron with access to resources, such as jobs, loans, licences, welfare benefits or protection, provides them selectively, and the clients repay with votes, attendance at rallies and loyalty. James C. Scott ('Patron-Client Politics and Political Change in Southeast Asia', 1972) defined the patron-client tie as a largely instrumental friendship between people of unequal status, and anthropological studies of Southern Italy, Latin America and South Asia showed how such ties link villages to the state.</p>
+
+<ul>
+  <li><strong>Features:</strong> the relationship is personal, unequal, reciprocal and contingent, since benefits depend on political support rather than on rights.</li>
+  <li><strong>Patronage and clientelism:</strong> patronage usually refers to the use of public office and public resources, especially jobs, to reward supporters. Clientelism is the wider system of exchange, which may also run through private resources, local notables and party machines such as Tammany Hall in nineteenth-century New York.</li>
+  <li><strong>Brokers:</strong> in mass democracies patrons cannot know every voter, so they rely on intermediaries. Susan Stokes, Thad Dunning, Marcelo Nazareno and Valeria Brusco, in Brokers, Voters, and Clientelism (2013), show how local brokers in Argentina and elsewhere monitor voters and channel benefits, and how they may serve their own interests rather than the party's.</li>
+  <li><strong>Programmatic versus clientelistic linkage:</strong> Herbert Kitschelt and Steven Wilkinson, in Patrons, Clients, and Policies (2007), distinguish parties that win votes through policies benefiting whole categories of citizens from parties that win them through targeted and contingent exchange.</li>
+</ul>
+
+<p>India offers rich material. M.N. Srinivas used the term 'vote bank' in the 1950s for the bloc support that village leaders could deliver. Kanchan Chandra, in Why Ethnic Parties Succeed (2004), calls India a patronage-democracy, a democracy in which the state controls a large share of jobs and services and elected officials have discretion in distributing them, so that voters favour parties led by members of their own ethnic group in the expectation of benefits. Tariq Thachil's Elite Parties, Poor Voters (2014) shows how service provision by the BJP's Sangh affiliates helped it win poor voters, and Partha Chatterjee's The Politics of the Governed (2004) reads the bargaining of the urban poor with politicians as 'political society', in which welfare is negotiated rather than claimed as a right. In S. Subramaniam Balaji v. State of Tamil Nadu (2013) the Supreme Court held that manifesto promises of free goods are not a corrupt practice under the Representation of the People Act 1951 and asked the Election Commission to frame guidelines. The shift to Direct Benefit Transfer through the JAM trinity of Jan Dhan accounts, Aadhaar and mobile phones has reduced the role of local brokers, though some observers argue that it binds beneficiaries directly to the national leader instead.</p>
+
+<p>Clientelism is usually criticised for weakening programmatic parties, tilting public spending towards targeted goods, breeding corruption and undermining the secret ballot and accountability. Yet scholars also note that in poor societies with weak bureaucracies it gives marginal groups access to an otherwise distant state. Clientelism tends to decline as incomes rise, the civil service becomes impartial and welfare becomes rule-based, which is why it is more marked in developing than in advanced industrial democracies.</p>
+
+<h3>Setbacks for the Centre-Left and the Rise of the Right</h3>
+
+<p>Since the mid-2010s, and especially in the elections of 2024 and 2025, centrist and centre-left parties have lost ground in many democracies while parties of the right have gained. The trend is real but uneven, and much of the gain has gone to the radical or populist right rather than to the traditional centre-right.</p>
+
+<ul>
+  <li><strong>Europe:</strong> in the European Parliament election of June 2024 the centre-right European People's Party remained the largest group with 188 of 720 seats, while the liberal Renew Europe group and the Greens lost heavily and groups further to the right gained. In Germany's election of February 2025 the CDU/CSU came first with 28.5 per cent and Friedrich Merz became Chancellor, the AfD came second with 20.8 per cent, and the SPD fell to 16.4 per cent, its worst result since 1887. In Portugal the centre-right Democratic Alliance won in 2024 and again in May 2025, when the Socialists fell to third place behind Chega for the first time.</li>
+  <li><strong>The Americas:</strong> Javier Milei won Argentina's presidency in 2023, Donald Trump won the US presidency again in 2024, and in Chile José Antonio Kast of the Republican Party defeated Jeannette Jara, the candidate of the governing left, in the December 2025 run-off.</li>
+  <li><strong>Counter-examples:</strong> the trend is not universal. Labour won a landslide in Britain in July 2024, the Labor Party increased its majority in Australia in May 2025, and Mark Carney's Liberals won Canada's election in April 2025.</li>
+  <li><strong>India:</strong> India does not fit the Western pattern neatly. The BJP, a party of the right, has dominated national politics since 2014, but in 2024 it won 240 of 543 seats and now governs through the NDA coalition.</li>
+</ul>
+
+<p>Several explanations are offered:</p>
+
+<ul>
+  <li><strong>Economic discontent:</strong> post-pandemic inflation and the cost-of-living crisis turned voters against incumbents of every colour in 2024, and centre-left governments were often the incumbents.</li>
+  <li><strong>The changing social base of the left:</strong> Thomas Piketty has described a shift from class-based voting to a 'Brahmin left' of educated voters and a 'merchant right' of the wealthy, leaving many working-class voters without a political home. The collapse of PASOK in Greece after the debt crisis gave the name 'Pasokification' to the decline of social democratic parties.</li>
+  <li><strong>Cultural backlash:</strong> Pippa Norris and Ronald Inglehart, in Cultural Backlash (2019), argue that older and less educated voters are reacting against rapid cultural change, and immigration has become a leading concern for many voters.</li>
+  <li><strong>Strategic convergence:</strong> centre-right parties have adopted tougher positions on migration, crime and national identity, while centre-left parties that accepted market reforms in the 1990s, the 'Third Way' of Tony Blair and Gerhard Schröder, find it hard to offer a distinct economic alternative.</li>
+</ul>
+
+<p>The trend poses a challenge for representation. When the mainstream parties of the centre lose support, party systems fragment, coalition-building becomes harder and the boundary between the mainstream right and the radical right weakens. Yet the counter-examples show that the centre-left can still win when it presents itself as the party of competent change.</p>
 
 <h2>Pressure Groups</h2>
 
@@ -6159,6 +6881,36 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The Bangladesh student movement was ignited in June 2024 when the High Court Division of the Supreme Court reinstated a controversial quota system, allocating 30% of government jobs to descendants of 1971 Liberation War veterans, a decision which reversed a 2018 reform that had abolished such quotas and sparked widespread discontent among students and job seekers, who viewed the system as discriminatory and a means of political patronage. The demands of the protesters included the abolition of the reinstated quota system in favour of merit-based recruitment, the resignation of Prime Minister Sheikh Hasina and her cabinet, and the implementation of democratic reforms and restoration of civil liberties. The movement was spearheaded by Students Against Discrimination, a coalition of university students from across Bangladesh, which utilised social media platforms like Facebook and Telegram to coordinate nationwide protests, human chains and blockades. The government's initial response was marked by severe repression, with deployment of police and paramilitary forces, use of live ammunition and tear gas; the violence peaked during the July Massacre, with estimates of over 1,500 deaths and thousands injured. On 21 July the Appellate Division cut the quotas to 7 per cent, but the protests went on. Facing mounting pressure, Sheikh Hasina resigned on August 5, 2024 and fled to India, and an interim government was established, led by Nobel Peace Prize laureate Muhammad Yunus, tasked with restoring democracy and organising free elections. Scholars have highlighted the deep-rooted structural issues and the youth's role in challenging authoritarianism, and the movement also underscores the role of social media.</p>
 
 <p>The Gen Z protests in Nepal can be understood as part of the recent wave of youth-led and digitally mobilised social movements, similar to Fridays for Future or the Hong Kong protests; these movements show the growing role of students, social media, leaderless mobilisation and anti-establishment anger in contemporary politics. In Nepal, the immediate trigger was the government's September 2025 ban on several social media platforms, with the state arguing that platforms had failed to register under government rules. For the youth, this looked like an attack on freedom of expression and digital rights, and the anger soon expanded into a larger protest against corruption, nepotism, unemployment and political elites in Nepali politics. The movement was called a Gen Z protest because young students and first-time political participants played a major role, and it used digital tools for mobilisation, including social media and VPNs. This shows a new pattern of political participation where formal party structures are less important and online networks become central; in this sense, the Nepal protests were not only street protests but also a form of digital political mobilisation. The government response worsened the situation: police action against protesters led to deaths and injuries, with police reportedly killing 19 protesters during the September demonstrations, after which the protests escalated and eventually toppled the government. An interim government led by former Chief Justice Sushila Karki was later sworn in with a mandate to conduct fresh elections. The significance of the Nepal Gen Z protests lies in three points: they show a crisis of legitimacy against the background of unemployment and corruption; they show the rise of youth as an independent political force, not always controlled by traditional parties; and they show that attempts to restrict digital space can backfire, because social media has become a major site of political participation and representation. Thus, the Nepal protests reflect the changing nature of social movements in the 21st century: they are youth-led, digitally coordinated, and suspicious of old party elites.</p>
+
+<h3>Movements for Women's Bodily Rights</h3>
+
+<p>Since the 2010s a global wave of protest has centred on women's physical security and bodily autonomy: freedom from sexual violence and harassment, control over reproduction and freedom from state control of dress. These movements share the features of new social movements. They are largely decentralised and led by young women, they use social media hashtags, and they treat personal experience as a structural and political problem, echoing the second-wave slogan that the personal is political.</p>
+
+<ul>
+  <li><strong>#MeToo:</strong> the phrase was first used by the activist Tarana Burke in 2006 and went viral in October 2017 after allegations against the Hollywood producer Harvey Weinstein. It exposed sexual harassment in workplaces across many countries. In India it took off in October 2018. M.J. Akbar resigned as Minister of State for External Affairs that month, and in February 2021 a Delhi court dismissed his defamation complaint against the journalist Priya Ramani.</li>
+  <li><strong>Ni Una Menos and the green wave:</strong> the first Ni Una Menos ('Not one woman less') march took place in Argentina on 3 June 2015 after the murder of a pregnant fourteen-year-old, Chiara Páez, and the movement spread across Latin America against femicide. Its green scarves became the symbol of the campaign for legal abortion, which Argentina legalised up to fourteen weeks in December 2020. The 'green wave' reached Mexico, whose Supreme Court held the criminalisation of abortion unconstitutional in 2021, and Colombia in 2022.</li>
+  <li><strong>Poland's Women's Strike:</strong> after the Constitutional Tribunal ruled on 22 October 2020 that abortion for foetal defects was unconstitutional, hundreds of thousands joined the largest protests in Poland since 1989, under the symbol of a red lightning bolt.</li>
+  <li><strong>Woman, Life, Freedom:</strong> the death of Mahsa Amini on 16 September 2022, after her arrest by Iran's morality police for 'improper' hijab, set off nationwide protests under the Kurdish slogan Jin, Jiyan, Azadi. Women burnt headscarves and cut their hair in public. Security forces killed several hundred protesters and the state executed several people over the protests, and the imprisoned activist Narges Mohammadi received the Nobel Peace Prize in 2023.</li>
+  <li><strong>After Dobbs:</strong> on 24 June 2022 the US Supreme Court, in Dobbs v. Jackson Women's Health Organization, overruled Roe v. Wade (1973) and held that the Constitution does not confer a right to abortion. Mass protests and state ballot measures followed. France responded by writing the 'guaranteed freedom' of women to have an abortion into Article 34 of its Constitution in March 2024, the first country to give abortion explicit constitutional protection.</li>
+</ul>
+
+<p>India has its own wave. The protests after the Delhi gang rape of December 2012 led to the Justice Verma Committee and the Criminal Law (Amendment) Act 2013, which widened the definition of rape and created new offences such as stalking and voyeurism. The rape and murder of a doctor at R.G. Kar Medical College in Kolkata in August 2024 led to the 'Reclaim the Night' marches of 14 August and to a national task force on the safety of medical workers set up by the Supreme Court. The Medical Termination of Pregnancy (Amendment) Act 2021 and the Supreme Court's 2022 judgment extending safe abortion to unmarried women show the legal side of the same struggle.</p>
+
+<p>These movements have changed laws and public debate, but their gains are uneven and reversible. Dobbs shows that rights can be withdrawn, Iran shows the capacity of a state to repress, and critics note that online campaigns can favour urban, middle-class women and fade without organisational depth. Feminist scholars also point to a backlash, as conservative and religious movements mobilise against reproductive rights and what they call gender ideology.</p>
+
+<h3>The Red Lipstick Movement</h3>
+
+<p>Red lipstick has served as a feminist symbol of defiance and self-assertion for more than a century. Suffrage campaigners in Britain and the United States in the 1910s are commonly associated with wearing it as a sign of independence, and during the Second World War it became an emblem of women's resilience. In recent protest it has been used to turn an object associated with femininity into a mark of resistance.</p>
+
+<p>The best-documented recent case is the #SoyPicoRojo ('I am red lipstick') campaign in Nicaragua. During the protests against Daniel Ortega's government that began in April 2018, the feminist sociologist and former Sandinista guerrilla Marlen Chow was arrested and, on impulse, identified herself as a member of the 'Pico Rojo' (red lipstick), recalling the poet Claribel Alegría, who had founded an association of Nicaraguan women of that name. Women and men then posted photographs of themselves wearing red lipstick with the hashtag, and the symbol spread as a gesture of defiance against the government and of support for those detained.</p>
+
+<ul>
+  <li><strong>Significance for feminist rights:</strong> the movement shows how women's protest can use everyday, low-cost symbols that are hard for a state to ban, and how feminism links bodily self-expression to political freedom.</li>
+  <li><strong>Lipstick feminism:</strong> the campaign draws on the third-wave idea that femininity and sexual self-expression can be sources of empowerment rather than signs of subordination.</li>
+  <li><strong>Critique:</strong> feminists in the radical tradition, and works such as Naomi Wolf's The Beauty Myth (1990), argue that beauty norms are themselves a form of patriarchal control, so a cosmetic symbol may reinforce the norms it claims to subvert. Others note that hashtag symbolism can raise visibility without changing laws or power relations.</li>
+</ul>
+
+<p>The Red Lipstick Movement thus belongs to the wider family of new social movements in which identity, the body and symbolic action, rather than the capture of state power, form the terrain of feminist politics.</p>
 
 <h2>Advanced Industrial vs Developing Societies</h2>
 
@@ -6211,7 +6963,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Even though they are cooperating, each country still keeps full control over its own borders and laws. The country remains the main player. So, internationalisation is about growing connections between countries, but without giving up their independence.</p>
 
-<p>Regionalisationis a localized phenomenon. It pertains to the interactions and collaborations among neighbouring states within a specific geographical area, such as Europe, South America, or South Asia. This process is often facilitated by shared histories, cultural ties, economic interests etc. Institutions like EU, ASEAN, BIMSTEC exemplify regionalisation.</p>
+<p>Regionalisation is a localized phenomenon. It pertains to the interactions and collaborations among neighbouring states within a specific geographical area, such as Europe, South America, or South Asia. This process is often facilitated by shared histories, cultural ties, economic interests etc. Institutions like EU, ASEAN, BIMSTEC exemplify regionalisation.</p>
 
 <p>The concept of the Westphalian world order originates from the Treaty of Westphalia (1648) , signed after the Thirty Years' War in Europe. It established foundational principles of international politics, which remain influential even today. The core elements include:</p>
 
@@ -6232,6 +6984,26 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Cultural Homogenization and Loss of Diversity: What is promoted as global culture is largely a projection of Western values and consumerism. In this process, indigenous traditions, languages, and social norms are being eroded or marginalized - raising concerns of cultural imperialism.</p>
 
 <p>Clash of Civilizational Values: The idea that globalization signals the "end of ideology" is misleading. While Western liberal norms dominate global discourse, rising Asian powers continue to assert distinct models rooted in 'Asian values' - emphasizing order, family over individual freedoms. This ideological divergence may deepen in a multipolar global order.</p>
+
+<h3>The Globalisation Debate: Hyperglobalists, Sceptics and Transformationalists</h3>
+
+<p>Globalisation is the widening, deepening and speeding up of worldwide interconnectedness in economic, political, cultural and environmental life. Anthony Giddens, in The Consequences of Modernity (1990), defined it as the intensification of worldwide social relations which link distant places, so that local events are shaped by events occurring far away, and David Harvey described it as time-space compression. The debate about it is intense because it raises questions about the power of the state, the fairness of the world economy, the fate of national cultures and the future of democracy. David Held, Anthony McGrew, David Goldblatt and Jonathan Perraton, in Global Transformations (1999), sorted the debate into three positions.</p>
+
+<table>
+  <thead>
+    <tr><th>Basis</th><th>Hyperglobalists</th><th>Sceptics</th><th>Transformationalists</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Key thinkers</td><td>Kenichi Ohmae, The Borderless World (1990) and The End of the Nation State (1995)</td><td>Paul Hirst and Grahame Thompson, Globalization in Question (1996)</td><td>David Held, Anthony McGrew, Anthony Giddens, James Rosenau</td></tr>
+    <tr><td>What is new</td><td>A single global market and a borderless world</td><td>Little: the world economy before 1914 was in some respects as open, and trade today is concentrated in regional blocs</td><td>Unprecedented levels of interconnectedness, though unevenly spread</td></tr>
+    <tr><td>The state</td><td>Declining, reduced to a manager of global capital</td><td>Still the main actor, and the author of globalisation through its own policies</td><td>Being reshaped, with sovereignty shared and power exercised at many levels</td></tr>
+    <tr><td>Direction</td><td>A global civilisation</td><td>Regional blocs and new forms of imperialism</td><td>Open and contingent</td></tr>
+  </tbody>
+</table>
+
+<p>Hyperglobalists include both neoliberals, who welcome the borderless world as the triumph of the market, and radical critics, who see it as the triumph of global capital. Sceptics, many of them realists or Marxists, argue that talk of globalisation is a myth that suits governments wishing to justify deregulation. Transformationalists occupy the middle ground: globalisation is real and historically unprecedented, but it is a contingent process with contradictory effects, integrating some regions and marginalising others.</p>
+
+<p>The three positions explain why the consequences of globalisation are so contested. Supporters point to rising world output, the fall in extreme poverty in China and India and the spread of technology. Critics, from Joseph Stiglitz in Globalization and Its Discontents (2002) to the anti-globalisation movement, point to financial crises, rising inequality within nations, the race to the bottom in labour standards and the democratic deficit of global institutions. India's experience since 1991 supports the transformationalist view. Liberalisation has integrated India into global markets and made it a major services exporter, yet the Indian state has kept wide powers, protected much of its agriculture and used its weight in the WTO and the G20 to shape the rules.</p>
 
 <h2>Economic Globalisation</h2>
 
@@ -6337,6 +7109,23 @@ export const polsciNoteContent: Record<string, string> = {
 <h2>Responses of Developing Nations</h2>
 
 <p>On the other hand, China has benefitted most from globalisation. Consequently, it is pitching strongly against protectionist moves of USA. It has even shown willingness to be a next world leader.</p>
+
+<h3>Over-Centralised Globalisation and a Global South-Sensitive Model</h3>
+
+<p>Critics in the Global South argue that globalisation has been over-centralised. Its rules are written mainly by the G7 and by institutions in which Western states hold the largest votes, its finance flows through a few Western centres and currencies, its technology and intellectual property are held by a small number of firms, and its manufacturing has become concentrated in a few places, above all China. The COVID-19 pandemic exposed the danger: developing countries faced shortages of medicines and vaccines, broken supply chains and capital flight, while rich countries secured most of the early vaccine supply. The debt distress of countries such as Sri Lanka and Zambia, and the slow response of the Bretton Woods institutions, reinforced the view that the system shifts risk onto its weakest members.</p>
+
+<p>A Global South-sensitive model of globalisation seeks to reduce these dangers by spreading voice, production and technology more widely:</p>
+
+<ul>
+  <li><strong>Reform of global institutions:</strong> realignment of IMF quotas and World Bank shares towards emerging economies, reform of the UN Security Council and restoration of the WTO's Appellate Body. The IMF's sixteenth quota review (2023) approved a 50 per cent increase in quotas but left their distribution unchanged, which shows how slowly power shifts.</li>
+  <li><strong>Policy space:</strong> the freedom for developing countries to pursue industrial policy, protect food security and manage capital flows, an argument made by Dani Rodrik and by Ha-Joon Chang in Kicking Away the Ladder (2002).</li>
+  <li><strong>Diversified supply chains:</strong> resilient and decentralised production networks, so that no single country can hold others hostage.</li>
+  <li><strong>Development finance and climate justice:</strong> concessional finance, debt relief through mechanisms such as the G20 Common Framework (2020), and climate finance on the principle of common but differentiated responsibilities.</li>
+  <li><strong>South-South institutions:</strong> bodies such as the BRICS New Development Bank (2015) and the Asian Infrastructure Investment Bank (2016), which give developing states alternative sources of finance.</li>
+  <li><strong>Technology as a public good:</strong> sharing of digital public infrastructure and of vaccine and green technologies on affordable terms.</li>
+</ul>
+
+<p>India has made this model a theme of its diplomacy. It has convened Voice of the Global South summits since January 2023 to carry the concerns of developing countries into the G20. Under its G20 presidency, with the theme 'One Earth, One Family, One Future', the African Union became a permanent member of the G20 at the New Delhi summit in September 2023, the New Delhi Leaders' Declaration welcomed a G20 framework for digital public infrastructure, and an expert group co-convened by N.K. Singh and Lawrence Summers proposed reform of the multilateral development banks. Critics note that the Global South is diverse, that China is both a champion of the South and a source of concentrated production and debt, and that reform has so far moved faster in declarations than in institutions.</p>
 
 <h2>Anti-Globalisation Movements</h2>
 
@@ -6470,7 +7259,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <h3>Scholars: Robert Keohane and Joseph Nye</h3>
 
-<p>Complex Interdependence is also known as Cob Web model.</p>
+<p>Complex interdependence is close to John Burton's cobweb model of world society (1972), which pictures the world as a web of transactions among many actors rather than as colliding states.</p>
 
 <p>Unlike other liberal theories, which are prescriptive, complex interdependence is descriptive. It describes the state of relations among nations in post-cold war world order.</p>
 
@@ -6666,6 +7455,34 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Hence if foreign policies reflect continuity, they also reflect change.</p>
 
+<h3>The Neo-Neo Debate: Neoliberal Institutionalism and Neorealism</h3>
+
+<p>From the 1980s the main debate in mainstream IR theory was between neorealism and neoliberal institutionalism, which Ole Waever called the 'neo-neo synthesis' because the two sides share so much. Both accept that the international system is anarchic, that states are the main actors and that states are rational egoists. Within these shared assumptions, neoliberals drew a far less gloomy conclusion about the prospects for cooperation than Kenneth Waltz had done.</p>
+
+<ul>
+  <li><strong>Robert Keohane:</strong> in After Hegemony (1984), Keohane argued that cooperation can continue even after the decline of a hegemon, because international institutions and regimes reduce transaction costs, provide information, monitor compliance and so reduce the fear of cheating. Stephen Krasner defined regimes as sets of principles, norms, rules and decision-making procedures around which actors' expectations converge in a given issue area.</li>
+  <li><strong>Robert Axelrod:</strong> in The Evolution of Cooperation (1984), Axelrod showed through computer tournaments of the repeated prisoners' dilemma that a strategy of reciprocity, tit-for-tat, does best. When states interact repeatedly, the 'shadow of the future' makes cooperation rational even among egoists.</li>
+  <li><strong>Absolute gains:</strong> neoliberals argue that states care mainly about their own absolute gains, so they will cooperate whenever all parties gain.</li>
+</ul>
+
+<p>Neorealists replied that this underestimated anarchy. Joseph Grieco, in 'Anarchy and the Limits of Cooperation' (International Organization, 1988), argued that states are defensive positionalists who care about relative gains: a state will refuse a deal from which it gains if its rival gains more, because today's partner may be tomorrow's enemy. John Mearsheimer, in 'The False Promise of International Institutions' (1994-95), argued that institutions merely reflect the distribution of power and have no independent effect on war and peace.</p>
+
+<table>
+  <thead>
+    <tr><th>Issue</th><th>Neorealism</th><th>Neoliberal institutionalism</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Anarchy</td><td>Severe, dominated by survival</td><td>Real but can be mitigated</td></tr>
+    <tr><td>Main obstacle to cooperation</td><td>Concern over relative gains</td><td>Fear of cheating</td></tr>
+    <tr><td>Gains</td><td>Relative</td><td>Absolute</td></tr>
+    <tr><td>Institutions</td><td>Reflect power and have little independent effect</td><td>Shape behaviour by changing incentives</td></tr>
+    <tr><td>Priority issues</td><td>Security</td><td>Political economy and the environment</td></tr>
+    <tr><td>Focus</td><td>Capabilities</td><td>Intentions and preferences</td></tr>
+  </tbody>
+</table>
+
+<p>Neoliberalism therefore lightened neorealism's dark view without rejecting its premises: anarchy remains, but it need not mean permanent conflict. The density of regimes after 1945, from the GATT and the WTO's dispute settlement system to the nuclear non-proliferation regime and the Paris Agreement, supports the neoliberal case. The paralysis of the WTO's Appellate Body since 2019, US-China technology decoupling and US withdrawals from agreements support the neorealist case. India's withdrawal from the Regional Comprehensive Economic Partnership in 2019, driven by fears of a widening trade deficit with China, shows that relative gains still weigh with states. Constructivist critics argue that both theories ignored identity and norms, and that they had converged so far that they were no longer true rivals.</p>
+
 <h2>Marxist Approach</h2>
 
 <p>It would be inappropriate if we use the term 'Marxist school of international politics'. Because Marx considered politics as a part of superstructure hence it is preferable to use the term 'Marxist school of international political economy'.</p>
@@ -6757,6 +7574,23 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Critical school/ Frankfurt school is concerned about 'emancipation of masses'. Andrew Linklater suggests that world can be emancipated from wars only when we make territorial boundaries irrelevant. He also suggests the strengthening of grassroot democracy. People should be empowered enough to put pressure on the ruling class to take responsible actions.</p>
 
 <p>He suggests to strengthen moral boundaries across nations. It denotes transnational civil society networks.</p>
+
+<h3>Marxism and Realism: Commonalities and Differences</h3>
+
+<p>Marxism and realism start from different units, classes and capital for one and states for the other, yet they share a hard-headed view of international politics that sets both against liberalism. E.H. Carr's The Twenty Years' Crisis (1939), a founding text of realism, drew on Marx and on Karl Mannheim's sociology of knowledge to expose the liberal 'harmony of interests' as the ideology of satisfied powers. Robert Gilpin's The Political Economy of International Relations (1987) likewise grouped the nationalist (realist) and Marxist perspectives together against liberalism in treating economic relations as conflictual.</p>
+
+<ul>
+  <li><strong>Materialism:</strong> both explain international politics through material forces, military power for realists and the mode of production for Marxists, rather than through ideas, morality or law.</li>
+  <li><strong>Structuralism:</strong> both see state behaviour as constrained by a structure, Waltz's anarchic system or Wallerstein's capitalist world-system, rather than freely chosen by leaders.</li>
+  <li><strong>Conflict as normal:</strong> both reject the liberal belief that trade and interdependence bring peace. Realists see a permanent struggle for power, and Marxists see class struggle and the rivalry of capitalist states. Lenin's Imperialism, the Highest Stage of Capitalism (1917) explained the First World War as a clash of imperialist powers over markets and colonies, an account close to the realist picture of great power rivalry.</li>
+  <li><strong>Scepticism about law and institutions:</strong> both regard international law and organisations as reflecting the interests of the powerful. Robert Cox's remark that theory is always for someone and for some purpose echoes Carr.</li>
+  <li><strong>Hierarchy and hegemony:</strong> both see the system as dominated by a leading power. Gilpin's War and Change in World Politics (1981) and Wallerstein's cycles of Dutch, British and American hegemony both describe the rise and decline of hegemons.</li>
+  <li><strong>Critique of idealism:</strong> both dismiss moralism in foreign policy as a mask for interest.</li>
+</ul>
+
+<p>The differences are equally important. Realists treat the state as the main actor and security as its main goal, while Marxists treat the state as an instrument of the dominant class and economic exploitation as the main dynamic. Realism sees anarchy and power politics as timeless, while Marxism is historical and expects capitalism, and with it the present international order, to be transcended. Realism counsels prudence and the balance of power, while Marxism looks to emancipation and revolution.</p>
+
+<p>The Ukraine war shows both the overlap and the contrast. Realists such as Mearsheimer explain it through NATO expansion and great power security, while Marxist writers stress the competition of rival capitalist blocs, arms industries and energy markets. Both reject the liberal reading of the war as simply a contest between democracy and autocracy. Marxism also remains relevant after the Cold War: the 2008 financial crisis, the power of transnational corporations and debt dependence in the Global South fit its account, though critics charge it with economic reductionism.</p>
 
 <h2>Functionalism & Neo-functionalism</h2>
 
@@ -7049,9 +7883,27 @@ export const polsciNoteContent: Record<string, string> = {
   <li>John Herz has used the Hobbesian theory of state of nature to develop security dilemma, a vicious cycle of insecurity which makes power politics a permanent feature.</li>
   <li>Robert Jervis has developed 'offence defence theory' to explain severity of security dilemma.</li>
   <li>Social constructivists believe that security dilemma is because anarchy is interpreted in a specific way. They suggest that communications can address security dilemma.</li>
-  <li>George Sorenson has given the concept of insecurity dilemma. Insecurity dilemma suggests that in 21st century, nations suffer from internal security threats. Reasons - rise of ethnic movements, non-state actors, failed states, civil wars.</li>
-  <li>Prof. Amitabh Acharya also believe that security dilemma may not be a relevant concept for third world states.</li>
+  <li>Georg Sørensen, building on Brian Job (1992), developed the concept of insecurity dilemma. Insecurity dilemma suggests that in 21st century, nations suffer from internal security threats. Reasons - rise of ethnic movements, non-state actors, failed states, civil wars.</li>
+  <li>Prof. Amitav Acharya also believes that security dilemma may not be a relevant concept for third world states.</li>
 </ul>
+
+<h3>The Widening of Security and Non-Traditional Threats</h3>
+
+<p>The traditional concept of national security was military and state-centred. Walter Lippmann (1943) held that a nation is secure when it does not have to sacrifice its core values to avoid war and can defend them by war if challenged. Arnold Wolfers, in '"National Security" as an Ambiguous Symbol' (1952), distinguished security in an objective sense, the absence of threats to acquired values, from security in a subjective sense, the absence of fear that such values will be attacked. During the Cold War security meant protecting territory and sovereignty from external military attack through armed force, alliances and deterrence.</p>
+
+<p>From the 1980s the concept was widened to cover non-military threats and deepened to cover referents other than the state:</p>
+
+<ul>
+  <li><strong>Barry Buzan:</strong> People, States and Fear (1983, second edition 1991) identified five sectors of security: military, political, economic, societal and environmental.</li>
+  <li><strong>The Copenhagen School:</strong> Buzan, Ole Waever and Jaap de Wilde, in Security: A New Framework for Analysis (1998), treated security as a speech act. An issue is 'securitised' when an actor successfully presents it to an audience as an existential threat that justifies extraordinary measures. Securitisation explains how migration, disease or climate change can be moved out of normal politics, and why critics warn that it can justify the suspension of rights.</li>
+  <li><strong>Human security:</strong> the UNDP Human Development Report of 1994, shaped by Mahbub ul Haq, made the individual the referent of security, defined as freedom from fear and freedom from want, and listed seven components: economic, food, health, environmental, personal, community and political security. The Commission on Human Security, chaired by Sadako Ogata and Amartya Sen, published Human Security Now (2003), and the UN General Assembly adopted a common understanding of human security in resolution 66/290 (2012).</li>
+</ul>
+
+<p><strong>Food crises:</strong> the 1996 World Food Summit defined food security as existing when all people, at all times, have physical and economic access to sufficient, safe and nutritious food. Amartya Sen's Poverty and Famines (1981) showed through the Bengal famine of 1943 that famine can occur without a fall in food supply when people lose their entitlement to food. The 2007-08 food price crisis set off riots in dozens of countries, and the war in Ukraine from 2022 disrupted grain and fertiliser exports, which the Black Sea Grain Initiative eased until Russia withdrew in July 2023. India's National Food Security Act 2013 treats access to food as a legal entitlement.</p>
+
+<p><strong>Environmental crises:</strong> climate change is described as a threat multiplier that worsens water scarcity, crop failure, displacement and competition for resources, and for small island states rising seas are an existential threat. Thomas Homer-Dixon's research linked environmental scarcity to violent conflict. The UN Security Council first debated climate and security in 2007, but in December 2021 India voted against, and Russia vetoed, a draft resolution that would have brought climate change into the Council's security work. India argued that the UNFCCC is the proper forum and that securitising climate action would undermine the principle of common but differentiated responsibilities.</p>
+
+<p>Human security needs emphasis alongside economic security because growth alone does not protect people. High GDP growth can coexist with malnutrition, pandemics and environmental collapse, and the COVID-19 pandemic showed that a health shock can destroy livelihoods in rich and poor states alike. Critics such as Roland Paris ('Human Security: Paradigm Shift or Hot Air?', 2001) argue that the concept is too broad to guide policy, and realists warn that widening drains security of meaning. India's own security agenda reflects the change: alongside the armed forces it now covers terrorism, cyber attacks, energy and food supply, pandemics and climate change.</p>
 
 <h2>Transnational Actors</h2>
 
@@ -7280,6 +8132,20 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Détente collapsed at the end of the 1970s. The Soviet invasion of Afghanistan in December 1979 was dubbed the "Brezhnev Doctrine" in action (Moscow's insistence on controlling its perimeter). The U.S., under President Ronald Reagan, responded with hardline policies. The early 1980s thus saw a "Second Cold War" - high tensions and rhetoric. During this phase, the superpowers engaged in intense proxy wars . The he U.S. armed Islamic mujahideen fighters against Soviet forces in Afghanistan. The toll of the Afghan war, combined with an arms race at a time of economic stagnation, strained the Soviet system severely.</p>
 
+<h3>Is a Bipolar World More Stable than a Multipolar One?</h3>
+
+<p>Polarity refers to the number of great powers in the international system. Whether stability, meaning the absence of great power war, is better served by two poles or by several is one of the classic debates of IR, opened by two articles published in 1964.</p>
+
+<ul>
+  <li><strong>Kenneth Waltz, 'The Stability of a Bipolar World' (Daedalus, 1964):</strong> with only two great powers there are no peripheries, so each watches the other closely and responds to every change. Each balances mainly through its own internal effort rather than through unreliable allies, so defections do not shake the system. Threats are clear, miscalculation is less likely, and the recurrent crises of a bipolar world act as a substitute for war. Waltz developed the argument in Theory of International Politics (1979).</li>
+  <li><strong>Karl Deutsch and J. David Singer, 'Multipolar Power Systems and International Stability' (World Politics, 1964):</strong> a multipolar system offers more partners for interaction and more cross-cutting ties, so hostility towards any one state is diluted. Each state can give only part of its attention to any one rival, which dampens arms races, and flexible alignments allow aggression to be balanced.</li>
+  <li><strong>Later contributions:</strong> Richard Rosecrance proposed 'bi-multipolarity' as a mix of the two. John Lewis Gaddis called the Cold War the 'Long Peace' because no great power war occurred between 1945 and 1989. John Mearsheimer, in The Tragedy of Great Power Politics (2001), argued that multipolarity is more war-prone than bipolarity and that unbalanced multipolarity, with a potential hegemon, is the most dangerous of all. William Wohlforth ('The Stability of a Unipolar World', 1999) argued that unipolarity is the most stable configuration.</li>
+</ul>
+
+<p>The historical record is mixed. The multipolar European system after 1815 enjoyed long periods of peace but also produced two world wars, while the bipolar Cold War avoided great power war but saw proxy wars across the Third World, from Korea and Vietnam to Angola and Afghanistan. Many scholars attribute the Long Peace as much to nuclear deterrence as to bipolarity.</p>
+
+<p>Developing countries see clear benefits in a multipolar world. It limits the unilateralism of a single superpower, seen in the invasion of Iraq in 2003, widens the room for strategic autonomy, offers alternative sources of finance, technology and markets, and gives middle powers and the Global South a greater voice in global governance. India seeks a multipolar world and a multipolar Asia, and its multi-alignment with the United States, Russia, the European Union and the Gulf states is designed for such an order. The danger is that a multipolar world without strong institutions may become more unpredictable and harder to manage.</p>
+
 <h2>Arms Race & Nuclear Threat</h2>
 
 <p>An arms race is a competitive buildup of military capabilities between states (or groups of states), each seeking security or advantage by outpacing the other. Throughout history, arms races have been a recurring phenomenon - from the naval arms race between Britain and Germany before World War I to the nuclear arms race of the Cold War. They are driven by the security dilemma : one state's attempt to increase its security (by arming) makes others feel less secure, prompting them to arm in response, leading to a spiral of accumulation.</p>
@@ -7489,7 +8355,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Six years after Bandung, the Movement of Non-Aligned countries was founded at the First Summit Conference of Belgrade, on Sep 1-6, 1961. The conference was attended by members of 25 countries from Asia, Africa Europe, and Latin America (Cuba). The newly created grouping, NAM was declared as a 'movement' and not an organization to avoid the bureaucratic implications of the latter. Further, the word 'movement' denotes the dynamism and the ever-evolving agenda in response to the global world order. The NAM was conceived to play an active role in international politics and to have its own stand on international matters. Which will reflect the interest of its members.</p>
 
-<p>At present, the membership of NAM includes 120 member states and 20 observer states along with the participation of 10 international organisations. The below map shows the members and observer states of NAM.</p>
+<p>At present, the membership of NAM includes 121 member states (South Sudan joined in 2024) and 20 observer states along with the participation of 10 international organisations. The below map shows the members and observer states of NAM.</p>
 
 <p>Since its inception, the NAM meetings have been held every three years. The latest Summits being the 2016 Venezuela Summit, the 2019 Azerbaijan (Baku) Summit and the 19th Summit, held at Kampala, Uganda, in January 2024 after being postponed from 2022. Meanwhile, a virtual NAM summit was held online on 4 May 2020 titled "United Against COVID-19".</p>
 
@@ -7525,7 +8391,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Dr. S. Jaishankar recently said that NAM was an idea born in a particular temporality, and believes that India, taking the concept of independence of action from NAM, should move beyond it to respond efficiently to contemporary developments.</p>
 
-<p>According to C Rajamohan , an Indian academic and foreign policy analyst, the end of Cold War was the best time for a graceful exit from a platform that had no achievement in the past and no prospects in future. It was the best time as the NAM issue had taken the credit of ending the Cold War. NAM countries should have declared the 'mission accomplished', and disbanded it. Now, the movement is in a comma. NAM was irrelevant even before the end of the Cold War. After the Cold War, it was put into a coma because countries were not ready for its burial. They prefer to maintain the triennial rituals.</p>
+<p>According to C Rajamohan , an Indian academic and foreign policy analyst, the end of Cold War was the best time for a graceful exit from a platform that had no achievement in the past and no prospects in future. It was the best time as the NAM issue had taken the credit of ending the Cold War. NAM countries should have declared the 'mission accomplished', and disbanded it. Now, the movement is in a coma. NAM was irrelevant even before the end of the Cold War. After the Cold War, it was put into a coma because countries were not ready for its burial. They prefer to maintain the triennial rituals.</p>
 
 <p>According to Prof. T V Paul, NAM never got the credit it deserved. There has been an intellectual bias against NAM. Despite all criticism, NAM acted as a limited soft-balancing mechanism. It has used 'naming and shaming' tools against great powers. The intellectual bias against NAM, a coalition of weaker states is as natural and expected as there is a bias against the subaltern class movements among upper classes and upper castes in hierarchical societies.</p>
 
@@ -7539,7 +8405,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Today, more than ever, NAM has a plethora of work to do. It has to set up a new international order through the UN, restructure and democratize the UN; enhance South-South cooperation and coordination with the G-77; foster cooperation in the areas of food cooperation, population, trade and investment; ensure equitable international flow of trade and transfer of technology; and oppose interventionism and imposition of economic conditions on developing countries. Given that more than half of the world still suffers from the issues relevant to NAM, it is pointless to question the relevance of the same. As diplomat N. Krishnan reminds us, "dynamics of globalization have produced a whole set of new problems which the Non-Alignment Movement must take note of."</p>
 
-<p>According to T V Paul, there is a space for the resurrection of the old movement as a soft balancing mechanism against powerful states. As great powers are once again in the arms race, militarization of oceans and territorial expansions, there is a need for weaker countries to come together to delegitimize imperial ventures. If third-world countries do not act as cushioning forces, international order will spiral into a hot war. Great powers always need to be restrained and balanced. Soft balancing by smaller states has a key role to play because military conflicts will ultimately bring suffering to them. There is a need to revive the 'Bandug' spirit. There is no hope from China and India to revive the movement because they are in the race of superstardom. The onus is on smaller countries.</p>
+<p>According to T V Paul, there is a space for the resurrection of the old movement as a soft balancing mechanism against powerful states. As great powers are once again in the arms race, militarization of oceans and territorial expansions, there is a need for weaker countries to come together to delegitimize imperial ventures. If third-world countries do not act as cushioning forces, international order will spiral into a hot war. Great powers always need to be restrained and balanced. Soft balancing by smaller states has a key role to play because military conflicts will ultimately bring suffering to them. There is a need to revive the 'Bandung' spirit. There is no hope from China and India to revive the movement because they are in the race of superstardom. The onus is on smaller countries.</p>
 
 <h3>India and NAM</h3>
 
@@ -7609,6 +8475,25 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>The U.S. suffered serious economic setbacks, notably the 2008 financial crisis , which originated in Wall Street and shook confidence in the American-model of deregulated capitalism. The crisis inflicted lasting damage: sluggish growth and rising debt. Additionally, persistent trade deficits led to industrial decline, fuelling domestic discontent. The COVID-19 pandemic (2020) further hit U.S. prestige, as America's initially chaotic response contrasted with more efficient actions by others.</p>
 
+<h3>NATO, US Hegemony and Transactional Pressure</h3>
+
+<p>The North Atlantic Treaty Organization was created by the Washington Treaty of April 1949 as a collective defence alliance. Its core is Article 5, under which an armed attack on one member is treated as an attack on all, and Article 5 has been invoked only once, after the attacks of 11 September 2001. NATO's first Secretary General, Lord Ismay, is said to have described its purpose as keeping the Russians out, the Americans in and the Germans down. After the Cold War it grew from 16 to 32 members, the latest being Finland (2023) and Sweden (2024), which joined after Russia's invasion of Ukraine.</p>
+
+<p><strong>NATO as a tool of US hegemony.</strong> Critics argue that NATO is the principal instrument through which the United States has perpetuated its primacy in Europe and beyond:</p>
+
+<ul>
+  <li>The United States supplies most of the alliance's military capability and its nuclear umbrella, and an American officer has always held the post of Supreme Allied Commander Europe.</li>
+  <li>Eastward expansion from 1999, despite Russian objections, carried the US sphere of influence to Russia's borders. Realists such as John Mearsheimer see this as a cause of the Ukraine crisis.</li>
+  <li>Out-of-area operations in Kosovo (1999), without Security Council authorisation, in Afghanistan (2003-14) and in Libya (2011), where critics argue a mandate to protect civilians was stretched into regime change, show NATO acting beyond the defence of its members.</li>
+  <li>Interoperability ties European militaries to American weapons, and the Madrid Strategic Concept of 2022 brought China onto the alliance's agenda as a source of systemic challenges.</li>
+</ul>
+
+<p>Defenders reply that NATO is an 'empire by invitation', in Geir Lundestad's phrase, since its members chose to join and the states of Central and Eastern Europe sought membership as protection against Russia. Decisions are taken by consensus, and allies such as France and Turkey have often defied Washington. Liberals see NATO as a security community of democracies rather than an instrument of domination.</p>
+
+<p><strong>Transactional coercion under Trump.</strong> Donald Trump's second term has turned US support into a bargain. Trump has questioned whether the United States would defend allies that spend too little, and at the Hague summit of June 2025 allies agreed to raise defence spending to 5 per cent of GDP by 2035, at least 3.5 per cent on core defence and up to 1.5 per cent on related resilience and infrastructure, with Spain securing an exception. The dispute over Greenland went further. In January 2026 Trump threatened tariffs on eight European allies that opposed his demand for US control of the Danish territory, then withdrew the threat after announcing a 'framework' for a deal with NATO Secretary General Mark Rutte. An agreement signed by the United States, Denmark and Greenland on 22 September 2026 expanded the US role in Greenland's defence while affirming Danish sovereignty and Greenland's right to self-determination.</p>
+
+<p>NATO's future depends on how these pressures are absorbed. One path is a more European NATO, in which European allies spend more, build their own defence industry and lead in conventional defence while the US nuclear guarantee remains. Another is gradual erosion, if doubts about US commitment lead allies to hedge. Yet the Russian threat, the Hague commitments and the absence of any substitute for the US nuclear umbrella give the alliance strong reasons to survive. For India, which stays outside all military alliances, the episode confirms the value of strategic autonomy and of partnerships that do not depend on a single power.</p>
+
 <h2>Post-Unipolar World</h2>
 
 <p>The Cold War shaped the second half of the 20th century profoundly. It set the stage for many of today's institutions and alliances, left a mixed legacy of technological progress and traumatic conflicts. Understanding its trajectory - and how it ended - is crucial to grasping current debates about whether we are entering a "new Cold War."</p>
@@ -7668,6 +8553,41 @@ export const polsciNoteContent: Record<string, string> = {
 <p>5. Resistance from Other Powers: China's rise is met with resistance from established and emerging powers. Along with USA, India and members of the EU are strengthening their own strategic positions to counterbalance China's assertiveness. It limits Chinese ability to unilaterally shape global norms and institutions.</p>
 
 <p>Dr. Saran argues that while China has made significant strides economically and militarily, these achievements are insufficient for true superpower status without corresponding reforms and trust-building. The combination of internal vulnerabilities and external resistance suggests that China's path to becoming a global superpower is fraught with challenges.</p>
+
+<h3>Power Transition Theory and US-China Relations</h3>
+
+<p>A.F.K. Organski set out power transition theory in World Politics (1958) and developed it with Jacek Kugler in The War Ledger (1980). Unlike balance of power theory, which expects peace when power is evenly distributed, power transition theory holds that peace is most secure when a dominant power enjoys clear preponderance and that war is most likely when a challenger approaches parity.</p>
+
+<ul>
+  <li><strong>Hierarchy:</strong> the system is a hierarchy with a dominant power at the top, followed by great powers, middle powers and small powers. The dominant power shapes the international order and its rules in its own interest.</li>
+  <li><strong>Differential growth:</strong> power changes mainly through internal development, that is industrialisation, population and political capacity, rather than through alliances. Uneven growth carries rising powers up the hierarchy.</li>
+  <li><strong>Satisfaction:</strong> a rising power that is satisfied with the existing order can overtake peacefully, as the United States overtook Britain. A dissatisfied challenger that approaches parity seeks to change the rules, and war becomes likely.</li>
+</ul>
+
+<p>Graham Allison popularised the idea as the Thucydides Trap in Destined for War (2017). Drawing on Thucydides' account of Athens and Sparta, his Harvard study found that in twelve of sixteen cases over the past five hundred years in which a rising power challenged a ruling one, the outcome was war.</p>
+
+<p>The theory captures much of the dynamic of US-China relations. China's economy is the world's largest by purchasing power parity and second in market terms, it has built the world's largest navy by number of ships, and it presses its claims over Taiwan and in the South China Sea, where it rejected the 2016 arbitral award in the case brought by the Philippines. It has also built alternative institutions such as the Belt and Road Initiative (2013) and the Asian Infrastructure Investment Bank, which some read as signs of dissatisfaction with a US-led order. The United States, for its part, treats China as its main strategic competitor and has imposed tariffs since 2018 and export controls on advanced semiconductors since 2022.</p>
+
+<p>The fit is imperfect. Nuclear weapons make a hegemonic war far costlier than in earlier transitions, and the two economies remain deeply interdependent. China has gained greatly from the existing order and works within the UN, the WTO and the IMF, which led Alastair Iain Johnston ('Is China a Status Quo Power?', 2003) to question whether it is truly revisionist. China's slowing growth and ageing population may also prevent it from reaching parity at all.</p>
+
+<p>For South and South-East Asia the rivalry brings both risk and opportunity. Small states fear being forced to choose, and most ASEAN members hedge, taking Chinese trade and investment while welcoming the US security presence. The Quad of India, the United States, Japan and Australia, revived in 2017, and AUKUS (2021) are responses to Chinese power, while debt-financed projects such as Sri Lanka's Hambantota port, leased to a Chinese company in 2017, have raised fears of dependence. For India the rivalry raises its value as a partner of the West, but the Galwan clash of June 2020 showed that it also faces Chinese pressure directly. The Asian order is moving from US primacy towards a contested multipolarity in which middle powers such as India, Japan and Indonesia carry greater weight.</p>
+
+<h3>Russia, Ukraine and the 'Greater Russia' Debate</h3>
+
+<p>The Ukraine crisis has unfolded in two stages. In November 2013 President Viktor Yanukovych suspended plans to sign an Association Agreement with the European Union under Russian pressure, and the Euromaidan protests drove him from office in February 2014. Russia then seized and annexed Crimea in March 2014, an annexation the UN General Assembly refused to recognise in resolution 68/262, and backed separatists in the Donbas, where the Minsk agreements of 2014 and 2015 failed to bring a settlement. On 24 February 2022 Russia launched a full-scale invasion, and in September 2022 it claimed to annex four Ukrainian regions, Donetsk, Luhansk, Zaporizhzhia and Kherson, after staged referendums. As of October 2026 the war continues, with Russia occupying roughly a fifth of Ukraine. US-brokered diplomacy since 2025, including the Alaska summit of August 2025 and a US peace plan, has produced brief truces but no ceasefire or peace agreement.</p>
+
+<p><strong>The 'Greater Russia' reading.</strong> One view holds that the present regime seeks to restore Russian dominance over the former Soviet space:</p>
+
+<ul>
+  <li>In 2005 Vladimir Putin called the collapse of the Soviet Union a major geopolitical disaster of the century, and his essay 'On the Historical Unity of Russians and Ukrainians' (July 2021) presented Russians and Ukrainians as one people.</li>
+  <li>The idea of the 'Russian world' (Russkiy mir) and of a 'near abroad' treats Russian speakers and the former Soviet republics as a Russian sphere of influence.</li>
+  <li>The pattern of action includes the war with Georgia (2008) and the recognition of Abkhazia and South Ossetia, the annexation of Crimea (2014), the 2022 invasion and the deepening Union State with Belarus.</li>
+  <li>Institutions such as the Eurasian Economic Union (2015) and the Collective Security Treaty Organization bind neighbours to Moscow.</li>
+</ul>
+
+<p><strong>The power politics and geopolitics reading.</strong> Realists argue that the crisis is a product of power politics rather than imperial nostalgia. John Mearsheimer's article 'Why the Ukraine Crisis Is the West's Fault' (Foreign Affairs, 2014) traced it to NATO's eastward expansion, especially the Bucharest summit declaration of 2008 that Ukraine and Georgia would become members, to EU enlargement and to Western democracy promotion, all of which Russia saw as threats to its security. Ukraine's location, its Black Sea coast and the Russian naval base at Sevastopol give it a strategic value that no Russian government would ignore. On this view Russia is a declining great power defending a buffer zone, not a power seeking to rebuild the Soviet Union.</p>
+
+<p>Critics of the realist view note that it denies agency to Ukraine and to the Central European states that chose to join NATO, and that Russia's war aims and rhetoric go beyond security. Ukraine also gave up the Soviet nuclear weapons on its soil under the Budapest Memorandum of 1994 in return for assurances of its territorial integrity, which Russia then violated. Most scholars combine the two readings, since security fears and imperial identity reinforce each other in Russian policy. India has abstained on UN resolutions condemning Russia, continued to buy Russian oil and defence equipment and called for dialogue and diplomacy, with Prime Minister Modi telling President Putin in 2022 that this is not an era of war.</p>
   `,
   'international-economic-system': `
 <h2>Bretton Woods System</h2>
@@ -7783,6 +8703,22 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The rise of mega-regional trade agreements and the return of protectionist rhetoric among major members threaten to erode the WTO's centrality. Reviving the WTO will likely require addressing developing countries' concerns and finding compromise to restore a binding dispute system.</p>
 
 <p>India's sympathetic outlook emphasizes reforming, not abandoning, institutions like the WTO to ensure they serve development, not just the West.</p>
+
+<h3>Why the MC12 Decision Was Not a TRIPS Waiver</h3>
+
+<p>In October 2020 India and South Africa proposed that the WTO waive members' obligations under four sections of the TRIPS Agreement, on copyright, industrial designs, patents and undisclosed information (trade secrets), for the prevention, containment and treatment of COVID-19. The waiver would have covered vaccines, medicines, diagnostics and other medical products. More than a hundred developing countries backed it, but the European Union, Switzerland, the United Kingdom and others opposed it, and the United States backed only a waiver for vaccines in May 2021.</p>
+
+<p>After some twenty months of talks, the Twelfth Ministerial Conference at Geneva adopted a Ministerial Decision on the TRIPS Agreement on 17 June 2022. Although it was widely reported as a waiver, it fell far short of one:</p>
+
+<ul>
+  <li><strong>Narrow scope:</strong> it covers only vaccines, not diagnostics or therapeutics, and only patents, including those on ingredients and processes, not trade secrets, know-how, copyright or industrial designs. Members were to decide on extending it to diagnostics and therapeutics within six months, but no agreement was reached.</li>
+  <li><strong>Clarification of existing flexibilities:</strong> most of the decision restates what Article 31 of TRIPS and the Doha Declaration on the TRIPS Agreement and Public Health (2001) already allowed, the grant of compulsory licences without the right holder's consent. It clarifies that eligible members may authorise such use through emergency decrees or executive orders and need not first negotiate with the patent holder.</li>
+  <li><strong>Only one real waiver:</strong> the one obligation actually waived is Article 31(f), which requires production under a compulsory licence to be predominantly for the domestic market. Eligible members may export any proportion of the vaccines so produced to other eligible members.</li>
+  <li><strong>Remuneration remains:</strong> the patent holder must still receive adequate remuneration, though members may take account of the humanitarian and not-for-profit purpose of a vaccine programme.</li>
+  <li><strong>Limited eligibility and duration:</strong> only developing country members are eligible, and those with existing capacity to make COVID-19 vaccines were encouraged to commit not to use the decision, which China did. The decision runs for five years.</li>
+</ul>
+
+<p>The decision therefore left the main barriers in place. The real bottleneck in vaccine production was access to technology, know-how and trade secrets, especially for mRNA vaccines, which the decision did not touch, and it came after the peak of vaccine shortages, when supply was no longer the main constraint. Civil society groups such as Médecins Sans Frontières criticised it as falling far short of what was needed, while its defenders argued that it preserved consensus in the WTO and showed that intellectual property rules can bend in an emergency. For India the outcome was a partial success: it confirmed that public health can qualify patent rights, but it also showed the strength of the pharmaceutical interests of developed countries in the WTO.</p>
 
 <h2>Socialist Economies & CMEA</h2>
 
@@ -7967,6 +8903,24 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Ad Hoc Judge</p>
 <p>There is also a provision in Article 31 of the statute, which allows an ad hoc judges sit on contentious cases. The system allows any party to a contentious case (if it otherwise does not have one of that party's nationals sitting on the court) to select one additional person to sit as a judge on that case only. It is thus possible that as many as seventeen judges may sit on one case. The purpose of this system is to encourage states to submit cases.</p>
 <p>Since the entry of its first case in 1947, the ICJ has entertained 191 cases till 2023.</p>
+
+<h3>UN Convention on the Law of the Sea (UNCLOS)</h3>
+
+<p>The United Nations Convention on the Law of the Sea, often called a 'constitution for the oceans', was negotiated at the Third UN Conference on the Law of the Sea (1973-82), signed at Montego Bay, Jamaica, on 10 December 1982 and entered into force on 16 November 1994. It replaced the four Geneva conventions of 1958 with a single regime. It had 170 parties as of 2024, including the European Union. India ratified it on 29 June 1995. The United States has not joined, although it accepts most of its navigational rules as customary law. Its salient features are:</p>
+
+<ul>
+  <li><strong>Maritime zones:</strong> measured from baselines, a territorial sea of up to 12 nautical miles under full sovereignty, a contiguous zone of up to 24 nautical miles for customs, fiscal, immigration and sanitary control, an exclusive economic zone (EEZ) of up to 200 nautical miles with sovereign rights over resources, and a continental shelf of 200 nautical miles that may extend to 350 nautical miles (or 100 nautical miles beyond the 2,500 metre isobath) where the margin reaches further.</li>
+  <li><strong>Navigation:</strong> innocent passage through the territorial sea, transit passage through international straits, archipelagic sea lanes passage, and freedom of navigation and overflight on the high seas and in the EEZ.</li>
+  <li><strong>The Area:</strong> the deep seabed beyond national jurisdiction is the 'common heritage of mankind' (Article 136). Part XI was modified by the 1994 Implementation Agreement to meet the objections of industrialised states.</li>
+  <li><strong>Institutions:</strong> the International Tribunal for the Law of the Sea (ITLOS, 21 judges, Hamburg), the International Seabed Authority (Kingston, Jamaica), which licenses seabed exploration, and the Commission on the Limits of the Continental Shelf, which examines claims to an extended shelf.</li>
+  <li><strong>Compulsory dispute settlement:</strong> under Part XV, failing agreement, disputes go to binding procedures. Article 287 lets a state choose ITLOS, the ICJ, arbitration under Annex VII (the default) or special arbitration under Annex VIII, while Article 298 allows it to exclude boundary and military disputes, as China did in 2006.</li>
+</ul>
+
+<p><strong>Cases and India.</strong> An Annex VII tribunal fixed the Bay of Bengal boundary between Bangladesh and India in July 2014, and India accepted the award. China rejected the July 2016 award in Philippines v. China, which found no legal basis for its claim to historic rights within the 'nine-dash line'. In May 2024 ITLOS advised unanimously that greenhouse gas emissions are marine pollution under the Convention. India's Maritime Zones Act of 1976 anticipated the Convention's zones, and as the first registered pioneer investor (1987) India holds ISA exploration contracts in the Indian Ocean.</p>
+
+<p><strong>The BBNJ Agreement.</strong> The Agreement on Marine Biological Diversity of Areas beyond National Jurisdiction (the High Seas Treaty), the third implementing agreement under UNCLOS, was adopted on 19 June 2023 and entered into force on 17 January 2026. It covers marine genetic resources and the sharing of their benefits, marine protected areas and other area-based tools on the high seas, environmental impact assessments, and capacity building and technology transfer. It came into force 120 days after Morocco became the sixtieth state to ratify it, on 19 September 2025. India signed it in September 2024 but has not yet ratified it, and the United States has signed without ratifying.</p>
+
+<p><strong>Assessment.</strong> UNCLOS is among the most widely accepted treaties, yet the absence of the United States, China's rejection of the 2016 award and the unfinished ISA mining code, which a US executive order of April 2025 sought to bypass, show the limits of ocean law without enforcement.</p>
 <h2>Security Council</h2>
 
 <h3>Composition and Functions of the UNSC</h3>
@@ -7977,7 +8931,7 @@ export const polsciNoteContent: Record<string, string> = {
 <li>Enforce international sanctions</li>
 <li>Authorize military action</li>
 <li>Recommending the admission of new UN members to the General Assembly</li>
-<li>Approving any changes to the UN Charter</li>
+<li>Calling, with the General Assembly, a General Conference to review the Charter (Article 109), though amendments themselves come into force only when ratified by two-thirds of members, including all five permanent members (Article 108)</li>
 <li>To recommend to the General Assembly the appointment of the Secretary-General</li>
 <li>Together with the Assembly, elect the Judges of the International Court of Justice.</li>
 <p>Under the Charter of the United Nations, all Member States are obligated to comply with Council decisions.</p>
@@ -8067,7 +9021,6 @@ export const polsciNoteContent: Record<string, string> = {
 <li>Some countries are also concerned about India's nuclear weapons capabilities, while some have suggested that India's difficulties with Pakistan will make it ineffective as a permanent member.</li>
 <li>There is also a concern that if India is included, other emerging powers such as Brazil, Germany, Japan, perhaps even South Africa will have to be accommodated.</li>
 <p>Given these concerns, it may not be very easy for India or anyone else to become a permanent member of the UN in the near future.</p>
-<p>Also include points from the subtopic UNSC Membership Reforms -&gt; Other Problems in UNSC Membership Reforms</p>
 <li>According to Ramchandra Guha, there is no need for India to be in the race of super stardom, rather it should focus on internal developments.</li>
 <li>According to Shyam Saran, India should focus on building real strength i.e. economic and military strength, rather than running after illusionary goals.</li>
 <li>As suggested by Prof. Ramesh Thakur, if India thinks that the goal of UNSC is so important, then it better go for non-cooperation with UN and make it realize the importance of India.</li>
@@ -8128,6 +9081,55 @@ export const polsciNoteContent: Record<string, string> = {
 <li>United Nations Economic and Social Commission for Asia and the Pacific (ESCAP)</li>
 <li>United Nations Economic and Social Commission for Western Asia (ESCWA)</li>
 <p>These regional commissions works to address some of the challenges facing respective regions through results-oriented projects, technical assistance and capacity building to member states in areas such as macroeconomic policy, socio-economic development, trade, investment, transport, environmental issues, disaster risk reduction, energy and 2030 SDG goals.</p>
+
+<h3>The Millennium Development Goals (2000-2015)</h3>
+
+<p>The Millennium Development Goals grew out of the Millennium Declaration adopted at the UN Millennium Summit in September 2000. They set eight goals, measured by 21 targets, to be met by 2015: eradicate extreme poverty and hunger, achieve universal primary education, promote gender equality and empower women, reduce child mortality, improve maternal health, combat HIV/AIDS, malaria and other diseases, ensure environmental sustainability, and develop a global partnership for development. Their real objective was to turn the broad promises of the 1990s UN conferences into a short list of measurable, time-bound targets that could mobilise aid and hold governments and donors to account.</p>
+
+<p>The record was mixed. The UN's final MDG report (2015) found that the number of people in extreme poverty fell from 1.9 billion in 1990 to 836 million in 2015, and that deaths of children under five fell from 12.7 million to about 6 million. But much of the fall in poverty came from growth in China and India rather than from the goals themselves, sub-Saharan Africa missed most targets, and maternal health and sanitation lagged. India halved its poverty ratio but missed its targets on maternal and infant mortality and sanitation. Critics called the MDGs donor-centric and drafted by a small group of officials, silent on inequality, governance and the environment, and weak on Goal 8, the only goal aimed at rich countries.</p>
+
+<h3>The Sustainable Development Goals (2015-2030)</h3>
+
+<p>On 25 September 2015 the General Assembly adopted Resolution 70/1, 'Transforming our World: the 2030 Agenda for Sustainable Development'. Its 17 goals and 169 targets, tracked by more than 230 indicators, differ from the MDGs in several ways:</p>
+
+<ul>
+  <li><strong>Universality:</strong> they apply to all countries, developed and developing, not only to the poor.</li>
+  <li><strong>Breadth:</strong> they add inequality (Goal 10), cities, sustainable consumption, climate action (Goal 13), oceans, and peace and institutions (Goal 16) to the social goals of the MDGs, framed around people, planet, prosperity, peace and partnership.</li>
+  <li><strong>Process:</strong> they were negotiated by member states in an Open Working Group rather than drafted by officials.</li>
+  <li><strong>Principle:</strong> a pledge to 'leave no one behind'.</li>
+  <li><strong>Review and finance:</strong> voluntary national reviews at the High-level Political Forum under ECOSOC, with financing set out in the Addis Ababa Action Agenda (July 2015).</li>
+</ul>
+
+<p>India presented voluntary national reviews in 2017 and 2020, and NITI Aayog has ranked the states on its SDG India Index since 2018, linking the goals to national schemes and competitive federalism.</p>
+
+<h3>Are the SDGs Attainable by 2030?</h3>
+
+<p>Full attainment now looks out of reach. The Secretary-General's 2026 progress report found that of 139 targets with trend data, only 36 per cent were on track or making moderate progress, 49 per cent were making marginal progress and 15 per cent had regressed below their 2015 baseline. Extreme poverty was estimated at about 10 per cent of the world's population in 2026, only three percentage points below 2015, and the report put the annual SDG financing gap in developing countries at 4 trillion dollars. The causes include the Covid-19 pandemic, conflicts from Ukraine to Sudan, debt distress, climate shocks and tightening aid budgets. The Economist argued in 2015 that 169 targets were too many to guide policy, and the goals carry no legal obligation. Their defenders reply that the SDGs still provide a shared yardstick, better data and a standard that governments and civil society can cite, so partial progress is the realistic outcome.</p>
+
+<h3>US Funding and UN Decision-Making</h3>
+
+<p>The United States is the UN's largest contributor. Its share of the regular budget is capped at 22 per cent (China is second at about 20 per cent for 2025-27), and its assessed share of peacekeeping for 2025-26 is about 26 per cent, although a 1994 US law limits its payments to 25 per cent. This predominance shapes decisions in several ways:</p>
+
+<ul>
+  <li><strong>Withholding as leverage:</strong> the Kassebaum-Solomon Amendment (1985) withheld dues to press for weighted voting on the budget and led the General Assembly to adopt budgeting by consensus in 1986 (Resolution 41/213). The Helms-Biden Act (1999) tied payment of US arrears to a lower US share, and the ceiling was cut from 25 to 22 per cent in December 2000.</li>
+  <li><strong>Exit and funding cuts:</strong> the US left UNESCO in 1984 and 2018, cut its UNESCO funding after Palestine's admission in 2011 and announced a third withdrawal in July 2025, effective at the end of 2026. On 7 January 2026 it ordered withdrawal from 66 international organisations, including 31 UN entities such as the UNFCCC and UNFPA.</li>
+  <li><strong>Earmarked voluntary funds:</strong> much of the money for agencies such as WHO, UNICEF and the World Food Programme is voluntary and tied to donor priorities, so donors shape agendas beyond their formal votes.</li>
+  <li><strong>Leadership:</strong> the US vetoed a second term for Secretary-General Boutros Boutros-Ghali in 1996.</li>
+</ul>
+
+<p>Late and withheld payments by the US and others produced a liquidity crisis, and in January 2026 Guterres warned member states of an 'imminent financial collapse'. Yet money does not buy votes in the General Assembly, where the US is often outvoted, and China's growing share shows financial weight shifting along with influence.</p>
+
+<h3>US Withdrawal from the WHO and Reimagining Global Health</h3>
+
+<p>On 20 January 2025, his first day back in office, President Trump signed Executive Order 14155 giving notice of US withdrawal from the World Health Organization, citing its handling of Covid-19. The withdrawal took effect on 22 January 2026, a year after notice, and the US disputes about 260 million dollars in unpaid dues. Argentina has also left. Because the US had supplied about 18 per cent of WHO's funding, the exit forced the organisation to halve its senior management and plan to shed about a quarter of its staff, and it strains disease surveillance and emergency work, especially in poor countries. The crisis has accelerated reform:</p>
+
+<ul>
+  <li><strong>Financing:</strong> the 2022 World Health Assembly agreed to raise assessed contributions to half of the base budget by the end of the decade, reducing dependence on earmarked donor money.</li>
+  <li><strong>Pandemic rules:</strong> the International Health Regulations were amended in 2024 to add a 'pandemic emergency' alert, and the WHO Pandemic Agreement was adopted on 20 May 2025, with its annex on pathogen access and benefit-sharing sent for further negotiation.</li>
+  <li><strong>Equity in production:</strong> regional manufacturing, such as the mRNA technology transfer hub set up in South Africa in 2021.</li>
+</ul>
+
+<p>Reimagining the WHO also means a larger voice for the Global South, stronger powers to verify outbreaks and a funding base that no single donor can hold hostage. India has a stake: with South Africa it proposed a TRIPS waiver for Covid-19 products at the WTO in October 2020, it supplied vaccines through Vaccine Maitri and COVAX, and it hosts the WHO Global Centre for Traditional Medicine at Jamnagar.</p>
 <h2>UN Peace-keeping</h2>
 
 <h3>Evolution of UN Peacekeeping</h3>
@@ -8174,8 +9176,21 @@ export const polsciNoteContent: Record<string, string> = {
 <p>John Lennon famously sang 'Give peace a chance'. These blue soldiers do that 24×7, in the pursuit of global peace!</p>
 <p>Peacekeeping is the only tool the global community has to mend various emerging cracks in the world. We will definitely come up with better tools, but until then, we will have to work on the ones we have to provide our fellow humans with a better environment.</p>
 <p>The professionalism and expertise of the Indian troops have helped in the implementation of the UN Peacekeeping doctrine. India should now gear up its peacekeeping role by not just contributing troops but also deriving newer strategies and thinking from its long experience.</p>
-<p>Click here</p>
-<p>Click here</p>
+
+<h3>UN Security Council Resolution 1325 on Women, Peace and Security</h3>
+
+<p>Adopted unanimously on 31 October 2000, Resolution 1325 was the first Security Council resolution to treat women's experience of conflict, and their role in ending it, as a matter of international peace and security. It recognised that women and girls suffer war in distinctive ways, above all through sexual violence, and that they are agents of peace rather than only victims. It called on states and the UN to increase women's participation in decision-making and peace processes, to bring a gender perspective into peacekeeping and to protect women and girls from gender-based violence. The indicators requested by Resolution 1889 (2009) group its agenda under four pillars:</p>
+
+<ul>
+  <li><strong>Participation:</strong> women in peace negotiations, mediation, peacekeeping and post-conflict governance.</li>
+  <li><strong>Protection:</strong> safeguarding women and girls from sexual and gender-based violence, including in refugee and displacement camps.</li>
+  <li><strong>Prevention:</strong> preventing violence against women, ending impunity and building gender analysis into conflict prevention.</li>
+  <li><strong>Relief and recovery:</strong> meeting women's needs in humanitarian aid, disarmament programmes and reconstruction.</li>
+</ul>
+
+<p>Nine later resolutions make up the wider Women, Peace and Security agenda. Resolution 1820 (2008) recognised that rape can be a tactic of war and may constitute a war crime, Resolution 1888 (2009) created the post of Special Representative on Sexual Violence in Conflict, Resolution 2242 (2015) linked the agenda to counter-terrorism, and Resolutions 2467 and 2493 (2019) called for survivor-centred approaches and full implementation. States give effect to the agenda through National Action Plans, adopted by 101 countries as of early 2024. The 2015 Global Study on the implementation of 1325, led by Radhika Coomaraswamy, found evidence that women's participation makes peace agreements more durable.</p>
+
+<p><strong>Relevance and limits.</strong> The resolution changed the vocabulary of security. Gender advisers, women protection advisers and female engagement teams are now routine in peace operations, and conflict-related sexual violence is treated as a matter for sanctions and international criminal law. Yet implementation lags. Women remain under a tenth of formal negotiators, sexual violence persists in wars from Sudan to Myanmar, and many National Action Plans are unfunded. Feminist critics argue that the agenda has been absorbed into existing security thinking without questioning militarism. India shows the gap: it has deployed women peacekeepers since its all-women police unit in Liberia in 2007, yet, like several of the largest troop contributors, it has no National Action Plan.</p>
 <h2>Need for UN Reforms</h2>
 
 <h3>Evaluating the UN's Record</h3>
@@ -8227,12 +9242,28 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Kenya, 2007 - 2008</p>
 <p>From December 2007 to January 2008, Kenya was swept by a wave of ethnic violence triggered by a disputed presidential election. French Foreign Affairs Ministers Bernard Kouchner made an appeal to the UN Security Council to react "in the name of the responsibility to protect" before Kenya plunged into a deadly ethnic conflict. On 10 January 2008, former UN Secretary-General Kofi Annan was accepted by the warring parties as mediator. The efforts led to the signing of a power-sharing agreement on 28 February 2008, and the violence subsided. This rapid and coordinated reaction by the international community was praised by Human Rights Watch as "a model of diplomatic action under the 'Responsibility to Protect' principles".</p>
 <p>Libya, 2011</p>
-<p>Libya was the first case where the Security Council authorized a military intervention citing the R2P. Following widespread and systematic attacks against the civilian population by the Libyan regime, the Security Council unanimously adopted resolution 1970 on 26 February 2011, demanding Libyan authorities to the violence.</p>
+<p>Libya was the first case where the Security Council authorized a military intervention citing the R2P. Following widespread and systematic attacks against the civilian population by the Libyan regime, the Security Council unanimously adopted resolution 1970 on 26 February 2011, demanding that the Libyan authorities end the violence.</p>
 <p>Days later, in resolution 1973, the Security Council authorized member states to take "all necessary measures" to protect civilians under threat of attack in the country. Acting on the resolution, NATO planes started striking Gaddafi's forces.</p>
-<p>This instance of use of R2P, however, remains controversial. NATA forces went beyond the mandate and entered an open battle with forces of Gaddafi. It led to great number of casualties (including civilian) and were condemned by Russia and China. They also held that the R2P has become a new discourse for western countries to intervene in domestic affairs of developing states.</p>
+<p>This instance of use of R2P, however, remains controversial. NATO forces went beyond the mandate and entered an open battle with forces of Gaddafi. It led to great number of casualties (including civilian) and were condemned by Russia and China. They also held that the R2P has become a new discourse for western countries to intervene in domestic affairs of developing states.</p>
 <p>The experience of Libya has resulted into a situation where despite the repeated demands by the west, Russia and China did not sanction the permission for R2P in case of Syria. The action of both West and Russia and China have been responsible for the continuing violations of human rights and the lack of necessary action by United Nations.</p>
 <p>There are also other instances of use of R2P, like Ivory Coast 2011, Central African Republics 2013, Burundi etc.</p>
 <p>Brazil has proposed 'Responsibility While Protection'. According to the resolution it is necessary to ensure the accountability of those who implement the R2P resolution. In case they transgress the limits, they must be penalized.</p>
+
+<h3>Reform Measures Actually Undertaken</h3>
+
+<p>Because amending the Charter is so difficult, most UN reform has come through General Assembly resolutions, new subsidiary bodies and the Secretary-General's managerial authority. The composition of the Security Council has not changed since 1965.</p>
+
+<ul>
+  <li><strong>2005 World Summit:</strong> the Peacebuilding Commission (December 2005) to support countries emerging from conflict, the Human Rights Council (March 2006), which replaced the discredited Commission on Human Rights and introduced the Universal Periodic Review of every member, and the endorsement of the Responsibility to Protect.</li>
+  <li><strong>UN Women (2010):</strong> four separate gender bodies merged into one entity.</li>
+  <li><strong>Selection of the Secretary-General:</strong> under Resolution 69/321 (2015), the 2016 candidates were nominated publicly and questioned in open dialogues, a process that produced Antonio Guterres.</li>
+  <li><strong>Guterres's restructuring (from 1 January 2019):</strong> the peace and security pillar was reorganised into a Department of Political and Peacebuilding Affairs and a Department of Peace Operations with shared regional divisions, to stress prevention. Management was split into a strategy and policy department and an operational support department, with authority delegated to heads of entities. Under Resolution 72/279 (2018), the resident coordinators who lead UN country teams were separated from UNDP and made independent.</li>
+  <li><strong>Veto initiative (2022):</strong> Resolution 76/262, adopted without a vote on 26 April 2022, requires the General Assembly to meet within ten working days of any veto, so that the vetoing member must explain itself before the whole membership.</li>
+  <li><strong>Pact for the Future (22 September 2024):</strong> adopted by consensus at the Summit of the Future, with a Global Digital Compact and a Declaration on Future Generations. Among its 56 actions, Action 39 pledges to redress the historical injustice against Africa as a priority, to enlarge the Council, to intensify efforts to agree on the future of the veto, including limits on its scope and use, and to consider a review clause. Action 47 commits members to reform the international financial architecture.</li>
+  <li><strong>UN80 Initiative (launched March 2025):</strong> amid a liquidity crisis, Guterres set up a task force to find efficiencies, review how mandates are implemented and propose structural changes. Revised estimates proposed cutting the 2026 regular budget by 15.1 per cent and posts by 18.8 per cent compared with 2025, with posts moved to cheaper duty stations. An Action Plan of November 2025 grouped 87 actions into 31 work packages, and proposals examined in 2026 include merging UNFPA with UN Women.</li>
+</ul>
+
+<p><strong>Relevance for developing countries.</strong> Several Guterres proposals speak to the Global South: independent resident coordinators to align UN work with national development plans, an SDG Stimulus of 500 billion dollars a year (2023), the call in his 2020 Nelson Mandela Lecture for a 'New Global Deal' giving developing countries a greater voice in global institutions, support for permanent African representation on the Council, and the shielding of programmes for least developed, landlocked and small island states from the UN80 cuts. The limits are equally clear. These are managerial changes that leave the 1945 distribution of power intact, the intergovernmental negotiations on Council reform remain deadlocked, and cuts driven by unpaid dues risk shrinking the development work that poorer members value most. For India and the G4, reform without a change in the Council's composition remains incomplete.</p>
   `,
 
   'regionalisation-world-politics': `
@@ -8268,6 +9299,31 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>The EU's challenges are equally significant. Brexit - the United Kingdom's departure in 2020, driven by grievances over sovereignty, immigration, and the democratic deficit of EU institutions - was the first reversal in the EU's history and energised Eurosceptic movements across the continent. The Eurozone crisis beginning in 2009 exposed the structural flaw of monetary union without fiscal union, generating severe north-south rifts over Greek and other sovereign debt bailouts. The 2015-16 migration surge strained free movement principles and fuelled nationalist politics. Russia's invasion of Ukraine in 2022 forced costly energy decoupling and underlined the EU's continued dependence on NATO for ultimate security guarantees.</p>
 
+<h3>Energy Security after the Ukraine War: REPowerEU</h3>
+
+<p>Russia's invasion of Ukraine in February 2022 exposed the EU's dependence on Russian energy. In 2021 Russia supplied about 45 per cent of EU gas imports, and Germany, the largest consumer, had no LNG terminal. When Moscow cut pipeline flows, prices spiked and energy-intensive industry faced closures. The Commission responded with REPowerEU in May 2022, built on three lines of action:</p>
+
+<ul>
+  <li><strong>Diversification:</strong> LNG from the United States and Qatar, more pipeline gas from Norway, Algeria and Azerbaijan, new import terminals and joint gas purchasing.</li>
+  <li><strong>Saving energy:</strong> a voluntary 15 per cent cut in gas demand and a rule that storage be filled to 90 per cent before each winter. Demand fell by about 17 per cent between August 2022 and January 2025.</li>
+  <li><strong>Renewables:</strong> faster permitting and higher targets for solar, wind, heat pumps and hydrogen, financed partly through the Recovery and Resilience Facility.</li>
+</ul>
+
+<p>Russia's share of EU gas imports fell to about 12 per cent in 2025. A regulation approved by the European Parliament in December 2025 sets a ban on Russian LNG imports by the end of 2026 and on pipeline gas by 30 September 2027. The costs were high: inflation, a widening competitiveness gap with the US and China, and resistance from Hungary and Slovakia, which still rely on Russian oil.</p>
+
+<h3>Trump's Return and the Push for European Defence and Revival</h3>
+
+<p>Donald Trump's second term from January 2025 brought tariff threats, doubts about the US guarantee to NATO and a pause in US military aid to Ukraine in March 2025. European leaders read this as a signal that the Union must provide for its own security. The main responses were:</p>
+
+<ul>
+  <li><strong>ReArm Europe (renamed Readiness 2030):</strong> proposed by Ursula von der Leyen on 4 March 2025 to mobilise up to 800 billion euros, mainly by letting member states raise defence spending without breaching EU fiscal rules (a potential 650 billion euros over four years). It was renamed after objections from Italy and Spain.</li>
+  <li><strong>SAFE (Security Action for Europe):</strong> adopted on 27 May 2025, it offers 150 billion euros in long-term loans for joint procurement, provided weapons have at least 65 per cent European components. Canada joined in December 2025.</li>
+  <li><strong>National and NATO commitments:</strong> Germany amended its constitution in March 2025 to exempt defence spending above 1 per cent of GDP from its debt brake, and NATO allies at The Hague summit (June 2025) agreed to spend 5 per cent of GDP on defence and related security by 2035, 3.5 per cent of it on core military needs.</li>
+  <li><strong>Economic and technological revival:</strong> the Draghi report (September 2024) estimated that the EU needs 750 to 800 billion euros of additional investment a year to close its productivity gap. The EU also hedged against US tariffs: it accepted a 15 per cent US tariff ceiling in July 2025 while diversifying trade, with the EU-Mercosur agreement provisionally applied from 1 May 2026 and the India-EU free trade agreement concluded on 27 January 2026.</li>
+</ul>
+
+<p><strong>Assessment.</strong> The jolt has moved defence to the centre of EU policy, but SAFE offers loans rather than common grants, European industry cannot yet replace US air defence, intelligence and logistics, and unanimity rules let Hungary obstruct. Whether strategic autonomy becomes real or remains a hedge within NATO depends on sustained money and political will. For India, a more autonomous and trade-seeking EU has meant a concluded FTA.</p>
+
 <h2>ASEAN: Cooperation Through the ASEAN Way</h2>
 
 <p>The Association of Southeast Asian Nations was founded in 1967 by Indonesia, Malaysia, the Philippines, Singapore, and Thailand. ASEAN's founding logic was explicitly different from the EU's: rather than deep supranational integration, ASEAN sought to build a stable framework for regional coexistence among states that were profoundly sovereignty-conscious and politically diverse. The ASEAN Way - characterised by consensus decision-making, non-interference in domestic affairs, informality, and an aversion to legally binding enforcement - became the defining norm of the organisation. ASEAN expanded over five decades to ten members, and with the admission of Timor-Leste as the eleventh on 26 October 2025 it now encompasses the whole of Southeast Asia.</p>
@@ -8277,6 +9333,20 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Amitav Acharya's concepts of norm localisation and norm subsidiarity provide the most rigorous theoretical account of ASEAN's success. Norm localisation describes how ASEAN members have selectively adapted international norms to fit prior local beliefs rather than accepting them wholesale. Norm subsidiarity describes ASEAN's creation of its own regional norms to protect regional autonomy from external imposition. Together these explain why ASEAN cooperation has been durable despite its resistance to legalistic enforcement. Kishore Mahbubani, in The ASEAN Miracle, emphasises that ASEAN's principles of consultation, non-interference, and consensus have produced regional peace among extraordinarily diverse states, and that it is a mistake to evaluate ASEAN by the standards of European supranationalism.</p>
 
 <p>ASEAN's limitations are real. The consensus requirement and non-interference norm make it incapable of addressing serious political crises: the Myanmar junta's atrocities after the 2021 coup have been met with ASEAN's Five Point Consensus, which the junta has comprehensively ignored without consequence to its membership. Intra-ASEAN trade at approximately twenty-five percent of total trade is far below the EU's sixty percent, and the single market remains far from realised. Great-power competition between the United States and China creates centrifugal pressures as different members align differently, threatening the unity that the consensus principle requires.</p>
+
+<h3>ASEAN Plus Three: Record and Limits</h3>
+
+<p>ASEAN Plus Three (APT) brings the ASEAN members together with China, Japan and South Korea. Its leaders first met in Kuala Lumpur in December 1997, and the 1997-98 Asian financial crisis, which East Asian governments felt the IMF had mishandled, gave it its purpose: regional defences that would reduce dependence on Washington-based institutions. Japan's 1997 proposal for an Asian Monetary Fund had been dropped after US and IMF opposition, so APT took a more modest path:</p>
+
+<ul>
+  <li><strong>Chiang Mai Initiative (CMI):</strong> agreed by APT finance ministers at Chiang Mai in May 2000 as a network of bilateral currency swaps, it was multilateralised (CMIM) in March 2010 as a 120 billion dollar reserve pool, which members agreed in 2012 to double to 240 billion dollars.</li>
+  <li><strong>AMRO:</strong> the ASEAN+3 Macroeconomic Research Office, set up in Singapore in 2011 and an international organisation since 2016, monitors member economies and would assess any swap request.</li>
+  <li><strong>Asian Bond Markets Initiative (2003):</strong> develops local-currency bond markets so that Asian savings are invested in the region, backed by a Credit Guarantee and Investment Facility.</li>
+  <li><strong>APTERR:</strong> the APT Emergency Rice Reserve, agreed in 2011 and in force since 2012, releases earmarked rice stocks after disasters.</li>
+  <li><strong>Crisis cooperation:</strong> a special APT summit on Covid-19 in April 2020 backed a regional response fund and a reserve of medical supplies.</li>
+</ul>
+
+<p><strong>How successful?</strong> APT has institutionalised financial cooperation that did not exist before 1997, and AMRO gives the region its own surveillance capacity. But the CMIM has never been activated. In 2008 South Korea and Singapore turned to swap lines from the US Federal Reserve, and Indonesia sought bilateral support from Japan and China. The larger part of each member's quota can be drawn only alongside an IMF programme, which governments see as stigmatising. Japan-China rivalry, territorial disputes and the shift of attention to the broader East Asia Summit (2005) and RCEP (2020) have confined APT to technical cooperation. Its record supports the view that East Asian regionalism is strongest in functional, low-politics areas and weakest where great-power rivalry intrudes. India, outside APT, was brought into the wider East Asia Summit partly because Japan and others wanted a balance to China.</p>
 
 <h2>SAARC: The Unfulfilled Promise of South Asian Integration</h2>
 
@@ -8295,6 +9365,42 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The relationship between regionalisation and globalisation has been a central theoretical debate since the proliferation of regional trade agreements in the 1990s raised the question of whether regional blocs were building blocks or stumbling blocks for the multilateral trading system. The evidence broadly supports the building block thesis. Regional arrangements have reduced barriers to trade and investment, established norms of open markets, created institutional capacity for managing interdependence, and provided frameworks within which states have developed habits of cooperation that facilitate multilateral engagement. The EU, ASEAN, and USMCA have all been consistent advocates for an open multilateral trading system even as they deepen regional integration.</p>
 
 <p>In an era of complex interdependence, governance has become multi-layered: global problems require global solutions, but regional collaboration makes those solutions more feasible and contextually tailored. Rather than a zero-sum competition between global and regional, the emerging paradigm treats regionalisation as a pillar of globalisation - a means by which countries pool sovereignty in manageable circles, build trust, and achieve collective gains that position them to contribute more effectively on the world stage. For India, this means pursuing regional initiatives such as the International Solar Alliance, BIMSTEC connectivity, and RCEP engagement in parallel with multilateral commitments in the WTO, Paris Agreement, and the SDG framework, treating regional and global integration as complementary rather than competing tracks of foreign policy.</p>
+
+<h3>NAFTA and its Replacement by the USMCA</h3>
+
+<p>The North American Free Trade Agreement, signed on 17 December 1992 and in force from 1 January 1994, created a free trade area of the United States, Canada and Mexico. It was the first major trade pact joining developed economies with a developing one, and regional trade grew from about 300 billion dollars to over a trillion dollars by 2011. Its limitations were:</p>
+
+<ul>
+  <li><strong>Uneven gains:</strong> US unions blamed it for lost manufacturing jobs as assembly moved to Mexican maquiladoras, and critics argued that subsidised US maize hurt small Mexican farmers. The Zapatista uprising in Chiapas began on the day it took effect.</li>
+  <li><strong>Weak social clauses:</strong> labour and environmental standards sat in side agreements (NAALC and NAAEC) that were hard to enforce.</li>
+  <li><strong>Investor-state disputes:</strong> Chapter 11 let corporations sue governments before private tribunals over regulation.</li>
+  <li><strong>Dated rules:</strong> it predated the digital economy, and its 62.5 per cent regional content rule for cars let a large share of components come from outside the region.</li>
+</ul>
+
+<p>Donald Trump, who had denounced NAFTA as a disaster for American workers, threatened in 2017 to withdraw, raising fears that the main bloc of North America would unravel. Renegotiation produced the United States-Mexico-Canada Agreement (USMCA), signed in November 2018, revised in December 2019 and in force from 1 July 2020. It answered NAFTA's limits through:</p>
+
+<ul>
+  <li><strong>Stricter rules of origin:</strong> 75 per cent regional content for cars, with 40 to 45 per cent made by workers earning at least 16 dollars an hour.</li>
+  <li><strong>Enforceable labour rules:</strong> labour and environment chapters inside the agreement, Mexican labour law reform and a rapid response mechanism against individual factories that deny workers' rights.</li>
+  <li><strong>Market access and new areas:</strong> wider access to Canada's dairy market, and chapters on digital trade and intellectual property.</li>
+  <li><strong>Limited investor-state disputes:</strong> Canada left the mechanism, and US-Mexico claims were narrowed.</li>
+  <li><strong>Sunset clause:</strong> a 16-year term with a joint review every six years.</li>
+</ul>
+
+<p>The USMCA has proved less stable than NAFTA. In 2025 the Trump administration imposed tariffs on many Canadian and Mexican goods, and at the first joint review on 1 July 2026 the US declined to extend the agreement, so the parties now face annual reviews until it expires in 2036 unless one withdraws earlier. The episode marks a shift from open regionalism towards managed, security-driven trade.</p>
+
+<h3>Latin American Regionalism and the US-led Order</h3>
+
+<p>Latin American regionalism has long mixed economic integration with a search for autonomy from the United States, from the Andean Pact (1969) to the dependency school's critique of unequal exchange. After the debt crisis and the Washington Consensus reforms of the 1980s and 1990s, and especially during the 'pink tide' of left-wing governments in the 2000s, the region built bodies that stressed sovereignty and alternative development:</p>
+
+<ul>
+  <li><strong>Mercosur:</strong> created by the Treaty of Asuncion (1991) between Argentina, Brazil, Paraguay and Uruguay, and a customs union since 1995. Venezuela has been suspended since 2016, and Bolivia became a full member in July 2024. Its trade agreement with the EU has been provisionally applied since 1 May 2026.</li>
+  <li><strong>ALBA:</strong> founded by Hugo Chavez and Fidel Castro in Havana on 14 December 2004 as a solidarity-based alternative to the US-backed Free Trade Area of the Americas, which collapsed at the Mar del Plata summit in 2005. Venezuelan oil, partly through Petrocaribe (2005), financed it.</li>
+  <li><strong>UNASUR:</strong> the Union of South American Nations, whose founding treaty was signed in 2008, added a South American Defence Council. Six members suspended participation in 2018 amid divisions over Venezuela and the choice of a secretary-general, and several moved to the rival PROSUR (2019), before Argentina, Brazil and Colombia rejoined in 2023.</li>
+  <li><strong>CELAC:</strong> founded in Caracas in December 2011 by 33 states of Latin America and the Caribbean, deliberately without the US and Canada, as an alternative to the US-led Organization of American States. It holds dialogues with China through the China-CELAC Forum and with the EU.</li>
+</ul>
+
+<p><strong>Moderate success.</strong> These bodies widened the region's diplomatic space, gave Brazil a platform for leadership and opened links to China, the EU and other partners, and Mercosur has proved the most durable. But success has been limited by ideological swings, since each change of government revives or abandons bodies, by weak supranational institutions, by Brazil's reluctance to bear the costs of leadership, by the collapse of Venezuela's oil economy, which hollowed out ALBA (Ecuador left in 2018 and Bolivia was suspended after its 2025 election), and by dependence on commodity exports, increasingly to China. The US seizure of Venezuela's President Nicolas Maduro in Caracas in January 2026 showed how little regional bodies can protect sovereignty against direct US power. India engages the region through a preferential trade agreement with Mercosur, in force since 2009.</p>
   `,
 
   'contemporary-global-concerns': `
@@ -8338,6 +9444,24 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>The political economy of climate negotiations is shaped by deep conflicts of interest between developed and developing countries, between fossil fuel exporters and importers, and between states with different levels of climate vulnerability. Developing nations insist they should not be required to curtail development in the same manner as rich countries that built their prosperity on high-emission industrialisation. Small Island Developing States and the Africa Group face existential threats from sea-level rise and intensifying droughts despite contributing minimally to cumulative greenhouse gas emissions, making their advocacy for stronger action and more generous finance commitments a matter of survival rather than preference. The debate between mitigation, reducing emissions at source through decarbonisation of energy, industry, and agriculture, and adaptation, building the infrastructure and institutional capacity to cope with climate impacts that are already locked in, reflects a deeper tension between the interests of developed and developing countries: mitigation produces diffuse global benefits while adaptation requires localised investment that attracts less international finance. The emerging debates over geoengineering approaches, including solar radiation management and large-scale carbon dioxide removal, raise profound questions about governance, risk, and the distribution of benefits and harms among states with different vulnerabilities.</p>
 
+<h3>India's Panchamrit Pledges at COP26 (Glasgow, 2021)</h3>
+
+<p>At COP26 in Glasgow on 1 November 2021, Prime Minister Narendra Modi announced five commitments, which he called the 'Panchamrit' (five nectar elements) of India's climate action:</p>
+
+<ol>
+  <li>raise non-fossil energy capacity to 500 GW by 2030</li>
+  <li>meet 50 per cent of India's energy requirements from renewable sources by 2030</li>
+  <li>reduce total projected carbon emissions by one billion tonnes by 2030</li>
+  <li>reduce the carbon intensity of the economy by 45 per cent by 2030</li>
+  <li>reach net zero emissions by 2070</li>
+</ol>
+
+<p>He paired these with LiFE (Lifestyle for Environment), a call for mindful rather than wasteful consumption, and asked developed countries to provide one trillion dollars in climate finance as soon as possible. India also secured the change from 'phase out' to 'phase down' of unabated coal power in the Glasgow Climate Pact, arguing that developing countries could not abandon coal without finance and technology.</p>
+
+<p>India's updated Nationally Determined Contribution of August 2022 adopted two of the pledges in modified form: a 45 per cent cut in the emissions intensity of GDP from 2005 levels by 2030, and about 50 per cent of installed electricity capacity from non-fossil sources by 2030. India submitted a Long-Term Low Emission Development Strategy at COP27 in November 2022 and launched Mission LiFE in October 2022. Non-fossil sources crossed half of installed power capacity in June 2025, five years ahead of the target.</p>
+
+<p><strong>Assessment.</strong> The pledges moved India from defending its right to emit towards a development-led transition, consistent with common but differentiated responsibilities. Critics note that the 2070 date is two decades after most developed countries, that installed capacity is not the same as generation, which coal still dominates, and that the one billion tonne target was never written into the NDC. India replies that its per capita emissions remain well below the world average and that delivery depends on finance, which is why it rejected as inadequate the goal of 300 billion dollars a year by 2035 agreed at COP29 in Baku (2024).</p>
+
 <h2>Gender Justice: Theories, Progress, and Remaining Gaps</h2>
 
 <p>The concept of gender justice draws its theoretical foundations from feminist political theory and the recognition that gender is a social construct rather than a biological given. Liberal feminism advocates for equal rights and opportunities within existing institutional structures, focusing on suffrage, legal equality, non-discrimination in employment, and access to education. Radical feminism goes further to critique patriarchy as a systemic structure of domination, emphasising bodily autonomy, reproductive rights, and the elimination of violence against women as central political demands. Marxist and socialist feminism link gender oppression to class structures and capitalist organisation, arguing that women's unpaid domestic labour subsidises capital accumulation and that exploitation in the labour market is inseparable from exploitation in the home. The care economy analysis developed by feminist economists challenges the standard economic framework that renders unpaid care work invisible in national accounts, arguing that cooking, cleaning, child-rearing, and elder care, activities disproportionately performed by women, must be recognised and rewarded if gender justice is to be realised.</p>
@@ -8369,6 +9493,40 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Former UN Secretary-General Kofi Annan proposed a strategy of Five Ds for addressing terrorism: dissuade terrorist groups from resorting to violence; deny them the means to carry out attacks; deter states from supporting them; develop state capacity to prevent terrorism; and defend human rights. Annan insisted that terrorism and human rights are not conflicting but mutually reinforcing concerns: strategies that trample rights in the name of security undermine the legitimacy needed to win the ideological contest against extremism. India has proposed a Comprehensive Convention on International Terrorism at the UN, calling for a universal definition of terrorism that accepts no differentiation between good and bad terrorists, mandatory closure of terrorist camps regardless of location, prosecution under anti-terror laws, and mandatory extradition for cross-border terrorism. The convention has been under negotiation since 1996 but has not achieved consensus: the United States seeks exclusions for its own armed forces operating without UN mandate, and Organisation of Islamic Cooperation countries seek exclusions for national liberation movements, reflecting the fundamental political disagreement about what counts as terrorism that has blocked a global legal framework for decades.</p>
 
 <p>India has also outlined a five-point formula for international counter-terrorism cooperation: exchange of timely and actionable intelligence; prevention of misuse of modern communications; capacity-building for border control; sharing information on the movement of persons; and designating counter-terror focal points for effective operational response. State sponsorship of terrorism remains a structural obstacle to these cooperative frameworks: Pakistan's covert support for anti-India militant groups and Iran's support for Hezbollah and other proxies illustrate how states can use non-state violence as instruments of foreign policy while formally condemning terrorism, making comprehensive international cooperation depend on resolving the political interests that motivate such sponsorship.</p>
+
+<h3>The NPT: Provisions and Deficiencies</h3>
+
+<p>The Treaty on the Non-Proliferation of Nuclear Weapons was opened for signature on 1 July 1968 and entered into force on 5 March 1970. It has 191 parties. Its core provisions are:</p>
+
+<ul>
+  <li><strong>Articles I and II:</strong> nuclear-weapon states will not transfer nuclear weapons or help others acquire them, and non-nuclear-weapon states will not acquire them.</li>
+  <li><strong>Article III:</strong> non-nuclear-weapon states accept IAEA safeguards on their nuclear material.</li>
+  <li><strong>Article IV:</strong> the 'inalienable right' of all parties to peaceful nuclear energy.</li>
+  <li><strong>Article VI:</strong> all parties will pursue negotiations in good faith on ending the arms race and on nuclear disarmament.</li>
+  <li><strong>Article IX(3):</strong> a nuclear-weapon state is one that manufactured and exploded a nuclear device before 1 January 1967, which fixed the club at the US, the USSR (now Russia), the UK, France and China.</li>
+  <li><strong>Article X:</strong> a party may withdraw on three months' notice if extraordinary events jeopardise its supreme interests.</li>
+</ul>
+
+<p>These provisions explain why the treaty has not delivered disarmament:</p>
+
+<ul>
+  <li><strong>Legalised inequality:</strong> the 1967 cut-off divides the world permanently into haves and have-nots, which India called 'nuclear apartheid', the phrase in the title of Jaswant Singh's 1998 defence of Pokhran-II in Foreign Affairs.</li>
+  <li><strong>Asymmetric obligations:</strong> safeguards bind only non-nuclear-weapon states, while Article VI has no timetable and no verification. The ICJ's 1996 advisory opinion held that states must pursue and conclude disarmament negotiations, yet the nuclear powers keep modernising.</li>
+  <li><strong>Latency loophole:</strong> Article IV allows enrichment and reprocessing, so a state can approach weapons capability while complying.</li>
+  <li><strong>Easy exit and weak enforcement:</strong> Article X let North Korea leave in 2003, and enforcement rests with a Security Council whose permanent members are the five recognised nuclear powers.</li>
+  <li><strong>Gaps in scope:</strong> it does not cover delivery systems, non-state actors or the states that never joined (India, Pakistan, Israel).</li>
+</ul>
+
+<h3>Non-Proliferation after the Cold War</h3>
+
+<ul>
+  <li><strong>Rollback (1990s):</strong> South Africa dismantled its weapons and joined the NPT in 1991, Ukraine, Belarus and Kazakhstan gave up Soviet weapons on their soil, and Brazil joined in 1998. The treaty was extended indefinitely in 1995, and the CTBT opened for signature in 1996.</li>
+  <li><strong>New proliferation:</strong> India and Pakistan tested in May 1998, drawing Security Council Resolution 1172. North Korea has tested six times since 2006, and the A.Q. Khan network, exposed in 2004, had sold enrichment technology to Libya, Iran and North Korea.</li>
+  <li><strong>New tools:</strong> the Proliferation Security Initiative (2003), Resolution 1540 (2004) on keeping weapons of mass destruction from non-state actors, Libya's renunciation (2003) and the Iran nuclear deal (JCPOA, 2015).</li>
+  <li><strong>Erosion:</strong> the US left the JCPOA in 2018. Israel and the US struck Iranian nuclear sites in June 2025, UN sanctions on Iran were reimposed on 28 September 2025, and US and Israeli strikes resumed in February 2026. In September 2026 the IAEA said it could no longer verify the size or location of Iran's enriched uranium. New START expired on 5 February 2026 without a successor, and the Review Conferences of 2005, 2015, 2022 and 2026 all ended without an agreed final document.</li>
+</ul>
+
+<p><strong>What the pace suggests.</strong> Proliferation has been far slower than feared. John F. Kennedy warned in 1963 that 15 to 25 states might have nuclear weapons in the 1970s, yet only India, Pakistan and North Korea have openly joined the club since the Cold War. The norm, alliance guarantees and export controls restrain most states, but states facing acute regional threats or fearing regime change, the lesson North Korea drew from Libya, still build weapons. The main strains now are vertical proliferation, such as China's expanding arsenal, the collapse of arms control and the use of military strikes in place of diplomacy. India stays outside the NPT with a no-first-use doctrine (2003), favours universal and non-discriminatory disarmament, as in Rajiv Gandhi's 1988 Action Plan, and gained access to civil nuclear trade through the 2008 NSG waiver.</p>
   `,
 
   'indian-foreign-policy': `
@@ -8399,7 +9557,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <h3>History and National Identity</h3>
 <p>The domestic history of a nation, as well as the history of its international relations play an important role in shaping foreign policy. Nations often draw important lessons from history. History also shapes the national perception and the national identity. And while one cannot make foreign policy solely based on historical knowledge, it is not wise to ignore history.</p>
-<p>In the Indian case, history explains a lot about its foreign policy. The colonial experience, which created a lasting suspicion against Western hegemony, was largely responsible for the Indian foreign policy post-independence. This was reflected in India leading the NAM and then siding with Russia in 1971, at the time of crisis. This history also explains India's relations with Pakistan, and the disputed border issue with China, a legacy of British rule.</p>
+<p>In the Indian case, history explains a lot about its foreign policy. The colonial experience, which created a lasting suspicion against Western hegemony, was largely responsible for the Indian foreign policy post-independence. This was reflected in India leading the NAM and then siding with the Soviet Union in 1971, at the time of crisis. This history also explains India's relations with Pakistan, and the disputed border issue with China, a legacy of British rule.</p>
 <p>It is also not necessary that the present will continue along the lines of past. e.g. France &amp; and Germany were historical rivals in WW I and WW II. However, the EU formation was led primarily by these two nations. Thus, if other factors are in favour of countries  -  then historical antagonism may not stand in between.</p>
 <p>National Identity denotes the self-perception of a nation in the global order of things. While a superpower like the USA or China will have a different approach, a middle power like India or Brazil will go for different means.</p>
 <p>The role of culture in shaping foreign policy is often explained by the use of the term 'soft power' . In the era of globalization assisted by the ICT revolution, there are many carriers of this culture. The movies, books, art forms etc. are all agents to project the culture and help in the generation of soft power. In the case of India, the ancient practice of yoga, the medicinal practice of ayurveda and rich philosophical and religious literature and practices, all contribute to its soft power, and in turn, affect foreign policy.</p>
@@ -8412,7 +9570,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Similarly, the writings of Machiavelli also illustrate how the 'individual leaders' are so important in international relations. His entire treaty, The Prince, is designed as a guidebook to young rulers, giving them, in essence, a template to guide their individual actions to help ensure their success. Closer at home, we also have the Saptang theory by Kautilya, which treats the king as a Nabhi (naval) of the entire state apparatus.</p>
 <p>In the case of India, soon after independence, India's Pakistan policy had a lot to do with Gandhi's idealism, who although didn't assume office, was the leader (father) of the nation.</p>
 <p>Under Nehru's leadership, we witness his personal traits in Indian foreign policy. The early decades carried on the idealism in Indian foreign policy and was evident in India's NAM and advocacy for decolonization in Africa and elsewhere. While NAM is certainly a legacy to be proud of, and it is difficult to tell which other course would have been better, the policy did not serve India well in solving the Kashmir issue and Indo Indo-China war.</p>
-<p>The period of Nehru was followed by Indira Gandhi, who many have claimed was a strong leader. The highlights of Indira Gandhi's foreign policy are India's approach to the Bangladesh War of Liberation, the treaty of 'Peace, Friendship and Cooperation, 1971' between India and Russia, and the progress in India's nuclear program.</p>
+<p>The period of Nehru was followed by Indira Gandhi, who many have claimed was a strong leader. The highlights of Indira Gandhi's foreign policy are India's approach to the Bangladesh War of Liberation, the treaty of 'Peace, Friendship and Cooperation, 1971' between India and the Soviet Union, and the progress in India's nuclear program.</p>
 <p>For Rajiv Gandhi, for whom politics was not the first choice, the leadership was marked by the failure of Indian foreign policy in Sri Lanka and his unfortunate assassination. However, the unorthodox approach of Rajiv Gandhi did help in easing India's relations with China, when the nations decided to separate the border issue from other bilateral issues. (1988)</p>
 <p>Fast forward to the contemporary period, we see a remarkable difference in Indian foreign policy since the NDA government. Keeping politics aside, scholars across the gamut have agreed that there has been a change in India's global image since PM Modi assumed office. There is a change in the narrative, as Harsh V Pant suggests, "the story has moved from a balancing power to a leading power."</p>
 <p>India has shown a willingness to exercise military power with Pakistan, it has been able to manoeuvre its relations with antagonistic partners like Russia and the USA, or Israel and Arab countries, and even the soft power has been leveraged to enhance India's global position. The recent success of Indian foreign policy includes India achieving consensus in the G20 declaration despite differing positions of members over the Ukraine War.</p>
@@ -8426,7 +9584,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Public opinion can said to be the collective preference of the nation's population, gauged through polling data or other such measures. There is a debate on the role of public opinion in shaping foreign policy. The realist tradition treats the public as unaware of the nuances of foreign policy decision-making and suggests it to be the domain of elites. Further, they also fear the compromise on 'rationality' in foreign policy, if public opinion is considered. Liberal tradition, on the other hand, suggests that public opinion plays an important role in foreign policy, just like it influences the domestic policies of government.</p>
 <p>We can see the disapproval of India's China policy by people post-1962 war, which set the public sentiment against the Chinese. The relations improved only with Rajiv Gandhi's visit to the nation in 1988, where it was decided to pursue the border issue separately.</p>
 <p>We also see the influence of strong public opinion in support of the Sri Lankan Tamil issue in Tamil Nadu. The public sentiment forced India to side with the Tamils in Sri Lanka and led to the 1987 India-Sri Lanka accord.</p>
-<p>Further, it also becomes difficult to make any concessions in foreign policy due to vote bank politics. For example, China has offered to settle the border issue since 1961, by giving up its claim on the NEFA region, if India is willing to secede Aksai China to it. The issue has not yet been settled since it will affect the domestic politics.</p>
+<p>Further, it also becomes difficult to make any concessions in foreign policy due to vote bank politics. For example, China has offered to settle the border issue since 1960, when Zhou Enlai visited Delhi, by giving up its claim on the NEFA region, if India is willing to cede Aksai Chin to it. The issue has not yet been settled since it will affect the domestic politics.</p>
 
 <h3>International Power Structure and Alliances</h3>
 <p>The international power structure can vary with time. The Cold War period was characterised by a bipolar world order, and countries were forced to choose from either of the blocs. India innovated the option of NAM since it didn't want to compromise its sovereignty. By pursuing NAM India performed a leadership role, especially for the global south or newly independent countries (NICs).</p>
@@ -8438,7 +9596,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Weak states or small powers have to strike a "balance between security and independence." Survival is the biggest concern for such nations and band-wagoning to a great power or playing off one great power against another, is their strategy. Such powers are less ambitious. For the authoritarian states, there is also an additional concern of regime security (North Korea). They have to be creative and innovative and often go for unorthodox means and unconventional pursuits.</p>
 <p>The present era is marked by globalization and regionalization. Consequently, there are numerous regional, global, military and trade alliances that countries participate in. These institutions have a significant influence on foreign policy.</p>
 <p>Being a part of the grouping, the choices of member states are often limited. As in the case of NATO, EU, ASEAN, or OPEC, the member countries try to achieve consensus, to project themselves as a cohesive union. This involves aligning foreign policy in a manner such consensus is possible. While the powerful members do try to influence the agenda of such grouping, they can only do it to a certain degree. For smaller members, the choices are often constrained in such forums.</p>
-<p>India is a member of multiple such organizations. It became a full member of the SCO in 2017, to keep close with China. It has stayed away from the coalitions that don't serve its interests and would constrain its foreign policy choices. e.g. NPT, APEC.</p>
+<p>India is a member of multiple such organizations. It became a full member of the SCO in 2017, to keep close with China. It has stayed away from the coalitions that don't serve its interests and would constrain its foreign policy choices, e.g. the NPT.</p>
 <p>Further, being a member of certain alliances also influences the foreign policy of other nations towards it. The security umbrella of NATO has served as a deterrent against Russia for decades, serving all the member countries. And Russia is fighting hard to ensure that Ukraine is not engulfed by NATO, which will limit the foreign policy options of Russia.</p>
 
 <h3>Geopolitical Location</h3>
@@ -8492,6 +9650,23 @@ export const polsciNoteContent: Record<string, string> = {
 <li>To aid National Command authorities with intelligence and advice</li>
 <p>However, it is also suggested that National Security Council must have a legislative backing as in the case of USA, which will ensure accountability check arbitrary independence.</p>
 <p>With institutionalization of strategic thinking, National Security Council has contributed to a more strategic and futuristic policy making, ending the knee jerk reactions. With two antagonistic neighbours, growing external terrorism threat, and a plethora of internal problems like left-wing extremism, radicalization and economic offences, the role of National Security Advisor &amp; National Security Council will be significant in times to come.</p>
+
+<h3>Public Diplomacy, the ICCR and India's Soft Power</h3>
+
+<p>Soft power, in Joseph Nye's formulation (Bound to Lead, 1990, and Soft Power, 2004), is the ability to obtain preferred outcomes through attraction rather than coercion or payment, drawing on a country's culture, political values and foreign policies. Public diplomacy, a term coined by Edmund Gullion in 1965, is the effort of a government to communicate directly with foreign publics rather than only with other governments. For India, a civilisational state with limited material resources, it is a way of turning cultural assets into diplomatic standing.</p>
+
+<p><strong>The Indian Council for Cultural Relations.</strong> The ICCR was founded on 9 April 1950 by Maulana Abul Kalam Azad, India's first Education Minister, and works as an autonomous body under the Ministry of External Affairs. Its main instruments are:</p>
+
+<ul>
+  <li><strong>Cultural centres abroad:</strong> a network that includes the Nehru Centre in London and centres from Moscow and Tashkent to Jakarta, Port Louis, Dhaka and Tokyo, which teach yoga, Indian music, dance and languages.</li>
+  <li><strong>Scholarships:</strong> places for students from Africa, Asia and other developing regions to study in India, building networks of alumni who later hold office at home.</li>
+  <li><strong>Chairs and festivals:</strong> chairs of Indian studies in foreign universities, Festivals of India, and sponsorship of performers and exhibitions abroad.</li>
+  <li><strong>Publications and awards:</strong> journals in several languages, such as Indian Horizons and Africa Quarterly, and the Jawaharlal Nehru Award for International Understanding.</li>
+</ul>
+
+<p><strong>Public diplomacy.</strong> The MEA created a Public Diplomacy Division in 2006, later merged with the External Publicity Division, to explain policy to foreign and domestic audiences through the media, social media, think tanks and the diaspora. Notable results include the UN's International Day of Yoga (21 June), adopted in December 2014 with a record 177 co-sponsors, the International Year of Millets (2023), Vaccine Maitri from January 2021, and the 2023 G20 presidency, held through more than 200 meetings in some 60 cities to project India as a voice of the Global South. Scholars such as Ian Hall note the limits of government action here, since much of India's appeal comes from its society, its democracy, films, cuisine and diaspora, rather than from the state.</p>
+
+<p><strong>Limits.</strong> The Standing Committee on External Affairs, in its report India's Soft Power and Cultural Diplomacy: Prospects and Limitations (December 2022), found the ICCR held back by inadequate funds, poor coordination between the MEA and the Ministry of Culture, a shortage of skilled staff and an unclear mandate. It urged a restructuring of the ICCR and an extra 500 crore rupees for its budget. Soft power also suffers when India's democratic record is questioned abroad, and it cannot substitute for hard power, as relations with China show. Compared with China's Confucius Institutes or Germany's Goethe-Institut, India's cultural network remains small.</p>
 <h2>Role of Parliament & PM</h2>
 
 <h3>Prime Minister's Office and the Cabinet</h3>
@@ -8586,6 +9761,53 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Terrorism hardly respects international boundaries. Despite the best effort nationally, without international cooperation, it is impossible to stamp out this global menace. Asia remains the most terrorism-active region of the world. In the Indian neighbourhood, while one state is ruled by a terrorist organization (Taliban in Afghanistan), the other state actively promotes cross-border terrorism, while remaining a victim itself (Pakistan).</p>
 <p>Climate change and environmental degradation is not in any one's interest. However, the highly industrialized countries which have had centuries of head start in their growth and prosperity path, are the principal cause for today's situation. Unfortunately, without deft diplomacy, traditional polluters seek to curb the growth path of emerging and developing economies by imposing mitigation measures, which are unfair to those who started industrialization late. India is fully committed to resolving the negative aspects of climate change and environmental degradation, but cannot be forced to accept the same conditions as those imposed on the more developed countries.</p>
 <p>In recent times, India has clearly demonstrated its will to play a leading role in the global arena and be counted as 'pole' in its own right. Continued stability and prosperity at home and political consensus on broad foreign policy parameters, will help India reach this goal.</p>
+
+<h3>Jaishankar's Six Phases of Indian Foreign Policy</h3>
+
+<p>External Affairs Minister S. Jaishankar, in his Ramnath Goenka Lecture (November 2019) and his book The India Way: Strategies for an Uncertain World (2020), divides India's foreign policy since independence into six phases:</p>
+
+<ol>
+  <li><strong>Optimistic non-alignment (1946-62):</strong> Panchsheel, Bandung and leadership of the newly independent world, ending with the 1962 war with China.</li>
+  <li><strong>Realism and recovery (1962-71):</strong> a defence build-up, acceptance of Western military aid and the 1965 war with Pakistan.</li>
+  <li><strong>Greater regional assertion (1971-91):</strong> the Indo-Soviet Treaty and the creation of Bangladesh in 1971, the 1974 nuclear test, Sikkim's merger (1975) and interventions in Sri Lanka (1987) and the Maldives (1988).</li>
+  <li><strong>Safeguarding strategic autonomy (1991-98):</strong> economic reform after the balance of payments crisis, the Look East policy, full relations with Israel (1992) and the refusal to sign the CTBT (1996).</li>
+  <li><strong>India as a balancing power (1998-2013):</strong> the Pokhran-II tests, the Indo-US nuclear deal and the 2008 NSG waiver, and membership of new groupings such as BRICS.</li>
+  <li><strong>Energetic diplomacy (since 2014):</strong> Neighbourhood First and Act East, a revived Quad, the International Solar Alliance, intensive summitry and diaspora outreach, Vaccine Maitri and the 2023 G20 presidency.</li>
+</ol>
+
+<p><strong>How justified is 'energetic diplomacy'?</strong> The label fits the scale and pace of engagement: more leadership visits, issue-based coalitions such as the Quad and I2U2, free trade agreements with the UAE and Australia (2022), the EFTA states (in force October 2025) and the UK (in force July 2026), and the conclusion of the India-EU FTA in January 2026. It also captures a readiness to take independent positions, as in India's refusal to take sides over the Ukraine war. Critics reply that energy describes style more than outcomes. Many initiatives build on the Look East and nuclear-deal phases, the Galwan clash of 2020 showed that the China problem is unresolved, ties with Bangladesh, the Maldives and Nepal have swung sharply, and India stayed out of RCEP in 2019. The periodisation is also offered by a serving minister about his own government's record, so it is partly a claim rather than a neutral classification.</p>
+
+<h3>Strategic Culture: Tanham's Thesis and its Critics</h3>
+
+<p>Strategic culture refers to the shared beliefs, assumptions and habits that shape how a state's elite thinks about the use of force. In Indian Strategic Thought: An Interpretive Essay (RAND, 1992), George Tanham argued that India's elite had shown little evidence of coherent, systematic strategic thinking and planning. He traced this to geography, which made the subcontinent seem naturally secure, to a history with little political unity before the British, who then kept strategy in their own hands, and to Hindu conceptions of time and of life as largely beyond human control, which discouraged long-range planning.</p>
+
+<p>Critics reply that India has a rich strategic tradition, from Kautilya's Arthashastra, with its mandala theory of circles of rivals and allies, to the Mahabharata. Stephen Cohen and Sunil Dasgupta (Arming without Aiming, 2010) saw 'strategic restraint' rather than incoherence as India's defining habit. Institutions such as the National Security Council (1998), the nuclear doctrine (2003) and the post of Chief of Defence Staff (2020) show strategy becoming more institutionalised.</p>
+
+<h3>Bajpai's Three Schools: Nehruvians, Neoliberals and Hyperrealists</h3>
+
+<p>Kanti Bajpai's essay 'Indian Strategic Culture', in Michael Chambers (ed.), South Asia in 2020 (2002), gives the most cited map of Indian strategic thought. He argues that India does have a strategic culture: its main schools share the belief that states live in an anarchic system in which power, including military power, matters. They differ on how to respond:</p>
+
+<ul>
+  <li><strong>Nehruvians:</strong> anarchy can be tempered through diplomacy, international institutions, trade and cultural exchange. India should keep adequate defences but use force only as a last resort, and seek autonomy through non-alignment and disarmament.</li>
+  <li><strong>Neoliberals:</strong> economic strength is the main source of power and security. India should liberalise, integrate with the world economy and build interdependence, avoiding conflicts that divert resources from growth.</li>
+  <li><strong>Hyperrealists:</strong> international politics is a permanent struggle in which threats must be met with force and peace comes through strength. They favour overt nuclear capability, punitive responses to Pakistan and firmness towards China.</li>
+</ul>
+
+<p><strong>From Nehruvianism to neoliberalism?</strong> Nehruvianism dominated until 1991. Since then a neoliberal outlook has grown: economic diplomacy under Look East and Act East, the nuclear deal pursued partly for energy and technology, free trade agreements from ASEAN (2009) to the EFTA states, the UK and the EU, the use of India's market as a strategic asset in supply-chain partnerships, and Jaishankar's language of interests over ideology. The transition is partial, however. India left RCEP in 2019, pursues Atmanirbhar Bharat and protects agriculture and small industry, and keeps a Nehruvian commitment to strategic autonomy and the Global South. Indian policy is best described as a blend in which neoliberal economics coexists with Nehruvian autonomy and a growing hyperrealist streak in security.</p>
+
+<h3>The Post-Pahalgam Doctrine: A Hyperrealist Turn?</h3>
+
+<p>India's response to the Pahalgam attack went beyond a military strike to a declared doctrine. It began with non-military coercion: holding the Indus Waters Treaty in abeyance, closing the Attari crossing and expelling Pakistani defence attachés. After Operation Sindoor, Prime Minister Modi's address to the nation on 12 May 2025 declared that 'Operation Sindoor is India's policy against terrorism' and set out a 'new normal':</p>
+
+<ul>
+  <li><strong>Response on India's terms:</strong> any terrorist attack will receive 'a befitting response on our terms only', against the places where terrorism originates.</li>
+  <li><strong>No nuclear blackmail:</strong> 'India will not tolerate any nuclear blackmail' and will strike terrorist hideouts that shelter behind it.</li>
+  <li><strong>No distinction between sponsor and terrorist:</strong> India 'will not differentiate between the government sponsoring terrorism and the masterminds of terrorism'.</li>
+</ul>
+
+<p>He added that 'Terror and talks cannot go together', that terror and trade cannot go together, that 'Water and blood cannot flow together', and that any talks with Pakistan would cover only terrorism and Pakistan-occupied Kashmir.</p>
+
+<p><strong>Is it hyperrealism?</strong> In Bajpai's terms the doctrine has a hyperrealist core. It extends the punitive turn that began with the surgical strikes of 2016 and the Balakot strike of 2019, replaces 'strategic restraint' with deterrence by punishment, and seeks to escape the stability-instability paradox described by Glenn Snyder, in which Pakistan's nuclear weapons had shielded sub-conventional attacks from Indian retaliation. Strikes on Pakistani air bases on 10 May signalled a readiness to escalate, and Modi's remark that 'The path of peace also goes through power' echoes the hyperrealist creed of peace through strength. Yet the conduct was calibrated. The government called its first strikes 'focused, measured, and non-escalatory', the fighting was brief and ended through talks between the Directors General of Military Operations, and India followed with diplomacy, sending seven all-party delegations to 33 capitals. Critics add that an automatic-response doctrine hands the initiative to terrorist groups, that it raises escalation risks between nuclear-armed states, and that President Trump's public claims to have brokered the ceasefire, which India denied, and China's military backing of Pakistan show the limits of unilateral action. The momentum towards hyperrealism is real, but Indian policy remains closer to coercive realism with limited aims than to pure hyperrealism.</p>
 <h2>Panchsheel & Non-Alignment</h2>
 
 <h3>Panchsheel and the 1954 Agreement</h3>
@@ -8598,7 +9820,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Bandung Asian-African conference in 1955 is considered as most immediate antecedent to the creation of NAM. The meeting was attended by 29 Heads of states belonging to the first post-colonial generation. The objective was to identify and assess world issues and pursue joint policies in international relations. However, there was also another important reason. These countries had newly attained independence. Development and increasing standard of living was the main concern for them. Thus, they did not want to be part of either the Western or Eastern block and get dragged into the cold war.</p>
 <p>The 'Ten Principles of Bandung' were proclaimed at the conference. Such principles were later adopted as the main goals and objectives of NAM.</p>
 <p>Six years after Bandung, the Movement of Non-Aligned countries was founded at the First Summit Conference of Belgrade, on Sep 1-6, 1961. The conference was attended by members of 25 countries from Asia, Africa Europe, and Latin America (Cuba). The newly created grouping, NAM was declared as a 'movement' and not an organization to avoid the bureaucratic implications of the latter. Further, the word 'movement' denotes the dynamism and the ever-evolving agenda in response to the global world order. The NAM was conceived to play an active role in international politics and to have its own stand on international matters. Which will reflect the interest of its members.</p>
-<p>At present, the membership of NAM includes 120 member states and 20 observer states along with the participation of 10 international organisations. The below map shows the members and observer states of NAM.</p>
+<p>At present, the membership of NAM includes 121 member states (South Sudan joined in 2024) and 20 observer states along with the participation of 10 international organisations. The below map shows the members and observer states of NAM.</p>
 <p>Since its inception, the NAM meetings have been held every three years. The 2016 Venezuela Summit and 2019 Azerbaijan (Baku) Summit were followed by the 19th Summit, postponed from 2022, which was held in Kampala, Uganda, in January 2024. Meanwhile, a virtual NAM summit was held online on 4 May 2020 titled "United Against COVID-19".</p>
 
 <h3>Objectives and Agenda of NAM</h3>
@@ -8621,14 +9843,14 @@ export const polsciNoteContent: Record<string, string> = {
 <h3>Relevance of NAM Today</h3>
 <p>According to Jagat S. Mehta , a former Indian Foreign Secretary; NAM was started to advocate for the independent rights of nations and that has been achieved, hence, the mission should be declared accomplished and NAM should be discontinued.</p>
 <p>Dr. S. Jaishankar recently said that NAM was an idea born in a particular temporality, and believes that India, taking the concept of independence of action from NAM, should move beyond it to respond efficiently to contemporary developments.</p>
-<p>According to C Rajamohan , an Indian academic and foreign policy analyst, the end of Cold War was the best time for a graceful exit from a platform that had no achievement in the past and no prospects in future. It was the best time as the NAM issue had taken the credit of ending the Cold War. NAM countries should have declared the 'mission accomplished', and disbanded it. Now, the movement is in a comma. NAM was irrelevant even before the end of the Cold War. After the Cold War, it was put into a coma because countries were not ready for its burial. They prefer to maintain the triennial rituals.</p>
+<p>According to C Rajamohan , an Indian academic and foreign policy analyst, the end of Cold War was the best time for a graceful exit from a platform that had no achievement in the past and no prospects in future. It was the best time as the NAM issue had taken the credit of ending the Cold War. NAM countries should have declared the 'mission accomplished', and disbanded it. Now, the movement is in a coma. NAM was irrelevant even before the end of the Cold War. After the Cold War, it was put into a coma because countries were not ready for its burial. They prefer to maintain the triennial rituals.</p>
 <p>According to Prof. T V Paul, NAM never got the credit it deserved. There has been an intellectual bias against NAM. Despite all criticism, NAM acted as a limited soft-balancing mechanism. It has used 'naming and shaming' tools against great powers. The intellectual bias against NAM, a coalition of weaker states is as natural and expected as there is a bias against the subaltern class movements among upper classes and upper castes in hierarchical societies.</p>
 <p>While it is easy to dismiss the NAM as redundant, it is also important to note that it is the biggest organization exclusively of third-world countries. In the dynamics of international relations, it is not possible to predict when the need will arise to revive it. Since its formation, NAM has maintained its regular schedule of summits. Moreover, the steadily growing memberships of NAM have eliminated all doubts as to the relevance of the NAM.</p>
 <p>However, this increasing number is also a bane to the organisation as it is turning NAM into a club where one can discuss and debate international issues rather than resolve them. The summit declarations don't include anything particular that suggests the movement is really grappling with the problems caused by a unipolar strategy intended to retain the North's hegemony over the South. Most importantly, the NAM's progress towards its two primary and consistent goals, the development of the third world and the eradication of poverty, continues to lag behind.</p>
 <p>Despite the fact that the bipolar world has ended, Washington should not become the political Mecca for individuals who had shied away from aligning themselves with either of the two blocs. It is clear that the assertion that "NAM is dead", actively promoted by some Western commentators is nothing less than a canard. A severely Euro-Center-centric international political landscape characterises the current unipolar world and is becoming increasingly featureless. The NAM, which saw the transition of the world from bipolar to unipolar and now a multipolar one, is possibly more important now than it has ever been in the history of international relations and development.</p>
 <p>The end of one block has not done away with the problems of the world. New issues like terrorism and climate change have emerged which necessitate global coordination.</p>
 <p>Today, more than ever, NAM has a plethora of work to do. It has to set up a new international order through the UN, restructure and democratize the UN; enhance South-South cooperation and coordination with the G-77; foster cooperation in the areas of food cooperation, population, trade and investment; ensure equitable international flow of trade and transfer of technology; and oppose interventionism and imposition of economic conditions on developing countries. Given that more than half of the world still suffers from the issues relevant to NAM, it is pointless to question the relevance of the same. As diplomat N. Krishnan reminds us, "dynamics of globalization have produced a whole set of new problems which the Non-Alignment Movement must take note of."</p>
-<p>According to T V Paul, there is a space for the resurrection of the old movement as a soft balancing mechanism against powerful states. As great powers are once again in the arms race, militarization of oceans and territorial expansions, there is a need for weaker countries to come together to delegitimize imperial ventures. If third-world countries do not act as cushioning forces, international order will spiral into a hot war. Great powers always need to be restrained and balanced. Soft balancing by smaller states has a key role to play because military conflicts will ultimately bring suffering to them. There is a need to revive the 'Bandug' spirit. There is no hope from China and India to revive the movement because they are in the race of superstardom. The onus is on smaller countries.</p>
+<p>According to T V Paul, there is a space for the resurrection of the old movement as a soft balancing mechanism against powerful states. As great powers are once again in the arms race, militarization of oceans and territorial expansions, there is a need for weaker countries to come together to delegitimize imperial ventures. If third-world countries do not act as cushioning forces, international order will spiral into a hot war. Great powers always need to be restrained and balanced. Soft balancing by smaller states has a key role to play because military conflicts will ultimately bring suffering to them. There is a need to revive the 'Bandung' spirit. There is no hope from China and India to revive the movement because they are in the race of superstardom. The onus is on smaller countries.</p>
 
 <h3>India and NAM</h3>
 <p>India is a founding member of the NAM. And since its birth NAM has been playing a very active role in fostering cooperation among nations, particularly among developing countries. India has felt it useful to continue to support and actively engage with the movement because it has provided a high profile and strong voice to India in international fora and affairs.</p>
@@ -8649,7 +9871,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>On the other hand, Stalin was also critical of the non-alignment in a very categorical manner. He held that 'those who are not with us are against us'.</p>
 <p>On a theoretical premise, Non-alignment was a new concept. At times, the scholars of international politics compared non-alignment with 1) the USA's policy of isolationism or 2) The policy of neutrality or equidistance adopted by some countries.</p>
 <p>However, it is to be noted that non-alignment should not be seen as an isolation or equidistance but rather principled distance. The concept of non-alignment of Nehru comes near to India's concept of secularism. India declared that it would stay away from blocks. India will be strengthening international law and the United Nations. Pandit Nehru clarified to the Indian parliament that no government can sacrifice national interest, not for the sake of ideology or anything else. According to him, non-alignment was the policy most conducive to India's national interest.</p>
-<p>Aparna Pandey in her book Chanakya To Modi, suggests that Nehru aspired to play a leadership role. India was weak militarily and economically. Non-alignment was an option that allowed India to 1) Maintain its independence yet be a part of world politics. 2) Maintain a relationship with both the superpowers without coercion.</p>
+<p>Aparna Pande in her book From Chanakya to Modi, suggests that Nehru aspired to play a leadership role. India was weak militarily and economically. Non-alignment was an option that allowed India to 1) Maintain its independence yet be a part of world politics. 2) Maintain a relationship with both the superpowers without coercion.</p>
 <p>K Natwar Singh, a former Indian diplomat suggests that Non-alignment was a doctrine. It was never a dogma. There was enough flexibility in the idea which allowed India to maintain its independence rather than becoming a camp follower. It would not have been wise if India had put 'all eggs in one basket'.</p>
 <p>Paul Power gives the domestic reason for adopting non-alignment. Domestic consensus in itself is a basis of sound foreign policy. Considering internal divisions e.g. Rightist favoured west, leftist favoured east, non-alignment gave Nehru a free hand in handling divisive domestic approach to foreign policy.</p>
 <p>Henry Kissinger in his book 'The World Order' remarks that although non-alignment was irritating for the USA, it was the best course of action that India could have followed.</p>
@@ -8657,7 +9879,7 @@ export const polsciNoteContent: Record<string, string> = {
 <p>After the Cold War, the growing strategic partnership with the USA again put a question mark on India's integrity towards non-alignment. Among the political parties, Congress was favouring non-alignment till the cold war. However, both right and left were against it. After the end of the Cold War, both Congress and the right left non alignment, and the chief advocate of non alignment became left. The Congress maintained the rhetoric without substance. The rightist party BJP never had illusions with non-alignment. Vajapeyi had no hesitation in openly calling the USA and Israel as India's natural allies. Similarly while describing the state of Indo-US relations, Prime Minister Modi had mentioned that the relationship has gone beyond 'hesitations of history'. Similarly, Modi and the Israeli Prime Minister describe the relationship as a marriage conceived in heaven, evident in the recent outburst of emotions of Indian leaders on the attack on Israel from the Gaza Strip.</p>
 <p>Presently, we're witnessing a shift in Indian foreign policy. From being too close to the USA, India reasserting 'strategic autonomy'. In his 2018 speech at the Shangri La dialogue, Prime Minister Modi emphasized the importance of cooperation with Russia and China, on the other hand, he expressed India's support for working with the USA to maintain peace and rule-based order in Indo-Pacific. The more significant was the Prime Minister praising Singapore for being 'fair.' 'Singapore has taught the world that when nations do not take sides, stand on principles, they earn respect.'</p>
 <p>We can say that India is trying to rebalance. According to South African experts, India is playing a delicate geopolitical game with the US, Russia and China as their influence is waxing and waning across the continent.</p>
-<p>According to civil society experts, the non-alignment of the Cold War era should be changed into a multiple alignment known as non-alignment 2.0. Martand Jha suggests that India should come up with a clearer idea about the essence of its policy of non-alignment.</p>
+<p>According to civil society experts, the non-alignment of the Cold War era should be updated for a changed world, as the Non-Alignment 2.0 report (2012) argued, and many now describe India's practice as multi-alignment. Martand Jha suggests that India should come up with a clearer idea about the essence of its policy of non-alignment.</p>
 <p>The essence of the policy is protecting India's own national interest. If India joins any alliance that protects its core national interest, it does not contradict its status as non-aligned. Since non-alignment is a Nehruvian legacy, the rightist party and its officials prefer using the term strategic autonomy.</p>
 
 <h3>The Non-Alignment 2.0 Report and the Future of Non-Alignment</h3>
@@ -8687,6 +9909,27 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The war was a blow India's image as a leader of the developing world. India's non-aligned policy was compromised and Nehru had to make an appeal to the United States for military assistance. Nehru was criticised for his idealistic foreign policy and failure to defend the country's honour.</p>
 <p>Post-independence, India was seen by the Soviets as a stable, populated postcolonial nation that was becoming a leader among nonaligned and anticolonial nations and that might work with them to thwart American aspirations in Asia. For India, the Soviet Union was a crucial ally for its economy and defence, promoting both growth and security. Moscow and New Delhi also offered each other diplomatic assistance; during significant Cold War events, such as the Soviet invasion of Czechoslovakia in 1968. In the United Nations, India voted with the Soviet Union or abstained from voting to denounce the Soviet Union. The Soviet government also supported India's claim to Kashmir.</p>
 <p>Since independence, India have played a significant role in advocating and developing NIEO. South-south cooperation have been one of the important pillar of Indian foreign policy and reflects the Indian spirit of Vasudhaiva Kutumbakam (whole world is one family).</p>
+
+<h3>A Realist Reading of Non-Alignment</h3>
+
+<p>Realists read non-alignment less as a moral stand than as the rational choice of a poor and militarily weak state in a bipolar world. Neorealists such as Kenneth Waltz (Theory of International Politics, 1979) explain state behaviour by the distribution of capabilities in an anarchic system. Seen this way, India in 1947 lacked the power to stand alone but had no wish to become the junior partner of either superpower. Keeping out of both blocs preserved its freedom of action, kept it out of great-power wars and let it bargain with both sides.</p>
+
+<ul>
+  <li><strong>Material weakness:</strong> In the 1950s India had a low per capita income, a small industrial base and a modest army. An alliance would have bought protection at the cost of autonomy, while non-alignment kept options open at little cost.</li>
+  <li><strong>Aid from both blocs:</strong> India drew resources from both camps. The United States supplied food grains under PL-480 from 1956 and Western donors in the Aid India Consortium (1958) funded its Five-Year Plans, while the Soviet Union built the Bhilai steel plant under a 1955 agreement and later supplied arms on easy terms.</li>
+  <li><strong>Interest over principle:</strong> When security demanded it, India bent the doctrine. Nehru sought American military help during the 1962 war with China, and Indira Gandhi's government signed the 1971 Treaty of Peace, Friendship and Cooperation with the Soviet Union before the Bangladesh war. India's mild response to Soviet interventions in Hungary (1956) and Czechoslovakia (1968) followed the same logic.</li>
+  <li><strong>Hedging, not neutrality:</strong> Non-alignment was never passive neutrality. It let India play the superpowers against each other and keep both engaged, which realists regard as classic hedging by a weaker state.</li>
+</ul>
+
+<p>The claim that non-alignment was "little more" than such a strategy is only half true. Critics of the realist reading make three points:</p>
+
+<ul>
+  <li><strong>Normative content:</strong> Non-alignment carried values drawn from the freedom struggle, such as anti-colonialism, anti-racism, Panchsheel and peaceful coexistence. India's chairing of the Neutral Nations Repatriation Commission in Korea (1953) and its peacekeeping in the Congo (1960) went beyond narrow interest.</li>
+  <li><strong>Not only the weak chose it:</strong> Yugoslavia, Egypt and Indonesia also chose non-alignment, while a weak state could equally have bandwagoned with a superpower, as Pakistan did by joining SEATO and CENTO. Choosing autonomy over protection reflected national identity as much as power.</li>
+  <li><strong>Idealism had costs:</strong> Faith in Panchsheel and in Chinese goodwill left India unprepared for 1962. Realists themselves count this as a failure, which shows that the Nehru years were not governed by cold calculation alone.</li>
+</ul>
+
+<p>A balanced answer treats non-alignment as a blend of prudence and principle. Its realist core, the pursuit of strategic autonomy, outlived the Cold War, while its normative language survives in India's claim to speak for the Global South.</p>
 <h2>Phases of India's Non-Alignment</h2>
 <p>The relations between India and the United States go back even before India secured its independence. It is interesting to note that it was an essay by American Humanist and philosopher Henry David Thoreau on 'Civil Disobedience', which inspired Gandhian strategy in South Africa and later in India. A few decades later, it was the Gandhian ideal of non-violence, which became a major inspiration for the 'Civil Rights Movement', led by Martin Luther King Jr.</p>
 <p>In these times, the USA's stand on a number of issues didn't endear itself to India. The Kashmir issue, UN intervention in it, and the treatment of Pakistan, admitting it in CENTO( Central Treaty Organisation) &amp; and SEATO (South East Asian Treaty Organisation) created an impression in India that the US didn't stand for her.</p>
@@ -8712,6 +9955,21 @@ export const polsciNoteContent: Record<string, string> = {
 <p>India was able to afford a sizable and well-armed military because Soviet and Russian weaponry was less expensive than that of the West. Attempts to acquire Western weapons or develop domestic weapons systems were met with disappointing outcomes, though more recent attempts to wean Russia off of its armaments have been more successful.</p>
 <p>During the Cold War, Russia saw India from the prism of geopolitical competition with the USA. After the end of the Cold War, Russia is again looking at the relations with the prism of realism. Russia looks at India from a transactional perspective as a buyer. Thus from Russia's side, the relationship has always been based on its own interest.</p>
 <p>According to Shyam Sharan, the nostalgia of Soviet era may be useful but it cannot drive the relations at present.</p>
+
+<h3>Why NAM Failed to Become a Third Force</h3>
+
+<p>Some leaders and many observers hoped that NAM would become a third force between the Western and Soviet blocs, strong enough to restrain both superpowers. Nehru himself rejected the idea of a third bloc, since a bloc would contradict the principle of staying out of blocs, and NAM never acted as a single force. The reasons go beyond size alone.</p>
+
+<ul>
+  <li><strong>Size and diversity:</strong> Membership grew from 25 states at Belgrade in 1961 to more than 100 by the 1980s. It included monarchies, military regimes, one-party socialist states and democracies with conflicting interests. Decisions by consensus produced long declarations rather than joint action.</li>
+  <li><strong>Bloc leanings:</strong> Many members were tied to one superpower by arms, aid or bases. At the Havana summit of 1979 Fidel Castro argued that the socialist countries were the movement's "natural ally". India, Yugoslavia and other moderates resisted, but the episode showed how far members leaned towards one camp.</li>
+  <li><strong>Wars between members:</strong> Members fought one another: Ethiopia and Somalia (1977-78), Vietnam and Cambodia (from 1978), Iran and Iraq (1980-88) and Iraq and Kuwait (1990). The Iran-Iraq war forced the seventh summit, due in Baghdad in 1982, to move to New Delhi in 1983.</li>
+  <li><strong>Afghanistan, 1979:</strong> The Soviet invasion of a member state split the movement. Many members condemned it, while India avoided criticising Moscow, which weakened NAM's claim to oppose interference by any great power.</li>
+  <li><strong>No institutions:</strong> NAM had no charter, permanent secretariat or common budget. The chair passed to each summit host, so the agenda shifted with the host's politics.</li>
+  <li><strong>Economic dependence:</strong> Members relied on Western markets and finance and on Soviet arms. The demand for a New International Economic Order failed because NAM had no economic leverage comparable to OPEC's oil.</li>
+</ul>
+
+<p><strong>After bipolarity.</strong> The end of the Cold War removed NAM's original reason to exist, and regional and issue-based bodies such as ASEAN, the African Union, BRICS, the SCO and the G20 now carry much of the cooperation that its members seek. Yet NAM remains the largest caucus of developing states at the United Nations, coordinates with the Group of 77 on development, and keeps moral weight on decolonisation, disarmament and Palestine. Its record is better judged by the agendas it shaped (decolonisation, the struggle against apartheid and the NIEO) than by a third-force role that its founders never intended.</p>
 <h2>Relevance of NAM Today</h2>
 <p>After the fall of the Soviet Union, Russia's first foreign policy priorities were its ties with the United States and Western Europe, which led to a period of neglect for the Russia-India relationship.</p>
 <p>Since the conclusion of the Cold War, Russia has attempted to forge stronger connections with both China and Pakistan while retaining its security ties to India, which has diminished its ability to act as a counterbalance against the threat posed by both countries. China, Russia, and India have developed a number of trilateral and multilateral institutions thanks to their shared interests in advancing a multipolar world order and countering American unipolarity. In the 2000s, two key multilateral forums - RIC (the Russia - India - China trilateral forum) and BRICS (Brazil -  Russia - India - China - South Africa) - were formed with both Indian and Russian participation to advance multipolarity in the security and financial realms, respectively. A third forum, the SCO, was formed in the early 2000s without Indian participation but later expanded to include both India and Pakistan, alongside Russia, China, and the post-Soviet states of Central Asia.</p>
@@ -8727,6 +9985,72 @@ export const polsciNoteContent: Record<string, string> = {
 <p>"India should avoid the temptation of building a bloc against the developed North. Instead, offer sustainable economic cooperation to the Global South through national, regional, and global institutions to further joint causes."</p>
 <p>BRICS is a multilateral forum comprising Brazil, Russia, India, China, South Africa, Egypt, Ethiopia, Iran, the United Arab Emirates and, since January 2025, Indonesia. BRICS was established as BRIC in 2009, in aftermath of Global Financial Crisis, with India, Russia, China and Brazil as founding members. Fareed Zakaria described the establishment of BRICS as the beginning of 'Post American world order'. It symbolized 'the decline of west and the rise of rest'. It also showed that the centre of gravity of international economy has shifted towards Asia Pacific.</p>
 <p>"BRICS is no longer an 'alternative', it is an established feature of the global landscape"  -  S Jaishankar</p>
+
+<h3>NonAlignment 2.0: Features and Comparison with Non-Alignment 1.0</h3>
+
+<p>NonAlignment 2.0: A Foreign and Strategic Policy for India in the Twenty First Century was written by an independent group of eight: Sunil Khilnani, Rajiv Kumar, Pratap Bhanu Mehta, Lt. Gen. (Retd.) Prakash Menon, Nandan Nilekani, Srinath Raghavan, Shyam Saran and Siddharth Varadarajan. The group met from November 2010 to January 2012 with administrative support from the National Defence College and the Centre for Policy Research, and National Security Adviser Shivshankar Menon attended some meetings. The preface is dated 30 January 2012.</p>
+
+<ul>
+  <li><strong>Strategic autonomy as the core value:</strong> The authors call strategic autonomy the defining goal of India's policy since the Republic began. The core objective of strategy is to give India "maximum options" in its external relations, which in turn widen its options for internal development.</li>
+  <li><strong>Power of example:</strong> India's influence will rest on high growth, wider capabilities for all citizens and robust democratic institutions, which is why the report covers internal security, education, cyber security and the state alongside diplomacy.</li>
+  <li><strong>China as the main challenge:</strong> China will remain "a significant foreign policy and security challenge". India should "hold the line" on the land frontier, keep its edge at sea and build a diverse network of partners that restrains China without appearing to join a containment ring.</li>
+  <li><strong>Partners, not allies:</strong> India will be courted in great-power competition, but formal alliances erode autonomy. On the United States the report concludes that both countries "may be better served by being friends rather than allies".</li>
+  <li><strong>An alternative universality:</strong> The conclusion recalls that Gandhi, Tagore, Nehru and Ambedkar shared one aspiration, that India should be "a site for an alternative universality", and that India's legitimacy will come from standing for the highest human and universal values. It warns that "power not backed by the power of ideas can be blind" and that India "should aim not just at being powerful: it should set new standards for what the powerful must do". The idea is that a large, diverse and developing democracy can show a path to universal values different from that of earlier great powers.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>Aspect</th><th>Non-alignment 1.0 (1947-1991)</th><th>NonAlignment 2.0 (2012)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Context</td><td>Bipolar Cold War and decolonisation</td><td>Diffused power, globalisation and the rise of China</td></tr>
+    <tr><td>Aim</td><td>Stay out of military blocs and protect new independence</td><td>Maximise strategic space and options</td></tr>
+    <tr><td>Method</td><td>Distance from both blocs, NAM solidarity, moral diplomacy at the UN</td><td>Engagement with all major powers and issue-based partnerships</td></tr>
+    <tr><td>Economy</td><td>Planned self-reliance with aid from both blocs</td><td>Deep integration with the world economy in trade, technology and labour</td></tr>
+    <tr><td>Main concerns</td><td>Bloc politics, colonialism and nuclear arms race</td><td>China, internal security, energy, cyber and maritime security</td></tr>
+    <tr><td>Values</td><td>Anti-colonialism, Panchsheel, peace</td><td>Democracy, pluralism and an alternative universality</td></tr>
+  </tbody>
+</table>
+
+<p>The two share the refusal of formal alliances, the link between foreign policy and development, and strategic autonomy as the end. The document has been read as stronger on principles than on hard choices, especially on how far to lean towards the United States as China's power grew.</p>
+
+<h3>Multi-Alignment versus Non-Alignment</h3>
+
+<p>Multi-alignment means building partnerships with several, often rival, powers at the same time and choosing partners issue by issue. Shashi Tharoor used the term in Pax Indica (2012) to argue that India should move beyond non-alignment, scholars such as Ian Hall have applied it to Modi's foreign policy, and S. Jaishankar's The India Way (2020) sets out the logic of engaging all major powers to widen India's options.</p>
+
+<ul>
+  <li><strong>Distance versus engagement:</strong> Non-alignment sought autonomy by keeping away from both blocs. Multi-alignment seeks it by engaging all sides so that no single partner gains decisive leverage over India.</li>
+  <li><strong>Practice:</strong> India sits in the Quad with the United States, Japan and Australia and in BRICS and the SCO with Russia and China. It signed all four foundational defence agreements with Washington yet bought the S-400 from Moscow and increased purchases of Russian oil after 2022. It works with Israel, the Gulf states and Iran at once.</li>
+  <li><strong>Interest, not ideology:</strong> Partners are chosen by issue: maritime security with the Quad, energy with Russia and the Gulf, technology with the United States and Japan, development finance through BRICS.</li>
+  <li><strong>Less Third World rhetoric:</strong> Nehru spoke for the developing world as a bloc. Multi-alignment is openly about national interest, though India still claims to voice the Global South through the Voice of the Global South Summits.</li>
+</ul>
+
+<p>The claim that India has "debunked" non-alignment is only partly right. India has dropped the NAM-centred form of the policy and the habit of equidistance, but it keeps the core goal of strategic autonomy and still refuses formal military alliances, the continuity that NonAlignment 2.0 described as preserving the core objectives of non-alignment in a changed world. Critics warn that multi-alignment can look opportunistic, may leave India without dependable allies in a crisis with China, and is hard to sustain when partners demand a choice, as the US penalty tariff of 2025 on India's purchases of Russian oil showed.</p>
+
+<h3>India at Recent NAM Summits and the Future of NAM</h3>
+
+<p>India's level of participation in NAM summits has fallen since 2016.</p>
+
+<ul>
+  <li><strong>17th Summit, Margarita Island, Venezuela (17-18 September 2016):</strong> Theme "Peace, Sovereignty and Solidarity for Development". Vice President Hamid Ansari led India, and Narendra Modi became the first Indian Prime Minister to miss a NAM summit since Charan Singh, a caretaker, in 1979. Minister of State M.J. Akbar used the ministerial meeting to call terrorism the biggest enemy of human rights. The declaration condemned terrorism in all its forms and called for Security Council reform, and Venezuela took the chair from Iran.</li>
+  <li><strong>18th Summit, Baku, Azerbaijan (25-26 October 2019):</strong> Theme "Upholding the Bandung Principles to ensure concerted and adequate response to the challenges of contemporary world". Vice President M. Venkaiah Naidu led India and EAM S. Jaishankar attended the ministerial meeting. Azerbaijan took the chair.</li>
+  <li><strong>Online Contact Group Summit (4 May 2020):</strong> Modi joined the virtual summit "United against COVID-19" hosted by President Ilham Aliyev, called for a coordinated and equitable response to the pandemic, and warned against terrorism and fake news.</li>
+  <li><strong>19th Summit, Kampala, Uganda (January 2024):</strong> Postponed from 2022, with the theme "Deepening Cooperation for Shared Global Affluence". EAM Jaishankar delivered India's statement on 19 January 2024. He called for a multipolar world with a reformed United Nations at its core, economic decentralisation with more regional production, resilient supply chains and "cultural rebalancing", and noted that "conflict anywhere has consequences everywhere". South Sudan was welcomed as a new member, taking membership to 121, and Uganda took the chair.</li>
+  <li><strong>Since Kampala:</strong> A Minister of State led India at the mid-term ministerial meeting in Kampala (October 2025), and Union Minister Kiren Rijiju represented India at the meeting hosted by Serbia on 1 September 2026 to mark NAM's 65th anniversary.</li>
+</ul>
+
+<p><strong>Why India has grown indifferent.</strong> India now prefers forums where it can shape outcomes: the G20, BRICS, the SCO, the Quad and its own Voice of the Global South Summits. NAM's consensus-bound membership yields little, Pakistan uses it to raise Kashmir, and Jaishankar has called non-alignment a term of a particular era.</p>
+
+<p><strong>Does NAM have a future?</strong> Its weakness as an organisation coexists with a revival of the non-aligned instinct, since many developing states refuse to take sides over Ukraine or in the US-China rivalry. Ways to strengthen the movement include:</p>
+
+<ul>
+  <li><strong>Institutions:</strong> a small permanent secretariat to provide continuity between summits and closer joint work with the Group of 77.</li>
+  <li><strong>A focused agenda:</strong> debt relief, climate finance, health and vaccine equity, food and energy security, and access to technology and digital public infrastructure.</li>
+  <li><strong>Reform of global institutions:</strong> a common platform on Security Council reform, IMF quotas and the development agenda at the WTO.</li>
+  <li><strong>Leadership:</strong> active roles by larger members such as India, Indonesia, Egypt and South Africa, alongside the G20 and BRICS.</li>
+</ul>
+
+<p>For India, low-cost engagement keeps a caucus of 121 states useful for UN elections and Security Council reform, so NAM's future depends on whether members turn it into a coordinating platform for the Global South.</p>
 `,
 
   'india-and-south-asia': `
@@ -8758,6 +10082,46 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Under the Awami League governments of Sheikh Hasina, India-Bangladesh relations reached historically high levels of cooperation. Bangladesh cracked down on anti-India insurgent groups operating from its territory, resolved the long-standing land boundary dispute through the ratification of the Land Boundary Agreement in 2015, and cooperated on connectivity projects including road and rail links. India extended lines of credit to Bangladesh for infrastructure development and the two countries expanded bilateral trade significantly. However, the political change in Bangladesh in 2024 following the ouster of Sheikh Hasina introduced uncertainty, as the interim government led by Muhammad Yunus signalled a somewhat different orientation in bilateral relations. The Bangladesh Nationalist Party won the general election of 12 February 2026, and its leader Tarique Rahman became Prime Minister.</p>
 
+<h3>The India-Bangladesh Land Boundary Agreement</h3>
+
+<p>The India-Bangladesh boundary, inherited from the Radcliffe Award of 1947, left three problems: enclaves (chhitmahals) of each country inside the other, mostly in and around Cooch Behar, tracts held by one country but belonging to the other (adverse possessions), and stretches never demarcated. A 1958 Nehru-Noon agreement with Pakistan to exchange enclaves led to the Supreme Court's opinion in the Berubari reference (1960) that ceding territory requires a constitutional amendment under Article 368. The Ninth Amendment (1960) was passed but the transfer was never carried out.</p>
+
+<ul>
+  <li><strong>The 1974 Agreement:</strong> Signed on 16 May 1974 by Indira Gandhi and Sheikh Mujibur Rahman, it provided for the exchange of enclaves, the transfer of adverse possessions and the demarcation of the remaining boundary. India kept Berubari Union No. 12, while Bangladesh kept the Dahagram-Angarpota enclave, linked to its mainland by the Tin Bigha Corridor, which India leased to it in 1992. Bangladesh ratified the agreement in 1974, but India did not.</li>
+  <li><strong>The 2011 Protocol:</strong> Signed in September 2011 during Manmohan Singh's visit to Dhaka, it settled the details left open: about 6.1 km of undemarcated boundary in three sectors (Daikhata-56 in West Bengal, Muhuri River-Belonia in Tripura and Lathitila-Dumabari in Assam), the adverse possessions, and the enclave exchange based on a joint headcount of residents completed in July 2011.</li>
+  <li><strong>Exchange of territory:</strong> India transferred 111 enclaves (about 17,160 acres) to Bangladesh and received 51 Bangladeshi enclaves (about 7,110 acres). Adverse possessions were adjusted so that each side kept most land it already held.</li>
+  <li><strong>Choice of nationality:</strong> Residents could stay and take the nationality of the state in which they now lived, or move. About 14,000 people in the former Bangladeshi enclaves became Indian citizens, and 979 residents of former Indian enclaves chose to move to India. The Centre approved a package of Rs 1,005.99 crore for their rehabilitation and for infrastructure in Cooch Behar.</li>
+  <li><strong>The 100th Amendment:</strong> The Constitution (One Hundredth Amendment) Act, 2015 amended the First Schedule for Assam, West Bengal, Meghalaya and Tripura. Introduced in December 2013, the bill passed the Rajya Sabha on 6 May 2015 and the Lok Sabha on 7 May 2015 without opposition. Instruments of ratification were exchanged in Dhaka on 6 June 2015 during Modi's visit, and the enclaves changed hands at midnight on 31 July 2015.</li>
+</ul>
+
+<p><strong>Significance.</strong> The agreement ended the statelessness of more than 50,000 enclave residents who had lived without schools, police or identity documents, fixed the land boundary so that it could be fenced and policed, and removed a forty-year irritant. It also showed a cross-party consensus, since a UPA government signed the Protocol and an NDA government ratified it. With the arbitral award of July 2014 on the maritime boundary, which India accepted, it settled India's boundaries with Bangladesh and is often cited as a model of give and take in South Asia.</p>
+
+<h3>Illegal Cross-Border Migration and Border Management</h3>
+
+<p>India's borders with Bangladesh (4,096 km) and Myanmar (1,643 km) are porous and in places riverine or forested. Migration from Bangladesh, driven by population pressure, poverty and floods, has changed the demography of parts of Assam, Tripura and West Bengal. Related communities live on both sides of the Myanmar border, and the 2021 coup sent refugees into Mizoram and Manipur.</p>
+
+<p><strong>Security consequences.</strong></p>
+
+<ul>
+  <li><strong>Ethnic conflict:</strong> Fear of being outnumbered drove the Assam Movement (1979-85) and the Nellie massacre (1983) and still shapes politics in Assam and Tripura. In Manipur the Meitei and Kuki-Zo conflict that began in May 2023 has been sharpened by claims about migrants from Myanmar.</li>
+  <li><strong>Insurgency, arms and drugs:</strong> Northeastern insurgent groups have used camps across both borders, and the Myanmar border is a route for arms and for heroin and methamphetamine from the Golden Triangle.</li>
+  <li><strong>Smuggling and local tension:</strong> Cattle, counterfeit currency and trafficked people cross the Bangladesh border, while encroachment on land and disputes over electoral rolls feed local resentment and friction with Dhaka.</li>
+</ul>
+
+<p><strong>Steps taken.</strong></p>
+
+<ul>
+  <li><strong>Fencing and surveillance:</strong> Most of the Bangladesh border has been fenced and floodlit and is guarded by the Border Security Force. Where fences cannot be built, especially on rivers, the Comprehensive Integrated Border Management System (CIBMS) uses sensors, cameras and radar, as in Project BOLD-QIT on the Brahmaputra in Dhubri, Assam (2019).</li>
+  <li><strong>National Register of Citizens:</strong> Updated in Assam under Supreme Court supervision, its final list of August 2019 left out about 19 lakh people, whose cases go to Foreigners Tribunals.</li>
+  <li><strong>Section 6A judgment (October 2024):</strong> A Constitution Bench upheld by four to one, with Justice J.B. Pardiwala dissenting, Section 6A of the Citizenship Act, added after the Assam Accord of 1985. It treats migrants who entered Assam before 1 January 1966 as citizens and lets those who came between then and 25 March 1971 register, with voting rights withheld for ten years. The ruling confirmed 25 March 1971 as the cut-off date for Assam.</li>
+  <li><strong>Immigration and Foreigners Act, 2025:</strong> In force from 1 September 2025, it replaced the Passport (Entry into India) Act 1920, the Registration of Foreigners Act 1939, the Foreigners Act 1946 and the Immigration (Carriers' Liability) Act 2000. It places on a person the burden of proving citizenship, requires hospitals, universities and lodgings to report foreigners, and allows arrest without warrant on reasonable suspicion of illegal entry. Critics note that it is silent on refugees.</li>
+  <li><strong>Ending the Free Movement Regime:</strong> The FMR let residents within 16 km of the Myanmar border cross without visas, a practice rooted in kinship ties and formalised with border passes in 2018 as part of the Act East policy. In February 2024 the government decided to end it and to fence the whole 1,643 km border, citing insurgency, drug trafficking and the Manipur violence. Only about 30 km had been fenced by September 2024.</li>
+</ul>
+
+<p><strong>Implications of ending the FMR.</strong> The decision pleased groups in Manipur's valley who blamed the open border for the conflict, but it divides Mizo, Chin, Naga and Kuki-Zo families and farms that straddle the line, and Mizoram's government and civil society groups opposed it. A sealed border may push movement into illegal channels and hurt the trade on which Act East connectivity depends.</p>
+
+<p><strong>Effectiveness.</strong> Fencing and technology have reduced crossings in some sectors, but rivers, hills, land acquisition delays and cross-border kinship limit results. Identification without a deportation route leaves many in limbo, since Bangladesh rarely accepts them as its nationals, and India has no refugee law. Lasting results need cooperation with Dhaka and Naypyidaw and development of border areas.</p>
+
 <h2>India-Nepal Relations</h2>
 
 <p>Nepal and India share an open border and deep civilisational, cultural, and religious ties. The 1950 Treaty of Peace and Friendship governs the bilateral relationship and grants Nepalese citizens the right to live and work in India on terms equivalent to Indian citizens, a provision that has generated considerable Nepalese traffic to Indian cities. However, the treaty has also been a source of controversy within Nepal, where nationalist opinion views some of its provisions as infringing on Nepalese sovereignty.</p>
@@ -8775,6 +10139,28 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The economic relationship between the two countries has been strengthened through the India-Sri Lanka Free Trade Agreement of 2000, which significantly expanded bilateral trade. India has provided substantial economic assistance to Sri Lanka, particularly during Sri Lanka's severe economic crisis in 2022, when India provided credit lines, fuel assistance, and food aid amounting to nearly four billion dollars as Sri Lanka faced foreign exchange reserves depletion and widespread shortages.</p>
 
 <p>The strategic dimension of the India-Sri Lanka relationship has been shaped by China's growing presence in the island. China financed the Hambantota port project and subsequently acquired a ninety-nine-year lease on the port in 2017, raising concerns in India and Western capitals about Chinese strategic intentions in the Indian Ocean. India has responded by deepening its own engagement with Sri Lanka on connectivity, development, and security cooperation.</p>
+
+<h3>Kachchatheevu and the Fishermen Dispute</h3>
+
+<p>Kachchatheevu is an uninhabited islet of about 285 acres in the Palk Strait, between Rameswaram and Sri Lanka's Neduntheevu (Delft). Its only structure is St Anthony's shrine, whose annual festival draws pilgrims from both countries. The Raja of Ramnad claimed it in colonial times, but a 1921 line agreed by the colonial governments placed it on Ceylon's side, and the dispute outlived independence.</p>
+
+<ul>
+  <li><strong>The 1974 Agreement:</strong> Signed in June 1974 by Indira Gandhi and Sirimavo Bandaranaike, it fixed the maritime boundary in the Palk Strait and placed Kachchatheevu on the Sri Lankan side. Indian fishermen and pilgrims kept access to the island as before without travel documents, and the vessels of both countries kept their traditional rights of navigation in each other's waters.</li>
+  <li><strong>The 1976 exchange of letters:</strong> Extending the boundary into the Gulf of Mannar and the Bay of Bengal, it stipulated that Indian fishing vessels and fishermen shall not fish in Sri Lanka's historic waters, territorial sea and exclusive economic zone, and vice versa. Tamil Nadu parties read the 1974 access clause as including a right to fish, which the 1976 letters ruled out.</li>
+  <li><strong>Legal challenge:</strong> Tamil Nadu leaders, including J. Jayalalithaa, petitioned the Supreme Court that the cession was unconstitutional because, on the Berubari principle, giving up territory needs a constitutional amendment. The Centre has argued that no Indian territory was ceded, since the island was disputed and never demarcated, and the matter remained sub judice in 2022.</li>
+  <li><strong>Political revival:</strong> The BJP raised the 1974 decision during the 2024 general election campaign, Sri Lanka replied that the issue was settled fifty years ago, and the Tamil Nadu Assembly passed a resolution in March 2025 to retrieve the island.</li>
+</ul>
+
+<p><strong>Why it remains intractable.</strong></p>
+
+<ul>
+  <li><strong>Livelihoods:</strong> Fish stocks on the Indian side of the narrow Palk Bay are depleted, so Tamil Nadu boats cross the boundary. Indian bottom trawlers damage the seabed and the nets of the Tamil fishermen of northern Sri Lanka, who regained access to the sea after the civil war ended in 2009. The dispute therefore sets Tamil against Tamil.</li>
+  <li><strong>Arrests:</strong> Sri Lankan authorities arrested 560 Indian fishermen in 2024 and 360 in 2025, most of them from Tamil Nadu, and seized 75 and 48 boats in those years (MEA, July 2026).</li>
+  <li><strong>Federal politics:</strong> Every major Tamil Nadu party demands the island's return, but the Centre cannot reopen a settled boundary treaty without damaging relations with Colombo.</li>
+  <li><strong>Strategic setting:</strong> Pressing the claim could push Sri Lanka towards China, whose growing presence in Sri Lanka India is trying to limit.</li>
+</ul>
+
+<p><strong>Managing the issue.</strong> The Joint Working Group on Fisheries, which includes Tamil Nadu officials, had met six times by 2026, most recently on 29 October 2024. India asks Sri Lanka to treat the matter on humanitarian and livelihood grounds and to avoid force, a point Modi made to Sri Lanka's leaders in April and October 2025, and it has secured the release of 3,642 fishermen since May 2014. Lasting relief depends on moving Tamil Nadu trawlers to deep-sea fishing, not on reopening sovereignty.</p>
 
 <h2>India-Bhutan Relations</h2>
 
@@ -8799,6 +10185,32 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Scholars have identified multiple structural reasons for SAARC's failure to realise its potential. The idea of SAARC was partly conceived by smaller South Asian states as a platform to balance Indian dominance rather than purely for cooperative purposes, which undermined the spirit of regional solidarity from the outset. Unlike the European Union or ASEAN, SAARC lacked an external push factor in the form of a supportive great power or a shared external threat that could have driven greater integration. The region is marked by a profound power asymmetry in which India accounts for the overwhelming share of South Asia's land mass, population, and economic output, and smaller neighbours often perceive Indian engagement with ambivalence. Political instability in member countries including Pakistan, Afghanistan, Nepal, Bangladesh, and Sri Lanka has repeatedly disrupted the continuity of bilateral and multilateral engagement. The India-Pakistan rivalry has been the single most important obstacle to SAARC functioning, because virtually all meaningful regional integration requires Indian and Pakistani cooperation, which the unresolved Kashmir dispute and Pakistan's support for cross-border terrorism have made impossible.</p>
 
 <p>Santosh Poudel, a Nepali scholar, has argued that India-Pakistan rivalry and India's isolation of Pakistan contributed to what he describes as the death of SAARC as a functioning regional organisation. Dr. Sanjay Baru suggests that historically regional organisations have been shaped by three factors: market-driven economies, movement of people across borders, and political will, and that in the case of SAARC all three are largely missing. Happymon Jacob has observed that India's attitude towards its neighbourhood has often been characterised by treating neighbours as irritants and challenges rather than opportunities, and draws lessons that India must deal with difficult situations more diplomatically, must follow up on its promises to neighbours, must avoid meddling in domestic politics, and must invest in institution building and soft power rather than competing with China in infrastructure domains where China has structural advantages.</p>
+
+<h3>Regionness: Why South Asia Lacks It</h3>
+
+<p>Björn Hettne and Fredrik Söderbaum, leading theorists of the new regionalism, set out the concept of regionness in "Theorising the Rise of Regionness" (New Political Economy, 2000). By analogy with stateness and nationness, regionness is the degree to which a geographical area becomes a coherent actor with its own identity, capacity to act and legitimacy. Regions are not given by geography but made through social, economic and political interaction, and they can move up or down a scale of five levels:</p>
+
+<ol>
+  <li><strong>Regional space:</strong> a geographical unit bounded by natural barriers.</li>
+  <li><strong>Regional complex:</strong> growing contacts and interdependence among groups and states, often expressed through a balance of power.</li>
+  <li><strong>Regional society:</strong> organised cooperation, formal or informal, in many fields, including regional organisations.</li>
+  <li><strong>Regional community:</strong> shared values, a regional civil society and a security community in which war between members becomes unthinkable.</li>
+  <li><strong>Region-state:</strong> an institutionalised polity with its own decision-making, approached only by the European Union.</li>
+</ol>
+
+<p>On this scale South Asia is a regional complex that has only partly become a regional society. SAARC exists, but cooperation is shallow, and Barry Buzan and Ole Wæver (Regions and Powers, 2003) describe it as a regional security complex structured by India-Pakistan rivalry. The reasons for its low regionness are:</p>
+
+<ul>
+  <li><strong>Asymmetry:</strong> India holds most of the region's land, people and output and is the only member that borders almost all the others, so smaller states fear domination and seek outside partners to balance it.</li>
+  <li><strong>India-Pakistan rivalry:</strong> wars, terrorism and the Kashmir dispute block region-wide projects and have frozen SAARC since 2016.</li>
+  <li><strong>Competing national identities:</strong> states built on religion or language treat shared heritage as a threat, and cross-border ethnic ties (Tamils, Madhesis, Bengalis, Pashtuns, Rohingya) become sources of suspicion rather than bridges.</li>
+  <li><strong>Weak economic interdependence:</strong> intra-regional trade is about five per cent of total trade, held down by SAFTA's sensitive lists, non-tariff barriers and poor transport links.</li>
+  <li><strong>Thin regional society:</strong> restrictive visas, few people-to-people links and weak regional media and civil society leave no regional identity beyond elites.</li>
+  <li><strong>Institutional design:</strong> SAARC's unanimity rule and the exclusion of bilateral issues prevent it from managing the conflicts that matter most.</li>
+  <li><strong>Outside pulls:</strong> China's investments and the interests of other powers give smaller states alternatives to regional integration.</li>
+</ul>
+
+<p>Sub-regional formats point to a possible rise in regionness in the east. BIMSTEC, the BBIN motor vehicles agreement (2015), power trade with Bhutan, Nepal and Bangladesh, and Indian-funded connectivity projects build cooperation where India-Pakistan rivalry does not intrude. Higher regionness in South Asia as a whole would need India to act as a benign leader and Pakistan to accept cooperation that does not wait for Kashmir.</p>
 
 <h2>BIMSTEC: Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation</h2>
 
@@ -8867,6 +10279,77 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The IBSA Dialogue Forum, established in 2003 through the Brasilia Declaration and bringing together India, Brazil, and South Africa as three large, multiracial democracies from three different continents, represents a distinct strand of Global South engagement that emphasises the compatibility of democratic governance and development. IBSA was created in the context of disappointment with developed countries' failure to implement the development agenda agreed at the Doha Round of WTO negotiations and was intended to demonstrate that the most advanced democracies of the Global South could coordinate on issues of global governance reform, trade, and development. China sought inclusion in IBSA, proposing a CHIBSA format, but India succeeded in keeping IBSA as a specifically democratic platform, distinguishing it from BRICS in which China plays a central role. IBSA summits have addressed issues including WTO reform, climate change, food security, and United Nations reform, and an IBSA Fund for the Alleviation of Poverty and Hunger has supported development projects in other Global South countries.</p>
 
 <p>India has also engaged the Global South through region-specific diplomatic initiatives. The India-Africa Forum Summit, held in 2008, 2011, and 2015, established a framework for comprehensive engagement with African nations across areas including development assistance, trade and investment, capacity building, and political consultation. India has extended lines of credit amounting to billions of dollars for infrastructure and development projects across Africa and has positioned itself as a partner in Africa's development that offers an alternative to both traditional Western donors and Chinese investment, emphasising the importance of technology transfer and capacity building alongside capital. The Forum for India-Pacific Islands Cooperation, established in 2014, has deepened India's ties with small island developing states in the Pacific, addressing their particular vulnerabilities to climate change and sea level rise. The India-CARICOM Summit has similarly extended India's engagement to Caribbean nations. These structured regional forums give concrete institutional expression to India's claim to speak for the Global South and provide mechanisms for sustained political dialogue and development cooperation.</p>
+
+<h3>India's Objections in the WTO Agriculture Negotiations</h3>
+
+<p>Agriculture employs nearly half of India's workforce, mostly smallholders, and food security for the poor rests on public procurement and distribution. India therefore sees the WTO Agreement on Agriculture (1995) as tilted towards rich countries, which were allowed to keep large subsidies after the Uruguay Round, while the room of developing countries to support farmers was capped.</p>
+
+<ul>
+  <li><strong>Public stockholding and the 1986-88 price:</strong> Market price support is measured as the gap between the administered price and a fixed external reference price from 1986-88, and developing countries must keep such support within a de minimis limit of 10 per cent of the value of production. Because the reference price ignores nearly four decades of inflation, India's procurement of rice and wheat at minimum support prices for the public distribution system under the National Food Security Act, 2013 can appear to breach the limit. India wants a permanent solution that updates the reference price or exempts food security stocks.</li>
+  <li><strong>The Peace Clause:</strong> The Bali Ministerial Conference (December 2013) agreed that members would not challenge developing countries' stockholding of traditional staples in dispute settlement, subject to transparency conditions, until a permanent solution was found. The General Council decided on 27 November 2014 that this protection would last until a permanent solution is adopted. India became the first member to invoke it in 2020, for rice, and has invoked it repeatedly since, for instance when its support for rice in 2022-23 reached about 12 per cent of the value of production.</li>
+  <li><strong>Special Safeguard Mechanism (SSM):</strong> India and the G33 seek the right of developing countries to raise tariffs temporarily against import surges or price falls. Disagreement between India and the United States over the trigger for the SSM was central to the collapse of the July 2008 Geneva talks on the Doha Round. The Nairobi Ministerial Conference (2015) affirmed developing countries' right to an SSM but left its terms to further negotiation.</li>
+  <li><strong>Unequal subsidies:</strong> Developed countries keep large entitlements to trade-distorting Amber Box support and spend heavily through the exempt Green Box. In July 2017 India and China jointly proposed that developed countries eliminate this Amber Box support before other reforms of domestic support.</li>
+  <li><strong>Defensive interests:</strong> India resists tariff cuts on sensitive products and links any new farm deal to a permanent solution on stockholding. It defends its right to restrict food exports in a crisis, while accepting the decision of 2022 exempting World Food Programme purchases from export bans.</li>
+</ul>
+
+<p>Neither the Abu Dhabi conference (2024) nor the Yaoundé conference (March 2026) agreed a permanent solution, so the Peace Clause remains India's legal shield as of 2026. Agricultural exporters argue that Indian stocks distort world rice markets when released, while India points out that support per farmer in rich countries is many times higher than in India.</p>
+
+<h3>India's Coalition Diplomacy and Clout in the WTO</h3>
+
+<p>The WTO decides by consensus, so any member can block an outcome. India's weight rests on this rule, on the size of its market and on its ability to speak for large coalitions of developing countries. It has moved from a defensive role in the GATT years to leading coalitions since the Doha Round.</p>
+
+<ul>
+  <li><strong>Doha, 2001:</strong> India, led by Commerce Minister Murasoli Maran, resisted negotiations on the Singapore issues (investment, competition policy, transparency in government procurement and trade facilitation) and secured language that talks on them would start only by explicit consensus.</li>
+  <li><strong>The G20 of developing countries (2003):</strong> Formed on 20 August 2003 before the Cancún conference, with Brazil and India at its core, it demanded cuts in US and EU farm subsidies and helped stall Cancún when developed countries pressed the Singapore issues. India and Brazil then joined the small core groups, such as the Five Interested Parties that negotiated the July 2004 framework of the Doha Round.</li>
+  <li><strong>The G33:</strong> This coalition of developing countries with many smallholders, in which India is a leading voice, seeks special products and the SSM and drove the Bali decision on stockholding.</li>
+  <li><strong>Other alliances:</strong> India works with the NAMA-11 on industrial tariffs, with the African Group and the G90 on development issues, and with South Africa on intellectual property and fisheries.</li>
+  <li><strong>Trade Facilitation Agreement:</strong> In July 2014 India refused to adopt the protocol bringing the TFA into the WTO rulebook until progress on stockholding was assured. An India-US understanding in November 2014 allowed the General Council to adopt both the protocol and the open-ended Peace Clause on 27 November 2014, and the TFA entered into force on 22 February 2017.</li>
+  <li><strong>Investment Facilitation for Development (IFD):</strong> India opposes adding this China-backed plurilateral agreement, supported by more than 100 members, to the WTO rulebook, arguing that investment lies outside the WTO's mandate and that plurilaterals erode consensus. It blocked it with South Africa and Türkiye in 2023 and at Abu Dhabi in 2024, and by March 2026 was the only member still objecting.</li>
+  <li><strong>Other positions:</strong> India has questioned the moratorium on customs duties on electronic transmissions, which costs developing countries revenue, and sought exemptions for small fishers in the fisheries subsidies talks.</li>
+</ul>
+
+<p><strong>Why its coalitions work.</strong> India's agenda of food security, policy space and special and differential treatment is shared by many poorer members. It builds issue-specific coalitions rather than one fixed bloc, its negotiators are technically well prepared, and it pairs firmness with bargains, as in 2014. Its limits are also clear: Western members call it a spoiler, some developing exporters oppose it on rice and fisheries, its power to block exceeds its power to deliver positive outcomes, and the paralysis of the Appellate Body since 2019 weakens a forum that India itself values.</p>
+
+<h3>India and the TRIPS Waiver for Covid-19 Vaccines</h3>
+
+<p>On 2 October 2020 India and South Africa asked the WTO's TRIPS Council to waive members' obligations on four categories of intellectual property (patents, industrial designs, copyright and undisclosed information) for Covid-19 vaccines, medicines, diagnostics and related technologies for the duration of the pandemic.</p>
+
+<ul>
+  <li><strong>India's case:</strong> Patents and trade secrets limited the number of producers while rich countries pre-booked supplies. Existing TRIPS flexibilities, such as compulsory licences and the Doha Declaration on TRIPS and Public Health (2001), work product by product and country by country and are too slow in a pandemic. Vaccines developed with public money should be global public goods, and wider production would also reduce the risk of new variants. India's large generic and vaccine industry gave weight to the case.</li>
+  <li><strong>Support and opposition:</strong> Kenya and Eswatini joined as co-sponsors in October 2020, and co-sponsors numbered 64 by November 2021, with about 100 members supporting the idea. The United States backed a vaccine waiver in May 2021, but the European Union, the United Kingdom and Switzerland, home to large pharmaceutical firms, argued that manufacturing capacity rather than patents was the bottleneck.</li>
+  <li><strong>The MC12 outcome (June 2022):</strong> The Ministerial Decision on the TRIPS Agreement lets eligible developing members, for five years, authorise the use of patents needed to produce and supply Covid-19 vaccines without the holder's consent, and export them without the usual rule that such production serve mainly the domestic market. Members able to export vaccines were encouraged to opt out. A decision on extending it to diagnostics and therapeutics was due within six months, but members could not agree.</li>
+</ul>
+
+<p>The outcome covered only patents and only vaccines and came when vaccine supply was no longer the main shortage, so supporters of the original proposal saw it as far narrower than what India and South Africa had sought. The campaign nonetheless reinforced India's standing as a voice for health equity, alongside its Vaccine Maitri supplies.</p>
+
+<h3>Guiding Principles of India-Africa Relations (Kampala, 2018)</h3>
+
+<p>Addressing the Parliament of Uganda on 25 July 2018, Prime Minister Modi said that India's engagement with Africa would be guided by ten principles:</p>
+
+<ol>
+  <li>Africa will be at the top of India's priorities, with sustained and regular engagement.</li>
+  <li>The development partnership will follow African priorities, on terms that will "liberate your potential and not constrain your future", relying on African talent and building local capacity.</li>
+  <li>India will keep its markets open, make trade with India easier and support Indian investment in Africa.</li>
+  <li>India's digital revolution will be used to improve public services, education, health, digital literacy and financial inclusion in Africa.</li>
+  <li>India will help improve African agriculture, since Africa has 60 per cent of the world's arable land but produces about 10 per cent of global output.</li>
+  <li>The partnership will address climate change, seeking a just international climate order, biodiversity and clean energy.</li>
+  <li>The two sides will cooperate against terrorism and extremism, for a safe cyberspace, and in support of UN peacekeeping.</li>
+  <li>They will keep the oceans open and free, with cooperation rather than competition on Africa's eastern shores and in the eastern Indian Ocean.</li>
+  <li>Africa must not "once again turn into a theatre of rival ambitions" but become "a nursery for the aspirations of Africa's youth".</li>
+  <li>India and Africa will work for a just, representative and democratic global order, since India's quest for reform of global institutions is incomplete without an equal place for Africa.</li>
+</ol>
+
+<p><strong>How the principles serve harmony and cooperation.</strong></p>
+
+<ul>
+  <li><strong>Partnership on African terms:</strong> The demand-driven approach contrasts with conditional Western aid and debt-heavy Chinese projects. In 2018 India was implementing about 180 lines of credit worth some 11 billion dollars in over 40 African countries and training more than 8,000 young Africans a year.</li>
+  <li><strong>Shared history:</strong> The principles draw on the common struggle against colonialism, Gandhi's years in South Africa and India's support for liberation movements and opposition to apartheid.</li>
+  <li><strong>Economic complementarity:</strong> Open markets, Indian investment (over 54 billion dollars by 2018), the Pan Africa e-Network and cooperation in farming and digital services link Indian capability to African needs.</li>
+  <li><strong>Security and the sea:</strong> Over 6,000 Indians served in five UN missions in Africa in 2018, and India's cooperative vision of Indian Ocean security covers piracy and maritime terrorism.</li>
+  <li><strong>Global governance:</strong> India and Africa coordinate on Security Council reform, and India's G20 presidency secured permanent membership for the African Union in 2023.</li>
+</ul>
+
+<p>Delivery lags behind the principles. Lines of credit are slow to disburse, India's trade and investment remain far smaller than China's, and the fourth India-Africa Forum Summit, planned for New Delhi in May 2026, was postponed because of a public health situation in parts of Africa, with new dates still to be fixed. The principles nonetheless give India a distinct offer based on consultation, capacity building and respect for African ownership.</p>
 
 <h2>South-South Cooperation: Instruments and Mechanisms</h2>
 
@@ -8946,9 +10429,25 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>Defence cooperation has been the strongest pillar of the relationship, with Russia serving as India's largest arms supplier for decades. Key joint projects include the BrahMos cruise missile, the fifth-generation fighter aircraft programme, and the Akula-class submarine lease. India has also received S-400 air defence systems from Russia despite American pressure to desist. Russia's dominance in India's arms imports, which stood at approximately seventy-five percent of total imports between 2009 and 2013 according to SIPRI estimates, has gradually reduced as India diversifies procurement towards the United States, France, and Israel, and pursues indigenisation under the Make in India initiative. Russia has also played an important role in India's civil nuclear programme, providing the reactors and financing for the Kudankulam Nuclear Power Plant, the largest in India.</p>
 
-<p>The bilateral economic relationship has remained below its potential. Trade hovered around fifteen billion dollars annually in the years before 2022, far below India's trade with the United States or China, hampered primarily by logistics, distance, and the dominance of state enterprises. The Russian invasion of Ukraine in February 2022 created both opportunities and complications. India significantly expanded its purchase of discounted Russian crude oil, pushing bilateral trade to approximately fifty billion dollars in financial year 2023. India has also identified specific product categories where it can expand exports to Russia to replace goods previously supplied by the US and EU. However, India's public stance shifted somewhat, with Prime Minister Modi telling President Putin at the SCO summit in Samarkand in September 2022 that this is not an era of war, the first public criticism of Russian actions, and India voted in favour of allowing Ukrainian President Zelensky to address the UN General Assembly by video, the first wartime vote in which India did not support Russia or abstain.</p>
+<p>The bilateral economic relationship has remained below its potential. Trade hovered around fifteen billion dollars annually in the years before 2022, far below India's trade with the United States or China, hampered primarily by logistics, distance, and the dominance of state enterprises. The Russian invasion of Ukraine in February 2022 created both opportunities and complications. India significantly expanded its purchase of discounted Russian crude oil, pushing bilateral trade to approximately fifty billion dollars in financial year 2023. India has also identified specific product categories where it can expand exports to Russia to replace goods previously supplied by the US and EU. However, India's public stance shifted somewhat, with Prime Minister Modi telling President Putin at the SCO summit in Samarkand in September 2022 that this is not an era of war, the first public criticism of Russian actions, and in August 2022 India voted in favour of allowing Ukrainian President Zelensky to address the UN Security Council by video, the first wartime vote in which India did not side with Russia or abstain.</p>
 
 <p>C. Raja Mohan has observed that India's sentimental attachment to the Moscow relationship has been replaced by a sense of realism in the Modi administration about the two countries' increasingly divergent regional and global trajectories. Russia's deepening dependence on China as a consequence of Western sanctions has complicated India's calculation, since a Russia excessively dependent on China is less useful as a strategic hedge. India is therefore managing its Russia relationship with pragmatic realism, maintaining defence and energy ties while carefully distancing itself from Russian positions that conflict with Indian interests.</p>
+
+<h3>US Pressure on India-Russia Ties, 2025-26</h3>
+
+<p>Since 2022 India has refused to join Western sanctions on Russia and become one of the largest buyers of discounted Russian crude. In 2025 the second Trump administration turned American unease into direct pressure.</p>
+
+<ul>
+  <li><strong>Tariffs:</strong> A 25 per cent tariff on Indian goods took effect in August 2025, and an executive order of 6 August 2025 added a 25 per cent penalty for India's purchases of Russian oil from 27 August 2025. Indian goods thus faced duties of 50 per cent, among the highest on any country, and US officials accused India of financing Russia's war.</li>
+  <li><strong>Sanctions on Rosneft and Lukoil:</strong> On 22 October 2025 the United States sanctioned Russia's two largest oil producers and threatened secondary sanctions on their partners. Indian refiners cut purchases from these firms.</li>
+  <li><strong>India's response:</strong> The MEA called the penalty unfair, unjustified and unreasonable, pointed out that the United States and the EU themselves trade with Russia, and said that India's purchases secured affordable energy for 1.4 billion people. Modi met Vladimir Putin and Xi Jinping at the SCO summit in Tianjin (August-September 2025). India also denied any US mediation in the ceasefire with Pakistan of May 2025 and maintains that issues with Pakistan, including Kashmir, are strictly bilateral.</li>
+  <li><strong>Putin's state visit (4-5 December 2025):</strong> At the 23rd annual summit, marking 25 years of the 2000 Declaration on Strategic Partnership, the two sides adopted a Programme for the Development of Strategic Areas of India-Russia Economic Cooperation till 2030, set a revised trade target of 100 billion dollars by 2030, agreed to develop settlement in national currencies and signed agreements on the mobility of skilled workers. Russia reaffirmed support for India's permanent membership of a reformed Security Council.</li>
+  <li><strong>Partial accommodation:</strong> On 2 February 2026 the United States cut tariffs on Indian goods to about 18 per cent and dropped the oil penalty after Indian refiners agreed to stop buying Russian oil except when necessary or already contracted. On 20 February 2026 the US Supreme Court ruled in Learning Resources v. Trump that the emergency powers law used for these tariffs did not authorise them. India nonetheless remained a large buyer of Russian oil (as of September 2026).</li>
+</ul>
+
+<p><strong>India-Russia relations in the 21st century.</strong> The pillars of the partnership are defence, civil nuclear energy, oil and a shared preference for a multipolar order. Its weaknesses are Russia's growing dependence on China, India's shift of arms purchases towards the West and domestic production, a trade balance heavily in Russia's favour because of oil, payment problems under sanctions, and the recruitment of Indian nationals into the Russian army, in which dozens have died.</p>
+
+<p><strong>Responses to US pressure.</strong> India treated the pressure as a test of strategic autonomy: it refused to criticise Russia openly or to accept outside mediation on Kashmir, hosted Putin at the height of the tariff dispute and accelerated trade deals with the EU, yet it trimmed oil purchases when the cost rose. Russia responded with discounts and settlement in national currencies. India's autonomy is thus exercised through bargaining rather than outright defiance.</p>
 
 <h2>India and the European Union</h2>
 
@@ -8957,6 +10456,24 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Trade and economic relations form the core of the partnership. EU-India trade turnover grew from 4.4 billion euros in 1980 to 60.9 billion euros in 2008 and approximately 124 billion euros in 2023. The EU is one of the largest sources of foreign direct investment in India, with stock reaching 96 billion euros in 2021. The EU-India Free Trade Agreement has been the most contested element of the strategic partnership. Negotiations were launched in 2007 but stalled after sixteen rounds in 2013, primarily over disputes on pharmaceuticals, automobiles, agricultural products, intellectual property rights, and government procurement. Negotiations resumed in 2022 along with separate tracks on geographical indications and investment protection. The EU-India Trade and Technology Council, launched in February 2023, represents the latest institutional innovation, aimed at boosting bilateral cooperation in strategic technologies, digital governance, clean energy, and resilient value chains. It is the EU's second such council after one with the United States, signalling the growing strategic importance of India to Europe.</p>
 
 <p>Within the EU framework, India has developed particularly strong bilateral relationships with France, Germany, and the United Kingdom. France is India's most important European strategic partner. The defence relationship includes technology transfers, the Rafale fighter acquisition, space cooperation, nuclear energy cooperation, and collaboration on submarine production. France shares India's vision of a free and open Indo-Pacific and has a strategic naval presence in the Indian Ocean through its base in Djibouti and island territories such as Reunion. France has supported India's bid for a permanent seat in the UN Security Council and its entry into the Nuclear Suppliers Group. India and France also jointly launched the International Solar Alliance in 2015. Some commentators suggest that from India's perspective, France can be the new Russia as a trusted defence partner willing to provide advanced technology. Germany is India's largest trading partner within Europe and one of India's most important industrial partners. The UK-India relationship, described by C. Raja Mohan as having shifted from entrenched pessimism to expansive new possibilities, encompasses trade, technology, diaspora ties, and security cooperation. The large South Asian diaspora in Britain creates both political complexity and cultural depth in the bilateral relationship.</p>
+
+<h3>The India-EU Free Trade Agreement and Security and Defence Partnership (2026)</h3>
+
+<p>At the India-EU summit in New Delhi on 27 January 2026, a day after European Council President António Costa and European Commission President Ursula von der Leyen attended Republic Day as chief guests, the two sides announced the conclusion of the free trade agreement under negotiation since 2007. Von der Leyen called it "the mother of all deals", creating a free trade zone of two billion people.</p>
+
+<ul>
+  <li><strong>Market access:</strong> According to the European Commission, the agreement eliminates or reduces tariffs on over 96 per cent of EU goods exports to India, saving European firms about 4 billion euros a year in duties. India is to cut duties on European cars from up to 110 per cent to 40 per cent within a quota, and to lower tariffs on machinery, chemicals, wine and spirits.</li>
+  <li><strong>Gains for India:</strong> Labour-intensive exports such as textiles, apparel, leather and footwear win duty-free access, putting them on a par with competitors like Bangladesh and Vietnam that already enjoyed EU preferences.</li>
+  <li><strong>Protected sectors:</strong> India kept sensitive farm products such as dairy and cereals out of the tariff cuts.</li>
+  <li><strong>Mobility:</strong> A separate agreement on mobility, signed at the summit, eases legal routes to the EU for Indian students, researchers and skilled workers.</li>
+  <li><strong>Status:</strong> The agreement still had to be signed and ratified. The Commission sent its proposals for signature and conclusion to the Council on 11 September 2026, after which it needs the Council's approval, the European Parliament's consent and approval in India. Both sides hope it can take effect in 2027. Separate talks on investment protection and geographical indications were continuing (as of October 2026).</li>
+</ul>
+
+<p><strong>The Security and Defence Partnership.</strong> Signed on 27 January 2026 by the EU's High Representative Kaja Kallas and External Affairs Minister S. Jaishankar on the margins of the summit, it gives the relationship its first comprehensive security framework. It covers maritime security, cyber issues, artificial intelligence and emerging technologies, hybrid threats, protection of critical infrastructure, counter-terrorism, organised crime, information sharing, non-proliferation, space security, capacity building, defence initiatives, training, and women, peace and security. It builds on the Strategic Dialogue on Foreign and Security Policy launched in June 2025 and on joint counter-piracy activity with the EU naval force off Somalia.</p>
+
+<p><strong>Why tariff threats pushed them together.</strong> The United States imposed 50 per cent tariffs on Indian goods from August 2025 and also pressed the EU with tariffs. India sought markets to offset US duties, and the EU sought to reduce its dependence on China and on an unpredictable Washington.</p>
+
+<p><strong>Evaluation.</strong> The partnership rests on complementary economies (goods trade of about 136 billion dollars in 2024-25), shared democratic values, the Trade and Technology Council (2023) and the India-Middle East-Europe Economic Corridor (2023). Frictions remain. The EU sanctioned the Rosneft-owned Nayara refinery in Gujarat in July 2025 and Kallas criticised India's part in the Zapad 2025 exercise with Russia, while the EU's Carbon Border Adjustment Mechanism, in its definitive phase from 2026, will tax Indian steel and aluminium. The 2026 agreements mark a shift from an underperforming relationship to a strategic one, but ratification and divergence over Russia will test it.</p>
 
 <h2>India and Japan</h2>
 
@@ -8971,6 +10488,29 @@ export const polsciNoteContent: Record<string, string> = {
 <p>Defence and security cooperation has deepened significantly. Japan's National Defence Program Guidelines have identified India as a priority partner in maritime security. The two countries conduct the JIMEX bilateral naval exercises. Japan's decision to reinterpret Article 9 of its constitution to permit collective self-defence expanded the scope for security cooperation. Japan eased its self-imposed ban on exporting military weapons in 2014, opening new avenues for defence industrial cooperation with India. Both countries are members of QUAD and share concerns about freedom of navigation in the South China Sea and the broader Indo-Pacific. India and Japan have also collaborated in third countries through the Asia-Africa Growth Corridor programme aimed at providing an alternative model of infrastructure development to China's Belt and Road Initiative.</p>
 
 <p>The ADB projects that by 2050 Asia will account for more than half of global GDP and that China, Japan, and India will be among the top five economies globally. In this context, the India-Japan partnership serves multiple strategic purposes: it strengthens each country's position relative to China, provides Japan with a strategic partner outside the US alliance system, deepens India's engagement with the Indo-Pacific, and creates a model of democratic partnership in infrastructure and technology that offers alternatives to Chinese-led initiatives. As Prime Minister Abe articulated, a strong India is in the best interest of Japan and a strong Japan is in the best interest of India.</p>
+
+<h3>The India-Japan Acquisition and Cross-Servicing Agreement (2020)</h3>
+
+<p>On 9 September 2020 India and Japan signed the Agreement concerning Reciprocal Provision of Supplies and Services between the Indian Armed Forces and the Self-Defense Forces of Japan, usually called the Acquisition and Cross-Servicing Agreement (ACSA). In a telephone call the next day Prime Ministers Modi and Abe welcomed it as a step that would deepen defence cooperation and contribute to peace and security in the Indo-Pacific.</p>
+
+<ul>
+  <li><strong>Reciprocal logistics:</strong> The forces of each country can obtain supplies and services from the other, such as food, water, fuel and lubricants, transport, spare parts, repair and maintenance, medical care and the use of port and airfield facilities. It is a logistics arrangement and does not grant bases.</li>
+  <li><strong>Scope:</strong> It applies during bilateral exercises and training, UN peacekeeping operations, humanitarian and disaster relief, and other mutually agreed activities.</li>
+  <li><strong>Interoperability:</strong> It eases joint exercises such as JIMEX and Malabar and makes coordinated operations at sea simpler.</li>
+  <li><strong>Part of a network:</strong> India had earlier signed logistics agreements with the United States (LEMOA, 2016), France (2018) and Australia (June 2020), so the Japan pact completed such arrangements with all Quad partners. For Japan, India joined ACSA partners such as the United States, Australia, the United Kingdom, Canada and France.</li>
+</ul>
+
+<p><strong>How it addresses India's security concerns.</strong></p>
+
+<ul>
+  <li><strong>Reach:</strong> Indian warships can replenish at Japanese facilities, including Japan's base in Djibouti near the Bab-el-Mandeb and ports in Japan itself, extending their endurance from the western Indian Ocean to the western Pacific.</li>
+  <li><strong>China:</strong> Signed three months after the Galwan clash, it signalled closer India-Japan alignment against Chinese assertiveness on the Himalayan frontier and in the East and South China Seas.</li>
+  <li><strong>Quad cooperation:</strong> With LEMOA and the Australian agreement, it helps the four navies operate together, as in Malabar after Australia rejoined in November 2020.</li>
+  <li><strong>Disaster relief and peacekeeping:</strong> It allows faster joint responses to disasters in the Indo-Pacific.</li>
+  <li><strong>Defence ties:</strong> It builds on the 2015 agreements on the transfer of defence equipment and technology and on protecting classified military information, and was followed by a new Joint Declaration on Security Cooperation in August 2025.</li>
+</ul>
+
+<p>The agreement remains a logistics enabler rather than a mutual defence commitment. Japan's constitutional limits and India's aversion to alliances restrict how far it can go, and its value depends on regular exercises and deployments that actually use it.</p>
   `,
 
   'india-and-un-system': `
@@ -9036,7 +10576,7 @@ export const polsciNoteContent: Record<string, string> = {
 
 <p>The campaign for UN Security Council reform reflects a broader concern that the Council's composition no longer reflects the realities of the contemporary world. The current five permanent members were determined by the outcomes of the Second World War in 1945. Since then, the international system has been transformed by decolonisation, the rise of new economic powers, and the emergence of new security challenges. Africa with 54 of the 193 UN member states and the region most affected by most peacekeeping operations has no permanent representation on the Security Council. The same is true for Latin America. India with approximately one-fifth of global population and one of the largest economies and militaries in the world is also unrepresented among the permanent five.</p>
 
-<p>The procedural requirements for Charter amendment create a structural obstacle: amendment requires a two-thirds majority in the General Assembly and ratification by all five permanent members, giving each permanent member an effective veto over any reform that might dilute its relative power. China is particularly resistant because its status as the sole Asian permanent member gives it a claim to represent Asian perspectives that would be weakened by India's inclusion. The Uniting for Consensus grouping opposes new permanent seats partly on principle and partly to protect the interests of regional rivals of G4 aspirants.</p>
+<p>The procedural requirements for Charter amendment create a structural obstacle: amendment requires a two-thirds majority in the General Assembly and ratification by two-thirds of member states, including all five permanent members, giving each permanent member an effective veto over any reform that might dilute its relative power. China is particularly resistant because its status as the sole Asian permanent member gives it a claim to represent Asian perspectives that would be weakened by India's inclusion. The Uniting for Consensus grouping opposes new permanent seats partly on principle and partly to protect the interests of regional rivals of G4 aspirants.</p>
 
 <p>Various models of reform have been proposed. The G4 model advocates for six new permanent members without veto power plus additional non-permanent seats. The African Union's Ezulwini Consensus calls for at least two permanent seats with veto power for Africa. The Uniting for Consensus model proposes only expansion of non-permanent seats with longer terms. An intermediate solution sometimes discussed informally would create a new category of semi-permanent members with longer terms and the possibility of re-election. None of these models has achieved sufficient consensus to move forward. The Inter-Governmental Negotiations process, which India has described as insufficiently structured and too dependent on oral exchanges rather than text-based negotiations, has continued without decisive progress since it was established in 2009. India's call for text-based negotiations reflects its view that the current format allows opponents of reform to delay indefinitely without committing to positions in writing, making genuine progress impossible.</p>
   `,
@@ -9133,6 +10673,44 @@ export const polsciNoteContent: Record<string, string> = {
 <p>The Gulf states are themselves in a structural transition. Saudi Arabia's Vision 2030, the UAE's ambitions as a global trade and technology hub, and Qatar's drive to host international events and conferences are all generating enormous demand for investment, construction, and skilled labour - demand that India is uniquely positioned to meet. Saudi Arabia has pledged investment worth 100 billion dollars in India across petrochemicals, infrastructure, manufacturing, and mining. The UAE committed to invest 7 billion dollars in an Indian food corridor. The Comprehensive Economic Partnership Agreement signed between India and the UAE in February 2022 set a target of 100 billion dollars in bilateral non-oil merchandise trade within five years. These developments reflect what former Vice President Hamid Ansari described as West Asia's "curse of centrality" - the region's strategic importance makes it perpetually contested - but India is increasingly positioned to exploit this centrality rather than be constrained by it.</p>
 
 <p>India's soft power in the region is substantial. The large and well-regarded Indian diaspora, the cultural reach of Bollywood, Modi's inauguration of Abu Dhabi's first Hindu stone temple in 2024, and India's reputation for non-interference and democratic governance all contribute to Indian influence. Gulf governments have increasingly aligned with India on security questions: after the abrogation of Article 370 in August 2019, Saudi Arabia publicly expressed understanding of India's approach in Jammu and Kashmir. The Abraham Accords of 2020 have simplified one dimension of India's balancing act in the region by reducing the binary pressure between Arab solidarity and engagement with Israel. India continues to maintain diplomatic relations with both Riyadh and Tehran and carefully avoids being drawn into their rivalry. American strategic disengagement from the Gulf, driven by reduced energy dependence and the pivot to China, creates additional space for India to emerge as a security partner and economic stakeholder in the region. S. Jaishankar has argued that West Asia should be seen not as a theatre for displaying India's power but as a space for augmenting it, and that India should aspire to leadership rather than mere balance in its regional diplomacy.</p>
+
+<h3>I2U2, the 'West Asia Quad', and Look West</h3>
+
+<p>I2U2 brings together India, Israel, the United Arab Emirates and the United States. It was conceived at a meeting of the four foreign ministers on 18 October 2021, which commentators dubbed a West Asian Quad, and held its first leaders' summit virtually on 14 July 2022 with Narendra Modi, Yair Lapid, Mohamed bin Zayed Al Nahyan and Joe Biden. It was made possible by the Abraham Accords of 2020, which normalised relations between Israel and the UAE.</p>
+
+<ul>
+  <li><strong>Agenda:</strong> joint investment in six areas (water, energy, transportation, space, health and food security), mobilising private capital and technology rather than military cooperation.</li>
+  <li><strong>Projects:</strong> The UAE pledged 2 billion dollars for integrated food parks in India, with India providing land and linking farmers, and the group backed a 300 MW hybrid wind and solar project with battery storage in Gujarat, for which the US Trade and Development Agency funded a feasibility study. An I2U2 Business Forum met in Abu Dhabi in February 2023, and a joint space-based tool for environmental and climate data was announced in September 2023.</li>
+  <li><strong>Difference from the Quad:</strong> The Indo-Pacific Quad has a security edge aimed at balancing China, while I2U2 is economic and technological, an example of the minilateral groups India prefers.</li>
+</ul>
+
+<p><strong>Look West.</strong> The term Look West, used from the mid-2000s by analogy with Look East, describes India's effort to treat the Gulf and wider West Asia as an extended neighbourhood rather than only a source of oil and a destination for workers. Under Modi the approach has become more active: a Comprehensive Strategic Partnership with the UAE (2017), a Strategic Partnership Council with Saudi Arabia (2019), the India-UAE CEPA (2022), close defence and technology ties with Israel, Chabahar with Iran and the India-Middle East-Europe Economic Corridor (2023). Its method is de-hyphenation: India deals separately with Israel, the Arab Gulf states and Iran and avoids taking sides in their rivalries.</p>
+
+<p><strong>Significance of I2U2 for Look West.</strong></p>
+
+<ul>
+  <li><strong>From bilateral to minilateral:</strong> It ties India's partnerships with Israel and the UAE into one framework with the United States, which would have been politically difficult before the Abraham Accords.</li>
+  <li><strong>Food and energy security:</strong> It combines Gulf capital, Indian land, labour and markets, and Israeli and American technology, serving the Gulf's food needs and India's investment and clean energy goals.</li>
+  <li><strong>Strategic position:</strong> It gives India a voice in a West Asian order shaped by the Abraham Accords and a place in US-backed connectivity plans, at a time when China's role in the Gulf is growing, as its brokering of the Saudi-Iran rapprochement in March 2023 showed.</li>
+</ul>
+
+<p><strong>Limits.</strong> Only one leaders' summit, in 2022, had been held by 2026. The Gaza war from October 2023, the Israel-Iran war of June 2025 and the US-Israeli war with Iran from February 2026 have stalled Arab-Israeli normalisation and with it I2U2 and IMEC, and India's ties with Iran limit how closely it can be identified with the grouping.</p>
+
+<h3>India-Iran Relations: Opportunities, Challenges and Limits</h3>
+
+<p>Iran matters to India as a land bridge to Afghanistan and Central Asia that bypasses Pakistan, a former major supplier of oil, a partner in the International North-South Transport Corridor (INSTC) and a Shia power that has at times checked Pakistan, as when it refused to back an anti-India resolution on Kashmir at the UN Human Rights Commission in 1994.</p>
+
+<ul>
+  <li><strong>Chabahar:</strong> Under the India-Iran-Afghanistan transit agreement of 2016, India Ports Global Limited (IPGL) has operated the Shahid Beheshti terminal since 2018. On 13 May 2024 IPGL signed a ten-year contract with Iran's Ports and Maritime Organisation to equip and run it, and India paid the last tranche of its 120 million dollar commitment for port equipment in August 2025. The port carried Indian wheat and other aid to Afghanistan.</li>
+  <li><strong>US sanctions on oil:</strong> Iran supplied about 16 per cent of India's crude in 2008-09, but imports fell under sanctions after 2012 and stopped in 2019, when the United States ended the waivers that had allowed limited purchases. India lost crude offered on easy terms, including credit and partial payment in rupees.</li>
+  <li><strong>US sanctions on Chabahar:</strong> The United States exempted Chabahar in 2018 for Afghanistan's reconstruction. Following a presidential memorandum of February 2025, the State Department revoked the exemption with effect from 29 September 2025. After Indian representations the US allowed activities to continue until 26 April 2026, when the conditional waiver ended, and as of July 2026 India remained engaged with all stakeholders on the consequences.</li>
+  <li><strong>Gulf tensions and energy security:</strong> After attacks on tankers in the Gulf of Oman during the US-Iran standoff of 2019, the Indian Navy launched Operation Sankalp in June 2019 to escort Indian-flagged ships through the Strait of Hormuz. Much of India's oil and gas passes through Hormuz, so any US-Iran conflict threatens supplies, prices and the Indian diaspora in the Gulf.</li>
+  <li><strong>The 2026 war:</strong> From 28 February 2026 the United States and Israel fought a war with Iran, interrupted by short-lived ceasefires. Iran's blockade of the Strait of Hormuz disrupted India's energy imports and Indian seafarers were killed in attacks on shipping. The Indian Navy began Operation Urja Suraksha in March 2026 to escort India-bound ships, and Iran later listed India among five countries whose ships could transit. India has balanced: it seized sanctioned Iranian tankers in February 2026 but voted against a UN Human Rights Council resolution on Iran's crackdown on protesters in January 2026.</li>
+  <li><strong>Political irritants:</strong> India voted against Iran at the IAEA Board in 2005 and 2006 over its nuclear programme. Supreme Leader Khamenei's remarks on Kashmir (2010 and 2017) and on Indian Muslims (September 2024) drew Indian protests.</li>
+  <li><strong>Strategic divergence:</strong> India's close ties with Israel, the United States and the Gulf monarchies, which see Iran as a threat, sit uneasily with Tehran. Iran signed a 25-year cooperation agreement with China in 2021, went ahead alone with the Chabahar-Zahedan railway in July 2020 citing Indian delays, and awarded the Farzad-B gas field, discovered by an ONGC Videsh-led consortium, to an Iranian firm in 2021.</li>
+</ul>
+
+<p><strong>Assessment.</strong> India-Iran relations are bounded by a triangle with the United States. India values Iran for connectivity and regional balance, but its larger stakes lie with the United States, Israel and the Gulf, while Iran has drawn closer to China. The future of Chabahar and India's energy security now depend on how the 2026 war and US sanctions evolve, a direct test of India's claim to strategic autonomy.</p>
 
 <h2>India&#39;s Relations with the US: Growing Partnership</h2>
 
