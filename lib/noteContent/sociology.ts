@@ -864,7 +864,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Sub-types:</strong></p>
 <ul>
-  <li><strong>Gerontocracy</strong>: Rule by elders. E.g. Ancient Athenian democracy, village panchayat, caste councils.</li>
+  <li><strong>Gerontocracy</strong>: Rule by elders. E.g. councils of elders in tribal and village communities, such as the traditional village panchayat and caste councils.</li>
   <li><strong>Patriarchalism</strong>: Authority of the father/husband/senior. The patriarch rules without a formal administrative staff.</li>
   <li><strong>Patrimonialism</strong>: Extended version; the patriarch rules with the help of a personal administrative staff (traditional bureaucracy). All officials are personal loyalists, not servants of the nation. No separation between public and private ends. No systematic appointment or promotion. E.g. Mughal Empire, Ancient Egypt, medieval Catholic Church.</li>
 </ul>
@@ -1933,7 +1933,7 @@ export const sociologyNoteContent: Record<string, string> = {
 </table>
 
 <h3>Cooley's Looking-Glass Self (Precursor to Mead)</h3>
-<p>Charles Horton Cooley (<em>Human Nature and Social Order</em>, 1922) argued that the unique feature of human life is the ability to see ourselves through others' eyes. He called this the <strong>Looking-Glass Self</strong>: our self-concept emerges by imagining how we appear to others. Three stages:</p>
+<p>Charles Horton Cooley (<em>Human Nature and the Social Order</em>, 1902) argued that the unique feature of human life is the ability to see ourselves through others' eyes. He called this the <strong>Looking-Glass Self</strong>: our self-concept emerges by imagining how we appear to others. Three stages:</p>
 <ol>
   <li>We imagine how we appear to others.</li>
   <li>We imagine how others judge that appearance.</li>
@@ -3109,7 +3109,7 @@ export const sociologyNoteContent: Record<string, string> = {
 </table>
 
 <h3>Serendipity and the Hawthorne Effect</h3>
-<p>A <strong>serendipitous finding</strong> is something unanticipated at the start of research: a discovery outside the scope of the original question. Merton later called these "latent functions" or unanticipated consequences.</p>
+<p>A <strong>serendipitous finding</strong> is something unanticipated at the start of research: a discovery outside the scope of the original question. Merton called this the serendipity pattern: an unanticipated, anomalous and strategic finding that prompts new theory.</p>
 <p><strong>The Hawthorne Effect</strong> (1924, Western Electric Plant): Researchers expected that changing lighting would affect productivity. Surprisingly, productivity improved regardless of whether lighting was increased or decreased: simply because workers knew they were being observed. This is the Hawthorne Effect: people modify their behaviour when they know they are being studied. This is called the <strong>Heisenberg uncertainty principle</strong> in natural science: the act of observation affects the thing being observed. Solution: covert observation.</p>
 
 <h2>Positivism vs Interpretivism: Core Comparison</h2>
@@ -3647,7 +3647,7 @@ export const sociologyNoteContent: Record<string, string> = {
   'stratification-mobility': `
 <h2>Social Stratification: Definition and Significance</h2>
 
-<p>Social stratification refers to the division of society into layers (strata) of people who possess unequal shares of scarce resources: wealth, power, and prestige. In the classic children's book <em>Animal Farm</em>, George Orwell captures this tendency perfectly: the animals' motto shifts from "All animals are equal" to "All animals are more equal than others." No society has been entirely free of stratification.</p>
+<p>Social stratification refers to the division of society into layers (strata) of people who possess unequal shares of scarce resources: wealth, power, and prestige. In <em>Animal Farm</em> (1945), George Orwell captures this tendency: the commandment "All animals are equal" becomes "All animals are equal, but some animals are more equal than others." No society has been entirely free of stratification.</p>
 
 <p><strong>Life chances</strong> are the level of opportunities, advantages or disadvantages people have in relation to education, health, employment, income, and housing. Life chances are not distributed equally: factors such as class, gender, age, and ethnicity all shape them. Stratification matters precisely because it determines life chances.</p>
 
@@ -3974,7 +3974,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Walby distinguishes <strong>private patriarchy</strong> (individual patriarch dominates women within the household, excluding them from the public sphere) from <strong>public patriarchy</strong> (women enter public life but are collectively exploited by men in general). "Women are no longer restricted to the domestic hearth, but have the whole society in which to roam and be exploited."</p>
 
-<p><strong>Patriarchal bargain</strong> (Lisa Wade): individual women's strategies to manipulate the patriarchal system to their advantage, conforming to patriarchal expectations because benefits of conformity exceed benefits of resistance. Examples: adopting an assertive demeanour in a male-dominated workplace; staying in a traditional marriage for financial security; silencing feminist views to protect career or relationships. The bargain leaves the system itself intact.</p>
+<p><strong>Patriarchal bargain</strong> (Deniz Kandiyoti, 1988): individual women's strategies to manipulate the patriarchal system to their advantage, conforming to patriarchal expectations because benefits of conformity exceed benefits of resistance. Examples: adopting an assertive demeanour in a male-dominated workplace; staying in a traditional marriage for financial security; silencing feminist views to protect career or relationships. The bargain leaves the system itself intact.</p>
 
 <h4>Raewyn Connell: Hierarchies Within Gender</h4>
 <p>Gender inequality does not just exist between men and women: there are hierarchies within each gender:</p>
@@ -4964,7 +4964,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Forms of Political Party (Maurice Duverger):</strong> Mass Based (China, Cuba, mostly socialist or communist countries) and Cadre Based (in democracies, rank-based, hierarchical, division of responsibilities).</p>
 
-<p><strong>Robert Dahl's classification:</strong> Exterior parties (emerging from external influence, e.g., CPI in India due to CP China and Russia) and Interior parties (like the Communist Party of the USSR).</p>
+<p><strong>Maurice Duverger's classification by origin:</strong> parties of internal origin, formed inside the legislature from parliamentary groups and electoral committees (most early European liberal and conservative parties), and parties of external origin, created by organisations outside parliament such as trade unions, churches or socialist societies (the British Labour Party).</p>
 
 <p><strong>Party systems and their assessments:</strong></p>
 <table>
@@ -5001,7 +5001,7 @@ export const sociologyNoteContent: Record<string, string> = {
 <p><strong>Types of Democracy:</strong></p>
 <ul>
   <li><strong>Participative</strong>: Direct participation via referendum, recall, plebiscite, initiative</li>
-  <li><strong>Representative</strong>: Agent-based (one who consults the electorate) or Delegate-based (one who acts on his own discretion while taking decisions). Bestows responsibility or power in the hands of a few to represent collective interest.</li>
+  <li><strong>Representative</strong>: Delegate-based (the representative follows the instructions of the electorate) or trustee-based (the representative acts on his own judgement, as Edmund Burke argued). Bestows responsibility or power in the hands of a few to represent collective interest.</li>
   <li><strong>Associative</strong>: Durkheim in <em>Professional Ethics and Civic Morals</em>: participation via voluntary organisations (socialist society), sensitise, check on bureaucracy, civic culture</li>
 </ul>
 
@@ -5233,9 +5233,9 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Family: Definitions and Types</h2>
 
-<p><strong>G.P. Murdoch</strong> defines the family as a group in which both relations of affinity and consanguinity (or adoption) are found. He studied 250 societies and argued the elementary family is found universally, with four defining characteristics: common residence; economic coordination; reproduction with socially approved sexual relations between adults of both sexes; and socialising children born to or adopted by the adults.</p>
+<p><strong>G.P. Murdock</strong> defines the family as a group in which both relations of affinity and consanguinity (or adoption) are found. He studied 250 societies and argued the elementary family is found universally, with four defining characteristics: common residence; economic coordination; reproduction with socially approved sexual relations between adults of both sexes; and socialising children born to or adopted by the adults.</p>
 
-<p><strong>Exception to Murdoch's universality claim (Colliers, 1997):</strong> The Na of China have no fixed co-resident husband-wife pair: men visit women's households at night and have no domestic role. Zambian families in Africa also deviate significantly. Murdoch's family is therefore not truly universal.</p>
+<p><strong>Exception to Murdock's universality claim (Cai Hua's study of the Na, 1997):</strong> The Na of China have no fixed co-resident husband-wife pair: men visit women's households at night and have no domestic role. Zambian families in Africa also deviate significantly. Murdock's family is therefore not truly universal.</p>
 
 <p><strong>Anthony Giddens</strong> offers a simplified definition: a family is a group of persons directly linked by kin connections, adult members of which assume responsibility for caring for children. He emphasises commitment over traditional structural features, and argues that in contemporary society "forever love" has transformed into "love till further notice": what he calls "plastic love."</p>
 
@@ -5249,8 +5249,8 @@ export const sociologyNoteContent: Record<string, string> = {
   <tr><td><strong>Laterally Extended</strong></td><td>Two or more couples of the same generation</td></tr>
   <tr><td><strong>Extended Joint (Henry Maine)</strong></td><td>Property held jointly; the classic Indian joint family</td></tr>
   <tr><td><strong>Reconstituted</strong></td><td>Spouses live with children of both previous and current marriages</td></tr>
-  <tr><td><strong>Single-Parent (Rapaport)</strong></td><td>One adult cares for children alone</td></tr>
-  <tr><td><strong>Dual-Career (Mowrer)</strong></td><td>Both partners work full-time outside the home</td></tr>
+  <tr><td><strong>Single-Parent</strong></td><td>One adult cares for children alone</td></tr>
+  <tr><td><strong>Dual-Career (Rhona and Robert Rapoport, 1969)</strong></td><td>Both partners work full-time outside the home</td></tr>
   <tr><td><strong>Homosexual Parents' Family</strong></td><td>Same-sex parents raising children</td></tr>
   <tr><td><strong>Commune Living</strong></td><td>Groups of unrelated people sharing resources and child-rearing</td></tr>
 </table>
@@ -5259,7 +5259,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h2>Functions of Family</h2>
 
-<p><strong>Murdoch (Social Structure)</strong> identifies four functions: economic, reproduction control, regulating sexual relations, and socialising children.</p>
+<p><strong>Murdock (Social Structure)</strong> identifies four functions: economic, reproduction control, regulating sexual relations, and socialising children.</p>
 
 <p><strong>Talcott Parsons</strong> identifies two basic functions that no other institution can replace: primary socialisation of children and stabilisation of adult personality. He argues that industrialisation led to the nucleation of the family because: specialised skills are now required; tasks are less labour-intensive; geographical and social mobility is high; universalistic values conflict with the particularistic values of extended family networks.</p>
 
@@ -5274,7 +5274,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Marx / David Cooper (<em>Death of Family</em>)</strong>: Family assures conformity, making individuals submit to exploitation. Family is an ideological conditioning device in an exploitative society.</li>
   <li><strong>R.D. Laing (<em>Politics of Family</em>)</strong>: Studies schizophrenic children and concludes the disorder is caused by the excessive expectations of parents.</li>
   <li><strong>Edmund Leach (<em>A Runaway World</em>)</strong>: Family members expect too much of each other, producing emotional stress and conflict.</li>
-  <li><strong>Feminist critique</strong>: Family legitimises the exploitation of women: household work goes unnoticed; family legitimises sexual abuse and domestic violence. Murray Strauss: "Marriage provides a hitting licence."</li>
+  <li><strong>Feminist critique</strong>: Family legitimises the exploitation of women: household work goes unnoticed; family legitimises sexual abuse and domestic violence. Murray Straus: "the marriage licence is a hitting licence."</li>
   <li><strong>Jordan Peterson</strong>: Families can fail to prepare children for the harsh realities of the world, making them vulnerable to bullying.</li>
 </ul>
 
@@ -5393,14 +5393,14 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Sociobiological (Evolutionary: Robin Fox):</strong> SDOL is the result of millions of years of adaptation. Men: hunters; women: childbearing and rearing. Differences in body types mean men are more suited for outside, muscular tasks.</p>
 
-<p><strong>Functional (Murdoch):</strong> SDOL is the most convenient way of organising tasks (based on study of 250 societies). Parsons: women are more expressive and do adult personality stabilisation. Delinquency studies: delinquency results from lack of motherly support.</p>
+<p><strong>Functional (Murdock):</strong> SDOL is the most convenient way of organising tasks (based on study of 250 societies). Parsons: women are more expressive and do adult personality stabilisation. Delinquency studies: delinquency results from lack of motherly support.</p>
 
 <p><strong>Feminist Critique:</strong></p>
 <ul>
   <li><strong>Jessie Bernard</strong>: criticises Parsons: the family serves male personality stabilisation, not gender-neutral adult personality stabilisation</li>
-  <li><strong>Ann Oakley</strong>: criticises Murdoch: incorrect to say women are unsuitable for public tasks (India: construction site workers are mainly women; Pygmies: no post-natal dependence on men; Israel: large participation of women in the army). SDOL is socially created.</li>
+  <li><strong>Ann Oakley</strong>: criticises Murdock: incorrect to say women are unsuitable for public tasks (India: construction site workers are mainly women; Pygmies: no post-natal dependence on men; Israel: large participation of women in the army). SDOL is socially created.</li>
   <li><strong>Margaret Mead (<em>Sex and Temperament in Three Primitive Societies</em>)</strong>: Study on tribes of Papua New Guinea found both men and women doing equally stern tasks with similar personalities, sometimes with home-loving men, a society exactly opposite to the West, proving SDOL is culturally variable. Critique (Deborah Gewertz, 1981): found evidence men dominated women, controlled their produce, and made all important political decisions. Mead used subjective descriptions.</li>
-  <li><strong>Shulamith Firestone (<em>Dialectics of Sex</em>)</strong>: Sexual inequality is the most fundamental inequality; criticises Marx for overlooking it. Because of SDOL, women are confined to the domestic sphere where their work is not valued (it doesn't fetch profits). Even when women work outside, they still work at home: double exploitation. The labour market has two segments: primary (high income, promotions, prestige (dominated by men) and secondary (low income, unstable, part-time, low status) confined to women). Firestone argued technology could eventually free women from biological reproduction.</li>
+  <li><strong>Shulamith Firestone (<em>The Dialectic of Sex</em>, 1970)</strong>: Sexual inequality is the most fundamental inequality; criticises Marx for overlooking it. Because of SDOL, women are confined to the domestic sphere where their work is not valued (it doesn't fetch profits). Even when women work outside, they still work at home: double exploitation. R.D. Barron and G.M. Norris (1976) later explained women's position at work through the dual labour market: a primary sector of well-paid, secure jobs with promotion, dominated by men, and a secondary sector of low-paid, unstable, part-time work to which women are largely confined. Firestone argued technology could eventually free women from biological reproduction.</li>
 </ul>
 
 <h3>Sylvia Walby: Theorising Patriarchy</h3>
@@ -5465,7 +5465,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Giddens: "forever love" changing into "love till further notice", plastic love</li>
   <li>Eugene Litwak: modified extended family (Willmott: dispersed extended family), common residence may not exist but kinship ties are maintained via internet, telephone, and air travel (frequency less but quality more)</li>
   <li>William Goode: achieved status and individualism are rising, working against familial norms and conventional role bargains</li>
-  <li>Bade Thorne: "cereal packet image" problem, the monolithic image of the ideal family obscures the reality of a plurality of family forms</li>
+  <li>Edmund Leach's "cereal packet image" of the family (1967) and Barrie Thorne's critique of the monolithic family (<em>Rethinking the Family</em>, 1982): the ideal image obscures the reality of a plurality of family forms</li>
   <li>Elizabeth Roberts and Wilmott and Young: industrialisation actually led to growth of the extended family through shared childcare and mutual help, a direct counter to Parsons</li>
   <li>Shah and Kolenda demolished the myth of joint family disintegration in India</li>
 </ul>
@@ -5657,7 +5657,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>A.R. Desai</strong>: Education has not been purposively geared after independence to obtain the desired changes. Policies and funding have failed to attain the goals of social mobility and equality.</li>
   <li><strong>Pierre Bourdieu</strong>: Cultural reproduction benefits only the top classes. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</li>
   <li><strong>Tawney (Tadpole Theory)</strong>: Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind.</li>
-  <li><strong>Sachidanand Sinha</strong>, "Dalit Elites", reservation and education produce a small elite that escapes its class without transforming the class as a whole.</li>
+  <li><strong>Sachchidananda</strong>, <em>The Harijan Elite</em> (1977): reservation and education produce a small elite that escapes its class without transforming the class as a whole.</li>
 </ul>
 
 <p><strong>Educational divides in India:</strong> Caste-related divide; gender (girls are undereducated and undernourished, leading to poor academic outcomes); class divide; religion (Sachar Committee, Ranganath Mishra Committee: Muslims denied entry in some schools); taboo-based exclusion (children of HIV patients, sex workers).</p>
@@ -5666,7 +5666,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <h3>New Education Policy 2020</h3>
 
-<p>India's third education policy (after 1968 and 1986), released in 2020 after a 34-year gap. Based on the DS Kothari Commission of 1964 and aligned with SDG4 of the 2030 Agenda: "inclusive and equitable quality education and lifelong learning opportunities for all."</p>
+<p>India's third education policy (after 1968 and 1986), released in 2020 after a 34-year gap. Drafted by the committee chaired by K. Kasturirangan (draft 2019) and approved in July 2020, it is aligned with SDG4 of the 2030 Agenda: "inclusive and equitable quality education and lifelong learning opportunities for all."</p>
 
 <p><strong>Key structural changes:</strong> Replaces the 10+2 structure with a 5+3+3+4 structure, incorporating children from age 3 into the formal education system (Early Childhood Care and Education). The four stages are: Foundational (3-8 years), Preparatory (8-11 years), Middle (11-14 years), Secondary (14-18 years).</p>
 
@@ -7001,7 +7001,7 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Central Zone</strong>: West Bengal, Odisha, Bihar/Jharkhand, southern UP, southern Rajasthan, Gujarat, MP, Maharashtra</li>
   <li><strong>Southern Zone</strong>: AP, Tamil Nadu, Karnataka, Kerala, Andaman and Nicobar Islands</li>
 </ul>
-<p>Major tribes: Gonds (4 million+); Bhils (4 million+); Santhals (3 million+). Mostly patrilineal, but Garos matrilineal. Religions vary: Nagas/Mizos/Santhals, Christianity; Bhutias/Lepchas: Buddhism; Bhils: Hinduism. Occupations: food gathering, forestry, jhum cultivation, wage labour.</p>
+<p>Major tribes (Census 2011): Bhils (about 1.7 crore), Gonds (about 1.3 crore), Santhals (about 65 lakh). Mostly patrilineal, but Garos matrilineal. Religions vary: Nagas/Mizos/Santhals, Christianity; Bhutias/Lepchas: Buddhism; Bhils: Hinduism. Occupations: food gathering, forestry, jhum cultivation, wage labour.</p>
 
 <h2>Colonial Policies and Their Impact</h2>
 
@@ -7311,7 +7311,7 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <ul>
   <li>Workers were recruited primarily from peasant and lower-caste backgrounds, often through contractors (Sardars/Mukaddams) from specific villages or communities, creating lasting connections between rural origin, caste identity, and industrial employment.</li>
-  <li>The labour movement in India: from the Bombay Mill Hands Association (1890), the All India Trade Union Congress (1920, led by Bal Gangadhar Tilak and later Lala Lajpat Rai), through post-independence unionisation: reflects both the class interests of workers and the caste and community identities that cut across class solidarity.</li>
+  <li>The labour movement in India: from the Bombay Mill Hands Association (1890), the All India Trade Union Congress (1920, with Lala Lajpat Rai as its first president), through post-independence unionisation: reflects both the class interests of workers and the caste and community identities that cut across class solidarity.</li>
   <li>The formal industrial working class was small relative to the total workforce: even at India's peak of industrial employment, formal sector manufacturing never absorbed more than 10-15% of the workforce.</li>
 </ul>
 
@@ -7377,7 +7377,7 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 <h3>Dalit and OBC Middle Classes: New Entrants</h3>
-<p>Reservation policy has produced a new Dalit middle class employed in government service and public sector enterprises: what Sachidanand Sinha has called "Harijan elites" and what critics sometimes call the "creamy layer." This class occupies an intermediate and ambiguous position: they have achieved middle-class status in terms of income and education, but continue to face caste discrimination in social life, residential neighbourhoods, and marriage markets.</p>
+<p>Reservation policy has produced a new Dalit middle class employed in government service and public sector enterprises: what Sachchidananda called the "Harijan elite" (1977) and what critics sometimes call the "creamy layer." This class occupies an intermediate and ambiguous position: they have achieved middle-class status in terms of income and education, but continue to face caste discrimination in social life, residential neighbourhoods, and marriage markets.</p>
 
 <p>SD Badgaiyyan extended this analysis to tribal elites who have used reservation and education to enter the government service middle class while remaining connected to and advocating for their tribal communities. The emergence of Dalit and tribal middle classes has significant political implications: they have produced new political entrepreneurs (Kanshi Ram and Mayawati for Dalits; leaders of Jharkhand and Chhattisgarh for tribals) who mobilise their communities' numbers into political power.</p>
 
@@ -7944,7 +7944,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p><strong>Pierre Bourdieu (Cultural Reproduction)</strong>: Like economic capital, cultural capital (taste, knowledge, speech patterns) is difficult to acquire, and the education system rewards those who already possess it, reproducing class privilege generation after generation. Corroborated by MM Tumin: top classes have a culture of excellence that self-perpetuates.</p>
 
-<p><strong>Tawney (Tadpole Theory)</strong>: Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. This produces Dalit Elites (Sachidanand Sinha) and Tribal Elites (SD Badgaiyyan): a small educated class that escapes its community's condition without transforming it.</p>
+<p><strong>Tawney (Tadpole Theory)</strong>: Only the "top of the bottom" (the most talented among disadvantaged groups) get state sponsorship; the rest are left behind. This produces a Harijan elite (Sachchidananda, 1977) and a tribal elite: a small educated class that escapes its community's condition without transforming it.</p>
 
 <p><strong>Althusser</strong>, Education functions as an Ideological State Apparatus, it produces workers who accept their place in the class hierarchy as natural and deserved. Gramsci: schools are sites of hegemonic struggle where the ruling class's worldview is transmitted as common sense.</p>
 
@@ -8044,7 +8044,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>Results: approximately 7.4 million acres were declared surplus, of which about 5.9 million were distributed. But the actual reform was far below potential: landlords transferred land to family members, used legal challenges, and lobbied for exemptions for orchards, plantations, and "efficiently managed" farms. The ceiling is widely regarded as the least successful of the land reform measures.</p>
 
 <h4>Bhoodan and Gramdan Movement</h4>
-<p>Vinoba Bhave launched the Bhoodan (land gift) movement in 1951 after being moved by the conditions of landless Harijans in Telangana (then under severe Naxalite pressure). He walked across India appealing to landowners to donate one-sixth of their land to the landless. By 1957, he had received pledges of approximately 4 million acres.</p>
+<p>Vinoba Bhave launched the Bhoodan (land gift) movement in 1951 after being moved by the conditions of landless Harijans in Telangana (in the wake of the Communist-led Telangana armed struggle of 1946-51). He walked across India appealing to landowners to donate one-sixth of their land to the landless. By 1957, he had received pledges of approximately 4 million acres.</p>
 
 <p>The Gramdan (village gift) movement extended this: entire village communities were asked to pool land and manage it collectively. JP Narayan was a key figure in this phase.</p>
 
@@ -8515,7 +8515,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Regionalism in India: Historical Background</h3>
 
-<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were recognised on the basis of language. By the 1960s, provinces settled within redrawn linguistic boundaries: Bombay divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast: Manipur, Tripura, and Meghalaya formed in the late 1970s; NEFA granted statehood as Arunachal Pradesh in 1987. The restive Nagas and Mizos were granted statehood only after violent encounters: Nagaland in 1963 (insurgency continues); Mizoram after 1986 Laldenga accord.</p>
+<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were recognised on the basis of language. By the 1960s, provinces settled within redrawn linguistic boundaries: Bombay divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast: Manipur, Tripura and Meghalaya became states in 1972; NEFA granted statehood as Arunachal Pradesh in 1987. The restive Nagas and Mizos were granted statehood only after violent encounters: Nagaland in 1963 (insurgency continues); Mizoram after 1986 Laldenga accord.</p>
 
 <h3>Factors Causing Regionalism</h3>
 <ul>
@@ -8631,7 +8631,7 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Historical Background</h3>
 
-<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were reorganised on the basis of language. Bombay was divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab was trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast. The states of Manipur, Tripura, and Meghalaya were formed in the late 1970s. NEFA was granted statehood as Arunachal Pradesh in 1987. The Nagas and Mizos achieved statehood only after violent encounters with the Indian state: Nagaland in 1963 (insurgency continues today), Mizoram after the 1986 accord with Laldenga. The 2021 violent clashes between Assam and Mizoram forces demonstrated that even settled state boundaries remain contested.</p>
+<p>Upon the recommendation of the States Reorganisation Committee (1953, headed by Fazal Ali), provinces were reorganised on the basis of language. Bombay was divided into Maharashtra (Marathi) and Gujarat (Gujarati); Punjab was trifurcated into Punjab (Punjabi), Haryana (Hindi), and Himachal Pradesh (Pahari); Kannada-speaking areas formed Karnataka; Telugu-speaking areas formed Andhra Pradesh. Then demands for autonomy emerged in the Northeast. Manipur, Tripura and Meghalaya became states in 1972. NEFA was granted statehood as Arunachal Pradesh in 1987. The Nagas and Mizos achieved statehood only after violent encounters with the Indian state: Nagaland in 1963 (insurgency continues today), Mizoram after the 1986 accord with Laldenga. The 2021 violent clashes between Assam and Mizoram forces demonstrated that even settled state boundaries remain contested.</p>
 
 <h3>Factors Producing Regionalism</h3>
 

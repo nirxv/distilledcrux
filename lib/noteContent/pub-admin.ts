@@ -304,9 +304,9 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <h3>The Setting</h3>
 
-<p>In the second half of the nineteenth century the American industrial climate produced a managerial class, and management practice began to shift from a day-to-day, problem-solving approach to a comprehensive, long-term one. <strong>Henri R. Towne</strong> and <strong>Henri Metcalf</strong> had attempted a unified system of management, and Towne called the new philosophy the science of management. <strong>Frederick Winslow Taylor</strong> (1856 to 1915) took up their ideas and is known as the Father of Scientific Management, though the term itself was coined by <strong>Louis Brandeis</strong> in 1910. Other contributors to the movement were <strong>Henry Lawrence Gantt</strong>, <strong>Harrington Emerson</strong>, <strong>Frank Bunker Gilbreth</strong>, <strong>Lillian Moller Gilbreth</strong>, <strong>Morris L. Cooke</strong> and <strong>Horace K. Hathaway</strong>.</p>
+<p>In the second half of the nineteenth century the American industrial climate produced a managerial class, and management practice began to shift from a day-to-day, problem-solving approach to a comprehensive, long-term one. <strong>Henry R. Towne</strong> and <strong>Henry Metcalfe</strong> had attempted a unified system of management, and Towne called the new philosophy the science of management. <strong>Frederick Winslow Taylor</strong> (1856 to 1915) took up their ideas and is known as the Father of Scientific Management, though the term itself was coined by <strong>Louis Brandeis</strong> in 1910. Other contributors to the movement were <strong>Henry Lawrence Gantt</strong>, <strong>Harrington Emerson</strong>, <strong>Frank Bunker Gilbreth</strong>, <strong>Lillian Moller Gilbreth</strong>, <strong>Morris L. Cooke</strong> and <strong>Horace K. Hathaway</strong>.</p>
 
-<p>Taylor's own path matters to the doctrine. He joined the Enterprise Hydraulic Works of Philadelphia in 1874 as an unpaid apprentice for four years, then worked at the Midvale Steel Company as a labourer and became its chief engineer in 1884. He was a working engineer with inventions to his name, and his belief that the best management is a true science came from the shop floor rather than the study. The movement's influence spread beyond America: in the USSR it took shape as the Stakhanovite Movement between 1920 and 1940.</p>
+<p>Taylor's own path matters to the doctrine. He joined the Enterprise Hydraulic Works of Philadelphia in 1874 as an unpaid apprentice for four years, then worked at the Midvale Steel Company as a labourer and became its chief engineer in 1884. He was a working engineer with inventions to his name, and his belief that the best management is a true science came from the shop floor rather than the study. The movement's influence spread beyond America: in the USSR it found an echo in the Stakhanovite movement, which began in 1935.</p>
 
 <h3>What Taylor Diagnosed</h3>
 
@@ -3255,7 +3255,7 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <h3>Single and Plural</h3>
 
-<p>A <strong>single budget</strong> contains the estimates of all government undertakings in one document, which reveals the financial position of the government as a whole. <strong>Plural budgets</strong> present separate department-wise budgets passed separately by the legislature. India followed the plural practice for the Railways from 1921, presenting a Railway Budget and then a general budget.</p>
+<p>A <strong>single budget</strong> contains the estimates of all government undertakings in one document, which reveals the financial position of the government as a whole. <strong>Plural budgets</strong> present separate department-wise budgets passed separately by the legislature. India followed the plural practice for the Railways from 1924, on the Acworth Committee's recommendation of 1921, presenting a Railway Budget and then a general budget.</p>
 
 <h3>Cash and Revenue</h3>
 
@@ -3432,7 +3432,7 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Three long-standing features of the Indian budget were altered simultaneously with effect from the budget of 2017-18, and any current answer must reflect them.</p>
 
 <ul>
- <li><strong>The Railway Budget was merged with the general budget</strong>, ending the separate presentation followed since 1921, on the recommendation of the committee headed by <strong>Bibek Debroy</strong> of NITI Aayog. India thereby moved from a plural to a single budget.</li>
+ <li><strong>The Railway Budget was merged with the general budget</strong>, ending the separate presentation followed since 1924, on the recommendation of the committee headed by <strong>Bibek Debroy</strong> of NITI Aayog. India thereby moved from a plural to a single budget.</li>
  <li><strong>The plan and non-plan classification of expenditure was abolished</strong>, the distinction having encouraged the neglect of maintenance and salaries as non-plan while privileging new schemes as plan. Expenditure is now classified as revenue and capital, which is the classification that carries economic meaning.</li>
  <li><strong>The date of presentation was advanced</strong> from the last day of February to the first of February, so that the legislative process can be completed before the financial year begins and departments can spend from April rather than waiting on a vote on account. The first combined budget was presented on 1 February 2017.</li>
 </ul>
@@ -4516,13 +4516,13 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The Cornwallis settlement also carried the decision that shaped Indian administration for a century: Indians were excluded from higher office, on the reasoning that only Europeans could be trusted with it. A service designed to be incorruptible was thereby designed to be alien, and the two features were connected in its founder's mind.</p>
 
-<p><strong>Lord Wellesley</strong> succeeded Cornwallis in 1798 and opened a training institution for civil servants at <strong>Fort William, Calcutta, in 1800</strong>. His formulation of the change in their character is worth quoting: civil servants were no longer the agents of a commercial concern but the officers of a powerful sovereign state, and must therefore do their work accordingly. Between 1805 and 1833 the secretariat expanded rapidly as workload grew, and new departments and boards were created, including the Board of Customs and additional Boards of Revenue, which was the first step of decentralisation undertaken to cope with the volume of business.</p>
+<p><strong>Lord Wellesley</strong>, Governor-General from 1798 after Sir John Shore's term (1793-98), opened a training institution for civil servants at <strong>Fort William, Calcutta, in 1800</strong>. His formulation of the change in their character is worth quoting: civil servants were no longer the agents of a commercial concern but the officers of a powerful sovereign state, and must therefore do their work accordingly. Between 1805 and 1833 the secretariat expanded rapidly as workload grew, and new departments and boards were created, including the Board of Customs and additional Boards of Revenue, which was the first step of decentralisation undertaken to cope with the volume of business.</p>
 
 <h3>The Charter Acts and Open Competition</h3>
 
 <ul>
  <li><strong>1833.</strong> The Presidency of Bengal was divided into Bengal and Agra, and the Governor-General of Bengal became the <strong>Governor-General of India</strong>. Open competition for the civil service was proposed but not implemented, and Indians continued to be treated as subordinate to the British.</li>
- <li><strong>1853.</strong> The Act abolished the <strong>patronage system</strong> of recruitment and introduced a merit system. A Civil Service Commission was set up in England in 1854 under <strong>Lord Macaulay</strong>, and the first competitive examination was held in London in 1855 on the Macaulay Commission's recommendation, with an age limit of nineteen to twenty-two.</li>
+ <li><strong>1853.</strong> The Act abolished the <strong>patronage system</strong> of recruitment and introduced a merit system. A committee under <strong>Lord Macaulay</strong> reported in 1854 on how the examination should work, the Civil Service Commission was set up in England in 1855, and the first competitive examination was held in London that year on the Macaulay Committee's recommendations, with an age limit of eighteen to twenty-three.</li>
 </ul>
 
 <p>The examination was open and it was held in London, which is the point on which the nationalist critique turned: a competition formally open to all was practically closed to Indians by distance, cost and the age limit, so the merit principle and the exclusion operated together rather than against each other.</p>
@@ -7441,7 +7441,7 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Why It Comes First</h3>
 
 <ul>
- <li><strong>Historically</strong>, the state came into being to maintain order. In the social contract account, <strong>Hobbes</strong> described a stateless condition as anarchy in which everyone stands against all, from which people surrender part of their sovereignty to a authority that uses it to bring about order. The first form of the state in its evolution was the <strong>police state</strong>, whose responsibility was order alone, and the lawful ability to use force remains a defining characteristic of statehood.</li>
+ <li><strong>Historically</strong>, the state came into being to maintain order. In the social contract account, <strong>Hobbes</strong> described a stateless condition as anarchy in which everyone stands against all, from which people surrender part of their sovereignty to an authority that uses it to bring about order. The first form of the state in its evolution was the <strong>police state</strong>, whose responsibility was order alone, and the lawful ability to use force remains a defining characteristic of statehood.</li>
  <li><strong>As a precondition for development.</strong> Foreign investment does not flow to states where order is weak. The literature contrasts Bihar and militancy-affected Jammu and Kashmir, where per capita income declined sharply, with <strong>Punjab</strong>, which emerged as one of India's most prosperous states after terrorism ended.</li>
  <li><strong>As a manifestation of good governance.</strong> Order and progress are its two expressions, and there can be no progress without order. The relationship is a vicious circle: the absence of progress fuels further disorder, which is the standard explanation for the spread of Naxalism into the least developed regions.</li>
 </ul>
