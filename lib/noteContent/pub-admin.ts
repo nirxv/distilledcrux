@@ -3605,6 +3605,57 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li>Its transferability to developing countries is doubtful. NPM assumes a capable, rule-bound bureaucracy that can be safely loosened. Where the Weberian stage has not been consolidated, loosening rules removes the only discipline present, which is why the sequencing argument matters: a state may need to become bureaucratic before it can usefully become post-bureaucratic.</li>
 </ul>
 
+<h3>NPM as Neo-Taylorism</h3>
+
+<p>Christopher Pollitt, in <em>Managerialism and the Public Services: The Anglo-American Experience</em> (1990), argued that the managerialism of the Thatcher and Reagan governments was in essence neo-Taylorism, a revival of Frederick Taylor's scientific management in the public sector. The resemblance lies in the method of control.</p>
+
+<ul>
+  <li><strong>Measurement:</strong> performance indicators and targets play the part that time-and-motion study played for Taylor, defining work in terms that can be counted.</li>
+  <li><strong>Control through output:</strong> staff are held to quantified standards, and pay and contracts are linked to results, as Taylor tied pay to output through the differential piece rate.</li>
+  <li><strong>The right to manage:</strong> managers plan and monitor while front-line staff execute, a separation of conception from execution that echoes Taylor's division between planning and doing.</li>
+  <li><strong>Efficiency as the aim:</strong> administration is treated as a technical problem of economy and efficiency, with politics and values in the background.</li>
+</ul>
+
+<p>The label is a critique. Pollitt held that NPM imported a model from private industry that industry itself was already questioning, and that it neglected what is distinctive in public services: citizenship, equity, accountability and the professional judgement of doctors, teachers and social workers. Target regimes also invite gaming, in which staff meet the measure rather than the purpose. Defenders reply that NPM also promised decentralisation and freedom for managers, which Taylorism never did, so the parallel holds for its control systems more than for the whole doctrine.</p>
+
+<h3>New Public Governance</h3>
+
+<p>Stephen Osborne, in "The New Public Governance?" (<em>Public Management Review</em>, 2006) and the volume he edited under the same title (2010), argued that New Public Management was a transitory stage in the evolution from traditional public administration to a new paradigm. Traditional administration rested on hierarchy and the rule-bound bureaucrat, and NPM on markets, competition and the manager. Neither fits a state that is both plural, with many interdependent actors contributing to public services, and pluralist, with many processes informing policy.</p>
+
+<ul>
+  <li><strong>Theoretical roots:</strong> institutional and network theory, rather than the political science of traditional administration or the rational and public choice theory of NPM.</li>
+  <li><strong>Focus:</strong> inter-organisational relationships and the governance of processes, rather than the single organisation and its internal resources.</li>
+  <li><strong>Mechanism:</strong> networks and relational contracts built on trust, rather than hierarchy or the market and classical contracts.</li>
+  <li><strong>Value base:</strong> neo-corporatist, with public value created through collaboration.</li>
+  <li><strong>Emphasis:</strong> service effectiveness and outcomes, with citizens and users drawn in as co-producers.</li>
+</ul>
+
+<p>Osborne treated NPM as a bridge rather than a destination, since its contracting and agencies created the fragmented landscape that only governance through networks can coordinate. The idea builds on Rhodes's account of governance as self-organising networks. Critics say it describes an aspiration more than a practice and blurs accountability across partners, and where the state remains dominant, as in India, network governance sits alongside hierarchy rather than replacing it. Partnerships with self-help groups, NGOs and private providers in Indian welfare programmes show both its promise and its problems.</p>
+
+<h3>The Neo-Weberian State</h3>
+
+<p>Christopher Pollitt and Geert Bouckaert, in the second edition of <em>Public Management Reform: A Comparative Analysis</em> (2004), coined the term Neo-Weberian State for the reform path of continental European countries such as France, Germany, Belgium, the Netherlands and the Nordic states. These governments modernised their administrations without adopting the market model of the Anglo-Saxon NPM countries.</p>
+
+<p>The Weberian elements are reaffirmed:</p>
+
+<ul>
+  <li>the state remains the main facilitator of solutions to the new problems of globalisation, technological change, shifting demography and environmental threat,</li>
+  <li>representative democracy remains the legitimating element of the state apparatus,</li>
+  <li>administrative law, suitably modernised, remains central to the relation between state and citizen, including equality before the law,</li>
+  <li>the public service keeps a distinctive status, culture and terms and conditions.</li>
+</ul>
+
+<p>The neo elements are added:</p>
+
+<ul>
+  <li>an external orientation towards meeting citizens' needs and wishes, in place of an internal orientation towards bureaucratic rules,</li>
+  <li>consultation with citizens and direct representation of their views, supplementing representative democracy rather than replacing it,</li>
+  <li>a greater orientation towards results rather than the correct following of procedure alone,</li>
+  <li>professionalisation of the public service, so that the official becomes a professional manager oriented to the citizen as well as an expert in the law.</li>
+</ul>
+
+<p>The Neo-Weberian State answers the claim that NPM was a global convergence. It shows that reform followed national traditions, and that a strong, law-bound state can become more efficient and citizen-centred without being hollowed out. Critics note that the model is a reconstruction of practice rather than a programme any government announced, and that its boundaries with NPM and governance are blurred. Indian reforms such as citizen's charters, outcome budgeting and right to services laws, introduced within a strong rule-bound bureaucracy, are closer to the neo-Weberian path than to full NPM.</p>
+
 <h2>Public Choice</h2>
 
 <p>Public choice supplies NPM's theoretical foundation, and is defined by <strong>Dennis Mueller</strong> as "the economic study of non-market decision making, or simply the application of economics to political science".</p>
