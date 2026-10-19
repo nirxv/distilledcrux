@@ -158,6 +158,22 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Applied anthropology is sometimes considered a fifth subfield: a method more than a discipline. It involves using anthropological knowledge and methods to address real-world problems: development projects, health interventions, legal cases, policy design, conflict resolution, and organisational management. Applied anthropology insists on the importance of local knowledge, community participation and cultural sensitivity in any intervention.</p>
 
+<h3>Role and Relevance of Anthropology in Contemporary India</h3>
+
+<p>Anthropology's holistic, field-based and comparative method gives it a practical role in a country of great biological, cultural and linguistic diversity, rapid change and deep inequality.</p>
+
+<ul>
+  <li><strong>Documenting diversity:</strong> the Anthropological Survey of India (1945) and its People of India project (launched 1985 under K.S. Singh) profiled 4,635 communities, and state Tribal Research Institutes supply ethnographic data for policy.</li>
+  <li><strong>Tribal policy:</strong> anthropological criteria guide the scheduling of tribes (Lokur Committee, 1965), the identification of Particularly Vulnerable Tribal Groups and policy for isolated peoples such as the Jarawa and Sentinelese. Laws such as PESA (1996) and the Forest Rights Act (2006) rest on the customary institutions anthropologists documented.</li>
+  <li><strong>Development and displacement:</strong> a social impact assessment is required before land acquisition under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013. Anthropologists study displacement, plan rehabilitation and evaluate programmes for cultural fit.</li>
+  <li><strong>Health and nutrition:</strong> medical anthropology explains acceptance or refusal of vaccination, institutional delivery and family planning, and biological anthropology supports nutrition surveys and screening for sickle cell disease, the target of the National Sickle Cell Anaemia Elimination Mission (2023).</li>
+  <li><strong>Biological and forensic work:</strong> identification of victims of crime and disaster, disputed paternity, anthropometric data for designing equipment and uniforms, sports science, and population genetics of the peopling of India.</li>
+  <li><strong>Heritage and language:</strong> archaeology and ethnoarchaeology protect and interpret sites, and linguistic anthropology documents endangered tribal languages and supports mother-tongue education.</li>
+  <li><strong>Social cohesion:</strong> understanding caste, ethnic, communal and regional conflicts, identity movements, demands for Scheduled Tribe status, migration and urban poverty.</li>
+</ul>
+
+<p><strong>Critical assessment:</strong> anthropology began in India as a colonial science of classification, seen in Risley's racial ranking of castes and in the Criminal Tribes Act 1871, and it is still accused of exoticising tribes. Planners often ignore its advice, social impact assessments are frequently perfunctory, and its influence on large projects has been limited. Its relevance depends on moving from description to engagement: studying cities, markets, the state and digital life, working with communities as partners, and holding policy to account.</p>
+
 <h2>The Scientific Method in Anthropology</h2>
 
 <p>Physical anthropology, and increasingly all anthropological subfields, applies the scientific method:</p>
@@ -222,6 +238,31 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Anatomy</h3>
 
 <p>Physical anthropologists with expertise in anatomy study the biomechanical relationships between skeletal and soft tissue structures. This knowledge is essential for interpreting fossilised remains: understanding how an extinct hominin moved, for example, requires detailed knowledge of bone and muscle relationships.</p>
+
+<h3>The New Physical Anthropology: From Typology to Evolutionary Process</h3>
+
+<p>Until the mid-twentieth century physical anthropology was largely descriptive and typological. Founders such as Aleš Hrdlička and Earnest Hooton measured skulls and bodies (cephalic index, nasal index, stature) to sort humanity into fixed racial types, each imagined as a pure ideal from which individuals deviated. The approach was static and often served racial hierarchy and eugenics.</p>
+
+<p>Sherwood Washburn's paper "The New Physical Anthropology" (1951) called for a new agenda in line with the Modern Synthesis of Darwinian selection and Mendelian genetics developed by Dobzhansky, Mayr and Simpson:</p>
+
+<ul>
+  <li><strong>From types to populations:</strong> the unit of study is the breeding population, in which variation is normal, not the racial type.</li>
+  <li><strong>From classification to process:</strong> the aim is to understand how mutation, selection, drift and gene flow produce change and adaptation.</li>
+  <li><strong>From measurement to hypothesis testing:</strong> measurements should answer specific questions, tested by experiment and comparison.</li>
+  <li><strong>Function and behaviour:</strong> anatomy is studied as functional complexes linked to behaviour, such as locomotion and chewing, and living primates are observed in the wild to help explain human evolution.</li>
+</ul>
+
+<p><strong>Developments that followed:</strong></p>
+
+<ul>
+  <li>Field primatology, encouraged by Washburn and Louis Leakey, with studies of baboons (Irven DeVore) and of chimpanzees (Jane Goodall, from 1960).</li>
+  <li>New dating: fluorine testing exposed the Piltdown fraud in 1953, and potassium-argon dating gave Olduvai Bed I an age of about 1.75 million years (1961).</li>
+  <li>Population genetics of blood groups and proteins, and the molecular clock of Vincent Sarich and Allan Wilson (1967), which placed the human-ape split at about five million years.</li>
+  <li>The critique of race: the UNESCO statements on race (from 1950), Frank Livingstone's argument (1962) that there are no races, only clines, and Richard Lewontin's finding (1972) that about 85 percent of human genetic variation lies within populations.</li>
+  <li>Later, DNA sequencing, ancient DNA and studies of human adaptability, growth and nutrition.</li>
+</ul>
+
+<p>The change of name from physical to biological anthropology marks this shift. In India the move was from B.S. Guha's anthropometric classification of races (1935) to serological, genetic and genomic studies of population history, such as the ancestral north Indian and ancestral south Indian components identified by David Reich and colleagues (2009).</p>
 
 <h2>Social / Cultural Anthropology</h2>
 
@@ -382,6 +423,91 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Old World catarrhines are divided into Cercopithecoidea (Old World monkeys) and Hominoidea (apes and humans). Hominoids are generally larger, tailless, possess larger and more complex brains, and have anatomical modifications of the shoulder for suspensory climbing. The family Hominidae includes all living and extinct habitually bipedal primates.</p>
 
+<h3>Strepsirhini and Haplorhini</h3>
+
+<p>Most primatologists now divide the order into the suborders <strong>Strepsirhini</strong> ("turned nose") and <strong>Haplorhini</strong> ("simple nose"), a scheme first proposed by R.I. Pocock in 1918 on the structure of the nose. Strepsirhines are the lemurs, lorises, pottos and galagos. Haplorhines are the tarsiers, monkeys, apes and humans. It replaces the Prosimii-Anthropoidea division because tarsiers, though nocturnal leapers like prosimians, share derived traits with anthropoids: a dry nose, a free upper lip, a haemochorial placenta, partial bony closure behind the eye socket and loss of the ability to make vitamin C.</p>
+
+<p><strong>Geographical distribution:</strong> strepsirhines are confined to the Old World tropics.</p>
+
+<ul>
+  <li><strong>Lemurs:</strong> found naturally only on Madagascar, where, isolated from monkeys, they radiated into about 100 species.</li>
+  <li><strong>Lorises:</strong> South and South-East Asia. The slender loris lives in the forests of south India and Sri Lanka, the slow loris in north-east India and South-East Asia.</li>
+  <li><strong>Pottos and galagos (bushbabies):</strong> sub-Saharan Africa.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Strepsirhini</th><th>Haplorhini</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Nose and lip</td><td>Moist, hairless rhinarium, upper lip tied to the gum</td><td>Dry, haired nose, free upper lip that allows facial expression</td></tr>
+    <tr><td>Eye socket</td><td>Postorbital bar only</td><td>Postorbital closure (partial in tarsiers)</td></tr>
+    <tr><td>Eye</td><td>Reflective tapetum lucidum in most, an aid to night vision</td><td>No tapetum, a retinal fovea for sharp vision</td></tr>
+    <tr><td>Teeth and digits</td><td>Toothcomb of forward-pointing lower incisors and canines, grooming claw on the second toe</td><td>No toothcomb, nails on all digits (tarsiers keep grooming claws)</td></tr>
+    <tr><td>Smell</td><td>Large olfactory region, functional vomeronasal organ, heavy scent-marking</td><td>Reduced olfaction, vomeronasal organ vestigial in Old World monkeys, apes and humans</td></tr>
+    <tr><td>Physiology and activity</td><td>Can synthesise vitamin C, many nocturnal, smaller brains</td><td>Need dietary vitamin C, mostly diurnal (except tarsiers and owl monkeys), larger brains</td></tr>
+  </tbody>
+</table>
+
+<h3>Smell as a Signal among Non-human Primates</h3>
+
+<p>Although primates trend towards reduced smell and enhanced vision, chemical signals remain important, above all in strepsirhines and New World monkeys. Scent persists after the sender has gone, works at night and in dense forest, and carries information on identity, sex, reproductive state and territory.</p>
+
+<ul>
+  <li><strong>Organs:</strong> odours are detected by the main olfactory epithelium and by the vomeronasal (Jacobson's) organ, which responds to pheromone-like compounds. The vomeronasal organ works in strepsirhines and New World monkeys but is vestigial in catarrhines.</li>
+  <li><strong>Scent-marking:</strong> ring-tailed lemur males rub secretions from wrist and arm glands onto their tails and wave them at rivals in "stink fights". Galagos and lorises urine-wash, wetting hands and feet so that their routes are marked as they climb. Marmosets and tamarins mark with glands around the genitals.</li>
+  <li><strong>Reproductive signals:</strong> in marmoset and tamarin groups, scent from the dominant breeding female helps suppress ovulation in subordinate females.</li>
+</ul>
+
+<p>Old World monkeys and apes rely more on visual signals such as the sexual swellings of female baboons and chimpanzees. Yoav Gilad and colleagues (2004) found that the loss of working olfactory receptor genes in primates coincided with the acquisition of full trichromatic colour vision, suggesting a trade-off between the two senses.</p>
+
+<h3>Locomotor Patterns in Non-human Primates</h3>
+
+<p>Primates move in more ways than any other mammalian order, thanks to the generalised limb kept from their arboreal past. The standard classification derives from John Napier and Alan Walker (1967) and the Napiers. A useful skeletal measure is the <strong>intermembral index</strong>: (humerus + radius) / (femur + tibia) multiplied by 100.</p>
+
+<ul>
+  <li><strong>Vertical clinging and leaping:</strong> clinging upright to trunks and leaping between them with long hind limbs. Tarsiers, galagos, sifakas, the indri. Index about 50 to 70.</li>
+  <li><strong>Slow climbing:</strong> deliberate movement gripping with all four limbs, without leaping. Lorises and pottos, including the slender loris of south India.</li>
+  <li><strong>Quadrupedalism:</strong> arboreal (most monkeys, such as capuchins and macaques, index about 80 to 100) or terrestrial on palms, soles or digits (baboons, geladas). The Hanuman langur walks on the ground and leaps in trees.</li>
+  <li><strong>Knuckle-walking:</strong> the ground gait of gorillas, chimpanzees and bonobos, with weight on the backs of the middle finger bones, suited to long-armed climbing apes.</li>
+  <li><strong>Brachiation:</strong> arm-over-arm swinging below branches, in its true ricochetal form only in gibbons and siamangs, with very long arms, hook-like hands and a mobile shoulder. The hoolock gibbon of north-east India, India's only ape, moves this way. Index about 130.</li>
+  <li><strong>Semi-brachiation:</strong> arm-swinging with climbing and leaping. Spider and woolly monkeys use a prehensile tail as a fifth limb.</li>
+  <li><strong>Quadrumanous climbing:</strong> orang-utans clamber slowly using all four limbs as hands. Index about 140.</li>
+  <li><strong>Bipedalism:</strong> habitual only in humans (index about 70). Chimpanzees and gibbons walk bipedally for short distances.</li>
+</ul>
+
+<p>Locomotion correlates with body size, diet and habitat, and the upright trunk of climbing and suspensory apes is central to debates on the origin of human bipedalism.</p>
+
+<h3>Forms of Primate Social Organisation</h3>
+
+<p>Most primates live in permanent social groups, linked to long infant dependency and reliance on learning. Group form varies with the distribution of food, predation risk, competition for mates and the threat of infanticide.</p>
+
+<ul>
+  <li><strong>Solitary (dispersed) living:</strong> adults forage alone, but a male's range overlaps those of several females and contact is kept by calls and scent. Orang-utans, lorises, galagos, mouse lemurs and the aye-aye.</li>
+  <li><strong>Monogamous pairs:</strong> an adult pair and young defend a territory, often with loud duets. Gibbons and siamangs, the indri, titi and owl monkeys. The hoolock gibbon of north-east India lives in such family groups. Males and females are similar in size.</li>
+  <li><strong>Polyandrous (cooperative breeding) groups:</strong> one breeding female mates with two or more males, who help carry the usual twins. Marmosets and tamarins.</li>
+  <li><strong>One-male, multi-female groups:</strong> a resident male with several females and young, surplus males living in all-male bands. Hanuman langurs and most gorilla groups. When outside males take over, infanticide can follow. Yukimaru Sugiyama first reported it among langurs at Dharwar (Karnataka) in the 1960s, and Sarah Blaffer Hrdy, studying langurs at Mount Abu (Rajasthan), interpreted it as a male reproductive strategy (<em>The Langurs of Abu</em>, 1977).</li>
+  <li><strong>Multi-level societies:</strong> one-male units nested within larger bands and herds. Hamadryas baboons, studied by Hans Kummer, and geladas.</li>
+  <li><strong>Multi-male, multi-female groups:</strong> several adults of each sex, a dominance hierarchy among males and stable female lineages. Savanna baboons, rhesus macaques, bonnet macaques of south India, ring-tailed lemurs and capuchins. Females usually stay in their natal group and males transfer.</li>
+  <li><strong>Fission-fusion communities:</strong> a large community whose members split into small, changing parties and rejoin. Chimpanzees, bonobos and spider monkeys. Chimpanzee males stay in their natal community and patrol its borders, while females transfer.</li>
+</ul>
+
+<p>Socioecological studies, beginning with John Crook and Stephen Gartlan (1966), linked group form to habitat: larger, multi-male groups in open country where predation is high, smaller or solitary units in forest where food is scattered. Richard Wrangham (1980) argued that food distribution shapes relations among females and that males distribute themselves around females. Social organisation is thus an adaptation to ecology, overlaid by learned traditions within each group.</p>
+
+<h3>Jane Goodall and the Study of Chimpanzee Behaviour</h3>
+
+<p>Jane Goodall (born 1934, London) began studying wild chimpanzees at Gombe Stream, Tanzania, in July 1960, sent by Louis Leakey, who hoped great ape behaviour would illuminate early hominids. She took a Cambridge PhD in 1965 under Robert Hinde without a first degree. Gombe is now the longest continuous field study of any wild animal population.</p>
+
+<ul>
+  <li><strong>Tool making:</strong> in 1960 she saw the male David Greybeard strip leaves from twigs to "fish" for termites, and chimpanzees also use chewed leaves as sponges. Tool making could no longer define humans.</li>
+  <li><strong>Hunting:</strong> chimpanzees, thought vegetarian, hunt red colobus monkeys and young bushpigs, often cooperatively, and share meat.</li>
+  <li><strong>Social life:</strong> lasting mother-offspring bonds (Flo and her son Flint), grooming, reconciliation, male dominance contests and individual personalities.</li>
+  <li><strong>Violence:</strong> the "four-year war" (1974 to 1978) in which the Kasakela community killed the males of the breakaway Kahama group, and infanticide and cannibalism by the female Passion and her daughter Pom.</li>
+  <li><strong>Method:</strong> long-term observation of habituated, individually named animals with attention to emotion and personality, criticised at first but now standard.</li>
+</ul>
+
+<p>Her main works are <em>In the Shadow of Man</em> (1971) and <em>The Chimpanzees of Gombe</em> (1986), and she founded the Jane Goodall Institute (1977). <strong>Assessment:</strong> she showed continuity between apes and humans in tool use, hunting, social bonds and violence, and supplied models for early hominid behaviour. Margaret Power argued that banana provisioning at Gombe in the 1960s increased aggression. Comparisons across field sites (Andrew Whiten and colleagues, 1999) later showed that chimpanzee communities have distinct cultural traditions.</p>
+
 <h2>Hominid Evolution: The Fossil Record</h2>
 
 <h3>Early Hominoids: Dryopithecus and Ramapithecus</h3>
@@ -417,6 +543,148 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Anatomically Modern Homo Sapiens: Cro-Magnon</h3>
 
 <p>The oldest remains of <em>Homo sapiens</em> come from Africa: Jebel Irhoud, Morocco (about 300,000 years ago) and Omo Kibish, Ethiopia (about 230,000 to 195,000 years ago). Anatomically modern humans reached Europe by about 45,000 years ago, where they are known as Cro-Magnon people, and replaced the Neanderthals with limited interbreeding. They had large brains and lived as hunter-gatherers in cooperative bands. They built shelters, used hides for clothing, and buried their dead. Cro-Magnon people are responsible for the cave paintings and other art found at sites such as Lascaux in France, evidence of fully developed symbolic thought and cultural life.</p>
+
+<h3>Miocene Hominoids and Their Significance</h3>
+
+<p>The Miocene (about 23 to 5 million years ago) was the age of apes, with dozens of hominoid genera across Africa, Europe and Asia, far more than survive today.</p>
+
+<ul>
+  <li><strong>Proconsul (East Africa, about 20 to 17 million years ago):</strong> named in 1933 and best known from the skull Mary Leakey found on Rusinga Island, Lake Victoria, in 1948. Ape-like teeth and no tail, but a monkey-like trunk and limbs for walking along branches: a stem hominoid near the base of the ape radiation.</li>
+  <li><strong>Dryopithecus (Europe, about 12 to 9 million years ago):</strong> described by Edouard Lartet in 1856. Its lower molars show the Y-5 cusp pattern of later apes and humans, the "Dryopithecus pattern".</li>
+  <li><strong>Sivapithecus (Siwaliks of India and Pakistan, about 12 to 8 million years ago):</strong> thick-enamelled molars and an orang-utan-like face, shown by the partial face GSP 15000 described by David Pilbeam in 1982. The jaws once called Ramapithecus belong to it. Its giant relative Gigantopithecus survived in China into the Pleistocene.</li>
+  <li><strong>Late Miocene African hominins:</strong> <em>Sahelanthropus</em> (Chad, about 7 million years), <em>Orrorin</em> (Kenya, about 6 million years) and <em>Ardipithecus kadabba</em> (Ethiopia, about 5.8 to 5.2 million years), the earliest candidates for the human line.</li>
+</ul>
+
+<p><strong>Significance:</strong> the Miocene record shows the origin of the hominoid body plan and the early separation of the orang-utan line from the African ape and human lines, as molecular evidence predicts. Thick enamel and small canines evolved more than once among apes, so, as the Ramapithecus episode showed, a few teeth cannot establish hominid status. The human line arose in Africa near the end of the epoch, as cooling climates broke up the forests.</p>
+
+<h3>Australopithecus Species of East and South Africa</h3>
+
+<p>The genus <em>Australopithecus</em> lived from about 4.2 to 2 million years ago. Its species walked upright on the ground but kept long arms and curved fingers useful for climbing, and had ape-sized brains of about 380 to 550 cc.</p>
+
+<table>
+  <thead>
+    <tr><th>Species</th><th>Region and sites</th><th>Approximate date</th><th>Key finds and features</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><em>A. anamensis</em></td><td>East Africa: Kanapoi and Allia Bay (Kenya)</td><td>4.2 to 3.9 million years</td><td>Named by Meave Leakey and colleagues in 1995. Tibia shows bipedalism, jaw primitive.</td></tr>
+    <tr><td><em>A. afarensis</em></td><td>East Africa: Hadar and Dikika (Ethiopia), Laetoli (Tanzania)</td><td>3.9 to 2.9 million years</td><td>"Lucy" (AL 288-1), found at Hadar by Donald Johanson in 1974, about 3.2 million years old. The Laetoli footprints (about 3.6 million years), found by Mary Leakey's team in 1978, prove upright walking.</td></tr>
+    <tr><td><em>A. garhi</em></td><td>East Africa: Bouri (Ethiopia)</td><td>about 2.5 million years</td><td>Described in 1999, found near antelope bones with stone-tool cut marks.</td></tr>
+    <tr><td><em>A. africanus</em></td><td>South Africa: Taung, Sterkfontein, Makapansgat</td><td>about 3 to 2 million years</td><td>Taung child (type specimen) and "Mrs Ples" (Sts 5), found by Robert Broom and John Robinson at Sterkfontein in 1947. Rounder skull and smaller face than <em>afarensis</em>.</td></tr>
+    <tr><td><em>A. sediba</em></td><td>South Africa: Malapa</td><td>about 2 million years</td><td>Found by Lee Berger's team in 2008. Small brain with some <em>Homo</em>-like hand and pelvis features.</td></tr>
+  </tbody>
+</table>
+
+<h4>The Taung Baby</h4>
+
+<p><strong>Discovery:</strong> in 1924 quarrymen at the Buxton limeworks near Taung, in present-day North West Province, South Africa, blasted out a block containing a fossil skull, which reached Raymond Dart, professor of anatomy at the University of the Witwatersrand. Dart described it in <em>Nature</em> in February 1925 as <em>Australopithecus africanus</em>, the "southern ape of Africa".</p>
+
+<ul>
+  <li>A child of about three to four years (Dart estimated six), with milk teeth and the first permanent molars erupting.</li>
+  <li>The face, lower jaw and a natural endocast (a stone cast of the inside of the braincase) survive. The endocast shows a brain of about 400 cc, within the ape range.</li>
+  <li>The foramen magnum lies forward under the skull, indicating a head balanced on an upright spine.</li>
+  <li>Small canines, a rounded forehead without heavy brow ridges and a less projecting face than a young ape of the same age.</li>
+  <li>Damage to the eye sockets, identified by Lee Berger (2006), suggests the child was killed by a large bird of prey.</li>
+</ul>
+
+<p><strong>Significance:</strong> Taung was the first australopithecine found, and Dart claimed it as a human ancestor that confirmed Darwin's view of an African origin. Arthur Keith, Grafton Elliot Smith and other British anatomists rejected it: it was a juvenile, Asia was the favoured cradle, and Piltdown had led them to expect a large brain before upright posture. Robert Broom's adult finds at Sterkfontein from 1936, Wilfrid Le Gros Clark's acceptance in 1947 and the exposure of Piltdown in 1953 vindicated Dart. Taung established that bipedalism preceded brain enlargement and made Africa the focus of research on human origins.</p>
+
+<h3>Paranthropus: The Robust Australopithecines</h3>
+
+<p><em>Paranthropus</em> ("beside man") is the genus Robert Broom created in 1938 for fossils from Kromdraai. It groups the "robust" australopithecines, bipedal hominins with massive jaws and teeth who lived only in Africa from about 2.7 million to roughly 1 million years ago, alongside early <em>Homo</em>.</p>
+
+<ul>
+  <li><strong><em>P. aethiopicus</em> (East Africa, about 2.7 to 2.3 million years):</strong> the "Black Skull" (KNM-WT 17000) found at West Turkana, Kenya, in 1985. Small brain (about 410 cc), projecting face, very large sagittal crest. The most primitive species.</li>
+  <li><strong><em>P. boisei</em> (East Africa, about 2.3 to 1.3 million years):</strong> Olduvai, Koobi Fora, the Omo valley, Konso, Peninj and as far south as Malawi. The type specimen OH 5, "Zinjanthropus" or "Nutcracker Man", was found by Mary Leakey at Olduvai in 1959 and dated to about 1.8 million years. The most extreme robust form, brain about 500 to 550 cc.</li>
+  <li><strong><em>P. robustus</em> (South Africa, about 2 to 1 million years):</strong> Kromdraai, Swartkrans and Drimolen caves. Somewhat smaller face and teeth than <em>boisei</em>, brain about 530 cc.</li>
+</ul>
+
+<p><strong>Characteristic features:</strong> a sagittal crest (in males) anchoring huge temporal muscles, wide flaring cheekbones giving a dish-shaped face, a massive mandible, very large molars and molar-like premolars with thick enamel, and small incisors and canines, all adaptations for heavy chewing. Below the head they were small-bodied bipeds.</p>
+
+<p><strong>Lifeways:</strong> John Robinson's "dietary hypothesis" of the 1950s held that robust forms were plant specialists and gracile forms omnivores. Carbon isotopes now show that <em>P. boisei</em> ate mainly grasses and sedges, and its tooth microwear shows little crushing of hard objects, so "Nutcracker Man" is a misnomer. <em>P. robustus</em> had a broader diet that included hard foods. Hand bones from Swartkrans suggest a precision grip, and worn bone fragments there may have been used to dig into termite mounds. Many individuals fell prey to leopards and other carnivores.</p>
+
+<p><strong>Phylogenetic status:</strong> Paranthropus is an extinct side branch, not ancestral to <em>Homo</em>. It is debated whether the robusts form one natural group descended from <em>P. aethiopicus</em>, which justifies a separate genus, or whether East and South African robusts evolved their chewing apparatus independently, in which case they belong in <em>Australopithecus</em>. Their survival alongside <em>Homo</em> for over a million years shows that human evolution was a branching bush.</p>
+
+<h3>Dart's Osteodontokeratic Culture and Its Refutation</h3>
+
+<p>Raymond Dart proposed that the australopithecines of the Makapansgat Limeworks cave (Limpopo Province, South Africa) made tools of bone (osteo), teeth (donto) and horn (keratic) before stone tools. He set out the idea fully in <em>The Osteodontokeratic Culture of Australopithecus prometheus</em> (1957). He had named the Makapansgat hominin <em>Australopithecus prometheus</em> in 1948 because blackened bones suggested fire to him. It is now included in <em>A. africanus</em>.</p>
+
+<ul>
+  <li><strong>Selection of parts:</strong> the cave held thousands of animal bones, mostly antelope, in which some parts were common (jaws, skull pieces, the lower ends of humeri) and others rare (tail and other vertebrae). Dart read this as deliberate selection of useful pieces.</li>
+  <li><strong>Tool uses:</strong> long bones were said to be clubs, toothed jaws saws and scrapers, and horn cores daggers.</li>
+  <li><strong>Violence:</strong> baboon skulls with depressed fractures were taken as victims of blows from bone clubs. Dart ("The predatory transition from ape to man", 1953) portrayed australopithecines as violent hunters, an image Robert Ardrey popularised in <em>African Genesis</em> (1961) as the "killer ape".</li>
+</ul>
+
+<p><strong>Taphonomic refutation:</strong> Sherwood Washburn ("Australopithecines: the hunters or the hunted?", 1957) suggested that hyenas collected the bones. C.K. Brain tested such claims through taphonomy, the study of how bones become fossils. Goat bones discarded by Namib villagers and chewed by dogs showed the same pattern of surviving parts as Makapansgat, because dense parts such as jaws and the lower humerus resist destruction while spongy parts are eaten. Leopards, hyenas and porcupines collect and break bones in caves, and a juvenile <em>Paranthropus</em> skull from Swartkrans (SK 54) bears two holes matching a leopard's lower canines. Brain's <em>The Hunters or the Hunted?</em> (1981) concluded that the South African hominins were more often prey than hunters.</p>
+
+<p><strong>Assessment:</strong> the osteodontokeratic culture is rejected, but the debate founded the science of taphonomy and replaced the image of early hominins as killers with one of vulnerable foragers. Bone use itself was possible: microscopic wear on bone fragments from Swartkrans and Sterkfontein suggests some early hominins used bones to dig into termite mounds (Lucinda Backwell and Francesco d'Errico, 2001).</p>
+
+<h3>Olduvai Gorge</h3>
+
+<p>Olduvai (officially Oldupai) Gorge is a ravine about 48 km long and up to about 90 m deep on the eastern edge of the Serengeti, northern Tanzania. Its exposed lake and river deposits, interleaved with datable volcanic layers, span about 2 million to 15,000 years ago. Wilhelm Kattwinkel came upon fossils there in 1911, Hans Reck followed in 1913, and Louis and Mary Leakey worked there from 1931 for decades.</p>
+
+<ul>
+  <li><strong>Dating:</strong> potassium-argon dating of Bed I in 1961 (about 1.8 million years) was the first such date for a hominin site and greatly lengthened the time scale of human evolution.</li>
+  <li><strong>Fossils:</strong> OH 5 (<em>Paranthropus boisei</em>, 1959), OH 7 (type specimen of <em>Homo habilis</em>, found in 1960 and named by Louis Leakey, Phillip Tobias and John Napier in 1964), OH 9 (<em>Homo erectus</em>, Bed II, about 1.4 million years) and OH 62 (a partial <em>H. habilis</em> skeleton, 1986).</li>
+  <li><strong>Tools:</strong> Mary Leakey defined the Oldowan industry from Bed I, followed by the Developed Oldowan and Acheulian in Bed II.</li>
+  <li><strong>Behaviour:</strong> sites such as FLK Zinj, with tools and cut-marked bones, started the debate between Glynn Isaac's home-base model and Lewis Binford's view of early hominins as scavengers.</li>
+</ul>
+
+<p><strong>Significance:</strong> a long, well-dated sequence linking fossils, tools and environments, showing early <em>Homo</em> and robust hominins living side by side, and making East Africa the main field of research on human origins.</p>
+
+<h3>Rhodesian Man (Kabwe 1)</h3>
+
+<p>Rhodesian Man is a skull found on 17 June 1921 by the Swiss miner Tom Zwiglaar in a cave at the Broken Hill lead and zinc mine, Northern Rhodesia (now Kabwe, Zambia). Arthur Smith Woodward described it in 1921 as a new species, <em>Homo rhodesiensis</em>.</p>
+
+<ul>
+  <li><strong>Features:</strong> cranial capacity about 1,280 cc, within the modern range, a long, low vault, one of the most massive continuous brow ridges of any hominin, and a large, broad face and palate. Limb bones found in the mine are close to those of modern humans.</li>
+  <li><strong>Pathology:</strong> severe decay in most of the upper teeth, among the earliest known cases of dental caries, with abscesses.</li>
+  <li><strong>Dating:</strong> Rainer Grün and colleagues (2020), using uranium-series and electron spin resonance dating, placed it at about 300,000 years ago (299,000 plus or minus 25,000).</li>
+  <li><strong>Classification:</strong> usually grouped with other African Middle Pleistocene fossils such as Bodo (Ethiopia) and Elandsfontein (South Africa) in <em>Homo heidelbergensis</em>, or kept as <em>Homo rhodesiensis</em>. Older schemes called it an "African Neanderthal" or <em>Homo sapiens rhodesiensis</em>.</li>
+</ul>
+
+<p><strong>Significance:</strong> Kabwe represents the archaic humans of Middle Pleistocene Africa, intermediate between <em>Homo erectus</em> and <em>Homo sapiens</em>. The new date makes it roughly contemporary with the earliest <em>Homo sapiens</em> at Jebel Irhoud and with the small-brained <em>Homo naledi</em> of South Africa, so several human lineages lived in Africa at once. Whether Kabwe's population was ancestral to modern humans or a parallel lineage is debated.</p>
+
+<h3>Classic and Progressive Neanderthals, and the Genetic Evidence</h3>
+
+<p>The first recognised Neanderthal came from the Feldhofer cave in the Neander valley, Germany, in 1856, and William King named <em>Homo neanderthalensis</em> in 1864. Neanderthals are classed either as a separate species or as a subspecies of <em>Homo sapiens</em>, and their lineage traits already appear at Sima de los Huesos, Spain, about 430,000 years ago.</p>
+
+<p><strong>The old distinction</strong>, developed in the 1950s by F. Clark Howell and others:</p>
+
+<ul>
+  <li><strong>Classic Neanderthals:</strong> western Europeans of the last glaciation, about 70,000 to 40,000 years ago (La Chapelle-aux-Saints, La Ferrassie, Le Moustier, Spy, Monte Circeo). Long, low skulls of about 1,500 to 1,600 cc, double-arched brow ridges, an occipital bun, a projecting mid-face, no chin, and a stocky body with short forearms and shins. Marcellin Boule's study of La Chapelle (1911 to 1913) wrongly portrayed them as stooped and brutish.</li>
+  <li><strong>Progressive (generalised) Neanderthals:</strong> earlier or eastern fossils such as Steinheim, Ehringsdorf and Krapina in Europe and Skhul and Tabun in Israel, with rounder skulls, smaller brow ridges and sometimes a trace of a chin.</li>
+</ul>
+
+<p>On the "pre-Neanderthal" view, generalised early forms gave rise both to modern humans and to the classic Neanderthals, a specialised dead end in glacial Europe. On the "Neanderthal phase" view of Aleš Hrdlička and C. Loring Brace, all Neanderthals were ancestral to modern humans.</p>
+
+<p><strong>Should the distinction be kept?</strong> Largely not. Skhul and Qafzeh (about 120,000 to 90,000 years) are now classed as early <em>Homo sapiens</em> while Tabun is Neanderthal, so the "progressive" group mixed two lineages. The accretion model (Jean-Jacques Hublin and others) shows Neanderthal traits building up gradually in Europe, so early European "progressives" are simply earlier members of one lineage. Classic traits reflect cold adaptation (a stocky build fits Bergmann's and Allen's rules) and genetic drift in small, isolated populations. The terms survive only to describe variation, such as the less extreme Near Eastern Neanderthals of Amud, Kebara and Shanidar.</p>
+
+<p><strong>Genetic evidence:</strong> Matthias Krings, Svante Pääbo and colleagues (1997) found Feldhofer mitochondrial DNA outside the range of living humans. The draft Neanderthal genome (Richard Green and colleagues, 2010) showed that living non-Africans carry Neanderthal DNA, later put at about 2 per cent, while sub-Saharan Africans carry very little. The mixing happened mainly in western Asia soon after modern humans left Africa, about 60,000 to 50,000 years ago. Denisovans, known from Denisova cave in Siberia (2010), left DNA in Melanesians and other Asians. Pääbo received the 2022 Nobel Prize in Physiology or Medicine.</p>
+
+<p><strong>"Europeans are closer to Neanderthals"</strong> is mistaken if it implies descent. Europeans carry no more Neanderthal ancestry than other non-Africans, and East Asians carry slightly more, because the mixing preceded the separation of these populations. About 98 per cent of a European genome derives from the population that left Africa, and no Neanderthal mitochondrial or Y-chromosome lineage survives. Modern humans entered Europe about 45,000 years ago and replaced Neanderthals within a few thousand years, with limited interbreeding. Neanderthals were thus a sister lineage, extinct about 40,000 years ago, that survives only as a small share of non-African genomes.</p>
+
+<h3>Origin and Dispersal of Modern Homo sapiens: Competing Models</h3>
+
+<ul>
+  <li><strong>Multiregional evolution:</strong> Milford Wolpoff, Wu Xinzhi and Alan Thorne (1984), building on Franz Weidenreich, held that <em>Homo erectus</em> populations of Africa, Europe, East Asia and Australasia evolved together into <em>Homo sapiens</em>, linked by gene flow. They cited regional continuity, such as shovel-shaped incisors from Zhoukoudian to modern East Asians and robust brows from Java (Ngandong) to early Australians (Kow Swamp).</li>
+  <li><strong>Recent African origin (replacement):</strong> associated with Christopher Stringer and Peter Andrews (1988). Modern humans evolved once, in Africa, and spread across Eurasia mainly after about 70,000 to 50,000 years ago, replacing archaic humans.</li>
+  <li><strong>Assimilation:</strong> Fred Smith and Günter Bräuer accepted an African origin but allowed some interbreeding with archaic populations.</li>
+</ul>
+
+<p><strong>Evidence:</strong> the earliest <em>Homo sapiens</em> are African (Jebel Irhoud, Morocco, about 300,000 years, Omo Kibish, about 230,000 to 195,000 years, Herto, about 160,000 years), while outside Africa they appear at Skhul and Qafzeh (about 120,000 to 90,000 years) and widely only after 60,000 years. Genetic diversity is greatest in Africa and falls with distance from East Africa, the signature of serial founder effects, and the Y chromosome also has an African root. About 2 per cent Neanderthal DNA in non-Africans and up to about 5 per cent Denisovan DNA in Melanesians show that replacement was not total, so the consensus is a "mostly out of Africa" model.</p>
+
+<h4>Mitochondrial DNA and Human Evolution</h4>
+
+<p>Mitochondrial DNA (mtDNA) is a circular genome of about 16,569 base pairs, inherited only through the mother and not recombined. It mutates faster than nuclear DNA and exists in many copies per cell, which aids recovery from ancient bone. Its lineages form a maternal family tree whose differences act as a molecular clock.</p>
+
+<ul>
+  <li>Rebecca Cann, Mark Stoneking and Allan Wilson (1987) compared mtDNA from 147 people of five regions and traced all lineages to a woman in Africa about 200,000 years ago, "Mitochondrial Eve". The deepest branches and greatest diversity were African.</li>
+  <li>Critics questioned the rooting and dating of the 1987 tree, but complete mtDNA sequences (Max Ingman and colleagues, 2000) confirmed the African root.</li>
+  <li>All non-African lineages descend from one African branch, haplogroup L3, through haplogroups M and N. The ancient, distinct M lineages of the Andaman Islanders (Kumarasamy Thangaraj and colleagues, 2005) support an early southern coastal route through India.</li>
+  <li>Limits: mtDNA records only the female line and behaves as a single locus open to chance and selection. "Eve" was only the woman whose maternal line happens to survive.</li>
+</ul>
+
+<p><strong>Centrality of Africa:</strong> Africa holds the earliest hominins (<em>Sahelanthropus</em>, about 7 million years), all australopithecines, the earliest <em>Homo</em>, the earliest stone tools (Lomekwi, about 3.3 million years), the first handaxes, the earliest <em>Homo sapiens</em> and early symbolic objects such as engraved ochre from Blombos cave (about 75,000 years). It was the source of the dispersals of <em>Homo erectus</em> and of modern humans. Yet hominins reached Dmanisi, Georgia, by about 1.8 million years and Shangchen, China, by about 2.1 million years, and Asia produced its own lineages, such as <em>Homo floresiensis</em> and the Denisovans. Africa is the birthplace of the genus and the species, Eurasia a major scene of their diversification and interbreeding.</p>
 
 <h2>Biological Factors in Human Evolution: The Hominization Process</h2>
 
@@ -873,6 +1141,41 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>Constitutive heterochromatin:</strong> Contains structurally functional elements like telomeres and centromeres; a permanent feature of every cell nucleus and contains no coding genes.</li>
 </ul>
 
+<h3>Causes and Mechanisms of Structural Chromosomal Aberrations</h3>
+
+<p>Structural aberrations arise when chromosomes break and the broken ends rejoin wrongly, or when crossing over occurs between misaligned sequences. They may be <strong>balanced</strong> (no material gained or lost, carriers usually healthy) or <strong>unbalanced</strong> (net loss or gain, usually harmful).</p>
+
+<ul>
+  <li><strong>Radiation and chemicals:</strong> X-rays and gamma rays (Hiroshima and Nagasaki survivors show raised aberration rates), benzene, alkylating agents and some anticancer drugs, and some viruses break chromosomes.</li>
+  <li><strong>Inherited instability:</strong> recessive DNA-repair disorders such as Bloom syndrome, Fanconi anaemia and ataxia telangiectasia show many spontaneous breaks and a high cancer risk.</li>
+  <li><strong>Unequal crossing over:</strong> repeated sequences pair out of register in meiosis, leaving a deletion on one chromatid and a duplication on the other. The 17p12 duplication of Charcot-Marie-Tooth disease type 1A arises this way.</li>
+</ul>
+
+<p><strong>Mechanisms and consequences:</strong></p>
+
+<ul>
+  <li><strong>Deletion:</strong> loss of a terminal or interstitial segment, as in cri-du-chat (5p-), Wolf-Hirschhorn syndrome (4p-), and microdeletions such as 22q11.2 (DiGeorge syndrome) and 7q11.23 (Williams syndrome).</li>
+  <li><strong>Inversion:</strong> a segment rejoins after turning through 180 degrees. Carriers are healthy, but at meiosis the inverted chromosome pairs with its homologue by forming a loop. Crossing over inside the loop of a pericentric inversion produces gametes with duplications and deletions, and inside a paracentric inversion it produces dicentric and acentric chromatids that are usually lost, so carriers have more miscarriages.</li>
+  <li><strong>Reciprocal translocation:</strong> exchange of segments between non-homologous chromosomes. Balanced carriers, about 1 in 500 people, form a cross-shaped group of four chromosomes at meiosis, and faulty segregation yields unbalanced gametes, causing infertility, recurrent miscarriage or affected children.</li>
+  <li><strong>Robertsonian translocation:</strong> two acrocentric chromosomes fuse at the centromere and lose their short arms. A healthy carrier of a 14 and 21 fusion has 45 chromosomes and a raised risk of a child with translocation Down syndrome.</li>
+  <li><strong>Cancer:</strong> acquired translocations activate genes. The Philadelphia chromosome (Peter Nowell and David Hungerford, 1960), shown by Janet Rowley (1973) to be a translocation between chromosomes 9 and 22, fuses the BCR and ABL genes and drives chronic myeloid leukaemia.</li>
+</ul>
+
+<h3>Karyotyping in the Diagnosis of Chromosomal Aberrations</h3>
+
+<p>A karyotype is the chromosome complement of a cell arranged in standard order by size, centromere position and banding pattern. Joe Hin Tjio and Albert Levan established the human number of 46 in 1956.</p>
+
+<ol>
+  <li>Cells are taken, usually blood lymphocytes, or amniotic cells, chorionic villi, bone marrow or skin fibroblasts.</li>
+  <li>Lymphocytes are stimulated with phytohaemagglutinin and cultured for about 72 hours at 37°C.</li>
+  <li>Colchicine arrests division at metaphase, when chromosomes are most condensed.</li>
+  <li>A hypotonic solution swells the cells, which are fixed in methanol and acetic acid and spread on slides.</li>
+  <li>Chromosomes are G-banded (trypsin and Giemsa), imaged, paired and arranged in groups A to G.</li>
+  <li>The result is written in standard notation, for example 47,XX,+21 (Down syndrome) or 46,XY,del(5)(p15) (cri-du-chat).</li>
+</ol>
+
+<p><strong>Diagnostic uses:</strong> numerical aberrations and mosaicism, visible structural rearrangements, balanced carriers in couples with recurrent miscarriage, prenatal diagnosis, disorders of sex development, and leukaemias. <strong>Limits:</strong> banding misses changes smaller than about 5 to 10 million base pairs. Fluorescence in situ hybridisation (FISH) detects microdeletions such as 22q11.2, and chromosomal microarrays now detect small gains and losses genome-wide, though only karyotyping reveals balanced rearrangements.</p>
+
 <h2>Cell Division: Mitosis and Meiosis</h2>
 
 <h3>Mitosis</h3>
@@ -1011,6 +1314,26 @@ export const anthropologyNoteContent: Record<string, string> = {
 </ul>
 <p>In malaria-endemic regions, the sickle cell allele is maintained by balancing selection because heterozygotes have a reproductive advantage. This is called heterozygote advantage.</p>
 
+<h3>Haemoglobin in Health and Disease</h3>
+
+<p>Haemoglobin, the oxygen-carrying protein of red blood cells, is a tetramer of two α-like and two β-like globin chains, each holding an iron-containing haem group that binds one oxygen molecule. The α-globin gene cluster lies on chromosome 16 and the β-globin cluster on chromosome 11.</p>
+
+<ul>
+  <li><strong>Foetal haemoglobin (HbF, α2γ2)</strong> predominates before birth. Its higher oxygen affinity lets the foetus draw oxygen from the mother's blood. Embryonic haemoglobins precede it.</li>
+  <li><strong>Adult haemoglobins:</strong> HbA (α2β2), about 97 per cent, and HbA2 (α2δ2), about 2 to 3 per cent. A raised HbA2 is the standard laboratory marker of β-thalassaemia trait.</li>
+</ul>
+
+<p><strong>Haemoglobinopathies</strong>, the commonest single-gene disorders in the world, fall into two groups:</p>
+
+<ul>
+  <li><strong>Structural variants</strong> change one amino acid. <strong>HbS</strong> (valine for glutamic acid at position 6 of the β chain) polymerises at low oxygen, so red cells sickle, block small vessels and break down, causing painful crises, anaemia and organ damage in homozygotes. <strong>HbC</strong> (position 6, lysine) is common in West Africa. <strong>HbE</strong> (position 26) is mild alone but severe when inherited with β-thalassaemia. <strong>HbD Punjab</strong> (position 121) occurs in north-west India.</li>
+  <li><strong>Thalassaemias</strong> reduce the output of a globin chain. α-thalassaemia usually results from gene deletions: loss of three of the four α genes causes HbH disease and loss of all four causes fatal hydrops foetalis. β-thalassaemia usually results from point mutations. β-thalassaemia major (Cooley's anaemia, described by Thomas Cooley in 1925) causes severe anaemia from infancy and requires lifelong transfusion and iron chelation.</li>
+</ul>
+
+<p><strong>Malaria and selection:</strong> J.B.S. Haldane suggested in 1949 that thalassaemia carriers resist malaria, and A.C. Allison (1954) showed the same for the sickle-cell trait. These alleles are therefore common in present or former malarial regions as balanced polymorphisms.</p>
+
+<p><strong>India:</strong> H. Lehmann and M. Cutbush reported the sickle-cell trait among tribal groups of the Nilgiri hills in 1952. HbS is concentrated in the tribal belt of central, western and southern India, with carrier rates above 20 per cent in some communities. HbE is common in Assam and other north-eastern states, and β-thalassaemia carriers form about 3 to 4 per cent of the population, with higher frequencies in certain communities. The National Sickle Cell Anaemia Elimination Mission, launched in 2023 at Shahdol, Madhya Pradesh, aims to eliminate sickle cell disease as a public health problem by 2047 through screening about seven crore people up to 40 years of age in tribal areas.</p>
+
 <h2>Rh Blood Group System</h2>
 
 <p>The Rh blood group system was discovered by Karl Landsteiner and A.S. Wiener in 1940, using rhesus monkey blood in the initial tests. Unlike ABO (which involves one chromosome pair with one set of alleles), the Rh system was described by Fisher and Race as three linked pairs of alleles (C/c, D/d, E/e) on chromosome 1. Molecular work has since shown two adjacent genes, RHD and RHCE, and there is no 'd' antigen: d only marks the absence of D. The most important is the D antigen (RhD), which causes the most severe immune reaction. People with at least one RHD gene (DD or Dd in the old notation) are Rh positive (about 85% of the US population); most Rh-negative people (dd) lack the RHD gene altogether.</p>
@@ -1022,6 +1345,57 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h2>Pedigree Analysis</h2>
 
 <p>Pedigree analysis is the method used to study inheritance in humans, where controlled crosses are impossible. It examines the presence or absence of a trait across generations within a family, tracking its relationship among parents, offspring, and siblings. Pedigrees are used to determine the mode of inheritance of a disease or trait, predict the probability of occurrence among offspring, and provide a basis for genetic counselling. The technique is also valuable for species with long generation times.</p>
+
+<h3>Twin Method and Heritability Estimation</h3>
+
+<p>Francis Galton proposed in 1875 that twins could separate the effects of "nature and nurture". The twin method compares monozygotic (MZ) twins, who share virtually all their genes, with dizygotic (DZ) twins, who share about half, assuming that both types share their family environment to the same degree.</p>
+
+<ul>
+  <li><strong>Zygosity:</strong> judged from the placental membranes (a single chorion means MZ twins), physical similarity, blood groups and dermatoglyphics, and now with certainty from DNA markers.</li>
+  <li><strong>Concordance:</strong> for qualitative traits, the percentage of pairs in which both twins are affected. For schizophrenia MZ concordance is roughly 45 to 50 per cent against about 15 per cent in DZ pairs: a genetic contribution, but MZ concordance well below 100 per cent shows that environment matters too.</li>
+  <li><strong>Correlation:</strong> for quantitative traits such as stature, MZ and DZ correlations are compared. MZ twins reared apart, as in the Minnesota study begun in 1979, strengthen the design.</li>
+</ul>
+
+<p><strong>Heritability</strong> is the proportion of phenotypic variance in a population that is due to genetic variance. <strong>Broad-sense heritability</strong> (H² = VG/VP) includes all genetic variance. <strong>Narrow-sense heritability</strong> (h² = VA/VP) includes only additive variance and predicts the response to selection (R = h²S, the breeder's equation).</p>
+
+<ul>
+  <li><strong>Twin formulas:</strong> Holzinger's index (1929), H = (CMZ - CDZ)/(100 - CDZ) for concordances in per cent, or (rMZ - rDZ)/(1 - rDZ) for correlations. Falconer's formula, h² = 2(rMZ - rDZ).</li>
+  <li><strong>Parent-offspring regression:</strong> the slope of offspring values on the mid-parent value estimates h², the slope on one parent h²/2.</li>
+  <li><strong>Sibling and half-sibling correlations:</strong> full sibs share half and half-sibs a quarter of additive variance, though full sibs also share an environment.</li>
+  <li><strong>Adoption studies:</strong> resemblance to biological compared with adoptive parents.</li>
+  <li><strong>Genomic estimates:</strong> heritability from genome-wide SNP similarity among unrelated people, usually lower than twin estimates (the "missing heritability" problem).</li>
+</ul>
+
+<p>Dermatoglyphic total ridge count has a heritability of about 0.9, and stature about 0.8 in well-nourished populations. <strong>Cautions:</strong> heritability belongs to a population at a time, not to an individual, and falls when environments vary more, as among poorly nourished groups. A highly heritable trait can still change, as the secular trend in stature shows. Heritability within groups says nothing about differences between groups, as Richard Lewontin (1970) showed with seeds grown in rich and poor soil. MZ twins may also share more similar environments than DZ twins, which inflates estimates.</p>
+
+<h3>Genetic Counselling: Steps, Pedigree Analysis and Ethics</h3>
+
+<p>Genetic counselling helps a person or family understand a genetic disorder, its chance of occurring or recurring, and the options available. Since Sheldon Reed coined the term (1947), its guiding principle has been non-directiveness: the counsellor informs and supports, and the family decides.</p>
+
+<ol>
+  <li><strong>Referral and history:</strong> an affected child, a family history of disease, consanguinity, recurrent miscarriage, advanced maternal age or an abnormal prenatal screening result.</li>
+  <li><strong>Diagnosis:</strong> clinical examination, karyotype, biochemical and DNA tests. All later advice depends on an accurate diagnosis.</li>
+  <li><strong>Pedigree:</strong> at least three generations drawn with standard symbols, to establish the mode of inheritance.</li>
+  <li><strong>Risk estimation:</strong> Mendelian risks for single-gene disorders (50 per cent for each child of a parent with an autosomal dominant disorder, 25 per cent for each child of two carriers of a recessive disorder, half the sons of a carrier mother for an X-linked recessive disorder), empirical risks from family studies for multifactorial disorders such as cleft lip, and age-related risks for chromosomal disorders.</li>
+  <li><strong>Options:</strong> carrier testing of relatives, prenatal diagnosis (chorionic villus sampling at about 10 to 13 weeks, amniocentesis from about 15 weeks), preimplantation genetic testing with in vitro fertilisation, donor gametes, adoption, or accepting the risk.</li>
+  <li><strong>Decision and follow-up:</strong> the family's own decision, psychological support, and help in informing relatives at risk.</li>
+</ol>
+
+<p><strong>Pedigree analysis in counselling</strong> reveals the mode of inheritance, identifies obligate carriers (such as the mother of two sons with haemophilia), shows consanguinity, reduced penetrance and variable expressivity, and points to a new mutation when an affected child has unaffected parents. It also identifies relatives for cascade carrier testing. Its limits are small families, incomplete or wrong information, misattributed paternity and late-onset disorders.</p>
+
+<p><strong>Serogenetics and cytogenetics in reproductive biology:</strong> Rh typing of mothers and anti-D immunoglobulin prevent haemolytic disease of the newborn. Cytogenetics finds balanced translocations in couples with recurrent miscarriage, sex chromosome anomalies and Y-chromosome microdeletions in infertility, and chromosomal disorders in prenatal samples. Maternal serum screening and cell-free foetal DNA testing identify high-risk pregnancies before invasive tests.</p>
+
+<p><strong>Ethical issues in reproductive technology:</strong></p>
+
+<ul>
+  <li><strong>Sex selection:</strong> banned in India by the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994, amended in 2003.</li>
+  <li><strong>Eugenics and disability:</strong> selective termination may express a devaluation of disabled lives.</li>
+  <li><strong>Consent, privacy and confidentiality</strong>, including whether relatives must be told of their risk.</li>
+  <li><strong>Embryo testing and editing:</strong> the Assisted Reproductive Technology (Regulation) Act, 2021, permits preimplantation testing only for known genetic diseases. The birth of gene-edited babies in China in 2018 showed the dangers of heritable genome editing.</li>
+  <li><strong>Exploitation and access:</strong> commercial surrogacy, now banned by the Surrogacy (Regulation) Act, 2021, and unequal access to costly technologies.</li>
+</ul>
+
+<p>In India the main application is carrier screening and counselling for β-thalassaemia and sickle cell disease in high-frequency communities and tribal areas.</p>
 
 <h2>Lethal Genes</h2>
 
@@ -1121,6 +1495,26 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>In populations with high consanguinity rates and common haemoglobinopathies (thalassemia, sickle cell anaemia), community premarital screening programs for carrier detection are active in Jordan, Saudi Arabia, Iran, Iraq, Bahrain, and Turkey, with significant success in reducing the birth prevalence of these disorders.</p>
 
+<h3>Measuring Genetic Load and the Factors Influencing It</h3>
+
+<p>H.J. Muller drew attention to "our load of mutations" in 1950, and J.F. Crow (1958) gave the standard definition: L = (Wmax - Wmean)/Wmax, the proportion by which the mean fitness of a population falls below that of the fittest genotype. Load cannot be seen directly and is estimated in several ways.</p>
+
+<ul>
+  <li><strong>From mutation rates (Haldane-Muller principle):</strong> at equilibrium between mutation and selection, the load from a locus is about equal to the mutation rate for a recessive allele and about twice the mutation rate for a dominant one, whatever the severity of the mutation.</li>
+  <li><strong>From consanguineous marriages:</strong> Newton Morton, J.F. Crow and H.J. Muller (1956) compared survival among the children of parents with different inbreeding coefficients (F) using -ln S = A + BF, where S is the proportion surviving. A measures the damage expressed in a random-mating population (genetic and environmental), and B the hidden damage that would appear under complete inbreeding. B is expressed in <strong>lethal equivalents</strong>: a set of harmful genes that would on average cause one death if made homozygous, such as one lethal gene or two genes each with a 50 per cent chance of causing death. A high B/A ratio was taken to indicate mainly mutational load, a low one load maintained by heterozygote advantage.</li>
+  <li><strong>From disease frequencies:</strong> the incidence of genetic disorders, malformations, stillbirths and early deaths in the children of cousin and uncle-niece marriages compared with others, which in south Indian studies showed a modest excess.</li>
+  <li><strong>Crow's index of the opportunity for selection (1958):</strong> a related demographic measure, I = Im + If/Ps. Here Im = Pd/Ps, where Pd is the proportion dying before reproductive age and Ps the proportion surviving, and If is the variance in number of offspring divided by the square of the mean. It sets an upper limit to selection intensity and has been calculated for many Indian tribal and caste populations.</li>
+</ul>
+
+<p><strong>Factors influencing genetic load:</strong></p>
+
+<ul>
+  <li><strong>Mutation rate:</strong> raised by ionising radiation, chemical mutagens and older paternal age, which adds new point mutations.</li>
+  <li><strong>Inbreeding and endogamy:</strong> consanguinity raises homozygosity. Long-standing caste and tribal endogamy has produced strong founder effects in many Indian groups (Nakatsuka and colleagues, 2017), so particular recessive disorders become common in particular communities, for example butyrylcholinesterase deficiency, dangerous with some anaesthetics, among the Vysya of Andhra Pradesh.</li>
+  <li><strong>Heterozygote advantage:</strong> keeps harmful alleles common, producing segregational load, such as deaths from sickle cell disease where the trait protects against malaria.</li>
+  <li><strong>Relaxed selection and population structure:</strong> medical treatment lets people with genetic disorders reproduce, slowly raising allele frequencies, while gene flow and outbreeding lower the expressed load and drift in small groups can fix harmful alleles.</li>
+</ul>
+
 <h2>Key Genetic Concepts Summary</h2>
 
 <ul>
@@ -1131,6 +1525,31 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>Isolate:</strong> A group totally separated from other groups, reproductively unstratified, so all individuals share the same gene pool. Prolonged isolation causes increasing divergence in gene frequencies between the isolate and neighbouring populations.</li>
   <li><strong>Mitochondrial DNA (mtDNA):</strong> Inherited exclusively through the maternal line; does not undergo recombination and thus acts genetically like a single gene. Used by Rebecca Cann to trace all modern human mitochondrial lineages to a common ancestor approximately 200,000 years ago in Africa: the "Mitochondrial Eve" hypothesis. Y-chromosome analysis, similarly non-recombining, independently supports African origin with a common paternal ancestor around 100,000 years ago.</li>
 </ul>
+
+<h3>Applications of DNA Technology and Genomic Research</h3>
+
+<p>The Human Genome Project (1990 to 2003) sequenced about 3 billion base pairs and found only about 20,000 protein-coding genes. The Telomere-to-Telomere consortium published the first complete, gapless human sequence in 2022.</p>
+
+<ul>
+  <li><strong>Diagnosis:</strong> PCR and sequencing diagnose single-gene disorders, detect carriers and allow prenatal and preimplantation diagnosis. Exome and whole-genome sequencing now identify the cause of many rare disorders.</li>
+  <li><strong>Therapy:</strong> recombinant human insulin (approved in 1982, the first recombinant drug), growth hormone, clotting factors and hepatitis B vaccine. Gene therapy began in 1990 with a child with ADA immunodeficiency, and CRISPR-based treatments for sickle cell disease and β-thalassaemia were approved in 2023.</li>
+  <li><strong>Pharmacogenomics:</strong> genotype guides choice and dose of drugs, for example testing for HLA-B*15:02, which predicts severe skin reactions to the anti-epileptic carbamazepine in many Asian populations.</li>
+  <li><strong>Forensics:</strong> DNA profiling (Alec Jeffreys, 1984) identifies offenders, disaster victims and parents in disputed paternity. Lalji Singh developed DNA fingerprinting in India at the Centre for Cellular and Molecular Biology, Hyderabad.</li>
+  <li><strong>Molecular anthropology:</strong> David Reich and colleagues (2009) showed that most Indian groups descend from a mixture of Ancestral North Indians and Ancestral South Indians. The genome of a Harappan woman from Rakhigarhi (Vasant Shinde and colleagues, 2019) showed a mix of ancestry related to ancient Iranians and to South Asian hunter-gatherers, with no steppe ancestry.</li>
+  <li><strong>Indian reference data:</strong> the Indian Genome Variation Consortium (2008) and the GenomeIndia project, which sequenced about 10,000 genomes from diverse communities, help locate disease variants common in particular endogamous groups.</li>
+</ul>
+
+<h3>Genome-wide Association Studies (GWAS)</h3>
+
+<p>A GWAS scans the whole genome for common variants associated with a disease or trait. Hundreds of thousands to millions of single nucleotide polymorphisms (SNPs) are typed on microarrays in thousands of cases and controls, or in people measured for a quantitative trait, and each SNP is tested for a difference in frequency. Because so many tests are made, only associations with p below 5 × 10⁻⁸ count as genome-wide significant, and findings must be replicated in independent samples.</p>
+
+<ul>
+  <li><strong>Landmarks:</strong> Robert Klein and colleagues (2005) linked the complement factor H gene to age-related macular degeneration. The Wellcome Trust Case Control Consortium (2007) studied seven common diseases in about 14,000 cases and 3,000 shared controls.</li>
+  <li><strong>Advances in understanding:</strong> GWAS have mapped thousands of loci for type 2 diabetes (TCF7L2 among the strongest), coronary disease, inflammatory bowel disease, schizophrenia, height and body mass. They revealed unexpected biology, such as the role of autophagy in Crohn's disease. They show that common diseases are highly polygenic, with many variants of small effect lying mostly in regulatory rather than coding DNA, and they underlie polygenic risk scores for identifying people at high risk.</li>
+  <li><strong>Limitations:</strong> associated SNPs usually tag nearby causal variants rather than cause disease, effects are small and explain only part of heritability, rare variants are missed, and population structure can create false associations. About four-fifths of participants have been of European ancestry, so results transfer poorly to South Asians and Africans, and studies of South Asians have found additional risk loci, for example for type 2 diabetes.</li>
+</ul>
+
+<p>Applied human genetics now reaches diagnosis, treatment, law and the reconstruction of human history, and raises questions of privacy, consent and benefit-sharing with the communities, often indigenous, whose DNA is studied.</p>
 `,
   'concept-of-race': `
 <h2>Defining Race: Historical and Modern Perspectives</h2>
@@ -1334,6 +1753,31 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Stephan Palmié asserted that race is not a thing but a social relation. Katya Gibel Mevorach called it "a metonym": a human invention whose criteria for differentiation are neither universal nor fixed but have always been used to manage difference. The "Aryan race" of Nazi ideology was supposed to consist of blond-haired, blue-eyed, white-skinned people, but technically Aryans are any people speaking one of the Indo-European languages (Greek, Hindi, Polish, German, Gaelic, English) most of whom have neither blond hair nor blue eyes. Jews do not form a race but a religious group, comparable to Buddhists or Protestants. The concept of racial superiority and inferiority has no basis in scientific fact; as Klineberg clearly stated, "the scientists know no relation between race and psychology."</p>
 
+<h3>Race and Ethnicity</h3>
+
+<p><strong>Race</strong> classifies people by inherited physical traits such as skin colour, hair form, facial features and head shape, on the assumption that they reflect common biological descent. <strong>Ethnicity</strong> (from Greek <em>ethnos</em>, people or nation) is a shared cultural identity based on language, religion, customs, history, a belief in common descent and a sense of belonging. Max Weber described ethnic groups as groups that hold a subjective belief in common descent, whether or not any blood relationship exists.</p>
+
+<table>
+  <thead>
+    <tr><th>Aspect</th><th>Race</th><th>Ethnicity</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Basis</td><td>Physical, biological traits</td><td>Cultural traits and shared identity</td></tr>
+    <tr><td>Ascription</td><td>Mainly imposed by others</td><td>Mainly self-ascribed, also recognised by others</td></tr>
+    <tr><td>Stability</td><td>Treated as fixed and inherited</td><td>Fluid, can be adopted, lost or redefined</td></tr>
+    <tr><td>Scientific status</td><td>Not valid as a biological division of humans, since variation is clinal and lies mostly within groups</td><td>A valid social and cultural category</td></tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Fredrik Barth (<em>Ethnic Groups and Boundaries</em>, 1969) showed that ethnic groups persist by maintaining social boundaries even when people and cultural traits cross them.</li>
+  <li>Ashley Montagu (<em>Man's Most Dangerous Myth: The Fallacy of Race</em>, 1942) proposed replacing "race" with "ethnic group", and the 1950 UNESCO statement he drafted urged the same.</li>
+</ul>
+
+<p><strong>How they relate:</strong> one physical type may include many ethnic groups, as the Naga tribes of north-east India share broadly similar physical features but form many ethnic groups with distinct languages and customs. Ethnic and religious groups are often "racialised", treated as if they were biological races, as Nazi Germany did with Jews. In India, H.H. Risley used the nasal index to rank castes as racial types in the 1901 Census, a view now rejected. People from the north-east face discrimination based on appearance, which led the Government of India to set up the Bezbaruah Committee in 2014.</p>
+
+<p><strong>Assessment:</strong> race has little value as a biological classification of humans, while ethnicity describes real social identities that shape politics, conflict and development. Race nevertheless remains a social reality, because racial categories continue to produce discrimination with real effects.</p>
+
 <h2>UNESCO Statement on Race</h2>
 
 <p>UNESCO organised a conference of eminent anthropologists, sociologists, and psychologists to establish a consensus on the concept of race. The conference recommended:</p>
@@ -1380,6 +1824,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p><strong>Development Proceeds at Different Rates:</strong> Though each child follows a general pattern, the rate of reaching developmental stages varies by individual, and by age and sex. From birth to early adulthood, stature and weight show rapid gain in infancy and early childhood, steady gain in middle childhood, rapid gain in adolescence, and slow increase until growth ceases at adult stature. During early adolescence, girls are taller and heavier than boys due to their earlier growth spurt, but as boys undergo their later adolescent spurt they catch up and eventually surpass girls.</p>
 
 <p><strong>Development is an Interrelated Genetic, Environmental, and Behavioural Process:</strong> Genes determine the potential for optimal development, but this potential is realized through interaction with the sociocultural and physical environment. Maturation (the sequential development of cognitive and motor skills over time) interacts with the child's learning experiences. A child who receives insufficient love and attention may fail to grow and develop to potential. Abstract thinking and social behaviour develop according to the peer and family environment.</p>
+
+<h3>Canalisation and Catch-up Growth</h3>
+
+<p><strong>Canalisation</strong> is the tendency of development to follow a genetically determined path, or "canal", and to resist disturbance, so that a similar end result is reached despite variation in genes and environment. C.H. Waddington introduced the term in 1942 and pictured development as a ball rolling down the valleys of an "epigenetic landscape" (<em>The Strategy of the Genes</em>, 1957). James Tanner described human growth in the same spirit as "target-seeking" or self-stabilising: a healthy child keeps to roughly the same centile line on a growth chart, set mainly by genes and parental height.</p>
+
+<p><strong>Catch-up growth</strong>, described by Andrea Prader, James Tanner and G.A. von Harnack (1963), is a period of faster-than-normal growth after a growth-retarding condition such as illness, starvation or hormone deficiency is removed. Growth velocity rises well above the normal rate for age and slows as the child regains its original curve. The opposite, <strong>catch-down growth</strong>, is seen in large babies of diabetic mothers, who slow after birth until they reach their genetic channel.</p>
+
+<ul>
+  <li><strong>Examples:</strong> children treated for coeliac disease or hypothyroidism, children recovering from famine or severe malnutrition, and premature or small-for-date babies in the first two years. Indian girls adopted into Swedish families grew rapidly but reached menarche early (L.A. Proos and colleagues, 1991), which cut short their growth.</li>
+  <li><strong>Mechanism:</strong> Tanner proposed a central comparison of actual with expected size, while later work points to the growth plate, which ages more slowly during growth arrest.</li>
+  <li><strong>Limits:</strong> catch-up is often incomplete when the insult is severe, prolonged or early, especially in the first 1,000 days. Stunting after about two years of age is largely irreversible, though partial recovery can occur in later childhood and adolescence.</li>
+  <li><strong>Costs:</strong> rapid catch-up in weight after low birth weight is linked with later obesity, insulin resistance and heart disease, which ties catch-up growth to the foetal origins of adult disease.</li>
+</ul>
+
+<p>Together they show that growth is regulated: the body returns to its genetic trajectory once the environment allows.</p>
 
 <h2>Patterns of Human Growth: Growth Curves</h2>
 
@@ -1472,6 +1931,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Psychosocial Factors</h3>
 <p>Psychological stress and deprivation can impair growth. Children suffering neglect and emotional deprivation may exhibit psychosocial short stature (deprivation dwarfism) despite adequate nutrition. Absence of the father from the home since childhood, high-conflict family relations, and other stress-inducing situations have been documented as correlates of earlier menarche, mediated by effects on the hypothalamic-pituitary axis.</p>
 
+<h3>Foetal Origins of Adult Disease: David Barker's Hypothesis</h3>
+
+<p>David Barker (1938 to 2013), a British epidemiologist at the Medical Research Council Environmental Epidemiology Unit, Southampton, proposed that many chronic diseases of adult life originate in the womb, when undernutrition at a critical period of development "programmes" the body's structure and metabolism.</p>
+
+<ul>
+  <li><strong>Evidence:</strong> Barker and Clive Osmond (1986) showed that areas of England and Wales with high infant mortality in the 1920s later had high death rates from coronary heart disease. Using birth weights and weights at one year recorded by health visitors in Hertfordshire from 1911, Barker and colleagues (1989) found that men with the lowest weights at birth and at one year had the highest death rates from heart disease. Low birth weight was later linked with hypertension and type 2 diabetes.</li>
+  <li><strong>Programming:</strong> a poorly nourished foetus protects its brain at the expense of other organs, leaving fewer kidney nephrons, fewer insulin-producing cells, insulin resistance and altered stress hormones. C. Nicholas Hales and Barker (1992) called this the <strong>thrifty phenotype</strong>, in contrast with James Neel's thrifty genotype: the foetus adapts to expected scarcity.</li>
+  <li><strong>Mismatch:</strong> risk is greatest when a baby programmed for scarcity meets plenty and gains weight rapidly in childhood.</li>
+  <li><strong>Support:</strong> people exposed in the womb to the Dutch Hunger Winter of 1944 to 1945 later showed more obesity, glucose intolerance and heart disease, and lasting changes in DNA methylation. The field is now called the Developmental Origins of Health and Disease (DOHaD).</li>
+</ul>
+
+<p><strong>Indian evidence:</strong> men born in Mysore who were small at birth had more coronary heart disease (Claudia Stein, Caroline Fall and colleagues, 1996). C.S. Yajnik's Pune Maternal Nutrition Study described the "thin-fat" Indian baby, small and thin but with relatively high body fat and insulin resistance, and linked low maternal vitamin B12 with high folate to insulin resistance in the children.</p>
+
+<p><strong>Assessment:</strong> critics point to confounding by socioeconomic status, birth weight as a crude proxy for foetal nutrition, modest effect sizes and genes that affect both foetal growth and adult disease. The hypothesis is nevertheless widely accepted and underlies the policy emphasis on maternal nutrition and the first 1,000 days, as in POSHAN Abhiyaan and the Pradhan Mantri Matru Vandana Yojana.</p>
+
 <h2>Chronological Age vs Biological Age</h2>
 
 <p>Chronological age is the actual number of years, months, and days a person has lived since birth. Biological age (also called physiological age) represents biological status of maturity: how old a person seems in terms of bodily function relative to calendar age. A person of chronological age 65 who maintains a healthy, active lifestyle may have a biological age of 55. Biological age is influenced by lifestyle (exercise, diet, stress, sleep, alcohol and tobacco use), heredity, and habitat/geographical environment. Biological age is assessed through biomarkers, recordable molecular or cellular events, such as telomere length, epigenetic clocks, and bone age (skeletal maturation).</p>
@@ -1560,6 +2034,106 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Physical anthropology has always been simultaneously a biological and a social science. The biosocial perspective holds that human biology cannot be understood apart from the social and cultural contexts in which it is embedded, and that social behaviour is shaped by biological imperatives. Applied physical anthropology translates this theoretical integration into practical domains: epidemiology, nutrition, forensic science, bioarchaeology, occupational health, and ergonomics.</p>
 
+<h3>Critical Biocultural Anthropology: Political Economy, Ecology and Adaptability</h3>
+
+<p>The biocultural approach studies human biology as the joint product of genes, environment and culture. It is called the hallmark of biological anthropology because the discipline's central findings are biocultural: the sickle-cell allele spread with forest-clearing agriculture in West Africa (Frank Livingstone, 1958), lactase persistence spread with dairying, kuru among the Fore of New Guinea spread through mortuary cannibalism, and stature and age at menarche respond to nutrition and social class.</p>
+
+<p><strong>The adaptability approach:</strong> from the 1960s the Human Adaptability section of the International Biological Programme (1964 to 1974), and projects such as Paul Baker's in highland Nuñoa, Peru, studied how populations cope with hypoxia, cold, heat and limited food. The model was ecological (stress, response, adaptation). It produced strong physiology but treated the environment as natural and populations as isolated and in balance with it.</p>
+
+<p><strong>The political-economic critique:</strong> Alan Goodman and Thomas Leatherman, in <em>Building a New Biocultural Synthesis: Political-Economic Perspectives on Human Biology</em> (1998), argued that most stresses acting on human bodies are produced by social relations: unequal access to land, food, work and health care, colonialism, markets and state policy. Leatherman's work among Andean farmers showed illness lowering work capacity and pushing households deeper into poverty, so that poor health and poverty reinforced each other.</p>
+
+<ul>
+  <li><strong>Integration:</strong> political-economic processes shape the local environment and limit choices. These create stressors (poor diet, infection, heavy labour, psychosocial stress), which produce biological responses (stunting, anaemia, raised blood pressure) with functional costs (lower work capacity, poorer schooling, reduced fertility) that feed back into poverty. Adaptation is studied together with its costs and with the power relations that create the stress.</li>
+  <li><strong>Related concepts:</strong> structural violence (Johan Galtung, applied to health by Paul Farmer), embodiment (Nancy Krieger) and syndemics (Merrill Singer), the clustering and interaction of diseases among the poor.</li>
+  <li><strong>Against "adaptive" readings of poverty:</strong> the "small but healthy" hypothesis of David Seckler and P.V. Sukhatme held that the small size of poor Indian children was a harmless adjustment to low intake. C. Gopalan (1983) replied that smallness reflected deprivation, with costs in illness, work capacity and mortality. The critical approach sides with Gopalan: what looks like adaptation may be a cost of inequality.</li>
+</ul>
+
+<p>Child malnutrition deaths among the Korku of Melghat (Maharashtra), linked to loss of forest livelihoods and seasonal migration, illustrate the approach in India. Critical biocultural anthropology does not reject adaptability research. It places adaptation within history and power and so connects biological anthropology with policy.</p>
+
+<h3>Adaptation, Adaptability and Acclimatisation</h3>
+
+<p>Gabriel Lasker (1969) distinguished three levels of human response to environmental stress: genetic change by natural selection, modification during growth, and reversible physiological acclimatisation. A. Roberto Frisancho's <em>Human Adaptation</em> (1979) developed this framework. Culture adds a further, non-biological layer.</p>
+
+<table>
+  <thead>
+    <tr><th>Term</th><th>Meaning</th><th>Time scale</th><th>Examples</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Adaptation (genetic)</strong></td><td>Heritable traits that raise survival and reproduction in an environment, spread by natural selection</td><td>Many generations, population level, fixed in the individual</td><td>Sickle-cell trait in malarial regions, lactase persistence among herders, EPAS1 variants in Tibetans, dark skin under strong ultraviolet light</td></tr>
+    <tr><td><strong>Adaptability</strong></td><td>An individual's capacity to adjust within a lifetime without genetic change</td><td>Within a lifetime</td><td>Covers the developmental and physiological responses below</td></tr>
+    <tr><td><strong>Developmental adjustment</strong></td><td>Changes acquired during growth that persist into adulthood</td><td>Childhood, largely irreversible</td><td>Larger chests and lungs in children raised at high altitude</td></tr>
+    <tr><td><strong>Acclimatisation</strong></td><td>Physiological change after exposure to a natural environment with several stresses</td><td>Days to months, reversible</td><td>More red cells within weeks at altitude, heat acclimatisation in one to two weeks</td></tr>
+    <tr><td><strong>Acclimation</strong></td><td>The same kind of response to a single stress under controlled conditions</td><td>Short term, reversible</td><td>Heat-chamber experiments</td></tr>
+    <tr><td><strong>Habituation</strong></td><td>Reduced response to a repeated stimulus</td><td>Short term</td><td>Reduced pain from cold water in the hands of fishermen</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Genetic and non-genetic factors:</strong> genetic factors include selected variants (haemoglobins, lactase, pigmentation and high-altitude genes) and the inherited basis of body size and shape. Non-genetic factors include acclimatisation, developmental plasticity, nutrition and disease, and cultural buffers such as clothing, fire, shelter, diet and technology. Genetic adaptation is slow, so for most new stresses humans rely first on plasticity and culture.</p>
+
+<p><strong>Human adaptation as biocultural:</strong> culture changes the stresses acting on the body, and biology shapes cultural possibilities. Dairying selected for lactase persistence, forest clearance for the sickle-cell allele, and fire and clothing let a tropical species occupy the Arctic and the Himalaya. At high altitude, biological traits (lung volume, haemoglobin patterns) work together with warm clothing, high-energy diets, herding and seasonal movement. Human adaptation is therefore seldom purely biological or purely cultural.</p>
+
+<h3>Human Adaptation to High Altitude</h3>
+
+<p>About 140 million people live above 2,500 m, mainly in the Andes, the Tibetan plateau and Himalaya, and the Ethiopian highlands. Their stresses are:</p>
+
+<ul>
+  <li><strong>Hypobaric hypoxia:</strong> the main stress. Air pressure falls with height, so each breath carries less oxygen. At about 4,000 m the partial pressure of oxygen is roughly 60 per cent of its sea-level value.</li>
+  <li><strong>Cold, low humidity and wind.</strong></li>
+  <li><strong>Strong solar and ultraviolet radiation.</strong></li>
+  <li><strong>Poor soils and short growing seasons</strong>, which limit diet.</li>
+</ul>
+
+<p><strong>Acclimatisation of lowlanders:</strong> within hours, breathing and heart rate rise. Over days to weeks the kidneys release erythropoietin, red cells and haemoglobin increase, red-cell 2,3-DPG helps unload oxygen to tissues, and capillary density rises. Too rapid an ascent causes acute mountain sickness and, in severe cases, high-altitude pulmonary or cerebral oedema, a known hazard for soldiers posted in Ladakh and Siachen. Long residence can cause chronic mountain sickness (Monge's disease, described by Carlos Monge in Peru), with excessive red cells.</p>
+
+<p><strong>Native highlanders: two solutions to hypoxia</strong></p>
+
+<table>
+  <thead>
+    <tr><th>Trait</th><th>Andeans (Quechua, Aymara)</th><th>Tibetans and Sherpas</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Chest and lungs</td><td>Large "barrel" chests and lung volumes, partly developmental: lowland children raised at altitude also develop them (Frisancho)</td><td>Large lung volumes</td></tr>
+    <tr><td>Breathing</td><td>Blunted ventilatory response to hypoxia</td><td>Higher resting ventilation and stronger response to hypoxia</td></tr>
+    <tr><td>Haemoglobin</td><td>High, carrying more oxygen but thickening the blood</td><td>Close to sea-level values</td></tr>
+    <tr><td>Circulation</td><td>Raised pulmonary artery pressure, enlarged right ventricle</td><td>More nitric oxide, greater blood flow, little pulmonary hypertension</td></tr>
+    <tr><td>Reproduction</td><td>Lower birth weights</td><td>Heavier birth weights, lower infant mortality</td></tr>
+    <tr><td>Chronic mountain sickness</td><td>More common</td><td>Rare</td></tr>
+    <tr><td>Genetics</td><td>Selected variants less clearly identified</td><td>Selected variants of EPAS1 and EGLN1 keep haemoglobin low. The EPAS1 variant came from interbreeding with Denisovans (Emilia Huerta-Sánchez and colleagues, 2014)</td></tr>
+  </tbody>
+</table>
+
+<p>Cynthia Beall's comparisons showed that Andeans and Tibetans reached adequate oxygen delivery by different routes, and that Ethiopian Amhara highlanders show a third pattern, with normal haemoglobin and normal oxygen saturation.</p>
+
+<p><strong>How cardiorespiratory traits help:</strong> larger lungs and alveolar surface raise the diffusion of oxygen into the blood. Higher ventilation (Tibetans) raises oxygen pressure in the alveoli. More capillaries and myoglobin and efficient muscle metabolism improve oxygen use in tissues. Greater blood flow without thickened blood (Tibetans) avoids the costs of excess red cells. Together these let highlanders work hard at altitudes that disable newcomers.</p>
+
+<p><strong>Cultural responses:</strong> layered wool clothing and thick-walled houses, high-carbohydrate diets, llama or yak herding, coca chewing in the Andes, and the seasonal movement of Himalayan herders such as the Changpa of Ladakh and the Bhotia between high and low pastures.</p>
+
+<h3>Responses to Cold and Heat, and Bergmann's and Allen's Rules</h3>
+
+<p><strong>Cold stress:</strong></p>
+
+<ul>
+  <li><strong>Physiological responses:</strong> peripheral vasoconstriction (reduces heat loss but risks frostbite), shivering, non-shivering heat production by brown fat and a raised basal metabolism, and cold-induced vasodilation, the "hunting reaction", in which blood returns to cold hands in cycles and protects them from injury.</li>
+  <li><strong>Population patterns:</strong> the Inuit have a high basal metabolism, aided by a diet rich in protein and fat, and warm hands from strong cold-induced vasodilation. Australian Aborigines sleeping through cold desert nights let skin temperature fall without shivering (P.F. Scholander and colleagues, 1958), an insulative pattern. Quechua highlanders keep hands and feet warmer than lowlanders.</li>
+</ul>
+
+<p><strong>Heat stress:</strong></p>
+
+<ul>
+  <li><strong>Physiological responses:</strong> vasodilation brings blood to the skin and sweating cools by evaporation.</li>
+  <li><strong>Heat acclimatisation:</strong> over one to two weeks, sweating starts earlier and becomes more profuse and less salty, plasma volume expands, and heart rate and core temperature during work fall.</li>
+  <li><strong>Body form:</strong> a tall, linear body with long limbs gives a large surface area for heat loss per unit of mass.</li>
+</ul>
+
+<p><strong>Bergmann's and Allen's rules:</strong> Carl Bergmann (1847) observed that within a warm-blooded species, populations in colder climates tend to have larger body mass, which lowers surface area relative to volume. J.A. Allen (1877) added that extremities such as limbs and ears are shorter in colder climates.</p>
+
+<ul>
+  <li><strong>Support in humans:</strong> D.F. Roberts (1953) found a strong negative relationship between mean annual temperature and body weight across world populations. The Inuit are stocky and short-limbed, while the Nilotic Dinka and Nuer of South Sudan are tall and linear with long limbs. Christopher Ruff (1991) showed that body breadth, more than height, sets the surface-to-mass ratio. The same principles explain the cold-adapted build of Neanderthals and the tall, slender <em>Homo erectus</em> Nariokotome boy from tropical Kenya.</li>
+  <li><strong>Limits:</strong> the relationships have weakened with better nutrition and migration (Peter Katzmarzyk and William Leonard, 1998). Short-statured tropical forest peoples are small for other reasons, including humidity, food limitation and early maturation. Clothing and shelter reduce the selective force of cold, and body size also reflects nutrition during growth. The rules hold in humans as broad statistical tendencies rather than strict laws.</li>
+</ul>
+
+<p><strong>Extreme climatic events:</strong> heat waves, cold waves, floods and droughts strike hardest at the poor, the old, infants and outdoor workers, and responses combine physiology with culture and policy: loose clothing, thick-walled houses, changed working hours, early warnings and cooling shelters. Ahmedabad's Heat Action Plan (2013), the first in South Asia, followed the deadly heat wave of 2010 and became a model for other Indian cities.</p>
+
 <h2>Epidemiological Anthropology</h2>
 
 <h3>Epidemiology and Its Goals</h3>
@@ -1600,9 +2174,82 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Geneticist James Neel (1962) introduced the concept of the <em>thrifty genotype</em>: a genotype very efficient at storing food as fat, which would have been advantageous during the feast-and-famine cycles of hunter-gatherer existence but became pathological in environments of consistent nutritional abundance. This explains the high rates of obesity and Type 2 diabetes observed in populations making rapid transitions to Western diets: the Pima-Papago Indians of the American Southwest (diabetes rates ~50%), Pacific Islanders, and Asian-derived populations. Gestational diabetes provides supporting evidence: pregnant women with an additional metabolic demand show elevated blood sugar as a thrifty-phenotype response.</p>
 
+<h3>Impact of Infectious Diseases on Indigenous Populations</h3>
+
+<p>When long-isolated indigenous populations first met outsiders, introduced infections caused some of the largest population collapses in history. Alfred Crosby (1976) called these "virgin soil epidemics": outbreaks among people with no previous exposure, and so no acquired immunity, to a disease.</p>
+
+<ul>
+  <li><strong>The Americas:</strong> after 1492, smallpox, measles, influenza and typhus spread ahead of European settlers. Smallpox struck the Aztec capital in 1520 and reached the Inca empire within a few years. By most estimates Native American populations fell by 50 to 90 per cent within a century or two.</li>
+  <li><strong>The Pacific and Australia:</strong> measles killed tens of thousands of Fijians in 1875, and smallpox devastated Aboriginal communities around Sydney in 1789.</li>
+  <li><strong>Twentieth century:</strong> measles epidemics among the Yanomami of Venezuela and Brazil in the 1960s and among newly contacted Amazonian groups show the pattern continuing.</li>
+</ul>
+
+<p><strong>Why the toll was so high:</strong></p>
+
+<ul>
+  <li>No acquired immunity, so adults as well as children fell ill at once.</li>
+  <li>Several new diseases arrived together or in quick succession.</li>
+  <li>Francis Black (1992) argued that the low genetic diversity of Native Americans, especially in the HLA system, let viruses adapted to one host spread easily to the next.</li>
+  <li>Social collapse: with everyone sick at once, no one fetched water, tended fields or nursed the sick, so famine and neglect added to the deaths.</li>
+  <li>Conquest, forced labour, displacement and loss of land deepened malnutrition and susceptibility.</li>
+</ul>
+
+<p>Biocultural anthropologists therefore reject explanations based on genetic weakness alone and stress that epidemics killed in a context of conquest and dispossession.</p>
+
+<p><strong>Indian examples:</strong></p>
+
+<ul>
+  <li>The Great Andamanese, who numbered several thousand when the British settlement at Port Blair was founded in 1858, were reduced to a few dozen by the mid-twentieth century, largely through syphilis, measles, influenza and other introduced infections.</li>
+  <li>The Jarawa suffered measles outbreaks in 1999 and 2006 after contact increased along the Andaman Trunk Road.</li>
+  <li>The policy of restricting contact with the Sentinelese and other isolated groups under the Andaman and Nicobar Islands (Protection of Aboriginal Tribes) Regulation, 1956, rests partly on this danger.</li>
+  <li>On the mainland, malaria and tuberculosis remain heavy burdens in tribal areas, worsened by malnutrition, displacement and poor access to health care.</li>
+</ul>
+
+<p>Protecting small, isolated groups depends on controlled contact, vaccination, screening of outsiders and respect for the communities' own choices about contact.</p>
+
 <h2>Nutritional Anthropology</h2>
 
 <p>Nutritional anthropology is the study of the relationship between human biology and diet, encompassing evolutionary, ecological, and sociocultural dimensions of human food behaviour. It draws on the biosocial perspective to understand how food systems, food beliefs, taboos, and socioeconomic access to food interact with biological nutritional needs to produce health and disease outcomes. Key concerns include: the evolution of human dietary patterns (Paleolithic to agricultural to industrial); population-specific nutritional adaptation (e.g., lactase persistence, variation in salivary amylase gene copy number); nutritional status assessment (anthropometric measures (weight-for-age, height-for-age, BMI) as well as biochemical and clinical markers); and the global epidemiology of malnutrition (both undernutrition/stunting in low-income populations and overnutrition/obesity in high-income and transitional populations). The first 1,000 days (conception to 2 years) are recognized as the critical window for nutritional investment: deficits in this period may be irreversible in their effects on growth, cognitive development, and lifelong disease risk.</p>
+
+<h3>Forms of Malnutrition and Protein-Energy Malnutrition</h3>
+
+<p>Malnutrition means deficiencies, excesses or imbalances in a person's intake of energy and nutrients. The World Health Organization groups it into three forms:</p>
+
+<ul>
+  <li><strong>Undernutrition:</strong> <em>stunting</em> (low height-for-age, from long-term deprivation), <em>wasting</em> (low weight-for-height, from recent acute weight loss) and <em>underweight</em> (low weight-for-age, a composite of both).</li>
+  <li><strong>Micronutrient-related malnutrition ("hidden hunger"):</strong> deficiency of iron (anaemia), iodine (goitre, cretinism), vitamin A (night blindness) and others.</li>
+  <li><strong>Overweight, obesity and diet-related non-communicable diseases</strong> such as type 2 diabetes and heart disease.</li>
+</ul>
+
+<p>India carries a double burden. The National Family Health Survey-5 (2019 to 2021) found 35.5 per cent of children under five stunted, 19.3 per cent wasted and 32.1 per cent underweight, with anaemia in 67.1 per cent of children aged 6 to 59 months and 57 per cent of women aged 15 to 49, while obesity and diabetes are rising.</p>
+
+<p><strong>Protein-energy malnutrition (PEM)</strong> results from inadequate intake of energy and protein, usually aggravated by infection, and is commonest between weaning and five years.</p>
+
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Marasmus</th><th>Kwashiorkor</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Main deficit</td><td>Severe shortage of total food energy</td><td>Diet low in protein relative to energy, typically starchy foods after weaning, often triggered by infection</td></tr>
+    <tr><td>Usual age</td><td>Under one year</td><td>One to four years</td></tr>
+    <tr><td>Oedema</td><td>Absent</td><td>Present, the defining sign</td></tr>
+    <tr><td>Body</td><td>Extreme wasting of muscle and fat, "skin and bones"</td><td>Wasting masked by oedema, moon face</td></tr>
+    <tr><td>Face, skin and hair</td><td>Wizened "old man" face, loose wrinkled skin</td><td>Flaky-paint skin lesions, sparse hair with reddish or pale discolouration</td></tr>
+    <tr><td>Other</td><td>Alert and hungry, liver normal</td><td>Apathetic, poor appetite, enlarged fatty liver, low serum albumin</td></tr>
+  </tbody>
+</table>
+
+<p>Cicely Williams named kwashiorkor in the 1930s from a Ga word of the Gold Coast (Ghana) for the illness of the child displaced from the breast by a new baby. <strong>Marasmic kwashiorkor</strong> combines severe wasting with oedema.</p>
+
+<ul>
+  <li><strong>Gomez classification (1956):</strong> weight-for-age as a percentage of the reference median: first degree 75 to 90, second degree 60 to 75, third degree below 60 per cent.</li>
+  <li><strong>Wellcome classification (1970):</strong> weight-for-age with or without oedema. 60 to 80 per cent with oedema is kwashiorkor, below 60 per cent without oedema marasmus, below 60 per cent with oedema marasmic kwashiorkor.</li>
+  <li><strong>Current WHO criteria:</strong> severe acute malnutrition is very low weight-for-height, a mid-upper arm circumference below 115 mm, or bilateral oedema.</li>
+</ul>
+
+<p><strong>Explanations:</strong> Williams attributed kwashiorkor to protein lack after weaning. C. Gopalan of the National Institute of Nutrition, Hyderabad, found that the diets of children with the two conditions differed little, and argued that marasmus is a successful adaptation to starvation while kwashiorkor is a failure of adaptation ("dysadaptation"). Infection and aflatoxins are also implicated, and the biocultural causes include poverty, short birth intervals, weaning practices and food taboos, poor sanitation and mothers' heavy workload.</p>
+
+<p><strong>Indian response:</strong> the Integrated Child Development Services (1975), the National Food Security Act (2013), POSHAN Abhiyaan (2018), Anaemia Mukt Bharat (2018) and school meals (PM POSHAN since 2021). Among tribal groups such as the Sahariya of Madhya Pradesh, malnutrition is tied to loss of land and forest, seasonal migration and weak services as much as to food intake.</p>
 
 <h2>Forensic Anthropology</h2>
 
@@ -1715,6 +2362,27 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p><strong>Experimental Archaeology:</strong> Use of analogies from experimental studies of ancient techniques and materials. A history of over 150 years. Precautions: materials similar to those used in the past must be employed; modern technology must not influence the experiments. Experimental stone tool making has been practiced since the early 19th century: Leakey, Crabtree, and Bordes made experimental specimens of all major tool types including Solutrean points and North American Clovis and Folsom points. Other experimental studies cover dwelling construction, megalithic tomb construction, food preparation, animal butchering, and agricultural practices.</p>
 
 <p><strong>Ethological Studies:</strong> Use of analogies from primate behavioural research to reconstruct prehistoric hunter-gatherer behaviour. Long-term field studies of chimpanzees, baboons, and other higher primates provide analogies: group living facilitating learning; occupation of core areas with a home base; production of flakes by chimpanzees breaking stone blocks (suggesting origins of stone tool making).</p>
+
+<h3>Classical Archaeology and Ethnoarchaeology Compared</h3>
+
+<p><strong>Classical archaeology</strong> studies the material remains of ancient Greece and Rome and the wider Mediterranean world, from the Bronze Age Aegean to late antiquity. It grew from Renaissance antiquarian collecting and the excavations at Herculaneum (from 1738) and Pompeii (from 1748), and was shaped by Johann Joachim Winckelmann, whose <em>History of the Art of Antiquity</em> (1764) set out a stylistic history of Greek art and turned the study of ancient objects into a historical discipline. Later landmarks include Heinrich Schliemann at Troy and Mycenae in the 1870s and Arthur Evans at Knossos from 1900. Classical archaeology works alongside ancient texts and uses art history, architecture, epigraphy (inscriptions), numismatics (coins) and pottery typology. Its traditional aims were historical and aesthetic, though since the 1970s it has also adopted survey, environmental and social approaches.</p>
+
+<p><strong>Ethnoarchaeology</strong> studies living communities to learn how behaviour produces material remains, so that the past can be interpreted by analogy. It began with Jesse Fewkes (1900) and became central with Lewis Binford's work among the Nunamiut and his search for middle-range theory.</p>
+
+<table>
+  <thead>
+    <tr><th>Aspect</th><th>Classical archaeology</th><th>Ethnoarchaeology</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Subject</td><td>Literate ancient civilisations of Greece and Rome</td><td>Living communities, often non-literate</td></tr>
+    <tr><td>Sources</td><td>Texts, inscriptions, art, monuments and excavated objects</td><td>Direct observation and interviews on present-day behaviour, discard and site formation</td></tr>
+    <tr><td>Time focus</td><td>The historical past</td><td>The present, used to understand the past</td></tr>
+    <tr><td>Aims</td><td>Historical and aesthetic reconstruction, testing and illustrating texts</td><td>Analogies and middle-range theory linking behaviour to material residues</td></tr>
+    <tr><td>Typical question</td><td>How a temple was built or a style developed</td><td>How a potter's waste or a hunting camp becomes an archaeological site</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Indian parallels:</strong> Indian historical archaeology followed a text-aided path like that of classical archaeology. Alexander Cunningham, first head of the Archaeological Survey of India (1861), located Buddhist sites from the accounts of the Chinese pilgrims Faxian and Xuanzang, and Mortimer Wheeler's excavation at Arikamedu near Puducherry (1945) found Roman amphorae and Arretine ware, linking India directly to the classical world. Indian ethnoarchaeology works with living craft and forager communities, as in the study of Khambhat bead-makers to interpret Harappan bead production.</p>
 
 <h2>Dating Methods</h2>
 
@@ -1923,6 +2591,22 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Every human society has culture: this is a human universal. All cultures have language, some form of family and kinship organisation, some form of economic exchange, some form of religion or worldview, some form of political authority, and some system of regulating sexuality and reproduction. These cultural universals reflect the universal challenges of human existence. At the same time, the specific content of these universals varies enormously across societies, which is what makes cross-cultural study so revealing of the range of human possibility.</p>
 
+<h3>Drawbacks of Treating Culture as an Integrated, Closed System</h3>
+
+<p>Classical anthropology often treated each culture as a bounded and internally consistent whole. Malinowski's functionalism saw every trait serving the whole, Radcliffe-Brown compared society to an organism, Benedict described each culture as a configuration around one dominant pattern, and Redfield's little community was small, homogeneous and self-sufficient. The model suited the study of one island or village by a lone fieldworker. Applied to contemporary society, it has serious drawbacks:</p>
+
+<ul>
+  <li><strong>It ignores connections:</strong> Eric Wolf (<em>Europe and the People Without History</em>, 1982) criticised the habit of treating nations and cultures as separate, hard billiard balls bouncing off one another. Societies have long been linked through trade, conquest, migration and capitalism, and many supposedly isolated tribes had already been reshaped by colonial rule.</li>
+  <li><strong>It hides internal variation and power:</strong> it presents the views of elders, men and dominant castes as "the culture" and silences women, the young, Dalits and dissenters. Annette Weiner's restudy of the Trobriands found the women's exchanges that Malinowski had missed.</li>
+  <li><strong>It freezes culture in time:</strong> a closed, balanced system cannot explain change, conflict or contradiction. Leach (<em>Political Systems of Highland Burma</em>, 1954) showed Kachin communities oscillating between gumsa and gumlao forms, with neither a stable equilibrium nor a fixed boundary.</li>
+  <li><strong>It cannot handle global flows:</strong> migration, media, markets and the internet create hybrid and deterritorialised cultures (Appadurai, 1996), and Fredrik Barth (1969) showed that ethnic boundaries persist even as people and traits cross them.</li>
+  <li><strong>It essentialises:</strong> Lila Abu-Lughod ("Writing Against Culture", 1991) argued that the concept of culture fixes difference and makes others appear timeless and homogeneous. Verena Stolcke (1995) showed how the idea of bounded cultures became a new rhetoric of exclusion against immigrants in Europe.</li>
+</ul>
+
+<p><strong>Indian illustrations:</strong> the colonial census fixed fluid caste and tribal identities into bounded categories (Bernard Cohn, 1987). Treating tribes as isolated wholes supported both early isolationist policy and a museum view of tribal culture, while the tribe-caste continuum, Sanskritisation, and universalisation and parochialisation all show constant exchange. Village studies showed that even the village is tied to wider markets, castes and the state.</p>
+
+<p>Contemporary anthropology therefore sees culture as an open, contested and changing process, shared unevenly and remade in practice, while recognising that people often experience their own way of life as coherent.</p>
+
 <h2>Culture and Civilisation</h2>
 
 <p>In everyday usage, "civilisation" often implies an evolutionary or evaluative hierarchy: some societies are considered more "civilised" than others. In anthropology, this usage is rejected. The anthropological concept of culture is non-evaluative and universal: every human society, regardless of its technological complexity, social scale, or historical antiquity, has a fully developed culture. There are no cultures that are "more cultural" than others.</p>
@@ -1955,6 +2639,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Beliefs</strong> are the shared understandings about the nature of the world and how it works: about causality, the supernatural, the cosmos, and human nature. Beliefs are not merely cognitive; they are charged with emotion and are closely connected to values and practices.</p>
 
+<h3>William Ogburn and Cultural Lag</h3>
+
+<p>William F. Ogburn, in <em>Social Change with Respect to Culture and Original Nature</em> (1922), argued that the parts of a modern culture change at different rates. He traced change to four processes: invention, accumulation, diffusion and adjustment. Material culture (technology and tools) changes fastest. The adaptive culture, the part of non-material culture (customs, laws, beliefs, institutions) that adjusts to material conditions, changes more slowly. The delay between a change in material culture and the matching adjustment in adaptive culture is <strong>cultural lag</strong>, and during it society suffers maladjustment and social problems. Ogburn's own examples were industrial machinery, which multiplied workplace accidents long before workmen's compensation laws were passed, and forests cut down faster than conservation policy developed.</p>
+
+<p><strong>Indian examples:</strong></p>
+
+<ul>
+  <li>Ultrasound spread in the 1980s before law and norms caught up, fuelling sex-selective abortion. The Pre-Natal Diagnostic Techniques Act came only in 1994 and was strengthened in 2003, while the child sex ratio kept falling.</li>
+  <li>Smartphones and social media spread faster than norms of privacy and rules on misinformation and cybercrime. The Digital Personal Data Protection Act came only in 2023.</li>
+  <li>Tractors, tube wells and the Green Revolution changed village agriculture faster than land relations and caste norms of labour.</li>
+  <li>Medicine prolongs life, while family care for the old and pension systems lag behind.</li>
+</ul>
+
+<p><strong>Critique:</strong> the theory assumes technological determinism, that material culture always leads. Ideas and values can drive material change, as in Weber's account of the Protestant ethic or the Gandhian revival of khadi. The line between material and non-material culture is blurred, since every tool carries meanings. Deciding which part "lags" implies a judgement about which part ought to adjust, and the theory treats culture as a machine of parts rather than as contested practice. The concept remains widely used for the gap between technology and law, as with artificial intelligence today.</p>
+
 <h2>Cultural Relativism and Ethnocentrism</h2>
 
 <h3>Ethnocentrism</h3>
@@ -1974,6 +2673,20 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>As a <strong>moral or epistemological principle</strong>, cultural relativism is more controversial. In its strong form, it holds that no culture's values can be judged as superior or inferior to those of any other: that all values are relative to the culture that holds them and no cross-cultural moral judgements are possible. This strong form creates serious difficulties when confronted with practices such as genocide, torture, or systematic oppression that may be culturally sanctioned. Most contemporary anthropologists maintain methodological relativism (as an approach to understanding) while acknowledging that some form of cross-cultural moral judgement is both possible and necessary.</p>
 
 <p>Herskovits distinguished three levels of cultural relativism: methodological (the principle that cultural traits must be understood in their own context), epistemological (the view that knowledge is always culturally relative), and moral or ethical (the view that moral standards are culturally relative). He advocated all three; most contemporary anthropologists accept the first and are ambivalent about the second and third.</p>
+
+<h3>Cultural Relativism and Human Rights</h3>
+
+<p>The tension between relativism and universal human rights came into the open when the United Nations drafted the Universal Declaration of Human Rights (1948). In 1947 the Executive Board of the American Anthropological Association submitted a Statement on Human Rights, drafted by Melville Herskovits, to the UN Commission on Human Rights. It argued that the individual realises his personality through his culture, so respect for individuals entails respect for cultural differences, that no scientific method exists for ranking cultures, and that values are relative to the culture from which they come. A declaration drawn from one tradition, Western liberal individualism, could not simply be applied to all humanity. Coming after colonial rule had been justified as a civilising mission, the warning had force. But critics, including Julian Steward (1948), noted the contradiction of claiming scientific neutrality while taking a moral stand, and the statement seemed to leave no ground for condemning the Nazi crimes just exposed.</p>
+
+<ul>
+  <li><strong>Relativist case:</strong> the Declaration stresses individual civil and political rights drawn from Western history, while many societies give weight to collective rights, duties and economic security. The Bangkok Declaration of Asian states (1993) appealed to regional particularities.</li>
+  <li><strong>Universalist case:</strong> strong relativism cannot condemn genocide, slavery, sati, untouchability or female genital cutting, and "culture" is often invoked by the powerful to silence women, Dalits or minorities within a group. The Vienna Declaration (1993) affirmed that all human rights are universal, indivisible and interdependent, while national and regional particularities must be borne in mind.</li>
+  <li><strong>Middle positions:</strong> Sally Engle Merry (<em>Human Rights and Gender Violence</em>, 2006) showed how activists vernacularise global rights by translating them into local terms and institutions.</li>
+</ul>
+
+<p><strong>Anthropology's changed position:</strong> the AAA's Declaration on Anthropology and Human Rights (1999) commits the discipline to human rights and treats the capacity for culture as itself a right, limited where its exercise diminishes the same capacity in others. Anthropologists now support the collective rights of indigenous peoples, recognised in the UN Declaration on the Rights of Indigenous Peoples (2007), while keeping methodological relativism to understand practices before judging them.</p>
+
+<p><strong>Indian examples:</strong> sati was banned in 1829 and again by the Commission of Sati (Prevention) Act 1987 after the death of Roop Kanwar. The Supreme Court set aside instant triple talaq in <em>Shayara Bano v Union of India</em> (2017). In <em>Madhu Kishwar v State of Bihar</em> (1996) it declined to strike down the customary male inheritance of land among the Ho but protected women's right to a livelihood from it, a case that shows the pull between tribal custom and gender equality.</p>
 
 <h2>Enculturation and Acculturation</h2>
 
@@ -2018,6 +2731,22 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Most contemporary anthropologists adopt an interactionist or biocultural position that rejects both extreme poles: neither pure biological determinism nor pure cultural constructionism adequately describes the human condition. Humans are biological beings with specific evolutionary histories, specific cognitive architectures, and specific developmental programmes; and they are also cultural beings whose specific behaviours, values, and identities are shaped by learned traditions. Biology sets constraints and tendencies; culture elaborates, redirects, and often overrides them.</p>
 
 <p>Examples of biocultural interaction: the human capacity for language is biologically based (specific neural structures in the brain; language acquisition device that enables rapid first-language learning in early childhood), but the specific language one speaks is culturally determined. The capacity for colour vision is biological, but the number and categories of colour terms a language employs and the salience of colour in perception vary culturally. The capacity for incest avoidance appears to have a biological basis (the Westermarck effect: individuals raised together in early childhood develop a sexual aversion to each other); but the specific incest taboos of any given society are culturally elaborated far beyond what biology alone requires.</p>
+
+<h3>Culture and Embodiment</h3>
+
+<p>Embodiment refers to the way culture is lived through, and inscribed in, the body. The body is not only a biological object on which culture acts from outside, but the ground of experience through which people perceive, act and know their world. The approach rejects the split between mind and body, and between nature and culture.</p>
+
+<ul>
+  <li><strong>Robert Hertz ("The Pre-eminence of the Right Hand", 1909):</strong> the near-universal privileging of the right hand over the left is a religious and social classification (sacred and profane) built on a slight biological asymmetry. In India the left hand is kept for impure tasks.</li>
+  <li><strong>Marcel Mauss ("Techniques of the Body", 1935):</strong> walking, swimming, sitting, sleeping, digging and giving birth are learned differently in each society and passed on by imitation and training. Mauss used the term habitus for these acquired bodily abilities.</li>
+  <li><strong>Mary Douglas (<em>Purity and Danger</em>, 1966, and <em>Natural Symbols</em>, 1970):</strong> the physical body is a symbol of the social body. Concern with bodily boundaries, orifices and pollution expresses concern with social boundaries, as in caste rules of food and touch.</li>
+  <li><strong>Pierre Bourdieu (<em>Outline of a Theory of Practice</em>, 1972, English 1977):</strong> habitus is a system of durable, transposable dispositions instilled by upbringing and class position and lived as bodily hexis: posture, gesture, taste and manner of speech. Among the Kabyle of Algeria, men's upright bearing and women's lowered gaze embody gender hierarchy.</li>
+  <li><strong>Michel Foucault (<em>Discipline and Punish</em>, 1975):</strong> modern institutions produce docile bodies through drill, timetables and surveillance.</li>
+  <li><strong>Nancy Scheper-Hughes and Margaret Lock ("The Mindful Body", 1987):</strong> distinguished the individual body-self, the social body (the body as symbol) and the body politic (the regulation and control of bodies).</li>
+  <li><strong>Thomas Csordas ("Embodiment as a Paradigm for Anthropology", 1990):</strong> drawing on Merleau-Ponty's phenomenology and on Bourdieu, he proposed embodiment as a paradigm in which the body is the existential ground of culture, a subject rather than an object.</li>
+</ul>
+
+<p><strong>Indian examples:</strong> untouchability inscribes caste hierarchy on bodies through rules of touch, water and commensality. A Hindu widow's tonsure, white dress and restricted diet once marked her social death. Tattooing (godna) among Baiga and Gond women marks identity and stages of life. Joseph Alter (<em>The Wrestler's Body</em>, 1992) showed how wrestlers in Banaras make their bodies, through diet, celibacy and exercise, into a moral and political project.</p>
 
 <h2>Subculture, Counterculture, and Cultural Pluralism</h2>
 
@@ -2120,6 +2849,34 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>Interpretive approach:</strong> Institutions are systems of shared meanings and definitions of reality. They are sustained by the ongoing interpretive activities of social actors who define situations, negotiate meanings, and maintain the appearance of objective social facts through everyday interaction.</li>
   <li><strong>Malinowski's approach:</strong> Each institution has a charter (the system of values for which the institution exists), personnel (the organised group of participants), norms (the rules governing behaviour), material apparatus (the physical resources used), activities (what people actually do), and a function (the contribution the institution makes to the satisfaction of needs). Every institution is simultaneously biological, cultural, psychological, and social.</li>
 </ul>
+
+<h3>Erving Goffman: Total Institutions</h3>
+
+<p>In <em>Asylums: Essays on the Social Situation of Mental Patients and Other Inmates</em> (1961), based on a year of fieldwork in 1955-56 at St Elizabeths Hospital, a large federal mental hospital in Washington, D.C., Erving Goffman defined a total institution as "a place of residence and work where a large number of like-situated individuals, cut off from the wider society for an appreciable period of time, together lead an enclosed, formally administered round of life."</p>
+
+<p><strong>Five types:</strong> institutions caring for people thought incapable and harmless (homes for the blind, the aged, orphans and the destitute), for those incapable and an unintended threat to others (mental hospitals, leprosaria, tuberculosis sanatoria), for protecting society from intentional dangers (prisons, prisoner-of-war and concentration camps), for pursuing a work-like task (army barracks, ships, boarding schools, work camps), and retreats from the world (monasteries, convents and abbeys).</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li>All aspects of life (sleep, work and play) take place in one place under one authority.</li>
+  <li>Each activity is done in the company of a large batch of others, all treated alike.</li>
+  <li>The day is tightly scheduled from above by a body of officials.</li>
+  <li>All activities are brought into a single rational plan meant to fulfil the official aims of the institution.</li>
+  <li>A basic split separates the large managed group of inmates from a small supervisory staff, with great social distance between them.</li>
+</ul>
+
+<p><strong>The inmate's self:</strong> on entry the inmate undergoes a <strong>mortification of self</strong>: stripping of clothing and possessions (the "identity kit"), numbering, searches, loss of privacy and of control over time, and humiliating rituals. A <strong>privilege system</strong> of rewards and punishments then reshapes behaviour. Inmates adapt by withdrawal, intransigence, colonisation (treating institutional life as home), conversion (taking on the staff's view of themselves) or "playing it cool", and they build an underlife of <strong>secondary adjustments</strong> that win small freedoms.</p>
+
+<p><strong>Relevance today:</strong></p>
+
+<ul>
+  <li>The book fed the deinstitutionalisation of psychiatric care and the rights-based approach of India's Mental Healthcare Act 2017. The death of 28 chained mentally ill people in a fire at a private asylum near a shrine in Erwadi, Tamil Nadu, in 2001 exposed custodial abuse.</li>
+  <li>It frames studies of prisons, juvenile and shelter homes, old-age homes, refugee and detention camps, barracks and migrant workers' dormitories.</li>
+  <li>Residential schools that cut children off from their language and culture, such as Canada's schools for indigenous children, are read as total institutions, which raises questions about the residential schooling of tribal children in India.</li>
+</ul>
+
+<p><strong>Critique:</strong> Goffman wrote mainly from the inmates' side, underplayed differences between institutions and inmates' capacity to resist, and treated institutions as more closed than many are today, when phones, visitors and courts reach inside. Foucault's analysis of discipline (1975) later extended similar ideas to society as a whole.</p>
 
 <h2>Role, Status, and Social Group</h2>
 
@@ -2235,6 +2992,30 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Three dimensions of stratification are commonly distinguished following Weber: class (economic position, differential access to the means of production and the market), status (social honour or prestige (differential ranking by community opinion), and party (power) capacity to influence collective decisions). These three dimensions do not always coincide: a nouveau riche individual may have class without status; a fallen aristocrat may retain status without class.</p>
 
 <p>Systems of stratification vary in their degree of openness: the extent to which individuals can move between strata through their own efforts. <strong>Closed systems</strong> are those in which position is ascribed at birth and movement between strata is prohibited or extremely difficult (e.g., the Hindu caste system, the estate system of feudal Europe, the racial caste system of apartheid South Africa). <strong>Open systems</strong> are those in which achieved characteristics matter and social mobility is structurally possible, though in practice it may be severely constrained (e.g., the class systems of modern capitalist societies).</p>
+
+<h3>Functionalist and Marxian Theories of Stratification</h3>
+
+<h4>Functionalist Theory</h4>
+
+<p>Kingsley Davis and Wilbert Moore ("Some Principles of Stratification", 1945) argued that stratification is universal because it is necessary. Every society must place its most able members in its most important positions and motivate them to perform. Positions differ in functional importance and in the scarcity of the talent and training they require. Unequal rewards (income, prestige, leisure) are the means by which society ensures that the most important positions are filled by the most qualified people, so stratification is an unconsciously evolved and useful device. Talcott Parsons similarly saw ranking as resting on shared values.</p>
+
+<p><strong>Melvin Tumin's critique (1953):</strong></p>
+
+<ul>
+  <li>Functional importance cannot be measured objectively: are sanitation workers less important to a city than lawyers?</li>
+  <li>Stratification limits the discovery of talent, since unequal access to education keeps able children of the poor from rising.</li>
+  <li>Training is not a sacrifice that society must reward, and its cost is often borne by parents.</li>
+  <li>People can be motivated by duty, service and satisfaction, not only by unequal rewards.</li>
+  <li>Stratification breeds hostility, suspicion and distrust, and privilege is inherited rather than earned, so it is dysfunctional as well as functional.</li>
+</ul>
+
+<h4>Marxian Theory</h4>
+
+<p>For Marx, classes are defined by their relation to the means of production. Under capitalism the bourgeoisie owns them and the proletariat sells its labour power, and profit is the surplus value taken from workers. Stratification is therefore exploitation, not functional necessity. The economic base shapes a superstructure of law, politics, religion and ideas that legitimates inequality through ideology and false consciousness. A class in itself becomes a class for itself through awareness and organisation, and class struggle drives history towards revolution. Critics point to the growth of the middle classes, the absence of revolution in advanced capitalism, and the neglect of status, gender, race and caste. Ralf Dahrendorf (1959) moved the basis of class from property to authority.</p>
+
+<h4>Stratification and the Reproduction of Inequality</h4>
+
+<p>Stratification sustains inequality across generations through the inheritance of property, unequal schooling, endogamy, cultural capital (Bourdieu), social closure by which groups monopolise rewards (Frank Parkin, 1979), and legitimating ideologies such as karma and dharma for caste or meritocracy for class. In India caste has been read through purity (Dumont), power (Berreman) and the separation of caste, class and power (Béteille). Discrimination persists: Sukhadeo Thorat and Paul Attewell (2007) found that job applicants with Dalit and Muslim names were less likely to be called for interview than equally qualified applicants with upper-caste Hindu names. Yet stratification is not fixed: reservations, Dalit movements, Sanskritisation and new urban occupations show groups contesting and partly overturning it.</p>
 `,
   'marriage-family-kinship': `
 <h2>Marriage: Definitions and Universality</h2>
@@ -2379,6 +3160,60 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Matrifocal family:</strong> A household centred on a mother and her children, without a consistently present male. Most common where male employment requires long absences or where marriage is unstable.</p>
 
+<h3>Morgan's Evolution of the Family and Its Critics</h3>
+
+<p>In <em>Systems of Consanguinity and Affinity of the Human Family</em> (1871) and <em>Ancient Society</em> (1877), Lewis Henry Morgan arranged the family in five successive forms, each tied to a stage of subsistence and property: the consanguine (group marriage of brothers and sisters), the punaluan (groups of brothers sharing wives, or sisters sharing husbands, which ended brother-sister marriage), the syndyasmian or pairing family (loose and easily dissolved pairs), the patriarchal (male authority with polygyny) and the monogamian (one man and one woman, tied to private property and inheritance by sons). He inferred the early forms mainly from kinship terms: Hawaiian terms that call all cousins brothers and sisters were read as survivals of group marriage.</p>
+
+<h4>How Other Evolutionists Disagreed</h4>
+
+<ul>
+  <li><strong>Henry Maine (<em>Ancient Law</em>, 1861):</strong> the patriarchal family, under the absolute power of the eldest male as in Roman patria potestas, was the original unit of society. Society moved from status to contract, not from promiscuity to monogamy.</li>
+  <li><strong>J.J. Bachofen (<em>Das Mutterrecht</em>, 1861) and J.F. McLennan (<em>Primitive Marriage</em>, 1865):</strong> agreed that early humans were promiscuous and first traced descent through women, but gave other causes. McLennan derived exogamy and marriage by capture from female infanticide and a shortage of women, and dismissed Morgan's kinship terms as mere forms of address.</li>
+  <li><strong>Edward Westermarck (<em>The History of Human Marriage</em>, 1891):</strong> denied that promiscuity or group marriage was ever a stage. Pair-bonding with paternal care, seen among the great apes, is primordial, and marriage is rooted in the family rather than the family in marriage.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Morgan relied on armchair data and on the false assumption that kin terms record past sexual unions. No society with brother-sister group marriage has ever been found, and Malinowski (<em>The Family among the Australian Aborigines</em>, 1913) showed that even the Aborigines, cited as group-marrying, lived in individual families. Matrilineal peoples such as the Khasi, Garo and Nayar are not survivals of an earlier stage. Yet Morgan founded kinship studies and linked the family to property and production, an idea Engels developed in <em>The Origin of the Family, Private Property and the State</em> (1884).</p>
+
+<h3>Household, Family and Domestic Group</h3>
+
+<p>The <strong>household</strong> is a co-resident unit whose members share a dwelling and usually a hearth and budget. The <strong>family</strong> is a kinship group whose members may live in several households. The two often differ: a joint family may be spread between a village house and a city flat, and a household may include servants or unrelated dependants.</p>
+
+<ul>
+  <li><strong>Developmental cycle:</strong> Meyer Fortes, in <em>The Developmental Cycle in Domestic Groups</em> (edited by Jack Goody, 1958), showed that a domestic group passes through phases of expansion, dispersion or fission, and replacement. A census at one moment catches households at different phases.</li>
+  <li><strong>A.M. Shah (<em>The Household Dimension of the Family in India</em>, 1973):</strong> from a Gujarat village and a review of other studies, Shah argued that the household must be separated from the wider family. A nuclear household is often a phase in the cycle of a joint family, so a rise in nuclear households does not prove that the joint family is breaking up.</li>
+  <li><strong>I.P. Desai (<em>Some Aspects of Family in Mahuva</em>, 1964):</strong> measured jointness by obligations rather than residence. Many households in this Gujarat town lived apart yet remained functionally joint in property, ritual and mutual help.</li>
+</ul>
+
+<h3>Urbanisation and the Family in India</h3>
+
+<p><strong>Urbanisation</strong> is the process by which a growing share of a population comes to live in towns and cities and to follow urban occupations and ways of life. The Census counts as urban all statutory towns and census towns with at least 5,000 people, a density of 400 per square kilometre and three-quarters of male main workers outside agriculture. India was 31.16 percent urban in 2011. Its effects on the family:</p>
+
+<ul>
+  <li><strong>Structure:</strong> smaller and more nuclear households, because of migration, housing costs and salaried jobs. Kin ties nevertheless persist. Milton Singer (1968) found that industrial families in Madras kept joint ownership and management, and Sylvia Vatuk (<em>Kinship and Urbanization</em>, 1972) found close kin ties among white-collar migrants in Meerut.</li>
+  <li><strong>Roles and authority:</strong> women's education and paid work create dual-earner couples and shift authority from elders to the conjugal pair, though housework still falls mainly on women.</li>
+  <li><strong>Marriage:</strong> later marriage, more choice of partner, matrimonial websites, more inter-caste marriage and more divorce, though arranged and caste-endogamous marriage remains the norm.</li>
+  <li><strong>Care:</strong> elderly parents left alone led to the Maintenance and Welfare of Parents and Senior Citizens Act 2007, and male migration leaves women heading rural households.</li>
+</ul>
+
+<h3>The Feminist Movement and the Family</h3>
+
+<p>Feminism questioned the family as natural, universal and harmonious. Jane Collier, Michelle Rosaldo and Sylvia Yanagisako ("Is There a Family?", 1982) argued that the family is a cultural and ideological construct, not a universal unit fixed by biology. Amartya Sen (1990) described the household as a site of cooperative conflict, and Bina Agarwal (<em>A Field of One's Own</em>, 1994) tied women's position to their lack of land. In India the women's movement, building on <em>Towards Equality</em> (1974), the report of the Committee on the Status of Women in India, changed family law:</p>
+
+<ul>
+  <li><strong>Violence and dowry:</strong> anti-dowry campaigns led to amendments of the Dowry Prohibition Act 1961 (1984, 1986), the offences of cruelty by husband or relatives (Section 498A IPC, 1983) and dowry death (Section 304B IPC, 1986), both now carried into the Bharatiya Nyaya Sanhita, 2023, and the Protection of Women from Domestic Violence Act 2005.</li>
+  <li><strong>Property:</strong> the Hindu Succession (Amendment) Act 2005 made daughters coparceners in joint family property, as confirmed in <em>Vineeta Sharma v Rakesh Sharma</em> (2020).</li>
+  <li><strong>Universality of marriage:</strong> later marriage, singlehood by choice, divorce, single mothers, live-in couples and same-sex partners have become more visible. <em>Navtej Singh Johar v Union of India</em> (2018) decriminalised consensual same-sex relations, though <em>Supriyo v Union of India</em> (2023) left the recognition of same-sex marriage to Parliament. Marriage nevertheless remains near universal in India, and change is fastest among the urban educated middle class.</li>
+</ul>
+
+<h3>Live-in Relationships and the Institution of Marriage</h3>
+
+<p>A live-in relationship is cohabitation by an unmarried couple without a wedding rite or registration. Anthropologically, marriage is more than co-residence and sex: it is a publicly recognised union that makes children legitimate and creates rights and alliance between kin groups. A live-in relationship shares the domestic and sexual side of marriage but lacks its public rite and its alliance between families, so it sits on a continuum between casual union and marriage.</p>
+
+<ul>
+  <li><strong>Law:</strong> in <em>S. Khushboo v Kanniammal</em> (2010) the Supreme Court held that cohabitation by consenting adults is not an offence. In <em>D. Velusamy v D. Patchaiammal</em> (2010) it held that a "relationship in the nature of marriage" under the Domestic Violence Act 2005 requires the couple to present themselves as spouses, be of legal age, be otherwise qualified to marry and have lived together voluntarily for a significant period. Children of such unions can inherit their parents' self-acquired property. The Uniform Civil Code of Uttarakhand (2024, in force 2025) requires live-in relationships to be registered but exempts Scheduled Tribes.</li>
+  <li><strong>Assessment:</strong> live-in relationships reflect urban individualism and the feminist questioning of marriage, but they remain a small and stigmatised minority, and women in them are vulnerable when the relationship ends. They show marriage being redefined rather than abolished.</li>
+</ul>
+
 <h2>Kinship</h2>
 
 <h3>Definitions and Meaning</h3>
@@ -2394,6 +3229,35 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <h3>Kinship Diagrams and Genealogies</h3>
 <p>Anthropologists construct kinship diagrams from the perspective of <em>ego</em>: a schematic showing all kin relations of a particular individual using standardised symbols. A genealogy, by contrast, begins with the earliest traceable ancestor and works downward. When Robin Fox attempted to use ego-centred diagrams among Tory Islanders, they preferred the genealogical approach, so he followed their preference: illustrating that methodological choice must sometimes defer to cultural preference.</p>
+
+<h3>Joking and Avoidance Relationships</h3>
+
+<p>In many societies certain kin must behave towards each other either with exaggerated respect and distance (avoidance) or with licensed teasing, insult and horseplay (joking). Both are patterned and obligatory forms of conduct, not matters of personal taste.</p>
+
+<ul>
+  <li><strong>Avoidance:</strong> the commonest case is between a man and his mother-in-law, who may not speak, meet or use each other's names, as among many Australian Aboriginal and Native American peoples. In North India a daughter-in-law veils her face before her father-in-law and her husband's elder brother (jeth) and does not speak their names.</li>
+  <li><strong>Joking:</strong> in North India a man may tease and flirt with his wife's younger sister (sali), and a woman with her husband's younger brother (devar). Joking is also common between cross-cousins, who are potential spouses, and between grandparents and grandchildren.</li>
+</ul>
+
+<h4>Radcliffe-Brown's Explanation</h4>
+
+<p>In "On Joking Relationships" (1940) and "A Further Note on Joking Relationships" (1949), both reprinted in <em>Structure and Function in Primitive Society</em> (1952), Radcliffe-Brown described the joking relationship as one in which custom permits, or even requires, one person to tease the other, who must take no offence: a relation of permitted disrespect. Both joking and avoidance arise where a relationship combines conjunction and disjunction. A man is joined to his wife's kin by marriage yet stands outside their group, with interests that may diverge from theirs. Such a relationship holds a potential for conflict, which society stabilises either by extreme respect that prevents contact or by joking that expresses hostility in a harmless form. Both therefore maintain the social structure. He also described joking between clans and tribes in Africa.</p>
+
+<h4>Other Explanations</h4>
+
+<ul>
+  <li><strong>E.B. Tylor (1889):</strong> linked mother-in-law avoidance to residence. Where a husband lives among his wife's people he remains a stranger, and avoidance marks this.</li>
+  <li><strong>Sigmund Freud (<em>Totem and Taboo</em>, 1913):</strong> avoidance guards against sexual temptation between a man and his mother-in-law.</li>
+  <li><strong>Mary Douglas (1968):</strong> a joke is an attack on structure, permitted only where the social structure itself contains the tension that the joke expresses.</li>
+</ul>
+
+<h4>Critique</h4>
+
+<ul>
+  <li>The functional account is static and circular. It says that the customs maintain structure but cannot explain why one society chooses avoidance and another joking for the same relationship.</li>
+  <li>It ignores the meanings actors give these relationships and their variation by situation and individual.</li>
+  <li>It overlooks gender and power. In North India avoidance falls mostly on young wives and enforces patrilineal authority over them, and joking with a devar, a potential husband under the levirate, can mask sexual pressure.</li>
+</ul>
 
 <h2>Descent: Principles and Types</h2>
 
@@ -2447,6 +3311,27 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Sudanese (Descriptive) Terminology</h3>
 <p>The most descriptive of all six systems. Provides a different term for each genealogical position. Siblings are fully differentiated from cousins, and every uncle, aunt, and cousin relationship has its own term. The North Indian kinship terminology is the most cited example: father's elder brother = tau, father's elder brother's wife = tai, father's younger brother = chacha, father's younger brother's wife = chachi, each specific position in the kinship universe has its own label.</p>
 
+<h3>A.L. Kroeber and the Determinants of Kinship Terminology</h3>
+
+<p>Alfred Kroeber's paper "Classificatory Systems of Relationship" (1909) was the first major attack on Morgan's treatment of kinship terms.</p>
+
+<ul>
+  <li><strong>Critique of Morgan:</strong> the division between classificatory and descriptive systems is false, since every system classifies. The English "cousin" merges male and female, paternal and maternal, older and younger relatives, and is as classificatory as any tribal term. Systems differ only in which distinctions they draw.</li>
+  <li><strong>Eight principles:</strong> Kroeber listed eight categories by which terms distinguish relatives: (1) generation, (2) lineal versus collateral relationship, (3) relative age within a generation, (4) sex of the relative, (5) sex of the speaker, (6) sex of the person through whom the relationship exists, (7) consanguinity versus affinity, and (8) the condition of the connecting relative, such as whether alive or dead. English uses only four of these (generation, lineality, sex of the relative and affinity), while many Native American systems use more.</li>
+  <li><strong>Terms reflect language and psychology:</strong> kinship terms are linguistic categories shaped by ways of thinking, and social institutions can be inferred from them only with great caution. This undercut the evolutionist practice of reading past group marriage from terms.</li>
+</ul>
+
+<p><strong>The debate on determinants:</strong></p>
+
+<ul>
+  <li><strong>W.H.R. Rivers (<em>Kinship and Social Organisation</em>, 1914):</strong> terms are determined by social institutions, above all forms of marriage. Cross-cousin marriage explains why one term can cover both the mother's brother and the father-in-law.</li>
+  <li><strong>Radcliffe-Brown ("The Study of Kinship Systems", 1941):</strong> terms follow structural principles such as the equivalence of siblings, the unity of the lineage group and the distinction of generations.</li>
+  <li><strong>G.P. Murdock (<em>Social Structure</em>, 1949):</strong> rules of descent, residence and marriage shape terminology, which changes more slowly than they do.</li>
+  <li><strong>Componential analysis:</strong> Ward Goodenough and Floyd Lounsbury (1956) built on Kroeber's principles, defining each term by a bundle of semantic components.</li>
+</ul>
+
+<p><strong>Assessment:</strong> the debate settled on the view that language, psychology and social structure all shape terminology. Kroeber's eight principles remain the basic tools for describing any system, as in North Indian terms that distinguish relative age (tau and chacha) and the sex of the linking relative (chacha and mama).</p>
+
 <h2>Descent Theory vs. Alliance Theory</h2>
 
 <h3>Descent Theory (Radcliffe-Brown, Fortes)</h3>
@@ -2469,6 +3354,19 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h2>Purum Kinship: A Case Study</h2>
 
 <p>The Purum are an Old Kuki tribe of Manipur, speaking a Tibeto-Burman language. The primary source is Tarak Chandra Das, <em>The Purums</em> (1945). Purum society consists of politically autonomous territorial segments linked by common patrilineal kinship ties and also through affinal ties. The five clans (Marrim, Makan, Kheyang, Thao, Parpa) are exogamous, and their main function is to regulate marriage. Marital residence is patrilocal after a mandatory three-year bride service. The prescribed marriage is with the mother's brother's daughter (MBD); marriage with the father's sister's daughter (FZD) is subject to a strict proscriptive taboo. Kinship terminology conforms to the marriage rules: parallel cousins and FZD are classed with sisters. For each male, kin groups are divided into three categories: his own (or his father's) kin group; his mother's kin group (from which his wife is chosen); and his sister's husband's kin group. Unrelated persons address one another by terminologically fixed terms based on the marital relationship between their respective kin groups. The Purum system has been extensively analysed as an example of generalised asymmetric exchange and prescriptive alliance.</p>
+
+<h3>Theoretical Significance of the Purum: The Prescriptive Alliance Debate</h3>
+
+<p>The Purum became one of the most discussed cases in kinship theory because Das's detailed data seemed to show Lévi-Strauss's generalised exchange working in practice. Five clans exchanged women in one direction only, wife-givers never became wife-takers, and the rule was written into the kinship terminology.</p>
+
+<ul>
+  <li><strong>Lévi-Strauss (1949):</strong> matrilateral (MBD) marriage links many groups in a long cycle and so integrates society more widely than patrilateral (FZD) marriage, whose direction reverses every generation. This explains why MBD marriage is more common across the world. It is an explanation by the needs of the social whole (a final cause).</li>
+  <li><strong>George Homans and David Schneider (<em>Marriage, Authority, and Final Causes</em>, 1955):</strong> rejected final causes and explained the preference by individual sentiment (an efficient cause). In patrilineal societies the father holds authority over a boy, so the boy's warm ties go to his mother's brother and extend to that man's daughter, making MBD marriage preferred. In matrilineal societies, where the mother's brother holds authority, FZD marriage should be preferred. Their cross-cultural survey found this correlation.</li>
+  <li><strong>Rodney Needham (<em>Structure and Sentiment</em>, 1962):</strong> argued that Homans and Schneider had confused preference with prescription. Lévi-Strauss was writing about prescriptive systems, in which the marriage rule is a category built into the terminology and the social order, not a matter of individual feeling. With the Purum as his test case, building on his structural analysis of Purum society (1958), Needham showed the whole society (terms, clans, gifts and symbolic classification) organised by asymmetric alliance between wife-giving and wife-taking groups.</li>
+  <li><strong>Later doubts:</strong> statistical reanalyses of Das's marriage records found that a number of actual marriages did not follow the one-way rule between clans, raising the question of whether the rule operated at the level of clans or of smaller lineages. Lévi-Strauss himself, in the preface to the second edition of <em>The Elementary Structures of Kinship</em> (1967), played down the distinction between prescriptive and preferential marriage.</li>
+</ul>
+
+<p><strong>Significance:</strong> the Purum debate sharpened three distinctions central to kinship theory: structure versus sentiment, prescription versus preference, and the model versus statistical behaviour. It also placed an Indian tribe, alongside Leach's Kachin, at the centre of world kinship theory.</p>
 `,
   'economic-organization': `
 <h2>Meaning and Scope of Economic Anthropology</h2>
@@ -2634,6 +3532,23 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Market exchange involves buying and selling of goods, labour, land, rentals, and credit using an intermediary token of common exchange value (money). Four requirements: a medium of exchange (money), prices (rates at which goods exchange for money), supply-and-demand price determination, and predominantly private property ownership. In contemporary life, significant market transactions occur on the internet: a market exists without a designated physical place. In rural and tribal India, weekly <em>haats</em> (markets) serve as social institutions combining economic transactions with friendship renewal, gossip exchange, marriage arrangement, and cultural significance. The reliance on market exchange and money is increasing globally through commercialisation and integration into wider economies.</p>
 
+<h3>Interpretations of the Kula Ring</h3>
+
+<ul>
+  <li><strong>Bronislaw Malinowski (<em>Argonauts of the Western Pacific</em>, 1922):</strong> functionalist. The Kula meets the need for prestige, binds partners across islands, carries ordinary barter (gimwali) alongside it, and organises magic, canoe building and leadership. It refuted the idea of a primitive economic man driven by utility.</li>
+  <li><strong>Marcel Mauss (<em>The Gift</em>, 1925):</strong> a total prestation, at once economic, legal, religious and moral, resting on three obligations: to give, to receive and to repay. Valuables carry something of their past holders, which compels their onward movement, and the gift creates both bonds and rivalry.</li>
+  <li><strong>Substantivists (Karl Polanyi, Marshall Sahlins):</strong> the Kula shows reciprocity as a form of economic integration embedded in social relations. Sahlins (<em>Stone Age Economics</em>, 1972) placed it under balanced reciprocity.</li>
+  <li><strong>J.P.S. Uberoi (<em>Politics of the Kula Ring</em>, 1962):</strong> reanalysing Malinowski's data, Uberoi argued that the Kula is above all political. It creates alliance and order among autonomous island communities without any central authority, and Kula partnerships express the rank of local leaders.</li>
+  <li><strong>Annette Weiner (<em>Women of Value, Men of Renown</em>, 1976):</strong> restudying the Trobriands, she found that Malinowski had missed women's exchanges of banana-leaf bundles and skirts at mortuary distributions. These renew the matrilineage, and men's renown depends on them. Her later idea of keeping-while-giving (<em>Inalienable Possessions</em>, 1992) showed that the most valued objects are held back from exchange.</li>
+  <li><strong>Nancy Munn (<em>The Fame of Gawa</em>, 1986):</strong> Kula exchange extends a person's influence across space and time and creates fame.</li>
+  <li><strong>Jerry and Edmund Leach (eds, <em>The Kula: New Perspectives on Massim Exchange</em>, 1983):</strong> collected restudies showing the Kula's regional variation and its persistence and change since Malinowski.</li>
+  <li><strong>Chris Gregory (<em>Gifts and Commodities</em>, 1982):</strong> contrasted gift exchange, which creates relations between persons, with commodity exchange, which creates relations between things.</li>
+</ul>
+
+<p><strong>Indian parallels:</strong> Jonathan Parry ("The Gift, the Indian Gift and the 'Indian Gift'", 1986) showed that dan, the Hindu religious gift, is meant to be given without return, unlike Mauss's reciprocal gift, and Gloria Raheja (<em>The Poison in the Gift</em>, 1988) showed that dan transfers inauspiciousness from donor to recipient.</p>
+
+<p><strong>Assessment:</strong> the Kula has been read in turn as function, reciprocity, politics, gender and value. Its rereadings show how one ethnography can be reworked by new theory and by restudy.</p>
+
 <h2>Consumption</h2>
 
 <p>Consumption refers to both the intake (eating or using things) and the output (spending resources to obtain things). Two contrasting modes anchor a consumption continuum:</p>
@@ -2699,6 +3614,24 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>A state is a form of political organisation with a bureaucracy and diversified governmental institutions with varying degrees of centralised control. It is now the form of political organisation within which all people live: bands, tribes, and chiefdoms persist but within state structures. States have enhanced power over their domain compared to other forms of political organisation, including a monopoly on the legitimate use of force.</p>
 
 <p>States use symbols to reinforce power: religious beliefs and symbols may link the ruler to divinity or to the priesthood; architecture and urban planning remind populations of state power. In pre-Hispanic Mexico, the central plaza of city-states like Tenochtitlán was symbolically equivalent to the centre of the cosmos; the most important temples and the head of state's residence surrounded it; houses in decreasing order of status were placed in decreasing proximity to the centre.</p>
+
+<h3>Theories of the Origin of the State</h3>
+
+<p>Pristine states, which arose without the influence of existing states, emerged in Mesopotamia, Egypt, the Indus valley, northern China, Mesoamerica and the Andes. Secondary states formed under the pressure or example of existing ones. Theories of state origin divide into conflict theories, which stress coercion and inequality, and integration theories, which stress the benefits of central management.</p>
+
+<ul>
+  <li><strong>Morgan and Engels:</strong> Morgan (<em>Ancient Society</em>, 1877) traced a passage from <em>societas</em>, based on kinship, to <em>civitas</em>, based on territory and property. Friedrich Engels (<em>The Origin of the Family, Private Property and the State</em>, 1884) argued that the state arose with private property and class division as the instrument by which the propertied class rules.</li>
+  <li><strong>Conquest theory:</strong> Franz Oppenheimer (<em>The State</em>, 1908) held that states began when herders conquered settled farmers and made them pay tribute. Robert Lowie (<em>The Origin of the State</em>, 1927) replied that internal associations and ranking prepared the ground.</li>
+  <li><strong>Hydraulic theory:</strong> Karl Wittfogel (<em>Oriental Despotism</em>, 1957) argued that large irrigation works in arid river valleys required a central bureaucracy to build and manage them, producing despotic states in Mesopotamia, Egypt, China and India. Robert McC. Adams showed that in Mesopotamia large canal systems came after the state, and many irrigation systems, such as the Balinese subak, are managed locally.</li>
+  <li><strong>Urban revolution:</strong> V. Gordon Childe (1950) linked the state to food surplus, craft specialists, cities, writing and a ruling class.</li>
+  <li><strong>Circumscription theory:</strong> Robert Carneiro ("A Theory of the Origin of the State", 1970) argued that where farmland is hemmed in by mountains, desert or sea (environmental circumscription), or by neighbouring peoples (social circumscription), population growth leads to war, and the defeated cannot flee. They are absorbed as subjects, and villages are welded into chiefdoms and states, as in the narrow coastal valleys of Peru. Where land is open, as in much of Amazonia, losers simply move away.</li>
+  <li><strong>Stratification first:</strong> Morton Fried (<em>The Evolution of Political Society</em>, 1967) argued that once some groups gained privileged access to basic resources, the state emerged to protect this stratified order.</li>
+  <li><strong>Integration theory:</strong> Elman Service (<em>Origins of the State and Civilization</em>, 1975) held that the state grew out of chiefdoms because central leadership brought benefits (redistribution, coordination, defence) that people accepted.</li>
+</ul>
+
+<p><strong>Indian perspectives:</strong> ancient texts offered their own theories. The Buddhist Aggañña Sutta tells of a ruler chosen by the people (Mahasammata) to end disorder, and the idea of matsya nyaya, the big fish eating the small, justified kingship as protection. Romila Thapar (<em>From Lineage to State</em>, 1984) traced the mid-first millennium BC change in the Ganga valley from lineage-based societies (gana-sanghas) to kingdoms such as Magadha, built on agrarian surplus, iron, towns and varna. Surajit Sinha ("State Formation and Rajput Myth in Tribal Central India", 1962) showed tribal chiefs of Chota Nagpur claiming Rajput descent to legitimise emerging states, and Hermann Kulke traced how regional kingdoms in Odisha grew by integrating local cults, above all that of Jagannath.</p>
+
+<p><strong>Assessment:</strong> no single cause explains all states. Most scholars now see state formation as the interplay of surplus, population pressure, war, trade, stratification and ideology, with different factors leading in different regions.</p>
 
 <h2>Concepts of Power, Authority, and Legitimacy</h2>
 
@@ -2961,6 +3894,27 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Emotional Function:</strong> Religion helps individuals cope with anxiety, illness, accidents, and death. Because people never have complete control, they turn to religious ritual in an attempt to maximize control through supernatural means. Trobriand Islanders perform magico-religious rituals before long voyages; men in New Guinea put magical leaves across garden fences to paralyse any thief. Even if such practices do not work materially, they may provide the psychological confidence that improves performance.</p>
 
+<h3>Religion as Ecological Adaptation</h3>
+
+<p>Cultural ecologists and cultural materialists argue that religious beliefs and rituals often encode practical knowledge and regulate people's use of their environment, even when believers explain them in purely sacred terms.</p>
+
+<ul>
+  <li><strong>Roy Rappaport (<em>Pigs for the Ancestors</em>, 1968):</strong> among the Tsembaga Maring of New Guinea, a ritual cycle regulates relations between people, pigs, land and enemies. After a war a ritual plant (rumbim) is planted and a truce holds while pig herds grow. When the pigs become a burden to the women who feed them and damage gardens, the rumbim is uprooted and a great pig festival (kaiko) is held to repay ancestors and allies. This cuts the herd, distributes protein and allows fighting to resume. Ritual acts as a homeostatic regulator of the ecosystem.</li>
+  <li><strong>Marvin Harris ("The Cultural Ecology of India's Sacred Cattle", 1966):</strong> the ban on killing cows preserves animals that supply bullocks, milk and dung for fuel and manure, worth more alive than dead. In <em>Cows, Pigs, Wars and Witches</em> (1974) he explained the Middle Eastern pork taboo as a ban on an animal ill-suited to arid lands.</li>
+  <li><strong>J. Stephen Lansing (<em>Priests and Programmers</em>, 1991):</strong> in Bali, water temples coordinate irrigation schedules among rice terraces (subak) and so control pests. When Green Revolution planners bypassed the temples in the 1970s, pest outbreaks followed.</li>
+</ul>
+
+<p><strong>Indian examples:</strong></p>
+
+<ul>
+  <li><strong>Sacred groves:</strong> patches of forest dedicated to deities, where felling is taboo, such as the law kyntang of the Khasi in Meghalaya, the sarna of the Munda and Oraon, the jaherthan of the Santal, the devrai of Maharashtra, the kavu of Kerala and the oran of Rajasthan. Madhav Gadgil and V.D. Vartak (1975) showed that such groves conserve biodiversity and water sources.</li>
+  <li><strong>The Bishnoi:</strong> following the twenty-nine principles of Guru Jambheshwar (fifteenth century), they protect khejri trees and wildlife. In 1730 Amrita Devi and 363 Bishnois died at Khejarli resisting the felling of trees.</li>
+  <li><strong>Totemic taboos:</strong> clans forbidden to kill or eat their totem animal or plant protect particular species.</li>
+  <li><strong>Sacred landscapes:</strong> the Dongria Kondh worship Niyam Raja, the god of the Niyamgiri hills. After the Supreme Court in 2013 asked the local gram sabhas to decide, all twelve rejected bauxite mining there.</li>
+</ul>
+
+<p><strong>Critique:</strong> such explanations can be functionalist and circular, assuming that whatever exists must be adaptive. Rappaport was criticised for treating the ecosystem as self-regulating and ignoring history and politics, and Harris for neglecting meaning, since many religious practices are costly or harmful. Sacred groves have also shrunk under population and market pressure.</p>
+
 <h2>Animism, Animatism, and Totemism</h2>
 
 <h3>Animism</h3>
@@ -2982,6 +3936,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Lévi-Strauss's structuralist account is the most influential modern treatment. For him, totems are not "good to eat" but "good to think": not valued because of their practical utility but because of the logical operations they facilitate. The diversity of natural species provides a model for social diversity: because each clan has a different totem, social differences mirror natural contrasts. But on another level, all totemic species are united as parts of nature, just as all human groups are united as parts of society. Natural diversity becomes a means of thinking social diversity; the unity of nature is used to express the unity of the human social order. Totemism is, for Lévi-Strauss, fundamentally a mode of classification: a way of using natural categories to think through social relations.</p>
 
 <p>In India, Stephen Fuchs documented totemic practices among central Indian tribes: the Gonds have a goat clan whose ancestors were saved from punishment for theft when their stolen goat miraculously turned into a pig; the Korkus have tree totems, as their ancestors hid under trees to escape enemies; the Balahis have snake and owl totems as these animals protected helpless infant ancestors. When a clan becomes too large, it may segment and each segment may adopt part of the original totemic species (a tiger clan splitting into sections representing head, tail, claws, and teeth) giving rise to the concept of a phratry (a group of brother clans).</p>
+
+<h3>Animism and Deep Ecology</h3>
+
+<p>For Tylor animism was a mistaken early belief in souls. Recent anthropology, often called the new animism, treats it instead as a relational way of being in the world, in which animals, plants, rivers and hills are persons with whom humans have social relations.</p>
+
+<ul>
+  <li><strong>Nurit Bird-David ("'Animism' Revisited", 1999):</strong> among the Nayaka, forest foragers of the Nilgiri region of south India, beings such as elephants, hills and trees become devaru, persons, through sharing and engagement. Animism is a relational epistemology: one knows a being by relating to it, not by classifying it. In earlier work (1990) she described how the Nayaka see the forest as a giving parent.</li>
+  <li><strong>Other work:</strong> Graham Harvey (<em>Animism</em>, 2005), Eduardo Viveiros de Castro's Amerindian perspectivism and Philippe Descola's <em>Beyond Nature and Culture</em> (2005) all question the Western split between nature and culture.</li>
+</ul>
+
+<p><strong>Deep ecology:</strong> the Norwegian philosopher Arne Naess ("The Shallow and the Deep, Long-Range Ecology Movement", 1973) contrasted shallow ecology, which fights pollution and resource depletion for human welfare, with deep ecology, which holds that all living beings have intrinsic value, rejects anthropocentrism and calls for biospheric equality and a smaller human footprint. Naess drew on Spinoza and on Gandhi's non-violence.</p>
+
+<p><strong>The link:</strong> both reject the view of nature as a mere resource, and deep ecologists often cite indigenous animism as a model for living with nature. Indian examples include sacred groves, the Chipko movement (from 1973), in which villagers hugged trees to stop commercial felling, and the Dongria Kondh's defence of Niyamgiri as a living deity. Law has moved in a similar direction: New Zealand recognised the Whanganui River as a legal person in 2017, and the Uttarakhand High Court declared the Ganga and Yamuna living entities in 2017, an order stayed by the Supreme Court.</p>
+
+<p><strong>Differences and critique:</strong> animism is a practical engagement in which people still hunt, fell and use the beings they respect, while deep ecology is a Western philosophy that often seeks to protect wilderness from people. Ramachandra Guha ("Radical American Environmentalism and Wilderness Preservation: A Third World Critique", 1989) argued that its focus on wilderness justified evicting forest dwellers, as from tiger reserves in India. Kent Redford ("The Ecologically Noble Savage", 1991) warned against romanticising indigenous peoples as natural conservationists.</p>
 
 <h2>Sacred and Profane</h2>
 
@@ -3362,6 +4331,37 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The school was criticised on several grounds: applying individual personality attributes to characterise whole cultures was considered methodologically risky, as later national character studies demonstrated. Benedict has been criticised for her strong belief that cultures have logical constancy, ignoring counter-evidence that contradicted her characterisations. Freeman's contradictory findings on Samoa challenged the validity of Mead's fieldwork. Even in small societies, Kardiner's basic personality structure could not explain the variation in personality traits: a weakness Du Bois's modal personality partially addressed. The overemphasis on childhood socialisation as the primary determinant of personality ignored adult experiences and the role of structural factors in shaping behaviour.</p>
 
+<h3>National Character Studies</h3>
+
+<p>National character studies applied culture and personality theory to modern nation-states. Their logic ran from basic personality to national character. If the members of a society share child-rearing practices and other primary institutions (Kardiner and Linton), they develop a common basic or modal personality (Du Bois), and this personality is then projected into the secondary institutions of the nation: its politics, religion, art and ways of waging war. Alex Inkeles and Daniel Levinson (1954) later defined national character as the modal personality structures found in a nation.</p>
+
+<h4>Major Studies</h4>
+
+<ul>
+  <li><strong>Ruth Benedict, <em>The Chrysanthemum and the Sword</em> (1946):</strong> based on her wartime work for the US Office of War Information, which sought to understand the enemy. Japanese life was ordered by hierarchy (taking one's proper station) and by a web of obligations (on, gimu and giri). She called Japan a shame culture, regulated by external sanctions, in contrast to the American guilt culture of internalised conscience. The title marks the paradox of a people at once aesthetic (the chrysanthemum) and militaristic (the sword).</li>
+  <li><strong>Geoffrey Gorer:</strong> traced Japanese aggression to strict early toilet training (1943) and, with John Rickman in <em>The People of Great Russia</em> (1949), linked the tight swaddling of Russian infants to an alternation between submission and rage and an acceptance of strong authority: the swaddling hypothesis.</li>
+  <li><strong>Margaret Mead:</strong> <em>And Keep Your Powder Dry</em> (1942) described American character as moralistic and driven by achievement. With Rhoda Métraux she edited <em>The Study of Culture at a Distance</em> (1953), the methods manual of Columbia University's Research in Contemporary Cultures project, begun by Benedict in 1947.</li>
+  <li><strong>India:</strong> G. Morris Carstairs (<em>The Twice-Born</em>, 1957) studied the personality of high-caste Hindus in Rajasthan, and Sudhir Kakar (<em>The Inner World</em>, 1978) linked Indian childhood, especially the intense early bond with the mother, to adult Hindu identity.</li>
+</ul>
+
+<h4>Political Aspects</h4>
+
+<p>The studies grew out of the Second World War and the Cold War and were funded by war and intelligence agencies to know the enemy and to plan propaganda and occupation. Benedict's work is often said to have informed the American decision to keep the Japanese emperor. This raised the question of whether anthropology should serve state power, whether studies of enemy peoples could be impartial, and whether national stereotypes would feed hostility.</p>
+
+<h4>Methodological Problems</h4>
+
+<ul>
+  <li><strong>Culture at a distance:</strong> without fieldwork, researchers relied on émigrés, prisoners of war, films, novels and propaganda.</li>
+  <li><strong>Samples:</strong> small and unrepresentative, often of exiles hostile to their homeland.</li>
+  <li><strong>False homogeneity:</strong> nation-states contain class, regional, ethnic, religious and gender differences that no single character can capture.</li>
+  <li><strong>Psychoanalytic reductionism:</strong> single practices such as swaddling were made to explain whole political systems, in reasoning that was circular and untestable.</li>
+  <li><strong>Static view:</strong> the studies ignored history and rapid change, as Japan's post-war transformation showed.</li>
+</ul>
+
+<h4>Contemporary Relevance</h4>
+
+<p>The idea survives in Geert Hofstede's <em>Culture's Consequences</em> (1980), which compares national cultures on dimensions such as power distance, individualism and uncertainty avoidance and is widely used in international business and diplomacy. It returns in nation branding and in military uses of cultural knowledge: in 2007 the American Anthropological Association's Executive Board opposed the US Army's Human Terrain System, recalling the ethical problems of wartime research. Anthropologists now study national identity as constructed and contested, as in Benedict Anderson's <em>Imagined Communities</em> (1983), rather than as a fixed personality.</p>
+
 <h2>Neo-Evolutionism</h2>
 
 <p>Neo-evolutionism emerged in the mid-20th century to revive and reformulate evolutionary thinking, stripped of the 19th-century ethnocentrism and unilinear determinism. Its key figures: V. Gordon Childe, Leslie White, and Julian Steward: agreed that cultural evolution was real but differed significantly in how they conceptualised it.</p>
@@ -3449,6 +4449,46 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Criticisms of Structuralism</h3>
 
 <p>Structuralism was criticised for its static and ahistorical character: it was concerned primarily with the structure of the human psyche without addressing historical change. Lévi-Strauss's assumption that the structures of human thought are universal has never been empirically demonstrated. The theory does not account for human individuality: human thought is not as uniform and invariable as structuralism assumes, and individual agency and variation are not accounted for. It fails to explain cultural variation: if the mind's deep structure is universal, why should different cultures exist? The theory does not account for the dynamic aspects of culture, technological, economic, and ecological factors. Feminist critics attacked Lévi-Strauss specifically for treating women only as objects of exchange in his theory of kinship, reducing women to items of communication between male exchangers rather than social actors in their own right.</p>
+
+<h3>The Story of Asdiwal</h3>
+
+<p>In "La Geste d'Asdiwal" (1958, translated as "The Story of Asdiwal" in Edmund Leach's collection <em>The Structural Study of Myth and Totemism</em>, 1967), Lévi-Strauss analysed a myth of the Tsimshian of the Northwest Coast of Canada, recorded by Franz Boas. Unlike the Oedipus analysis, this study tied the myth closely to the ethnography of the people who told it.</p>
+
+<p><strong>The myth in brief:</strong> in a winter famine, a mother and her daughter, both widowed, set out from opposite ends of the Skeena river and meet halfway. A supernatural being marries the daughter, and their son Asdiwal is born. Asdiwal follows a white bear up to the sky, marries the daughter of the Sun and later returns to earth. He marries mortal women, quarrels with his brothers-in-law, is abandoned by them on a reef during a sea-lion hunt and is taken into the underground home of the sea lions. At last, hunting in the mountains, he forgets his snowshoes and is turned to stone.</p>
+
+<p><strong>Four levels:</strong> Lévi-Strauss showed that the story is built from oppositions on four levels:</p>
+
+<ul>
+  <li><strong>Geographic:</strong> movements east and west, up and down the Skeena and Nass rivers, between sea and mountain.</li>
+  <li><strong>Techno-economic:</strong> winter famine against the plenty of the spring candlefish runs, and hunting in the mountains against hunting at sea.</li>
+  <li><strong>Sociological:</strong> marriage and residence. Asdiwal's marriages take him to live with his wife's people, and each one fails.</li>
+  <li><strong>Cosmological:</strong> journeys to the sky above and to the world beneath the sea.</li>
+</ul>
+
+<p><strong>Interpretation:</strong> the Tsimshian were matrilineal, yet a wife went to live with her husband. The myth explores the opposite arrangement, residence with the wife's kin, and shows through Asdiwal's repeated failures that it cannot work. Myth does not mirror society but works over a real contradiction in it, between descent through women and the movement of women to their husbands' groups. Mythical thought moves from the awareness of oppositions towards their mediation, and different versions of a myth (here the Skeena and Nass versions) are transformations of one another.</p>
+
+<p><strong>Assessment:</strong> Asdiwal answered the charge that structuralism ignored context, since its oppositions were drawn from Tsimshian ecology and social organisation, and it is often regarded as Lévi-Strauss's most convincing myth analysis. Mary Douglas ("The Meaning of Myth", 1967) praised its ethnographic grounding but doubted that it revealed universal structures of the mind rather than the analyst's own patterning. Other critics argue that the oppositions are chosen by the analyst, that the method ignores the narrative sequence, performance and tellers of a myth, and that its claims cannot be tested. The four volumes of <em>Mythologiques</em> extended the method to hundreds of myths but were criticised on the same grounds.</p>
+
+<h3>Structuralism Applied to Caste</h3>
+
+<p>Louis Dumont's <em>Homo Hierarchicus</em> (1966, English 1970) is the most influential structuralist account of caste. Dumont treated caste not as a set of groups but as a system of ideas and values.</p>
+
+<ul>
+  <li><strong>Pure and impure:</strong> the system rests on one binary opposition, between purity and impurity. Célestin Bouglé (1908) had described caste by three features: separation, hierarchy and interdependence. Dumont derived all three from this single principle. The Brahmin, purest, and the Untouchable, who absorbs impurity, are its two poles, and each implies the other.</li>
+  <li><strong>Hierarchy as encompassment:</strong> hierarchy is the encompassing of the contrary. The higher value contains the lower, as a whole contains its part.</li>
+  <li><strong>Status and power:</strong> ritual status (the Brahmin) is separated from political power (the king) and ranked above it. The king commands in power but is encompassed by the Brahmin in status.</li>
+  <li><strong>Homo hierarchicus and homo aequalis:</strong> traditional India values hierarchy and the whole, the modern West equality and the individual.</li>
+</ul>
+
+<p><strong>Critique:</strong> Gerald Berreman argued that caste is a system of power and exploitation, seen very differently from below, where Untouchables reject their supposed impurity. Gloria Raheja (<em>The Poison in the Gift</em>, 1988) showed that in a western Uttar Pradesh village the dominant landowning Gujars, not the Brahmins, stood at the centre of ritual exchange. Dipankar Gupta (<em>Interrogating Caste</em>, 2000) found many competing caste hierarchies rather than one shared ideology, and Nicholas Dirks (<em>Castes of Mind</em>, 2001) argued that colonial rule raised the Brahmanical view of caste above the power of kings. Dumont is also faulted for relying on Sanskrit texts and treating India as unchanging.</p>
+
+<h3>Structuralism Applied to Gender</h3>
+
+<p>Sherry Ortner's essay "Is Female to Male as Nature Is to Culture?" (1972, reprinted in Rosaldo and Lamphere's <em>Woman, Culture, and Society</em>, 1974) used Lévi-Strauss's opposition between nature and culture to explain what she took to be the universal subordination of women. Every culture sets itself above nature, which it seeks to control. Women are seen as closer to nature because of their bodies and reproduction, their confinement to the domestic sphere and child care, and a psyche shaped by these roles. Men are identified with culture, public life and religion. Women thus occupy an intermediate, ambiguous position and are ranked below men. Michelle Rosaldo's contrast of domestic and public spheres (1974) made a similar argument.</p>
+
+<p>Indian scholars found related oppositions in kinship and caste. Leela Dube's "Seed and Earth" (1986) analysed the Hindu image of the man as seed and the woman as field, which assigns children and lineage to the father. Nur Yalman (1963) showed that caste purity is guarded through control of women's sexuality, which binds caste to gender.</p>
+
+<p><strong>Critique:</strong> Carol MacCormack and Marilyn Strathern (<em>Nature, Culture and Gender</em>, 1980) argued that the nature-culture dichotomy is a Western idea, not a universal one, and Strathern found that the Hagen of Papua New Guinea do not divide the world in this way. Ortner herself qualified her claim (1996). Binary models also leave little room for women's agency or for differences of class and caste.</p>
 
 <h2>Symbolic and Interpretive Anthropology</h2>
 
@@ -3543,6 +4583,22 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Criticisms of Post-Modernism in Anthropology</h3>
 
 <p>Post-modernism has been attacked from several directions. For many, the school is vague and worthless: adding nothing analytical to the existing system of knowledge. The most common critique is that postmodernism attacks the scientific and methodological bases of the discipline, moving it toward a non-scientific basis closer to the humanities. An additional critique holds that postmodernism steered professional anthropology away from concerns with fieldwork, actual contact with living people, and into concerns with ethnography as a textual object of literary analysis. Post-modernism leads to multiple interpretations of a single phenomenon, contributing to confusion and a relativism where no interpretation can be judged better than any other. British anthropologist Ernest Gellner attacked post-modernism as self-absorbed and highly subjective, constituting a form of new "armchair anthropology for modern times."</p>
+
+<h3>Arjun Appadurai: The Global Cultural Economy</h3>
+
+<p>Arjun Appadurai, in "Disjuncture and Difference in the Global Cultural Economy" (1990), expanded in <em>Modernity at Large: Cultural Dimensions of Globalization</em> (1996), argued that the global cultural economy can no longer be understood through centre-periphery models such as world-systems theory, or through a simple choice between homogenisation and heterogenisation. Global cultural flows move along five dimensions, which he called scapes. The suffix marks their fluid, irregular shapes, like landscapes, and the fact that each looks different from the position of the actor who views it.</p>
+
+<ul>
+  <li><strong>Ethnoscapes:</strong> the moving people of the world: tourists, immigrants, refugees, exiles and guest workers, such as Kerala's workers in the Gulf.</li>
+  <li><strong>Technoscapes:</strong> the global configuration of technology, mechanical and informational, moving across borders, as in the IT industry of Bengaluru.</li>
+  <li><strong>Financescapes:</strong> the rapid flows of global capital through currency markets, stock exchanges and investment.</li>
+  <li><strong>Mediascapes:</strong> the electronic means of producing and spreading information, and the images and narratives they carry through film, television and the internet.</li>
+  <li><strong>Ideoscapes:</strong> chains of political ideas and images, many from the Enlightenment (freedom, rights, sovereignty, democracy), and the counter-ideologies of states and movements.</li>
+</ul>
+
+<p><strong>Disjuncture:</strong> the scapes move at different speeds and in different directions and do not line up. People may move where capital cannot, or images travel where people may not, and these gaps produce new identities and conflicts. <strong>Deterritorialisation</strong> separates culture from place, so that diasporas become markets for films and sources of funds for movements at home. <strong>Imagination</strong> becomes a social practice: through media, ordinary people imagine lives in many places, extending Benedict Anderson's imagined communities into imagined worlds. Global forms are also <strong>indigenised</strong>, and for smaller nations a regional power may be more threatening than America: for Sri Lankans, Indianisation may matter more than Americanisation. His essay on cricket in <em>Modernity at Large</em> shows how an English game was decolonised and made Indian through vernacular radio commentary, television and advertising.</p>
+
+<p><strong>Critique:</strong> the scapes are vague and hard to study empirically. The model stresses flows and imagination but plays down political economy, class and the unequal ability to move, since many people stay fixed in place. Its picture of a postnational world sits uneasily with the resurgence of nationalism and border control, which Appadurai himself addressed in <em>Fear of Small Numbers</em> (2006) on violence against minorities. The framework nevertheless remains a standard starting point for the anthropology of globalisation, migration and media.</p>
 
 <h2>Cultural Materialism (Marvin Harris)</h2>
 
@@ -3803,6 +4859,31 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li>The anthropologist's own cultural background may introduce personal biases into observations and interpretations, which must be consciously managed.</li>
 </ul>
 
+<h3>Ethical Concerns Raised by Genetic Research and Artificial Intelligence</h3>
+
+<p>Codes such as the American Anthropological Association's Principles of Professional Responsibility (2012) and the Indian Council of Medical Research's National Ethical Guidelines for Biomedical and Health Research Involving Human Participants (2017) rest on consent, confidentiality and doing no harm. Advances in genomics and artificial intelligence (AI) strain each of these principles.</p>
+
+<h4>Biological Anthropology and Genetic Research</h4>
+
+<ul>
+  <li><strong>Secondary use of samples:</strong> blood given for one purpose may be reused for another. Havasupai blood collected by Arizona State University researchers from 1990 for a diabetes study was later used for research on schizophrenia, inbreeding and migration. The tribe sued, and the case was settled in 2010 with the return of the samples.</li>
+  <li><strong>Group harm:</strong> findings about a whole community, on its origins, admixture or disease risk, can contradict its own history, weaken claims to land or status, stigmatise it, or revive racial typology. Indigenous groups called the Human Genome Diversity Project (1991) the "Vampire Project". In India, genetic findings on ancestral north and south Indian populations have been drawn into political debates on Aryan origins and caste.</li>
+  <li><strong>Consent and benefit-sharing:</strong> broad consent for unknown future uses, the return of results, and a share in profits. The Kani of Kerala received half the licence fee when their knowledge of the arogyapacha plant was used to make the drug Jeevani, a model later backed by the Biological Diversity Act 2002 and the Nagoya Protocol (2010).</li>
+  <li><strong>Ancient DNA and human remains:</strong> destructive sampling of skeletons requires consultation with descendant communities, as the Native American Graves Protection and Repatriation Act (1990) requires in the USA.</li>
+</ul>
+
+<h4>Socio-Cultural Anthropology and AI</h4>
+
+<ul>
+  <li><strong>Data without consent:</strong> scraping social media and online communities treats public visibility as consent, and AI can re-identify informants from small details, which makes anonymity hard to keep.</li>
+  <li><strong>Surveillance:</strong> facial recognition and predictive tools can target minorities, migrants and protesters, and ethnographic knowledge can feed such systems, an echo of Project Camelot.</li>
+  <li><strong>Bias and exclusion:</strong> AI trained mainly on dominant languages and groups misreads tribal languages, dialects and faces, and automated welfare systems can exclude people when biometric authentication fails.</li>
+  <li><strong>Confidential field data:</strong> uploading interviews to commercial transcription or translation tools may break the promises made to informants.</li>
+  <li><strong>Ownership:</strong> AI models trained on ethnographic archives, folklore or indigenous languages raise the question of who owns and profits from this knowledge.</li>
+</ul>
+
+<p><strong>Responses:</strong> the CARE Principles for Indigenous Data Governance (2019), namely collective benefit, authority to control, responsibility and ethics, assert indigenous data sovereignty: the right of communities to govern data about themselves. In India the Digital Personal Data Protection Act, 2023 governs personal data, and large projects such as the Genome India Project (launched 2020) make these questions practical. Anthropologists argue for community consent alongside individual consent, ethical review of every secondary use, and the return of benefits to the groups studied.</p>
+
 <h2>History of Fieldwork in Anthropology</h2>
 
 <p>When anthropology was first established as a discipline in the 19th century, scholars depended on reports from missionaries, voyagers, traders, and administrators in distant colonies: they were <strong>armchair anthropologists</strong>. E.B. Tylor participated in one field expedition to Mexico (published as <em>Anahuac</em>, 1861) but his major works were based on secondary sources.</p>
@@ -3816,6 +4897,31 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Fieldwork Today</h3>
 
 <p>Contemporary fieldwork spans remote populations and urban settings, one's own native community, government and legal spaces, environmental change, media, and the internet. Virtual ethnography, research in digital and online spaces, has emerged as a challenging frontier, where what is real or surreal is hard to decipher. The essence of fieldwork (direct, long-term engagement with people in their own context) remains unchanged.</p>
+
+<h3>Controversies over the Fieldwork of Malinowski and Mead</h3>
+
+<p>The two most famous fieldworkers of the early twentieth century both became the subject of controversy after their deaths. The debates turned on a methodological question: how far can an ethnography be trusted as an objective record of another way of life?</p>
+
+<h4>Malinowski's Diary</h4>
+
+<p>Malinowski kept a private diary in Polish during his fieldwork in New Guinea and the Trobriand Islands. It was published in 1967, twenty-five years after his death, as <em>A Diary in the Strict Sense of the Term</em>, with an introduction by Raymond Firth.</p>
+
+<ul>
+  <li><strong>What it revealed:</strong> loneliness, depression, worry about his health, sexual longing, escape into novels, frequent irritation with the islanders and racist abuse of them, and a longing for European company. The patient, empathetic participant observer of <em>Argonauts of the Western Pacific</em> (1922) looked very different in private.</li>
+  <li><strong>The debate:</strong> Clifford Geertz, in "From the Native's Point of View" (1974), argued that the Diary destroyed the myth of the fieldworker as a model of empathy. Ethnographic understanding, he concluded, comes not from fellow feeling with informants but from interpreting their symbols and categories.</li>
+  <li><strong>Significance:</strong> it exposed the colonial setting of fieldwork and the gap between the fieldworker's experience and the polished monograph. It fed the later turn to reflexivity, in which the ethnographer's position, emotions and power are written into the account.</li>
+</ul>
+
+<h4>Mead and Samoa: The Freeman Controversy</h4>
+
+<p>Mead's <em>Coming of Age in Samoa</em> (1928) rested on about nine months in Samoa in 1925-26, most of it on Ta'u, in the Manu'a islands of American Samoa. She lived with an American naval family rather than in a Samoan household and relied mainly on adolescent girls as informants. Derek Freeman, who had lived and worked in Western Samoa from 1940, published <em>Margaret Mead and Samoa: The Making and Unmaking of an Anthropological Myth</em> in 1983, five years after her death.</p>
+
+<ul>
+  <li><strong>Freeman's charges:</strong> Samoa had a cult of female virginity, frequent rape, harsh punishment and intense competition, not the relaxed adolescence Mead described. He blamed a short stay, a weak command of Samoan, residence outside a Samoan household, and her prior commitment to Boas's cultural determinism. In <em>The Fateful Hoaxing of Margaret Mead</em> (1999) he argued that two young women had jokingly misled her about sexual freedom.</li>
+  <li><strong>Replies:</strong> Mead could no longer answer. Freeman worked on other islands, decades later, largely with senior men and with court and police records, while Mead talked with girls. Critics found his own use of evidence selective, and Paul Shankman (<em>The Trashing of Margaret Mead</em>, 2009) judged the hoaxing claim weak.</li>
+</ul>
+
+<p><strong>Lessons:</strong> Karl Heider (1988) called such disagreements between ethnographers of the same people the Rashomon effect. Both controversies show that an ethnography is shaped by the fieldworker's gender, age, theory, length of stay, language skill and choice of informants. They encouraged restudies, longer fieldwork, full disclosure of methods and the reflexive writing that is now standard.</p>
 
 <h2>Ethnography and Ethnology</h2>
 
@@ -3833,11 +4939,48 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Criticisms of ethnology include: ethnocentrism (comparing cultures from the researcher's own cultural framework); oversimplification and generalisation across diverse groups; reinforcing power imbalances by neglecting the voices of studied communities; lack of contextual understanding of historical, political, and economic factors; essentialism (treating cultures as fixed and unchanging); Western bias; and limited representation of marginalised groups.</p>
 
+<h3>New Forms of Ethnography</h3>
+
+<p>From the 1980s the classic ethnography, a single bounded village studied by a lone and detached observer, was questioned by the writing culture critique, by globalisation, by concern with power, and by interest in the non-human world. Several new forms of ethnography answered these doubts.</p>
+
+<h4>Multi-sited Ethnography</h4>
+
+<p>George Marcus, in "Ethnography in/of the World System: The Emergence of Multi-Sited Ethnography" (1995), argued that many objects of study (migration, commodities, media, development projects) do not sit in one place. The ethnographer should follow them across sites: follow the people, the thing, the metaphor, the plot or story, the life or biography, and the conflict. Sidney Mintz's <em>Sweetness and Power</em> (1985), which traces sugar from Caribbean plantations to English consumers, is an early model. Xiang Biao's <em>Global "Body Shopping"</em> (2007) followed Indian IT workers recruited through labour agencies between India and Australia. Ulf Hannerz (2003) warned of the cost: less time, depth and language skill at each site.</p>
+
+<h4>Multispecies Ethnography</h4>
+
+<p>S. Eben Kirksey and Stefan Helmreich named the field in "The Emergence of Multispecies Ethnography" (2010). It treats animals, plants, fungi and microbes as participants in social life rather than as a backdrop to it. Key works include Donna Haraway's <em>When Species Meet</em> (2008), Eduardo Kohn's <em>How Forests Think</em> (2013) on the Runa of Ecuador and Anna Tsing's <em>The Mushroom at the End of the World</em> (2015). In India, Radhika Govindrajan's <em>Animal Intimacies</em> (2018) studies how villagers of the Central Himalayas relate to goats, cows, monkeys and bears.</p>
+
+<h4>Critical Ethnography</h4>
+
+<p>Critical ethnography has an explicit political purpose: to expose power, inequality and injustice and to support change. It draws on Marxism, the Frankfurt School, feminism and Paulo Freire. D. Soyini Madison (<em>Critical Ethnography</em>, 2005) describes it as beginning from an ethical responsibility to address injustice in a particular setting. Philippe Bourgois's <em>In Search of Respect</em> (1995), on crack dealers in East Harlem, links street violence to economic exclusion. Studies of bonded labour, displacement or caste atrocities in India often take this form. Critics say that advocacy can bias the data.</p>
+
+<h4>Experiential Ethnography</h4>
+
+<p>Experiential ethnography treats the fieldworker's own bodily, emotional and sensory experience as a source of knowledge rather than as bias to be removed. Jean Briggs (<em>Never in Anger</em>, 1970) used her own ostracism among the Utku Inuit to understand their control of anger. Renato Rosaldo, in "Grief and a Headhunter's Rage" (1984), understood Ilongot rage only after the death of his wife. Paul Stoller's apprenticeship to Songhay sorcerers (<em>In Sorcery's Shadow</em>, 1987, with Cheryl Olkes) and Loïc Wacquant's training as a boxer (<em>Body and Soul</em>, 2004) are further examples. It overlaps with autoethnography and sensory ethnography. Critics ask how such evidence can be checked by others.</p>
+
 <h2>Data: Types and Sources</h2>
 
 <p>Data is any distinct piece of information collected for research purposes. By source: <strong>primary data</strong> is collected first-hand by the researcher through observation, interview, or questionnaire; <strong>secondary data</strong> is already collected and analysed by someone else. By nature: <strong>quantitative data</strong> is numerical or measurable; <strong>qualitative data</strong> relates to beliefs, meanings, and social relationships.</p>
 
 <p>Secondary data must be evaluated for reliability (who collected it, sources, methods, time, accuracy), suitability (whether the definitions and scope match the present inquiry), and adequacy (whether the level of accuracy and coverage is sufficient).</p>
+
+<h3>Mixed-Method Approach</h3>
+
+<p>A mixed-method approach combines quantitative data (counts, measurements, surveys, statistics) with qualitative data (participant observation, interviews, case studies, life histories) in one study, so that each makes up for the limits of the other. Numbers show how widespread a pattern is, and qualitative work shows what it means and why it occurs. John Creswell and Vicki Plano Clark (<em>Designing and Conducting Mixed Methods Research</em>, 2007) set out the standard designs:</p>
+
+<ul>
+  <li><strong>Convergent (parallel) design:</strong> both kinds of data are collected at the same time and compared to see whether they agree.</li>
+  <li><strong>Explanatory sequential design:</strong> a survey comes first, and fieldwork then explains its results, such as why some households in a village join a scheme and others do not.</li>
+  <li><strong>Exploratory sequential design:</strong> fieldwork comes first, and its local categories are used to build a schedule for a larger sample.</li>
+  <li><strong>Embedded design:</strong> one kind of data plays a supporting role inside a study led by the other, such as interviews within a nutrition trial.</li>
+</ul>
+
+<p><strong>Triangulation:</strong> Norman Denzin (<em>The Research Act</em>, 1970) used the term for checking a finding through more than one source. He distinguished data triangulation (different times, places and persons), investigator triangulation (several researchers), theory triangulation (several perspectives) and methodological triangulation (several methods).</p>
+
+<p><strong>In anthropology:</strong> the discipline has long been mixed in practice. Village studies began with a household census and genealogies before participant observation, and T. Scarlett Epstein's <em>Economic Development and Social Change in South India</em> (1962) joined economic surveys of the villages of Wangala and Dalena with ethnography. Biological anthropologists combine anthropometry and blood samples with interviews on diet and health beliefs. A study of anaemia in a tribal village, for instance, can pair haemoglobin tests and a dietary survey with observation of food taboos and of who eats first in the household.</p>
+
+<p><strong>Limits:</strong> the approach needs more time, money and skill, and the two traditions rest on different assumptions about knowledge (positivist and interpretive), which are hard to reconcile when the results disagree.</p>
 
 <h2>Tools of Data Collection</h2>
 
@@ -3921,6 +5064,29 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li><strong>Area sampling:</strong> Small geographical areas are designated as sampling units; households within those areas are surveyed. The size of the areas and the fraction surveyed depend on population distribution, map availability, and accuracy required.</li>
 </ul>
 
+<h3>Non-Probability Sampling and the Choice of a Study Group</h3>
+
+<p>Probability methods, including <strong>systematic sampling</strong> (every nth unit from a list after a random start), suit large surveys whose results must be generalised statistically. Anthropologists more often study small communities, hidden groups or particular kinds of knowledge. They then use non-probability sampling, in which units are chosen by judgement or availability:</p>
+
+<ul>
+  <li><strong>Purposive (judgemental) sampling:</strong> choosing people with the knowledge or experience the study needs, such as priests, healers, elders or midwives as key informants on ritual or medicine.</li>
+  <li><strong>Snowball (chain-referral) sampling:</strong> each informant leads to others. It suits hidden or stigmatised groups such as migrant labourers, sex workers, drug users or people living with HIV. Respondent-driven sampling (Douglas Heckathorn, 1997) adds statistical controls to it.</li>
+  <li><strong>Quota sampling:</strong> a fixed number is filled from each category (age, sex, caste), but units within each category are not chosen at random.</li>
+  <li><strong>Convenience (accidental) sampling:</strong> whoever is available, such as visitors to a weekly haat. It is quick but the least representative.</li>
+  <li><strong>Theoretical sampling:</strong> in grounded theory, new cases are chosen to test emerging ideas until no new insight appears (saturation).</li>
+</ul>
+
+<p><strong>Applying them to a study group:</strong> the choice depends on the size of the group, the aim of the study and the data needed.</p>
+
+<ul>
+  <li>A very small community, such as a Particularly Vulnerable Tribal Group, is usually enumerated in full, since a sample would lose too much.</li>
+  <li>A village study begins with a census of all households, then draws a stratified sample (by caste, landholding or occupation) for schedules and a purposive one for in-depth interviews and case studies.</li>
+  <li>Anthropometric and genetic surveys need random or stratified samples by age and sex, so that results can be compared across populations.</li>
+  <li>Large surveys such as the National Family Health Survey use stratified two-stage samples, choosing villages or urban blocks first and households second.</li>
+</ul>
+
+<p>Qualitative studies judge sample size by saturation rather than by statistical formula. Since findings from non-probability samples cannot be generalised with a known margin of error, they are often paired with probability samples in a mixed design.</p>
+
 <h2>Analysis, Interpretation, and Presentation of Data</h2>
 
 <h3>Processing and Analysis</h3>
@@ -3935,6 +5101,32 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Two types of research reports: <strong>technical reports</strong> (emphasise methods, assumptions, detailed findings with limitations and supporting data: include summary of results, nature of study, methods, data, analysis, conclusions, bibliography, appendices, and index); <strong>popular reports</strong> (emphasise simplicity and attractiveness, use charts, diagrams, and clear writing, focus on practical aspects and policy implications).</p>
 
 <p>Steps in writing a report: logical analysis of subject matter; preparation of final outline; preparation of rough draft; rewriting and polishing; preparation of final bibliography; writing the final draft.</p>
+
+<h3>Methods of Qualitative Data Analysis</h3>
+
+<p>Qualitative data (field notes, interview transcripts, life histories, documents, photographs and recordings) are analysed by reducing them to codes and categories, finding patterns, and interpreting their meaning in context. Analysis usually runs alongside fieldwork rather than after it. The main methods are:</p>
+
+<ul>
+  <li><strong>Grounded theory:</strong> developed by Barney Glaser and Anselm Strauss in <em>The Discovery of Grounded Theory</em> (1967). Theory is built up from the data rather than tested on it. In the scheme of Strauss and Corbin (1990), data are coded line by line (open coding), codes are linked into categories (axial coding) and a core category is chosen (selective coding). Constant comparison and theoretical sampling go on until saturation.</li>
+  <li><strong>Thematic analysis:</strong> identifying recurring themes across the data. Virginia Braun and Victoria Clarke (2006) set out six phases: familiarisation, initial coding, searching for themes, reviewing them, defining and naming them, and writing up.</li>
+  <li><strong>Content analysis:</strong> systematic classification and counting of words, themes or images in texts and media (Bernard Berelson, 1952). It can be quantitative (frequencies) or qualitative (meanings), as in a study of how tribes are portrayed in school textbooks.</li>
+  <li><strong>Narrative analysis:</strong> studying stories as wholes, their structure and sequence, and how people make sense of their lives through them. William Labov's model divides a personal narrative into abstract, orientation, complicating action, evaluation, resolution and coda. It suits life histories and accounts of displacement or illness.</li>
+  <li><strong>Domain and taxonomic analysis:</strong> James Spradley (<em>The Ethnographic Interview</em>, 1979) showed how to sort native terms into cultural domains and taxonomies, followed by componential and theme analysis, close to the cognitive anthropology of folk classification.</li>
+  <li><strong>Discourse analysis:</strong> examining how language in talk and texts builds identities and relations of power.</li>
+</ul>
+
+<h4>Computer Software for Qualitative Analysis</h4>
+
+<p>Computer-assisted qualitative data analysis software (CAQDAS) helps to store, code, search and link large bodies of text, audio, video and images. Popular packages include:</p>
+
+<ul>
+  <li><strong>NVivo</strong> (QSR International): coding, memos, queries and visual models, widely used in universities.</li>
+  <li><strong>ATLAS.ti</strong> (developed in Berlin): coding of texts, images and video, with network views that link codes.</li>
+  <li><strong>MAXQDA</strong> (VERBI, Germany): coding with mixed-methods tools that link codes to survey variables.</li>
+  <li><strong>Others:</strong> QDA Miner, the web-based Dedoose, free tools such as Taguette, and ANTHROPAC (Stephen Borgatti) for free lists and pile sorts.</li>
+</ul>
+
+<p>Software speeds up coding and retrieval and makes analysis more transparent, but it does not interpret the data. Critics warn that it can pull quotations out of context and favour counting over meaning.</p>
 
 <h2>Shift from Classical to Contemporary Interpretation and Presentation</h2>
 
@@ -3991,6 +5183,21 @@ export const anthropologyNoteContent: Record<string, string> = {
   <li>Linguistic anthropologists consult with educational institutions on improving standardised tests for bilingual populations and conduct policy research for governments.</li>
   <li>Cultural anthropologists improve policies and programmes in education, health care, business, poverty reduction, and conflict prevention.</li>
 </ul>
+
+<h3>Health as a Cultural Construct</h3>
+
+<p>Health and illness are not purely biological facts. Each culture defines what counts as being ill, what causes illness, who may heal and what treatment is proper. Even the World Health Organization's definition (1948) of health as "a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity" reaches beyond biology. Medical anthropology studies these cultural constructions.</p>
+
+<ul>
+  <li><strong>Disease, illness and sickness:</strong> Arthur Kleinman (<em>Patients and Healers in the Context of Culture</em>, 1980) separated disease, the biological malfunction recognised by biomedicine, from illness, the person's experience and interpretation of being unwell. Allan Young (1982) added sickness, the social recognition of a person as ill, with its rights and duties. Disease can exist without illness, as in undiagnosed hypertension, and illness without disease.</li>
+  <li><strong>Explanatory models:</strong> Kleinman showed that patients and healers each hold an explanatory model of an episode: its cause, onset, course, severity and proper treatment. Care fails when the models clash. He also divided every health care system into popular (family and community), folk (non-professional healers) and professional sectors.</li>
+  <li><strong>Personalistic and naturalistic systems:</strong> George Foster (1976) distinguished personalistic systems, which blame illness on the purposeful act of a sorcerer, witch, ghost, deity or the evil eye, from naturalistic systems, which explain it by impersonal imbalance, as in the humours of Ayurveda (vata, pitta, kapha) and Unani, or the balance of hot and cold foods.</li>
+  <li><strong>Culture-bound syndromes:</strong> some disorders take forms specific to a culture, such as dhat syndrome in South Asia (anxiety over loss of semen, named by N.N. Wig in 1960), koro in East Asia and susto in Latin America. DSM-5 (2013) calls them cultural concepts of distress. Mark Nichter (1981) showed how women in South India voice distress through culturally accepted idioms such as possession.</li>
+</ul>
+
+<p><strong>Indian examples:</strong> smallpox was long understood as the visitation of the goddess Sitala, to be appeased rather than treated. Tribal communities consult an ojha, bhagat or gunia, who may diagnose spirit attack, alongside the health centre. India's medical pluralism is formally recognised through AYUSH, a separate ministry since 2014. Resistance to polio vaccination in parts of Uttar Pradesh, fed by rumours of sterilisation, was overcome by working with religious leaders and local mobilisers, and India was certified polio-free in 2014.</p>
+
+<p><strong>Significance and critique:</strong> treating health as cultural helps programmes communicate, respect local healers and avoid blaming patients. Critical medical anthropologists such as Paul Farmer warn that cultural explanations can hide the structural violence of poverty, caste and gender, which shapes who falls ill and who receives care.</p>
 
 <h2>Forensic Anthropology</h2>
 
@@ -4116,6 +5323,79 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <h3>Upper Palaeolithic</h3>
 <p>The Upper Palaeolithic in India (approximately 40,000-10,000 BP) is associated with blade-based industries and the earliest systematic rock art. Bhimbetka rock shelters in Madhya Pradesh contain paintings that appear to date from the Mesolithic through the historical period, with the earliest engravings and cupule-bearing rocks at Daraki-Chattan (MP) dated to between 300,000 and 70,000 BC.</p>
+
+<h3>The Soanian Tradition</h3>
+
+<p>The Soanian (Sohanian) tradition is a pebble-tool industry of the north-west of the subcontinent, named after the Soan (Sohan) river, an Indus tributary on the Potwar plateau near Rawalpindi, Pakistan. Hellmut de Terra and T.T. Paterson defined it after the Yale-Cambridge expedition of 1935, in <em>Studies on the Ice Age in India and Associated Human Cultures</em> (1939). They tied the tools to a series of river terraces, which they correlated with the glacial and interglacial stages of Kashmir.</p>
+
+<ul>
+  <li><strong>Tools:</strong> choppers (flaked on one face) and chopping tools (flaked on both faces) made on rounded quartzite pebbles, with flakes, cores and scrapers. Handaxes are rare or absent in classic Soanian collections.</li>
+  <li><strong>Early Soan:</strong> pebble tools with minimal flaking and flakes with plain striking platforms.</li>
+  <li><strong>Late Soan:</strong> more flakes struck from prepared cores, resembling the Levallois technique, and fewer pebble tools. Many scholars now place it in the Middle Palaeolithic.</li>
+  <li><strong>Distribution in India:</strong> the Siwalik foothills and valleys of Jammu, Himachal Pradesh, Punjab and Haryana, including the Beas, Banganga and Sirsa valleys, studied by B.B. Lal, G.C. Mohapatra and others.</li>
+</ul>
+
+<p>Hallam Movius (1948) grouped the Soanian with the chopper-chopping tool industries of East and South-East Asia, east of what became known as the "Movius Line", in contrast to the handaxe industries of Africa, western Europe and peninsular India. India thus appeared to hold two separate Lower Palaeolithic cultures: the Soanian in the north and the Madras handaxe industry in the south.</p>
+
+<h3>Problems in Describing the Indian Palaeolithic</h3>
+
+<ul>
+  <li><strong>Collapse of the two-culture model:</strong> handaxes and cleavers were later found in the Soan valley and the Siwaliks, and choppers occur at peninsular Acheulian sites. The Soanian is now seen less as a separate culture than as a pebble-tool facies, shaped by the rounded quartzite pebbles available, that may span several periods.</li>
+  <li><strong>Weak chronology:</strong> most finds are surface collections or tools redeposited in river gravels, out of primary context. De Terra and Paterson's link between terraces and glaciations did not hold, and pluvial schemes for the peninsula proved unreliable. Few sites have absolute dates, although cosmogenic nuclide, palaeomagnetic and luminescence dating, as at Attirampakkam, are changing this.</li>
+  <li><strong>Borrowed terminology:</strong> the European sequence of Lower, Middle and Upper Palaeolithic and labels such as Acheulian, Levallois and Mousterian fit Indian material poorly, so Indian workers also used regional names (Madrasian, Soanian, Nevasan). The Indian Middle Palaeolithic began far earlier than once assumed, and microliths appear by about 35,000 years ago at Jwalapuram, long before the European Mesolithic.</li>
+  <li><strong>Few human fossils:</strong> apart from the Narmada calvaria, no hominin remains show which species made which industry.</li>
+  <li><strong>Raw material effects:</strong> quartzite, quartz and other local stones constrain tool forms, so typological differences may reflect raw material rather than culture or age.</li>
+  <li><strong>Uneven research:</strong> large regions remain unsurveyed, many sites have been destroyed by dams, mining and farming, and research long concentrated on classifying tools rather than on behaviour and environment.</li>
+</ul>
+
+<p>Recent work therefore studies the Indian Palaeolithic through regional sequences, dated contexts and hominin behaviour, rather than forcing it into the European scheme or the old Soan-Madras division.</p>
+
+<h3>Palaeolithic Sites of South India</h3>
+
+<ul>
+  <li><strong>Pallavaram (near Chennai, Tamil Nadu):</strong> on 30 May 1863 Robert Bruce Foote of the Geological Survey of India found a handaxe here, the first recognised Palaeolithic tool in India. Foote is called the father of Indian prehistory, and the handaxe industry of the region came to be called "Madrasian".</li>
+  <li><strong>Attirampakkam (Kortallayar valley, Tamil Nadu):</strong> discovered by Foote and William King later in 1863. Shanti Pappu and colleagues (2011) dated its Acheulian handaxes and cleavers to about 1.5 million years ago by palaeomagnetism and cosmogenic nuclide burial dating, among the earliest Acheulian dates outside Africa. Luminescence dating (Kumar Akhilesh, Shanti Pappu and colleagues, 2018) showed a Middle Palaeolithic industry with prepared-core flakes by about 385,000 years ago.</li>
+  <li><strong>Isampur (Hunsgi-Baichbal valleys, Karnataka):</strong> an Acheulian quarry-cum-workshop where hominins shaped limestone slabs into handaxes and cleavers, leaving cores, flakes and hammerstones in place. Electron spin resonance dating suggested an age of about 1.2 million years (K. Paddayya and colleagues, 2002).</li>
+  <li><strong>Hunsgi valley (Karnataka):</strong> studied by K. Paddayya since the 1970s, with many Acheulian localities near streams and springs. Paddayya used ecological and ethnographic models to reconstruct the seasonal movement of hominin groups.</li>
+  <li><strong>Jwalapuram (Jurreru valley, Kurnool district, Andhra Pradesh):</strong> Michael Petraglia and colleagues (2007) found Middle Palaeolithic tools just below and above the ash of the Toba super-eruption of about 74,000 years ago, with similar technology on both sides, suggesting that the toolmakers survived the eruption. The nearby Jwalapuram 9 rock shelter has a microlithic sequence beginning about 35,000 years ago.</li>
+  <li><strong>Other areas:</strong> the Malaprabha and Ghataprabha valleys of Karnataka have yielded rich Acheulian assemblages.</li>
+</ul>
+
+<p><strong>Significance:</strong></p>
+
+<ul>
+  <li>Some of the earliest Acheulian sites outside Africa lie in South India, showing that handaxe-making hominins, probably <em>Homo erectus</em> in the broad sense, reached the subcontinent soon after leaving Africa and undermining the Movius Line.</li>
+  <li>Quarry-workshops such as Isampur reveal planning, raw material selection and the organisation of tool making.</li>
+  <li>The early Middle Palaeolithic at Attirampakkam suggests that this technology developed locally among archaic hominins long before modern humans arrived.</li>
+  <li>Jwalapuram bears on population survival through the Toba eruption and on when modern humans reached India.</li>
+  <li>The region preserves a long sequence from the Lower Palaeolithic to the microlithic, and its sites founded Indian prehistory itself.</li>
+</ul>
+
+<h3>Upper Palaeolithic of India: Features and Distribution</h3>
+
+<p>The Indian Upper Palaeolithic dates broadly to about 40,000 to 10,000 years ago, during the last glacial period, when India was cooler and much drier than today. Ostrich eggshell from many sites in Rajasthan, Madhya Pradesh and Maharashtra points to open, semi-arid grassland.</p>
+
+<p><strong>Distinctive features:</strong></p>
+
+<ul>
+  <li><strong>Blade and burin industries:</strong> parallel-sided blades from prepared cores, burins, backed blades, points, scrapers and borers. Blades are less dominant than in Europe and occur with flake tools, so many Indian assemblages are flake-blade industries.</li>
+  <li><strong>Raw materials:</strong> fine-grained stones such as chert, chalcedony and jasper increasingly replace quartzite.</li>
+  <li><strong>Bone tools:</strong> points, awls and scrapers, notably from the Kurnool caves.</li>
+  <li><strong>Art and ritual:</strong> ostrich eggshell beads and engraved eggshell, a possible shrine at Baghor I and a carved bone object from Lohanda Nala. Some scholars assign the earliest paintings at Bhimbetka to this period, but their age is not securely established.</li>
+  <li><strong>Transition:</strong> a trend towards smaller blades leads into the microlithic tradition of the Mesolithic.</li>
+</ul>
+
+<p><strong>Distribution and key sites:</strong></p>
+
+<ul>
+  <li><strong>Belan and Son valleys (Uttar Pradesh and Madhya Pradesh):</strong> excavated by G.R. Sharma of Allahabad University, partly with J. Desmond Clark. At Baghor I in the Son valley, a circular platform of sandstone rubble held a natural triangular stone with concentric triangular laminations, of the kind still worshipped by Kol and Baiga villagers as a form of the mother goddess, which suggests a shrine at the end of the Upper Palaeolithic. At Lohanda Nala in the Belan valley, a carved bone object has been interpreted as a mother goddess figurine.</li>
+  <li><strong>Central India:</strong> the Bhimbetka rock shelters (Madhya Pradesh), with Upper Palaeolithic blade levels below the Mesolithic.</li>
+  <li><strong>Maharashtra:</strong> Patne (Jalgaon district), excavated by S.A. Sali, with a sequence from the Middle Palaeolithic to the Mesolithic, blades and burins, ostrich eggshell beads and a fragment of eggshell engraved with a criss-cross design.</li>
+  <li><strong>Rajasthan and Gujarat:</strong> Budha Pushkar near Ajmer, studied by Bridget Allchin, Andrew Goudie and Karunakara Hegde, and Visadi in Gujarat.</li>
+  <li><strong>Andhra Pradesh:</strong> the Renigunta blade and burin industry near Tirupati, reported by M.L.K. Murty (1968), one of the first Upper Palaeolithic industries recognised in India, and the Kurnool caves (Billa Surgam, excavated by Robert Bruce Foote in 1884, and Muchchatla Chintamani Gavi), with bone tools and animal remains.</li>
+</ul>
+
+<p>The Upper Palaeolithic belongs to modern humans in India, though modern humans were probably present earlier, using Middle Palaeolithic or early microlithic tools.</p>
 
 <h2>Prehistoric Art</h2>
 
@@ -4503,6 +5783,31 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The accumulating morphological and molecular evidence led to the conclusion that Ramapithecus was not a hominid at all but rather a fossil great ape closely related to Sivapithecus. Today, Ramapithecus is generally treated as a junior synonym of Sivapithecus, meaning the fragmentary specimens originally assigned to Ramapithecus are now considered to belong to the genus Sivapithecus (most likely to the species <em>Sivapithecus indicus</em> or <em>Sivapithecus sivalensis</em>). The Ramapithecus episode is now cited in the history of palaeoanthropology as a cautionary tale about the dangers of drawing sweeping phylogenetic conclusions from fragmentary dental material.</p>
 
+<h3>Jolly's Seed Eaters Model of Hominid Differentiation</h3>
+
+<p>Clifford J. Jolly, in "The seed-eaters: a new model of hominid differentiation based on a baboon analogy" (<em>Man</em>, 1970), proposed that the first hominids separated from the apes by adapting to a diet of small, hard food objects such as grass seeds in open, seasonal grassland. He based the model on the gelada baboon (<em>Theropithecus gelada</em>) of the Ethiopian highlands.</p>
+
+<p><strong>The gelada analogy:</strong> geladas feed on grass blades, seeds and roots while sitting upright and shuffling on their haunches, picking up small items one at a time with a precise grip between thumb and index finger. Jolly listed a set of features shared by geladas and early hominids as the outcome of this small-object feeding.</p>
+
+<ul>
+  <li><strong>Teeth and jaws:</strong> small incisors (no need to bite into large fruits), reduced canines that allow side-to-side grinding, crowded, thick-enamelled molars, and robust jaws with powerful chewing muscles.</li>
+  <li><strong>Posture and hands:</strong> an upright trunk during feeding and fine manual dexterity, which pre-adapted the line to bipedalism and tool use.</li>
+  <li><strong>Two phases:</strong> in the first, seed-eating produced the dental and postural changes. In the second, hunting, meat-eating, tool making and brain expansion followed in <em>Homo</em>.</li>
+</ul>
+
+<p><strong>Significance:</strong> the model gave a dietary explanation for canine reduction, in place of the idea going back to Darwin that tools and weapons made large canines unnecessary, and offered an alternative to the "Man the Hunter" model. At the time, <em>Ramapithecus</em> from the Siwaliks, with its thick enamel and small canines, seemed to fit the first phase.</p>
+
+<p><strong>Critique:</strong></p>
+
+<ul>
+  <li>Geladas are not bipedal, so the analogy explains upright sitting but not upright walking.</li>
+  <li><em>Ramapithecus</em> proved to be <em>Sivapithecus</em>, an ape on the orang-utan line, so thick enamel evolved in apes as well and is not a hominid marker.</li>
+  <li><em>Ardipithecus ramidus</em> (about 4.4 million years) had only moderately thick enamel and lived in woodland rather than open grassland.</li>
+  <li>Isotope and tooth wear studies show varied early hominid diets, and the model neglects early tool use and meat.</li>
+</ul>
+
+<p>The model survives as one of several adaptive models, valued for its attention to diet and feeding posture.</p>
+
 <h2>Sivapithecus</h2>
 
 <h3>Discovery and Taxonomy</h3>
@@ -4796,6 +6101,27 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Linguistic Diversity and the Census</h3>
 <p>Bernard S. Cohn argued that the colonial Indian census, rather than passively recording linguistic and caste identities, actively shaped and manufactured them. G.S. Ghurye, who was perhaps the first to critique the caste census, noted that one obvious result was the proliferation of caste associations and the objectifying of previously fluid identities. The census created a political incentive for communities to project distinct identities, leading to linguistic and community mobilisation.</p>
 
+<h3>Dravidian Languages and Their Subgroups</h3>
+
+<p>Francis Whyte Ellis showed in 1816 that Tamil, Telugu and Kannada are related, and Robert Caldwell named and established the family in <em>A Comparative Grammar of the Dravidian or South-Indian Family of Languages</em> (1856). Bhadriraju Krishnamurti's <em>The Dravidian Languages</em> (2003) groups them into four subgroups.</p>
+
+<ul>
+  <li><strong>South Dravidian:</strong> Tamil, Malayalam, Kannada, Tulu, Kodava (Kodagu), Irula, Kurumba, Badaga, Toda and Kota. Tamil, Malayalam and Kannada are literary languages, and the Nilgiri tribes speak small languages of this branch.</li>
+  <li><strong>South-Central Dravidian:</strong> Telugu and the tribal languages Gondi, Konda, Kui, Kuvi, Pengo and Manda of central and eastern India.</li>
+  <li><strong>Central Dravidian:</strong> Kolami, Naiki, Parji, Ollari and Gadaba, spoken by small tribal groups in Maharashtra, Telangana, Chhattisgarh and Odisha.</li>
+  <li><strong>North Dravidian:</strong> Kurukh of the Oraon, Malto of the Sauria Paharia of the Rajmahal hills, and Brahui of Baluchistan in Pakistan.</li>
+</ul>
+
+<p>Census 2011 counted 8.11 crore speakers of Telugu, 6.90 crore of Tamil, 4.37 crore of Kannada and 3.48 crore of Malayalam, and Dravidian languages together are spoken by about a fifth of Indians.</p>
+
+<p><strong>Anthropological significance:</strong></p>
+
+<ul>
+  <li>Most speakers of the Central and North branches, and many of the South-Central branch, are tribes (Gond, Kondh, Kolam, Oraon, Maler), so Dravidian is a tribal family as well as the family of the southern states.</li>
+  <li>Brahui and the North Dravidian languages point to a once wider northern spread, supporting the view that Dravidian speech covered much of India before Indo-Aryan expanded, and underlie attempts by Asko Parpola and Iravatham Mahadevan to read the Harappan script as Dravidian.</li>
+  <li>Dravidian kinship terminology encodes cross-cousin marriage, which Louis Dumont and Thomas Trautmann (<em>Dravidian Kinship</em>, 1981) analysed as a distinct kinship system.</li>
+</ul>
+
 <h2>Religious Profile of India</h2>
 
 <p>India is constitutionally secular but enormously religiously diverse. Census 2011 data on religious composition:</p>
@@ -4844,6 +6170,59 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Tribal communities generally show distinct demographic patterns compared to the general population. Their growth rates have varied considerably: some scheduled tribes have grown faster than the national average, while the most vulnerable, the Particularly Vulnerable Tribal Groups (PVTGs), have declining or stagnant populations.</p>
 
 <p>PVTGs (formerly known as Primitive Tribal Groups): 75 communities designated by the Government of India as particularly vulnerable due to pre-agricultural levels of technology, stagnant or declining population, extremely low literacy, and subsistence-level economy. Examples include Sentinelese and Onge (Andaman Islands), Jarwa, Great Andamanese, Birhors (Jharkhand), Chenchu (Andhra Pradesh), Hill Korwa, Abujhmaria (Chhattisgarh), Saura (Odisha), Toda (Tamil Nadu), Cholanaickan (Kerala).</p>
+
+<h3>Risley's Classification of Indian Populations: Method and Criticism</h3>
+
+<p>H.H. Risley (1851-1911) of the Indian Civil Service began an anthropometric and ethnographic survey of Bengal in 1885, published as <em>The Tribes and Castes of Bengal</em> (1891), directed the ethnographic survey as Census Commissioner for 1901, and set out his scheme in <em>The People of India</em> (1908). He named seven types: Turko-Iranian, Indo-Aryan, Scytho-Dravidian, Aryo-Dravidian, Mongolo-Dravidian, Mongoloid and Dravidian.</p>
+
+<p><strong>Method:</strong></p>
+
+<ul>
+  <li><strong>Anthropometry:</strong> measurement of head form (cephalic index), nose form (nasal index), the orbito-nasal index and stature on samples of castes and tribes, mainly in Bengal, the North-Western Provinces and Oudh, Punjab, Bombay and Madras.</li>
+  <li><strong>Observation and ethnography:</strong> skin colour, hair and features recorded by eye, together with language, customs and origin traditions gathered through a standard questionnaire.</li>
+  <li><strong>Race and caste:</strong> he treated castes as racial units and held that in much of northern India the social rank of a caste varies inversely with its nasal index, the finest noses belonging to the highest castes.</li>
+  <li><strong>Historical explanation:</strong> the types were named after languages and peoples of history and explained as the products of invasion and mixture.</li>
+</ul>
+
+<p><strong>Criticisms:</strong></p>
+
+<ul>
+  <li><strong>Small, uneven samples</strong> measured by many observers of varying skill, with some regions barely covered.</li>
+  <li><strong>Language confused with race:</strong> Aryan and Dravidian are language families, not physical types.</li>
+  <li><strong>Unproven elements:</strong> there is no evidence of Scythian settlement from Gujarat to Coorg, and B.S. Guha traced the broad heads of Bengal and western India to an Alpine strain, not to Mongoloid or Scythian mixture.</li>
+  <li><strong>Omissions:</strong> no Negrito element on the mainland, and tribal Proto-Australoids lumped with Dravidian-speaking castes as "Dravidian".</li>
+  <li><strong>Race and caste rank:</strong> G.S. Ghurye (<em>Caste and Race in India</em>, 1932), reworking Risley's own figures, found the link between nasal index and caste rank roughly true only in Hindustan, not in Bengal, Bombay or Madras, where castes of a region resemble one another.</li>
+  <li><strong>Colonial purpose:</strong> ranking castes by physique supported a racial theory of caste, and his 1901 attempt to order castes by social precedence provoked petitions and hardened caste identities.</li>
+</ul>
+
+<h3>S.S. Sarkar's Classification Compared with Risley's</h3>
+
+<p>S.S. Sarkar, a physical anthropologist of the Calcutta school, set out his scheme in <em>The Aboriginal Races of India</em> (1954). Its main features:</p>
+
+<ul>
+  <li><strong>Australoid base:</strong> the Australoid (Veddid) type is the oldest element of the Indian population, present in all castes and concentrated among tribes and lower castes.</li>
+  <li><strong>No mainland Negrito:</strong> against Guha, he denied a Negrito strain in mainland India.</li>
+  <li><strong>Six elements:</strong> Australoid, Indo-Aryan, Irano-Scythian, Mundari-speaking, Far Eastern (Malay-Polynesian) and Mongoloid.</li>
+  <li><strong>No caste-race ranking:</strong> he did not treat caste rank as a function of physical type.</li>
+</ul>
+
+<p><strong>Was it better than Risley's?</strong> In part. Sarkar drew on the more systematic anthropometric work done after Risley, recognised the Australoid base that Risley missed, dropped the claim that caste rank follows nose form, and abandoned the Mongolo-Dravidian label for Bengal. But his scheme remained typological, assumed pure ancestral types that later mixed, kept a Scythian element close to Risley's, and still named a physical type after a language (the Mundari speakers). It improved on Risley in data and in freedom from caste ideology, not in basic method.</p>
+
+<h3>Why Somatometric Classifications Failed</h3>
+
+<p>From Risley (1908) through Haddon (1925), Guha (1935) and Sarkar, classifications reached different numbers and kinds of types and never produced an agreed picture of Indian diversity.</p>
+
+<ul>
+  <li><strong>Different traits and weights:</strong> each scholar chose different measurements and observations, so the same population fell into different types: Risley had seven, Guha six with nine subtypes, Sarkar six.</li>
+  <li><strong>Plastic traits:</strong> stature, head form and nose form change with nutrition, climate and growth. Franz Boas (1912) showed head form changing between immigrant parents and their American-born children, and nasal form tracks climate.</li>
+  <li><strong>Continuous variation:</strong> traits vary gradually and independently of one another, so any boundary between types is arbitrary.</li>
+  <li><strong>Subjective somatoscopy:</strong> skin colour, hair form and eye form were judged by eye and graded differently by different observers.</li>
+  <li><strong>Sampling:</strong> small, non-random samples chosen by caste label, and group averages that hid variation within groups.</li>
+  <li><strong>Mixed categories:</strong> types were named after languages, castes or regions, and long caste endogamy produced local clusters rather than continental races.</li>
+  <li><strong>The typological idea itself:</strong> the notion of pure races that migrated and mixed was discredited, and the UNESCO statements on race (1950 and 1951) rejected it.</li>
+</ul>
+
+<p>Serology (blood groups) and then genetics replaced somatometry. Genome-wide studies such as that of David Reich and colleagues (2009) describe Indian groups as mixtures, in varying proportions, of Ancestral North Indians and Ancestral South Indians, separated by long endogamy rather than by discrete races.</p>
 
 <h2>Fecundity and Fertility: Core Concepts</h2>
 
@@ -5079,6 +6458,35 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <h3>Moksha</h3>
 <p>The ultimate end of life is to attain Moksha: liberation, emancipation, freedom from the cycle of death and rebirth, freedom from ignorance, self-realisation, and consciousness of the Oneness of the Supreme Soul. Kapadia: Moksha represents the end of life, the realisation of an inner spirituality in man. Some thinkers believe Moksha is the most important Purushartha and the remaining three are only means toward it. Vedanta: liberation comes to those who know Brahman as that which is the origin and end of all things, the universal principle behind everything that exists, the consciousness that pervades everything. Such realisation comes from self-knowledge and self-discipline. Moksha is self-discipline that becomes so perfect it is unconscious, second nature: a state of bliss. The Purusharthas are the blueprint for human fulfilment: working with them helps create a satisfyingly balanced, meaningful life at the deepest and most holistic level.</p>
+
+<h3>Dharma and Religion: A Comparison</h3>
+
+<p>Dharma is often translated as "religion", but the two differ in scope and logic. P.V. Kane's <em>History of Dharmasastra</em> (1930-1962) traced how the idea moved from the cosmic order (<em>rita</em>) of the Vedas to the duties of each person.</p>
+
+<ul>
+  <li><strong>Dharma:</strong> from <em>dhri</em>, to hold or sustain, the order that upholds cosmos and society. It has layers: <em>sadharana dharma</em> (duties common to all, such as truth, non-violence and not stealing), <em>varnashrama dharma</em> (duties of one's varna and stage of life), <em>svadharma</em> (one's own duty, as in the Gita's counsel to Arjuna), <em>raja dharma</em> (duties of the king) and <em>apad dharma</em> (conduct allowed in emergencies). The Dharmashastras of Manu and Yajnavalkya read as codes of law, custom, ritual and ethics.</li>
+  <li><strong>Religion in Tylor:</strong> E.B. Tylor in <em>Primitive Culture</em> (1871) gave as a minimum definition "the belief in Spiritual Beings", making belief in the supernatural the core of religion.</li>
+  <li><strong>Religion in Durkheim:</strong> Émile Durkheim in <em>The Elementary Forms of the Religious Life</em> (1912) defined religion as a unified system of beliefs and practices relative to sacred things, set apart and forbidden, which unite all who adhere to them into one moral community called a church.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>Point</th><th>Dharma</th><th>Religion in the Western sense</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Core</td><td>Right conduct, duty and order</td><td>Belief in spiritual beings or the sacred</td></tr>
+    <tr><td>God</td><td>Not essential: Mimamsa, and the Jain and Buddhist dhamma, need no creator god</td><td>Usually centred on God or spiritual beings</td></tr>
+    <tr><td>Founder and creed</td><td>No single founder, book or creed</td><td>Often a founder, scripture and creed</td></tr>
+    <tr><td>Organisation</td><td>No church: lived through family, caste and village</td><td>A church or congregation</td></tr>
+    <tr><td>Scope</td><td>Law, ethics, ritual, custom, polity and economy</td><td>A distinct sphere, separable from law and politics</td></tr>
+    <tr><td>Application</td><td>Contextual: duty varies with varna, ashrama, gender and situation</td><td>Universal: the same beliefs bind all believers</td></tr>
+    <tr><td>Emphasis</td><td>Right action (orthopraxy)</td><td>Right belief (orthodoxy)</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Overlap:</strong> Durkheim's idea of religion as the bond of a moral community fits dharma's role in integrating society through duties, and his division of sacred and profane parallels the purity and pollution that dharma regulates. Both sanction a social order, which Marxist and Ambedkarite critics see as legitimising inequality, since varnashrama dharma ties duty to birth.</p>
+
+<p><strong>Assessment:</strong> Translating dharma as religion narrows it to belief and worship, a colonial habit that shaped the census and personal law. Dharma is closer to a total moral and social order of which religion, in the Western sense, is one part. Indian usage itself separates dharma from <em>panth</em> or <em>sampradaya</em>, a sect or path of faith.</p>
 
 <h2>Rina: The Doctrine of Obligations</h2>
 
@@ -5363,6 +6771,29 @@ export const anthropologyNoteContent: Record<string, string> = {
 <h3>Evolutionary Theory</h3>
 <p>Caste did not come into existence suddenly. It is the result of a long process of social evolution involving: hereditary occupations; desire of Brahmins to keep themselves pure; lack of rigid unitary state control; belief in reincarnation and karma; ideas of exclusive family, ancestor worship, and sacramental meals; clash of patriarchal and matriarchal systems; clash of races, colour prejudices, and conquest; deliberate economic and administrative policies (especially British); geographical isolation of the Indian peninsula; static nature of Hindu society; foreign invasions; and rural social structure.</p>
 
+<h3>Ambedkar's "Castes in India" (1916): Endogamy Superimposed on Exogamy</h3>
+
+<p>B.R. Ambedkar read "Castes in India: Their Mechanism, Genesis and Development" at Alexander Goldenweiser's anthropology seminar at Columbia University on 9 May 1916, and it was published in the <em>Indian Antiquary</em> in 1917. It is his earliest account of the origin of caste and differs from his later Shudra and Broken Men theses.</p>
+
+<ul>
+  <li><strong>Cultural unity:</strong> despite racial mixture, the peoples of India share a deep cultural unity, so caste cannot be explained by race. Caste is the parcelling of an already unified society into closed units.</li>
+  <li><strong>Critique of definitions:</strong> after examining Senart, Nesfield, Risley and Ketkar, he concluded that the absence of intermarriage, that is endogamy, is the only characteristic peculiar to caste.</li>
+  <li><strong>Mechanism:</strong> Indian society practised exogamy of gotra and sapinda. Caste arose when endogamy was superimposed on this exogamy, and the superimposition of endogamy on exogamy is, in his account, the creation of caste.</li>
+  <li><strong>Surplus woman and surplus man:</strong> a closed endogamous group must keep a balance of marriageable men and women. The widow, a surplus woman, was disposed of by sati or by enforced widowhood. The widower, a surplus man whom the group could not afford to lose, was either made to renounce the world or married to a girl not yet of marriageable age, hence girl marriage. Sati, enforced widowhood and child marriage were the customs that maintained endogamy.</li>
+  <li><strong>Genesis:</strong> the Brahmins were the first to enclose themselves into an endogamous class. Other groups followed by imitation, drawing on Gabriel Tarde's laws of imitation flowing from higher to lower, and by excommunication of those who broke the rules. In his phrase, some closed the door while others found it closed against them.</li>
+  <li><strong>Plurality:</strong> caste exists only in the plural, and Manu did not create it but codified an order already in being.</li>
+</ul>
+
+<p><strong>Critical appraisal:</strong></p>
+
+<ul>
+  <li>It was the first account to place the control of women's marriage and sexuality at the centre of caste, a line developed by feminist scholars such as Uma Chakravarti (<em>Gendering Caste</em>, 2003).</li>
+  <li>It rejected racial theories such as Risley's at a time when they dominated.</li>
+  <li>It is speculative: there is little historical evidence that sati, widowhood and child marriage arose to balance numbers, and these customs were confined mainly to the upper castes.</li>
+  <li>It explains how caste is maintained better than how it began, gives the Brahmins sole initiative in a way close to the Brahmanical theory, and says little about occupation, political power or purity and pollution, which Dumont and others later made central.</li>
+  <li>Ambedkar himself moved to historical explanations in <em>Who Were the Shudras?</em> (1946) and <em>The Untouchables</em> (1948), and in <em>Annihilation of Caste</em> (1936) drew the conclusion that a system resting on endogamy and scriptural sanction could not be reformed from within.</li>
+</ul>
+
 <h2>Varna and Caste: The Distinction</h2>
 
 <p>Varna and caste (Jati) must be carefully distinguished. Varna is the pan-Indian, textually prescribed four-fold categorization: an ideal, abstract schema. Jati is the actual social reality: a locally bounded, endogamous group of thousands of varieties across India. The mapping between the two is complex and contested: many Jatis claim Kshatriya or Brahmin Varna status that is not acknowledged by other Jatis. The process of asserting higher Varna status is part of the mechanism of Sanskritization. While Varna provides the conceptual framework (pure-impure, hierarchy, dharma), Jati is the operative unit of caste: the group within which one is born, marries, eats, and dies.</p>
@@ -5438,6 +6869,23 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p><strong>Ambedkar's position:</strong> In <em>Annihilation of Caste</em> (1936), Ambedkar argued that caste cannot be reformed: it must be annihilated. Its theological roots in Varna, karma, and dharma must be attacked. Conversion out of Hinduism (which he practised in 1956 by converting to Buddhism) was the logical endpoint of his anti-caste position. Gandhi's position, reforming untouchability while retaining the Varna system, was rejected by Ambedkar as fundamentally insufficient.</p>
 
 <p><strong>Assessment:</strong> The weight of evidence suggests that caste in India is neither disappearing nor static. It is transforming: from an occupationally determined, ritually graded, locally enforced hierarchy toward a more politically mobilized, associationally organized, and identity-based social formation. The abolition of untouchability as a legal matter has not ended caste discrimination; it has driven it into new arenas (inter-caste violence, honour killings, discrimination in employment, housing, and education). Caste endures as the organizing principle of electoral politics, social networks, marriage markets, and cultural identity: even as its ritual and occupational rigidities diminish in urban settings.</p>
+
+<h3>Caste among Non-Hindu Communities</h3>
+
+<p>Islam, Christianity, Sikhism and Buddhism reject caste in doctrine, yet ranked, endogamous and often occupational groups exist among their Indian followers, mainly because most converts came from local castes and kept their rank, marriage rules and occupations.</p>
+
+<ul>
+  <li><strong>Muslims:</strong> colonial census reports and Ghaus Ansari's <em>Muslim Caste in Uttar Pradesh</em> (1960) described three strata: the Ashraf, claiming foreign descent (Sayyid, Shaikh, Mughal and Pathan), the Ajlaf, converts from artisan and service castes such as the Julaha weavers, and the Arzal, converts from untouchable castes such as the Halalkhor sweepers. Imtiaz Ahmad's edited <em>Caste and Social Stratification among the Muslims</em> (1973) showed endogamous biradaris, caste councils and hereditary occupations. The Sachar Committee (2006) used the same three categories, and the Pasmanda movement mobilises the Ajlaf and Arzal.</li>
+  <li><strong>Sikhs:</strong> despite the Gurus' rejection of caste and the common kitchen (<em>langar</em>), Jats, Khatris and Aroras rank above artisan Ramgarhias and Dalit Mazhabi and Ramdasia Sikhs. Marriage is caste-endogamous, and some villages have separate gurdwaras and cremation grounds for Dalits.</li>
+  <li><strong>Christians:</strong> in Kerala, Syrian Christians claim high status and the Knanaya keep strict endogamy, apart from Latin Catholics and Dalit converts. In Tamil Nadu, Dalit Christians have faced separate seating, hearses and cemeteries and exclusion from church office.</li>
+  <li><strong>Buddhists:</strong> neo-Buddhists of Maharashtra still largely marry within the former Mahar community and are treated as Dalits in villages, while Ladakhi Buddhist society ranks the Mon, Beda and Garra low.</li>
+  <li><strong>Jains and Parsis:</strong> Jains are divided into endogamous jatis such as the Oswal and Porwal, and Parsis remain a closed endogamous community.</li>
+  <li><strong>Islamic tribes:</strong> the Muslim islanders of Lakshadweep keep a ranked order of Koya, Malmi and Melacheri (Leela Dube).</li>
+</ul>
+
+<p><strong>Interpretations:</strong> Louis Dumont (<em>Homo Hierarchicus</em>, 1966) treated caste among Muslims and Christians as a product of the Hindu environment, present in practice but lacking the full religious justification of purity and pollution. Ghaus Ansari and Imtiaz Ahmad argued that Muslim caste is real in its own right, rooted in descent, occupation and endogamy even without scriptural backing. Some scholars prefer terms such as biradari or caste-like stratification.</p>
+
+<p><strong>Assessment:</strong> Caste is a social category of Indian society, not only of Hinduism: conversion changed belief but rarely endogamy, landholding or occupational status. The denial of SC status to Dalit Christians and Muslims under the Constitution (Scheduled Castes) Order 1950, despite this evidence, remains contested.</p>
 `,
 'sacred-complex-nature-man-spirit': `
 <h2>Theoretical Framework: Great and Little Traditions</h2>
@@ -5552,6 +7000,33 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Christianity entered India earliest through the St. Thomas tradition: according to which the Apostle Thomas arrived in Kerala in 52 CE and founded the Syrian Christian (Saint Thomas Christian / Nasrani) community, among the world's oldest Christian communities. Portuguese missionaries brought Latin Christianity to Goa and the Malabar Coast from 1498, often with coercive elements (Goa Inquisition, 1560-1812). British and other European Protestant missionaries arrived from the 18th century onward. <em>Social impact:</em> Christian missionaries established schools, hospitals, and printing presses: making modern education and healthcare available to communities previously excluded from them. Mission schools disproportionately served Dalit and Adivasi communities. Missionaries recorded, studied, and sometimes preserved indigenous languages (grammars, dictionaries, translations of Bible). The social reform movement in 19th century India was partly stimulated by missionary critique of caste, untouchability, sati, and child marriage: pushing Indian reformers like Ram Mohan Roy (Brahmo Samaj) and Jyotirao Phule to respond. Many Dalits and Adivasis converted to Christianity as a rejection of caste oppression: the Mass Conversion movements in Andhra (Madigas, Malas), Tamil Nadu, Chhattisgarh, and the Northeast (where Christianity is now dominant). <em>Educational and intellectual:</em> Missionaries translated Indian classical texts into European languages and European scientific and philosophical texts into Indian languages: mediating the encounter between Western Enlightenment thought and Indian intellectual traditions. <em>Architectural:</em> Church architecture along the Malabar and Coromandal coasts and in Goa blends European Baroque, Gothic, and local Indian styles. <em>Limitation:</em> Christianity remained a minority religion in India, unlike in Korea or the Philippines, partly because caste Hindus resisted conversion, and partly because the association of Christianity with colonial power created ambivalence.</p>
 
+<h3>Indigenisation of Christianity in India</h3>
+
+<p>Indigenisation (inculturation) is the expression of Christian faith through the language, symbols, music, arts and social forms of a local culture, so that it no longer appears foreign.</p>
+
+<ul>
+  <li><strong>Early indigenous Christianity:</strong> the St Thomas Christians of Kerala long lived as a high-status, caste-like community sharing Hindu customs of dress, food, marriage and purity. The Portuguese Synod of Diamper (1599) tried to Latinise them.</li>
+  <li><strong>Accommodation:</strong> the Jesuit Roberto de Nobili, in Madurai from 1606, lived as a Brahmin sannyasi, wore saffron, kept a vegetarian diet and let converts keep caste marks and customs. This led to the Malabar Rites controversy, and Rome finally condemned such accommodations in 1744.</li>
+  <li><strong>Thinkers and ashrams:</strong> Brahmabandhab Upadhyay (1861-1907) called himself a Hindu Catholic. Shantivanam (Saccidananda Ashram) in Tamil Nadu was founded in 1950 by Jules Monchanin and Henri Le Saux (Abhishiktananda) and later led by Bede Griffiths, using Indian forms of monastic life.</li>
+  <li><strong>After the Second Vatican Council (1962-65):</strong> Catholic worship in India adopted regional languages, bhajans, the oil lamp and arati, sitting on the floor and Indian architecture. Protestant churches had long used vernacular Bibles and hymns.</li>
+  <li><strong>Tribal Christianity:</strong> Bibles, hymns and church life in Khasi, Mizo, Naga and Munda languages, with community feasts and local leadership, made Christianity a marker of tribal identity in the Northeast and Chota Nagpur.</li>
+</ul>
+
+<p><strong>Critique:</strong> Dalit theologians such as A.P. Nirmal argued that indigenisation drew on Brahmanical and Sanskritic forms (ashrams, Vedanta, Sanskrit chants) and so excluded Dalit Christians, who form a large share of Indian Christians. They called for Dalit cultural forms instead. Hindu nationalists, for their part, see inculturation as a strategy of conversion.</p>
+
+<h3>Non-Hindu Religions and the Emancipation of Scheduled Castes</h3>
+
+<ul>
+  <li><strong>Buddhism:</strong> B.R. Ambedkar converted with several hundred thousand followers at Nagpur on 14 October 1956 and set out his Navayana Buddhism in <em>The Buddha and His Dhamma</em> (1957). Neo-Buddhists, mainly Mahars of Maharashtra, gained dignity, education and a political identity.</li>
+  <li><strong>Christianity:</strong> mass conversions from the late nineteenth century (Malas and Madigas in Andhra, Chuhras in Punjab, Pulayas in Kerala), studied by J. Waskom Pickett (<em>Christian Mass Movements in India</em>, 1933), brought schools, hospitals and self-respect.</li>
+  <li><strong>Islam:</strong> conversion offered equality in prayer, but Muslim society kept a hierarchy of Ashraf, Ajlaf and Arzal (Imtiaz Ahmad, <em>Caste and Social Stratification among Muslims in India</em>, 1973), and the Pasmanda movement now speaks for backward and Dalit Muslims.</li>
+  <li><strong>Sikhism:</strong> the langar and the Gurus rejected caste, yet Mazhabi and Ravidasia Sikhs faced exclusion, which led to separate gurdwaras and the Ad-Dharm movement of the 1920s.</li>
+</ul>
+
+<p><strong>Limits:</strong> caste survived conversion. Dalit Christians in parts of Tamil Nadu have faced separate seating, separate cemeteries and exclusion from church office, and converts keep caste endogamy. Conversion also carried a legal cost. The Constitution (Scheduled Castes) Order, 1950 confined Scheduled Caste status to Hindus, apart from Sikhs of certain Punjab castes, and was extended to all Sikhs in 1956 and to Buddhists in 1990. Dalit Christians and Muslims remain excluded. The Supreme Court upheld this in <em>Soosai v Union of India</em> (1985), the Ranganath Misra Commission (2007) recommended delinking Scheduled Caste status from religion, and in 2022 the government appointed a commission under former Chief Justice K.G. Balakrishnan to examine the question.</p>
+
+<p><strong>Assessment:</strong> non-Hindu religions gave Scheduled Castes an ideology of equality, education and a new identity, and Buddhism became a vehicle of political assertion. They did not abolish caste, which reproduced itself within each community, and the law still ties reservation benefits to remaining within Hinduism, Sikhism or Buddhism.</p>
+
 <h2>Religious Syncretism in India</h2>
 
 <p>The cumulative effect of the encounter between Hinduism, Buddhism, Jainism, Islam, and Christianity is a deep and complex tradition of <em>religious syncretism</em>: the blending and mutual influencing of religious traditions. Indian syncretism operates at multiple levels: theological (Kabir's nirguna Bhakti defying both Hindu and Islamic categories; the Sikh Granth Sahib incorporating compositions by both Hindu and Muslim saints), ritual (shared shrines; Hindus offering at dargahs; Muslims participating in Hindu festivals in some regions), architectural (the fusion of Persian and Indian temple traditions in Mughal architecture), musical (Hindustani classical music incorporating both raga and tala systems with Persian instruments and forms), and social (inter-religious friendships, neighbourhood co-residence, shared foodways in many Indian cities). McKim Marriott's processes of universalization and parochialization, and the sacred complex's function as a meeting ground of different traditions, castes, and sects, provide the analytical framework for understanding this syncretic tradition as structurally produced rather than merely accidental.</p>
@@ -5609,6 +7084,40 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The Anthropological Society of Bombay, founded in 1886, published a journal in which a number of early anthropological studies were initiated: the first institutional forum for anthropological publication in India. Anthropology was introduced as a subject in the Department of Sociology at Bombay University in 1919, marking the beginning of academic institutionalisation. The first full-fledged Department of Anthropology was established at Calcutta University in 1920, with Ananthakrishna Iyer, R. Chanda, and others joining as faculty. The founding of this department is the single most important institutional event of the formative phase.</p>
 
+<h3>Colonial Scholars and the Tribes of North-East India</h3>
+
+<p>E.T. Dalton's <em>Descriptive Ethnology of Bengal</em> (1872) first surveyed many north-eastern tribes. From the 1900s the government of Eastern Bengal and Assam, and later Assam, published a series of monographs on the hill peoples, written mostly by the officers who governed them.</p>
+
+<ul>
+  <li><strong>P.R.T. Gurdon,</strong> <em>The Khasis</em> (1907): Khasi matriliny, the youngest daughter as custodian of family property, clan organisation and religion.</li>
+  <li><strong>T.C. Hodson,</strong> <em>The Meitheis</em> (1908) and <em>The Naga Tribes of Manipur</em> (1911).</li>
+  <li><strong>Other monographs:</strong> A. Playfair's <em>The Garos</em> (1909), Sidney Endle's <em>The Kacharis</em> (1911), J. Shakespear's <em>The Lushei Kuki Clans</em> (1912) and N.E. Parry's <em>The Lakhers</em> (1932).</li>
+  <li><strong>J.H. Hutton,</strong> <em>The Angami Nagas</em> and <em>The Sema Nagas</em> (both 1921): headhunting, feasts of merit, megaliths and village polity. He was Census Commissioner for 1931, introduced the term "exterior castes", wrote <em>Caste in India</em> (1946) and held the William Wyse chair of social anthropology at Cambridge.</li>
+  <li><strong>J.P. Mills,</strong> <em>The Lhota Nagas</em> (1922), <em>The Ao Nagas</em> (1926) and <em>The Rengma Nagas</em> (1937): detailed accounts of Naga social organisation, the morung and agriculture.</li>
+  <li><strong>Christoph von Fürer-Haimendorf,</strong> who followed them with <em>The Naked Nagas</em> (1939) on the Konyak and later studies of the Apatani.</li>
+</ul>
+
+<p><strong>Contribution:</strong></p>
+
+<ul>
+  <li>They produced the first systematic ethnographies of the region, many based on long residence and knowledge of local languages.</li>
+  <li>They remain primary sources for pre-Christian religion, headhunting, morung life, customary law and oral traditions that have since changed or disappeared.</li>
+  <li>Hutton's comparative work on megaliths and on the Naga village fed theories of diffusion and his mana theory of caste.</li>
+  <li>Their photographs and collections, many now in the Pitt Rivers Museum, Oxford, form a major archive.</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+
+<ul>
+  <li>They wrote as administrators, for the needs of governance, in a standard format rather than around theoretical problems.</li>
+  <li>Evolutionist assumptions led them to present the hill peoples as primitive survivals and to dwell on headhunting and "savage" customs.</li>
+  <li>They fixed fluid groups into bounded tribes and fostered umbrella labels such as "Naga" that later became political identities.</li>
+  <li>Their view of the hill peoples as distinct and vulnerable supported keeping the hills outside the constitutional reforms, embodied in the excluded areas of the 1935 Act, which deepened the divide between hills and plains.</li>
+  <li>Women's lives and the people's own voices were largely absent.</li>
+</ul>
+
+<p>Despite these limits, the colonial monographs are the starting point for later study of the North-East, and Naga, Khasi and Mizo scholars today read them critically as records of their own past.</p>
+
 <h2>Phase II: Constructive Phase (1920-1949)</h2>
 
 <h3>Institutionalisation and the Growth of Indian Anthropology</h3>
@@ -5661,6 +7170,43 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The Anthropological Survey of India (AnSI), established in 1945 and now under the Ministry of Culture, became the primary governmental body for anthropological research. Its most ambitious project was the "People of India" survey: launched under K.S. Singh's direction in the 1980s: which aimed to document all of India's communities. The survey identified over 4,600 communities across India and documented them in a series of state-by-state volumes, constituting the most comprehensive ethnographic database on India's population ever assembled. The project combined quantitative survey methods with qualitative ethnographic observation, using a standardised schedule covering biological traits, historical background, language, occupation, social customs, religion, and developmental indices.</p>
 
+<h3>Verrier Elwin and Tribal Policy after Independence</h3>
+
+<p>Elwin's contribution to tribal policy after 1947 came from a shift in his own thinking. In <em>The Baiga</em> (1939) he had proposed a protected "national park" for the Baiga, an idea attacked as isolationist. After independence he argued for integration on tribal terms.</p>
+
+<ul>
+  <li><strong>Posts:</strong> he was Deputy Director of the newly founded Anthropological Survey of India, became an Indian citizen in January 1954 and in the same year Adviser for Tribal Affairs to the NEFA administration, a post he held from Shillong until his death in 1964.</li>
+  <li><strong><em>A Philosophy for NEFA</em>:</strong> his statement of frontier policy (1959 edition) rejected both isolation and assimilation and called for bringing medicine, schooling and better farming without destroying tribal culture, working through village councils and protecting land and forest.</li>
+  <li><strong>The Tribal Panchsheel:</strong> Nehru's foreword to that edition set out five principles: development along the lines of the people's own genius, respect for tribal rights in land and forest, training of tribal teams to run their own areas, no over-administration or multiplicity of schemes, and judgment of results by the quality of human character rather than by statistics or money spent.</li>
+  <li><strong>The Elwin Committee (1959-60):</strong> the committee on Special Multipurpose Tribal Blocks, which he chaired, reviewed the first tribal development blocks. It found that the general Community Development pattern had been applied with too little regard for tribal conditions and urged development adapted to tribal ways, trained staff and protection from exploitation. Its findings fed into the Tribal Development Block strategy of the Third Plan.</li>
+  <li><strong>Recognition:</strong> the Padma Bhushan (1961) and a posthumous Sahitya Akademi award for his autobiography <em>The Tribal World of Verrier Elwin</em> (1964).</li>
+</ul>
+
+<p><strong>Assessment:</strong> Elwin turned anthropology into policy. The Panchsheel remains the normative reference of Indian tribal administration, and PESA and the FRA echo its first two principles. Critics, from Ghurye to later planners, saw him as romantic and paternalist and blamed his slow pace for NEFA's weak roads and administration in 1962, while others credit him with sparing Arunachal Pradesh the land alienation and insurgency seen elsewhere.</p>
+
+<h3>Surajit Sinha: Tribes as Part of Indian Civilisation</h3>
+
+<p>Surajit Chandra Sinha (1926-2002), trained at Calcutta University and Northwestern University, later Director of the Anthropological Survey of India and Vice-Chancellor of Visva-Bharati, argued that tribes and castes are not isolated categories but parts of one Indian civilisation. Drawing on Redfield's great and little traditions and on long fieldwork among the Bhumij of Manbhum, he developed the argument in "Bhumij-Kshatriya Social Movement in South Manbhum" (1959), "State Formation and Rajput Myth in Tribal Central India" (1962), "Tribe-Caste and Tribe-Peasant Continua in Central India" (1965) and <em>Tribes and Indian Civilization: Structures and Transformation</em> (1982).</p>
+
+<ul>
+  <li><strong>No isolated tribe:</strong> the tribes of peninsular India have long been tied to caste society through markets, labour, pilgrimage and political overlordship, so their cultures form a dimension of the little tradition of Indian civilisation.</li>
+  <li><strong>Continua:</strong> tribe and caste are poles of a continuum. The tribal pole is marked by ecological and social isolation, egalitarian clans and local gods, the caste pole by interdependence, hierarchy and links with the great tradition. A parallel tribe-peasant continuum traces the move from hunting and swidden to plough farming and markets.</li>
+  <li><strong>State formation and the Rajput myth:</strong> Bhumij and other tribal chiefs became rajas and zamindars, claimed Rajput descent through myths and Brahman genealogists, and drew their kin upward, so tribal polities joined the Hindu political order.</li>
+  <li><strong>Movement along the continuum:</strong> the Bhumij-Kshatriya movement, in which Bhumij sections adopted Hindu rites and claimed Kshatriya rank, shows tribes moving toward the caste pole.</li>
+</ul>
+
+<p><strong>Critical appraisal:</strong></p>
+
+<ul>
+  <li><strong>Strengths:</strong> it ended the colonial picture of tribes as isolated primitives and brought history and archival research into Indian anthropology. It agrees with N.K. Bose's account of tribal absorption, F.G. Bailey's continuum and André Béteille's view (1986) that Indian tribes have long lived on the margins of a civilisation.</li>
+  <li><strong>Evolutionism:</strong> the continuum implies one-way movement from tribe to caste, treating tribes as castes in the making, and neglects the reverse process of tribalisation and the revival of tribal identity through the Sarna and Gondi Dharm movements and the Jharkhand movement (K.S. Singh).</li>
+  <li><strong>Hindu-centred civilisation:</strong> equating Indian civilisation with the Sanskritic great tradition sidelines tribes who turned to Christianity or kept apart, and fits few tribes of the North-East.</li>
+  <li><strong>Regional base:</strong> the model rests on central Indian groups such as the Bhumij, whose chiefs had long ties with Hindu kingdoms.</li>
+  <li><strong>Power:</strong> integration appears as cultural exchange, underplaying land alienation, debt and the exploitation by dikus that drove tribal revolts. Virginius Xaxa (1999) argued that tribes should be studied as societies in their own right, not as stages on the way to caste.</li>
+</ul>
+
+<p>Sinha's argument remains a valuable corrective to the isolation thesis, provided integration is seen as a contested, two-way process rather than an inevitable absorption.</p>
+
 <h2>Phase IV: Modern/Global Phase (1990 onwards)</h2>
 
 <p>From the 1990s, Indian anthropology engaged increasingly with global theoretical debates: postmodernism, postcolonial theory, feminist anthropology, and the anthropology of globalisation: while also responding to domestic intellectual and political challenges. The postmodern critique of anthropology's complicity with colonialism was particularly resonant in the Indian context: ethnographic surveys and census operations had literally been instruments of colonial governance. The "writing culture" critique (Clifford and Marcus, 1986): that ethnographic texts are literary constructions shaped by the power relations between Western researchers and non-Western subjects, prompted Indian anthropologists to reflect on their own positionality relative to the communities they studied.</p>
@@ -5672,6 +7218,34 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Physical anthropology in India developed alongside social and cultural anthropology, with distinct institutional bases. The Anthropological Survey of India carried out systematic physical anthropological surveys alongside its ethnographic work, collecting measurements, blood group data, genetic markers, and demographic information on India's diverse populations. D.N. Majumdar's <em>Races and Cultures of India</em> provided one of the first systematic accounts of the physical anthropological diversity of the Indian population. The study of India's tribal populations (particularly the Andamanese, Veddas, and Jarawa) was significant for understanding the early peopling of South and Southeast Asia.</p>
 
 <p>The prehistoric archaeological dimension of physical anthropology in India is addressed separately in the paleoanthropological evidence topic, covering the Siwalik primates (Ramapithecus, Sivapithecus), the Narmada fossil (Homo erectus narmadensis), and the Lower Palaeolithic cultures of the Soan and Acheulian traditions.</p>
+
+<h3>B.S. Guha and the Racial Classification of the 1931 Census</h3>
+
+<p>Biraja Sankar Guha (1894-1961) took his PhD at Harvard (1924) under Roland Dixon and E.A. Hooton with a thesis on the racial basis of the caste system. He joined the anthropological section of the Zoological Survey of India in 1927, conducted the racial survey of the 1931 Census, and became the first Director of the Anthropological Survey of India (1945-1954). He later directed the Bihar Tribal Research Institute.</p>
+
+<p><strong>The classification:</strong> his report "Racial Affinities of the Peoples of India" in the Census of India 1931 (1935), and his pamphlet <em>Racial Elements in the Population</em> (1944), identified six main racial elements with nine subtypes:</p>
+
+<ul>
+  <li>Negrito, which he reported among the Kadar and Pulayan of the south and regarded as the earliest stratum.</li>
+  <li>Proto-Australoid, the main element among central and southern tribes.</li>
+  <li>Mongoloid: Palaeo-Mongoloid (long-headed and broad-headed) and Tibeto-Mongoloid.</li>
+  <li>Mediterranean: Palaeo-Mediterranean, Mediterranean and Oriental.</li>
+  <li>Western Brachycephals: Alpinoid, Dinaric and Armenoid.</li>
+  <li>Nordic.</li>
+</ul>
+
+<p><strong>Contribution:</strong> it was the first India-wide classification by a professionally trained physical anthropologist. It corrected Risley by recognising the Negrito and Proto-Australoid elements and by tracing the broad heads of Bengal and Gujarat to an Alpine strain, and it guided Indian physical anthropology and tribal studies for two decades. As founder of the AnSI, Guha built the national institution for physical and cultural research.</p>
+
+<p><strong>Critique:</strong></p>
+
+<ul>
+  <li>It is typological, assuming fixed races that entered India in successive waves, a view that genetics has replaced with continuous variation and mixture.</li>
+  <li>It rests on head form, nose form and stature, which the environment shapes, and on very small samples for some elements, such as the Nordic.</li>
+  <li>Its labels (Nordic, Alpine, Dinaric) were borrowed from European race science.</li>
+  <li>S.S. Sarkar disputed the Negrito strain on the mainland.</li>
+  <li>Links drawn between races and cultures, such as Mediterraneans with the Indus civilisation and Palaeo-Mediterraneans with the megaliths, were speculative.</li>
+  <li>Guha himself came to stress that pure races are a myth and that mixture is the reality of human populations.</li>
+</ul>
 
 <h2>Key Themes and Debates in Indian Anthropology</h2>
 
@@ -5797,6 +7371,29 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Lewis applied the same critical lens to Rampur. He found that the jajmani system, rather than the harmonious system of reciprocal obligation Wiser had described, had degenerated into a system of exploitation: land-owning Jat castes extracted services from lower castes and returned inadequate compensation; the personal bonds of paternalistic obligation had been replaced by purely extractive economic relations. He showed that village solidarity was fragile and faction-ridden, and that the "community" presented to outsiders was a strategic front concealing deep internal divisions along caste and economic lines.</p>
 
+<h3>F.G. Bailey: Bisipara</h3>
+
+<p>F.G. Bailey's <em>Caste and the Economic Frontier: A Village in Highland Orissa</em> (1957) studied Bisipara, an Oriya-speaking village in the Kondmals (now Kandhamal district) of Odisha, a hill tract where Oriya castes lived among the Kond tribe. Trained in Max Gluckman's Manchester school, Bailey asked what happens to a caste village when a money economy and an outside administration reach it: the "economic frontier".</p>
+
+<ul>
+  <li><strong>The old order:</strong> the Warrior caste owned most of the land and dominated the village, with Brahmins at the ritual top and service and untouchable castes below, all bound together by land and hereditary service.</li>
+  <li><strong>The economic frontier:</strong> British rule and new trade brought money, government posts and a market in land. Wealth could now be earned outside the village's land-based order, and land could be bought and sold.</li>
+  <li><strong>The Distillers:</strong> grew rich from the liquor trade under the new administration and bought land, much of it from Warriors who needed cash. They then adopted the ways of higher castes and rose in rank. Here caste rank came to follow wealth.</li>
+  <li><strong>The Boad Outcastes (Pans):</strong> gained some wealth through trade and government favour and pressed for higher status, including entry to the village temple. The clean castes united against them. Here the ritual barrier held.</li>
+  <li><strong>Conclusion:</strong> economic change does not dissolve caste but reshuffles position within it. Castes in the middle can convert new wealth into rank, but untouchability blocks the conversion. The village becomes an arena in which groups compete for land, power and status, shaped by the wider political and economic system.</li>
+</ul>
+
+<p><strong>Salience:</strong></p>
+
+<ul>
+  <li>It was one of the first Indian village studies to make change and conflict, rather than equilibrium, its subject, and to tie the village to the market and the state.</li>
+  <li>It complemented Srinivas's ideas of Sanskritisation and the dominant caste by showing how wealth from outside the village could be turned into rank, and it showed the limits of such mobility for Dalits.</li>
+  <li>It led to Bailey's <em>Tribe, Caste and Nation</em> (1960), on the Konds and Oriya castes, to his tribe-caste continuum, and later to the transactional analysis of politics in <em>Stratagems and Spoils</em> (1969).</li>
+  <li>The Pan-Kond tensions of the region resurfaced in the Kandhamal violence of 2007-08.</li>
+</ul>
+
+<p><strong>Critique:</strong> one small village carries broad conclusions. The economic explanation of mobility underplays religion and ideology, women hardly appear, and the Konds are treated apart from the village. Later critics found his transactional approach too focused on individuals calculating advantage.</p>
+
 <h2>Factions in Indian Villages</h2>
 
 <p>Factionalism: the formation of competing, internally cohesive groups within a village that struggle for local dominance: is one of the most persistent features of Indian village politics. The classic analysis is by Oscar Lewis, who showed that factions in Rampur crosscut caste lines: they were organised around powerful individuals (typically large landowners) who built coalitions by extending patronage across caste boundaries. M.N. Srinivas similarly showed that factions in Rampura were not simple caste blocs but coalitions of individuals from different castes aligned behind different dominant leaders.</p>
@@ -5818,6 +7415,45 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>The Green Revolution of the 1960s and 1970s introduced high-yielding variety seeds, chemical fertilisers, pesticides, and irrigation infrastructure, dramatically increasing agricultural productivity in favoured areas (particularly the Punjab-Haryana wheat belt and parts of Andhra Pradesh and Tamil Nadu). But the Green Revolution was capital-intensive, and its benefits accrued disproportionately to large landowners who could afford the new inputs. It accelerated differentiation within the peasantry, increased the demand for hired labour (creating new patterns of wage dependency), and contributed to mechanisation of agriculture (particularly threshing and irrigation) that further displaced agricultural labourers.</p>
 
 <p>Changes in technology: the spread of tractors, tube wells, chemical fertilisers, and eventually mobile phones and digital connectivity: transformed the technical basis of agriculture and the information environment of village residents. The Green Revolution completed the monetisation of the agrarian economy that the colonial period had begun, making cash rather than grain the medium of exchange even in previously subsistence-oriented villages and finally dissolving the economic basis of the jajmani system in most regions.</p>
+
+<h3>Globalisation and the Indian Village</h3>
+
+<p>Economic liberalisation from 1991 opened Indian agriculture and rural labour to global markets, capital and media, with effects that run both ways.</p>
+
+<p><strong>Opportunities:</strong></p>
+
+<ul>
+  <li>Non-farm work in construction, transport, services and factories, and remittances from migrants in cities and the Gulf, as in Kerala, which fund housing and schooling.</li>
+  <li>New markets for horticulture, dairy, fisheries and crafts, and contract farming with agribusiness firms.</li>
+  <li>Mobile phones, television and the internet, which bring market prices, weather information and new aspirations, and loosen caste and gender seclusion.</li>
+  <li>New seeds and technology, such as Bt cotton, approved in 2002.</li>
+</ul>
+
+<p><strong>Challenges:</strong></p>
+
+<ul>
+  <li>Exposure to volatile world prices and rising input costs, which feed debt and agrarian distress, including farmer suicides in cotton belts such as Vidarbha.</li>
+  <li>Land acquisition for industry and special economic zones (SEZ Act 2005), which provoked resistance at Singur and Nandigram in 2006-07.</li>
+  <li>Decline of crafts and village services unable to compete with factory goods.</li>
+  <li>Widening inequality between regions, castes and classes, the feminisation of agriculture as men migrate, and consumer aspirations beyond village incomes.</li>
+</ul>
+
+<p>Dipankar Gupta ("Whither the Indian Village", 2005) argued that agriculture has become a residual occupation and that the village is shrinking as a source of livelihood, though people keep their homes and identities there.</p>
+
+<h3>Digitisation of the Rural Economy</h3>
+
+<p>Since 2014 the state has built a digital infrastructure for rural welfare and markets:</p>
+
+<ul>
+  <li><strong>JAM trinity:</strong> bank accounts under the Pradhan Mantri Jan Dhan Yojana (launched 28 August 2014), more than 50 crore by 2023, linked to Aadhaar numbers and mobile phones.</li>
+  <li><strong>Direct Benefit Transfer (from 2013):</strong> subsidies, pensions, scholarships and MGNREGA wages paid straight into bank accounts, cutting leakage through intermediaries.</li>
+  <li><strong>PM-KISAN (launched February 2019):</strong> income support of Rs 6,000 a year to landholding farmers in three instalments, paid by direct transfer.</li>
+  <li><strong>Unified Payments Interface (UPI):</strong> launched by the National Payments Corporation of India in 2016, now used for payments in village shops and haats.</li>
+  <li><strong>e-NAM (launched 14 April 2016):</strong> an online trading platform linking agricultural produce markets (mandis) across states.</li>
+  <li><strong>Others:</strong> Digital India (2015), Common Service Centres run by village entrepreneurs, BharatNet broadband for gram panchayats, Soil Health Cards and SVAMITVA drone mapping of village house sites for property cards.</li>
+</ul>
+
+<p><strong>Effects and limits:</strong> digitisation has widened financial inclusion, reduced leakage and let women and lower castes deal with the state and market more directly. But a digital divide by region, caste, gender, age and literacy persists, since women and the poor are less likely to own smartphones. Failures of biometric authentication and poor connectivity have excluded some of the poorest from rations and wages, many accounts lie dormant, digital fraud is rising, and service-centre operators can become new middlemen. Digitisation extends the reach of state and market into the village while reproducing older inequalities in new forms.</p>
 `,
 
   'linguistic-religious-minorities': `
@@ -6072,6 +7708,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>The positive effects of media on rural society include: access to information about government schemes, legal rights, market prices, and healthcare; increased political awareness and participation; a language and communication shift, such as the rise of Hinglish in the rural belt, that has simultaneously connected communities to national culture and eroded the boundaries that excluded lower-caste speakers from public discourse; enhanced educational opportunities through distance learning and educational broadcasting; and the creation of a platform through which marginalised groups can voice grievances and build solidarity, functioning as what some scholars have called a "safety valve" for social tensions that might otherwise erupt in violence.</p>
 
 <p>The negative effects include: the rise of consumerism and materialist aspirations that outstrip the economic capacity of rural households, producing debt and status anxiety; the commodification of women through advertising, entertainment, and digital content that reinforces patriarchal gender norms even as it superficially valorises female agency; the creation of what Dube called a "moral vacuum" in which traditional value systems have been undermined but new coherent normative frameworks have not yet been consolidated; and the intensification of political conflict, as the media amplifies provocative content and makes communal tension more visible and contagious.</p>
+
+<h3>Ethnic Media and Social Awareness</h3>
+
+<p>Ethnic media are media produced by and for ethnic, linguistic, tribal or other minority communities, usually in their own languages and about matters that mainstream media ignore. They range from community newspapers and radio to mobile and internet platforms. They give marginal groups a voice, preserve language and identity, and connect citizens with the state.</p>
+
+<ul>
+  <li><strong>CGNet Swara:</strong> started in 2010 by the journalist Shubhranshu Choudhary in the Gond areas of central India. Anyone can call a number from a basic mobile phone and record a report in Gondi or Hindi, which moderators check and publish for others to hear. Reports of unpaid wages, broken hand pumps or absent teachers have led officials to act, and the service carries Adivasi voices from conflict areas where few journalists go.</li>
+  <li><strong>Khabar Lahariya:</strong> founded in 2002 in Chitrakoot district of Uttar Pradesh with the support of the NGO Nirantar, a newspaper written and run by rural women, many of them Dalit, in Bundeli and other local dialects. It later became a digital video news platform. It reports on caste violence, gender, local corruption and government schemes, and its story is told in the documentary <em>Writing with Fire</em> (2021).</li>
+  <li><strong>Community radio:</strong> opened to NGOs and community groups by the policy of 2006. Sangham Radio, run by Dalit women of the Deccan Development Society in Medak (now in Telangana) since 2008, was among the first.</li>
+  <li><strong>Others:</strong> Video Volunteers (2003) trains community correspondents to film local injustices, and All India Radio broadcasts in many tribal languages.</li>
+</ul>
+
+<p><strong>Role in social awareness:</strong> ethnic media spread knowledge of rights and schemes in a language people understand, make local grievances visible to administrators, build pride in tribal languages and identities, and let women, Dalits and Adivasis become producers rather than objects of news. They replace top-down development communication with participatory communication.</p>
+
+<p><strong>Limits:</strong> they depend on donors and volunteers, their reach is limited by literacy, connectivity and electricity, reporters in conflict zones face harassment, and local elites can capture them.</p>
 `,
 
 'tribal-situation-india': `
@@ -6207,6 +7858,72 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Tribal societies are characterised by relative egalitarianism: the absence of the rigid hierarchical stratification characteristic of the caste system. Leadership in most tribal communities is based on age, personal qualities, and expertise rather than hereditary rank. The clan is the fundamental unit of social organisation, governing marriage, inheritance, and collective ritual. Clans are typically exogamous, and the rules of exogamy maintain alliances between groups. The lineage within the clan may serve as the locus of political authority: among Gonds, the lineage group (<em>gotra</em>) observes rites in common and a specialist recollects the genealogy that serves as a uniting factor. The collectivity rather than the individual is the dominant value in tribal social organisation: individual achievement is less valorised than collective solidarity, which is both a source of resilience and, in the context of competitive access to modern opportunities, a structural disadvantage.</p>
 
+<h3>Youth Dormitories</h3>
+
+<p>The youth dormitory is a house in or near the village where unmarried boys, and in many tribes girls in a separate house, sleep and are trained by the community. It is a major agency of socialisation among the tribes of middle India and the North-East.</p>
+
+<ul>
+  <li><strong>Ghotul</strong> of the Muria Gond of Bastar, described in Verrier Elwin's <em>The Muria and their Ghotul</em> (1947). Boys (<em>chelik</em>) and girls (<em>motiari</em>) live together under leaders, the boys' <em>sirdar</em> and the girls' <em>belosa</em>. Elwin distinguished an older type in which couples paired for the whole of their ghotul life (<em>jodidar</em>) from a newer type in which lasting pairs were forbidden and partners rotated (<em>mundial</em>).</li>
+  <li><strong>Dhumkuria</strong> of the Oraon, described by S.C. Roy in <em>The Oraons of Chota Nagpur</em> (1915), with separate houses for bachelors (<em>jonkh-erpa</em>) and maidens (<em>pel-erpa</em>).</li>
+  <li><strong>Giti-ora</strong>, the sleeping houses of unmarried Munda and Ho boys and girls.</li>
+  <li><strong>North-East:</strong> the <em>morung</em> of the Nagas, the <em>zawlbuk</em> of the Mizo, the <em>nokpante</em> of the Garo, and the <em>moshup</em> (boys) and <em>rasheng</em> (girls) of the Adi.</li>
+  <li><strong>Others:</strong> the <em>dhangarbasa</em> of the Bhuiyan and the <em>majang</em> of the Juang.</li>
+</ul>
+
+<p><strong>Functions:</strong></p>
+
+<ul>
+  <li><strong>Education:</strong> myths, songs, dances, crafts, hunting and farming skills and customary law are taught by older members.</li>
+  <li><strong>Economic:</strong> members form labour teams for village and household work.</li>
+  <li><strong>Discipline:</strong> obedience to leaders, punishment of offenders and training in cooperation.</li>
+  <li><strong>Political and defensive:</strong> the Naga morung was the guardhouse and council house of a village section in the headhunting era, holding log drums and trophies.</li>
+  <li><strong>Ritual and recreation:</strong> members perform at festivals, weddings and funerals.</li>
+  <li><strong>Preparation for marriage:</strong> in the ghotul, regulated premarital relations prepare the young for marriage, a function Elwin defended against charges of immorality.</li>
+</ul>
+
+<p><strong>Decline:</strong> missionaries and Hindu reformers condemned dormitories as immoral, schools took over education, and administration and the end of headhunting removed their defensive role. The Mizo zawlbuk disappeared after Christianisation, and many morungs now survive as cultural centres, as at the Naga Heritage Village at Kisama during the Hornbill Festival. Where ghotuls survive among the Muria they remain a symbol of tribal autonomy.</p>
+
+<h3>Traditional Interdependence in the Nilgiris</h3>
+
+<p>The Nilgiri plateau of Tamil Nadu supported a regional system in which communities with different economies exchanged goods and services. W.H.R. Rivers (<em>The Todas</em>, 1906) and David Mandelbaum, who worked among the Kota from the 1930s, described it.</p>
+
+<ul>
+  <li><strong>Toda:</strong> buffalo pastoralists of the grasslands, centred on their sacred dairies. They supplied ghee, milk products and buffaloes, and claimed a customary ownership of the plateau.</li>
+  <li><strong>Kota:</strong> artisans and musicians who made pottery, iron tools and leather goods and played music at the funerals and festivals of other groups. In return they received ghee, grain, buffalo hides and meat, including the carcasses of buffaloes sacrificed at Toda funerals.</li>
+  <li><strong>Badaga:</strong> farmers who migrated from the Mysore plains from about the sixteenth century and gave the Todas a customary share of grain in acknowledgement of their claim to the land. The Badagas are not an ST.</li>
+  <li><strong>Kurumba:</strong> forest dwellers of the slopes who supplied honey and forest produce and served as sorcerers and watchmen, feared by the others for their magic.</li>
+  <li><strong>Irula:</strong> cultivators and gatherers of the lower slopes who exchanged forest produce with the plateau groups.</li>
+</ul>
+
+<p>The system had a caste-like ritual ranking in which the carrion-eating, musician Kotas were treated as polluting by Todas and Badagas and the Kurumbas were kept at a distance for their reputed sorcery. The exchanges were hereditary and customary, much like a regional jajmani system.</p>
+
+<p><strong>Changes:</strong></p>
+
+<ul>
+  <li><strong>Colonial settlement:</strong> after the founding of Ootacamund in the 1820s, roads, markets and money made each group less dependent on the others.</li>
+  <li><strong>Plantations and forestry:</strong> tea, eucalyptus and wattle plantations took Toda grasslands and forest, shrinking buffalo herds and forest produce.</li>
+  <li><strong>Badaga prosperity:</strong> the Badagas became tea growers and the most prosperous group, and their grain payments to the Todas lapsed.</li>
+  <li><strong>Kota reform:</strong> from the 1930s a Kota reform movement gave up music for others and the eating of carrion to raise the community's status, breaking the old exchanges.</li>
+  <li><strong>Forest restrictions:</strong> reserved forests and the Mudumalai sanctuary limited Kurumba and Irula access, and many became plantation or wage labourers. Some Irulas now work through the Irula Snake Catchers' Cooperative (1978).</li>
+  <li><strong>Present status:</strong> the Toda, Kota, Kurumba and Irula are all PVTGs of Tamil Nadu, and their links now run more to the market and the state than to one another.</li>
+</ul>
+
+<h3>Apatani Wet-Rice and Paddy-cum-Fish Agriculture</h3>
+
+<p>The Apatani (43,777 in Census 2011) of the Ziro valley in Lower Subansiri, Arunachal Pradesh, are settled wet-rice cultivators amid neighbours such as the Nyishi who practise shifting cultivation. Christoph von Fürer-Haimendorf, who first reached them in 1944, presented them in <em>The Apa Tanis and their Neighbours</em> (1962) as a "primitive civilisation" because of the intensity and productivity of their farming.</p>
+
+<ul>
+  <li><strong>Terraced wet fields:</strong> the valley floor is levelled into plots separated by earthen bunds.</li>
+  <li><strong>Irrigation:</strong> channels led from hill streams carry water from plot to plot, with bamboo pipes and outlets regulating levels, and clans maintain the channels.</li>
+  <li><strong>Paddy-cum-fish culture:</strong> fish are reared in the flooded fields with the rice, and finger millet is grown on the bunds, so one plot yields rice, fish and millet.</li>
+  <li><strong>Hand labour:</strong> all work is done by family and clan labour, without draught animals or machines.</li>
+  <li><strong>Organic fertility:</strong> household refuse, rice husk and the dung of pigs and poultry keep the fields fertile without chemical inputs.</li>
+  <li><strong>Managed groves:</strong> family and clan bamboo and pine groves on the slopes supply timber and fuel and are replanted.</li>
+  <li><strong>Exchange:</strong> surplus rice was traded to Nyishi neighbours for mithun, pigs and other goods.</li>
+</ul>
+
+<p>The system supports a dense population on a small area with high yields and little ecological damage, and the Apatani cultural landscape is on India's tentative list for World Heritage status. Pressures include the growth of Ziro town, shrinking family plots, the migration of young people and the spread of chemical inputs.</p>
+
 <h2>Bio-Genetic Variability of Indian Tribes</h2>
 
 <p>The study of bio-genetic variability among Indian tribes seeks to understand the relationship between tribal biological characteristics and their historical origins, migration patterns, and adaptation to local environments. Data from blood group systems, haemoglobin polymorphisms, serum proteins, and more recently from genome-wide studies have contributed to this understanding.</p>
@@ -6315,6 +8032,34 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The Xaxa Committee called for agro-based training institutions and labour-intensive processing industries in tribal regions; micro-credit on reasonable terms for SHGs, cooperatives, and Gram Sabhas; support for organic farming and eco-forestry; micro watershed development as the top priority for tribal agriculture; and credit facilities for ST entrepreneurs on par with other social groups. MGNREGA, Kaushal Vikas Yojana, Vandhan Yojana, TRIFED, and e-commerce linkages (Amazon tribal stores) represent recent government initiatives, though their reach in remote areas remains limited.</p>
 
+<h3>Tribal Agricultural Labourers and Distress Migration</h3>
+
+<p>Land alienation and displacement have turned many tribal cultivators into wage labourers. In Census 2011 agricultural labourers made up 44.4 percent of ST workers, up from 36.9 percent in 2001, while cultivators fell from 44.7 to 34.5 percent, so that for STs labourers now outnumber cultivators.</p>
+
+<p><strong>Issues of tribal agricultural labourers:</strong></p>
+
+<ul>
+  <li><strong>Seasonality:</strong> work comes mainly at sowing and harvest, leaving long idle months in rain-fed uplands.</li>
+  <li><strong>Low and unequal wages:</strong> payment below the legal minimum, often in kind, with women paid less than men for the same work.</li>
+  <li><strong>Debt and bondage:</strong> advances from landlords and contractors tie workers to employers, as in the <em>hali</em> system of the Sahariya of Rajasthan.</li>
+  <li><strong>Labour on lost land:</strong> many work as labourers or sharecroppers on land once theirs and now held by non-tribals.</li>
+  <li><strong>No social security:</strong> labourers lack formal protection, and MGNREGA work in remote areas is held back by late payment and weak registration of demand.</li>
+  <li><strong>Women's double burden:</strong> women combine wage work with forest collection, water, fuel and care work.</li>
+</ul>
+
+<p><strong>Factors responsible for tribal migration:</strong></p>
+
+<ul>
+  <li><strong>Push factors:</strong> loss of land and forest access, displacement by dams and mines, debt, drought and crop failure in rain-fed uplands, and restrictions on shifting cultivation.</li>
+  <li><strong>Pull factors:</strong> demand for cheap labour in brick kilns, construction, plantations and the irrigated farms of other states, and domestic work in cities.</li>
+  <li><strong>Colonial precedent:</strong> recruiters took Santhal, Munda and Oraon labourers to the Assam tea gardens from the nineteenth century. Their descendants, the tea tribes, are still not Scheduled Tribes in Assam.</li>
+  <li><strong>Labour circuits today:</strong> the <em>dadan</em> system takes families from western Odisha, many of them tribal, to brick kilns in Andhra Pradesh and Telangana on advances that turn into bondage, and Bhils from western Madhya Pradesh and southern Rajasthan migrate to the farms and building sites of Gujarat.</li>
+</ul>
+
+<p><strong>Consequences:</strong> Migration brings cash, remittances and new skills, but also bondage, wage theft, unsafe work, sexual exploitation of women and trafficking of girls as domestic workers. Children who travel with parents drop out of school, migrants lose access to rations and voting at their destinations, and village institutions and festivals weaken when the young are away. The plight of stranded migrants during the 2020 COVID-19 lockdown showed how unprotected tribal workers are.</p>
+
+<p><strong>Remedies:</strong> restoration of alienated land and recognition of forest rights, MGNREGA work in the lean season, enforcement of minimum wages, registration of migrants and contractors under the Occupational Safety, Health and Working Conditions Code 2020 (which replaced the Inter-State Migrant Workmen Act 1979), portable rations under One Nation One Ration Card, seasonal hostels for migrants' children, and Gram Sabha oversight of labour recruiters.</p>
+
 <h2>Health and Nutritional Problems</h2>
 
 <p>Tribal communities experience substantially higher burdens of disease, malnutrition, and mortality than the national average. Their health situation reflects the intersection of poverty, geographical isolation, environmental exposure (living in forest and hill areas endemic for malaria, filariasis, and other vector-borne diseases), inadequate public health infrastructure, and cultural distance from biomedical health services.</p>
@@ -6335,6 +8080,22 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Most resettlement colonies and tribal habitations lack proper public health facilities and protected drinking water. The Public Distribution System (PDS) functions poorly in remote tribal areas, leaving nutritional deficiency unaddressed. Approximately one percent of the total health budget flows to tribal areas despite their outsized disease burden. The Mungekar Committee and Xaxa Committee both emphasised that the health crisis cannot be addressed by routine administration and requires mission-mode approaches with community participation.</p>
 
+<h3>Sickle Cell Disease among Tribes and the Programmes against It</h3>
+
+<p>Sickle cell disease is an inherited haemoglobin disorder. A single mutation in the beta-globin gene (HbS) makes red cells sickle, causing anaemia, painful crises, infections, stroke and early death in people who inherit two copies (HbSS). Carriers (HbAS, the sickle cell trait) are usually healthy and resist falciparum malaria, which keeps the allele frequent in malarial forest belts, a classic balanced polymorphism.</p>
+
+<ul>
+  <li><strong>Distribution:</strong> the allele is concentrated in a belt across Gujarat, Maharashtra, Madhya Pradesh, Chhattisgarh, Odisha and Jharkhand, and in the Nilgiri-Wayanad hills of the south, with carrier frequencies of 10 to 25 percent in some Gond, Bhil and Oraon groups.</li>
+  <li><strong>Burden:</strong> malnutrition, malaria, lack of transfusion and drugs such as hydroxyurea, and long distances to hospitals raise mortality among tribal patients, many of whom are never diagnosed.</li>
+  <li><strong>Social dimension:</strong> crises are often treated as spirit affliction by traditional healers, and endogamy keeps carrier-carrier marriages frequent, so screening must go with counselling.</li>
+</ul>
+
+<p><strong>National Sickle Cell Anaemia Elimination Mission (2023):</strong> Announced in the Union Budget 2023-24 and launched by the Prime Minister at Shahdol, Madhya Pradesh, on 1 July 2023, the mission aims to eliminate sickle cell disease as a public health problem by 2047. It runs under the National Health Mission in 278 districts of 17 high-focus states: Gujarat, Maharashtra, Rajasthan, Madhya Pradesh, Jharkhand, Chhattisgarh, West Bengal, Odisha, Tamil Nadu, Telangana, Andhra Pradesh, Karnataka, Assam, Uttar Pradesh, Kerala, Bihar and Uttarakhand. Its elements are universal screening of 7 crore people aged 0 to 40 in affected tribal areas, sickle cell genetic status cards to inform marriage and pregnancy decisions, counselling, and treatment and follow-up through public health facilities. The Dharti Aaba Abhiyan (2024) adds Centres of Competence at AIIMS and other premier institutes for prenatal diagnosis.</p>
+
+<p><strong>Initiatives of affected states:</strong> Gujarat began a state screening and counselling programme for its tribal districts in 2006, Chhattisgarh set up a dedicated Sickle Cell Institute at Raipur, Maharashtra runs a sickle cell control programme in its tribal and Vidarbha districts, and Madhya Pradesh has its own state programme in its tribal belt. These state efforts supplied the model of screening, cards and counselling that the national mission adopted.</p>
+
+<p><strong>Gaps:</strong> screening without counselling can stigmatise carriers, especially young women in marriage negotiations, treatment centres remain far from hamlets, and prenatal diagnosis raises ethical questions where health literacy is low. Anthropologists stress working through local healers, clan elders and village councils so that genetic advice fits marriage customs.</p>
+
 <h2>Particularly Vulnerable Tribal Groups (PVTGs)</h2>
 
 <p>The most marginalised among Scheduled Tribes are the 75 groups designated as Particularly Vulnerable Tribal Groups (formerly Primitive Tribal Groups or PTGs), identified on the basis of pre-agricultural technology, stagnant or declining population, very low literacy, and subsistence-level economy. The Scheme for Development of PVTGs came into effect from April 1, 2008, and seeks to adopt a holistic approach through Conservation-cum-Development (CCD) plans valid for five years, funded entirely by the central government.</p>
@@ -6348,6 +8109,39 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>The Xaxa Committee (High Level Committee on Socio-Economic, Health and Educational Status of Tribal Communities, 2013-2014, chaired by Virginius Xaxa) provided the most comprehensive recent survey of tribal problems. Its findings confirmed that all the above problems persist and are in many cases worsening. Key recommendations included: a rights-based and non-displacement approach to development in tribal areas; strict enforcement of land protection laws and restoration of alienated land; Gram Sabha participation in identification and restoration of land through PESA; monitoring agencies at national and state levels to prevent land alienation; return of unutilised land acquired by governments and PSUs to original landowners; attention to land and water sources polluted by industrial and mining projects; and rehabilitation of tribals displaced by conflict in Chhattisgarh and the Northeast.</p>
 
 <p>The Xaxa Committee's framework locates tribal problems not in the social or cultural characteristics of tribals, as earlier colonial and development discourses implied, but in the structural conditions of a development paradigm that systematically appropriates tribal land, forests, and water while excluding tribal communities from the benefits. The solution lies not in tribal assimilation into mainstream development but in a transformation of the development model itself toward one that respects tribal rights, identity, and priorities as its foundation.</p>
+
+<h3>Problems of Pastoral and Nomadic Communities</h3>
+
+<p>Pastoral, nomadic and semi-nomadic groups move with herds or services along customary routes. Examples include the Gujjar and Bakarwal of Jammu and Kashmir, the Van Gujjars of Uttarakhand, the Gaddis of Himachal Pradesh, the Changpa of Ladakh, the Raika (Rebari) of Rajasthan and Gujarat, the Dhangar of Maharashtra and the Toda buffalo herders of the Nilgiris. Many nomadic service groups (entertainers, traders, healers) are also Denotified Tribes. Their salient issues are:</p>
+
+<ul>
+  <li><strong>Loss of grazing commons:</strong> pastures and migration routes have been taken by farms, canals, plantations, mines and towns, and village commons have been privatised or planted.</li>
+  <li><strong>Protected areas:</strong> national parks and sanctuaries close traditional grazing, as in the removal of Van Gujjars from Rajaji National Park, and forest departments treat herders as encroachers.</li>
+  <li><strong>Conflict:</strong> crop damage and water disputes with settled farmers along the routes.</li>
+  <li><strong>Market and policy shocks:</strong> falling demand for camels and coarse wool, and laws such as the Rajasthan Camel Act 2015, which protected the camel but restricted its sale outside the state and cut Raika incomes.</li>
+  <li><strong>Exclusion from services:</strong> without a fixed address many lack ration and voter cards, children's schooling breaks with each move, and health care is hard to reach on the road.</li>
+  <li><strong>Stigma and classification:</strong> some still carry the "criminal" label of the colonial Criminal Tribes Act, and the same group may be ST in one state and OBC in another.</li>
+  <li><strong>Climate:</strong> erratic snow and drought shrink high pastures, as among the Changpa of Changthang.</li>
+</ul>
+
+<p><strong>Responses:</strong> The Forest Rights Act 2006 recognises grazing and the traditional seasonal resource access of nomadic and pastoralist communities (Section 3(1)(d)), and Jammu and Kashmir began recognising such rights after the Act was extended there in 2019. The Renke (2008) and Idate (2017) Commissions examined denotified and nomadic groups, followed by the Development and Welfare Board for DNTs, NTs and SNTs (2019) and the SEED scheme (2022). Grazing claims are still rarely settled, and policy favours settling herders over supporting mobility, which ecologists regard as an efficient use of dry and mountain rangelands.</p>
+
+<h3>Climate Change and Tribal Survival</h3>
+
+<p>Tribes guard much of India's remaining forest and contribute little to greenhouse emissions, yet they are among the most exposed to climate change, because their livelihoods rest on rain-fed farms, forests, pastures and water bodies and they have few assets to absorb shocks.</p>
+
+<ul>
+  <li><strong>Agriculture and food:</strong> erratic monsoons, dry spells and heat lower the yields of rain-fed upland millets, pulses and paddy, and shorter jhum fallows in the North-East reduce soil recovery.</li>
+  <li><strong>Forest produce:</strong> shifts in flowering and fruiting reduce mahua, tendu, sal seed and honey, the main cash sources of central Indian tribes, and forest fires grow more frequent.</li>
+  <li><strong>Water:</strong> springs dry up in the Himalaya and the North-East, and droughts in central India force distress migration.</li>
+  <li><strong>Health:</strong> warming carries malaria and other vector-borne diseases to higher altitudes and longer seasons, on top of malnutrition and sickle cell disease.</li>
+  <li><strong>Pastoral and island groups:</strong> Changpa herders lose winter pasture to irregular snow, and storms and sea-level rise threaten island tribes. The 2004 tsunami devastated the Nicobarese, while the Onge and Jarawa, reading the sea, survived by moving to high ground.</li>
+  <li><strong>Cultural loss:</strong> when crops, forests and seasons change, the agricultural rituals, festivals and ecological knowledge tied to them lose their basis.</li>
+</ul>
+
+<p><strong>Mitigation can also harm:</strong> compensatory afforestation under the Compensatory Afforestation Fund Act 2016 has planted monocultures on tribal commons, and hydropower, solar parks and the mining of minerals for the energy transition take tribal land. Carbon-credit forestry may restrict customary use.</p>
+
+<p><strong>Assessment:</strong> Tribal ecological knowledge, from sacred groves and community forest management to Apatani paddy-cum-fish farming and hardy millet varieties, is a resource for adaptation. Secure community forest rights, Gram Sabha consent, climate-resilient livelihoods and a tribal voice in state climate action plans link survival with conservation. Without them the custodians of natural resources risk becoming climate refugees.</p>
 `,
 
 
@@ -6464,6 +8258,31 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The heterogeneity within the OBC category makes aggregate statistics potentially misleading. Some OBC communities (particularly numerically dominant agricultural castes) have economic and educational profiles approaching or exceeding those of forward castes in their states; others (particularly MBC artisan and service communities) have profiles approaching those of SCs.</p>
 
+<h3>Making OBC Lists: National and State</h3>
+
+<p><strong>History:</strong></p>
+
+<ul>
+  <li><strong>Before the Constitution:</strong> Kolhapur reserved half its posts for backward communities in 1902, Mysore followed the Miller Committee (1918), and the Madras Presidency issued its first communal Government Order in 1921 for non-Brahmins.</li>
+  <li><strong>Constitution:</strong> Articles 15(4), 16(4) and 340 allow special provisions for socially and educationally backward classes (SEBCs) and a commission to study their condition.</li>
+  <li><strong>First Backward Classes Commission (Kaka Kalelkar, 1953-55):</strong> listed 2,399 backward communities, largely by caste. The Union rejected the report and left identification to the states.</li>
+  <li><strong>State commissions:</strong> states built their own lists through bodies such as the Sattanathan Commission in Tamil Nadu (1970), the Havanur Commission in Karnataka (1975) and the Mungeri Lal Commission in Bihar (1976), using social, educational and economic indicators.</li>
+  <li><strong>Mandal Commission (1979-80):</strong> applied 11 indicators (four social, three educational and four economic) weighted 3, 2 and 1, so that a caste scoring 11 of 22 points was classed as backward. It identified 3,743 castes.</li>
+  <li><strong>Indra Sawhney (1992):</strong> upheld 27 percent central reservation, excluded the creamy layer and required permanent bodies to revise the lists, which produced the National Commission for Backward Classes Act 1993 and state commissions.</li>
+</ul>
+
+<p><strong>From the 102nd to the 105th Amendment:</strong> The 102nd Amendment (2018) gave the NCBC constitutional status (Article 338B) and inserted Article 342A, under which the President notifies the SEBCs. In <em>Jaishri Laxmanrao Patil v. Chief Minister, Maharashtra</em> (5 May 2021) the Supreme Court struck down the Maratha quota for breaching the 50 percent ceiling and held, by 3 to 2, that after the 102nd Amendment only the central list existed, so states could no longer identify SEBCs. Parliament responded with the 105th Amendment (passed in August 2021, assent on 18 August, in force from 15 August 2021), which amended Articles 338B, 342A and 366(26C) to restore the power of each state and union territory to prepare and maintain its own list of SEBCs, separate from the Central List and without the need to consult the NCBC.</p>
+
+<p><strong>Methods today:</strong></p>
+
+<ul>
+  <li><strong>Central List:</strong> the NCBC examines requests for inclusion, hears evidence and advises, the President notifies the list for central purposes, and only Parliament can then include or exclude communities by law. It governs central jobs and institutions.</li>
+  <li><strong>State Lists:</strong> state backward classes commissions survey castes on social, educational and economic indicators, and states notify the lists by order or law. States now rely on surveys and commission reports, as in Bihar's caste survey (2023) and Maharashtra's 2024 law granting the Marathas separate SEBC reservation.</li>
+  <li><strong>Sub-categorisation:</strong> the Rohini Commission (2017-2023) examined sub-categorisation of the Central List, and states such as Andhra Pradesh, Karnataka and Bihar already divide their OBCs into groups, including Most or Extremely Backward Classes.</li>
+</ul>
+
+<p><strong>Issues:</strong> the lack of caste data since 1931 left lists resting on old surveys, a gap the decision to count castes in the forthcoming Census may fill. Dominant castes press for inclusion, the creamy-layer limit of Rs 8 lakh a year is rarely revised, and the 50 percent ceiling constrains state lists.</p>
+
 <h2>Constitutional Safeguards: An Overview</h2>
 
 <h3>Provisions Common to SCs and STs</h3>
@@ -6484,6 +8303,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>The 77th Constitutional Amendment 1995 inserted Article 16(4A) permitting reservation in promotions for SCs and STs in government services, extending the reservation principle beyond initial appointments. The 85th Amendment 2001 added the benefit of consequential seniority for SC/ST candidates promoted under reservation, overcoming a Supreme Court ruling that denied seniority credit for reservation-based promotions.</p>
 
+<h3>Article 371A: Special Provisions for Nagaland</h3>
+
+<p>Article 371A was inserted by the Constitution (Thirteenth Amendment) Act 1962 and came into force on 1 December 1963, when Nagaland became a state. It gave constitutional form to the 16-point agreement of 1960 between the Government of India and the Naga People's Convention, which accepted statehood within the Union in return for protection of Naga custom and land.</p>
+
+<ul>
+  <li><strong>Clause (1)(a):</strong> no Act of Parliament in respect of (i) religious or social practices of the Nagas, (ii) Naga customary law and procedure, (iii) administration of civil and criminal justice involving decisions according to Naga customary law, and (iv) ownership and transfer of land and its resources applies to Nagaland unless the Legislative Assembly of Nagaland so decides by resolution.</li>
+  <li><strong>Clause (1)(b):</strong> the Governor has special responsibility for law and order, acting in his individual judgment after consulting the Council of Ministers, for as long as he considers that the internal disturbances of the former Naga Hills-Tuensang Area continue, until the President ends this responsibility.</li>
+  <li><strong>Clause (1)(c):</strong> money given by the Centre for a specific purpose must be shown under that purpose in the demand for grants.</li>
+  <li><strong>Tuensang district:</strong> a regional council of 35 members and, for ten years or longer, administration by the Governor, a Minister for Tuensang affairs, and the Governor's final say on Tuensang matters.</li>
+</ul>
+
+<p><strong>Significance:</strong> Article 371A goes beyond the Sixth Schedule, since it shields Naga custom and land from parliamentary law itself. Land and its resources remain with villages, clans and individuals under customary tenure, and village councils and customary courts settle disputes. It became the model for Article 371G for Mizoram (1986).</p>
+
+<p><strong>Controversies:</strong> Nagaland invokes clause (1)(a)(iv) to claim control over its oil and natural gas. Naga tribal bodies cited the Article against 33 percent reservation for women in urban local bodies, which led to violent protests in 2017 and long-delayed civic elections. Critics argue that customary law protected in this way can entrench male authority and keep women out of land inheritance and village councils, while Naga groups see the Article as the core of their political settlement with India.</p>
+
 <h2>Affirmative Action: Debates and Assessment</h2>
 
 <h3>Has Reservation Achieved Its Goals?</h3>
@@ -6497,6 +8331,21 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>Scholars and policy analysts have argued that reservations in government employment and education, while important, are insufficient tools for addressing the multiple dimensions of SC, ST, and OBC disadvantage. Complementary policies required include: land reform actually implemented (rather than legislated and evaded); universal and quality public education that removes the pre-reservation educational deficit that limits competitive access; universal health coverage that addresses the catastrophic health expenditure burden on SC/ST households; legal empowerment (accessible courts, effective police protection under the Atrocities Act, enforcement of labour rights); social accountability mechanisms that make local governments and service providers responsive to SC/ST communities; and economic inclusion through targeted credit, insurance, and market access for SC/ST micro-entrepreneurs.</p>
 
 <p>B.R. Ambedkar's vision went beyond reservations to the annihilation of caste itself: the elimination of the social and economic system that produces SC disadvantage rather than accommodating it within the system through quotas. This more radical agenda, articulated most fully in his undelivered 1936 address "Annihilation of Caste," remains a touchstone for Dalit intellectual and political movements and continues to generate debate about the relationship between identity politics, affirmative action, and structural economic transformation.</p>
+
+<h3>Conversion and the Emancipation of Scheduled Castes</h3>
+
+<p>Many Dalits have sought to escape untouchability by leaving Hinduism. Ambedkar declared at Yeola in 1935 that though born a Hindu he would not die one, and on 14 October 1956 at Deekshabhoomi, Nagpur, he embraced Buddhism with several hundred thousand followers, mostly Mahars, administering 22 vows that rejected Hindu gods and caste.</p>
+
+<ul>
+  <li><strong>Buddhism:</strong> conversion gave a new name and identity, freed converts from caste duties such as removing carcasses, and built an Ambedkarite culture of education, viharas and political assertion. Maharashtra holds about three-quarters of India's Buddhists (Census 2011), most of them neo-Buddhists. Yet villagers often still treat neo-Buddhists as Mahars, and rivalries persist between Dalit castes.</li>
+  <li><strong>Christianity:</strong> mass movements from the late nineteenth century among the Chuhras of Punjab, the Malas and Madigas of Andhra, and the Pulayas and Paraiyars of Kerala and Tamil Nadu, analysed by J. Waskom Pickett in <em>Christian Mass Movements in India</em> (1933), brought schools, hospitals and a sense of equal worth. But caste followed converts: separate seating, cemeteries and even churches for Dalit Christians in parts of Tamil Nadu, and few Dalits in church leadership.</li>
+  <li><strong>Islam:</strong> medieval conversion is often explained as escape from caste, though Richard Eaton (1993) linked mass conversion in Bengal to agrarian settlement of the forest frontier rather than caste protest. Converts formed the Ajlaf and Arzal strata, now mobilised by the Pasmanda movement.</li>
+  <li><strong>Sikhism:</strong> despite the Gurus' rejection of caste, Mazhabi and Ramdasia Sikhs face exclusion, which fed the Ad-Dharm movement (1926) and the Ravidassia identity.</li>
+</ul>
+
+<p><strong>The religion clause:</strong> Paragraph 3 of the Constitution (Scheduled Castes) Order 1950 originally confined SC status to Hindus. Sikhs were added in 1956 and Buddhists in 1990, but Christian and Muslim Dalits remain excluded and lose reservation on conversion. The Supreme Court upheld the exclusion in <em>Soosai v. Union of India</em> (1985), the Ranganath Misra Commission (2007) recommended delinking SC status from religion, and in 2022 the government appointed a commission under former Chief Justice K.G. Balakrishnan to examine the question.</p>
+
+<p><strong>Assessment:</strong> Conversion brought dignity, education and political consciousness, most clearly in Ambedkarite Buddhism, but it did not end caste, because caste is reproduced through endogamy, landholding and village relations rather than doctrine alone. The religion clause also penalises conversion, so the economic gains of reservation and the social gains of conversion pull against each other.</p>
 `,
   'social-change-tribal-societies': `
 <h2>Tribal Social Change: Overview</h2>
@@ -6846,6 +8695,33 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Tribal revivalist movements against Hinduization:</strong> Some tribal movements explicitly resisted Hinduization and reasserted indigenous identity: the <em>Tana Bhagat movement</em> (Oraons, Jharkhand, 1914): paradoxically combined rejection of animal sacrifice (typically Hindu influence) with assertion of tribal identity and rejection of landlord/moneylender exploitation; the <em>Kherwar/Sarhul movement</em> of Santhals: seasonal festivals (Sarhul in spring, Sohrai in autumn) asserting nature worship and rejecting Brahminical intrusion; and the Gondi religion movement: assertion of a distinct Gond religious identity (Gondi Dharm) with its own cosmology rooted in nature spirits rather than Hindu gods.</p>
 
+<h3>N.K. Bose: The Hindu Method of Tribal Absorption</h3>
+
+<p>Nirmal Kumar Bose (1901-1972), in his essay "The Hindu Method of Tribal Absorption" (<em>Science and Culture</em>, 1941), drew on his fieldwork among the Juang of Odisha to explain how tribes had entered Hindu society over centuries without conquest or mass conversion. He developed the argument in <em>Hindu Samajer Gadan</em> (1949), translated by André Béteille as <em>The Structure of Hindu Society</em> (1975).</p>
+
+<ul>
+  <li><strong>Economic security:</strong> Hindu society offered a secure, non-competitive place in a production system in which each caste held a hereditary occupation. Tribes drawn by this security entered as specialised castes.</li>
+  <li><strong>Cultural autonomy:</strong> the absorbed group could keep its own customs, deities and caste council, so entry required no sudden break.</li>
+  <li><strong>Gradual ritual change:</strong> tribal deities were identified with Hindu gods, Brahman priests were invited for some rites, and rules of food and pollution were slowly adopted, as among Juang villages that began worshipping Hindu deities alongside their own.</li>
+  <li><strong>Place in the hierarchy:</strong> the group became a caste, usually low, though ruling lineages claimed Kshatriya rank.</li>
+</ul>
+
+<p>Bose's model is the classic statement of absorption without forced assimilation and anticipates the tribe-caste continuum. Critics note that it describes a peaceful, consensual process and underplays the land loss, dependence and low ritual rank that came with entry, and that it treats Hindu society as the natural destination of tribes.</p>
+
+<h3>Hinduisation and the Status of Tribal Women in Central India</h3>
+
+<p>Women in most central Indian tribes traditionally had more freedom than women in caste Hindu society: bride price rather than dowry, choice in marriage, divorce and widow remarriage, free movement in markets and dances, and a full share in field and forest work. Hinduisation, especially where groups sought higher rank through Sanskritisation or Rajput claims, eroded this.</p>
+
+<ul>
+  <li><strong>Marriage payments:</strong> bride price gave way to dowry in Sanskritising sections, making daughters a burden rather than an asset.</li>
+  <li><strong>Widowhood and divorce:</strong> widow remarriage and easy divorce were discouraged as marks of low status.</li>
+  <li><strong>Seclusion:</strong> women of status-seeking families withdrew from field labour, markets and public dancing, which reduced their economic independence.</li>
+  <li><strong>Loss of institutions:</strong> youth dormitories and mixed dances were abandoned as immoral, removing spaces of female sociability and choice of partner.</li>
+  <li><strong>Ritual restrictions:</strong> Brahmanical ideas of menstrual pollution and of women's ritual incapacity reinforced their exclusion from worship.</li>
+</ul>
+
+<p>Such changes were badges of claimed rank, as among the Bhumij of Manbhum who sought Kshatriya status (Surajit Sinha). The Tana Bhagat Oraon combined Hindu-style purity with giving up dance and liquor. The impact was not uniform: Hinduisation also opened devotional and literate roles to some women, while customary law in many tribes, irrespective of religion, still denies women inheritance of land.</p>
+
 <h2>Impact of Christianity on Tribal Societies</h2>
 
 <h3>History of Christian Missionary Activity</h3>
@@ -6876,11 +8752,77 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p>Verrier Elwin (himself an ordained Anglican priest who renounced active missionary work) attacked Christian missionaries for believing that religious conversion would bring modernity and development to tribal communities: arguing instead that it destroyed tribal culture and community spirit. He equally blamed Hindu reformers. Elwin's position: tribal communities had their own profound and valid religious life, which outsiders, whether missionaries or Hindu reformers, had no right to disrupt. G.S. Ghurye, from a nationalist perspective, criticized Christianity as a further mechanism of separation between tribal and Hindu society, reinforcing the British colonial strategy of isolating tribals from the mainstream. His assimilationist stance paradoxically converged with Elwin's critique of missionary work, though from entirely different premises.</p>
 
+<h3>Christianity in Jharkhand</h3>
+
+<p>Chotanagpur was the main field of Christian missions in middle India. Lutheran missionaries sent by Johannes Gossner of Berlin reached Ranchi on 2 November 1845, and their converts, mostly Oraon and Munda, later formed the Gossner Evangelical Lutheran Church. Anglican and Catholic missions followed from 1869. The decisive Catholic advance came with the Belgian Jesuit Constant Lievens, who settled at Torpa in 1885 and won tens of thousands of Munda and Oraon converts by taking up their land cases against zamindars in the colonial courts, persuading magistrates to consider unwritten customary law. His fellow Jesuit John-Baptist Hoffmann, author of a Mundari grammar (1903) and the <em>Encyclopaedia Mundarica</em>, wrote many provisions of the Chotanagpur Tenancy Act 1908 and founded the Chotanagpur Catholic Cooperative Credit Society in 1909. Census 2011 counted 14.19 lakh Christians in Jharkhand (4.3 percent of the population), about 94 percent of them STs, and Simdega district has a Christian majority.</p>
+
+<p><strong>Impact:</strong></p>
+
+<ul>
+  <li><strong>Land and law:</strong> missionary litigation and the CNT Act gave Munda and Oraon cultivators protection against land alienation, and the <em>mundari khuntkatti</em> tenure of founding lineages was recorded in law.</li>
+  <li><strong>Education and elite formation:</strong> mission schools and colleges produced tribal teachers, clerks, priests and politicians, and Christian tribes are far more literate than non-Christian ones.</li>
+  <li><strong>Political leadership:</strong> educated Christians formed the Chotanagpur Unnati Samaj (1915), and Christian leadership was prominent in the Adivasi Mahasabha (1938), led by Jaipal Singh, and the Jharkhand Party (1950), the base of the Jharkhand movement.</li>
+  <li><strong>Health and credit:</strong> hospitals, credit societies and grain banks reduced dependence on moneylenders.</li>
+  <li><strong>Culture:</strong> converts gave up sacrifices to the bongas, the sarna rites and, at first, dance and rice beer, though the Catholic Church later brought tribal music, dance and language into worship.</li>
+</ul>
+
+<p><strong>Tensions:</strong> Conversion divided villages and clans into Christian and Sarna sections, with disputes over marriage, festivals and the village priest's role. Birsa Munda passed through a Lutheran mission school before rejecting the missions and founding his own faith. In the late 1960s the Congress MP Kartik Oraon campaigned to remove tribal converts from the ST list, arguing that better-educated Christians took most reserved posts. The delisting demand has been revived in recent years by Hindu nationalist groups, the demand for a separate Sarna code is partly a non-Christian assertion of tribal identity, and Jharkhand passed a Freedom of Religion Act in 2017.</p>
+
+<p><strong>Assessment:</strong> Christianity was the main channel of modern education and political consciousness for the tribes of Jharkhand, and the Jharkhand movement drew its first leaders from it. It also created a gap between Christian and non-Christian tribes and made religion a line of division within tribal society, which political groups continue to exploit.</p>
+
 <h2>Impact of Islam on Tribal Societies</h2>
 
 <p>The impact of Islam on tribal societies in India has been less systematic and less documented than Christianity, but historically significant in specific regions. In Bengal (now Bangladesh and West Bengal), large-scale conversion of lower-caste and tribal communities to Islam occurred during the Sultanate and Mughal periods: partly through Sufi missionaries whose devotional, non-hierarchical message appealed to communities excluded from the Brahminical order. Among Scheduled Tribes, the Lakshadweep islanders, the Gujjar and Bakarwal of Jammu and Kashmir, and the Tadvi Bhil of Maharashtra are predominantly Muslim. In the northeast, some Bangladeshi migration has introduced Islam to border tribal communities. The impact broadly parallels Christianity: conversion offered social mobility and escape from caste discrimination, but at the cost of traditional religious practices; the universalist Islamic brotherhood cut across tribal distinctions; and mosques and Quranic education replaced indigenous ritual structures.</p>
 
 <p>Islam's impact on tribal religion also operated through syncretism: many tribal Muslims retained elements of ancestor worship, animistic belief, and totem relationships alongside Islamic practice. The dargahs (shrines of Sufi saints) became important centres of pilgrimage for both Muslim and non-Muslim tribal communities in some regions.</p>
+
+<h3>Islam and Matriliny in Lakshadweep</h3>
+
+<p>The islanders of Lakshadweep are Scheduled Tribes (94.8 percent of the population in Census 2011) and almost all Sunni Muslims, yet they follow matrilineal descent. Leela Dube's <em>Matriliny and Islam: Religion and Society in the Laccadives</em> (1969) showed how the two systems coexist.</p>
+
+<ul>
+  <li><strong>Descent and property:</strong> the matrilineal joint group (<em>taravad</em>) holds ancestral property, which passes in the female line by custom, while self-acquired property follows Islamic law of inheritance. Islam governs belief and worship, matriliny governs kinship and ancestral property.</li>
+  <li><strong>Residence:</strong> marriage is duolocal: the husband stays in his own taravad house and visits his wife at night, while she and the children live in hers.</li>
+  <li><strong>Stratification:</strong> a ranked order of Koya (landowners and boat owners), Malmi (navigators and sailors) and Melacheri (coconut-tree climbers and labourers) persists, with marriage largely within each group, a caste-like hierarchy inside an egalitarian faith.</li>
+  <li><strong>Women's position:</strong> matriliny gives women security of house and property, while marriage, divorce and religious authority follow Islamic rules and remain in male hands.</li>
+</ul>
+
+<p>Dube's study shows that a universal religion need not displace local kinship: custom and Islamic law divide the field between them. Similar matrilineal Islam is found among the Mappila Muslims of north Malabar, with whom the islanders share historical links.</p>
+
+<h3>Impact of Islam on Scheduled Tribes</h3>
+
+<p>Besides the Lakshadweep islanders, Muslim STs include the Gujjar and Bakarwal pastoralists of Jammu and Kashmir, the Shia Balti and Purigpa of Ladakh, the Tadvi Bhil of Maharashtra and many Siddi of Gujarat and Karnataka.</p>
+
+<ul>
+  <li><strong>Belief and worship:</strong> monotheism, the mosque and the madrasa replaced spirit propitiation, though veneration of saints' shrines carries older ideas of sacred places.</li>
+  <li><strong>Law:</strong> Islamic personal law in marriage and divorce sits beside customary rules on land and descent.</li>
+  <li><strong>Continuity of custom:</strong> the Tadvi Bhil keep Bhil kinship, dress and some festivals, and Gujjar-Bakarwal transhumance and clan organisation continue under Islam.</li>
+  <li><strong>Identity and politics:</strong> Islam linked these groups to a wider Muslim community and drew them into regional politics, as in the Gujjar-Bakarwal opposition to the grant of ST status to the Paharis of Jammu and Kashmir in 2024.</li>
+</ul>
+
+<p>Islam's impact on tribes has on the whole been less disruptive than that of Christianity, because it arrived without schools and missions on the same scale and often accommodated custom.</p>
+
+<h3>Buddhism and the Buddhist Tribes of India</h3>
+
+<p>Buddhist STs live mainly along the Himalaya and in the North-East.</p>
+
+<ul>
+  <li><strong>Mahayana (Tibetan) Buddhists:</strong> the Monpa, Sherdukpen and Memba of Arunachal Pradesh, the Bhutia and many Lepcha of Sikkim, the Bot, Changpa and Brokpa of Ladakh, and the Lahaula, the Bhot of Spiti and many Kinnaura of Himachal Pradesh.</li>
+  <li><strong>Theravada Buddhists:</strong> the Khamti and many Singpho of eastern Arunachal Pradesh, and the Chakma and Marma (Mog) of Mizoram and Tripura.</li>
+</ul>
+
+<p><strong>Impact of Buddhism:</strong></p>
+
+<ul>
+  <li><strong>The monastery:</strong> gompas such as Tawang, Hemis and Rumtek became centres of learning, literacy in the Tibetan script, art (thangka and murals), Sowa-Rigpa medicine and festivals such as Losar and the masked dances of Hemis and Tawang.</li>
+  <li><strong>Family and land:</strong> the custom of giving a son to the monastery, with fraternal polyandry and primogeniture in Ladakh and Spiti, limited the division of scarce land.</li>
+  <li><strong>Economy and polity:</strong> monasteries held land and organised trade, and Tawang monastery historically exercised authority over the surrounding Monpa villages.</li>
+  <li><strong>Syncretism:</strong> Buddhist ethics of non-violence and merit overlay older beliefs. The Lepcha keep their <em>bongthing</em> and <em>mun</em> shamans, and Monpa and Sherdukpen villages still propitiate mountain and forest spirits.</li>
+  <li><strong>Persisting hierarchy:</strong> Ladakhi Buddhist society ranks the Mon, Beda and Garra (musicians and blacksmiths) low, so Buddhism did not remove caste-like status.</li>
+  <li><strong>Identity and politics:</strong> Buddhism shaped ethnic politics, from the Ladakh Buddhist Association's agitation for Union Territory status (granted in 2019) to the long struggle for citizenship of Chakma refugees, displaced from the Chittagong Hill Tracts in the 1960s and settled in Arunachal Pradesh.</li>
+</ul>
+
+<p>Unlike Christianity, Buddhism reached these groups through long contact with Tibet and Burma rather than through modern missions, so it fused with local culture and left tribal identity largely intact.</p>
 
 <h2>Tribal Revivalist and Syncretic Religious Movements</h2>
 
@@ -6910,6 +8852,26 @@ export const anthropologyNoteContent: Record<string, string> = {
 <p>The relationship between tribal communities and the modern nation-state is one of the central political anthropological problems of postcolonial societies. A nation-state is built on claims of territorial sovereignty, uniform citizenship, a national language and culture, and a single legal system. Tribal communities, by contrast, are organized around ethnic identity, customary law, communal land ownership, local governance structures, and cultural particularity. The encounter between these two logics has produced a range of outcomes: assimilation (tribes becoming citizens indistinguishable from the general population), accommodation (constitutional and legal recognition of tribal distinctiveness within the state framework), resistance and insurgency (armed movements demanding autonomy or independence), and marginalization (tribes losing land, livelihood, and cultural identity without gaining full citizenship rights).</p>
 
 <p>In the Indian context, the foundational tension was articulated at the moment of independence itself: were tribal communities to be regarded as distinct peoples with rights to self-determination (the international law trajectory, codified later in ILO Convention 169 and the UN Declaration on the Rights of Indigenous Peoples, 2007), or as backward sections of the Indian citizenry to be integrated into the national mainstream through development and education? Nehru's answer was the Tribal Panchsheel, Ghurye's was assimilation, Elwin's was autonomy-with-integration. The Constitution resolved this tension through a complex framework that simultaneously affirmed tribal cultural rights and subjected tribal areas to special administrative control.</p>
+
+<h3>ILO Conventions 107 and 169 and India</h3>
+
+<p><strong>Convention 107 (1957):</strong> The Indigenous and Tribal Populations Convention, adopted on 26 June 1957 and in force from 1959, was the first international treaty on these peoples. It protected them but aimed at their progressive integration into national life. India ratified it on 29 September 1958, and it remains in force for India.</p>
+
+<p><strong>Convention 169 (1989):</strong> The Indigenous and Tribal Peoples Convention, adopted on 27 June 1989 and in force from 5 September 1991, revised Convention 107 and abandoned its integrationist approach. Its main provisions:</p>
+
+<ul>
+  <li><strong>Scope and self-identification (Article 1):</strong> it covers tribal peoples whose social, cultural and economic conditions set them apart, and peoples regarded as indigenous because they descend from populations present at conquest or colonisation. Self-identification is a fundamental criterion.</li>
+  <li><strong>Consultation (Article 6):</strong> governments must consult these peoples in good faith, through their own representative institutions, on measures that affect them.</li>
+  <li><strong>Own priorities (Article 7):</strong> the right to decide their own priorities for development and to take part in plans that affect them.</li>
+  <li><strong>Customary law (Articles 8 to 10):</strong> respect for customs and institutions compatible with human rights.</li>
+  <li><strong>Land and resources (Articles 13 to 19):</strong> recognition of ownership and possession of lands traditionally occupied, and participation in the use and management of natural resources.</li>
+  <li><strong>Relocation (Article 16):</strong> removal only as an exception, with free and informed consent, a right to return, and land of equal quality where return is impossible.</li>
+  <li><strong>Other rights:</strong> fair employment, vocational training, health, social security and education in their own languages.</li>
+</ul>
+
+<p><strong>Is India a signatory?</strong> No. India has not ratified Convention 169, which only about two dozen states, mostly in Latin America, have ratified. India voted for the non-binding UN Declaration on the Rights of Indigenous Peoples in 2007 but holds that all Indians are indigenous, so that the term in its international sense, shaped by settler colonies, does not fit India. Its reasons are that indigeneity is hard to fix after millennia of migration (Hutton thought only the Negritos could claim to be original), and that self-identification and ownership of land and resources could feed separatist claims in the North-East and limit the state's control over minerals.</p>
+
+<p>Scholars such as Jaganath Pathy and B.K. Roy Burman argue that tribes share the experience of colonised peoples, and others point out that Indian law already reflects much of Convention 169: the Fifth and Sixth Schedules, PESA's consultation of the Gram Sabha and the Forest Rights Act's requirement of free, prior and informed consent for relocation from critical wildlife habitats. Ratification would add international accountability more than new rights.</p>
 
 <h2>Colonial Foundations</h2>
 
@@ -6977,6 +8939,29 @@ export const anthropologyNoteContent: Record<string, string> = {
 
 <p><strong>Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act 2006 (Forest Rights Act):</strong> Historically, tribal communities were dispossessed of forest land and forest rights by colonial forest laws that made them encroachers in their own home. The Forest Rights Act recognized the rights of forest-dwelling scheduled tribes and other traditional forest dwellers to live in and cultivate forest land they have been occupying. Individual forest rights: right to hold and live in forest land up to 4 hectares. Community forest rights: right to protect, regenerate, conserve, and manage community forest resources; right to use and sell minor forest produce. Critical wildlife habitat provisions allow for relocation but require free, prior, and informed consent of gram sabhas. The Act is regarded as a landmark recognition of tribal land rights, though implementation has been contested by forest departments and conservation organizations.</p>
 
+<h3>Affirmative Action in the USA and Protective Discrimination in India</h3>
+
+<p><strong>USA:</strong> The phrase "affirmative action" first appeared in President Kennedy's Executive Order 10925 (1961), which required federal contractors to ensure non-discrimination, and Executive Order 11246 (1965) made affirmative action an obligation of federal contractors. After the Civil Rights Act 1964, employers and universities adopted goals and preferences for African Americans, Hispanics, Native Americans and women. The Supreme Court barred fixed racial quotas in <em>Regents of the University of California v. Bakke</em> (1978) while allowing race as one factor, upheld that position in <em>Grutter v. Bollinger</em> (2003), and ended race-conscious college admissions in <em>Students for Fair Admissions v. Harvard</em> (2023). Native American tribes have a separate standing as "domestic dependent nations" with reservations and tribal governments, and the Court treated hiring preference for Indians in the Bureau of Indian Affairs as political rather than racial (<em>Morton v. Mancari</em>, 1974).</p>
+
+<p><strong>India:</strong> Protective discrimination for STs is written into the Constitution: Articles 15(4), 16(4) and 46, reserved seats in the Lok Sabha and assemblies (Articles 330 and 332), 7.5 percent of central posts and seats in central educational institutions, reservation in promotion (Article 16(4A)), and the Fifth and Sixth Schedules, PESA and the FRA for land and self-government. STs are identified by Presidential order under Article 342.</p>
+
+<table>
+  <thead>
+    <tr><th>Point</th><th>USA</th><th>India (STs)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Source</td><td>Executive orders, statutes and court rulings</td><td>The Constitution, with Acts and orders</td></tr>
+    <tr><td>Basis</td><td>Race, ethnicity and gender, to remedy discrimination and promote diversity</td><td>Historical disadvantage and isolation of listed communities</td></tr>
+    <tr><td>Method</td><td>Goals, outreach and case-by-case preference, with quotas barred since 1978</td><td>Fixed group quotas, within a 50 percent ceiling (Indra Sawhney, 1992)</td></tr>
+    <tr><td>Sphere</td><td>Public and private, including federal contractors and private universities</td><td>Mainly the state: government jobs, public education and legislatures</td></tr>
+    <tr><td>Representation</td><td>No reserved seats</td><td>Reserved seats in Parliament, assemblies and panchayats</td></tr>
+    <tr><td>Land and autonomy</td><td>Tribal sovereignty and reservations for Native Americans</td><td>Fifth and Sixth Schedules, PESA and FRA</td></tr>
+    <tr><td>Trend</td><td>Narrowed by the courts, race-conscious admissions ended in 2023</td><td>Expanded, with OBC (1990) and EWS (2019) quotas added</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Assessment:</strong> Indian protective discrimination is broader and more secure: it guarantees political representation and protects land and culture, which American affirmative action never attempted for racial minorities. But its benefits have gone disproportionately to better-placed tribes such as the Meena of Rajasthan and educated Christian tribes, it barely touches the private sector, and it has done little for PVTGs. The American experience shows how fragile preferences without constitutional backing can be, while the sovereignty of Native American tribes offers a parallel to India's Sixth Schedule.</p>
+
 <h2>Inner Line Permit System</h2>
 
 <p>The Inner Line Permit (ILP) system is a British-era colonial mechanism that restricts outsider access to protected areas containing tribal communities. It was originally created under the Bengal Eastern Frontier Regulation (1873) to protect British commercial interests in the frontier regions (specifically, to keep non-British traders from interfering with the tea trade) and to preserve tribal ways of life from outsider intrusion. Currently applicable in four northeastern states: Arunachal Pradesh, Nagaland, Mizoram, and Manipur (extended 2019). Indian nationals require an ILP to enter these areas; foreigners require a Protected Area Permit. The ILP system has been supported by tribal communities as a protection against demographic invasion (outsiders settling and buying land in tribal homelands); it has been criticized as an obstacle to economic development and national integration. Manipur's inclusion in 2019 was a response to tribal demands; it fuels Meitei resentment as they perceive the ILP as limiting their movement within their own state.</p>
@@ -7009,6 +8994,25 @@ export const anthropologyNoteContent: Record<string, string> = {
 (4) Tribal areas should not be overburdened with a multiplicity of schemes. Tribals should not be weaned away from their own arts, culture, and language.
 (5) Results should be judged not by statistics or the amount of money spent, but by the quality of human character developed.
 This became the normative foundation of Indian tribal policy after independence, even as actual practice diverged significantly from it.</p>
+
+<h3>Verrier Elwin in NEFA: Adviser for Tribal Affairs</h3>
+
+<p>After independence Verrier Elwin moved from advocacy to policy. He served as Deputy Director of the newly founded Anthropological Survey of India, became an Indian citizen in January 1954, and in the same year Nehru made him Adviser for Tribal Affairs to the North-East Frontier Agency (NEFA, now Arunachal Pradesh), which the Governor of Assam then administered as agent of the President. From Shillong he toured the frontier divisions for a decade, advised the officers of the Indian Frontier Administrative Service and wrote <em>Myths of the North-East Frontier of India</em> (1958), <em>The Art of the North-East Frontier of India</em> (1959) and <em>A Philosophy for NEFA</em>, whose 1959 edition carried Nehru's foreword setting out the Tribal Panchsheel. He died in Delhi in February 1964.</p>
+
+<h4>Elwin's Philosophy for NEFA</h4>
+
+<p>Elwin rejected two extremes: keeping the frontier tribes in isolation, as if in a museum, and detribalising them into copies of plains society. His aim was to bring modern medicine, education and better farming to the frontier without destroying what was valuable in tribal life.</p>
+
+<ul>
+  <li><strong>Development along their own genius:</strong> change at a pace the people could absorb, with no imposition of plains dress, food habits or religion.</li>
+  <li><strong>Land and forest:</strong> tribal rights to land and forest protected, with the Inner Line of the Bengal Eastern Frontier Regulation 1873 keeping out traders, moneylenders, settlers and missionaries who lacked permits.</li>
+  <li><strong>Tribal institutions:</strong> administration through village councils such as the <em>kebang</em> of the Adi, and no over-administration.</li>
+  <li><strong>Language and culture:</strong> respect for local languages, weaving, crafts, dance and the village dormitory, and an effort to build pride in tribal culture.</li>
+  <li><strong>The right officers:</strong> a small cadre trained in tribal ways, judged, as the fifth Panchsheel principle put it, by the quality of life they fostered rather than by money spent.</li>
+  <li><strong>Integration, not isolation:</strong> the frontier people were to feel part of India through service and goodwill, not through cultural conversion.</li>
+</ul>
+
+<p><strong>Assessment:</strong> The NEFA policy turned the Panchsheel into practice and is credited with sparing Arunachal Pradesh the land alienation of central India and the armed insurgency of the Naga Hills. Critics called it paternalist and romantic: the cautious pace left roads, schools and administration thin, a weakness exposed during the Chinese invasion of 1962, and the restriction on outsiders was read by Hindu nationalists and some others as keeping the frontier apart from India. Ramachandra Guha's biography, <em>Savaging the Civilized</em> (1999), traces Elwin's shift from the protectionism of the 1930s to this integrationist position.</p>
 
 <h2>Constitutional Framework for Tribal Administration</h2>
 
@@ -7080,6 +9084,44 @@ This became the normative foundation of Indian tribal policy after independence,
 
 <p>The Tribal Sub-Plan (TSP) mandates that a proportion of plan funds (at least proportional to the ST share of population) be earmarked for tribal development within state plans. Special Central Assistance (SCA) to TSP provides additional funds from the centre. Article 275(1) guarantees grants from the Consolidated Fund of India for promoting ST welfare and administering Scheduled Areas through the Ministry of Tribal Affairs. Despite these funding mechanisms, the Dhebar Commission, Bhuria Commission, and Xaxa Committee all observed that tribal development funds were being diverted to non-tribal areas or absorbed into general administration, with poor accountability and weak monitoring. There was "a tendency for officials" to produce statistics of expenditure while tribal conditions failed to improve proportionally. The Fifth Five Year Plan-onwards increase in resource allocation has not been matched by proportional improvement in tribal development indicators.</p>
 
+<h3>Development Action Plan for Scheduled Tribes (DAPST)</h3>
+
+<p>DAPST is the present form of the central Tribal Sub-Plan. When the Union Budget dropped the distinction between Plan and Non-Plan spending in 2017-18, TSP earmarking by central ministries became the Scheduled Tribe Component (STC), governed by the DAPST guidelines of 2017.</p>
+
+<ul>
+  <li><strong>Earmarking:</strong> 41 central ministries and departments set aside a share of their scheme budgets for STs, following the differential earmarking proposed by the Narendra Jadhav Task Force (2010) rather than a flat population share.</li>
+  <li><strong>Scale:</strong> the allocations appear in Statement 10B of the Union Budget. The DAPST budget estimate has grown roughly fourfold, from about Rs 31,000 crore in 2017-18 to over Rs 1.25 lakh crore in 2025-26, spread across more than 200 schemes.</li>
+  <li><strong>Monitoring:</strong> the Ministry of Tribal Affairs tracks spending and physical outputs through an online STC monitoring system, and PM JANMAN and the Dharti Aaba Abhiyan are both funded from DAPST.</li>
+  <li><strong>States:</strong> states keep their own Tribal Sub-Plans, and Andhra Pradesh and Karnataka gave theirs statutory backing in 2013.</li>
+</ul>
+
+<p><strong>Assessment:</strong> DAPST has raised the size and visibility of tribal funds. Old weaknesses persist. Much of the allocation is notional, as in general road, power or housing schemes where the tribal share is only assumed, funds are not always spent in tribal areas or on tribal households, outcome data by community are thin, and there is no central law making the earmarking binding, which the Xaxa Committee recommended.</p>
+
+<h3>Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (2024)</h3>
+
+<p>Announced in the Budget Speech 2024-25, the scheme was approved by the Union Cabinet on 18 September 2024 as the Pradhan Mantri Janjatiya Unnat Gram Abhiyan and launched by the Prime Minister at Hazaribagh, Jharkhand, on 2 October 2024 as the Dharti Aaba Janjatiya Gram Utkarsh Abhiyan, after Birsa Munda, remembered as Dharti Aaba (father of the earth). It extends the PM JANMAN saturation model from PVTG hamlets to all tribal-majority villages.</p>
+
+<ul>
+  <li><strong>Outlay:</strong> Rs 79,156 crore over five years (Central share Rs 56,333 crore, State share Rs 22,823 crore), drawn from the DAPST funds of the ministries.</li>
+  <li><strong>Coverage:</strong> about 63,000 tribal-majority villages and tribal villages in aspirational districts, more than 5 crore tribal people, 549 districts and 2,740 blocks in 30 states and union territories.</li>
+  <li><strong>Delivery:</strong> 25 interventions by 17 ministries, with villages mapped and progress monitored on the PM Gati Shakti portal.</li>
+  <li><strong>Targets:</strong> 20 lakh pucca houses, 25,000 km of roads, tap water and electricity for every eligible household, up to 1,000 mobile medical units, 1,000 hostels, 8,000 new or upgraded anganwadi centres, 1,000 tribal home stays, 100 Tribal Multipurpose Marketing Centres, Centres of Competence for sickle cell disease, and livelihood support for about 22 lakh Forest Rights Act patta holders.</li>
+</ul>
+
+<p><strong>Links to the Sustainable Development Goals:</strong> The Abhiyan's four goals (enabling infrastructure, economic empowerment, universal access to good education, and healthy lives with dignified ageing) map onto several SDGs.</p>
+
+<ul>
+  <li><strong>SDG 1 and SDG 11 (no poverty, sustainable communities):</strong> pucca houses with water, power and Ayushman Bharat cards.</li>
+  <li><strong>SDG 2 (zero hunger):</strong> anganwadis, nutrition gardens and support for farming, fisheries and livestock.</li>
+  <li><strong>SDG 3 (good health):</strong> mobile medical units, sickle cell diagnosis and the aim of national levels of infant and maternal mortality and immunisation.</li>
+  <li><strong>SDG 4 (quality education):</strong> hostels, upgraded ashram and residential schools and the aim of national enrolment ratios.</li>
+  <li><strong>SDG 6 and SDG 7 (water, energy):</strong> Jal Jeevan Mission taps, grid connections and off-grid solar.</li>
+  <li><strong>SDG 8 and SDG 9 (decent work, infrastructure):</strong> skilling, home stays, marketing centres, roads and mobile connectivity.</li>
+  <li><strong>SDG 10 and SDG 15 (reduced inequality, life on land):</strong> closing the gap between tribal and other villages, and forest-rights-based livelihoods that tie income to forest conservation.</li>
+</ul>
+
+<p><strong>Critique:</strong> The Abhiyan treats tribal development as a gap in services to be saturated and measures progress in houses, roads and connections. Identity, land security and Gram Sabha consent under PESA and the FRA sit at its margins, delivery depends on state capacity and on convergence across 17 ministries, and the money is largely existing DAPST allocation rather than new funds. Its value will depend on whether gram sabhas plan the interventions, in the spirit of the Panchsheel's warning against a multiplicity of schemes.</p>
+
 <h2>NCST: National Commission for Scheduled Tribes</h2>
 
 <p>The National Commission for Scheduled Tribes was created by the 89th Constitutional Amendment Act 2003, which amended Article 338 to separate the earlier combined National Commission for SCs and STs into two distinct bodies, adding a new Article 338A for the NCST. The NCST has the following duties and powers: investigate and monitor all matters relating to constitutional safeguards for STs; inquire into specific complaints with respect to deprivation of rights and safeguards; participate and advise on planning of socioeconomic development of STs; evaluate the working of safeguards; present annual reports to the President. The NCST has the powers of a civil court in investigating matters. It has addressed issues including wrongful exclusion from ST lists (particularly the demand by certain communities in Arunachal Pradesh, Manipur, and other northeastern states), exclusion from ST status when members migrate to plains areas (a problem particularly acute in Assam where Sixth Schedule beneficiaries lose ST protections when they move to non-tribal areas), and the need for stronger implementation of PESA and FRA.</p>
@@ -7088,6 +9130,47 @@ This became the normative foundation of Indian tribal policy after independence,
 
 <p>Within the broader category of Scheduled Tribes, 75 communities are identified as Particularly Vulnerable Tribal Groups (formerly Primitive Tribal Groups), characterized by pre-agricultural technology, very low levels of literacy, declining or stagnant population, and subsistence-level economy. These are the most marginalized tribal communities, including the Sentinelese (Andaman, with whom contact is prohibited under law), Shompen (Great Nicobar), Jarwa (Andaman), Onge (Little Andaman), Birhor (Jharkhand), Chenchu (Andhra Pradesh/Telangana), Korwa (Jharkhand/Chhattisgarh), Baiga (MP/Chhattisgarh), Hill Korba, and Saura/Saora (Odisha). PVTGs receive special attention through the Development of Particularly Vulnerable Tribal Groups scheme, with 100% central funding for conservation-cum-development plans prepared for each PVTG.</p>
 
+<h3>PVTGs: From "Primitive" to "Particularly Vulnerable"</h3>
+
+<p>The category grew out of the Dhebar Commission (1960-61), which found that some tribes lagged far behind others. A sub-category of Primitive Tribal Groups (PTGs) was created during the Fourth Plan, 52 groups had been identified by the end of the Fifth Plan, and the list reached 75 in 1993-94. The criteria are a pre-agricultural level of technology, a stagnant or declining population, extremely low literacy and a subsistence economy. In 2006 the Government of India renamed them Particularly Vulnerable Tribal Groups. The old label was erroneous for four reasons:</p>
+
+<ul>
+  <li><strong>Evolutionist and pejorative:</strong> "primitive" assumed a ladder of cultural stages that anthropology had abandoned and presented living peoples as survivals from the past.</li>
+  <li><strong>Technology confused with culture:</strong> groups with simple tools have rich religion, kinship and ecological knowledge, as Elwin showed for the Saora and Rivers for the Toda, both now PVTGs.</li>
+  <li><strong>Wrong cause:</strong> their condition reflects vulnerability produced by land loss, forest laws, disease and neglect, not innate backwardness. The criteria themselves measure vulnerability, so the new name fits them.</li>
+  <li><strong>Uneven application:</strong> the list has not been revised since 1993-94, groups in similar conditions were left out, and some PVTGs have not been notified as Scheduled Tribes.</li>
+</ul>
+
+<h3>Recent Welfare Measures for PVTGs</h3>
+
+<p>Before 2023 PVTGs were served mainly by the fully centrally funded Development of PVTGs scheme with its Conservation-cum-Development plans, by Article 275(1) grants and by state micro projects, as in Odisha. Other measures include Eklavya Model Residential Schools, Van Dhan Vikas Kendras for minor forest produce, and habitat rights for PVTGs under Section 3(1)(e) of the Forest Rights Act 2006, which the Baiga of Dindori (Madhya Pradesh) were among the first to receive.</p>
+
+<p><strong>PM JANMAN:</strong> The Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan was announced in the Budget Speech 2023-24, launched by the Prime Minister at Khunti (Jharkhand) on Janjatiya Gaurav Divas, 15 November 2023, and approved by the Union Cabinet on 29 November 2023. Its outlay is Rs 24,104 crore (Central share Rs 15,336 crore, State share Rs 8,768 crore) over three years, funded through the Development Action Plan for Scheduled Tribes. It covers the 75 PVTGs in 18 states and the Andaman and Nicobar Islands with 11 critical interventions through 9 ministries:</p>
+
+<ul>
+  <li><strong>Housing and roads:</strong> 4.90 lakh pucca houses and 8,000 km of connecting roads.</li>
+  <li><strong>Water and power:</strong> piped water to all PVTG habitations, community water supply for 2,500 hamlets of fewer than 20 households, grid electricity for 57,000 households and off-grid solar for 1 lakh households.</li>
+  <li><strong>Health and nutrition:</strong> 1,000 mobile medical units and 2,500 anganwadi centres.</li>
+  <li><strong>Education and skills:</strong> 500 hostels and vocational training in 60 aspirational PVTG blocks.</li>
+  <li><strong>Livelihood and connectivity:</strong> 500 Van Dhan Vikas Kendras, 1,000 multipurpose centres and mobile towers in 3,000 villages.</li>
+</ul>
+
+<p><strong>Critical assessment:</strong> PM JANMAN is the first mission aimed at PVTGs alone, and its habitation-level saturation targets suit groups living in scattered hamlets. But it is largely a convergence of existing infrastructure schemes, it depends on fresh baseline surveys because the Census does not enumerate many PVTGs separately, and uniform packages such as pucca houses may not suit forest-dependent or semi-nomadic groups like the Birhor. The National Advisory Council (2013) had warned that badly designed interventions can deepen PVTG vulnerability, so habitat rights, consent and culturally suited delivery matter as much as targets.</p>
+
+<h3>PVTGs of the Andaman and Nicobar Islands</h3>
+
+<p>Five of the 75 PVTGs live in the islands. Four are Negrito hunter-gatherers speaking Andamanese languages, and the fifth, the Shompen, is Mongoloid. Census 2011 counts are given in brackets.</p>
+
+<ul>
+  <li><strong>Great Andamanese (44):</strong> once some ten groups spread across Great Andaman, devastated after 1858 by the penal settlement, epidemics and the Andaman Homes, and resettled on Strait Island in 1970. Their languages are nearly extinct and most now speak Hindi.</li>
+  <li><strong>Onge (101):</strong> Little Andaman, settled at Dugong Creek and South Bay. Settlement and logging on their island from the late 1960s shrank their forest, and dependence on rations and alcohol has damaged their health.</li>
+  <li><strong>Jarawa (380):</strong> forests of South and Middle Andaman, hostile to outsiders until they began peaceful contact in 1997-98. The Andaman Trunk Road through their reserve brought poaching, disease and "human safaris", which the courts and the administration have repeatedly tried to curb.</li>
+  <li><strong>Sentinelese (15, estimated from a distance):</strong> North Sentinel Island, the only group that still rejects all contact.</li>
+  <li><strong>Shompen (229):</strong> semi-nomadic foragers and horticulturists of interior Great Nicobar, covered by a Shompen Policy (2015) and threatened by the Great Nicobar development project.</li>
+</ul>
+
+<p><strong>Protection of Aboriginal Tribes Regulation 1956:</strong> The Andaman and Nicobar Islands (Protection of Aboriginal Tribes) Regulation 1956, made by the President under Article 240, declares tribal reserves, bars entry into them without a permit, and restricts land transfer, trade and other activities there. A 2012 amendment created a buffer zone around the Jarawa reserve and made photographing or filming the Jarawa for tourism an offence. The administration's Jarawa policy (2004) and Shompen policy follow minimal intervention, respecting the groups' choice of isolation. The Nicobarese, the largest tribe of the islands, are not a PVTG.</p>
+
 <h2>B.K. Roy Burman and the Buffer Zone Concept</h2>
 
 <p>Bikram Keshari Roy Burman, described by S.C. Dube as a "walking encyclopedia," was one of the most influential Indian anthropologists in the policy domain. He developed the concept of a "buffer zone" as an administrative and developmental strategy for tribal areas: a transitional administrative space between the tribal homeland and the non-tribal world, within which the pace and character of change is controlled and managed by tribal communities themselves rather than imposed by the state or market. The buffer zone concept was an attempt to operationalize Nehru's Tribal Panchsheel in spatial and administrative terms, providing protection without isolation. Roy Burman contributed extensively to policy debates on tribal demography, land rights, and northeast India, and served on numerous official committees.</p>
@@ -7095,6 +9178,32 @@ This became the normative foundation of Indian tribal policy after independence,
 <h2>Critical Assessment: Protection vs Development Contradiction</h2>
 
 <p>The fundamental tension in tribal administration since independence has been between the constitutional mandate to protect tribal land, forests, culture, and self-governance, and the development state's demand for tribal land, forests, water, and minerals to fuel industrial growth. Tribal areas of peninsular and central India (Jharkhand, Odisha, Chhattisgarh, Madhya Pradesh) contain a disproportionate share of India's mineral and forest wealth while housing some of the poorest populations: in 2004-05, the proportion of tribal people below the poverty line was 54.2% in Jharkhand and 75.6% in Odisha. The overcoming of tribal "isolation" through large-scale mining, industrial, and infrastructure projects in these states has not resolved poor development indicators. Rather, it has led to further impoverishment and vulnerability. The Xaxa Committee concluded that what the state has actually pursued in tribal areas (outside Northeast India) is assimilation rather than integration, in contradiction to the Panchsheel. Protective measures are violated by the very state charged with enforcing them: laws and rules are manipulated and subverted to accommodate corporate interests; tribal protests are met with state paramilitary and corporate private security. The contradiction between development and protection in tribal administration remains unresolved, making it the central political anthropological question of postcolonial India.</p>
+
+<h3>NGOs, Missionaries and Tribal Development</h3>
+
+<p>Voluntary organisations work where the state is thin. The Ministry of Tribal Affairs funds them through grants-in-aid to voluntary organisations working for STs, and since the Companies Act 2013 (Section 135) corporate social responsibility funds also reach tribal areas through them. Their roles fall into four types.</p>
+
+<ul>
+  <li><strong>Service delivery:</strong> health and schooling in remote hamlets. SEARCH (Abhay and Rani Bang) in Gadchiroli developed home-based newborn care by trained village health workers, a model later taken up by the National Health Mission, and Jan Swasthya Sahyog runs community health work among tribal villages near Bilaspur.</li>
+  <li><strong>Livelihood and organisation:</strong> PRADAN organises tribal women into self-help groups in Jharkhand and Odisha, Seva Mandir works among the Bhil villages of southern Rajasthan, and many NGOs help gram sabhas file community forest rights claims.</li>
+  <li><strong>Rights and advocacy:</strong> Ekta Parishad's land-rights marches (Janadesh 2007, Jan Satyagraha 2012), legal aid against land alienation and fake gram sabha resolutions, and support for movements such as the Dongria Kondh campaign in Niyamgiri.</li>
+  <li><strong>Research and mediation:</strong> surveys, social audits and training of panchayat members under PESA, and linking communities with government departments, banks and companies. In this way NGOs facilitate other stakeholders, carrying schemes to people and people's demands to the state.</li>
+</ul>
+
+<p><strong>Tribal women:</strong> NGO interventions for tribal women include self-help groups and federations that give access to credit and a public voice, training of women as health workers and paralegals, campaigns against witch-hunting led by survivors such as Chutni Mahato of Jharkhand (Padma Shri 2021), help in securing joint pattas under the Forest Rights Act, and action against the trafficking of tribal girls as domestic workers.</p>
+
+<p><strong>Missionaries in Central India:</strong> Christian missions were the earliest voluntary agencies among the tribes of Chotanagpur, Odisha and Madhya Pradesh. They built schools and hospitals, reduced tribal languages to writing, ran cooperatives (J.B. Hoffmann's credit society among the Munda, 1909) and fought land cases, creating an educated tribal elite. They also split villages into converts and non-converts. The Niyogi Committee (Madhya Pradesh, 1956) alleged conversion by inducement, and Odisha (1967) and Madhya Pradesh (1968) passed freedom of religion laws. The Vanvasi Kalyan Ashram (founded 1952 at Jashpur) runs schools and hostels with the declared aim of countering conversion, so tribal welfare in central India became a field of religious competition.</p>
+
+<p><strong>Limits:</strong></p>
+
+<ul>
+  <li>Dependence on donor and CSR money, short project cycles and little continuity.</li>
+  <li>Uneven accountability, urban and non-tribal leadership, and the risk of replacing tribal institutions instead of strengthening them.</li>
+  <li>Charges of proselytisation against both Christian and Hindu bodies, and tighter control of foreign funding after the FCRA amendment of 2020.</li>
+  <li>Co-option by the state as contractors for schemes, which blunts their watchdog role.</li>
+</ul>
+
+<p>The Panchsheel principle that outside agencies should be used sparingly, and tribal teams trained instead, still sets the test: NGOs help most when they strengthen gram sabhas and tribal organisations rather than substitute for them.</p>
 `,
   'role-of-anthropology-development': `
 <h2>Anthropology as an Applied Discipline</h2>
@@ -7226,6 +9335,62 @@ This became the normative foundation of Indian tribal policy after independence,
 <h3>Rehabilitation Colonies and Social Disintegration</h3>
 
 <p>Where rehabilitation has been attempted through the creation of resettlement colonies, the outcomes have frequently been worse than no rehabilitation at all. Resettlement colonies typically bring together households from different villages and different caste or tribal communities who have no prior history of social relationship and no shared institutional framework for managing collective resources, resolving disputes, or coordinating collective action. The social capital: the dense networks of kinship obligation, reciprocal labour exchange, shared ritual participation, and informal credit: that had sustained the displaced communities in their home territories cannot be transferred to a resettlement colony and must be painstakingly rebuilt over a generation or more. In the meantime, the displaced community is socially fragmented, economically vulnerable, and politically powerless in its new location.</p>
+
+<h3>Anthropological Frames for Displacement: Cernea's Impoverishment Risks and Reconstruction Model</h3>
+
+<p>Anthropological studies of development-induced displacement in India, from Walter Fernandes and Enakshi Ganguly Thukral's <em>Development, Displacement and Rehabilitation</em> (1989) to Amita Baviskar's <em>In the Belly of the River</em> (1995), have stressed that displacement dismantles a way of life, not only a landholding, that tribes bear a disproportionate share of it, and that rehabilitation has rarely restored livelihoods. Two frameworks dominate.</p>
+
+<ul>
+  <li><strong>Scudder and Colson's stage model:</strong> Thayer Scudder and Elizabeth Colson, from their study of the Gwembe Tonga displaced by the Kariba dam in Zambia, described resettlement in four stages: planning and recruitment, adjustment and coping (when people cling to the familiar), community formation and economic development, and handing over and incorporation.</li>
+  <li><strong>Cernea's Impoverishment Risks and Reconstruction (IRR) model:</strong> Michael Cernea, senior sociologist at the World Bank, set out in the 1990s, most fully in <em>World Development</em> (1997), eight linked risks that turn displacement into impoverishment, each paired with a reconstruction strategy.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>Risk</th><th>Reconstruction</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Landlessness</td><td>Land-based resettlement (land for land)</td></tr>
+    <tr><td>Joblessness</td><td>Re-employment and new livelihoods</td></tr>
+    <tr><td>Homelessness</td><td>House reconstruction</td></tr>
+    <tr><td>Marginalisation</td><td>Social inclusion and restored status</td></tr>
+    <tr><td>Food insecurity</td><td>Adequate nutrition</td></tr>
+    <tr><td>Increased morbidity and mortality</td><td>Better health care</td></tr>
+    <tr><td>Loss of access to common property</td><td>Restoration of community assets and services</td></tr>
+    <tr><td>Social disarticulation</td><td>Rebuilding networks and communities</td></tr>
+  </tbody>
+</table>
+
+<p>The model is diagnostic and predictive. Its value for tribes is that it names the losses cash compensation ignores, above all commons and social disarticulation. Critics note that it was built inside the World Bank to make projects work, treats displacement as manageable rather than questioning it, and gives little weight to sacred landscapes and gender, which later writers added.</p>
+
+<p><strong>A rehabilitation package to retain community belonging:</strong></p>
+
+<ul>
+  <li>Displacement only as a last resort, after a social impact assessment and with the prior consent of the Gram Sabha in Scheduled Areas, as PESA, the FRA and the LARR Act 2013 require.</li>
+  <li>Resettlement of whole villages and clans together, preferably in the same Scheduled Area and in a compact block, as Section 41 of the LARR Act provides, so that kinship, dialect and village councils survive.</li>
+  <li>Land for land of equal quality, with community forest and grazing rights at the new site, rather than cash alone.</li>
+  <li>Land for sacred groves, burial grounds, the sarna, dormitories and community halls, and relocation of shrines with the people's own priests.</li>
+  <li>Continuation of ST status, reservation and Fifth Schedule protection in the new area, and fishing rights in the reservoir.</li>
+  <li>Benefit-sharing through a stake in project income or the District Mineral Foundations created by the 2015 amendment to the mining law, and training for project jobs.</li>
+  <li>Separate entitlements for women and adult daughters, and monitoring by the displaced themselves.</li>
+</ul>
+
+<h3>Displacement and Tribal Women</h3>
+
+<p>Displacement by hydroelectric and irrigation dams hits tribal women harder than men because their work and authority rest on the commons. Studies of oustees of Hirakud, Sardar Sarovar and other projects, by Walter Fernandes and others and collected in Lyla Mehta's <em>Displaced by Development</em> (2009), show a common pattern.</p>
+
+<ul>
+  <li><strong>Loss of the commons:</strong> submergence of forests, riverbanks and grazing land removes the forest produce, fuel, fodder, fish, water and medicinal plants that women gathered and controlled.</li>
+  <li><strong>Male-centred compensation:</strong> compensation and land titles go to the male head of household. The Narmada Water Disputes Tribunal (1979) treated every major son, but not an unmarried adult daughter, as a separate family entitled to land.</li>
+  <li><strong>Monetisation:</strong> cash compensation, controlled by men, was often spent on consumption and liquor, and women lost the economic role they had held in a subsistence economy.</li>
+  <li><strong>Loss of kin support:</strong> the scattering of villages breaks women's natal and neighbourhood networks and leaves them isolated in resettlement colonies with a heavier burden of care.</li>
+  <li><strong>Labour and vulnerability:</strong> women become casual labourers at project sites and in towns, facing low wages, sexual exploitation and trafficking.</li>
+  <li><strong>Health and ritual:</strong> unfamiliar water, crowding and the loss of herbal remedies worsen health, and the loss of sacred sites removes women's ritual roles.</li>
+</ul>
+
+<p><strong>Ethnographic examples:</strong> Bhil and Bhilala women of the Narmada valley lost riverbank cultivation and forest gathering without any separate claim to land, and Hirakud oustees in Odisha joined the landless labour force. Women were also prominent in the protests of the Narmada Bachao Andolan, showing agency as well as loss.</p>
+
+<p><strong>Urbanisation and industrialisation:</strong> in the steel and mining towns of Rourkela, Bhilai and the Jharkhand coalfields, tribal women were absorbed mainly as unskilled head-load and construction workers and were the first to lose work to mechanisation. Many young women from Jharkhand and Chhattisgarh migrate as domestic workers to Delhi and other cities, where they face isolation, abuse and trafficking. Urban contact brings schooling, wages and new aspirations, but it weakens the relatively equal standing that women held in the tribal village.</p>
 
 <h2>Forest Policy and Tribals</h2>
 

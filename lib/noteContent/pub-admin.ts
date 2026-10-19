@@ -119,6 +119,21 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The practical invalidity of the dichotomy did not trouble the thinkers of the first period. That it was empirically false, since administrators plainly make policy through rule-making, discretion and advice, became the charge that opened the next phase of the discipline.</p>
 
+<h3>Why the Dichotomy Debate Is Still Alive</h3>
+
+<p>As a description of how government works, the dichotomy was discredited by the late 1940s. <strong>Paul Appleby</strong>, in <em>Policy and Administration</em> (1949), argued that administration is itself policy making, and Simon's attack on the fact-value split removed its philosophical base. Yet the debate keeps returning, because the question beneath it has not been settled: how a permanent, expert administration can be subordinate to elected politicians and still be protected from them.</p>
+
+<ul>
+ <li><strong>As a norm.</strong> The dichotomy survives as the principle of a neutral, merit-based service that serves any elected government with equal loyalty and is neither rewarded nor punished for its politics. Indian service conduct rules bar officers from membership of political parties and from political activity, and Article 311 protects civil servants against arbitrary dismissal.</li>
+ <li><strong>In New Public Management.</strong> NPM revived the separation in structural form: policy ministries were split from executive agencies that deliver services under performance targets, as in Britain after the <em>Next Steps</em> report (1988) and in New Zealand's reforms. Osborne and Gaebler's steering and rowing restate Goodnow's politics and administration.</li>
+ <li><strong>As complementarity.</strong> <strong>James Svara</strong>, in his dichotomy-duality model (1985) and in "The Myth of the Dichotomy" (2001), argued that elected officials and administrators share the work. Elected officials dominate the definition of <em>mission</em>, administrators dominate <em>management</em>, and the two share <em>policy</em> and <em>administration</em>. The relationship is one of complementarity, in which politicians respect administrative competence and administrators accept political control.</li>
+ <li><strong>As images of roles.</strong> <strong>Aberbach, Putnam and Rockman</strong>, in <em>Bureaucrats and Politicians in Western Democracies</em> (1981), traced four images of the relationship: policy and administration strictly separated, a division between facts supplied by bureaucrats and interests represented by politicians, a division of energy and equilibrium in which both engage in politics, and a pure hybrid in which the roles merge.</li>
+</ul>
+
+<h4>Autonomy and Control</h4>
+
+<p>The administrator needs autonomy and discretion because expertise, continuity and the impartial application of law cannot be exercised under day-to-day political direction. The politician needs control and intervention because he answers to the legislature and the electorate for what the administration does. Each need is legitimate, and the danger lies at the extremes: too much autonomy produces the unaccountable bureaucracy Weber feared, and too much control produces a politicised service. The Supreme Court has sought the balance. <em>Prakash Singh v Union of India</em> (2006) directed minimum tenure for senior police officers and bodies to insulate postings from political interference, and <em>T.S.R. Subramanian v Union of India</em> (2013) called for civil services boards to handle transfers, fixed tenure, and the recording of oral instructions from political superiors. The dichotomy remains alive because these arrangements still have to be defended.</p>
+
 <h2>Public and Private Administration</h2>
 
 <p>Whether public administration is a species of administration in general, or something different in kind, determines whether business techniques can simply be imported into government. It is therefore the theoretical question underneath every managerial reform from the 1930s to New Public Management.</p>
@@ -189,6 +204,25 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Stage VI: Paradigmatic Shifts (from the 1980s)</h3>
 
 <p>Economy and efficiency, administrative management, POSDCORB, performance budgeting, work measurement, human relations, cost-benefit analysis, productivity, management by objectives, the new federalism, affirmative action, organisation development, policy analysis and the systems approach are all by now part of the repertoire of public administration. The 1980s added the market-oriented reform agenda of New Public Management, and the 1990s the counter-current of governance and public value.</p>
+
+<h3>Nicholas Henry's Five Paradigms</h3>
+
+<p><strong>Nicholas Henry</strong>, in "Paradigms of Public Administration" (<em>Public Administration Review</em>, 1975) and in his textbook <em>Public Administration and Public Affairs</em>, organised the history of the discipline into five overlapping paradigms, each defined by Golembiewski's test of locus and focus.</p>
+
+<table>
+ <thead>
+ <tr><th>Paradigm</th><th>Period</th><th>Locus and focus</th><th>Landmarks</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>1. The politics-administration dichotomy</td><td>1900 to 1926</td><td>Locus in the government bureaucracy, focus left undefined</td><td>Goodnow's <em>Politics and Administration</em> (1900), White's <em>Introduction to the Study of Public Administration</em> (1926)</td></tr>
+ <tr><td>2. The principles of administration</td><td>1927 to 1937</td><td>Focus on universal principles, locus anywhere, since the principles were held to apply to every organisation</td><td>Willoughby's <em>Principles of Public Administration</em> (1927), Gulick and Urwick's <em>Papers on the Science of Administration</em> (1937)</td></tr>
+ <tr><td>3. Public administration as political science</td><td>1950 to 1970</td><td>Locus regained in the bureaucracy, focus lost, the field reduced to a sub-field of political science</td><td>Followed the challenge of 1938 to 1947 by Barnard, Simon, Dahl and Waldo</td></tr>
+ <tr><td>4. Public administration as management</td><td>1956 to 1970</td><td>Focus on organisation theory and management science, locus lost, since the public setting was no longer treated as distinctive</td><td>The founding of <em>Administrative Science Quarterly</em> (1956)</td></tr>
+ <tr><td>5. Public administration as public administration</td><td>From 1970</td><td>Focus on organisation theory, management science and public policy, locus in public affairs and the public interest</td><td>The founding of the National Association of Schools of Public Affairs and Administration (NASPAA) in 1970</td></tr>
+ </tbody>
+</table>
+
+<p>The sequence shows a discipline that repeatedly gained one element by losing the other. The first paradigm knew where it worked but not what it knew. The second knew what it knew but held that where did not matter. The third returned to government as its home and lost a distinctive body of knowledge. The fourth found management techniques and lost the public. Only the fifth claimed both, and the separation of public administration programmes from political science departments, organised through NASPAA, was its institutional sign. Henry's scheme is the standard answer to questions on the evolution of the discipline because it explains why crises of identity recur: each paradigm settled one question by abandoning the other.</p>
 
 <h2>New Public Administration</h2>
 
@@ -324,6 +358,35 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Why It Survives</h3>
 
 <p>Work study, standardisation, ergonomics, job design, performance standards, incentive pay and management by exception all descend from Taylor, and process re-engineering and the productivity literature of the 1990s restated his questions in new vocabulary. In public administration his influence runs through the economy-and-efficiency movement, work measurement and performance budgeting. The criticism that matters is not that his techniques failed but that they answered only one question, and treated it as the whole of administration.</p>
+
+<h3>Gramsci's Critique of Taylorism</h3>
+
+<p>Taylor's scientific management differs from the classical organisation theory of Gulick and Urwick in unit and motive. Taylor worked upward from the task and the worker, treating productivity as a matter of method and individual incentive, while Gulick and Urwick worked downward from the chief executive, treating administration as a matter of structure, span of control and POSDCORB.</p>
+
+<p><strong>Antonio Gramsci</strong>, in his prison notes on "Americanism and Fordism" (early 1930s, published in the <em>Prison Notebooks</em>), exposed the socio-psychological basis of Taylorism.</p>
+
+<ul>
+ <li><strong>The mechanisation of the worker.</strong> Taylor, Gramsci wrote, expressed with brutal cynicism the purpose of American society: to develop in the worker automatic and mechanical attitudes to the highest degree, breaking up the old psycho-physical link of skilled work, which demanded the active participation of intelligence, imagination and initiative, and reducing production to its mechanical, physical aspect.</li>
+ <li><strong>A new type of worker.</strong> Rationalised production required a new type of human being suited to the new type of work. Hence Ford's interest in his workers' drinking and sexual habits, and the high wages that rewarded and enforced the new discipline.</li>
+ <li><strong>Hegemony born in the factory.</strong> In America, Gramsci argued, hegemony was born in the factory and needed only a small number of professional political and ideological intermediaries. Consent to the social order was produced by the organisation of work itself.</li>
+ <li><strong>The limit of mechanisation.</strong> The worker's brain is not mummified. Once a movement becomes automatic, the mind is left free, and it may turn to thoughts that are anything but conformist.</li>
+</ul>
+
+<p>Taylorism, on this reading, treated the worker as a body to be trained and paid rather than a mind to be engaged, and its efficiency had a political dimension that the language of mental revolution concealed. The argument looks forward to Harry Braverman's <em>Labor and Monopoly Capital</em> (1974).</p>
+
+<h3>Lenin and Socialist Management</h3>
+
+<p><strong>V.I. Lenin</strong>, in <em>The State and Revolution</em> (1917) and <em>The Immediate Tasks of the Soviet Government</em> (1918), treated socialist management as the conscious direction of the organisational development of society as a whole, once the capitalist owner had been removed.</p>
+
+<ul>
+ <li><strong>Accounting and control.</strong> Lenin held that accounting and control are the main requirement for the proper functioning of the first phase of communist society. Capitalism had already reduced much administration to simple registration and checking that any literate person could perform, so workers could be drawn into it.</li>
+ <li><strong>The productivity of labour.</strong> Once power was won, organising production became the principal task. Lenin described the Taylor system as combining the refined brutality of bourgeois exploitation with a number of the greatest scientific achievements in the analysis of work, and urged that it be studied, taught and adapted to Soviet ends.</li>
+ <li><strong>Discipline and one-man management.</strong> Large-scale machine industry, he argued, requires strict unity of will, secured by the subordination of the will of thousands to the will of one, so each enterprise was placed under individual responsibility rather than committees.</li>
+ <li><strong>Bourgeois specialists.</strong> Experts from the old order were to be employed at high salaries, which Lenin admitted was a departure from the principles of the Paris Commune, until workers had learned to manage.</li>
+ <li><strong>Emulation and inspection.</strong> Socialist competition was to spur effort, and the Workers' and Peasants' Inspection to check a growing bureaucracy that Lenin's "Better Fewer, But Better" (1923) treated as a grave danger.</li>
+</ul>
+
+<p>Socialist management thus combines planning, scientific management and mass participation under party direction. Its history is its critique: one-man management and party control produced the bureaucracy Lenin condemned, and the Stakhanovite movement of the mid-1930s turned Taylor's methods into a campaign for ever higher output norms.</p>
 
 <h2>Administrative Management: Henri Fayol</h2>
 
@@ -463,6 +526,57 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li>As <strong>Martin Albrow</strong> notes, formal rationality has increased manifold in present-day administration thanks to the advance of management technique, so the emphasis on formalism has aged better than its critics expected.</li>
 </ul>
 
+<h3>Victor Thompson and Bureaupathology</h3>
+
+<p><strong>Victor A. Thompson</strong>, in <em>Modern Organization</em> (1961), traced the dysfunctions of bureaucracy to a conflict built into its structure: the gap between the <strong>right to decide</strong>, which hierarchy assigns to position, and the <strong>ability to decide</strong>, which modern technology has spread among specialists. The superior holds formal authority over subordinates who know more than he does about the matters he must decide, the same inconsistency Parsons found in Weber's model.</p>
+
+<p>The insecurity this creates produces what Thompson called <strong>bureaupathology</strong>: behaviour that serves the personal needs of the official rather than the goals of the organisation. Its symptoms are excessive aloofness, ritualistic attachment to routines and procedures, resistance to change, and petty insistence on the rights of authority and status, together with a drive to control subordinates through close supervision. Thompson used a separate term, <em>bureausis</em>, for the client's side of the problem, the inability of some people to accept the impersonality of modern organisation.</p>
+
+<p>This is why bureaupathology denigrates competence. Where position overrides knowledge, the specialist's judgement is subordinated to the superior's anxiety, initiative is treated as a challenge to authority, and officials learn that safety lies in conformity rather than in skill. The Indian generalist-specialist controversy, and the file that climbs several levels for approval of a technically settled matter, illustrate the pattern. The remedy Thompson's analysis implies is to recognise the authority of expertise alongside the authority of position.</p>
+
+<h3>Marx on Bureaucracy</h3>
+
+<p><strong>Karl Marx</strong> wrote no systematic theory of bureaucracy, but his treatment of it is rooted in his account of the state. The starting point is the <em>Critique of Hegel's Philosophy of Right</em> (1843). Hegel had presented the bureaucracy as the <strong>universal class</strong>, the body of officials that mediates between civil society and the state and serves the general interest. Marx turned the claim around.</p>
+
+<ul>
+ <li><strong>The imaginary state.</strong> The bureaucracy is the imaginary state alongside the real state. It claims to embody the general interest while pursuing its own particular interest, which it passes off as the general one.</li>
+ <li><strong>The spiritualism of the state.</strong> Bureaucracy turns the state into a matter of form and ritual, and Marx called bureaucrats the Jesuits and theologians of the state. It treats the formal purpose of the state as its own content and holds the state, the spiritual essence of society, as its private property. The purpose of the state becomes the official's private purpose, a pursuit of higher posts and careers.</li>
+ <li><strong>Secrecy and the hierarchy of knowledge.</strong> The general spirit of bureaucracy is the secret, the mystery, guarded within by hierarchy and against the outside world by its character as a closed corporation. The top leaves knowledge of detail to the lower levels, the lower levels credit the top with understanding of the general, and so all are mutually deceived.</li>
+</ul>
+
+<p>In his later historical writings bureaucracy is an instrument of class rule. <em>The Eighteenth Brumaire of Louis Bonaparte</em> (1852) describes the French executive, with its enormous bureaucratic and military organisation, as a parasitic body that each revolution perfected instead of breaking. <em>The Civil War in France</em> (1871) draws the lesson of the <strong>Paris Commune</strong>: the working class cannot simply lay hold of the ready-made state machinery and wield it for its own purposes. The Commune replaced the old officialdom with officials who were elected, responsible and revocable at short notice and paid workmen's wages, and Marx expected bureaucracy, like the state, to disappear in a classless society.</p>
+
+<p>The contrast with Weber is the point an answer should draw. Weber saw bureaucracy as the technically superior and permanent form of modern administration, whose danger was its power over its political masters. Marx saw it as a historical product of class society, serving the dominant class while claiming to stand above it, and therefore transient. The Marxian reading helps explain why an Indian administration inherited from a colonial state built for revenue and order was long experienced as standing apart from the people it governed. Its weakness is the record of the states that claimed Marx's name, in which bureaucracy grew instead of withering away.</p>
+
+<h3>Warren Bennis and the End of Bureaucracy</h3>
+
+<p><strong>Warren Bennis</strong> argued in "The Coming Death of Bureaucracy" (1966) and in <em>The Temporary Society</em> (1968, with Philip Slater) that bureaucracy was a social invention suited to the stable and predictable conditions of industrial society, and predicted that within twenty-five to fifty years it would give way to new forms. He gave four reasons.</p>
+
+<ul>
+ <li><strong>Rapid and unexpected change</strong>, which a structure built on fixed rules and routines cannot follow.</li>
+ <li><strong>Growth in size</strong>, so that the volume of internal activity outruns hierarchical coordination.</li>
+ <li><strong>The complexity of modern technology</strong>, which requires diverse, highly specialised competence that no single superior can direct.</li>
+ <li><strong>A change in managerial values</strong> towards a humanistic view of people that rejects coercion and mechanical control.</li>
+</ul>
+
+<p>The organisations of the future would be <strong>organic-adaptive</strong> structures and <strong>temporary systems</strong>: in Bennis's words, "adaptive, problem-solving, temporary systems of diverse specialists, linked together by coordinating and task-evaluating executive specialists in an organic flux". Task forces would form around problems rather than functions, be staffed by specialists chosen for their relevance to the problem, and dissolve when it was solved. Authority would rest on competence rather than rank, and the executive's job would be to coordinate and link the project groups.</p>
+
+<h4>Forms of Modern Organisation</h4>
+
+<ul>
+ <li><strong>Project and task-force organisation</strong>, the direct form of Bennis's temporary system.</li>
+ <li><strong>Matrix organisation</strong>, in which staff report both to a functional head and to a project manager, combining specialist depth with a focus on outputs.</li>
+ <li><strong>Network and virtual organisation</strong>, in which a small core coordinates partners and contractors who do most of the work.</li>
+ <li><strong>Team-based and flat structures</strong>, which remove layers of hierarchy and delegate decisions to self-managing teams.</li>
+ <li><strong>Adhocracy</strong>, a word Bennis himself introduced in <em>The Temporary Society</em>, popularised by Alvin Toffler in <em>Future Shock</em> (1970) and developed by Henry Mintzberg, for an organisation that fuses experts into ad hoc project teams in order to innovate.</li>
+</ul>
+
+<p>Indian government uses these forms alongside its hierarchy rather than in place of it: mission-mode programmes, task forces and empowered groups, the Unique Identification Authority's small core working through registrars and enrolment agencies, and the project organisation of the Delhi Metro Rail Corporation.</p>
+
+<h4>Strengths and Limitations</h4>
+
+<p>The thesis correctly identified the pressures of change, specialisation and size, and its organic forms are now common in research, technology and project work. Its prediction failed. Bureaucracy has not died, because the values it secures, legality, accountability, equal treatment and continuity, are demanded of governments in every environment, and temporary systems are weak at all four. Bennis also underrated the human cost of permanent impermanence, the loss of security and identity that temporary systems impose. The realistic outcome is a mixed form, in which hierarchy persists for routine work and accountability while project, matrix and network structures handle change.</p>
+
 <h2>The Human Relations School: Elton Mayo</h2>
 
 <p><strong>George Elton Mayo</strong> (born 1880 in Adelaide) studied logic and philosophy at Adelaide and medicine at Edinburgh, worked in psychopathology, chaired the philosophy department at Queensland in 1919, and moved to America, joining the Wharton School and then becoming Professor of Industrial Research at the Harvard Graduate School of Business Administration in 1926. He was influenced by <strong>Pierre Janet</strong> and <strong>Sigmund Freud</strong>, which is visible in his attention to sentiment rather than incentive. He criticised the classical school for dehumanising operations, breaking traditional social relations and creating social tension.</p>
@@ -501,6 +615,45 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Over-correction.</strong> Where the classical school saw only structure, the human relations school came close to seeing only sentiment. The behavioural approach would rejoin the two.</li>
 </ul>
 
+<h3>Mary Parker Follett</h3>
+
+<p><strong>Mary Parker Follett</strong> (1868 to 1933) bridged the classical and human relations schools. She came to management from political science and social work: <em>The New State</em> (1918) argued for a democracy built up from neighbourhood groups, and <em>Creative Experience</em> (1924) developed a psychology of social interaction. In the 1920s she turned to business, and her papers were collected after her death as <em>Dynamic Administration</em> (1941), edited by Henry Metcalf and Lyndall Urwick. She held that administration in business and in government is one problem, the organisation of human relationships, and studied business because new methods of cooperation were being tried there that government could learn from. Treating the organisation as a web of human relationships before the Hawthorne findings were published, she pioneered the socio-psychological approach.</p>
+
+<h4>Constructive Conflict</h4>
+
+<p>In "Constructive Conflict" (1925) she defined conflict as the appearance of difference, difference of opinions, of interests. Conflict is neither good nor bad in itself, and since difference cannot be avoided, the question is how to use it. There are three ways of dealing with it.</p>
+
+<ul>
+ <li><strong>Domination</strong>: the victory of one side over the other. It is the easiest method and the least successful, since the defeated side waits for its chance.</li>
+ <li><strong>Compromise</strong>: each side gives up something to have peace. Since neither gets what it wanted, the conflict returns in another form.</li>
+ <li><strong>Integration</strong>: a solution in which both desires find a place and neither side sacrifices anything. Her example is a small room in a library: another reader wanted the window open, she wanted it shut, and they opened a window in the next room, where no one was sitting.</li>
+</ul>
+
+<p>Integration requires bringing differences into the open, breaking each demand into its parts to find the interest beneath it, and inventing a new solution. It creates something new instead of dividing what exists, which is why interdependence and collaboration, not victory, were for her the route to more inclusive social arrangements. She admitted that integration is not always possible.</p>
+
+<h4>The Law of the Situation and Authority</h4>
+
+<p>In "The Giving of Orders" (1925) she argued that orders given by one person to another provoke resistance, and that the remedy is to <strong>depersonalise</strong> them: superior and subordinate should both study the situation and take their orders from it, which she called the <strong>law of the situation</strong>. She distinguished <strong>power-over</strong>, the coercive power of one person over another, from <strong>power-with</strong>, power developed jointly, and held that only the second is productive. Authority, in her phrase, belongs to the job and stays with the job: it derives from function, not rank, and the notion of a final authority at the top is an illusion, since decisions are built from contributions at every level.</p>
+
+<h4>Coordination</h4>
+
+<p>She set out four principles of coordination.</p>
+
+<ul>
+ <li><strong>By direct contact</strong> between the responsible people concerned, horizontal as well as vertical.</li>
+ <li><strong>In the early stages</strong>, while policy is being formed, not after it is settled.</li>
+ <li><strong>As the reciprocal relating of all the factors in a situation</strong>, since each part affects and is affected by every other.</li>
+ <li><strong>As a continuing process</strong>, never achieved once and for all.</li>
+</ul>
+
+<h4>Assessment</h4>
+
+<ul>
+ <li><strong>Far ahead of her times.</strong> Integration anticipates joint problem-solving negotiation, power-with anticipates participative management, and lateral coordination anticipates matrix and network forms. <strong>McGregor</strong> carried her ideas into complex organisations, since the principle of integration in Theory Y is hers. Peter Drucker called her a prophet of management.</li>
+ <li><strong>Her idealism shows.</strong> Integration assumes that every conflict hides reconcilable interests. Some conflicts, over wages, power and the division of profit, are zero-sum, and she gave little attention to the unequal power that decides whose terms prevail.</li>
+ <li><strong>Ideas or structure?</strong> Follett wrote for managers amid the industrial unrest of the 1920s, and her examples are conflicts between workers and management, so she addressed real conflicts of interest and not merely of ideas. But she sought to dissolve them by integration within the existing order, not by changing ownership and control, which is the radical critique of her dynamic administration.</li>
+</ul>
+
 <h2>The Behavioural Approach: Herbert Simon</h2>
 
 <p><strong>Herbert Simon's</strong> <em>Administrative Behaviour</em> (1947) shifts the unit of analysis once more. The organisation is neither a structure of positions nor a web of sentiments but a system of <strong>decisions</strong>, and administrative theory is the theory of how decisions are made and constrained.</p>
@@ -508,6 +661,43 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Two moves matter at the level of organisation theory. First, Simon dismissed the classical principles as <strong>proverbs</strong>: they come in mutually contradictory pairs, specialisation against unity of command, narrow span of control against few hierarchical levels, and nothing in them indicates which member of a pair applies to a given case. Second, he replaced economic man, who maximises, with <strong>administrative man</strong>, who <em>satisfices</em>, choosing the first alternative that meets an acceptable threshold because the information and computing capacity required to maximise are never available. The limit is not irrationality but <strong>bounded rationality</strong>: rational behaviour within the boundary of what the decision-maker can know and process.</p>
 
 <p>The organisational consequence is that structure is best understood as the mechanism by which the premises of decisions are supplied to those who make them. Hierarchy, communication channels, training and standard procedures all work by shaping what a subordinate takes as given. The full treatment of Simon, including the fact-value dichotomy, the zone of acceptance and his critics, belongs to the note on administrative behaviour.</p>
+
+<h3>Barnard's Definition of Organisation</h3>
+
+<p><strong>Chester Barnard</strong>, in <em>The Functions of the Executive</em> (1938), defined a formal organisation as a system of consciously coordinated activities or forces of two or more persons. Each term carries weight.</p>
+
+<ul>
+ <li><strong>System</strong>: the organisation is a whole whose parts are interdependent, and it is more than the sum of its members' efforts. This makes Barnard a forerunner of the systems approach.</li>
+ <li><strong>Activities or forces</strong>: the organisation consists of the activities of persons, not of the persons themselves. Individuals stand outside it and contribute part of their activity to it, which is why their continued willingness to contribute cannot be taken for granted.</li>
+ <li><strong>Consciously coordinated</strong>: the activities are deliberately related to a common purpose. This separates formal organisation from <strong>informal organisation</strong>, the network of personal contacts and interactions without a conscious joint purpose. Barnard held that informal organisation precedes and conditions the formal, and that formal organisations in turn create informal ones, which they need for communication and cohesion.</li>
+ <li><strong>Two or more persons</strong>: organisation begins where individual capacity ends, when a purpose is beyond what one person can achieve alone.</li>
+</ul>
+
+<p>An organisation comes into being when there are persons able to communicate with each other, who are willing to contribute action, to accomplish a common purpose. Communication, willingness to serve and common purpose are therefore its elements. The definition marks the break with the classical school, which defined organisation as a structure of positions. Barnard defined it as a cooperative system of human activity that survives only while it is effective in achieving its purpose and efficient in satisfying the motives of those who contribute. Its weakness is its assumption of cooperation: it says little about conflict, power and coercion in organisations whose members contribute because they have no alternative.</p>
+
+<h3>Weaknesses of the Behavioural Approach and the Shifts That Followed</h3>
+
+<p>The behavioural approach, from Barnard through Simon's <em>Administrative Behaviour</em> (1947) to the empirical studies of the 1950s, sought a science of administration built on observable behaviour, quantitative method and the separation of facts from values. By the late 1960s its usefulness for analysing administrative problems was being questioned on several grounds.</p>
+
+<ul>
+ <li><strong>Exclusion of values.</strong> Its logical positivism confined science to facts, while public administration is about choices among values such as equity, justice and legitimacy. Waldo's charge in 1952 was that a discipline built on efficiency could not explain the democracy it served.</li>
+ <li><strong>Technique before substance.</strong> The pursuit of rigour led to the study of what could be measured rather than what mattered, so methods were refined while the problems governments faced went unaddressed.</li>
+ <li><strong>Micro focus.</strong> Its unit was the individual decision or the small group, which neglected the environment, power and the purposes of organisations.</li>
+ <li><strong>Conservatism.</strong> By describing existing behaviour and treating it as given, it lent support to the status quo, a bias its critics called empirical conservatism.</li>
+ <li><strong>Limited transfer.</strong> Its findings came from American organisations and travelled poorly to developing countries, which is why comparative administration turned to ecology.</li>
+</ul>
+
+<p>The shifts made in response came from within political science and from public administration itself.</p>
+
+<ul>
+ <li><strong>Post-behaviouralism.</strong> In his presidential address to the American Political Science Association in 1969, "The New Revolution in Political Science", <strong>David Easton</strong>, himself a leading behaviouralist, announced a post-behavioural revolution under a <strong>credo of relevance</strong>: substance must take precedence over technique, research must address urgent social problems, values must be studied and developed rather than concealed, intellectuals have a duty to protect humane values, and to know is to bear the responsibility for acting. Scientific method was kept but subordinated to relevance.</li>
+ <li><strong>New Public Administration.</strong> Minnowbrook in 1968 turned the same demand on the discipline, insisting on relevance, values, social equity and change.</li>
+ <li><strong>Systems and ecological approaches</strong> widened the frame from the individual decision to the organisation in its environment.</li>
+ <li><strong>The policy orientation</strong> made the content and consequences of government action the subject, not administrative behaviour alone.</li>
+ <li><strong>Public choice</strong> kept the behavioural interest in individual action but replaced psychology with the economic assumption of self-interest.</li>
+</ul>
+
+<p>The behavioural approach was absorbed rather than abandoned. Its empirical methods became the ordinary tools of the field, and behavioural public administration has revived its interest in how officials and citizens actually decide, now drawing on behavioural economics. What changed is that method lost its claim to define the discipline.</p>
 
 <h2>The Systems Approach</h2>
 
@@ -556,6 +746,20 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Assessment</h3>
 
 <p>Contingency theory is the natural terminus of the sequence: having watched each school claim universality and lose it, the field concluded that fit is the only general principle available. Its weakness is the mirror of its strength. A theory that says the answer depends on the circumstances gives the practitioner very little until the relevant circumstances are specified, and the list of contingent variables has grown long enough that the theory risks becoming a restatement of the problem. For public administration there is a further difficulty: a government department cannot choose its environment, its tasks or often its structure, so the prescription to fit the organisation to its circumstances meets a system in which very few of those variables are in the administrator's hands.</p>
+
+<h3>Strategic Contingencies Theory</h3>
+
+<p>Contingency theory asks how an organisation as a whole should fit its environment. <strong>Strategic contingencies theory</strong> asks how power is distributed among the sub-units inside it. Its classic statement is "A Strategic Contingencies' Theory of Intraorganizational Power" by <strong>D.J. Hickson, C.R. Hinings, C.A. Lee, R.E. Schneck and J.M. Pennings</strong> (<em>Administrative Science Quarterly</em>, 1971). It built on Michel Crozier's study of a French state tobacco monopoly, in which the maintenance workers, the only people able to deal with machine breakdowns, held power far beyond their formal position because they controlled the one remaining source of uncertainty.</p>
+
+<p>The theory treats the organisation as a set of interdependent sub-units and holds that a sub-unit's power depends on three variables.</p>
+
+<ul>
+ <li><strong>Coping with uncertainty.</strong> A sub-unit that reduces uncertainty for others, by forecasting, preventing or absorbing it, makes them dependent on it.</li>
+ <li><strong>Non-substitutability.</strong> Power grows where no other unit, inside or outside the organisation, can perform the activity.</li>
+ <li><strong>Centrality.</strong> Power grows with the <em>pervasiveness</em> of a sub-unit's workflows, the number of other units linked to it, and with their <em>immediacy</em>, the speed and severity with which a stoppage of its work would halt the organisation's main output.</li>
+</ul>
+
+<p>A sub-unit that copes with critical uncertainty, cannot be replaced and is central controls the organisation's strategic contingencies and becomes its most powerful part. For organisational design the problem is that such power may serve the sub-unit rather than the organisation and may outlast the contingency that created it. The design responses that follow from the theory are to create substitutes, by training others, codifying expertise into routines or contracting with outside providers, to reduce centrality by building buffers such as stocks, parallel units and redundancy so that one stoppage cannot halt the whole, and to spread the capacity to cope with uncertainty so that no single unit monopolises it. Design thus manages dependence instead of leaving it to accumulate. In Indian government the same logic explains the leverage of a single technology vendor over a department whose records only it can run, and why reform so often begins with building in-house capacity.</p>
 `,
  'administrative-behaviour': `
 <h2>What This Topic Asks</h2>
@@ -602,6 +806,58 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Arrange the orders a person might receive in order of their acceptability and they fall into three groups: those clearly unacceptable; those on the neutral line, just acceptable or just unacceptable; and those unquestionably acceptable. The last group lies within the <strong>zone of indifference</strong>, and orders falling inside it are obeyed without conscious question, whatever the nature of the authority behind them. The zone widens or narrows with the inducements the organisation offers against the burdens and sacrifices it demands.</p>
 
 <p>Simon adopted the idea and renamed it the <strong>zone of acceptance</strong>. The practical importance for public administration is large: it means the effective authority of a superior is a variable maintained by the organisation's incentives, not a constant conferred by the rules.</p>
+
+<h3>Barnard: The Contribution-Satisfaction Equilibrium</h3>
+
+<p>Barnard's theory of organisation is at bottom a theory of why people keep contributing to it. A formal organisation exists when persons able to communicate are willing to contribute action to a common purpose, so <strong>communication</strong>, <strong>willingness to serve</strong> and <strong>common purpose</strong> are its three elements. Willingness is the fragile one. Each member weighs the inducements the organisation offers against the burdens and sacrifices it demands, and goes on contributing only while the inducements are at least equal to the contributions in his own estimation. The survival of the organisation therefore depends on an equilibrium between what it gives and what it receives, the <strong>contribution-satisfaction equilibrium</strong>.</p>
+
+<p>Barnard's <strong>economy of incentives</strong> lists what the organisation can offer. <em>Specific</em> inducements, offered to particular persons, are material inducements, personal non-material opportunities such as distinction, prestige and power, desirable physical conditions of work, and ideal benefactions such as pride of workmanship and loyalty to a cause. <em>General</em> incentives are associational attractiveness, conditions of work suited to habitual methods and attitudes, the feeling of enlarged participation in events, and the condition of communion with colleagues. He held that material reward is weak beyond the level of subsistence and that non-material incentives carry most of the weight. Where incentives cannot be raised, the organisation must work on the other side of the balance through <strong>persuasion</strong>: coercion, the rationalisation of opportunity, and the inculcation of motives.</p>
+
+<h4>Effectiveness and Efficiency</h4>
+
+<ul>
+ <li><strong>Effectiveness</strong> is the accomplishment of the cooperative purpose, which is social and non-personal. An organisation that cannot achieve its purpose disintegrates.</li>
+ <li><strong>Efficiency</strong> is the satisfaction of the individual motives of those who contribute. In Barnard's specialised sense it is the organisation's capacity to offer effective inducements in sufficient quantity to maintain the equilibrium of the system. An organisation that achieves its purpose while dissatisfying its members is effective but inefficient, and it will not survive, because the contributions on which it depends will be withdrawn.</li>
+</ul>
+
+<p>Efficiency in this sense has nothing to do with the engineer's ratio of output to input. It measures the organisation's ability to keep its members contributing, and it makes the survival of every organisation a problem of motivation.</p>
+
+<h4>The Barnard-Simon Theory</h4>
+
+<p>Simon adopted the idea in <em>Administrative Behaviour</em> (1947), and <strong>James March and Herbert Simon</strong>, in <em>Organizations</em> (1958), restated it as <strong>inducements-contributions theory</strong>. Each participant receives inducements and makes contributions, continues to participate only while the inducements are as great as or greater than the contributions, measured by his own values and by the alternatives open to him, and the contributions of one group are the source of the inducements paid to others. March and Simon described this Barnard-Simon theory of organisational equilibrium as essentially a theory of motivation, a statement of the conditions under which an organisation can induce its members to continue participating and so assure its survival.</p>
+
+<h4>Is It Still a Logical Model?</h4>
+
+<ul>
+ <li><strong>For it:</strong> it explains turnover, absenteeism and the withdrawal of effort without assuming that people work for money alone, it shares the human relations finding that non-material rewards matter, and it anticipates later exchange theories such as Adams's equity theory and Vroom's expectancy model.</li>
+ <li><strong>Against it:</strong> it assumes members can calculate and compare inducements and contributions, which is hard where both are intangible. It treats exit as the response to imbalance, while members with few alternatives stay and withdraw effort instead. And it neglects power, since the organisation, not the member, usually sets the terms.</li>
+</ul>
+
+<p>The second objection has an Indian application. A permanent civil service with assured tenure and few comparable outside options rarely loses members, so its equilibrium is kept or lost in effort rather than in membership. Barnard's model then describes the official who stays but contributes the minimum, and it points to the inducements that remain available when pay is fixed by commission: recognition, meaningful work, fair promotion and a shared sense of purpose.</p>
+
+<h3>Barnard: The Functions of the Executive</h3>
+
+<p>Barnard brought the social into the study of organisation. Where the classical writers saw a structure of positions to be filled and controlled, he saw a cooperative system of human activity that survives only while people choose to keep contributing to it, and that contains an informal organisation the chart does not show. The executive's job follows from that view. Executive work, in his account, is not the work of the organisation but the specialised work of maintaining the organisation in operation. The executive does not merely manage a group of persons. He maintains the system of cooperation itself, which is why his role is larger than a manager's.</p>
+
+<p>Barnard named three executive functions, corresponding to the three elements of organisation.</p>
+
+<ul>
+ <li><strong>Providing a system of communication.</strong> This means defining the scheme of organisation, securing personnel of loyalty and capacity to fill its positions, and maintaining the informal organisation, which carries what the formal channels cannot.</li>
+ <li><strong>Securing essential services from individuals.</strong> This has two parts: bringing people into cooperative relationship with the organisation through recruitment, and eliciting their services once inside through incentives, persuasion, the maintenance of morale, supervision and training. It is the executive's management of the contribution-satisfaction equilibrium.</li>
+ <li><strong>Formulating and defining purpose.</strong> Purpose is defined less by words at the top than by the aggregate of decisions taken throughout the organisation, so responsibility for it is spread down the hierarchy. The executive must also make members believe in it. In Barnard's words, "the inculcation of belief in the real existence of a common purpose is an essential executive function". Without that belief the cooperative system dissolves into a set of individual bargains.</li>
+</ul>
+
+<h4>Coordination as the Whole</h4>
+
+<p>Barnard rejected the classical habit of listing coordination as one principle beside specialisation, authority and the rest. For him communication, authority, specialisation and purpose are all aspects comprehended in coordination. Coordination is therefore not a separate activity but the character of the whole cooperative system, and the three executive functions are three views of the same task.</p>
+
+<h4>Executive Responsibility and Morality</h4>
+
+<p>His chapter on the nature of executive responsibility explains what the executive adds. Executive positions, he wrote, imply a complex morality, because the executive is subject to several codes at once, his personal code, professional codes and the codes of the organisation and its units, and these may conflict. They require a high capacity of responsibility, which Barnard defined as the power of a private code of morals to control conduct in the presence of strong contrary desires or impulses. They demand technical competence as a moral factor, since good intentions without ability produce failure. Above all they require the faculty of creating morals for others: inspiring cooperative personal decisions and a faith in the common purpose that outlasts any single bargain.</p>
+
+<p>This creative function is, for Barnard, the essence of leadership and the highest exercise of responsibility. His conclusion is that organisations endure in proportion to the breadth of the morality by which they are governed, so that foresight, long purposes and high ideals are the basis of the persistence of cooperation.</p>
+
+<p>The assessment cuts two ways. Barnard explains why a district officer who only applies rules cannot hold a team together through a flood, an epidemic or an election, where shared purpose and morale do the work that orders cannot. But <strong>Charles Perrow</strong> and others criticised him for treating cooperation as the natural state of organisation, for neglecting conflict and power, and for giving the executive a moral authority that can shade into manipulation of the people whose beliefs he is meant to shape.</p>
 
 <h2>Herbert Simon</h2>
 
@@ -686,6 +942,24 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The substance divides on three points. On <strong>fact and value</strong>, Simon, grounded in logical positivism, insisted that factual propositions could be handled scientifically while value propositions belonged to the political realm; Waldo replied that values are always involved and that public administrators cannot escape making value judgements. On <strong>method</strong>, Simon wanted a rigorous science; Waldo held that the demand for rigour was itself a value choice that narrowed what the field could study. On <strong>democracy</strong>, Waldo's point was that a discipline organised around efficiency cannot explain, let alone justify, the democratic processes that public administration exists to serve.</p>
 
 <p>Neither side won, and the argument is still the spine of the subject. New Public Administration in 1968 is Waldo's position institutionalised; New Public Management in the 1980s is Simon's efficiency criterion returning in market dress.</p>
+
+<h3>Simon's Two-Dimensional Taxonomy of Decision Techniques</h3>
+
+<p>In <em>The New Science of Management Decision</em> (1960) Simon carried the distinction between programmed and non-programmed decisions into a classification of the techniques used to make them. The two are not separate kinds but the ends of a continuum, running from highly programmed decisions, repetitive and routine with a settled procedure, to highly non-programmed ones, novel, ill-structured and consequential. Simon crossed this dimension with a second, the age of the technique: the <strong>traditional</strong> methods organisations have always used, and the <strong>modern</strong> methods made possible by operations research and the computer. The result is a two-by-two table.</p>
+
+<table>
+ <thead>
+ <tr><th>Type of decision</th><th>Traditional techniques</th><th>Modern techniques</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Programmed: routine, repetitive, with a standard procedure</td><td>Habit. Clerical routine and standard operating procedures. Organisation structure: common expectations, a system of sub-goals and well-defined channels of information</td><td>Operations research: mathematical analysis, models and computer simulation. Electronic data processing</td></tr>
+ <tr><td>Non-programmed: one-shot, ill-structured, novel policy decisions</td><td>Judgement, intuition and creativity. Rules of thumb. Selection and training of executives</td><td>Heuristic problem-solving techniques, applied to training human decision-makers and to constructing heuristic computer programs</td></tr>
+ </tbody>
+</table>
+
+<p>Three points follow. First, the degree of programming is a matter of degree, and decisions move along the continuum as an organisation learns: what was once a matter of judgement becomes a procedure once its pattern is understood. Second, Simon expected modern techniques to advance from the programmed quadrant into the non-programmed one, as heuristic programming allowed computers to simulate human problem solving. Third, the table gives the manager a rule for allocating attention: programme whatever can safely be programmed and push it downward, so that the judgement of senior officials is reserved for decisions no procedure can handle.</p>
+
+<p>The same book described decision making in three phases: <strong>intelligence</strong> activity, searching the environment for conditions that call for decision, <strong>design</strong> activity, inventing and analysing possible courses of action, and <strong>choice</strong> activity, selecting one of them. In Indian administration the taxonomy is visible in the movement of routine entitlement decisions, such as pension sanction, scholarship payment and the mutation of land records, onto rule-based software, while disaster response and policy design remain non-programmed decisions that depend on judgement and on how officers are selected and trained.</p>
 
 <h2>Communication in Organisations</h2>
 
@@ -817,6 +1091,64 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>On <strong>conflict</strong> Likert is worth citing directly. He defines it as "the active striving for one's own preferred outcome, which if attained, precludes the attainment by others of their own preferred outcome, thereby producing hostility", and distinguishes <em>substantive</em> conflict, arising from the substance of the task, from <em>affective</em> conflict, arising from the emotional aspects of interpersonal relations. His remedy for both is System 4 management.</p>
 
+<h3>Clayton Alderfer: ERG Theory</h3>
+
+<p><strong>Clayton Alderfer</strong>, in an article of 1969 and in <em>Existence, Relatedness, and Growth</em> (1972), reworked Maslow's hierarchy to fit evidence from organisations. He compressed Maslow's five levels into three.</p>
+
+<ul>
+ <li><strong>Existence needs</strong>: material and physiological desires, corresponding to Maslow's physiological and safety needs, and met by pay, benefits and working conditions.</li>
+ <li><strong>Relatedness needs</strong>: relationships with family, colleagues, superiors and friends, corresponding to Maslow's social needs and the external part of esteem.</li>
+ <li><strong>Growth needs</strong>: the desire for creative and productive personal development, corresponding to the internal part of esteem and to self-actualisation.</li>
+</ul>
+
+<p>The changes in assumption matter more than the change in number.</p>
+
+<ul>
+ <li><strong>More than one need can operate at once.</strong> A person may seek growth while existence needs are still unmet, so the hierarchy is not a strict ladder.</li>
+ <li><strong>The order is not fixed.</strong> Culture and personal history can change the priority of needs, which answers the objection that Maslow's order is Western and middle-class.</li>
+ <li><strong>Frustration-regression.</strong> Maslow allowed only satisfaction-progression, upward movement as each level is met. Alderfer added that when a higher need is frustrated, a person falls back on a lower one and intensifies demand for it. An employee denied growth in a dead-end post presses harder for pay.</li>
+ <li><strong>A continuum rather than steps.</strong> The three categories shade into one another, which made the theory easier to test.</li>
+</ul>
+
+<p>ERG therefore reconceptualises the hierarchy rather than rejecting it. It keeps the idea that needs differ in kind, drops the claim that they must be satisfied in sequence, and adds a mechanism that explains behaviour Maslow cannot. Its administrative lesson is that where promotion and responsibility are blocked, as in a seniority-bound service, demands for pay and allowances will intensify, and money alone will not settle them. Its weakness is that its empirical support, though better than Maslow's, is still limited and its categories remain broad.</p>
+
+<h3>McGregor's The Professional Manager</h3>
+
+<p><em>The Professional Manager</em> (1967), published after McGregor's death in 1964 and edited by Caroline McGregor and Warren Bennis, revises the argument of <em>The Human Side of Enterprise</em> (1960) in three ways.</p>
+
+<ul>
+ <li><strong>Managerial cosmology.</strong> Every manager acts on a cosmology, a largely unexamined set of beliefs about people, causation and the world in which he works. It shapes what he perceives, how he interprets the behaviour of subordinates and which strategies seem sensible to him, so his role perceptions follow from it. McGregor now said that Theory X and Theory Y were not managerial strategies but underlying beliefs about the nature of man that lead managers to adopt one strategy rather than another. Changing practice therefore requires making the cosmology explicit and testing it against evidence.</li>
+ <li><strong>The manager as a professional.</strong> As the engineer applies physical science, the professional manager applies the knowledge of the behavioural sciences. The model is the relationship of a professional to a client, in which the professional helps not by dictating to the client but by placing knowledge and skill at the client's disposal.</li>
+ <li><strong>The rational and emotive individual.</strong> Human behaviour is not purely rational, and feelings are facts the manager must take into account. The manager is himself a rational and emotive individual whose task is to work through the differences among people and build a managerial team, since the work of a modern organisation is done by interdependent groups rather than by individuals.</li>
+</ul>
+
+<p>The difference from Theory Y is one of object and of tone. Theory Y was a set of assumptions about subordinates and their capacity for self-direction, with the integration of individual and organisational goals as its principle. <em>The Professional Manager</em> turns to the manager himself, to his beliefs, his emotions and his relations with peers, and treats conflict and difference as the normal material of teamwork rather than as failures of integration.</p>
+
+<p>It also clarifies why Theory Y is indicative rather than prescriptive. McGregor never offered it as a formula or as a licence for soft management. Its assumptions indicate possibilities: the limits on human collaboration in organisations lie not in human nature but in management's ingenuity in discovering how to realise the potential of its people. How to realise it is left to the manager's judgement in each situation, just as a professional places knowledge at the client's disposal instead of dictating to him.</p>
+
+<h3>Public Service Motivation</h3>
+
+<p>Public service motivation (PSM) is the claim that people in government are moved by motives that theories drawn from business omit. <strong>James Perry and Lois Wise</strong>, in "The Motivational Bases of Public Service" (<em>Public Administration Review</em>, 1990), defined it as an individual's predisposition to respond to motives grounded primarily or uniquely in public institutions and organisations. They grouped the motives into three kinds.</p>
+
+<ul>
+ <li><strong>Rational</strong>: motives of individual utility, such as the attraction of taking part in policy formulation, commitment to a public programme through personal identification with it, and advocacy of a special interest.</li>
+ <li><strong>Norm-based</strong>: a desire to serve the public interest, loyalty to duty and to the government as a whole, and commitment to social equity.</li>
+ <li><strong>Affective</strong>: commitment to a programme from genuine conviction about its social importance, and the patriotism of benevolence, a love of the people and of the political community.</li>
+</ul>
+
+<p>Their propositions explain why PSM is treated as an inducement to efficiency: the greater a person's PSM, the more likely he is to seek membership of a public organisation, PSM is positively related to individual performance in public organisations, and organisations that attract members with high PSM are less dependent on utilitarian incentives to manage performance. <strong>Perry</strong> (1996) later measured it along four dimensions: attraction to public policy making, commitment to the public interest, compassion and self-sacrifice.</p>
+
+<p>Used as an inducement, PSM points administration in four directions.</p>
+
+<ul>
+ <li><strong>Recruitment</strong> can test for public service values, so that the system selects for motivation as well as ability.</li>
+ <li><strong>Job design</strong> can connect officials to the visible results of their work, raising the sense that it matters.</li>
+ <li><strong>Recognition</strong> should accompany pay, since pay-for-performance schemes can crowd out intrinsic motivation in work whose value lies in its purpose.</li>
+ <li><strong>Leadership</strong> that communicates the mission of the organisation links personal values to daily work.</li>
+</ul>
+
+<p>Indian practice draws on the idea. Mission Karmayogi (2020) frames capacity building around the role and values of the public servant rather than rules alone, and the Prime Minister's Awards for Excellence in Public Administration recognise innovation by districts and officers. The approach has limits. PSM is measured largely through self-reports, which invite socially desirable answers. Entry to the civil services is also prized for security, status and power, so a high level of PSM cannot be assumed. And motivation without resources and autonomy turns into frustration and burnout, so PSM supplements sound structure, fair pay and accountable management rather than replacing them.</p>
+
 <h2>Leadership</h2>
 
 <p><strong>Keith Davis</strong> defines leadership as "the ability to persuade others to seek defined objectives, enthusiastically. It is the human factor which binds a group together and motivates it towards goals." <strong>Koontz and Weihrich</strong> describe it as "the art or process of influencing people so that they will strive willingly and enthusiastically towards the achievement of group goals", adding that leaders do not stand behind a group to push and prod but place themselves before it to facilitate progress.</p>
@@ -867,6 +1199,58 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The leadership literature is drawn from business and transfers to government imperfectly, which is a point worth making in an answer rather than assuming. The public administrator leads without control over the two instruments the models assume: he cannot usually set the goal, which is fixed by statute or by the political executive, and he cannot usually distribute the reward, since pay and promotion are governed by service rules. What he has instead is the authority of office, the example of his own conduct, and the ability to protect his subordinates from arbitrary interference.</p>
 
 <p>Tenure compounds the difficulty. A district officer transferred every eighteen months cannot pursue a transformational agenda that requires years, and the frequent transfer of Indian civil servants is therefore not only an administrative irritant but a structural limit on what leadership in the public service can be. The theories remain useful, but the honest conclusion is that public leadership is exercised against constraints the business literature does not contemplate.</p>
+
+<h3>William Reddin: The 3-D Model</h3>
+
+<p>The Ohio State studies identified two independent dimensions of leader behaviour, <em>initiating structure</em> and <em>consideration</em>, and Blake and Mouton's grid scored concern for production and concern for people and held the 9,9 team style to be best everywhere. <strong>William J. Reddin</strong>, in <em>Managerial Effectiveness</em> (1970), kept the two dimensions as <strong>task orientation</strong> and <strong>relationships orientation</strong> and added a third, <strong>effectiveness</strong>, the extent to which a manager achieves the output requirements of his position. His central claim is that no style is effective or ineffective in itself: any style has situations appropriate to it and many situations inappropriate to it.</p>
+
+<p>The first two dimensions yield four basic styles, and the third splits each into a more effective and a less effective version, according to whether it fits the situation.</p>
+
+<table>
+ <thead>
+ <tr><th>Basic style</th><th>Orientation</th><th>Less effective</th><th>More effective</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Separated</td><td>Low task, low relationships</td><td>Deserter</td><td>Bureaucrat</td></tr>
+ <tr><td>Related</td><td>Low task, high relationships</td><td>Missionary</td><td>Developer</td></tr>
+ <tr><td>Dedicated</td><td>High task, low relationships</td><td>Autocrat</td><td>Benevolent autocrat</td></tr>
+ <tr><td>Integrated</td><td>High task, high relationships</td><td>Compromiser</td><td>Executive</td></tr>
+ </tbody>
+</table>
+
+<p>The model added two things to its predecessors. It made effectiveness a separate dimension instead of an assumed product of one style, so that the integrated 9,9 manager becomes a mere compromiser where the situation calls for decisiveness, while a separated style becomes an effective bureaucrat in an office whose work is routine and where procedure is the point. It also asks of the manager two skills, <strong>situational sensitivity</strong>, reading what the situation demands, and <strong>style flexibility</strong>, changing style to meet it. For public administration the bureaucrat style fairly describes what much routine regulatory work requires, while disaster management demands a dedicated or integrated style. The criticism is that the situational variables are loosely defined and that effectiveness is judged after the event, so the model is easier to apply in hindsight than in advance.</p>
+
+<h3>Leaders and Managers: Bennis and Kotter</h3>
+
+<p>The distinction between leading and managing was opened by <strong>Abraham Zaleznik</strong> in "Managers and Leaders: Are They Different?" (<em>Harvard Business Review</em>, 1977) and given its best-known form by <strong>Warren Bennis</strong>. In <em>Leaders</em> (1985), written with Burt Nanus, he put it as the proposition that managers are people who do things right and leaders are people who do the right thing. The manager's concern is efficiency in performing a given task, while the leader's concern is whether it is the right task. In <em>On Becoming a Leader</em> (1989) he extended the contrast.</p>
+
+<table>
+ <thead>
+ <tr><th>The manager</th><th>The leader</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Administers</td><td>Innovates</td></tr>
+ <tr><td>Maintains</td><td>Develops</td></tr>
+ <tr><td>Focuses on systems and structure</td><td>Focuses on people</td></tr>
+ <tr><td>Relies on control</td><td>Inspires trust</td></tr>
+ <tr><td>Has a short-range view</td><td>Has a long-range perspective</td></tr>
+ <tr><td>Asks how and when</td><td>Asks what and why</td></tr>
+ <tr><td>Accepts the status quo</td><td>Challenges it</td></tr>
+ </tbody>
+</table>
+
+<p><strong>John Kotter</strong>, in "What Leaders Really Do" (<em>Harvard Business Review</em>, 1990) and <em>A Force for Change</em> (1990), gave the distinction a functional basis. Management is about coping with <strong>complexity</strong>: it brings order and consistency to large organisations through planning and budgeting, organising and staffing, and controlling and problem solving. Leadership is about coping with <strong>change</strong>: setting a direction, aligning people behind it, and motivating and inspiring them. Kotter concluded that most organisations are over-managed and under-led, and that both are needed in proportions that depend on how complex the organisation is and how fast its environment changes.</p>
+
+<h4>Is the Distinction Valid?</h4>
+
+<ul>
+ <li><strong>Valid as a distinction of function.</strong> Setting direction and maintaining order are different activities, and an organisation can have one without the other. A department run with procedural correctness towards an obsolete objective is well managed and badly led.</li>
+ <li><strong>Overdrawn as a distinction of persons.</strong> <strong>Henry Mintzberg</strong>, in <em>The Nature of Managerial Work</em> (1973), counted leader among the ten roles of every manager, and doing the right things achieves nothing unless they are also done rightly. Most administrators must do both in the same week.</li>
+ <li><strong>Biased.</strong> The contrast tends to romanticise the leader and belittle the manager, though many organisational failures are failures of execution rather than of vision.</li>
+ <li><strong>Contextual.</strong> Stable, rule-bound work needs management above all, while reform, crisis and turbulence call for leadership. The success of an organisation depends on matching the mix to its situation, which connects the argument to the contingency theories of leadership.</li>
+</ul>
+
+<p>Indian administration supplies both sides. T.N. Seshan's tenure as Chief Election Commissioner (1990 to 1996) changed what the Model Code of Conduct meant in practice, a case of leadership redirecting an institution, while the routine conduct of elections by district officers is management of great complexity. E. Sreedharan's direction of the Delhi Metro combined the two: a clear commitment to time-bound completion, and tight managerial control of contracts and schedules.</p>
 `,
  'accountability-control': `
 <h2>The Problem This Topic Answers</h2>
@@ -1132,6 +1516,22 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Civil society bodies supply what the formal machinery cannot: they identify the grievance before it reaches a forum, aggregate individual complaints into a pattern, sustain attention between elections, and supply the technical capacity that individual citizens lack. The MKSS campaign in Rajasthan, which began as a demand for wage records and ended in the national right to information, is the clearest Indian demonstration that accountability instruments are usually won from below rather than granted from above.</p>
 
+<h3>The Fourth Estate in Chains</h3>
+
+<p>The press can hold government to account only if it is itself free and credible. The claim that the fourth estate is in chains points to constraints from five directions.</p>
+
+<ul>
+ <li><strong>Ownership.</strong> Media houses are increasingly owned by corporate groups with interests in other sectors, and some by politicians. Cross-media ownership concentrates influence, and the Telecom Regulatory Authority of India's recommendations on media ownership (2014) to limit it have not been acted on. An owner with business before the government has reason to soften coverage.</li>
+ <li><strong>Revenue.</strong> Dependence on advertising, including government advertising, makes hostile reporting costly. In <em>Common Cause v Union of India</em> (2015) the Supreme Court laid down guidelines on government advertising to prevent its use for political patronage.</li>
+ <li><strong>Paid news.</strong> News space sold as advertising without disclosure was documented by a Press Council of India sub-committee in 2010, and the Election Commission treats it as election expenditure. In 2011 the Commission disqualified a legislator, Umlesh Yadav, for failing to account for paid news.</li>
+ <li><strong>Law.</strong> Criminal defamation, upheld in <em>Subramanian Swamy v Union of India</em> (2016) and retained in the Bharatiya Nyaya Sanhita, 2023, and costly civil suits are used to intimidate journalists. Sedition was put in abeyance by the Supreme Court in 2022, but offences against sovereignty and unity, internet shutdowns and the regulation of digital news under the Information Technology Rules, 2021 add pressure. The courts have pushed back: <em>Shreya Singhal v Union of India</em> (2015) struck down Section 66A of the Information Technology Act, <em>Anuradha Bhasin v Union of India</em> (2020) required internet suspensions to be proportionate, and <em>Madhyamam Broadcasting v Union of India</em> (2023) held that criticism of government policy cannot be branded anti-establishment to justify a ban.</li>
+ <li><strong>Weak regulation.</strong> The Press Council of India, under the Press Council Act, 1978, covers only print and can only warn, admonish or censure. Television news is regulated by industry bodies with modest sanctions, and digital media have no independent regulator.</li>
+</ul>
+
+<p>Some chains are self-made. Ratings-driven sensationalism, media trials that prejudge accused persons, polarised coverage and the decline of costly investigative reporting have eroded credibility. The media has become, in one reading, more a societal lens than an institutional one: it amplifies public sentiment, increasingly through social media, rather than scrutinising institutions systematically. Yet it still exposes failures, from procurement scams to custodial violence, that then reach Parliament and the courts.</p>
+
+<p>Making the media more responsible and impartial requires disclosure of ownership and financial interests, limits on cross-media concentration, an independent regulator for all media with powers beyond censure, neutral and transparent allocation of government advertising, a review of criminal defamation, protection for journalists, and support for public-service and investigative journalism. Accountability of government through the media depends on the accountability of the media itself.</p>
+
 <h2>The Right to Information</h2>
 
 <p>RTI means access to reasonable information, files and documents concerning government operations and performance, available to citizens and to non-governmental organisations. It is the precondition of every other accountability mechanism, because a control that cannot see what was done cannot judge it.</p>
@@ -1265,6 +1665,22 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Equality between governors and governed is a myth.</strong> There will always be inequalities between them. The workable position is not that they should not exist but that they should rest on principle rather than on arbitrariness, being inequalities of function and service rather than of status.</li>
  <li><strong>Discretion is unavoidable.</strong> Dicey's first meaning condemns wide discretionary power, which a welfare state cannot do without. The modern rule of law therefore asks not whether discretion exists but whether it is conferred by law, exercised for the purpose for which it was given, and open to review.</li>
 </ul>
+
+<h3>Red Light and Green Light Theories</h3>
+
+<p><strong>Carol Harlow and Richard Rawlings</strong>, in <em>Law and Administration</em> (1984), classified theories of administrative law by the signal they give to the state.</p>
+
+<ul>
+ <li><strong>Red light theory</strong> treats administrative law as a brake on state power. It descends from Dicey's rule of law and laissez-faire liberalism, and later from Hayek's warning against the planning state in <em>The Road to Serfdom</em> (1944). Its purpose is to protect the individual's liberty and property against the administration, its chief instrument is the independent court exercising judicial review, and its method is control after the event, which Harlow and Rawlings called fire-fighting.</li>
+ <li><strong>Green light theory</strong> treats administrative law as a means of enabling the state to deliver collective goods. It descends from the Fabian and functionalist tradition of Laski, Robson and Jennings, who saw the administrative state as an instrument of social welfare and the courts as conservative obstacles to it, and J.A.G. Griffith's case for a political constitution belongs to it. Its preferred controls are political accountability, internal review, tribunals, ombudsmen and good administrative design, and its method is prevention before the event, fire-watching.</li>
+ <li><strong>Amber light</strong> is the middle position Harlow and Rawlings identified, accepting an active state while insisting on controls that improve its decisions as well as restrain them.</li>
+</ul>
+
+<h4>Which Is More Effective?</h4>
+
+<p>The objectives of administrative law are to keep power within legal limits, to protect rights, and to make administration fair, rational and effective. Neither theory achieves all of them alone. Red light control protects the individual in the particular case, but it is slow, costly, available mainly to those who can reach a court, and blunt as a means of improving administration. Green light control reaches the routine decisions that never come to court and improves administration from within, but it depends on the integrity and capacity of the administration and the vigilance of the legislature, and fails where these are weak.</p>
+
+<p>India needs both, and its system combines them. Judicial review under Articles 32 and 226 is part of the basic structure, as <em>L. Chandra Kumar v Union of India</em> (1997) held, and <em>Maneka Gandhi v Union of India</em> (1978) extended fairness and non-arbitrariness to administrative action, a strong red light. The growth of the welfare state has been matched by green light devices: tribunals under Articles 323A and 323B, the Right to Information Act, 2005, the Lokpal and Lokayuktas Act, 2013, citizens' charters, right to services laws and social audit. Given court arrears and the scale of welfare administration, the more effective emphasis is green light, internal controls, transparency and grievance redress that prevent wrongs, with judicial review held in reserve for illegality and the violation of rights. That combination is the amber light, and it is the position best suited to the objectives of administrative law in a developing welfare state.</p>
 
 <h2>Delegated Legislation</h2>
 
@@ -1576,6 +1992,34 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p><strong>Ramesh K. Arora</strong> describes a two-way exchange that has partly repaired the field's original condescension. Comparative theory can contribute to American administrative theory "by way of proving certain propositions like those dealing with prismatic elements in a diffracted society and with positive formalism", while comparative public administration can take the rich stock of propositions developed by American administrative theory and test how far they are culture-bound. Both traditions have converged on an ecological and developmental orientation, and the New Public Administration of the late 1960s, with its concern for administration and environment, belongs to the same movement.</p>
 
+<h3>Decline in the 1970s and Revival from the 1980s</h3>
+
+<p>Comparative public administration lost momentum in the 1970s almost as fast as it had grown. <strong>Peter Savage</strong>, reviewing the movement in 1976, judged that it started with no paradigm of its own and developed none. The reasons are usually grouped as follows.</p>
+
+<ul>
+ <li><strong>No paradigm.</strong> The field borrowed its frameworks, structural-functionalism, systems theory and modernisation theory, from sociology and political science, and never agreed on a dominant model or even on what was to be compared.</li>
+ <li><strong>Grand theory without testing.</strong> Riggs's prismatic model and similar constructs were too abstract to be tested, while most actual studies were descriptions of single countries. <strong>Lee Sigelman's</strong> survey of the literature (1976) found that much of what was called comparative did not compare at all.</li>
+ <li><strong>Elitist and west-centric assumptions.</strong> The field studied bureaucratic elites rather than citizens, and treated development as becoming like the West, with Western institutions as the measure. Developing countries appeared as deficient versions of the diffracted model.</li>
+ <li><strong>Irrelevance to practice.</strong> Its theories offered little that governments or aid agencies could use, and disillusion with technical assistance removed its practical audience.</li>
+ <li><strong>Loss of funding.</strong> Ford Foundation support for the Comparative Administration Group ended in the early 1970s, and the group's activity dwindled.</li>
+</ul>
+
+<h4>Why a Universal Theory Remains Elusive</h4>
+
+<p><strong>Robert Dahl</strong> argued in 1947 that claims to a science of public administration would remain hollow until the field became comparative, since only comparison could separate propositions true everywhere from those true in one national setting. Comparison then showed how few propositions survive the test. Administrative behaviour is embedded in culture: <strong>Geert Hofstede's</strong> <em>Culture's Consequences</em> (1980) found that nations differ systematically in power distance, uncertainty avoidance, individualism and masculinity, each of which shapes how authority, rules and participation work. The same rule produces different behaviour in different settings, which is Riggs's formalism. Nations also disagree on what good administration is, data are rarely comparable, and the tension between ideographic depth and nomothetic generality cannot be removed. Culture therefore stands in the way of integrating administrative thought into a universal theory, though middle-range generalisations about particular institutions remain possible.</p>
+
+<h4>The Revival</h4>
+
+<ul>
+ <li><strong>Comparison of reforms.</strong> The spread of New Public Management across the OECD made cross-national comparison a practical necessity. Pollitt and Bouckaert's <em>Public Management Reform: A Comparative Analysis</em> (2000) found distinct national trajectories rather than convergence.</li>
+ <li><strong>Governance and globalisation.</strong> International agencies compared countries on governance, corruption and state capacity, and globalisation raised the question whether administrative systems were converging.</li>
+ <li><strong>Policy transfer.</strong> Studies of lesson-drawing and policy transfer asked how administrative ideas travel between countries and what happens to them on arrival.</li>
+ <li><strong>The developmental state.</strong> Studies of East Asia, beginning with Chalmers Johnson's <em>MITI and the Japanese Miracle</em> (1982), compared how bureaucracies drove industrialisation.</li>
+ <li><strong>Method.</strong> The new work is empirical, middle-range and institution-specific, less interested in universal theory than in explaining variation.</li>
+</ul>
+
+<p>The new objective is not to export Western models but to understand why the same reform succeeds in one country and fails in another. Indian reform debates, such as the second Administrative Reforms Commission's use of British, New Zealand and other experience, belong to this kind of comparison. The criticism that survives is that the revival compares Western democracies with each other far more than it studies developing countries on their own terms.</p>
+
 <h2>Historical and Sociological Factors</h2>
 
 <p>Administrative systems are shaped by the histories that produced them, which is why two states with similar constitutions administer differently.</p>
@@ -1746,6 +2190,27 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The debate also recognises that although the role of government must be reduced, the state retains duties and functions, particularly in welfare and development, that are best performed by it. The market cannot take up all development functions: market forces promote economic growth but do not remove illiteracy or poverty, and do not develop backward regions, because the returns there do not attract private investment. The state's role remains important for development precisely where the market's logic does not reach.</p>
 
+<h3>The Washington Consensus and After</h3>
+
+<p><strong>John Williamson</strong> coined the term <strong>Washington Consensus</strong> in 1989, in a paper for the Institute for International Economics, to summarise the reforms that the Washington institutions, the IMF, the World Bank and the US Treasury, were urging on Latin America. His ten points were fiscal discipline, the redirection of public spending towards education, health and infrastructure, tax reform with a broad base and moderate rates, market-determined interest rates, a competitive exchange rate, trade liberalisation, openness to foreign direct investment, privatisation of state enterprises, deregulation, and secure property rights.</p>
+
+<p>Applied as a package, often as a condition of loans, the consensus gave results far from optimal in the transitional economies of the former Soviet bloc. Rapid liberalisation and privatisation, the shock therapy of the early 1990s in Russia, came before the legal, regulatory and institutional framework of a market existed, and the outcome was a deep and prolonged collapse of output, rising inequality and the capture of privatised assets by insiders. The East Asian crisis of 1997 then showed the danger of opening capital accounts without financial regulation.</p>
+
+<p>The <strong>post-Washington Consensus</strong> was set out by <strong>Joseph Stiglitz</strong>, then chief economist of the World Bank, in his 1998 lecture "More Instruments and Broader Goals: Moving Toward the Post-Washington Consensus".</p>
+
+<ul>
+ <li><strong>More instruments.</strong> Macroeconomic stability and liberalisation are not enough. Markets need effective regulation, above all of finance, competition policy, investment in education and technology, and reform sequenced to institutional capacity.</li>
+ <li><strong>Broader goals.</strong> The aim is not growth of GDP alone but sustainable, equitable and democratic development.</li>
+ <li><strong>State and market as complements.</strong> The question is not the size of the state but its effectiveness, the same conclusion the World Development Report of 1997 reached.</li>
+ <li><strong>Ownership.</strong> Reforms imposed through conditionality fail where countries do not own them, so policy must be fitted to local institutions rather than applied as one size for all.</li>
+</ul>
+
+<h4>Is State-led Development a Distortion?</h4>
+
+<p>The neoclassical view treats state intervention as a distortion of prices that misallocates resources, and the failures of import substitution and loss-making public enterprises gave it evidence. East Asia points the other way. <strong>Alice Amsden's</strong> <em>Asia's Next Giant</em> (1989) showed South Korea deliberately getting prices wrong through subsidies and directed credit tied to export performance, and <strong>Robert Wade's</strong> <em>Governing the Market</em> (1990) showed the same for Taiwan. Intervention succeeded where it was disciplined by performance standards and carried out by a capable and autonomous bureaucracy, which is Evans's embedded autonomy, and failed where it served rent-seeking. State-led development is therefore not a distortion in itself, and its results depend on the quality of the state.</p>
+
+<p>India's path shows the balance developing countries must strike. The reforms of 1991 liberalised trade, industry and finance gradually rather than by shock therapy, and the state then built regulators, SEBI, TRAI and the Competition Commission, to govern the markets it had opened, while keeping a direct role in welfare through rights-based laws such as MGNREGA (2005) and the National Food Security Act (2013). The lesson of the post-Washington Consensus is that market freedom requires more state capacity, of a regulating rather than a controlling kind.</p>
+
 <h2>Democratic Decentralisation</h2>
 
 <p>Decentralisation belongs in this topic because it is the standing comparative answer to the failures the prismatic model describes. If administrative behaviour in a transitional society is in fact determined by local power, then a structure that pretends to centralised authority while control remains local is the worst arrangement available, since it combines the rigidity of the centre with the particularism of the locality.</p>
@@ -1778,6 +2243,51 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The <strong>Human Development Index</strong>, introduced by the UNDP in 1990 under Haq's direction, gave the idea a measure, combining achievement in three dimensions: a long and healthy life, knowledge, and a decent standard of living, the last represented by gross national income per capita adjusted for purchasing power. The HDI is crude by design; its purpose was to displace GDP as the single number by which countries are ranked, and in that it succeeded.</p>
 
 <p>The <strong>Brundtland Report</strong> of the World Commission on Environment and Development (1987) added the temporal dimension, defining sustainable development as development that meets the needs of the present without compromising the ability of future generations to meet their own. The definition carries two concepts: <em>needs</em>, in particular the essential needs of the world's poor, to which overriding priority should be given; and <em>limitations</em> imposed by the state of technology and social organisation on the environment's ability to meet present and future needs. Read carefully, it is a redistributive claim as much as an ecological one.</p>
+
+<h3>Women in Development, Women and Development, Gender and Development</h3>
+
+<p>Development theory came to women late, through three approaches, each a critique of the one before.</p>
+
+<ul>
+ <li><strong>Women in Development (WID)</strong> emerged in the early 1970s, drawing on <strong>Ester Boserup's</strong> <em>Woman's Role in Economic Development</em> (1970), which showed that modernisation had often marginalised women by directing technology, training and land rights to men. The Percy Amendment to the United States Foreign Assistance Act (1973) required American aid to integrate women into development, and the UN Decade for Women (1976 to 1985) spread the approach. Rooted in liberal feminism and modernisation theory, WID sought to bring women into existing development through projects for income, credit, education and skills, treating them as an untapped resource whose inclusion would make development more efficient.</li>
+ <li><strong>Women and Development (WAD)</strong>, from the second half of the 1970s, drew on Marxist and dependency theory. It argued that women had always been part of development, and that the problem was not their exclusion but the terms of their inclusion in a global and class order that exploited the labour of poor women and poor men alike. It criticised WID for accepting existing structures, but it tended to subsume gender under class and said little about relations between men and women within the household.</li>
+ <li><strong>Gender and Development (GAD)</strong>, from the 1980s, drew on socialist feminism and on networks of Southern women such as DAWN, founded in 1984, whose platform by Gita Sen and Caren Grown, <em>Development, Crises and Alternative Visions</em> (1987), linked gender inequality to development models. GAD shifted attention from women to <strong>gender</strong>, the socially constructed roles and power relations between women and men, and asked how development could transform them.</li>
+</ul>
+
+<table>
+ <thead>
+ <tr><th></th><th>WID</th><th>GAD</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Focus</td><td>Women as a group</td><td>Relations between women and men</td></tr>
+ <tr><td>Problem</td><td>The exclusion of women from development</td><td>Unequal power relations that keep women subordinate</td></tr>
+ <tr><td>Goal</td><td>More efficient and effective development</td><td>Equitable, sustainable development with women and men as decision-makers</td></tr>
+ <tr><td>Strategy</td><td>Women's projects and components, income and productivity</td><td>Structural change, empowerment and gender analysis of all policy</td></tr>
+ <tr><td>Women seen as</td><td>Recipients and an untapped resource</td><td>Agents of change</td></tr>
+ <tr><td>Needs addressed</td><td>Practical gender needs</td><td>Practical and strategic gender needs</td></tr>
+ </tbody>
+</table>
+
+<p>The last row comes from <strong>Maxine Molyneux</strong> (1985), who separated practical gender interests, arising from women's existing roles and concerned with water, food and health care, from strategic gender interests, which challenge subordination through legal rights, control over property and freedom from violence. <strong>Caroline Moser</strong> turned these into practical and strategic gender needs in her work on gender planning (1989, 1993). GAD led to <strong>gender mainstreaming</strong>, adopted in the Beijing Platform for Action (1995), under which every policy is assessed for its effects on women and men.</p>
+
+<p>Indian planning followed the same path. The Sixth Plan (1980 to 1985) was the first to include a chapter on women and development, the Ninth Plan adopted a Women's Component Plan so that not less than thirty per cent of funds and benefits in women-related sectors would flow to women, and the National Policy for the Empowerment of Women (2001) adopted the language of empowerment and mainstreaming.</p>
+
+<h3>Women's Empowerment Beyond Economic Growth</h3>
+
+<p>Growth raises incomes but does not by itself change the norms and power relations that limit women's choices. <strong>Naila Kabeer</strong>, in "Resources, Agency, Achievements" (<em>Development and Change</em>, 1999), defined empowerment as the expansion in people's ability to make strategic life choices in a context where this ability was previously denied to them. It has three inter-related dimensions: <strong>resources</strong>, material, human and social, which are its preconditions, <strong>agency</strong>, the ability to define goals and act on them, which is its process, and <strong>achievements</strong>, the outcomes in well-being. A rise in household income that leaves decisions with men, or paid work added to unpaid care without any gain in voice, supplies resources without agency. Amartya Sen's estimate of more than a hundred million missing women (1990), the product of discrimination in care and of sex-selective practices, showed that discrimination can persist as incomes rise, as the low child sex ratios of some of India's most prosperous states confirm.</p>
+
+<h4>Affirmative Action in India</h4>
+
+<ul>
+ <li><strong>Local government.</strong> The 73rd and 74th Amendments (1992) reserved not less than one-third of seats and of chairperson posts in panchayats and municipalities for women, including within the seats reserved for Scheduled Castes and Scheduled Tribes. Bihar raised the share to half in 2006, and many states have since done the same. Chattopadhyay and Duflo (2004) found that village councils headed by women in West Bengal and Rajasthan invested more in the public goods women prioritised, such as drinking water.</li>
+ <li><strong>Legislatures.</strong> The Constitution (106th Amendment) Act, 2023, the Nari Shakti Vandan Adhiniyam, inserted Articles 330A, 332A and 334A to reserve one-third of the seats filled by direct election in the Lok Sabha, the state legislative assemblies and the Delhi assembly for women, including one-third of the seats reserved for Scheduled Castes and Scheduled Tribes. It takes effect after the delimitation based on the first census published after its commencement, lasts fifteen years, and rotates reserved seats after each delimitation.</li>
+ <li><strong>Gender budgeting.</strong> The Union Budget has carried a Gender Budget Statement since 2005-06, showing allocations for schemes wholly or partly meant for women, and ministries have set up gender budgeting cells.</li>
+ <li><strong>Economic and social measures.</strong> Self-help groups under the National Rural Livelihoods Mission, maternity benefit raised to twenty-six weeks in 2017, and campaigns such as Beti Bachao Beti Padhao (2015) address resources and norms together.</li>
+</ul>
+
+<h4>Why Discrimination Persists</h4>
+
+<p>Affirmative action has widened women's presence without eliminating discrimination. Elected women are often represented in practice by male relatives, the familiar figure of the sarpanch pati. Reservation in legislatures still awaits delimitation. Female participation in the labour force remains low, unpaid care work remains unequally shared, and violence and the fear of it restrict mobility and voice. Gender budgeting often reclassifies existing spending instead of changing it. Empowerment must therefore be pursued as concrete participation across institutions, in households, panchayats, markets and the bureaucracy, and not only through programmes, which is the GAD lesson that equal outcomes require changes in power and not only in resources.</p>
 
 <h2>Development Administration</h2>
 
@@ -2153,6 +2663,31 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Recruitment is usually done by the head of the organisation, but as organisations grow and need many kinds of employee, a separate agency becomes necessary, either within government or as an independent body. The argument for independence is the argument for merit itself: an appointing authority that is also the employer cannot credibly resist political pressure. This is the rationale for the constitutional position of the Union Public Service Commission and the State Public Service Commissions in India, whose independence rests on security of tenure, a charged salary and restrictions on the future employment of members.</p>
 
+<h3>Affirmative Action and Representative Bureaucracy</h3>
+
+<p>Affirmative action is the deliberate widening of entry to public employment for groups that open competition would otherwise leave out. Its theoretical basis is the idea of representative bureaucracy, set out by <strong>J. Donald Kingsley</strong> in <em>Representative Bureaucracy</em> (1944), which showed that the British civil service, though recruited by open examination, was drawn from and reflected the outlook of the dominant middle class. Merit competition does not by itself prevent <strong>administrative elitism</strong>: where education and social advantage coincide, an open examination selects a narrow stratum, and training, a closed career and distance from the governed consolidate it. The scholar-officials of imperial China, the Oxbridge administrative class in Britain and the Indian Civil Service recruited in London were all meritocratic in form and socially exclusive in fact.</p>
+
+<h4>The Global Context</h4>
+
+<ul>
+ <li><strong>United States.</strong> The term entered public policy through President Kennedy's Executive Order 10925 of 1961, which required government contractors to take affirmative action to ensure non-discrimination, and Executive Order 11246 of 1965 extended the obligation. American practice has relied on goals and outreach rather than reserved posts, and in 2023 the Supreme Court ended race-conscious university admissions in <em>Students for Fair Admissions v. Harvard</em>.</li>
+ <li><strong>Britain</strong> permits positive action, such as encouraging applications from under-represented groups, but not reserved posts, while <strong>Malaysia</strong> (the New Economic Policy of 1971) and <strong>South Africa</strong> (the Employment Equity Act, 1998) use preference in public employment to correct a historical imbalance between communities.</li>
+</ul>
+
+<h4>The Indian Constitutional Scheme</h4>
+
+<p>India has gone furthest among democracies, because reservation is written into the Constitution rather than left to policy.</p>
+
+<ul>
+ <li><strong>Article 16(4)</strong> permits reservation of appointments for any backward class not adequately represented in the services. <strong>Article 16(4A)</strong>, inserted by the 77th Amendment (1995) and amended by the 85th (2001) to add consequential seniority, extends it to promotion for the Scheduled Castes and Scheduled Tribes. <strong>Article 16(4B)</strong>, inserted by the 81st Amendment (2000), allows unfilled reserved vacancies to be carried forward without counting against the ceiling for the year in which they are filled.</li>
+ <li><strong>Article 335</strong> requires the claims of the Scheduled Castes and Scheduled Tribes to be taken into consideration "consistently with the maintenance of efficiency of administration". The 82nd Amendment (2000) added a proviso permitting relaxation of qualifying marks and lowering of evaluation standards for them. The article is the constitutional statement of the tension between representation and efficiency.</li>
+ <li><strong>Indra Sawhney v. Union of India (1992)</strong>, decided by nine judges, upheld 27 per cent reservation for the Other Backward Classes, required the exclusion of the <strong>creamy layer</strong>, fixed a ceiling of <strong>50 per cent</strong> save in extraordinary situations, and held that Article 16(4) does not extend to promotions.</li>
+ <li><strong>M. Nagaraj v. Union of India (2006)</strong> upheld the later amendments but required the state to show quantifiable data on backwardness, inadequacy of representation and administrative efficiency before reserving in promotion. <strong>Jarnail Singh (2018)</strong> dropped the need to prove the backwardness of the Scheduled Castes and Scheduled Tribes and applied the creamy layer test to promotions.</li>
+ <li>The <strong>103rd Amendment (2019)</strong> added Article 16(6), permitting up to 10 per cent reservation for the economically weaker sections, which was upheld by three to two in <em>Janhit Abhiyan v. Union of India</em> (2022).</li>
+</ul>
+
+<p>Affirmative action answers the elitism that open competition reproduces, and the social base of the Indian services has widened markedly since independence. Its limits are as clear. Benefits concentrate among the better-off within eligible groups, which the creamy layer rule attempts to correct, reserved posts at higher levels often remain unfilled, and reservation changes who enters far more than how the service behaves, so a bureaucracy can become representative in composition without becoming more responsive in conduct.</p>
+
 <h2>Training</h2>
 
 <p>Training is the deliberate improvement of an employee's capacity to perform, and in a career service it is the only instrument available for adjusting a workforce to new tasks, since the workforce itself cannot be replaced.</p>
@@ -2192,6 +2727,23 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>A career system is one in which a person enters young at the bottom of a service, advances within it, and remains until retirement, as against a position-based system in which each post is filled by open competition from inside or outside. Career systems buy commitment, institutional memory and continuity at the price of mobility and fresh capability, which is the trade-off behind every argument about lateral entry.</p>
 
 <p>Career advancement serves the individual by giving direction to effort, recognition of achievement and rising reward; and it serves the organisation by retaining capability, motivating performance and filling higher posts with people who understand the institution. The standard hindrances are the shape of the hierarchy, which narrows towards the top so that most careers stall by design; the absence of any reliable link between performance and advancement; political interference in postings; and the tendency of seniority to substitute for assessment.</p>
+
+<h3>Lateral Entry</h3>
+
+<p>Lateral entry is the appointment of people from outside the career service directly to middle and senior posts, which brings an element of the position system into a career system. India used it informally after independence for economists and technical advisers, among them Manmohan Singh, who served as Economic Adviser in the Ministry of Commerce in the early 1970s. It became a formal scheme in <strong>June 2018</strong>, when the government invited specialists from outside government for <strong>ten posts of Joint Secretary</strong>. In <strong>August 2024</strong> the government asked the <strong>UPSC to cancel</strong> its fresh advertisement for lateral recruitment, after political objection that these single-post appointments carried no reservation. The episode showed that lateral entry has to be reconciled with the representativeness that the constitutional scheme of recruitment protects.</p>
+
+<p><strong>An antidote to complacency?</strong> The argument rests on the incentives of a closed career. An officer who entered by examination in his twenties and advances largely by seniority faces no outside competition for the posts ahead of him, so the pressure to acquire expertise or to perform is weak. Opening some posts to outsiders introduces that competition, imports domain knowledge and benchmarks the career service against the best available outside it. The limitation is scale. A handful of appointments cannot change the incentives of a service of thousands, and complacency is better treated at its source, through appraisal that discriminates, promotion linked to performance and posting by competence. Lateral entry supplements these reforms and cannot replace them.</p>
+
+<p><strong>Freshness against accountability.</strong> Outsiders bring new methods and a willingness to question settled practice, and they also raise specific problems of accountability.</p>
+
+<ul>
+ <li><strong>Conflict of interest.</strong> An appointee from a sector who will return to it after three to five years may favour it in decisions about its regulation, the revolving door problem, which only strict disclosure and cooling-off rules can restrain.</li>
+ <li><strong>Weak sanctions.</strong> A career officer's accountability rests on a thirty-year career that misconduct can damage. A contract appointee who leaves at the end of the term is less held by that sanction.</li>
+ <li><strong>Neutrality.</strong> The doctrine of a non-partisan service serving successive governments fits uneasily with a contract tied to one government's term, and an appointee selected for his views may be seen as the government's man rather than the state's.</li>
+ <li><strong>Selection.</strong> Unless an independent body selects, lateral entry can become patronage under another name, which is why the role of the UPSC in selection matters.</li>
+</ul>
+
+<p>Lateral entry can bring freshness without loss of accountability only if it carries the safeguards a career service provides automatically: independent selection, declaration of interests, a cooling-off period on exit, clear lines of answerability, and reservation or some other means of keeping senior posts representative.</p>
 
 <h2>Classification</h2>
 
@@ -2285,6 +2837,34 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Absence of consequence.</strong> Where the appraisal does not materially affect advancement, both parties treat it as a formality, which is self-fulfilling.</li>
 </ul>
 
+<h3>Performance Management and Performance Appraisal</h3>
+
+<p>Performance appraisal and performance management are often run together, and they are distinct activities. <strong>Appraisal</strong> is a periodic, usually annual, assessment of an individual against set standards, made by a reporting officer and used for decisions on promotion, training and discipline. <strong>Performance management</strong> is a continuous cycle that links the work of individuals and teams to the objectives of the organisation and seeks to improve performance rather than only to record it. Appraisal is one stage within performance management.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Performance appraisal</th><th>Performance management</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Nature</td><td>An event, usually once a year</td><td>A continuous process through the year</td></tr>
+ <tr><td>Focus</td><td>The individual's past performance and traits</td><td>Results and future capability of individuals, teams and the organisation</td></tr>
+ <tr><td>Purpose</td><td>Evaluation, for promotion and control</td><td>Improvement and development, with evaluation as one use</td></tr>
+ <tr><td>Relationship</td><td>Top-down: the reporting officer judges</td><td>Shared: targets agreed and progress reviewed jointly</td></tr>
+ <tr><td>Link to the organisation</td><td>Often weak, since traits are rated in isolation</td><td>Individual goals derived from organisational objectives</td></tr>
+ </tbody>
+</table>
+
+<p>The cycle is commonly stated, for instance by the United States Office of Personnel Management, in five stages: <strong>planning</strong> work and setting expectations, <strong>monitoring</strong> performance continually, <strong>developing</strong> the capacity to perform, <strong>rating</strong> performance periodically, and <strong>rewarding</strong> good performance. It draws on management by objectives, which made agreed targets rather than traits the basis of assessment.</p>
+
+<h4>The Indian Experience</h4>
+
+<ul>
+ <li>The replacement of the Annual Confidential Report by the <strong>Annual Performance Appraisal Report</strong>, with disclosure and work targets agreed at the start of the year, moved Indian appraisal some way towards performance management.</li>
+ <li>The <strong>Results-Framework Document</strong>, introduced under the Performance Monitoring and Evaluation System approved in 2009, applied performance management to ministries and departments, with weighted objectives, success indicators and annual targets.</li>
+</ul>
+
+<p>The weakness of Indian practice is that the two halves were never joined. The departmental document set targets for the organisation and the appraisal report set targets for the officer, and the two were not systematically linked, so an officer could be rated outstanding in a department that missed its targets. Performance management exists to close that gap. Without it, appraisal remains a record of the past year rather than an instrument for improving the next.</p>
+
 <h2>Promotion</h2>
 
 <p>Promotion is advancement to a post of higher responsibility, status and pay, and it is integral to a career service because it is the principal reward the service can offer and the principal instrument by which it retains ability.</p>
@@ -2352,6 +2932,33 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Public employees organise, and the state as employer faces the problem of bargaining with people whose work the public cannot do without. The machinery for dialogue takes different forms: in Britain and India through joint consultative machinery and compulsory arbitration, and in the United States through more formal collective bargaining, with restrictions in all three on the right to strike in essential services. The underlying question is whether the state is an employer like any other, which it cannot be where the service is a monopoly and the withdrawal of labour is a withdrawal of government itself.</p>
 
+<h3>Whitleyism</h3>
+
+<p>Whitleyism is the method of settling the conditions of public employment through standing joint councils of employer and employee representatives, by consultation and negotiation rather than by unilateral decision or industrial conflict. It takes its name from the <strong>Whitley Committee</strong> on relations between employers and employed, chaired by <strong>J.H. Whitley</strong>, which reported in 1917 and 1918 and recommended joint industrial councils. The British civil service adopted the idea in <strong>1919</strong> through a National Whitley Council with departmental councils beneath it, each with an official side and a staff side.</p>
+
+<ul>
+ <li><strong>Joint bodies at several levels</strong>, national, departmental and local, so that issues are settled at the level where they arise.</li>
+ <li><strong>Recognition of staff associations</strong> as legitimate partners rather than adversaries.</li>
+ <li><strong>Consultation on conditions of service</strong>, including pay, hours, leave, welfare and working methods, with agreement as the aim.</li>
+ <li><strong>Arbitration</strong> where negotiation fails, as the substitute for the strike in a service the public cannot do without.</li>
+</ul>
+
+<h3>The Joint Consultative Machinery</h3>
+
+<p>India adopted the model in the <strong>Scheme for Joint Consultative Machinery and Compulsory Arbitration</strong> for central government employees, introduced in <strong>1966</strong>. A <strong>National Council</strong>, chaired by the Cabinet Secretary, deals with matters common to all central employees, <strong>Departmental Councils</strong> with matters of a single department, and regional or office councils sit below them. Disagreements on <strong>pay and allowances, weekly hours of work and leave</strong> of a class or grade of employees may be referred to a <strong>Board of Arbitration</strong>, whose award binds both sides subject to the power of Parliament to modify or reject it.</p>
+
+<h4>The Three Dimensions of the Relationship</h4>
+
+<ul>
+ <li><strong>Constitutional.</strong> Government servants hold office at pleasure under Article 310, with the protections of Article 311, and have the freedom of association under Article 19(1)(c), subject to reasonable restrictions. The Supreme Court held in <em>Kameshwar Prasad v. State of Bihar</em> (1962) that peaceful demonstration is protected but that there is no fundamental right to strike, and in <em>T.K. Rangarajan v. Government of Tamil Nadu</em> (2003) that government employees have no right to strike.</li>
+ <li><strong>Political.</strong> Unions of public employees are often affiliated to political parties, which turns service disputes into political contests and makes governments cautious employers.</li>
+ <li><strong>Operational.</strong> Pay is fixed by pay commissions, conditions by service rules and disputes by joint councils and tribunals, so collective bargaining in the strict sense hardly exists.</li>
+</ul>
+
+<h4>Relevance Today</h4>
+
+<p>The case for Whitleyism is that it treats the relationship as one of mutual reliance: the government needs a willing workforce and employees need a stable employer, so continuous consultation serves both better than periodic confrontation. Its record is mixed. In India the councils have met irregularly, the official side controls the agenda, and the large questions of pay go to pay commissions rather than to the councils, so the machinery has been more formal than real. In Britain the national machinery lost much of its role once pay bargaining was delegated to departments in the 1990s. The principle remains relevant because the alternatives are unilateral fixation, which breeds resentment, and the strike, which the law restricts and the public cannot afford. A satisfactory relationship requires councils that meet regularly, a government willing to accept arbitration it dislikes, and recognised associations that represent employees rather than parties.</p>
+
 <h2>Integrity Management</h2>
 
 <h3>Neutrality and Anonymity</h3>
@@ -2382,6 +2989,64 @@ export const pubAdminNoteContent: Record<string, string> = {
 </ul>
 
 <p>The last two are the reason integrity cannot be secured by administrative means alone. Where favouritism and bribery are ordinary in the wider society, an official is asked to observe a standard that nothing around him observes, and the arrangements that succeed are those that reduce the occasion for discretion rather than those that exhort the officer holding it.</p>
+
+<h3>The Nolan Principles</h3>
+
+<p>The <strong>Committee on Standards in Public Life</strong> was set up in Britain in October 1994 by John Major's government, after the cash-for-questions affair, under the chairmanship of <strong>Lord Nolan</strong>. Its first report, published in 1995, set out the <strong>Seven Principles of Public Life</strong> expected of every holder of public office: <strong>selflessness, integrity, objectivity, accountability, openness, honesty and leadership</strong>.</p>
+
+<p>The report matters for an answer less for the list than for its method of securing it. It held that principles must be built into institutions rather than left to individual character, and proposed three means:</p>
+
+<ul>
+ <li><strong>Codes of conduct</strong> in every public body, drawn up to give effect to the principles.</li>
+ <li><strong>Independent scrutiny</strong> to support the internal systems for maintaining standards, since self-regulation alone does not command public confidence.</li>
+ <li><strong>Guidance and education</strong>, including induction training, so that standards are understood and reinforced rather than merely published.</li>
+</ul>
+
+<p>The principles have since been written into many British codes of conduct, and they belong to a wider international movement towards values-based public ethics, seen in the <strong>OECD Recommendation on Improving Ethical Conduct in the Public Service</strong> (1998) and the <strong>United Nations Convention against Corruption</strong> (2003), which India ratified in 2011 and which asks states to apply codes of conduct for public officials. The Indian counterpart is the second ARC's proposal for a code of ethics stating public service values alongside the conduct rules.</p>
+
+<h3>Thompson and the Obeying Orders Defence</h3>
+
+<p><strong>Dennis F. Thompson</strong>, in "The Possibility of Administrative Ethics" (<em>Public Administration Review</em>, 1985), asked whether administrative ethics is possible at all, given that officials act on behalf of others and within organisations. He identified two arguments that deny it, and rejected both.</p>
+
+<ul>
+ <li><strong>The ethic of neutrality</strong> holds that officials should carry out the orders of their superiors and the policies of the government faithfully, without exercising independent moral judgement. If they disagree they may protest within the organisation or resign, but they may not substitute their own judgement. Thompson objects that it rests on a separation of politics from administration that does not exist, since officials exercise discretion and shape policy, and that resignation is often ineffective and leaves the wrong in place. An official who has discretion cannot disclaim responsibility for how he uses it.</li>
+ <li><strong>The ethic of structure</strong> holds that responsibility belongs to the organisation and not to individuals, because outcomes are the product of many hands and no single official causes them. Thompson, who had analysed this "problem of many hands" in 1980, replies that individuals can still be held responsible where they contributed to an outcome and were not excused by ignorance or compulsion, and that a doctrine which makes nobody responsible destroys accountability altogether.</li>
+</ul>
+
+<p>The argument "I was only obeying orders" is the ethic of neutrality carried to its limit, and administrative ethics answers it at three levels.</p>
+
+<ul>
+ <li><strong>In law.</strong> The Charter of the Nuremberg tribunal (1945) provided that acting on the orders of a government or a superior did not free a defendant from responsibility, though it might mitigate punishment. Hannah Arendt's <em>Eichmann in Jerusalem</em> (1963) showed how an official could take part in great crimes while regarding himself as a dutiful administrator.</li>
+ <li><strong>In Indian rules.</strong> The conduct rules require a government servant to act according to his best judgement except when acting under the direction of an official superior, and to obtain such directions in writing, or written confirmation of oral directions, wherever practicable. In <em>T.S.R. Subramanian v. Union of India</em> (2013) the Supreme Court held that officials should act on written orders and record oral instructions. Written orders fix responsibility on the person who gives them, which is the institutional answer to the defence.</li>
+ <li><strong>In ethics.</strong> Obedience is owed to lawful authority and to the Constitution, not to any instruction whatever. An official must give candid advice, refuse an unlawful order and record dissent from an improper one, which is the space that neutrality leaves for conscience.</li>
+</ul>
+
+<p>The gap between what is and what ought to be is real, but Thompson's point is that it does not make administrative ethics abstract. Hierarchy, political pressure and collective decision are the conditions under which officials work. Ethics does not deny these conditions but sets standards for acting within them, and institutions such as written orders, disclosure of interests and protection for those who dissent narrow the gap by making the right course safer to take.</p>
+
+<h3>The Second ARC on Institutionalising Ethics</h3>
+
+<p>The second Administrative Reforms Commission's fourth report, <strong>Ethics in Governance</strong> (2007), argued that ethical conduct cannot rest on exhortation and must be institutionalised at both the political and the administrative levels, since an honest service under a corrupt political executive, or the reverse, will not hold. Its principal recommendations for the two levels were these.</p>
+
+<ul>
+ <li><strong>Ministers.</strong> A <strong>code of ethics</strong> in addition to the existing code of conduct, with the Prime Minister and the Chief Ministers responsible for enforcing it.</li>
+ <li><strong>Legislators.</strong> Codes of ethics and of conduct for members of Parliament and the state legislatures, enforced through machinery within each House.</li>
+ <li><strong>Elections and defection.</strong> Partial state funding of elections, to reduce the demand for illegitimate funds, and decisions on disqualification for defection to be taken by the President or the Governor on the advice of the Election Commission rather than by the presiding officer.</li>
+ <li><strong>Civil servants.</strong> Public service values to be defined and made applicable to all tiers of government, with any transgression treated as misconduct, so that the code states what an official should do and not only what he must not.</li>
+ <li><strong>Corruption law.</strong> New offences such as <strong>collusive bribery</strong>, in which giver and taker both gain at the public's expense, confiscation of illegally acquired property, and protection for whistle-blowers.</li>
+</ul>
+
+<h4>Innovative Practices and the Limits of Codes</h4>
+
+<p>The trend in public sector ethics is from a <strong>compliance-based</strong> approach, relying on rules, controls and punishment, towards an <strong>integrity-based</strong> approach, relying on values, guidance and leadership, a distinction made prominent by the OECD. A code that equates ethics with anti-corruption is insufficient for three reasons. It lists prohibitions and says little about the positive duties of fairness, responsiveness and care for the citizen. It reaches only conduct that can be detected and proved. And it treats the official as a suspect, which encourages defensive caution rather than honest judgement. The practices gaining ground combine the two approaches.</p>
+
+<ul>
+ <li><strong>Reducing discretion through technology</strong>, as in direct benefit transfer, procurement through the Government e-Marketplace (2016) and faceless income tax assessment (2020), which remove the face-to-face contact in which bribes are demanded.</li>
+ <li><strong>Integrity pacts</strong> in large public procurement, promoted by the Central Vigilance Commission, under which the buyer and the bidders commit to abstain from corrupt practices, overseen by independent external monitors.</li>
+ <li><strong>Social audit</strong>, as under the rural employment guarantee, which makes beneficiaries the auditors of public works.</li>
+ <li><strong>Values in the service rules.</strong> In 2014 the All India Services (Conduct) Rules were amended to add positive duties, among them upholding the supremacy of the Constitution and democratic values, political neutrality, accountability and transparency, and decisions on merit alone.</li>
+</ul>
+
+<p>These practices raise public trust only where leadership backs them, since officials take their cue from what their superiors do rather than from what codes say.</p>
 
 <h2>Morale and Motivation</h2>
 
@@ -2468,6 +3133,33 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p><strong>Built-in stabilisers</strong> work automatically through the structure of taxation and expenditure: when incomes are high, as during rapid growth, a higher proportion of income is taxed, and when incomes are low a smaller proportion is. They cannot by themselves have a large stabilising effect, so stability must be maintained through discretionary fiscal and monetary policy. Taxation policy can create a climate favourable to saving and to proper patterns of expenditure, which is its developmental as distinct from its revenue function.</p>
 
+<h3>Article 265 and Tax Reform After 1991</h3>
+
+<p><strong>Article 265</strong> of the Constitution provides that no tax shall be levied or collected except by authority of law. It is the constitutional form of the principle of no taxation without representation, and it has four consequences.</p>
+
+<ul>
+ <li><strong>Only law can tax.</strong> A tax needs a law enacted by a competent legislature, and no executive order or administrative instruction can impose or collect one.</li>
+ <li><strong>The law must be valid.</strong> It must fall within the legislative competence given by the Seventh Schedule, or by Article 246A in the case of GST, and must not violate fundamental rights or other constitutional limits.</li>
+ <li><strong>Levy and collection are both covered.</strong> Collection without authority is unlawful even where the levy itself is valid, and money so collected must be refunded.</li>
+ <li><strong>It is a constitutional right, not a fundamental right.</strong> It sits in Part XII, so a challenge under Article 32 must show that a fundamental right is also infringed.</li>
+</ul>
+
+<p>Article 265 does not forbid retrospective taxation by law, which is why the Finance Act, 2012 could reverse the Supreme Court's <em>Vodafone</em> judgment of the same year by retrospectively taxing indirect transfers of Indian assets. The damage to investor confidence led Parliament to withdraw such demands through the Taxation Laws (Amendment) Act, 2021. Legality is the minimum condition of taxation, and certainty and fairness are the further conditions a tax system needs.</p>
+
+<h4>The Post-1991 Reforms</h4>
+
+<ul>
+ <li><strong>The Chelliah Committee.</strong> The Tax Reforms Committee chaired by <strong>Raja Chelliah</strong> (reports from 1991 to 1993) set the direction: lower and fewer rates, a broader base, fewer exemptions, lower customs duties, a larger share for direct taxes, and the extension of taxation to services. Service tax was introduced in 1994-95.</li>
+ <li><strong>The Kelkar Task Forces.</strong> The task forces on direct and indirect taxes chaired by <strong>Vijay Kelkar</strong> (2002) pressed for simplification, fewer exemptions and modern tax administration, and his task force on implementing the Fiscal Responsibility and Budget Management Act (2004) proposed a comprehensive goods and services tax.</li>
+ <li><strong>State VAT</strong> replaced cascading sales taxes in most states from April 2005.</li>
+ <li><strong>GST.</strong> The Constitution (101st Amendment) Act, 2016 enabled the goods and services tax, launched on 1 July 2017, which subsumed most central and state indirect taxes, created a common national market, and placed rate-setting with the GST Council under Article 279A. Rates were rationalised in September 2025 into two main slabs of 5 and 18 per cent.</li>
+ <li><strong>Direct taxes.</strong> Corporate tax was cut in 2019 to 22 per cent for domestic companies forgoing exemptions, a simpler personal income tax regime with fewer exemptions became the default from 2023-24, faceless assessment and a Taxpayers' Charter came in 2020, and the Income-tax Act, 2025 replaced the Act of 1961 from 1 April 2026.</li>
+</ul>
+
+<h4>Why Direct Tax Reform Matters</h4>
+
+<p>Direct taxes are progressive, falling on income and wealth according to ability to pay, while indirect taxes fall on consumption and weigh more heavily on the poor. A larger share for direct taxes therefore serves equity, and a broad base with moderate rates serves both revenue and compliance. Fiscal policy has to address <strong>inequity</strong>, through progressive and evenly enforced taxes, <strong>intricacy</strong>, through simple laws, fewer exemptions and stable rules, and <strong>obscurantism</strong>, through transparency, such as the statement of revenue forgone on tax incentives presented with the budget. Neo-liberal policy enlarged the scope of taxation not by raising rates but by broadening the base, formalising the economy, bringing services into the net and using digital systems that make evasion harder. The limits remain: a tax-to-GDP ratio low for India's needs, exemptions that persist, disputes over GST compensation and the fiscal autonomy of states, and litigation that the new laws were meant to reduce.</p>
+
 <h2>Public Debt</h2>
 
 <p>Public debt is borrowing by government against future revenue, and its administration is part of fiscal policy rather than an exception to it. Borrowing for capital formation that yields a return exceeding the cost of the debt enlarges the economy's capacity; borrowing to meet current consumption transfers a present liability to a future population that had no part in incurring it. The distinction between the two is what makes the separation of revenue and capital accounts in a budget a matter of substance rather than of bookkeeping.</p>
@@ -2529,6 +3221,35 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Functions</h3>
 
 <p>The budget is a powerful instrument in the hands of government. For the administrator it is three things at once: a record of past performance, a method of current control, and a projection of future plans. If it is broken down finely enough, the administrator can determine what has been happening and whether the intended results are being achieved. For the legislature it is the principal occasion of control over the executive; for the economy it is the government's main instrument of demand management and redistribution; and for the citizen it is the clearest available statement of what the government actually intends, since priorities stated in speeches are contradicted or confirmed by the allocations.</p>
+
+<h3>Aaron Wildavsky and the Politics of Budgeting</h3>
+
+<p><strong>Aaron Wildavsky's</strong> <em>The Politics of the Budgetary Process</em> (1964) is the founding study of budgeting as it is actually done. Its thesis is that budgeting is a political process. A budget is, in his phrase, "a series of goals with price tags attached": it translates the government's purposes into money, and since money is limited, every allocation decides whose purposes prevail. If politics is the conflict over whose preferences shall determine policy, the budget records the outcome of that conflict.</p>
+
+<h4>Calculation</h4>
+
+<p>Budgeting is too complex for comprehensive analysis, since no one can review every programme every year and rank all values. Those who budget therefore deal with their overwhelming burdens by adopting heuristic aids to calculation, in the manner of Simon's bounded rationality and Lindblom's incrementalism.</p>
+
+<ul>
+ <li><strong>The base.</strong> Last year's budget is treated as broadly settled and not re-examined, and attention goes to the increment, the proposed increase or cut.</li>
+ <li><strong>Fair share.</strong> Each agency expects to share proportionately in any general increase or reduction, an expectation that limits conflict.</li>
+ <li><strong>Roles.</strong> Spending agencies act as <strong>advocates</strong> of expansion, and the central budget office and the appropriations committees act as <strong>guardians</strong> of the purse. Each can be partisan because the other is expected to supply the balance.</li>
+ <li><strong>Strategies.</strong> Agencies cultivate a clientele, win the confidence of the appropriations committees, and start new programmes small, the camel's nose under the tent.</li>
+</ul>
+
+<p>Davis, Dempster and Wildavsky (1966) showed statistically that American federal appropriations followed stable incremental rules. Incrementalism is thus a rational response to complexity and conflict: it lightens calculation, confines disagreement to the margin, and leaves errors correctable next year.</p>
+
+<h4>Politics versus Analysis</h4>
+
+<p>The opposing tradition asked what V.O. Key, in "The Lack of a Budgetary Theory" (1940), called the basic budgeting question: on what basis shall it be decided to allocate money to activity A instead of activity B? Verne Lewis (1952) answered with the economic analysis of relative value and marginal return, which PPBS and zero-base budgeting tried to institutionalise. Wildavsky argued that these reforms misunderstood budgeting. In "Political Implications of Budgetary Reform" (1961) he concluded that no significant change can be made in the budgetary process without affecting the political process. A reform that changes the basis of decision redistributes power among agencies, the executive and the legislature, so budgetary reform is political reform, and fails when it pretends otherwise. PPBS demanded agreement on objectives and analytical capacity that governments lack, and "A Budget for All Seasons? Why the Traditional Budget Lasts" (1978) explained the survival of the line-item budget by its simplicity, its use for control and its capacity to accommodate conflict.</p>
+
+<p>His alternative was not a new budget format but attention to the political institutions and rules by which politics reaches agreement on a budget. In <em>How to Limit Government Spending</em> (1980) he proposed a constitutional rule linking the growth of spending to the growth of the economy, a change in the rules of the game rather than in technique, and <em>The New Politics of the Budgetary Process</em> (1988) traced the breakdown under deficits of the consensus behind incrementalism.</p>
+
+<p>A synthesis is possible and is now common practice. Analysis informs the margin that politics decides: performance information, outcome budgets and medium-term frameworks shape the bargaining without replacing it. Wildavsky's own <em>Speaking Truth to Power</em> (1979) treated policy analysis as a craft that serves political deliberation.</p>
+
+<h4>A Comparative Theory and India</h4>
+
+<p>In <em>Budgeting: A Comparative Theory of Budgetary Processes</em> (1975) Wildavsky related budgetary behaviour to wealth and predictability. Rich countries with predictable revenue budget incrementally, poor but predictable ones budget according to revenue, rich but uncertain ones rely on supplementary budgets, and poor and uncertain countries practise <strong>repetitive budgeting</strong>, remaking the budget again and again through the year, as Caiden and Wildavsky had shown in <em>Planning and Budgeting in Poor Countries</em> (1974). Indian budgeting shows several types at once: an incremental base, supplementary demands, mid-year cuts and cash management by the Finance Ministry, and allocations shaped by bargaining among ministries, states and allies. Outcome budgeting brought analysis into a process that remains, as Wildavsky would predict, political at its core.</p>
 
 <h2>Types of Budget</h2>
 
@@ -2611,6 +3332,31 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Execution involves the collection of revenue, the custody of funds and their disbursement. <strong>Custody</strong> covers safe-keeping of public funds, depositing a substantial portion in banks, safe investment of surplus money, the crediting of interest on public money to the public treasury, and maintenance of adequate cash reserves.</p>
 
 <p>Arrangements differ. In India the <strong>Reserve Bank of India</strong> conducts the treasury business of government to a large extent, with the State Bank of India acting where there is no branch agency of the RBI, and a network of district treasuries and sub-treasuries persists because banking facilities do not reach everywhere. In <strong>Great Britain</strong>, public receipts and payments are centralised in the Bank of England with no outlying state treasuries. In the <strong>United States</strong> most public receipts and payments are made through private banks, since the central government has no bank of its own, with statutory rules determining where public funds are deposited and accounts opened by tender; the earlier practice of letting departmental heads choose the banks was abandoned after repeated corruption and loss of public money. The general advantage of a government having its own central bank is that public money is safer and corruption and malpractice are harder.</p>
+
+<h3>Cut Motions</h3>
+
+<p>A cut motion is a motion, moved during the voting on demands for grants, to reduce the amount of a demand. Since the Rajya Sabha does not vote on demands for grants, cut motions belong to the Lok Sabha alone. Its rules of procedure recognise three kinds.</p>
+
+<ul>
+ <li><strong>Disapproval of policy cut</strong>: that the demand be reduced to Re 1, representing disapproval of the policy underlying it. The member must state the policy precisely and may advocate an alternative.</li>
+ <li><strong>Economy cut</strong>: that the demand be reduced by a specified amount, representing the economy that can be effected, either by a lump-sum reduction or by omitting or reducing an item.</li>
+ <li><strong>Token cut</strong>: that the demand be reduced by Rs 100, in order to ventilate a specific grievance within the sphere of responsibility of the Government of India.</li>
+</ul>
+
+<p>To be admissible a cut motion must relate to one demand only, must not concern expenditure charged on the Consolidated Fund, must not raise a matter that is not primarily the concern of the Union government, must not relate to a matter pending before a court, and must not propose amendment of existing law. If a cut motion is adopted, the government has lost a vote on its own estimates, which amounts to a loss of the confidence of the House and may compel its resignation.</p>
+
+<h4>Why They Matter Though Seldom Carried</h4>
+
+<p>A government with a working majority does not allow a cut motion to pass, so they are almost never adopted. Their value lies elsewhere.</p>
+
+<ul>
+ <li><strong>They focus debate.</strong> They allow the opposition to direct discussion of a demand to a particular policy, waste or grievance, and oblige the minister to answer on record.</li>
+ <li><strong>They locate responsibility.</strong> A token cut ties a grievance to a particular ministry and a particular grant.</li>
+ <li><strong>They test the majority.</strong> Under coalition or minority government a cut motion becomes a vote of confidence on a policy, and allies can use the threat to extract concessions.</li>
+ <li><strong>They inform the public.</strong> Through the press, the debate reaches the electorate, the final audience of parliamentary accountability.</li>
+</ul>
+
+<p>Their force is limited by the guillotine, under which most demands, and the cut motions moved on them, are voted without discussion, by the small number of ministries whose demands are debated each year, and by party discipline under the anti-defection law, which makes the outcome of every vote predictable. They remain instruments of accountability less because they reduce grants than because they compel the government to explain and defend its spending in public.</p>
 
 <h2>Accounts</h2>
 
@@ -2751,6 +3497,56 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li>The eight characteristics are not always compatible: consensus orientation slows responsiveness, participation can reduce efficiency, and equity may require overriding a majority.</li>
  <li>It is presented as a technical standard while embedding a particular political theory, in which a limited state, secure property and market coordination are treated as neutral facts.</li>
  <li>It describes an end state without supplying a route, which is the same objection made against Riggs's diffracted model.</li>
+</ul>
+
+<h3>Governance as Self-Organising Networks</h3>
+
+<p><strong>R.A.W. Rhodes</strong>, in "The New Governance: Governing without Government" (<em>Political Studies</em>, 1996) and <em>Understanding Governance</em> (1997), distinguished six uses of the word governance: the minimal state, corporate governance, New Public Management, good governance, socio-cybernetic systems and self-organising networks. His own usage is the last. Governance refers to self-organising, inter-organisational networks with four characteristics.</p>
+
+<ul>
+ <li><strong>Interdependence between organisations.</strong> Governance is broader than government, covering non-state actors, and the boundaries between the public, private and voluntary sectors become shifting and opaque.</li>
+ <li><strong>Continuing interaction</strong> between members of the network, caused by the need to exchange resources and negotiate shared purposes.</li>
+ <li><strong>Game-like interactions</strong>, rooted in trust and regulated by rules of the game negotiated and agreed by the participants.</li>
+ <li><strong>Significant autonomy from the state.</strong> Networks are not accountable to the state. They are self-organising, and the state can steer them only indirectly and imperfectly.</li>
+</ul>
+
+<p>Governance is therefore the management of self-organising networks, and the public manager's task shifts from command to brokerage: assembling actors, building trust and managing the rules of interaction.</p>
+
+<h4>The Hollow State and Third-Party Government</h4>
+
+<p>Rhodes described the <strong>hollowing out of the state</strong> in Britain (1994) through four trends: privatisation and the limiting of public intervention, the loss of functions by central and local government to alternative delivery systems such as executive agencies, the loss of functions to institutions of the European Union, and the limiting of civil servants' discretion through managerial accountability. In the United States, H. Brinton Milward and Keith Provan used the term <strong>hollow state</strong> for a government that finances services but contracts their production to non-profit and private bodies. <strong>Lester Salamon</strong> called the same pattern <strong>third-party government</strong> (1981): public purposes pursued through grants, contracts, loan guarantees, vouchers and tax expenditures delivered by non-state agents, so that government shares its discretion over public money and authority with them. His <em>The Tools of Government</em> (2002) made the choice of such tools the centre of what he called the new governance. As the state moves from the bureaucratic to the hollow form, administration becomes the management of relationships it does not control, which is why governance has displaced government as the organising concept.</p>
+
+<h4>Markets, Hierarchies and Networks</h4>
+
+<p>Modern governing structures combine three modes of coordination, a scheme set out in Thompson, Frances, Levačić and Mitchell's <em>Markets, Hierarchies and Networks</em> (1991) and adapted by Rhodes.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Markets</th><th>Hierarchies</th><th>Networks</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Basis of relationships</td><td>Contract and property rights</td><td>Employment</td><td>Resource exchange</td></tr>
+ <tr><td>Degree of dependence</td><td>Independent</td><td>Dependent</td><td>Interdependent</td></tr>
+ <tr><td>Medium of exchange</td><td>Price</td><td>Authority</td><td>Trust</td></tr>
+ <tr><td>Resolution of conflict</td><td>Haggling and the courts</td><td>Rules and commands</td><td>Diplomacy</td></tr>
+ <tr><td>Culture</td><td>Competition</td><td>Subordination</td><td>Reciprocity</td></tr>
+ <tr><td>Public sector form</td><td>Contracting out, vouchers, user charges</td><td>The traditional department</td><td>Partnerships, collaborative forums, policy networks</td></tr>
+ </tbody>
+</table>
+
+<p>Traditional public administration relied on hierarchy and NPM on markets. Governance adds networks, and real public services use all three, often within the same programme.</p>
+
+<h4>Collaboration Through the Governance Lens</h4>
+
+<p>Collaboration and its cognates, cooperation, coordination, partnership, co-production and networking, describe how public agencies work with each other and with private and voluntary bodies. <strong>Ansell and Gash</strong> (2008) defined <strong>collaborative governance</strong> as an arrangement in which public agencies directly engage non-state stakeholders in collective decision making that is formal, consensus-oriented and deliberative, in order to make or implement public policy or manage public programmes or assets. Through the governance lens, collaboration is the normal mode of delivery when no single organisation has the resources, information or authority to act alone. Indian examples include school meals delivered by partners such as the Akshaya Patra Foundation, insurance-based hospital care under Ayushman Bharat PM-JAY, and common service centres run by village-level entrepreneurs.</p>
+
+<h4>Criticism</h4>
+
+<ul>
+ <li><strong>Accountability.</strong> Where many hands deliver a service, responsibility blurs, and networks answer to their members rather than to citizens or Parliament.</li>
+ <li><strong>The state is not hollow.</strong> Bob Jessop's idea of meta-governance holds that the state still sets the rules within which networks operate, and Fritz Scharpf's shadow of hierarchy describes the state's capacity to impose a solution if networks fail.</li>
+ <li><strong>Unequal power.</strong> Networks favour organised and well-resourced interests and can exclude the poor.</li>
+ <li><strong>Transfer.</strong> The thesis was built on British experience, and where civil society is weak the state remains the principal actor.</li>
 </ul>
 
 <h2>New Public Management</h2>
@@ -3347,6 +4143,31 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Adoption is the conversion of a proposal into an authoritative decision through legislation, executive order or regulation. Legitimation is the wider process by which the decision acquires the acceptance that makes compliance possible without coercion. A policy that is legally adopted but not legitimated faces resistance at every point of delivery, which is why consultation before adoption is not a formality but an investment in implementability.</p>
 
+<h3>Wicked Problems</h3>
+
+<p><strong>Horst Rittel and Melvin Webber</strong>, in "Dilemmas in a General Theory of Planning" (<em>Policy Sciences</em>, 1973), distinguished the <strong>tame</strong> problems of science and engineering, which can be defined, solved and checked, from the <strong>wicked</strong> problems of social policy. Wicked does not mean evil but resistant to resolution. They listed ten properties.</p>
+
+<ul>
+ <li>There is no definitive formulation of a wicked problem, since to define it is already to imply a solution.</li>
+ <li>There is no stopping rule: the planner stops for want of time or money, not because the problem is solved.</li>
+ <li>Solutions are not true or false but better or worse, and different stakeholders judge them differently.</li>
+ <li>There is no immediate and no ultimate test of a solution, since consequences spread over time.</li>
+ <li>Every solution is a one-shot operation that cannot be tried and withdrawn without leaving effects.</li>
+ <li>There is no enumerable set of possible solutions.</li>
+ <li>Every wicked problem is essentially unique.</li>
+ <li>Every wicked problem can be considered a symptom of another problem.</li>
+ <li>The explanation chosen for the problem determines the nature of its resolution.</li>
+ <li>The planner has no right to be wrong, since the effects fall on real people.</li>
+</ul>
+
+<p>Policy problems tend towards wickedness as societies grow more interdependent, as problems cut across departmental boundaries and as stakeholders become more numerous and assertive. Malnutrition is an example: it involves food, health, sanitation, the status of women and income, and no single ministry owns it. Climate change has been called super wicked, since time is running out, those seeking to solve it are also causing it, and there is no central authority to impose a solution.</p>
+
+<h4>The Capacity and Preparedness of the State</h4>
+
+<p>The traditional state is organised for tame problems: departments with defined jurisdictions, linear planning, uniform rules and accountability for outputs. Wicked problems need collaboration across departments and levels of government, engagement of citizens and stakeholders in defining the problem, adaptive management that learns from small experiments, and long time horizons. The Australian Public Service Commission's report <em>Tackling Wicked Problems</em> (2007) drew the same conclusions for government practice.</p>
+
+<p>India has built some of this capacity. POSHAN Abhiyaan (2018) seeks convergence of several ministries on nutrition, the Commission for Air Quality Management in the National Capital Region was created by statute in 2021 to coordinate action across states on air pollution, and the response to Covid-19 used the Disaster Management Act, 2005 for a whole-of-government approach. The constraints are equally visible: departmental silos, centrally designed schemes with uniform norms, budget cycles shorter than the problems, weak data, and a culture of accountability for procedure that discourages experiment. The state's preparedness is therefore partial. It can coordinate in a crisis, but routine collaboration across boundaries, the condition for managing rather than solving wicked problems, remains the exception.</p>
+
 <h2>Models of Policy Decision-Making</h2>
 
 <h3>The Rational-Comprehensive Model</h3>
@@ -3387,6 +4208,50 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Public choice</strong> applies economic assumptions of self-interested rationality to political actors, treating voters, politicians and bureaucrats as utility maximisers. <strong>Niskanen's</strong> budget-maximising bureaucrat and <strong>Dunleavy's</strong> bureau-shaping critique both belong to this literature, and it supplies the theoretical basis for much of New Public Management.</li>
  <li><strong>Game theory</strong> analyses policy choice under conditions of interdependence, where the best course for each actor depends on what others do, and is most useful for international and regulatory questions.</li>
 </ul>
+
+<h3>Cost-Benefit Analysis in Policy Making</h3>
+
+<p>Cost-benefit analysis is the principal rational technique of policy analysis drawn from welfare economics. It asks whether the total benefits of a proposal, to whomever they accrue, exceed its total costs, both measured in money and discounted to present value. Its origins lie with the French engineer <strong>Jules Dupuit</strong>, who analysed the utility of public works in 1844, and it entered official practice in the United States through the Flood Control Act of 1936, which permitted federal flood control projects where the benefits, to whomsoever they may accrue, exceeded the estimated costs. Its theoretical basis is the <strong>Kaldor-Hicks criterion</strong> (1939): a policy is an improvement if those who gain could compensate those who lose and still be better off, whether or not compensation is actually paid.</p>
+
+<p>The method runs in steps: define the alternatives, including doing nothing, identify all costs and benefits, direct and indirect, value them in money using market prices or <strong>shadow prices</strong> where markets are absent or distorted, discount future values at a social discount rate, calculate the net present value or benefit-cost ratio, and test the result through <strong>sensitivity analysis</strong> to see how far it rests on uncertain assumptions. For developing countries, Little and Mirrlees's manual for the OECD and the UNIDO <em>Guidelines for Project Evaluation</em> (1972) by Dasgupta, Marglin and Sen adapted the method to distorted prices and to distributional weights.</p>
+
+<h4>Its Value to Policy Makers</h4>
+
+<ul>
+ <li>It makes trade-offs explicit and forces comparison of alternatives, including inaction.</li>
+ <li>It counts indirect and external effects that a departmental appraisal would ignore.</li>
+ <li>It disciplines the claims made for favoured projects and exposes white elephants.</li>
+ <li>It gives ministries a common language for advice.</li>
+</ul>
+
+<h4>Why It Is Called Unsatisfactory</h4>
+
+<ul>
+ <li><strong>Pricing the priceless.</strong> Lives, forests, sacred sites and cultural loss resist monetary valuation, and imputed prices can decide the result. <strong>Steven Kelman</strong>, in "Cost-Benefit Analysis: An Ethical Critique" (1981), argued that some actions are right or wrong whether or not their benefits outweigh their costs, and that putting a price on some things diminishes their value.</li>
+ <li><strong>Distribution ignored.</strong> A rupee counts the same whoever receives it, so a project may pass while making the poor worse off, and potential compensation is no comfort to those never compensated.</li>
+ <li><strong>The discount rate.</strong> Its choice is a value judgement that shrinks costs borne by future generations.</li>
+ <li><strong>Uncertainty and bias.</strong> Estimates are made under deep uncertainty, often by agencies that want the project approved.</li>
+</ul>
+
+<h4>The Dam in the Valley</h4>
+
+<p>For a dam in a forested valley inhabited by ethnic communities, a narrow cost-benefit analysis is not enough. Rational analysis would combine a social cost-benefit analysis with distributional weights for the displaced, an environmental impact assessment under the EIA Notification, 2006, a social impact assessment under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013, risk and sensitivity analysis for hydrology, seismicity and cost overruns, scenario planning and decision trees for contingencies, multi-criteria analysis for values that cannot be priced, and consultation with gram sabhas, whose role the Forest Rights Act, 2006 and the Supreme Court's Niyamgiri judgment (2013) recognise. The Sardar Sarovar project, whose World Bank funding ended in 1993 after an independent review, shows the cost of treating displaced people as a compensation entry in the accounts. Cost-benefit analysis informs political judgement but cannot replace it.</p>
+
+<h3>Geoffrey Vickers and the Appreciative System</h3>
+
+<p><strong>Sir Geoffrey Vickers</strong>, a lawyer and administrator who turned to systems thinking, set out his account of policy making in <em>The Art of Judgment</em> (1965) and <em>Value Systems and Social Process</em> (1968). He rejected the view, shared by the rational model and by Simon, that policy making is goal seeking. Governments and organisations do not mainly pursue goals that, once reached, are finished with. They regulate <strong>relationships</strong> over time, maintaining or changing them according to <strong>norms</strong>, standards of what those relationships ought to be. For Vickers, goals are subsidiary to norms and values: a goal is a temporary target set to correct a mismatch between the actual state of affairs and the norm.</p>
+
+<p>Policy makers perceive situations through an <strong>appreciative system</strong>, a set of readinesses, built up through experience, to notice some features of a situation rather than others and to value them in some ways rather than others. Appreciation is not neutral observation. It decides what counts as a problem in the first place, and it changes through use, as experience and debate alter what a society notices and values.</p>
+
+<p>Policy judgement, on this account, comprises three kinds of judgement.</p>
+
+<ul>
+ <li><strong>Reality judgements</strong>: what the situation is and is likely to become, the facts as the appreciative system selects them.</li>
+ <li><strong>Value judgements</strong>: how the situation compares with the norms of what it ought to be, which identifies the mismatch that calls for action.</li>
+ <li><strong>Instrumental judgements</strong>: what can be done to reduce the mismatch, the choice of means.</li>
+</ul>
+
+<p>Reality and value judgements together make up appreciation, and they cannot be separated, since what one notices depends on what one values. This is the sharpest difference from Simon's separation of fact and value. The model explains why policy often changes when norms change rather than when new facts appear: Indian food policy moved from price support and welfare distribution to an enforceable entitlement under the National Food Security Act, 2013 because the norm of what the state owes the hungry changed. Vickers's ideas shaped Peter Checkland's soft systems methodology. The weakness of the model is that it describes judgement without giving the analyst a method for exercising it, and appreciative systems may simply reflect the values of those already in power.</p>
 
 <h2>Policy Implementation</h2>
 
@@ -3566,6 +4431,33 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>There are genuine similarities between Mauryan and contemporary Indian administration, and the rise of democracy has produced institutions with no past counterpart. The honest formulation is that the Mauryan state was administratively sophisticated and politically pre-modern, and that the sophistication is what makes the comparison tempting while the politics is what makes it wrong.</p>
 
+<h3>Kautilya's Welfare State</h3>
+
+<p>The reading of the Kautilyan state as "neither a police state nor merely a tax-gathering state" rests on the purposes the <em>Arthashastra</em> assigns to the king. Order and revenue are means. The end is <strong>yogakshema</strong>, the security of what has been acquired together with the welfare and prosperity of the people. Kautilya places the king's happiness in the happiness of his subjects and his welfare in theirs, and tells him to treat as good not what pleases himself but what pleases his subjects.</p>
+
+<p>His definition of <strong>artha</strong> supports the same reading. In the last book of the <em>Arthashastra</em> he defines artha as the <strong>livelihood (vritti) of men</strong>, and as the earth inhabited by men, and the <em>Arthashastra</em> as the science of acquiring and protecting that earth. The work is therefore a science of the livelihood of the people and of the territory that sustains it, which is why translating artha simply as wealth, and the work as a treatise on economics, is too narrow.</p>
+
+<ul>
+ <li><strong>Economic regulation.</strong> Superintendents (<em>adhyakshas</em>) supervised agriculture, trade, weights and measures, mines and state enterprises, and the state controlled prices and protected buyers against fraud by merchants and artisans.</li>
+ <li><strong>Social protection.</strong> The king was to maintain orphans, the aged, the infirm, the afflicted and helpless women, and in famine to distribute seed and provisions and start public works.</li>
+ <li><strong>Danda for protection.</strong> Punishment exists to prevent <em>matsyanyaya</em>, the law of the fishes in which the strong devour the weak, so even the coercive power of the state is justified by the protection it gives the weak.</li>
+</ul>
+
+<p><strong>Kautilyan and modern democratic rulers.</strong> The resemblance in purpose conceals a difference in structure. The Kautilyan king's duty of welfare is moral, grounded in dharma and in prudence, since a discontented people endangers the throne, and the subjects cannot enforce it. A modern democratic ruler's duty is legal and political, enforced through elections, parliamentary scrutiny, courts and fundamental rights, and the welfare provided is an entitlement rather than royal favour. Kautilya also allowed the king deception, espionage and almost any means in the interest of the state, which a constitutional order bound by the rule of law forbids. His emphasis on governing well, on the accountability of officials and on justice nonetheless anticipates the concerns of contemporary Indian governance, from the welfare state of the Directive Principles to audit by the CAG and the vigilance machinery.</p>
+
+<h3>Kautilya on the Integrity of Officials</h3>
+
+<p>Kautilya's approach to ethics in public service starts from the assumption that officials will be tempted, and builds controls around that assumption rather than relying on virtue alone. This is why the <em>Arthashastra</em> can be read as centrally concerned with ethics in public services, and also why the reading needs qualifying.</p>
+
+<ul>
+ <li><strong>Upadhas, the tests of integrity.</strong> Before appointment, ministers were tested in secret through four kinds of allurement: <strong>dharmopadha</strong> (religious), <strong>arthopadha</strong> (wealth), <strong>kamopadha</strong> (lust) and <strong>bhayopadha</strong> (fear). Only those who passed all four were fit for the highest posts, and others were employed according to the tests they had passed, those proof against monetary temptation, for instance, in revenue and treasury work.</li>
+ <li><strong>Forty ways of embezzlement.</strong> Kautilya listed some forty ways in which officials could misappropriate revenue. He observed that just as one cannot help tasting honey or poison placed on the tongue, an official handling the king's revenue cannot help tasting a little of it, and that detecting it is as hard as telling whether a fish moving in water is drinking.</li>
+ <li><strong>Controls.</strong> Accounts were submitted to the records and audit office, the <em>akshapatala</em>, officials were watched by spies, informers were rewarded, and embezzlement and misconduct carried graded fines and punishments.</li>
+ <li><strong>Discipline at the top.</strong> The king himself was to control his senses and follow a disciplined routine, since an undisciplined ruler corrupts the whole administration.</li>
+</ul>
+
+<p><strong>Assessment.</strong> Kautilya was a moralist in that he required righteous conduct of the king and his officers and treated dharma as the foundation of the state, and a realist in that he relied on testing, surveillance and punishment to secure it. His is an ethics of control, in which integrity is secured from outside by fear of detection more than from within by values the official holds, and his methods of secret temptation and espionage would be unacceptable in a democracy. The lesson he anticipates is that integrity needs institutions, audit, vigilance and the reduction of opportunity, and not exhortation alone.</p>
+
 <h2>The Mughal Tradition</h2>
 
 <p>The Mughal empire was among the largest and most powerful of its time, ruled by what the literature calls liberal despotic kings. The credit for the strength of Mughal administration goes principally to <strong>Akbar</strong>, who organised central, provincial and local administration systematically, and who reorganised revenue administration on modern lines with the advice of <strong>Todarmal</strong>, one of the <em>navratnas</em>.</p>
@@ -3594,6 +4486,21 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>What Carried Forward</h3>
 
 <p>The land revenue settlement, the district as the effective unit of administration, the combination of revenue collection with magisterial and police functions in a single local officer, and the maintenance of detailed land records all passed from the Mughal system through the Company to the modern collectorate. The British did not invent the district officer; they inherited the post, standardised it and gave it a covenanted service to fill.</p>
+
+<h3>Indian and Extra-Indian Elements</h3>
+
+<p><strong>Jadunath Sarkar</strong>, in <em>Mughal Administration</em>, described the Mughal system as a Perso-Arabic system in an Indian setting: its higher institutions came from outside India, and its base, especially in revenue and local administration, was Indian.</p>
+
+<ul>
+ <li><strong>Extra-Indian elements.</strong> The central offices derived from the Persian and Abbasid tradition: the <strong>wazir</strong> or <strong>diwan</strong> in charge of revenue and finance, the <strong>mir bakhshi</strong> in charge of the army and the mansabdars, the <strong>sadr-us-sudur</strong> for religious grants and charity, the <strong>qazi</strong> administering Islamic law, and the <strong>muhtasib</strong> as censor of public morals. Persian was the language of administration, court ceremonial followed Persian models, and Abul Fazl's theory of kingship as a light from God drew on Persian ideas. The graded ranks of the mansabdari system recall the decimal organisation of Central Asian armies.</li>
+ <li><strong>Indian elements.</strong> The village and the <strong>pargana</strong> remained the units of revenue administration, with hereditary local officials: the <strong>patwari</strong> keeping village records, the <strong>qanungo</strong> keeping pargana records, and the village headman and the <strong>chaudhuri</strong> as intermediaries. Revenue methods built on those of Sher Shah and, through him, on older Indian practice. Akbar's policy of <em>sulh-i-kul</em>, the incorporation of Rajput chiefs into the mansabdari system and the employment of Hindu officials such as Todar Mal gave the empire an Indian ruling class alongside a foreign one.</li>
+</ul>
+
+<h4>Todar Mal and the Zabti System</h4>
+
+<p>Akbar's revenue system was worked out with <strong>Raja Todar Mal</strong>, who had earlier served under Sher Shah. Under the <strong>zabti</strong> system, land was measured with a standard unit and a bamboo <em>jarib</em> joined by iron rings, which did not shrink or stretch like the rope used earlier. Land was classified by the regularity of its cultivation into <strong>polaj</strong> (cultivated every year), <strong>parauti</strong> (left fallow for a short time), <strong>chachar</strong> (fallow for three or four years) and <strong>banjar</strong> (fallow for five years or more). Under the <strong>dahsala</strong> arrangement of 1580, the average produce and average prices of each crop over the preceding ten years were worked out, and the state's share, one-third of the average produce, was fixed in cash per unit of land. The system applied in the core provinces of northern India, while crop-sharing and other methods continued elsewhere.</p>
+
+<p>The zabti system matters to Indian administration because it rested on measurement, classification and written records rather than on assessment at the collector's discretion, and that principle continued through the British land settlements into the modern land records system.</p>
 
 <h2>The British Legacy</h2>
 
@@ -3669,6 +4576,48 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Its <strong>defects</strong> were equally structural. The service was <em>regulatory</em> rather than developmental, built to maintain order and collect revenue, so it had no experience of promoting change and a settled preference against it. It was <em>elitist and distant</em>, the officer being socially and physically removed from the people. It was <em>over-centralised</em>, with initiative reserved to the top. It was <em>generalist</em>, distrusting the specialist at a moment when development required technical competence. It was <em>procedure-bound</em>, so that correctness of process displaced achievement of result. And it was designed for an <em>unaccountable</em> executive, so that the habits of secrecy and anonymity survived into a system in which the executive answers to an elected legislature.</p>
 
 <p>The sharpest formulation is that the steel frame was built to hold a structure up, not to move it, and the demand made of it after 1947 was that it move.</p>
+
+<h3>The Charter Act of 1853 and the Legislative Council</h3>
+
+<p>The <strong>Charter Act of 1853</strong>, the last of the Charter Acts, for the first time <strong>separated the legislative from the executive functions</strong> of the Governor-General's council. It added six members for legislative purposes: the Chief Justice and a judge of the Supreme Court at Calcutta, and four representatives appointed by the provincial governments of Madras, Bombay, Bengal and Agra. The enlarged council, sitting for legislation, came to be known as the Indian (Central) Legislative Council.</p>
+
+<ul>
+ <li><strong>A mini-parliament.</strong> The legislative council adopted procedures modelled on those of the British Parliament, so that legislation was treated for the first time as a special function of government requiring its own machinery and process.</li>
+ <li><strong>Local representation.</strong> The provincial members brought regional representation into the central legislature for the first time.</li>
+ <li><strong>Beyond its brief.</strong> The council began to question the executive and debate its policy, acting as a forum of opposition, which is why the Indian Councils Act, 1861 confined it strictly to legislation.</li>
+</ul>
+
+<p><strong>The beginning of a parliamentary system?</strong> In form, yes: a separate legislative function, a deliberative body with parliamentary procedure, and the idea that law should be made by a distinct process. In substance, no. Every member was an official, no member was elected, no Indian sat in the council, and the executive was not responsible to it. The Act began parliamentary <em>procedure</em> in India, not parliamentary <em>government</em>, which needed elected members (indirectly from 1892), ministers responsible to a legislature (in the transferred subjects from 1919) and finally a Council of Ministers answerable to an elected House under the Constitution.</p>
+
+<h3>The Macaulay Committee, 1854</h3>
+
+<p>The Charter Act of 1853 ended patronage in appointments to the covenanted civil service, and the <strong>Committee on the Indian Civil Service</strong> under <strong>T.B. Macaulay</strong> reported in 1854 on how open competition should work.</p>
+
+<ul>
+ <li>Appointment by <strong>open competitive examination</strong> instead of nomination by the Directors of the Company.</li>
+ <li>Candidates should have the best <strong>liberal education</strong> England offered, ideally a degree from Oxford or Cambridge, and the examination should test it through general subjects such as English literature, history, mathematics, the classics and the sciences, rather than technical knowledge of administration.</li>
+ <li>Selected candidates should spend a probationary period in England studying Indian law, history and languages before going to India.</li>
+ <li>The Company's college at Haileybury, through which nominees had passed, was no longer to be the route of entry.</li>
+</ul>
+
+<p>The report's premise was that men who had excelled in a general education of the highest kind would prove superior in any profession to those trained early for a particular calling. That is the doctrine of the <strong>gentleman generalist</strong>, and it links the ICS to the <strong>elite theory</strong> of bureaucracy associated with Pareto, Mosca and Michels: a small, select, socially homogeneous group, chosen for intellect and character, governing a large population with wide discretion. Philip Woodruff's history of the service called its members <em>The Guardians</em>, after Plato's ruling class, and Lloyd George in 1922 called it the "steel frame" of British rule.</p>
+
+<p><strong>Does the elitism persist?</strong> Several features of the Macaulay design survive in the Indian Administrative Service: selection by a general examination rather than for specific skills, the dominance of the generalist over the specialist, a small service with great authority over a large population, early responsibility, and a sense of corporate distinction from the people and from other services. Its social base long favoured the English-educated urban middle class. Against this, the service has been substantially democratised. Reservation and the use of Indian languages in the examination since the Kothari reforms have widened its social base, its members answer to elected ministers and are subject to the right to information and judicial review, and lateral entry, though contested, has opened its career monopoly at the margins. The fair conclusion is that the structure of the Macaulay model persists while its social exclusiveness has been much reduced.</p>
+
+<h3>The Indianisation of the Services</h3>
+
+<p>Indianisation was slow because the services were the instrument of control, and each concession was made reluctantly and under political pressure.</p>
+
+<ol>
+ <li><strong>Open competition, 1853 to 1870.</strong> The examination was formally open to Indians but held in London, in English. <strong>Satyendranath Tagore</strong> became the first Indian to enter the ICS, in 1863. An Act of 1870 allowed Indians of merit to be nominated to posts reserved for the covenanted service, and Lytton's Statutory Civil Service (1879) was built on it.</li>
+ <li><strong>The age-limit agitation.</strong> The maximum age was lowered to nineteen in 1876, which made the examination almost impossible for Indians, and a higher age limit and simultaneous examinations in India became central demands of the early nationalists and of the Congress from its first session in 1885.</li>
+ <li><strong>Aitchison (1886) and Islington (1912 to 1915).</strong> The first created the imperial, provincial and subordinate services, giving Indians the provincial services, and the second recommended a larger Indian share of higher posts.</li>
+ <li><strong>From 1922</strong>, after the Montagu-Chelmsford reforms, the ICS examination was held in India as well as in London, first at Allahabad.</li>
+ <li><strong>The Lee Commission (1924)</strong>, the Royal Commission on the Superior Civil Services in India, recommended that within fifteen years half the ICS should be Indian, with Europeans and Indians recruited directly in equal numbers and the rest of the Indian share filled by promotion from the provincial services. It recommended that recruitment to the services in the transferred fields pass to the provinces, and that the Public Service Commission provided for in the Government of India Act, 1919 be set up.</li>
+ <li><strong>The Public Service Commission</strong> was established on 1 October 1926 under Sir Ross Barker. The Government of India Act, 1935 provided for a Federal Public Service Commission and provincial commissions, and the federal commission became the Union Public Service Commission under the Constitution.</li>
+</ol>
+
+<p>The record supports the view that Indianisation was slow but steady. Each step followed political pressure, each was hedged by safeguards for European officers, and parity was promised in 1924 for a date fifteen years away. But the direction never reversed, and the machinery built along the way, the provincial services, the examination in India and the public service commissions, is what the republic took over when the Indian Administrative Service replaced the ICS.</p>
 
 <h2>Post-Independence Development</h2>
 
@@ -3750,6 +4699,80 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h2>The Constitution as an Administrative Document</h2>
 
 <p>The Indian Constitution is unusual among constitutions in how much administration it contains. It does not merely establish organs and distribute powers; it prescribes the services, protects their tenure, creates the audit and recruitment machinery, allocates taxes, and provides for the suspension of the whole arrangement in an emergency. For Paper II this means the constitutional framework is not background to administration but its operating charter, and most administrative controversies in India are ultimately arguments about provisions rather than about practices.</p>
+
+<h3>Constitutionalism</h3>
+
+<p>Constitutionalism is the principle that government derives its authority from a higher law and is limited by it: power is granted, defined and restrained by a constitution and exercised only within those limits. <strong>C.H. McIlwain</strong>, in <em>Constitutionalism: Ancient and Modern</em> (1940), identified its essential quality as a legal limitation on government, the opposite of arbitrary rule. Its premises are the rule of law, the protection of individual rights, the separation or division of powers, an independent judiciary able to enforce the limits, and the accountability of rulers to the ruled.</p>
+
+<h4>How Limited Government Is Secured in India</h4>
+
+<ul>
+ <li><strong>A written and supreme Constitution</strong>, from which every organ, Parliament included, derives its power.</li>
+ <li><strong>Fundamental Rights</strong> enforceable in the courts, with Article 13 declaring void any law inconsistent with them.</li>
+ <li><strong>Judicial review</strong> of legislation and executive action under Articles 32 and 226.</li>
+ <li><strong>A federal division of powers</strong>, so that neither level of government holds all power.</li>
+ <li><strong>The basic structure doctrine.</strong> In <strong>Kesavananda Bharati v. State of Kerala</strong> (1973) a bench of thirteen judges held by seven to six that Parliament's power under Article 368 does not extend to altering the basic structure of the Constitution. The doctrine was applied in <em>Indira Gandhi v. Raj Narain</em> (1975) to strike down the clause of the 39th Amendment that placed the Prime Minister's election beyond challenge, in <em>Minerva Mills</em> (1980), which held limited amending power itself to be a basic feature, and in <em>I.R. Coelho</em> (2007), which opened laws placed in the Ninth Schedule after 24 April 1973 to review. It makes even constitutional amendment a limited power, which is constitutionalism in its strongest form.</li>
+ <li><strong>Independent constitutional bodies</strong>, the Election Commission, the CAG and the Public Service Commissions, which check the executive in their fields.</li>
+</ul>
+
+<h4>Premises the Bureaucracy Cannot Violate</h4>
+
+<p>For administration, constitutionalism means that an official may act only under legal authority and within it. The courts have turned this into enforceable rules. Article 14 forbids arbitrary action, as held in <em>E.P. Royappa v. State of Tamil Nadu</em> (1974). <em>Maneka Gandhi v. Union of India</em> (1978) requires any procedure depriving a person of liberty to be just, fair and reasonable. Natural justice requires a hearing before an adverse decision, and discretion must be used for the purpose for which it was given. Article 311 limits the government as employer in the same way.</p>
+
+<h4>A Functional Reality?</h4>
+
+<p>The record is mixed. The Emergency of 1975 to 1977, when fundamental rights were suspended, the press censored and opponents detained, and the Supreme Court's holding in <em>ADM Jabalpur</em> (1976) that detention could not be challenged during the Emergency, showed how far the limits could be suspended. The 44th Amendment, the basic structure doctrine and the review of Article 356 in <em>Bommai</em> showed them restored, and the Court disowned <em>ADM Jabalpur</em> in <em>K.S. Puttaswamy</em> (2017). Limited government also depends on what courts cannot supply, and repeated ordinances, weak parliamentary scrutiny and custodial violence are breaches of constitutionalism in practice. It leads to the rule of law and social justice only when institutions, civil society and citizens uphold its values, through the decentralised government of the 73rd and 74th Amendments, the right to information and an informed public as well as through the courts.</p>
+
+<h3>The Preamble as a Framework for Administration</h3>
+
+<p>The Preamble declares India a <strong>sovereign, socialist, secular, democratic republic</strong> and resolves to secure to all citizens <strong>justice</strong>, social, economic and political, <strong>liberty</strong> of thought, expression, belief, faith and worship, <strong>equality</strong> of status and of opportunity, and <strong>fraternity</strong> assuring the dignity of the individual and the unity and integrity of the nation. It derives from the Objectives Resolution moved by Nehru in the Constituent Assembly in December 1946. The <strong>42nd Amendment (1976)</strong> added the words <em>socialist</em>, <em>secular</em> and <em>integrity</em>. In <em>Berubari</em> (1960) the Supreme Court held that the Preamble was not part of the Constitution, and in <em>Kesavananda Bharati</em> (1973) that it is, and that it guides interpretation.</p>
+
+<ul>
+ <li><strong>Sovereignty of the people.</strong> "We, the people" makes the administration the servant of the citizen, which grounds citizen-centric administration, citizen's charters and the right to information.</li>
+ <li><strong>Justice, social, economic and political</strong>, carried into the Directive Principles, sets the welfare and developmental mission of the administration and supports reservation and other affirmative programmes.</li>
+ <li><strong>Liberty</strong> limits the administration's coercive power.</li>
+ <li><strong>Equality</strong> of status and opportunity requires impartial administration and fair access to public employment.</li>
+ <li><strong>Secularism</strong> requires the state to treat all religions alike in its administration.</li>
+ <li><strong>Fraternity and dignity</strong> require an administration that treats citizens, especially the weakest, with respect.</li>
+</ul>
+
+<p><strong>Ideals on paper?</strong> Several of the Preamble's promises remain incomplete. Political justice through universal franchise has been realised to a degree few expected in 1950, but economic justice is qualified by persistent poverty and inequality, social justice by continuing caste discrimination and violence against women and Dalits, and fraternity by communal conflict. The ideals are not merely on paper, since they have driven land reform, reservation, rights-based welfare legislation and judicial interpretation, but they remain goals rather than achievements, which is how the framers meant them.</p>
+
+<p><strong>Is "socialist" redundant?</strong> The argument that liberalisation since 1991 has made the word redundant assumes that socialism means state ownership of the means of production. The courts have read it differently, as a commitment to a welfare state that reduces inequality and secures a decent standard of life, compatible with a mixed economy. In November 2024, in <em>Dr. Balram Singh v. Union of India</em>, the Supreme Court dismissed petitions challenging the insertion of "socialist" and "secular" by the 42nd Amendment, observing that the word does not tie elected governments to any particular economic policy. On that reading the word is not redundant: liberalisation changed the means, from state ownership to markets with targeted welfare, and left the commitment to economic justice in place.</p>
+
+<h3>Sources of the Constitution</h3>
+
+<p>The Constitution has a structural part, which organises the state, and a philosophical part, which states its purposes and the rights of citizens. The two have different sources.</p>
+
+<h4>The Government of India Act, 1935</h4>
+
+<p>The structural part draws more on the <strong>Government of India Act, 1935</strong> than on any other source, which is why the Act is called the most important source of the Constitution. The features carried over include:</p>
+
+<ul>
+ <li>the <strong>federal scheme</strong>, with powers divided into three lists and a strong centre,</li>
+ <li>the office of <strong>Governor</strong>, with discretionary powers,</li>
+ <li>the <strong>emergency provisions</strong>, including the power under section 93 to take over the administration of a province, the model for Article 356,</li>
+ <li>the <strong>Federal Court</strong>, the model for the Supreme Court's jurisdiction in disputes between the units,</li>
+ <li><strong>Public Service Commissions</strong> at the federal and provincial levels, and</li>
+ <li>much administrative detail on services, finance and relations between the centre and the units.</li>
+</ul>
+
+<p>Its limits as a source matter as much. The 1935 Act had no bill of rights, no statement of purposes, a franchise restricted by property and education, and a Governor-General and Governors answerable to Britain, so the Constitution borrowed its machinery and rejected its spirit.</p>
+
+<h4>Sources of the Philosophical Part</h4>
+
+<ul>
+ <li><strong>The Objectives Resolution</strong> (1946), the basis of the Preamble.</li>
+ <li><strong>The national movement</strong>: the Nehru Report of 1928, which proposed a bill of rights, and the Karachi Resolution of the Congress in 1931 on fundamental rights and economic policy.</li>
+ <li><strong>The United States</strong>: fundamental rights, judicial review and the independence of the judiciary.</li>
+ <li><strong>Ireland</strong>: the Directive Principles of State Policy.</li>
+ <li><strong>Britain</strong>: parliamentary government, the rule of law and the cabinet system.</li>
+ <li><strong>France</strong>: the republic and the ideals of liberty, equality and fraternity.</li>
+ <li><strong>The Soviet Union</strong>: the ideals of social, economic and political justice, and later the fundamental duties.</li>
+ <li><strong>Gandhian thought</strong>: village panchayats, cottage industries, prohibition and the protection of cattle among the Directive Principles.</li>
+</ul>
+
+<p><strong>The liberal-democratic influence.</strong> The value premises are substantially liberal-democratic and Western in origin: individual rights, the rule of law, representative and responsible government, an independent judiciary and equality before the law, transmitted through the British connection and the education of the nationalist leadership. The Constitution is not only liberal, however. Its commitment to social and economic justice, to reservation for disadvantaged groups and to the directive principles of a welfare state reflects Fabian and socialist thought, Gandhian ideas and Ambedkar's concern with caste, so the liberal framework is joined to a transformative purpose that the Western liberal constitutions of the time did not share.</p>
 
 <h2>The Parliamentary System</h2>
 
@@ -3886,6 +4909,16 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The important point for an answer is that <strong>Article 249 requires the Council of States to act</strong>, which is the chamber representing the states, so the Constitution's own mechanism for central encroachment is routed through the states' own house. Whether that is a real safeguard depends on whether the Council of States functions as a federal chamber or as a second party chamber, and the honest answer is that it has largely functioned as the latter.</p>
 
+<h3>Pith and Substance and Severability</h3>
+
+<p>Two doctrines govern how the courts treat laws that touch more than one list or exceed the competence of the legislature that made them.</p>
+
+<p><strong>Pith and substance.</strong> Since the subjects in the three lists inevitably overlap, the courts look at the <strong>true nature and character</strong> of a law, its pith and substance, to decide which entry it falls under. If in substance it is on a subject within the competence of the enacting legislature, the law is valid even if it <strong>incidentally encroaches</strong> on a subject in another list. The Privy Council applied the doctrine in <em>Prafulla Kumar Mukherjee v. Bank of Commerce, Khulna</em> (1947), upholding a Bengal money-lending law although it affected promissory notes, a central subject, and the Supreme Court in <em>State of Bombay v. F.N. Balsara</em> (1951), upholding the Bombay Prohibition Act as a law on intoxicating liquor, a state subject, although it touched imports, a Union subject. The doctrine gives the lists the flexibility without which almost every law could be struck down for some overlap. Its companion, the doctrine of <strong>colourable legislation</strong>, prevents abuse: a legislature cannot do indirectly what it cannot do directly.</p>
+
+<p><strong>Severability.</strong> Where part of a law is invalid, because it exceeds legislative competence or violates fundamental rights, the court strikes down only that part, provided the valid part can stand on its own and the legislature would have enacted it without the invalid part. Article 13 states the principle for fundamental rights, declaring inconsistent laws void "to the extent of" the inconsistency. In <em>A.K. Gopalan v. State of Madras</em> (1950) the Court struck down section 14 of the Preventive Detention Act and left the rest standing. <em>R.M.D. Chamarbaugwalla v. Union of India</em> (1957) set out the tests of severability, and in <em>Kihoto Hollohan v. Zachillhu</em> (1992) paragraph 7 of the Tenth Schedule was invalidated while the rest of the anti-defection law was upheld.</p>
+
+<p><strong>Supplementary but distinct.</strong> The two doctrines work in sequence. Pith and substance decides <em>whether</em> a law is within competence by characterising it as a whole, and saves it despite incidental overlap. Severability applies <em>after</em> a defect has been found in part of a law, and saves the valid remainder. One prevents the invalidation of a law for overlap, the other the invalidation of a whole law for a defective part. Both express the presumption in favour of the legislature's work, which matters for federalism because it keeps the laws of both levels in force wherever the Constitution allows.</p>
+
 <h2>Distribution of Executive Powers</h2>
 
 <p>The general rule is that executive power follows legislative power: the Union's executive power extends to matters on which Parliament may legislate, and a state's to matters within its legislature's competence, with the Union prevailing on concurrent subjects where Parliament has so provided.</p>
@@ -3952,6 +4985,47 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Borrowing and Grants</h3>
 
 <p>The Union may borrow on the security of the Consolidated Fund of India without limit; a state may borrow within India but requires the Union's consent while indebted to it, which in practice is always. Grants-in-aid under Article 275 and discretionary grants under Article 282 supply further transfers, the latter having been the vehicle for centrally sponsored schemes, which are the standing federal grievance: they commit state expenditure to central priorities in subjects on the State List, with the state supplying a matching share for a scheme it did not design.</p>
+
+<h3>The Fifteenth Finance Commission</h3>
+
+<p>The <strong>Fifteenth Finance Commission</strong>, constituted on 27 November 2017 under <strong>N.K. Singh</strong>, gave a report for 2020-21 and a final report for <strong>2021-22 to 2025-26</strong>. It set the states' share of the divisible pool of central taxes at <strong>41 per cent</strong>, against the 42 per cent of the Fourteenth, the reduction reflecting the reorganisation of Jammu and Kashmir into union territories. Its criteria for distribution among the states were:</p>
+
+<table>
+ <thead>
+ <tr><th>Criterion</th><th>Weight (per cent)</th><th>What it measures</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Income distance</td><td>45</td><td>How far a state's per capita income lies below that of the richest, an equity measure</td></tr>
+ <tr><td>Population (2011)</td><td>15</td><td>Need, by number of people</td></tr>
+ <tr><td>Area</td><td>15</td><td>The higher cost of administering a larger territory</td></tr>
+ <tr><td>Forest and ecology</td><td>10</td><td>Dense forest cover, an ecological service</td></tr>
+ <tr><td>Demographic performance</td><td>12.5</td><td>Lower fertility, rewarding population control</td></tr>
+ <tr><td>Tax and fiscal efforts</td><td>2.5</td><td>Own tax collection relative to capacity</td></tr>
+ </tbody>
+</table>
+
+<h4>The Terms of Reference</h4>
+
+<ul>
+ <li><strong>The 2011 Census.</strong> The terms required the use of 2011 population figures, where earlier commissions had used those of 1971 so as not to penalise states that had controlled population growth. The southern states, which reduced fertility early, argued that they would lose. The Commission answered with the demographic performance criterion, but Karnataka in particular still saw a sharp fall in its share.</li>
+ <li><strong>Union finances.</strong> It was asked to consider the effect on the Union's finances of the higher devolution recommended by its predecessor, which states read as a signal to reduce their share.</li>
+ <li><strong>Performance incentives.</strong> It could propose incentives for states on matters such as population control, ease of doing business, efficiency of expenditure and control of expenditure on populist measures, which states saw as intrusion into their policy choices.</li>
+ <li><strong>Revenue deficit grants.</strong> It was asked to examine whether such grants should be given at all.</li>
+ <li><strong>Defence and internal security.</strong> A later addition asked whether a separate non-lapsable fund for defence and internal security should be created, and the Commission recommended a Modernisation Fund for Defence and Internal Security, which states feared would compete with their claims.</li>
+</ul>
+
+<h4>Norms or Needs</h4>
+
+<p>A <strong>need-based</strong> approach estimates each state's revenue gap and fills it, which rewards states that spend more and raise less. A <strong>norm-based</strong> approach distributes by objective formulae and normative assessments of what a state should raise and spend, which treats states alike and encourages fiscal discipline but may underfund states with genuine disabilities. The Fifteenth Commission's devolution is largely norm-based, a formula of measurable indicators, with need entering through income distance, population and area and through revenue deficit grants.</p>
+
+<h4>Contention Since the Tenth Commission</h4>
+
+<ul>
+ <li><strong>The vertical share.</strong> The Tenth Commission (1995-2000) proposed that all central taxes be pooled for sharing, which the <strong>80th Amendment (2000)</strong> adopted. The states' share then moved to 29.5 per cent under the Eleventh, 30.5 under the Twelfth, 32 under the Thirteenth, 42 under the Fourteenth and 41 under the Fifteenth. The growth of cesses and surcharges, which lie outside the divisible pool, means that states receive less of gross central revenue than these figures suggest.</li>
+ <li><strong>Equity against efficiency.</strong> A heavy weight on income distance moves resources from richer to poorer states, and the richer states argue that they are penalised for growth and good management.</li>
+ <li><strong>The population base</strong>, 1971 or 2011, which divides states by their demographic record.</li>
+ <li><strong>The terms of reference.</strong> States object that the Union alone frames them and uses them to steer state policy, which strains the Commission's quasi-judicial character.</li>
+</ul>
 
 <h2>Emergency Provisions</h2>
 
@@ -4037,6 +5111,53 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Three developments have reshaped the framework since the commissions reported. <strong>Coalition politics</strong> from 1989 made the states' bargaining position real, and the fall in invocations of Article 356 followed political arithmetic as much as it followed <em>Bommai</em>. The <strong>73rd and 74th Amendments</strong> added a third tier, which changed the federal question from a two-level to a three-level one and exposed the states as reluctant devolvers in their turn. And the <strong>GST Council</strong> created a form of shared sovereignty in taxation that neither the Constitution as framed nor the commissions that examined it had contemplated.</p>
 
 <p>The conclusion an answer should reach is that the formal framework has been remarkably stable while the working balance has moved substantially, and that it has moved with the party system more than with any amendment. Indian federalism is best understood as a constitutional design whose centralising provisions are permanently available and only intermittently used, which makes the political conditions of their use as important a subject as the provisions themselves.</p>
+
+<h3>Appointment of Judges: the Collegium and the NJAC</h3>
+
+<p>Articles 124 and 217 provide for the appointment of Supreme Court and High Court judges by the President after <strong>consultation</strong> with the Chief Justice of India and other judges. What consultation means has been settled by the Supreme Court in a series of cases rather than by the text.</p>
+
+<ul>
+ <li><strong>First Judges case</strong>, <em>S.P. Gupta v. Union of India</em> (1981): consultation does not mean concurrence, so the executive had primacy.</li>
+ <li><strong>Second Judges case</strong>, <em>Supreme Court Advocates-on-Record Association v. Union of India</em> (1993): the Court reversed this and gave primacy to the opinion of the Chief Justice formed in consultation with the two senior-most judges, which created the <strong>collegium</strong>.</li>
+ <li><strong>Third Judges case</strong>, a presidential reference under Article 143 (1998): the collegium for Supreme Court appointments was enlarged to the Chief Justice and the four senior-most judges, and for High Court appointments set at the Chief Justice and the two senior-most judges.</li>
+</ul>
+
+<p>The <strong>99th Amendment</strong> and the <strong>National Judicial Appointments Commission Act</strong>, both of 2014, replaced the collegium with a commission of six: the Chief Justice of India as chairperson, the two next senior judges of the Supreme Court, the Union Law Minister, and two eminent persons chosen by a committee of the Prime Minister, the Chief Justice and the Leader of the Opposition in the Lok Sabha, one of them from the Scheduled Castes, Scheduled Tribes, Other Backward Classes, minorities or women. Any two members could block a recommendation. On <strong>16 October 2015</strong>, in the <strong>Fourth Judges case</strong>, a Constitution Bench struck down both by four to one, holding that primacy of the judiciary in appointments is part of the independence of the judiciary, a basic feature, and that the Law Minister's presence and the veto of two members, who need not be judges, compromised it. Justice Chelameswar dissented. The collegium was restored, and the Court called for a revised Memorandum of Procedure to make it more transparent.</p>
+
+<table>
+ <thead>
+ <tr><th>For the collegium</th><th>For a commission</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Executive participation threatens independence, since the government is the largest litigant</td><td>The text says consultation, not concurrence, and few democracies let judges choose judges</td></tr>
+ <tr><td>Judges are best placed to assess legal ability and judicial temperament</td><td>The collegium is opaque, with no published criteria or reasons</td></tr>
+ <tr><td>A veto by two members, possibly the eminent persons, could block the best candidates</td><td>It has been criticised for narrow selection and for under-representing women and disadvantaged groups</td></tr>
+ <tr><td>Independence of the judiciary is a basic feature, and the amendment impaired it</td><td>It answers to no one, and disagreements with the executive have delayed appointments</td></tr>
+ </tbody>
+</table>
+
+<p>The collegium has been the cornerstone of judicial independence in the sense that it kept appointments out of executive hands, and it is also the most criticised feature of the judicial system, because it bought independence at the cost of transparency and accountability. Independence and accountability need not be alternatives: a process with published criteria, recorded reasons and a permanent secretariat, with judicial primacy retained, would serve both.</p>
+
+<h3>Judicial Activism and Judicial Overreach</h3>
+
+<p><strong>Judicial activism</strong> is the use of judicial power to expand rights and to compel the other branches to perform their constitutional duties, going beyond the settlement of disputes between parties. <strong>Judicial overreach</strong> is activism that crosses into the functions of the legislature or the executive, where a court frames policy, administers or legislates instead of reviewing. The line between them is the line between enforcing a duty and choosing how it should be performed.</p>
+
+<h4>The Growth of Activism</h4>
+
+<ul>
+ <li><strong>Public interest litigation</strong>, developed from the late 1970s under Justices P.N. Bhagwati and V.R. Krishna Iyer, relaxed the rules of standing so that any public-spirited person could approach the court for those unable to do so, as in <em>Hussainara Khatoon</em> (1979) on undertrial prisoners and <em>S.P. Gupta</em> (1981).</li>
+ <li><strong>Expansion of Article 21</strong> after <em>Maneka Gandhi</em> (1978) into rights to livelihood, shelter, health, education, a clean environment and privacy.</li>
+ <li><strong>Guidelines where the law was silent</strong>, as in <em>Vishaka</em> (1997) on sexual harassment at the workplace, which governed until Parliament legislated in 2013.</li>
+ <li><strong>Continuing mandamus</strong>, under which the court keeps a case open and supervises compliance, as in <em>Vineet Narain</em> (1997) on the independence of the CBI and the Central Vigilance Commission, the forest cases in <em>T.N. Godavarman</em>, and <em>Prakash Singh</em> (2006) on police reform.</li>
+</ul>
+
+<h4>Overreach</h4>
+
+<p>The examples usually cited are directions that went beyond enforcing a duty into making policy: the order of 2016 banning the sale of liquor within 500 metres of national and state highways, the order of the same year making the playing of the national anthem in cinemas compulsory, made optional in 2018, and the 2012 direction to implement the interlinking of rivers. The Supreme Court itself cautioned in <em>Divisional Manager, Aravali Golf Club v. Chander Hass</em> (2007) that judges must exercise restraint, must not encroach on the functions of the legislature and the executive, and should not try to run the government.</p>
+
+<p><strong>A consequence of ineffective executive?</strong> Largely, yes. The courts have entered fields where the executive failed to act, on pollution, police reform, custodial violence, forests and the independence of investigating agencies, and where the legislature left gaps, as on workplace harassment. Cases reach the courts because citizens find no remedy elsewhere. But this is not the whole explanation. Some interventions reflect the courts' own expansion of their role and the absence of any check on it, and the record of continuing mandamus is uneven: the police reform directions have been implemented only partially, which shows that a court cannot substitute for an executive that does not wish to act.</p>
+
+<p><strong>Assessment.</strong> The separation of powers in India is a separation of functions rather than a rigid wall, and judges do not govern when they compel the government to obey the law or protect rights. They govern when they choose between policy options, manage administration or fix technical standards without the expertise, the accountability or the capacity to implement that the executive possesses. The courts have creatively reinterpreted their authority and raised their standing against the other branches, and the gains in rights and accountability are real. But the lasting remedy for an ineffective executive is a more accountable executive, and the proper judicial posture is to enforce duties while leaving the means to those who answer to the electorate.</p>
 `,
  'public-sector-undertakings': `<h2>Why the Public Sector Was Built</h2>
 
@@ -4341,6 +5462,65 @@ export const pubAdminNoteContent: Record<string, string> = {
 </ul>
 
 <p>In the years after 1947 there were two standing committees. The <strong>Defence Committee</strong>, established in 1947 with five or six cabinet members, had its own secretariat organisation within the Cabinet Secretariat known as the military wing. The <strong>Economic Committee</strong> followed soon after with six members. Priority, rehabilitation and resource committees were added in due course, and the number of committees has risen and fallen with circumstance. The committees that matter most are those on political affairs, security, economic affairs and appointments, the last of which clears senior civil service appointments and is therefore the point at which the political executive touches the permanent service most directly.</p>
+
+<h3>Groups of Ministers and Empowered Groups of Ministers</h3>
+
+<p>A <strong>Group of Ministers</strong> is an ad hoc body of ministers constituted by the Prime Minister or the cabinet to examine an issue, usually one that cuts across ministries, and to report to the cabinet. An <strong>Empowered Group of Ministers</strong> is authorised to decide on the cabinet's behalf, so that its decisions carry the force of cabinet decisions without returning to the full cabinet. The device was not new, since a group under L.K. Advani reviewed the national security system after the Kargil war, but such groups multiplied under the coalition governments of 2004 to 2014, on subjects such as spectrum pricing, gas pricing, drought and the Lokpal bill. The new government abolished all existing groups in <strong>May 2014</strong> and returned their business to the ministries and the cabinet, and groups have since been constituted selectively, as on COVID-19 in 2020.</p>
+
+<h4>Do They Impair Cabinet Responsibility?</h4>
+
+<ul>
+ <li><strong>The case that they do.</strong> Collective responsibility under <strong>Article 75(3)</strong> assumes that every minister is bound by decisions the cabinet has collectively taken. An empowered group of four or five ministers binds the whole Council by decisions in which most ministers had no part, so collective responsibility becomes responsibility for decisions others took. Groups also served to defer difficult decisions and, in a coalition, to transfer them from the Prime Minister to the senior allies who sat on them, which weakened the cabinet as the centre of decision.</li>
+ <li><strong>The case that they do not.</strong> Collective responsibility is a rule of accountability to the Lok Sabha, not a requirement that every minister deliberate on every decision. Cabinet committees have always decided on the cabinet's behalf, the cabinet creates an empowered group and defines its mandate, and the government as a whole still stands or falls in the House. A cabinet that delegates a decision remains responsible for it.</li>
+</ul>
+
+<p>The defensible conclusion is that empowered groups did not breach the constitutional doctrine but strained its working convention. The doctrine survives as long as the cabinet can recall what it delegates and the House can remove the whole ministry. What weakened was the cabinet as a deliberative body, a political rather than a legal loss, and it was felt most under coalitions, where the groups became a means of managing allies.</p>
+
+<h3>Administration Under Coalition Governments</h3>
+
+<p>From 1989 to 2014 no single party won a Lok Sabha majority, and the Union was governed by coalitions or minority governments, among them the National Front, the United Front, the National Democratic Alliance from 1998 to 2004 and the United Progressive Alliance from 2004 to 2014. The election of 2014 restored a single-party majority, and that of 2024, in which the largest party won 240 seats, returned the Union to dependence on allies.</p>
+
+<h4>Problems of Administration</h4>
+
+<ul>
+ <li><strong>The Prime Minister's power over the ministry</strong> is shared with allied leaders, who nominate their own ministers and claim particular portfolios, so appointments and the allocation of departments follow coalition arithmetic rather than competence.</li>
+ <li><strong>Collective responsibility weakens</strong> when ministers owe their place to their own party leader rather than to the Prime Minister, and when allies publicly oppose decisions of the government they belong to.</li>
+ <li><strong>Policy paralysis.</strong> Decisions require consensus among parties with different constituencies, so contested reforms stall, as when the decision to allow foreign investment in multi-brand retail in 2012 cost the government an ally.</li>
+ <li><strong>Coordination outside the Constitution.</strong> Common minimum programmes, coordination committees and, under the UPA, the National Advisory Council became centres of influence outside the cabinet, blurring where responsibility lay.</li>
+ <li><strong>Enlarged ministries</strong>, swollen to accommodate allies, which produced the 91st Amendment.</li>
+ <li><strong>Inconsistent direction for the civil service</strong>, as ministries held by different parties pursued different priorities within one government.</li>
+ <li><strong>Regional pressure on national policy</strong>, as allies based in one state shaped decisions on matters such as river waters and relations with neighbouring countries.</li>
+</ul>
+
+<h4>What Varies, and What Changed After 2014</h4>
+
+<p>Coalitions differ with their leadership, the structure of parties and the political moment. A coalition with a dominant core party and a Prime Minister of standing, as under Vajpayee from 1999, can govern for a full term. One whose core is weak or which depends on outside support, as the United Front did between 1996 and 1998, changes Prime Ministers and falls. Where the party leader and the head of government are different people, as under the UPA, a second centre of authority complicates the Prime Minister's position. The gains were real too: coalitions gave regional parties and states a voice at the Centre, encouraged consensus, and coincided with a sharp fall in the use of Article 356.</p>
+
+<p>The move to one-party dominance in 2014 changed the system in predictable ways. The Prime Minister's control over the ministry and the PMO's role in policy grew, groups of ministers were wound up, decisions became quicker, and the bargaining power of states declined. The return of coalition dependence in 2024 confirms that electoral arithmetic, more than the Constitution, sets the balance between prime ministerial and collegial government.</p>
+
+<h3>The 91st Amendment Beyond the Cap</h3>
+
+<p>The <strong>Constitution (Ninety-first Amendment) Act, 2003</strong>, in force from 1 January 2004, did four things.</p>
+
+<ul>
+ <li><strong>Article 75(1A)</strong> limits the Union Council of Ministers, including the Prime Minister, to fifteen per cent of the total membership of the Lok Sabha, and <strong>Article 164(1A)</strong> applies the same limit to a state, with a <strong>minimum of twelve</strong> ministers including the Chief Minister.</li>
+ <li><strong>Articles 75(1B) and 164(1B)</strong> bar a member disqualified for defection from appointment as a minister until the end of his term or his re-election, whichever is earlier.</li>
+ <li><strong>Article 361B</strong> bars such a member from holding any remunerative political post for the same period.</li>
+ <li>The Tenth Schedule's protection for a <strong>split</strong> by one-third of a legislature party was deleted, so that only a <strong>merger</strong> supported by two-thirds of the legislature party now protects members from disqualification.</li>
+</ul>
+
+<h4>Did It Right-Size the Council of Ministers?</h4>
+
+<p>In part. Ministries assembled to buy support, the largest in Uttar Pradesh in the late 1990s with more than ninety members, shrank to the limit, and the defection provisions removed ministerial office as a reward for defection. The evidence of evasion is also strong.</p>
+
+<ul>
+ <li><strong>Substitutes for office.</strong> Legislators left out of the ministry are made parliamentary secretaries, chairs of corporations and boards, or advisers with cabinet rank. In <em>Bimolangshu Roy v. State of Assam</em> (2017) the Supreme Court held that a state legislature lacked competence to create posts of parliamentary secretary, and similar appointments elsewhere have been challenged as offices of profit.</li>
+ <li><strong>Small states.</strong> The minimum of twelve far exceeds fifteen per cent in assemblies of thirty-two or forty members, so in the smaller states a large part of the ruling side holds office and the assembly's capacity to scrutinise the executive is weakened.</li>
+ <li><strong>The ceiling as a target.</strong> Governments tend to fill the permitted number, so the cap has become the norm.</li>
+ <li><strong>Defection by merger.</strong> With the split exception gone, mass defections are arranged as two-thirds mergers, and delay by presiding officers in deciding disqualification petitions blunts the remaining sanction.</li>
+</ul>
+
+<p>The amendment succeeded in limiting the formal size of ministries and did not end the political logic that produced the bloat, which reappears in the offices created around the ministry.</p>
 
 <h2>The Cabinet Secretariat</h2>
 
@@ -4797,6 +5977,18 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>The loss of a medium-term horizon.</strong> Whatever the defects of the Five Year Plan, it forced ministries and states to think beyond the annual budget, and a three-year action agenda aligned to the expenditure framework is closer to budgeting than to planning.</li>
 </ul>
 
+<h3>The National Data and Analytics Platform</h3>
+
+<p>The <strong>National Data and Analytics Platform (NDAP)</strong>, built by NITI Aayog and opened to the public in 2022, is a single portal that hosts datasets published by central ministries, state governments and statistical agencies in a <strong>standardised and interoperable</strong> form. It builds on the open data commitment of the National Data Sharing and Accessibility Policy of 2012 and the data.gov.in portal, and addresses their main defect: government data existed in incompatible formats, with different geographical codes, units and periods, so that combining two datasets required expertise few users had.</p>
+
+<ul>
+ <li><strong>Standardisation.</strong> Datasets are mapped to common geographical units, including the district where data allow, so that figures from different ministries can be joined.</li>
+ <li><strong>Analysis and visualisation</strong> on the platform itself, letting users compare states and districts, merge datasets and produce charts and maps without specialised software.</li>
+ <li><strong>Open access</strong> for researchers, journalists, civil society, students and officials alike.</li>
+</ul>
+
+<p>Its claim to democratise development rests on three effects. It lowers the cost of evidence, so that policy debate is less the monopoly of those inside government. It shows a state or district where it lags, which is the precondition of the ranking-based competition NITI Aayog relies on. And it lets civil society and local governments test official claims against official data. Its limits are those of the data it carries. It is only as good, current and granular as what departments supply, it depends on their willingness to publish unflattering figures, and access to a portal is not the capacity to use it, which remains unequal across states, districts and citizens.</p>
+
 <h2>Cooperative Federalism</h2>
 
 <p>Cooperative federalism is NITI Aayog's organising claim, and it should be assessed rather than repeated. The institutional expression is the Governing Council of Chief Ministers, the use of sub-groups and task forces of Chief Ministers on specific subjects, and the language of <em>Team India</em> in which the Centre and the states are described as partners rather than as principal and agent.</p>
@@ -4804,6 +5996,22 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Three developments support the claim: the abolition of the distinction between plan and non-plan transfers removed an instrument of central direction; the raising of the states' share in the divisible pool on the Fourteenth Finance Commission's recommendation enlarged untied transfers substantially; and the GST Council created a joint body in which taxation is decided by weighted vote rather than by central decision.</p>
 
 <p>Two developments cut the other way: centrally sponsored schemes persist and continue to direct state spending on State List subjects; and a ranking-and-competition model, while it respects state autonomy formally, substitutes reputational pressure from the Centre for financial pressure, which is a change in the instrument of influence rather than its abandonment. The honest conclusion is that Indian federalism has become more cooperative in <em>finance</em> and more competitive in <em>performance</em>, and that the second is not the same thing as the first.</p>
+
+<h3>Competitive Federalism and the Drift into Parochialism</h3>
+
+<p>Competitive federalism asks states to compete for investment, rankings and central recognition, on the reasoning that competition spreads good practice faster than direction from the Centre. Its instruments include the <strong>state rankings under the Business Reform Action Plan</strong> for ease of doing business, NITI Aayog's indices on health, school education, water management, export preparedness and innovation, and the SDG India Index. The gains are real: single-window clearances, time-bound approvals and published service standards have spread from state to state through this competition.</p>
+
+<p>The tendency towards parochialism takes several forms.</p>
+
+<ul>
+ <li><strong>Domicile reservation in private employment.</strong> Haryana's law of 2020 reserving seventy-five per cent of private jobs below a salary ceiling for local residents, struck down by the Punjab and Haryana High Court in 2023, and similar measures elsewhere treat citizens of other states as outsiders in a common labour market.</li>
+ <li><strong>A race to the bottom in incentives</strong>, as states bid for large investments with tax concessions, cheap land and relaxed labour and environmental conditions that may cost the public more than the investment returns.</li>
+ <li><strong>Competition in a crisis.</strong> During the second wave of COVID-19 in 2021 states competed for oxygen and floated separate tenders for vaccines, a contest a federation should have coordinated.</li>
+ <li><strong>Resource disputes and nativism</strong>, over river waters and against migrant workers, where a state government's electoral interest lies in its own residents at others' expense.</li>
+ <li><strong>Unequal starting points.</strong> Competition among unequal states rewards those already ahead, since investment flows to the infrastructure and skills poorer states lack, widening regional disparity.</li>
+</ul>
+
+<p>The remedy is to keep competition inside a cooperative frame: rankings that measure improvement as well as level, Finance Commission transfers that compensate states starting behind, inter-state forums such as the Inter-State Council and the zonal councils to settle disputes, and the constitutional guarantees of equality and of freedom of movement, residence and occupation under Articles 14, 16 and 19 as a limit on measures that discriminate against citizens of other states.</p>
 
 
 <h2>Planning and Administration</h2>
@@ -4868,6 +6076,35 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Inadequate planning machinery at the district level</strong>, in staff, data and technical capacity.</li>
  <li>The pressure for decentralisation came <strong>from above</strong> rather than from local demand, so the institutions exist without a constituency that insists on their working.</li>
 </ul>
+
+<h3>Why District Planning Stayed Prominent in a Few States</h3>
+
+<p>District Planning Committees exist in almost every state, and in most they meet rarely, consolidate departmental proposals and are dominated by a minister or by officials. The few states where district planning has meant something share three conditions: a state government willing to give local bodies untied funds, a political movement that treated decentralisation as its own project, and mobilisation of citizens and experts to make planning from below workable. Kerala is the clearest case.</p>
+
+<h4>Kerala's People's Plan Campaign, 1996</h4>
+
+<p>In August 1996 Kerala launched the <strong>People's Plan Campaign</strong> for the Ninth Plan, devolving about <strong>35 per cent</strong> of the state's development budget to local governments under the joint supervision of the <strong>State Planning Board</strong> and the <strong>Local Self-Government Department</strong>. Led within the Planning Board by <strong>T.M. Thomas Isaac</strong> and supported by the Kerala Sastra Sahitya Parishad, the campaign proceeded in phases.</p>
+
+<ul>
+ <li><strong>Gram Sabhas and ward assemblies</strong> identified local needs, with large public participation.</li>
+ <li><strong>Development seminars</strong> in each panchayat assessed resources and problems sector by sector and produced development reports.</li>
+ <li><strong>Task forces</strong> of officials, experts and activists turned the priorities into projects.</li>
+ <li><strong>Panchayats and municipalities</strong> prepared their own plans, which block and district panchayats integrated, and volunteer technical experts, many of them retired, appraised the projects.</li>
+</ul>
+
+<p>The first years drew criticism for hurried projects and weak technical appraisal, but the campaign made local planning a normal part of Kerala's administration, and the state has remained near the top of devolution rankings since. The national campaign for Gram Panchayat Development Plans, <em>Sabki Yojana Sabka Vikas</em>, begun in October 2018, follows the same method of planning upward from the Gram Sabha.</p>
+
+<h4>Why It Was Marginalised Elsewhere</h4>
+
+<ul>
+ <li><strong>No untied funds.</strong> Where local bodies receive only scheme money with fixed guidelines there is nothing to plan, and the district plan becomes a compilation.</li>
+ <li><strong>Control of the DPC</strong> by a state minister or by officials, which turned an elected planning forum into an extension of the state government.</li>
+ <li><strong>Legislators' resistance</strong>, since an effective district plan reduces their influence over the location of works.</li>
+ <li><strong>Vertical line departments</strong>, which continued to plan under their state directorates over which the DPC had no authority.</li>
+ <li><strong>No technical support</strong> at district level for data, appraisal and integration.</li>
+</ul>
+
+<p>West Bengal and Karnataka, which revived their panchayats in 1978 and 1987, were the other states where local planning gained ground before the constitutional amendments. Where district planning has stayed prominent the reason has been political: a state government that chose to share money and power. Where that choice was absent the constitutional machinery was created and left without purpose.</p>
 
 <h2>Assessment</h2>
 
@@ -4939,6 +6176,23 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Assessment</h3>
 
 <p>The office is defensible in principle and problematic in practice. A constitutional head who can insist on a floor test, refuse to dissolve an assembly while an alternative government exists, and report a genuine breakdown is a safeguard the federal structure needs. The difficulty is that the same office is filled by the Union, held at its pleasure, and often occupied by a politician with a continuing career, so the safeguard and the instrument of central intervention are the same person. Every recommendation made on the subject for sixty years has addressed that single problem, and none has been accepted in the form proposed.</p>
+
+<h3>Removal of Governors: B.P. Singhal (2010)</h3>
+
+<p>Under <strong>Article 156(1)</strong> the Governor holds office during the pleasure of the President, which in practice means the Union Council of Ministers, and Article 156(3) fixes a term of five years subject to that pleasure. The clause prescribes no procedure and no grounds, so in principle the Union may remove a Governor at any time.</p>
+
+<p>In July 2004 the new Union government removed the Governors of Uttar Pradesh, Gujarat, Haryana and Goa, appointed by its predecessor. <em>B.P. Singhal v. Union of India</em>, decided by a Constitution Bench on <strong>7 May 2010</strong>, examined whether such removals could be challenged.</p>
+
+<ul>
+ <li>The pleasure doctrine under Article 156 is not limited by any provision of the Constitution, and a Governor has no security of tenure.</li>
+ <li>But the power cannot be exercised <strong>arbitrarily, capriciously or unreasonably</strong>. It may be used only in rare and exceptional circumstances, for valid and compelling reasons.</li>
+ <li>A Governor cannot be removed because he is out of tune with the policies or ideology of the Union government or because the Union has lost confidence in him, and a <strong>change of government at the Centre is not a ground</strong> for removal.</li>
+ <li>The decision is open to <strong>limited judicial review</strong>. If a Governor shows a prima facie case of arbitrariness or mala fides, the Union must disclose its reasons, though the Court will otherwise presume that compelling reasons existed.</li>
+</ul>
+
+<h4>The Fuzzy Area</h4>
+
+<p>The judgment created the zone the question describes. Pleasure need not be explained, yet its withdrawal requires compelling reasons. Reasons need not be stated, yet must be disclosed once a prima facie case is made. Because the burden lies on the Governor and good faith is presumed, the protection has proved weak in practice. After the change of government in 2014 several Governors appointed by the previous government resigned after the Union Home Secretary asked them to, Aziz Qureshi of Uttarakhand challenged that request in the Supreme Court, and Kamla Beniwal was moved from Gujarat to Mizoram and then removed in August 2014. Governors induced to resign leave no removal for a court to review. The episode shows the limit of judicial protection for an office held at pleasure. The Punchhi Commission's remedy, removal only through impeachment by the state legislature, would require a constitutional amendment, and no government in power has wanted to give up the instrument.</p>
 
 <h2>The Chief Minister</h2>
 
@@ -5416,6 +6670,30 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The recurring recommendation of separating the two roles deserves a caution, and making it is what distinguishes a considered answer. Splitting regulation from development resolves the role conflict and creates a coordination problem in its place, since the district then has two apexes and no single officer answerable for the whole. States that have separated the functions have not conspicuously outperformed those that have not, which suggests that the binding constraint is tenure and political interference rather than the allocation of functions.</p>
 
+<h3>Reorganisation and the Size of Districts</h3>
+
+<p>India had 640 districts at the 2011 Census and has well over seven hundred now, the increase driven by state decisions to divide large districts. <strong>Telangana</strong>, formed with ten districts in 2014, created <strong>twenty-one new districts on 11 October 2016</strong> and two more in 2019, reaching thirty-three. <strong>Andhra Pradesh</strong> went from thirteen to <strong>twenty-six districts on 4 April 2022</strong>, drawn largely around its Lok Sabha constituencies, and to twenty-eight at the end of 2025. <strong>Rajasthan</strong> raised its number from thirty-three to fifty in 2023, and the next government abolished nine of the new districts in December 2024, leaving forty-one.</p>
+
+<h4>The Case for Smaller Districts</h4>
+
+<ul>
+ <li><strong>Span of control.</strong> A Collector responsible for several million people and dozens of departments cannot supervise them all, and a smaller district narrows the span to what one officer can oversee.</li>
+ <li><strong>Access.</strong> The Collectorate, the district hospital and the courts come nearer to villages, cutting the distance and cost of every dealing with the administration.</li>
+ <li><strong>Delivery and monitoring</strong>, since a smaller unit allows closer inspection of schemes, better-targeted planning and quicker response to disasters and disorder.</li>
+ <li><strong>Development of neglected areas</strong>, as a new headquarters brings offices, roads and investment to a town that was peripheral.</li>
+</ul>
+
+<h4>The Case Against</h4>
+
+<ul>
+ <li><strong>Staff and infrastructure.</strong> Each new district needs a Collectorate, a police headquarters and a full set of district officers, which the cadres may not supply, so new districts often run for years with officers holding additional charge.</li>
+ <li><strong>Cost.</strong> Buildings, vehicles and establishment absorb money that could have gone to services.</li>
+ <li><strong>Disruption of records</strong>, as land records, court jurisdictions and statistical series are split and must be rebuilt.</li>
+ <li><strong>Political motive.</strong> Boundaries and headquarters are often drawn to satisfy local demands, reward constituencies or precede elections. The Rajasthan reversal, in which districts created by one government were abolished by the next, shows how far the decision can turn on political rather than administrative logic.</li>
+</ul>
+
+<p>A smaller district relieves an overburdened Collector only if the other causes of overload change with it. The burden comes as much from the number of schemes, committees and reporting lines, and from tenures of a few months, as from area, and these follow the officer into the new district. Reorganisation is administratively justified when it rests on criteria of population, area, terrain and distance, is accompanied by staff and infrastructure, and is decided through a commission or published process rather than by announcement. Where it rests on electoral convenience it multiplies offices without improving administration.</p>
+
 
 <h2>What the Second ARC Recommended</h2>
 
@@ -5466,6 +6744,31 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>Article 312 provides a deliberately difficult route. Before a new All India Service can be created, the <strong>Council of States</strong>, because that House represents the states and is expected to protect their interest, must declare by a resolution supported by a <strong>special majority</strong> of not less than two-thirds of the members present and voting that it is necessary or expedient in the national interest. Parliament may then create the service by an ordinary law, passed by simple majority in both Houses.</p>
 
 <p>At independence there were two All India Services, the <strong>Indian Administrative Service</strong> and the <strong>Indian Police Service</strong>. The <strong>Indian Forest Service</strong> was created in <strong>1966</strong>, bringing the number to three. That the route runs through the states' own chamber is the constitutional answer to the federal objection: the states cannot be given a common service without their House consenting by a large majority.</p>
+
+<h3>The All India Judicial Service</h3>
+
+<p>The <strong>42nd Amendment (1976)</strong> added an <strong>all-India judicial service</strong> to Article 312, so that it can be created by the same route as any All India Service: a resolution of the Council of States supported by two-thirds of the members present and voting, followed by a law of Parliament. <strong>Article 312(3)</strong> excludes any post inferior to that of <strong>district judge</strong> as defined in Article 236, and Article 312(4) allows the creating law to amend the chapter on subordinate courts without being treated as an amendment of the Constitution under Article 368. The idea was recommended by the Law Commission as early as its fourteenth report (1958) and has been revived repeatedly, but the service has not been created.</p>
+
+<ul>
+ <li><strong>For.</strong> Recruitment of district judges by open national competition would raise the quality of the trial courts, where most citizens meet the judiciary. A national pool would help fill the large number of vacancies that delay justice. It would widen the social base of the judiciary, with reservation applied nationally, and it would create a body of tested judges for elevation to the High Courts, widening the field from which the collegium chooses.</li>
+ <li><strong>Against.</strong> Articles 233 to 235 vest the appointment of district judges in the Governor in consultation with the High Court and give the High Courts control over the subordinate courts, so the service would shift control away from the High Courts, several of which oppose it, and from the states. District courts work in the regional language and apply local laws and customs, which an officer from another state would take years to learn. States fear losing preference for their own residents, and members of the state judicial services fear reduced prospects of promotion to district judge.</li>
+ <li><strong>Independence.</strong> If the executive controlled recruitment, posting or discipline, the service would weaken the independence of the subordinate judiciary. Any design consistent with the separation of the judiciary from the executive must keep recruitment under judicial supervision and leave control over postings and discipline with the High Courts.</li>
+</ul>
+
+<p>On timely justice the honest answer is that the service addresses one cause of delay, unfilled posts and uneven quality at the district level, and leaves the others untouched: the ratio of judges to population, adjournments, the volume of government litigation, procedural law and court infrastructure. It would help, but it would not solve the problem by itself, and it cannot be created without the cooperation of the states and the High Courts whose control it would alter. Nor does it touch the dispute between the Supreme Court and the Union over appointments to the higher judiciary, which is a question of the collegium rather than of recruitment.</p>
+
+<h3>Grievance Redressal for Civil Servants</h3>
+
+<p>The conduct rules bar civil servants from criticising government policy in public and from bringing outside influence to bear on their service matters, so the state owes them channels through which their grievances can be heard. The machinery has four layers.</p>
+
+<ul>
+ <li><strong>Departmental remedies.</strong> Representations to the superior authority, and appeal, revision and review under the Central Civil Services (Classification, Control and Appeal) Rules, 1965, and the All India Services (Discipline and Appeal) Rules, 1969, with a memorial to the President as the last departmental step.</li>
+ <li><strong>Constitutional protection.</strong> Article 311 guarantees an inquiry, with notice of the charges and a reasonable opportunity of being heard, before dismissal, removal or reduction in rank.</li>
+ <li><strong>Administrative tribunals.</strong> Article 323A, inserted by the 42nd Amendment (1976), and the Administrative Tribunals Act, 1985, created the <strong>Central Administrative Tribunal</strong> and allowed state tribunals for service disputes, so that these would be settled quickly by a specialised body. The Act requires an employee normally to exhaust departmental remedies first. Since <em>L. Chandra Kumar</em> (1997) a tribunal's order can be challenged before a High Court.</li>
+ <li><strong>Joint consultation.</strong> The Joint Consultative Machinery (1966), with councils at national and departmental levels and compulsory arbitration on pay, hours of work and leave, handles the collective grievances of central employees.</li>
+</ul>
+
+<p><strong>Assessment.</strong> The mechanism is extensive on paper and weak in operation, which is why grievance redressal has been called the weakest link in civil service management. Departmental appeals are decided within the hierarchy complained against and are slow. The tribunals carry heavy pendency, and the added tier of the High Court after <em>L. Chandra Kumar</em> has lengthened litigation, with the government itself a frequent appellant. The joint councils meet irregularly. Officers therefore turn to the courts and, increasingly, to the media and social media. Airing grievances in public breaches the conduct rules and erodes the anonymity on which neutrality depends, so the remedy lies not only in discipline but in internal channels that are quick and credible: time limits for deciding representations, independent grievance officers within departments, and disposal of tribunal cases within fixed periods. A disclosure of wrongdoing in the public interest is a different matter from a personal grievance, and falls under the Whistle Blowers Protection Act, 2014, rather than the service machinery.</p>
 
 <h2>The Classification of Services</h2>
 
@@ -5577,6 +6880,57 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>The specialist gap.</strong> An officer is trained as a general administrator and then spends a career in a succession of unrelated sectors, acquiring domain knowledge in none, which is the training system's contribution to the generalist problem.</li>
 </ul>
 
+<h3>Mission Karmayogi and the Capacity Building Commission</h3>
+
+<p>The <strong>National Programme for Civil Services Capacity Building</strong>, Mission Karmayogi, was launched in <strong>September 2020</strong> to create a competent civil service rooted in Indian ethos, with a shared understanding of India's priorities. It shifts training from rule-based to <strong>role-based</strong>, mapping each post to the roles, activities and competencies it requires and delivering continuous learning through the <strong>iGOT Karmayogi</strong> online platform. It is meant to reach officials of the Centre, the states and local bodies alike.</p>
+
+<p>The <strong>Capacity Building Commission</strong> was constituted in <strong>April 2021</strong>, with <strong>Adil Zainulbhai</strong> as chairperson, as the custodian of the mission's framework. It sits in an institutional structure headed by a Public Human Resources Council chaired by the Prime Minister, with <strong>Karmayogi Bharat</strong>, a wholly government-owned special purpose vehicle, running the online platform. It was set up to bring a common, competency-based approach to training across ministries and training institutions that had each trained in their own way. Its mandate is to:</p>
+
+<ul>
+ <li>facilitate the preparation of <strong>capacity building plans</strong> by ministries, departments, organisations and the states,</li>
+ <li>exercise <strong>functional supervision</strong> over the training institutions involved in building the capacity of civil servants,</li>
+ <li>make <strong>policy recommendations</strong> to the Department of Personnel and Training on personnel and capacity building,</li>
+ <li><strong>audit human resources</strong> in government and the outcomes of capacity building,</li>
+ <li>approve knowledge partners and the mechanism for validating training content, and</li>
+ <li>present an <strong>annual report</strong> to the Prime Minister's HR Council.</li>
+</ul>
+
+<p><strong>How far it has come.</strong> The Commission has moved training from a scatter of courses towards a common framework: ministries prepare capacity building plans, a competency model and standards for training institutions have been laid down, and online learning reaches officials, including those at the cutting edge, on a scale classroom training never did. Its limits are those of the mission. Completion of online modules is easier to count than change in performance, the link between learning and promotion or posting remains weak, and the Commission advises and supervises but does not control the personnel decisions that shape behaviour.</p>
+
+<p><strong>Supplement, not solution.</strong> The capacity constraint in Indian administration has several sources, and Mission Karmayogi reaches one of them, the competence of officials in post. It does not fill vacancies, especially at the cutting edge, correct the short tenures that prevent officers from applying what they learn, change promotion by seniority, or supply specialists where the generalist structure lacks them. A role-based framework in a system where postings are made for other reasons, and advancement does not depend on competence, will produce trained officials in the wrong posts. The mission is a necessary supplement, and it will relieve the capacity constraint only alongside reform of recruitment, tenure, appraisal and promotion.</p>
+
+<h3>Training and Capacity Building</h3>
+
+<p>Training and capacity building differ in scope and in object. <strong>Training</strong> is the planned development of an individual's knowledge, skills and attitudes for the performance of a defined job, delivered through courses at fixed points in a career. <strong>Capacity building</strong> is the wider and continuous process by which individuals, organisations and the institutional system as a whole acquire and keep the ability to perform their functions and reach their objectives. The United Nations Development Programme's work on capacity development distinguishes three levels: the individual, the organisation and the enabling environment of rules, incentives and institutions.</p>
+
+<table>
+ <thead>
+ <tr><th></th><th>Training</th><th>Capacity building</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Unit</td><td>The individual employee</td><td>Individuals, organisations and the institutional setting</td></tr>
+ <tr><td>Object</td><td>Competence for a present or next job</td><td>The ability of the system to perform and adapt</td></tr>
+ <tr><td>Time</td><td>Episodic, at fixed points</td><td>Continuous</td></tr>
+ <tr><td>Means</td><td>Courses, instruction and attachments</td><td>Training plus systems, processes, technology, structures, incentives and culture</td></tr>
+ <tr><td>Measure of success</td><td>Skills acquired</td><td>Improvement in organisational performance and service delivery</td></tr>
+ </tbody>
+</table>
+
+<p>An official who is well trained but works in a department with outdated processes, no data systems and no incentive to perform will not perform better, which is why training is a necessary part of capacity building but not the whole of it. Training must also follow the country's socio-economic and technological needs: a service that runs digital public infrastructure, regulates markets and manages climate risk needs content that changes with those tasks, not a syllabus fixed at entry.</p>
+
+<h4>The National Training Policy, 2012</h4>
+
+<p>The <strong>National Training Policy, 2012</strong>, which replaced the policy of 1996, set out the government's approach to training civil servants. Its main provisions were:</p>
+
+<ul>
+ <li><strong>Training for all</strong>, from the cutting edge level, where citizens meet the government, to the top, rather than for the higher services alone.</li>
+ <li><strong>Competency-based training</strong>, resting on a framework of the competencies each post requires and on <strong>training need analysis</strong>.</li>
+ <li>A link between training and <strong>career progression</strong>, so that training carries consequence.</li>
+ <li>Responsibility within each ministry and cadre, through training plans, designated training managers and funds set aside for training.</li>
+</ul>
+
+<p>Read against the policy, the capacity problems that persist are largely failures of implementation: training below the higher services remained thin, need analysis was not done systematically, state training institutes were short of faculty and resources, and the link to promotion was not made. Mission Karmayogi, with its competency framework and online delivery, is in large part an attempt to carry out what the 2012 policy prescribed.</p>
+
 
 <h2>Representativeness</h2>
 
@@ -5639,6 +6993,21 @@ export const pubAdminNoteContent: Record<string, string> = {
 <h3>Politicisation in Practice</h3>
 
 <p>The forms the problem takes in India are specific and worth naming: transfer and posting used as reward and punishment; the cultivation of officers by parties expecting to return to office; post-retirement appointments creating an interest in pleasing during service; and public identification of officers with particular policies, which destroys anonymity and makes neutrality unsustainable. The Supreme Court's direction that minimum tenures be fixed, and the creation of civil services boards to advise on postings, are the principal institutional answers, and both have been implemented unevenly.</p>
+
+<h3>T.S.R. Subramanian v. Union of India (2013)</h3>
+
+<p>The Supreme Court's ruling of <strong>31 October 2013</strong> in <strong>T.S.R. Subramanian v. Union of India</strong> is the principal judicial attempt to insulate civil servants from political pressure. It arose from a public interest petition by 83 retired civil servants, among them T.S.R. Subramanian, a former Cabinet Secretary, and drew on earlier reform proposals for fixed tenure and independent advice on postings. Its directions were these.</p>
+
+<ul>
+ <li><strong>Fixed minimum tenure.</strong> The Centre and the states were directed to provide an assured minimum tenure for civil servants, the Court reasoning that frequent transfers destroy professionalism and accountability and serve as an instrument of political control.</li>
+ <li><strong>Civil Services Boards.</strong> Boards of senior serving officers were to be constituted at the Centre and in the states, within three months, to advise on transfers, postings and disciplinary matters until Parliament legislated.</li>
+ <li><strong>Written orders.</strong> Civil servants should act on written instructions, and where they receive oral directions from political superiors, they should record them, so that responsibility for a decision can be fixed.</li>
+ <li><strong>A civil service law.</strong> The Court urged Parliament to enact a law under <strong>Article 309</strong> regulating appointment, transfer and disciplinary action, in place of a system governed largely by executive rules.</li>
+</ul>
+
+<p>In 2014 the Centre amended the cadre rules of the All India Services to provide a minimum tenure of two years and a Civil Services Board to recommend transfers. The rules still allow premature transfer for recorded reasons, and compliance in the states has been uneven, so the protection is weaker in practice than in the judgment.</p>
+
+<p><strong>Assessment.</strong> The ruling would help good governance because it targets the mechanism through which political pressure actually reaches officers, the transfer. A fixed tenure gives an officer time to master a post and to be held to account for results, protects the officer who refuses an improper demand, and, with written orders, makes the political executive answerable for its instructions. The objections are that tenure can also protect the inefficient or the corrupt, that elected governments have a legitimate claim to choose the officers who carry out their programme, and that a judicial direction cannot by itself change a political culture. The reform that would give it full effect is the one the Court asked for and Parliament has not enacted: a civil services law with a transparent transfer policy and boards whose advice is departed from only for recorded reasons.</p>
 
 
 <h2>The Service and Good Governance</h2>
@@ -5709,6 +7078,37 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The Indian civil service is an institution of considerable achievement and an obvious set of defects, and an answer should hold both. It has conducted elections in the world's largest democracy, held a diverse federation together, administered famine relief and disaster response, and maintained a standard of integrity at senior levels that many comparable states have not. Its recruitment remains genuinely open and competitive, which is not a small thing.</p>
 
 <p>Its defects are the ones every commission has named for seventy years: advancement by seniority rather than performance, appraisal that does not discriminate, tenure too short for accountability, training without consequence, generalism in an age of technical government, and a posting system through which political pressure reaches the individual officer. The diagnosis has never been the difficulty. The difficulty is that each defect protects someone, and that the service asked to reform itself is the body whose position reform would alter.</p>
+
+<h3>Bureaucracy as an Impediment to Development</h3>
+
+<p>The critique that bureaucracy obstructs development has three sources, and an answer should keep them apart.</p>
+
+<ul>
+ <li><strong>Dysfunction from within.</strong> <strong>Robert Merton</strong>, in "Bureaucratic Structure and Personality" (1940), argued that the discipline needed for reliability leads officials to treat rules as ends in themselves, so that conformity displaces the goal the rule was meant to serve. He borrowed Veblen's term <em>trained incapacity</em> for the condition in which an official's training itself makes him unable to respond to changed circumstances. This is the root of the complaint that civil servants become so wedded to procedure that procedure becomes the work, and of the red tape that delays the decisions development needs.</li>
+ <li><strong>Imbalance with politics.</strong> <strong>Fred Riggs</strong>, in "Bureaucrats and Political Development: A Paradoxical View" (1963), argued that where bureaucracy grows faster than the political institutions that should control it, as in many new states, it comes to dominate them, and the growth of parties, legislatures and interest groups able to hold administration to account is stunted.</li>
+ <li><strong>Colonial inheritance.</strong> In India the apparatus was built for order and revenue, and its habits of control, centralisation and distance from the people survived into a state that asked it to promote change.</li>
+</ul>
+
+<h4>Bureaucratic and Democratic Values</h4>
+
+<table>
+ <thead>
+ <tr><th>Bureaucratic values</th><th>Democratic values</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Hierarchy and command</td><td>Equality and participation</td></tr>
+ <tr><td>Expertise: the official knows best</td><td>Popular will: the citizen decides</td></tr>
+ <tr><td>Uniform rules applied impersonally</td><td>Responsiveness to particular needs</td></tr>
+ <tr><td>Secrecy and anonymity</td><td>Openness and public accountability</td></tr>
+ <tr><td>Continuity and stability</td><td>Change through elections</td></tr>
+ </tbody>
+</table>
+
+<p>The collision is real but not constant. Development needs both sets of values: impartial rules and expertise to deliver programmes without favouritism, and participation and responsiveness to decide what the programmes should be and whether they work. The damage arises when bureaucratic values operate without democratic checks, as in the <strong>Community Development Programme</strong> of 1952, which the <strong>Balwant Rai Mehta Committee</strong> (1957) found had failed to enlist people's participation because it was run as a departmental programme.</p>
+
+<p><strong>Over-dependence.</strong> Indian planning relied on the bureaucracy not only to regulate but to produce, license and deliver, and the licence-permit system that resulted became a byword for delay and rent-seeking until the reforms of 1991 dismantled much of it. The dysfunction lay less in the bureaucracy itself than in asking a single hierarchical instrument to do everything.</p>
+
+<p><strong>The counter-argument.</strong> No state has developed without a capable bureaucracy. Peter Evans's <em>Embedded Autonomy</em> (1995) showed that the developmental states of East Asia rested on cohesive, merit-recruited bureaucracies with close ties to society. The Indian bureaucracy has conducted elections, delivered food security and disaster relief, and built the systems of identity and direct benefit transfer on which welfare now depends. The remedy for its rigidity is not to bypass it but to change its incentives and open it to the citizen: less discretion and procedure, the right to information, social audit, devolution to elected local bodies, and appraisal by results rather than by compliance with process.</p>
 `,
  'local-government-india': `
 <h2>Why Local Government</h2>
@@ -5895,6 +7295,35 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The effect is double. Cities obtain capital they could not raise, and the constitutional body created to govern the city is bypassed in favour of an administrative vehicle answerable to the state and the Union. This is exactly the pattern of parallel bodies described for rural local government, appearing in urban form and at larger scale.</p>
 
+<h3>New Localism</h3>
+
+<p>New localism is an approach to centre-local relations that emerged in Britain under the Labour governments after 1997 and was developed by the New Local Government Network, most influentially in Dan Corry and Gerry Stoker's <em>New Localism: Refashioning the Centre-Local Relationship</em> (2002). Stoker described it as <strong>managed decentralisation</strong>: power and resources are devolved from central control to front-line managers, local democratic bodies and local consumers and communities, within an agreed framework of national minimum standards and policy priorities.</p>
+
+<h4>Principles</h4>
+
+<ul>
+ <li><strong>Uniform solutions imposed from the centre fail</strong>, because problems and capacities differ between places.</li>
+ <li><strong>Devolution is conditional and managed.</strong> The centre sets goals, standards and targets and devolves the means of meeting them, rewarding localities that perform with greater freedom.</li>
+ <li><strong>Devolution reaches beyond the council</strong> to service managers, neighbourhoods, users and community organisations.</li>
+ <li><strong>Networked governance.</strong> Local outcomes are produced through partnerships of local government, other public agencies, business and the voluntary sector rather than by a single authority.</li>
+ <li><strong>Citizen engagement</strong> in designing and delivering services, not only in periodic elections.</li>
+</ul>
+
+<p>In the global-local debate new localism is the local counterpart of globalisation. As capital and decisions move upward to global markets and national frameworks, the locality becomes the place where competitiveness, service quality and social cohesion are actually produced, and its governance is reorganised around partnership and performance.</p>
+
+<h4>New Localism in India</h4>
+
+<p>In India the idea arrived with liberalisation and urban reform rather than as a doctrine. Its features appear in Delhi's <strong>Bhagidari</strong> partnership with resident welfare associations, in the reform conditions attached to the Jawaharlal Nehru National Urban Renewal Mission from 2005, and in the special purpose vehicles of the Smart Cities Mission from 2015, where the Union sets the framework and funds, cities compete for selection and delivery moves to companies and partnerships. It has changed centre-state-local relations by opening a direct channel between the Union and cities, with states as intermediaries whose consent is needed but whose control is reduced.</p>
+
+<h4>Does It Relegate the 74th Amendment?</h4>
+
+<ul>
+ <li><strong>The case that it strengthens local governance.</strong> It brings citizens, expertise and private capital into urban services, energises local action and holds providers to measurable standards, which the amendment's institutions alone had not achieved.</li>
+ <li><strong>The case that it undermines it.</strong> The 74th Amendment devolved <em>political</em> power to elected municipalities and ward committees. New localism devolves <em>managerial</em> power within a framework set above and delivers it through bodies outside the elected council. An official-led Smart City company and a resident association speaking for propertied neighbourhoods can bypass the councillor and the ward committee, participation favours organised middle-class groups over slum dwellers and informal workers, and targets set by the Union replace priorities set by the municipality.</li>
+</ul>
+
+<p>New localism need not defeat self-government, but in Indian conditions it often has, because it was grafted onto municipalities that never received the functions, funds and staff the 74th Amendment promised. Partnership with a weak elected body becomes substitution for it. Where elected councils are strong, new localism adds participation and performance to local democracy instead of replacing it.</p>
+
 <h2>Devolution: The Three Fs</h2>
 
 <p>Devolution has three elements, and the standard formulation in the literature is that a local body needs <strong>functions, funds and functionaries</strong> together. The Indian record is progressively worse across the three.</p>
@@ -5935,6 +7364,35 @@ export const pubAdminNoteContent: Record<string, string> = {
 </ul>
 
 <p>The composition matters more than the total. A local body funded almost wholly by tied transfers is an implementing agency whatever its constitutional status, and the measure of genuine fiscal decentralisation is the share of untied resources, which remains small.</p>
+
+<h3>Union Finance Commission Grants to Local Bodies</h3>
+
+<p>The 73rd and 74th Amendments inserted clauses <strong>(bb)</strong> and <strong>(c)</strong> into <strong>Article 280(3)</strong>, requiring the Finance Commission to recommend the measures needed to augment the Consolidated Fund of a state to supplement the resources of its panchayats and municipalities on the basis of the recommendations of the State Finance Commission. Every award since the Tenth Finance Commission has included grants for local bodies, and their size and design have changed markedly.</p>
+
+<table>
+ <thead>
+ <tr><th>Commission</th><th>Period</th><th>Grants to local bodies</th><th>Design</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Thirteenth</td><td>2010-15</td><td>Rs 87,519 crore</td><td>Linked to the divisible pool, with a basic grant and a performance grant released only when conditions were met</td></tr>
+ <tr><td>Fourteenth</td><td>2015-20</td><td>Rs 2,87,436 crore</td><td>Only to gram panchayats and municipalities, with basic and performance grants in the ratio 90:10 for panchayats and 80:20 for municipalities</td></tr>
+ <tr><td>Fifteenth</td><td>2021-26</td><td>Rs 4,36,361 crore</td><td>All tiers of panchayats and municipalities, with tied grants for water and sanitation, health grants through local governments, and entry conditions</td></tr>
+ </tbody>
+</table>
+
+<h4>Performance Conditions</h4>
+
+<ul>
+ <li>The <strong>Thirteenth</strong> Commission tied its performance grant to conditions on the states, among them a supplement to the budget showing local body accounts, audit of local bodies under the technical guidance of the Comptroller and Auditor General, an independent local body ombudsman, prompt transfer of grants, and for municipalities service standards and a property tax board.</li>
+ <li>The <strong>Fourteenth</strong> made the performance grant depend on <strong>audited accounts</strong> and an <strong>increase in own revenue</strong>, and for municipalities on publishing service level benchmarks.</li>
+ <li>The <strong>Fifteenth</strong> set entry conditions: online publication of audited accounts, the constitution of State Finance Commissions and action on their reports, and for urban bodies notified floor rates of property tax and growth in its collection in line with the growth of the state's economy.</li>
+</ul>
+
+<h4>Has the Commission Strengthened Local Bodies?</h4>
+
+<p>The case that it has is strong on money and on accounts. Finance Commission grants are now among the largest and most predictable resources many gram panchayats receive, and the Fourteenth Commission's direct grants to gram panchayats made the Gram Panchayat Development Plan possible. The conditions have pushed states to constitute State Finance Commissions, to get local accounts audited and published and to raise property tax, accountability gains that decades of exhortation had not produced.</p>
+
+<p>The qualifications are equally clear. Performance grants have often gone partly unreleased because states, not local bodies, failed the conditions, which penalises the bodies for their state's default. Tied grants direct local spending to national priorities. The amounts remain small against local needs, and they cannot substitute for the State Finance Commission, whose weakness is the root of the problem. Accountability has improved in the sense of compliance with accounting and audit, and less in the sense that matters most, of an elected body answering to its own citizens for what it chose to spend.</p>
 
 <h2>The State Finance Commission</h2>
 
@@ -6083,6 +7541,26 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>That sequence is the most instructive thing in this topic. A commission reported comprehensively in 1981; a court ordered implementation in 2006; a monitoring committee was needed by 2008; and the 1861 Act still stands. Police reform in India is not blocked by an absence of diagnosis or even of legal compulsion, but by the unwillingness of state governments to surrender an instrument they find useful.</p>
 
+<h3>The Seven Directives in Prakash Singh</h3>
+
+<p>In <em>Prakash Singh v. Union of India</em>, decided on <strong>22 September 2006</strong>, the Supreme Court issued seven directions binding on the Union and the states until they enacted fresh police legislation. The directions drew on the National Police Commission, the Ribeiro and Padmanabhaiah Committees and the Sorabjee draft, and each answers one of three defects: political control without accountability, insecurity of tenure, and the absence of any channel for public complaint.</p>
+
+<ol>
+ <li><strong>State Security Commission</strong> in every state, chaired by the Chief Minister or Home Minister, to ensure that the state government does not exercise unwarranted influence or pressure on the police, to lay down broad policy guidelines and to evaluate the performance of the state police. States could follow the models proposed by the National Human Rights Commission, the Ribeiro Committee or the Sorabjee Committee.</li>
+ <li><strong>Selection and tenure of the DGP.</strong> The Director General of Police to be chosen by the state from among the <strong>three senior-most officers empanelled by the UPSC</strong> on the basis of length of service, record and range of experience, and to serve a minimum tenure of <strong>two years</strong> irrespective of the date of superannuation.</li>
+ <li><strong>Tenure of field officers.</strong> Officers on operational duty, the Inspector General of a zone, the Deputy Inspector General of a range, the Superintendent of Police of a district and the officer in charge of a police station, to have a minimum tenure of two years.</li>
+ <li><strong>Separation of investigation from law and order</strong>, beginning with towns and urban areas with a population of ten lakh or more, so that investigation becomes speedier and more expert.</li>
+ <li><strong>Police Establishment Board</strong> in each state, composed of the DGP and four other senior officers, to decide transfers, postings and promotions of officers of the rank of Deputy Superintendent and below, and to make recommendations for those above.</li>
+ <li><strong>Police Complaints Authorities</strong> at the state level, for serious misconduct by officers of the rank of Superintendent and above, and at the district level, for officers of the rank of Deputy Superintendent and below, covering allegations such as death, grievous hurt or rape in custody.</li>
+ <li><strong>National Security Commission</strong> at the Union level, to prepare a panel for the selection and placement of the chiefs of the central police organisations, who were also to have a minimum tenure of two years.</li>
+</ol>
+
+<h4>Why the Opportunity Was Lost</h4>
+
+<p>Compliance has been formal rather than substantive. Many states enacted new police Acts after 2006, but these generally gave statutory form to diluted versions of the directions: security commissions dominated by government nominees and without binding force, establishment boards that left the final word on transfers with the government, and complaints authorities staffed by serving officials. The K.T. Thomas monitoring committee reported in 2010 that the states had shown indifference to the directions. In <strong>July 2018</strong> the Court had to issue further orders on the selection of the DGP, requiring states to send proposals to the UPSC at least three months before a vacancy and barring the appointment of an acting DGP, because acting appointments were being used to bypass the panel.</p>
+
+<p>The reasons for the lackadaisical response are several. Police is a State List subject and a political instrument that ruling parties of every colour find useful. States presented the directions as judicial intrusion into a legislative and executive domain. Civil servants and police officers disagreed over control of postings, and the directions carried no sanction for non-compliance beyond contempt, which the Court was reluctant to use against elected governments. <em>Prakash Singh</em> therefore shows the limit of judicial direction as an instrument of administrative reform: a court can prescribe structures but cannot supply the will to make them work, and a state government that chairs the body meant to insulate the police from itself can comply in form and defeat the purpose.</p>
+
 
 <h2>Internal Security and the Federal Problem</h2>
 
@@ -6106,6 +7584,78 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Most Indian debate treats these as alternatives, demanding either insulation from politicians or control over an abusive force. They are in fact complements, and a reform that delivers one without the other produces either a politicised police or an unaccountable one. This is the single most useful proposition to organise an answer on police reform around.</p>
 
+<h3>SMART Policing and Technology</h3>
+
+<p>The Prime Minister set out the idea of <strong>SMART policing</strong> at the conference of Directors General of Police at Guwahati in <strong>2014</strong>: a police that is <strong>S</strong>trict and Sensitive, <strong>M</strong>odern and Mobile, <strong>A</strong>lert and Accountable, <strong>R</strong>eliable and Responsive, and <strong>T</strong>echno-savvy and Trained. The formula joins attitude to equipment, and its point is that technology without a change in behaviour only reproduces the old police more efficiently.</p>
+
+<ul>
+ <li><strong>CCTNS.</strong> The <strong>Crime and Criminal Tracking Network and Systems</strong>, approved in 2009 as a mission mode project and run by the National Crime Records Bureau, links police stations across the country on a common platform for FIRs, investigation records and criminal databases. The <strong>Interoperable Criminal Justice System</strong> builds on it to connect police, forensic laboratories, prosecution, courts and prisons.</li>
+ <li><strong>Cyber crime.</strong> The <strong>Indian Cyber Crime Coordination Centre</strong>, set up under the Ministry of Home Affairs in 2020, the National Cyber Crime Reporting Portal and the 1930 helpline address offences that cross state and national borders.</li>
+ <li><strong>Citizen services</strong>, including electronic registration of information and the <strong>zero FIR</strong>, which the Bharatiya Nagarik Suraksha Sanhita, 2023 now provides for, allowing an FIR at any police station whatever its jurisdiction.</li>
+ <li><strong>Analytics and surveillance</strong>: facial recognition, city CCTV networks, mapping of crime hot spots, and the records created under the <strong>Criminal Procedure (Identification) Act, 2022</strong>, which allows the police to collect measurements including finger impressions, iris and retina scans and biological samples and to retain them for seventy-five years.</li>
+</ul>
+
+<p>Technology and <strong>community policing</strong> address the same deficit from opposite ends: one improves what the police can know without the public, the other what the public will tell them. Kerala's <strong>Janamaithri Suraksha</strong> project of 2008, Tamil Nadu's <strong>Friends of Police</strong> and the <strong>mohalla committees</strong> of Maharashtra's riot-prone towns built standing contact between police and residents through beat officers, local committees and joint patrolling. Their record shows that community policing lasts where it is part of the station's routine and lapses where it depends on one officer's enthusiasm and ends with his transfer.</p>
+
+<h4>Ethical and Privacy Limits of AI in Policing</h4>
+
+<ul>
+ <li><strong>Legality.</strong> In <em>K.S. Puttaswamy v. Union of India</em> (2017) the Supreme Court held privacy to be a fundamental right, so any intrusion must satisfy the tests of legality, legitimate aim and proportionality. Much police use of facial recognition and analytics rests on executive orders rather than on a law that defines its purpose, limits and safeguards.</li>
+ <li><strong>Data protection.</strong> The <strong>Digital Personal Data Protection Act, 2023</strong> permits the Union to exempt state agencies in the interest of security and public order, so the main statutory safeguard may not reach police processing.</li>
+ <li><strong>Bias.</strong> Systems trained on past arrest data reproduce past patterns of policing, so communities already over-policed are flagged more often, and facial recognition produces false matches more often for some groups.</li>
+ <li><strong>Opacity.</strong> A suspect cannot contest a decision whose reasoning even the officer cannot explain, which sits badly with the requirement that coercive state action be reasoned.</li>
+ <li><strong>Function creep</strong>, where data gathered to investigate cyber crime or trace missing children is used to watch protest and dissent.</li>
+</ul>
+
+<p>These are reasons to regulate rather than to abandon the technology, since cyber crime cannot be policed without automated tools. The answer lies in a statutory framework for police use of AI, independent audit of algorithms, a human decision at every coercive step, and oversight by a body outside the police.</p>
+
+<h3>The National Investigation Agency</h3>
+
+<p>The <strong>National Investigation Agency Act, 2008</strong> was passed within weeks of the Mumbai attacks of November 2008 and received assent on <strong>31 December 2008</strong>, creating India's first federal agency for terrorism and related offences. Its premise is that terror networks cross state boundaries while police remains a State List subject.</p>
+
+<ul>
+ <li><strong>Purpose.</strong> To investigate and prosecute the <strong>Scheduled Offences</strong> listed in the Act, among them offences under the Unlawful Activities (Prevention) Act, the Atomic Energy Act, the anti-hijacking and maritime safety laws and the law on weapons of mass destruction, which affect the sovereignty, security and integrity of India.</li>
+ <li><strong>Jurisdiction.</strong> A state forwards the report of a scheduled offence to the Union, which decides within fifteen days whether to entrust it to the NIA, and the Union may also direct the NIA to take up a case on its own motion. <strong>No consent of the state is required</strong>, unlike the CBI, and NIA officers exercise police powers throughout India. The state police may investigate until the NIA takes over.</li>
+ <li><strong>Special Courts</strong> try NIA cases, with appeals lying to a bench of two judges of the High Court.</li>
+ <li><strong>The 2019 amendment</strong> extended the Agency's reach to scheduled offences committed <strong>outside India</strong> against Indian citizens or affecting the interests of India, added <strong>human trafficking, counterfeit currency, manufacture and sale of prohibited arms, cyber-terrorism</strong> and offences under the Explosive Substances Act, 1908, and allowed the Union to designate Sessions Courts as Special Courts.</li>
+</ul>
+
+<p>The Agency has given counter-terrorism investigation a single national point of command, with specialised staff and courts. The objections are federal and civil-libertarian. States argue that a Union agency able to take over cases without consent erodes their responsibility for police and public order, and <strong>Chhattisgarh</strong> challenged the Act before the Supreme Court in 2020 under Article 131. The extension to trafficking and counterfeiting carries the intrusion beyond terrorism, and the stringent bail provisions of the UAPA, under which most NIA cases are prosecuted, keep accused persons in custody for years before trial. The Agency's effectiveness still depends on state police, who are the first responders and the main source of local intelligence.</p>
+
+<h3>AFSPA and the Withdrawal Debate</h3>
+
+<p>The <strong>Armed Forces (Special Powers) Act, 1958</strong> gives the armed forces special powers in areas declared <strong>disturbed</strong>. The declaration under <strong>Section 3</strong> may be made by the Governor or by the Union, the Union's power having been added in 1972, and it is the declaration rather than the Act that decides where the powers apply.</p>
+
+<ul>
+ <li><strong>Section 4</strong> allows an officer, after such warning as he considers necessary, to fire upon or otherwise use force, even to the causing of death, against a person acting in contravention of an order prohibiting assemblies of five or more or the carrying of weapons, to destroy arms dumps and fortified positions, to arrest without warrant on reasonable suspicion, and to enter and search premises without warrant.</li>
+ <li><strong>Section 6</strong> bars prosecution or suit against any person acting under the Act without the <strong>previous sanction of the Union government</strong>, which has rarely been given.</li>
+ <li>In <em>Naga People's Movement of Human Rights v. Union of India</em> (1997) a Constitution Bench upheld the Act, while requiring periodic review of a declaration, minimum force, and the handing over of arrested persons to the police without delay.</li>
+ <li>In <em>Extra Judicial Execution Victim Families Association v. Union of India</em> (2016) the Court held that excessive or retaliatory force is not protected even in a disturbed area, and ordered investigation of alleged fake encounters in Manipur.</li>
+</ul>
+
+<p>The security case is that soldiers fighting armed insurgents in place of a civil administration need legal protection for decisions taken under fire, and that the Army is deployed only because the state police cannot cope. The rights case is that wide powers combined with immunity breed impunity. The killing of Thangjam Manorama in Assam Rifles custody in Manipur in 2004, Irom Sharmila's sixteen-year fast for repeal, and the killing of civilians at Oting in Nagaland's Mon district in December 2021 made the Act the symbol of alienation in the north-east.</p>
+
+<p>The <strong>Justice B.P. Jeevan Reddy Committee</strong>, set up in November 2004 after the Manorama case, recommended in <strong>June 2005</strong> that the Act be <strong>repealed</strong> and the necessary powers placed in the Unlawful Activities (Prevention) Act with safeguards. The <strong>second ARC</strong>, in its report on public order, endorsed repeal on the same lines, and neither recommendation was accepted. The <strong>Santosh Hegde Commission</strong>, appointed by the Supreme Court in 2013, found the Manipur encounters it examined to be fake.</p>
+
+<p><strong>Tripura</strong> withdrew the Act in <strong>May 2015</strong>, after its government judged that the state police had contained the insurgency, and <strong>Meghalaya</strong> was freed of it in 2018. From <strong>April 2022</strong> the Union substantially reduced the disturbed areas in <strong>Assam, Nagaland and Manipur</strong>, citing improved security. Tripura is the strongest argument for a rational policy, because withdrawal followed a demonstrated capacity of the state police to hold the ground and was not followed by a return of insurgency. It suggests a rule in place of case-by-case sentiment: the Act should be area-specific and time-bound, its continuation should rest on a published review of the security situation, withdrawal should follow the building of police capacity, and sanction for prosecution should be decided within a fixed period. The ethnic violence in Manipur from May 2023 shows that the reverse movement remains possible, so the argument is for disciplined use rather than for assuming that the conditions requiring the Act have passed.</p>
+
+<h3>Criminalisation of Politics</h3>
+
+<p>The <strong>Vohra Committee</strong>, constituted in July 1993 after the Bombay serial blasts under Union Home Secretary <strong>N.N. Vohra</strong>, reported in <strong>October 1993</strong> that crime syndicates were in places virtually running a parallel government and that the nexus of criminal gangs, police, bureaucrats and politicians had developed considerable power. The report was placed before Parliament only in 1995. The distinction drawn in the questions is real. <em>Criminalisation of politics</em> is the use of criminals by politicians for money, muscle and votes. <em>Politicisation of criminals</em> is the entry of criminals into politics in their own right, seeking office for protection and patronage, and it grew as the first taught criminals their electoral value.</p>
+
+<ul>
+ <li><strong><em>Union of India v. Association for Democratic Reforms</em> (2002)</strong> held that voters have a right to know a candidate's criminal antecedents, assets and educational qualifications, and candidates now file affidavits disclosing them.</li>
+ <li><strong><em>Lily Thomas v. Union of India</em> (2013)</strong> struck down Section 8(4) of the Representation of the People Act, 1951, which had let a sitting legislator keep his seat while an appeal was pending, so that a member convicted of a disqualifying offence, including any offence with a sentence of two years or more, is disqualified at once.</li>
+ <li><strong><em>Public Interest Foundation v. Union of India</em> (2018)</strong>, a Constitution Bench, declined to add disqualification on the framing of charges, leaving that to Parliament, but directed candidates to declare pending cases prominently and candidates and parties to publicise them widely in print and electronic media, and urged Parliament to legislate.</li>
+ <li><strong><em>Rambabu Singh Thakur v. Sunil Arora</em> (2020)</strong> required parties to publish on their websites and in newspapers the criminal record of each candidate they field and the reasons for selecting that person, with <em>winnability</em> alone not an acceptable reason, and to report compliance to the Election Commission.</li>
+</ul>
+
+<p>The data show the limits of disclosure. The share of elected Lok Sabha members declaring criminal cases, as analysed by the Association for Democratic Reforms, rose from 30 per cent in 2009 to 43 per cent in 2019 and 46 per cent in 2024. The Law Commission's <strong>244th Report</strong> (2014) proposed disqualification on the framing of charges for offences punishable with five years or more, with safeguards against motivated cases, and Parliament has not acted on it.</p>
+
+<h4>Why Institutional Change Is Not Enough</h4>
+
+<p>Each measure has improved the supply of information and left the demand for such candidates untouched. Parties field them because they win. They win because they can finance campaigns and deliver protection, services and quick settlement of disputes where the state cannot, and voters who distrust a slow police and judiciary rationally prefer a strongman who gets things done. The consequences for law and order administration are direct: pressure on postings and investigations, withdrawal of cases against the politically connected, intimidation of witnesses, and a police force that learns whose writ runs. Disclosure, special courts for legislators and disqualification on conviction address symptoms. The causes lie in election finance, in trials so slow that an accused can contest for decades while presumed innocent, and in the weakness of the state's own delivery, and reform that does not reach them will be outrun.</p>
+
 <h2>The Criminal Justice System</h2>
 
 <p>Policing is one part of a chain that runs from investigation through prosecution and trial to punishment and correction, and the chain fails at every link.</p>
@@ -6119,6 +7669,60 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Low conviction rates</strong>, which destroy deterrence and encourage the extra-legal shortcuts the police then take.</li>
  <li>The <strong>second ARC</strong> recommended creating local courts in rural areas with populations of twenty-five thousand and above, to bring adjudication within reach.</li>
 </ul>
+
+<h3>Separating Investigation from Prosecution</h3>
+
+<p>Two separations are often confused. The first is the separation of the <em>investigation</em> wing of the police from its <em>law and order</em> wing, which the National Police Commission recommended and <em>Prakash Singh</em> ordered. The second is the separation of investigation from <em>prosecution</em>: the officer who collects the evidence should not control the lawyer who decides whether it is fit to place before a court. The public prosecutor is an officer of the court, whose duty is to help the court reach the truth rather than to secure a conviction at any cost.</p>
+
+<ul>
+ <li><strong>Judicial basis.</strong> In <em>S.B. Shahane v. State of Maharashtra</em> (1995) the Supreme Court directed that assistant public prosecutors be organised in a cadre independent of the police department.</li>
+ <li><strong>The Code of Criminal Procedure.</strong> <strong>Section 25A</strong>, inserted by the amendment of 2005, enabled a state to establish a <strong>Directorate of Prosecution</strong> headed by a Director drawn from advocates of at least ten years' practice and appointed with the concurrence of the Chief Justice of the High Court, with public prosecutors subordinate to him.</li>
+ <li><strong>The Bharatiya Nagarik Suraksha Sanhita, 2023</strong>, in force from <strong>1 July 2024</strong>, carries the provision into <strong>Section 20</strong> and adds a <strong>District Directorate of Prosecution</strong> in every district. A Director or Deputy Director must have practised for at least fifteen years or be or have been a Sessions Judge. Supervision is graded by the gravity of the offence: the Director monitors cases punishable with ten years or more, life imprisonment or death and advises on appeals, Deputy Directors scrutinise police reports and monitor cases punishable with seven to ten years, and Assistant Directors monitor the rest. The provision remains enabling, since the state <em>may</em> establish the Directorates, the Director works under the administrative control of the state Home Department, and the Chief Justice's concurrence in the appointment, required by Section 25A, is no longer prescribed.</li>
+ <li><strong>Related changes in the Sanhita</strong> improve the evidence the prosecutor receives: forensic examination of the crime scene is mandatory for offences punishable with seven years or more, searches and seizures are to be recorded by audio-video means, and time limits are set for framing charges and pronouncing judgment.</li>
+</ul>
+
+<h4>Merits and Difficulties</h4>
+
+<ul>
+ <li><strong>Independent scrutiny.</strong> A prosecutor outside police control can refuse a weak or motivated charge-sheet, which protects the accused from harassment and the court from cases that should never have been filed.</li>
+ <li><strong>Professionalism.</strong> A separate cadre with its own recruitment, training and career builds expertise that a prosecutor dependent on police goodwill, or appointed on political considerations, does not acquire.</li>
+ <li><strong>Rights of the accused.</strong> Distance between investigator and prosecutor reduces the incentive to extract confessions or manufacture evidence to secure a conviction.</li>
+ <li><strong>The coordination cost.</strong> Investigators and prosecutors answering to different hierarchies communicate poorly, so gaps in evidence surface only at trial, which is one explanation offered for low conviction rates.</li>
+ <li><strong>Control moved rather than removed.</strong> Where the Directorate sits under the Home Department and the government makes the appointments, independence from the police can coexist with dependence on the executive.</li>
+</ul>
+
+<p>The balance now generally favoured is separation of control with integration of work: an independent prosecution service that advises investigators from the early stages of serious cases, without either side directing the other.</p>
+
+<h3>Judicial Delay and Pendency</h3>
+
+<p>Delay is the point at which the justice system fails most visibly, in civil as in criminal cases. More than five crore cases are pending across Indian courts, the great majority in the district and subordinate courts, and the <strong>National Judicial Data Grid</strong> now publishes pendency court by court.</p>
+
+<h4>Causes</h4>
+
+<ul>
+ <li><strong>Too few judges.</strong> The Law Commission's <strong>120th Report</strong> (1987) recommended fifty judges per million population, and the ratio remains around twenty-one. Sanctioned posts are themselves left vacant for long periods, in the High Courts through delays in the collegium and government process, and in the district judiciary through slow recruitment.</li>
+ <li><strong>Procedure.</strong> Liberal adjournments, unenforced time limits, many layers of appeal and interlocutory challenges let a determined litigant prolong a case almost indefinitely.</li>
+ <li><strong>The state as litigant.</strong> Government is the largest single litigant, and departments appeal adverse orders as routine, because no officer is blamed for appealing and any officer may be blamed for not doing so.</li>
+ <li><strong>Weak investigation and prosecution</strong>, which send poorly prepared criminal cases to trial and keep undertrials in prison.</li>
+ <li><strong>Infrastructure and staff</strong>, from courtrooms to support staff and digital capacity, which for the subordinate courts depend on state budgets.</li>
+</ul>
+
+<h4>The Colonial Ethos</h4>
+
+<p>The charge that the system remains colonial refers to more than its age. Its procedural codes, adversarial style, the language of the higher courts, long vacations and forms of address were designed for a system that dispensed justice to subjects rather than delivered it to citizens. The replacement of the Indian Penal Code, the Code of Criminal Procedure and the Indian Evidence Act by the <strong>Bharatiya Nyaya Sanhita</strong>, the <strong>Bharatiya Nagarik Suraksha Sanhita</strong> and the <strong>Bharatiya Sakshya Adhiniyam</strong> from <strong>1 July 2024</strong> was presented as decolonisation, and their procedural content, electronic summons, trial by video conference, recognition of electronic records as evidence and time limits for charges and judgments, addresses delay directly. Critics reply that most of the substantive law was carried over, and that the ethos lies in how courts are run rather than in the names of the codes.</p>
+
+<h4>Reforms</h4>
+
+<ul>
+ <li><strong>e-Courts.</strong> The e-Courts Mission Mode Project computerised the district courts and created the National Judicial Data Grid. Its third phase, approved in September 2023 with an outlay of Rs 7,210 crore, aims at digital and paperless courts with e-filing and virtual hearings.</li>
+ <li><strong>Gram Nyayalayas.</strong> The <strong>Gram Nyayalayas Act, 2008</strong>, in force from October 2009, provides for mobile courts at the intermediate panchayat level, presided over by a Nyayadhikari with the powers of a first class magistrate and following simplified procedure. States have notified far fewer than the Act envisaged, and many of those notified do not function.</li>
+ <li><strong>Fast-track and special courts</strong>, including those for sexual offences against women and children and for cases against legislators.</li>
+ <li><strong>Alternative dispute resolution</strong> through Lok Adalats under the Legal Services Authorities Act, 1987, commercial courts and the <strong>Mediation Act, 2023</strong>.</li>
+ <li><strong>An All India Judicial Service</strong>, enabled by Article 312 since the 42nd Amendment, which would recruit district judges nationally and has been resisted by several states and High Courts.</li>
+ <li><strong>Reducing government litigation</strong> by screening appeals and settling disputes between government bodies outside court.</li>
+</ul>
+
+<p>The Law Commission's <strong>245th Report</strong> (2014) argued that the judge-population ratio is a poor guide and that judicial strength should be calculated from the rates at which cases are filed and disposed of. The point generalises: more judges will help only if procedure, the state's own litigation and the quality of investigation change with them, since an efficient judiciary depends as much on what reaches it as on how many sit.</p>
 
 <h2>Prisons</h2>
 
@@ -6211,6 +7815,41 @@ export const pubAdminNoteContent: Record<string, string> = {
 <p>The ombudsman institution addresses what the CVC and CBI do not: corruption at the political level and maladministration that is legal but unjust. The Indian story, from <strong>Ashok Kumar Sen's</strong> proposal in the 1960s and <strong>L.M. Singhvi's</strong> coinage of the terms in 1963, through the first ARC's recommendation in 1966, the lapsed bill of 1968 and seven further attempts to 2001, the Venkatachaliah recommendation of 2002, the second ARC in 2005 and the <strong>India Against Corruption</strong> movement of 2011, is set out in the note on accountability, as are the provisions of the <strong>Lokpal and Lokayuktas Act, 2013</strong>.</p>
 
 <p>What belongs here is the assessment. The Act brings the Prime Minister within jurisdiction subject to exclusions and procedural safeguards; it requires every state to establish a Lokayukta; and it has been undermined by the long delay in making the first appointment, by dependence on government for staff and investigating machinery, by the absence of constitutional status, and by the composition of the selection committee, in which the executive it is meant to check predominates. The <strong>Lokayuktas</strong> vary enormously between states in jurisdiction, powers and effectiveness, and the strongest of them have been the ones given <em>suo motu</em> powers and an investigating agency of their own.</p>
+
+<h3>UNCAC and the Wider Legal Framework</h3>
+
+<p>The <strong>United Nations Convention against Corruption</strong>, adopted by the General Assembly in October 2003, is the only legally binding universal anti-corruption instrument. India signed it in 2005 and <strong>ratified it in May 2011</strong>. The Convention rests on four pillars, <strong>prevention</strong>, <strong>criminalisation and law enforcement</strong>, <strong>international cooperation</strong> and <strong>asset recovery</strong>, and some of its obligations are mandatory while others require states only to consider adopting them.</p>
+
+<table>
+ <thead>
+ <tr><th>Pillar</th><th>Indian instruments</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Prevention</td><td>Central Vigilance Commission Act, 2003, Right to Information Act, 2005, conduct rules, e-procurement and the Government e-Marketplace, direct benefit transfer</td></tr>
+ <tr><td>Criminalisation</td><td>Prevention of Corruption Act, 1988, amended in 2018 to make bribe-giving a distinct offence, to make commercial organisations liable for bribes paid on their behalf, and to require trials to be completed ordinarily within two years</td></tr>
+ <tr><td>Enforcement and oversight</td><td>CBI, state anti-corruption bureaus, and the Lokpal and Lokayuktas Act, 2013, under which the first Lokpal was appointed in 2019</td></tr>
+ <tr><td>Asset recovery</td><td>Prevention of Money Laundering Act, 2002, Fugitive Economic Offenders Act, 2018, Benami Transactions (Prohibition) Amendment Act, 2016, and the Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act, 2015</td></tr>
+ <tr><td>Reporting persons</td><td>Whistle Blowers Protection Act, 2014</td></tr>
+ <tr><td>International cooperation</td><td>Mutual legal assistance treaties and extradition arrangements</td></tr>
+ </tbody>
+</table>
+
+<h4>Where the Framework Falls Short</h4>
+
+<ul>
+ <li><strong>Bribery of foreign public officials</strong>, a mandatory obligation under the Convention, is not an offence in Indian law, and the bill introduced for the purpose in 2011 lapsed.</li>
+ <li><strong>Private sector bribery</strong>, which the Convention asks states to consider criminalising, remains outside the Prevention of Corruption Act.</li>
+ <li><strong>Whistle-blower protection</strong> exists on paper, since the 2014 Act has not been brought into force, and an amending bill of 2015 that would have narrowed it lapsed.</li>
+ <li><strong>Section 17A</strong> of the amended Prevention of Corruption Act requires prior approval before any investigation into a decision taken by a public servant in official functions, which protects honest decision-making and also lets the government decide whether its own officers are investigated.</li>
+ <li><strong>Independence of investigators.</strong> The CBI depends on the government for its staffing and on state consent, and the Lokpal relies on borrowed investigating machinery.</li>
+ <li><strong>Political finance</strong>, which the Convention addresses among its preventive measures, remains opaque. In <em>Association for Democratic Reforms v. Union of India</em> (2024) the Supreme Court struck down the electoral bond scheme as violating the voter's right to information.</li>
+</ul>
+
+<h4>Zero Tolerance as a Multi-Pronged Approach</h4>
+
+<p>The government's zero tolerance policy combines law with process. On the legal side are the 2018 amendment, the Fugitive Economic Offenders Act and the enlarged use of the money laundering law, whose wide powers of arrest and attachment the Supreme Court upheld in <em>Vijay Madanlal Choudhary v. Union of India</em> (2022). On the process side are measures that remove discretion and personal contact: direct benefit transfer, e-auction of coal blocks and spectrum, faceless income tax assessment, the abolition of interviews for junior posts from 2016, the Government e-Marketplace, and compulsory retirement of officers of doubtful integrity under <strong>Fundamental Rule 56(j)</strong>. The process reforms are the stronger part, because they remove the opportunity for corruption instead of relying on detection after the event.</p>
+
+<p>The critique is that enforcement is seen as selective, with central agencies accused of pursuing opponents of the government more readily than its allies, that convictions in money laundering cases are few relative to arrests, that Section 17A and the unimplemented whistle-blower law weaken the system exactly where insiders would expose wrongdoing, and that the Lokpal has made little visible impact. Zero tolerance is credible only where the institutions applying it are seen to be independent of those they investigate.</p>
 
 <h2>Vigilance Administration</h2>
 
@@ -6444,6 +8083,49 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>The anganwadi worker, on whom the largest programme rests, is classified as an honorary worker rather than an employee and paid accordingly, which is a structural statement about how the state values care work. Schemes addressed to women are administered by departments in which women are underrepresented at every level. And the deepest difficulty is that the outcomes sought, sex ratio, nutrition, school completion, freedom from violence, are determined within households that no administrative instrument reaches directly, which is why the reservation provisions, by changing who exercises public authority, have arguably accomplished more than the schemes.</p>
 
+<h3>Gender Equality: Constitutional Provisions and Judicial Interventions</h3>
+
+<p>The Constitution treats gender equality both as a guarantee against discrimination and as a mandate for special measures, and the courts have extended both.</p>
+
+<h4>Constitutional Provisions</h4>
+
+<ul>
+ <li><strong>The Preamble</strong> promises equality of status and of opportunity.</li>
+ <li><strong>Article 14</strong> guarantees equality before the law, <strong>Article 15(1)</strong> prohibits discrimination on grounds including sex, <strong>Article 15(3)</strong> permits special provision for women and children, and <strong>Article 16</strong> forbids discrimination on grounds of sex in public employment.</li>
+ <li><strong>Article 21</strong>, as interpreted, protects dignity, bodily autonomy, privacy and safety at work, and <strong>Article 23</strong> prohibits trafficking in human beings.</li>
+ <li><strong>Directive Principles</strong>: <strong>Article 39(a)</strong> on an adequate means of livelihood for men and women equally, <strong>39(d)</strong> on equal pay for equal work, <strong>39(e)</strong> on the health and strength of workers, men and women, and <strong>Article 42</strong> on maternity relief.</li>
+ <li><strong>Article 51A(e)</strong> makes it a fundamental duty to renounce practices derogatory to the dignity of women.</li>
+ <li><strong>Articles 243D and 243T</strong> reserve not less than one-third of seats in panchayats and municipalities for women, and Article 243D extends the reservation to the offices of panchayat chairpersons.</li>
+ <li>The <strong>Constitution (106th Amendment) Act, 2023</strong> reserves one-third of seats in the Lok Sabha, the state assemblies and the Delhi assembly for women, to take effect after the delimitation that follows the first census after its commencement, for fifteen years.</li>
+</ul>
+
+<h4>Judicial Interventions</h4>
+
+<table>
+ <thead>
+ <tr><th>Case</th><th>Year</th><th>Holding</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><em>C.B. Muthamma v. Union of India</em></td><td>1979</td><td>Foreign Service rules requiring women to seek permission to marry, and allowing a married woman to be required to resign, were discriminatory</td></tr>
+ <tr><td><em>Air India v. Nergesh Meerza</em></td><td>1981</td><td>Termination of air hostesses on first pregnancy struck down as arbitrary</td></tr>
+ <tr><td><em>Mary Roy v. State of Kerala</em></td><td>1986</td><td>Syrian Christian women entitled to equal inheritance under the Indian Succession Act</td></tr>
+ <tr><td><em>Vishaka v. State of Rajasthan</em></td><td>1997</td><td>Guidelines against sexual harassment at the workplace, drawing on CEDAW, later enacted as the POSH Act, 2013</td></tr>
+ <tr><td><em>Githa Hariharan v. Reserve Bank of India</em></td><td>1999</td><td>The mother may act as natural guardian of a minor in place of an absent or indifferent father</td></tr>
+ <tr><td><em>Anuj Garg v. Hotel Association of India</em></td><td>2007</td><td>A ban on women working in bars struck down as protection that in fact restricted women</td></tr>
+ <tr><td><em>Shayara Bano v. Union of India</em></td><td>2017</td><td>Instant triple talaq held invalid</td></tr>
+ <tr><td><em>Joseph Shine v. Union of India</em></td><td>2018</td><td>The adultery offence, which treated the wife as her husband's property, struck down</td></tr>
+ <tr><td><em>Indian Young Lawyers Association v. State of Kerala</em></td><td>2018</td><td>Exclusion of women of menstruating age from Sabarimala held unconstitutional, the wider questions since referred to a larger bench</td></tr>
+ <tr><td><em>Vineeta Sharma v. Rakesh Sharma</em></td><td>2020</td><td>Daughters are coparceners by birth under the amended Hindu Succession Act, whether or not the father was alive in 2005</td></tr>
+ <tr><td><em>Secretary, Ministry of Defence v. Babita Puniya</em></td><td>2020</td><td>Permanent commission for women officers in the Army, rejecting arguments based on stereotypes</td></tr>
+ <tr><td><em>Lt. Col. Nitisha v. Union of India</em></td><td>2021</td><td>Recognised indirect discrimination, where neutral evaluation criteria disadvantaged women officers</td></tr>
+ <tr><td><em>X v. Principal Secretary, Health and Family Welfare Department</em></td><td>2022</td><td>Unmarried women entitled to the same access to abortion as married women up to twenty-four weeks</td></tr>
+ </tbody>
+</table>
+
+<h4>Assessment</h4>
+
+<p>The trajectory runs from formal to substantive equality. Early cases removed explicit discrimination in service rules. Later ones asked whether protective rules were in fact restrictions, read international conventions into domestic law where Parliament had not legislated, and recognised that neutral rules can discriminate in effect. The new criminal law carries part of this forward: the <strong>Bharatiya Nyaya Sanhita, 2023</strong> groups offences against women and children in a chapter of their own and omits adultery, but retains the exception for marital rape of a wife who is not a minor, which is under challenge. The gap that remains is administrative. Rights declared by courts depend on internal complaints committees that actually exist, police stations that register complaints and courts that decide them quickly, and implementation, as with the workplace harassment law, has lagged behind the law itself.</p>
+
 
 <h2>Education Administration</h2>
 
@@ -6549,6 +8231,36 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Reform fatigue.</strong> Repeated exercises that change little teach officials that the next one may also be waited out.</li>
 </ul>
 
+<h3>Caiden: Reform Against Resistance</h3>
+
+<p><strong>Gerald Caiden</strong>, in <em>Administrative Reform</em> (1969), defined administrative reform as "the artificial inducement of administrative transformation against resistance." Each term separates reform from ordinary change. Administrative change is natural and continuous, the adjustment any organisation makes to its environment. Reform is <strong>artificial</strong>, planned deliberately by someone with a purpose. It seeks <strong>transformation</strong>, altering structures, procedures and attitudes rather than tinkering with them. And it meets <strong>resistance</strong> by its nature, since a change that disturbed nobody would not need to be induced. Reform is therefore a political and moral process as much as a technical one, because it decides whose interests are to be overridden.</p>
+
+<h4>The Nature of Resistance</h4>
+
+<ul>
+ <li><strong>Vested interests.</strong> Those who gain from the existing arrangement, in power, status, promotion prospects or illicit income, oppose its alteration. Services defend cadre privileges and departments defend jurisdiction.</li>
+ <li><strong>Insecurity.</strong> Officials fear loss of jobs, skills made obsolete or new performance demands, which is why computerisation and performance appraisal have met opposition from staff associations.</li>
+ <li><strong>Inertia and routine.</strong> Bureaucracy is designed for stability, and habit, precedent and rule make the existing way of working the default.</li>
+ <li><strong>Political resistance.</strong> Reform that reduces patronage over transfers, appointments or contracts takes away instruments politicians use.</li>
+ <li><strong>Cultural resistance</strong>, where the values a reform assumes, such as impersonal merit or the citizen's entitlement, are not shared by the society around the administration.</li>
+</ul>
+
+<p>Indian examples are plentiful. The lateral entry of specialists into joint secretary and director posts from 2018 met resistance from the services, and an advertisement for forty-five such posts was withdrawn in August 2024 after political objection to the absence of reservation. Performance-linked promotion and fixed tenures, recommended repeatedly, have been implemented least because they disturb the services most.</p>
+
+<h4>Inducements Required</h4>
+
+<ul>
+ <li><strong>Political will and sustained leadership</strong> at the top, signalling that the reform will outlast the reformer's attention.</li>
+ <li><strong>A legal mandate</strong>, since a statutory right or duty is harder to wait out than an executive instruction, as the information and public services statutes show.</li>
+ <li><strong>Participation</strong> of the staff affected in designing the change, which turns some opponents into owners.</li>
+ <li><strong>Compensation for losers</strong> through retraining, redeployment and protection of pay.</li>
+ <li><strong>Communication and early visible gains</strong>, which build support before the costs are felt.</li>
+ <li><strong>External pressure</strong> from courts, civil society, the media or a crisis, which supplies the force internal reformers lack.</li>
+ <li><strong>Sequencing</strong>, piloting a change before extending it, so that resistance is met with evidence.</li>
+</ul>
+
+<p>Caiden's definition implies that resistance is a condition to be managed, not a malfunction to be eliminated. Some resistance is legitimate and exposes a badly designed reform, and a strategy that treats every objection as obstruction loses the information that objections carry.</p>
+
 
 <h2>How Reform Is Attempted</h2>
 
@@ -6596,6 +8308,34 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Its lasting contributions were the recommendation for a <strong>Lokpal and Lokayuktas</strong>, the call for the <strong>gradual infusion of specialists</strong> into the administrative services, the strengthening of Organisation and Method work, and its proposals on district administration. Its limitation was that it worked within the assumptions of its time: a planned economy, a dominant public sector and an administration whose problem was thought to be capacity rather than accountability.</p>
 
+<h3>The Appleby Reports</h3>
+
+<p><strong>Paul H. Appleby</strong>, the American public administrator and dean of the Maxwell School at Syracuse, was invited by the Government of India to survey its administration. His two reports remain the reference point against which later reform commissions are measured.</p>
+
+<h4>Public Administration in India: Report of a Survey (1953)</h4>
+
+<ul>
+ <li>He placed India among the <strong>dozen or so most advanced governments</strong> of the world, which set the tone of the report: the system was sound in design and slow in operation.</li>
+ <li>He found <strong>over-centralisation</strong> and too little delegation, so that decisions climbed many levels and ministers and senior officers were absorbed in detail.</li>
+ <li>He criticised the <strong>excessive checks</strong> exercised by the Ministry of Finance over the spending of administrative ministries, which duplicated scrutiny and caused delay, and the attention of Parliament and audit to small transactions rather than to policy.</li>
+ <li>He observed that the Union depended for executing its programmes on states over which it had little administrative control, an unusual degree of dependence for a national government.</li>
+ <li>He recommended an <strong>Organisation and Methods</strong> unit and an <strong>Institute of Public Administration</strong>, and both were created in <strong>1954</strong>.</li>
+</ul>
+
+<h4>Re-examination of India's Administrative System (1956)</h4>
+
+<ul>
+ <li>The second report concentrated on the government's industrial and commercial enterprises and urged that they be given <strong>managerial autonomy</strong>, with ministries and Parliament setting policy and leaving operations to the enterprise.</li>
+ <li>It criticised audit by the <strong>Comptroller and Auditor General</strong> as a brake on initiative, since auditors trained to check regularity judged business decisions after the event.</li>
+ <li>It repeated the case for <strong>delegation of financial powers</strong> to administrative ministries.</li>
+</ul>
+
+<h4>Have Later Commissions Departed from Appleby?</h4>
+
+<p>On diagnosis, largely not. Over-centralisation, delay, excessive financial control and the need for delegation recur in the first ARC and again in the second ARC half a century later. The first ARC's case for the autonomy of public undertakings restated the 1956 report, and the later delegation of financial powers to ministries, with financial advisers placed inside them, and the memorandum of understanding system for public enterprises follow the line he drew.</p>
+
+<p>The departures lie in objectives. Appleby's concern was efficiency within a system whose ends he took as given. Integrity, redress of citizens' grievances and accountability to the public were taken up by later bodies: the Santhanam Committee on corruption, the first ARC with the Lokpal and performance budgeting, and the second ARC with a rights-based, citizen-centric programme of information, service guarantees and ethics. The fair answer is that later commissions departed from Appleby in what they asked administration to do while largely confirming his account of how it worked, which is itself evidence of how little the machinery changed.</p>
+
 <h2>The Second Administrative Reforms Commission</h2>
 
 <p>Constituted in <strong>2005</strong> under <strong>Veerappa Moily</strong>, the second Commission completed its work by <strong>31 May 2009</strong> and submitted <strong>fifteen reports</strong>. Its organising philosophy was to make administration <strong>citizen-centric, transparent, accountable, efficient and ethical</strong>, which is a different starting point from the first Commission's concern with capacity, and reflects the intervening arrival of liberalisation, the right to information and rights-based legislation.</p>
@@ -6637,6 +8377,21 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>That pattern is not accidental and is the finding to state: <strong>reform proceeds in inverse proportion to how much it disturbs.</strong></p>
 
+<h3>The Principle of Subsidiarity</h3>
+
+<p>Subsidiarity holds that a function should be performed by the lowest level of government, or the smallest unit of social organisation, competent to perform it, and that a higher level should act only where a lower one cannot act effectively. The idea originated in Catholic social teaching, in Pope Pius XI's encyclical <em>Quadragesimo Anno</em> (1931), and entered public law through the European Charter of Local Self-Government (1985) and the Maastricht Treaty (1992), which made it a governing principle of the European Union.</p>
+
+<p>The second ARC invoked it most fully in its sixth report, <strong>Local Governance</strong> (2007), and applied the same reasoning to delegation within government in its reports on the organisational structure of the Government of India and on state and district administration. The case rests on three claims: the level closest to the citizen knows local needs best, a citizen can hold a nearby government to account more easily than a distant one, and higher levels burdened with tasks that lower levels could perform neglect the tasks only they can perform.</p>
+
+<ul>
+ <li><strong>Devolution to local governments.</strong> Functions local bodies can perform should be transferred to them by law, with the funds and staff to perform them, and each devolved subject broken into activities assigned to the appropriate tier.</li>
+ <li><strong>Within the state government.</strong> The secretariat should confine itself to policy, legislation and monitoring, delegating execution to directorates, field agencies and the district.</li>
+ <li><strong>Within the Union government.</strong> Ministries should concentrate on policy and leave implementation to executive agencies, states and local bodies, instead of running schemes on subjects that belong to the states.</li>
+ <li><strong>Beyond government.</strong> What communities, self-help groups, cooperatives and voluntary bodies can do should not be taken over by the state. This horizontal form of the principle is consistent with the Commission's report on social capital.</li>
+</ul>
+
+<p>The case is strong because the characteristic defect of Indian administration is concentration: decisions taken far from where their effects are felt, by officials who cannot know local conditions. Its limits are equally clear. Subsidiarity assumes the lower level is capable, and Indian local bodies often lack staff and revenue, so devolution without capacity transfers responsibility without the means to discharge it. It assumes the lower level is democratic, and local power can be captured by dominant castes and landed interests, which is why the principle must be paired with reservation, the Gram Sabha and audit. And it depends on states willing to give up power, which they have proved reluctant to do. The principle states the right direction of reform and says little about how to overcome the resistance it provokes.</p>
+
 <h2>E-Governance</h2>
 
 <p>E-governance is the use of information and communication technology to improve the delivery of services, the efficiency of internal processes and the participation of citizens. The distinction that matters, drawn in the note on New Public Management, is between the <em>limited</em> sense of delivering existing services electronically and the <em>wider</em> sense of transforming government and governance through technology. Digitising a bad process produces a faster bad process.</p>
@@ -6675,6 +8430,31 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Exclusion by design</strong>, where an online-only channel closes the counter that was the only channel available to those without connectivity.</li>
  <li><strong>Capacity and continuity</strong>, since projects depend on officers who are transferred and on vendors whose contracts end.</li>
 </ul>
+
+<h3>The Government e-Marketplace</h3>
+
+<p>The <strong>Government e-Marketplace (GeM)</strong> was launched by the Ministry of Commerce and Industry on <strong>9 August 2016</strong> as an online platform for the procurement of common goods and services by ministries, departments and public enterprises. It replaced the <strong>Directorate General of Supplies and Disposals</strong>, whose rate contracts had been slow and opaque, and is run by a wholly government-owned, not-for-profit special purpose vehicle. <strong>Rule 149 of the General Financial Rules, 2017</strong> makes procurement through GeM mandatory for central government buyers where the item is available on it. Its cumulative gross merchandise value passed thirteen lakh crore rupees by 2025.</p>
+
+<ul>
+ <li><strong>Transparency</strong>: buyers, sellers and prices are recorded on an open platform, reducing the personal contact and discretion in which procurement corruption resides.</li>
+ <li><strong>Price discovery</strong> through direct purchase, e-bidding and reverse auctions.</li>
+ <li><strong>Inclusion</strong>: micro and small enterprises account for a large share of orders, and initiatives such as <em>Womaniya</em> for women entrepreneurs and self-help groups and the <em>Startup Runway</em> open public procurement to sellers who could not have dealt with the older system.</li>
+ <li><strong>Speed</strong>, with standard items procured in days rather than months.</li>
+</ul>
+
+<h4>Implementation Challenges</h4>
+
+<ul>
+ <li><strong>Quality and specification.</strong> Buyers report goods that do not match their listings, sub-standard products and sellers who misdescribe brand or origin, and quality checks have lagged behind the platform's growth.</li>
+ <li><strong>Price gaming.</strong> Platform prices are not always lower than open-market prices, and sellers can adjust listings or collude in bidding.</li>
+ <li><strong>Restrictive bid conditions</strong> on turnover or experience, inserted by buyers, which exclude the small sellers the platform was meant to include.</li>
+ <li><strong>Delayed payments</strong> by buying departments, which hurt small sellers most.</li>
+ <li><strong>Capacity on both sides</strong>: buyers in field offices unfamiliar with the platform, and rural and small sellers with limited digital skills or connectivity.</li>
+ <li><strong>Circumvention</strong>, by splitting orders to stay below thresholds, by declaring items unavailable on GeM, or by drafting specifications that only one seller can meet.</li>
+ <li><strong>Complex procurement.</strong> The platform handles standard goods well and complex services, works and customised items less well.</li>
+</ul>
+
+<p>GeM illustrates the general lesson of e-governance. Putting procurement online removes some discretion and relocates the rest, into specifications, vendor registration and the acceptance of goods, so its effectiveness depends on back-end controls, quality assurance and the capacity of buyers rather than on the portal alone.</p>
 
 
 <h2>Regulatory Reform</h2>
@@ -6904,6 +8684,27 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>Social audit subjects a programme's records to examination by the community it serves, in a public assembly at which officials are present and must respond. It was given statutory footing under the employment guarantee legislation, under which the gram sabha conducts audits of works executed in its area, supported by an independent social audit unit at the State level. Its strength is that it verifies facts that no external auditor can check, whether the work was done and whether the persons on the muster roll worked. Its weakness is that it depends on the independence of the audit unit from the department it audits, and on the willingness of local officials to face the assembly, both of which vary widely.</p>
 
+<h3>The National Human Rights Commission</h3>
+
+<p>The <strong>National Human Rights Commission</strong> was constituted on 12 October 1993 under the <strong>Protection of Human Rights Act, 1993</strong>, in line with the Paris Principles for national human rights institutions. It is a statutory, not a constitutional, body. Since the <strong>2019 amendment</strong> its chairperson may be a former Chief Justice of India or a former judge of the Supreme Court. Its members include a serving or former Supreme Court judge, a serving or former Chief Justice of a High Court and three persons with knowledge of human rights, one of whom must be a woman, and the chairpersons of the national commissions for Scheduled Castes, Scheduled Tribes, women, minorities, backward classes and children and the Chief Commissioner for Persons with Disabilities sit as ex officio members. The President appoints on the recommendation of a committee of the Prime Minister, the Speaker, the Home Minister, the Leaders of the Opposition in both Houses and the Deputy Chairman of the Rajya Sabha, for a term of three years or until the age of seventy.</p>
+
+<p>It may inquire, on petition or on its own motion, into violations of human rights by a public servant or negligence in preventing them, with the powers of a civil court to summon witnesses and require documents. It may intervene in court proceedings, visit prisons and other institutions, review legal safeguards and promote human rights literacy. After an inquiry it may recommend compensation, prosecution or other action to the government, or approach the Supreme Court or a High Court.</p>
+
+<h4>Its Limitations</h4>
+
+<ul>
+ <li><strong>Recommendations are not binding.</strong> The government must report the action taken but may decline to act, and the Commission's remedies are publicity and the courts.</li>
+ <li><strong>The armed forces.</strong> Under <strong>Section 19</strong> the Commission cannot investigate complaints against the armed forces itself. It may only seek a report from the Union government and make recommendations, after which the government informs it within three months of the action taken. Where the gravest allegations arise, in areas under AFSPA, it therefore depends on the account of the accused institution.</li>
+ <li><strong>The one-year bar.</strong> Under <strong>Section 36(2)</strong> it cannot inquire into any matter after one year from the date of the alleged act, a limit the Supreme Court treated as jurisdictional in <em>N.C. Dhoundial v. Union of India</em> (2004). Many grave violations come to light only years later.</li>
+ <li><strong>No investigating cadre of its own.</strong> It relies on police officers on deputation, and it cannot take up matters already pending before another commission.</li>
+ <li><strong>Composition.</strong> Membership is dominated by retired judges and officials, the selection committee is weighted towards the government, and civil society is thinly represented, which has raised questions about its independence.</li>
+ <li><strong>Volume.</strong> Complaints far exceed its capacity, and a large share are dismissed at the threshold.</li>
+</ul>
+
+<h4>Assessment</h4>
+
+<p>Within these limits the Commission has achieved more than its powers suggest. It required custodial deaths to be reported to it within twenty-four hours and laid down procedures for inquiry into deaths in police encounters, which changed police practice by making such events visible. It secured protection for Chakma refugees in Arunachal Pradesh through the Supreme Court in 1996, monitored bonded labour at the Court's request, and after the Gujarat violence of 2002 sought the transfer of the Best Bakery trial out of the state. Its chief contribution is to have made public authorities aware that they must account for how they treat people in their custody. Its chief failure is that it cannot compel, so an institution dependent on the goodwill of governments is weakest exactly where violations are most serious. The reforms usually proposed are binding recommendations subject to appeal, an independent investigation wing, relaxation of the one-year limit, and power to inquire into the armed forces at least where civilians are the victims.</p>
+
 <h2>Disaster Management</h2>
 
 <p>Disaster administration in India underwent a deliberate paradigm shift from a relief-centred and reactive approach towards a proactive approach covering prevention, mitigation and preparedness, with relief as one phase in a cycle rather than the whole of the response. The shift is the point most questions turn on, so it should be stated explicitly.</p>
@@ -7054,6 +8855,45 @@ export const pubAdminNoteContent: Record<string, string> = {
 </ul>
 
 <p>The Second ARC's recommendation that regulators be created by a common statutory framework rather than by separate statutes, with uniform provisions on selection, tenure, removal, funding and accountability, addresses most of these at once, and it remains unimplemented.</p>
+
+<h3>Cushman and the Headless Fourth Branch</h3>
+
+<p>The American independent regulatory commissions, beginning with the Interstate Commerce Commission of 1887, combined rule-making, administration and adjudication in bodies insulated from presidential control. <strong>Robert E. Cushman</strong> examined them in a study for the <strong>President's Committee on Administrative Management</strong>, the Brownlow Committee, whose report of <strong>1937</strong> called them a <strong>headless fourth branch</strong> of government, and he developed the analysis in <em>The Independent Regulatory Commissions</em> (1941).</p>
+
+<p>His dilemma is the one in the question. If a commission is wholly independent, it makes important policy and administrative decisions without being responsible to the President or, through him, to the electorate, so independence becomes irresponsibility. If its independence is removed, its quasi-judicial work of deciding cases between parties loses the impartiality adjudication requires. Independence suits the judge and responsibility suits the policymaker, and a commission is both.</p>
+
+<p>His proposed solution, adopted by the Brownlow Committee, was to separate the functions: place a commission's policy-making and administrative work within an executive department under a secretary answerable to the President, and leave its adjudication to a judicial section independent of the department. Congress did not adopt the scheme, but the principle that a regulator's adjudication should be separated from its policy role has shaped regulatory design since.</p>
+
+<h4>The Dilemma in India</h4>
+
+<ul>
+ <li><strong>Separation of adjudication.</strong> India has applied Cushman's remedy in part by moving appeals and disputes to tribunals: the <strong>Telecom Disputes Settlement and Appellate Tribunal</strong> for TRAI, the <strong>Securities Appellate Tribunal</strong> for SEBI, the <strong>Appellate Tribunal for Electricity</strong> for the electricity commissions, and the <strong>National Company Law Appellate Tribunal</strong> for the Competition Commission.</li>
+ <li><strong>Policy directions.</strong> The statutes reserve to the government a power to issue binding directions on questions of policy, and under the TRAI Act the government's decision on whether a question is one of policy is final, which keeps the regulator responsible at the cost of its independence.</li>
+ <li><strong>Appointment, tenure and funding</strong> lie with the government, which secures responsibility but exposes the regulator to capture by the executive it is meant to stand apart from.</li>
+ <li><strong>Accountability to Parliament</strong> is thin, limited to the laying of annual reports and occasional appearances before committees.</li>
+</ul>
+
+<p>Cushman's insight is that no design dissolves the dilemma. Design can only allocate it. The Indian answer, independence in adjudication through tribunals and responsibility in policy through government directions, follows his solution in outline, and its weakness lies in the second half, where government control over appointments and directions can erode the independence on which a regulator's credibility with investors and consumers depends.</p>
+
+<h3>TRAI, Consumers and Net Neutrality</h3>
+
+<p>The <strong>Telecom Regulatory Authority of India</strong> was established in 1997 under the <strong>TRAI Act, 1997</strong>, to regulate telecommunications as the sector opened to private operators. The <strong>2000 amendment</strong> transferred its adjudicatory functions to the Telecom Disputes Settlement and Appellate Tribunal and required the government to seek TRAI's recommendations on the need for new service providers and the terms of licences, though the government is not bound by them.</p>
+
+<h4>Protecting the Consumer</h4>
+
+<ul>
+ <li><strong>Tariffs.</strong> TRAI issues tariff orders and requires transparency in tariff offers, while leaving most retail tariffs to competition, which brought Indian mobile tariffs among the lowest in the world.</li>
+ <li><strong>Quality of service.</strong> It prescribes standards for call drops, network availability and data speeds, publishes performance comparisons, and imposes financial disincentives for breach.</li>
+ <li><strong>Choice.</strong> <strong>Mobile number portability</strong>, introduced in 2010-11, lets a subscriber change operator without changing number, which disciplines operators more than any direct regulation.</li>
+ <li><strong>Unsolicited commercial communication.</strong> Its regulations and the do-not-disturb registry address spam calls and messages.</li>
+ <li><strong>Grievance redress and awareness</strong>, through complaint and appeal mechanisms within operators, registered consumer advocacy groups and consumer outreach.</li>
+</ul>
+
+<h4>Net Neutrality</h4>
+
+<p>Net neutrality is the principle that service providers treat all internet traffic alike, without blocking, throttling or charging differently according to content, application or source. TRAI's <strong>Prohibition of Discriminatory Tariffs for Data Services Regulations</strong> of <strong>8 February 2016</strong> barred tariffs that varied by content, which ended zero-rating offers such as Facebook's Free Basics and Airtel Zero in their existing form. Its recommendations of <strong>November 2017</strong> went further, prohibiting blocking, throttling, paid prioritisation and other discriminatory treatment of content while permitting reasonable traffic management and excluding specialised services such as remote surgery and autonomous vehicles. The Department of Telecommunications accepted them in <strong>July 2018</strong>.</p>
+
+<p>The task in the network era is continuing. Operators argue that a few large content platforms generate most traffic and should pay towards network costs, a claim to a fair share that would reopen differential treatment. Zero-rating can return in subtler forms, and the exception for specialised services could become a back door for priority lanes. TRAI's limits are structural: its recommendations on licensing and spectrum bind no one, the government can issue binding policy directions, and enforcement through licence conditions rests with the Department of Telecommunications. Its record shows a regulator that has protected consumers well where competition and its own regulations reach, and that depends on the government where they do not.</p>
 
 <h2>Coordination in Crisis</h2>
 
@@ -7307,6 +9147,18 @@ export const pubAdminNoteContent: Record<string, string> = {
 
 <p>In rural development specifically, the consequence is that a district plan is generally an aggregation of departmental proposals rather than a synthesis of village plans, which reproduces at the district level exactly the defect the Balwant Rai Mehta Committee identified in the Community Development Programme in 1957.</p>
 
+<h3>Mission Antyodaya</h3>
+
+<p><strong>Mission Antyodaya</strong>, announced in the Union Budget of 2017-18 and led by the Ministry of Rural Development, is a convergence and accountability framework rather than a scheme with funds of its own. It set out to bring <strong>one crore households</strong> out of poverty and make <strong>50,000 gram panchayats</strong> poverty-free by 2019, the 150th birth anniversary of Mahatma Gandhi, by bringing the programmes of some twenty-six ministries and departments to bear on the same households and panchayats at the same time, with the gram panchayat as the basic unit of planning.</p>
+
+<ul>
+ <li><strong>Convergence.</strong> Housing, roads, employment guarantee works, livelihoods through self-help groups, skills, electricity, sanitation, drinking water and nutrition schemes are aligned so that a deprived household receives them together rather than one at a time.</li>
+ <li><strong>Measurement.</strong> An annual survey at gram panchayat and village level records infrastructure and services across the subjects devolved to panchayats, and the results rank gram panchayats. The 2022-23 round covered more than 2.6 lakh gram panchayats.</li>
+ <li><strong>Planning.</strong> The survey produces gap reports that feed the <strong>Gram Panchayat Development Plan</strong>, so that a panchayat plans against measured deficits rather than lists of demands.</li>
+</ul>
+
+<p>Its claim to pursue a poverty-free India rests on a sound diagnosis: rural poverty is multidimensional, and a household lifted out of one deprivation by one scheme falls back for want of another. Its difficulties are those of every convergence effort. Ministries keep their own guidelines, budgets and timelines, so alignment depends on district coordination that is often weak. There has been no independent verification that the 2019 target was met, and rankings on infrastructure measure facilities more readily than household incomes and capabilities. Panchayats asked to plan against the survey's gaps also have little untied money to close them. The Mission's lasting contribution is the data and planning discipline it brought to the gram panchayat more than the poverty target.</p>
+
 <h2>Rural Transformation</h2>
 
 <p>The village the administration was designed for is not the village that now exists, and an answer that ignores this describes a vanished object.</p>
@@ -7318,6 +9170,18 @@ export const pubAdminNoteContent: Record<string, string> = {
  <li><strong>Economic corridors and infrastructure.</strong> Large industrial and freight corridors, of which the Delhi-Mumbai corridor is the leading instance, alter the rural areas along their route profoundly, through land acquisition, changes in land value, new employment and new settlement. Their administration is conducted through special purpose vehicles and development authorities rather than through the district or the panchayat, which means the bodies constitutionally responsible for a territory are frequently not the bodies transforming it.</li>
  <li><strong>Aspiration.</strong> A rural population with education, mobile connectivity and knowledge of what exists elsewhere does not accept what it once did, which changes what a development administration must supply and how it must behave.</li>
 </ul>
+
+<h3>The Shyama Prasad Mukherji Rurban Mission</h3>
+
+<p>The <strong>Shyama Prasad Mukherji Rurban Mission</strong>, launched in February 2016 at Kurubhat in Chhattisgarh's Rajnandgaon district, set out to develop <strong>300 clusters</strong> of villages as <strong>Rurban</strong> areas that keep the character of a village while acquiring the amenities of a town. Its motto, the soul of a village with the amenities of a city, states the aim.</p>
+
+<ul>
+ <li><strong>The cluster.</strong> A cluster is a group of contiguous villages with a population of about 25,000 to 50,000 in plain and coastal areas and 5,000 to 15,000 in desert, hilly and tribal areas, selected by states on criteria including growth in population and in non-farm employment.</li>
+ <li><strong>Convergence.</strong> Each cluster prepares an <strong>Integrated Cluster Action Plan</strong> that brings existing central and state schemes together for the cluster, across components such as skill development, agro-processing, digital literacy, water supply, sanitation, solid and liquid waste management, village streets and drains, health and education facilities and inter-village roads.</li>
+ <li><strong>Critical Gap Funding.</strong> The Mission adds its own money only to fill what convergence cannot, up to 30 per cent of the project cost, with a ceiling of Rs 30 crore in plain areas and Rs 15 crore in desert, hilly and tribal areas.</li>
+</ul>
+
+<p>The cluster approach answers the oldest defect of rural development administration, that departments act separately on the same village. Its premise is that a growth centre with town-like services can hold population and investment that would otherwise move to cities, the logic of the earlier <strong>PURA</strong> idea associated with A.P.J. Abdul Kalam. The Mission's portal records nearly 300 approved clusters covering about 2,800 gram panchayats in 254 districts, with expenditure well short of approved investment. The criticisms are familiar. Convergence depends on departments answering to their own ministries, action plans were often aggregations of existing schemes rather than designs for a cluster, and clusters were planned by officials more than by the gram panchayats within them. The Mission is best understood as a test of whether coordination can be bought cheaply with gap funding, not as a new source of rural investment.</p>
 
 <h2>Why Rural Development Administration Underperforms</h2>
 

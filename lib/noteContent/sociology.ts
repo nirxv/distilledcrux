@@ -112,6 +112,26 @@ export const sociologyNoteContent: Record<string, string> = {
   </tr>
 </table>
 
+<h3>The Indian Mode of Production Debate</h3>
+<p>From the late 1960s to the early 1980s, scholars writing mainly in the <em>Economic and Political Weekly</em> argued over how to characterise Indian agriculture. Had the Green Revolution made it capitalist, or did it remain feudal or semi-feudal? The answer mattered politically, because Left parties derived their strategy from it, and the CPI (Marxist-Leninist) described India as "semi-feudal and semi-colonial" to justify agrarian revolution. Alice Thorner's review "Semi-Feudalism or Capitalism?" (EPW, 1982) summarised the debate.</p>
+
+<ul>
+  <li><strong>Capitalist transition</strong>: Utsa Patnaik (from 1971) argued that capitalist relations were growing: big farmers used hired wage labour, produced for the market and reinvested surplus in machinery and inputs. She later proposed a labour-exploitation criterion for classifying the peasantry.</li>
+  <li><strong>Doubts about the evidence</strong>: Ashok Rudra's survey of big farmers in Punjab (with Majid and Talib, 1969) found little sign that they formed a distinct capitalist class, and Paresh Chattopadhyay disputed Patnaik's criteria of capitalism.</li>
+  <li><strong>Semi-feudalism</strong>: Amit Bhaduri ("A Study in Agricultural Backwardness under Semi-Feudalism", <em>Economic Journal</em>, 1973) identified sharecropping, perpetual indebtedness of tenants, the combination of landlord and moneylender in one person, and tenants' lack of access to markets. Because the landlord gained more from usury than from higher output, he had no interest in raising productivity. Pradhan Prasad described similar relations in Bihar.</li>
+  <li><strong>Colonial mode of production</strong>: Jairus Banaji (1972) and Hamza Alavi (1975) argued that colonialism created a distinct structure subordinated to metropolitan capital, neither feudal nor fully capitalist.</li>
+</ul>
+
+<p>Behind the debate lay Marx's own ambiguity about India. His 1859 Preface listed an "Asiatic" mode of production alongside the ancient, feudal and bourgeois modes, and his articles of 1853 saw British rule as both destructive and the agent of change.</p>
+
+<p><strong>Assessment:</strong></p>
+<ul>
+  <li><strong>Regional unevenness</strong>: Punjab, Haryana and western Uttar Pradesh showed capitalist farming, while eastern India retained tenancy, bondage and usury, so different relations coexisted.</li>
+  <li><strong>Continuity with earlier work</strong>: Daniel Thorner's "built-in depressor" (<em>The Agrarian Prospect in India</em>, 1956) had already explained how landlord dominance held back investment.</li>
+  <li><strong>Missing caste and gender</strong>: later scholars, including Gail Omvedt, argued that the debate was economistic and neglected caste and gender, through which labour was actually controlled.</li>
+  <li><strong>Lesson</strong>: Marx's stages cannot be applied mechanically to colonised societies.</li>
+</ul>
+
 <h2>Dialectical Materialism</h2>
 
 <p>Engels systematised Marx's method into three laws of dialectics: applicable to nature, history, and society:</p>
@@ -181,6 +201,54 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Economic crisis that radicalises the have-nots</li>
 </ul>
 <p>Marx distinguished earlier revolts (slave/serf) as <em>false revolutions</em> driven by false consciousness: aided by an emerging class (bourgeoisie). The workers' revolution will be a <em>true revolution</em> because the proletariat has no alternative and no emerging class to help them: only true consciousness can drive it.</p>
+
+<h3>Marx and Weber on Class: The Weberian Critique</h3>
+<p>Marx left no finished definition of class: the last chapter of <em>Capital</em>, Volume 3, titled "Classes", breaks off after a few paragraphs. The main alternative is Max Weber's essay "Class, Status, Party" in <em>Economy and Society</em> (published posthumously in 1922). Weber accepted that "property" and "lack of property" are the basic categories of all class situations, but rejected the idea that class is the only, or always the main, basis of inequality and conflict.</p>
+
+<table>
+  <tr>
+    <th>Issue</th>
+    <th>Marx</th>
+    <th>Weber</th>
+  </tr>
+  <tr>
+    <td>Basis of class</td>
+    <td>Ownership or non-ownership of the means of production: a relation in production</td>
+    <td>Market situation: property, but also marketable skills and credentials, which shape life chances</td>
+  </tr>
+  <tr>
+    <td>Nature of the relation</td>
+    <td>Exploitation: surplus value flows from worker to capitalist</td>
+    <td>Unequal life chances in the market: income, housing, education, health</td>
+  </tr>
+  <tr>
+    <td>Class action</td>
+    <td>A class in itself becomes a class for itself through struggle</td>
+    <td>A common class situation does not automatically produce class action. It depends on how clearly people see the causes of their situation</td>
+  </tr>
+  <tr>
+    <td>Other dimensions</td>
+    <td>Status and political power follow economic position</td>
+    <td>Status (social honour) and party (organised power) are separate dimensions that can diverge from class</td>
+  </tr>
+  <tr>
+    <td>Direction of change</td>
+    <td>Polarisation and proletarian revolution</td>
+    <td>Growth of the white-collar middle class and of bureaucracy. Socialism would increase bureaucratic power</td>
+  </tr>
+</table>
+
+<p><strong>Weberian critique of Marx:</strong></p>
+<ul>
+  <li><strong>Economic reductionism</strong>: status groups such as castes, ethnic groups and professions organise inequality on non-economic grounds, and status honour can even resist the market.</li>
+  <li><strong>The propertyless are not one class</strong>: a software engineer and a construction labourer both lack capital but have very different life chances.</li>
+  <li><strong>No inevitable class consciousness</strong>: workers may identify with caste, religion, nation or occupation, and parties can unite people across classes.</li>
+  <li><strong>Failed polarisation</strong>: the middle class has grown rather than shrunk, as Weber expected from the spread of bureaucracy.</li>
+</ul>
+
+<p><strong>Later developments:</strong> David Lockwood (<em>The Blackcoated Worker</em>, 1958) added work situation and status situation to market situation to explain why clerks did not identify with manual workers. Frank Parkin (<em>Marxism and Class Theory: A Bourgeois Critique</em>, 1979) recast class as social closure through exclusion and usurpation. On the Marxist side, Erik Olin Wright's "contradictory class locations" (1978) placed managers and professionals between capital and labour, partly answering Weber.</p>
+
+<p><strong>Indian example:</strong> Andre Beteille's <em>Caste, Class and Power</em> (1965), a Weberian study of Sripuram village in Thanjavur, found that Brahmins had once combined high caste, landownership and power, but land sales and non-Brahmin politics pulled the three apart. A poor Brahmin with high ritual status but little land fits Weber better than Marx. Marxists reply that caste persists because it secures control over land and labour.</p>
 
 <h2>Alienation</h2>
 
@@ -280,6 +348,22 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Questioning of monarchical state, traditional values, and norms: redefining success by market performance rather than moral grounds.</li>
   <li>Technological advances, urban growth, and industrial development.</li>
 </ul>
+
+<h3>Functionalist Responses to Marx</h3>
+<p>Functionalists start from the opposite premise to Marx: society is held together by shared values and the interdependence of its parts, not by coercion. Conflict and inequality exist, but they are contained, regulated and even useful.</p>
+
+<ul>
+  <li><strong>Talcott Parsons</strong> (<em>The Social System</em>, 1951): order rests on value consensus internalised through socialisation. Change is normally gradual and adaptive, through differentiation, adaptive upgrading, inclusion and value generalisation (<em>Societies: Evolutionary and Comparative Perspectives</em>, 1966). The system moves to a new equilibrium rather than being overthrown. Stratification expresses shared values that rank achievement, not exploitation.</li>
+  <li><strong>Kingsley Davis and Wilbert Moore (1945)</strong>: inequality is universal and functionally necessary because unequal rewards draw scarce talent into important positions. Class differences are a mechanism of role allocation, not a source of revolution.</li>
+  <li><strong>Lewis Coser</strong> (<em>The Functions of Social Conflict</em>, 1956): drawing on Simmel, he argued that conflict can be functional. It strengthens group boundaries and cohesion, acts as a safety valve, and pushes institutions to adjust. Flexible societies that tolerate conflict change without revolution.</li>
+  <li><strong>Ralf Dahrendorf</strong> (<em>Class and Class Conflict in Industrial Society</em>, 1959): a conflict theorist who revised Marx in ways close to functionalism. The separation of ownership from control, a growing skilled middle class and the welfare state undermined the two-class model. Conflict now arises from authority relations in "imperatively coordinated associations" and is institutionalised through unions, collective bargaining and parties, so it yields reform rather than revolution.</li>
+</ul>
+
+<p><strong>Common points against Marx:</strong> class polarisation has not occurred, workers have gained social rights through citizenship and the welfare state (T.H. Marshall), revolutions broke out in peasant societies such as Russia and China rather than in advanced capitalism, and the state can act as an arbiter rather than an instrument of one class.</p>
+
+<p><strong>Marxist rejoinder:</strong> functionalism cannot explain how consensus arises or whose values it expresses. Gramsci's hegemony and the Frankfurt School treat apparent consensus as manufactured. Tumin showed that inequality blocks talent rather than allocating it, and even Merton conceded that institutions can be dysfunctional for some groups.</p>
+
+<p><strong>Relevance to India:</strong> the Parsonian view fits planned, gradual change through the Constitution, reservations, the Green Revolution and democratic institutions. The Marxian view better explains agrarian unrest, Naxalism and rising inequality after liberalisation. Most Indian sociologists combine the two: change through adaptation, and conflict wherever adaptation fails to reach the poor.</p>
 
 `,
   'emile-durkheim': `
@@ -857,6 +941,23 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>All three forms coexist in real societies. Applied to Indian politics, Weber's scheme shows rational-legal authority all over, with some elements of traditionalism and charisma remaining. Modern state rules through a combination of rational-legal and charismatic legitimacy.</p>
 
+<h3>Is Power a Zero-Sum Game? Weber and Parsons</h3>
+<p>For Weber, power is the chance of carrying out one's will even against the resistance of others. This definition implies that power is <strong>distributive</strong> and <strong>zero-sum</strong>: a fixed quantity, so that one actor's gain is another's loss, as in the power of a ruler over subjects, a landlord over tenants or a dominant caste over a village.</p>
+
+<p>Talcott Parsons rejected this view, first in his review of C. Wright Mills's <em>The Power Elite</em> ("The Distribution of Power in American Society", 1957) and then in "On the Concept of Political Power" (1963):</p>
+<ul>
+  <li><strong>Power as a capacity of the system</strong>: power is the generalised capacity to secure the performance of binding obligations in the pursuit of collective goals. It belongs to the social system, not only to individuals.</li>
+  <li><strong>The money analogy</strong>: power is a symbolic medium like money. As banks lend out deposits and so create credit, citizens "deposit" power in leaders through elections, and leaders can invest it in collective projects that increase the total.</li>
+  <li><strong>Legitimacy</strong>: power rests on shared values and trust. Force is used only when confidence fails, much as gold backs money only in a crisis.</li>
+  <li><strong>Variable sum</strong>: when a society organises effectively, everyone's capacity can grow together.</li>
+</ul>
+
+<p><strong>Indian example:</strong> the Pulse Polio campaign, which led to India being certified polio-free in 2014, shows legitimate authority mobilising health workers, religious leaders and families to raise collective capacity. Struggles over land, caste dominance or reservation show the zero-sum side, where one group's gain is resisted as another's loss.</p>
+
+<p><strong>Critique of Parsons:</strong> Anthony Giddens ("'Power' in the Recent Writings of Talcott Parsons", 1968) argued that Parsons ignored the hierarchical character of power and the conflicts of interest it serves. Mills and Marxists hold that "collective goals" usually reflect elite interests, and Steven Lukes adds that consensus may itself be produced by power.</p>
+
+<p><strong>Assessment:</strong> The two views capture different aspects of one phenomenon. Power to achieve shared goals can grow, while power over others is unequally distributed. Michael Mann (<em>The Sources of Social Power</em>, 1986) builds on this pairing of collective and distributive power.</p>
+
 <h2>Rationality and Rationalisation</h2>
 
 <p>Weber identified four types of rationality:</p>
@@ -1062,6 +1163,34 @@ export const sociologyNoteContent: Record<string, string> = {
     <td>Increasing rationalisation and bureaucratisation; iron cage</td>
   </tr>
 </table>
+
+<h3>Class, Status and Party: Weber's Theory of Stratification</h3>
+<p>In "Class, Status, Party" in <em>Economy and Society</em> (published 1922, translated in Gerth and Mills, <em>From Max Weber</em>, 1946), Weber argued that classes, status groups and parties are all "phenomena of the distribution of power within a community". Inequality therefore has three distinct dimensions, each located in a different order: classes in the economic order, status groups in the social order, and parties in the sphere of power.</p>
+
+<ul>
+  <li><strong>Class</strong>: people who share the same chances in the market for goods and labour, and so the same life chances. Class situation is ultimately market situation. Weber distinguished property classes (rentiers versus debtors), commercial or acquisition classes (entrepreneurs and professionals versus workers), and social classes, within which individual and generational mobility is easy and typical. A class is not a community, and a common class situation does not by itself produce class action.</li>
+  <li><strong>Status</strong>: a claim to social honour, positive or negative. Status groups are communities with a specific style of life, restrictions on social intercourse and marriage, and monopolies over goods and opportunities. Classes are stratified by their relation to the production and acquisition of goods, status groups by their consumption, expressed in styles of life. Caste is the extreme case, a status group closed by ritual and endogamy (<em>The Religion of India</em>, 1916-17).</li>
+  <li><strong>Party</strong>: an association aimed at acquiring social power to influence communal action, from political parties to unions and pressure groups. Parties may represent class interests, status interests, both or neither.</li>
+</ul>
+
+<h4>How the Three Interact to Produce and Sustain Inequality</h4>
+<ul>
+  <li><strong>Convertibility</strong>: property is not always recognised as a status qualification, but in the long run it usually is. Status opens access to power, and power secures economic advantage, so each resource can be converted into the others.</li>
+  <li><strong>Social closure</strong>: status groups monopolise land, office, education and marriage partners and keep outsiders out, turning economic advantage into inherited privilege.</li>
+  <li><strong>Status against market</strong>: status honour can resist pure market principles, as old elites disdain the newly rich. Weber held that stratification by status is favoured when the economy is stable, while technological and economic change pushes class situation to the foreground.</li>
+  <li><strong>Divergence</strong>: the three need not coincide. A poor Brahmin may have high status and little wealth, a rich trader low ritual rank. Such status inconsistency makes a simple two-class conflict unlikely.</li>
+  <li><strong>Parties as instruments</strong>: parties mobilise class and status interests to capture the state, which then reshapes markets and status, for example through land reform or reservation.</li>
+</ul>
+
+<p><strong>Indian example:</strong> Andre Beteille's <em>Caste, Class and Power</em> (1965) applied the three dimensions to Sripuram village in Thanjavur. Caste rank, landownership and power once coincided in the Brahmins but drew apart as land passed to non-Brahmins and political power to non-Brahmin parties.</p>
+
+<p><strong>Critique:</strong></p>
+<ul>
+  <li><strong>Marxists</strong>: Weber describes the distribution of rewards, not their source. Market situation itself rests on property relations, and in capitalism status and party usually follow class.</li>
+  <li><strong>Vagueness</strong>: the number of classes is open-ended. Neo-Weberians such as David Lockwood and John Goldthorpe built more precise schemes from market and work situation.</li>
+  <li><strong>Gender</strong>: feminists note that Weber, like Marx, took the male household head as the unit of stratification.</li>
+  <li><strong>Strength</strong>: the multidimensional model explains caste, ethnicity, professions and the growing middle class better than a single economic axis, and it shapes much empirical research on stratification.</li>
+</ul>
 
 <h2>Criticisms of Weber</h2>
 
@@ -1539,6 +1668,19 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Non-functional consequences</strong>: neither functional nor dysfunctional; simply irrelevant to the system.</li>
 </ul>
 
+<h3>Limitations of the Concept of Latent Functions</h3>
+<p>Merton defined manifest functions as objective consequences that contribute to the adjustment of a system and are intended and recognised by participants, and latent functions as those neither intended nor recognised. The idea made functional analysis subtler, but it has clear limits.</p>
+<ul>
+  <li><strong>A double criterion</strong>: intention and recognition can vary independently. A consequence may be unintended yet recognised, or intended yet unrecognised by most participants. Colin Campbell questioned it in "A Dubious Distinction?" (<em>American Sociological Review</em>, 1982), arguing that Merton slides between the motives of actors and the consequences an observer identifies.</li>
+  <li><strong>Whose awareness?</strong> Participants differ. A function latent for ordinary members may be manifest to leaders: political machine bosses knew well what services they provided. The concept does not say whose recognition counts.</li>
+  <li><strong>Hard to verify</strong>: latent functions are usually found after the fact, and almost any persistent practice can be credited with some hidden benefit. Such post factum interpretation, which Merton himself warned against, is hard to falsify.</li>
+  <li><strong>No causal explanation</strong>: a useful unintended consequence does not explain why a practice exists or persists. Anthony Giddens argued that one must show how the consequence feeds back into people's conduct, and preferred to speak simply of unintended consequences.</li>
+  <li><strong>Conservative use</strong>: the search for hidden benefits can excuse harmful institutions. Merton's own example of the political machine has been read as an apology for corruption.</li>
+  <li><strong>The observer's authority</strong>: interpretivists object that the sociologist claims to know the meaning of a practice better than its participants.</li>
+</ul>
+
+<p><strong>Indian example:</strong> William Wiser's <em>The Hindu Jajmani System</em> (1936) presented jajmani ties as reciprocal exchanges that gave security to all castes. Later work, such as Thomas Beidelman's <em>A Comparative Analysis of the Jajmani System</em> (1959), showed that these "functions" concealed the exploitation of service castes by landowning patrons, a warning against reading latent functions as benefits for the whole society.</p>
+
 <h2>Conformity and Deviance: Strain Theory</h2>
 <p><strong>Paper:</strong> <em>"Social Structure and Anomie"</em> (1938)</p>
 
@@ -1821,6 +1963,41 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Race and stigma</strong>: The meaning attached to skin colour or caste mark shapes interaction and self-concept. Symbolic meanings of race are socially constructed, not biological.</li>
   <li><strong>Dramaturgy (Goffman)</strong>: Extended Mead: our self is ever-changing across social contexts through impression management. We present different selves on a first date, at a job interview, and in a poker game. Life is a performance on a social stage.</li>
 </ul>
+
+<h3>W.I. Thomas: The Definition of the Situation</h3>
+<p>W.I. Thomas of the Chicago School argued that before acting, people examine and interpret their situation, and this <strong>definition of the situation</strong> shapes behaviour more than the situation's objective features (<em>The Unadjusted Girl</em>, 1923). With Florian Znaniecki, in <em>The Polish Peasant in Europe and America</em> (1918-20), he had studied how immigrants' attitudes interacted with the values of their new surroundings. In <em>The Child in America</em> (1928), written with Dorothy Swaine Thomas, he stated what Merton later named the <strong>Thomas theorem</strong>: "If men define situations as real, they are real in their consequences."</p>
+
+<p>Individuals do not define situations alone. Family, community and law supply ready-made definitions in the form of moral codes, and these compete with the individual's spontaneous definitions. Thomas saw social control and deviance as arising from this rivalry.</p>
+
+<p><strong>Significance in sociology:</strong></p>
+<ul>
+  <li><strong>Foundation of interactionism</strong>: it anticipates Blumer's premise that people act towards things on the basis of the meanings those things have for them.</li>
+  <li><strong>Self-fulfilling prophecy</strong>: Merton (1948) built on it: a false belief that a sound bank will fail causes the run that ruins it. Rosenthal and Jacobson's <em>Pygmalion in the Classroom</em> (1968) reported that teachers' expectations raised pupils' performance.</li>
+  <li><strong>Labelling theory</strong>: Becker's <em>Outsiders</em> (1963) shows how defining someone as deviant shapes a deviant career.</li>
+  <li><strong>Social construction of reality</strong>: Berger and Luckmann (1966) and Goffman's <em>Frame Analysis</em> (1974) extend the idea from individuals to shared, institutionalised definitions.</li>
+  <li><strong>Micro to macro</strong>: subjective definitions produce objective outcomes such as riots, market panics and discrimination.</li>
+</ul>
+
+<p><strong>Indian examples:</strong> rumours of child-lifters spread on WhatsApp in 2018 led to mob lynchings of strangers. Defining certain castes as polluting produces real exclusion from wells, temples and housing regardless of hygiene, and communal rumours have repeatedly turned into riots.</p>
+
+<p><strong>Critique:</strong> the theorem can overstate the subjective, since hunger or a flood has consequences whatever people believe. Marxists and feminists ask whose definitions prevail, because the power to define situations is unequally distributed.</p>
+
+<h3>Goffman's Dramaturgical Perspective</h3>
+<p>In <em>The Presentation of Self in Everyday Life</em> (1956, US edition 1959), Erving Goffman analysed face-to-face interaction as theatre. Individuals are performers who try to control the impressions others form of them, which he called <strong>impression management</strong>. Where Mead explained how the self emerges, Goffman showed how it is staged and sustained in everyday encounters.</p>
+
+<ul>
+  <li><strong>Front</strong>: the expressive equipment of a performance: setting (a clinic, a courtroom), appearance (uniform, dress) and manner (confident or deferential).</li>
+  <li><strong>Front and back regions</strong>: the front region is where the performance is given before an audience. The back region is where performers relax, rehearse and contradict the front, as waiters joke about customers in the kitchen.</li>
+  <li><strong>Teams</strong>: performances are often collective. Doctors and nurses, or a family before guests, cooperate to sustain a shared definition of the situation.</li>
+  <li><strong>Idealisation and mystification</strong>: performers present themselves in line with officially accredited values and keep social distance to maintain the audience's awe.</li>
+  <li><strong>Face-work</strong> ("On Face-Work", 1955): people protect their own and others' face through tact and repair embarrassing breakdowns with apologies or by "not noticing".</li>
+  <li><strong>Role distance</strong> (<em>Encounters</em>, 1961): performers signal that they are more than their role, as an adult riding a merry-go-round shows detachment.</li>
+  <li><strong>Stigma</strong> (<em>Stigma</em>, 1963): people with a spoiled identity manage information about themselves by passing or covering.</li>
+</ul>
+
+<p><strong>How it explains everyday life:</strong> it exposes the work behind ordinary order: a bride's composed shyness, a candidate's humility while campaigning in a village, a call-centre worker's adopted accent and Western name, and curated selves on Instagram. Social order appears fragile, sustained moment by moment through cooperation and tact.</p>
+
+<p><strong>Critique:</strong> Alvin Gouldner (<em>The Coming Crisis of Western Sociology</em>, 1970) saw dramaturgy as mirroring a middle class that sells appearances, blind to power and history. Critics also say it paints people as cynical manipulators, leaves unclear whether a true self lies behind the masks, and ignores the structures that decide who gets a stage. Giddens nonetheless drew on Goffman to show how routine interaction reproduces social structure.</p>
 
 <h2>Mind, Self, and Society</h2>
 
@@ -2348,6 +2525,43 @@ export const sociologyNoteContent: Record<string, string> = {
 </table>
 <p>Today, the distinction has blurred. Anthropologists study state and globalisation; sociologists study rural and tribal societies. Frazer: <em>"Social anthropology is that branch of sociology which deals with primitive societies."</em> Radcliffe-Brown: social anthropology is a "comparative sociology." Ghurye: sociology must include anthropological courses on comparative culture and social institutions. Andre Beteille: <em>"When an Indian studies a 'tribal' village he is an anthropologist; when he studies a 'nontribal' village he is a sociologist."</em></p>
 
+<h3>Sociology and Political Science</h3>
+<p>Political science studies the state, government, constitutions, political parties and the formal machinery of power. Sociology studies society as a whole and treats power as a social relation found in the family, caste, class, religion and the workplace as much as in the state. The two overlap most in <strong>political sociology</strong>, which asks how social structure shapes political life and how politics in turn reshapes society.</p>
+
+<table>
+  <tr>
+    <th>Political Science</th>
+    <th>Sociology</th>
+  </tr>
+  <tr>
+    <td>Studies the state and government: sovereignty, constitutions, law, public administration</td>
+    <td>Studies all social groups and institutions. The state is one institution among many and a product of social forces</td>
+  </tr>
+  <tr>
+    <td>Classical political science was normative, legal and institutional: what the ideal state should be</td>
+    <td>Empirical and comparative: how power actually works, who holds it and why</td>
+  </tr>
+  <tr>
+    <td>Power means formal, legitimate state power</td>
+    <td>Power is present in every relationship: patriarchy in the family, the dominant caste in the village, management in the factory. Feminists: "the personal is political"</td>
+  </tr>
+  <tr>
+    <td>Treats people as citizens and voters</td>
+    <td>Treats people as members of castes, classes, religions and genders whose identities shape political choices</td>
+  </tr>
+</table>
+
+<p><strong>Points of convergence:</strong></p>
+<ul>
+  <li><strong>Shared founders</strong>: Marx saw the state as an instrument of the ruling class. Weber defined the state, power, authority and the party. Robert Michels's <em>Political Parties</em> (1911) gave the iron law of oligarchy. Tocqueville's <em>Democracy in America</em> (1835-40) traced democracy to social conditions and voluntary associations.</li>
+  <li><strong>Behavioural revolution</strong>: from the 1950s political science borrowed sociological methods (surveys, voting studies) and concepts. Gabriel Almond's structural-functional approach drew on Parsons, and Almond and Verba's <em>The Civic Culture</em> (1963) used surveys in five nations to study political culture.</li>
+  <li><strong>Political sociology</strong>: Seymour Martin Lipset's <em>Political Man</em> (1960) traced democracy to economic development, education and class. Giovanni Sartori (1969) distinguished a "sociology of politics", which reduces politics to social causes, from a true political sociology in which political and social factors act on each other.</li>
+</ul>
+
+<p><strong>Indian example:</strong> Rajni Kothari's <em>Caste in Indian Politics</em> (1970) showed that democratic competition politicised caste while caste shaped voting and party strategy. F.G. Bailey's <em>Politics and Social Change: Orissa in 1959</em> (1963) and M.N. Srinivas's work on the dominant caste link village social structure to state politics. Election studies by Lokniti-CSDS draw on both disciplines.</p>
+
+<p><strong>Assessment:</strong> The boundary is one of emphasis. Political science without sociology cannot explain why the same formal institutions work differently in different societies, as Indian democracy works through caste and community. Sociology without political science underrates the autonomy of the state, a point Theda Skocpol pressed in <em>Bringing the State Back In</em> (1985).</p>
+
 <h2>Sociology and Common Sense</h2>
 
 <p>Many people claim that sociology is "just common sense." But as Comte argued, society must be studied scientifically to understand and solve its problems. Sociology systematically tests common-sense beliefs against evidence: and repeatedly debunks them.</p>
@@ -2461,6 +2675,34 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Analyse results to draw conclusions, generalisations, and theories.</li>
   <li>Publish results: so they can be verified by others; incorporated into social policy.</li>
 </ol>
+
+<h3>Theory and Data: "Data Without Theory Is Blind"</h3>
+<p>The maxim adapts Immanuel Kant's <em>Critique of Pure Reason</em> (1781), which held that thoughts without content are empty and intuitions without concepts are blind. In sociology it means that facts do not speak for themselves. Theory tells the researcher what to observe and how to interpret it, while data test, refine or overturn theory. <strong>Methodology</strong> is the system of rules and procedures that links the two: how concepts are operationalised, which method suits the question, and what counts as evidence.</p>
+
+<ul>
+  <li><strong>From theory to data (deduction)</strong>: hypotheses are derived from theory and tested, as in Popper's hypothetico-deductive method. Durkheim's <em>Suicide</em> (1897) began from a theory of integration and regulation and tested it against suicide rates.</li>
+  <li><strong>From data to theory (induction)</strong>: generalisations are built up from observation, as in grounded theory (Glaser and Strauss, <em>The Discovery of Grounded Theory</em>, 1967). M.N. Srinivas developed the concept of Sanskritisation from fieldwork among the Coorgs (<em>Religion and Society among the Coorgs of South India</em>, 1952).</li>
+  <li><strong>The wheel of science</strong>: Walter Wallace (<em>The Logic of Science in Sociology</em>, 1971) presented research as a cycle in which theory yields hypotheses, hypotheses guide observation, observations yield empirical generalisations, and these feed back into theory.</li>
+</ul>
+
+<h4>C. Wright Mills: Two Opposite Failures</h4>
+<p>In <em>The Sociological Imagination</em> (1959), Mills attacked two errors:</p>
+<ul>
+  <li><strong>Grand theory</strong>: concepts so general that they never reach observable social reality. His target was Parsons's <em>The Social System</em> (1951), passages of which Mills "translated" into plain English to show how little they said. This is theory without data, empty.</li>
+  <li><strong>Abstracted empiricism</strong>: survey research, associated with Paul Lazarsfeld, that piles up statistics on narrow questions without a theory of social structure or history, so that method rather than problems governs research. This is data without theory, blind.</li>
+</ul>
+<p>Mills wanted research driven by substantive problems that connect personal troubles with public issues.</p>
+
+<h4>Robert K. Merton: Middle Range and the Interplay of Theory and Research</h4>
+<p>Merton (<em>Social Theory and Social Structure</em>, 1949, enlarged 1957 and 1968) argued for <strong>theories of the middle range</strong>: limited theories close enough to data to be tested yet general enough to go beyond description, such as reference group theory. In "The Bearing of Empirical Research on Sociological Theory" he showed that research does more than test theory. It also:</p>
+<ul>
+  <li><strong>Initiates theory</strong> through the <strong>serendipity pattern</strong>: an unanticipated, anomalous and strategic finding forces a new explanation.</li>
+  <li><strong>Recasts theory</strong>: new data that do not fit force the conceptual scheme to be extended.</li>
+  <li><strong>Refocuses theory</strong>: new methods of research open new areas of theoretical interest.</li>
+  <li><strong>Clarifies concepts</strong>: research demands concepts that can be measured, so vague ideas must be made precise.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Most research now moves back and forth between deduction and induction. Feminist and interpretive scholars add that theory also enters through the researcher's values and choice of problem, so the relation between theory and data is never purely technical.</p>
 
 <h2>Critique of the Scientific Method in Sociology</h2>
 
@@ -2963,6 +3205,29 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 <p>Applications: media representation of gender (women portrayed as housewives; men as doctors and athletes), political campaigns (frequency of terms like "jobs" and "unemployment"), social media (Kosinski used Facebook profile analysis to infer IQ, sexuality, and political views from user "likes").</p>
 
+<h3>Social Survey: Strengths and Weaknesses</h3>
+<p>The social survey collects standardised information from a large number of people, usually a sample, through questionnaires or structured interviews. Classic examples are Charles Booth's <em>Life and Labour of the People in London</em> (1889-1903) and Seebohm Rowntree's study of poverty in York (1901). In India the National Sample Survey (since 1950), the National Family Health Survey (since 1992-93) and the Periodic Labour Force Survey (since 2017-18) are large official surveys.</p>
+
+<ul>
+  <li><strong>Strengths</strong>: with probability sampling, findings can be generalised to the population. Standard questions allow replication and comparison across groups, regions and time, as successive NFHS rounds show. Data can be quantified to test hypotheses and correlations. Coverage is wide at low cost per respondent, anonymity can encourage honest answers on sensitive subjects, and governments depend on survey data for policy.</li>
+  <li><strong>Validity</strong>: closed questions impose the researcher's categories and miss meanings. Aaron Cicourel (<em>Method and Measurement in Sociology</em>, 1964) argued that researchers and respondents may not share the meaning of questions.</li>
+  <li><strong>Saying and doing</strong>: Richard LaPiere (1934) toured the US with a Chinese couple and was refused service only once, yet over nine-tenths of the establishments that answered his later letter said they would not serve Chinese guests.</li>
+  <li><strong>Response bias</strong>: social desirability, faulty memory, interviewer effects (such as the caste or gender of the interviewer) and non-response distort results.</li>
+  <li><strong>Snapshot and politics</strong>: a survey records one moment and shows correlation more easily than cause. Survey data can also be contested: in 2019 the government withheld the results of the 2017-18 consumer expenditure survey, citing data quality.</li>
+</ul>
+
+<h3>The Census Method and Its Challenges</h3>
+<p>A census enumerates every member of a population rather than a sample. India's census has been taken every ten years since 1881, the first synchronous count, and Census 2011 was the fifteenth. The 2021 round was postponed because of the COVID-19 pandemic. Its houselisting phase was scheduled for April to September 2026 and the population count for February 2027. It is the first Indian census to offer self-enumeration online and the first full caste count since 1931, decided by the Cabinet Committee on Political Affairs on 30 April 2025.</p>
+
+<ul>
+  <li><strong>Scale and quality</strong>: millions of enumerators, mostly schoolteachers, must apply the same definitions uniformly across languages and terrains.</li>
+  <li><strong>Hard-to-count populations</strong>: the homeless, nomadic and denotified tribes, seasonal migrants, and people in conflict zones or remote forests tend to be undercounted.</li>
+  <li><strong>Misreporting</strong>: age heaping at round numbers, and answers on caste, religion, mother tongue or disability shaped by the respondent's interests.</li>
+  <li><strong>Politics of categories</strong>: a census classifies as well as counts. Bernard Cohn (<em>An Anthropologist among the Historians</em>, 1987) showed how colonial censuses turned caste into a fixed, ranked, countable category. When H.H. Risley's 1901 Census ranked castes by social precedence, caste associations petitioned for higher places. Today Adivasi groups in Jharkhand demand a separate Sarna religion code, and the caste count must classify thousands of jatis.</li>
+  <li><strong>Long gaps and high stakes</strong>: the delay left welfare targeting on 2011 figures, and the new count will underpin delimitation of constituencies and women's reservation under the 106th Amendment (2023).</li>
+  <li><strong>Privacy and trust</strong>: digital collection raises concerns about data security and linkage with other databases, which can lower cooperation.</li>
+</ul>
+
 <h2>Qualitative Research Methods</h2>
 
 <h3>1. Semi-Structured / Unstructured Interviews</h3>
@@ -3067,6 +3332,28 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Reflexivity</strong>: Sociologists should explicitly state their national, ethnic, and theoretical locations at the start of research.</li>
   <li><strong>Triadic analysis (Macfarlane)</strong>: Comparing only two societies (England and India, or "the West and the rest") inevitably implies one is superior. Beteille: Western scholars articulated most concepts in sociology on the basis of their own societies. Solution: compare three societies simultaneously to avoid binary bias.</li>
 </ul>
+
+<h3>Digital Ethnography and Visual Methods</h3>
+<p><strong>Digital ethnography</strong> extends participant observation to social life lived through digital media: online communities, social media platforms, messaging groups, gaming worlds and the everyday use of smartphones. The field site may be wholly online or may connect online and offline settings. Christine Hine's <em>Virtual Ethnography</em> (2000) treated the internet both as a culture and as a cultural artefact, and Robert Kozinets called the study of online communities "netnography". Daniel Miller's comparative project <em>Why We Post</em> (published from 2016) studied social media in nine field sites, including one in South India, and found that people make platforms local rather than becoming globally alike.</p>
+
+<p><strong>Visual methods</strong> use photographs, film, video and drawings as data or as tools of research. Researchers analyse existing images (advertisements, Instagram posts, wedding albums), produce their own (ethnographic film), or ask participants to photograph their own lives and discuss the pictures (photovoice and photo-elicitation). Gregory Bateson and Margaret Mead's <em>Balinese Character</em> (1942) was built on hundreds of photographs. Gillian Rose (<em>Visual Methodologies</em>, 2001) asks researchers to examine the production of an image, the image itself and its audiences.</p>
+
+<p><strong>Why the trend is growing:</strong></p>
+<ul>
+  <li>Much of social life, from caste-based matrimonial sites and WhatsApp family groups to election campaigns and gig work, now takes place on screens, so the field itself has moved.</li>
+  <li>Online material is abundant and cheap, and reaches groups that are hard to meet in person, such as a diaspora or LGBTQ communities.</li>
+  <li>Images capture embodied, emotional and non-verbal aspects of culture that interviews miss, and photovoice gives voice to participants with little literacy.</li>
+</ul>
+
+<p><strong>Problems:</strong></p>
+<ul>
+  <li><strong>Ethics</strong>: informed consent is hard to obtain in public forums, quoted posts can be traced to their authors, and images identify people. Covert observation online revives the dilemmas of covert fieldwork.</li>
+  <li><strong>Authenticity and representativeness</strong>: online selves are curated performances in Goffman's sense, and users are not a sample of the population, given India's digital divide by gender, class and region.</li>
+  <li><strong>Platform power</strong>: algorithms decide what is visible, and companies control access to data.</li>
+  <li><strong>Interpretation</strong>: an image does not explain itself. Its meaning depends on who made it, for whom, and how audiences read it.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Digital and visual methods widen fieldwork rather than replace it. The strongest studies follow people between online and offline life and combine images with interviews and observation, a form of triangulation.</p>
 
 <h2>Variables and Correlation</h2>
 
@@ -3241,6 +3528,29 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Transdisciplinary</strong>: brings together sociology, anthropology, psychology, political science, and literature to analyse complex issues like gender-based violence and reproductive rights.</li>
   <li><strong>Special researcher-researched relationship</strong>: feminist researchers listen carefully to women informants; they pay close attention to how women think about their lives.</li>
 </ul>
+
+<h3>Intersectionality as a Research Approach</h3>
+<p>Intersectionality holds that axes of inequality such as gender, race, caste, class, religion, sexuality and disability do not act separately but combine to produce distinct experiences of privilege and oppression. Kimberle Crenshaw coined the term in 1989 ("Demarginalizing the Intersection of Race and Sex") after courts, as in <em>DeGraffenreid v. General Motors</em> (1976), refused to see discrimination against Black women as anything other than race discrimination or sex discrimination. Its roots lie in Black feminism, including the Combahee River Collective Statement (1977). Patricia Hill Collins (<em>Black Feminist Thought</em>, 1990) described interlocking oppressions as a "matrix of domination".</p>
+
+<h4>Significance for Social Research</h4>
+<ul>
+  <li><strong>Reveals hidden groups</strong>: single-axis analysis averages away those at the intersections. Data on "women" often reflect upper-caste women, and data on "Dalits" often reflect Dalit men. Crenshaw's "Mapping the Margins" (1991) showed how services for victims of domestic violence failed immigrant women of colour.</li>
+  <li><strong>Challenges additive models</strong>: Dalit women do not carry caste and gender as two separate burdens. Caste is maintained through control of women's sexuality, which Uma Chakravarti (1993) called Brahmanical patriarchy, and sexual violence is used to punish Dalit assertion, as in the Khairlanji massacre (2006).</li>
+  <li><strong>Standpoint and voice</strong>: Gopal Guru ("Dalit Women Talk Differently", 1995) and Sharmila Rege's Dalit feminist standpoint (1998) argued that both the women's movement and the Dalit movement had spoken for Dalit women without them.</li>
+  <li><strong>Better policy</strong>: it calls for disaggregated data and targeted schemes, for example tracking outcomes for Muslim women or Adivasi girls separately.</li>
+  <li><strong>Reflexivity</strong>: researchers must examine their own social location, which shapes access, trust and interpretation.</li>
+</ul>
+
+<h4>Limitations</h4>
+<ul>
+  <li><strong>Endless categories</strong>: axes can multiply without limit. Leslie McCall ("The Complexity of Intersectionality", 2005) distinguished anti-categorical, intra-categorical and inter-categorical approaches to manage the problem.</li>
+  <li><strong>Measurement</strong>: in surveys each added axis splits the sample into smaller cells, so statistical comparison weakens. Much intersectional work therefore remains qualitative and small-scale.</li>
+  <li><strong>Neglect of structure</strong>: Marxist critics argue that class is a relation of exploitation, not one identity among many, and that intersectionality describes positions without explaining their origin.</li>
+  <li><strong>Travel to India</strong>: Nivedita Menon (2015) questioned what a concept built on US anti-discrimination law adds to Indian feminism, which had long dealt with caste and community.</li>
+  <li><strong>Fragmentation</strong>: critics fear it can divide movements into ever smaller identity groups.</li>
+</ul>
+
+<p><strong>Assessment:</strong> Intersectionality works best as a sensitising lens that asks which inequalities matter in a given context, not as a fixed checklist of identities.</p>
 
 <h2>Research Design</h2>
 
@@ -3531,6 +3841,56 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 <p>Amartya Sen's <strong>Capability Approach</strong>: poverty is not material deprivation alone but deprivation of basic capabilities, the freedom to become what one wants to be. Development means expanding people's capabilities and freedom of choice. Anti-poverty programmes must focus not just on income but on education, healthcare, and capability enhancement. Kerala: moderately developed economy but achieved significant poverty reduction through education and healthcare expansion, per capita GDP does not directly determine well-being. This approach inspired the <strong>Human Development Index (HDI)</strong>, created by UNDP in 1990.</p>
+
+<h3>Social Capital Deprivation and the Capability Approach</h3>
+<p><strong>Social capital</strong> refers to the resources people can draw on through their networks and relationships. Pierre Bourdieu ("The Forms of Capital", 1986) defined it as resources linked to membership of a durable network of mutual acquaintance and recognition, convertible into economic and cultural capital and unequally distributed by class. James Coleman (1988) stressed norms and trust within families and communities. Robert Putnam (<em>Making Democracy Work</em>, 1993, and <em>Bowling Alone</em>, 2000) treated it as networks, norms and trust that enable collective action, and distinguished:</p>
+<ul>
+  <li><strong>Bonding social capital</strong>: ties within homogeneous groups such as kin, caste or a slum community, which help people get by through informal credit, shared food and care.</li>
+  <li><strong>Bridging social capital</strong>: ties across groups. Mark Granovetter ("The Strength of Weak Ties", 1973) showed that acquaintances, not close friends, carry information about jobs.</li>
+  <li><strong>Linking social capital</strong> (Michael Woolcock): ties to people with power in institutions such as officials, banks and employers.</li>
+</ul>
+
+<p><strong>Social capital deprivation and chronic poverty:</strong> the chronically poor often have dense bonding ties but few bridging or linking ties, so they cannot reach jobs, credit or public services and depend on middlemen and moneylenders. Bonding ties can also trap. Alejandro Portes (1998) described negative social capital: exclusion of outsiders, heavy claims on successful members and downward levelling norms. A Dalit or Adivasi family may have strong community ties but no contact in the block office, while dominant castes use caste networks for business and jobs.</p>
+
+<table>
+  <tr>
+    <th>Dimension</th>
+    <th>Capability Deprivation (Sen)</th>
+    <th>Social Capital Deprivation</th>
+  </tr>
+  <tr>
+    <td>Poverty is</td>
+    <td>Lack of real freedom to be and do what one values: health, education, political voice</td>
+    <td>Lack of useful relationships, trust and access to institutions</td>
+  </tr>
+  <tr>
+    <td>Unit of analysis</td>
+    <td>The individual's capabilities and entitlements</td>
+    <td>Networks, groups and communities</td>
+  </tr>
+  <tr>
+    <td>Why poverty persists</td>
+    <td>Low capabilities block the conversion of resources into well-being across generations</td>
+    <td>Closed networks and missing links reproduce disadvantage across generations</td>
+  </tr>
+  <tr>
+    <td>Measures</td>
+    <td>Human Development Index (1990), Multidimensional Poverty Index (2010)</td>
+    <td>Surveys of membership, trust and networks</td>
+  </tr>
+  <tr>
+    <td>Policy</td>
+    <td>Public provision of health, education, nutrition and rights</td>
+    <td>Self-help groups, community organisation, linking the poor to banks and the state</td>
+  </tr>
+  <tr>
+    <td>Critique</td>
+    <td>Individualistic, neglects group-based and structural power</td>
+    <td>Can romanticise community, blame the poor's networks and ignore class and the state (Ben Fine, John Harriss)</td>
+  </tr>
+</table>
+
+<p><strong>Complementarity:</strong> Sen himself treated social exclusion as a form of capability deprivation (2000), recalling Adam Smith's point that being unable to appear in public without shame is a deprivation in itself. India's self-help group movement, from NABARD's bank linkage programme (1992) to Kerala's Kudumbashree (1998), builds bridging and linking ties as a route to capabilities such as credit, voice and literacy.</p>
 
 <h2>Dimensions of Stratification: Class, Status, Gender, Ethnicity, and Race</h2>
 
@@ -4037,6 +4397,36 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Flexibility and quick solutions: less commitment than mainstream churches; services tailored to individual identity.</li>
 </ul>
 
+<h3>Sects, Cults and Caste</h3>
+<p>Weber distinguished the <strong>church</strong>, a compulsory organisation into which one is born, from the <strong>sect</strong>, a voluntary association of the religiously qualified that one joins by choice ("The Protestant Sects and the Spirit of Capitalism", 1906). Ernst Troeltsch (<em>The Social Teaching of the Christian Churches</em>, 1912) added that sects draw on the lower strata and stand apart from the world. H. Richard Niebuhr (<em>The Social Sources of Denominationalism</em>, 1929) argued that sects rarely outlast one generation in their original form: as members prosper and children are born into them, they become denominations. Cults are looser, usually centred on a charismatic leader and open to followers of other faiths.</p>
+
+<p><strong>Role in multi-religious societies:</strong> sects give dignity and community to groups ranked low by the established order, protest against priestly hierarchy, and sometimes grow into new religions. They can also provoke conflict with the parent faith, as when Pakistan declared Ahmadis non-Muslim by constitutional amendment in 1974, or when the Dera Sacha Sauda clashed with Sikh bodies in Punjab in 2007.</p>
+
+<p><strong>Effects on caste and intercaste relations in India:</strong></p>
+<ul>
+  <li><strong>Rejection of caste</strong>: Buddhism and Jainism, the Bhakti and Sant traditions (Kabir, Ravidas), Basava's Virashaiva movement in twelfth-century Karnataka, and the Satnami movement founded by Guru Ghasidas among the Chamars of Chhattisgarh in the early nineteenth century rejected Brahmin ritual and admitted all castes.</li>
+  <li><strong>Weber's thesis</strong>: in <em>The Religion of India</em> (1916-17) Weber observed that Indian sects tended to be reabsorbed into the caste order, often becoming castes themselves. The Lingayats became an endogamous cluster of jatis with their own internal hierarchy.</li>
+  <li><strong>Deras and Dalit identity</strong>: in Punjab many Dalits follow deras such as Dera Sachkhand Ballan, where they find a dignity denied in Jat-dominated gurdwaras. After a Ravidassia sant was killed in Vienna in 2009, the dera declared a separate Ravidassia religion with its own scripture, the <em>Amritbani</em>, in 2010. This raised Dalit confidence but hardened boundaries with Jat Sikhs.</li>
+  <li><strong>Neo-Buddhism</strong>: Ambedkar's conversion with his followers at Nagpur on 14 October 1956 gave Mahars and others a new identity, but conversion did not end untouchability in villages, where neo-Buddhists are often still treated as a caste.</li>
+  <li><strong>New cults</strong>: guru movements such as the Radhasoamis, the Brahma Kumaris and the followers of Sathya Sai Baba (studied by Lawrence Babb in <em>Redemptive Encounters</em>, 1986) bring castes together in worship and service but rarely touch marriage.</li>
+</ul>
+
+<p><strong>Assessment:</strong> sects and cults soften caste in worship, commensality (as in the langar) and the sense of equal dignity, much less in marriage. Over time they may become new castes, as Weber predicted, or sharpen caste identities, as with the deras.</p>
+
+<h3>Little and Great Traditions in Contemporary India</h3>
+<p>Robert Redfield (<em>Peasant Society and Culture</em>, 1956) distinguished the <strong>great tradition</strong> of the reflective few, cultivated in schools and temples, from the <strong>little tradition</strong> of the largely unreflective many in village communities. McKim Marriott ("Little Communities in an Indigenous Civilization", in <em>Village India</em>, 1955), studying Kishan Garhi in Uttar Pradesh, showed the two linked by universalisation and parochialisation. Milton Singer (<em>When a Great Tradition Modernizes</em>, 1972) found in Madras that the great tradition was being carried by new media and urban middle-class devotees rather than declining.</p>
+
+<p><strong>How they coexist today:</strong></p>
+<ul>
+  <li><strong>Layered worship</strong>: the same household worships Sanskritic deities and the village goddess or a local hero. M.N. Srinivas (<em>Religion and Society among the Coorgs of South India</em>, 1952) described all-India, peninsular, regional and local levels of Hinduism.</li>
+  <li><strong>Media</strong>: the film <em>Jai Santoshi Maa</em> (1975) turned a little-known goddess into a pan-Indian deity, and Ramanand Sagar's television <em>Ramayan</em> (1987-88) spread a standard version of the epic, while local versions live on in folk performance.</li>
+  <li><strong>Migration</strong>: Chhath has travelled with Bihari migrants to Delhi and Mumbai, and the public Ganeshotsav that Tilak promoted from 1893 is now celebrated across India.</li>
+  <li><strong>Two-way borrowing</strong>: local deities acquire Sanskritic names, myths and Brahmin priests, while Sanskritic gods take local forms and festivals.</li>
+  <li><strong>Resistance</strong>: some Adivasi and Bahujan groups assert their own traditions against the great tradition, as in celebrating Mahishasur as a hero, and Kancha Ilaiah (<em>Why I Am Not a Hindu</em>, 1996) rejects calling Bahujan culture "little".</li>
+</ul>
+
+<p><strong>Assessment:</strong> the two traditions coexist through constant exchange rather than replacement. Critics note that the dichotomy is too neat and implicitly ranks textual culture above folk culture, and Dumont and Pocock (1957) located India's unity in shared structural principles such as purity and hierarchy.</p>
+
 <h2>Religion in Modern Society: Secularisation, Revivalism, and Fundamentalism</h2>
 
 <h3>Secularisation</h3>
@@ -4298,6 +4688,45 @@ export const sociologyNoteContent: Record<string, string> = {
   <tr><td><strong>Control via non-human technology</strong></td><td>Skills transferred from employees to machines; standardisation</td><td>Workers easily replaceable; bargaining power destroyed</td></tr>
 </table>
 
+<h3>The Gig Economy and Platform Capitalism</h3>
+<p>The <strong>gig economy</strong> is paid work organised as short tasks ("gigs") mediated by digital platforms: ride-hailing (Uber, Ola), food and grocery delivery (Swiggy, Zomato), home services (Urban Company) and online freelancing. Workers are classed as independent contractors or "partners", not employees. NITI Aayog's report <em>India's Booming Gig and Platform Economy</em> (2022) estimated 7.7 million gig workers in 2020-21, projected to reach 23.5 million by 2029-30.</p>
+
+<p>Nick Srnicek (<em>Platform Capitalism</em>, 2016) argues that platforms are digital infrastructures that sit between users, profit by extracting and controlling data, and grow through network effects. "Lean platforms" such as Uber own almost no assets: workers own the vehicles and phones, while the platform owns the software and the data.</p>
+
+<table>
+  <tr><th>Dimension</th><th>Industrial Capitalism</th><th>Platform Capitalism</th></tr>
+  <tr><td>Workplace</td><td>Factory or office, workers gathered in one place</td><td>Dispersed across the city, the road or the home, workers rarely meet</td></tr>
+  <tr><td>Employment relation</td><td>Wage contract with an employer, regular hours</td><td>Independent contractor paid per task, no fixed employer</td></tr>
+  <tr><td>Control</td><td>Foremen, Taylorist rules and the assembly line</td><td>Algorithmic management: automated allocation, ratings, incentives, surge pricing and deactivation</td></tr>
+  <tr><td>Means of production</td><td>Owned by the capitalist</td><td>Vehicle and phone owned by the worker, data and algorithm by the platform</td></tr>
+  <tr><td>Social security</td><td>Tied to employment: provident fund, pension, sick leave</td><td>Largely absent, risks shifted to the worker</td></tr>
+  <tr><td>Collective action</td><td>Trade unions and collective bargaining</td><td>Atomised workforce, but new app-based worker unions and flash strikes</td></tr>
+</table>
+
+<p><strong>Impact on the labour market and workers:</strong></p>
+<ul>
+  <li><strong>Gains</strong>: easy entry, flexible hours and extra income for students, migrants and some women, and urban work for those without formal credentials.</li>
+  <li><strong>Precarity</strong>: volatile income, long hours to meet incentive targets, road risks in fast delivery, and deactivation without a hearing. Guy Standing (<em>The Precariat</em>, 2011) sees such workers as part of a growing class without occupational security or identity.</li>
+  <li><strong>Hidden control</strong>: the app's rules are opaque, so workers cannot contest pay or ratings. The algorithm replaces the visible boss.</li>
+  <li><strong>Erosion of the standard employment relationship</strong>: classing workers as "partners" removes employer obligations and bypasses labour law.</li>
+</ul>
+
+<p><strong>Social security net:</strong> the Code on Social Security (2020), in force with the other labour codes from 21 November 2025, is the first Indian law to define gig workers and platform workers. It provides for schemes covering life and disability, health, maternity and old age, funded partly by aggregators contributing 1 to 2 per cent of annual turnover, capped at 5 per cent of what they pay such workers. Rajasthan passed the first state law for platform-based gig workers in July 2023. Critics note that because gig workers are defined as outside the employer-employee relationship, minimum wage and other employment protections do not apply, and benefits depend on schemes the government must frame.</p>
+
+<h3>Marx on the Limits of the Working Day</h3>
+<p>In <em>Capital</em>, Volume 1 (1867), chapter 10 on "The Working-Day", Marx divides the working day into necessary labour time, in which the worker reproduces the value of his wages, and surplus labour time, which produces surplus value for the capitalist. The day has a minimum, since under capitalism it can never shrink to necessary labour alone, and outer limits: physical (sleep, food, rest) and moral or social (time for family, education and social life). Within these limits it is elastic.</p>
+
+<ul>
+  <li><strong>Absolute surplus value</strong>: capital seeks more surplus value by lengthening the working day. Marx drew on factory inspectors' reports of children and adults working 12 to 16 hours, and wrote that capital is dead labour that, "vampire-like", lives only by sucking living labour.</li>
+  <li><strong>Right against right</strong>: the capitalist claims the right to use the labour power he has bought, and the worker the right to sell it without being destroyed. "Between equal rights force decides." The length of the day is settled by class struggle.</li>
+  <li><strong>The Factory Acts</strong>: English workers won legal limits step by step, from the Factory Act of 1833, which restricted child labour and appointed inspectors, to the Ten Hours Act of 1847 for women and young persons. Marx called the legally limited working day a "modest Magna Charta" in place of the grand catalogue of the rights of man.</li>
+  <li><strong>Relative surplus value</strong>: once hours were capped, capital raised surplus value by reducing necessary labour time through machinery, speed-up and intensification of work within the same hours.</li>
+</ul>
+
+<p><strong>Significance for the social organisation of work:</strong> industrial capitalism imposed clock time and time-discipline on workers (E.P. Thompson, "Time, Work-Discipline and Industrial Capitalism", 1967). The struggle for the eight-hour day, symbolised by the Haymarket events in Chicago (1886) and the ILO's first convention (1919), continued the story Marx told.</p>
+
+<p><strong>India:</strong> the Factories Act 1948, now subsumed in the Occupational Safety, Health and Working Conditions Code (2020), limited adult work to 48 hours a week and 9 hours a day. In 2020 several states allowed 12-hour shifts during the pandemic, and in <em>Gujarat Mazdoor Sabha v. State of Gujarat</em> (2020) the Supreme Court struck down Gujarat's notification that waived overtime wages. Calls by business leaders for 70-hour working weeks, and the round-the-clock availability expected of platform workers, show that the limits of the working day are still contested.</p>
+
 <h2>Formal and Informal Organisation of Work</h2>
 
 <h3>Formal Organisation</h3>
@@ -4388,6 +4817,26 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Feminist sociologists (Selma James, Ann Oakley, Christine Delphy) have argued that housework produces things of value, it reproduces the labour power that capitalism depends upon, yet it goes unaccounted, unrewarded, and unseen. Selma James ran the "Wages for Housework" campaign in 1972, demanding recognition of domestic labour as socially necessary and economically valuable work.</p>
 
 <blockquote>"It is common sense that housework is unpaid and workplace is paid. Sociology helps in realising that it is only because of housework that capitalism is functioning. All units in society are connected."</blockquote>
+
+<h3>The Reserve Army of Labour and Feminist Debates</h3>
+<p>In <em>Capital</em>, Volume 1 (1867), chapter 25 on "The General Law of Capitalist Accumulation", Marx argued that accumulation, especially mechanisation, constantly produces a <strong>relative surplus population</strong> or industrial reserve army of unemployed and partly employed workers. It takes three forms:</p>
+<ul>
+  <li><strong>Floating</strong>: workers repelled and attracted by modern industry as it contracts and expands.</li>
+  <li><strong>Latent</strong>: the rural population ready to move to the towns as capitalism enters agriculture.</li>
+  <li><strong>Stagnant</strong>: workers in extremely irregular employment, such as domestic industry, living in the worst conditions.</li>
+</ul>
+<p>The reserve army serves capital by holding down wages, disciplining those in work through fear of replacement, and supplying labour that can be drawn in during booms and expelled in slumps.</p>
+
+<h4>Feminist Positions</h4>
+<ul>
+  <li><strong>Veronica Beechey</strong> ("Some Notes on Female Wage Labour in Capitalist Production", <em>Capital and Class</em>, 1977) argued that married women are a preferred part of the reserve army. Because the family wage ideology assumes husbands support them, they can be paid less than the cost of their own upkeep. They can be dismissed easily and return to the home without being counted as unemployed.</li>
+  <li><strong>Wartime evidence</strong>: in the Second World War women were drawn into factories in Britain and the US, and many were pushed back into the home after 1945.</li>
+  <li><strong>Irene Bruegel</strong> (<em>Feminist Review</em>, 1979) tested the thesis for the British recession of the 1970s. Women in manufacturing lost jobs faster than men, but women's overall employment kept growing because women were concentrated in expanding service and clerical work. Occupational segregation shielded many "women's jobs" from substitution by men.</li>
+  <li><strong>Housewifisation</strong>: Maria Mies (<em>The Lace Makers of Narsapur</em>, 1982) showed that women making lace for export in Andhra Pradesh were defined as housewives doing spare-time work, which justified very low piece rates. Defining women as non-workers is itself a way of producing cheap labour.</li>
+  <li><strong>Feminisation of labour</strong>: Guy Standing (1989) argued that flexible global production increasingly relies on women's cheap and insecure labour, so women become a core but precarious part of the workforce, not merely a reserve.</li>
+</ul>
+
+<p><strong>Indian relevance:</strong> women's farm labour, home-based work such as beedi rolling and garment piecework, and seasonal work fit the pattern of a low-paid reserve that is easily shed. Critics add that the concept takes the home as women's natural place and leaves out their unpaid domestic labour, which reproduces the entire labour force.</p>
 
 <h2>Comparative Summary</h2>
 
@@ -4567,6 +5016,29 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Episodic accountability: democracy limited to voting only; limited accountability mechanisms; illiteracy and ignorance of populace</li>
 </ul>
 
+<h3>Political Participation: Meaning, Modes and Barriers</h3>
+<p>Political participation refers to the voluntary activities by which citizens share in choosing rulers and, directly or indirectly, in shaping public policy (Herbert McClosky, 1968). It includes conventional acts such as voting and campaigning and unconventional acts such as protest, which Barnes and Kaase (<em>Political Action</em>, 1979) found had become normal in Western democracies.</p>
+
+<ul>
+  <li><strong>Lester Milbrath</strong> (<em>Political Participation</em>, 1965) arranged participation as a hierarchy. <strong>Gladiatorial</strong> activities (holding office, standing for election, active party work) involve very few. <strong>Transitional</strong> activities include attending meetings, contacting officials and donating. <strong>Spectator</strong> activities include voting and discussing politics. Below them are the <strong>apathetics</strong>. Milbrath and M.L. Goel (1977) later recast the scheme into several modes, including protest and community activity.</li>
+  <li><strong>Verba and Nie</strong> (<em>Participation in America</em>, 1972) identified four modes: voting, campaign activity, communal activity on local problems, and particularised contacting of officials.</li>
+  <li><strong>Protest and new forms</strong>: dharnas, bandhs, hunger strikes, petitions, public interest litigation and online campaigns.</li>
+</ul>
+
+<p><strong>Participatory democracy and its conditions:</strong> Carole Pateman (<em>Participation and Democratic Theory</em>, 1970) argued that participation in workplaces and local bodies educates citizens for democracy. Almond and Verba (<em>The Civic Culture</em>, 1963) linked stable democracy to a participant political culture rather than a parochial or subject one. Conducive conditions include literacy and political information, economic security and relative equality, civil liberties and a free press, a dense civil society, and decentralised institutions such as the panchayats and municipalities created by the 73rd and 74th Amendments (1992), with one-third of seats reserved for women.</p>
+
+<p><strong>Participation and voting in India:</strong> unlike Western democracies, where turnout rises with income and education, India's poor, rural, Dalit and Adivasi voters turn out at least as much as the affluent, a pattern Yogendra Yadav called the "second democratic upsurge" of the 1990s. Women's turnout matched men's in the 2019 Lok Sabha election. Lokniti-CSDS studies show voting shaped by caste and community, party loyalty, leaders and candidates, welfare benefits and local patronage.</p>
+
+<p><strong>Barriers to participation in India:</strong></p>
+<ul>
+  <li><strong>Socio-economic</strong>: poverty and illiteracy limit participation beyond voting, as daily survival leaves little time for meetings or campaigns.</li>
+  <li><strong>Social structure</strong>: dominant castes have long controlled who speaks in the village, and patriarchal norms lead many women to vote as the family directs and produce proxy rule by "sarpanch patis".</li>
+  <li><strong>Money and muscle</strong>: costly elections, criminalisation of politics and opaque funding. The Supreme Court struck down electoral bonds in <em>Association for Democratic Reforms v. Union of India</em> (2024).</li>
+  <li><strong>Exclusion from the rolls</strong>: internal migrants often cannot vote where they work, and homeless and nomadic people face documentation barriers.</li>
+  <li><strong>Institutional</strong>: dynastic and centralised parties limit inner-party democracy, and accountability is largely confined to voting every five years.</li>
+  <li><strong>Alienation and fear</strong>: urban middle-class apathy, distrust of politicians, and violence in insurgency-affected areas.</li>
+</ul>
+
 <h2>The State</h2>
 
 <p>Weber's classic definition: the state is "a human community that successfully claims the monopoly over the legitimate use of physical force within a given territory." Other groups might resort to violence, but they are termed terrorists or hooligans. Thomas Hobbes: the state exercises sovereignty. Machiavelli: the state comprises institutions governing members within a territorial boundary; members confined in a boundary are deemed citizens and enjoy political, cultural, religious, social, and economic rights.</p>
@@ -4699,6 +5171,48 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>A social movement may decline for several reasons: when the goal is achieved and energy dissipates; when the movement is repressed by state authorities (frightening away participants, discouraging new recruits, imprisoning leaders); when factionalism develops and undermines unity; when the movement goes mainstream: becoming an accepted part of the system after realising some of its goals, so that it contributes to but no longer challenges the status quo. The US labor movement is now well-established; its leaders control vast sums of money and have more in common with the business tycoons they once opposed than with rank-and-file workers.</p>
 
+<h3>Social Movements in the Digital Era</h3>
+<p>Digital media have changed how movements recruit, communicate and protest. Manuel Castells (<em>Networks of Outrage and Hope</em>, 2012) describes <strong>networked social movements</strong>, from the Arab Spring (2010-11) to Occupy Wall Street (2011), which begin with outrage shared online, occupy urban squares and act in a hybrid space of internet and street. They are horizontal, often leaderless, viral and self-reflective. W. Lance Bennett and Alexandra Segerberg (<em>The Logic of Connective Action</em>, 2013) contrast collective action, built on formal organisations and shared identity, with <strong>connective action</strong>, in which individuals join through personal frames shared on social media, such as "We are the 99%".</p>
+
+<p><strong>Changes in the forms of protest:</strong></p>
+<ul>
+  <li>Hashtag campaigns and online petitions, as with #MeToo (2017), which spread to India in 2018.</li>
+  <li>Citizen video that bypasses mainstream media: the viral video of Dalit youths being flogged at Una (2016) set off a Dalit march across Gujarat.</li>
+  <li>Rapid mobilisation without parties or unions, as in India Against Corruption (2011) and the protests after the Delhi gang rape (2012).</li>
+  <li>Hybrid protest: the farmers' protest of 2020-21 combined unions and gurdwara networks with its own newspaper, social media teams and diaspora support.</li>
+</ul>
+
+<p><strong>Challenges:</strong></p>
+<ul>
+  <li><strong>Fragility</strong>: Zeynep Tufekci (<em>Twitter and Tear Gas</em>, 2017) argues that digital tools let movements grow fast without building organisational capacity, so they struggle to negotiate, change tactics or survive repression.</li>
+  <li><strong>Slacktivism</strong>: Malcolm Gladwell (2010) argued that weak online ties cannot sustain high-risk activism, which needs strong ties. Evgeny Morozov (<em>The Net Delusion</em>, 2011) warned that authoritarian states use the internet for surveillance and propaganda.</li>
+  <li><strong>State control</strong>: Access Now has recorded more internet shutdowns in India than in any other country in several recent years. In <em>Anuradha Bhasin v. Union of India</em> (2020) the Supreme Court held that indefinite suspension of the internet is impermissible and that restrictions must be necessary and proportionate.</li>
+  <li><strong>Unequal access</strong>: the digital divide by gender, class, caste and region limits who can take part.</li>
+  <li><strong>Counter-movements and disinformation</strong>: Jen Schradie (<em>The Revolution That Wasn't</em>, 2019) found that well-organised conservative groups used digital tools more effectively than the left. Organised trolling and fake news polarise debate.</li>
+</ul>
+
+<p><strong>Assessment:</strong> social media have lowered the cost of mobilisation and widened participation, but lasting change still depends on organisation, leadership and ideology offline.</p>
+
+<h3>Ideology in Social Movements and the Turn to Identity Politics</h3>
+<p>An <strong>ideology</strong> is a system of ideas that diagnoses what is wrong, explains its causes, prescribes a remedy and sketches a better society. It legitimises action, sustains commitment beyond one grievance and links members who never meet. M.S.A. Rao (<em>Social Movements in India</em>, 1978-79) held that ideology distinguishes a movement from mere collective behaviour, and classified movements as reformist, transformative or revolutionary. T.K. Oommen treats ideology, organisation and leadership as the core components of a movement. David Snow and Robert Benford (1988) show ideology at work through diagnostic, prognostic and motivational framing.</p>
+
+<ul>
+  <li><strong>Ideology as essential</strong>: Gandhian ideology sustained Bhoodan, Maoism the Naxalite movement and Ambedkarite thought the Dalit movement. Neil Smelser likewise held that every collective episode needs a generalised belief, and that the type of belief separates a hostile outburst such as a riot from a norm-oriented or value-oriented movement.</li>
+  <li><strong>Ideology acquired later</strong>: many movements begin with a local grievance. Ramachandra Guha (<em>The Unquiet Woods</em>, 1989) showed that Chipko began as a peasant protest over forest rights and was later framed as environmentalism and eco-feminism.</li>
+  <li><strong>Loose frames</strong>: new social movements and leaderless digital protests rest on identities and frames more than on comprehensive doctrines.</li>
+  <li><strong>Primordial means, progressive ends</strong>: many Indian movements mobilise caste, tribe or religion for equality. The SNDP Yogam (1903) organised Ezhavas under Narayana Guru for reform, and the Jharkhand movement used tribal identity to win a state in 2000. Lloyd and Susanne Rudolph (<em>The Modernity of Tradition</em>, 1967) saw caste associations as vehicles of democratisation.</li>
+</ul>
+
+<h4>From Ideology to Identity Politics in India</h4>
+<p><strong>Identity politics</strong> is mobilisation around group identities such as caste, religion, language, region or gender, seeking recognition and a share of power and resources. Charles Taylor ("The Politics of Recognition", 1992) and Nancy Fraser, who separated claims for recognition from claims for redistribution, theorised it.</p>
+<ul>
+  <li><strong>Ideological phase</strong>: from 1947 to the 1970s politics was organised around broad programmes: Nehruvian secularism and socialism within the Congress system, the Left, and the JP movement's call for Total Revolution (1974).</li>
+  <li><strong>The turn</strong>: around 1990 came Mandal (OBC reservation, 1990), Mandir (the Ram Janmabhoomi campaign and the demolition of the Babri Masjid in 1992) and the market reforms of 1991, which narrowed economic debate. Parties rooted in caste and region, such as the BSP (1984), the SP and the RJD, grew. Christophe Jaffrelot (<em>India's Silent Revolution</em>, 2003) traced the rise of lower castes in North Indian politics.</li>
+  <li><strong>Ideology within identity</strong>: this is not an "end of ideology" in Daniel Bell's sense (1960). Hindutva and Ambedkarism are themselves ideologies built on identity, and recent campaigns combine identity appeals with welfare.</li>
+</ul>
+
+<p><strong>Assessment:</strong> identity politics has deepened democracy by bringing excluded groups into power, but it can harden group boundaries, reduce politics to vote banks and push class issues aside. Critics such as Anand Teltumbde argue that identity-based Dalit politics has benefited a small elite while neglecting land and labour.</p>
+
 <h2>Revolution</h2>
 
 <p>A revolution is a forcible overthrow of a government or social order in favour of a new system: a fundamental change in political power or organisational structures that takes place in a relatively short period of time. Aristotle described two types: complete change from one constitution to another, and modification of an existing constitution. A sudden change in government brought about violently is often called a coup d'état or palace revolution. More broadly, revolution is a complete change of social structure where political change reflects one of its manifestations.</p>
@@ -4803,6 +5317,27 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>In India: marriage is also a Dharma, a moral and religious duty</li>
 </ul>
 
+<h3>Hindu Marriage: Sacrament, Contract and Commerce</h3>
+
+<p>Classical Hindu thought treats marriage as a <em>samskara</em>, a sacrament and not a contract. K.M. Kapadia (<em>Marriage and Family in India</em>, 1955) and P.H. Prabhu (<em>Hindu Social Organisation</em>) set out its three aims: <em>dharma</em> (religious duty), <em>praja</em> (progeny, above all a son to perform the ancestral rites) and <em>rati</em> (pleasure), with dharma the highest and rati the lowest. As a sacrament the union was:</p>
+<ul>
+  <li><strong>Religious</strong>: completed by sacred rites before the fire, such as <em>kanyadan</em>, <em>panigrahana</em> and <em>saptapadi</em> (the seven steps), not by the consent of the parties</li>
+  <li><strong>Indissoluble</strong>: no divorce, and a bond believed to continue after death, which is why widow remarriage was forbidden among the upper castes</li>
+</ul>
+
+<p><strong>The contractual turn.</strong> The Special Marriage Act 1954 provided civil marriage across caste and religion. The Hindu Marriage Act 1955 made monogamy compulsory, set minimum ages and allowed judicial separation and divorce, and a 1976 amendment added divorce by mutual consent. Consent, choice and dissolution, the marks of a contract, thus entered Hindu marriage. Yet Section 7 still makes a Hindu marriage complete only with customary rites such as the seventh step of saptapadi, and in <em>Dolly Rani v. Manish Kumar Chanchal</em> (2024) the Supreme Court described Hindu marriage as a samskara and held that registration without the required ceremonies does not make a valid marriage.</p>
+
+<p><strong>From ritual to commercial: factors behind the change</strong></p>
+<ul>
+  <li><strong>Dowry inflation</strong>: M.N. Srinivas ("Some Reflections on Dowry", 1984) distinguished traditional dowry, gifts given to a daughter, from modern dowry, a groom price set by the groom's education and job, which spread to castes that once paid bride price as they Sanskritised. The Dowry Prohibition Act 1961 and the dowry death provisions of criminal law have not stopped it, and the NCRB still records thousands of dowry deaths every year.</li>
+  <li><strong>A market in partners</strong>: matrimonial columns and websites sort candidates by caste, salary, height and complexion, so a match is negotiated like a transaction between families of equal status.</li>
+  <li><strong>The wedding industry</strong>: planners, destination weddings and lavish display make the wedding a site of conspicuous consumption.</li>
+  <li><strong>Individualism and women's education</strong>: love and semi-arranged marriages, live-in relationships and rising urban divorce weaken the idea of an unbreakable sacred bond.</li>
+  <li><strong>Skewed sex ratios</strong>: in Haryana and Punjab a shortage of brides has produced cross-region marriages in which brides are brought, and sometimes bought, from poorer states (Ravinder Kaur).</li>
+</ul>
+
+<p><strong>Assessment.</strong> Marriage in India remains sacred in form and near universal in practice: horoscope matching, kanyadan and saptapadi persist, and divorce rates stay low by world standards. Its content, however, is increasingly contractual and commercial, and Ravinder Kaur and Rajni Palriwala (eds., <em>Marrying in South Asia</em>, 2014) show how globalisation has made it a site of status competition. The sacred and the commercial now coexist.</p>
+
 <h2>Lineage and Descent</h2>
 
 <p><strong>Descent</strong> is the principle whereby a child is socially affiliated with the group of his or her parents. <strong>Lineage</strong> refers to a kin group in which members have a common ancestor whose identity is known: it is the principle upon which inheritance is based. Family is the smallest descent group compared to lineage.</p>
@@ -4887,6 +5422,42 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 <p>Strong filial ties often prevent women from dragging brothers to court despite the legal equality. Key dimensions of contemporary patriarchy: private vs. public sphere distinction; paid vs. unpaid (domestic) work; unequal salaries for the same work; gender-typing of jobs (pink-collar work); glass ceilings for women contrasted with glass elevators for men (Karuna Ahmad).</p>
 
+<h3>Kandiyoti's Patriarchal Bargain</h3>
+
+<p>Deniz Kandiyoti, in "Bargaining with Patriarchy" (<em>Gender and Society</em>, 1988), argued that women are not passive victims of patriarchy. They work out strategies within a given set of constraints to maximise their security and life options. She called these strategies patriarchal bargains, and showed that they differ with the form patriarchy takes:</p>
+<ul>
+  <li><strong>Sub-Saharan Africa</strong>: wives keep separate crops, income and responsibilities, so they resist openly when husbands try to claim their labour.</li>
+  <li><strong>Classic patriarchy</strong> (North Africa, the Muslim Middle East, South and East Asia, including northern India): a girl is married young into her husband's patrilocal extended household, where she is subordinate to all the men and to the senior women, above all her mother-in-law. Her hardship is temporary, since she will one day control daughters-in-law of her own. So she invests in her sons and their loyalty, and gains a stake in the system that subordinates her.</li>
+</ul>
+<p>Women therefore often defend the patriarchal order. When it is undermined by market forces, nuclear households and the independence of young men, the old bargain breaks down, and women may cling to propriety and male protection rather than lose what the bargain promised.</p>
+
+<p><strong>Application to marriage in India</strong></p>
+<ul>
+  <li><strong>Mother-in-law and daughter-in-law</strong>: the young bride accepts the ghunghat, restricted movement and heavy housework in the expectation of authority later. As mothers-in-law, women then enforce purdah and dowry demands on the next bride.</li>
+  <li><strong>Son preference</strong>: since sons secure a woman's status and old age, women themselves often favour sons, which feeds sex-selective abortion.</li>
+  <li><strong>Hypergamy and dowry</strong>: families pay dowry to marry daughters into higher-status households, trading the daughter's labour and obedience for standing and protection.</li>
+</ul>
+
+<p><strong>Gendered division of work.</strong> The bargain now extends to paid work. Many educated women win permission to work outside the home by preserving the family's respectability and continuing to do most of the housework and care. A job becomes acceptable only if it does not disturb domestic duties, so women choose teaching, government service or work close to home, accept slower careers, and present their earnings as a contribution to the family rather than a claim to equal authority. The bargain buys some autonomy but leaves male authority intact.</p>
+
+<p><strong>Critique.</strong> The concept can make women appear complicit in their own subordination and underplays open resistance, such as the women's movement against dowry and domestic violence. It also sorts patriarchy into broad regional types and gives less attention to caste and class differences among women.</p>
+
+<h3>Is the Domestic Division of Labour Changing?</h3>
+
+<p>The gender-based domestic division of labour assigns housework, cooking and the care of children and the elderly to women, and paid work outside the home to men. Functionalists such as Parsons saw this as natural, with women in expressive and men in instrumental roles. As more women take up formal employment, sociologists ask whether men now take a larger share of work at home.</p>
+<ul>
+  <li><strong>Willmott and Young (<em>The Symmetrical Family</em>, 1973)</strong>: in their London studies, couples increasingly shared tasks, leisure and decisions. They predicted a steady march towards equal roles.</li>
+  <li><strong>Ann Oakley (<em>The Sociology of Housework</em>, 1974)</strong>: in her interviews with 40 London housewives, only a minority of husbands did much housework or childcare. Men "helped" when asked, and responsibility stayed with women.</li>
+  <li><strong>Arlie Hochschild (<em>The Second Shift</em>, 1989)</strong>: in American dual-earner couples, employed women came home to a second shift of housework and childcare, adding up to roughly an extra month of work a year compared with their husbands.</li>
+  <li><strong>Duncombe and Marsden</strong>: women also carry the emotion work of keeping relationships going, a "triple shift".</li>
+  <li><strong>Jonathan Gershuny</strong>: men's share of domestic work is rising, but slowly, a "lagged adaptation" to wives' employment.</li>
+  <li><strong>Rhona and Robert Rapoport</strong>: even in dual-career families, where both partners pursue careers, the wife usually kept the main responsibility for home and children.</li>
+</ul>
+
+<p><strong>Indian evidence.</strong> Promilla Kapur (<em>Marriage and the Working Woman in India</em>, 1970) found educated working wives caught in role conflict between the expectations of the family and those of the job. The NSO Time Use Survey 2019 found that women who did unpaid domestic work spent about 299 minutes a day on it, against 97 minutes for men. Change is visible in urban dual-career homes, where men shop, take children to school and share some childcare, and the Maternity Benefit (Amendment) Act 2017 raised paid maternity leave to 26 weeks and required crèches in larger establishments. But much of the change comes from hiring paid domestic workers, usually poorer women, rather than from husbands sharing the work.</p>
+
+<p><strong>Patriarchy at home and at work.</strong> Walby's shift from private to public patriarchy captures the present pattern: women gain access to paid work but face lower pay, gender-typed jobs and glass ceilings while still carrying the domestic load. The domestic division of labour is changing in degree rather than in kind, and faster among educated urban couples than among rural and working-class households.</p>
+
 <h2>Contemporary Trends in Kinship</h2>
 <ul>
   <li>Diversity in family forms is growing: no single dominant model</li>
@@ -4897,6 +5468,46 @@ export const sociologyNoteContent: Record<string, string> = {
   <li>Bade Thorne: "cereal packet image" problem, the monolithic image of the ideal family obscures the reality of a plurality of family forms</li>
   <li>Elizabeth Roberts and Wilmott and Young: industrialisation actually led to growth of the extended family through shared childcare and mutual help, a direct counter to Parsons</li>
   <li>Shah and Kolenda demolished the myth of joint family disintegration in India</li>
+</ul>
+
+<h3>Queer Kinship</h3>
+
+<p>Traditional kinship theory rests on two foundations: biological descent (consanguinity) and heterosexual marriage (affinity). Queer kinship refers to the ties of family and relatedness that lesbian, gay, bisexual and transgender people build outside, or against, these foundations.</p>
+<ul>
+  <li><strong>Kath Weston (<em>Families We Choose: Lesbians, Gays, Kinship</em>, 1991)</strong>: in fieldwork in the San Francisco Bay Area, she found gay men and lesbians, often rejected by their families of origin, building "chosen families" of partners, friends, former lovers and children. Kinship here rests on choice, love and lasting care rather than on blood.</li>
+  <li><strong>David Schneider</strong>: his <em>American Kinship</em> (1968) and later critique of kinship studies treated kinship as a cultural system of symbols rather than a fact of biology, opening the way for queer kinship studies.</li>
+  <li><strong>Judith Butler</strong>: in "Is Kinship Always Already Heterosexual?" (2002) she argued that recognising only heterosexual marriage denies legitimacy to other forms of intimacy and care.</li>
+  <li><strong>Janet Carsten</strong>: replaced "kinship" with "relatedness", ties made through feeding, living together and caring.</li>
+</ul>
+
+<p><strong>How it challenges traditional kinship:</strong> it separates kinship from procreation and from marriage, makes family a matter of choice, blurs the line between friend and kin, and uses adoption and assisted reproduction to create parenthood without a heterosexual couple.</p>
+
+<p><strong>Indian illustrations</strong></p>
+<ul>
+  <li><strong>Hijra gharanas</strong>: hijras are organised in houses (gharanas) headed by gurus, with chelas as disciples. Serena Nanda (<em>Neither Man nor Woman</em>, 1990) and Gayatri Reddy (<em>With Respect to Sex</em>, 2005) show the guru-chela tie working as a lineage, with mothers, daughters and grandmothers, inheritance and succession, a kinship made without birth or marriage.</li>
+  <li><strong>Same-sex couples</strong>: Ruth Vanita (<em>Love's Rite</em>, 2005) documented same-sex weddings and joint suicides of women couples in India, showing couples reaching for the language of marriage.</li>
+  <li><strong>Law</strong>: <em>NALSA v. Union of India</em> (2014) recognised transgender persons as a third gender, and <em>Navtej Singh Johar v. Union of India</em> (2018) decriminalised consensual same-sex relations. In <em>Deepika Singh</em> (2022) the Supreme Court accepted that family can take atypical forms, including queer relationships. But in <em>Supriyo Chakraborty v. Union of India</em> (2023) it declined to recognise same-sex marriage and left the matter to Parliament.</li>
+</ul>
+
+<p><strong>Critique.</strong> Chosen families can be fragile and are easier to sustain for the urban middle class. Queer kinship also borrows the idioms it challenges: hijra gharanas have a strict hierarchy of their own, and many same-sex couples seek marriage itself. Yet it confirms that kinship is a social and cultural construction rather than a biological given.</p>
+
+<h3>David Morgan: Family Practices</h3>
+
+<p>David Morgan, in <em>Family Connections</em> (1996) and <em>Rethinking Family Practices</em> (2011), argued that family is better understood as something people do than as a structure they belong to. "Family" works more as an adjective describing practices than as a noun naming a fixed group. Family practices are the everyday, often routine activities through which people create and sustain family relationships: cooking and eating together, caring for children and the old, sharing money, celebrating festivals, visiting and keeping in touch.</p>
+<ul>
+  <li><strong>Active</strong>: family is made and remade through action, not simply given by blood or law</li>
+  <li><strong>Everyday and regular</strong>: ordinary routines matter more than formal rules</li>
+  <li><strong>Fluid</strong>: family practices overlap with practices of gender, work, age and friendship, so family has no sharp boundary</li>
+  <li><strong>History and biography</strong>: personal practices are shaped by wider social change and in turn reshape it</li>
+  <li><strong>The actor's view</strong>: people themselves decide whom they count as family</li>
+</ul>
+<p><strong>Strengths.</strong> The approach escapes the single nuclear family model of Murdock and Parsons. It covers step-families, single-parent and same-sex families, and families spread across distance. Indian examples include migrant workers and children abroad who "do family" through remittances, video calls and visits at festivals, and separated households that remain functionally joint by sharing rituals and resources.</p>
+<p><strong>Critique</strong></p>
+<ul>
+  <li>It can blur family into friendship and other intimate ties, so the concept loses its edge.</li>
+  <li>It stresses agency and underplays structure. Law, property, the labour market and patriarchy limit what people can do, and in India caste endogamy and inheritance law shape family practices whatever individuals prefer.</li>
+  <li>It says little about power and inequality inside the family, such as who does the cooking and caring.</li>
+  <li>Janet Finch ("Displaying Families", 2007) added that practices must also be displayed to and recognised by others to count as family, and Carol Smart widened the field to "personal life" to include ties beyond the family.</li>
 </ul>
 `,
   'social-change-modern-society': `
@@ -5088,6 +5699,25 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Postmodernist critique of science (Lyotard):</strong> Science is just another metanarrative, not privileged over other forms of knowledge. Modern science is increasingly abstract (quantum mechanics, chaos theory) and funded by vested interests. The credibility of "value-free" science is itself a social construction that legitimises powerful interests.</p>
 
+<h3>Risk Society, the Pandemic and the Social Responsibility of Science</h3>
+<p>Ulrich Beck (<em>Risk Society: Towards a New Modernity</em>, 1986, English 1992) argued that industrial modernity is giving way to a <strong>risk society</strong>, whose central problem is no longer only the distribution of wealth but the distribution of risks produced by modernisation itself: nuclear accidents, chemical pollution, climate change and new diseases. The book appeared in the year of the Chernobyl disaster.</p>
+<ul>
+  <li><strong>Manufactured risks</strong>: unlike natural hazards, these are created by science and technology. Giddens (<em>Runaway World</em>, 1999) contrasted manufactured risk with external risk.</li>
+  <li><strong>Global and boomerang effects</strong>: risks cross borders and classes and return to those who produced them. Beck wrote that "poverty is hierarchic, smog is democratic", though in practice the poor are more exposed.</li>
+  <li><strong>Reflexive modernisation</strong>: science both creates risks and is needed to detect them, so experts lose their monopoly and society must question science.</li>
+  <li><strong>Organised irresponsibility</strong>: states, firms and experts diffuse blame so that no one is held accountable.</li>
+</ul>
+
+<h4>Science, Technology and the Pandemic</h4>
+<p><strong>Science as rescuer:</strong> the genome of the new coronavirus was shared within weeks, and vaccines were developed within a year. India produced Covishield (Serum Institute, with Oxford-AstraZeneca) and Covaxin (Bharat Biotech with ICMR), began vaccination on 16 January 2021 and gave more than 200 crore doses through the CoWIN platform. Telemedicine (eSanjeevani), online education, digital payments and work from home kept society running.</p>
+<p><strong>At the mercy of its own creations:</strong> the virus spread along global air networks, zoonotic spillovers are linked to ecological disruption, and an "infodemic" of misinformation spread on social media. The lockdown announced on 24 March 2020 triggered the exodus of migrant workers, the second wave of 2021 exposed oxygen shortages, online schooling excluded children without devices, and rich countries secured vaccines first. These outcomes reflected social organisation and inequality more than the limits of science.</p>
+
+<h4>Social Responsibility of Science</h4>
+<p>J.D. Bernal (<em>The Social Function of Science</em>, 1939) argued that science should be organised to meet human needs. After Hiroshima, the Russell-Einstein Manifesto (1955) and the Pugwash Conferences (from 1957) called on scientists to answer for the uses of their work. In India, Nehru championed the "scientific temper", which the 42nd Amendment (1976) made a fundamental duty under Article 51A(h), and the Scientific Policy Resolution (1958) tied science to the removal of poverty.</p>
+<p><strong>Science and backwardness in developing societies:</strong> the Green Revolution ended food shortages but widened gaps between regions and classes and depleted Punjab's groundwater. Satellite communication, Operation Flood and the eradication of polio (India was certified polio-free in 2014) show science reducing backwardness. Yet technology designed without attention to society can exclude the poor, as when failures of biometric authentication denied rations to entitled families. Sheila Jasanoff's call for "technologies of humility" (2003) asks that the governance of science include public participation, attention to the vulnerable and honesty about uncertainty.</p>
+
+<p><strong>Assessment:</strong> humanity is not simply at the mercy of nature or technology. Science supplies the means to face crises such as COVID-19, but whether its benefits reach everyone depends on social institutions, equity and democratic control.</p>
+
 <h2>Globalisation and Social Change</h2>
 
 <p>Globalisation refers to the process of increasing interconnection between societies across the world in which distant events have increasing effects on local life and vice versa (Giddens). It operates across multiple dimensions: economic (integration of markets, MNCs, WTO); political (rise of international institutions: UN, World Bank, IMF); cultural (spread of global consumer culture, McDonaldization); communicational (internet, social media, electronic networks); and ecological (global environmental risks, climate change).</p>
@@ -5102,11 +5732,79 @@ export const sociologyNoteContent: Record<string, string> = {
 <p><strong>Leslie Sklair (Sociology of the Global System):</strong> Transnational practices include: economic (transnational corporations), political (capitalist-inspired politicians), and cultural-ideological (consumerism spread globally). Globalisation has mostly negative impacts: class polarisation and ecological unsustainability.</p>
 
 <p><strong>Impact on social change:</strong> Globalisation accelerates the pace of social change; spreads Western values, consumer culture, and democratic norms globally; creates new forms of inequality (digital divide, global class polarisation); undermines traditional cultures and produces identity anxieties that fuel nationalism, religious revivalism, and fundamentalism; and generates new collective risks (environmental crises, pandemics, financial contagion) that require collective responses beyond the nation-state.</p>
+
+<h3>Sustainable Development, the SDGs and Corporate Social Responsibility</h3>
+<p>The Brundtland Commission's report <em>Our Common Future</em> (1987) defined sustainable development as "development that meets the needs of the present without compromising the ability of future generations to meet their own needs". It joined two ideas: priority for the needs of the world's poor, and the limits that technology and social organisation place on the environment's ability to meet them. The Rio Earth Summit (1992) adopted Agenda 21, and the Millennium Development Goals (2000-2015) set eight goals mainly for developing countries.</p>
+
+<p>On 25 September 2015 the UN General Assembly adopted the 2030 Agenda for Sustainable Development, with 17 Sustainable Development Goals and 169 targets. Its elements:</p>
+<ul>
+  <li><strong>Three integrated dimensions</strong>: economic growth, social inclusion and environmental protection, treated as indivisible.</li>
+  <li><strong>Five Ps</strong>: people, planet, prosperity, peace and partnership.</li>
+  <li><strong>Leave no one behind</strong>: reaching the furthest behind first, which requires data disaggregated by income, gender, age and disability.</li>
+  <li><strong>Universality</strong>: unlike the MDGs, the goals apply to rich and poor countries alike.</li>
+  <li><strong>The goals</strong>: social (no poverty, zero hunger, health, education, gender equality, water and sanitation), economic (clean energy, decent work, industry and infrastructure, reduced inequality, sustainable cities), environmental (responsible consumption and production, climate action, life below water, life on land) and institutional (peace, justice and strong institutions, partnerships). India tracks progress through NITI Aayog's SDG India Index, first published in 2018.</li>
+</ul>
+
+<p><strong>Sociological debate:</strong> ecological modernisation theorists hold that technology and markets can decouple growth from environmental damage. Allan Schnaiberg's "treadmill of production" (1980) argues that capitalism's drive for constant growth rules this out without structural change. Ramachandra Guha and Joan Martinez-Alier (<em>Varieties of Environmentalism</em>, 1997) describe an "environmentalism of the poor", for whom forests and water are matters of livelihood, as in Chipko and the Narmada Bachao Andolan.</p>
+
+<h4>Corporate Social Responsibility</h4>
+<p>CSR is the idea that business has obligations to society beyond profit. Archie Carroll's pyramid (1991) ranks economic, legal, ethical and philanthropic responsibilities, and John Elkington's "triple bottom line" (1994) asks firms to account for people and planet as well as profit. Milton Friedman (1970), by contrast, held that the social responsibility of business is to increase its profits. Section 135 of India's Companies Act 2013, in force from April 2014, made India one of the first countries to mandate CSR spending: companies with a net worth of Rs 500 crore, turnover of Rs 1,000 crore or net profit of Rs 5 crore must spend at least 2 per cent of their average net profit of the previous three years on activities listed in Schedule VII, which include environmental sustainability.</p>
+<p><strong>Relevance amid environmental crises:</strong> CSR can fund afforestation, water conservation, renewable energy and clean-up, and pushes firms to measure their environmental impact. Critics see much of it as greenwashing: spending clusters in industrialised states and safe fields, and philanthropy does not offset harm from a firm's core business. In the Niyamgiri case (2013) the Supreme Court left the Vedanta-linked bauxite mining project to the gram sabhas of the Dongria Kondh, all of which rejected it, showing that community rights and regulation matter more than voluntary goodwill.</p>
+
+<h3>Civil Society Organisations and Grassroots Change</h3>
+<p>Civil society organisations occupy the space between family, market and state: non-governmental organisations (NGOs), community-based organisations, self-help groups (SHGs), cooperatives and people's movements. Working close to communities, they act as agents of change from below.</p>
+<ul>
+  <li><strong>Organising the poor</strong>: the Self Employed Women's Association (SEWA), founded by Ela Bhatt in Ahmedabad in 1972, organised informal women workers into a union, cooperatives and a bank.</li>
+  <li><strong>Credit and empowerment through SHGs</strong>: NABARD's SHG-Bank Linkage Programme (1992), Kerala's Kudumbashree (1998) and the National Rural Livelihoods Mission (2011) gave poor women savings, credit, collective voice and a route into panchayat politics.</li>
+  <li><strong>Rights and accountability</strong>: the public hearings of the Mazdoor Kisan Shakti Sangathan in Rajasthan led to the Right to Information Act 2005, and civil society campaigns shaped the rural employment guarantee law (2005), the Forest Rights Act (2006) and the National Food Security Act (2013). Social audits of MGNREGA expose corruption.</li>
+  <li><strong>Service and innovation</strong>: Pratham's Annual Status of Education Reports (since 2005) measure learning, and Barefoot College at Tilonia trains rural women as solar engineers.</li>
+</ul>
+<p><strong>Limitations:</strong> James Ferguson (<em>The Anti-Politics Machine</em>, 1990) showed how development agencies turn political questions of power into technical problems, and Sangeeta Kamat (2002) described the "NGO-isation" of movements as professional, donor-funded bodies replace mass mobilisation. SHGs can add to women's burdens and suffer elite capture, and the Andhra Pradesh microfinance crisis (2010) showed the dangers of commercial lending. Partha Chatterjee (<em>The Politics of the Governed</em>, 2004) notes that most of the poor deal with the state through "political society" rather than formal civil society.</p>
+
+<h4>Civil Society and Science and Technology Policy in India</h4>
+<p>Indian science policy, from the Scientific Policy Resolution (1958) to the Science, Technology and Innovation Policy (2013), was framed mainly by scientists and the state. Civil society has pressed for science that serves the people and for public scrutiny of technology:</p>
+<ul>
+  <li><strong>People's science movements</strong>: the Kerala Sastra Sahitya Parishad (1962) spread science in Malayalam under the slogan "science for social revolution" and led the campaign that saved Silent Valley, declared a national park in 1984. The All India People's Science Network (1988) followed.</li>
+  <li><strong>Technology assessment</strong>: public consultations led to the moratorium on Bt brinjal in 2010, and protests at Kudankulam questioned nuclear safety.</li>
+  <li><strong>Knowledge and patents</strong>: challenges by CSIR and civil society groups led to the revocation of patents on turmeric (1997) and neem (2000), and health activists backed section 3(d) of the Patents Act, which the Supreme Court applied in <em>Novartis v. Union of India</em> (2013) to refuse a patent on a cancer drug.</li>
+  <li><strong>Accountability</strong>: survivors' groups after the Bhopal gas disaster (1984) keep corporate and state responsibility for industrial hazards before the public.</li>
+</ul>
+
+<h3>Patriarchy, Gender Division of Labour and Development</h3>
+<p>Sylvia Walby (<em>Theorising Patriarchy</em>, 1990) defines patriarchy as a system of social structures and practices in which men dominate, oppress and exploit women. Through the <strong>gender division of labour</strong> it assigns paid, public and valued work mainly to men and unpaid care and domestic work mainly to women. Social development, measured by health, education, freedom and equality, is held back when half the population is confined in this way.</p>
+<ul>
+  <li><strong>Development can marginalise women</strong>: Ester Boserup (<em>Woman's Role in Economic Development</em>, 1970) showed that in African shifting cultivation women did much of the farming, but colonial and modernising policies gave men land titles, cash crops, training and technology, pushing women into less productive work.</li>
+  <li><strong>From WID to GAD</strong>: the Women in Development approach of the 1970s sought to add women to projects. Women and Development, drawing on Marxist feminism, stressed women's place in global capitalism. Gender and Development, from the 1980s, targets power relations between women and men. Caroline Moser distinguished practical gender needs (water, income) from strategic gender needs (land rights, freedom from violence), and the Beijing conference (1995) adopted gender mainstreaming.</li>
+  <li><strong>Missing women</strong>: Amartya Sen ("More Than 100 Million Women Are Missing", 1990) traced excess female mortality in South Asia and China to son preference and neglect of girls. India's child sex ratio fell to its lowest level since Independence in Census 2011, prompting Beti Bachao Beti Padhao (2015) and stricter enforcement of the PCPNDT Act (1994, amended 2003).</li>
+  <li><strong>Unpaid care</strong>: the first national Time Use Survey (2019) found Indian women spending about three times as long as men on unpaid domestic work, which limits their paid work, schooling and leisure and goes unrecorded in GDP.</li>
+  <li><strong>Assets and bargaining power</strong>: Bina Agarwal (<em>A Field of One's Own</em>, 1994) argued that land rights strengthen women's bargaining power within the household. The Hindu Succession (Amendment) Act 2005 made daughters coparceners.</li>
+</ul>
+
+<p><strong>Does women's education end patriarchal discrimination?</strong></p>
+<ul>
+  <li><strong>In part</strong>: education delays marriage, lowers fertility and child mortality and strengthens women's voice. Dyson and Moore (1983) linked the greater autonomy of women in south India to better demographic outcomes, and educated women have led campaigns against dowry and violence.</li>
+  <li><strong>Not by itself</strong>: women's paid work in India stayed low even as girls' schooling rose, consistent with Claudia Goldin's U-shaped curve of female labour force participation. Education can be valued as a marriage asset, and dowry often rises with the groom's education. Leela Dube showed how girls are raised as temporary members of their natal home. Kerala combines high female literacy with dowry, low female employment and gender violence.</li>
+</ul>
+<p><strong>Assessment:</strong> patriarchy and development shape each other. Education reduces discrimination most when it goes with changes in property, work, law and the sharing of care.</p>
 `,
   'introducing-indian-society': `
 <h2>Perspectives on the Study of Indian Society</h2>
 
 <p>Indian society is unique in its scale, antiquity, complexity, and diversity: yet it exhibits remarkable continuities across millennia. Three dominant perspectives have structured its sociological study: the Indological (book view), the Structural-Functional (field view), and the Marxist (historical-materialist). Each emerges from different epistemological assumptions and leads to different conclusions about Indian society's nature and trajectory.</p>
+
+<h3>Insiders and Outsiders in the Study of Indian Society</h3>
+
+<p>Who understands a society best, its members or strangers to it? Robert K. Merton ("Insiders and Outsiders: A Chapter in the Sociology of Knowledge", 1972) set out two doctrines. The insider doctrine holds that only members of a group, by sharing its experience, have access to its meanings. The outsider doctrine, drawing on Simmel's figure of the stranger, holds that detachment from a group's interests and prejudices gives clearer vision. Merton concluded that both claims are partial: insiders and outsiders see different things, and knowledge grows from exchange between them.</p>
+
+<p><strong>The debate in India</strong></p>
+<ul>
+  <li><strong>Colonial and Western outsiders</strong>: British administrators, missionaries and Indologists produced the first accounts of caste and village, later criticised as Orientalist (Edward Said, 1978) and as colonial forms of knowledge that fixed caste in census categories (Bernard Cohn). Later Western scholars such as Dumont, Marriott and Bailey brought comparative theory, but Dumont's <em>Homo Hierarchicus</em> was faulted for a Brahminical, text-based picture.</li>
+  <li><strong>Indian insiders</strong>: M.N. Srinivas defended the study of one's own society. Indian sociologists know the language and the nuances, though they must guard against the biases of their own caste, region and class. <em>The Remembered Village</em> (1976), written from memory after his field notes were destroyed in a fire, shows both the depth and the risks of insider knowledge. Andre Beteille and T.N. Madan (eds., <em>Encounter and Experience</em>, 1975) collected Indian fieldworkers' reflections on being both insiders and outsiders in the communities they studied.</li>
+  <li><strong>Who is the insider?</strong> Gopal Guru ("How Egalitarian Are the Social Sciences in India?", 2002) argued that Indian social science is divided between "theoretical Brahmins", who theorise, and "empirical Shudras", who supply data. Upper-caste Indian scholars are outsiders to Dalit experience, so Dalits must be able to theorise their own lives. In <em>The Cracked Mirror</em> (2012), Sundar Sarukkai replied that experience does not give exclusive ownership of theory.</li>
+  <li><strong>Standpoint</strong>: Sharmila Rege's Dalit feminist standpoint extends the argument to the intersection of caste and gender.</li>
+</ul>
+
+<p><strong>Assessment.</strong> Being Indian does not make a scholar an insider to every Indian group, since caste, gender, region and class divide experience. The fruitful position is Merton's: insiders bring access and empathy, outsiders bring comparison and detachment, and good sociology joins reflexivity about one's own position with methods that let marginal groups speak for themselves.</p>
 
 <h2>A. Indology (G.S. Ghurye)</h2>
 
@@ -5272,6 +5970,28 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Ashok Rudra and Pranab Bardhan</strong>: Follow Althusser's theory of Ideological State Apparatus (focusing on the genesis of inequality rather than tracking its history)</li>
   <li><strong>Pradeep Sarkar</strong>: LPG era = neo-colonialism (for explaining poverty and marginalisation in India)</li>
 </ul>
+
+<h3>A.R. Desai: The Colonial Mode of Production and New Social Classes</h3>
+
+<p>In <em>Social Background of Indian Nationalism</em> (1948), A.R. Desai argued that Indian social classes cannot be understood through caste, religion or culture alone. They must be traced to the material base, the transformation of the economy under British rule. Pre-British India had largely self-sufficient villages where land was not a commodity and production was mainly for use. British rule replaced this with a colonial mode of production, capitalist in form but subordinated to British interests, and this created classes that had not existed before.</p>
+
+<p><strong>How the colonial economy produced them</strong></p>
+<ul>
+  <li><strong>New land systems</strong>: the Permanent Settlement (1793), Ryotwari and Mahalwari made land private property that could be bought, sold and mortgaged</li>
+  <li><strong>Commercialisation of agriculture</strong>: cash revenue demands pushed peasants to grow crops for the market, often for export</li>
+  <li><strong>Destruction of handicrafts</strong>: cheap British manufactures ruined artisans and pushed them onto the land</li>
+  <li><strong>Railways, modern industry, administration and English education</strong>: these created new urban occupations</li>
+</ul>
+
+<p><strong>The new classes Desai identified</strong></p>
+<ul>
+  <li><strong>In agrarian areas</strong>: zamindars created by the British, tenants under the zamindars, peasant proprietors divided into upper, middle and lower strata, agricultural labourers, and modern merchants and moneylenders.</li>
+  <li><strong>In urban areas</strong>: the modern capitalist class (industrial, commercial and financial), the modern working class in industry, transport and mines, petty traders and shopkeepers tied to the new economy, and the professional classes of lawyers, doctors, teachers, journalists, technicians, managers and clerks who formed the educated middle class.</li>
+</ul>
+
+<p><strong>Features.</strong> These classes were national in character: they arose across British India and had all-India interests, unlike the local, caste-bound groups of the past. Their growth was uneven, with the zamindars and the professional middle class of the presidency towns emerging first and the industrial bourgeoisie and working class later. Each class came into conflict with colonial rule in its own way, so the phases of nationalism followed the rise of these classes: the educated middle class led early nationalism, the industrial bourgeoisie backed the Congress, and peasants and workers joined in later phases.</p>
+
+<p><strong>Critique.</strong> Desai reads Indian history through European categories and underplays caste, which decided who became landlord, moneylender, professional or labourer. Pre-colonial villages were neither as self-sufficient nor as classless as he assumed. Yet his method of linking class formation to the mode of production remains the basis of Marxist analysis of Indian society.</p>
 
 <h2>D. Modernisation of Indian Tradition</h2>
 
@@ -5449,6 +6169,31 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Swadeshi and boycott movements</strong>: the 1905 partition of Bengal triggered mass protests including bonfires of imported cloth, economic boycott of British goods, and the establishment of national educational institutions.</li>
 </ul>
 
+<h3>Protests and Movements</h3>
+
+<p>A protest is a public expression of objection to a policy, event or condition: a march, strike, dharna or riot, often local and short-lived. A social movement is sustained, organised collective action with leadership, an ideology and a goal of change, which uses protests as one of its tactics. M.S.A. Rao (<em>Social Movements in India</em>, 1978-79) stressed ideology and collective mobilisation as the marks of a movement and classified movements as reformist, transformative and revolutionary. Charles Tilly saw movements as sustained campaigns of claim-making that display worthiness, unity, numbers and commitment. Every movement contains protests, but not every protest becomes a movement.</p>
+
+<p>Colonial agrarian movements that changed rural society include the Indigo Revolt (1859-60), the Pabna tenants' movement (1873), which preceded the Bengal Tenancy Act 1885, the Deccan Riots (1875), followed by the Deccan Agriculturists' Relief Act 1879, Champaran (1917), Kheda (1918), Bardoli (1928) and Tebhaga (1946-47).</p>
+
+<h3>Champaran Satyagraha (1917)</h3>
+
+<p>In Champaran, north Bihar, European indigo planters bound tenants under the <em>tinkathia</em> system to grow indigo on three <em>kathas</em> in every twenty (3/20 of their land) at low fixed prices. When synthetic dye made indigo unprofitable, planters exacted enhanced rents and lump sums for releasing tenants from the obligation. Raj Kumar Shukla, a local cultivator, persuaded Gandhi to come.</p>
+<ul>
+  <li><strong>Method:</strong> in April 1917 Gandhi defied an order to leave the district, and the case was dropped. With Rajendra Prasad, Brajkishore Prasad, J.B. Kripalani and others he recorded the statements of thousands of peasants, turning fear into public testimony.</li>
+  <li><strong>Outcome:</strong> Gandhi sat on the official enquiry committee, and the Champaran Agrarian Act 1918 abolished <em>tinkathia</em>. Planters refunded a quarter of the money they had taken.</li>
+  <li><strong>Sociological dynamics:</strong> it was Gandhi's first satyagraha in India and the template of his method: non-violent defiance, careful documentation, negotiation and constructive work in schools and sanitation. It linked peasant grievance to nationalist leadership and drew a new rural educated middle class into politics. Its limits were also clear: it targeted European planters and left Indian landlords and the tenancy structure untouched.</li>
+</ul>
+
+<h3>Tebhaga Movement (Bengal, 1946-47)</h3>
+
+<p>Bengal's sharecroppers (<em>bargadars</em> or <em>adhiars</em>) customarily gave half the crop to the <em>jotedar</em> who held the land, besides many illegal levies. The Floud Commission (Bengal Land Revenue Commission, 1940) had recommended that sharecroppers keep two-thirds. In September 1946 the Communist-led Bengal Provincial Kisan Sabha called on them to enforce <em>tebhaga</em>, a two-thirds share, by taking the harvest to their own threshing floors.</p>
+<ul>
+  <li><strong>Spread:</strong> strongest in north Bengal (Dinajpur, Rangpur, Jalpaiguri), it also took hold in Midnapore and the 24 Parganas, drawing Rajbanshi, Santhal and Muslim peasants.</li>
+  <li><strong>Women:</strong> peasant women formed their own volunteer squads and faced the police, making it one of the first agrarian movements with mass female participation.</li>
+  <li><strong>Decline:</strong> police firing and arrests followed, a bargadars bill introduced by the provincial government in early 1947 was never enacted, and the movement faded amid communal tension and Partition.</li>
+  <li><strong>Contribution:</strong> Tebhaga made the sharecropper's share a political question, built class solidarity across caste, tribe and religion on the eve of Partition, and trained the cadre that later shaped West Bengal's land reforms, from the Bargadars Act 1950 to the recording of sharecroppers under Operation Barga (1978).</li>
+</ul>
+
 <h2>Modernisation of Indian Tradition</h2>
 
 <h3>The Debate on Tradition and Modernity</h3>
@@ -5511,6 +6256,49 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p><strong>Sri Narayana Guru and SNDP Movement (Kerala)</strong>: Narayana Guru (1856-1928) challenged caste untouchability in Kerala through the founding of temples accessible to lower castes, the establishment of schools, and the SNDP (Sree Narayana Dharma Paripalana) Yogam (1903). His philosophy: "One caste, one religion, one God for man." He consecrated temples with the motto: "Not for one religion, one caste or one sect, but for the betterment of all."</p>
 
+<h3>Orthogenetic Change, Differentiation and Continuity</h3>
+
+<p>Robert Redfield and Milton Singer ("The Cultural Role of Cities", 1954) distinguished orthogenetic change, which grows out of a civilisation's own tradition, from heterogenetic change, which comes through contact with other civilisations. Yogendra Singh (<em>Modernization of Indian Tradition</em>, 1973) applied the distinction to India's great and little traditions.</p>
+
+<p><strong>Change through differentiation:</strong> much orthogenetic change in India has come by new doctrines and groups branching off from the parent tradition.</p>
+<ul>
+  <li><strong>Great tradition:</strong> Buddhism and Jainism broke from Vedic Brahmanism, rejecting sacrifice and Brahmin authority. Later the Bhakti saints, Basava's Virashaiva (Lingayat) movement in twelfth-century Karnataka and the Kabirpanth broke with caste and ritual orthodoxy, and Sikhism grew from the same devotional ferment.</li>
+  <li><strong>Little tradition:</strong> McKim Marriott's study of Kishan Garhi showed universalisation, as local deities and rites are linked upward to Sanskritic forms, and parochialisation, as great-tradition elements are reshaped locally.</li>
+  <li><strong>Caste structure:</strong> castes split into sub-castes, and mobile groups claimed new varna status through Sanskritisation, so the system grew more segmented.</li>
+</ul>
+
+<p><strong>Continuities in the process:</strong> differentiation has rarely produced a clean break.</p>
+<ul>
+  <li><strong>Absorption:</strong> the Buddha was reclaimed as an avatar of Vishnu, and Bhakti was assimilated into mainstream Hinduism.</li>
+  <li><strong>Hierarchy reproduced:</strong> sects that rejected caste, such as the Lingayats and Kabirpanthis, themselves became caste-like endogamous groups.</li>
+  <li><strong>Positional, not structural, change:</strong> Srinivas observed that Sanskritisation changes a caste's position in the hierarchy without changing the hierarchy.</li>
+  <li><strong>Principles of tradition:</strong> Yogendra Singh named hierarchy, holism, continuity and transcendence as organising principles of Indian tradition. Continuity, the idea that the new renews the old, explains why breakaway movements were so often reabsorbed.</li>
+</ul>
+
+<p>Orthogenetic change in India thus does proceed through differentiation, but within a frame of continuity that absorbs dissent. Dalit Buddhism is a modern test: it seeks a decisive break with Hinduism, yet draws on an indigenous tradition.</p>
+
+<h3>Tradition and Modernity: Misplaced Polarities</h3>
+
+<p>Classical modernisation theory treated tradition and modernity as opposite poles: a society had to shed one to gain the other. Joseph Gusfield ("Tradition and Modernity: Misplaced Polarities in the Study of Social Change", <em>American Journal of Sociology</em>, 1967) rejected this as resting on fallacies:</p>
+<ul>
+  <li>that developing societies were static before modern contact,</li>
+  <li>that tradition is a consistent and uniform body of norms,</li>
+  <li>that traditional society has a homogeneous social structure,</li>
+  <li>that new forms simply displace old ones,</li>
+  <li>that traditional and modern forms are always in conflict and mutually exclusive.</li>
+</ul>
+<p>Traditions are plural and changing, they can legitimate change, and old and new commonly coexist and reinforce each other.</p>
+
+<p><strong>Indian evidence:</strong></p>
+<ul>
+  <li><strong>The Rudolphs</strong> (<em>The Modernity of Tradition: Political Development in India</em>, 1967) showed caste associations turning a traditional institution into a vehicle of democratic politics, and Gandhi drawing on traditional ideals of renunciation and non-violence to build a modern mass movement.</li>
+  <li><strong>Milton Singer</strong> (<em>When a Great Tradition Modernizes</em>, 1972) found Madras industrialists combining modern business with Hindu ritual through compartmentalisation, ritual neutralisation and vicarious ritualisation, that is, delegating ritual to others.</li>
+  <li><strong>Tilak's public Ganeshotsav</strong> (1893) turned a household festival into nationalist mobilisation.</li>
+  <li><strong>Everyday life:</strong> matrimonial websites with caste filters, online darshan, astrology apps, and family business houses running modern corporations.</li>
+</ul>
+
+<p><strong>Are they antithetical?</strong> Largely not. S.N. Eisenstadt's 'multiple modernities' (2000) holds that societies modernise along paths shaped by their own traditions. Yet the two can clash: Louis Dumont argued that the hierarchical values of caste resist modern equality, and honour killings and caste panchayats show tradition resisting constitutional rights. Tradition and modernity interact selectively, with some traditions aiding modernity and others obstructing it.</p>
+
 <h2>Social Reforms: Key Issues</h2>
 
 <h3>Women's Position and Gender Reforms</h3>
@@ -5548,6 +6336,21 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Nationalist historiography (VD Savarkar, RC Majumdar, Jadunath Sarkar) challenged this by constructing a narrative of continuous Indian civilisation and heroic resistance. Marxist historiography (Irfan Habib, Bipan Chandra) analysed colonialism as a form of capitalist exploitation. <strong>Subaltern Studies</strong> (Ranajit Guha, Gyanendra Pandey, Partha Chatterjee, Shahid Amin) challenged both colonial and nationalist historiographies by recovering the agency and consciousness of peasants, workers, women, and tribals who had been marginalised from elite nationalist accounts.</p>
 
 <p>Guha's <em>Elementary Aspects of Peasant Insurgency in Colonial India</em> (1983) argued that peasant revolts were not mere spontaneous, irrational reactions to material conditions but were organised expressions of a distinct peasant consciousness with its own codes, symbols, and logic. What colonial authorities dismissed as "crime" was in fact "rebellion."</p>
+
+<h3>Colonial Construction of Tradition</h3>
+
+<p>A strong line of scholarship argues that much of what colonial rulers called India's unchanging tradition was partly produced by colonial rule itself. By classifying, codifying and ranking Indian society, the colonial state hardened fluid practices into fixed 'traditions' and then pointed to them as proof of a backwardness that justified British rule.</p>
+
+<ul>
+  <li><strong>Census and objectification:</strong> Bernard Cohn (<em>An Anthropologist among the Historians</em>, 1987) showed that the census, from 1871-72, required every Indian to be placed in a fixed caste and religion. Local, negotiable identities became bounded, countable and politically charged.</li>
+  <li><strong>Risley's ranking:</strong> as Census Commissioner for 1901, Herbert Risley ordered castes by 'social precedence' and tied caste to race through measures such as the nasal index (<em>The People of India</em>, 1908). Caste associations flooded the census with petitions to be recorded under a higher varna.</li>
+  <li><strong>Codified law:</strong> under Warren Hastings's plan of 1772, Hindu and Muslim personal law was applied from Sanskrit and Arabic texts read by pandits and maulvis. Brahmanical texts such as the <em>Manusmriti</em>, translated by William Jones (1794), gained an authority over local custom they had never had.</li>
+  <li><strong>Criminal and martial castes:</strong> the Criminal Tribes Act 1871 branded whole communities as hereditary criminals, while army recruitment sorted others into 'martial races'.</li>
+  <li><strong>Orientalist knowledge:</strong> Edward Said (<em>Orientalism</em>, 1978) and Ronald Inden (<em>Imagining India</em>, 1990) argued that Indology defined India by caste, spirituality and passivity, as the irrational 'other' of a rational Europe. The image of the self-sufficient 'village republic' (Metcalfe, Maine) likewise presented India as static.</li>
+  <li><strong>Caste as the essence of India:</strong> Nicholas Dirks (<em>Castes of Mind</em>, 2001) argued that caste became the single organising category of Indian society only under colonial rule, once political authority was taken from Indian kings and caste was read as a purely religious order.</li>
+</ul>
+
+<p><strong>Critical assessment:</strong> the thesis exposes the politics of colonial knowledge, but it can overstate colonial power. Susan Bayly (<em>Caste, Society and Politics in India</em>, 1999) shows that caste hierarchy was already hardening in the eighteenth century and that colonial rule intensified rather than invented it. Indian pandits, informants and caste associations helped shape colonial categories and used them for their own claims, so Indians were agents as well as objects, and reformers such as Phule attacked caste on their own terms. The thesis is best read as showing how tradition was rigidified and politicised, not created from nothing.</p>
 
 <h2>Long-Term Consequences of Colonial Rule</h2>
 
@@ -5630,6 +6433,28 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Dipankar Gupta (EPW, 2005) presents a starkly different picture of Indian villages: "The village is shrinking as a sociological reality, though it still exists as space. Nowhere else does one find the level of hopeless disenchantment as one does in the rural regions of India. In urban slums there is squalor, there is filth and crime, but there is hope and the excitement that tomorrow might be quite different from today. Rarely would a villager today want to be a farmer if given an opportunity elsewhere. The joint family is disappearing, the rural caste hierarchy is losing its tenacity, and the much romanticised harmony of village life is now exposed for the sham it perhaps always was."</p>
 
 <p>BR Ambedkar's analysis was even more radical: the village was a cesspool of degradation, corruption, and worse. Village India was able to carry on only because there was little option for most people outside the confines of the rural space.</p>
+
+<h3>Factionalism in Rural Society</h3>
+
+<p>A faction is a loose, leader-centred group that competes with similar groups for power, resources and prestige within a village or local community. Ralph Nicholas ("Factions: A Comparative Analysis", 1965) identified five features: factions are conflict groups, they are political groups, they are not corporate groups, their members are recruited by a leader, and they are recruited on diverse principles such as kinship, caste, patronage, debt and neighbourhood.</p>
+
+<p><strong>Studies of Indian villages</strong></p>
+<ul>
+  <li><strong>Oscar Lewis</strong> (<em>Village Life in Northern India</em>, 1958): in Rampur near Delhi, village life was divided into factions built mainly on kinship and lineage within the dominant Jat caste. Factions shaped disputes over land, marriage and panchayat affairs and the working of development programmes.</li>
+  <li><strong>F.G. Bailey</strong> (<em>Stratagems and Spoils</em>, 1969): factions are held together by transactions between leaders and followers rather than by shared ideology, and leaders manipulate rules to win support.</li>
+  <li><strong>Paul Brass</strong> (<em>Factional Politics in an Indian State</em>, 1965): factions in the Uttar Pradesh Congress linked village leaders to district and state politicians, so village factions became part of party politics.</li>
+  <li><strong>Adrian Mayer</strong>: described the "action-set", the network a candidate assembles through many different ties, to explain shifting support in elections.</li>
+</ul>
+
+<p><strong>Why factions flourish:</strong> disputes over land and inheritance, competition for leadership of panchayats and cooperatives, rivalry between lineages within a dominant caste, access to state schemes and contracts, and party competition, which links village rivals to outside patrons. Reservation of sarpanch posts under the 73rd Amendment and the flow of funds through MGNREGA and other schemes have raised the stakes of village office.</p>
+
+<p><strong>Is Indian rural society faction-ridden?</strong> Factions are widespread and often obstruct collective development. But:</p>
+<ul>
+  <li>Factions are vertical alliances that cut across caste and class. Hamza Alavi ("Peasant Classes and Primordial Loyalties", 1973) argued that they bind poor peasants to rich patrons and so block class solidarity, which makes them a means of domination as much as of conflict.</li>
+  <li>They also give followers channels of help, credit and access to the state.</li>
+  <li>Factional conflict coexists with cooperation in festivals, labour exchange and crises, and is found in urban and party politics too, so it is not peculiar to the village.</li>
+</ul>
+<p>"Faction-ridden" thus describes one real feature of rural politics, but the village is better seen as a field in which caste, class, kinship and party ties combine and compete.</p>
 
 <h2>Village Studies: Approaches and Debates</h2>
 
@@ -5723,6 +6548,32 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Post-independence trends summarised by PC Joshi: decline of feudalistic and customary tenancy, replaced by more insecure and exploitative lease arrangements; increased importance of commercial tenancy; rise of owner-farmers. The emergence of commercial peasants led to two important socio-economic consequences: increased production and productivity of agriculture; and accentuated class conflicts in villages.</p>
 
 <p>The impact of land reforms was uneven: dependent on the size of holdings. Rich tenants who could pay compensation to zamindars elevated themselves to owner-farmers. Poorer tenants, forced to borrow, often lost tenurial security and became a "non-owning proletariat": with increased insecurity, obligations, and subordination.</p>
+
+<h3>Why Land Reform Fell Short and Reforms for Today</h3>
+
+<p>Land reform was a paradigm shift: it ended zamindari and the formal power of intermediaries. Where it was carried through, as in Jammu and Kashmir (Big Landed Estates Abolition Act 1950), Kerala (the 1969 amendment to its Land Reforms Act) and West Bengal (Operation Barga, 1978), it changed rural power. Elsewhere it fell well short of equality.</p>
+
+<p><strong>Why it fell short</strong></p>
+<ul>
+  <li><strong>Political will</strong>: land is a state subject, and state legislatures dominated by landowning castes diluted the laws and delayed enforcement. Gunnar Myrdal (<em>Asian Drama</em>, 1968) called this the "soft state", which passes laws it does not enforce.</li>
+  <li><strong>Loopholes</strong>: high ceilings, generous family units, exemptions for orchards, plantations and trusts, and benami and fictitious transfers. Daniel Thorner (<em>The Agrarian Prospect in India</em>, 1956) showed how riddled the laws were with escape routes.</li>
+  <li><strong>Poor land records</strong>: oral and concealed tenancies left tenants unable to prove their rights, and "voluntary surrenders" and evictions followed.</li>
+  <li><strong>Class bias</strong>: rich tenants who could pay compensation became owners, while poor tenants, sharecroppers and Dalit labourers gained little.</li>
+  <li><strong>Lack of organisation</strong>: reform succeeded where peasants were mobilised, as in Kerala and West Bengal, and failed where they were not.</li>
+  <li><strong>Shift of priority</strong>: from the mid-1960s the Green Revolution moved attention from redistribution to production.</li>
+</ul>
+
+<p><strong>Reforms for a more equitable society</strong></p>
+<ul>
+  <li><strong>Accurate, digitised land records and clear titles</strong>, building on the Digital India Land Records Modernisation Programme, so that tenants, women and small owners can prove and defend their rights.</li>
+  <li><strong>Legal, recorded tenancy</strong>: NITI Aayog's Model Agricultural Land Leasing Act (2016) would let owners lease without fear of losing land and give tenants access to credit, insurance and support prices.</li>
+  <li><strong>Women's land rights</strong>: joint titles and enforcement of the Hindu Succession (Amendment) Act 2005. Bina Agarwal (<em>A Field of One's Own</em>, 1994) showed that land in women's hands improves family welfare and women's bargaining power.</li>
+  <li><strong>Redistribution</strong>: enforce ceilings, distribute surplus, Bhoodan and government waste land, and give homestead plots to landless Dalit families.</li>
+  <li><strong>Adivasi land</strong>: full implementation of the Forest Rights Act 2006 and PESA 1996, restoration of alienated tribal land, and protection of Scheduled Areas as upheld in the Samatha judgment (1997).</li>
+  <li><strong>Fair acquisition</strong>: consent and social impact assessment under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013.</li>
+  <li><strong>Collective farming</strong>: farmer producer organisations and group farming, such as women's groups under Kerala's Kudumbashree leasing land collectively, to overcome fragmentation.</li>
+</ul>
+<p>The task today is less to break feudal landlordism than to secure land rights for tenants, women, Dalits and Adivasis, the groups the first round of reform left out.</p>
 
 <h2>Green Revolution and Its Social Consequences</h2>
 
@@ -5926,6 +6777,21 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Sripuram's caste map</strong>: Beteille's detailed analysis revealed that even within the Brahmin community of Sripuram, there were at least four levels of segmentation: political divisions (Brahmins vs Non-Brahmins), occupational divisions (Mirasdar Brahmins/landowners vs temple priests vs panchangakkarans), doctrinal divisions (Smartha/Iyer vs Shri Vaishnava/Iyengar), and marital divisions (multiple sub-castes within each doctrinal group). This confirmed that the caste system is far more complex than the simple Varna scheme suggests.</li>
 </ul>
 
+<h3>E. McKim Marriott: Attributional and Interactional Theories of Caste Ranking</h3>
+
+<p>In "Interactional and Attributional Theories of Caste Ranking" (<em>Man in India</em>, 1959), McKim Marriott distinguished two ways of explaining how castes come to be ranked.</p>
+<table>
+  <thead><tr><th>Attributional approach</th><th>Interactional approach</th></tr></thead>
+  <tbody>
+    <tr><td>A caste's rank follows from its own attributes: occupation, diet, dress, rituals and customs such as widow remarriage</td><td>A caste's rank follows from the pattern of transactions between castes</td></tr>
+    <tr><td>Clean occupations and vegetarianism rank high, leather work, scavenging and beef eating rank low</td><td>Above all, who accepts cooked food (kachcha and pakka), water and ritual services from whom</td></tr>
+    <tr><td>Drawn from texts and the varna scheme: Hutton, Ghurye and most early accounts</td><td>Drawn from field observation of village exchanges: Marriott in Kishan Garhi, Uttar Pradesh</td></tr>
+    <tr><td>Rank is fixed by the qualities of the group</td><td>Rank is relational, can be measured and can change</td></tr>
+  </tbody>
+</table>
+<p>Marriott argued that attributes do not predict local rank consistently: meat-eating Rajputs and other dominant castes often rank above vegetarian traders, and the same occupation carries different rank in different regions. Rank is better read from interaction. A caste that gives food to many castes and accepts it from few ranks high, while one that accepts food from nearly all ranks low. In "Caste Ranking and Food Transactions: A Matrix Analysis" (1968) he arranged the food exchanges among the castes of Kishan Garhi in a matrix and showed that they yield a consistent hierarchy. He later developed a transactional theory in which castes follow strategies of giving and receiving to protect or raise their rank ("Hindu Transactions", 1976).</p>
+<p><strong>Assessment.</strong> The interactional approach brought measurement and attention to local variation, and fits Srinivas's view that caste rank is negotiable. But the two approaches are complementary, since attributes such as purity explain why food from certain castes is refused. The interactional approach also depends on food transactions that are fading in towns, eating places and offices, where interaction no longer follows caste rules. Neither approach alone captures the ideology of purity that Dumont stressed or the competing claims to rank that Dipankar Gupta emphasises.</p>
+
 <h2>The Jajmani System</h2>
 
 <p>The Jajmani system was the economic dimension of the caste system at the village level. Each caste in a village had a hereditary service relationship with other castes: the Brahmin priest performed religious rituals; the carpenter made agricultural implements; the washerman cleaned clothes; the cobbler made and repaired shoes; the barber cut hair; the sweeper cleaned the village: all for the dominant farming caste (the <em>jajman</em>) in exchange for a fixed share of the harvest.</p>
@@ -6049,6 +6915,50 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>Christophe Jaffrelot: reservation policy has produced a "silent revolution", the rise of the Other Backward Classes as a politically assertive and electorally dominant force in North India. The dominance of upper-caste Brahmins and Baniyas in Congress politics has been replaced by OBC-dominated regional parties. This is social change from below: without a revolution.</p>
 
+<h3>Beteille: Harmonic and Disharmonic Social Structures</h3>
+
+<p>Andre Beteille distinguishes societies by the relation between their values and their actual structure of inequality.</p>
+<ul>
+  <li><strong>Harmonic social structure</strong>: inequality in practice is supported by the dominant values. Traditional caste society ranked people by birth, and the ideology of hierarchy, purity and karma made that ranking seem right and natural to most of its members, including many at the bottom. Values and structure were in accord.</li>
+  <li><strong>Disharmonic social structure</strong>: values and structure contradict each other. Independent India adopted equality as its central value through the Constitution (equality before law, abolition of untouchability, adult franchise), but caste, class and gender inequalities persist in practice.</li>
+</ul>
+<p>B.R. Ambedkar foresaw this in his speech to the Constituent Assembly on 25 November 1949: "On the 26th of January 1950, we are going to enter into a life of contradictions. In politics we will have equality and in social and economic life we will have inequality."</p>
+<p><strong>In changing Indian society</strong></p>
+<ul>
+  <li><strong>Tension and protest</strong>: once inequality loses legitimacy it breeds resentment. Dalit, OBC, women's and tribal movements draw their force from the gap between constitutional values and everyday practice.</li>
+  <li><strong>The state as a bridge</strong>: reservation, the SC and ST (Prevention of Atrocities) Act 1989, land reform and legal reform try to bring structure into line with values.</li>
+  <li><strong>Backlash</strong>: atrocities against Dalits who assert equality, and anti-reservation agitations, show resistance from those who lose privilege.</li>
+  <li><strong>Uneven pace</strong>: values change faster in law and politics than in marriage, kinship and religion, so disharmony is sharpest in private life.</li>
+</ul>
+<p><strong>Assessment.</strong> The concept explains why contemporary India sees more open conflict over inequality than traditional society did, even though it is more egalitarian in principle. Beteille himself warned that pursuing equality mainly through caste quotas can harden caste identities. Critics add that traditional society was never fully harmonic, since Buddhism, the Bhakti saints and lower-caste movements always contested hierarchy.</p>
+
+<h3>Dipankar Gupta: Discrete Castes and the Shift from Hierarchy to Difference</h3>
+
+<p>In <em>Interrogating Caste: Understanding Hierarchy and Difference in Indian Society</em> (2000), Dipankar Gupta argues that Dumont's single, agreed hierarchy is a Brahminical view of caste. In practice:</p>
+<ul>
+  <li><strong>Discrete castes</strong>: each caste is a separate, bounded group that sees itself as naturally different from others, much as <em>jati</em> also means species. Endogamy rests on this belief in natural difference. Each caste has its own origin tale that gives it a high, often royal or divine, beginning and explains its present position as the result of a fall or a deception.</li>
+  <li><strong>Muddled hierarchies</strong>: castes accept that hierarchy exists but not the rank others assign them. Since every caste places itself high, there are as many hierarchies as there are castes, and the overall order is muddled rather than agreed. Landed Jats and Rajputs do not accept Brahmin superiority, and Dalit castes reject the stigma attached to them.</li>
+  <li><strong>Hierarchy and difference</strong>: hierarchy ranks castes vertically on a scale of purity, while difference treats them as separate, horizontal identities. With the decline of the jajmani system and the spread of the market and democracy, difference has become the dominant principle.</li>
+</ul>
+<p><strong>Is India moving from hierarchy towards difference?</strong> Evidence for:</p>
+<ul>
+  <li>Castes now mobilise as political and economic interest groups, not as ranks in a ritual order. The Gujjar agitation for ST status in Rajasthan (2007-08) and the Patidar (2015), Jat (2016) and Maratha agitations for reservation show landed castes asserting identity and seeking state benefits, not higher ritual rank.</li>
+  <li>Dalit castes assert pride, as in Ravidassia and Ambedkarite Buddhist assertion, rather than seeking Sanskritisation.</li>
+  <li>M.N. Srinivas ("An Obituary on Caste as a System", 2003) argued that caste as a hierarchical system of interdependent castes is dying while caste as identity grows stronger.</li>
+</ul>
+<p>Evidence against: untouchability, violence against Dalits who marry upper-caste partners or ride horses at weddings, endogamy and residential segregation show that hierarchy and purity have not disappeared. Present-day intercaste relations combine both principles: difference dominates public and political life, while hierarchy persists in marriage, commensality and the treatment of Dalits.</p>
+
+<h3>Caste among Non-Hindu Communities</h3>
+
+<p>Islam, Christianity and Sikhism reject caste in doctrine, yet caste-like formations exist among their followers in India. Most converts came in as whole jatis and kept their occupation, endogamy and place in local society. Dumont saw caste among non-Hindus as a weaker form lacking full religious justification, while Indian studies stress how much of its substance survives.</p>
+<ul>
+  <li><strong>Muslims</strong>: Ghaus Ansari (<em>Muslim Caste in Uttar Pradesh</em>, 1960) and Imtiaz Ahmad (ed., <em>Caste and Social Stratification among the Muslims</em>, 1973) describe a threefold order: <em>Ashraf</em> claiming foreign descent (Sayyid, Shaikh, Mughal, Pathan), <em>Ajlaf</em> from converted artisan and service castes (such as the Ansari weavers and Qureshi butchers) and <em>Arzal</em> from converted Dalit castes. These groups are largely endogamous and tied to occupation, though the ideology of purity is weaker. The Pasmanda movement of backward and Dalit Muslims challenges Ashraf dominance of community leadership.</li>
+  <li><strong>Christians</strong>: Duncan Forrester (<em>Caste and Christianity</em>, 1980) traced how Protestant missions in India alternately accommodated and fought caste among converts. David Mosse (<em>The Saint in the Banyan Tree</em>, 2012) shows caste reproduced among Tamil Catholics through separate seating, separate cemeteries, separate festival processions and upper-caste control of church office. Syrian Christians of Kerala claim high-caste origin and marry among themselves. Dalit Christians are denied SC status because the Constitution (Scheduled Castes) Order 1950 limits it to Hindus, Sikhs (added 1956) and Buddhists (added 1990). The Ranganath Misra Commission (2007) recommended delinking SC status from religion, and a commission under K.G. Balakrishnan was set up in 2022 to examine the question.</li>
+  <li><strong>Sikhs</strong>: landowning Jat Sikhs dominate villages and gurdwara management. Dalit Sikhs, Mazhabis and Ravidasias, often have separate gurdwaras and cremation grounds (Surinder Jodhka), and many Ravidasias have built a separate religious identity around Guru Ravidas.</li>
+  <li><strong>Others</strong>: Jains are divided into endogamous castes, and Navayana Buddhists are drawn mostly from one Dalit caste, the Mahars.</li>
+</ul>
+<p><strong>Assessment.</strong> Caste is a South Asian social institution rather than a purely Hindu one. Conversion offered spiritual equality and sometimes education and mobility, but not escape from social hierarchy, since land, occupation and marriage remained structured by caste. This weakens the view of caste as a purely religious ideology and supports those who treat it as a structure of power and inequality.</p>
+
 `,
   'tribal-communities': `
 <h2>Definitional Problems</h2>
@@ -6120,6 +7030,29 @@ export const sociologyNoteContent: Record<string, string> = {
 <h3>Christian Missionaries</h3>
 <p>Contributed schools and hospitals in remote areas. Main ideology was assimilation into Christianity: disrupting traditional cultural practices. Contributed to high literacy in the Northeast (Nagaland, Mizoram, Arunachal Pradesh among most literate states).</p>
 
+<h3>Colonial "Criminal Tribes"</h3>
+
+<p>The Criminal Tribes Act 1871 allowed the colonial government to notify an entire community as a "criminal tribe", making every member a suspected criminal by birth. It applied first to the North-Western Provinces, Oudh and Punjab, was extended to Bengal in 1876 and to the Madras Presidency in 1911, and was consolidated in 1924.</p>
+
+<p><strong>Why the category was created</strong></p>
+<ul>
+  <li><strong>A caste theory of crime</strong>: colonial officials read Indian society through caste and assumed that occupations were hereditary. If weaving and carpentry passed from father to son, they argued, so did crime, and some communities were seen as hereditary professional criminals.</li>
+  <li><strong>Suspicion of mobile people</strong>: nomads, pastoralists, itinerant traders, entertainers and peddlers (Banjaras, Pardhis, Sansis, Kanjars, Nats and others) escaped land revenue, census and police control. A state built on settled agriculture saw mobility itself as a threat.</li>
+  <li><strong>Order after 1857</strong>: the colonial state wanted to police groups that lay beyond its control.</li>
+  <li><strong>Forest and grazing laws</strong>: as forests were reserved and grazing restricted, communities who lived by them lost their livelihoods and some turned to petty crime, which seemed to confirm the stereotype.</li>
+</ul>
+
+<p><strong>Implications</strong></p>
+<ul>
+  <li><strong>Surveillance</strong>: registration, passes for travel, regular roll calls at police stations and arrest without warrant.</li>
+  <li><strong>Settlements</strong>: many were confined in reformatory settlements and made to work on farms and in factories, some run by the Salvation Army.</li>
+  <li><strong>Stigma and poverty</strong>: communities were branded criminal by birth, cut off from land and from their traditional occupations.</li>
+  <li><strong>After independence</strong>: the Act was repealed in 1949 and the communities "denotified" in 1952, but Habitual Offenders Acts in many states carried the label forward. Denotified tribes (DNTs) still face police harassment, custodial violence and exclusion. The death of Budhan Sabar of the Kheria Sabar community in police custody in Purulia, West Bengal, in 1998 became a symbol of this, taken up by Mahasweta Devi and G.N. Devy in their campaign for DNT rights.</li>
+  <li><strong>Commissions</strong>: the Renke Commission (2008) and the Idate Commission examined the condition of denotified, nomadic and semi-nomadic tribes and recommended special measures for their inclusion.</li>
+</ul>
+
+<p><strong>Sociological significance.</strong> The criminal tribe was a colonial category that turned a stereotype into law and so produced the marginality it claimed to describe. Meena Radhakrishna (<em>Dishonoured by History</em>, 2001) shows how it served colonial control over labour and movement. It also shows how state classification can create lasting social identities, as the census did for caste.</p>
+
 <h2>Issues of Integration and Autonomy</h2>
 
 <p><strong>Assimilationists</strong>: tribes should be absorbed into larger Indian society; uniform administration; colonial baggage labels should go.</p>
@@ -6135,6 +7068,26 @@ export const sociologyNoteContent: Record<string, string> = {
 </ul>
 
 <p>BN Majumdar proposed "Limited Assimilation": absorbing useful tribal practices while preserving autonomy. UN Dhebar Commission (1960) endorsed integration policy. The singular success of NEFA (now Arunachal Pradesh), implemented under Verrier Elwin's guidance, resulted in the only Northeast state not convulsed with militancy, and certain tribes achieving 100% literacy. Elwin: "Integration can only take place on the basis of equality: moral and political equality."</p>
+
+<h3>The Ghurye-Elwin Debate on Tribal Policy</h3>
+
+<p>From the late 1930s, the anthropologist Verrier Elwin and the sociologist G.S. Ghurye argued over how the state should treat India's tribes. Their debate set the terms of tribal policy after independence.</p>
+
+<p><strong>Elwin: protection and freedom.</strong> Elwin, who lived among the Gond and Baiga of the Central Provinces, held that contact with outsiders (moneylenders, traders, landlords, forest officials, police and missionaries) was destroying tribal life. In <em>The Baiga</em> (1939) and <em>The Loss of Nerve</em> (1941) he described land alienation, debt, bans on shifting cultivation and contempt for tribal custom producing a loss of zest for life. He proposed that the most vulnerable tribes be protected in reserved areas, "national parks", where the entry of outsiders would be controlled and tribes could live by their own ways until they could meet the wider society as equals. For Elwin, freedom for the tribals meant freedom from exploitation and freedom to keep their land, forests, dances, dormitories and beliefs.</p>
+
+<p><strong>Ghurye: assimilation.</strong> In <em>The Aborigines "So-called" and Their Future</em> (1943), later revised as <em>The Scheduled Tribes</em>, Ghurye rejected the idea that tribes were a separate people. He called them "backward Hindus", imperfectly integrated sections of Hindu society, pointing to centuries of contact, shared deities and the Hinduisation of groups such as the Bhils and Gonds. Isolation, he argued, would keep them backward and served the colonial strategy of dividing Indians through excluded areas. Their future lay in assimilation into the Hindu and national mainstream through education, settled agriculture and reform of customs such as drinking.</p>
+
+<p><strong>Points of contrast</strong></p>
+<ul>
+  <li><strong>Identity</strong>: Elwin saw tribes as distinct peoples with their own cultures, Ghurye as part of Hindu society</li>
+  <li><strong>Contact</strong>: for Elwin it caused exploitation and cultural loss, for Ghurye it was the path to progress</li>
+  <li><strong>Policy</strong>: temporary protection and isolation against assimilation</li>
+  <li><strong>Politics</strong>: nationalists accused Elwin of colonial isolationism and of treating tribes as museum specimens, while Elwin saw "uplift" as a cover for exploitation and cultural destruction</li>
+</ul>
+
+<p><strong>Resolution.</strong> Elwin himself moved towards integration. As adviser on tribal affairs to the North-East Frontier Agency, he set out in <em>A Philosophy for NEFA</em> (1957) a path of development without imposition, and Nehru's foreword to its second edition (1959) stated the five principles of tribal Panchsheel. Nehru's policy of integration steered between Elwin's isolation and Ghurye's assimilation, and its spirit survives in the Fifth and Sixth Schedules, PESA (1996) and the Forest Rights Act (2006).</p>
+
+<p><strong>Assessment.</strong> Ghurye's view denied tribal identity and ignored the exploitation that contact brought, and the displacement of Adivasis by dams and mines since independence bears out many of Elwin's fears. Elwin's early view was romantic and paternalist, treating tribes as fragile cultures to be preserved rather than as citizens with rights and aspirations of their own. Tribal movements today demand neither isolation nor assimilation but control over land, forests and self-government.</p>
 
 <h2>Constitutional Safeguards</h2>
 
@@ -6292,6 +7245,47 @@ export const sociologyNoteContent: Record<string, string> = {
   <li><strong>Land dispossession for infrastructure</strong>: Special Economic Zones, mining, dams, and urban expansion have led to large-scale land acquisition from peasant and tribal communities, pushing small farmers and Adivasis off agricultural land.</li>
 </ul>
 
+<h3>Andre Beteille: Class and the Bases of Agrarian Class Structure</h3>
+
+<p><strong>Definition of class.</strong> Following Weber more than Marx, Andre Beteille (<em>Caste, Class and Power</em>, 1965) treats class as one of three distinct dimensions of stratification, beside caste (status) and power. A class is a category of people who occupy a similar position in the system of production, which in an agrarian society is defined mainly by their relation to land. Classes differ from castes: they are categories rather than named, closed communities, membership is not fixed by birth, and they lack the ritual and endogamous boundaries of caste. Beteille stressed that agrarian classes in India are rarely conscious, organised groups.</p>
+
+<p><strong>Bases of agrarian class structure</strong> (<em>Studies in Agrarian Social Structure</em>, 1974)</p>
+<ul>
+  <li><strong>Ownership, control and use of land</strong>: the basic division is between those who own land, those who cultivate land they do not own, and those who work on others' land for wages, yielding landowners, tenants and agricultural labourers.</li>
+  <li><strong>Organisation of work</strong>: within each category it matters whether the household works the land itself, supervises hired labour or leases the land out. Non-cultivating landowners, owner-cultivators who hire labour and family-labour peasants occupy different class positions.</li>
+  <li><strong>Manual labour and status</strong>: abstaining from manual work on the land marks high status. In Thanjavur, Brahmin landowners did not plough, which set them apart from cultivating non-Brahmin tenants and Adi-Dravida labourers.</li>
+  <li><strong>Local categories</strong>: Beteille urged attention to the categories rural people themselves use, such as the mirasdar (landowner) and the pannaiyal (attached labourer) in Tamil Nadu, rather than imposing a two-class model.</li>
+  <li><strong>Overlapping positions</strong>: one household may own a little land, lease in more and also work for wages, so agrarian classes shade into one another and are not neatly bounded.</li>
+  <li><strong>Caste and region</strong>: the agrarian hierarchy overlaps with caste (upper-caste owners, middle-caste tenants, Dalit labourers) and varies with tenure history, irrigation and region.</li>
+</ul>
+<p><strong>Assessment.</strong> Beteille's approach captures the complexity of Indian agrarian structure and its overlap with caste. Marxist scholars criticise it for describing categories without analysing exploitation and the extraction of surplus, and peasant and labour movements since the 1960s show that agrarian classes can act as conscious groups.</p>
+
+<h3>The Rural Middle Class: Bullock Capitalists and Neo-Rich Farmers</h3>
+
+<p>A rural middle class of rich and middle peasants emerged after independence, drawn mainly from middle and backward castes such as the Jats, Yadavs, Kurmis, Patidars, Vokkaligas, Reddys, Kammas and Marathas. Lloyd and Susanne Rudolph (<em>In Pursuit of Lakshmi</em>, 1987) called them "bullock capitalists": self-employed owner-cultivators with holdings of roughly 2.5 to 15 acres, relying mainly on family labour and their own bullocks and small machines, neither landlords nor labourers.</p>
+
+<p><strong>Factors in its growth and consolidation</strong></p>
+<ul>
+  <li><strong>Land reform</strong>: zamindari abolition removed intermediaries, and tenancy reform turned superior tenants of middle castes into owners.</li>
+  <li><strong>Green Revolution</strong>: high-yielding seeds, fertilisers, tubewells and tractors raised the surplus of those with enough land and capital.</li>
+  <li><strong>State support</strong>: minimum support prices and procurement, subsidised power, water and fertiliser, institutional credit after bank nationalisation (1969), cooperatives and extension services.</li>
+  <li><strong>Political power</strong>: numbers and land made these castes dominant in Srinivas's sense, and adult franchise, Panchayati Raj and cooperatives turned that dominance into political power.</li>
+</ul>
+
+<p><strong>Characteristics of the neo-rich agrarian class:</strong> market orientation and commercial crops, investment in machinery, hired labour at peak seasons, moneylending, and diversification into trade, transport, cold storage, brick kilns and real estate. Its members spend on consumer goods, sons' education, dowry and lavish weddings, and seek government jobs for the next generation. Many keep caste values and patriarchal control over women even as they modernise production.</p>
+
+<p><strong>Relation to capitalism in agriculture.</strong> In Green Revolution areas these farmers produce for the market, reinvest their surplus and hire wage labour, signs of capitalist development that Utsa Patnaik documented. Yet the bullock capitalist rests on family labour and modest holdings, and the persistence of tenancy, debt and attached labour elsewhere keeps capitalist relations uneven across regions.</p>
+
+<p><strong>Socio-structural implications</strong></p>
+<ul>
+  <li><strong>New dominant castes</strong> replaced the old landlord and upper-caste elites in village and state politics.</li>
+  <li><strong>Farmers' movements</strong>: from the late 1970s, the new farmers' movements (Mahendra Singh Tikait's Bharatiya Kisan Union in western Uttar Pradesh, Sharad Joshi's Shetkari Sanghatana in Maharashtra and the Karnataka Rajya Raitha Sangha) demanded remunerative prices, cheap inputs and loan waivers. Joshi framed the conflict as "Bharat versus India", rural producers against the urban, industrial state.</li>
+  <li><strong>Political assertion</strong>: Charan Singh's peasant politics and later the Mandal politics of OBC reservation (report 1980, implemented 1990) expressed this class's rise, part of what Christophe Jaffrelot calls India's "silent revolution".</li>
+  <li><strong>Rural-urban bargaining</strong>: Ashutosh Varshney (<em>Democracy, Development and the Countryside</em>, 1995) showed how the farm lobby used democratic politics to win price support and subsidies.</li>
+  <li><strong>Conflict with labourers</strong>: Dalit labourers' demands for higher wages and dignity have met resistance and violence from the new landowning castes.</li>
+  <li><strong>Mobility and crisis</strong>: sons move into education, business and government jobs, while fragmenting holdings and rising costs now squeeze many middle farmers, feeding agitations for reservation (Jats, Patidars, Marathas) and for a legal guarantee of MSP.</li>
+</ul>
+
 <h2>Industrial Class Structure</h2>
 
 <h3>Colonial Origins of Indian Industrial Classes</h3>
@@ -6387,6 +7381,28 @@ export const sociologyNoteContent: Record<string, string> = {
 
 <p>SD Badgaiyyan extended this analysis to tribal elites who have used reservation and education to enter the government service middle class while remaining connected to and advocating for their tribal communities. The emergence of Dalit and tribal middle classes has significant political implications: they have produced new political entrepreneurs (Kanshi Ram and Mayawati for Dalits; leaders of Jharkhand and Chhattisgarh for tribals) who mobilise their communities' numbers into political power.</p>
 
+<h3>Middle-Class Women: Changing Status and Roles</h3>
+
+<p>The colonial middle class first redefined women's roles. Nineteenth-century reformers campaigned against sati and child marriage and for widow remarriage and female education, but the ideal they promoted was the educated, home-centred wife and mother, guardian of national culture. Since independence, and faster since 1991, education, white-collar employment and urban living have changed the status of middle-class women.</p>
+
+<p><strong>Changes</strong></p>
+<ul>
+  <li><strong>Education and work</strong>: women's enrolment in higher education now matches men's, and middle-class women work in teaching, medicine, banking, IT, media and government service. Their income gives them a voice in household decisions.</li>
+  <li><strong>Marriage and family</strong>: later marriage, more say in choosing partners, smaller families, nuclear and dual-career households, and growing acceptance of divorce and of single women living alone.</li>
+  <li><strong>Legal and public voice</strong>: the Sexual Harassment of Women at Workplace Act 2013 and the Maternity Benefit (Amendment) Act 2017 widened rights at work, and protests after the Delhi gang rape (2012), Pinjra Tod and #MeToo (2018) drew heavily on middle-class women.</li>
+</ul>
+
+<p><strong>Continuities and constraints</strong></p>
+<ul>
+  <li><strong>Double burden</strong>: paid work is added to housework and care, Arlie Hochschild's "second shift", often eased only by hiring poorer women as domestic help.</li>
+  <li><strong>Status production work</strong>: Hanna Papanek ("Family Status Production", 1979) showed that middle-class women's unpaid work, such as supervising children's education, hosting, ritual and display, produces the family's status. Henrike Donner's study of Kolkata (<em>Domestic Goddesses</em>, 2008) found mothers investing intensely in children's schooling as a middle-class project.</li>
+  <li><strong>Respectability</strong>: Smitha Radhakrishnan (<em>Appropriately Indian</em>, 2011) found women IT professionals crafting a "respectable" femininity that joins career with family duty. Many families withdraw women from work after marriage or childbirth to signal status, so urban female work participation stays low despite rising education.</li>
+  <li><strong>Glass ceiling and safety</strong>: few women reach senior posts, and fear of harassment limits their mobility and choice of jobs.</li>
+  <li><strong>Dowry and son preference</strong>: dowry inflation and sex-selective abortion are marked in prosperous groups. Census 2011 recorded a child sex ratio of 918 girls per 1,000 boys, lower in urban than in rural areas.</li>
+</ul>
+
+<p><strong>Assessment.</strong> Middle-class women have gained education, income and choice, but within a patriarchal frame that still expects them to guard family honour and status. Their status has risen further in the public sphere than in the private one.</p>
+
 <h2>Caste and Class: Intersection in India</h2>
 
 <p>The relationship between caste and class in India is one of the most important and contested questions in Indian sociology. Several positions have been advanced:</p>
@@ -6417,6 +7433,45 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Andre Beteille observes that kinship in India is so strong that voting is driven by kinship rather than merit: the primary source of political recruitment is the kinship group. The democratic political system in India is thus engaged in social and cultural reproduction. Krishna Kumar makes the same point for economic life: kinship in India is so intensive that behind every corrupt man there is an ambitious family. Industrial recruitment takes place largely on kinship rather than merit. Both conclude that with modernity, kinship and descent in India have not changed significantly: making it essential to study kinship under social transformation.</p>
 
 <p>The role of descent and kinship is not limited to private spheres like marriage and family. It defines occupation (jati and hereditary work), political activities (caste-based mobilisation), industrial recruitment (nepotism), and access to resources. The sociology of Indian kinship cannot be separated from the sociology of caste, class, and power.</p>
+
+<h3>Kinship: Definition and G.P. Murdock's Contribution</h3>
+
+<p>Kinship is the socially recognised network of relationships based on descent (consanguinity) and marriage (affinity), together with the rules of rights, duties, residence, inheritance and terms of address that go with them. Social recognition rather than biology defines it, as adoption and fictive kin show.</p>
+
+<p><strong>George Peter Murdock</strong> (1897-1985) brought systematic cross-cultural comparison to kinship. He built the Cross-Cultural Survey at Yale, which grew into the Human Relations Area Files, and in <em>Social Structure</em> (1949) tested hypotheses statistically on a sample of 250 societies. His contributions:</p>
+<ul>
+  <li><strong>Universality of the nuclear family</strong>: found in every society in his sample, alone or as the unit of larger polygamous and extended families, with four functions: sexual, economic, reproductive and educational.</li>
+  <li><strong>Degrees of kin</strong>: primary kin (members of one's own families of orientation and procreation), secondary kin (the primary kin of one's primary kin, 33 types) and tertiary kin (151 types).</li>
+  <li><strong>Kinship terminology</strong>: he classified kin-term systems by how they name cousins into six types named after peoples: Eskimo, Hawaiian, Iroquois, Sudanese, Omaha and Crow.</li>
+  <li><strong>How kinship systems change</strong>: residence, descent and terminology are linked. Change usually begins with the rule of residence, which then reshapes descent groups and finally kin terms.</li>
+</ul>
+<p><strong>Critique.</strong> Kathleen Gough's work on the Nayars of Kerala, whose visiting husbands had no domestic role, questioned the universality of the nuclear family, as did the Israeli kibbutz. Treating societies as independent cases also ignores borrowing between them (Galton's problem). Yet Murdock's typologies of family, residence, descent and kin terms remain the basic vocabulary of Indian kinship studies, including comparisons of regional systems.</p>
+
+<h3>Descent Theory and Alliance Theory</h3>
+
+<p>Two theories dominated mid-twentieth-century kinship studies, and each fits one of India's major kinship regions.</p>
+<table>
+  <thead><tr><th>Descent theory</th><th>Alliance theory</th></tr></thead>
+  <tbody>
+    <tr><td>Radcliffe-Brown, Meyer Fortes ("The Structure of Unilineal Descent Groups", 1953), Evans-Pritchard (<em>The Nuer</em>, 1940)</td><td>Claude Lévi-Strauss (<em>The Elementary Structures of Kinship</em>, 1949), Rodney Needham, Edmund Leach, Louis Dumont</td></tr>
+    <tr><td>Unilineal descent groups (lineages and clans tracing a common ancestor) are the building blocks of society</td><td>Marriage alliances between groups, through the exchange of women, are the building blocks of society</td></tr>
+    <tr><td>Groups are corporate: they hold property, settle disputes and continue across generations</td><td>The incest taboo forces groups to give women away, creating lasting ties of reciprocity</td></tr>
+    <tr><td>Marriage is secondary, a link between groups already formed by descent</td><td>Affinity is primary: restricted exchange (bilateral cross-cousin marriage) or generalised exchange (matrilateral cross-cousin marriage) links groups over generations</td></tr>
+  </tbody>
+</table>
+
+<p><strong>North India and descent.</strong> North Indian kinship is organised by patrilineal descent: the household, the lineage (<em>kul</em>, <em>khandan</em>) and the exogamous <em>gotra</em>. Lineages hold land and ancestral rites, and gotra, village and sapinda exogamy push marriage outward. Marriage is asymmetrical: <em>kanyadan</em>, the gift of a virgin, makes wife-givers inferior to wife-takers, gifts flow one way and hypergamy is common. T.N. Madan's study of the Pandits of rural Kashmir (<em>Family and Kinship</em>, 1965) showed descent and the patrilineal household as the organising principles.</p>
+
+<p><strong>South India and alliance.</strong> Louis Dumont ("Hierarchy and Marriage Alliance in South Indian Kinship", 1957) argued that Dravidian kin terms divide relatives of one's own generation into two categories, kin and affines, so that the mother's brother and his children are affines by definition and cross-cousin marriage renews the alliance in every generation. He later called this "affinity as a value" (1983): affinity is inherited, not created afresh by each marriage. Thomas Trautmann (<em>Dravidian Kinship</em>, 1981) traced the history of the system. Here marriage close to home, symmetrical exchange and continuing relations between the same families matter more than lineage depth.</p>
+
+<p><strong>Conceptual issues about lineage and descent in India</strong></p>
+<ul>
+  <li><strong>Gotra and lineage</strong>: the gotra is a category of putative descent from a rishi that regulates marriage, while the lineage is a working group of known kin, so "descent group" means different things at different levels.</li>
+  <li><strong>Descent and caste</strong>: caste endogamy combined with gotra exogamy makes descent a means of reproducing caste.</li>
+  <li><strong>Matriliny</strong>: the Nayar <em>taravad</em> of Kerala and the Khasi and Garo of Meghalaya trace descent through women, so patriliny is not a single Indian norm.</li>
+  <li><strong>Property</strong>: the Mitakshara coparcenary vested ancestral property in the male line until the Hindu Succession (Amendment) Act 2005 made daughters coparceners, moving descent towards bilaterality.</li>
+  <li><strong>No absolute divide</strong>: Karve found intermediate central zones, and alliance matters in the North too, through hypergamous chains of marriage between villages.</li>
+</ul>
 
 <h2>Types of Kinship Systems: Irawati Karve's Four Zones</h2>
 
@@ -6483,6 +7538,18 @@ export const sociologyNoteContent: Record<string, string> = {
 <p>Tulsi Patel's fieldwork shows women consider it sinful to prohibit their husbands from sexual access, leading to unwanted pregnancies. Women lose their lives during childbirth; even in poor health they accept patriarchal convention: forgetting their entitlements. Women's wages are less than half of men's despite doing twice the work in factories. For these women, family is "a paradise in a hopeless world": where marriage, childbirth, and motherhood are made to seem like they make a woman's life complete. Feminist movements are not rebellions against patriarchy: they are asking for equality, for recognition of entitlements that exist in law but not in social practice.
 
 The sexual division of labour in India is continuously reproduced through the kinship system. The kinship zone a person inhabits determines their entitlements. A Khasi woman has matrilineal property rights; a North Indian woman's inheritance rights were legally equalised with men's only in 2005. The four kinship zones thus create structurally different entitlement landscapes for women: complicating any unified account of gender in India.</p>
+
+<h3>Leela Dube: Seed and Earth</h3>
+
+<p>Leela Dube's essay "Seed and Earth: The Symbolism of Biological Reproduction and Sexual Relations of Production" (in <em>Visibility and Power</em>, 1986, edited with Eleanor Leacock and Shirley Ardener) shows how a farming metaphor underpins patrilineal kinship in India. Drawing on texts such as the Manusmriti and on everyday sayings, she shows that the man is seen as the seed (<em>bija</em>) and the woman as the field or earth (<em>kshetra</em>).</p>
+<ul>
+  <li><strong>Identity from the seed</strong>: the seed decides the child's nature, caste and gotra. The earth only nourishes it, so the mother contributes nurture but not identity.</li>
+  <li><strong>The owner of the field</strong>: as the crop belongs to the owner of the field, the child belongs to the husband and his lineage. Women thus have no independent claim over their children.</li>
+  <li><strong>Control of sexuality</strong>: since the purity of the lineage depends on what is sown in the field, women's sexuality, movement and marriage must be guarded.</li>
+  <li><strong>Hypergamy</strong>: the metaphor explains why <em>anuloma</em> unions (a higher-caste man with a lower-caste woman) were tolerated while <em>pratiloma</em> unions (a lower-caste man with a higher-caste woman) were condemned: a superior seed may grow in an inferior field, but not the reverse.</li>
+  <li><strong>Property</strong>: like a field, a woman is owned rather than an owner, so women are denied rights in land and in the natal lineage. A daughter is <em>paraya dhan</em>, another's wealth, only a temporary member of her father's house.</li>
+</ul>
+<p><strong>Significance.</strong> Dube argued that gender inequality is built into cultural ideas of procreation and kinship, not only into law and economy. This helps explain son preference, the low value placed on daughters, and resistance to women's inheritance even after the Hindu Succession (Amendment) Act 2005. Her wider comparative work, including her study of matrilineal Muslims in Lakshadweep and <em>Women and Kinship</em> (1997), showed that women's position varies with the kinship system and is different where descent is traced through women.</p>
 `,
   'religion-society-india': `
 <h2>Introduction: Religion in the Indian Context</h2>
@@ -6510,6 +7577,29 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>The Sufi movement represented Islam's mystical dimension: emphasising direct personal experience of God (fana, or annihilation of the self in God), love and ecstasy over legal compliance, and openness to local cultural forms. The Chishti order (Moinuddin Chishti, Nizamuddin Auliya, Amir Khusrau) became deeply embedded in Indian popular culture. The dargahs (shrines) of Sufi saints attract devotees of all religions: embodying the syncretic spirit of popular Indian religiosity. The Sufi concept of Wahadut-ul-Wajud (Unity of God: God and his creations are one) resonates with Advaita Vedanta's non-dualism.</p>
 
 <p>The Bhakti-Sufi synthesis produced a composite culture: shared music (qawwali, bhajan, doha), shared pilgrimage sites, shared vocabulary of devotion: that formed the cultural backdrop against which both anti-colonial nationalism and communalism later struggled. This composite culture is what TN Madan calls "Indianised" or "domesticated" religion: religious traditions that have adapted to each other through centuries of co-habitation.</p>
+
+<h3>Islam as Practised in India</h3>
+
+<p>Islam reached India through Arab traders on the Malabar coast, Sufi saints and Turkish and Mughal rule, and most Indian Muslims descend from local converts. Indian Islam therefore joins a shared textual faith (the Quran, the five pillars, the shariat) with practices rooted in local society. Imtiaz Ahmad's edited volumes, notably <em>Caste and Social Stratification among Muslims in India</em> (1973) and <em>Ritual and Religion among Muslims in India</em> (1981), argued that these levels are complementary parts of one lived religion, not a pure faith corrupted by Hindu custom.</p>
+
+<p><strong>Distinct features:</strong></p>
+<ul>
+  <li><strong>Sufi orders and shrines:</strong> Chishti, Suhrawardi, Qadiri and Naqshbandi orders, veneration of pirs, and dargahs such as Ajmer and Nizamuddin whose <em>urs</em> festivals draw people of all faiths.</li>
+  <li><strong>Caste-like stratification:</strong> the Ashraf, Ajlaf and Arzal division, with occupational birth groups (<em>biradaris</em>) and endogamy.</li>
+  <li><strong>Shared custom and regional variety:</strong> life-cycle rites, dress, food, music and language shared with neighbouring Hindus, from the matrilineal Mappilas of north Kerala and the islanders of Lakshadweep to the Meos of Mewat, who long kept Hindu customs, and the Bohra and Khoja trading communities of Gujarat.</li>
+  <li><strong>Personal law:</strong> marriage, divorce and inheritance under the Muslim Personal Law (Shariat) Application Act 1937.</li>
+</ul>
+
+<p><strong>How they have changed:</strong></p>
+<ul>
+  <li><strong>Reform and purification:</strong> from the nineteenth century, Deoband (1866), the Ahl-i-Hadith and the Tablighi Jamaat, founded by Maulana Muhammad Ilyas among the Meos in 1926, campaigned against shrine worship and customs they saw as un-Islamic. The Barelvi school defended Sufi practice, so Indian Islam divided into rival schools.</li>
+  <li><strong>Modernisation:</strong> the Aligarh movement promoted Western education and an educated Muslim middle class emerged.</li>
+  <li><strong>Islamisation and Ashrafisation:</strong> upwardly mobile groups adopt Ashraf titles and stricter scriptural practice, a parallel to Sanskritisation. Gulf migration from the 1970s brought remittances and Gulf-influenced practice, notably in Kerala.</li>
+  <li><strong>Identity under pressure:</strong> Partition, riots and communal politics have pushed many towards a more uniform, visible identity. Francis Robinson (1983) argued, against Ahmad, that the shift towards scriptural Islam is a long-run historical trend.</li>
+  <li><strong>Internal democratisation:</strong> the Pasmanda movement of backward-caste Muslims challenges Ashraf dominance, and Muslim women won <em>Shayara Bano v. Union of India</em> (2017), which struck down instant triple talaq, followed by the Muslim Women (Protection of Rights on Marriage) Act 2019.</li>
+</ul>
+
+<p><strong>Impact of Muslims on Indian society:</strong> Indo-Islamic architecture, Hindustani music, qawwali and the ghazal, the Urdu language, Mughal painting, cuisine and dress, the revenue and administrative systems of the Sultanate and the Mughals, and the Bhakti-Sufi meeting that produced figures such as Kabir. Islam also offered lower castes an exit from Brahmanical hierarchy, though caste reappeared within it.</p>
 
 <h2>Communalism</h2>
 
@@ -6641,6 +7731,62 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>The Muslim Women (Protection of Rights on Divorce) Act 1986 (Shah Bano case) and its amendment (2019 Triple Talaq Act criminalising instant triple talaq) show the contested terrain where religion, gender, state power, and minority rights intersect. The Sabarimala verdict (2018, Supreme Court allowing women of all ages into the temple) sparked massive protests: illustrating that changes to religious practice through legal intervention generate fierce resistance even from religious women who see their exclusion as religiously meaningful.</p>
 
+<h3>Patriarchy: Ideology and Material Basis</h3>
+
+<p>Patriarchy, literally 'rule of the father', is a system of social structures and practices in which men dominate, oppress and exploit women (Sylvia Walby, <em>Theorizing Patriarchy</em>, 1990). It works as an ideology that presents male authority and the sexual division of labour as natural, sacred or customary, taught through family, religion, school and media. Kate Millett (<em>Sexual Politics</em>, 1970) made the term central to feminist theory. The ideology rests on a material base.</p>
+
+<ul>
+  <li><strong>Property:</strong> Engels (<em>The Origin of the Family, Private Property and the State</em>, 1884) tied women's subordination to private property and men's wish to pass it to legitimate heirs, which required control of women's sexuality. In India patrilineal inheritance kept land in male hands, and Bina Agarwal (<em>A Field of One's Own</em>, 1994) showed how few women control land.</li>
+  <li><strong>Labour:</strong> Heidi Hartmann ("The Unhappy Marriage of Marxism and Feminism", 1979) located the material base of patriarchy in men's control over women's labour power, at home through unpaid domestic work and in the market through exclusion from better jobs.</li>
+  <li><strong>Sexuality and reproduction:</strong> marriage rules, seclusion, the stress on virginity and son preference.</li>
+  <li><strong>Walby's six structures:</strong> household production, paid work, the state, male violence, sexuality and cultural institutions, with a historical shift from private patriarchy in the household to public patriarchy in employment and the state.</li>
+</ul>
+
+<p><strong>Brahmanical patriarchy:</strong> Uma Chakravarti ("Conceptualising Brahmanical Patriarchy in Early India", <em>Economic and Political Weekly</em>, 1993) argued that caste purity depends on controlling women's sexuality, since caste is reproduced through endogamy. Seclusion, early marriage and enforced widowhood among upper castes guarded caste boundaries, so gender, caste and class interlock.</p>
+
+<p><strong>Patriarchy as dominance:</strong> it works through force (domestic violence, honour crimes), through law and the state, and above all through consent, as women internalise norms of service and sacrifice. Gerda Lerner (<em>The Creation of Patriarchy</em>, 1986) showed it to be historical, not natural, and so open to change.</p>
+
+<h4>Social and Cultural Determinants of the Sexual Division of Labour</h4>
+<p>Functionalists explained the division by biology: George Murdock's cross-cultural survey linked it to childbearing and male strength, and Talcott Parsons gave men 'instrumental' and women 'expressive' roles. Ann Oakley (<em>Housewife</em>, 1974) showed the housewife role to be a social construction. In India, caste decides which women work outside: upper castes withdraw women from field labour as a mark of status, while Dalit and Adivasi women work in fields and on construction sites. Maria Mies (<em>The Lace Makers of Narsapur</em>, 1982) showed how defining women as 'housewives' let their home-based craft work be paid as mere side income. Purdah, family honour and the burden of care confine women to the home or to low-paid work.</p>
+
+<p><strong>Is patriarchy a key to inequality?</strong> It is a key, since it shapes access to property, work, education, health and power in every community, but not the only one. Gopal Guru ("Dalit Women Talk Differently", 1995) and Sharmila Rege (1998) argued that Dalit women face caste and class oppression that upper-caste feminism overlooked, and Kimberlé Crenshaw's 'intersectionality' (1989) captures how gender, caste, class and religion combine.</p>
+
+<h3>Patriarchy and Honour Killing</h3>
+
+<p>An honour killing is the murder of a person, usually a woman or a couple, by family or community members who believe the victim has dishonoured them, typically by choosing a partner across caste or religion or within a prohibited <em>gotra</em>. The links with patriarchy are direct.</p>
+
+<ul>
+  <li><strong>Women as bearers of honour:</strong> family and caste honour (<em>izzat</em>) is vested in women's sexual conduct, so a woman's choice of partner is treated as a collective matter for men to decide.</li>
+  <li><strong>Caste endogamy:</strong> in the logic of Brahmanical patriarchy, controlling marriages preserves caste boundaries and property. Many killings punish inter-caste unions, above all a dominant-caste woman marrying a Dalit man.</li>
+  <li><strong>Property and alliance:</strong> a daughter's free choice threatens control over land and the alliances families build through marriage.</li>
+  <li><strong>Community enforcement:</strong> caste councils such as the khap panchayats of Haryana and western Uttar Pradesh pronounce couples guilty and impose boycotts. Prem Chowdhry (<em>Contentious Marriages, Eloping Couples</em>, 2007) traces how land, marriage markets and caste pride drive this policing.</li>
+  <li><strong>Backlash against autonomy:</strong> education, mobile phones, urban work and constitutional rights increase self-chosen marriages, and violence reacts against this loss of control.</li>
+</ul>
+
+<p><strong>Cases:</strong> Manoj and Babli, killed in Haryana in 2007 for marrying within their <em>gotra</em>, a case in which a khap leader was among those convicted. Shankar, a Dalit youth hacked to death at Udumalpet, Tamil Nadu, in 2016 for marrying Kausalya, a Thevar woman. Kevin Joseph, a Dalit Christian killed in Kottayam, Kerala, in 2018. Pranay Perumalla, killed at Miryalaguda, Telangana, in 2018 at the instance of his wife Amrutha's father. Ankit Saxena, killed in Delhi in 2018 by the family of his Muslim girlfriend.</p>
+
+<p><strong>Law:</strong> the Supreme Court upheld adults' right to marry by choice in <em>Lata Singh v. State of Uttar Pradesh</em> (2006), called khap diktats illegal in <em>Arumugam Servai v. State of Tamil Nadu</em> (2011), and in <em>Shakti Vahini v. Union of India</em> (2018) laid down preventive, remedial and punitive measures, including protection and safe houses for couples. The Law Commission's 242nd Report (2012) proposed a separate law, but no central law exists.</p>
+
+<h3>Patriarchy, Girl-Child Socialisation and Entitlements</h3>
+
+<p>Leela Dube ("On the Construction of Gender: Hindu Girls in Patrilineal India", <em>Economic and Political Weekly</em>, 1988) showed that in patrilineal, patrilocal families a daughter is a temporary member of her natal home, <em>paraya dhan</em> (another's wealth), so her upbringing is training for life in another household.</p>
+
+<ul>
+  <li><strong>Gendered training:</strong> girls learn service, restraint, modesty and self-sacrifice, take on chores and sibling care early, and face curbs on movement after puberty, while boys are prepared for authority and the outside world. Sudhir Kakar (<em>The Inner World</em>, 1978) traced the psychology of the 'good woman' this produces.</li>
+  <li><strong>Body and purity:</strong> menstrual taboos and the stress on virginity teach girls that their bodies carry family honour.</li>
+  <li><strong>Unequal investment:</strong> sons are seen as old-age security and performers of last rites, so families spend more on their food, health and schooling.</li>
+</ul>
+
+<p><strong>Effects on entitlements:</strong> Amartya Sen used 'entitlements' for the goods a person can command, and his idea of household 'cooperative conflict' explains why women command less.</p>
+<ul>
+  <li><strong>Survival:</strong> Sen's 'missing women' (1990) and a child sex ratio of 918 in Census 2011 reflect sex-selective abortion and neglect. NFHS-5 (2019-21) recorded a sex ratio at birth of 929.</li>
+  <li><strong>Health:</strong> in NFHS-5, 59.1 per cent of girls aged 15-19 were anaemic, against 31.1 per cent of boys.</li>
+  <li><strong>Marriage:</strong> 23.3 per cent of women aged 20-24 had married before 18 (NFHS-5), cutting short schooling and autonomy, and dowry makes daughters a financial burden.</li>
+  <li><strong>Property:</strong> daughters became coparceners in Hindu joint family property in 2005, and <em>Vineeta Sharma v. Rakesh Sharma</em> (2020) held that the right does not depend on the father being alive in 2005. In practice many daughters give up their share to keep ties with brothers.</li>
+</ul>
+
+<p><strong>Responses:</strong> the PCPNDT Act 1994, the Prohibition of Child Marriage Act 2006, Beti Bachao Beti Padhao (2015) and the 2005 inheritance reform tackle symptoms. Lasting change needs a change in socialisation itself, through girls' education, women's employment and men sharing care.</p>
+
 <h2>Desacralisation and Secularisation in India</h2>
 
 <p>Desacralisation refers to the process by which supernatural beliefs are no longer seen as controlling the world: action is no longer governed by religious belief but by rational, scientific calculation. In MN Srinivas's sociological terminology, Westernisation and Secularisation are two faces of the same modernising process: though they can be separated analytically.</p>
@@ -6731,6 +7877,45 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Key laws as instruments of social change: Hindu Marriage Act (1955); Hindu Succession Act (1956, amended 2005); Dowry Prohibition Act (1961); SC/ST Prevention of Atrocities Act (1989); Protection of Women from Domestic Violence Act (2005); Right to Education Act (2009); Forest Rights Act (2006).</p>
 
+<h3>Ambedkar on Constitutional Morality</h3>
+
+<p>Introducing the Draft Constitution in the Constituent Assembly on 4 November 1948, B.R. Ambedkar took the idea of constitutional morality from George Grote, the historian of Greece. Grote meant "a paramount reverence for the forms of the Constitution": obedience to authority acting within those forms, combined with open speech and unrestrained criticism of those in power, and every citizen's confidence that opponents hold the Constitution as sacred as he does.</p>
+
+<ul>
+  <li><strong>Why it mattered:</strong> Ambedkar argued that a constitution can be perverted without changing its form, merely by changing the form of administration. Only where people are "saturated" with constitutional morality can details of administration safely be left to the legislature.</li>
+  <li><strong>India's condition:</strong> "Constitutional morality is not a natural sentiment. It has to be cultivated." He added: "Democracy in India is only a top-dressing on an Indian soil, which is essentially undemocratic." This was his justification for writing administrative detail into the Constitution.</li>
+  <li><strong>Link to his wider vision:</strong> it complements his insistence on social democracy and his warnings against hero-worship and unconstitutional methods. Rulers and citizens alike must channel conflict through constitutional forms.</li>
+</ul>
+
+<p><strong>In the courts:</strong> the Supreme Court uses constitutional morality for the values of the Constitution, such as dignity, equality and liberty, which prevail over popular or social morality. It was invoked in <em>Manoj Narula v. Union of India</em> (2014), in <em>Navtej Singh Johar v. Union of India</em> (2018), which decriminalised consensual same-sex relations, and in the Sabarimala case (<em>Indian Young Lawyers Association v. State of Kerala</em>, 2018). Justice Indu Malhotra's dissent in Sabarimala held that in a plural society constitutional morality also requires respect for religious freedom, and critics warn that an open-ended standard widens judicial discretion.</p>
+
+<p><strong>Sociological significance:</strong> constitutional morality is a cultural requirement, not only a legal one. Where caste, communal and patriarchal norms remain strong, the Constitution works as a charter for transforming society, and its success depends on citizens and officials internalising its values.</p>
+
+<h3>Protective Discrimination and the Creamy Layer</h3>
+
+<p>Protective discrimination is preferential treatment for groups that have suffered historic disadvantage, so that formal equality becomes substantive. The Constitution permits it through Articles 15(4), 15(5), 16(4), 46, 330 and 332. Marc Galanter (<em>Competing Equalities: Law and the Backward Classes in India</em>, 1984) analysed this compensatory discrimination as a balance between two ideas of equality: equal treatment of individuals and compensatory justice for groups.</p>
+
+<p><strong>The creamy layer:</strong> in <em>Indra Sawhney v. Union of India</em> (1992) a nine-judge bench upheld 27 per cent reservation for OBCs in central government jobs, capped total reservation at 50 per cent save in extraordinary situations, and required exclusion of the 'creamy layer', the socially advanced among the OBCs. Criteria fixed in 1993 on the advice of the Justice R.N. Prasad committee exclude the children of constitutional functionaries and senior officers and families above an income limit, raised from Rs 1 lakh in 1993 to Rs 8 lakh in 2017.</p>
+
+<p><strong>Problems relating to the creamy layer:</strong></p>
+<ul>
+  <li><strong>Outdated limits:</strong> the income ceiling is revised rarely and ignores differences between rural and urban costs and family sizes.</li>
+  <li><strong>Income versus status:</strong> income cannot measure social backwardness, yet without some exclusion the advanced sections take most benefits.</li>
+  <li><strong>Concentration of benefits:</strong> the Rohini Commission (constituted 2017, report 2023) found that about 97 per cent of central OBC jobs and seats went to roughly a quarter of OBC castes, so sub-categorisation is needed, not only the creamy layer.</li>
+  <li><strong>Unfilled posts:</strong> where remaining candidates do not qualify, reserved posts lapse or are carried forward instead of reaching the poor.</li>
+  <li><strong>SCs and STs:</strong> <em>Jarnail Singh v. Lachhmi Narain Gupta</em> (2018) applied the creamy layer to promotions, and in <em>State of Punjab v. Davinder Singh</em> (2024), which allowed sub-classification of SCs and STs, several judges led by Justice B.R. Gavai urged a creamy layer for them too. The Union Cabinet replied that the Constitution makes no provision for a creamy layer among SCs and STs.</li>
+</ul>
+
+<p><strong>"Protects but also discriminates":</strong></p>
+<ul>
+  <li><strong>Against the poor outside the scheme:</strong> poor members of non-reserved groups had no protection until the 103rd Amendment (2019) created a 10 per cent quota for economically weaker sections, upheld in <em>Janhit Abhiyan v. Union of India</em> (2022).</li>
+  <li><strong>Within beneficiary groups:</strong> dominant sub-castes and the better-off capture most benefits, so the poorest are protected least.</li>
+  <li><strong>Reinforcing caste identity:</strong> critics such as Andre Beteille warn that group quotas keep caste alive as the unit of public life, and competing demands for backward status (Jats, Patidars, Marathas) follow.</li>
+  <li><strong>Stigma:</strong> beneficiaries are labelled undeserving, although reservation has created a Dalit and OBC middle class and widened representation.</li>
+</ul>
+
+<p><strong>Suggested changes:</strong> sub-categorise OBC and SC lists, review the lists periodically, update and apply the creamy-layer limit consistently, invest in schools and scholarships so that the poorest can compete for reserved seats, extend diversity measures to the private sector, and use caste data from the 2027 Census for evidence-based policy.</p>
+
 <h2>C. Education and Social Change</h2>
 
 <p>Brown argued: "Education helps in changing the basic outlook of a person towards society. Education changes the established patterns of social relationships, attitudes and values of a person and also the structure of society."</p>
@@ -6778,6 +7963,40 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>India's third education policy (after 1968 and 1986), NEP 2020 replaces 10+2 with a 5+3+3+4 structure: bringing children from age 3 into the formal system. Key reforms: teaching in mother tongue up to Class 5; Foundational Literacy and Numeracy mission (basic reading/arithmetic by Grade 3); multiple entry-exit in higher education; elimination of rigid arts-science-commerce streams; Academic Bank of Credit; GER in higher education to 50% by 2035; public investment to 6% of GDP.</p>
 
 <p><strong>Critique:</strong> Mother tongue emphasis may impede English access and thus employment for marginalised sections. Phasing out college affiliations risks corporatisation. Only 9.85% of government schools have functional computers (UDISE+): online education emphasis deepens digital divide. Primary causes of dropout (child marriage, child labour, poverty) remain unaddressed.</p>
+
+<h3>Constitutional Provisions for Education</h3>
+
+<table>
+  <tr><th>Provision</th><th>Content</th></tr>
+  <tr><td>Article 21A (86th Amendment, 2002)</td><td>Free and compulsory education for all children aged 6 to 14, in the manner the state may by law determine</td></tr>
+  <tr><td>Article 45 (substituted in 2002)</td><td>Early childhood care and education for all children until they complete six years</td></tr>
+  <tr><td>Article 51A(k)</td><td>Duty of parents or guardians to provide opportunities for education to children aged 6 to 14</td></tr>
+  <tr><td>Article 46</td><td>Promote with special care the educational and economic interests of the weaker sections, especially SCs and STs</td></tr>
+  <tr><td>Articles 15(4), 15(5), 15(6)</td><td>Special provisions for backward classes, SCs and STs, including reservation in admission to private institutions other than minority ones (93rd Amendment, 2005), and for economically weaker sections (103rd Amendment, 2019)</td></tr>
+  <tr><td>Articles 28-30</td><td>No religious instruction in wholly state-funded institutions, no denial of admission to state-aided institutions on grounds of religion, race, caste or language, and minorities' right to establish and administer their institutions</td></tr>
+  <tr><td>Article 350A</td><td>Primary education in the mother tongue for children of linguistic minorities</td></tr>
+  <tr><td>Seventh Schedule</td><td>Education moved from the State List to the Concurrent List by the 42nd Amendment (1976)</td></tr>
+</table>
+
+<p>The Supreme Court read a right to education into Article 21 in <em>Mohini Jain</em> (1992) and limited it to children up to 14 in <em>Unni Krishnan</em> (1993), which paved the way for Article 21A.</p>
+
+<h3>Right of Children to Free and Compulsory Education Act 2009</h3>
+
+<p>The RTE Act, in force from 1 April 2010, gives effect to Article 21A.</p>
+<ul>
+  <li><strong>Entitlement:</strong> every child aged 6 to 14 has a right to elementary education (Classes 1 to 8) in a neighbourhood school without fees or charges.</li>
+  <li><strong>Admission:</strong> no capitation fee and no screening of children or parents, and out-of-school children join an age-appropriate class with special training.</li>
+  <li><strong>25 per cent seats:</strong> private unaided schools must give at least a quarter of entry-level seats to children from disadvantaged groups and weaker sections, with costs reimbursed by the state.</li>
+  <li><strong>Norms:</strong> pupil-teacher ratios of 30:1 at primary and 35:1 at upper primary level, basic infrastructure such as classrooms, toilets and drinking water, and qualified teachers.</li>
+  <li><strong>Child-friendly schooling:</strong> no physical punishment or mental harassment, and continuous and comprehensive evaluation.</li>
+  <li><strong>Detention:</strong> originally no child could be held back before Class 8. A 2019 amendment let states hold back pupils in Classes 5 and 8 who fail a re-examination.</li>
+  <li><strong>Community control:</strong> School Management Committees with at least three-quarters of members drawn from parents, and monitoring by child rights commissions.</li>
+  <li><strong>Teachers:</strong> no private tuition, and no non-educational duties except the census, elections and disaster relief.</li>
+</ul>
+
+<p><strong>Empowerment through RTE:</strong> elementary enrolment became nearly universal, girls' and Dalit enrolment rose, and the 25 per cent quota placed poor children in elite classrooms. But ASER surveys repeatedly find many Class 5 children unable to read a Class 2 text, so access has outrun learning. The quota is unevenly applied, minority schools are exempt (<em>Pramati</em>, 2014), and teacher vacancies persist.</p>
+
+<p><strong>Education as an instrument of social change:</strong> education spreads rational thought, enables mobility, builds political awareness and has been the main ladder for Dalits, women and first-generation learners, as Ambedkar's call to educate, agitate and organise recognised. But unequal schools also reproduce inequality, and Karuna Ahmad found its effect on ideas greater than on structures. Education becomes a major instrument of change when it is equal in quality and joined to land, jobs and rights.</p>
 
 <h2>D. Development Planning: Evolution and Challenges</h2>
 
@@ -6983,6 +8202,45 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Vandana Shiva and the Navdanya movement advocate a return to traditional seed varieties, organic farming, and agroecological principles. Some state governments (Andhra Pradesh's "Zero Budget Natural Farming," Sikkim's organic farming model) have experimented with low-input sustainable agriculture. The challenge is transitioning millions of small farmers without destroying their livelihoods in the process.</p>
 
+<h3>The Swaminathan Commission and Minimum Support Prices</h3>
+
+<p>The National Commission on Farmers, chaired by M.S. Swaminathan, was set up in November 2004 and submitted five reports, the last on 4 October 2006. It linked farmers' welfare with national food and nutrition security.</p>
+
+<p><strong>Key recommendations</strong></p>
+<ul>
+  <li><strong>Prices</strong>: a minimum support price (MSP) at least 50 per cent above the weighted average cost of production, and better support prices across a wider range of crops</li>
+  <li><strong>Land</strong>: distribution of ceiling-surplus and waste land, and no diversion of prime farmland and forest to the corporate sector</li>
+  <li><strong>Water</strong>: rainwater harvesting, groundwater recharge and more public investment in irrigation</li>
+  <li><strong>Credit and insurance</strong>: crop loans at 4 per cent simple interest with government support, debt relief in distress areas, an agricultural risk fund, and an integrated credit, crop, livestock and health insurance package</li>
+  <li><strong>Food security</strong>: a universal public distribution system, community food and water banks run by women's self-help groups, and a National Food Guarantee Act</li>
+</ul>
+<p>The National Policy for Farmers (2007) drew on its work and defined "farmer" broadly to include tenants, sharecroppers, agricultural labourers and others who depend on farming.</p>
+
+<p><strong>Food and nutrition security.</strong> The Commission treated food security as a livelihood question: farmers who earn a fair price grow more food, and a universal PDS, local grain banks and nutrition programmes give the poor access to it. The National Food Security Act 2013, which entitles up to 75 per cent of the rural and 50 per cent of the urban population to subsidised grain, partly realised this idea. The price recommendation remains contested: since 2018-19 the government has set MSP at 1.5 times a narrower measure of cost (paid-out costs plus the value of family labour) rather than the comprehensive cost that farmers' organisations demand.</p>
+
+<p><strong>Can MSP help rural development?</strong></p>
+<ul>
+  <li><strong>For</strong>: MSP gives a floor price that reduces risk and distress sales, encourages investment and output, and underpinned the Green Revolution. Assured procurement of wheat and paddy in Punjab and Haryana, and later of wheat in Madhya Pradesh and paddy in Chhattisgarh, raised farm incomes and stocked the PDS.</li>
+  <li><strong>Against</strong>: MSP is announced for 22 crops, but effective procurement is concentrated on wheat and rice in a few states. The Shanta Kumar Committee (2015) estimated that only about 6 per cent of farmers sold to procurement agencies, and small farmers in eastern India often sell below MSP to traders.</li>
+  <li><strong>Distortions</strong>: open-ended procurement locks Punjab and Haryana into the water-hungry wheat-paddy cycle, depleting groundwater and leading to stubble burning, and favours larger farmers with a marketable surplus.</li>
+  <li><strong>Alternatives</strong>: price deficiency payments such as Madhya Pradesh's Bhavantar Bhugtan Yojana (2017) and the PM-AASHA scheme (2018), procurement of pulses and millets, and farmer producer organisations.</li>
+</ul>
+<p>MSP helps rural development where procurement reaches farmers and is combined with diversification, irrigation and credit. The demand for a legal MSP guarantee in the farmers' protest of 2020-21 shows how far farmers' security depends on it.</p>
+
+<h3>Decline of Village Industries</h3>
+
+<p>Village industries are small, household-based crafts and manufactures rooted in the village economy: weaving, pottery, carpentry, smithy work, leather work, oil pressing, basketry and food processing. Many were caste occupations tied to patrons through the jajmani system. Their decline has several causes:</p>
+<ul>
+  <li><strong>Colonial deindustrialisation</strong>: cheap British machine-made goods, discriminatory tariffs and the export of raw materials ruined Indian weavers and artisans. D.R. Gadgil (<em>The Industrial Evolution of India in Recent Times</em>, 1924) traced the decline of handicrafts to the disappearance of the courts that patronised them, new tastes brought by foreign rule and competition from machine goods.</li>
+  <li><strong>Factory and imported goods</strong>: plastic, aluminium and steel vessels replaced earthen pots and brassware, mill and powerloom cloth replaced handloom, and after 1991 cheap imports undercut toys, silk and other small goods.</li>
+  <li><strong>Mechanisation of agriculture</strong>: tractors, pumps and factory-made implements reduced demand for village carpenters and blacksmiths.</li>
+  <li><strong>Decline of the jajmani system</strong>: cash payment replaced customary shares of grain, removing the artisan's assured market.</li>
+  <li><strong>Lack of credit, raw materials, technology and markets</strong>: artisans depend on middlemen, master weavers and traders who take most of the margin, and forest produce and clay are harder to obtain.</li>
+  <li><strong>Policy</strong>: planning after 1956 favoured heavy industry, and after 1991 items once reserved for small-scale industry were progressively de-reserved.</li>
+  <li><strong>Social change</strong>: young people leave hereditary occupations for education and wage work, and Dalit artisans leave stigmatised trades such as leather work in search of dignity.</li>
+</ul>
+<p><strong>Responses.</strong> Gandhi saw village industries as the base of a self-reliant village and founded the All India Village Industries Association (1934), led by J.C. Kumarappa. After independence the Karve Committee (1955) recommended support for village and small industries, and the Khadi and Village Industries Commission was set up in 1957. Later schemes include SFURTI clusters for traditional industries (2005), the Prime Minister's Employment Generation Programme (2008) and PM Vishwakarma (2023) for artisans in traditional trades. These have slowed the decline in some crafts, but most village industries survive only where artisans reach urban, export or tourist markets through cooperatives, design support and online sales.</p>
+
 `,
   'industrialization-urbanisation': `
 <h2>Industrialisation in India: Historical Overview</h2>
@@ -7057,6 +8315,64 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Deshpande (1979) shows this results from "pre-labour market characteristics" such as education and land holdings: those with more land and education ended up in higher wage sectors, while depressed conditions of Adivasis and Dalits ensured supply of labour who can be made to work at mere subsistence level (Nathan, 1987). Caste thus ensures cheap labour for different jobs by not paying more than necessary: keeping lower sections in lower strata of the working class while giving upper castes privilege in the labour market. Caste is not only a matter of marriage and residence but more so a continuing pool of social relations for the supply of various kinds of labour for the capitalist mode of production.</p>
 
+<h3>Formal and Informal Sectors</h3>
+
+<p>The term "informal sector" was coined by the anthropologist Keith Hart from fieldwork among migrants in Accra, presented in 1971 and published as "Informal Income Opportunities and Urban Employment in Ghana" (1973). The ILO's Kenya mission report (1972) brought it into development policy. Hart showed that urban migrants who looked unemployed were in fact earning through petty trade, small services and casual work outside the reach of state regulation.</p>
+
+<table>
+  <thead><tr><th>Formal (organised) sector</th><th>Informal (unorganised) sector</th></tr></thead>
+  <tbody>
+    <tr><td>Registered enterprises, the public sector and factories covered by labour laws</td><td>Unregistered, small, household-based or own-account enterprises</td></tr>
+    <tr><td>Written contracts, regular wages, job security</td><td>Casual, piece-rate or contract work without a written contract</td></tr>
+    <tr><td>Social security: provident fund, ESI, gratuity, paid leave</td><td>Little or no social security</td></tr>
+    <tr><td>Union rights and collective bargaining</td><td>Weak or absent unions</td></tr>
+    <tr><td>More capital and technology, inside the tax net</td><td>Low capital, easy entry, largely outside the tax net</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Indian definitions.</strong> The National Commission for Enterprises in the Unorganised Sector (NCEUS), set up in 2004 under Arjun Sengupta, defined the unorganised sector as unincorporated private enterprises owned by individuals or households, run on a proprietary or partnership basis, with fewer than ten workers. Unorganised workers include those working in such enterprises and households, and also workers in the formal sector without employment or social security benefits. International labour statisticians make the same distinction between the informal sector, defined by the enterprise (1993), and informal employment, defined by the job (2003). The NCEUS estimated that over 90 per cent of India's workforce was informal, and its 2007 report found 77 per cent of Indians living on less than Rs 20 a day.</p>
+
+<p><strong>Why the informal sector has grown in India</strong></p>
+<ul>
+  <li><strong>Jobless growth</strong>: the formal sector has never absorbed more than a small share of the workforce, so people leaving agriculture enter construction, trade and services informally.</li>
+  <li><strong>Informalisation from above</strong>: after 1991, formal firms cut costs by subcontracting to small units and hiring contract and casual labour, so informal workers now sit inside formal enterprises (Jan Breman).</li>
+  <li><strong>Rural push</strong>: agrarian distress drives seasonal and circular migrants into urban informal work.</li>
+  <li><strong>Compliance costs</strong>: the legalist view holds that firms stay small and unregistered to escape regulation and tax.</li>
+</ul>
+<p>The urban informal labour market is segmented by caste, gender and region. Street vendors, domestic workers, head-loaders, waste pickers and home-based workers face insecure incomes, no social security, poor housing and harassment by police and municipal officials. The Self-Employed Women's Association (SEWA), founded by Ela Bhatt in Ahmedabad in 1972, showed that informal women workers can organise, and the Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act 2014 recognised vendors' right to a livelihood.</p>
+
+<h3>Formalisation of the Informal Sector</h3>
+
+<p>Formalisation means bringing informal enterprises and workers within the reach of registration, law and social protection. In India it has followed several routes:</p>
+<ul>
+  <li><strong>Unorganised Workers' Social Security Act 2008</strong>: passed after the NCEUS reports, it provided for social security schemes and a National Social Security Board for unorganised workers.</li>
+  <li><strong>Labour codes</strong>: the Code on Wages 2019 and the Code on Social Security 2020, which subsumed the 2008 Act, came into force with the other labour codes on 21 November 2025. The social security code recognises gig and platform workers for the first time and provides for schemes for them.</li>
+  <li><strong>e-Shram (2021)</strong>: an Aadhaar-linked national database of unorganised workers, meant to make welfare portable.</li>
+  <li><strong>Pensions and credit</strong>: Atal Pension Yojana (2015), Pradhan Mantri Shram Yogi Maan-dhan (2019) and PM SVANidhi loans for street vendors (2020).</li>
+  <li><strong>State laws</strong>: Rajasthan's Platform Based Gig Workers (Registration and Welfare) Act 2023 was the first state law for gig workers.</li>
+  <li><strong>Fiscal formalisation</strong>: GST (2017), digital payments and Udyam registration of small enterprises draw firms into the formal economy.</li>
+</ul>
+<p><strong>Assessment.</strong> Registration is not protection. Benefits remain small, contributory schemes have low take-up, and domestic workers still lack a central law. The shocks of demonetisation (2016) and the early GST hit cash-based informal units hardest, bringing job losses and underemployment, with women in home-based and piece-rate work among the most exposed. Meanwhile contract labour keeps growing inside formal firms. Dalits, Adivasis, women and migrants gain from formalisation only when it brings enforceable rights and not merely an identity number.</p>
+
+<h3>Child Labour</h3>
+
+<p>Child labour is work that deprives children of their childhood, schooling and health. Census 2011 counted about 10.1 million working children aged 5 to 14, mostly in agriculture, household industries, brick kilns, carpets (Mirzapur-Bhadohi), glass bangles (Firozabad), fireworks (Sivakasi) and domestic work.</p>
+
+<p><strong>Myron Weiner (<em>The Child and the State in India</em>, 1991)</strong> rejected the view that poverty alone explains child labour. Comparing India with Europe, the United States, Japan and other Asian countries, he showed that child labour ended where the state made primary education compulsory and enforced it, often before those countries became rich. India failed to do so because of the beliefs of its officials, teachers and middle class: a view of society as a hierarchy in which poor children should learn their parents' work, a fear that educating them would create misfits and unemployment, and the claim that poor families need their children's earnings.</p>
+
+<p><strong>Causes</strong></p>
+<ul>
+  <li><strong>Poverty and debt</strong>: families pledge children's labour against loans, a form of bonded labour</li>
+  <li><strong>Demand</strong>: informal employers want cheap, docile workers who cannot unionise, and the "nimble fingers" argument is used to justify children's work in carpets and embroidery</li>
+  <li><strong>Schooling</strong>: poor quality, distance, teacher absence and caste discrimination push children out of school</li>
+  <li><strong>Caste and gender</strong>: Dalit and Adivasi children are over-represented, and girls' unpaid domestic and sibling-care work goes uncounted</li>
+  <li><strong>Migration</strong>: children of seasonal migrants follow their parents to brick kilns and sugarcane fields and drop out</li>
+</ul>
+
+<p><strong>Law and policy.</strong> Article 24 bars children under 14 from factories, mines and hazardous work, and Article 21A (2002) with the Right to Education Act 2009 guarantees free schooling from 6 to 14. The Child Labour (Prohibition and Regulation) Act 1986, amended in 2016 as the Child and Adolescent Labour (Prohibition and Regulation) Act, bans all employment of children under 14 and the employment of adolescents aged 14 to 18 in hazardous occupations. In <em>M.C. Mehta v. State of Tamil Nadu</em> (1996) the Supreme Court ordered offending employers to pay Rs 20,000 per child into a welfare fund. India ratified ILO Conventions 138 and 182 in 2017.</p>
+
+<p><strong>Has law abolished child labour?</strong> Not yet. The 2016 amendment lets children help in family enterprises after school hours, which covers most child work on farms, in homes and in workshops and is hard to monitor. Enforcement is weak, convictions are few and rehabilitation is thin. Child labour therefore raises questions beyond the informal sector, about education, caste, gender, agrarian distress and the definition of work itself. Neera Burra (<em>Born to Work</em>, 1995) and the M.V. Foundation of Hyderabad argued that every child out of school is a child labourer, so universal schooling of good quality is the surest remedy. Practical measures include tracking every out-of-school child, seasonal hostels for migrant children, income support for parents through MGNREGA and social security, supply-chain audits in export trades, and joint action by the labour, education and police departments.</p>
+
 <h2>Types of Cities in India</h2>
 
 <p>Indian cities can be classified by the dominant economic function they serve:</p>
@@ -7095,6 +8411,40 @@ The sexual division of labour in India is continuously reproduced through the ki
   <tr><td><strong>Social Environment</strong></td><td>Growth of slums; increase in crime; anomie and social isolation; breakdown of community ties</td></tr>
   <tr><td><strong>Environmental Infrastructure</strong></td><td>Housing and amenities deficit; energy infrastructure strain; transport congestion</td></tr>
 </table>
+
+<h3>Overurbanisation and Recent Urban Trends</h3>
+
+<p>Kingsley Davis and Hilda Hertz Golden (1954) used the term overurbanisation for urban growth that runs ahead of industrial employment. In the West, factories pulled workers into towns. In much of Asia and Africa, rural poverty pushes people into cities that cannot give them jobs, housing or services. Bert Hoselitz (1955) similarly distinguished "generative" cities, which stimulate growth in their region, from "parasitic" ones, which draw resources from it without return.</p>
+
+<p><strong>Trends in India (Census 2011)</strong></p>
+<ul>
+  <li><strong>Level and pace</strong>: 377 million people, 31.1 per cent of the population, lived in urban areas, up from 27.8 per cent in 2001. For the first time since independence, urban areas added more people in a decade than rural areas.</li>
+  <li><strong>Census towns</strong>: settlements with at least 5,000 people, a density of 400 per sq km and three-quarters of male main workers outside agriculture rose from 1,362 to 3,894. Much new urbanisation is villages becoming urban in place while still governed as villages, what K.C. Pradhan called "unacknowledged urbanisation".</li>
+  <li><strong>Metropolitan concentration</strong>: million-plus cities rose from 35 to 53, and growth spills into the peri-urban fringes of Delhi, Mumbai, Bengaluru and Hyderabad.</li>
+  <li><strong>Small towns</strong>: Denis, Mukhopadhyay and Zérah call the growth of small towns that is not driven by the metropolises "subaltern urbanisation".</li>
+  <li><strong>Slums</strong>: 65.5 million people lived in slums in 2011.</li>
+</ul>
+
+<p><strong>Rural push and overurbanisation.</strong> India is under-urbanised by world standards, yet its urban growth outpaces formal industrial jobs. Migrants pushed out by tiny holdings, agrarian distress, drought and caste oppression in Bihar, eastern Uttar Pradesh and Odisha end up in construction, vending and other informal work. Demographically, natural increase among urban residents now adds more to urban growth than migration, and the reclassification of villages as towns is a large third component. Sociologically, the result is a city of informal workers, slums and circular migrants who keep one foot in the village, clustered by caste and region in M.S.A. Rao's mohalla culture, rather than Wirth's anonymous urbanite.</p>
+
+<p><strong>Is industrialisation the only precondition of urbanisation?</strong> No. Industry built Jamshedpur, Bhilai and Bokaro, but Indian towns have also grown as administrative capitals (Chandigarh, Bhubaneswar, Gandhinagar), pilgrimage centres (Varanasi, Puri, Tirupati), coaching and education hubs (Kota), cantonments, trading and transport nodes, and service and IT centres (Bengaluru, Gurugram) where growth came from services rather than factories. Reclassification of large villages and rural distress also produce urban growth without industrialisation.</p>
+
+<p><strong>Consequences and concerns:</strong> overcrowding, water shortage and urban flooding (Mumbai 2005, Chennai 2015), pollution and heat, informal housing, the exclusion of migrants from welfare, and weak urban local bodies despite the 74th Amendment. The Smart Cities Mission and AMRUT (2015) concentrate on infrastructure, while critics call for planning that includes the informal poor.</p>
+
+<h3>The Rural-Urban Continuum</h3>
+
+<p>Early sociology treated rural and urban as opposite types: Tönnies's Gemeinschaft and Gesellschaft, Durkheim's mechanical and organic solidarity, Wirth's urbanism as a way of life. Robert Redfield replaced the dichotomy with a continuum. In <em>The Folk Culture of Yucatan</em> (1941) he compared four Mexican communities, from the tribal village of Tusik and the peasant village of Chan Kom to the town of Dzitas and the city of Merida. Moving towards the city, he found increasing cultural disorganisation, secularisation and individualism. Settlements differ by degree rather than kind and lie along a folk-urban continuum.</p>
+
+<p><strong>The continuum in India</strong></p>
+<ul>
+  <li><strong>Census towns and peri-urban villages</strong>: settlements around Delhi, Gurugram and Bengaluru mix farming with factory, transport and service work while remaining villages in administration.</li>
+  <li><strong>Commuting and circular migration</strong>: daily commuters and seasonal migrants live in both worlds, carrying money, goods and ideas between them.</li>
+  <li><strong>M.S.A. Rao (<em>Urbanisation and Social Change</em>, 1970)</strong>: in Yadavpur, a village on the fringe of Delhi, villagers were drawn into urban jobs, land markets and politics while keeping their caste and kinship ties.</li>
+  <li><strong>Two-way exchange</strong>: caste, kin and village networks survive in urban mohallas, while villages adopt urban consumption, media, schooling and politics.</li>
+  <li><strong>Policy</strong>: the idea of "rurban" clusters underlies the Shyama Prasad Mukherji Rurban Mission (2016), which provides urban amenities to groups of villages.</li>
+</ul>
+
+<p><strong>Critique.</strong> Oscar Lewis's restudy of Tepoztlán (1951), a village Redfield had earlier described as harmonious, found conflict and individualism, so the folk end of the continuum was idealised. The model also assumes that change flows one way, from city to village, and treats rural and urban as cultural types while ignoring the class and power relations that bind them.</p>
 
 <h2>Slums and Deprivation in Urban Areas</h2>
 
@@ -7212,6 +8562,29 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Dipankar Gupta disagrees with the standard view of caste in politics. He argues that caste in elections produces, reproduces, and perpetuates caste consciousness: not some secular group interest. Rather than making political choices that reflect the "real interests" of caste communities, electoral mobilisation reinforces the very category of caste identity as the primary frame of political life. Friendship, leadership quality, and local issues also matter: but caste provides the structural foundation within which these operate.</p>
 
+<h3>Dominant Caste in Village Politics</h3>
+
+<p>M.N. Srinivas built the concept of the dominant caste from his Rampura fieldwork ("The Dominant Caste in Rampura", <em>American Anthropologist</em>, 1959). Its political point is that power in the village rests less on ritual rank than on numbers and land. In Rampura the peasant Okkaligas, not the Brahmins, settled disputes, controlled the panchayat and spoke for the village to officials and politicians.</p>
+
+<ul>
+  <li><strong>Regional examples:</strong> Okkaligas (Vokkaligas) and Lingayats in Karnataka, Reddys and Kammas in Andhra Pradesh, Marathas in Maharashtra, Patidars in Gujarat, Jats in Haryana and western Uttar Pradesh, Yadavs in Uttar Pradesh and Bihar, and Vanniyars and Thevars in parts of Tamil Nadu.</li>
+  <li><strong>Role in village politics:</strong> the dominant caste arbitrates disputes, including those of other castes, controls access to land, credit and work, heads the panchayat, and acts as broker between the village and the party, the bureaucracy and the market. Lower castes often copy its style of life, so it also sets the local model of mobility.</li>
+  <li><strong>Factions:</strong> dominance does not mean unity. Oscar Lewis (<em>Village Life in Northern India</em>, 1958) found Jat factions competing for clients across caste lines, and party politics often runs along such faction lines.</li>
+</ul>
+
+<h3>The Origin of the 'Vote Bank'</h3>
+
+<p>Srinivas also coined 'vote bank', in "The Social System of a Mysore Village" (1955, in McKim Marriott's <em>Village India</em>). He used it for the votes a patron could deliver because his clients and dependants followed his lead. F.G. Bailey (<em>Politics and Social Change: Orissa in 1959</em>, 1963) widened it to caste leaders and brokers who delivered a whole caste's votes to a party in return for favours. The term now covers any community voting as a bloc for sectional benefits, as with the KHAM coalition (Kshatriya, Harijan, Adivasi, Muslim) in 1980s Gujarat or the Muslim-Yadav base of the RJD in Bihar.</p>
+
+<h3>Changing Rural Power Structure</h3>
+
+<ul>
+  <li><strong>From ritual rank and landlordism to numbers:</strong> in Sripuram, Andre Beteille (<em>Caste, Class and Power</em>, 1965) found that caste, class and power had once coincided in the Brahmin landlords, but after independence land passed to non-Brahmins and power to those who could mobilise votes through parties.</li>
+  <li><strong>Rise of peasant castes:</strong> zamindari abolition, land reform and the Green Revolution made middle peasant castes the new dominant castes, and their weight fed OBC assertion after Mandal.</li>
+  <li><strong>Panchayati Raj:</strong> the 73rd Amendment (1992) reserved seats and chairpersons' posts for SCs, STs and women. Dalit and women sarpanchs now hold office, though proxy rule by husbands ('sarpanch pati') and violence against Dalit office-holders show that old dominance resists.</li>
+  <li><strong>Looser vote banks:</strong> the secret ballot, education, migration and direct benefit transfers weaken patrons' control. Election surveys such as the CSDS-Lokniti National Election Studies find that caste still shapes voting but seldom moves as a single bloc delivered on command.</li>
+</ul>
+
 <h2>The Congress System (Rajni Kothari)</h2>
 
 <p>Kothari introduced the concept of the "Congress system" to describe India's distinctive party system in the first two decades after independence. It was not a one-party system in the sense of a monopoly on power but a system of one-party dominance in which competing parts played dissimilar roles. The Congress functioned as a party of consensus: representing the historical synthesis of the nationalist movement. Other parties were parties of pressure, functioning on the margin of this consensus.</p>
@@ -7276,6 +8649,23 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>A Kumar argues that the underlying principle in India's accommodations of regional identity has remained internal self-determination: which has served to weaken the bases of political secessionism without defeating the principle of self-determination itself. Ashok Behuria argues the Indian federation has temperamentally behaved as a "union" and not a "federation": leadership must adopt federal principles and gradually devolve financial powers to units to contain ethnocultural assertions. Creation of "dependent" states without genuine devolution of powers will not improve conditions.</p>
 
+<h3>Cultural Pluralism and Nation-Building</h3>
+
+<p>Cultural pluralism is a condition, and a policy, in which distinct groups keep their languages, religions and customs while sharing common political institutions. Horace Kallen's <em>Culture and Democracy in the United States</em> (1924) introduced the term against the American 'melting pot', which expected assimilation. The plural alternative is often called the 'salad bowl'. Nation-building is the creation of a shared political identity and loyalty to a common state among diverse people. Reinhard Bendix (<em>Nation-Building and Citizenship</em>, 1964) tied it to extending citizenship to all, and Karl Deutsch to dense social communication.</p>
+
+<p>India chose the plural path, summed up in Nehru's 'unity in diversity':</p>
+<ul>
+  <li><strong>Language:</strong> linguistic states from 1956, 22 languages in the Eighth Schedule, the three-language formula, and retreat from imposing Hindi after the 1965 anti-Hindi agitation in Tamil Nadu.</li>
+  <li><strong>Religion:</strong> freedom of religion (Articles 25-28), minorities' cultural and educational rights (Articles 29-30), separate personal laws and secularism as 'principled distance'.</li>
+  <li><strong>Tribe and region:</strong> the Fifth and Sixth Schedules, special provisions for several states under Article 371, and accords that turned insurgents into stakeholders, such as the Mizo Accord (1986).</li>
+</ul>
+
+<p><strong>Does nation-building depend on strengthening pluralities?</strong> Largely, yes. Recognition has weakened secession: the DMK dropped its demand for Dravida Nadu in 1963, and Mizoram has been peaceful since its accord. Where identities were denied or met mainly by force, as in Punjab in the 1980s and parts of the Northeast, alienation grew. Bhikhu Parekh (<em>Rethinking Multiculturalism</em>, 2000) argues that a multicultural society needs a shared public culture built through dialogue between communities, not one imposed by the majority.</p>
+
+<p><strong>Role of religion:</strong> religion can integrate. Pilgrimage networks gave India a sacred geography long before it was one state, the Bhakti and Sufi traditions created a composite culture, and Gandhi used religious idiom (Ram Rajya, prayer meetings, ahimsa) to bring the masses into the national movement. Religion can also divide: separate electorates, the two-nation theory, Partition and later riots show religion used to define the nation against an internal 'other'. A nation defined by one faith makes minorities second-class citizens, while one that respects all faiths can draw on their shared ethic of duty and fellowship.</p>
+
+<p><strong>Is a single dominant culture a hindrance?</strong> Majoritarian pressure for one language, religion or way of life strains the plural compact, as the 1965 agitation and recent policing of food, festivals and interfaith marriage show. Multicultural India is strengthened by protecting minority rights, decentralising power, a shared constitutional patriotism and everyday contact across communities.</p>
+
 <h2>Political Parties in India</h2>
 
 <p>A political party is an institution consisting of leaders, followers, policies, and programmes whose principal purpose is to capture power. Political parties provide the crucial connection between social processes and policy-makers: they link individuals, state, and society; influence debates on issues affecting various social groups; and educate people while formulating public opinion.</p>
@@ -7285,6 +8675,23 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>The Election Commission classifies parties into national parties (requiring at least 2% of Lok Sabha seats from at least three states, or 6% of votes with at least four Lok Sabha seats, or recognition as a state party in four or more states), state parties (parties meeting EC's state-level criteria), and registered/unrecognised parties (more than 2000 registered). In 2020, India had seven national parties: INC, BJP, BSP, CPI, CPI(M), NCP, and AITC.</p>
 
 <p>Regional parties are central to India's multi-party democracy. Between 1996 and 2014, roughly 50% of votes went to the two national parties and 50% to hundreds of regional players. In 2019, the regional party vote share plummeted to 43.2% as BJP's pan-Indian expansion absorbed constituencies previously held by regional parties.</p>
+
+<h3>Pressure Groups in Indian Democracy</h3>
+
+<p>An interest group is any organised body of people who share a common interest, whether or not they act on it politically. It becomes a pressure group when it actively presses the government, legislators or parties to shape policy in its favour. Unlike a party, it does not contest elections or seek office. Every pressure group is an interest group, but not every interest group is a pressure group. Myron Weiner's <em>The Politics of Scarcity</em> (1962) was the first major study of how Indian business, labour, student, caste and linguistic groups pressed a state that controlled scarce resources.</p>
+
+<ul>
+  <li><strong>Business:</strong> FICCI, CII and ASSOCHAM lobby on taxation, trade and industrial policy, often as insider groups with direct access to ministries.</li>
+  <li><strong>Labour:</strong> AITUC, INTUC, BMS and CITU are each tied to a party, which makes them partly party wings rather than autonomous groups.</li>
+  <li><strong>Farmers:</strong> the Bharatiya Kisan Union, Sharad Joshi's Shetkari Sanghatana and the Karnataka Rajya Raitha Sangha pressed for remunerative prices. The Samyukt Kisan Morcha won the repeal of the three farm laws in 2021.</li>
+  <li><strong>Professional and caste groups:</strong> the Indian Medical Association, bar councils and caste associations, including the quota agitations of Jats, Patidars and Marathas.</li>
+  <li><strong>Civil society and promotional groups:</strong> the Mazdoor Kisan Shakti Sangathan's campaign led to the Right to Information Act (2005), and the National Alliance of People's Movements links struggles against displacement.</li>
+  <li><strong>Religious groups:</strong> the Vishva Hindu Parishad and the All India Muslim Personal Law Board press on temples, personal law and conversion.</li>
+</ul>
+
+<p><strong>Role in democracy:</strong> pressure groups articulate interests between elections, give governments specialised information, widen participation for those whom parties neglect and hold officials to account. In pluralist theory (Robert Dahl) competition among many groups disperses power. Lloyd and Susanne Rudolph (<em>In Pursuit of Lakshmi</em>, 1987) found Indian interest groups fragmented and dependent on a dominant state, a pattern they called "involuted pluralism".</p>
+
+<p><strong>Critique:</strong> access is unequal. Well-funded business lobbies reach decision-makers while the unorganised poor rarely do. Money can buy influence, a concern behind the Supreme Court's striking down of the electoral bonds scheme in <em>Association for Democratic Reforms v. Union of India</em> (2024). Groups built on caste or religion can also deepen sectional divides.</p>
 
 <h2>Decentralisation and Panchayati Raj</h2>
 
@@ -7299,6 +8706,22 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>TN Madan argues that secularism is a minority viewpoint in India: of Hindu elites who have internalised Enlightenment values but who represent neither the majority of Hindus nor Muslim, Christian, or Sikh communities for whom religion is not separable from public life. For Madan, secularism in India is therefore "an impossible project." Ashis Nandy similarly argues that Western secularism cannot solve Indian communalism: it requires privatising religion in societies where religion is inseparably public. Partha Chatterjee and Amartya Sen respond that however imperfectly realised, the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
 
 <p>Communalism has been the central threat to India's secular polity. Bipan Chandra identifies three stages: the belief that co-religionists share common secular interests; liberal communalism (different but reconcilable secular interests); and extreme communalism (fundamentally antagonistic secular interests, the logic of the Two-Nation Theory). Colonial divide-and-rule policy, separate electorates (Morley-Minto 1909), the trauma of Partition, political mobilisation of religious grievances, and the growth of Hindu nationalism have all contributed to communal politics in independent India.</p>
+
+<h3>Secularisation as a Social Process</h3>
+
+<p>Secularism is a doctrine about the state: how it should treat religions. Secularisation is a social process in which religion loses its hold over thought, institutions and conduct. A secular state can preside over a society that is not secularising. M.N. Srinivas (<em>Social Change in Modern India</em>, 1966) described secularisation as a process in which what was earlier regarded as religious ceases to be so, and in which the economic, political, legal and moral spheres become more distinct from one another. He saw it as closely tied to Westernisation.</p>
+
+<ul>
+  <li><strong>Desacralisation:</strong> rational and scientific explanation displaces religious explanation of events such as illness or drought.</li>
+  <li><strong>Differentiation:</strong> law, education, economy and government separate from religious authority, and caste panchayats lose ground to courts.</li>
+  <li><strong>Rationalism:</strong> customs are judged by reason and usefulness rather than sacred sanction.</li>
+  <li><strong>Weaker purity and pollution rules:</strong> trains, buses, restaurants, factories and offices force contact between castes, especially in cities.</li>
+  <li><strong>Simpler ritual:</strong> life-cycle rites are shortened and become occasions for display rather than sacred duty.</li>
+</ul>
+
+<p><strong>Impact on religious communities:</strong> the educated urban middle class of every community has moved furthest, rural and poorer groups least. Among Hindus, ritual has shrunk in daily life even as festivals and pilgrimages have grown. Among Muslims, Sikhs and Christians, reform movements have often stressed scriptural purity, so modern education has sometimes produced a more self-conscious religious identity rather than a weaker one. The same pattern appears in Hindu reformism.</p>
+
+<p><strong>Is India becoming more secular?</strong> Education and economic growth have advanced the institutional side of secularisation, but belief and public religiosity remain strong. The Pew Research Center's survey of 29,999 Indian adults (2019-20) found that 97 per cent believe in God and 84 per cent say religion is very important in their lives. Religion has also become more visible in politics, media and consumption. Secularisation in India is therefore partial and uneven: strong in institutions and the professions, weak in belief and identity.</p>
 
 <h2>Caste Associations and Their Sociological Significance</h2>
 
@@ -7322,6 +8745,22 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Subaltern Studies scholars (Ranjit Guha, Partha Chatterjee) argue that Dalit political consciousness cannot be captured through the frameworks of elite politics: it has its own autonomous modes of organisation, resistance, and aspiration that mainstream party politics regularly domesticates and co-opts. Upendra Baxi: Dalit rights claims are not merely political demands but legal and moral claims that challenge the foundational legitimacy of the social order.</p>
 
+<h3>Ambedkar's Final Speech in the Constituent Assembly (25 November 1949)</h3>
+
+<p>Closing the debate on the Constitution, B.R. Ambedkar argued that democratic institutions alone would not secure democracy. He named three tasks.</p>
+
+<ul>
+  <li><strong>Constitutional methods only:</strong> once constitutional ways of pursuing social and economic goals are open, civil disobedience, non-cooperation and satyagraha lose their justification. He called such methods "the Grammar of Anarchy".</li>
+  <li><strong>No hero-worship:</strong> citing John Stuart Mill's warning against laying one's liberties at the feet of even a great man, he said that "in politics, Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship."</li>
+  <li><strong>Social democracy:</strong> "Political democracy cannot last unless there lies at the base of it social democracy." Social democracy is a way of life that treats liberty, equality and fraternity as a "union of trinity". Liberty without equality produces the supremacy of the few, equality without liberty kills initiative, and without fraternity both would require "a constable to enforce them."</li>
+</ul>
+
+<p>He warned that on 26 January 1950 India would "enter into a life of contradictions": one man, one vote, one value in politics, but graded inequality in social and economic life. If the contradiction lasted, "those who suffer from inequality will blow up the structure of political democracy". He added that "the castes are anti-national", since they separate social life and breed jealousy, and that without fraternity "equality and liberty will be no deeper than coats of paint."</p>
+
+<p><strong>Is social democracy a precondition?</strong> For Ambedkar it was: political democracy rests on habits of equality and fellow-feeling that a constitution cannot create by decree. Persisting atrocities, untouchability and economic inequality under regular elections partly bear him out. Yet political democracy has also built social democracy, through reservation, Dalit and OBC political assertion and rights legislation, so the relationship works both ways.</p>
+
+<p><strong>Ambedkar as a wise democrat:</strong> he joined faith in parliamentary institutions with a sober sense of their social limits. In a 1952 lecture at Poona he defined democracy as a form of government that brings about revolutionary changes in social and economic life without bloodshed, and listed as its conditions the absence of glaring inequalities, an effective opposition, equality in law and administration, constitutional morality and a working public conscience. His concern was how institutions survive, not only how they are designed.</p>
+
 <h2>OBC Politics and the Mandal Commission</h2>
 
 <p>The Mandal Commission (1980, chaired by BP Mandal) recommended 27% reservation for Other Backward Classes (OBCs) in central government jobs and educational institutions, in addition to the existing 22.5% for SCs and STs. The report gathered dust for a decade before V.P. Singh's government implemented it in 1990. The anti-Mandal agitation, dominated by upper-caste students, and the pro-Mandal counter-mobilisation fundamentally restructured Indian politics. The three forces of "Mandal, Masjid, and Market" that disrupted the third party system all had their roots in this period.</p>
@@ -7333,6 +8772,22 @@ The sexual division of labour in India is continuously reproduced through the ki
 <p>India's Constitution establishes a federal system but with a strong unitary bias: the Centre retains powers to impose President's Rule, to create and dissolve states, and to override state legislation through the Concurrent List. The trend since the 1990s has been toward greater de facto federalism as coalition politics at the centre made regional parties indispensable partners and gave them leverage to demand greater state autonomy.</p>
 
 <p>The 14th Finance Commission (2015) recommended increasing the states' share of central taxes from 32% to 42%: the largest transfer in Indian fiscal history. GST (implemented 2017) created a new federal tax architecture but also centralised revenue in ways that reduced state fiscal autonomy. The abolition of the Planning Commission (2014) and its replacement by NITI Aayog removed the institutional mechanism for Centre-state dialogue on development planning, shifting decisions further toward the Centre even as formal devolution increased.</p>
+
+<h3>Citizenship in Contemporary India</h3>
+
+<p>Citizenship is full membership of a political community, with rights against the state and duties towards it. T.H. Marshall traced its growth from civil to political to social rights. Niraja Gopal Jayal (<em>Citizenship and Its Discontents: An Indian History</em>, 2013) studies Indian citizenship as legal status, as rights and as identity or belonging. Her central finding is that the law has moved from birth (<em>jus soli</em>) towards descent (<em>jus sanguinis</em>).</p>
+
+<ul>
+  <li><strong>The Constitution and the 1955 Act:</strong> Articles 5-11 settled citizenship at the commencement of the Constitution, and the Citizenship Act 1955 made almost everyone born in India a citizen.</li>
+  <li><strong>1986 amendment:</strong> for those born on or after 1 July 1987, at least one parent had to be an Indian citizen.</li>
+  <li><strong>2003 amendment:</strong> for those born on or after 3 December 2004, both parents had to be citizens, or one a citizen and the other not an 'illegal migrant'. It also provided for a National Register of Indian Citizens and for Overseas Citizenship of India.</li>
+  <li><strong>Assam:</strong> Section 6A (added in 1985 after the Assam Accord) made 25 March 1971 the cut-off for migrants to Assam, and the Supreme Court upheld it in 2024. The Supreme Court-monitored National Register of Citizens, published on 31 August 2019, left out about 19 lakh people, many of them poor with weak documents, whose status now rests with Foreigners Tribunals.</li>
+  <li><strong>Citizenship (Amendment) Act 2019:</strong> it offers a faster path to citizenship to Hindu, Sikh, Buddhist, Jain, Parsi and Christian migrants from Afghanistan, Bangladesh and Pakistan who entered India on or before 31 December 2014. Its rules were notified in March 2024. Critics argue that leaving out Muslims brings religion into the test of belonging, against the equality guarantee of Article 14, and the Shaheen Bagh protests (2019-20) made it a national issue. Supporters present it as relief for persecuted minorities.</li>
+</ul>
+
+<p><strong>Substantive citizenship:</strong> rights on paper are unevenly enjoyed. Migrants lose rations and welfare when they leave their home state, Dalits and Adivasis meet discrimination in claiming rights, and women's citizenship is mediated by family and community. Reservations and minority institutions are group-differentiated rights of the kind Will Kymlicka calls multicultural citizenship (1995).</p>
+
+<p><strong>Nation and citizenship under globalisation:</strong> the nation-state remains the gatekeeper of citizenship, but globalisation loosens the tie between territory and belonging. Aihwa Ong's "flexible citizenship" (1999) describes mobile elites who hold rights in several countries. India has no dual citizenship, yet the Overseas Citizenship of India card gives the diaspora lifelong visa rights and a stake in the homeland. Meanwhile migration and refugee flows provoke harder borders, documents and registers. Citizenship is stretched outward for the mobile and tightened against the undocumented.</p>
 `,
   'social-movements-india': `
 <h2>Definition and Significance</h2>
@@ -7543,6 +8998,32 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <p>Yet social movements in India face structural limitations: cooptation of leaders by the state (a consistent strategy used since the colonial period); fragmentation along caste, religious, and regional lines that prevents convergence; repression through UAPA, sedition laws, and police action; and the challenge of sustaining mass mobilisation beyond the immediate crisis. The relationship between social movements and the formal democratic system remains creative but tension-filled: movements need democracy to operate, but democracy often absorbs, dilutes, or deflects movement demands.</p>
 
+<h3>From Physical to Virtual Movements: Social Media and Mobilisation</h3>
+
+<p>Twenty-first-century movements increasingly begin online and move into the streets, or stay online as hashtag campaigns. Manuel Castells (<em>Networks of Outrage and Hope: Social Movements in the Internet Age</em>, 2012) argued that networked movements grow from outrage shared through digital networks, occupy urban space and are leaderless and horizontal. W. Lance Bennett and Alexandra Segerberg called this 'connective action', built on personalised sharing, as against collective action built by organisations. Zeynep Tufekci (<em>Twitter and Tear Gas: The Power and Fragility of Networked Protest</em>, 2017) warned that digital tools let movements scale fast without building the capacity to negotiate, adapt and last, leaving them prone to a 'tactical freeze'.</p>
+
+<p><strong>The transition in India:</strong></p>
+<ul>
+  <li><strong>India Against Corruption (2011):</strong> Anna Hazare's fast for a Jan Lokpal drew the urban middle class through SMS, missed-call campaigns, Facebook and television.</li>
+  <li><strong>Nirbhaya protests (2012):</strong> outrage spread on social media brought young people to India Gate without any party or organisation calling them.</li>
+  <li><strong>Shaheen Bagh (2019-20):</strong> a local sit-in led by Muslim women against the CAA became a national network through live streams and hashtags.</li>
+  <li><strong>Farmers' protest (2020-21):</strong> a physical siege of Delhi's borders backed by its own social media teams and the <em>Trolley Times</em> newsletter to counter hostile coverage.</li>
+</ul>
+
+<p><strong>#MeToo in India:</strong> it followed a crowdsourced list of academics accused of harassment (2017) and gathered pace after allegations in the film industry in September 2018. Women named harassers in journalism, film and politics, and Union minister M.J. Akbar resigned in October 2018. In 2021 a Delhi court acquitted journalist Priya Ramani in his defamation case, recognising a woman's right to speak even decades later. Its impact: internal complaints committees under the POSH Act taken more seriously, and a public vocabulary for harassment. Its limits: debate on due process, and a voice mostly urban, English-speaking and upper-caste, with rural and Dalit women little heard.</p>
+
+<p><strong>Social media and mass mobilisation:</strong> social media lowers the cost of mobilising, spreads images and frames that create shared outrage, links dispersed participants, and bypasses gatekeepers in the press. It also serves counter-mobilisation: IT cells, trolling and disinformation are turned against movements, and majoritarian mobilisation is itself networked.</p>
+
+<p><strong>Limits:</strong></p>
+<ul>
+  <li><strong>Slacktivism:</strong> a like or share is not commitment, and Malcolm Gladwell argued that weak online ties cannot sustain high-risk activism.</li>
+  <li><strong>Digital divide:</strong> rural, poor, older and female Indians are less connected.</li>
+  <li><strong>State control:</strong> India has recorded among the highest numbers of internet shutdowns in the world, and in <em>Anuradha Bhasin v. Union of India</em> (2020) the Supreme Court held that indefinite shutdowns are impermissible and restrictions must be necessary and proportionate. Surveillance and arrests also deter online dissent.</li>
+  <li><strong>Fragility:</strong> without organisation, online campaigns fade once attention moves on.</li>
+</ul>
+
+<p>The shift is therefore towards hybrid rather than purely virtual movements: the most effective recent cases, such as the farmers' protest, joined organisation and bodily presence with digital networks.</p>
+
 `,
   'population-dynamics': `
 <h2>Introduction: Population as a Sociological Concern</h2>
@@ -7564,6 +9045,53 @@ The sexual division of labour in India is continuously reproduced through the ki
 
 <h3>Malthus on Population</h3>
 <p>Thomas Malthus in <em>An Essay on the Principle of Population</em> (1798) argued that population grows geometrically (1, 2, 4, 8) while food supply grows arithmetically (1, 2, 3, 4), creating a permanent tendency toward overpopulation, poverty, and misery. He identified two types of checks: preventive checks (delayed marriage, celibacy, moral restraint) and positive checks (war, famine, disease, poverty). Marx responded sharply: poverty is not natural but structural, a product of the capitalist mode of production creating a reserve army of labour to keep wages low. The solution is not population control but the abolition of the exploitative class structure.</p>
+
+<h3>National Population Policy 2000</h3>
+
+<p>The National Population Policy 2000 (NPP 2000), announced in February 2000, was the first population policy formally adopted by the government: the 1976 and 1977 statements had been laid before Parliament but never adopted. It reaffirmed voluntary and informed choice and continued the target-free approach to family planning, treating population stabilisation as a matter of reproductive and child health, women's empowerment and education.</p>
+
+<ul>
+  <li><strong>Immediate objective:</strong> meet the unmet need for contraception, health infrastructure and health personnel, and provide integrated basic reproductive and child health services.</li>
+  <li><strong>Medium-term objective:</strong> bring the total fertility rate (TFR) to replacement level by 2010.</li>
+  <li><strong>Long-term objective:</strong> a stable population by 2045, consistent with sustainable growth, social development and environmental protection.</li>
+</ul>
+
+<p><strong>Fourteen socio-demographic goals for 2010</strong> included: infant mortality below 30 per 1,000 live births, maternal mortality below 100 per 100,000 live births, universal immunisation, 80 per cent institutional deliveries and 100 per cent deliveries by trained persons, girls' marriage not earlier than 18 and preferably after 20, free and compulsory schooling to 14 with dropouts below 20 per cent, universal access to contraception with a wide choice of methods, 100 per cent registration of births, deaths, marriages and pregnancies, containing AIDS, and promoting the small family norm.</p>
+
+<p><strong>Institutions and measures:</strong> a National Commission on Population chaired by the Prime Minister (set up on 11 May 2000), State Commissions under Chief Ministers, implementation through panchayats and municipalities, rewards for poor couples who marry after the legal age and adopt the small family norm, and a recommendation to extend the freeze on Lok Sabha seats based on the 1971 Census to 2026, which the 84th Amendment (2001) did.</p>
+
+<table>
+  <tr><th>Goal</th><th>Target (2010)</th><th>Outcome</th></tr>
+  <tr><td>TFR</td><td>2.1</td><td>2.0 in NFHS-5 (2019-21), about a decade late</td></tr>
+  <tr><td>Infant mortality rate</td><td>below 30</td><td>28 (SRS 2020)</td></tr>
+  <tr><td>Maternal mortality ratio</td><td>below 100</td><td>97 (SRS 2018-20)</td></tr>
+  <tr><td>Institutional births</td><td>80%</td><td>88.6% (NFHS-5)</td></tr>
+  <tr><td>Full immunisation</td><td>universal</td><td>76.4% of children aged 12-23 months (NFHS-5)</td></tr>
+  <tr><td>No marriage before 18</td><td>universal</td><td>23.3% of women aged 20-24 married before 18 (NFHS-5)</td></tr>
+  <tr><td>Unmet need for contraception</td><td>meet it</td><td>9.4% (NFHS-5), down from 12.9% (NFHS-4)</td></tr>
+  <tr><td>Birth registration</td><td>100%</td><td>89.1% of children under five (NFHS-5)</td></tr>
+</table>
+
+<p><strong>Assessment:</strong> the national TFR goal was met late and averages hide wide gaps. NFHS-5 recorded TFRs of 3.0 in Bihar, 2.9 in Meghalaya, 2.4 in Uttar Pradesh and 2.3 in Jharkhand, against about 1.7 to 1.8 in the southern states. Education matters more than religion: women with no schooling had a TFR of 2.8, those with twelve or more years 1.8. Contraception remains a women's burden, with female sterilisation at 37.9 per cent of currently married women against 0.3 per cent for male sterilisation.</p>
+
+<p><strong>Modifications suggested:</strong> focus on high-fertility districts, expand spacing methods and male responsibility, invest in girls' secondary education and women's employment, tackle son preference and child marriage, and widen the policy to ageing, migration and sub-replacement fertility.</p>
+
+<h3>Family Planning: From Control to a Political U-Turn</h3>
+
+<p><strong>Control:</strong> in 1952 India became the first country to launch a national family planning programme. Clinics gave way to sterilisation camps and targets for health workers, and during the Emergency (1975-77) the drive turned coercive, with forced sterilisation of poor men. The 42nd Amendment (1976) froze the allocation of Lok Sabha seats on the 1971 Census so that states curbing population would not lose seats. The backlash helped defeat the Congress in 1977, and the programme was renamed Family Welfare.</p>
+
+<p><strong>Rights:</strong> at the 1974 Bucharest conference India argued that development is the best contraceptive. After the Cairo conference (ICPD, 1994) India adopted a target-free approach (1996), the Reproductive and Child Health programme (1997) and the voluntary NPP 2000.</p>
+
+<p><strong>Coercion by other means:</strong> from the 1990s several states, including Rajasthan, Haryana and Andhra Pradesh, barred people with more than two children from contesting panchayat elections, and the Supreme Court upheld Haryana's rule in <em>Javed v. State of Haryana</em> (2003). Assam extended the norm to state government jobs, and Uttar Pradesh published a draft population control bill in 2021. Debate around such measures often turned on Muslim fertility (2.4 against 1.9 for Hindus in NFHS-5), entangling family planning with religious demography. In his 2019 Independence Day speech the Prime Minister called a small family a form of patriotism.</p>
+
+<p><strong>The U-turn:</strong> with national TFR at 2.0 and the southern states well below replacement, the message has reversed in several places.</p>
+<ul>
+  <li><strong>Southern pronatalism:</strong> Andhra Pradesh's Chief Minister N. Chandrababu Naidu, once a champion of population control, began urging families to have more children. On 13 November 2024 his government introduced a bill to remove the two-child bar on contesting panchayat elections that the state had imposed in 1994, citing below-replacement fertility and an ageing population.</li>
+  <li><strong>Delimitation:</strong> the freeze on seat allocation ends with the first census after 2026. Seats reallocated by population would shift from the south to Uttar Pradesh and Bihar, so states that met family planning goals fear losing weight. In April 2026 a government package to delimit on the 2011 Census, raise the Lok Sabha to as many as 850 seats and bring in women's reservation sooner failed when the Constitution (131st Amendment) Bill fell short of a two-thirds majority (298 to 230). Southern parties, led by M.K. Stalin's DMK in Tamil Nadu, objected that it would cut the south's share of representation.</li>
+  <li><strong>Ageing and labour:</strong> southern states face shrinking workforces and rising care needs, while northern states still have young, growing populations.</li>
+</ul>
+
+<p>The U-turn is political rather than demographic: a programme once justified by fear of overpopulation is now shaped by fears of ageing, lost political weight and religious demography. The demographic case remains for voluntary choice, investment in people and a federal formula that does not penalise states that succeeded.</p>
 
 <h2>Sex Ratio</h2>
 <p>The sex ratio (females per 1000 males) improved from 933 (2001 Census) to 943 (2011 Census) and 948 (NFHS-5). However, the child sex ratio (0-6 years) has consistently declined: 976 (1961), 945 (1991), 927 (2001), 918 (2011), 929 (NFHS-5). The slight improvement reflects the impact of Beti Bachao Beti Padhao and PCPNDT enforcement.</p>
@@ -7604,11 +9132,56 @@ The sexual division of labour in India is continuously reproduced through the ki
 </ul>
 <p>The central paradox of ageing in India: medical technology has increased the span of life, but a higher proportion of aged persons with little income must depend on others. Traditional institutions have lost hold; the joint family is giving way to nuclear arrangements; changes in kinship and family organisation have been, on net, to the disadvantage of the aged.</p>
 
+<h3>Active Ageing and Theories of Ageing</h3>
+
+<p>The World Health Organization's <em>Active Ageing: A Policy Framework</em> (2002), prepared for the Second UN World Assembly on Ageing in Madrid, defines active ageing as the process of optimising opportunities for health, participation and security in order to enhance quality of life as people age. 'Active' means continuing involvement in social, economic, cultural, civic and spiritual life, not only physical activity or paid work. Its three pillars are health, participation and security.</p>
+
+<p><strong>Why a glocal goal:</strong> ageing is global and the goal is set globally, through the Madrid International Plan of Action on Ageing (2002) and the UN Decade of Healthy Ageing (2021-30). It must be achieved locally, through families, communities, local health services and national policy suited to each society. In India this means the National Policy on Older Persons (1999), the Maintenance and Welfare of Parents and Senior Citizens Act 2007, the National Programme for Health Care of the Elderly, the 2024 extension of Ayushman Bharat health cover to everyone aged 70 and above regardless of income, and local senior citizens' associations and day-care centres.</p>
+
+<p><strong>Theories of ageing:</strong></p>
+<ul>
+  <li><strong>Disengagement theory</strong> (Elaine Cumming and William Henry, <em>Growing Old</em>, 1961): withdrawal of the old from roles is natural and functional, making way for the young.</li>
+  <li><strong>Activity theory</strong> (Robert Havighurst): people age well by staying active and replacing lost roles with new ones. Active ageing builds on this view.</li>
+  <li><strong>Continuity theory</strong> (Robert Atchley): people keep earlier habits, relationships and identities as they age.</li>
+  <li><strong>Modernisation theory</strong> (Donald Cowgill and Lowell Holmes, <em>Aging and Modernization</em>, 1972): the status of the old declines with health technology, industrial work, urbanisation and mass education.</li>
+  <li><strong>Political economy of ageing</strong> (Peter Townsend, Carroll Estes): dependency in old age is produced by retirement rules, pensions and labour markets, not by age itself.</li>
+</ul>
+
+<p><strong>Gendering of elder care:</strong> in developing countries, India included, care of the elderly falls disproportionately on women. Patrilocal residence makes the daughter-in-law the expected carer, and wives and daughters give most unpaid personal care. The causes are social: the sexual division of labour defines care as women's work, women's lower earnings make their time seem cheap, and the lack of public long-term care pushes the burden onto families. Women also live longer, are more often widowed, own less property and have fewer pensions, so they are more likely to need care and less likely to get it. Paid care is feminised too, in what Arlie Hochschild calls 'global care chains'.</p>
+
+<p><strong>Perspectives on the problems of the elderly:</strong> familial (filial duty, enforced by the 2007 Act), welfare state (pensions and health cover), community (NGOs such as HelpAge India, elders' self-help groups), market (senior housing, reverse mortgage, insurance) and rights-based, following the UN Principles for Older Persons (1991): independence, participation, care, self-fulfilment and dignity.</p>
+
 <h2>Literacy</h2>
 <p>India's literacy rate was 12% at independence, 64.8% in 2001, and 74.04% in 2011. Male literacy (82.14%) is significantly higher than female literacy (65.46%). Regional variation is stark: Kerala (96.2%) vs Bihar (61.8%). India has approximately 287 million illiterate adults. Literacy is not merely a skill but a social variable determining access to employment, health services, legal rights, and political participation. Illiteracy is concentrated among women, Dalits, Adivasis, and rural populations, making it both a consequence and a cause of social inequality. Karuna Ahmad's research shows that while education has produced ideational change (changing knowledge and attitudes), structural change (redistribution of power and opportunity) has been far slower.</p>
 
 <h2>Migration</h2>
 <p>Jan Breman's concept of "footloose labour" captures India's vast population of seasonal and circular migrants: workers who move from harvest to harvest, construction site to construction site, without stable residence or social security. Breman estimates over 100 million are circular migrants in India. Push factors include agricultural distress, drought, land alienation, and caste violence. Pull factors include urban employment, higher wages, education, and aspiration. Post-LPG, migration toward metropolitan areas has intensified as services and manufacturing concentrate in urban centres. For sending areas, migration produces remittance income but also "missing men" villages where women manage alone. For receiving areas, it provides labour but generates housing pressure, slum formation, and ethnic tensions.</p>
+
+<h3>Reverse Migration During the COVID-19 Lockdown</h3>
+
+<p>Reverse migration is the return of migrants from their places of work, usually cities, to their places of origin, usually villages. Return is normal in India's circular migration, but in 2020 it became a sudden, mass, distress movement. After the nationwide lockdown was announced on 24 March 2020, factories, building sites and shops closed overnight. The government told Parliament in September 2020 that more than one crore migrant workers had returned to their home states, many on foot or by bicycle before Shramik Special trains began on 1 May 2020. On 8 May sixteen workers walking home were killed by a goods train near Aurangabad.</p>
+
+<p><strong>Features:</strong> sudden and unplanned, it involved mainly informal circular workers in construction, manufacturing, domestic work and street trade, flowed from Delhi, Mumbai, Surat, Bengaluru and other centres to Uttar Pradesh, Bihar, Odisha, Jharkhand, Madhya Pradesh and West Bengal, and was marked by hunger, police barricades and stigma on arrival.</p>
+
+<p><strong>Sociological reasons:</strong></p>
+<ul>
+  <li><strong>Informality:</strong> most migrants had no written contract, paid leave or employer obligation, so wages stopped the day work stopped.</li>
+  <li><strong>Housing tied to work:</strong> many slept at work sites or in employer-provided rooms and lost shelter with the job.</li>
+  <li><strong>Non-portable welfare:</strong> ration cards and entitlements were tied to the home state, leaving migrants outside the city's safety net.</li>
+  <li><strong>Village as insurance:</strong> land, kin and caste community at home offered food and care the city did not. Jan Breman's 'footloose labour' belongs fully to neither place.</li>
+  <li><strong>Exclusion from urban citizenship:</strong> migrants were treated as labour, not residents, and the crisis confirmed that sense of not belonging.</li>
+  <li><strong>Fear:</strong> of infection and of dying away from family.</li>
+</ul>
+
+<p><strong>Consequences and implications:</strong></p>
+<ul>
+  <li><strong>Villages:</strong> a sudden labour surplus, record demand for MGNREGA work in 2020-21, lost remittances, rising debt, and returnees stigmatised as carriers of the virus.</li>
+  <li><strong>Cities:</strong> labour shortages on reopening and gradual re-migration from late 2020, showing that villages could not absorb the returnees.</li>
+  <li><strong>Families:</strong> children dropped out of school and women's unpaid work rose.</li>
+  <li><strong>Policy:</strong> free food grain under the PM Garib Kalyan Anna Yojana, the Garib Kalyan Rojgar Abhiyaan (June 2020) in 116 districts with many returnees, One Nation One Ration Card for portable rations, and the e-Shram portal (2021) to register unorganised workers. In 2021 the Supreme Court directed states to implement One Nation One Ration Card and register migrant workers.</li>
+</ul>
+
+<p>The episode exposed what the Inter-State Migrant Workmen Act 1979 had long failed to deliver: registration, portable welfare and protection for the workers who build India's cities.</p>
 
 <h2>Reproductive Health</h2>
 <p>About 78% of total conceptions are unplanned; about 25% are definitely unwanted. Maternal Mortality Rate (MMR) has fallen from 556 (1990) to 97 (2018-20). Infant Mortality Rate (IMR) has fallen from 147 (1950s) to 28 (2020) but varies enormously by state (8 in Kerala vs 46 in MP). Government programmes include Janani Suraksha Yojana (conditional cash transfer for institutional delivery), the National Health Mission, the ASHA programme, the ANM network, and nutrition entitlements under the National Food Security Act for pregnant and lactating mothers.</p>
@@ -7632,10 +9205,76 @@ The sexual division of labour in India is continuously reproduced through the ki
 <h3>Environment and Sustainability</h3>
 <p>Ecological consequences of India's development model are severe: deforestation; river pollution (Ganga and Yamuna among world's most polluted); air pollution (13 of world's 20 most polluted cities are in India); soil degradation; climate vulnerability. The idea of "growth with justice" provides an evaluative framework combining economic growth with equity and ecological integrity. True sustainability requires changing patterns of production and consumption, not merely improving technological efficiency. Eco-feminist movements (Chipko, Appiko, NBA) have had women at their forefront, demonstrating that sustainability is inseparable from gender equality.</p>
 
+<h3>Development-Induced Displacement and Cernea's IRR Model</h3>
+
+<p>Development-induced displacement is the forced uprooting of people from homes, land and livelihoods to make way for dams, mines, industry, highways, cities and even wildlife reserves. Unlike refugees from war, the displaced are moved by the state in the name of public interest, so the costs fall on a few while the benefits go elsewhere. Michael Cernea, a World Bank sociologist, set out the Impoverishment Risks and Reconstruction (IRR) model ("The Risks and Reconstruction Model for Resettling Displaced Populations", <em>World Development</em>, 1997). Displacement impoverishes through eight linked risks:</p>
+
+<ul>
+  <li><strong>Landlessness:</strong> loss of land, the base of production and income.</li>
+  <li><strong>Joblessness:</strong> loss of wage work, especially for labourers and artisans.</li>
+  <li><strong>Homelessness:</strong> loss of shelter and of a familiar cultural space.</li>
+  <li><strong>Marginalisation:</strong> downward mobility and loss of status and confidence.</li>
+  <li><strong>Food insecurity:</strong> lost crops and incomes bring hunger.</li>
+  <li><strong>Increased morbidity and mortality:</strong> stress, poor water and crowded camps raise illness.</li>
+  <li><strong>Loss of common property:</strong> forests, grazing land, rivers and fishing grounds, rarely compensated.</li>
+  <li><strong>Social disarticulation:</strong> kin networks, community institutions and sacred sites are broken.</li>
+</ul>
+
+<p>Reconstruction means reversing each risk: land for land, re-employment, housing, social inclusion, food security, health care, restored commons and rebuilt communities. The model turns a list of harms into a planning tool.</p>
+
+<p><strong>Case studies:</strong></p>
+<ul>
+  <li><strong>Hirakud and Sardar Sarovar dams:</strong> many oustees were resettled on poor land or not at all, and Narmada valley Adivasis lost forest and river commons that cash never replaced.</li>
+  <li><strong>Singur and Nandigram (West Bengal, 2006-07):</strong> acquisition for a car factory and a proposed chemical hub met fierce resistance, and police firing at Nandigram in March 2007 killed fourteen people. In <em>Kedar Nath Yadav v. State of West Bengal</em> (2016) the Supreme Court quashed the Singur acquisition and ordered the land returned.</li>
+  <li><strong>Mining in central India:</strong> coal and bauxite projects in Jharkhand, Chhattisgarh and Odisha displace Adivasis whose rights rest on custom, not title. Walter Fernandes estimates that Adivasis make up about 40 per cent of the displaced, though they are 8.6 per cent of the population (Census 2011).</li>
+</ul>
+
+<p><strong>Landless labourers and marginal farmers</strong> suffer most. Under the Land Acquisition Act 1894 compensation went only to title-holders, so labourers, sharecroppers, artisans and fisherfolk who lived off the land got nothing, while marginal farmers received small cash sums that were soon spent, leaving them as casual labourers in towns. The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013 counts such dependants as affected families entitled to rehabilitation, and requires social impact assessment and the consent of affected families for private and public-private projects. Several states have since exempted categories of projects from these safeguards.</p>
+
 <h2>B. Poverty, Deprivation, and Inequality</h2>
 <p>Amartya Sen's foundational insight is that "poverty is more than an economic problem." Sen's Capability Approach defines poverty as the deprivation of basic capabilities: the ability to live a long and healthy life, to be educated, to participate in political and social life. Social causes include caste-based disabilities, conspicuous spending obligations (dowry, elaborate marriages, funerals), and social exclusion from public goods. Economic causes include unequal land distribution, low wages, and rural indebtedness. Political causes include skewed policies favouring influential constituencies and poor accountability. Globalisation-related causes include sidelining of cottage industries and the race to the bottom in labour standards.</p>
 <p>Consequences of poverty: culture of poverty (Oscar Lewis) transmitting values and behaviours across generations including present-time orientation, fatalism, and apathy; malnutrition with India's stunting and wasting rates among the worst in the world; illiteracy as children are pulled out of school for labour; social deviance including crime and Naxalism as responses to structural exclusion. Bhalla and Chadha's study of Punjab cultivators found the gains of the Green Revolution unevenly shared, with many marginal and small farmers still poor, suggesting that development can deepen structured inequality.</p>
 <p>Government programmes operate through four channels: wage employment (MNREGA); self-employment (PM Mudra Yojana); food security (NFSA, PDS, Mid-Day Meal, POSHAN Abhiyan); and social security (Ayushman Bharat, NSAP pensions). Sen and Jean Dreze in <em>An Uncertain Glory</em> argue that poverty alleviation requires not just economic growth but active social provisioning in health, education, and nutrition, combined with democratic participation and RTI-based accountability.</p>
+
+<h3>Caste, Class and the Extreme Poor</h3>
+
+<p>Extreme poverty in India is concentrated where low caste status and low class position overlap: among Dalit agricultural labourers, Adivasi forest dwellers and landless casual workers. Caste once fixed occupation and barred access to land, education and credit, so it decided who ended at the bottom of the class structure. Class position then reinforces caste disadvantage across generations.</p>
+
+<ul>
+  <li><strong>Assets:</strong> long denied land, Dalits remain over-represented among the landless and agricultural labourers, while Adivasis lose land through displacement and alienation.</li>
+  <li><strong>Occupation:</strong> stigmatised work such as manual scavenging and bonded labour is still caste-assigned, despite the Bonded Labour System (Abolition) Act 1976 and the Prohibition of Employment as Manual Scavengers and their Rehabilitation Act 2013.</li>
+  <li><strong>Labour-market discrimination:</strong> Sukhadeo Thorat and Paul Attewell ("The Legacy of Social Exclusion", <em>Economic and Political Weekly</em>, 2007) sent matched job applications to private firms under upper-caste Hindu, Dalit and Muslim names. Equally qualified Dalit and Muslim applicants received fewer interview calls, so caste operates even in modern urban markets.</li>
+  <li><strong>Graded inequality:</strong> Ambedkar's term for a hierarchy in which every caste looks down on another, which divides the poor of different castes and blocks class unity.</li>
+</ul>
+
+<p>Jan Breman's studies of south Gujarat trace how the old <em>hali</em> bondage of Dubla labourers gave way not to security but to footloose casual labour. Oscar Lewis's 'culture of poverty' blames the values of the poor, whereas the Indian evidence points to structural exclusion.</p>
+
+<h4>Changing Means of Production and Rural Poverty</h4>
+<ul>
+  <li><strong>Mechanisation:</strong> tractors, threshers and combine harvesters cut the demand for labour, hitting landless Dalit labourers hardest.</li>
+  <li><strong>Green Revolution:</strong> seeds, fertiliser and irrigation favoured farmers with capital and land, widening the gap between rich and small peasants.</li>
+  <li><strong>Decline of jajmani ties:</strong> cash wages replaced customary shares and patronage, removing a floor of security without providing a new one.</li>
+  <li><strong>Costs and debt:</strong> purchased inputs make cultivation costly, so crop failure or a price fall pushes small farmers into debt and distress sales. P. Sainath's reporting documented the agrarian distress behind farmer suicides.</li>
+  <li><strong>Fragmentation:</strong> repeated division leaves most farm households on marginal plots that cannot support a family.</li>
+</ul>
+
+<h3>Privatisation of Education and Educational Inequality</h3>
+
+<p>Privatisation means a growing share of education provided and financed privately: fee-charging schools, private colleges and coaching. Private unaided schools, including low-fee schools in villages and slums, have grown fast since the 1990s, and most professional higher education is now private.</p>
+
+<ul>
+  <li><strong>A two-track system:</strong> English-medium private schools for those who can pay, underfunded government schools for the poor, Dalits, Adivasis, many Muslims and many girls. Schooling then reproduces class difference instead of reducing it.</li>
+  <li><strong>Gender:</strong> families more often send sons to private schools and daughters to free government schools, and spend more on sons' coaching.</li>
+  <li><strong>Higher education:</strong> capitation fees, high fees in private engineering and medical colleges, and costly coaching (the Kota phenomenon) carry the gap into the professions.</li>
+  <li><strong>Theory:</strong> Bourdieu's cultural capital explains how private schooling turns family advantage into credentials, and Bowles and Gintis (<em>Schooling in Capitalist America</em>, 1976) argued that schooling corresponds to the class structure of work.</li>
+  <li><strong>Erosion of public schools:</strong> the exit of middle-class families removes the most vocal users of government schools and weakens pressure for quality.</li>
+</ul>
+
+<p><strong>Policy responses:</strong> the Kothari Commission (1964-66) proposed a common school system that was never built. In <em>Mohini Jain</em> (1992) and <em>Unni Krishnan</em> (1993) the Supreme Court condemned capitation fees. The RTE Act 2009 makes private unaided schools reserve 25 per cent of entry-level seats for disadvantaged children, with fees reimbursed by the state, upheld in <em>Society for Unaided Private Schools of Rajasthan v. Union of India</em> (2012). Minority schools were exempted in <em>Pramati Educational and Cultural Trust v. Union of India</em> (2014).</p>
+
+<p><strong>Educational problems of weaker sections:</strong> first-generation learners lack support at home, many Adivasi children are taught in a language not their own, Dalit children meet separate seating and teacher prejudice, poverty pulls children into work and seasonal migration, and girls drop out at puberty for want of toilets and safety or because of early marriage. Scholarships, residential schools, mid-day meals and the RTE quota have widened access, but quality remains unequal.</p>
+
+<p><strong>Assessment:</strong> defenders argue that low-fee private schools reach where the state fails and give parents choice. Critics reply that choice exists only for those who can pay and that learning gaps follow fees. Without strong public schools, privatisation deepens inequality.</p>
 
 <h2>C. Violence Against Women</h2>
 <p>Violence against women (VAW) is any act of gender-based violence resulting in physical, sexual, or psychological harm (UN Declaration, 1993). A woman is violated because of being a woman; gender is the reason for the violation. Five forms: Psychological (humiliation, emotional isolation, threats); Physical (hitting, beating, torture, murder); Sexual (any non-consensual sexual activity including rape and incest); Financial (controlling finances, preventing employment); Spiritual (destroying cultural or religious beliefs through ridicule or punishment).</p>
@@ -7658,10 +9297,60 @@ The sexual division of labour in India is continuously reproduced through the ki
 <h2>D. Communalism and Secularism</h2>
 <p>Communalism is the mobilisation of people on the basis of religious community to pursue sectional interests at the expense of others. Bipan Chandra identifies three stages: the belief that co-religionists share common secular interests; liberal communalism (different but reconcilable interests); and extreme communalism (fundamentally antagonistic interests, the logic of the Two-Nation Theory that produced Partition). Consequences include communal riots producing deaths, displacement, and chronic inter-community distrust; forced migration and ghettoisation of minorities; permanent fear and insecurity; hindrance to class-based social solidarity; and electoral politics structured around religious identity rather than development performance. The Indian Constitution's secular framework of principled distance (Rajeev Bhargava) treats all religions equally while preventing any religion from dictating state policy. TN Madan's "impossible project" argument and Ashis Nandy's critique of Western secularism point to the difficulty of implementing a constitutional ideal where religion is deeply public. Partha Chatterjee and Amartya Sen respond that the secular-democratic framework remains the best available framework for managing India's religious diversity.</p>
 
+<h3>Ethnocentrism and Social Media in Communal Polarisation</h3>
+
+<p>W.G. Sumner (<em>Folkways</em>, 1906) defined ethnocentrism as the outlook in which one's own group is the centre of everything and all others are scaled and rated by reference to it. It breeds in-group loyalty and out-group contempt. Henri Tajfel and John Turner's social identity theory (1979) showed that people raise their self-esteem by favouring their own group and devaluing others, even when the groups are arbitrary.</p>
+
+<p><strong>Rising ethnocentrism and conflict:</strong> ethnocentrism turns into conflict when competition for jobs, land or power is framed as a contest between communities. Examples include 'sons of the soil' movements against migrants, the flight of people from the Northeast from Bengaluru in August 2012 after threatening rumours, attacks on African students, and the Meitei-Kuki violence in Manipur from May 2023. Religious ethnocentrism underlies communal riots. Group pride is not harmful in itself, but it becomes dangerous when the 'other' is cast as a threat to be excluded.</p>
+
+<p><strong>How social media feed polarisation:</strong></p>
+<ul>
+  <li><strong>Echo chambers and filter bubbles:</strong> algorithms show users more of what they already believe (Cass Sunstein, Eli Pariser), hardening group identities.</li>
+  <li><strong>Speed of rumour:</strong> doctored videos and false claims spread faster than corrections. A fake video circulated before the Muzaffarnagar riots (2013), and child-lifting rumours on WhatsApp led to mob lynchings in 2018.</li>
+  <li><strong>Organised campaigns:</strong> party IT cells and troll networks amplify hate and target minorities and critics.</li>
+  <li><strong>Outrage pays:</strong> platforms built on engagement reward provocative content.</li>
+</ul>
+
+<p><strong>Ways to combat it:</strong></p>
+<ul>
+  <li><strong>Platform accountability:</strong> the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021 require grievance officers and quick takedowns, and WhatsApp limited message forwarding in India in 2018.</li>
+  <li><strong>Even-handed law enforcement:</strong> action against hate speech under Section 196 of the Bharatiya Nyaya Sanhita (formerly Section 153A of the IPC), and the Supreme Court's guidelines against lynching in <em>Tehseen Poonawalla v. Union of India</em> (2018).</li>
+  <li><strong>Fact-checking and digital literacy:</strong> independent fact-checkers and media literacy taught in schools.</li>
+  <li><strong>Civic ties:</strong> Ashutosh Varshney's evidence that inter-community associations and peace committees prevent riots.</li>
+  <li><strong>Responsible leadership:</strong> political and religious leaders refusing to share divisive content.</li>
+</ul>
+
 <h2>E. Other Emerging Challenges</h2>
 <p>The digital divide compounds traditional social exclusion. India has over 800 million internet users (2023) but access is profoundly unequal across urban/rural, gender, caste, and class lines. COVID-19 exposed this starkly when poor children were excluded from online education while middle-class children shifted seamlessly.</p>
 <p>Climate change: India is among the world's most climate-vulnerable countries. Heat waves, floods, cyclones, and drought are intensifying, affecting agricultural livelihoods that still support the majority of India's population. Climate justice demands equitable burden-sharing given that India's per capita emissions are far below the global average.</p>
 <p>Mental health: India has one of the world's largest mental health burdens with approximately 150 million requiring active intervention. Stigma, grossly inadequate public infrastructure (one psychiatrist per 200,000 population), and a dominant biomedical model ignoring social determinants all limit effective response. The Mental Healthcare Act (2017) is a legislative advance without commensurate system capacity.</p>
+
+<h3>Inter-Caste Conflict</h3>
+
+<p>Much caste violence in India is not between the highest and the lowest castes but between groups close to each other in the hierarchy, typically a landowning backward or intermediate caste and the Dalit caste just below it.</p>
+
+<h4>Why Conflict Is Sharpest Between Neighbouring Castes</h4>
+<ul>
+  <li><strong>Competition for the same resources:</strong> neighbouring castes compete for the same land, wage work, reserved seats, panchayat posts and jobs. Distant castes rarely compete directly.</li>
+  <li><strong>Relative deprivation:</strong> people compare themselves with near reference groups (Merton, Runciman). A caste that sees the one below catching up feels threatened, and the lower caste resents those just above more than a remote elite.</li>
+  <li><strong>Contested status:</strong> Sanskritisation claims and Dalit assertions of dignity (a groom riding a horse, new clothes, temple entry) challenge the rank of the caste directly above, which defends the boundary.</li>
+  <li><strong>Closeness intensifies conflict:</strong> Lewis Coser (<em>The Functions of Social Conflict</em>, 1956) argued that conflict is more intense between groups in close relationship, and Freud wrote of the 'narcissism of small differences'.</li>
+  <li><strong>New dominant castes:</strong> land reform and the Green Revolution made OBC peasant castes the new rural dominant castes, and as Dalits gained education, reservation and political voice the two met head on.</li>
+</ul>
+
+<p><strong>Examples:</strong> Thevar and Dalit clashes in southern Tamil Nadu in the 1990s, Gujjar and Meena clashes in Rajasthan in 2007 when Gujjars sought the Scheduled Tribe status Meenas already held, the Khairlanji killings of a Dalit family in Maharashtra (2006), the burning of Valmiki homes by Jats at Mirchpur, Haryana (2010), and the attack on three Dalit colonies in Dharmapuri, Tamil Nadu, after an inter-caste marriage (2012).</p>
+
+<p><strong>Dimensions:</strong> conflicts turn on land and wages, dignity and ritual rank, inter-caste marriage, control of panchayats and votes, access to temples, water and public space, and reservation. They take the form of atrocities and social boycott, riots, and organised agitations for or against quotas.</p>
+
+<h4>Preventing Caste Conflict</h4>
+<ul>
+  <li><strong>Firm law enforcement:</strong> strict use of the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act 1989, strengthened in 2015 with new offences and exclusive special courts, and speedy trials.</li>
+  <li><strong>Economic justice:</strong> land reform, minimum wages and non-farm jobs reduce the dependence that dominant castes exploit.</li>
+  <li><strong>Protection of couples:</strong> police protection and safe houses for inter-caste couples, as directed in <em>Shakti Vahini v. Union of India</em> (2018).</li>
+  <li><strong>Civic engagement:</strong> Ashutosh Varshney (<em>Ethnic Conflict and Civic Life</em>, 2002) found that everyday associations across communities keep the peace. Mixed schools, cooperatives and local peace committees build such ties.</li>
+  <li><strong>Accountable policing:</strong> Dalit representation in the police and penalties for official inaction.</li>
+  <li><strong>Political restraint:</strong> parties that mobilise caste resentment inflame conflict, while broad coalitions dampen it.</li>
+</ul>
 
 <h2>Conclusion: The Dialectics of Social Transformation</h2>
 <p>The challenges of social transformation in India are facets of a single structural reality: a society attempting to realise its constitutional promises within the constraints of a deeply stratified social structure, a capitalist economy producing both growth and inequality, a global ecological crisis, and a democratic polity that both empowers the marginalised and enables powerful groups to capture the state. Andre Beteille's paradox captures the challenge precisely: law, planning, and education determine the direction in which society should go; the social structure (caste, class, patriarchy, communalism) determines the direction in which it actually goes. The gap between the constitutional vision and social reality is occupied by social movements, subaltern politics, feminist struggles, Dalit assertion, and ecological resistance. Upendra Baxi's argument is indispensable: rights cannot be gifts from above; they must be claimed from below. Social transformation in India requires the organised, sustained, and rights-conscious mobilisation of those who bear the greatest costs of the existing social order.</p>
