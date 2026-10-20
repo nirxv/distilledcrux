@@ -21,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/anthropology/pyqs`,       lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/geography/pyqs`,          lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/pub-admin/pyqs`,          lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
+    ...['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'].map((s) => (
+      { url: `${base}/${s}/flashcards`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
+    )),
     { url: `${base}/geography/mapping`,       lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/notes`,                   lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/privacy`,                 lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },

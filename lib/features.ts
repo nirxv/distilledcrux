@@ -17,13 +17,14 @@ export const TOPPER_COPIES_LIVE = false;
  *   (lib/pyqNotes.json, served by /api/chat/related). Gates "Answer a past
  *   question", the mentor start (which begins from a past question), the PYQ
  *   line in Worth knowing and the PYQ follow-up.
- * - Flashcards: there are no flashcards on this site yet. Gates the card
- *   count in Worth knowing and the Flashcards link in the chat sidebar.
+ * - Flashcards: live from October 2026, one deck per optional at
+ *   /<subject>/flashcards. Gates the card count in Worth knowing and the
+ *   Flashcards link in the chat sidebar.
  * - Syllabus tracker: live (see below). Gates the coverage ring in the
  *   sidebar and "Mark it done".
  */
 export const CHAT_TOPIC_PYQS_LIVE = true;
-export const FLASHCARDS_LIVE = false;
+export const FLASHCARDS_LIVE = true;
 // On from step 7: topics are ticked off on the note reader and in the chat,
 // kept per device and synced to the account (hooks/useSyllabusTracker,
 // components/ProgressSync).

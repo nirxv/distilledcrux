@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getNoteBySlug } from '@/lib/notes';
 import { isPyqSubject, pyqsForNote } from '@/lib/pyqs';
 import { cachePublic } from '@/lib/cacheHeaders';
+import { countForTopic } from '@/lib/flashcardStore';
+import { isFlashcardSubject } from '@/lib/flashcardMeta';
 
 /**
  * What the site already has on one notes topic, for the chat page.
@@ -15,21 +17,24 @@ import { cachePublic } from '@/lib/cacheHeaders';
  * down. Which questions belong to which topic is lib/pyqNotes.json.
  *
  * Nothing in the response depends on who is asking, so it is cached at the
- * edge; it changes only when a deploy changes the PYQ data. There are no
- * flashcards on this site yet, so that count is always null.
+ * edge; it changes only when a deploy changes the PYQ data or a batch of
+ * flashcards is loaded. The card count is null when it could not be read.
  */
 export async function GET(req: NextRequest) {
   const slug = req.nextUrl.searchParams.get('slug') ?? '';
   const note = getNoteBySlug(slug);
   if (!note) return NextResponse.json({ error: 'unknown_topic' }, { status: 404 });
 
-  const pyqs = isPyqSubject(note.subject) ? await pyqsForNote(note.subject, note.slug) : [];
+  const [pyqs, flashcards] = await Promise.all([
+    isPyqSubject(note.subject) ? pyqsForNote(note.subject, note.slug) : Promise.resolve([]),
+    isFlashcardSubject(note.subject) ? countForTopic(note.subject, note.slug) : Promise.resolve(null),
+  ]);
 
   return NextResponse.json(
     {
       topic: { slug: note.slug, title: note.title, section: note.section, paper: note.paper },
       pyqs: pyqs.map((q) => ({ id: q.id, year: Number(q.year), marks: q.marks, question: q.question })),
-      flashcards: null,
+      flashcards,
     },
     { headers: cachePublic(3600) },
   );

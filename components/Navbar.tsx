@@ -121,6 +121,7 @@ export default function Navbar() {
     ? [
         { href: `/notes/${slug}`, label: 'Notes' },
         { href: `/${slug}/pyqs`, label: 'PYQs' },
+        { href: `/${slug}/flashcards`, label: 'Flashcards' },
         ...(optional === 'geography' ? [{ href: '/geography/mapping', label: 'Maps' }] : []),
         // /test reads ?optional=, the profile spelling, not the route slug.
         { href: `/test?optional=${optional}`, label: 'Tests' },

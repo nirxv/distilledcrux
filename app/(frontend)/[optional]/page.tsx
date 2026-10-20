@@ -199,7 +199,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
         <section className="op-section">
           <div className="ds-container">
             <div className="op-head">
-              <h2 className="ds-h2">When you’re ready to write</h2>
+              <h2 className="ds-h2">When you’re ready to practise</h2>
             </div>
             <div className="op-tools">
               <Link href="/evaluate" className="op-tool ds-card ds-card-link">
@@ -211,6 +211,11 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
                 <span className="op-tool-icon"><Glyph d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></span>
                 <span className="op-tool-title">Take a test</span>
                 <span className="op-tool-text">A short test on one topic, to see what actually stayed with you.</span>
+              </Link>
+              <Link href={`/${slug}/flashcards`} className="op-tool ds-card ds-card-link">
+                <span className="op-tool-icon"><Glyph d="M3 6h14v14H3zM7 6V4h14v14h-2M7 11h6M7 15h4" /></span>
+                <span className="op-tool-title">Revise with flashcards</span>
+                <span className="op-tool-text">Short cards on thinkers, terms and facts, each tied to the past questions it helps you answer.</span>
               </Link>
               {slug === 'geography' && (
                 <Link href="/geography/mapping" className="op-tool ds-card ds-card-link">

@@ -42,6 +42,7 @@ const G = {
   plans: 'M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z',
   home: 'M3 11l9-8 9 8M5 9.5V20h14V9.5',
   grid: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
+  cards: 'M3 6h14v14H3zM7 6V4h14v14h-2M7 11h6M7 15h4',
 };
 
 function pages(subject: string | null): Item[] {
@@ -51,6 +52,7 @@ function pages(subject: string | null): Item[] {
     ...(s ? [
       { key: 'notes', label: `${SUBJECT_NAME[s]} notes`, hint: 'Every topic in the syllabus', href: `/notes/${s}`, group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
       { key: 'pyqs', label: `${SUBJECT_NAME[s]} PYQs`, hint: 'Past questions, topic by topic', href: `/${s}/pyqs`, group: 'Go to' as const, icon: <Glyph d={G.pyq} /> },
+      { key: 'flashcards', label: `${SUBJECT_NAME[s]} flashcards`, hint: 'Revise with spaced repetition', href: `/${s}/flashcards`, group: 'Go to' as const, icon: <Glyph d={G.cards} /> },
     ] : [
       { key: 'notes', label: 'Notes', hint: 'Pick an optional', href: '/notes', group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
     ]),
