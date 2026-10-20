@@ -111,9 +111,9 @@ export default function Navbar() {
   /**
    * Two sets of links. Before a reader has an optional the bar points at what
    * the site offers; once they have one it is their workspace for that
-   * subject. Either way it stays at five or six, with the chat set apart:
-   * Dashboard and Plans live in the account menu, and everything else is a
-   * ⌘K away.
+   * subject. Pricing is in both, so the plans are never more than a click
+   * away. The chat is set apart, Dashboard lives in the account menu, and
+   * everything else is a ⌘K away.
    */
   const slug = routeSlugForOptional(optional);
   const optionalLabel = labelForOptional(optional);
@@ -126,6 +126,7 @@ export default function Navbar() {
         // /test reads ?optional=, the profile spelling, not the route slug.
         { href: `/test?optional=${optional}`, label: 'Tests' },
         { href: '/evaluate', label: 'Evaluate' },
+        { href: '/pricing', label: 'Pricing' },
         { href: '/chat', label: 'AI Chat', accent: true },
       ]
     : [
@@ -217,7 +218,7 @@ export default function Navbar() {
       <div className={`nb-sheet ds${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="nb-sheet-search" onClick={openPalette}>{Icon.search}Search notes, tools, or ask the AI</button>
         <div className="nb-sheet-links">
-          {[...links, ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : []), ...(slug ? [{ href: '/pricing', label: 'Plans' }] : [])].map((l) => (
+          {[...links, ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : [])].map((l) => (
             <Link key={l.href} href={l.href} className={`nb-sheet-link${isActive(l.href) ? ' on' : ''}${(l as NavLink).accent ? ' accent' : ''}`}>
               <span>{(l as NavLink).accent && Icon.chat}{l.label}</span>
               {Icon.arrow}
@@ -267,11 +268,11 @@ const NAV_CSS = `
 .nb-inner { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: var(--space-4); }
 .nb-brand { display: inline-flex; align-items: center; gap: var(--space-2); text-decoration: none; color: var(--text); flex-shrink: 0; }
 .nb-brand span { font-family: var(--font-body); font-weight: 700; font-size: 1.06rem; letter-spacing: -0.01em; }
-.nb-links { display: flex; align-items: center; gap: 2px; margin-left: var(--space-4); }
+.nb-links { display: flex; align-items: center; gap: 2px; margin-left: var(--space-4); flex-shrink: 0; }
 .nb-link {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 7px 12px; border-radius: var(--radius-md);
-  color: var(--text2); text-decoration: none; font-size: 0.92rem;
+  color: var(--text2); text-decoration: none; font-size: 0.92rem; white-space: nowrap;
   transition: color 0.15s, background 0.15s;
 }
 .nb-link:hover { color: var(--text); background: var(--ds-soft); }
@@ -279,10 +280,10 @@ const NAV_CSS = `
 .nb-link.accent { color: var(--accent-text); background: var(--accent-dim); margin-left: var(--space-1); }
 .nb-link.accent:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .nb-link.accent.on { background: var(--accent); color: var(--accent-on); }
-.nb-right { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; }
+.nb-right { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; min-width: 0; }
 .nb-search {
   display: inline-flex; align-items: center; gap: var(--space-2);
-  height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(200px, 22vw, 320px);
+  height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(200px, 22vw, 320px); min-width: 0;
   background: var(--ds-soft); color: var(--text3);
   border: 1px solid var(--border2); border-radius: var(--radius-full);
   font-size: 0.88rem; cursor: pointer; transition: border-color 0.15s, color 0.15s;
@@ -366,12 +367,14 @@ const NAV_CSS = `
 @media (max-width: 1080px) {
   .nb-search { width: auto; padding: 0 var(--space-3); }
   .nb-search-text, .nb-search kbd { display: none; }
+  .nb-links { margin-left: var(--space-2); }
+  .nb-link { padding: 7px 9px; }
 }
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .nb-links, .nb-theme, .nb-account, .nb-signin { display: none; }
   .nb-burger { display: inline-flex; }
   .nb { padding: 0 var(--space-3); }
 }
-@media (min-width: 861px) { .nb-sheet { display: none; } }
+@media (min-width: 921px) { .nb-sheet { display: none; } }
 @media (prefers-reduced-motion: reduce) { .nb-sheet, .nb-burger span { transition: none; } }
 `;
