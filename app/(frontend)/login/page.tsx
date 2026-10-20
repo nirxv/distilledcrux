@@ -173,7 +173,7 @@ export default function LoginPage() {
 
         <div className="lg-free">
           <strong>A free account opens</strong>
-          <span>every note and past question for your optional, three AI chats and one answer evaluation.</span>
+          <span>every note and past question for your optional, three AI chats, one answer evaluation and 100 flashcard answers.</span>
         </div>
 
         <p className="lg-legal">
