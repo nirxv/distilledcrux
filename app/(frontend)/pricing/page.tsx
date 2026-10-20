@@ -57,6 +57,24 @@ declare global {
   }
 }
 
+/**
+ * Razorpay's checkout script, loaded once per page load. A second visit to
+ * this page reuses the same promise instead of adding another script tag, and
+ * a failed load is forgotten so the next visit can try again.
+ */
+let razorpayScript: Promise<void> | null = null;
+function loadRazorpay(): Promise<void> {
+  if (window.Razorpay) return Promise.resolve();
+  razorpayScript ??= new Promise<void>((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    s.onload = () => resolve();
+    s.onerror = () => { razorpayScript = null; s.remove(); reject(new Error('razorpay_script_failed')); };
+    document.body.appendChild(s);
+  });
+  return razorpayScript;
+}
+
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 
 export default function PricingPage() {
@@ -69,12 +87,12 @@ export default function PricingPage() {
   const [activeUntil, setActiveUntil] = useState<string | null>(null);
 
   useEffect(() => {
-    if (window.Razorpay) { setRzpReady(true); return; }
-    const s = document.createElement('script');
-    s.src = 'https://checkout.razorpay.com/v1/checkout.js';
-    s.onload = () => setRzpReady(true);
-    s.onerror = () => setError('Payment gateway failed to load. Try disabling your adblocker.');
-    document.body.appendChild(s);
+    let live = true;
+    loadRazorpay().then(
+      () => { if (live) setRzpReady(true); },
+      () => { if (live) setError('Payment gateway failed to load. Try disabling your adblocker.'); },
+    );
+    return () => { live = false; };
   }, []);
 
   useEffect(() => {
@@ -113,7 +131,7 @@ export default function PricingPage() {
   const handlePurchase = async (planId: string) => {
     setError(null);
     const user = auth.currentUser;
-    if (!user) { window.location.href = '/login?next=/pricing'; return; }
+    if (!user) { window.location.assign('/login?next=/pricing'); return; }
     if (!selectedOptional) { setError('Pick your optional above before choosing a plan.'); return; }
     setLoading(planId);
     try {
@@ -158,7 +176,7 @@ export default function PricingPage() {
             });
             const verifyData = await verifyRes.json();
             if (verifyData.success) {
-              window.location.href = '/dashboard?payment=success';
+              window.location.assign('/dashboard?payment=success');
             } else {
               setError('Payment verification failed. Contact support.');
             }
