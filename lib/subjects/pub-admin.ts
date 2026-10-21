@@ -52,7 +52,6 @@ export const pubAdminConfig: SubjectConfig = {
     { name: 'Punchhi Commission',   work: 'Report on Centre-State Relations (2010)',                   domain: 'indian' },
   ],
 
-  rag: null,
 
   rubricWeights: {
     introduction: 15,

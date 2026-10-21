@@ -1,20 +1,13 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // lib/subjects/index.ts
 // Subject registry — single source of truth for all optional subjects.
-// Adding RAG later: set rag.enabled = true + namespace. Nothing else changes.
+// Book passages for marking come from lib/ragSearch.ts, filtered by subject id.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export interface Thinker {
   name: string
   work?: string        // Primary known work (for citation prompts)
   domain: string       // e.g. 'ancient' | 'medieval' | 'modern' | 'classical' | 'indian'
-}
-
-export interface RagConfig {
-  enabled: boolean
-  namespace: string    // Supabase pgvector namespace key
-  topK: number         // Chunks to retrieve
-  scoreThreshold: number
 }
 
 export interface SubjectConfig {
@@ -30,10 +23,6 @@ export interface SubjectConfig {
   systemPromptTemplate: string
 
   thinkerRoster: Thinker[]
-
-  // null = RAG not yet set up for this subject.
-  // Flip to RagConfig when books are uploaded to Supabase.
-  rag: RagConfig | null
 
   // Section weights — used to compute max marks per section in the CoT prompt.
   // Values are *percentages* of total marks (must sum to 100).

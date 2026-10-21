@@ -44,7 +44,6 @@ export const anthropologyConfig: SubjectConfig = {
     { name: 'Surajit Sinha',         work: 'Tribe-Caste and Tribe-Peasant Continua',                       domain: 'indian' },
   ],
 
-  rag: null,
 
   rubricWeights: {
     introduction: 15,

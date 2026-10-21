@@ -127,6 +127,7 @@ export function ReadProgress({ stages, startedAt }: { stages: ReadStages; starte
 export type EvalStages = {
   read?: { pages: number; typed: boolean };
   transcribed?: { words: number };
+  books?: { passages: number };
   reference?: { ok: boolean };
   marking?: true;
   marked?: true;
@@ -141,6 +142,7 @@ export function applyEvalStage(s: EvalStages, e: { id?: string } & Record<string
   switch (e.id) {
     case 'read':          return { ...s, read: { pages: Number(e.pages) || 0, typed: Boolean(e.typed) } };
     case 'transcribed':   return { ...s, transcribed: { words: Number(e.words) || 0 } };
+    case 'books':         return { ...s, books: { passages: Number(e.passages) || 0 } };
     case 'reference':     return { ...s, reference: { ok: Boolean(e.ok) } };
     case 'marking':       return { ...s, marking: true };
     case 'marked':        return { ...s, marked: true };
@@ -172,6 +174,15 @@ function evalRows(s: EvalStages): Row[] {
         text: !started ? 'Sending your answer' : s.read?.typed ? 'Reading your answer' : `Reading your handwriting (${pages} page${plural})`,
       };
 
+  const books: Row = s.books
+    ? {
+        key: 'books', state: 'done',
+        text: s.books.passages > 0
+          ? `Found ${s.books.passages} passage${s.books.passages === 1 ? '' : 's'} in the reference books`
+          : 'No close passages in the books, so marking against the rubric alone',
+      }
+    : { key: 'books', state: started ? 'active' : 'pending', text: 'Finding what the books say about it' };
+
   const reference: Row = s.reference
     ? { key: 'reference', state: 'done', text: s.reference.ok ? 'Drafted a strong answer to mark against' : "Couldn't draft a reference answer; marking against the rubric" }
     : { key: 'reference', state: started ? 'active' : 'pending', text: 'Drafting a strong answer to mark against' };
@@ -180,7 +191,7 @@ function evalRows(s: EvalStages): Row[] {
     ended ? { key, state: 'done', text: did } : begun ? { key, state: 'active', text: doing } : { key, state: 'pending', text: todo };
 
   return [
-    read, reference,
+    read, books, reference,
     step('marking', s.marking, s.marked, 'Marking against the UPSC rubric', 'Marked against the UPSC rubric', 'Mark against the UPSC rubric'),
     step('scoring', s.scoring, s.scored, 'Scoring introduction, body, conclusion and presentation', 'Scored each section', 'Score each section'),
     step('feedback', s.feedback, s.feedback_done, 'Writing your feedback', 'Feedback written', 'Write your feedback'),

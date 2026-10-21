@@ -42,7 +42,6 @@ export const sociologyConfig: SubjectConfig = {
     { name: 'Romila Thapar',      work: 'Early India (for historical-sociological context only)',                        domain: 'indian' },
   ],
 
-  rag: null, // flip to { enabled: true, namespace: 'sociology', topK: 6, scoreThreshold: 0.72 } when books uploaded
 
   rubricWeights: {
     introduction: 15,

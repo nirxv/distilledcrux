@@ -9,6 +9,8 @@ import { hasActiveSubscription, optionalForSubject, profileOptional } from "@/li
 import { routeSlugForOptional } from "@/lib/optionals";
 import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
 import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
+import { getBookContext } from "@/lib/ragSearch";
+import type { SubjectKey } from "@/lib/subjectConfig";
 
 const FREE_EVAL_LIMIT = 1;
 
@@ -120,8 +122,7 @@ async function evaluate(req: NextRequest, emit: Emit): Promise<Response> {
 
     // ── Resolve subject config + assemble final system prompt ──────────────
     const subjectConfig = getSubjectConfig(subject);
-    // RAG context is empty string until the ragTask runs below.
-    // assemblePrompt() is called again after ragTask with the real ragContext.
+    // The prompt is assembled after the book search below, with its passages.
     const rosterStr = buildRosterString(subjectConfig.thinkerRoster);
 
     if (!question || !marks) {
@@ -336,31 +337,12 @@ Go page by page. Do not rush. Every word matters.`;
         })()
       : Promise.resolve(finalTranscript);
 
-    // RAG task — subject-aware: only runs when config.rag.enabled = true
-    const ragTask = (async () => {
-      if (!subjectConfig.rag?.enabled || !subjectConfig.rag.namespace) {
-        return ''; // RAG not yet set up for this subject
-      }
-      try {
-        const ragRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/rag-search`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            query: question,
-            namespace: subjectConfig.rag.namespace,
-            topK: subjectConfig.rag.topK,
-            scoreThreshold: subjectConfig.rag.scoreThreshold,
-          }),
-        });
-        const ragData = await ragRes.json();
-        const ctx = ragData.context || '';
-        if (ctx) debug(`RAG context fetched [${subjectConfig.rag.namespace}], length:`, ctx.length);
-        return ctx;
-      } catch (ragErr) {
-        debug('RAG fetch failed (non-fatal):', ragErr);
-        return '';
-      }
-    })();
+    // Book passages, searched beside the OCR and the reference answer and kept
+    // to this optional's books. getBookContext swallows its own failures.
+    const ragTask = getBookContext(question, subjectConfig.id as SubjectKey).then((ctx) => {
+      emit({ id: "books", passages: ctx ? ctx.split("\n\n---\n\n").length : 0 });
+      return ctx;
+    });
 
     const words = (t: string) => (t.trim() ? t.trim().split(/\s+/).length : 0);
     const ocrTracked = ocrTask.then((t) => {

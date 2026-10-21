@@ -53,7 +53,6 @@ export const polsciConfig: SubjectConfig = {
     { name: 'Pratap Bhanu Mehta',  work: 'The Burden of Democracy',                                    domain: 'indian' },
   ],
 
-  rag: null,
 
   rubricWeights: {
     introduction: 15,

@@ -48,7 +48,6 @@ export const geographyConfig: SubjectConfig = {
     { name: 'LP Singh',             work: 'Indian Geography (drainage, climate sections)',               domain: 'indian' },
   ],
 
-  rag: null,
 
   rubricWeights: {
     introduction: 15,
