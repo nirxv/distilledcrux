@@ -987,7 +987,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>A tidal bore is a rare natural phenomenon that occurs in certain rivers and estuaries where the incoming tidal wave produces a wave that travels rapidly upstream against the current. It occurs when the tidal range is large and the estuary is funnel-shaped (narrowing rapidly inland), concentrating the tidal energy. Famous tidal bores include the Qiantang River bore in China, the Turnagain Arm bore in Alaska, and the Hoogly River bore in India (Bhogdoi bore on the Brahmaputra has also been recorded). Tidal bores can be dangerous and cause flooding.</p>
 
-<p>The importance of tides for India is significant: tidal energy potential in the Gulf of Khambhat and Gulf of Kutch is estimated at over 9,000 MW; tidal bores affect navigation and agriculture in estuarine regions; tidal range determines harbour construction and shipping (high tidal range can strand ships if not planned for); mangroves and tidal wetlands are shaped by tidal cycles and provide critical ecosystem services; and traditional fishing communities have detailed knowledge of tidal patterns to guide their activities.</p>
+<p>The importance of tides for India is significant: most of India's estimated tidal energy potential of about 12,455 MW lies in the Gulf of Khambhat and Gulf of Kutch; tidal bores affect navigation and agriculture in estuarine regions; tidal range determines harbour construction and shipping (high tidal range can strand ships if not planned for); mangroves and tidal wetlands are shaped by tidal cycles and provide critical ecosystem services; and traditional fishing communities have detailed knowledge of tidal patterns to guide their activities.</p>
 
 <h2>Waves</h2>
 
@@ -1279,9 +1279,9 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>Threats to biodiversity follow the HIPPO framework: Habitat destruction and fragmentation (the single greatest threat globally and in India - deforestation, agricultural expansion, urbanisation, and infrastructure development have reduced habitat and isolated populations into fragments too small to sustain viable populations); Invasive alien species (species introduced intentionally or accidentally outside their native range that outcompete, prey upon, or parasitise native species - water hyacinth choking Indian wetlands, Lantana camara invading forest understories, spotted deer overpopulating the Andamans, Nile tilapia outcompeting native fish in peninsular rivers); Pollution (pesticides, heavy metals, plastics, and oil contaminating soil, water, and food chains; endocrine-disrupting chemicals affecting reproductive success of amphibians and birds); Population growth and overexploitation (overfishing, bushmeat hunting, illegal wildlife trade, over-collection of medicinal plants); and climate change (range shifts, phenological mismatches between species, coral bleaching, glacier retreat, sea level rise, and increased fire frequency are already measurably reducing biodiversity).</p>
 
-<p>IUCN Red List categories for threatened species are: Extinct (EX - no remaining individuals); Extinct in the Wild (EW - survives only in captivity); Critically Endangered (CR - extremely high risk of extinction); Endangered (EN - very high risk); Vulnerable (VU - high risk); Near Threatened (NT - close to qualifying for a threatened category); Least Concern (LC); and Data Deficient (DD). Key Indian species and their status include: Bengal Tiger (Endangered - approximately 3,000 remaining, with India holding 70 percent of the global population; Project Tiger launched 1973 has increased numbers); Indian One-Horned Rhinoceros (Vulnerable - approximately 4,000, concentrated in Kaziranga National Park in Assam which holds about 70 percent of the world population; Project Rhino); Asian Elephant (Endangered - approximately 50,000 globally, 27,000 in India; Project Elephant 1992); Snow Leopard (Vulnerable - approximately 7,500 globally, 500 to 700 in India; found in J&K, Himachal Pradesh, Uttarakhand, Sikkim, Arunachal Pradesh); Indian Wild Ass (Near Threatened - found only in the Little Rann of Kutch, Gujarat; protected in the Indian Wild Ass Wildlife Sanctuary); Great Indian Bustard (Critically Endangered - fewer than 200 remaining, threatened by power lines and wind farms in Rajasthan); Gangetic River Dolphin (Endangered - India's national aquatic animal, threatened by pollution, damming, and fishing nets in the Ganga-Brahmaputra system); and Olive Ridley Sea Turtle (Vulnerable - mass nesting or arribada at Gahirmatha Beach and the Rushikulya river mouth in Odisha represents one of the world's largest sea turtle nesting events).</p>
+<p>IUCN Red List categories for threatened species are: Extinct (EX - no remaining individuals); Extinct in the Wild (EW - survives only in captivity); Critically Endangered (CR - extremely high risk of extinction); Endangered (EN - very high risk); Vulnerable (VU - high risk); Near Threatened (NT - close to qualifying for a threatened category); Least Concern (LC); and Data Deficient (DD). Key Indian species and their status include: Bengal Tiger (Endangered - approximately 3,000 remaining, with India holding almost 75 percent of the global population; Project Tiger launched 1973 has increased numbers); Indian One-Horned Rhinoceros (Vulnerable - approximately 4,000, concentrated in Kaziranga National Park in Assam which holds about 70 percent of the world population; Project Rhino); Asian Elephant (Endangered - approximately 50,000 globally, with 29,964 counted in India in 2017 and 22,446 in its first DNA-based estimate of 2025, a new baseline; Project Elephant 1992); Snow Leopard (Vulnerable - approximately 7,500 globally, 500 to 700 in India; found in J&K, Himachal Pradesh, Uttarakhand, Sikkim, Arunachal Pradesh); Indian Wild Ass (Near Threatened - found only in the Little Rann of Kutch, Gujarat; protected in the Indian Wild Ass Wildlife Sanctuary); Great Indian Bustard (Critically Endangered - fewer than 200 remaining, threatened by power lines and wind farms in Rajasthan); Gangetic River Dolphin (Endangered - India's national aquatic animal, threatened by pollution, damming, and fishing nets in the Ganga-Brahmaputra system); and Olive Ridley Sea Turtle (Vulnerable - mass nesting or arribada at Gahirmatha Beach and the Rushikulya river mouth in Odisha represents one of the world's largest sea turtle nesting events).</p>
 
-<p>Conservation approaches include in-situ conservation (protecting species in their natural habitat through protected areas) and ex-situ conservation (maintaining species outside their natural habitat in zoos, botanical gardens, seed banks, and tissue culture facilities). India's protected area network includes 106 National Parks, over 550 Wildlife Sanctuaries, 18 Biosphere Reserves (of which 13 are in the UNESCO World Network of Biosphere Reserves), and numerous Community Reserves and Conservation Reserves under the Wildlife Protection Act 1972 (amended 2006). Project Tiger (1973) covering 58 Tiger Reserves (as of 2025) is one of the world's most successful large mammal conservation programmes, increasing tiger population from 1,827 in 1972 to over 3,000 by 2022. Other species-specific projects include Project Elephant (1992), Project Snow Leopard (2009), Project Crocodile (1975 - recovering three species: mugger, saltwater, and gharial), and Sea Turtle Conservation.</p>
+<p>Conservation approaches include in-situ conservation (protecting species in their natural habitat through protected areas) and ex-situ conservation (maintaining species outside their natural habitat in zoos, botanical gardens, seed banks, and tissue culture facilities). India's protected area network includes 106 National Parks, 567 Wildlife Sanctuaries (January 2023), 18 Biosphere Reserves (of which 13 are in the UNESCO World Network of Biosphere Reserves), and numerous Community Reserves and Conservation Reserves under the Wildlife Protection Act 1972 (amended 2006). Project Tiger (1973) covering 58 Tiger Reserves (as of 2025) is one of the world's most successful large mammal conservation programmes, increasing tiger population from 1,827 in 1972 to over 3,000 by 2022. Other species-specific projects include Project Elephant (1992), Project Snow Leopard (2009), Project Crocodile (1975 - recovering three species: mugger, saltwater, and gharial), and Sea Turtle Conservation.</p>
 
 <p>International frameworks for biodiversity conservation include: the Convention on Biological Diversity (CBD, adopted 1992 at the Earth Summit in Rio de Janeiro, ratified by 196 parties including India) with its Aichi Biodiversity Targets (2010-2020) and the Kunming-Montreal Global Biodiversity Framework (2022, committing to protect 30 percent of land and oceans by 2030 - the 30x30 target); CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora, 1973 - regulates trade in approximately 40,000 species through three appendices; India is a signatory); the Ramsar Convention on Wetlands (1971 - designates Wetlands of International Importance called Ramsar sites; India has 103 Ramsar sites as of October 2026, the most in Asia and the third most in the world after the United Kingdom and Mexico, including Chilika Lake, Keoladeo National Park, and Loktak Lake); the World Heritage Convention (UNESCO, 1972 - designating natural sites of Outstanding Universal Value such as Kaziranga, Manas, Sundarbans, Nanda Devi, Western Ghats, and Great Himalayan National Park in India); and the Bonn Convention on Migratory Species (CMS, 1979 - protecting species that migrate across international borders).</p>
 
@@ -1578,7 +1578,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>Water resources are unevenly distributed globally and within countries, and water stress is increasing due to population growth, agricultural demand, industrial use, and climate change. Freshwater constitutes only about 2.5 percent of total water on earth, of which about 68 percent is locked in ice caps and glaciers, about 30 percent is groundwater, and less than 1 percent is in surface water bodies including rivers, lakes, and wetlands accessible for human use. Asia has about 36 percent of the world's freshwater runoff but 60 percent of the world's population. The concept of virtual water, developed by Tony Allan, refers to the water embedded in the production of goods - importing water-intensive goods effectively imports water from water-rich to water-scarce regions. India faces severe water stress: the Indo-Gangetic Plain depends heavily on groundwater, much of which is being mined at unsustainable rates; the Deccan Plateau faces recurrent drought; and transboundary water disputes (Cauvery, Mahanadi, Krishna, Godavari) are persistent political conflicts.</p>
 
-<p>Forest resources cover approximately 31 percent of the world's land area, with the largest areas in Russia, Brazil, Canada, the United States, and China. Tropical forests, particularly the Amazon basin, the Congo basin, and the forests of Southeast Asia and the Western Ghats, have the highest biodiversity but are being lost most rapidly to agricultural expansion (soy, palm oil, cattle ranching), logging, and infrastructure development. Deforestation rates are highest in Brazil, Indonesia, and several African countries. India has a relatively low forest cover of about 24 percent (including all tree cover) against the National Forest Policy goal of 33 percent, with significant variation from the densely forested northeastern states to the arid and semi-arid western states.</p>
+<p>Forest resources cover approximately 31 percent of the world's land area, with the largest areas in Russia, Brazil, Canada, the United States, and China. Tropical forests, particularly the Amazon basin, the Congo basin, and the forests of Southeast Asia and the Western Ghats, have the highest biodiversity but are being lost most rapidly to agricultural expansion (soy, palm oil, cattle ranching), logging, and infrastructure development. Deforestation rates are highest in Brazil, Indonesia, and several African countries. India's forest and tree cover was 25.17 percent of its area in the India State of Forest Report 2023, against the National Forest Policy goal of 33 percent, with significant variation from the densely forested northeastern states to the arid and semi-arid western states.</p>
 
 <p>Marine resources include fisheries (providing 20 percent of global animal protein consumption), seabed minerals including polymetallic nodules rich in manganese, nickel, copper, and cobalt in the abyssal plains, hydrothermal vent deposits of zinc, copper, silver, and gold, cobalt-rich ferromanganese crusts on seamounts, and gas hydrates (methane clathrates) in continental margins. India's Exclusive Economic Zone (EEZ) of 2.02 million square kilometres is among the largest in the world and contains significant fisheries, oil and gas deposits (Bombay High, Krishna-Godavari basin), and potential for deep-sea mineral extraction. The Blue Economy concept, encompassing sustainable use of marine resources, has become a policy priority for India.</p>
 
@@ -1598,13 +1598,13 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>Coal is the most abundant fossil fuel and the largest single source of electricity generation globally. It is classified by carbon content and energy value from highest to lowest as anthracite, bituminous, sub-bituminous, and lignite. The largest coal reserves are in the United States, Russia, Australia, China, and India. India has the fifth-largest coal reserves in the world and is the second-largest producer and consumer after China. Indian coal is largely of Gondwana bituminous type found in the Damodar Valley (Jharia, Raniganj), Mahanadi Valley, Godavari Valley, and Wardha Valley coalfields. India's coal is high in ash content (30-45 percent) compared to international standards (10-15 percent), reducing calorific value and increasing pollution. Jharia coalfield in Jharkhand, the richest coal deposit in India, has been burning underground for over a century due to spontaneous combustion.</p>
 
-<p>Petroleum (crude oil) is the most traded commodity in the world and remains central to transport, petrochemicals, and many industrial processes. The largest proved reserves are concentrated in the Middle East (Saudi Arabia, Iran, Iraq, Kuwait, UAE together hold over 48 percent of world reserves), Venezuela (Orinoco heavy oil belt), Russia, and Libya. The Organisation of the Petroleum Exporting Countries (OPEC), founded in 1960 and including 11 members as of 2026 (after Angola left in 2024 and the United Arab Emirates in 2026), coordinates production among major exporters to influence prices. The United States became the world's largest oil producer by 2018 due to the shale revolution - hydraulic fracturing (fracking) technology unlocking tight oil and shale gas from low-permeability rock formations. India has limited domestic oil reserves concentrated in the Bombay High offshore field (operated by ONGC), the Barmer basin in Rajasthan (operated by Cairn/Vedanta), the Upper Assam basin, and the Krishna-Godavari basin offshore. India imports approximately 85 percent of its crude oil requirements, making it highly vulnerable to global price fluctuations and supply disruptions.</p>
+<p>Petroleum (crude oil) is the most traded commodity in the world and remains central to transport, petrochemicals, and many industrial processes. The largest proved reserves are concentrated in the Middle East (Saudi Arabia, Iran, Iraq, Kuwait, UAE together hold over 48 percent of world reserves), Venezuela (Orinoco heavy oil belt), Russia, and Libya. The Organisation of the Petroleum Exporting Countries (OPEC), founded in 1960 and including 11 members as of 2026 (after Angola left in 2024 and the United Arab Emirates in 2026), coordinates production among major exporters to influence prices. The United States became the world's largest oil producer by 2018 due to the shale revolution - hydraulic fracturing (fracking) technology unlocking tight oil and shale gas from low-permeability rock formations. India has limited domestic oil reserves concentrated in the Bombay High offshore field (operated by ONGC), the Barmer basin in Rajasthan (operated by Cairn/Vedanta), the Upper Assam basin, and the Krishna-Godavari basin offshore. India imported about 89 percent of its crude oil requirements in 2025-26, making it highly vulnerable to global price fluctuations and supply disruptions.</p>
 
-<p>Natural gas is the cleanest-burning fossil fuel and has grown rapidly as a source of electricity generation (displacing coal) and industrial feedstock. Proved reserves are largest in Russia, Iran, Qatar, Turkmenistan, and the United States. Liquefied Natural Gas (LNG) technology, which cools gas to -162 degrees Celsius to reduce its volume 600-fold for shipping, has globalised the gas market. India's domestic gas production from the KG-D6 block operated by Reliance Industries (now declining), the Mumbai High, and other fields meets only a fraction of demand; India has been expanding LNG import capacity at Hazira, Dahej, Kochi, Dabhol, and Ennore terminals. The government's goal of increasing the share of natural gas in India's energy mix from about 6 percent to 15 percent by 2030 requires both domestic production growth and import infrastructure expansion.</p>
+<p>Natural gas is the cleanest-burning fossil fuel and has grown rapidly as a source of electricity generation (displacing coal) and industrial feedstock. Proved reserves are largest in Russia, Iran, Qatar, Turkmenistan, and the United States. Liquefied Natural Gas (LNG) technology, which cools gas to -162 degrees Celsius to reduce its volume 600-fold for shipping, has globalised the gas market. India's domestic gas production from the KG-D6 block operated by Reliance Industries (now declining), the Mumbai High, and other fields meets only a fraction of demand; India has expanded LNG import capacity to eight terminals, among them Dahej, Hazira, Kochi, Dabhol and Ennore. The government's goal of increasing the share of natural gas in India's energy mix from about 6 percent to 15 percent by 2030 requires both domestic production growth and import infrastructure expansion.</p>
 
-<p>Nuclear energy provides about 10 percent of global electricity generation, with the largest shares in France (70 percent), Slovakia, Ukraine, Hungary, and Belgium. Nuclear power uses fission of uranium-235 or plutonium-239 to generate heat for steam turbines. Uranium reserves are largest in Kazakhstan, Australia, Namibia, Canada, and Russia. India has an ambitious nuclear energy programme under the Department of Atomic Energy, with 23 operating reactors providing about 3 percent of electricity, and plans for significant expansion including large light-water reactors (Kudankulam with Russian collaboration), indigenous PHWRs at multiple sites, and a long-term thorium breeder reactor programme leveraging India's large thorium reserves in beach sands (monazite) of Kerala and Tamil Nadu. India is not a signatory to the Nuclear Non-Proliferation Treaty (NPT) but concluded the landmark India-US Civil Nuclear Agreement (123 Agreement) in 2008, enabling civilian nuclear cooperation with the Nuclear Suppliers Group.</p>
+<p>Nuclear energy provides about 10 percent of global electricity generation, with the largest shares in France (70 percent), Slovakia, Ukraine, Hungary, and Belgium. Nuclear power uses fission of uranium-235 or plutonium-239 to generate heat for steam turbines. Uranium reserves are largest in Kazakhstan, Australia, Namibia, Canada, and Russia. India has an ambitious nuclear energy programme under the Department of Atomic Energy, with about 8.8 GW of nuclear capacity (2026) providing about 3 percent of electricity, and plans for significant expansion including large light-water reactors (Kudankulam with Russian collaboration), indigenous PHWRs at multiple sites, and a long-term thorium breeder reactor programme leveraging India's large thorium reserves in beach sands (monazite) of Kerala and Tamil Nadu. India is not a signatory to the Nuclear Non-Proliferation Treaty (NPT) but concluded the landmark India-US Civil Nuclear Agreement (123 Agreement) in 2008, enabling civilian nuclear cooperation with the Nuclear Suppliers Group.</p>
 
-<p>Renewable energy sources include solar, wind, hydropower, biomass, geothermal, and tidal energy. Solar photovoltaic (PV) and wind power have seen dramatic cost reductions (solar PV costs down over 90 percent since 2010) and are now often the cheapest sources of new electricity generation globally. Hydropower provides about 16 percent of global electricity and is the largest source of renewable electricity; the largest hydropower producers are China (Three Gorges Dam at 22.5 GW is the world's largest), Brazil, Canada, the United States, and Russia. India has large hydropower potential (approximately 148 GW technically feasible) concentrated in the northeastern states, Himachal Pradesh, Uttarakhand, and the Western Ghats, though environmental and displacement concerns have constrained development.</p>
+<p>Renewable energy sources include solar, wind, hydropower, biomass, geothermal, and tidal energy. Solar photovoltaic (PV) and wind power have seen dramatic cost reductions (solar PV costs down over 90 percent since 2010) and are now often the cheapest sources of new electricity generation globally. Hydropower provides about 16 percent of global electricity and is the largest source of renewable electricity; the largest hydropower producers are China (Three Gorges Dam at 22.5 GW is the world's largest), Brazil, Canada, the United States, and Russia. India has large hydropower potential (about 133 GW from schemes above 25 MW in the Central Electricity Authority's reassessment of 2017-23) concentrated in the northeastern states, Himachal Pradesh, Uttarakhand, and the Western Ghats, though environmental and displacement concerns have constrained development.</p>
 
 <p>India's renewable energy ambitions are among the most ambitious in the world. The National Solar Mission (2010) set a target of 20 GW of solar capacity, raised in 2015 to 100 GW by 2022 (installed solar capacity was approximately 70 GW in 2023). The International Solar Alliance (ISA), co-founded by India and France at COP21 in 2015, has more than 120 member and signatory countries and promotes solar deployment. India's target for non-fossil fuel electricity capacity is 500 GW by 2030, supporting its commitment at COP26 to achieve net zero emissions by 2070. The Gujarat-Rajasthan corridor and Karnataka host some of the world's largest solar parks including Bhadla Solar Park in Rajasthan (2.25 GW, among the largest single solar parks in the world) and Pavagada Solar Park in Karnataka. Wind energy is concentrated in Tamil Nadu, Gujarat, Rajasthan, Maharashtra, and Andhra Pradesh.</p>
 
@@ -1614,7 +1614,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>The causes include rapid growth in demand with population, industrialisation, urbanisation and rising incomes, the finite and depleting nature of fossil fuels, the concentration of oil and gas reserves in a few regions, geopolitical shocks and cartels, under-investment in supply and grids, and waste through inefficient appliances, vehicles and transmission losses. The effects are inflation, trade deficits and currency pressure in importing countries, power cuts that hurt industry and farming, energy poverty among households that cannot afford modern fuels, and a return to coal and biomass that raises emissions and indoor air pollution.</p>
 
-<p>The intensity of the crisis varies regionally with resource endowment, import dependence, income and infrastructure. Exporters such as Saudi Arabia, Russia and Qatar gain from high prices while importers suffer. Europe was hit hard in 2022 because Russia had supplied about 40 percent of its gas imports, and Sri Lanka and Pakistan faced fuel and power shortages in 2022 as their foreign exchange ran short. In much of sub-Saharan Africa, home to most of the world's people without electricity, the crisis is one of access rather than price. India imports about 85 percent of its crude oil. Within the country, coal-bearing Chhattisgarh and Odisha generate surplus thermal power while distant coastal states depend on coal hauled by rail or imported, and only 58.6 percent of households used clean cooking fuel in NFHS-5 (2019-21), far fewer in rural areas.</p>
+<p>The intensity of the crisis varies regionally with resource endowment, import dependence, income and infrastructure. Exporters such as Saudi Arabia, Russia and Qatar gain from high prices while importers suffer. Europe was hit hard in 2022 because Russia had supplied about 40 percent of its gas imports, and Sri Lanka and Pakistan faced fuel and power shortages in 2022 as their foreign exchange ran short. In much of sub-Saharan Africa, home to most of the world's people without electricity, the crisis is one of access rather than price. India imports nearly 90 percent of its crude oil. Within the country, coal-bearing Chhattisgarh and Odisha generate surplus thermal power while distant coastal states depend on coal hauled by rail or imported, and only 58.6 percent of households used clean cooking fuel in NFHS-5 (2019-21), far fewer in rural areas.</p>
 
 <h3>Measures: Efficiency, Energy Mix and Strategic Reserves</h3>
 
@@ -1634,7 +1634,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>Rare earth elements (REEs) are a group of 17 elements including lanthanum, cerium, praseodymium, neodymium, and the heavier rare earths dysprosium and terbium, used in permanent magnets for wind turbines and electric vehicle motors, phosphors for LEDs and displays, catalysts, and defence applications. China dominates REE production (approximately 60 percent of global output) and refining (approximately 85 percent), giving it substantial strategic leverage. India has significant rare earth reserves in beach sand minerals (monazite, a thorium-REE phosphate mineral) in coastal areas of Kerala (Chavara), Tamil Nadu, Andhra Pradesh, and Odisha; these are processed by the state-owned Indian Rare Earths Limited. The India-Australia Critical Minerals Investment Partnership and similar agreements aim to diversify supply chains away from Chinese dominance.</p>
 
-<p>Lithium, essential for lithium-ion batteries used in electric vehicles, grid storage, and consumer electronics, is concentrated in the Lithium Triangle of Argentina, Bolivia, and Chile (the high-altitude Atacama salt flats contain approximately 50 percent of world lithium reserves in brine form). Australia mines spodumene hard-rock lithium from the Pilbara region. A significant lithium discovery was announced in the Reasi district of Jammu and Kashmir in 2023, estimated at 5.9 million tonnes - potentially the world's fifth-largest deposit - though exploration is at an early stage. India's critical mineral security, including lithium supply for its EV and energy storage ambitions, has become a major policy priority.</p>
+<p>Lithium, essential for lithium-ion batteries used in electric vehicles, grid storage, and consumer electronics, is concentrated in the Lithium Triangle of Argentina, Bolivia, and Chile (the high-altitude Atacama salt flats contain approximately 50 percent of world lithium reserves in brine form). Australia mines spodumene hard-rock lithium from the Pilbara region. A significant lithium discovery was announced in the Reasi district of Jammu and Kashmir in 2023, reported by the Geological Survey of India as 5.9 million tonnes of inferred resources, though exploration is at an early stage and the first auctions, in 2023 and 2024, failed for want of bidders. India's critical mineral security, including lithium supply for its EV and energy storage ambitions, has become a major policy priority.</p>
 
 <p>Phosphate rock, the primary source of phosphorus for fertilisers, has the largest reserves in Morocco and Western Sahara (which together hold approximately 70 percent of world reserves), giving Morocco exceptional strategic importance in global food security. Other major producers include China, Egypt, Russia, and Jordan. India has limited phosphate resources and imports large quantities of di-ammonium phosphate (DAP) for agriculture. Potash (potassium salts for fertiliser) is dominated by Canada (Saskatchewan) and Belarus/Russia in the global supply, giving the Belarus-Russia axis considerable leverage in agricultural input markets - a leverage illustrated by the supply disruptions following sanctions after 2022.</p>
 
@@ -2846,6 +2846,690 @@ export const geographyNoteContent: Record<string, string> = {
 <p>Its limits are equally clear. The Indian Forest Act, 1927, the Wild Life (Protection) Act, 1972, the Forest Rights Act, 2006 and state tree-protection laws lie outside Schedule I, so many forest and wildlife disputes cannot be brought before it. Vacancies have left benches idle at times, its orders can be stayed on appeal, and compliance depends on the same agencies it censures. The 2023 amendment that renamed the 1980 law the Van (Sanrakshan Evam Samvardhan) Adhiniyam also exempted categories of land, such as strategic and security projects within 100 km of the international borders and the Line of Actual Control, which narrows what can be challenged before the Tribunal.</p>
 `,
 
+  'resources-india': `
+<h2>Resources: Meaning and Classification</h2>
+
+<p>A resource is anything in the environment that people can use to meet their needs with the technology, institutions and demand of their time. Erich Zimmermann (World Resources and Industries, 1933) put it as "resources are not, they become": coal was black rock until the steam engine, and lithium mattered little before the battery.</p>
+
+<ul>
+  <li><strong>By origin:</strong> biotic resources such as forests, wildlife, fisheries and livestock, and abiotic resources such as land, water, minerals and fossil fuels.</li>
+  <li><strong>By renewability:</strong> renewable flows such as sunlight, wind, water and forests, which last if used within their rate of renewal, and non-renewable stocks such as coal, oil and metallic ores, which use depletes, though metals can be recycled.</li>
+  <li><strong>By stage of development:</strong> potential resources, known but unused, such as most of the hydel potential of Arunachal Pradesh, developed resources that are surveyed and in use, and reserves, the part of a stock that can be worked profitably with present technology.</li>
+</ul>
+
+<p>India has 2.4 per cent of the world's land and about 4 per cent of its renewable fresh water but about 18 per cent of its people. Its rocks are rich in coal, iron ore, bauxite, chromite and limestone and poor in oil, gas, copper and the critical minerals of the energy transition. Pressure on land and water, dependence on imported energy and the need for conservation therefore shape the use of every resource.</p>
+
+<h2>Land Resources</h2>
+
+<h3>Land Area, Reporting Area and Land Use</h3>
+<p>India's geographical area is 328.76 million hectares (Mha), about 2.4 per cent of the world's land, supporting about 18 per cent of humanity. Land-use statistics cover only the reporting area, for which land records exist: 306.93 Mha in 2023-24 (provisional), about 93 per cent of the total, excluding territory under foreign occupation and some unsurveyed tracts. It is divided into nine classes (Land Use Statistics at a Glance 2023-24):</p>
+<table>
+<thead>
+<tr><th>Class (2023-24, provisional)</th><th>Area (Mha)</th><th>Share of reporting area (per cent)</th></tr>
+</thead>
+<tbody>
+<tr><td>Forests</td><td>72.02</td><td>23.5</td></tr>
+<tr><td>Area under non-agricultural uses</td><td>28.55</td><td>9.3</td></tr>
+<tr><td>Barren and unculturable land</td><td>16.59</td><td>5.4</td></tr>
+<tr><td>Permanent pastures and other grazing land</td><td>10.21</td><td>3.3</td></tr>
+<tr><td>Land under miscellaneous tree crops and groves</td><td>2.95</td><td>1.0</td></tr>
+<tr><td>Culturable waste land</td><td>11.59</td><td>3.8</td></tr>
+<tr><td>Fallow land other than current fallows</td><td>11.16</td><td>3.6</td></tr>
+<tr><td>Current fallows</td><td>14.91</td><td>4.9</td></tr>
+<tr><td>Net sown area</td><td>138.99</td><td>45.3</td></tr>
+</tbody>
+</table>
+<ul>
+  <li><strong>A closed frontier:</strong> net sown area has stayed between about 138 and 142 Mha since 2011-12, so output grows through multiple cropping: from 2011-12 to 2023-24 cropping intensity rose from 139 to 157 per cent and net irrigated area from 66.0 to 82.4 Mha.</li>
+  <li><strong>Built-up spread:</strong> non-agricultural uses grew from 26.36 to 28.55 Mha over the same years, while culturable waste fell from 12.64 to 11.59 Mha.</li>
+  <li><strong>Forests in land records:</strong> a legal category, distinct from satellite-mapped forest cover (21.76 per cent of the geographical area, India State of Forest Report 2023).</li>
+</ul>
+
+<h3>Land as a Limiting Resource: the Uneven Ecological Footprint</h3>
+<p>The ecological footprint (Wackernagel and Rees, 1996) is the productive area, in global hectares (gha), needed to supply a population's consumption and absorb its wastes, compared with biocapacity, the productive area available. In the Global Footprint Network's 2025 results India's footprint is 1.13 gha per person, less than half the world average of 2.51 gha, yet its biocapacity is only 0.38 gha, so India demands about three times what its land regenerates. Net sown area is about 0.1 hectare per person. The pressure is uneven:</p>
+<ul>
+  <li><strong>Social and urban:</strong> affluent households consume far more than the rural poor, and cities draw food, water, power and sand from distant hinterlands while building over farmland, lakes and floodplains around Delhi and Bengaluru.</li>
+  <li><strong>Mining regions:</strong> opencast mining in Jharkhand, Odisha and Chhattisgarh clears forest and displaces tribal people to supply power and steel used elsewhere.</li>
+  <li><strong>Green Revolution belt:</strong> Punjab and Haryana pump groundwater at 156 and 137 per cent of the extractable resource (CGWB, 2025) and export it as virtual water in rice and wheat.</li>
+</ul>
+<p>Land-use change can promote eco-development at each level. Nationally, the National Forest Policy (1988) seeks a third of the area under forest or tree cover, and at the 14th Conference of the Parties to the UN Convention to Combat Desertification (New Delhi, September 2019) India announced the goals of land degradation neutrality and restoring 26 Mha of degraded land by 2030. Regionally, shelterbelts, dune fixation and silvipasture restore the Thar. Locally, watershed treatment, closing commons to open grazing, agroforestry and fuel and fodder plantations on culturable waste raise biomass, recharge and incomes.</p>
+
+<h3>Land Degradation and Desertification</h3>
+<p>The Desertification and Land Degradation Atlas of India (2021) of ISRO's Space Applications Centre found 97.85 Mha, 29.77 per cent of the geographical area, undergoing degradation in 2018-19, up from 96.40 Mha in 2011-13 and 94.53 Mha in 2003-05. Degradation in drylands, which cover about 69 per cent of India, is desertification: 83.69 Mha in 2018-19. Water erosion is the leading process (11.01 per cent of the geographical area), followed by vegetation degradation (9.15 per cent) and wind erosion (5.46 per cent). Rajasthan, Maharashtra, Gujarat, Karnataka, Ladakh, Jharkhand, Odisha, Madhya Pradesh and Telangana, in that order, hold most of the degraded area, and over half of Jharkhand, Rajasthan, Delhi, Gujarat and Goa is degrading, against under 10 per cent of Kerala, Assam, Bihar and Punjab.</p>
+<ul>
+  <li><strong>Thar and Kachchh:</strong> wind erosion and shifting dunes from overgrazing, ploughing of marginal land and fuelwood cutting.</li>
+  <li><strong>Semi-arid Deccan, Bundelkhand and the Chambal:</strong> sheet and gully erosion on shallow soils, and ravines eating into farmland along the Chambal.</li>
+  <li><strong>Canal commands:</strong> waterlogging and salinity in the Indira Gandhi Canal and parts of the Punjab, Haryana and western Uttar Pradesh plains.</li>
+  <li><strong>Mining belts, hills and cold desert:</strong> pits and dumps in Jharkhand and Odisha, vegetation loss from shortened jhum cycles in Mizoram, and wind action in Ladakh.</li>
+</ul>
+<p>The consequences are lower yields, silted reservoirs, dust storms, reduced recharge, scarce fodder and fuel, and distress migration.</p>
+
+<h2>Water Resources</h2>
+
+<h3>Precipitation, Total and Utilisable Water</h3>
+<p>Precipitation, the source of all fresh water, is about 3,729 billion cubic metres (BCM) a year in the Central Water Commission's 2024 compilation (older estimates said 4,000 BCM), over 75 per cent of it in June to September. The CWC's Assessment of Water Resources of India (2024) puts the average annual water resources of the river basins at 2,115.95 BCM. Terrain and seasonality limit use: utilisable surface water is 690 BCM (National Commission for Integrated Water Resources Development, 1999) and annual groundwater recharge 447 BCM (2024 assessment), about 1,137 BCM in all. India has more than 18 per cent of the world's population but only 4 per cent of its renewable water (National Water Policy 2012).</p>
+
+<h3>Basin-wise Availability</h3>
+<table>
+<thead>
+<tr><th>Basin</th><th>Average annual resources (BCM)</th><th>Utilisable surface water (BCM)</th><th>Per capita, 2025 (cubic metres)</th></tr>
+</thead>
+<tbody>
+<tr><td>Brahmaputra</td><td>592.32</td><td>24</td><td>12,325</td></tr>
+<tr><td>Ganga</td><td>581.75</td><td>250</td><td>981</td></tr>
+<tr><td>Barak and others</td><td>93.65</td><td>not given</td><td>9,146</td></tr>
+<tr><td>Godavari</td><td>129.17</td><td>76.3</td><td>1,448</td></tr>
+<tr><td>Krishna</td><td>86.32</td><td>58</td><td>860</td></tr>
+<tr><td>Cauvery</td><td>26.53</td><td>19</td><td>548</td></tr>
+<tr><td>East-flowing rivers, Pennar to Kanyakumari</td><td>27.06</td><td>16.5</td><td>364</td></tr>
+</tbody>
+</table>
+<p>The Ganga-Brahmaputra-Meghna system carries about 1,268 BCM, 60 per cent of the total (CWC, Water Sector at a Glance 2024), but the Brahmaputra's narrow, flood-prone valley allows little storage. Small, seasonal, densely farmed peninsular basins such as the Cauvery, Pennar and Sabarmati fall far below 1,000 cubic metres per person, while the short west-flowing Western Ghats rivers carry about 227 BCM.</p>
+
+<h3>Per Capita Availability and Water Stress</h3>
+<p>Malin Falkenmark's indicator (1989) treats a country as water-stressed below 1,700 cubic metres per person a year, water-scarce below 1,000 and in absolute scarcity below 500. India had 1,747 cubic metres per person at the 2011 population, and the CWC projects 1,573 for 2021, 1,446 for 2031 and 1,300 for 2051, so India is already water-stressed. The 1999 National Commission projected demand of 973 to 1,180 BCM by 2050, against 1,137 BCM utilisable, and agriculture takes about 70 per cent of abstraction.</p>
+
+<h2>Groundwater</h2>
+
+<h3>Distribution of Groundwater</h3>
+<p>Occurrence depends on rock type. The CGWB recognises 14 principal and 42 major aquifers.</p>
+<ul>
+  <li><strong>Alluvial plains:</strong> the thick, porous Indo-Ganga-Brahmaputra alluvium is the largest store, with a specific yield of about 10 per cent in younger alluvium and 16 per cent in piedmont (kandi) gravels, recharged by rain, rivers and canal seepage.</li>
+  <li><strong>Hard-rock peninsula:</strong> fissured rocks such as granite, gneiss and basalt cover nearly two-thirds of the country. Water sits only in the weathered and fractured upper zone, with a specific yield of 1.5 to 3 per cent in weathered granite and 0.35 per cent in massive rock, so wells fail quickly in drought.</li>
+  <li><strong>Arid west and coasts:</strong> saline, poorly recharged aquifers in western Rajasthan and Kachchh, and coastal aquifers open to seawater intrusion.</li>
+</ul>
+
+<h3>Dynamic Ground Water Resource Assessment 2025</h3>
+<p>The CGWB's annual assessment for 2025 (October 2025) gives annual recharge of 448.52 BCM, extractable resources of 407.75 BCM and extraction of 247.22 BCM, a stage of extraction of 60.63 per cent. Irrigation takes 215.10 BCM (87 per cent), and wells and tube wells irrigated 62.94 per cent of net irrigated area in 2023-24 (provisional).</p>
+<table>
+<thead>
+<tr><th>Category (stage of extraction)</th><th>Assessment units</th><th>Per cent</th></tr>
+</thead>
+<tbody>
+<tr><td>Safe (below 70 per cent)</td><td>4,946</td><td>73.14</td></tr>
+<tr><td>Semi-critical (70 to 90)</td><td>758</td><td>11.21</td></tr>
+<tr><td>Critical (90 to 100)</td><td>201</td><td>2.97</td></tr>
+<tr><td>Over-exploited (above 100)</td><td>730</td><td>10.80</td></tr>
+<tr><td>Saline</td><td>127</td><td>1.88</td></tr>
+</tbody>
+</table>
+<p>Stress is concentrated in the north-west (Punjab 156.4, Haryana 136.8, Delhi 92.1 per cent), where pumping outpaces ample recharge, the arid west (Rajasthan 147.1 per cent), where recharge is small, and the hard-rock south (Tamil Nadu 73.5, Karnataka 66.5 per cent). Punjab has 111 of its 153 units over-exploited. Over-exploited units rose from 839 in 2004 to 1,186 in 2017 and fell to 730 in 2025, helped in places by recharge works and good rainfall, yet half the monitoring wells showed a fall in pre-monsoon 2024 against the 2014-23 mean.</p>
+
+<h3>Causes of Depletion</h3>
+<ul>
+  <li><strong>Cropping and prices:</strong> assured procurement of rice and wheat and returns from sugarcane keep water-hungry crops in semi-arid Punjab, Haryana, western Uttar Pradesh and Maharashtra.</li>
+  <li><strong>Cheap power and pumps:</strong> free or flat-rate farm electricity removes the cost of extra pumping, and submersible pumps chase falling water tables.</li>
+  <li><strong>Property regime:</strong> groundwater, the National Water Policy 2012 notes, is still treated as individual property and exploited without regard to sustainability.</li>
+  <li><strong>Geology, lost recharge and urban demand:</strong> hard-rock aquifers store little, paving and encroached tanks cut infiltration, and short municipal supply drives households and industries to deep borewells.</li>
+</ul>
+
+<h3>Groundwater Contamination</h3>
+<p>The CGWB's Annual Ground Water Quality Report 2025 (2024 samples) found nitrate above 45 mg per litre in 20.7 per cent of samples, fluoride above 1.5 mg per litre in 8.05 per cent and excess salinity in 7.23 per cent.</p>
+<table>
+<thead>
+<tr><th>Contaminant</th><th>Main areas</th><th>Origin and health effect</th></tr>
+</thead>
+<tbody>
+<tr><td>Nitrate</td><td>Rajasthan, Haryana, Punjab, Gujarat, Maharashtra, shallow Ganga plain aquifers</td><td>Fertiliser, animal waste and sewage, blue baby syndrome in infants</td></tr>
+<tr><td>Fluoride</td><td>Rajasthan, Gujarat, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu</td><td>Geogenic, from granite and gneiss, dental and skeletal fluorosis</td></tr>
+<tr><td>Arsenic</td><td>West Bengal, Bihar, Uttar Pradesh, Assam, Punjab, Chhattisgarh</td><td>Geogenic, mainly in Ganga-Brahmaputra alluvium, skin lesions and cancers</td></tr>
+<tr><td>Uranium</td><td>Punjab (over half of samples above 30 parts per billion), Haryana, Delhi, Rajasthan</td><td>Mainly geogenic, aggravated by depletion, kidney damage</td></tr>
+</tbody>
+</table>
+<p>In fast-growing cities contamination is a public health issue. Leaking sewers and septic tanks seep nitrate and pathogens into shallow aquifers, landfills such as Ghazipur in Delhi leak leachate, effluent drains such as Ludhiana's Buddha Nullah carry heavy metals, and over-pumping draws saline water from depth or the sea. The urban poor, reliant on unmonitored borewells and tankers, suffer most. Remedies are sewerage and faecal sludge treatment, scientific landfills, protected well fields, fortnightly CGWB quality alerts and piped treated supply.</p>
+
+<h3>Management of Groundwater</h3>
+<ul>
+  <li><strong>Atal Bhujal Yojana:</strong> launched on 25 December 2019 with Rs 6,000 crore for 2020-21 to 2024-25, half a World Bank loan, in 8,220 water-stressed gram panchayats of 80 districts in Haryana, Gujarat, Karnataka, Madhya Pradesh, Maharashtra, Rajasthan and Uttar Pradesh. It promotes panchayat-led, demand-side management and gives better-performing panchayats more funds.</li>
+  <li><strong>Mapping and regulation:</strong> the National Aquifer Mapping and Management Programme, heliborne surveys of about 1 lakh sq km of north-west India, and a Model Bill for state groundwater laws.</li>
+  <li><strong>Recharge:</strong> the Master Plan for Artificial Recharge to Groundwater 2020 envisages about 1.42 crore structures to harness 185 BCM of monsoon rain.</li>
+  <li><strong>Demand side:</strong> separate electricity feeders for farm pumps (suggested by the National Water Policy 2012), later paddy transplanting under the Punjab Preservation of Subsoil Water Act, 2009, micro-irrigation and crop diversification.</li>
+</ul>
+
+<h2>Water Management and the Freshwater Crisis</h2>
+
+<h3>The Freshwater Crisis and the National Water Policy 2012</h3>
+<p>The crisis combines falling per capita availability, seasonal rain, a water-rich east and water-short west and south, groundwater overdraft, pollution, wasteful flood irrigation and urban shortage. Chennai declared "Day Zero" on 19 June 2019 when its four main reservoirs ran dry, and NITI Aayog's Composite Water Management Index (2018) projected demand at twice the available supply by 2030. The National Water Policy 2012 sets out the blueprint:</p>
+<ul>
+  <li>water as a common pool resource held by the state under the public trust doctrine, with a National Framework Law</li>
+  <li>drinking water and sanitation as pre-emptive needs, then other basic needs, food security and minimum ecological flows</li>
+  <li>the river basin as the planning unit, with integrated water resources management</li>
+  <li>demand management, volumetric pricing by statutory Water Regulatory Authorities, water users' associations and reuse of treated water.</li>
+</ul>
+
+<h3>Jal Shakti Abhiyan, Rainwater Harvesting and Watersheds</h3>
+<p>The Jal Shakti Abhiyan began on 1 July 2019 in 1,592 blocks of 256 water-stressed districts and became Jal Shakti Abhiyan: Catch the Rain, covering all districts, on 22 March 2021. Mission Amrit Sarovar (24 April 2022) sought 75 rejuvenated water bodies per district, and by 2026 its portal reported 68,827 completed against a target of 50,000. Telangana's Mission Kakatiya (2015) set out to restore 46,531 tanks, and Chennai mandates rooftop harvesting. The watershed, which contains the whole chain of runoff, erosion and recharge, suits village-level planning, and in the hills takes the form of terracing, check dams and springshed management.</p>
+
+<h3>Interlinking of Rivers as a Resource Strategy</h3>
+<p>Interlinking would move water from surplus Himalayan and Mahanadi-Godavari basins to the deficit south and west. The National Perspective Plan (1980) underlies the 30 links identified by the National Water Development Agency, and the Ken-Betwa link, whose foundation stone was laid in December 2024, is the first under way. Since weak monsoons often hit donor and recipient basins together, it can supplement but not replace recharge, efficiency and demand management.</p>
+
+<h3>Water Conflicts, River Boards and Local Solutions</h3>
+<p>Water is a State subject (Entry 17, State List), subject to Union regulation of inter-state rivers (Entry 56, Union List). The River Boards Act, 1956 provides only for advisory boards, and boards with real functions exist by special arrangement: the Bhakra Beas Management Board (1966, renamed 1976), the Krishna and Godavari River Management Boards under the Andhra Pradesh Reorganisation Act, 2014, whose jurisdiction the Centre notified in July 2021, and the Cauvery Water Management Authority (1 June 2018), set up after the Supreme Court's judgment of 16 February 2018. Boards are controversial because states fear losing control of their dams and canals and riparian states distrust each other's representation.</p>
+<p>Scarcity is local, so solutions must fit place:</p>
+<ul>
+  <li>village water budgets and crop planning in hard-rock Maharashtra and Karnataka</li>
+  <li>ice stupas in Ladakh and springshed recharge in Sikkim</li>
+  <li>desalination and wastewater reuse in coastal cities such as Chennai.</li>
+</ul>
+
+<h2>Energy Profile of India</h2>
+
+<p>India was the world's third-largest energy consumer in 2025, using 933.9 million tonnes of oil equivalent: coal 59.0 per cent, oil 27.9, natural gas 6.1, other renewables 3.9, hydroelectricity 1.6 and nuclear 1.5 (Energy Institute data, cited by PPAC). Use per head was 0.6 tonnes of oil equivalent, against 3.19 in China and 6.45 in the United States. Per capita electricity consumption rose from 957 kWh in 2013-14 to 1,460 kWh in 2024-25 (Ministry of Power). Non-fossil sources crossed half of installed capacity in June 2025, yet coal generated about 70 per cent of utility electricity in 2025-26.</p>
+
+<table>
+<thead>
+<tr><th>Installed capacity, 31 July 2026 (CEA)</th><th>GW</th><th>Per cent</th></tr>
+</thead>
+<tbody>
+<tr><td>Coal and lignite</td><td>230.8</td><td>41.8</td></tr>
+<tr><td>Gas and diesel</td><td>20.7</td><td>3.8</td></tr>
+<tr><td>Nuclear</td><td>8.8</td><td>1.6</td></tr>
+<tr><td>Large hydro (including 7.4 GW of pumped storage)</td><td>52.1</td><td>9.4</td></tr>
+<tr><td>Solar</td><td>164.6</td><td>29.8</td></tr>
+<tr><td>Wind</td><td>58.1</td><td>10.5</td></tr>
+<tr><td>Bio-power, waste to energy and small hydro</td><td>16.9</td><td>3.1</td></tr>
+<tr><td>Total</td><td>552.0</td><td>100</td></tr>
+</tbody>
+</table>
+
+<h2>Coal</h2>
+
+<h3>Types and Grades</h3>
+
+<p>Coal ranks by carbon content from anthracite through bituminous and sub-bituminous to lignite. In India three groups matter.</p>
+
+<ul>
+  <li><strong>Gondwana coal:</strong> bituminous and sub-bituminous coal of the Permian Barakar and Raniganj measures in faulted troughs of the Peninsular shield, almost all of India's coal, low in sulphur but high in ash.</li>
+  <li><strong>Tertiary coal:</strong> much younger coal of the North-East, classed by the Ministry of Coal as high-sulphur coal, which limits its use.</li>
+  <li><strong>Lignite:</strong> Tertiary brown coal of Tamil Nadu, Rajasthan and Gujarat.</li>
+</ul>
+
+<p>Coking coal is graded by ash content, and non-coking coal by gross calorific value (GCV) from G1 (above 7,000 kcal/kg) to G17. About 71 per cent of measured non-coking resources fall in grades G9 to G14 (3,100 to 4,900 kcal/kg) (1 April 2023), so most Indian coal is low-grade steam coal.</p>
+
+<h3>Reserves and Distribution</h3>
+
+<p>The Geological Survey of India's National Coal Inventory 2025 put coal resources at 400.72 billion tonnes on 1 April 2025, to a depth of 1,200 m, in 64 coalfields (45 Gondwana and 19 Tertiary). Lignite resources were 47.37 billion tonnes in 15 fields. By state, Odisha (101.0 billion tonnes), Jharkhand (93.3) and Chhattisgarh (85.3) hold about 70 per cent, followed by West Bengal (34.4), Madhya Pradesh (33.6), Telangana (23.3) and Maharashtra (13.6).</p>
+
+<table>
+<thead>
+<tr><th>Variety (1 April 2023)</th><th>Billion tonnes</th><th>Main states</th></tr>
+</thead>
+<tbody>
+<tr><td>Non-coking</td><td>341.00</td><td>Odisha, Chhattisgarh, Jharkhand, West Bengal, Madhya Pradesh, Telangana</td></tr>
+<tr><td>Coking (prime 5.32, medium 28.53, semi 1.80)</td><td>35.64</td><td>Jharkhand (31.41, including all prime coking coal), Madhya Pradesh, West Bengal</td></tr>
+<tr><td>High-sulphur Tertiary</td><td>1.66</td><td>Meghalaya, Assam, Nagaland, Arunachal Pradesh</td></tr>
+<tr><td>Lignite</td><td>47.37</td><td>Tamil Nadu (37.60), Rajasthan (6.59), Gujarat (2.72)</td></tr>
+</tbody>
+</table>
+
+<h3>The Coalfields and Their Distinctive Features</h3>
+
+<p>The Gondwana coalfields follow river valleys along old faulted troughs.</p>
+
+<table>
+<thead>
+<tr><th>Valley</th><th>Coalfield</th><th>Distinctive features</th></tr>
+</thead>
+<tbody>
+<tr><td>Damodar (Jharkhand, West Bengal)</td><td>Raniganj</td><td>India's oldest coalfield, where the East India Company's John Sumner and Suetonius Grant Heatly found coal in 1774. Coking and non-coking coal.</td></tr>
+<tr><td>Damodar</td><td>Jharia (Dhanbad)</td><td>India's main store of prime coking coal, used at Jamshedpur and Bokaro. Underground fires since 1916 had consumed about 37 MT by 2007.</td></tr>
+<tr><td>Damodar</td><td>Giridih</td><td>The Karharbari seam has India's finest coking coal, with 9 to 12.6 per cent ash.</td></tr>
+<tr><td>Damodar</td><td>Bokaro, Ramgarh, North and South Karanpura</td><td>Upper Damodar fields with Karanpura seams over 20 m thick. Bokaro and North Karanpura, with Jharia and Raniganj, are the most promising for coal-bed methane (ONGC).</td></tr>
+<tr><td>Son (Madhya Pradesh, Uttar Pradesh)</td><td>Singrauli</td><td>The exceptionally thick Jhingurda seam (130 to 162 m) in large opencast mines. High-ash coal (17 to 40 per cent) feeds pithead power stations.</td></tr>
+<tr><td>Mahanadi (Odisha, Chhattisgarh)</td><td>Talcher (Angul, Brahmani valley)</td><td>Among the largest reserves of any Indian coalfield, mostly low-grade power coal.</td></tr>
+<tr><td>Mahanadi</td><td>Ib Valley (Jharsuguda)</td><td>Coal found in 1900 while the Bengal Nagpur Railway bridged the Ib.</td></tr>
+<tr><td>Mahanadi</td><td>Korba (Hasdeo valley)</td><td>Main field of South Eastern Coalfields, whose Gevra mine (1981) is described as Asia's largest opencast mine.</td></tr>
+<tr><td>Godavari-Wardha (Telangana, Maharashtra)</td><td>Singareni</td><td>Coal found near Yellandu in 1871. Singareni Collieries, 51 per cent owned by Telangana, is the main source of coal for the south.</td></tr>
+<tr><td>Godavari-Wardha</td><td>Wardha valley (Chandrapur)</td><td>Non-coking coal, mostly opencast, where near-surface coal is running out.</td></tr>
+<tr><td>Satpura (Madhya Pradesh)</td><td>Pench-Kanhan, Mohpani, Tawa, Pathakhera</td><td>The main coking coal outside the Damodar valley.</td></tr>
+</tbody>
+</table>
+
+<h3>Tertiary Coal and Lignite</h3>
+
+<p>Tertiary coal is mined around Margherita and Ledo in Upper Assam by North Eastern Coalfields and in the hills of Meghalaya, Nagaland and Arunachal Pradesh. Meghalaya's rat-hole mining through narrow tunnels has been banned by the National Green Tribunal but continues. Lignite was found at Neyveli in Tamil Nadu in 1934. NLC India runs opencast mines of 30.6 MT a year at Neyveli and Barsingsar (Bikaner) with 3,640 MW of lignite power stations beside them, and lignite is also mined at Giral and Kapurdi-Jalipa (Barmer) and in Kutch. Output was 45.13 MT in 2024-25.</p>
+
+<h3>Production, Imports and Quality</h3>
+
+<p>Coal output rose from 609.18 MT in 2014-15 to 1,047.52 MT in 2024-25, second only to China. Coal India produced 781.06 MT (about 75 per cent), Singareni 69.01 MT and captive and commercial mines 197.46 MT. Coking coal output that year was only 66.47 MT, and India imported 246.37 MT of coal in 2025-26, including 66.33 MT of coking coal for steel (provisional, Ministry of Coal).</p>
+
+<ul>
+  <li><strong>Low heat value:</strong> Indian coal averages a GCV of about 4,500 kcal/kg against about 6,500 for Australian coal, so Indian stations burn about 0.7 kg of coal per kWh against 0.45 kg in the United States.</li>
+  <li><strong>Washing:</strong> in 2024-25 coking coal washeries turned 15.91 MT of raw coal into 5.90 MT of washed coal, a yield of 37 per cent, which keeps steel plants dependent on imported low-ash coal.</li>
+</ul>
+
+<p>After the Supreme Court quashed 214 of 218 coal block allocations (24 September 2014), blocks were auctioned for captive use, and in 2020 commercial mining was opened with no end-use restriction and 100 per cent FDI. The first auction, launched on 18 June 2020, allotted 18 mines, and the Ministry of Coal lists 141 mines auctioned in 14 rounds.</p>
+
+<h2>Location of Thermal Power Plants</h2>
+
+<ul>
+  <li><strong>Pithead plants:</strong> on the coalfield, sending power by wire: Vindhyachal (4,760 MW, India's largest coal station), Sasan Ultra Mega Power Project (3,960 MW) and Rihand (3,000 MW) in the Singrauli belt, and Korba, Sipat, Talcher and Ramagundam.</li>
+  <li><strong>Load-centre plants:</strong> near cities and fed by coal trains, such as Dadri (1,820 MW) near Delhi, Tanda in eastern Uttar Pradesh and Barh near Patna. Delhi's Badarpur station, rated India's most polluting by the Centre for Science and Environment (2015), shut on 15 October 2018.</li>
+  <li><strong>Coastal plants:</strong> at ports, burning imported coal, such as the Mundra Ultra Mega Power Project (Tata Power, 4,000 MW) and Adani's Mundra station (4,620 MW) in Kutch, and Udupi, Krishnapatnam and Tuticorin.</li>
+</ul>
+
+<p>Ultra Mega Power Projects, supercritical coal stations of 4,000 MW or more awarded by competitive bidding, run only at Sasan (pithead) and Mundra (coastal). Krishnapatnam was deferred and Reliance quit Tilaiya.</p>
+
+<h3>Why Coalfields and Power Plants Do Not Coincide</h3>
+
+<ul>
+  <li><strong>Concentrated coal, dispersed demand:</strong> Odisha, Jharkhand, Chhattisgarh and parts of Madhya Pradesh supplied about 75 per cent of domestic coal despatch in 2021-22 (Ministry of Coal). The northern and southern regions had 98.3 GW of coal capacity in July 2026, yet apart from Singrauli and the Godavari valley they have little coal.</li>
+  <li><strong>State-wise planning:</strong> state electricity boards built stations within their own borders long before the grid was unified on 31 December 2013 with the 765 kV Raichur-Solapur line.</li>
+  <li><strong>Water:</strong> plants need cooling water, so they gather on rivers, reservoirs and coasts.</li>
+  <li><strong>Imported coal:</strong> plants in Gujarat, Karnataka, Andhra Pradesh and Tamil Nadu burn coal brought by sea, and six ports (Dhamra, Mundra, Gangavaram, Paradip, Krishnapatnam and Jaigad) handle about 48 per cent of coal imports.</li>
+  <li><strong>Pollution and ash:</strong> urban air quality pushes plants out of cities, while hauling high-ash coal means carrying waste, which favours pithead generation.</li>
+  <li><strong>Rail strain:</strong> railways carried 66 per cent of coal despatch in 2021-22, and wagon shortages and congestion delay supply. The Coal Logistics Policy 2023 seeks nearest-mine linkages, rail-sea-rail movement and mechanised first mile connectivity for 90 per cent of coal by 2029-30.</li>
+</ul>
+
+<p>The mismatch is partly inevitable, since geology fixed coal in the east-central plateau while people and industry spread across the plains and coasts. Coal by wire helps: the Talcher-Kolar HVDC line (1,450 km, 2,500 MW since 2007) carries pithead power from Odisha to the south.</p>
+
+<h2>Petroleum and Natural Gas</h2>
+
+<h3>Sedimentary Basins and Oilfields</h3>
+
+<p>India has 26 sedimentary basins covering 3.4 million sq km on land and offshore (PPAC), and output comes from young, mainly Tertiary, basins. On 1 April 2021 crude reserves were 587.3 MT, mostly in the Western Offshore (37 per cent) and Assam (27 per cent), and gas reserves 1,372.6 BCM, led by the Eastern Offshore (40.6 per cent). Crude output fell from 32.2 MT in 2019-20 to 27.9 MT in 2025-26, and gross gas output was 34.8 BCM, 72 per cent of it offshore.</p>
+
+<table>
+<thead>
+<tr><th>Basin</th><th>Main fields</th><th>Share of crude output by region, 2025-26 (per cent)</th></tr>
+</thead>
+<tbody>
+<tr><td>Mumbai Offshore</td><td>Mumbai High, found in 1974 and producing since 1976, 160 km off Mumbai</td><td>Western Offshore 42.6</td></tr>
+<tr><td>Cambay (Gujarat)</td><td>Ankleshwar, Lunej (Gujarat's first oil well)</td><td>Gujarat onshore 18.5</td></tr>
+<tr><td>Assam-Arakan</td><td>Digboi (oil found in 1889), Naharkatiya, Moran, Tripura gas fields</td><td>Assam 15.8</td></tr>
+<tr><td>Rajasthan (Barmer)</td><td>Mangala (found in 2004), Bhagyam and Aishwariya of Cairn, with waxy crude. Output fell from 6.65 MT in 2019-20 to 2.95 MT</td><td>Rajasthan 10.5</td></tr>
+<tr><td>Krishna-Godavari</td><td>Razole onshore (first gas, 1983), Reliance's deepwater KG-D6 block off Kakinada, India's largest gas find</td><td>Eastern Offshore 9.7</td></tr>
+<tr><td>Cauvery (Tamil Nadu)</td><td>Onshore fields of the delta</td><td>Tamil Nadu 0.9</td></tr>
+</tbody>
+</table>
+
+<h3>Import Dependence and Geopolitics</h3>
+
+<ul>
+  <li><strong>Dependence:</strong> India imported 88.7 per cent of its crude oil in 2025-26 (provisional), up from 84.4 per cent in 2020-21, at a cost of USD 123.4 billion, and about half its gas as LNG (PPAC). Most crude passes the Strait of Hormuz, so West Asian conflict threatens supply and prices.</li>
+  <li><strong>Diversification:</strong> crude sources widened from 27 to 41 countries. Russia replaced Iraq as the top supplier from January 2023, and India did not join the Western price cap on Russian crude.</li>
+  <li><strong>Strategic reserves:</strong> caverns at Visakhapatnam (1.33 MT), Mangaluru (1.5 MT) and Padur (2.5 MT) hold 5.33 MT, about 9.5 days of consumption, with a second phase planned at Chandikhol (4 MT) and Padur (2.5 MT).</li>
+</ul>
+
+<h3>Refineries and Their Location</h3>
+
+<p>India had 22 refineries with 258.1 MT a year of capacity on 1 April 2026, second in Asia and fourth in the world (PPAC).</p>
+
+<ul>
+  <li><strong>Near crude sources:</strong> Digboi (1901, Asia's first refinery), Guwahati, Bongaigaon and Numaligarh (being expanded from 3 to 9 MT, due by December 2026) in Assam, Koyali near the Cambay fields, and the 9 MT HPCL Rajasthan Refinery at Pachpadra, near the Barmer fields.</li>
+  <li><strong>Near markets, fed by pipeline:</strong> Barauni, first fed by pipeline from Naharkatiya, and Mathura, Panipat, Bina and Bathinda in the northern plains.</li>
+  <li><strong>Coastal, on imported crude:</strong> Reliance's Jamnagar (68.2 MT in two units, the world's largest single-site complex), Nayara's Vadinar (20 MT), Mumbai, Kochi, Mangaluru, Chennai, Visakhapatnam, Paradip and Haldia.</li>
+</ul>
+
+<h3>Natural Gas</h3>
+
+<p>Gas was 6.1 per cent of primary energy in 2025, against a goal of 15 per cent by 2030. Domestic gas, including coal-bed methane from West Bengal, Madhya Pradesh and Jharkhand, meets half of demand, and eight LNG terminals (53.5 MT a year on 1 April 2026), led by Dahej (17.5 MT), supply the rest. A grid of over 27,000 km carries gas inland, and city gas networks in 307 geographical areas had 9,158 CNG stations and 1.77 crore domestic piped gas connections on 31 August 2026 (PNGRB).</p>
+
+<h2>Hydel Power</h2>
+
+<h3>Potential and Distribution</h3>
+
+<p>The Central Electricity Authority's reassessment (2017-23) put potential from schemes above 25 MW at 133,410 MW, below an earlier estimate of 148,701 MW. Arunachal Pradesh alone has 50,394 MW and the North-East 55,930 MW (42 per cent), and the northern region 46,971 MW, led by Himachal Pradesh (18,305), Uttarakhand (13,481) and Jammu and Kashmir (12,265). Large hydro capacity was 52.1 GW in July 2026, including 7.4 GW of pumped storage, so about a third of conventional potential is developed, and the North-East had only 3.0 GW.</p>
+
+<table>
+<thead>
+<tr><th>Feature</th><th>Himalayan rivers</th><th>Peninsular rivers</th></tr>
+</thead>
+<tbody>
+<tr><td>Flow</td><td>Perennial, fed by snow and glaciers as well as the monsoon</td><td>Seasonal, so large storage is needed</td></tr>
+<tr><td>Relief</td><td>Steep gradients and gorges suit high-head and run-of-river schemes</td><td>High heads at the Western Ghats scarp: Koyna sends a Krishna tributary's water west to the Arabian Sea near Chiplun, and the Sharavathi drops over Jog</td></tr>
+<tr><td>Share of potential</td><td>Northern and north-eastern regions, about 77 per cent</td><td>Southern and western regions, about 15 per cent, largely tapped</td></tr>
+<tr><td>Major projects</td><td>Bhakra (1,325 MW) and Nathpa Jhakri (1,500 MW) on the Satluj, the Tehri complex on the Bhagirathi, Subansiri Lower (2,000 MW, its eight units being commissioned in stages), Dibang (2,880 MW, under construction)</td><td>Koyna (1,960 MW), Srisailam (1,670 MW) on the Krishna, Sardar Sarovar (1,450 MW) on the Narmada, Idukki (780 MW)</td></tr>
+<tr><td>Constraints</td><td>Seismicity, fractured rocks, heavy silt, landslides, glacial lake floods, remoteness</td><td>Competition with irrigation and drinking water</td></tr>
+</tbody>
+</table>
+
+<h3>Pumped Storage</h3>
+
+<p>Pumped storage, which pumps water uphill when power is cheap and generates at peak, is the main store for solar and wind power: India had about 7 GW against a potential of about 258 GW and targets 57 GW of pumped storage by 2031-32 (Ministry of Power, 2025).</p>
+
+<h3>Issues</h3>
+
+<ul>
+  <li><strong>Displacement:</strong> Tehri displaced more than 100,000 people, and Sardar Sarovar gave rise to the Narmada Bachao Andolan.</li>
+  <li><strong>Seismicity:</strong> Tehri sits in a major fault zone, and some geologists hold that the Koyna reservoir triggered the earthquake of 11 December 1967.</li>
+  <li><strong>Glacial floods:</strong> a rock and ice avalanche in Chamoli (February 2021) damaged the Rishiganga project and killed workers at Tapovan Vishnugad, and the South Lhonak lake burst (October 2023) destroyed the Teesta III dam.</li>
+  <li><strong>Downstream effects:</strong> protests in Assam over dam safety and daily flow swings halted Subansiri Lower from December 2011.</li>
+</ul>
+
+<p>Basin-wide studies of cumulative impact, glacial lake monitoring, fair resettlement and pumped storage on existing reservoirs are the way forward.</p>
+
+<h2>Nuclear Power</h2>
+
+<h3>The Three-Stage Programme</h3>
+
+<p>Homi J. Bhabha conceived the programme in the 1950s because India has about 25 per cent of the world's known thorium (846,477 tonnes in the monazite of the beach sands of Kerala, Tamil Nadu and Andhra Pradesh) but only 1 to 2 per cent of its uranium.</p>
+
+<ol>
+  <li><strong>Stage I:</strong> pressurised heavy water reactors (PHWRs) on natural uranium generate power and plutonium-239.</li>
+  <li><strong>Stage II:</strong> fast breeder reactors burn plutonium and breed uranium-233 from thorium. The 500 MWe Prototype Fast Breeder Reactor at Kalpakkam reached first criticality on 6 April 2026.</li>
+  <li><strong>Stage III:</strong> reactors running on thorium and uranium-233.</li>
+</ol>
+
+<p>Uranium is mined at Jaduguda (from 1967) in Jharkhand and at Tummalapalle in Andhra Pradesh, and imported fuel became available after the India-US civil nuclear agreement and the Nuclear Suppliers Group waiver of 2008.</p>
+
+<h3>Stations, Capacity and Policy</h3>
+
+<p>Nuclear capacity was 8,780 MW on 30 September 2026 (MNRE, excluding 100 MW on long outage), and nuclear plants produced about 3 per cent of electricity in 2024-25. Most stations lie in western and southern states far from the coalfields.</p>
+
+<table>
+<thead>
+<tr><th>Station</th><th>State</th><th>Reactors</th></tr>
+</thead>
+<tbody>
+<tr><td>Tarapur</td><td>Maharashtra</td><td>Two boiling water reactors (1969), India's first, and two 540 MW PHWRs</td></tr>
+<tr><td>Rawatbhata</td><td>Rajasthan</td><td>Older PHWRs and RAPP-7 (700 MW, commercial operation April 2025)</td></tr>
+<tr><td>Kalpakkam</td><td>Tamil Nadu</td><td>Two 220 MW PHWRs and the PFBR</td></tr>
+<tr><td>Narora</td><td>Uttar Pradesh</td><td>Two 220 MW PHWRs</td></tr>
+<tr><td>Kakrapar</td><td>Gujarat</td><td>Two 220 MW PHWRs and the first indigenous 700 MW PHWRs (2023, 2024)</td></tr>
+<tr><td>Kaiga</td><td>Karnataka</td><td>Four 220 MW PHWRs</td></tr>
+<tr><td>Kudankulam</td><td>Tamil Nadu</td><td>Two 1,000 MW Russian VVERs, the largest station, with units 3 to 6 under construction</td></tr>
+</tbody>
+</table>
+
+<p>The Nuclear Energy Mission (Union Budget 2025-26) targets 100 GW by 2047, with Rs 20,000 crore for at least five indigenous small modular reactors by 2033. The SHANTI (Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India) Act, 2025, assented to on 20 December 2025, replaced the Atomic Energy Act, 1962 and the Civil Liability for Nuclear Damage Act, 2010. Companies other than government ones may now be licensed to build, own and operate nuclear power plants, while enrichment, spent fuel reprocessing, heavy water production and uranium and thorium mining stay with the Central Government.</p>
+
+<h2>Non-Conventional Energy Resources</h2>
+
+<p>Non-conventional energy sources are renewable flows, such as sunlight, wind, small streams, biomass, the earth's heat and the tides, little used for commercial power until recent decades. They are inexhaustible and nearly emission-free in use, but diffuse and intermittent, so they need land, storage and strong grids.</p>
+
+<table>
+<thead>
+<tr><th>Source</th><th>Installed capacity, 30 September 2026 (MNRE)</th></tr>
+</thead>
+<tbody>
+<tr><td>Solar</td><td>171.05 GW, of which 33.41 GW grid-connected rooftop and 6.63 GW off-grid</td></tr>
+<tr><td>Wind</td><td>59.20 GW</td></tr>
+<tr><td>Large hydro</td><td>52.06 GW, including 7.43 GW of pumped storage</td></tr>
+<tr><td>Bio-power</td><td>11.74 GW, of which bagasse cogeneration 9.82 GW</td></tr>
+<tr><td>Small hydro (up to 25 MW)</td><td>5.18 GW</td></tr>
+<tr><td>Total renewable</td><td>299.25 GW</td></tr>
+</tbody>
+</table>
+
+<h3>Why India Is Suited: The Peninsular Advantage</h3>
+
+<ul>
+  <li><strong>High insolation:</strong> lying largely in low latitudes, most of India receives 4 to 7 kWh per sq m per day (MNRE) on about 300 sunny days a year. The clear skies of the Thar, Kutch and the Deccan and the cold desert of Ladakh suit large solar parks.</li>
+  <li><strong>Wind belts:</strong> the south-west monsoon blows strongly over the peninsula from June to September, and gaps in the Western Ghats such as the Palghat Gap funnel it into Tamil Nadu. Coastal Gujarat and Tamil Nadu, the Thar and the plateau edges of Maharashtra, Karnataka and Andhra Pradesh hold most of the potential.</li>
+  <li><strong>Coastline and gulfs:</strong> a coastline estimated at 11,098 km in 2024 offers offshore wind and wave energy, and the funnel-shaped Gulfs of Khambhat and Kutch have large tidal ranges.</li>
+  <li><strong>Biomass, streams and heat:</strong> crop residues and bagasse from a large farm economy, swift Himalayan and Western Ghats streams for small hydro, and hot springs along the Himalayan collision zone and in peninsular rift zones.</li>
+</ul>
+
+<h3>Solar Energy</h3>
+
+<p>The National Institute of Solar Energy put India's solar potential at 748 GW, assuming panels cover 3 per cent of wasteland (MNRE). The National Solar Mission, launched on 11 January 2010 under the National Action Plan on Climate Change (2008), aimed at 20 GW by 2022. In 2015 the target was raised to 100 GW, including 40 GW of rooftop solar. It was missed in 2022, mainly because rooftop lagged, and reached only on 31 January 2025. Rajasthan (28.8 GW), Gujarat (19.4 GW), Maharashtra, Tamil Nadu and Karnataka led in March 2025.</p>
+
+<table>
+<thead>
+<tr><th>Solar park</th><th>Location</th><th>Capacity</th><th>Features</th></tr>
+</thead>
+<tbody>
+<tr><td>Bhadla</td><td>Phalodi district, Rajasthan</td><td>2,245 MW</td><td>completed in 2020 on about 56 sq km of the Thar, where dust storms cut panel efficiency</td></tr>
+<tr><td>Pavagada</td><td>Tumakuru district, Karnataka</td><td>2,050 MW</td><td>completed in 2019 on land leased from farmers</td></tr>
+<tr><td>Kurnool and Rewa</td><td>Andhra Pradesh and Madhya Pradesh</td><td>1,000 MW and 750 MW</td><td>ultra mega solar parks</td></tr>
+<tr><td>Khavda hybrid park</td><td>Kutch, Gujarat</td><td>30 GW planned</td><td>solar and wind on 726 sq km of wasteland, begun in December 2020</td></tr>
+</tbody>
+</table>
+
+<ul>
+  <li><strong>Rooftop solar:</strong> PM Surya Ghar: Muft Bijli Yojana, launched in February 2024 with an outlay of Rs 75,021 crore, aims to equip one crore homes with panels supplying up to 300 units of free electricity a month.</li>
+  <li><strong>Farm solar:</strong> PM-KUSUM (March 2019) set out to add 10 GW of solar plants of up to 2 MW on farmland, 17.5 lakh standalone solar pumps and the solarisation of 10 lakh grid-connected pumps, replacing diesel and giving farmers an income from surplus power.</li>
+</ul>
+
+<h3>Wind Energy</h3>
+
+<p>The National Institute of Wind Energy estimates gross potential at 695.50 GW at 120 m above ground level and 1,163.9 GW at 150 m, led at 150 m by Rajasthan, Gujarat, Maharashtra and Karnataka (MNRE). Installed capacity was 59.20 GW on 30 September 2026, the fourth largest in the world. Gujarat (15.2 GW) and Tamil Nadu (12.1 GW) led in February 2026. Muppandal in Kanyakumari district (about 1,500 MW) and the Jaisalmer Wind Park (1,064 MW) are the largest farms. Wind is strongest in the monsoon and helps meet the evening peak after solar output falls.</p>
+
+<p>The National Offshore Wind Energy Policy was notified on 6 October 2015. MNRE estimates about 36 GW of offshore potential off Gujarat and nearly 35 GW off Tamil Nadu, and in June 2024 viability gap funding was approved for the first 1 GW, 500 MW off each coast.</p>
+
+<h3>Small Hydro, Bio-energy, Geothermal and Tidal Energy</h3>
+
+<ul>
+  <li><strong>Small hydro:</strong> IIT Roorkee estimated 21,133 MW at 7,133 sites, about half in Arunachal Pradesh, Himachal Pradesh, Jammu and Kashmir and Uttarakhand (MNRE).</li>
+  <li><strong>Biomass and bagasse:</strong> MNRE's Biomass Potential Assessment Report (2021) found 228.5 MT of surplus crop residue a year and a power potential of about 28 GW, led by Punjab, Uttar Pradesh, Gujarat, Maharashtra and Madhya Pradesh. Bagasse cogeneration in sugar mills could add about 14 GW, led by Uttar Pradesh and Maharashtra.</li>
+  <li><strong>Biofuels and biogas:</strong> the goal of 20 per cent ethanol in petrol (E20) by 2030 was advanced to 2025 and met that year, against 1.53 per cent in 2014. Ethanol from cane and grain raises concerns over water use and food security. The SATAT initiative (2018) set a target of 15 MT of compressed biogas from 5,000 plants by 2023.</li>
+  <li><strong>Geothermal:</strong> the Geological Survey of India estimates that about 10 GW could be extracted (MNRE). Puga and Chumathang in Ladakh are the most promising fields. Others include Tattapani (Chhattisgarh), the Cambay graben (Gujarat) and Manikaran in Kullu district, which has an experimental plant. MNRE reports no installed geothermal capacity.</li>
+  <li><strong>Tidal and wave:</strong> an IIT Madras and CRISIL study (2014) put theoretical potential at 12,455 MW for tidal and 41,300 MW for wave energy (MNRE). Most tidal potential lies in the Gulfs of Khambhat and Kutch, with a smaller share in the Sundarbans, where a 3.75 MW pilot at Durgaduani Creek was approved in 2011. MNRE regards ocean energy as not yet commercially viable.</li>
+</ul>
+
+<h3>Green Hydrogen and Storage</h3>
+
+<p>Green hydrogen is made by splitting water with renewable electricity. The National Green Hydrogen Mission, approved in January 2023 with an outlay of Rs 19,744 crore, mostly for SIGHT incentives to electrolyser makers and producers, aims at a capacity of at least 5 MT a year by 2030, needing about 125 GW of new renewable capacity. It would first replace the roughly 5 MT of grey hydrogen used in refineries and fertiliser plants, with hubs near clusters of such plants.</p>
+
+<p>Storage evens out the daily swings of solar and wind. The Central Electricity Authority's National Electricity Plan (2023) projects a need for 411.4 GWh by 2031-32, 175.18 GWh from pumped storage and 236.22 GWh from batteries, and an energy storage obligation rises from 1 per cent in 2023-24 to 4 per cent by 2029-30.</p>
+
+<h3>Why Solar Has Lagged Behind Its Potential</h3>
+
+<ul>
+  <li><strong>Land:</strong> acquisition is slow, and parks compete with farming, grazing commons and wildlife habitat.</li>
+  <li><strong>Intermittency:</strong> panels generate only by day and less in the monsoon, so without storage coal plants must stay ready for the evening peak.</li>
+  <li><strong>DISCOM finances:</strong> state distribution companies carry large accumulated losses and debts, and delayed payments to generators raise risk and the cost of finance.</li>
+  <li><strong>Transmission:</strong> the best sites in the Thar, Kutch and Ladakh lie far from load centres, and evacuation lines lag behind plants. The Green Energy Corridor scheme builds intra-state lines.</li>
+  <li><strong>Slow rooftop uptake:</strong> upfront costs, rented housing and slow net-metering approvals made the 40 GW rooftop target of 2022 the main shortfall.</li>
+  <li><strong>Imported equipment:</strong> developers relied on cells and modules imported largely from China. Domestic module making has grown quickly, but cell and wafer making lag far behind. The Approved List of Models and Manufacturers (2019, later extended to cells) and a Production Linked Incentive scheme of Rs 24,000 crore (2021 and 2022) push domestic manufacturing.</li>
+</ul>
+
+<h3>Solar Energy and Future Development</h3>
+
+<p>Solar strengthens energy security by replacing imported fuel, gives farmers daytime power for irrigation and a second income, reaches remote hamlets and islands through off-grid systems, creates manufacturing jobs, and supplies the cheap power on which green hydrogen, green ammonia and electric mobility depend. It is the core of the 500 GW target and of India's solar diplomacy.</p>
+
+<h2>Climate Commitments and Green Energy Initiatives</h2>
+
+<p>India's first Nationally Determined Contribution (NDC) under the Paris Agreement, submitted on 2 October 2015, set three goals for 2030: 40 per cent of installed electricity capacity from non-fossil sources, a cut of 33 to 35 per cent in the emissions intensity of GDP from 2005 levels, and an additional carbon sink of 2.5 to 3 billion tonnes of carbon dioxide equivalent. At COP26 in Glasgow (November 2021) the Prime Minister announced the Panchamrit: 500 GW of non-fossil capacity, half of energy requirements from renewables, a cut of one billion tonnes in projected emissions and a 45 per cent cut in emissions intensity, all by 2030, and net zero by 2070. The updated NDC approved by the Union Cabinet on 3 August 2022 raised the targets to a 45 per cent intensity cut and about 50 per cent non-fossil capacity by 2030, and added LiFE (Lifestyle for Environment).</p>
+
+<p>India reached the 50 per cent target five years early: on 30 June 2025 non-fossil sources made up 242.78 GW, or 50.08 per cent, of 484.82 GW of installed capacity (MNRE, July 2025). Non-fossil capacity stood at 308.03 GW on 30 September 2026. The International Solar Alliance, launched by India and France on 30 November 2015 at COP21 in Paris and headquartered in Gurugram, has over 120 member and signatory countries and promotes One Sun One World One Grid.</p>
+
+<p><strong>Assessment:</strong> the capacity pledges have been met early, but coal still generates about 70 per cent of India's electricity because solar and wind produce for fewer hours. India cites its low per capita emissions and seeks finance and technology from developed countries.</p>
+
+<h2>Energy Crisis in India</h2>
+
+<p>India's energy crisis is a chronic gap between rising need and secure, affordable and clean supply.</p>
+
+<ul>
+  <li><strong>Import dependence:</strong> net energy import dependency was 40.9 per cent in 2021-22. India imports over four-fifths of its crude oil, and imported about 90 per cent of its coking coal in 2021-22.</li>
+  <li><strong>Coal shortages:</strong> in October 2021 a third of coal power plants had less than three days of stock and outages hit Uttar Pradesh, Rajasthan, Punjab, Jharkhand, Maharashtra and Kerala.</li>
+  <li><strong>Rising demand:</strong> peak demand crossed 250 GW for the first time on 30 May 2024, yet per capita consumption, 1,460 kWh in 2024-25, remains far below the world average.</li>
+  <li><strong>DISCOM losses:</strong> high transmission and distribution losses, theft and below-cost farm tariffs leave distribution companies in debt. Loss-making DISCOMs buy too little power and cut supply, so shortages can coexist with idle plants.</li>
+  <li><strong>Regional disparity:</strong> coal lies in Jharkhand, Odisha and Chhattisgarh and wind and solar in the western and southern states, while the Ganga plain and the big cities depend on long-distance rail and transmission.</li>
+  <li><strong>Energy poverty:</strong> Saubhagya (2017) connected 2.82 crore households by March 2021, but connection did not end village outages. Ujjwala (2016) reached 10 crore beneficiaries by December 2023, yet lakhs of beneficiaries bought few or no refills because of high prices, so firewood and dung remain common in rural kitchens.</li>
+</ul>
+
+<h3>Circumventing the Crisis Through Non-Conventional Energy</h3>
+
+<p>Domestic sun and wind replace imported fuel, and rooftop and farm solar supply power where it is used, cutting transmission losses and the farm subsidies that burden DISCOMs. Wind-solar hybrids with storage can provide round-the-clock power, ethanol and compressed biogas reduce crude and gas imports, and green ammonia can replace imported fertiliser. Land, grids, storage and imported critical minerals limit them, and coal will remain the base load for years.</p>
+
+<h2>Energy Efficiency and Conservation</h2>
+
+<p>Energy efficiency means getting the same service from less energy. A unit saved needs no fuel, imports or new plant, so efficiency is the cheapest resource.</p>
+
+<h3>Law and Institutions</h3>
+
+<ul>
+  <li><strong>Energy Conservation Act, 2001:</strong> it provides for energy norms for designated consumers in energy-intensive industries, labels for appliances and codes for buildings. The Bureau of Energy Efficiency (BEE) was set up under it on 1 March 2002 in the Ministry of Power.</li>
+  <li><strong>Energy Conservation (Amendment) Act, 2022:</strong> assented to on 19 December 2022, it enables a carbon credit trading scheme, lets the government fix a minimum share of non-fossil energy for designated consumers, extends the building code, renamed the Energy Conservation and Sustainable Building Code, to large residential buildings, and brings vehicles and vessels under energy standards.</li>
+  <li><strong>Carbon Credit Trading Scheme:</strong> notified on 28 June 2023. Obligated entities must meet greenhouse gas emission norms, others may buy credits voluntarily, and one credit equals one tonne of carbon dioxide equivalent.</li>
+</ul>
+
+<h3>Programmes</h3>
+
+<ul>
+  <li><strong>Perform, Achieve and Trade (PAT):</strong> a component of the National Mission for Enhanced Energy Efficiency (2010). Under rules notified in March 2012, designated consumers in sectors such as steel, cement, aluminium and fertilisers receive energy-saving targets, and units that beat them earn Energy Saving Certificates they can sell to those that fall short. BEE reports that PAT covers 1,333 industries using 55 per cent of industrial energy and has saved 25.78 million tonnes of oil equivalent.</li>
+  <li><strong>Standards and Labelling:</strong> star labels cover 38 appliances and are mandatory for products such as air conditioners, refrigerators and LED bulbs.</li>
+  <li><strong>Buildings:</strong> the Energy Conservation Building Code (2007, revised 2017) for commercial buildings, the Eco Niwas Samhita for homes and the Energy Conservation and Sustainable Building Code 2024.</li>
+  <li><strong>UJALA:</strong> launched on 5 January 2015 and run by Energy Efficiency Services Limited, it has distributed over 36.87 crore LED bulbs, saving an estimated 48.42 billion kWh a year and avoiding 9,789 MW of peak demand.</li>
+</ul>
+
+<h3>Can Efficiency Resolve the Crisis?</h3>
+
+<p>Efficiency softens the crisis quickly: it slows demand growth, delays new plants, lowers peak load, cuts imports and emissions, and reduces household bills, as UJALA showed. It cannot resolve the crisis alone. Per capita use must rise with development, cheaper energy can encourage more use, small enterprises and farm pumps lie largely outside PAT, and states enforce building codes unevenly. The way forward pairs efficiency with supply: stronger codes, efficient farm pumps, smart meters, time-of-day tariffs, a deeper carbon market and more renewables, storage and grids.</p>
+
+<h2>Mineral Resources</h2>
+
+<h3>Geology and the Mineral Belts</h3>
+<p>India's mineral map is largely a geological map. The Archaean gneisses and Dharwar schist belts of the Peninsula hold the metallic ores: banded iron formations, manganese of the Gondite and Kodurite series, gold of the Kolar and Hutti-Maski belts, copper and chromite. Cuddapah and Delhi rocks add barytes, uranium, limestone and the Khetri copper, Vindhyan rocks give limestone, building stone and the Panna diamonds, and the Gondwana basins of the Damodar, Son, Mahanadi and Godavari hold most of the coal. Laterite on the Deccan basalts and Eastern Ghats khondalites carries bauxite, Tertiary rocks hold oil, gas and lignite, and Quaternary coastal sands carry heavy mineral placers. The alluvial Indo-Gangetic plain has almost no metallic minerals.</p>
+<table>
+<thead>
+<tr><th>Belt</th><th>Geology</th><th>Main minerals and mining areas</th></tr>
+</thead>
+<tbody>
+<tr><td>Chota Nagpur-Odisha (Jharkhand, Odisha, West Bengal)</td><td>Iron Ore Group of Singhbhum and Bonai-Kendujhar, ultramafic intrusions, Gondwana basins</td><td>Iron ore of Noamundi, Kiriburu, Gua, Barsua and Joda, chromite of Sukinda, copper of Ghatsila, bauxite of Koraput (Panchpatmali) and Lohardaga, mica of Koderma, uranium of Jaduguda, coal of the Damodar and Mahanadi valleys</td></tr>
+<tr><td>Central (Chhattisgarh, Madhya Pradesh, eastern Maharashtra)</td><td>Iron formations of Bastar and Durg, Gondite manganese, Malanjkhand granitoids, Vindhyan rocks</td><td>Iron ore of Bailadila and Dalli-Rajhara, manganese of Balaghat, Nagpur and Bhandara, copper of Malanjkhand, coal of Korba and Singrauli, diamonds of Panna</td></tr>
+<tr><td>Southern (Karnataka, Goa, Tamil Nadu, Andhra Pradesh)</td><td>Dharwar schist belts, Cuddapah basin, coastal sands</td><td>Iron ore of Bellary-Hospet and Goa, magnetite of Kudremukh, manganese of Sandur, gold of Hutti, barytes of Mangampet, magnesite of Salem, placers of Kerala and Kanyakumari</td></tr>
+<tr><td>Aravalli (Rajasthan, Gujarat)</td><td>Aravalli and Delhi fold belts, Cambay and Barmer basins</td><td>Lead-zinc of Rampura Agucha, Sindesar Khurd, Rajpura-Dariba and Zawar, copper of Khetri, rock phosphate of Jhamarkotra, tungsten of Degana, marble of Makrana, oil and lignite</td></tr>
+<tr><td>Himalayan (Jammu and Kashmir to the North-East)</td><td>Young folded rocks, Tertiary basins</td><td>Magnesite of Uttarakhand, limestone, lithium at Salal-Haimana (Reasi), Tertiary coal of Meghalaya, Assam oil, base metals left unworked in difficult terrain</td></tr>
+</tbody>
+</table>
+<p>The correlation explains the mineral economy. Dharwar iron ore beside Gondwana coking coal made the north-eastern plateau the steel heartland. Because most ores lie in forested tribal districts, mining collides with forest and tribal rights. Where geology is unfavourable India is short: its copper ore averaged only 0.83 per cent copper in 2023-24, and it imported all its lithium, cobalt and nickel in 2020.</p>
+
+<h3>Metallic Minerals</h3>
+<p>The Indian Minerals Yearbook 2024 (Indian Bureau of Mines) gives resources as on 1 April 2020 and production for 2023-24. In 2023 India ranked third in the world in iron ore and chromite, fifth in manganese ore and sixth in bauxite.</p>
+<table>
+<thead>
+<tr><th>Mineral</th><th>Resources (2020)</th><th>Production (2023-24)</th><th>Main mines</th></tr>
+</thead>
+<tbody>
+<tr><td>Iron ore: haematite (higher grade) and magnetite</td><td>Haematite 24,057 MT: Odisha 39 per cent, Jharkhand 20, Chhattisgarh 19, Karnataka 12. Magnetite 11,227 MT: Karnataka 69.5 per cent</td><td>277.3 MT: Odisha 53.7 per cent, Chhattisgarh 16.6, Karnataka 14.8</td><td>Bonai-Kendujhar belt, Noamundi, Kiriburu, Bailadila, Bellary-Hospet, Goa. Kudremukh, inside a national park, was closed</td></tr>
+<tr><td>Manganese</td><td>503.6 MT: Odisha 34 per cent, Karnataka 25</td><td>3.38 MT: Madhya Pradesh and Maharashtra 30.6 per cent each, against imports of 5.59 MT</td><td>Balaghat, Nagpur-Bhandara (MOIL), Kendujhar, Sandur</td></tr>
+<tr><td>Bauxite</td><td>4,958 MT: Odisha 41 per cent, Chhattisgarh 20, Andhra Pradesh 12</td><td>23.97 MT: Odisha about 73 per cent</td><td>Panchpatmali (Koraput, NALCO), Lohardaga, Surguja, Jamnagar, Kolhapur</td></tr>
+<tr><td>Copper</td><td>1.66 billion tonnes of ore: Rajasthan 52 per cent, Madhya Pradesh 23, Jharkhand 15</td><td>3.78 MT of ore, all by Hindustan Copper, against concentrate imports of 10.16 lakh tonnes</td><td>Malanjkhand (Balaghat), Khetri (Jhunjhunu), Ghatsila</td></tr>
+<tr><td>Chromite</td><td>332 MT, over 96 per cent in Odisha</td><td>3.15 MT, all from Odisha</td><td>Sukinda valley (Jajpur), Nuasahi</td></tr>
+<tr><td>Lead and zinc</td><td>766.5 MT of ore, 89 per cent in Rajasthan</td><td>16.5 MT of ore, enough for self-sufficiency in zinc but not lead</td><td>Rampura Agucha (Bhilwara), Sindesar Khurd, Rajpura-Dariba, Zawar</td></tr>
+<tr><td>Gold</td><td>518 MT of ore: Bihar 43 per cent (inferred only), Rajasthan 25, Karnataka 20</td><td>1,603 kg, 97 per cent from Karnataka</td><td>Hutti (Raichur). Kolar Gold Fields closed on 28 February 2001</td></tr>
+</tbody>
+</table>
+<p>The pattern shows the sector's problems: surplus iron ore (46.4 MT was exported in 2023-24, and fines made up 73 per cent of output) beside shortages of copper, lead and high-grade manganese, low-grade ores needing beneficiation, and output concentrated in Odisha.</p>
+
+<h3>Non-metallic Minerals</h3>
+<p>Limestone resources of 2,27,589 MT are led by Karnataka (24 per cent), Andhra Pradesh (13) and Rajasthan (12), and output reached 452 MT in 2023-24. Andhra Pradesh holds 41 per cent of mica resources, in Nellore, while Koderma in Jharkhand was once the mica capital of India, and mica was reclassified as a major mineral in February 2025. Uttarakhand (52 per cent) and Tamil Nadu (34) hold most magnesite, and Andhra Pradesh 92 per cent of barytes.</p>
+
+<h3>Critical Minerals</h3>
+<p>Critical minerals combine high economic importance with high supply risk. A Ministry of Mines committee listed 30 for India in June 2023: antimony, beryllium, bismuth, cadmium, cobalt, copper, gallium, germanium, graphite, hafnium, indium, lithium, molybdenum, nickel, niobium, phosphorus, platinum group elements, potash, rare earth elements, rhenium, selenium, silicon, strontium, tantalum, tellurium, tin, titanium, tungsten, vanadium and zirconium.</p>
+<ul>
+<li><strong>Economic development:</strong> lithium, cobalt, nickel and graphite go into batteries for electric vehicles and storage, silicon, gallium and germanium into solar cells and semiconductors, and rare earth magnets into wind turbines and motors. The targets of 500 GW of non-fossil capacity by 2030 and net zero by 2070 depend on them, as do electronics and fertilisers.</li>
+<li><strong>National security:</strong> tungsten, titanium, beryllium and rare earths are needed for defence, aerospace and nuclear technology.</li>
+<li><strong>Import dependence:</strong> in 2020 India imported all its lithium, cobalt, nickel, vanadium, niobium, germanium, rhenium, beryllium, tantalum and strontium, and 60 per cent of its natural graphite. Refining is concentrated in China, and Indian electric vehicle makers faced shortages of rare earth magnets in 2025.</li>
+</ul>
+<p>India has responded on several fronts.</p>
+<ul>
+<li><strong>Law:</strong> the Mines and Minerals (Development and Regulation) Amendment Act, 2023 removed lithium, beryllium, titanium, niobium, tantalum and zirconium minerals from the list of twelve atomic minerals reserved for public sector mining, let the Union government auction 24 critical and strategic minerals with revenue going to the states, and created an exploration licence for deep-seated and critical minerals. The first offshore auction (November 2024) offered 13 blocks, including polymetallic nodules off Great Nicobar.</li>
+<li><strong>National Critical Mineral Mission:</strong> approved on 29 January 2025 with Rs 16,300 crore of government spending and Rs 18,000 crore expected from public sector undertakings over seven years, covering exploration, fast-track approvals, recovery from tailings, overseas assets, a stockpile, processing parks, recycling and a Centre of Excellence.</li>
+<li><strong>Overseas assets:</strong> Khanij Bidesh India Limited (KABIL), a joint venture of NALCO, Hindustan Copper and MECL, agreed in January 2024 to explore five lithium brine blocks of about 15,703 hectares in Catamarca, Argentina.</li>
+<li><strong>Partnerships:</strong> India joined the United States-led Minerals Security Partnership in June 2023.</li>
+<li><strong>Domestic finds:</strong> in February 2023 the Geological Survey of India reported 5.9 MT of inferred lithium resources (G3 stage) at Salal-Haimana, Reasi, but auctions in December 2023 and July 2024 failed for want of bidders.</li>
+</ul>
+
+<h3>Problems of Mining</h3>
+<ul>
+<li><strong>Displacement:</strong> the richest deposits lie in Scheduled Areas, and in the Niyamgiri case (2013) the Supreme Court left bauxite mining to the gram sabhas, which rejected it.</li>
+<li><strong>Illegal mining and environment:</strong> mining in Bellary was banned in 2011 after the Karnataka Lokayukta exposed illegal extraction, a ban in Goa was lifted in 2014 with an annual cap of 20 MT, and the Shah Commission found 94 of 192 iron ore leases in Odisha without environmental clearance.</li>
+<li><strong>District Mineral Foundations:</strong> created by the 2015 amendment of the mining law to return revenue to affected areas, they had collected about Rs 90,730 crore by March 2024 and spent Rs 49,845 crore, often on works far from affected villages.</li>
+</ul>
+
+<h2>Biotic Resource Regions</h2>
+<p>Biotic resources are the plants, animals and micro-organisms used for food, timber, fodder, fibre, medicine and genes. The standard regionalisation, by W.A. Rodgers and H.S. Panwar of the Wildlife Institute of India (1988), divides India into ten biogeographic zones, later subdivided into 27 provinces.</p>
+<table>
+<thead>
+<tr><th>Zone (share of area)</th><th>Biotic resources</th><th>Main problems</th></tr>
+</thead>
+<tbody>
+<tr><td>Trans-Himalaya (5.6 per cent)</td><td>Cold desert pastures, pashmina goats, snow leopard, kiang</td><td>Overgrazing, tourism waste, warming</td></tr>
+<tr><td>Himalaya (6.4 per cent)</td><td>Temperate and alpine forests, medicinal herbs, musk deer, red panda</td><td>Deforestation, landslides, roads and hydropower, overharvest of herbs</td></tr>
+<tr><td>Desert (6.6 per cent)</td><td>Thorn scrub, khejri, great Indian bustard, wild ass</td><td>Desertification, overgrazing, power lines that kill bustards</td></tr>
+<tr><td>Semi-arid (16.6 per cent)</td><td>Dry forest, grasslands, Asiatic lion, blackbuck</td><td>Grasslands treated as wasteland, a single lion population</td></tr>
+<tr><td>Western Ghats (4.0 per cent)</td><td>Evergreen and shola forests, spices, high endemism</td><td>Plantations, quarrying, hydel projects, unsettled Ecologically Sensitive Area proposals (Gadgil 2011, Kasturirangan 2013)</td></tr>
+<tr><td>Deccan Peninsula (42.0 per cent)</td><td>Teak and sal forests, minor forest produce, tiger, elephant</td><td>Mining and dams in tribal forests, broken corridors, fire, conflict</td></tr>
+<tr><td>Gangetic Plain (10.8 per cent)</td><td>Wetlands, terai grasslands, river dolphin, gharial</td><td>Conversion to farmland, drained wetlands, polluted rivers</td></tr>
+<tr><td>Coasts (2.5 per cent)</td><td>Mangroves, estuaries, fisheries, olive ridley turtle</td><td>Mangrove loss to aquaculture and ports, erosion, overfishing</td></tr>
+<tr><td>North-East (5.2 per cent)</td><td>Evergreen forests, bamboo, orchids, rhinoceros</td><td>Shortened jhum cycles, hunting, dams, floods</td></tr>
+<tr><td>Islands (0.3 per cent)</td><td>Evergreen forests, coral reefs, dugong, Nicobar megapode</td><td>Infrastructure such as the Great Nicobar project, coral bleaching, tsunami risk</td></tr>
+</tbody>
+</table>
+<p>Common problems are habitat loss and fragmentation, overuse of commons, invasive species and climate change, worst in the poorest forest-dependent districts. Each zone needs its own plan: protected areas and corridors, community rights and benefit-sharing, protection of grasslands and wetlands, and regulated tourism and infrastructure in mountains, coasts and islands.</p>
+
+<h2>Marine Resources and the Blue Economy</h2>
+
+<h3>Marine Resources</h3>
+<ul>
+<li><strong>Fisheries:</strong> India is the world's second-largest fish producer. In July 2025 the Ministry of Fisheries reported a record 195 lakh tonnes, with inland fisheries nearly 75 per cent and over 3 crore fishers and fish farmers. The Pradhan Mantri Matsya Sampada Yojana, launched in September 2020 with about Rs 20,000 crore over four to five years, funds harbours, cold chains and aquaculture. Inshore waters are overfished while the deep sea is underused.</li>
+<li><strong>Oil, gas and offshore minerals:</strong> Mumbai High and the Krishna-Godavari basin yield oil and gas, and offshore blocks of sand, lime mud and nodules were first put up for auction in 2024.</li>
+<li><strong>Beach placers:</strong> ilmenite, rutile, zircon, sillimanite, garnet and monazite are concentrated at Chavara (Kerala), Manavalakurichi (Tamil Nadu), Chhatrapur and Brahmagiri (Odisha) and Bhavanapadu (Andhra Pradesh). Ilmenite resources were 687.6 MT (2020) and monazite, the source of rare earths and thorium, 12.73 MT (2021).</li>
+<li><strong>Polymetallic nodules:</strong> India became the first pioneer investor in 1987 with about 1,50,000 sq km in the Central Indian Ocean Basin and, under its 2002 contract with the International Seabed Authority, retains 75,000 sq km. The nodules, estimated at about 380 MT, contain manganese, nickel, copper and cobalt.</li>
+</ul>
+
+<h3>The Blue Economy</h3>
+<p>The Ministry of Earth Sciences' Draft Blue Economy Policy (February 2021) treats the blue economy as the ocean resources and coastal economic infrastructure within India's jurisdiction, across an Exclusive Economic Zone of over 2 million sq km. Its seven themes are ocean accounting and governance, marine spatial planning and tourism, fisheries, manufacturing and services, shipping, deep-sea mining and offshore energy, and security. The Deep Ocean Mission, approved in June 2021 at Rs 4,077 crore for five years, is developing a submersible to carry three people to 6,000 metres (Samudrayaan) and a system to mine nodules from that depth, and is exploring hydrothermal sulphides on mid-ocean ridges. Fisheries schemes, Sagarmala and offshore auctions complete the effort.</p>
+<p>The initiatives are valid in principle, since the ocean offers food, jobs, energy, critical minerals and strategic reach. Their impact is mixed. Fish output and coastal infrastructure have grown, but inshore stocks are under strain, ports and aquaculture clear mangroves and displace fisherfolk, and commercial nodule mining depends on an exploitation code that the International Seabed Authority had yet to adopt when the mission began, and threatens deep-sea life. Marine spatial planning, ecosystem-based fisheries management and protection of mangroves as blue carbon would make it sustainable.</p>
+
+<h2>Forest and Wildlife Resources</h2>
+
+<h3>Forest Cover and Forest Produce</h3>
+<p>The India State of Forest Report 2023 (released December 2024, still the latest in October 2026) puts forest cover at 7,15,343 sq km (21.76 per cent of the geographical area) and tree cover at 1,12,014 sq km (3.41 per cent), together 25.17 per cent, short of the one-third goal of the National Forest Policy 1988. Of the 1,445 sq km gained since 2021, only 156 sq km was forest. Madhya Pradesh, Arunachal Pradesh and Chhattisgarh have the largest forest areas, and Lakshadweep (91.33 per cent) and Mizoram (85.34 per cent) the highest shares.</p>
+<p>Forests yield timber, fuelwood, fodder, bamboo (on 1,54,670 sq km) and minor forest produce such as tendu leaves, mahua, sal seeds, lac and honey, on which tribal households, and women especially, depend. Forest carbon stock was 7,285.5 MT in 2023.</p>
+
+<h3>Social Forestry, Agroforestry and Joint Forest Management</h3>
+<p>Social forestry, a term of the National Commission on Agriculture (1976), aimed to grow fuelwood, fodder and small timber outside forests through farm forestry, village woodlots and plantations along roads, canals and railways. Agroforestry combines trees with crops and livestock. Both fell short.</p>
+<ul>
+<li><strong>Market capture:</strong> farm forestry became commercial eucalyptus planting for pulp by larger farmers, as in Gujarat and Karnataka, leaving the poor little fuelwood or fodder.</li>
+<li><strong>Top-down management:</strong> forest departments chose sites and species, so villagers felt no ownership.</li>
+<li><strong>Wrong species:</strong> exotics such as eucalyptus and Prosopis juliflora replaced fodder and fruit trees.</li>
+<li><strong>Loss of commons:</strong> planting on grazing land excluded the landless, and benefits went to elites.</li>
+<li><strong>Tenure and regulation:</strong> insecure tenancy and rules on felling and transporting farm timber deterred planting.</li>
+</ul>
+<p>Joint Forest Management grew from the Arabari experiment in West Bengal's sal forests, where forester Ajit Kumar Banerjee shared produce and profit with villagers in return for protection. Following the National Forest Policy 1988, the guidelines of June 1990 let forest protection committees guard degraded forest for non-timber produce and a share of timber revenue. Many sal forests recovered, but the committees had no legal standing.</p>
+
+<h3>The Forest Rights Act, 2006</h3>
+<p>The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006, in force from 31 December 2007, set out to correct the historical injustice that had made forest dwellers encroachers on their own land. It recognises individual rights to land cultivated on 13 December 2005, up to 4 hectares, community rights over minor forest produce, grazing and fish, and the right to manage community forest resources. Other traditional forest dwellers must show three generations (75 years) of residence. The gram sabha initiates claims, and people may be moved from critical wildlife habitats only with consent.</p>
+<p>By 30 June 2026 the Ministry of Tribal Affairs reported 54,01,561 claims and 25,42,359 titles (1,24,162 of them community titles) covering about 2.38 crore acres. Of 43,55,591 claims disposed of, over 18 lakh were not granted. Chhattisgarh, Odisha and Madhya Pradesh lead, while Karnataka issued only 16,700 titles against 2,95,176 claims.</p>
+<ul>
+<li><strong>Security of tenure:</strong> titles protect cultivators from eviction and harassment.</li>
+<li><strong>Community control:</strong> Mendha-Lekha in Gadchiroli won control of its bamboo.</li>
+<li><strong>Voice against diversion:</strong> the Niyamgiri gram sabhas rejected bauxite mining.</li>
+<li><strong>Limits:</strong> mass rejections, community rights lagging individual titles, forest department resistance and tension with inviolate wildlife areas. In February 2019 the Supreme Court ordered rejected claimants evicted, then put the order on hold for review.</li>
+</ul>
+
+<h3>Compensatory Afforestation (CAMPA)</h3>
+<p>Agencies diverting forest land pay for compensatory planting. After the Supreme Court ordered a fund and authority (CAMPA) in 2001, the Compensatory Afforestation Fund Act, 2016 and its 2018 rules placed the money in non-lapsable public accounts, and Rs 47,436 crore went to states in August 2019. Plantations on degraded land rarely replace natural forest.</p>
+
+<h3>Wildlife Resources and Their Conservation</h3>
+<p>In January 2023 India had 106 national parks and 567 wildlife sanctuaries, and protected areas covered 1,73,629.52 sq km, about 5.28 per cent of the country (Wildlife Institute of India). There were 58 tiger reserves as of March 2025, covering about 2.5 per cent of the area, and 33 elephant reserves in 14 states.</p>
+<p>Project Tiger began in 1973 with nine reserves. The All India Tiger Estimation 2022 counted an average of 3,682 tigers (range 3,167 to 3,925), up from 2,967 in 2018, almost 75 per cent of the world's wild tigers, led by Madhya Pradesh (785), Karnataka (563) and Uttarakhand (560), though numbers fell in the Western Ghats. Project Elephant (1992) protects elephants and their corridors. The 2017 count gave 29,964 elephants, and the first DNA-based estimate (October 2025) gave 22,446, a new baseline not comparable with the old method.</p>
+<p>Conservation faces several problems.</p>
+<ul>
+<li><strong>Habitat loss:</strong> mines, dams, roads and railways cut corridors, and many tigers and most elephants range outside protected areas.</li>
+<li><strong>Human-wildlife conflict:</strong> crop raiding and deaths turn people against wildlife, despite advisories asking for relief within 24 hours.</li>
+<li><strong>Poaching and trade:</strong> poaching wiped out Sariska's tigers in 2005.</li>
+<li><strong>People in parks:</strong> contested relocation and tension between forest rights and inviolate core areas.</li>
+<li><strong>Small populations:</strong> the Asiatic lion of Gujarat and the great Indian bustard face disease, accidents and inbreeding, and Lantana, grazing and fire degrade habitat.</li>
+<li><strong>Management gaps:</strong> staff shortages, limited funds and pressure for development clearances.</li>
+</ul>
+<p>Measures to prevent extinction of rare species combine law, habitat and science.</p>
+<ul>
+<li><strong>Legal protection:</strong> Schedule I of the Wild Life (Protection) Act, 1972, conservation and community reserves (2002) and the statutory National Tiger Conservation Authority (2006).</li>
+<li><strong>Species projects:</strong> Project Tiger, Project Elephant, Project Crocodile (1975) and Project Snow Leopard (2009), linked by corridors.</li>
+<li><strong>Breeding and reintroduction:</strong> conservation breeding of vultures and gharials, and the return of the cheetah, extinct in India since 1952, with eight animals from Namibia released at Kuno on 17 September 2022 and twelve from South Africa in February 2023. Gujarat has created a second home for lions at Barda, and lions rose from 674 in 2020 to 891 in 2025.</li>
+<li><strong>Communities:</strong> eco-development, forest rights, tourism revenue and prompt compensation.</li>
+<li><strong>Monitoring:</strong> camera-trap and DNA estimation and intelligence-led anti-poaching.</li>
+</ul>
+
+<h2>Technology and Resource Utilisation</h2>
+
+<ul>
+  <li><strong>Coal and power:</strong> mechanised opencast mining lifted output by about 70 per cent in ten years, supercritical units burn less coal per unit, and HVDC lines carry pithead power far away.</li>
+  <li><strong>Oil and gas:</strong> offshore and deepwater drilling opened Mumbai High and KG-D6, and enhanced recovery (Mangala) matters because Indian fields recover only 30 to 35 per cent of oil in place.</li>
+  <li><strong>Nuclear and hydro:</strong> indigenous 700 MW PHWRs, fast breeders that stretch scarce uranium and pumped storage widen the usable resource base.</li>
+  <li><strong>Minerals:</strong> remote sensing and airborne geophysical surveys locate deposits, and beneficiation and pelletisation make low-grade ore and iron ore fines usable.</li>
+  <li><strong>Water and farming:</strong> drip and sprinkler irrigation, aquifer mapping and satellite crop monitoring raise output per unit of water, while cheap pumps also drove groundwater overdraft.</li>
+</ul>
+
+<p>Technology widens the resource base, but it can also speed depletion, so it works best with regulation and prices that reflect scarcity.</p>
+`,
+
   'agriculture-india': `
 <h2>Agriculture in India: Significance and General Character</h2>
 
@@ -2946,7 +3630,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <h2>Irrigation in India</h2>
 
-<p>Irrigation is the controlled application of water to agricultural land to supplement deficient or unreliable rainfall. India's net sown area is approximately 141 million hectares of which about 68 to 70 million hectares are under some form of irrigation, representing an irrigation intensity of approximately 48 to 50 percent. The remaining cultivated area depends entirely on monsoon rainfall and is subject to the full risk of its variability. Expanding irrigated area has been a central goal of agricultural policy since independence because irrigation is the single most effective intervention for increasing crop yields, enabling multiple cropping, reducing weather risk, and supporting the adoption of high-yielding varieties that respond to fertiliser inputs only when water is not a limiting factor.</p>
+<p>Irrigation is the controlled application of water to agricultural land to supplement deficient or unreliable rainfall. India's net sown area is about 139 million hectares, of which about 82 million hectares, or 59 percent, was irrigated in 2023-24 (provisional). The remaining cultivated area depends entirely on monsoon rainfall and is subject to the full risk of its variability. Expanding irrigated area has been a central goal of agricultural policy since independence because irrigation is the single most effective intervention for increasing crop yields, enabling multiple cropping, reducing weather risk, and supporting the adoption of high-yielding varieties that respond to fertiliser inputs only when water is not a limiting factor.</p>
 
 <p>Canal irrigation is the oldest and most extensive form of large-scale irrigation in India. It involves the diversion of river water into a network of main canals, branch canals, distributaries, and field channels that convey water by gravity flow to agricultural fields. Canal irrigation is most developed in the alluvial plains of Punjab, Haryana, Uttar Pradesh, Bihar, Rajasthan, Andhra Pradesh, Tamil Nadu, and Odisha. The Indira Gandhi Canal, formerly the Rajasthan Canal, is the longest canal in India, carrying water from the Harike barrage on the Sutlej river in Punjab over 649 kilometres into the Thar Desert of western Rajasthan, transforming formerly arid land into cultivable area and supporting the colonisation of Ganganagar, Bikaner, Jaisalmer, and Barmer districts. Other major canal systems include the Eastern Yamuna Canal, the Upper Ganga Canal, the Sarda Canal, the Gandak Canal, the Kosi Canal, the Mahanadi delta system, the Krishna-Godavari delta systems, the Cauvery delta system, and the Hirakud canal system. Canal irrigation is expensive to construct and maintain, requires flat or gently sloping terrain, and is most efficient in areas with large perennial rivers. Tail-end scarcity and waterlogging near the head of canals are chronic management problems associated with the extensive Indian canal network.</p>
 
@@ -4017,7 +4701,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>River water disputes are among the most intractable inter-state conflicts in India, combining geographical resource scarcity, historical allocation agreements contested by riparian states, agricultural dependence on irrigation, intense political salience, and institutional complexity. Water is a State List subject but inter-state river water disputes fall under Parliament and the Supreme Court through the Inter-State River Water Disputes Act 1956 (amended 2002 and further reform proposed).</p>
 
-<p>The Cauvery water dispute is one of India's oldest and most bitter river conflicts. The Cauvery originates at Talakaveri in Kodagu district of Karnataka and flows eastward through Karnataka and Tamil Nadu into the Bay of Bengal through the Cauvery delta (the rice bowl of Tamil Nadu, centred on Thanjavur). The conflict is between Karnataka (upper riparian, with growing irrigation and Bengaluru urban water needs) and Tamil Nadu (lower riparian, with a much longer historical claim established by the 1892 and 1924 agreements between the Mysore and Madras states). The Cauvery Water Disputes Tribunal (CWDT), constituted in 1990, gave its final award in 2007 allocating 419 TMC (thousand million cubic feet) to Tamil Nadu, 270 TMC to Karnataka, 30 TMC to Kerala, and 7 TMC to Puducherry. The Supreme Court modified the CWDT award in 2018, marginally increasing Karnataka's share. The Cauvery Water Management Authority (CWMA) and the Cauvery Water Regulation Committee (CWRC) were constituted by the Supreme Court to implement the order. Periodic rainfall shortfalls in Karnataka's catchment trigger acute political crises when Tamil Nadu demands releases, which have sparked communal violence between Kannada and Tamil communities in both states and in Bengaluru.</p>
+<p>The Cauvery water dispute is one of India's oldest and most bitter river conflicts. The Cauvery originates at Talakaveri in Kodagu district of Karnataka and flows eastward through Karnataka and Tamil Nadu into the Bay of Bengal through the Cauvery delta (the rice bowl of Tamil Nadu, centred on Thanjavur). The conflict is between Karnataka (upper riparian, with growing irrigation and Bengaluru urban water needs) and Tamil Nadu (lower riparian, with a much longer historical claim established by the 1892 and 1924 agreements between the Mysore and Madras states). The Cauvery Water Disputes Tribunal (CWDT), constituted in 1990, gave its final award in 2007 allocating 419 TMC (thousand million cubic feet) to Tamil Nadu, 270 TMC to Karnataka, 30 TMC to Kerala, and 7 TMC to Puducherry. The Supreme Court modified the CWDT award in 2018, marginally increasing Karnataka's share. The Cauvery Water Management Authority (CWMA) and the Cauvery Water Regulation Committee (CWRC) were set up by the Centre in 2018, as the Supreme Court's judgment directed, to implement the award. Periodic rainfall shortfalls in Karnataka's catchment trigger acute political crises when Tamil Nadu demands releases, which have sparked communal violence between Kannada and Tamil communities in both states and in Bengaluru.</p>
 
 <p>The Krishna water dispute involves the three lower-riparian states of Maharashtra (source state, Mahabaleshwar), Karnataka, and Andhra Pradesh (now including Telangana). The Krishna Water Disputes Tribunal-I (Bachawat Tribunal, 1969-1976) allocated 560 TMC to Maharashtra, 700 TMC to Karnataka, and 800 TMC to Andhra Pradesh from a dependable flow of 2,060 TMC. With actual flows often exceeding 2,060 TMC and with new projects developed on the surplus, KWDT-II (Brijesh Kumar Tribunal, constituted 2004, final award 2010) allocated the surplus flows among the three states. The bifurcation of Andhra Pradesh in 2014 created a new dimension, with Telangana and Andhra Pradesh as co-riparian successor states requiring further sub-allocation of Andhra Pradesh's share. Disputes over projects like the Kaleshwaram Lift Irrigation Scheme in Telangana and the Polavaram multipurpose project (a national project in Andhra Pradesh) have generated further tensions.</p>
 
@@ -4060,7 +4744,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>India's maritime boundaries are governed by the United Nations Convention on the Law of the Sea (UNCLOS 1982), to which India is a signatory. Under UNCLOS, India exercises different degrees of jurisdiction over different maritime zones. The Territorial Sea extends 12 nautical miles (approximately 22 km) from the baseline (the low-water line along the coast), within which India has full sovereignty equivalent to land territory, subject to the right of innocent passage by foreign vessels. The Contiguous Zone extends from 12 to 24 nautical miles, within which India can exercise control to prevent and punish infringement of its customs, fiscal, immigration, and sanitary laws. The Exclusive Economic Zone (EEZ) extends 200 nautical miles from the baseline; within the EEZ, India has sovereign rights for the purpose of exploring and exploiting, conserving and managing the natural resources of the seabed, subsoil, and the superjacent waters, as well as jurisdiction over marine scientific research, artificial islands, and the protection of the marine environment. India does not have sovereignty over the EEZ (foreign vessels have freedom of navigation), but has exclusive resource rights. The Continental Shelf may extend beyond 200 nautical miles up to 350 nautical miles where the natural prolongation of the land territory extends that far; India has submitted claims to an Extended Continental Shelf beyond 200 nautical miles to the Commission on the Limits of the Continental Shelf (CLCS).</p>
 
-<p>India's total EEZ covers approximately 2.02 million square kilometres (including the EEZ around the Andaman and Nicobar Islands in the Bay of Bengal and the Lakshadweep Islands in the Arabian Sea), one of the largest EEZs in the world. The EEZ encompasses significant petroleum and natural gas deposits (Bombay High, the KG basin offshore block, the Mahanadi basin), fishery resources supporting millions of fisherfolk along India's coastline (11,098 km as recalculated in 2024, against the earlier 7,516 km), and potential for deep-sea mineral extraction (polymetallic nodules, cobalt-rich ferromanganese crusts) and Ocean Thermal Energy Conversion (OTEC). India has been granted Pioneer Investor status by the International Seabed Authority for exploration of polymetallic nodules in the Central Indian Ocean Basin, with exploration blocks allocated in an area of approximately 150,000 sq km.</p>
+<p>India's total EEZ covers approximately 2.02 million square kilometres (including the EEZ around the Andaman and Nicobar Islands in the Bay of Bengal and the Lakshadweep Islands in the Arabian Sea), one of the largest EEZs in the world. The EEZ encompasses significant petroleum and natural gas deposits (Bombay High, the KG basin offshore block, the Mahanadi basin), fishery resources supporting millions of fisherfolk along India's coastline (11,098 km as recalculated in 2024, against the earlier 7,516 km), and potential for deep-sea mineral extraction (polymetallic nodules, cobalt-rich ferromanganese crusts) and Ocean Thermal Energy Conversion (OTEC). India has been granted Pioneer Investor status by the International Seabed Authority for exploration of polymetallic nodules in the Central Indian Ocean Basin, with an initial allocation of about 150,000 sq km in 1987, of which it retains 75,000 sq km under its 2002 contract.</p>
 
 <p>Maritime boundary disputes exist with several neighbours. The Sir Creek dispute with Pakistan concerns an approximately 96 km tidal creek in the Rann of Kutch between Sindh (Pakistan) and Gujarat (India): the location of the boundary within or along the creek determines the EEZ boundary in the Arabian Sea, with implications for potential hydrocarbon resources. The boundary has not been formally delimited. India and Bangladesh delimited their maritime boundary in the Bay of Bengal through an international arbitration award by the Permanent Court of Arbitration in 2014 (Bangladesh-India Maritime Boundary Arbitration), the first such delimitation through binding arbitration for India, which resolved overlapping EEZ claims in the Bay of Bengal and awarded Bangladesh a larger maritime area than it had previously controlled. India and Sri Lanka share the Palk Strait and the Gulf of Mannar; the maritime boundary was delimited in 1974 and 1976, but the Katchatheevu island (ceded to Sri Lanka under the 1974 agreement) remains a politically sensitive issue in Tamil Nadu, affecting the fishing rights of Indian fishermen in the Palk Strait. The Andaman and Nicobar Islands' maritime boundaries approach the EEZs of Myanmar, Thailand, Indonesia, and Malaysia, with particular strategic significance at the northern entrance to the Strait of Malacca.</p>
 
@@ -4106,7 +4790,7 @@ export const geographyNoteContent: Record<string, string> = {
 
 <p>The India-US Civil Nuclear Agreement (123 Agreement, 2008) was a landmark that ended India's nuclear isolation. The agreement, negotiated during the George W. Bush and Manmohan Singh governments, allowed civilian nuclear cooperation between India and the United States despite India not being an NPT signatory, on the basis of India's voluntary separation of civilian and military nuclear facilities, India's commitment to IAEA safeguards on civilian facilities, and India's strong non-proliferation record. The agreement was a political achievement for both sides: for India, it ended 34 years of nuclear isolation and opened access to nuclear fuel, technology, and international nuclear commerce; for the US, it recognised India as a de facto nuclear weapons state and deepened strategic partnership. The NSG waiver in 2008 (enabling all NSG members to engage in civilian nuclear commerce with India) was essential to operationalising the agreement. Subsequently, India has concluded civilian nuclear agreements with Russia, France, the UK, Canada, Australia, Japan, and South Korea. India seeks full NSG membership, which is blocked by China on the grounds that Pakistan should simultaneously receive NSG membership or that non-NPT states cannot be admitted.</p>
 
-<p>India's nuclear geography also encompasses its thorium reserves, which are among the world's largest (approximately 846,000 tonnes in beach sands primarily in Kerala, Tamil Nadu, and Andhra Pradesh). India's three-stage nuclear power programme, conceived by Dr. Homi Bhabha, is designed to eventually use thorium as fuel: Stage 1 uses natural uranium in Pressurised Heavy Water Reactors (PHWRs) to generate electricity and plutonium; Stage 2 uses the plutonium in Fast Breeder Reactors (FBRs) to breed more plutonium and uranium-233 from thorium; Stage 3 uses the uranium-233 from Stage 2 to fuel Advanced Heavy Water Reactors (AHWRs) running primarily on thorium. The Prototype Fast Breeder Reactor (PFBR) at Kalpakkam (Tamil Nadu) under the Department of Atomic Energy is the critical Stage 2 facility whose completion (long-delayed, now expected imminently) will enable transition to the thorium cycle. India's nuclear power capacity stands at approximately 7,480 MW (23 operating reactors) with ambitious plans for expansion.</p>
+<p>India's nuclear geography also encompasses its thorium reserves, which are among the world's largest (approximately 846,000 tonnes in beach sands primarily in Kerala, Tamil Nadu, and Andhra Pradesh). India's three-stage nuclear power programme, conceived by Dr. Homi Bhabha, is designed to eventually use thorium as fuel: Stage 1 uses natural uranium in Pressurised Heavy Water Reactors (PHWRs) to generate electricity and plutonium; Stage 2 uses the plutonium in Fast Breeder Reactors (FBRs) to breed more plutonium and uranium-233 from thorium; Stage 3 uses the uranium-233 from Stage 2 to fuel Advanced Heavy Water Reactors (AHWRs) running primarily on thorium. The Prototype Fast Breeder Reactor (PFBR) at Kalpakkam (Tamil Nadu) under the Department of Atomic Energy is the critical Stage 2 facility. After long delays it reached first criticality on 6 April 2026, a step towards the thorium cycle. India's nuclear power capacity was about 8,780 MW in 2026, with a target of 100 GW by 2047.</p>
 
 <h3>Space Programmes and National Security</h3>
 

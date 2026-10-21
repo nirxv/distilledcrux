@@ -80,8 +80,8 @@ export const paper1Notes: AnthroNote[] = [
     paper: 1,
     section: 'Physical Anthropology',
     topic: 8,
-    description: 'Epidemiological anthropology: disease patterns, nutritional anthropology, occupational health and ergonomics, bioarchaeology, forensic anthropology',
-    subtopics: ['Epidemiological Anthropology', 'Nutritional Anthropology', 'Forensic Anthropology', 'Bioarchaeology', 'Ergonomics & Occupational Health'],
+    description: 'Human adaptation: acclimatisation, high altitude, heat and cold, Bergmann\'s and Allen\'s rules. Epidemiological anthropology and disease patterns, nutritional anthropology, occupational health and ergonomics, bioarchaeology, forensic anthropology',
+    subtopics: ['Human Adaptation', 'High Altitude Adaptation', 'Epidemiological Anthropology', 'Nutritional Anthropology', 'Forensic Anthropology', 'Bioarchaeology', 'Ergonomics & Occupational Health'],
   },
   {
     slug: 'principles-prehistoric-archaeology',
