@@ -66,8 +66,14 @@ export async function POST(req: NextRequest) {
     const ua = req.headers.get('user-agent') ?? '';
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
 
-    const { visitor_id, firebase_uid, page, referrer, device, os, browser, is_first_visit } = await req.json();
+    const { visitor_id, firebase_uid, page, referrer, device, os, browser, dwell: rawDwell } = await req.json();
     if (!visitor_id) return NextResponse.json({ ok: false, reason: 'no visitor_id' });
+
+    // Seconds the visitor had already spent, sent with a first visit. A new
+    // row needs at least one: under that is someone who bounced straight off.
+    const dwell = typeof rawDwell === 'number' && Number.isFinite(rawDwell)
+      ? Math.min(Math.max(Math.floor(rawDwell), 0), 3600)
+      : 0;
 
     const rl = await checkRateLimit(`session:${visitor_id}`, {
       windowSeconds: SESSION_RATE_WINDOW_SECONDS,
@@ -119,12 +125,15 @@ export async function POST(req: NextRequest) {
         })
         .eq('id', existing.id);
     } else {
+      if (dwell < 1) return NextResponse.json({ ok: false, reason: 'too_short' });
+      // Started when the visitor arrived, so the row opens with the time they spent.
+      const startedAt = new Date(Date.now() - dwell * 1000).toISOString();
       await sb.from('user_sessions').insert({
         visitor_id,
         firebase_uid: firebase_uid || null,
         visit_count: 1,
         visited_at: now,
-        session_start: now,
+        session_start: startedAt,
         last_active: now,
         entry_page: page,
         last_page: page,
@@ -136,7 +145,7 @@ export async function POST(req: NextRequest) {
         country,
         city,
         is_bounce: true,
-        session_duration_secs: 0,
+        session_duration_secs: dwell,
       });
     }
 

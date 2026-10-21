@@ -95,17 +95,36 @@ async function getFirebaseUid(): Promise<string | null> {
 }
 
 // ---------------------------------------------------------------------------
+// First visits
+// ---------------------------------------------------------------------------
+/**
+ * A first visit is recorded only once the visitor has stayed: after
+ * FIRST_VISIT_AFTER_MS, on moving to another page, or on leaving after at
+ * least MIN_DWELL_SECS. It used to be written the moment the page loaded,
+ * so everyone who bounced straight off left a row with a 0-second session.
+ * The time already spent travels with the ping, so the row starts with it.
+ */
+const FIRST_VISIT_AFTER_MS = 10 * 1000;
+const MIN_DWELL_SECS = 1;
+// A new key, so visitors counted under the old rule go through the new one once.
+const COUNTED_KEY = '_dc_visit_counted';
+const pageLoadedAt = typeof performance !== 'undefined' ? Date.now() - performance.now() : Date.now();
+
+// ---------------------------------------------------------------------------
 // API calls
 // ---------------------------------------------------------------------------
-async function pingTrack(visitor_id: string, page: string, isFirstVisit: boolean) {
+async function trackBody(visitor_id: string, page: string) {
   const firebase_uid = await getFirebaseUid();
   const { device, os, browser } = getDeviceInfo();
-  const referrer = isFirstVisit ? (document.referrer || 'direct') : undefined;
+  return { visitor_id, firebase_uid, page, device, os, browser };
+}
 
-  await fetch('/api/track-session', {
+function postTrack(body: Record<string, unknown>, keepalive: boolean) {
+  void fetch('/api/track-session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ visitor_id, firebase_uid, page, referrer, device, os, browser, is_first_visit: isFirstVisit }),
+    body: JSON.stringify(body),
+    keepalive,
   }).catch(() => {});
 }
 
@@ -124,6 +143,9 @@ export default function SessionTracker() {
   const pathname = usePathname();
   const lastPath = useRef<string | null>(null);
   const visitorIdRef = useRef<string | null>(null);
+  // The first visit, held back until the visitor has stayed. Calling it sends
+  // it if they have been here long enough.
+  const pendingFirst = useRef<((keepalive: boolean) => void) | null>(null);
 
   // Resolve visitor ID once on mount
   useEffect(() => {
@@ -140,11 +162,45 @@ export default function SessionTracker() {
     (async () => {
       const visitor_id = visitorIdRef.current ?? await getVisitorId();
       visitorIdRef.current = visitor_id;
-      const isFirstVisit = !localStorage.getItem('_dc_visited');
-      if (isFirstVisit) localStorage.setItem('_dc_visited', '1');
-      await pingTrack(visitor_id, pathname, isFirstVisit);
+      const body = await trackBody(visitor_id, pathname);
+
+      // Moving to another page means the visitor stayed, so a first visit
+      // still held back for the page they came from is recorded now.
+      pendingFirst.current?.(false);
+
+      if (!localStorage.getItem(COUNTED_KEY)) {
+        pendingFirst.current = (keepalive: boolean) => {
+          const dwell = Math.floor((Date.now() - pageLoadedAt) / 1000);
+          if (dwell < MIN_DWELL_SECS) return;
+          pendingFirst.current = null;
+          localStorage.setItem(COUNTED_KEY, '1');
+          postTrack({ ...body, referrer: document.referrer || 'direct', is_first_visit: true, dwell }, keepalive);
+        };
+        // Resolving the visitor id can take a while on a first visit; if the
+        // wait has already passed, there is no reason to hold on.
+        if (Date.now() - pageLoadedAt >= FIRST_VISIT_AFTER_MS) pendingFirst.current(false);
+        return;
+      }
+
+      postTrack({ ...body, is_first_visit: false }, false);
     })();
   }, [pathname]);
+
+  // What releases a held-back first visit: staying FIRST_VISIT_AFTER_MS, or
+  // leaving the page (the tab is hidden, or the page is unloaded).
+  useEffect(() => {
+    if (!shouldTrack()) return;
+    const timer = setTimeout(() => pendingFirst.current?.(false), Math.max(0, FIRST_VISIT_AFTER_MS - (Date.now() - pageLoadedAt)));
+    const onHide = () => { if (document.visibilityState === 'hidden') pendingFirst.current?.(true); };
+    const onPageHide = () => pendingFirst.current?.(true);
+    document.addEventListener('visibilitychange', onHide);
+    window.addEventListener('pagehide', onPageHide);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('visibilitychange', onHide);
+      window.removeEventListener('pagehide', onPageHide);
+    };
+  }, []);
 
   // Heartbeat — interval + tab-switch + page-close
   useEffect(() => {
