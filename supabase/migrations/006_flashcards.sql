@@ -89,6 +89,11 @@ revoke all on public.flashcards from anon, authenticated;
 grant select (id, subject, topic, topics, type, front, questions, asked, status, created_at, updated_at)
   on public.flashcards to anon, authenticated;
 
+-- Grants are written out because Supabase stopped granting new tables to the
+-- API roles on 30 October 2026. The answers and the seed script
+-- (scripts/seed-flashcards.mjs) go through the service key.
+grant select, insert, update, delete on public.flashcards to service_role;
+
 -- ── Unlocks ─────────────────────────────────────────────────────────────────
 -- The allowance is a set of cards, not a count: spaced repetition shows the
 -- same card again and again, and re-opening one already unlocked must cost
@@ -111,6 +116,8 @@ create policy "service role manages flashcard unlocks" on public.flashcard_unloc
   using (true) with check (true);
 
 revoke all on public.flashcard_unlocks from anon, authenticated;
+grant select, insert, update, delete on public.flashcard_unlocks to service_role;
+grant usage, select on sequence public.flashcard_unlocks_id_seq to service_role;
 
 -- ── Spending the allowance ──────────────────────────────────────────────────
 -- One row per requested card: whether the reader may see its answer. Cards

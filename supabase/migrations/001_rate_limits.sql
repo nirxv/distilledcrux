@@ -15,6 +15,12 @@ create table if not exists public.rate_limits (
 -- Nothing outside the service role should read or write this.
 alter table public.rate_limits enable row level security;
 
+-- Grants are written out because Supabase stopped granting new tables to the
+-- API roles on 30 October 2026. Only the server reaches this table, with the
+-- service key.
+revoke all on public.rate_limits from anon, authenticated;
+grant select, insert, update, delete on public.rate_limits to service_role;
+
 -- Sweeping old windows is cheap and keeps the table from growing without bound.
 create index if not exists rate_limits_window_start_idx
   on public.rate_limits (window_start);

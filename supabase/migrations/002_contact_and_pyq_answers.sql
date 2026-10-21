@@ -23,6 +23,12 @@ create table if not exists public.contact_submissions (
 -- anon policy is granted and none should be.
 alter table public.contact_submissions enable row level security;
 
+-- Grants are written out because Supabase stopped granting new tables to the
+-- API roles on 30 October 2026. Only /api/contact touches this table, with the
+-- service key.
+revoke all on public.contact_submissions from anon, authenticated;
+grant select, insert, update, delete on public.contact_submissions to service_role;
+
 create index if not exists contact_submissions_created_at_idx
   on public.contact_submissions (created_at desc);
 
@@ -46,6 +52,10 @@ create table if not exists public.pyq_answers (
 );
 
 alter table public.pyq_answers enable row level security;
+
+-- Read and written only through /api/pyq-answers, with the service key.
+revoke all on public.pyq_answers from anon, authenticated;
+grant select, insert, update, delete on public.pyq_answers to service_role;
 
 create index if not exists pyq_answers_question_idx
   on public.pyq_answers (subject, pyq_id, created_at);

@@ -63,3 +63,7 @@ create policy "service role manages study progress" on public.study_progress
   using (true) with check (true);
 
 revoke all on public.study_progress from anon, authenticated;
+
+-- Grants are written out because Supabase stopped granting new tables to the
+-- API roles on 30 October 2026. /api/progress uses the service key.
+grant select, insert, update, delete on public.study_progress to service_role;
