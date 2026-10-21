@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,6 +16,9 @@ const CommandPalette = dynamic(() => import('@/components/CommandPalette'), { ss
 const loadPalette = () => { void import('@/components/CommandPalette'); };
 
 type NavLink = { href: string; label: string; accent?: boolean };
+/** A link in the bar that opens a short menu instead of going somewhere. */
+type NavMenu = { label: string; items: { href: string; label: string; note: string; icon: ReactNode }[] };
+type NavItem = NavLink | NavMenu;
 
 const Icon = {
   search: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>,
@@ -27,6 +30,9 @@ const Icon = {
   swap: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16" /></svg>,
   out: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" /></svg>,
   arrow: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>,
+  chev: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>,
+  notes: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z" /></svg>,
+  cards: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h14v14H3zM7 6V4h14v14h-2M7 11h6M7 15h4" /></svg>,
 };
 
 export default function Navbar() {
@@ -36,10 +42,12 @@ export default function Navbar() {
   const optional = useOptional();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteMounted, setPaletteMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const dropRef = useRef<HTMLDivElement>(null);
   const [isMac, setIsMac] = useState(true);
 
   useEffect(() => {
@@ -54,9 +62,19 @@ export default function Navbar() {
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+      if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
+    };
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      setMenuOpen(false);
+      setDropOpen(false);
     };
     document.addEventListener('mousedown', onDown);
-    return () => document.removeEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onEsc);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onEsc);
+    };
   }, []);
 
   useEffect(() => {
@@ -69,6 +87,7 @@ export default function Navbar() {
     /* eslint-disable-next-line react-hooks/set-state-in-effect */
     setMobileOpen(false);
     setMenuOpen(false);
+    setDropOpen(false);
   }, [pathname]);
 
   const openPalette = useCallback(() => {
@@ -114,14 +133,23 @@ export default function Navbar() {
    * subject. Pricing is in both, so the plans are never more than a click
    * away. The chat is set apart, Dashboard lives in the account menu, and
    * everything else is a ⌘K away.
+   *
+   * Flashcards sit under Notes, as the other way of going over the same
+   * topics. The phone sheet has room for every link, so there it is a flat
+   * list with Flashcards straight after Notes.
    */
   const slug = routeSlugForOptional(optional);
   const optionalLabel = labelForOptional(optional);
-  const links: NavLink[] = slug
+  const links: NavItem[] = slug
     ? [
-        { href: `/notes/${slug}`, label: 'Notes' },
+        {
+          label: 'Notes',
+          items: [
+            { href: `/notes/${slug}`, label: 'Notes', note: 'Every topic in the syllabus', icon: Icon.notes },
+            { href: `/${slug}/flashcards`, label: 'Flashcards', note: 'Revise with spaced repetition', icon: Icon.cards },
+          ],
+        },
         { href: `/${slug}/pyqs`, label: 'PYQs' },
-        { href: `/${slug}/flashcards`, label: 'Flashcards' },
         ...(optional === 'geography' ? [{ href: '/geography/mapping', label: 'Maps' }] : []),
         // /test reads ?optional=, the profile spelling, not the route slug.
         { href: `/test?optional=${optional}`, label: 'Tests' },
@@ -136,6 +164,7 @@ export default function Navbar() {
         { href: '/pricing', label: 'Pricing' },
         { href: '/chat', label: 'AI Chat', accent: true },
       ];
+  const flatLinks: NavLink[] = links.flatMap((l) => ('items' in l ? l.items.map(({ href, label }) => ({ href, label })) : [l]));
 
   const initial = (user?.displayName?.[0] ?? user?.email?.[0] ?? '?').toUpperCase();
   const avatar = (size: number) => user?.photoURL
@@ -154,7 +183,36 @@ export default function Navbar() {
           </Link>
 
           <div className="nb-links">
-            {links.map((l) => (
+            {links.map((l) => 'items' in l ? (
+              <div key={l.label} ref={dropRef} className="nb-drop">
+                <button
+                  className={`nb-link nb-drop-btn${l.items.some((i) => isActive(i.href)) ? ' on' : ''}`}
+                  onClick={() => setDropOpen((o) => !o)}
+                  aria-expanded={dropOpen}
+                  aria-haspopup="menu"
+                >
+                  {l.label}
+                  {Icon.chev}
+                </button>
+                {dropOpen && (
+                  <div className="nb-menu nb-drop-menu" role="menu" aria-label={l.label}>
+                    {l.items.map((i) => (
+                      <Link
+                        key={i.href}
+                        href={i.href}
+                        role="menuitem"
+                        className={`nb-drop-item${isActive(i.href) ? ' on' : ''}`}
+                        aria-current={isActive(i.href) ? 'page' : undefined}
+                        onClick={() => setDropOpen(false)}
+                      >
+                        <span className="nb-drop-icon">{i.icon}</span>
+                        <span className="nb-drop-text"><strong>{i.label}</strong><small>{i.note}</small></span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
               <Link
                 key={l.href}
                 href={l.href}
@@ -218,7 +276,7 @@ export default function Navbar() {
       <div className={`nb-sheet ds${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="nb-sheet-search" onClick={openPalette}>{Icon.search}Search notes, tools, or ask the AI</button>
         <div className="nb-sheet-links">
-          {[...links, ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : [])].map((l) => (
+          {[...flatLinks, ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : [])].map((l) => (
             <Link key={l.href} href={l.href} className={`nb-sheet-link${isActive(l.href) ? ' on' : ''}${(l as NavLink).accent ? ' accent' : ''}`}>
               <span>{(l as NavLink).accent && Icon.chat}{l.label}</span>
               {Icon.arrow}
@@ -280,6 +338,24 @@ const NAV_CSS = `
 .nb-link.accent { color: var(--accent-text); background: var(--accent-dim); margin-left: var(--space-1); }
 .nb-link.accent:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .nb-link.accent.on { background: var(--accent); color: var(--accent-on); }
+.nb-drop { position: relative; }
+.nb-drop-btn { border: none; background: none; font: inherit; font-size: 0.92rem; cursor: pointer; }
+.nb-drop-btn svg { color: var(--text3); transition: transform 0.15s; }
+.nb-drop-btn[aria-expanded="true"] { color: var(--text); background: var(--ds-soft); }
+.nb-drop-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+.nb-menu.nb-drop-menu { left: 0; right: auto; width: 300px; }
+.nb-drop-item {
+  display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2);
+  border-radius: var(--radius-md); color: var(--text); text-decoration: none;
+}
+.nb-drop-item:hover, .nb-drop-item.on { background: var(--ds-soft); }
+.nb-drop-icon {
+  width: 36px; height: 36px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-md); background: var(--accent-dim); color: var(--accent-text);
+}
+.nb-drop-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.nb-drop-text strong { font-size: 0.92rem; }
+.nb-drop-text small { font-size: 0.8rem; color: var(--text3); }
 .nb-right { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; min-width: 0; }
 .nb-search {
   display: inline-flex; align-items: center; gap: var(--space-2);
@@ -376,5 +452,5 @@ const NAV_CSS = `
   .nb { padding: 0 var(--space-3); }
 }
 @media (min-width: 921px) { .nb-sheet { display: none; } }
-@media (prefers-reduced-motion: reduce) { .nb-sheet, .nb-burger span { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .nb-sheet, .nb-burger span, .nb-drop-btn svg { transition: none; } }
 `;
