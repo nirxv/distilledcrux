@@ -23,6 +23,9 @@ import Footer from '@/components/Footer';
 import SessionTracker from '@/components/SessionTracker';
 import ProgressSync from '@/components/ProgressSync';
 import { AuthProvider } from '@/components/AuthProvider';
+import BottomNav from '@/components/BottomNav';
+import Toaster from '@/components/ui/Toast';
+import ConfirmHost from '@/components/ui/ConfirmDialog';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -73,6 +76,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </div>
+        <BottomNav />
+        <Toaster />
+        <ConfirmHost />
         </AuthProvider>
       </body>
     </html>

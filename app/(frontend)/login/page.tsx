@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { auth, signInWithGoogle, signInWithGoogleRedirect, googleBlocksThisBrowser, isAndroid } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import Mascot from '@/components/Mascot';
+import SplitShell from '@/components/onboarding/SplitShell';
 import OwlLoader from '@/components/OwlLoader';
 
 /** Only ever send the user to a path on this origin. */
@@ -123,12 +123,11 @@ export default function LoginPage() {
   if (checking) return <OwlLoader size="page" label="Checking your sign-in" />;
 
   return (
-    <div className="lg ds">
+    <SplitShell pose="peek">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="lg-card">
-        <Mascot pose="peek" width={104} preload />
-        <h1 className="lg-title">Sign in to Distilled Crux</h1>
-        <p className="lg-lede">
+        <h1 className="sp-title">Sign in to continue</h1>
+        <p className="sp-lede lg-lede">
           {headed ? `${headed} ` : ''}
           New here? Signing in with Google makes your free account.
         </p>
@@ -180,16 +179,14 @@ export default function LoginPage() {
           By continuing, you agree to our <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>.
         </p>
       </div>
-    </div>
+    </SplitShell>
   );
 }
 
 const CSS = `
-.lg { min-height: var(--page-min-h); display: flex; align-items: center; justify-content: center; padding: clamp(24px, 6vh, 64px) var(--space-4); background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--accent-dim) 80%, transparent) 0%, transparent 60%), var(--bg); }
-.lg-card { width: 100%; max-width: 440px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--space-8) var(--space-6) var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-2); }
-.lg-title { margin: var(--space-4) 0 var(--space-2); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
-.lg-lede { margin: 0 0 var(--space-6); color: var(--text2); line-height: 1.6; }
-.lg-google { width: 100%; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 var(--space-5); border: 1.5px solid var(--border2); border-radius: var(--radius-full); background: var(--bg); color: var(--text); font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+.lg-card { width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.lg-lede { margin-bottom: var(--space-8); }
+.lg-google { width: 100%; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 var(--space-5); border: 1px solid var(--border2); border-radius: var(--radius-md); background: var(--ds-card); color: var(--text); font: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow-xs); transition: border-color 0.15s, box-shadow 0.15s; }
 .lg-google:hover:not(:disabled) { border-color: var(--border3); box-shadow: var(--elev-1); }
 .lg-google:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .lg-google:disabled { color: var(--text3); cursor: progress; }
@@ -209,9 +206,6 @@ const CSS = `
 .lg-free strong { color: var(--text); }
 .lg-legal { margin: var(--space-5) 0 0; font-size: 0.82rem; color: var(--text3); line-height: 1.5; }
 .lg-legal a { color: var(--text2); }
-@media (max-width: 640px) {
-  .lg-card { padding: var(--space-6) var(--space-4) var(--space-5); }
-  .lg-title { font-size: 1.4rem; }
-}
+
 @media (prefers-reduced-motion: reduce) { .lg-spin { animation-duration: 2s; } }
 `;

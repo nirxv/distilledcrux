@@ -430,7 +430,7 @@ export default function Dashboard() {
                 {stats.joinedAt && <div><span>Joined</span><span>{fmtDate(stats.joinedAt)}</span></div>}
                 <div><span>Email</span><span className="db-email">{user?.email}</span></div>
               </div>
-              <Link href="/onboarding?change=1" className="db-change">Change optional <Arrow /></Link>
+              <Link href="/profile" className="db-change">Profile and settings <Arrow /></Link>
               {stats.isPremium && (
                 <p className="db-card-note">Your plan stays with {optLabel}. A different optional would be on the free plan.</p>
               )}

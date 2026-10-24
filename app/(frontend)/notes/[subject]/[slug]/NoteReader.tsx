@@ -8,6 +8,7 @@ import SidebarNotes from '@/components/SidebarNotes';
 import Mascot from '@/components/Mascot';
 import { rememberNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
+import { confirmDialog } from '@/components/ui/ConfirmDialog';
 
 const SUBJECT_NAME: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology', polsci: 'PSIR', geography: 'Geography', 'pub-admin': 'Public Administration',
@@ -822,7 +823,7 @@ export default function NoteReader({
           </div>
           {highlights.length > 0 && <span className="nr-hlbar-note">Tap a highlight to remove it.</span>}
           {highlights.length > 0 && (
-            <button type="button" className="nr-hlbar-clear" onClick={() => { if (confirm('Clear all highlights?')) setHighlights([]); }}>
+            <button type="button" className="nr-hlbar-clear" onClick={async () => { if (await confirmDialog({ title: 'Clear all your highlights from this note?', confirmLabel: 'Clear all', tone: 'danger' })) setHighlights([]); }}>
               Clear all
             </button>
           )}
@@ -1222,7 +1223,7 @@ const NR_CSS = `
 
 /* ── Find in note ── */
 .nr-find-panel {
-  position: fixed; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); right: 24px; z-index: 300;
+  position: fixed; bottom: max(calc(24px + env(safe-area-inset-bottom, 0px)), calc(var(--bn-clear) + 12px)); right: 24px; z-index: 300;
   display: flex; align-items: center; gap: 8px; min-width: 320px; max-width: calc(100vw - 32px);
   padding: 8px 8px 8px 14px; background: var(--ds-card); border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
   border-radius: var(--radius-full); box-shadow: var(--elev-3);
@@ -1234,7 +1235,7 @@ const NR_CSS = `
 .nr-find-step, .nr-find-esc { width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: var(--ds-soft); color: var(--text2); cursor: pointer; font-size: 0.85rem; }
 .nr-find-step:disabled { opacity: 0.4; cursor: default; }
 .nr-find-fab {
-  position: fixed; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); right: 24px; z-index: 299;
+  position: fixed; bottom: max(calc(24px + env(safe-area-inset-bottom, 0px)), calc(var(--bn-clear) + 12px)); right: 24px; z-index: 299;
   display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px;
   background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-full);
   color: var(--text2); font-size: 0.86rem; font-weight: 600; cursor: pointer; box-shadow: var(--elev-2);

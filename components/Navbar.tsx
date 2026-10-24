@@ -28,6 +28,7 @@ const Icon = {
   dash: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>,
   plans: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" /></svg>,
   swap: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16" /></svg>,
+  user: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="3.5" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>,
   out: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" /></svg>,
   arrow: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>,
   chev: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>,
@@ -250,6 +251,7 @@ export default function Navbar() {
                     </div>
                     <Link href="/dashboard" className="nb-menu-item" role="menuitem">{Icon.dash}Dashboard</Link>
                     <Link href="/pricing" className="nb-menu-item" role="menuitem">{Icon.plans}Plans</Link>
+                    <Link href="/profile" className="nb-menu-item" role="menuitem">{Icon.user}Profile and settings</Link>
                     <Link href="/onboarding?change=1" className="nb-menu-item" role="menuitem">{Icon.swap}Change optional</Link>
                     <button className="nb-menu-item danger" role="menuitem" onClick={handleSignOut}>{Icon.out}Sign out</button>
                   </div>
@@ -295,7 +297,7 @@ export default function Navbar() {
               </div>
               <div className="nb-sheet-actions">
                 <button className="ds-btn ds-btn-line ds-btn-sm" onClick={toggleTheme}>{theme === 'dark' ? Icon.sun : Icon.moon}{theme === 'dark' ? 'Light' : 'Dark'}</button>
-                <Link className="ds-btn ds-btn-line ds-btn-sm" href="/onboarding?change=1">{Icon.swap}Optional</Link>
+                <Link className="ds-btn ds-btn-line ds-btn-sm" href="/profile">{Icon.user}Profile</Link>
                 <button className="ds-btn ds-btn-line ds-btn-sm nb-danger" onClick={handleSignOut}>{Icon.out}Sign out</button>
               </div>
             </>

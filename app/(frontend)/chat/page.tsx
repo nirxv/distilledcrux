@@ -25,6 +25,8 @@ import OwlLoader from '@/components/OwlLoader';
 import { parseMentorSections } from '@/lib/chatMentor';
 import { linkifyCitations } from '@/lib/chatCitations';
 import { useChatAccess } from '@/hooks/useChatAccess';
+import { toast } from '@/components/ui/Toast';
+import { NEW_CHAT_EVENT } from '@/components/BottomNav';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -152,7 +154,7 @@ function DownloadPDFButton({ content, question, langHi }: { content: string; que
   const handleClick = async () => {
     setDownloading(true);
     try { await downloadAnswerAsPDF(content, question); }
-    catch (e) { console.error(e); alert('PDF generation failed.'); }
+    catch (e) { console.error(e); toast(langHi ? 'PDF नहीं बन सका। फिर कोशिश करें।' : 'The PDF could not be made. Try again in a moment.', 'error'); }
     finally { setDownloading(false); }
   };
   return (
@@ -315,6 +317,48 @@ function SourcesCard({ sources, active, langHi, onOpen }: { sources: Source[]; a
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
       </span>
     </button>
+  );
+}
+
+/**
+ * One small tip above the box once a conversation is going, about something
+ * the chat can do that is easy to miss. Each is shown until it is put away.
+ */
+const TIPS: { id: string; en: string; hi: string; desktop?: boolean }[] = [
+  { id: 'books', en: 'Switch on Chat with books in the tools by the send button, and answers cite the standard books.', hi: 'भेजें बटन के पास के टूल्स में पुस्तकों से चैट चालू करें, और उत्तर मानक पुस्तकों का हवाला देंगे।' },
+  { id: 'mains', en: 'Under any reply, Turn this into a Mains answer rewrites it in exam shape.', hi: 'किसी भी उत्तर के नीचे, इसे मुख्य परीक्षा के उत्तर में बदलें उसे परीक्षा के ढाँचे में लिख देता है।' },
+  { id: 'tab', en: 'Press Tab to take the suggested question in the box.', hi: 'बॉक्स में सुझाया गया प्रश्न लेने के लिए Tab दबाएँ।', desktop: true },
+];
+const TIPS_KEY = 'dc_chat_tips_seen';
+
+function QuickTip({ langHi }: { langHi: boolean }) {
+  const [tip, setTip] = useState<(typeof TIPS)[number] | null>(null);
+  useEffect(() => {
+    let seen: string[] = [];
+    try { seen = JSON.parse(localStorage.getItem(TIPS_KEY) ?? '[]'); } catch { /* every tip is new */ }
+    const touch = window.matchMedia?.('(hover: none)').matches;
+    // What has been seen lives in this browser, so it is read after mount.
+    /* eslint-disable-next-line react-hooks/set-state-in-effect */
+    setTip(TIPS.find(x => !seen.includes(x.id) && !(x.desktop && touch)) ?? null);
+  }, []);
+  if (!tip) return null;
+  const dismiss = () => {
+    try {
+      const seen = JSON.parse(localStorage.getItem(TIPS_KEY) ?? '[]') as string[];
+      localStorage.setItem(TIPS_KEY, JSON.stringify([...seen, tip.id]));
+    } catch { /* it comes back next time */ }
+    setTip(null);
+  };
+  return (
+    <div className="ch-tip" role="note">
+      <span className="ch-tip-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" /></svg>
+      </span>
+      <p><strong>{langHi ? 'छोटा सुझाव:' : 'Quick tip:'}</strong> {langHi ? tip.hi : tip.en}</p>
+      <button className="ch-tip-x" onClick={dismiss} aria-label={langHi ? 'हटाएँ' : 'Dismiss'}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
   );
 }
 
@@ -696,8 +740,8 @@ function ChatContent() {
   const clearPdf = () => { setPdfBase64(null); setPdfName(null); };
 
   const handlePdfUpload = useCallback((file: File) => {
-    if (!file || file.type !== 'application/pdf') { alert('Please upload a valid PDF file.'); return; }
-    if (file.size > 20 * 1024 * 1024) { alert('PDF too large. Max 20MB.'); return; }
+    if (!file || file.type !== 'application/pdf') { toast('That file is not a PDF. Pick a PDF to upload.', 'error'); return; }
+    if (file.size > 20 * 1024 * 1024) { toast('That PDF is over 20 MB. Try a smaller one.', 'error'); return; }
     const reader = new FileReader();
     reader.onload = (e) => {
       const base64 = (e.target?.result as string).split(',')[1];
@@ -734,6 +778,15 @@ function ChatContent() {
     resetStart();
   };
 
+  // The phone tab bar's New chat, pressed while already on this page.
+  const startNewChatRef = useRef(startNewChat);
+  useEffect(() => { startNewChatRef.current = startNewChat; });
+  useEffect(() => {
+    const onNew = () => startNewChatRef.current();
+    window.addEventListener(NEW_CHAT_EVENT, onNew);
+    return () => window.removeEventListener(NEW_CHAT_EVENT, onNew);
+  }, []);
+
   const openChat = (id: string) => {
     const entry = historyList.find(c => c.id === id);
     if (!entry) return;
@@ -750,6 +803,7 @@ function ChatContent() {
       return updated;
     });
     if (id === chatId) startNewChat();
+    toast(langHi ? 'चैट हटा दी गई' : 'Chat deleted');
   };
 
   const onBooks = () => {
@@ -771,7 +825,7 @@ function ChatContent() {
   const sendMessage = async (text?: string, opts: { format?: 'mains' } = {}) => {
     const q = (text ?? input).trim();
     if (!q || loading) return;
-    if (q.length > 10000) { alert('Message too long. Max 10000 characters.'); return; }
+    if (q.length > 10000) { toast('That message is over 10,000 characters. Try a shorter one.', 'error'); return; }
     if (usageLoading) return;
     if (!access.signedIn) { showLoginModal(); return; }
     if (!canChat) { showChatLimitModal(); return; }
@@ -1199,21 +1253,23 @@ function ChatContent() {
           />
         </aside>
 
-        <main className="ch-main">
+        <main className={`ch-main${empty ? ' is-start' : ''}`}>
+          {/* The chat's own name, opening the list of chats, as the design's
+              goal switcher does; and a new chat beside it. */}
           <div className="ch-mobilebar">
-            <button className="ch-icon-btn" onClick={() => setSidebarOpen(true)} aria-label={langHi ? 'चैट खोलें' : 'Open chats'}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+            <button className="ch-mobilebar-title" onClick={() => setSidebarOpen(true)} aria-label={langHi ? 'आपकी चैट खोलें' : 'Open your chats'}>
+              <span>{empty ? (langHi ? 'नई चैट' : 'New chat') : makeChatTitle(thread)}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
             </button>
-            <span className="ch-mobilebar-title">{langHi ? `AI ${SUBJECT_DISPLAY[subject]} सहायक` : `AI ${SUBJECT_DISPLAY[subject]} Assistant`}</span>
-            <button className="ch-icon-btn" onClick={startNewChat} aria-label={langHi ? 'नई चैट' : 'New chat'}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 5v14M5 12h14" /></svg>
+            <button className="ch-icon-btn ch-icon-btn-line" onClick={startNewChat} aria-label={langHi ? 'नई चैट' : 'New chat'} title={langHi ? 'नई चैट' : 'New chat'}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" /></svg>
             </button>
           </div>
 
           <div className="ch-scroll" ref={scrollRef}>
             {empty ? (
               <div className="ch-start">
-                <Mascot pose="peek" width={160} className="ch-start-owl" preload />
+                <div className="ch-start-art"><Mascot pose="peek" width={160} className="ch-start-owl" preload /></div>
                 <h1>{langHi ? 'आज हम क्या पढ़ रहे हैं?' : 'What are we studying today?'}</h1>
                 <p>
                   {topicNote
@@ -1313,7 +1369,7 @@ function ChatContent() {
             )}
           </div>
 
-          {!empty && <div className="ch-dock">{composer}</div>}
+          {!empty && <div className="ch-dock">{!loading && <QuickTip langHi={langHi} />}{composer}</div>}
         </main>
 
         {panel && (
@@ -1405,10 +1461,9 @@ div:has(> #main-layout) { min-height: 0 !important; }
   --ch-tint-3: #48a8a5;
   --ch-tint-4: #c686ae;
   display: flex;
-  gap: var(--space-4);
-  /* <main> is padded exactly the navbar's 60px. */
+  /* <main> is padded exactly the navbar's 60px; the chat fills the rest,
+     edge to edge: a full-height sidebar, then the conversation. */
   height: calc(100dvh - 60px);
-  padding: 0 var(--space-4) var(--space-4);
   background: var(--ch-ground);
   font-family: var(--font-body);
   color: var(--text);
@@ -1456,8 +1511,12 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-premium { color: var(--premium-text); margin-left: var(--space-1); font-size: 0.8em; }
 
 /* ── Sidebar ── */
-.ch-side { width: 280px; flex-shrink: 0; display: flex; flex-direction: column; min-height: 0; }
-.ch-side-inner { display: flex; flex-direction: column; gap: var(--space-3); height: 100%; min-height: 0; padding-top: var(--space-4); overflow-y: auto; scrollbar-width: thin; }
+.ch-side {
+  width: 280px; flex-shrink: 0; display: flex; flex-direction: column; min-height: 0;
+  padding: 0 var(--space-4); background: var(--ch-card); border-right: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+}
+.ch-side-inner { display: flex; flex-direction: column; gap: var(--space-3); height: 100%; min-height: 0; padding: var(--space-5) 0; overflow-y: auto; scrollbar-width: thin; }
 .ch-side-search {
   display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;
   height: 44px; padding: 0 var(--space-3);
@@ -1519,9 +1578,30 @@ div:has(> #main-layout) { min-height: 0 !important; }
   font-size: 0.74rem; color: var(--accent-text);
 }
 .ch-side-card {
-  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-2xl);
+  position: relative;
+  background: var(--ch-soft); border: 1px solid var(--border); border-radius: var(--radius-2xl);
   padding: var(--space-4);
 }
+.ch-side-card-x {
+  position: absolute; top: 3px; right: 3px; width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: none; background: none; border-radius: var(--radius-md); color: var(--text3); cursor: pointer;
+}
+.ch-side-card-x:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+/* Who is signed in, at the foot of the sidebar; it opens the profile. */
+.ch-side-user {
+  display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0;
+  padding: var(--space-2) var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--ch-card); color: var(--text); text-decoration: none;
+  transition: border-color 0.15s;
+}
+.ch-side-user:hover { border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.ch-side-user-pic { position: relative; display: inline-flex; flex-shrink: 0; }
+.ch-side-user-pic img, .ch-side-user-pic > span { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-dim); color: var(--accent-text); font-weight: 700; }
+.ch-side-user-pic i { position: absolute; right: -1px; bottom: -1px; width: 11px; height: 11px; border-radius: 50%; background: var(--success-text); border: 2px solid var(--ch-card); }
+.ch-side-user-text { min-width: 0; display: flex; flex-direction: column; }
+.ch-side-user-text strong { font-size: 0.875rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ch-side-user-text span { font-size: 0.8rem; color: var(--text3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ch-ring { position: relative; width: 64px; height: 64px; margin-bottom: var(--space-3); }
 .ch-ring span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 600; }
 .ch-side-card-title { font-size: 0.92rem; font-weight: 700; margin-bottom: var(--space-1); }
@@ -1532,8 +1612,26 @@ div:has(> #main-layout) { min-height: 0 !important; }
 /* ── Main panel ── */
 .ch-main {
   flex: 1; min-width: 0; display: flex; flex-direction: column;
-  background: var(--ch-card); border: 1px solid var(--border); border-radius: var(--radius-xl);
-  margin-top: var(--space-4); overflow: hidden; position: relative;
+  background: var(--ch-ground); overflow: hidden; position: relative;
+}
+/* The start screen sits on a soft wash of the site's own colours, lightest
+   in the bottom corner, as in the design's new-goal screen. */
+.ch-main.is-start {
+  background: radial-gradient(ellipse 100% 145% at 100% 100%,
+    var(--ch-ground) 0%,
+    color-mix(in srgb, var(--accent-wash) 75%, var(--ch-ground)) 26%,
+    color-mix(in srgb, var(--wash-sociology) 85%, var(--ch-ground)) 51%,
+    color-mix(in srgb, var(--wash-polsci) 55%, var(--ch-ground)) 76%,
+    color-mix(in srgb, var(--premium-wash) 85%, var(--ch-ground)) 100%);
+}
+/* The dark washes are deep colours; at full strength they read as a glow. */
+[data-theme="dark"] .ch-main.is-start {
+  background: radial-gradient(ellipse 100% 145% at 100% 100%,
+    var(--ch-ground) 0%,
+    color-mix(in srgb, var(--accent-wash) 45%, var(--ch-ground)) 26%,
+    color-mix(in srgb, var(--wash-sociology) 50%, var(--ch-ground)) 51%,
+    color-mix(in srgb, var(--wash-polsci) 25%, var(--ch-ground)) 76%,
+    color-mix(in srgb, var(--premium-wash) 45%, var(--ch-ground)) 100%);
 }
 .ch-mobilebar { display: none; }
 .ch-scroll { flex: 1; min-height: 0; overflow-y: auto; position: relative; overscroll-behavior: contain; }
@@ -1553,7 +1651,18 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-start > :last-child { margin-bottom: auto; }
 /* Sized off the window height, so the whole start screen fits a laptop
    screen on first load instead of opening half-scrolled. */
-.ch-start-owl { width: auto; height: clamp(64px, 13vh, 150px); margin-bottom: clamp(4px, 1vh, 16px); flex-shrink: 0; }
+.ch-start-owl { display: block; width: auto; height: clamp(64px, 13vh, 150px); flex-shrink: 0; }
+.ch-start-art { position: relative; isolation: isolate; flex-shrink: 0; margin-bottom: clamp(4px, 1vh, 16px); }
+/* Rings around the owl, 48px apart, fading out downwards: the design's
+   decorative background pattern, drawn in the accent instead of its yellow.
+   The box stops 100px below the owl so it never adds scroll. */
+.ch-start-art::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none;
+  left: 50%; top: calc(50% - 384px); width: 768px; height: 484px; transform: translateX(-50%);
+  background: repeating-radial-gradient(circle at 50% 384px, transparent 0 47px, color-mix(in srgb, var(--accent) 34%, transparent) 47px 48px);
+  -webkit-mask: radial-gradient(ellipse 52% 100% at 50% 0%, black 0%, transparent 95%);
+  mask: radial-gradient(ellipse 52% 100% at 50% 0%, black 0%, transparent 95%);
+}
 .ch-start h1 { font-family: var(--font-body); font-size: clamp(1.45rem, 3.8vh, 2rem); font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; margin: 0 0 clamp(4px, 1vh, 12px); color: var(--text); }
 .ch-start > p { font-size: clamp(0.88rem, 2.1vh, 1.02rem); line-height: 1.65; color: var(--text2); max-width: 620px; margin: 0 0 clamp(8px, 2.5vh, 32px); }
 .ch-restart { margin-bottom: var(--space-4); }
@@ -1574,14 +1683,17 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-start > .ch-composer {
   position: sticky; bottom: 0; z-index: 2;
   padding: var(--space-2) 0 clamp(8px, 2vh, 32px);
-  background: linear-gradient(to top, var(--ch-card) 85%, transparent);
 }
 
 /* ── Guided flow ── */
 .ch-flow {
   width: 100%; text-align: left;
   display: flex; flex-direction: column; min-height: 0;
-  background: var(--ch-soft); border: 1px solid var(--border); border-radius: var(--radius-xl);
+  /* Frosted over the start screen's wash rather than a grey slab on it. */
+  background: color-mix(in srgb, var(--ch-card) 78%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border); border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xs);
   padding: clamp(10px, 2vh, 20px) var(--space-5);
   margin-bottom: var(--space-1);
 }
@@ -1662,13 +1774,13 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-input {
   display: flex; align-items: flex-end; gap: var(--space-2);
   padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4);
-  background: var(--ch-card); border: 2px solid var(--border); border-radius: var(--radius-xl);
-  box-shadow: var(--elev-2);
+  background: var(--ch-card); border: 1px solid var(--border2); border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
   transition: border-color 0.2s;
 }
 .ch-input:focus-within, .ch-input.lit {
   border-color: color-mix(in srgb, var(--accent) 70%, transparent);
-  box-shadow: 0 0 0 4px var(--accent-glow), var(--elev-2);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 70%, transparent), 0 0 0 5px var(--accent-glow), var(--shadow-md);
 }
 .ch-input-icon { color: var(--text3); display: inline-flex; padding-bottom: var(--space-2); }
 .ch-textarea {
@@ -1829,9 +1941,11 @@ div:has(> #main-layout) { min-height: 0 !important; }
 /* ── Worth knowing ── */
 .ch-worth {
   margin-top: var(--space-5); padding: var(--space-4);
-  background: color-mix(in srgb, var(--accent) 5%, var(--ch-card));
-  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
-  border-radius: var(--radius-lg);
+  /* A rim that runs through the site's colours, the design's noticed card. */
+  border: 1px solid transparent; border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent-wash) 60%, var(--ch-card)), color-mix(in srgb, var(--wash-sociology) 45%, var(--ch-card)) 55%, color-mix(in srgb, var(--wash-polsci) 35%, var(--ch-card))) padding-box,
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 55%, transparent), color-mix(in srgb, var(--tint-sociology) 45%, transparent), color-mix(in srgb, var(--tint-polsci) 40%, transparent)) border-box;
 }
 .ch-worth-head { display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem; font-weight: 700; margin-bottom: var(--space-2); }
 .ch-worth-head svg { color: var(--accent); }
@@ -1840,14 +1954,34 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-worth-item p { margin: 0 0 var(--space-2); font-size: 0.88rem; line-height: 1.6; color: var(--text); }
 
 /* ── Follow-ups ── */
-.ch-follow { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); margin-top: var(--space-5); }
+.ch-follow { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-1-5); margin-top: var(--space-5); }
 .ch-follow-btn {
-  display: inline-flex; align-items: center; gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  background: var(--ch-card); color: var(--text);
-  border: 1px solid var(--border2); border-radius: var(--radius-md);
-  font-size: 0.86rem; cursor: pointer; text-align: left;
+  display: inline-flex; align-items: center; gap: var(--space-1-5);
+  padding: var(--space-1-5) var(--space-2-5);
+  background: var(--ch-card); color: var(--text2);
+  border: 1px solid var(--border2); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xs);
+  font-size: 0.8rem; font-weight: 500; cursor: pointer; text-align: left;
 }
+/* A tip above the box: an info mark, one line, and a way to put it away. */
+.ch-tip {
+  position: relative; display: flex; align-items: flex-start; gap: var(--space-3);
+  margin-bottom: var(--space-2); padding: var(--space-3) 44px var(--space-3) var(--space-3);
+  background: var(--ch-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+.ch-tip-icon {
+  width: 32px; height: 32px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border2); border-radius: var(--radius-full); color: var(--accent-text);
+}
+.ch-tip p { margin: 0; font-size: 0.8rem; line-height: 1.5; color: var(--text2); align-self: center; }
+.ch-tip p strong { color: var(--text); font-weight: 600; }
+.ch-tip-x {
+  position: absolute; top: 6px; right: 6px; width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: none; background: none; border-radius: var(--radius-md); color: var(--text3); cursor: pointer;
+}
+.ch-tip-x:hover { color: var(--text); background: var(--ch-soft); }
 .ch-follow-btn svg { color: var(--text3); flex-shrink: 0; }
 .ch-follow-btn:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent-text); }
 .ch-follow-btn:hover svg { color: var(--accent); }
@@ -1871,8 +2005,8 @@ div:has(> #main-layout) { min-height: 0 !important; }
 
 /* ── Side panel ── */
 .ch-panel {
-  width: 420px; flex-shrink: 0; margin-top: var(--space-4);
-  background: var(--ch-card); border: 1px solid var(--border); border-radius: var(--radius-xl);
+  width: 420px; flex-shrink: 0;
+  background: var(--ch-card); border-left: 1px solid var(--border);
   display: flex; flex-direction: column; min-height: 0; overflow: hidden;
 }
 .ch-panel-scrim { display: none; }
@@ -1910,21 +2044,22 @@ div:has(> #main-layout) { min-height: 0 !important; }
   pointer-events: none;
 }
 .ch-scrim { display: none; }
-.ch-modal-scrim { position: fixed; inset: 0; z-index: 1000; background: color-mix(in srgb, var(--bg) 70%, transparent); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: var(--space-4); }
+.ch-modal-scrim { position: fixed; inset: 0; z-index: 1000; background: var(--scrim); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: var(--space-4); }
 .ch-modal {
   width: 100%; max-width: 360px; text-align: center;
-  background: var(--ch-card); border: 1px solid var(--border2); border-radius: var(--radius-xl);
-  box-shadow: var(--elev-3); padding: var(--space-6);
+  background: var(--ch-card); border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: var(--shadow-xl); padding: var(--space-6);
   display: flex; flex-direction: column; align-items: center; gap: var(--space-3);
 }
-.ch-modal-title { font-size: 1.15rem; font-weight: 700; }
+.ch-modal-title { font-size: 1.125rem; font-weight: 700; }
 .ch-modal p { margin: 0; font-size: 0.88rem; line-height: 1.6; color: var(--text2); }
 
 /* ── Narrower desktops: the panel floats over the chat ── */
 @media (max-width: 1279px) {
   .ch-panel {
-    position: absolute; top: 0; right: var(--space-4); bottom: var(--space-4); z-index: 50;
+    position: absolute; top: var(--space-3); right: var(--space-3); bottom: var(--space-3); z-index: 50;
     width: min(440px, calc(100% - var(--space-8)));
+    border: 1px solid var(--border); border-radius: var(--radius-xl);
     box-shadow: var(--elev-3);
   }
   .ch-panel-scrim { display: block; position: absolute; inset: 0; z-index: 49; background: color-mix(in srgb, var(--bg) 40%, transparent); }
@@ -1932,26 +2067,34 @@ div:has(> #main-layout) { min-height: 0 !important; }
 
 /* ── Tablet and phone: the sidebar becomes a drawer ── */
 @media (max-width: 899px) {
-  .ch-wrap { padding: 0; gap: 0; }
-  .ch-main { margin-top: 0; border-radius: 0; border: none; border-top: 1px solid var(--border); }
+  .ch-main { border-top: 1px solid var(--border); }
   .ch-side {
     position: fixed; top: 0; left: 0; bottom: 0; z-index: 1350;
     width: min(320px, 86vw); padding: 0 var(--space-4) var(--space-4);
-    background: var(--ch-ground); border-right: 1px solid var(--border);
+    background: var(--ch-card); border-right: 1px solid var(--border);
     transform: translateX(-100%); transition: transform 0.2s ease;
     box-shadow: var(--elev-3);
   }
   .ch-side.open { transform: none; }
   .ch-scrim { display: block; position: fixed; inset: 0; z-index: 1340; background: color-mix(in srgb, var(--bg) 55%, transparent); }
-  .ch-mobilebar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--border); }
-  .ch-mobilebar-title { font-size: 0.9rem; font-weight: 600; }
+  .ch-mobilebar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) var(--space-3) var(--space-2) var(--space-2); border-bottom: 1px solid var(--border); background: var(--ch-ground); }
+  .ch-main.is-start .ch-mobilebar { background: transparent; border-bottom-color: transparent; }
+  .ch-mobilebar-title {
+    flex: 1; min-width: 0; display: inline-flex; align-items: center; gap: var(--space-1);
+    padding: var(--space-1-5) var(--space-2); border: none; background: none; border-radius: var(--radius-md);
+    color: var(--text); font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer;
+  }
+  .ch-mobilebar-title span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ch-mobilebar-title svg { flex-shrink: 0; color: var(--text3); }
+  .ch-icon-btn-line { width: 36px; height: 36px; border: 1px solid var(--border2); border-radius: var(--radius-md); background: var(--ch-card); color: var(--text2); box-shadow: var(--shadow-xs); }
   .ch-panel { top: 0; right: 0; bottom: 0; width: 100%; margin: 0; border-radius: 0; border: none; }
 }
 
 @media (max-width: 768px) {
+  /* The floating tab bar sits below the chat; the chat ends where it begins. */
+  .ch-wrap { height: calc(100dvh - 60px - var(--bn-clear)); }
   .ch-side-chats { flex: none; min-height: 0; overflow: visible; }
-  .ch-side { padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px)); }
-  .ch-dock { padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom, 0px)); }
+  .ch-side { padding-bottom: var(--bn-clear); }
   .ch-start { justify-content: flex-start; padding: var(--space-5) var(--space-4) 0; }
   /* The owl and subtitle took most of a phone's height, so the flow's list of
      choices had to scroll inside its card from the first screen. */
@@ -1963,7 +2106,7 @@ div:has(> #main-layout) { min-height: 0 !important; }
   .ch-textarea { max-height: 104px; }
   .ch-thread { padding: var(--space-5) var(--space-4); }
   .ch-dock { padding: var(--space-2) var(--space-3) var(--space-3); }
-  .ch-menu { position: fixed; left: var(--space-3); right: var(--space-3); bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-3)); width: auto; }
+  .ch-menu { position: fixed; left: var(--space-3); right: var(--space-3); bottom: calc(var(--bn-clear) + var(--space-3)); width: auto; }
   .ch-thinking { gap: var(--space-3); }
   .ch-thinking-owl { width: 56px; }
 }
@@ -1974,8 +2117,6 @@ div:has(> #main-layout) { min-height: 0 !important; }
 .ch-start .ch-textarea { max-height: 104px; }
 @media (max-height: 760px) {
   .ch-start .ch-textarea { max-height: 56px; }
-  .ch-wrap { padding-bottom: var(--space-3); }
-  .ch-main, .ch-panel { margin-top: var(--space-3); }
   .ch-start > .ch-composer { padding-bottom: var(--space-2); }
   .ch-flow { padding: var(--space-2-5) var(--space-4); }
 }
@@ -1983,7 +2124,7 @@ div:has(> #main-layout) { min-height: 0 !important; }
 /* Shorter windows: the syllabus card sits ring-beside-text, so the sidebar
    fits without scrolling on a 13-inch laptop. */
 @media (max-height: 860px) and (min-width: 900px) {
-  .ch-side-inner { gap: var(--space-2); padding-top: var(--space-3); }
+  .ch-side-inner { gap: var(--space-2); padding: var(--space-3) 0; }
   .ch-side-chats { min-height: 96px; }
   .ch-side-nav a { padding: 6px var(--space-2); }
   .ch-side-card { display: grid; grid-template-columns: 48px 1fr; column-gap: var(--space-3); align-items: center; padding: var(--space-3); }
