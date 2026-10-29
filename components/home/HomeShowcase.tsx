@@ -90,6 +90,18 @@ function NotesPreview() {
   );
 }
 
+function CardsPreview() {
+  return (
+    <Frame title="Flashcards · Sociology">
+      <div className="sw-progress"><span>4 / 20</span><span className="sw-asked">Asked 2024 and 2018</span></div>
+      <div className="sw-track"><i style={{ width: '20%' }} /></div>
+      <div className="sw-card"><small>Concept · Emile Durkheim</small><b>What are Durkheim&rsquo;s four types of suicide?</b></div>
+      <div className="sw-card back"><small>Answer</small><b>Egoistic and altruistic, from integration. Anomic and fatalistic, from regulation.</b></div>
+      <div className="sw-rate"><span>Blank</span><span>Hard</span><span className="on">Good</span><span>Easy</span></div>
+    </Frame>
+  );
+}
+
 function PyqPreview() {
   const rows = [
     { year: 2024, marks: 20, q: 'Riggs’ Prismatic Model has been criticised as overly gloomy and technical complex, but it remains as a useful starting point…' },
@@ -151,6 +163,12 @@ export default function HomeShowcase() {
       text: 'Every topic in both papers, cut down to what an answer actually uses: the thinkers, the debates and the examples.',
       points: ['Free with your account', 'Laid out the way the syllabus is', 'Ask the AI about anything you are reading'],
       cta: 'Read the notes', href: slug ? `/notes/${slug}` : '/notes', wash: 'var(--wash-anthropology)', preview: <NotesPreview />,
+    },
+    {
+      key: 'cards', tab: 'Flashcards', title: 'The thinkers and terms that slip away.',
+      text: 'Short cards for who argued what, the terms and the facts UPSC asks for, each tied to the past questions it helps you answer. The ones you miss come back sooner.',
+      points: ['Every topic in all five optionals', 'Each card shows the years it was asked', 'The first 100 answers are free with your account'],
+      cta: 'Start revising', href: slug ? `/${slug}/flashcards` : '/flashcards', wash: 'var(--wash-polsci)', preview: <CardsPreview />,
     },
     {
       key: 'pyq', tab: 'PYQs', title: 'See what UPSC keeps asking.',
@@ -306,6 +324,15 @@ const SC_CSS = `
 .sw-explain { font-size: 12.5px; color: var(--text2); }
 .sw-compose { display: flex; align-items: center; justify-content: space-between; margin-top: 2px; padding: 8px 8px 8px 14px; border: 1.5px solid var(--border2); border-radius: 14px; color: var(--text3); }
 .sw-compose i { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9px; border: 1px solid var(--border2); font-style: normal; font-size: 13px; }
+.sw-asked { font-weight: 600; color: var(--accent-text); }
+.sw-card { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--sw-line); border-radius: 14px; background: var(--ds-soft); }
+.sw-card small { font-size: 12px; color: var(--text3); }
+.sw-card b { font-size: 16px; font-weight: 800; letter-spacing: -0.015em; line-height: 1.35; }
+.sw-card.back { background: var(--accent-wash); border-color: color-mix(in srgb, var(--accent) 25%, transparent); }
+.sw-card.back b { font-size: 14px; font-weight: 600; letter-spacing: 0; }
+.sw-rate { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.sw-rate span { padding: 8px 4px; border-radius: 10px; border: 1px solid var(--sw-line); text-align: center; font-size: 12.5px; font-weight: 600; color: var(--text2); }
+.sw-rate span.on { background: var(--accent-wash); color: var(--accent-text); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 .sw-sub { font-weight: 700; font-size: 14px; margin-top: 2px; }
 .sw-list { margin: -4px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; color: var(--text); }
 .sw-list b { font-weight: 700; }

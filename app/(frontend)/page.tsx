@@ -8,6 +8,9 @@ import { HeroActions } from '@/components/home/HomeLinks';
 import HomeShowcase from '@/components/home/HomeShowcase';
 import { PLANS, PLAN_ORDER, formatRupees } from '@/lib/plans';
 import { notesForSubject } from '@/lib/notes';
+import { FLASHCARDS_LIVE } from '@/lib/features';
+import { isFlashcardSubject } from '@/lib/flashcardMeta';
+import { countForSubject } from '@/lib/flashcardStore';
 import { pyqCountForOptional } from '@/lib/pyqCounts';
 import { SUBJECT_BOOKS } from '@/lib/subjectConfig';
 
@@ -51,6 +54,8 @@ export default async function Home() {
     id: o.id,
     topics: notesForSubject(o.id).length,
     pyqs: (await pyqCountForOptional(o.optional)) ?? 0,
+    // Null when the count could not be read: the card then leaves it out.
+    cards: FLASHCARDS_LIVE && isFlashcardSubject(o.id) ? await countForSubject(o.id) : null,
   })));
   const byId = Object.fromEntries(counts.map((c) => [c.id, c]));
   const totalPyqs = counts.reduce((n, c) => n + c.pyqs, 0);
@@ -110,7 +115,10 @@ export default async function Home() {
                     <span className="hm-opt-body">
                       <span className="hm-opt-name">{o.name}</span>
                       <span className="hm-opt-sub">{o.sub}</span>
-                      <span className="hm-opt-meta">{c.topics} topics · {c.pyqs.toLocaleString('en-IN')} PYQs</span>
+                      <span className="hm-opt-meta">
+                        {c.topics} topics · {c.pyqs.toLocaleString('en-IN')} PYQs
+                        {c.cards ? <>{' '}<span className="hm-opt-cards">{c.cards.toLocaleString('en-IN')} flashcards</span></> : null}
+                      </span>
                     </span>
                     <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
                   </Link>
@@ -226,6 +234,8 @@ const HOME_CSS = `
 .hm-opt-name { font-weight: 700; font-size: 1.06rem; color: var(--text); }
 .hm-opt-sub { font-size: 0.88rem; color: var(--text2); line-height: 1.5; }
 .hm-opt-meta { font-family: var(--font-ui); font-size: 0.78rem; color: var(--t); font-weight: 600; margin-top: var(--space-2); }
+/* The deck's size on a line of its own, so it never wraps in half. */
+.hm-opt-cards { display: block; margin-top: 2px; }
 .hm-opt-go { color: var(--text3); transition: color 0.15s, transform 0.15s; padding-top: 2px; }
 .hm-opt:hover .hm-opt-go { color: var(--t); transform: translateX(2px); }
 

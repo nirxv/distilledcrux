@@ -130,3 +130,21 @@ export async function countForTopic(subject: FlashcardSubject, topic: string): P
   }
   return count ?? 0;
 }
+
+/**
+ * Published cards in one deck, or null on failure rather than 0. Only the
+ * count comes back, no rows, so the home page can show it at build time for
+ * next to nothing.
+ */
+export async function countForSubject(subject: FlashcardSubject): Promise<number | null> {
+  const { count, error } = await client()
+    .from('flashcards')
+    .select('id', { count: 'exact', head: true })
+    .eq('status', 'published')
+    .eq('subject', subject);
+  if (error) {
+    console.error('[flashcardStore] deck count failed:', error.message);
+    return null;
+  }
+  return count ?? 0;
+}
