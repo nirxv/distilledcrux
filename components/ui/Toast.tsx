@@ -54,13 +54,13 @@ export default function Toaster() {
   }, []);
 
   return (
-    <div className="ds ts" aria-live="polite" role="status">
+    <div className="ds toast" aria-live="polite" role="status">
       <style dangerouslySetInnerHTML={{ __html: TOAST_CSS }} />
       {items.map((t) => (
-        <div key={t.id} className={`ts-item ${t.kind}`}>
-          <span className="ts-icon">{ICON[t.kind]}</span>
+        <div key={t.id} className={`toast-item ${t.kind}`}>
+          <span className="toast-icon">{ICON[t.kind]}</span>
           <p>{t.message}</p>
-          <button type="button" className="ts-x" onClick={() => setItems((list) => list.filter((x) => x.id !== t.id))} aria-label="Dismiss">
+          <button type="button" className="toast-x" onClick={() => setItems((list) => list.filter((x) => x.id !== t.id))} aria-label="Dismiss">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
           </button>
         </div>
@@ -70,33 +70,33 @@ export default function Toaster() {
 }
 
 const TOAST_CSS = `
-.ts {
+.toast {
   position: fixed; top: 72px; left: 50%; transform: translateX(-50%); z-index: 2600;
   width: min(571px, calc(100vw - 24px));
   display: flex; flex-direction: column; gap: var(--space-2); pointer-events: none;
 }
-.ts-item {
+.toast-item {
   position: relative; pointer-events: auto;
   display: flex; align-items: flex-start; gap: var(--space-4);
   padding: var(--space-4) 52px var(--space-4) var(--space-4);
   background: var(--ds-card); border: 1px solid var(--border2); border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-2xl);
-  animation: tsIn 0.22s cubic-bezier(0.16,1,0.3,1);
+  animation: toastIn 0.22s cubic-bezier(0.16,1,0.3,1);
 }
-.ts-item p { margin: 0; font-size: 0.875rem; line-height: 20px; font-weight: 600; color: var(--text2); }
+.toast-item p { margin: 0; font-size: 0.875rem; line-height: 20px; font-weight: 600; color: var(--text2); }
 /* The icon's two faint rings, as in the alert design: 30% and 10% of its colour. */
-.ts-icon { position: relative; flex-shrink: 0; display: inline-flex; width: 20px; height: 20px; }
-.ts-icon::before, .ts-icon::after { content: ''; position: absolute; border: 2px solid currentColor; border-radius: 50%; }
-.ts-icon::before { inset: -4px; opacity: 0.3; }
-.ts-icon::after { inset: -9px; opacity: 0.1; }
-.ts-item.success .ts-icon { color: var(--success-text); }
-.ts-item.error .ts-icon { color: var(--danger-text); }
-.ts-x {
+.toast-icon { position: relative; flex-shrink: 0; display: inline-flex; width: 20px; height: 20px; }
+.toast-icon::before, .toast-icon::after { content: ''; position: absolute; border: 2px solid currentColor; border-radius: 50%; }
+.toast-icon::before { inset: -4px; opacity: 0.3; }
+.toast-icon::after { inset: -9px; opacity: 0.1; }
+.toast-item.success .toast-icon { color: var(--success-text); }
+.toast-item.error .toast-icon { color: var(--danger-text); }
+.toast-x {
   position: absolute; top: 7px; right: 7px; width: 36px; height: 36px;
   display: inline-flex; align-items: center; justify-content: center;
   border: none; background: none; border-radius: var(--radius-md); color: var(--text3); cursor: pointer;
 }
-.ts-x:hover { background: var(--ds-soft); color: var(--text); }
-@keyframes tsIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .ts-item { animation: none; } }
+.toast-x:hover { background: var(--ds-soft); color: var(--text); }
+@keyframes toastIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .toast-item { animation: none; } }
 `;
