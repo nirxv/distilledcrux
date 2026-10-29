@@ -648,7 +648,7 @@ function TestPageInner() {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <header className="ts-hero">
           <div className="ds-container">
-            <h1 className="ds-h1 ts-h1">Sit a practice paper</h1>
+            <h1 className="ds-h1 ts-h1">Attempt a practice paper</h1>
             <p className="ds-lede ts-lede">Real past questions in the Mains format, against the clock. Write on paper, then mark yourself against the rubric, or have answers checked.</p>
           </div>
         </header>
@@ -786,7 +786,7 @@ function TestPageInner() {
         {renderBlocks(true)}
 
         <div className="ts-end">
-          <button type="button" className="ds-btn ds-btn-solid" onClick={() => { clearRefreshSafe('dc_test_v1'); setDeadline(null); setEndedAt(null); setPhase('config'); }}>Sit another paper</button>
+          <button type="button" className="ds-btn ds-btn-solid" onClick={() => { clearRefreshSafe('dc_test_v1'); setDeadline(null); setEndedAt(null); setPhase('config'); }}>Attempt another paper</button>
           <Link href={`/${subject}`} className="ds-btn ds-btn-line">Back to {SUBJECTS[subject].label}</Link>
         </div>
       </div>
