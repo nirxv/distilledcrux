@@ -13,6 +13,14 @@ const BOT_UA = /bot|crawler|spider|crawling|headlesschrome|googlebot|bingbot|ahr
 const SESSION_RATE_LIMIT = 3;
 const SESSION_RATE_WINDOW_SECONDS = 10;
 
+/**
+ * Only visits from India are recorded. The country is Vercel's reading of the
+ * visitor's IP; a request without one is not recorded either, which also keeps
+ * local development out of the table.
+ */
+const RECORDED_COUNTRY = 'IN';
+const fromIndia = (req: NextRequest) => req.headers.get('x-vercel-ip-country') === RECORDED_COUNTRY;
+
 function parseCountry(req: NextRequest) {
   const country = req.headers.get('x-vercel-ip-country') ?? null;
   const city = req.headers.get('x-vercel-ip-city')
@@ -28,6 +36,7 @@ export async function PATCH(req: NextRequest) {
   try {
     const ua = req.headers.get('user-agent') ?? '';
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
+    if (!fromIndia(req)) return NextResponse.json({ ok: false, reason: 'outside_india' });
 
     const { visitor_id } = await req.json();
     if (!visitor_id) return NextResponse.json({ ok: false });
@@ -65,6 +74,7 @@ export async function POST(req: NextRequest) {
   try {
     const ua = req.headers.get('user-agent') ?? '';
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
+    if (!fromIndia(req)) return NextResponse.json({ ok: false, reason: 'outside_india' });
 
     const { visitor_id, firebase_uid, page, referrer, device, os, browser, dwell: rawDwell } = await req.json();
     if (!visitor_id) return NextResponse.json({ ok: false, reason: 'no visitor_id' });
