@@ -6,7 +6,8 @@ import SubjectIcon from '@/components/SubjectIcon';
 import HomeAsk from '@/components/home/HomeAsk';
 import { HeroActions } from '@/components/home/HomeLinks';
 import HomeShowcase from '@/components/home/HomeShowcase';
-import { PLANS, PLAN_ORDER, formatRupees } from '@/lib/plans';
+import { PLANS, PLAN_ORDER } from '@/lib/plans';
+import { OfferNote, PlanPrice } from '@/components/home/PlanOffer';
 import { notesForSubject } from '@/lib/notes';
 import { FLASHCARDS_LIVE } from '@/lib/features';
 import { isFlashcardSubject } from '@/lib/flashcardMeta';
@@ -161,6 +162,7 @@ export default async function Home() {
             <div className="hm-head">
               <h2 className="ds-h2">One payment, and nothing renews behind your back</h2>
               <p className="ds-lede">Notes and past questions are free with an account. A plan gets you unlimited AI chat and answer evaluation for your optional.</p>
+              <OfferNote />
             </div>
             <div className="hm-plans">
               {PLAN_ORDER.map((id) => {
@@ -169,7 +171,7 @@ export default async function Home() {
                   <Link key={id} href="/pricing" className={`hm-plan ds-card ds-card-link${id === 'yearly' ? ' featured' : ''}`}>
                     {id === 'yearly' && <span className="ds-tag">Most chosen</span>}
                     <span className="hm-plan-name">{p.label}</span>
-                    <span className="hm-plan-price">{formatRupees(p)}</span>
+                    <span className="hm-plan-price-row"><PlanPrice id={id} /></span>
                     <span className="hm-plan-period">{p.period}</span>
                     <span className="hm-plan-text">{PLAN_NOTE[id]}</span>
                   </Link>
@@ -254,7 +256,11 @@ const HOME_CSS = `
 .hm-plan.featured { border-color: color-mix(in srgb, var(--accent) 50%, transparent); box-shadow: 0 0 0 3px var(--accent-dim); }
 .hm-plan .ds-tag { position: absolute; top: var(--space-4); right: var(--space-4); }
 .hm-plan-name { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; color: var(--text3); }
-.hm-plan-price { font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; color: var(--text); margin-top: var(--space-1); }
+.hm-plan-price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-2); margin-top: var(--space-1); }
+.hm-plan-price { font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; color: var(--text); }
+.hm-plan-was { font-family: var(--font-ui); font-size: 0.95rem; font-weight: 600; color: var(--text3); }
+.hm-plan-off { padding: 1px 8px; border-radius: var(--radius-pill); background: var(--premium-wash); color: var(--premium-text); font-family: var(--font-ui); font-size: 0.74rem; font-weight: 700; }
+.hm-offer { align-self: flex-start; margin: var(--space-2) 0 0; padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg); background: var(--premium-wash); color: var(--premium-text); font-family: var(--font-ui); font-size: 0.92rem; font-weight: 700; line-height: 1.5; }
 .hm-plan-period { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); }
 .hm-plan-text { font-size: 0.9rem; color: var(--text2); margin-top: var(--space-3); }
 .hm-plans-more { display: flex; justify-content: center; margin-top: var(--space-5); }
@@ -286,7 +292,8 @@ const HOME_CSS = `
   /* A plan is one compact row on a phone: name and price, then its line. */
   .hm-plan { flex-direction: row; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-2); padding: var(--space-4); }
   .hm-plan-name { flex-basis: 100%; }
-  .hm-plan-price { font-size: 1.6rem; margin-top: 0; }
+  .hm-plan-price-row { margin-top: 0; }
+  .hm-plan-price { font-size: 1.6rem; }
   .hm-plan-text { flex-basis: 100%; margin-top: var(--space-1); }
   .hm-plan .ds-tag { top: var(--space-3); right: var(--space-3); }
 }

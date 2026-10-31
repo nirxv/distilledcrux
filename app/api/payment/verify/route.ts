@@ -3,6 +3,7 @@ import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
+import { PLANS, amountAllowed, isPlanId } from '@/lib/plans';
 
 /**
  * Confirms a Razorpay payment and grants the subscription.
@@ -20,14 +21,12 @@ const razorpay = new Razorpay({
   key_secret: process.env.RAZORPAY_KEY_SECRET!,
 });
 
-// Server-side truth. Must stay in step with PLAN_AMOUNTS in create-order.
-const PLAN_DAYS: Record<string, number> = { daily: 1, sixmonth: 180, yearly: 365 };
-const PLAN_AMOUNTS: Record<string, number> = { daily: 4900, sixmonth: 199900, yearly: 299900 };
-
 type OrderNotes = {
   firebase_uid?: string;
   plan?: string;
   optional?: string;
+  /** The offer the order was priced under, written by create-order. */
+  offer?: string;
 };
 
 export async function POST(req: NextRequest) {
@@ -89,19 +88,19 @@ export async function POST(req: NextRequest) {
 
   const plan = notes.plan ?? '';
   const optional = notes.optional ?? '';
-  const days = PLAN_DAYS[plan];
-  const expectedAmount = PLAN_AMOUNTS[plan];
 
-  if (!days || !expectedAmount || !optional) {
+  if (!isPlanId(plan) || !optional) {
     return NextResponse.json({ error: 'Order is missing plan details' }, { status: 400 });
   }
+  const days = PLANS[plan].days;
 
-  // 5. The order must be paid, for the amount that plan costs.
+  // 5. The order must be paid, for the amount that plan costs: its list price,
+  //    or the sale price of the offer the order was made under.
   if (orderStatus !== 'paid') {
     return NextResponse.json({ error: 'Order is not paid' }, { status: 402 });
   }
-  if (orderAmount !== expectedAmount) {
-    console.error('Amount mismatch', { razorpay_order_id, orderAmount, expectedAmount, plan });
+  if (!amountAllowed(plan, orderAmount, notes.offer)) {
+    console.error('Amount mismatch', { razorpay_order_id, orderAmount, listAmount: PLANS[plan].amountPaise, offer: notes.offer ?? null, plan });
     return NextResponse.json({ error: 'Amount does not match the plan' }, { status: 400 });
   }
 

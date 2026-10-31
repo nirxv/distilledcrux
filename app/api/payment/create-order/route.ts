@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PLANS, PLAN_ORDER } from '@/lib/plans';
+import { PLANS, PLAN_ORDER, priceNow, type PlanId } from '@/lib/plans';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import Razorpay from 'razorpay';
 
@@ -48,9 +48,14 @@ export async function POST(req: NextRequest) {
 
   const optLabel = optionalDisplayName(optional);
 
+  // The price now, which is the sale price while an offer runs. The offer's id
+  // goes into the notes, so verify accepts this amount for this order even if
+  // it is paid after the offer ends.
+  const { amountPaise, offer } = priceNow(plan as PlanId);
+
   try {
     const order = await razorpay.orders.create({
-      amount: planData.amount,
+      amount: amountPaise,
       currency: 'INR',
       receipt: `dc_${user.uid.slice(0, 8)}_${Date.now()}`,
       notes: {
@@ -59,12 +64,13 @@ export async function POST(req: NextRequest) {
         plan,
         optional,
         days: String(planData.days),
+        ...(offer ? { offer: offer.id } : {}),
       },
     });
 
     return NextResponse.json({
       orderId: order.id,
-      amount: planData.amount,
+      amount: amountPaise,
       currency: 'INR',
       keyId: process.env.RAZORPAY_KEY_ID,
       description: `${optLabel} — ${planData.label}`,

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { PLANS, PLAN_ORDER, rupees, type PlanId } from '@/lib/plans';
+import { useOffer } from '@/hooks/useOffer';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
@@ -24,10 +25,10 @@ const OPTIONALS = [
  * questions" (the bank across all five optionals, not the one bought) and
  * "Performance analytics" (there is none).
  */
-const PLAN_COPY: Record<PlanId, { blurb: string; cta: string; perMonth?: string }> = {
+const PLAN_COPY: Record<PlanId, { blurb: string; cta: string; months?: number }> = {
   daily:    { blurb: 'For a test day, or one last push before the paper.', cta: 'Get a day' },
-  sixmonth: { blurb: 'One focused run up to Mains.', cta: 'Get 6 months', perMonth: `about ₹${Math.round(rupees(PLANS.sixmonth) / 6)} a month` },
-  yearly:   { blurb: 'A full year, enough for the whole run to Mains.', cta: 'Get a year', perMonth: `about ₹${Math.round(rupees(PLANS.yearly) / 12)} a month` },
+  sixmonth: { blurb: 'One focused run up to Mains.', cta: 'Get 6 months', months: 6 },
+  yearly:   { blurb: 'A full year, enough for the whole run to Mains.', cta: 'Get a year', months: 12 },
 };
 
 const COMPARE: { what: string; free: string; premium: string }[] = [
@@ -78,6 +79,7 @@ function loadRazorpay(): Promise<void> {
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 
 export default function PricingPage() {
+  const offer = useOffer();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [rzpReady, setRzpReady] = useState(false);
@@ -207,6 +209,7 @@ export default function PricingPage() {
             <p className="ds-lede pr-lede">
               Notes and past questions are free with your account. Premium opens everything else for one optional, for as long as you buy. Nothing renews on its own.
             </p>
+            {offer && <p className="pr-offer">{offer.line}</p>}
           </div>
         </header>
 
@@ -244,14 +247,23 @@ export default function PricingPage() {
               const copy = PLAN_COPY[id];
               const featured = id === 'yearly';
               const busy = loading === id;
+              // The sale price while an offer covers this plan, with the list price struck through.
+              const sale = offer?.amountPaise[id];
+              const price = (sale ?? plan.amountPaise) / 100;
               return (
                 <article key={id} className={`pr-plan${featured ? ' featured' : ''}`}>
                   <div className="pr-plan-top">
                     <h3 className="pr-plan-name">{plan.label}</h3>
                     {featured && <span className="pr-tag">Most chosen</span>}
                   </div>
-                  <div className="pr-price"><span>₹</span>{rupees(plan).toLocaleString('en-IN')}</div>
-                  <div className="pr-period">{plan.period}{copy.perMonth ? ` · ${copy.perMonth}` : ''}</div>
+                  <div className="pr-price-row">
+                    <div className="pr-price"><span>₹</span>{price.toLocaleString('en-IN')}</div>
+                    {offer && sale && <>
+                      <s className="pr-was" aria-label={`was ₹${rupees(plan).toLocaleString('en-IN')}`}>₹{rupees(plan).toLocaleString('en-IN')}</s>
+                      <span className="pr-off">{offer.percentOff}% off</span>
+                    </>}
+                  </div>
+                  <div className="pr-period">{plan.period}{copy.months ? ` · about ₹${Math.round(price / copy.months).toLocaleString('en-IN')} a month` : ''}</div>
                   <p className="pr-blurb">{copy.blurb}</p>
                   <button type="button"
                     className={`ds-btn ${featured ? 'ds-btn-solid' : 'ds-btn-line'} pr-buy`}
@@ -338,6 +350,10 @@ const CSS = `
 .pr-plan-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-4); }
 .pr-plan-name { margin: 0; font-size: 1.1rem; font-weight: 800; }
 .pr-tag { padding: 3px 12px; border-radius: var(--radius-full); background: var(--accent); color: var(--accent-on); font-size: 0.8rem; font-weight: 700; }
+.pr-price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2) var(--space-3); }
+.pr-was { font-size: 1.15rem; font-weight: 600; color: var(--text3); }
+.pr-off { padding: 2px 10px; border-radius: var(--radius-full); background: var(--premium-wash); color: var(--premium-text); font-size: 0.8rem; font-weight: 700; }
+.pr-offer { display: inline-block; margin: var(--space-4) 0 0; padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg); background: var(--premium-wash); color: var(--premium-text); font-size: 0.95rem; font-weight: 700; line-height: 1.5; }
 .pr-price { font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--text); }
 .pr-price span { margin-right: 2px; font-size: 1.5rem; font-weight: 700; vertical-align: 0.6em; }
 .pr-period { margin-top: var(--space-2); font-size: 0.9rem; color: var(--text3); }
