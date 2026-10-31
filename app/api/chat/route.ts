@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { claudeClient, claudeReadsPdf, claudeRequest } from '@/lib/claude';
 import { isPdfBase64TooLarge } from '@/lib/uploadLimits';
 import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
@@ -387,10 +388,17 @@ export async function POST(req: NextRequest) {
             pdfMode: !!pdf_base64,
           });
 
-          if (pdf_base64) {
+          let pdfPaused = false;
+          if (pdf_base64 && !claudeReadsPdf()) {
+            // DeepSeek is standing in for Claude (lib/claude.ts) and can't
+            // read PDFs. Say so, and don't count it against the allowance.
+            pdfPaused = true;
+            collect(lang === 'hi'
+              ? 'PDF पढ़ना कुछ दिनों के लिए रुका हुआ है। जिस हिस्से को समझना है, उसका टेक्स्ट यहाँ चिपकाएँ और फिर से पूछें।'
+              : 'Reading PDFs is paused for a few days. Paste the part you want explained as text, and ask again.');
+          } else if (pdf_base64) {
             // PDF mode → Haiku (supports document input)
-            const Anthropic = (await import('@anthropic-ai/sdk')).default;
-            const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+            const anthropic = claudeClient();
             const msgsCopy = messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content as any })) as any[];
             const firstUserIdx = msgsCopy.findIndex((m: { role: string }) => m.role === 'user');
             if (firstUserIdx !== -1) {
@@ -402,12 +410,12 @@ export async function POST(req: NextRequest) {
                 ],
               };
             }
-            const anthropicStream = anthropic.messages.stream({
+            const anthropicStream = anthropic.messages.stream(claudeRequest({
               model: 'claude-haiku-4-5-20251001',
               max_tokens: maxTokens,
               system: systemPrompt,
               messages: msgsCopy,
-            });
+            }));
             for await (const chunk of anthropicStream) {
               if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
                 collect(chunk.delta.text);
@@ -415,20 +423,19 @@ export async function POST(req: NextRequest) {
             }
           } else if (lang === 'hi') {
             // Hindi mode → Haiku
-            const Anthropic = (await import('@anthropic-ai/sdk')).default;
-            const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+            const anthropic = claudeClient();
             const builtMessages = messages.map((m: { role: string; content: string }, i: number) => {
               if (i === messages.length - 1 && m.role === 'user') {
                 return { role: m.role, content: m.content + '\n\n[IMPORTANT: Respond entirely in Hindi (Devanagari script), keeping citation markers as [Source #N]]' };
               }
               return { role: m.role, content: m.content };
             });
-            const anthropicStream = anthropic.messages.stream({
+            const anthropicStream = anthropic.messages.stream(claudeRequest({
               model: 'claude-haiku-4-5-20251001',
               max_tokens: maxTokens,
               system: systemPrompt,
               messages: builtMessages as any,
-            });
+            }));
             for await (const chunk of anthropicStream) {
               if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
                 collect(chunk.delta.text);
@@ -491,7 +498,7 @@ export async function POST(req: NextRequest) {
 
           // Count the call once an answer actually went out. Anonymous callers
           // no longer reach this point; they are asked to sign in above.
-          if (answered && !isPremium) {
+          if (answered && !pdfPaused && !isPremium) {
             try {
               await recordUsage(identity, 'chat_count');
             } catch (incErr) {

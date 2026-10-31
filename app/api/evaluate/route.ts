@@ -1,6 +1,7 @@
 export const maxDuration = 60;
 
 import { NextRequest, NextResponse } from "next/server";
+import { claudeClient, claudeRequest, viaDeepSeek } from "@/lib/claude";
 import { debug } from "@/lib/debugLog";
 import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/uploadLimits";
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
@@ -314,7 +315,7 @@ Go page by page. Do not rush. Every word matters.`;
             { text: ocrPrompt },
           ];
           const ocrRes = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -484,8 +485,12 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
 → FINAL TOTAL (after audit): [write number] out of ${marks}`;
 
     // ── Pass 1: Claude Haiku 4.5 (vision + strict rubric following) ──
-    const { default: Anthropic } = await import("@anthropic-ai/sdk");
-    const anthropicClient = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    const anthropicClient = claudeClient();
+    // DeepSeek skips the rubric and writes the final JSON straight away, so
+    // the bands and the audit never run. Claude works through the steps.
+    const STEPS_NOT_JSON = viaDeepSeek()
+      ? "\n\nWrite your working for every step above as plain text, in order, through the audit and the FINAL TOTAL line. Do not write JSON: that is a later step."
+      : "";
 
     // Convert Groq image_url format → Anthropic base64 format
     type AnthropicImageBlock = { type: "image"; source: { type: "base64"; media_type: "image/jpeg" | "image/png" | "image/gif" | "image/webp"; data: string } };
@@ -500,7 +505,10 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
     });
 
     emit({ id: "marking" });
-    const cotHaikuRes = await anthropicClient.messages.create({
+    // On DeepSeek (lib/claude.ts) the marking thinks first only when it has
+    // to read the pages itself: it reads handwriting much better that way,
+    // but thinking over a transcript took most of the route's 60 s.
+    const cotHaikuRes = await anthropicClient.messages.create(claudeRequest({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 2400,
       system: ASSEMBLED_PROMPT,
@@ -508,14 +516,16 @@ If any check above failed, write "CORRECTION:" followed by the fixed band/tally/
         {
           role: "user",
           content: finalTranscript
-            ? cotPrompt
+            ? cotPrompt + STEPS_NOT_JSON
             : [
                 ...anthropicImageBlocks,
-                { type: "text" as const, text: cotPrompt },
+                { type: "text" as const, text: cotPrompt + STEPS_NOT_JSON },
               ],
         },
       ],
-    });
+      // After the FINAL TOTAL it goes on to write that JSON anyway: stop it.
+      ...(viaDeepSeek() ? { stop_sequences: ["```json"] } : {}),
+    }, { think: !finalTranscript, deepSeekMaxTokens: 3000 }));
 
     emit({ id: "marked" });
     const cotReasoning = cotHaikuRes.content

@@ -1,6 +1,7 @@
 export const maxDuration = 120;
 
 import { NextRequest, NextResponse } from 'next/server';
+import { claudeClient, claudeRequest } from '@/lib/claude';
 import { createServerClient } from '@/lib/supabase';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { getSubjectConfig, writingRules, DEFAULT_SUBJECT } from '@/lib/subjects';
@@ -97,15 +98,12 @@ with no preamble, no commentary on your own writing, and no marking scheme.`;
 Write the model answer now:`;
 
   try {
-    const Anthropic = (await import('@anthropic-ai/sdk')).default;
-    const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
-    const stream = anthropic.messages.stream({
+    const stream = claudeClient().messages.stream(claudeRequest({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: TOKENS[marks],
       system,
       messages: [{ role: 'user', content: prompt }],
-    });
+    }));
 
     const encoder = new TextEncoder();
     const out = new ReadableStream<Uint8Array>({
