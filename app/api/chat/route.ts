@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { claudeClient, claudeReadsPdf, claudeRequest } from '@/lib/claude';
+import { streamGeminiPdf } from '@/lib/geminiPdf';
 import { isPdfBase64TooLarge } from '@/lib/uploadLimits';
 import { checkRateLimit, rateLimitHeaders, clientIp } from '@/lib/rateLimit';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
@@ -388,14 +389,13 @@ export async function POST(req: NextRequest) {
             pdfMode: !!pdf_base64,
           });
 
-          let pdfPaused = false;
+          let geminiDone = false;
           if (pdf_base64 && !claudeReadsPdf()) {
             // DeepSeek is standing in for Claude (lib/claude.ts) and can't
-            // read PDFs. Say so, and don't count it against the allowance.
-            pdfPaused = true;
-            collect(lang === 'hi'
-              ? 'PDF पढ़ना कुछ दिनों के लिए रुका हुआ है। जिस हिस्से को समझना है, उसका टेक्स्ट यहाँ चिपकाएँ और फिर से पूछें।'
-              : 'Reading PDFs is paused for a few days. Paste the part you want explained as text, and ask again.');
+            // read PDFs. Gemini reads them (lib/geminiPdf.ts).
+            // Gemini often ends on a list item with no full stop, which the
+            // gate would take for a cut-off sentence and drop.
+            geminiDone = await streamGeminiPdf({ system: systemPrompt, messages, pdfBase64: pdf_base64, maxTokens, onText: collect });
           } else if (pdf_base64) {
             // PDF mode → Haiku (supports document input)
             const anthropic = claudeClient();
@@ -484,7 +484,7 @@ export async function POST(req: NextRequest) {
             }
           }
 
-          gate.flush();
+          gate.flush(geminiDone);
           const answered = gate.emitted() > 0;
           if (!answered) send('Something went wrong. Please try again.');
           else if (stages) {
@@ -498,7 +498,7 @@ export async function POST(req: NextRequest) {
 
           // Count the call once an answer actually went out. Anonymous callers
           // no longer reach this point; they are asked to sign in above.
-          if (answered && !pdfPaused && !isPremium) {
+          if (answered && !isPremium) {
             try {
               await recordUsage(identity, 'chat_count');
             } catch (incErr) {
