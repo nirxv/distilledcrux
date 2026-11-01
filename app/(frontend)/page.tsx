@@ -14,6 +14,10 @@ import { isFlashcardSubject } from '@/lib/flashcardMeta';
 import { countForSubject } from '@/lib/flashcardStore';
 import { pyqCountForOptional } from '@/lib/pyqCounts';
 import { SUBJECT_BOOKS } from '@/lib/subjectConfig';
+import DailyAnswer from '@/components/home/DailyAnswer';
+import { DAILY_SUBJECTS, dailyQuestions } from '@/lib/dailyQuestions';
+import { PYQ_SUBJECT_NAME } from '@/lib/pyqs';
+import { istDay } from '@/lib/istDay';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -49,6 +53,10 @@ const Arrow = () => (
 );
 
 export default async function Home() {
+  // Today's five for each optional, as of the day this page is built; the
+  // panel fetches a later day's set itself.
+  const day = istDay();
+  const dailySets = await Promise.all(DAILY_SUBJECTS.map(async (subject) => ({ subject, questions: await dailyQuestions(subject, day) })));
   // Counted from the data at build time, so the numbers stay true as
   // questions and notes are added.
   const counts = await Promise.all(OPTIONALS.map(async (o) => ({
@@ -135,6 +143,17 @@ export default async function Home() {
                 <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* ── A question a day ── */}
+        <section id="daily-answer" className="hm-section">
+          <div className="ds-container ds-narrow">
+            <div className="hm-head">
+              <h2 className="ds-h2">A question a day</h2>
+              <p className="ds-lede">Five past questions a day from your optional, the same for everyone. Do one when you have ten minutes, or all five on the clock.</p>
+            </div>
+            <DailyAnswer sets={dailySets} names={PYQ_SUBJECT_NAME} day={day} />
           </div>
         </section>
 

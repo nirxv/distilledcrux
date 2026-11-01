@@ -3,14 +3,10 @@ import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
 import { pyqCountForOptional } from '@/lib/pyqCounts';
 import { isPyqSubject, loadPyqs } from '@/lib/pyqs';
+import { dailyQuestions } from '@/lib/dailyQuestions';
 import { notesForSubject } from '@/lib/notes';
 import { routeSlugForOptional } from '@/lib/optionals';
 
-/**
- * One past question for the day, the same for every reader of an optional on
- * a given date: from the last ten years' papers, and one with marks, so it can
- * go straight to the evaluator.
- */
 /**
  * What the dashboard needs to report coverage: each topic's question ids, by
  * paper. Ids rather than questions, so this stays a few kilobytes.
@@ -25,15 +21,14 @@ async function pyqIndex(slug: string | null) {
   }));
 }
 
+/**
+ * Today's question for the dashboard: the first of the optional's daily five
+ * (lib/dailyQuestions), so the dashboard and the daily set agree. It used to
+ * be its own pick, by UTC day, from the same pool.
+ */
 async function questionOfTheDay(slug: string | null) {
   if (!slug || !isPyqSubject(slug)) return null;
-  const { questions } = await loadPyqs(slug);
-  const newest = Number(questions[0]?.year) || 0;
-  const pool = questions.filter((q) => q.marks && [10, 15, 20].includes(q.marks) && Number(q.year) >= newest - 10);
-  if (!pool.length) return null;
-  const day = Math.floor(Date.now() / 86_400_000);
-  const q = pool[day % pool.length];
-  return { id: q.id, question: q.question, year: q.year, paper: q.paper, marks: q.marks, topic: q.topic };
+  return (await dailyQuestions(slug))[0] ?? null;
 }
 
 export async function GET(req: NextRequest) {

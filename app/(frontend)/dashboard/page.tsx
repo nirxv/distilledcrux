@@ -285,7 +285,7 @@ export default function Dashboard() {
                 {tq && (
                   <article className="db-today">
                     <div className="db-today-head">
-                      <span className="db-today-label">A question to try</span>
+                      <span className="db-today-label">Today’s question</span>
                       <span className="db-today-meta">{tq.year} · {tq.paper}{tq.marks ? ` · ${tq.marks} marks` : ''}</span>
                     </div>
                     <Link href={`/${slug}/pyqs/${tq.id}`} className="db-today-q">{tq.question}</Link>
@@ -296,6 +296,7 @@ export default function Dashboard() {
                       <Link href={`/chat?subject=${slug}&q=${encodeURIComponent(tq.question)}`} className="ds-btn ds-btn-line ds-btn-sm">
                         Ask the AI how to approach it
                       </Link>
+                      <Link href={`/${slug}#daily-answer`} className="db-more">All five for today</Link>
                     </div>
                   </article>
                 )}
@@ -468,7 +469,9 @@ const CSS = `
 .db-today-meta { font-size: 0.86rem; color: var(--text3); }
 .db-today-q { display: block; margin-bottom: var(--space-5); font-size: clamp(1.1rem, 2vw, 1.28rem); font-weight: 600; line-height: 1.5; color: var(--text); text-decoration: none; }
 .db-today-q:hover { color: var(--accent-text); }
-.db-today-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.db-today-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.db-more { margin-left: auto; padding: 6px 2px; font-size: 0.88rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
+.db-more:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .db-resume { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
 .db-resume-item { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); color: var(--text3); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; min-width: 0; }

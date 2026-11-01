@@ -35,6 +35,7 @@ const Icons = {
   chat: <svg width="20" height="20" viewBox="0 0 24 24" {...stroke} aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>,
   you: <svg width="20" height="20" viewBox="0 0 24 24" {...stroke} aria-hidden="true"><circle cx="12" cy="8" r="3.5" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>,
   test: <svg width="20" height="20" viewBox="0 0 24 24" {...stroke} aria-hidden="true"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5M9.5 2h5" /></svg>,
+  today: <svg width="20" height="20" viewBox="0 0 24 24" {...stroke} aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" /><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3" /></svg>,
   plus: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>,
 };
 
@@ -98,6 +99,10 @@ export default function BottomNav() {
             <Link href="/evaluate" className="bn-menu-item" role="menuitem">
               <span className="bn-menu-icon">{Icons.evaluate}</span>
               <span><strong>Evaluate</strong><span>Get an answer checked</span></span>
+            </Link>
+            <Link href={slug ? `/${slug}#daily-answer` : '/#daily-answer'} className="bn-menu-item" role="menuitem">
+              <span className="bn-menu-icon">{Icons.today}</span>
+              <span><strong>Today’s questions</strong><span>Five PYQs a day, on the clock</span></span>
             </Link>
             <Link href={optional ? `/test?optional=${optional}` : '/test'} className="bn-menu-item" role="menuitem">
               <span className="bn-menu-icon">{Icons.test}</span>

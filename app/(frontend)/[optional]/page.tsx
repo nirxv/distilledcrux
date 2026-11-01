@@ -8,6 +8,10 @@ import SyllabusTabs, { type SyllabusPaper } from '@/components/optional/Syllabus
 import { notesForSubject } from '@/lib/notes';
 import { pyqSummaryForOptional } from '@/lib/pyqCounts';
 import { SUBJECT_BOOKS, type SubjectKey } from '@/lib/subjectConfig';
+import TodayPractice from '@/components/TodayPractice';
+import { dailyQuestions } from '@/lib/dailyQuestions';
+import { isPyqSubject } from '@/lib/pyqs';
+import { istDay } from '@/lib/istDay';
 
 /**
  * A subject's front door: what the optional covers, its syllabus as a list of
@@ -99,6 +103,9 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
   const bookCount = bookGroups.reduce((n, g) => n + g.books.length, 0);
 
   const pyqs = await pyqSummaryForOptional(subject.optional);
+  // Today's five, as of the day the page is built; the panel fetches a later day's itself.
+  const day = istDay();
+  const daily = isPyqSubject(slug) ? await dailyQuestions(slug, day) : [];
   const first = notes[0];
   const tint = { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` };
 
@@ -167,6 +174,19 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
                   </li>
                 )))}
               </ul>
+            </div>
+          </section>
+        )}
+
+        {/* ── A question a day ── */}
+        {daily.length > 0 && isPyqSubject(slug) && (
+          <section id="daily-answer" className="op-section">
+            <div className="ds-container ds-narrow">
+              <div className="op-head">
+                <h2 className="ds-h2">A question a day</h2>
+                <p className="ds-lede">Five past {subject.name} questions a day, the same for everyone. Do one when you have ten minutes, or all five on the clock, and have them checked.</p>
+              </div>
+              <TodayPractice subject={slug} questions={daily} day={day} />
             </div>
           </section>
         )}
