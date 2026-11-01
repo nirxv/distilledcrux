@@ -389,13 +389,14 @@ export async function POST(req: NextRequest) {
             pdfMode: !!pdf_base64,
           });
 
-          let geminiDone = false;
+          // Whether the model ended on its own, not at its length limit.
+          // Answers often close on a list item with no full stop, which the
+          // gate would otherwise take for a cut-off sentence and drop.
+          let ended = false;
           if (pdf_base64 && !claudeReadsPdf()) {
             // DeepSeek is standing in for Claude (lib/claude.ts) and can't
             // read PDFs. Gemini reads them (lib/geminiPdf.ts).
-            // Gemini often ends on a list item with no full stop, which the
-            // gate would take for a cut-off sentence and drop.
-            geminiDone = await streamGeminiPdf({ system: systemPrompt, messages, pdfBase64: pdf_base64, maxTokens, onText: collect });
+            ended = await streamGeminiPdf({ system: systemPrompt, messages, pdfBase64: pdf_base64, maxTokens, onText: collect });
           } else if (pdf_base64) {
             // PDF mode → Haiku (supports document input)
             const anthropic = claudeClient();
@@ -419,6 +420,8 @@ export async function POST(req: NextRequest) {
             for await (const chunk of anthropicStream) {
               if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
                 collect(chunk.delta.text);
+              } else if (chunk.type === 'message_delta') {
+                ended = chunk.delta.stop_reason === 'end_turn' || chunk.delta.stop_reason === 'stop_sequence';
               }
             }
           } else if (lang === 'hi') {
@@ -439,6 +442,8 @@ export async function POST(req: NextRequest) {
             for await (const chunk of anthropicStream) {
               if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
                 collect(chunk.delta.text);
+              } else if (chunk.type === 'message_delta') {
+                ended = chunk.delta.stop_reason === 'end_turn' || chunk.delta.stop_reason === 'stop_sequence';
               }
             }
           } else {
@@ -478,13 +483,15 @@ export async function POST(req: NextRequest) {
                     const json = JSON.parse(trimmed.slice(6));
                     const delta = json.choices?.[0]?.delta?.content;
                     if (delta) collect(delta);
+                    const finish = json.choices?.[0]?.finish_reason;
+                    if (finish) ended = finish === 'stop';
                   } catch { /* ignore malformed SSE */ }
                 }
               }
             }
           }
 
-          gate.flush(geminiDone);
+          gate.flush(ended);
           const answered = gate.emitted() > 0;
           if (!answered) send('Something went wrong. Please try again.');
           else if (stages) {
