@@ -32,19 +32,38 @@ function parseCountry(req: NextRequest) {
 // ---------------------------------------------------------------------------
 // PATCH — heartbeat (keeps last_active + duration fresh)
 // ---------------------------------------------------------------------------
+/** The most pages one beat may carry; the tracker queues no more than this. */
+const MAX_BEAT_PAGES = 20;
+
+/**
+ * A beat also carries the pages opened since the tracker's last call, which
+ * wait for it rather than costing a call each (components/SessionTracker.tsx).
+ * They are recorded as pageviews, as POST records one.
+ */
 export async function PATCH(req: NextRequest) {
   try {
     const ua = req.headers.get('user-agent') ?? '';
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
     if (!fromIndia(req)) return NextResponse.json({ ok: false, reason: 'outside_india' });
 
-    const { visitor_id } = await req.json();
+    const { visitor_id, pages: rawPages, firebase_uid, device, os, browser } = await req.json();
     if (!visitor_id) return NextResponse.json({ ok: false });
+    const pages: string[] = (Array.isArray(rawPages) ? rawPages : [])
+      .slice(0, MAX_BEAT_PAGES)
+      .filter((p: unknown): p is string => typeof p === 'string' && p.length > 0 && p.length <= 512);
+
+    if (pages.length) {
+      const rl = await checkRateLimit(`session:${visitor_id}`, {
+        windowSeconds: SESSION_RATE_WINDOW_SECONDS,
+        limit: SESSION_RATE_LIMIT,
+      });
+      if (!rl.allowed) return NextResponse.json({ ok: false, reason: 'rate_limited' });
+    }
 
     const sb = createServerClient();
     const { data: existing } = await sb
       .from('user_sessions')
-      .select('id, session_start')
+      .select('id, session_start, visit_count, pages_visited')
       .eq('visitor_id', visitor_id)
       .order('session_start', { ascending: false })
       .limit(1)
@@ -56,9 +75,34 @@ export async function PATCH(req: NextRequest) {
     const start = existing.session_start ? new Date(existing.session_start) : now;
     const duration = Math.floor((now.getTime() - start.getTime()) / 1000);
 
+    if (!pages.length) {
+      await sb
+        .from('user_sessions')
+        .update({ last_active: now.toISOString(), session_duration_secs: duration })
+        .eq('id', existing.id);
+      return NextResponse.json({ ok: true });
+    }
+
+    const visited: string[] = existing.pages_visited ?? [];
+    for (const page of pages) if (!visited.includes(page)) visited.push(page);
+    const { country, city } = parseCountry(req);
     await sb
       .from('user_sessions')
-      .update({ last_active: now.toISOString(), session_duration_secs: duration })
+      .update({
+        visit_count: (existing.visit_count ?? 1) + pages.length,
+        visited_at: now.toISOString(),
+        last_active: now.toISOString(),
+        last_page: pages[pages.length - 1],
+        pages_visited: visited,
+        session_duration_secs: duration,
+        is_bounce: visited.length <= 1,
+        ...(firebase_uid && { firebase_uid }),
+        ...(device && { device }),
+        ...(os && { os }),
+        ...(browser && { browser }),
+        ...(country && { country }),
+        ...(city && { city }),
+      })
       .eq('id', existing.id);
 
     return NextResponse.json({ ok: true });
@@ -160,7 +204,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ ok: true });
-  } catch (e: any) {
-    return NextResponse.json({ ok: false, reason: e.message });
+  } catch (e) {
+    return NextResponse.json({ ok: false, reason: (e as Error).message });
   }
 }

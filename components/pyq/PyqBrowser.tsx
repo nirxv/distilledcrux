@@ -253,7 +253,10 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
                       {x.marks && <span className="pq-marks">{x.marks} marks</span>}
                     </div>
                     <h3 className="pq-q">
-                      <Link href={`/${subject}/pyqs/${x.id}`} onClick={rememberPlace}>{highlight(x.question, q)}</Link>
+                      {/* No prefetch: each question page is built on the server the first time
+                          it is asked for, so prefetching every question in view cost a render each,
+                          again after every deploy. One opened is built then. */}
+                      <Link href={`/${subject}/pyqs/${x.id}`} prefetch={false} onClick={rememberPlace}>{highlight(x.question, q)}</Link>
                     </h3>
                     <div className="pq-foot">
                       <button type="button" className={`pq-topic${f.topic === x.topic ? ' on' : ''}`} onClick={() => pickTopic(x.topic)}

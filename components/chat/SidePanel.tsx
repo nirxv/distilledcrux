@@ -93,6 +93,7 @@ export default function SidePanel({ content, subject, langHi, onClose, onAnswer,
                     middle click or Cmd-click opens it in a new tab. */}
                 <Link
                   href={`/${subject}/pyqs/${q.id}`}
+                  prefetch={false}
                   className="ch-panel-pyq-link"
                   onClick={() => onOpenPyq?.(bodyRef.current?.scrollTop ?? 0)}
                 >

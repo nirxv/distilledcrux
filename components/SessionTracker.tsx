@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 
 // ---------------------------------------------------------------------------
@@ -42,7 +43,7 @@ async function getVisitorId(): Promise<string> {
     return visitorId;
   } catch {
     // Hard fallback — random UUID stored in localStorage only
-    let id = localStorage.getItem('_dc_fp') ?? crypto.randomUUID();
+    const id = localStorage.getItem('_dc_fp') ?? crypto.randomUUID();
     localStorage.setItem('_dc_fp', id);
     return id;
   }
@@ -66,7 +67,7 @@ function getDeviceInfo() {
   else if (/linux/i.test(ua)) os = 'Linux';
 
   let browser = 'unknown';
-  if ((navigator as any).brave?.isBrave) browser = 'Brave';
+  if ((navigator as { brave?: { isBrave?: unknown } }).brave?.isBrave) browser = 'Brave';
   else if (/edg\//i.test(ua)) browser = 'Edge';
   else if (/opr\//i.test(ua)) browser = 'Opera';
   else if (/chrome\//i.test(ua)) browser = 'Chrome';
@@ -83,7 +84,6 @@ async function getFirebaseUid(): Promise<string | null> {
   try {
     if (!auth.currentUser) {
       await new Promise<void>(resolve => {
-        const { onAuthStateChanged } = require('firebase/auth');
         const unsub = onAuthStateChanged(auth, () => { unsub(); resolve(); });
         setTimeout(resolve, 2000);
       });
@@ -111,6 +111,59 @@ const COUNTED_KEY = '_dc_visit_counted';
 const pageLoadedAt = typeof performance !== 'undefined' ? Date.now() - performance.now() : Date.now();
 
 // ---------------------------------------------------------------------------
+// How often to call
+// ---------------------------------------------------------------------------
+/**
+ * As few calls as the session data allows, since each one is server time
+ * against a small free allowance (2026-11-04). A session costs one call as it
+ * starts and a beat now and then:
+ *
+ *  - The first page of a session is sent at once (a first visit ever, once
+ *    the visitor has stayed; see above). Later pages wait in PAGES_KEY and go
+ *    with the next beat.
+ *  - Hiding the tab beats, which marks where the session ended, but at most
+ *    every HIDE_BEAT_GAP_MS, since phones hide it at every app switch. The
+ *    first hide after a session starts always beats, so a short visit still
+ *    gets its length.
+ *  - While the reader is active (scrolled, tapped or typed lately) and the
+ *    tab is visible, it beats every HEARTBEAT_MS. A tab left open in the
+ *    background used to beat every 5 minutes for as long as it stayed open,
+ *    and every tab switch beat twice, on hiding and on showing.
+ *
+ * SENT_KEY, shared by the reader's tabs, holds when the last call went.
+ */
+const HEARTBEAT_MS = 15 * 60 * 1000;
+const HIDE_BEAT_GAP_MS = 5 * 60 * 1000;
+const SESSION_GAP_MS = 30 * 60 * 1000;
+const MAX_QUEUED_PAGES = 20;
+const SENT_KEY = '_dc_track_sent';
+const PAGES_KEY = '_dc_track_pages';
+const INPUT_EVENTS = ['pointerdown', 'keydown', 'scroll', 'touchstart', 'wheel'] as const;
+let lastInput = Date.now();
+// The session's first call has gone and no beat has followed it yet.
+let startUnbeaten = false;
+// Device and account, for the pages a beat carries.
+let pageInfo: Record<string, unknown> = {};
+
+const lastSent = () => Number(localStorage.getItem(SENT_KEY)) || 0;
+const markSent = () => localStorage.setItem(SENT_KEY, String(Date.now()));
+
+function queuedPages(): string[] {
+  try {
+    const q = JSON.parse(sessionStorage.getItem(PAGES_KEY) ?? '[]');
+    return Array.isArray(q) ? q.filter((p) => typeof p === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+function queuePage(page: string) {
+  const q = queuedPages();
+  if (q.at(-1) === page || q.length >= MAX_QUEUED_PAGES) return;
+  try { sessionStorage.setItem(PAGES_KEY, JSON.stringify([...q, page])); } catch { /* storage full or blocked */ }
+}
+
+// ---------------------------------------------------------------------------
 // API calls
 // ---------------------------------------------------------------------------
 async function trackBody(visitor_id: string, page: string) {
@@ -120,6 +173,10 @@ async function trackBody(visitor_id: string, page: string) {
 }
 
 function postTrack(body: Record<string, unknown>, keepalive: boolean) {
+  markSent();
+  // The next hide beats whatever the gap, so this visit gets its length. Not
+  // when it is sent as the reader leaves: it carries its length already.
+  startUnbeaten = !keepalive;
   void fetch('/api/track-session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -128,11 +185,17 @@ function postTrack(body: Record<string, unknown>, keepalive: boolean) {
   }).catch(() => {});
 }
 
-async function pingHeartbeat(visitor_id: string) {
-  await fetch('/api/track-session', {
+/** keepalive, so a beat sent as the tab closes still arrives. */
+function pingHeartbeat(visitor_id: string) {
+  startUnbeaten = false;
+  markSent();
+  const pages = queuedPages();
+  try { sessionStorage.removeItem(PAGES_KEY); } catch { /* as above */ }
+  void fetch('/api/track-session', {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ visitor_id }),
+    body: JSON.stringify({ visitor_id, ...(pages.length ? { pages, ...pageInfo } : {}) }),
+    keepalive: true,
   }).catch(() => {});
 }
 
@@ -163,6 +226,7 @@ export default function SessionTracker() {
       const visitor_id = visitorIdRef.current ?? await getVisitorId();
       visitorIdRef.current = visitor_id;
       const body = await trackBody(visitor_id, pathname);
+      pageInfo = { firebase_uid: body.firebase_uid, device: body.device, os: body.os, browser: body.browser };
 
       // Moving to another page means the visitor stayed, so a first visit
       // still held back for the page they came from is recorded now.
@@ -182,6 +246,11 @@ export default function SessionTracker() {
         return;
       }
 
+      // A session's first page goes now, the rest with the next beat.
+      if (Date.now() - lastSent() < SESSION_GAP_MS) {
+        queuePage(pathname);
+        return;
+      }
       postTrack({ ...body, is_first_visit: false }, false);
     })();
   }, [pathname]);
@@ -202,31 +271,36 @@ export default function SessionTracker() {
     };
   }, []);
 
-  // Heartbeat — interval + tab-switch + page-close
+  // Heartbeat: see "How often to call" above. None on beforeunload: closing
+  // a tab hides it first. The timer checks every minute, which costs nothing,
+  // and beats only once HEARTBEAT_MS has passed since any tab's last call.
   useEffect(() => {
     if (!shouldTrack()) return;
-    const interval = setInterval(async () => {
-      const id = visitorIdRef.current ?? await getVisitorId();
-      pingHeartbeat(id);
-    }, 5 * 60 * 1000);
-
-    const onVisibility = async () => {
+    const beat = async () => {
       const id = visitorIdRef.current ?? await getVisitorId();
       pingHeartbeat(id);
     };
-    const onUnload = async () => {
-      const id = visitorIdRef.current ?? await getVisitorId();
-      pingHeartbeat(id);
+    const interval = setInterval(() => {
+      const now = Date.now();
+      if (document.visibilityState === 'visible' && now - lastInput < HEARTBEAT_MS && now - lastSent() >= HEARTBEAT_MS) void beat();
+    }, 60 * 1000);
+    const onVisibility = () => {
+      if (document.visibilityState !== 'hidden') return;
+      if (startUnbeaten || Date.now() - lastSent() >= HIDE_BEAT_GAP_MS) void beat();
     };
-
     document.addEventListener('visibilitychange', onVisibility);
-    window.addEventListener('beforeunload', onUnload);
-
     return () => {
       clearInterval(interval);
       document.removeEventListener('visibilitychange', onVisibility);
-      window.removeEventListener('beforeunload', onUnload);
     };
+  }, []);
+
+  // Notes when the reader last did something, for the heartbeat above.
+  useEffect(() => {
+    if (!shouldTrack()) return;
+    const onInput = () => { lastInput = Date.now(); };
+    for (const e of INPUT_EVENTS) window.addEventListener(e, onInput, { passive: true });
+    return () => { for (const e of INPUT_EVENTS) window.removeEventListener(e, onInput); };
   }, []);
 
   return null;

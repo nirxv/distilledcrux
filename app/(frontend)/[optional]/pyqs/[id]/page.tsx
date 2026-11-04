@@ -12,6 +12,10 @@ import { PYQ_SUBJECT_NAME, isPyqSubject, loadPyqs } from '@/lib/pyqs';
 type Params = { optional: string; id: string };
 
 // Built the first time each question is opened, then served as a static page.
+// Not all at build time: 4,732 pages would add about 650 MB to every deploy,
+// against the free plan's 10 GB of deployment storage. The lists that link
+// here don't prefetch, so a page is built when someone opens it, not when it
+// scrolls into view.
 export async function generateStaticParams() {
   return [];
 }
