@@ -8,6 +8,8 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
 import Mascot from '@/components/Mascot';
 import { routeSlugForOptional } from '@/lib/optionals';
+import { clearRef, readRef } from '@/lib/referralClient';
+import InvitedNote from '@/components/InvitedNote';
 
 const OPTIONALS = [
   { id: 'sociology',             label: 'Sociology' },
@@ -141,7 +143,7 @@ export default function PricingPage() {
       const orderRes = await fetch('/api/payment/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
-        body: JSON.stringify({ plan: planId, optional: selectedOptional }),
+        body: JSON.stringify({ plan: planId, optional: selectedOptional, ref: readRef() }),
       });
       const orderData = await orderRes.json();
       if (!orderRes.ok) throw new Error(orderData.error ?? 'Order creation failed');
@@ -178,6 +180,7 @@ export default function PricingPage() {
             });
             const verifyData = await verifyRes.json();
             if (verifyData.success) {
+              clearRef();
               window.location.assign('/dashboard?payment=success');
             } else {
               setError('Payment verification failed. Contact support.');
@@ -210,6 +213,7 @@ export default function PricingPage() {
               Notes and past questions are free with your account. Premium opens everything else for one optional, for as long as you buy. Nothing renews on its own.
             </p>
             {offer && <p className="pr-offer">{offer.line}</p>}
+            <InvitedNote className="pr-offer" />
           </div>
         </header>
 

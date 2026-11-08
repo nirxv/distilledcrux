@@ -7,6 +7,7 @@ import Mascot from '@/components/Mascot';
 import OwlLoader from '@/components/OwlLoader';
 import SubjectIcon from '@/components/SubjectIcon';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
+import { REFERRER_DAYS } from '@/lib/referral';
 import { readLastNote, type LastNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
@@ -400,9 +401,10 @@ export default function Dashboard() {
                     <span className="db-active">Active</span>
                   </div>
                   <p className="db-card-text">
-                    {stats.plan ? `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan for ${optLabel}` : `For ${optLabel}`}
+                    {stats.plan ? `${stats.plan === 'referral' ? 'Invite reward' : `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan`} for ${optLabel}` : `For ${optLabel}`}
                     {fmtDate(stats.expiresAt) ? `, until ${fmtDate(stats.expiresAt)}.` : '.'}
                   </p>
+                  <Link href="/invite" className="db-invite">Invite a friend, get {REFERRER_DAYS} days</Link>
                 </>
               ) : (
                 <>
@@ -420,6 +422,7 @@ export default function Dashboard() {
                   </div>
                   <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers and the chat’s book and mentor modes.</p>
                   <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">See plans</Link>
+                  <Link href="/invite" className="db-invite">Invite a friend, get {REFERRER_DAYS} days</Link>
                 </>
               )}
             </div>
@@ -517,6 +520,8 @@ const CSS = `
 .db-active { padding: 2px 10px; border-radius: var(--radius-full); background: var(--success-wash); color: var(--success-text); font-size: 0.8rem; font-weight: 700; }
 .db-card-text { margin: var(--space-3) 0 0; font-size: 0.92rem; line-height: 1.6; color: var(--text2); }
 .db-card-btn { width: 100%; justify-content: center; margin-top: var(--space-4); }
+.db-invite { display: block; width: fit-content; margin-top: var(--space-3); font-size: 0.92rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
+.db-invite:hover { text-decoration: underline; }
 .db-usage { display: flex; flex-direction: column; gap: var(--space-2); }
 .db-usage-row { display: flex; justify-content: space-between; gap: var(--space-3); font-size: 0.92rem; }
 .db-usage-row span:first-child { color: var(--text2); }

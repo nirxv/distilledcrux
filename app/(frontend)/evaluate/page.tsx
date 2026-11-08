@@ -10,6 +10,7 @@ import { readProgress } from '@/lib/progressStream';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
 import { isPdf, toAnswerPages } from '@/lib/answerImages';
 import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
+import ShareButton from '@/components/evaluate/ShareButton';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface SectionMark { awarded: number; out_of: number; reasoning: string }
@@ -25,6 +26,8 @@ interface Evaluation {
   section_marks:       { introduction: SectionMark; body: SectionMark; conclusion: SectionMark; presentation: SectionMark }
   marks:               number
   marks_out_of:        number
+  /** A signed card the reader can share, for a signed-in check. */
+  share_token?:        string
 }
 
 // An image is sent to the server as-is, so it must fit the server's per-file
@@ -414,6 +417,9 @@ export default function EvaluatePage() {
                     <Link href={`/chat?q=${encodeURIComponent(question)}${subjectId ? `&subject=${subjectId}` : ''}`} className="ds-btn ds-btn-solid">
                       Ask the AI for a model answer
                     </Link>
+                    {result.share_token && (
+                      <ShareButton token={result.share_token} marks={result.marks} outOf={result.marks_out_of} subject={subjectLabel ? `${subjectLabel} optional` : 'Mains'} />
+                    )}
                     <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Check another answer</button>
                   </div>
                 </div>
@@ -691,6 +697,9 @@ const CSS = `
 .ev-sec-why { margin: 6px 0 0; font-size: 0.84rem; line-height: 1.5; color: var(--text3); }
 .ev-score-actions { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-6); }
 .ev-score-actions .ds-btn { width: 100%; justify-content: center; min-height: 46px; }
+.ev-share { display: flex; flex-direction: column; gap: var(--space-2); }
+.ev-share-note { margin: 0; font-family: var(--font-ui); font-size: 0.8rem; line-height: 1.5; color: var(--text3); }
+.ev-share-link { padding: 0; border: 0; background: none; font: inherit; color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 
 .ev-block { padding: var(--space-5) var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
 .ev-block h2 { margin: 0 0 var(--space-3); font-size: 1.15rem; font-weight: 800; letter-spacing: -0.01em; }

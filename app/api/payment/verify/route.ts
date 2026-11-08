@@ -4,6 +4,7 @@ import { createServerClient } from '@/lib/supabase';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import { PLANS, amountAllowed, isPlanId } from '@/lib/plans';
+import { isRefCode, isReferralPlan, REFERRED_DAYS, REFERRER_DAYS } from '@/lib/referral';
 
 /**
  * Confirms a Razorpay payment and grants the subscription.
@@ -27,6 +28,8 @@ type OrderNotes = {
   optional?: string;
   /** The offer the order was priced under, written by create-order. */
   offer?: string;
+  /** The invite code the buyer came with, written by create-order. */
+  ref?: string;
 };
 
 export async function POST(req: NextRequest) {
@@ -112,10 +115,22 @@ export async function POST(req: NextRequest) {
     .eq('optional', optional)
     .maybeSingle();
 
+  // A referral pays out only on a reader's first purchase. Read before the
+  // upsert below writes this payment onto their row.
+  let firstPurchase = false;
+  if (isRefCode(notes.ref) && isReferralPlan(plan)) {
+    const { count } = await supabase
+      .from('subscriptions')
+      .select('firebase_uid', { count: 'exact', head: true })
+      .eq('firebase_uid', user.uid)
+      .not('razorpay_payment_id', 'is', null);
+    firstPurchase = count === 0;
+  }
+
   const now = Date.now();
   const currentExpiry = current?.expires_at ? new Date(current.expires_at).getTime() : 0;
   const base = Math.max(now, currentExpiry);
-  const expiresAt = new Date(base + days * 24 * 60 * 60 * 1000).toISOString();
+  let expiresAt = new Date(base + days * 24 * 60 * 60 * 1000).toISOString();
 
   const { error } = await supabase.from('subscriptions').upsert({
     firebase_uid: user.uid,
@@ -132,6 +147,23 @@ export async function POST(req: NextRequest) {
   if (error) {
     console.error('Subscription upsert error:', error);
     return NextResponse.json({ error: 'DB error' }, { status: 500 });
+  }
+
+  // Never fails the purchase: the reader has paid for their plan whatever
+  // happens to the invite bonus.
+  if (firstPurchase) {
+    const { data: refRes, error: refErr } = await supabase.rpc('apply_referral', {
+      p_code: String(notes.ref),
+      p_order_id: razorpay_order_id,
+      p_buyer_uid: user.uid,
+      p_buyer_optional: optional,
+      p_plan: plan,
+      p_referrer_days: REFERRER_DAYS,
+      p_referred_days: REFERRED_DAYS,
+    });
+    if (refErr) console.error('[verify] referral failed:', refErr.message);
+    else if (refRes?.result === 'applied' && refRes.expires_at) expiresAt = refRes.expires_at;
+    else console.log('[verify] referral not applied:', refRes?.result);
   }
 
   return NextResponse.json({ success: true, plan, optional, expiresAt });

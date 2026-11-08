@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PLANS, PLAN_ORDER, priceNow, type PlanId } from '@/lib/plans';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
+import { isRefCode, isReferralPlan } from '@/lib/referral';
 import Razorpay from 'razorpay';
 
 const razorpay = new Razorpay({
@@ -36,7 +37,7 @@ export async function POST(req: NextRequest) {
   const user = await verifyFirebaseToken(token);
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const { plan, optional } = await req.json();
+  const { plan, optional, ref } = await req.json();
 
   const planData = PLAN_AMOUNTS[plan];
   if (!planData) return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
@@ -52,6 +53,9 @@ export async function POST(req: NextRequest) {
   // goes into the notes, so verify accepts this amount for this order even if
   // it is paid after the offer ends.
   const { amountPaise, offer } = priceNow(plan as PlanId);
+  // The invite code the buyer arrived with. Only a claim: verify checks the
+  // code, the plan and that this is the buyer's first purchase.
+  const refCode = isReferralPlan(plan as PlanId) && isRefCode(ref) ? String(ref).toUpperCase() : null;
 
   try {
     const order = await razorpay.orders.create({
@@ -65,6 +69,7 @@ export async function POST(req: NextRequest) {
         optional,
         days: String(planData.days),
         ...(offer ? { offer: offer.id } : {}),
+        ...(refCode ? { ref: refCode } : {}),
       },
     });
 

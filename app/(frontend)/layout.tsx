@@ -22,6 +22,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SessionTracker from '@/components/SessionTracker';
 import ProgressSync from '@/components/ProgressSync';
+import RefCapture from '@/components/RefCapture';
 import { AuthProvider } from '@/components/AuthProvider';
 import BottomNav from '@/components/BottomNav';
 import Toaster from '@/components/ui/Toast';
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <SessionTracker />
         <ProgressSync />
+        <RefCapture />
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <main style={{ flex: 1, paddingTop: 60 }} id="main-layout">
             {children}

@@ -7,6 +7,7 @@ import { rejectUpload, toImageContents, IMAGE_AND_PDF_TYPES } from "@/lib/upload
 import { verifyFirebaseToken } from "@/lib/verifyFirebaseToken";
 import { createServerClient } from "@/lib/supabase";
 import { hasActiveSubscription, optionalForSubject, profileOptional } from "@/lib/entitlements";
+import { cardFromEvaluation, signCard } from "@/lib/shareCard";
 import { routeSlugForOptional } from "@/lib/optionals";
 import { resolveUsageIdentity, readUsage, recordUsage } from "@/lib/usageIdentity";
 import { getSubjectConfig, buildRosterString, assemblePrompt } from "@/lib/subjects";
@@ -753,7 +754,12 @@ Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were miss
       }
     }
 
-    return NextResponse.json(evaluation);
+    // A signed card the reader can choose to share. Nothing is stored unless
+    // they do; see lib/shareCard and /api/share.
+    const share_token = user
+      ? signCard(user.uid, cardFromEvaluation(question, optionalForSubject(subject), lang, evaluation as Parameters<typeof cardFromEvaluation>[3]))
+      : undefined;
+    return NextResponse.json(share_token ? { ...evaluation, share_token } : evaluation);
 
   } catch (err) {
     console.error("Evaluation error:", err);

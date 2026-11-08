@@ -151,7 +151,7 @@ export default function ProfileSettings() {
   const savedLabel = labelForOptional(saved.optional);
   const paidLabel = labelForOptional(sub?.optional);
   const leavingPaid = Boolean(sub?.optional && optional && optional !== sub.optional);
-  const planLabel = sub ? (PLANS[sub.plan as keyof typeof PLANS]?.label ?? sub.plan) : null;
+  const planLabel = sub ? (PLANS[sub.plan as keyof typeof PLANS]?.label ?? (sub.plan === 'referral' ? 'Invite reward' : 'Premium')) : null;
   const planDays = sub?.daysLeft ?? 0;
   const initial = (user.displayName?.[0] ?? user.email?.[0] ?? '?').toUpperCase();
 
