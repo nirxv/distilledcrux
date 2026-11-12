@@ -391,35 +391,25 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
               </div>
             )}
 
-            {toppers && (
+            {/* Only where a topper answered it: an empty card on most questions was noise. */}
+            {toppers && toppers.length > 0 && (
               <div className="pd-side">
                 <h2 className="pd-side-title">Topper copies</h2>
-                {toppers.length > 0 ? (
-                  <>
-                    <p className="pd-side-text">
-                      {toppers.length === 1 ? 'One topper has' : `${toppers.length} toppers have`} answered this, in their own handwriting.
-                    </p>
-                    <div className="pd-related">
-                      {toppers.slice(0, 6).map(t => (
-                        <Link key={t.id} href={`/${subject}/topper-copies/${t.id}`} prefetch={false} className="pd-rel">
-                          <span className="pd-rel-q">{t.topper}</span>
-                          {t.rankLine && <span className="pd-rel-meta">{t.rankLine}</span>}
-                        </Link>
-                      ))}
-                    </div>
-                    {new Set(toppers.map(t => t.topper)).size > 1 && (
-                      <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
-                        Compare two side by side <Arrow />
-                      </Link>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <p className="pd-side-text">No topper copy answers this one yet.</p>
-                    <Link href={`/${subject}/topper-copies?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
-                      Topper copies on {pyq.topic} <Arrow />
+                <p className="pd-side-text">
+                  {toppers.length === 1 ? 'One topper has' : `${toppers.length} toppers have`} answered this, in their own handwriting.
+                </p>
+                <div className="pd-related">
+                  {toppers.slice(0, 6).map(t => (
+                    <Link key={t.id} href={`/${subject}/topper-copies/${t.id}`} prefetch={false} className="pd-rel">
+                      <span className="pd-rel-q">{t.topper}</span>
+                      {t.rankLine && <span className="pd-rel-meta">{t.rankLine}</span>}
                     </Link>
-                  </>
+                  ))}
+                </div>
+                {new Set(toppers.map(t => t.topper)).size > 1 && (
+                  <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
+                    Compare two side by side <Arrow />
+                  </Link>
                 )}
               </div>
             )}

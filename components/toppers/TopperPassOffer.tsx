@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { TOPPER_PASS_RUPEES, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
 import { labelForSlug } from '@/lib/optionals';
+import TopperComing from './TopperComing';
 import { buyTopperPass } from './buyPass';
 
 type Props = {
@@ -45,6 +46,8 @@ export default function TopperPassOffer({ subject, look = 'card', own }: Props) 
 
   if (own !== undefined && own !== subject) {
     const mine = labelForSlug(own);
+    // Their own optional has no copies yet: say they are coming, not "switch".
+    if (mine && !isTopperSubject(own)) return <TopperComing optional={mine} />;
     return (
       <div className={`tpo tpo-${look}`}>
         <p className="tpo-what">

@@ -307,7 +307,16 @@ export default function PricingPage() {
             <section className="pr-pass">
               <h2 className="pr-h2">Only want the topper copies?</h2>
               {passSubjects.length === 0 ? (
-                <p className="pr-note">Topper copies are in for {TOPPER_SUBJECTS.map((t) => TOPPER_SUBJECT_NAME[t]).join(', ')} so far, not yet for {selected?.label}.</p>
+                <div className="pr-pass-list">
+                  <article className="pr-plan pr-pass-card">
+                    <div className="pr-plan-top">
+                      <h3 className="pr-plan-name">{selected?.label} topper copies</h3>
+                      <span className="pr-tag pr-tag-soft">Coming</span>
+                    </div>
+                    <p className="pr-blurb">Handwritten answers by {selected?.label} rankers, filed under the UPSC questions they answer, like the {TOPPER_SUBJECTS.map((t) => TOPPER_SUBJECT_NAME[t]).join(' and ')} copies. Premium for {selected?.label} will include them.</p>
+                    <Link href={`/${TOPPER_SUBJECTS[0]}/topper-copies`} className="ds-btn ds-btn-line pr-buy">See the {TOPPER_SUBJECT_NAME[TOPPER_SUBJECTS[0]]} copies</Link>
+                  </article>
+                </div>
               ) : (
               <div className="pr-pass-list">
                 {passSubjects.map((subject) => (

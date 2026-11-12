@@ -170,4 +170,14 @@ export const TOPPER_PASS_CSS = `
 .tpo-err { margin: 0; font-size: 0.86rem; color: var(--danger-text); }
 .tpo-done { margin: 0; padding: 10px 14px; border-radius: var(--radius-lg); background: var(--success-wash); color: var(--success-text); font-weight: 600; }
 .tp-msg .tpo-card { align-self: center; }
+
+.tco { display: flex; align-items: flex-start; gap: var(--space-4); margin: 0 0 var(--space-4); padding: var(--space-5); border-radius: var(--radius-xl); background: var(--ds-card); border: 1px solid var(--border); text-align: left; }
+.tco-icon { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-lg); background: var(--accent-dim); color: var(--accent-text); }
+.tco-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.tco-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin: 0; }
+.tco-title { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+.tco-tag { padding: 2px 10px; border-radius: var(--radius-full); background: var(--ds-soft); border: 1px solid var(--border); color: var(--text2); font-size: 0.76rem; font-weight: 700; white-space: nowrap; }
+.tco-text { margin: 0; font-size: 0.92rem; line-height: 1.55; color: var(--text2); }
+.tp-msg .tco { align-self: center; width: 100%; max-width: 440px; margin: var(--space-2) 0 0; }
+@media (max-width: 560px) { .tco { gap: var(--space-3); padding: var(--space-4); } .tco-icon { width: 38px; height: 38px; } }
 `;

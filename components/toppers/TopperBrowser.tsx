@@ -2,8 +2,10 @@
 import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { rankLine, type TopperCopy } from '@/lib/toppers/meta';
+import { isTopperSubject, rankLine, type TopperCopy } from '@/lib/toppers/meta';
+import { labelForSlug } from '@/lib/optionals';
 import { allowanceLine, useTopperStatus } from './useTopperStatus';
+import TopperComing from './TopperComing';
 import TopperPassOffer from './TopperPassOffer';
 
 type Filters = { q: string; paper: '' | '1' | '2'; topic: string; topper: string; asked: boolean };
@@ -121,6 +123,8 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
   }, [shown, filtered.length]);
 
   const note = allowanceLine(allowance, subject);
+  // A reader whose own optional has no copies yet is told theirs are coming.
+  const comingFor = allowance.own && !isTopperSubject(allowance.own) ? labelForSlug(allowance.own) : null;
   const filteredAtAll = Boolean(f.q || f.paper || f.topic || f.topper || f.asked);
 
   return (
@@ -134,6 +138,11 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
           </p>
         ) : !allowance.signedIn ? (
           <p className="tb-allow">Browse freely. <Link href={`/login?next=/${subject}/topper-copies`}>Sign in</Link> to open copies, and your first five are free.</p>
+        ) : comingFor ? (
+          <>
+            <TopperComing optional={comingFor} />
+            {note && <p className="tb-allow">{note}</p>}
+          </>
         ) : (
           <div className="tb-allow tb-allow-offer">
             {note && <p className="tb-allow-note">{note}</p>}
