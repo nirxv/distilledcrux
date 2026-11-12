@@ -167,9 +167,9 @@ export default function GeoMap({ places, selected = null, onPick, base = 'politi
         {onMark && <Tap onMark={onMark} />}
         {marks.map((m) => (
           <Fragment key={`mark-${m.id}`}>
-            {m.truth && <Polyline positions={[[m.lat, m.lng], [m.truth.lat, m.truth.lng]]} pathOptions={{ className: `gm-line ${m.tone ?? ''}`, weight: 2, dashArray: '5 5' }} interactive={false} />}
+            {m.truth && <Polyline key={`line-${m.id}-${m.tone ?? ''}`} positions={[[m.lat, m.lng], [m.truth.lat, m.truth.lng]]} className={`gm-line ${m.tone ?? ''}`} pathOptions={{ weight: 2, dashArray: '5 5' }} interactive={false} />}
             <CircleMarker key={`mark-${m.id}-${m.tone ?? 'open'}`} center={[m.lat, m.lng]} radius={7}
-              pathOptions={{ className: `gm-mark ${m.tone ?? 'open'}`, fillOpacity: 1, weight: 2 }} interactive={false}>
+              className={`gm-mark ${m.tone ?? 'open'}`} pathOptions={{ fillOpacity: 1, weight: 2 }} interactive={false}>
               {/* Once checked, the place's own numbered dot carries the number. */}
               {m.num != null && !m.truth && <Tooltip permanent direction="right" offset={[6, 0]} className="gm-mark-n">{m.num}</Tooltip>}
             </CircleMarker>
@@ -179,7 +179,7 @@ export default function GeoMap({ places, selected = null, onPick, base = 'politi
           const on = selected === p.id;
           return (
             <Fragment key={p.id}>
-              <CircleMarker center={[p.lat, p.lng]} radius={p.num != null ? 18 : 16} pathOptions={{ className: 'gm-hit', weight: 0 }} eventHandlers={{ click: () => pick(p.id) }}>
+              <CircleMarker center={[p.lat, p.lng]} radius={p.num != null ? 18 : 16} className="gm-hit" pathOptions={{ weight: 0 }} eventHandlers={{ click: () => pick(p.id) }}>
                 {!quiet && (
                   <Tooltip direction="top" offset={[0, -8]} className="gm-tip">
                     <strong>{p.num != null ? `${p.num}. ` : ''}{p.name}</strong>
@@ -189,13 +189,15 @@ export default function GeoMap({ places, selected = null, onPick, base = 'politi
               </CircleMarker>
               {p.num != null ? (
                 <CircleMarker key={`${p.id}-${on}`} center={[p.lat, p.lng]} radius={on ? 13 : 10}
-                  pathOptions={{ className: `gm-num${on ? ' on' : ''}`, fillOpacity: 1, weight: on ? 2.5 : 1.5 }} eventHandlers={{ click: () => pick(p.id) }}>
+                  className={`gm-num${on ? ' on' : ''}`} pathOptions={{ fillOpacity: 1, weight: on ? 2.5 : 1.5 }} eventHandlers={{ click: () => pick(p.id) }}>
                   <Tooltip permanent direction="center" offset={[0, 0]} className={`gm-n${on ? ' on' : ''}`}>{p.num}</Tooltip>
                 </CircleMarker>
               ) : (
-                // Leaflet sets a class only when it makes the dot.
+                // Leaflet reads the class only when it draws the dot, so a dot whose
+                // class changes is drawn anew. In pathOptions it came too late, and
+                // every dot was Leaflet's own blue, its tap ring a pale blue halo.
                 <CircleMarker key={`${p.id}-${on}`} center={[p.lat, p.lng]} radius={on ? 8 : quiet ? 7 : 5}
-                  pathOptions={{ className: `gm-dot${on ? ' on' : ''}`, fillOpacity: 1, weight: on ? 3 : 1.5 }} eventHandlers={{ click: () => pick(p.id) }} />
+                  className={`gm-dot${on ? ' on' : ''}`} pathOptions={{ fillOpacity: 1, weight: on ? 3 : 1.5 }} eventHandlers={{ click: () => pick(p.id) }} />
               )}
             </Fragment>
           );
