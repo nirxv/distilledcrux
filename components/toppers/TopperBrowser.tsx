@@ -120,7 +120,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
     return () => io.disconnect();
   }, [shown, filtered.length]);
 
-  const note = allowanceLine(allowance);
+  const note = allowanceLine(allowance, subject);
   const filteredAtAll = Boolean(f.q || f.paper || f.topic || f.topper || f.asked);
 
   return (
@@ -137,7 +137,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
         ) : (
           <div className="tb-allow tb-allow-offer">
             {note && <p className="tb-allow-note">{note}</p>}
-            <TopperPassOffer subject={subject} look="line" />
+            <TopperPassOffer subject={subject} look="line" own={allowance.own} />
           </div>
         )
       )}

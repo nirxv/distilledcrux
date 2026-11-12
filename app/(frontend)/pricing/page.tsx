@@ -11,7 +11,7 @@ import { routeSlugForOptional } from '@/lib/optionals';
 import { clearRef, readRef } from '@/lib/referralClient';
 import InvitedNote from '@/components/InvitedNote';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
-import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, type TopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject, type TopperSubject } from '@/lib/toppers/meta';
 import { buyTopperPass } from '@/components/toppers/buyPass';
 
 const OPTIONALS = [
@@ -51,7 +51,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 
 const faqs = [
   { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
-  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every Sociology topper copy for a year, side-by-side compare included, paid once. A Premium plan for Sociology includes them, so there is no need for both.` }] : []),
+  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every Sociology topper copy for a year, side-by-side compare included, paid once. Like a plan, it works while Sociology is the optional on your profile. A Premium plan for Sociology includes them, so there is no need for both.` }] : []),
   { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
   { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
@@ -217,6 +217,10 @@ export default function PricingPage() {
   };
 
   const selected = OPTIONALS.find(o => o.id === selectedOptional);
+  // The pass follows the optional picked above, as the plans do. Before a
+  // pick, every optional with copies is on offer.
+  const selectedSlug = routeSlugForOptional(selectedOptional);
+  const passSubjects: TopperSubject[] = !selectedOptional ? [...TOPPER_SUBJECTS] : isTopperSubject(selectedSlug) ? [selectedSlug] : [];
   const profileLabel = OPTIONALS.find(o => o.id === userOptional)?.label;
   const slug = routeSlugForOptional(selectedOptional);
   const tint = slug ? { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` } : undefined;
@@ -302,8 +306,11 @@ export default function PricingPage() {
           {TOPPER_COPIES_LIVE && (
             <section className="pr-pass">
               <h2 className="pr-h2">Only want the topper copies?</h2>
+              {passSubjects.length === 0 ? (
+                <p className="pr-note">Topper copies are in for {TOPPER_SUBJECTS.map((t) => TOPPER_SUBJECT_NAME[t]).join(', ')} so far, not yet for {selected?.label}.</p>
+              ) : (
               <div className="pr-pass-list">
-                {TOPPER_SUBJECTS.map((subject) => (
+                {passSubjects.map((subject) => (
                   <article key={subject} className="pr-plan pr-pass-card">
                     <div className="pr-plan-top">
                       <h3 className="pr-plan-name">{TOPPER_SUBJECT_NAME[subject]} topper copies</h3>
@@ -311,13 +318,14 @@ export default function PricingPage() {
                     </div>
                     <div className="pr-price-row"><div className="pr-price"><span>₹</span>{TOPPER_PASS_RUPEES}</div></div>
                     <div className="pr-period">for a year, paid once</div>
-                    <p className="pr-blurb">Every {TOPPER_SUBJECT_NAME[subject]} topper copy, handwritten answers by rankers, with side-by-side compare. Premium for {TOPPER_SUBJECT_NAME[subject]} includes them.</p>
+                    <p className="pr-blurb">Every {TOPPER_SUBJECT_NAME[subject]} topper copy, handwritten answers by rankers, with side-by-side compare, while {TOPPER_SUBJECT_NAME[subject]} is the optional on your profile. Premium for {TOPPER_SUBJECT_NAME[subject]} includes them.</p>
                     <button type="button" className="ds-btn ds-btn-line pr-buy" onClick={() => buyPass(subject)} disabled={!!passBusy || !!loading}>
                       {passBusy === subject ? 'Opening checkout…' : `Get ${TOPPER_SUBJECT_NAME[subject]} topper copies`}
                     </button>
                   </article>
                 ))}
               </div>
+              )}
             </section>
           )}
 

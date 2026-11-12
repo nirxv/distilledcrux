@@ -119,9 +119,11 @@ type Props = {
   gate: 'wait' | 'confirm' | 'go';
   /** Free opens left, for the confirm line. */
   freeLeft?: number;
+  /** The optional on the reader's profile as a route slug, undefined while unknown. */
+  own?: string | null;
 };
 
-export default function TopperPdf({ subject, copyId, height, onOpened, next, gate, freeLeft }: Props) {
+export default function TopperPdf({ subject, copyId, height, onOpened, next, gate, freeLeft, own }: Props) {
   const [state, setState] = useState<'auth' | 'opening' | 'drawing' | 'ready' | 'login' | 'limit' | 'error' | 'pdf-error'>('auth');
   const [confirmed, setConfirmed] = useState(false);
   const go = gate === 'go' || confirmed;
@@ -215,8 +217,8 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
         {view === 'limit' && (
           <div className="tp-msg">
             <strong>You have opened your {limit} free copies</strong>
-            <span>They stay open to you. To open the rest:</span>
-            <TopperPassOffer subject={subject} />
+            <span>{own !== undefined && own !== subject ? 'They stay open to you.' : 'They stay open to you. To open the rest:'}</span>
+            <TopperPassOffer subject={subject} own={own} />
           </div>
         )}
         {(view === 'error' || view === 'pdf-error') && (

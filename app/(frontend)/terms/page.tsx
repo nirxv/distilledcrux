@@ -55,7 +55,7 @@ export default function TermsPage() {
       {TOPPER_COPIES_LIVE && (
         <p>
           A topper copy pass opens every topper copy in one optional ({TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(", ")})
-          for a year, for ₹{TOPPER_PASS_RUPEES.toLocaleString("en-IN")}, paid once. A subscription to that optional includes them.
+          for a year, for ₹{TOPPER_PASS_RUPEES.toLocaleString("en-IN")}, paid once. Like a subscription, it works while that optional is the one on your profile, and a subscription to that optional includes them.
         </p>
       )}
       <p>

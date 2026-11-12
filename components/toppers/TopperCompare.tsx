@@ -28,7 +28,7 @@ export default function TopperCompare({ subject, pool, a, b }: Props) {
   const allowance = useTopperStatus(subject);
   const byId = new Map(pool.map((c) => [c.id, c]));
   const left = Math.max(0, allowance.limit - allowance.used);
-  const note = allowanceLine(allowance);
+  const note = allowanceLine(allowance, subject);
 
   const setPane = (i: 0 | 1, id: string) => {
     const next: [string, string] = [...ids];
@@ -70,7 +70,7 @@ export default function TopperCompare({ subject, pool, a, b }: Props) {
                 <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className="tc-open">Open on its own page</Link>
               </div>
               <TopperPdf key={c.id} subject={subject} copyId={c.id} height="min(76vh, 980px)"
-                gate={gateFor(allowance, c.id)} freeLeft={left} onOpened={allowance.noteOpened} />
+                gate={gateFor(allowance, c.id)} freeLeft={left} own={allowance.own} onOpened={allowance.noteOpened} />
             </section>
           );
         })}

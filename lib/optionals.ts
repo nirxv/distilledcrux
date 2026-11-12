@@ -45,6 +45,11 @@ export function labelForOptional(optional: unknown): string | null {
   return isOptionalId(optional) ? OPTIONALS[optional].label : null;
 }
 
+/** The reader-facing label for a route slug ('polsci' is PSIR), or null. */
+export function labelForSlug(slug: unknown): string | null {
+  return Object.values(OPTIONALS).find((o) => o.slug === slug)?.label ?? null;
+}
+
 /* ─── The reader's own optional, shared across the app ──────────────────── */
 
 /** Where the navbar remembers the optional between navigations. */

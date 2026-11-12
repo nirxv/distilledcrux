@@ -55,7 +55,7 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
         </header>
 
         <TopperPdf key={copy.id} subject={subject} copyId={copy.id} height="min(82vh, 1100px)"
-          gate={gateFor(allowance, copy.id)} freeLeft={left} onOpened={allowance.noteOpened} />
+          gate={gateFor(allowance, copy.id)} freeLeft={left} own={allowance.own} onOpened={allowance.noteOpened} />
       </div>
 
       <aside className="tv-aside">

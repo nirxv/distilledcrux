@@ -1,16 +1,18 @@
 import type { NextRequest } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
-import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
+import { hasActiveSubscription, profileOptional } from '@/lib/entitlements';
+import { routeSlugForOptional } from '@/lib/optionals';
 import { FREE_TOPPER_LIMIT, type TopperSubject } from './meta';
 
 /**
  * Who may open a topper copy.
  *
  * Anyone signed in may open five copies, any five, across every optional.
- * After that a copy needs a subscription to the optional it belongs to, or a
- * topper pass for it (₹799 for a year, migration 011): a sociology
- * subscription or pass opens every sociology copy and nothing else, the same
- * rule as model answers and flashcards (lib/entitlements.ts).
+ * After that a copy needs its optional to be the one on the reader's profile,
+ * and a subscription or a topper pass (₹799 for a year, migration 011) for
+ * that optional. A sociology subscription or pass opens every sociology copy
+ * while sociology is on the profile, and nothing once the reader switches
+ * away, the same rule as evaluation (profileOptional in lib/entitlements.ts).
  *
  * The allowance is a set, not a count. Opening a copy already opened is free,
  * in the viewer and in Compare alike, so a reader is never charged twice for
@@ -27,9 +29,11 @@ export type TopperReader = {
   via: 'subscription' | 'pass' | null;
   /** When the topper pass runs out, if that is what opens them. */
   passUntil: string | null;
+  /** The optional on the reader's profile, as a route slug ('polsci'), or null. */
+  own: string | null;
 };
 
-const ANON: TopperReader = { uid: null, unlimited: false, via: null, passUntil: null };
+const ANON: TopperReader = { uid: null, unlimited: false, via: null, passUntil: null, own: null };
 
 /** When this reader's topper pass for the optional ends, or null. A failed lookup is no pass. */
 export async function topperPassUntil(uid: string, subject: TopperSubject): Promise<string | null> {
@@ -52,12 +56,17 @@ export async function resolveReader(req: NextRequest, subject: TopperSubject): P
     // An unverifiable token is anonymous, not an error.
   }
   if (!uid) return ANON;
+  // A failed profile lookup is no optional, so nothing opens past the free five.
+  const db = createServerClient();
+  const optional = await profileOptional(db, uid);
+  const own = routeSlugForOptional(optional);
+  if (!optional || own !== subject) return { uid, unlimited: false, via: null, passUntil: null, own };
   const [subscribed, passUntil] = await Promise.all([
-    hasActiveSubscription(createServerClient(), uid, optionalForSubject(subject)),
+    hasActiveSubscription(db, uid, optional),
     topperPassUntil(uid, subject),
   ]);
   const via = subscribed ? 'subscription' : passUntil ? 'pass' : null;
-  return { uid, unlimited: via !== null, via, passUntil };
+  return { uid, unlimited: via !== null, via, passUntil, own };
 }
 
 export type TopperStatus = {
