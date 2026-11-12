@@ -20,7 +20,9 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https:",
-      "connect-src 'self' https://api.anthropic.com https://*.supabase.co https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://ip-api.com",
+      // *.r2.cloudflarestorage.com: topper copy PDFs, fetched by pdf.js from a
+      // five-minute signed URL (lib/toppers/r2.ts). The bucket itself is private.
+      "connect-src 'self' https://*.r2.cloudflarestorage.com https://api.anthropic.com https://*.supabase.co https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://firebase.googleapis.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://ip-api.com",
       "frame-src 'self' https://*.firebaseapp.com https://accounts.google.com https://api.razorpay.com https://checkout.razorpay.com",
       "base-uri 'self'",
       "form-action 'self' https://*.firebaseapp.com https://accounts.google.com",

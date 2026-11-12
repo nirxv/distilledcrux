@@ -9,6 +9,7 @@ import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
+import { isTopperSubject } from '@/lib/toppers/meta';
 
 // The ⌘K palette carries every note's title; it is fetched the first time
 // it is wanted, not with every page.
@@ -35,6 +36,8 @@ const Icon = {
   chev: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>,
   notes: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z" /></svg>,
   cards: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h14v14H3zM7 6V4h14v14h-2M7 11h6M7 15h4" /></svg>,
+  pyq: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 4h6v3H9zM9 5.5H6.5A1.5 1.5 0 0 0 5 7v12.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H15M9 12h6M9 16h4" /></svg>,
+  copy: <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12.5c1.2-1 2.2-1 3 0s1.8 1 3 0M9 16.5c1.2-1 2.2-1 3 0" /></svg>,
 };
 
 export default function Navbar() {
@@ -151,7 +154,16 @@ export default function Navbar() {
             { href: `/${slug}/flashcards`, label: 'Flashcards', note: 'Revise with spaced repetition', icon: Icon.cards },
           ],
         },
-        { href: `/${slug}/pyqs`, label: 'PYQs' },
+        // Topper copies sit with the PYQs: they are filed by the questions they answer.
+        isTopperSubject(slug)
+          ? {
+              label: 'PYQs',
+              items: [
+                { href: `/${slug}/pyqs`, label: 'Past questions', note: 'Every question UPSC has set', icon: Icon.pyq },
+                { href: `/${slug}/toppers`, label: 'Topper copies', note: 'Handwritten answers by rankers', icon: Icon.copy },
+              ],
+            }
+          : { href: `/${slug}/pyqs`, label: 'PYQs' },
         ...(optional === 'geography' ? [{ href: '/geography/mapping', label: 'Maps' }] : []),
         // /test reads ?optional=, the profile spelling, not the route slug.
         { href: `/test?optional=${optional}`, label: 'Tests' },

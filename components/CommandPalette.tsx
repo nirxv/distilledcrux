@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { allNotes, type SubjectNote } from '@/lib/notes';
 import SubjectIcon from '@/components/SubjectIcon';
+import { isTopperSubject } from '@/lib/toppers/meta';
 
 /**
  * ⌘K: jump to any note, page or tool by typing a few letters, or hand the
@@ -43,6 +44,7 @@ const G = {
   home: 'M3 11l9-8 9 8M5 9.5V20h14V9.5',
   grid: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
   cards: 'M3 6h14v14H3zM7 6V4h14v14h-2M7 11h6M7 15h4',
+  copy: 'M6 3h9l4 4v14H6zM14 3v5h5M9 12.5c1.2-1 2.2-1 3 0s1.8 1 3 0M9 16.5c1.2-1 2.2-1 3 0',
 };
 
 function pages(subject: string | null): Item[] {
@@ -53,6 +55,7 @@ function pages(subject: string | null): Item[] {
       { key: 'notes', label: `${SUBJECT_NAME[s]} notes`, hint: 'Every topic in the syllabus', href: `/notes/${s}`, group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
       { key: 'pyqs', label: `${SUBJECT_NAME[s]} PYQs`, hint: 'Past questions, topic by topic', href: `/${s}/pyqs`, group: 'Go to' as const, icon: <Glyph d={G.pyq} /> },
       { key: 'flashcards', label: `${SUBJECT_NAME[s]} flashcards`, hint: 'Revise with spaced repetition', href: `/${s}/flashcards`, group: 'Go to' as const, icon: <Glyph d={G.cards} /> },
+      ...(isTopperSubject(s) ? [{ key: 'toppers', label: `${SUBJECT_NAME[s]} topper copies`, hint: 'Handwritten answers by rankers', href: `/${s}/toppers`, group: 'Go to' as const, icon: <Glyph d={G.copy} /> }] : []),
     ] : [
       { key: 'notes', label: 'Notes', hint: 'Pick an optional', href: '/notes', group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
     ]),

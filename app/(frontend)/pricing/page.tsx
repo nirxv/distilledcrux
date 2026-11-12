@@ -10,6 +10,7 @@ import Mascot from '@/components/Mascot';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { clearRef, readRef } from '@/lib/referralClient';
 import InvitedNote from '@/components/InvitedNote';
+import { TOPPER_COPIES_LIVE } from '@/lib/features';
 
 const OPTIONALS = [
   { id: 'sociology',             label: 'Sociology' },
@@ -38,6 +39,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
   { what: 'Past questions, with search and filters', free: 'Included', premium: 'Included' },
   { what: 'Timed tests', free: 'Included', premium: 'Included' },
   { what: 'Flashcards with spaced repetition', free: '100 answers', premium: 'Unlimited' },
+  ...(TOPPER_COPIES_LIVE ? [{ what: 'Topper answer copies, with side-by-side compare (Sociology)', free: '5 copies', premium: 'Every copy' }] : []),
   { what: 'AI chat', free: '3 questions', premium: 'Unlimited' },
   { what: 'Chat modes: books, mentor, brainstorm and your own PDF', free: '—', premium: 'Included' },
   { what: 'Answer evaluation', free: '1 answer', premium: 'Unlimited' },
@@ -46,7 +48,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 ];
 
 const faqs = [
-  { q: 'Is there a free tier?', a: 'Yes. A free account opens every note and past question, three AI chats, one answer evaluation and 100 flashcard answers. No payment card needed.' },
+  { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
   { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
   { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
@@ -318,7 +320,7 @@ export default function PricingPage() {
             <Mascot pose="peek" width={92} />
             <div className="pr-close-text">
               <h2>Not sure yet?</h2>
-              <p>Start with the free account: every note, every past question, three chats, one evaluation and 100 flashcard answers.</p>
+              <p>Start with the free account: every note, every past question, three chats, one evaluation{TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.</p>
             </div>
             <Link href={signedIn ? '/dashboard' : '/login?next=/dashboard'} className="ds-btn ds-btn-line">
               {signedIn ? 'Go to your dashboard' : 'Sign in free'}

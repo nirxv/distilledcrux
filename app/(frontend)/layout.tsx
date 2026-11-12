@@ -38,7 +38,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://distilledcrux.com'),
   title: { default: 'Distilled Crux UPSC Optional Preparation', template: '%s | Distilled Crux' },
-  description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional Sociology, Anthropology, History, Geography and more.',
+  description: 'AI answer evaluation, curated notes, 4500+ PYQs and topper copies for UPSC Mains Optional Sociology, Anthropology, PSIR, Geography and Public Administration.',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://distilledcrux.com' },
   openGraph: {

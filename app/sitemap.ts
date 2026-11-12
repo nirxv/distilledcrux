@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { TOPPER_SUBJECTS } from '@/lib/toppers/meta';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://distilledcrux.com';
@@ -23,6 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/pub-admin/pyqs`,          lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     ...['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'].map((s) => (
       { url: `${base}/${s}/flashcards`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
+    )),
+    ...TOPPER_SUBJECTS.map((s) => (
+      { url: `${base}/${s}/toppers`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
     )),
     { url: `${base}/geography/mapping`,       lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/notes`,                   lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },

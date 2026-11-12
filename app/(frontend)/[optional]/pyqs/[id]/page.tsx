@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PyqDetail from '@/components/pyq/PyqDetail';
 import { PYQ_SUBJECT_NAME, isPyqSubject, loadPyqs } from '@/lib/pyqs';
+import { copiesForPyq, isTopperSubject, rankLine } from '@/lib/toppers';
 
 /**
  * One past question. The server finds it and its neighbours and sends only
@@ -53,6 +54,15 @@ export default async function PyqPage({ params }: { params: Promise<Params> }) {
   // Neighbours in the order the list shows them: newest paper first.
   const peek = (j: number) => (j >= 0 && j < questions.length ? { id: questions[j].id, question: questions[j].question } : null);
 
+  // Copies that answer it, one per topper, where the optional's copies are live.
+  let toppers: { id: string; topper: string; rankLine: string }[] | undefined;
+  if (isTopperSubject(optional)) {
+    const seen = new Set<string>();
+    toppers = (await copiesForPyq(optional, pyq.id))
+      .filter((c) => !seen.has(c.topper) && seen.add(c.topper))
+      .map((c) => ({ id: c.id, topper: c.topper, rankLine: rankLine(c) }));
+  }
+
   return (
     <PyqDetail
       subject={optional}
@@ -62,6 +72,7 @@ export default async function PyqPage({ params }: { params: Promise<Params> }) {
       prev={peek(i - 1)}
       next={peek(i + 1)}
       topicCount={questions.filter((q) => q.topic === pyq.topic).length}
+      toppers={toppers}
     />
   );
 }

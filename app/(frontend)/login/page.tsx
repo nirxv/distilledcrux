@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { TOPPER_COPIES_LIVE } from '@/lib/features';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { auth, signInWithGoogle, signInWithGoogleRedirect, googleBlocksThisBrowser, isAndroid } from '@/lib/firebase';
@@ -172,7 +173,7 @@ export default function LoginPage() {
 
         <div className="lg-free">
           <strong>A free account opens</strong>
-          <span>every note and past question for your optional, three AI chats, one answer evaluation and 100 flashcard answers.</span>
+          <span>every note and past question for your optional, three AI chats, one answer evaluation{TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.</span>
         </div>
 
         <p className="lg-legal">

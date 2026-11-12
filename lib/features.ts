@@ -1,13 +1,12 @@
+import { TOPPER_SUBJECTS } from '@/lib/toppers/meta';
+
 /**
- * Features that are built but not yet live.
- *
- * Topper answer copies are promised in three places — the pricing cards, the
- * login page's feature list and a card on every PYQ page — and none of them has
- * anything behind it yet. The markup is kept rather than deleted so the feature
- * can be turned back on in one edit once real copies are close; until then the
- * site should not advertise it at all.
+ * Topper answer copies: live from November 2026, one optional at a time as
+ * each gets enough copies (TOPPER_SUBJECTS in lib/toppers/meta.ts). True once
+ * any optional has them; gates the pricing row, the free-tier lines on the
+ * login and pricing pages, and the terms.
  */
-export const TOPPER_COPIES_LIVE = false;
+export const TOPPER_COPIES_LIVE = TOPPER_SUBJECTS.length > 0;
 
 /**
  * Parts of the chat page that came over from historyoptional.xyz.

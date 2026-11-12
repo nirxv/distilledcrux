@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { sanitizeHtml } from '@/lib/sanitizeHtml';
-import { TOPPER_COPIES_LIVE } from '@/lib/features';
 import type { Pyq } from '@/lib/pyqs';
 import { listKey } from './PyqBrowser';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
@@ -27,6 +26,8 @@ type Props = {
   prev: Peek;
   next: Peek;
   topicCount: number;
+  /** Topper copies that answer this question, best rank first; absent where copies are not live. */
+  toppers?: { id: string; topper: string; rankLine: string }[];
 };
 
 /** The model's markdown, escaped first so nothing it writes becomes markup. */
@@ -51,7 +52,7 @@ const Lock = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
 );
 
-export default function PyqDetail({ subject, subjectName, pyq, related, prev, next, topicCount }: Props) {
+export default function PyqDetail({ subject, subjectName, pyq, related, prev, next, topicCount, toppers }: Props) {
   const router = useRouter();
   const base = `/${subject}/pyqs`;
 
@@ -390,11 +391,36 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
               </div>
             )}
 
-            {/* Topper's Copy — archived until real copies are close; see lib/features.ts */}
-            {TOPPER_COPIES_LIVE && (
+            {toppers && (
               <div className="pd-side">
-                <h2 className="pd-side-title">Topper&apos;s copy</h2>
-                <p className="pd-side-text">Answer copies from toppers for this question will be added here.</p>
+                <h2 className="pd-side-title">Topper copies</h2>
+                {toppers.length > 0 ? (
+                  <>
+                    <p className="pd-side-text">
+                      {toppers.length === 1 ? 'One topper has' : `${toppers.length} toppers have`} answered this, in their own handwriting.
+                    </p>
+                    <div className="pd-related">
+                      {toppers.slice(0, 6).map(t => (
+                        <Link key={t.id} href={`/${subject}/toppers/${t.id}`} prefetch={false} className="pd-rel">
+                          <span className="pd-rel-q">{t.topper}</span>
+                          {t.rankLine && <span className="pd-rel-meta">{t.rankLine}</span>}
+                        </Link>
+                      ))}
+                    </div>
+                    {new Set(toppers.map(t => t.topper)).size > 1 && (
+                      <Link href={`/${subject}/toppers/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
+                        Compare two side by side <Arrow />
+                      </Link>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <p className="pd-side-text">No topper copy answers this one yet.</p>
+                    <Link href={`/${subject}/toppers?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
+                      Topper copies on {pyq.topic} <Arrow />
+                    </Link>
+                  </>
+                )}
               </div>
             )}
           </aside>
