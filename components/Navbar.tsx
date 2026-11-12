@@ -285,7 +285,7 @@ export default function Navbar() {
           <div className="nb-right">
             <button className="nb-search" onClick={openPalette} onMouseEnter={loadPalette} onFocus={loadPalette} aria-label="Search the site">
               {Icon.search}
-              <span className="nb-search-text">Search notes, or ask the AI</span>
+              <span className="nb-search-text">Search</span>
               <kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
             </button>
 
@@ -456,10 +456,10 @@ const NAV_CSS = `
 .nb-sheet-invite > svg { flex-shrink: 0; color: var(--accent-text); }
 .nb-search {
   display: inline-flex; align-items: center; gap: var(--space-2);
-  height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(200px, 22vw, 320px); min-width: 0;
+  height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(150px, 13vw, 200px); min-width: 0;
   background: var(--ds-soft); color: var(--text3);
   border: 1px solid var(--border2); border-radius: var(--radius-full);
-  font-size: 0.88rem; cursor: pointer; transition: border-color 0.15s, color 0.15s;
+  font-size: 0.86rem; cursor: pointer; transition: border-color 0.15s, color 0.15s;
 }
 .nb-search:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--text2); }
 .nb-search-text { flex: 1; min-width: 0; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
