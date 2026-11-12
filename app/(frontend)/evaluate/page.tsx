@@ -11,6 +11,7 @@ import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
 import { isPdf, toAnswerPages } from '@/lib/answerImages';
 import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
 import ShareButton from '@/components/evaluate/ShareButton';
+import { TOPPER_SUBJECTS } from '@/lib/toppers/meta';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface SectionMark { awarded: number; out_of: number; reasoning: string }
@@ -336,6 +337,9 @@ export default function EvaluatePage() {
   }
 
   const subjectLabel = labelForOptional(optionalId)
+  // Not isTopperSubject: calling an imported helper here makes the React
+  // compiler lint call the Date.now() in the submit handlers impure.
+  const topperCopies = TOPPER_SUBJECTS.some((s) => s === subjectId)
   const signedOut = !profileLoading && !user
   const pct = result ? result.marks / result.marks_out_of : 0
   const tint = subjectId ? { ['--t' as string]: `var(--tint-${subjectId})`, ['--w' as string]: `var(--wash-${subjectId})` } : undefined
@@ -371,7 +375,7 @@ export default function EvaluatePage() {
             <div className="ev-limit">
               <Mascot pose="peek" width={120} />
               <h1 className="ev-limit-title">You&apos;ve used your free evaluation</h1>
-              <p>Premium marks every answer you write, and opens model answers and the chat&apos;s book, mentor and brainstorm modes.</p>
+              <p>Premium marks every answer you write, and opens model answers{topperCopies ? ', every topper copy' : ''} and the chat&apos;s book, mentor and brainstorm modes.</p>
               <div className="ev-limit-actions">
                 <Link href="/pricing" className="ds-btn ds-btn-solid">See plans</Link>
                 <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Back</button>

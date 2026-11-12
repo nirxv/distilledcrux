@@ -38,6 +38,15 @@ const FIREBASE_AUTH_UPSTREAM = `${process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID}.f
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ['firebase-admin', 'razorpay'],
+  // Topper copies moved from /<optional>/toppers on 12 Nov 2026. Limited to
+  // the optionals so /api/toppers is never caught.
+  redirects: async () => [
+    {
+      source: '/:optional(sociology|anthropology|polsci|geography|pub-admin)/toppers/:path*',
+      destination: '/:optional/topper-copies/:path*',
+      permanent: true,
+    },
+  ],
   rewrites: async () => [
     {
       source: '/__/auth/:path*',

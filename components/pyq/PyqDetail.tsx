@@ -401,14 +401,14 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                     </p>
                     <div className="pd-related">
                       {toppers.slice(0, 6).map(t => (
-                        <Link key={t.id} href={`/${subject}/toppers/${t.id}`} prefetch={false} className="pd-rel">
+                        <Link key={t.id} href={`/${subject}/topper-copies/${t.id}`} prefetch={false} className="pd-rel">
                           <span className="pd-rel-q">{t.topper}</span>
                           {t.rankLine && <span className="pd-rel-meta">{t.rankLine}</span>}
                         </Link>
                       ))}
                     </div>
                     {new Set(toppers.map(t => t.topper)).size > 1 && (
-                      <Link href={`/${subject}/toppers/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
+                      <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
                         Compare two side by side <Arrow />
                       </Link>
                     )}
@@ -416,7 +416,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 ) : (
                   <>
                     <p className="pd-side-text">No topper copy answers this one yet.</p>
-                    <Link href={`/${subject}/toppers?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
+                    <Link href={`/${subject}/topper-copies?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
                       Topper copies on {pyq.topic} <Arrow />
                     </Link>
                   </>

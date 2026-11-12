@@ -65,9 +65,9 @@ export default function TopperCompare({ subject, pool, a, b }: Props) {
                     ))}
                   </select>
                 </label>
-                <p className="tc-rank">{[c.year ? `CSE ${c.year}` : '', c.source].filter(Boolean).join(' · ')}</p>
+                {c.year && <p className="tc-rank">CSE {c.year}</p>}
                 <p className="tc-q"><span>{c.paper} · {c.marks} marks</span>{c.question}</p>
-                <Link href={`/${subject}/toppers/${c.id}`} prefetch={false} className="tc-open">Open on its own page</Link>
+                <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className="tc-open">Open on its own page</Link>
               </div>
               <TopperPdf key={c.id} subject={subject} copyId={c.id} height="min(76vh, 980px)"
                 gate={gateFor(allowance, c.id)} freeLeft={left} onOpened={allowance.noteOpened} />

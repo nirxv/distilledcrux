@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import TopperCopyView from '@/components/toppers/TopperCopyView';
-import { TOPPER_PDF_CSS, TOPPER_VIEW_CSS } from '@/components/toppers/styles';
+import { TOPPER_PASS_CSS, TOPPER_PDF_CSS, TOPPER_VIEW_CSS } from '@/components/toppers/styles';
 import { PYQ_SUBJECT_NAME, loadPyqs } from '@/lib/pyqs';
 import { comparableCopies, getCopy, isTopperSubject, rankLine } from '@/lib/toppers';
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   return {
     title: `${short} | ${copy.topper} topper copy, ${name}`,
     description: `${copy.topper}${rankLine(copy) ? ` (${rankLine(copy)})` : ''} answers “${copy.question.slice(0, 120)}” in UPSC ${name} optional, ${copy.paper}, ${copy.marks} marks. Handwritten answer copy.`,
-    alternates: { canonical: `https://distilledcrux.com/${optional}/toppers/${copy.id}` },
+    alternates: { canonical: `https://distilledcrux.com/${optional}/topper-copies/${copy.id}` },
   };
 }
 
@@ -48,10 +48,10 @@ export default async function TopperCopyPage({ params }: { params: Promise<Param
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_VIEW_CSS + TOPPER_PDF_CSS }} />
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_VIEW_CSS + TOPPER_PDF_CSS + TOPPER_PASS_CSS }} />
       <div className="tvp ds" style={{ ['--t' as string]: `var(--tint-${optional})`, ['--w' as string]: `var(--wash-${optional})` }}>
         <div className="ds-container">
-          <Link href={`/${optional}/toppers`} className="ds-back">
+          <Link href={`/${optional}/topper-copies`} className="ds-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
             {name} topper copies
           </Link>

@@ -12,12 +12,16 @@ export type TopperAllowance = {
   limit: number;
   /** Copies in this optional already opened, free to open again. */
   opened: Set<string>;
+  /** What opens every copy: a subscription or a topper pass. */
+  via: 'subscription' | 'pass' | null;
+  /** When the topper pass runs out, if a pass is what opens them. */
+  passUntil: string | null;
   /** The allowance could not be read just now. */
   unavailable: boolean;
 };
 
 const START: TopperAllowance = {
-  loading: true, signedIn: false, unlimited: false, used: 0, limit: FREE_TOPPER_LIMIT, opened: new Set(), unavailable: false,
+  loading: true, signedIn: false, unlimited: false, used: 0, limit: FREE_TOPPER_LIMIT, opened: new Set(), unavailable: false, via: null, passUntil: null,
 };
 
 /**
@@ -48,6 +52,8 @@ export function useTopperStatus(subject: string) {
           loading: false, signedIn: true, unavailable: false,
           unlimited: d.unlimited === true, used: d.used ?? 0, limit: d.limit ?? FREE_TOPPER_LIMIT,
           opened: new Set<string>(d.opened ?? []),
+          via: d.via === 'subscription' || d.via === 'pass' ? d.via : null,
+          passUntil: typeof d.passUntil === 'string' ? d.passUntil : null,
         });
       } catch {
         if (!cancelled) setState({ ...START, loading: false, signedIn: true, unavailable: true });

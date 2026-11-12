@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import SubjectIcon from '@/components/SubjectIcon';
 import TopperBrowser, { type PyqRef } from '@/components/toppers/TopperBrowser';
-import { TOPPER_BROWSER_CSS } from '@/components/toppers/styles';
+import { TOPPER_BROWSER_CSS, TOPPER_PASS_CSS } from '@/components/toppers/styles';
 import { PYQ_SUBJECT_NAME, loadPyqs } from '@/lib/pyqs';
 import { TOPPER_SUBJECTS, isTopperSubject, listCopies } from '@/lib/toppers';
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ optional:
   return {
     title: `${name} Optional Topper Answer Copies`,
     description: `${copies.length} handwritten answers by ${toppers} UPSC ${name} rankers, question by question, linked to the past questions they answer. Compare two toppers side by side.`,
-    alternates: { canonical: `https://distilledcrux.com/${optional}/toppers` },
+    alternates: { canonical: `https://distilledcrux.com/${optional}/topper-copies` },
   };
 }
 
@@ -46,7 +46,7 @@ export default async function ToppersPage({ params }: { params: Promise<{ option
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_BROWSER_CSS }} />
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_BROWSER_CSS + TOPPER_PASS_CSS }} />
       <div className="tl ds" style={{ ['--t' as string]: `var(--tint-${optional})`, ['--w' as string]: `var(--wash-${optional})` }}>
         <section className="tl-hero">
           <div className="ds-container">

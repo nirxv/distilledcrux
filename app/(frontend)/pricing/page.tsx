@@ -11,6 +11,8 @@ import { routeSlugForOptional } from '@/lib/optionals';
 import { clearRef, readRef } from '@/lib/referralClient';
 import InvitedNote from '@/components/InvitedNote';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
+import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, type TopperSubject } from '@/lib/toppers/meta';
+import { buyTopperPass } from '@/components/toppers/buyPass';
 
 const OPTIONALS = [
   { id: 'sociology',             label: 'Sociology' },
@@ -49,6 +51,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 
 const faqs = [
   { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
+  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every Sociology topper copy for a year, side-by-side compare included, paid once. A Premium plan for Sociology includes them, so there is no need for both.` }] : []),
   { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
   { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
@@ -91,6 +94,20 @@ export default function PricingPage() {
   const [userOptional, setUserOptional] = useState<string | null>(null);
   const [signedIn, setSignedIn] = useState(false);
   const [activeUntil, setActiveUntil] = useState<string | null>(null);
+  const [passBusy, setPassBusy] = useState<TopperSubject | null>(null);
+
+  const buyPass = async (subject: TopperSubject) => {
+    setError(null);
+    setPassBusy(subject);
+    try {
+      const out = await buyTopperPass(subject);
+      if (out === 'login') { window.location.assign('/login?next=/pricing'); return; }
+      if (out === 'done') { window.location.assign(`/${subject}/topper-copies`); return; }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Something went wrong');
+    }
+    setPassBusy(null);
+  };
 
   useEffect(() => {
     let live = true;
@@ -282,6 +299,28 @@ export default function PricingPage() {
             })}
           </section>
 
+          {TOPPER_COPIES_LIVE && (
+            <section className="pr-pass">
+              <h2 className="pr-h2">Only want the topper copies?</h2>
+              <div className="pr-pass-list">
+                {TOPPER_SUBJECTS.map((subject) => (
+                  <article key={subject} className="pr-plan pr-pass-card">
+                    <div className="pr-plan-top">
+                      <h3 className="pr-plan-name">{TOPPER_SUBJECT_NAME[subject]} topper copies</h3>
+                      <span className="pr-tag pr-tag-soft">Paid once</span>
+                    </div>
+                    <div className="pr-price-row"><div className="pr-price"><span>₹</span>{TOPPER_PASS_RUPEES}</div></div>
+                    <div className="pr-period">for a year, paid once</div>
+                    <p className="pr-blurb">Every {TOPPER_SUBJECT_NAME[subject]} topper copy, handwritten answers by rankers, with side-by-side compare. Premium for {TOPPER_SUBJECT_NAME[subject]} includes them.</p>
+                    <button type="button" className="ds-btn ds-btn-line pr-buy" onClick={() => buyPass(subject)} disabled={!!passBusy || !!loading}>
+                      {passBusy === subject ? 'Opening checkout…' : `Get ${TOPPER_SUBJECT_NAME[subject]} topper copies`}
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+
           <p className="pr-rzp">
             Payment is processed by Razorpay. Your card statement and Razorpay’s receipt will show “History Optional”, the venture Distilled Crux is a product of.
           </p>
@@ -352,6 +391,9 @@ const CSS = `
 
 .pr-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); align-items: stretch; }
 .pr-plan { display: flex; flex-direction: column; padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.pr-pass { margin-top: var(--space-8); }
+.pr-pass-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 380px)); gap: var(--space-4); margin-top: var(--space-4); }
+.pr-pass .pr-tag-soft { background: var(--ds-soft); color: var(--text2); white-space: nowrap; }
 .pr-plan.featured { border: 2px solid var(--accent); box-shadow: var(--elev-2); }
 .pr-plan-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-4); }
 .pr-plan-name { margin: 0; font-size: 1.1rem; font-weight: 800; }

@@ -27,6 +27,7 @@ import { linkifyCitations } from '@/lib/chatCitations';
 import { useChatAccess } from '@/hooks/useChatAccess';
 import { toast } from '@/components/ui/Toast';
 import { NEW_CHAT_EVENT } from '@/components/BottomNav';
+import { isTopperSubject } from '@/lib/toppers/meta';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -420,9 +421,10 @@ function FollowUps({ slug, asked, wasMains, langHi, subject, onSend }: {
  * to sign-in, which brings the reader back here with the question, or to the
  * plans.
  */
-function AccessModal({ kind, langHi, loginHref, onClose }: {
+function AccessModal({ kind, langHi, subject, loginHref, onClose }: {
   kind: 'login' | 'limit';
   langHi: boolean;
+  subject: SubjectKey;
   loginHref: string;
   onClose: () => void;
 }) {
@@ -444,7 +446,9 @@ function AccessModal({ kind, langHi, loginHref, onClose }: {
         <p>
           {login
             ? (langHi ? 'निःशुल्क खाते में 3 संदेश मिलते हैं। लौटने पर आपका प्रश्न यहीं मिलेगा।' : 'A free account comes with 3 messages. Your question will be waiting when you get back.')
-            : (langHi ? 'असीमित चैट और मूल्यांकन, मेंटर मोड, पुस्तकों से चैट और PDF।' : 'Unlimited chats and evaluations, Mentor mode, Chat with books and PDFs.')}
+            : isTopperSubject(subject)
+              ? (langHi ? 'असीमित चैट और मूल्यांकन, मेंटर मोड, पुस्तकों से चैट और PDF, और हर टॉपर कॉपी।' : 'Unlimited chats and evaluations, Mentor mode, Chat with books and PDFs, and every topper copy.')
+              : (langHi ? 'असीमित चैट और मूल्यांकन, मेंटर मोड, पुस्तकों से चैट और PDF।' : 'Unlimited chats and evaluations, Mentor mode, Chat with books and PDFs.')}
         </p>
         <Link className="ch-btn ch-btn-solid ch-btn-wide" href={login ? loginHref : '/pricing'}>
           {login ? (langHi ? 'साइन इन करें' : 'Sign in') : (langHi ? 'प्लान देखें' : 'See plans')}
@@ -1223,6 +1227,7 @@ function ChatContent() {
           <AccessModal
             kind={modal}
             langHi={langHi}
+            subject={subject}
             loginHref={`/login?next=${encodeURIComponent(`/chat?subject=${subject}${input.trim() ? `&q=${encodeURIComponent(input.trim())}` : ''}`)}`}
             onClose={() => setModal(null)}
           />

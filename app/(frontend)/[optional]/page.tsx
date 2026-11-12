@@ -239,7 +239,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
                 <span className="op-tool-text">Short cards on thinkers, terms and facts, each tied to the past questions it helps you answer.</span>
               </Link>
               {isTopperSubject(slug) && (
-                <Link href={`/${slug}/toppers`} className="op-tool ds-card ds-card-link">
+                <Link href={`/${slug}/topper-copies`} className="op-tool ds-card ds-card-link">
                   <span className="op-tool-icon"><Glyph d="M6 3h9l4 4v14H6zM14 3v5h5M9 12.5c1.2-1 2.2-1 3 0s1.8 1 3 0M9 16.5c1.2-1 2.2-1 3 0" /></span>
                   <span className="op-tool-title">Read topper copies</span>
                   <span className="op-tool-text">Handwritten answers by rankers, question by question, with two side by side to compare.</span>

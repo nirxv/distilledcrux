@@ -21,6 +21,8 @@ import { type TopperCopy, type TopperSubject } from './meta';
 export * from './meta';
 
 type StoredCopy = TopperCopy & {
+  /** Where the booklet came from, e.g. "LevelUp IAS Sociology Test Series 2024, Test 01". Kept for our records, never shown. */
+  source: string;
   /** R2 object key. Server-only. */
   key: string;
   /** Path of the PDF under the pipeline's state folder, for the publish script. */
@@ -43,7 +45,7 @@ async function stored(subject: TopperSubject): Promise<StoredCopy[]> {
 
 function publicCopy(c: StoredCopy): TopperCopy {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { key, file, ...rest } = c;
+  const { key, file, source, ...rest } = c;
   return rest;
 }
 

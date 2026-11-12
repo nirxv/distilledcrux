@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { auth } from '@/lib/firebase';
+import TopperPassOffer from './TopperPassOffer';
 
 /**
  * One topper copy's handwritten pages, with zoom. The viewer page shows one;
@@ -191,7 +192,8 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
           <button type="button" onClick={() => rezoom(Math.min(2.4, +(zoom + 0.2).toFixed(1)))} disabled={state !== 'ready' || zoom >= 2.4} aria-label="Zoom in">+</button>
         </div>
       </div>
-      <div className="tp-box" style={{ height }}>
+      {/* Fixed height only once there are pages to scroll; a message alone gets a box its own size. */}
+      <div className={`tp-box${showBox ? '' : ' msg'}`} style={showBox ? { height } : undefined}>
         <div ref={boxRef} className="tp-pages" hidden={!showBox} />
         {(view === 'auth' || view === 'opening' || view === 'drawing') && (
           <div className="tp-msg" aria-live="polite"><span className="tp-spin" aria-hidden="true" />{view === 'drawing' ? 'Drawing the pages' : 'Opening the copy'}</div>
@@ -213,8 +215,8 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
         {view === 'limit' && (
           <div className="tp-msg">
             <strong>You have opened your {limit} free copies</strong>
-            <span>They stay open to you. A subscription to this optional opens every copy.</span>
-            <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">See plans</Link>
+            <span>They stay open to you. To open the rest:</span>
+            <TopperPassOffer subject={subject} />
           </div>
         )}
         {(view === 'error' || view === 'pdf-error') && (

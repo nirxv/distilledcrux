@@ -55,7 +55,7 @@ function pages(subject: string | null): Item[] {
       { key: 'notes', label: `${SUBJECT_NAME[s]} notes`, hint: 'Every topic in the syllabus', href: `/notes/${s}`, group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
       { key: 'pyqs', label: `${SUBJECT_NAME[s]} PYQs`, hint: 'Past questions, topic by topic', href: `/${s}/pyqs`, group: 'Go to' as const, icon: <Glyph d={G.pyq} /> },
       { key: 'flashcards', label: `${SUBJECT_NAME[s]} flashcards`, hint: 'Revise with spaced repetition', href: `/${s}/flashcards`, group: 'Go to' as const, icon: <Glyph d={G.cards} /> },
-      ...(isTopperSubject(s) ? [{ key: 'toppers', label: `${SUBJECT_NAME[s]} topper copies`, hint: 'Handwritten answers by rankers', href: `/${s}/toppers`, group: 'Go to' as const, icon: <Glyph d={G.copy} /> }] : []),
+      ...(isTopperSubject(s) ? [{ key: 'toppers', label: `${SUBJECT_NAME[s]} topper copies`, hint: 'Handwritten answers by rankers', href: `/${s}/topper-copies`, group: 'Go to' as const, icon: <Glyph d={G.copy} /> }] : []),
     ] : [
       { key: 'notes', label: 'Notes', hint: 'Pick an optional', href: '/notes', group: 'Go to' as const, icon: <Glyph d={G.notes} /> },
     ]),

@@ -7,8 +7,9 @@ import { FREE_TOPPER_LIMIT, type TopperSubject } from './meta';
  * Who may open a topper copy.
  *
  * Anyone signed in may open five copies, any five, across every optional.
- * After that a copy needs a subscription to the optional it belongs to: a
- * sociology subscription opens every sociology copy and nothing else, the same
+ * After that a copy needs a subscription to the optional it belongs to, or a
+ * topper pass for it (₹799 for a year, migration 011): a sociology
+ * subscription or pass opens every sociology copy and nothing else, the same
  * rule as model answers and flashcards (lib/entitlements.ts).
  *
  * The allowance is a set, not a count. Opening a copy already opened is free,
@@ -20,13 +21,29 @@ import { FREE_TOPPER_LIMIT, type TopperSubject } from './meta';
 
 export type TopperReader = {
   uid: string | null;
-  /** A live subscription to this optional: no metering at all. */
+  /** A live subscription or topper pass for this optional: no metering at all. */
   unlimited: boolean;
+  /** What opens every copy, when something does. */
+  via: 'subscription' | 'pass' | null;
+  /** When the topper pass runs out, if that is what opens them. */
+  passUntil: string | null;
 };
+
+const ANON: TopperReader = { uid: null, unlimited: false, via: null, passUntil: null };
+
+/** When this reader's topper pass for the optional ends, or null. A failed lookup is no pass. */
+export async function topperPassUntil(uid: string, subject: TopperSubject): Promise<string | null> {
+  const { data, error } = await createServerClient().rpc('topper_pass_until', { p_uid: uid, p_subject: subject });
+  if (error) {
+    console.error('[toppers/access] pass lookup failed:', error.message);
+    return null;
+  }
+  return typeof data === 'string' ? data : null;
+}
 
 export async function resolveReader(req: NextRequest, subject: TopperSubject): Promise<TopperReader> {
   const token = req.headers.get('x-user-token') ?? '';
-  if (!token) return { uid: null, unlimited: false };
+  if (!token) return ANON;
   let uid: string | null = null;
   try {
     const { verifyFirebaseToken } = await import('@/lib/verifyFirebaseToken');
@@ -34,9 +51,13 @@ export async function resolveReader(req: NextRequest, subject: TopperSubject): P
   } catch {
     // An unverifiable token is anonymous, not an error.
   }
-  if (!uid) return { uid: null, unlimited: false };
-  const unlimited = await hasActiveSubscription(createServerClient(), uid, optionalForSubject(subject));
-  return { uid, unlimited };
+  if (!uid) return ANON;
+  const [subscribed, passUntil] = await Promise.all([
+    hasActiveSubscription(createServerClient(), uid, optionalForSubject(subject)),
+    topperPassUntil(uid, subject),
+  ]);
+  const via = subscribed ? 'subscription' : passUntil ? 'pass' : null;
+  return { uid, unlimited: via !== null, via, passUntil };
 }
 
 export type TopperStatus = {

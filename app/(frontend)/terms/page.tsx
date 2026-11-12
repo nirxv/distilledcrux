@@ -3,6 +3,7 @@ import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
 import LegalDoc from "@/components/LegalDoc";
 import { PLANS, PLAN_ORDER, formatRupees } from "@/lib/plans";
 import { TOPPER_COPIES_LIVE } from "@/lib/features";
+import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME } from "@/lib/toppers/meta";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalDoc current="terms" title="Terms of Service" updated="Last updated: 5 October 2026 · Effective: 5 October 2026">
+    <LegalDoc current="terms" title="Terms of Service" updated="Last updated: 12 November 2026 · Effective: 12 November 2026">
       <p>
         These Terms of Service govern your use of <strong>distilledcrux.com</strong> operated
         by the Distilled Crux Team. By accessing or using the site you agree to be bound by these terms.
@@ -51,6 +52,12 @@ export default function TermsPage() {
           </li>
         ))}
       </ul>
+      {TOPPER_COPIES_LIVE && (
+        <p>
+          A topper copy pass opens every topper copy in one optional ({TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(", ")})
+          for a year, for ₹{TOPPER_PASS_RUPEES.toLocaleString("en-IN")}, paid once. A subscription to that optional includes them.
+        </p>
+      )}
       <p>
         All payments are processed securely by Razorpay. Prices are in Indian Rupees (INR)
         and inclusive of applicable taxes. We reserve the right to change pricing with
@@ -60,7 +67,7 @@ export default function TermsPage() {
       <h2>5. Refund Policy</h2>
       <p>
         All purchases are final. We do not offer refunds, exchanges, or credits for any
-        subscription plan once payment has been processed. Please review the features
+        subscription plan{TOPPER_COPIES_LIVE ? " or topper copy pass" : ""} once payment has been processed. Please review the features
         available on the free plan before subscribing.
       </p>
       <p>

@@ -29,7 +29,7 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
         <header className="tv-head">
           <div className="tv-meta">
             <span className="tv-paper">{copy.paper}</span>
-            <Link href={`/${subject}/toppers?topic=${encodeURIComponent(copy.topic)}`} className="tv-topic">{copy.topic}</Link>
+            <Link href={`/${subject}/topper-copies?topic=${encodeURIComponent(copy.topic)}`} className="tv-topic">{copy.topic}</Link>
             <span className="tv-marks">{copy.marks} marks</span>
           </div>
           <h1 className="tv-q">{copy.question}</h1>
@@ -37,7 +37,6 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
             <strong>{copy.topper}</strong>
             {rankLine(copy) && <span>{rankLine(copy)}</span>}
           </p>
-          <p className="tv-source">{copy.source}</p>
           {pyqs.length > 0 && (
             <div className="tv-asked">
               <span className="tv-asked-label">This answer would answer {pyqs.length === 1 ? 'a UPSC question' : `${pyqs.length} UPSC questions`}</span>
@@ -66,12 +65,12 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
             <ul className="tv-others">
               {others.map((o) => (
                 <li key={o.id}>
-                  <Link href={`/${subject}/toppers/${o.id}`} prefetch={false} className="tv-other">
+                  <Link href={`/${subject}/topper-copies/${o.id}`} prefetch={false} className="tv-other">
                     <span className="tv-other-name">{o.topper}</span>
                     <span className="tv-other-rank">{rankLine(o)}</span>
                     {allowance.opened.has(o.id) && <span className="tv-opened">Opened</span>}
                   </Link>
-                  <Link href={`/${subject}/toppers/compare?a=${copy.id}&b=${o.id}`} prefetch={false} className="tv-cmp">Compare</Link>
+                  <Link href={`/${subject}/topper-copies/compare?a=${copy.id}&b=${o.id}`} prefetch={false} className="tv-cmp">Compare</Link>
                 </li>
               ))}
             </ul>
@@ -90,7 +89,7 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
           </p>
           <Link href={`/evaluate?question=${encodeURIComponent(copy.question)}&marks=${copy.marks}`} className="ds-btn ds-btn-line ds-btn-sm">Write your answer</Link>
         </div>
-        <Link href={`/${subject}/toppers`} className="tv-all">All {subjectName} topper copies</Link>
+        <Link href={`/${subject}/topper-copies`} className="tv-all">All {subjectName} topper copies</Link>
       </aside>
     </div>
   );

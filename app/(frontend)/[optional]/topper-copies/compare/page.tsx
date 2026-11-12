@@ -2,15 +2,15 @@ import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import TopperCompare from '@/components/toppers/TopperCompare';
-import { TOPPER_COMPARE_CSS, TOPPER_PDF_CSS } from '@/components/toppers/styles';
+import { TOPPER_COMPARE_CSS, TOPPER_PASS_CSS, TOPPER_PDF_CSS } from '@/components/toppers/styles';
 import { PYQ_SUBJECT_NAME } from '@/lib/pyqs';
 import { comparableCopies, copiesForPyq, getCopy, isTopperSubject } from '@/lib/toppers';
 
 /**
  * Two toppers' answers to the same question, side by side.
  *
- *   /<optional>/toppers/compare?a=<copy>&b=<copy>
- *   /<optional>/toppers/compare?pyq=<id>     the two best-ranked copies that answer a PYQ
+ *   /<optional>/topper-copies/compare?a=<copy>&b=<copy>
+ *   /<optional>/topper-copies/compare?pyq=<id>     the two best-ranked copies that answer a PYQ
  *
  * Either pane can be switched to any other copy of the same printed question
  * or of a UPSC question the first copy answers.
@@ -34,22 +34,22 @@ export default async function ComparePage({ params, searchParams }: { params: Pr
     // Two different toppers: one person can answer a PYQ in two tests.
     const second = forPyq.find((c) => c.topper !== forPyq[0]?.topper);
     if (!second) notFound();
-    redirect(`/${optional}/toppers/compare?a=${forPyq[0].id}&b=${second.id}`);
+    redirect(`/${optional}/topper-copies/compare?a=${forPyq[0].id}&b=${second.id}`);
   }
 
   const a = sp.a ? await getCopy(optional, sp.a) : null;
   if (!a) notFound();
   const others = await comparableCopies(optional, a);
-  if (!others.length) redirect(`/${optional}/toppers/${a.id}`);
+  if (!others.length) redirect(`/${optional}/topper-copies/${a.id}`);
   const b = (sp.b && others.find((o) => o.id === sp.b)) || others[0];
   const name = PYQ_SUBJECT_NAME[optional];
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_COMPARE_CSS + TOPPER_PDF_CSS }} />
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS + TOPPER_COMPARE_CSS + TOPPER_PDF_CSS + TOPPER_PASS_CSS }} />
       <div className="tcp ds" style={{ ['--t' as string]: `var(--tint-${optional})`, ['--w' as string]: `var(--wash-${optional})` }}>
         <div className="ds-container tcp-wide">
-          <Link href={`/${optional}/toppers`} className="ds-back">
+          <Link href={`/${optional}/topper-copies`} className="ds-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
             {name} topper copies
           </Link>

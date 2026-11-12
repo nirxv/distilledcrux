@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/contact";
 import LegalDoc from "@/components/LegalDoc";
 import { PLANS, PLAN_ORDER, formatRupees } from "@/lib/plans";
+import { TOPPER_COPIES_LIVE } from "@/lib/features";
+import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME } from "@/lib/toppers/meta";
 
 export const metadata: Metadata = {
   title: "Refund Policy",
@@ -11,15 +13,15 @@ export const metadata: Metadata = {
 
 export default function RefundPage() {
   return (
-    <LegalDoc current="refund" title="Refund Policy" updated="Last updated: 29 July 2026 · Effective: 29 July 2026">
+    <LegalDoc current="refund" title="Refund Policy" updated="Last updated: 12 November 2026 · Effective: 12 November 2026">
       <p>
-        This Refund Policy applies to all premium subscription purchases made on{" "}
-        <strong>distilledcrux.com</strong>.
+        This Refund Policy applies to all purchases made on{" "}
+        <strong>distilledcrux.com</strong>: premium subscriptions{TOPPER_COPIES_LIVE ? " and topper copy passes" : ""}.
       </p>
 
       <h2>1. No-Refund Policy</h2>
       <p>
-        All subscription purchases are <strong>final and non-refundable</strong>. Once a
+        All purchases are <strong>final and non-refundable</strong>. Once a
         payment is processed via Razorpay, we do not offer refunds, partial refunds,
         or credits regardless of usage.
       </p>
@@ -41,6 +43,11 @@ export default function RefundPage() {
             </li>
           );
         })}
+        {TOPPER_COPIES_LIVE && TOPPER_SUBJECTS.map((s) => (
+          <li key={s}>
+            <strong>{TOPPER_SUBJECT_NAME[s]} topper copies</strong> ₹{TOPPER_PASS_RUPEES} for a year, paid once
+          </li>
+        ))}
       </ul>
 
       <h2>3. Exceptions</h2>

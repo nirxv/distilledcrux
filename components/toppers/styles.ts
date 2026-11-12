@@ -9,6 +9,8 @@ export const TOPPER_BROWSER_CSS = `
 .tb-allow { margin: 0 0 var(--space-3); padding: 10px 14px; border-radius: var(--radius-lg); background: var(--ds-soft); border: 1px solid var(--border); font-size: 0.92rem; color: var(--text2); }
 .tb-allow.on { background: var(--success-wash); border-color: transparent; color: var(--success-text); font-weight: 600; }
 .tb-allow a { color: var(--accent-text); font-weight: 600; }
+.tb-allow-offer { display: flex; flex-direction: column; gap: var(--space-2); }
+.tb-allow-note { margin: 0; }
 .tb-bar { position: sticky; top: 60px; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .tb-search { flex: 1 1 340px; display: flex; align-items: center; gap: var(--space-2); height: 48px; padding: 0 var(--space-2) 0 var(--space-4); background: var(--ds-card); border: 1.5px solid var(--border2); border-radius: var(--radius-full); color: var(--text3); }
 .tb-search:focus-within { border-color: color-mix(in srgb, var(--accent) 65%, transparent); box-shadow: 0 0 0 4px var(--accent-glow); }
@@ -78,6 +80,8 @@ export const TOPPER_PDF_CSS = `
 .tp-zoom span { min-width: 44px; text-align: center; }
 .tp-box { position: relative; overflow: auto; background: color-mix(in srgb, var(--ds-soft) 60%, var(--bg)); overscroll-behavior: contain; }
 .tp-pages { padding: 10px; }
+.tp-box.msg { display: flex; min-height: 300px; }
+.tp-box.msg .tp-msg { position: static; flex: 1; }
 .tp-page { display: block; margin: 0 auto 12px; background: #fff; border-radius: 3px; box-shadow: var(--elev-1); }
 .tp-msg { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-2); padding: var(--space-6); text-align: center; color: var(--text2); }
 .tp-msg strong { font-size: 1.05rem; color: var(--text); }
@@ -99,7 +103,6 @@ export const TOPPER_VIEW_CSS = `
 .tv-q { margin: 0 0 var(--space-3); font-size: clamp(1.12rem, 2.2vw, 1.36rem); font-weight: 600; line-height: 1.5; letter-spacing: -0.01em; color: var(--text); }
 .tv-who { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; font-size: 1rem; }
 .tv-who span { font-size: 0.9rem; color: var(--text3); }
-.tv-source { margin: 4px 0 0; font-size: 0.84rem; color: var(--text3); }
 .tv-asked { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border); }
 .tv-asked-label { display: block; margin-bottom: var(--space-2); font-size: 0.82rem; font-weight: 700; color: var(--warning-text); }
 .tv-asked ul { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; list-style: none; }
@@ -152,4 +155,19 @@ export const TOPPER_COMPARE_CSS = `
   .tc-pane { display: none; }
   .tc-pane.front { display: flex; }
 }
+`;
+
+export const TOPPER_PASS_CSS = `
+.tpo { display: flex; flex-direction: column; gap: var(--space-2); }
+.tpo-card { width: 100%; max-width: 380px; margin-top: var(--space-2); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--ds-card); border: 1px solid var(--border); text-align: left; }
+.tpo-line { padding-top: var(--space-2); border-top: 1px solid var(--border); }
+.tpo-what { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+.tpo-what strong { font-size: 1rem; color: var(--text); }
+.tpo-what span { font-size: 0.86rem; color: var(--text3); }
+.tpo-acts { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.tpo-plans { font-size: 0.88rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
+.tpo-plans:hover { text-decoration: underline; text-underline-offset: 3px; }
+.tpo-err { margin: 0; font-size: 0.86rem; color: var(--danger-text); }
+.tpo-done { margin: 0; padding: 10px 14px; border-radius: var(--radius-lg); background: var(--success-wash); color: var(--success-text); font-weight: 600; }
+.tp-msg .tpo-card { align-self: center; }
 `;

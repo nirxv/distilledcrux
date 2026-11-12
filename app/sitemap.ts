@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${base}/${s}/flashcards`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
     )),
     ...TOPPER_SUBJECTS.map((s) => (
-      { url: `${base}/${s}/toppers`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
+      { url: `${base}/${s}/topper-copies`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 }
     )),
     { url: `${base}/geography/mapping`,       lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/notes`,                   lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },

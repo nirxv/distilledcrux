@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import Link from 'next/link';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
+import { TOPPER_COUNTS, isTopperSubject } from '@/lib/toppers/meta';
 
 /**
  * The tools, one at a time: a row of tabs and one large panel that says what
@@ -121,6 +122,31 @@ function PyqPreview() {
   );
 }
 
+function TopperPreview() {
+  const rows = [
+    { name: 'Riya Saini', rank: 'AIR 22 · CSE 2024' },
+    { name: 'Shobhika Pathak', rank: 'AIR 37 · CSE 2024' },
+    { name: 'Mudita Bansal', rank: 'AIR 44 · CSE 2024' },
+  ];
+  return (
+    <Frame title="Topper copies · Sociology">
+      <div className="sw-crumb">Paper I · Sociology as Science · 10 marks</div>
+      <div className="sw-h sw-q">How has the scope of Sociology broadened in the global times?</div>
+      <div className="sw-filters"><span className="on">Asked by UPSC in 2020</span><span>8 toppers</span></div>
+      {rows.map((r) => (
+        <div key={r.name} className="sw-pyq">
+          <div className="sw-pyq-meta"><b>{r.name}</b> · {r.rank}</div>
+          <div className="sw-pyq-q">Handwritten answer, 2 pages</div>
+        </div>
+      ))}
+      <div className="sw-sources">
+        <span className="sw-sources-n">Compare two side by side</span>
+        <span className="sw-sources-from">the same question, two rankers, page by page</span>
+      </div>
+    </Frame>
+  );
+}
+
 function TestPreview() {
   return (
     <Frame title="Test · Sociology">
@@ -175,6 +201,12 @@ export default function HomeShowcase() {
       text: 'Every past question for your optional, sorted by topic. Pick one, see how a good answer goes, then write your own.',
       points: ['Filter by year, paper and marks', 'Model answers when you want one', 'Free with your account'],
       cta: 'Browse PYQs', href: slug ? `/${slug}/pyqs` : '#optionals', wash: 'var(--warning-wash)', preview: <PyqPreview />,
+    },
+    {
+      key: 'toppers', tab: 'Topper copies', title: 'Read how rankers actually wrote it.',
+      text: 'Handwritten answers by Sociology rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.',
+      points: [`${TOPPER_COUNTS.sociology.copies.toLocaleString('en-IN')} answers by ${TOPPER_COUNTS.sociology.toppers} rankers`, 'Two toppers side by side on the same question', 'Five free with your account'],
+      cta: 'Read topper copies', href: `/${slug && isTopperSubject(slug) ? slug : 'sociology'}/topper-copies`, wash: 'var(--wash-geography)', preview: <TopperPreview />,
     },
     {
       key: 'test', tab: 'Tests', title: 'Find out what actually stayed with you.',

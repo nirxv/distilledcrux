@@ -11,6 +11,7 @@ import { REFERRER_DAYS } from '@/lib/referral';
 import { readLastNote, type LastNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
+import { TOPPER_COUNTS, isTopperSubject } from '@/lib/toppers/meta';
 
 /** Kept in step with CHAT_FREE_LIMIT in app/api/chat/route.ts. */
 const CHAT_FREE_LIMIT = 3;
@@ -100,6 +101,7 @@ const ICON: Record<string, ReactNode> = {
   evaluate: <><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></>,
   test: <><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5M9 2h6" /></>,
   map: <><path d="M9 4L3 6.5v13L9 17l6 3 6-2.5v-13L15 7z" /><path d="M9 4v13M15 7v13" /></>,
+  toppers: <path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12.5c1.2-1 2.2-1 3 0s1.8 1 3 0M9 16.5c1.2-1 2.2-1 3 0" />,
 };
 const Glyph = ({ name }: { name: string }) => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICON[name]}</svg>
@@ -242,6 +244,7 @@ export default function Dashboard() {
   const tools = [
     { key: 'notes', title: 'Notes', count: stats.notesCount ? `${stats.notesCount} topics` : null, desc: 'Every topic in the syllabus, cut to what an answer uses.', href: `/notes/${slug}` },
     { key: 'pyq', title: 'Past questions', count: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} questions` : null, desc: 'By year, paper and topic, each one ready to answer.', href: `/${slug}/pyqs` },
+    ...(isTopperSubject(slug) ? [{ key: 'toppers', title: 'Topper copies', count: `${TOPPER_COUNTS[slug].copies.toLocaleString('en-IN')} answers`, desc: 'Handwritten answers by rankers, with two side by side to compare.', href: `/${slug}/topper-copies` }] : []),
     { key: 'chat', title: 'AI chat', count: null, desc: 'Ask anything. It answers from the standard books and shows you where.', href: `/chat?subject=${slug}` },
     { key: 'evaluate', title: 'Evaluate', count: null, desc: 'Upload a handwritten answer and get it marked, part by part.', href: '/evaluate' },
     { key: 'test', title: 'Tests', count: null, desc: 'Timed papers built from past questions, marked like the real thing.', href: `/test?optional=${stats.optional}` },
@@ -263,7 +266,7 @@ export default function Dashboard() {
                 <Mascot pose="celebrate" width={96} />
                 <div className="db-celebrate-text">
                   <strong>You’re on Premium</strong>
-                  <span>Everything for {optLabel} is open now: unlimited chats and evaluations, model answers, and the chat’s book and mentor modes.</span>
+                  <span>Everything for {optLabel} is open now: unlimited chats and evaluations, model answers{isTopperSubject(slug) ? ', every topper copy' : ''}, and the chat’s book and mentor modes.</span>
                 </div>
                 <button type="button" className="db-celebrate-x" onClick={() => setCelebrate(false)} aria-label="Dismiss">✕</button>
               </div>
@@ -420,7 +423,7 @@ export default function Dashboard() {
                       <span>{stats.evalCount >= 1 ? 'Used' : '1 free, not used yet'}</span>
                     </div>
                   </div>
-                  <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers and the chat’s book and mentor modes.</p>
+                  <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers{isTopperSubject(slug) ? ', every topper copy' : ''} and the chat’s book and mentor modes.</p>
                   <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">See plans</Link>
                   <Link href="/invite" className="db-invite">Invite a friend, get {REFERRER_DAYS} days</Link>
                 </>

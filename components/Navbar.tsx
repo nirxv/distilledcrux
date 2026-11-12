@@ -47,12 +47,13 @@ export default function Navbar() {
   const optional = useOptional();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
+  // Which bar menu is open, by its label. One at a time: Notes and PYQs are
+  // both menus, and a single open flag opened them together.
+  const [dropOpen, setDropOpen] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteMounted, setPaletteMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const dropRef = useRef<HTMLDivElement>(null);
   const [isMac, setIsMac] = useState(true);
 
   useEffect(() => {
@@ -67,12 +68,12 @@ export default function Navbar() {
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
-      if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
+      if (!(e.target instanceof Element && e.target.closest('.nb-drop'))) setDropOpen(null);
     };
     const onEsc = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return;
       setMenuOpen(false);
-      setDropOpen(false);
+      setDropOpen(null);
     };
     document.addEventListener('mousedown', onDown);
     document.addEventListener('keydown', onEsc);
@@ -92,7 +93,7 @@ export default function Navbar() {
     /* eslint-disable-next-line react-hooks/set-state-in-effect */
     setMobileOpen(false);
     setMenuOpen(false);
-    setDropOpen(false);
+    setDropOpen(null);
   }, [pathname]);
 
   const openPalette = useCallback(() => {
@@ -160,7 +161,7 @@ export default function Navbar() {
               label: 'PYQs',
               items: [
                 { href: `/${slug}/pyqs`, label: 'Past questions', note: 'Every question UPSC has set', icon: Icon.pyq },
-                { href: `/${slug}/toppers`, label: 'Topper copies', note: 'Handwritten answers by rankers', icon: Icon.copy },
+                { href: `/${slug}/topper-copies`, label: 'Topper copies', note: 'Handwritten answers by rankers', icon: Icon.copy },
               ],
             }
           : { href: `/${slug}/pyqs`, label: 'PYQs' },
@@ -198,17 +199,17 @@ export default function Navbar() {
 
           <div className="nb-links">
             {links.map((l) => 'items' in l ? (
-              <div key={l.label} ref={dropRef} className="nb-drop">
+              <div key={l.label} className="nb-drop">
                 <button
                   className={`nb-link nb-drop-btn${l.items.some((i) => isActive(i.href)) ? ' on' : ''}`}
-                  onClick={() => setDropOpen((o) => !o)}
-                  aria-expanded={dropOpen}
+                  onClick={() => setDropOpen((o) => (o === l.label ? null : l.label))}
+                  aria-expanded={dropOpen === l.label}
                   aria-haspopup="menu"
                 >
                   {l.label}
                   {Icon.chev}
                 </button>
-                {dropOpen && (
+                {dropOpen === l.label && (
                   <div className="nb-menu nb-drop-menu" role="menu" aria-label={l.label}>
                     {l.items.map((i) => (
                       <Link
@@ -217,7 +218,7 @@ export default function Navbar() {
                         role="menuitem"
                         className={`nb-drop-item${isActive(i.href) ? ' on' : ''}`}
                         aria-current={isActive(i.href) ? 'page' : undefined}
-                        onClick={() => setDropOpen(false)}
+                        onClick={() => setDropOpen(null)}
                       >
                         <span className="nb-drop-icon">{i.icon}</span>
                         <span className="nb-drop-text"><strong>{i.label}</strong><small>{i.note}</small></span>

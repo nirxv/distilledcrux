@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { rankLine, type TopperCopy } from '@/lib/toppers/meta';
 import { allowanceLine, useTopperStatus } from './useTopperStatus';
+import TopperPassOffer from './TopperPassOffer';
 
 type Filters = { q: string; paper: '' | '1' | '2'; topic: string; topper: string; asked: boolean };
 const EMPTY: Filters = { q: '', paper: '', topic: '', topper: '', asked: false };
@@ -124,14 +125,21 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
 
   return (
     <div className="tb">
-      {(note || (!allowance.loading && !allowance.signedIn) || allowance.unlimited) && (
-        <p className={`tb-allow${allowance.unlimited ? ' on' : ''}`}>
-          {allowance.unlimited
-            ? `Your ${subjectName} subscription opens every copy.`
-            : !allowance.signedIn
-              ? <>Browse freely. <Link href={`/login?next=/${subject}/toppers`}>Sign in</Link> to open copies, and your first five are free.</>
-              : <>{note}{allowance.used >= allowance.limit && <> <Link href="/pricing">See plans</Link></>}</>}
-        </p>
+      {!allowance.loading && (
+        allowance.unlimited ? (
+          <p className="tb-allow on">
+            {allowance.via === 'pass' && allowance.passUntil
+              ? `Your topper pass opens every ${subjectName} copy until ${new Date(allowance.passUntil).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}.`
+              : `Your ${subjectName} subscription opens every copy.`}
+          </p>
+        ) : !allowance.signedIn ? (
+          <p className="tb-allow">Browse freely. <Link href={`/login?next=/${subject}/topper-copies`}>Sign in</Link> to open copies, and your first five are free.</p>
+        ) : (
+          <div className="tb-allow tb-allow-offer">
+            {note && <p className="tb-allow-note">{note}</p>}
+            <TopperPassOffer subject={subject} look="line" />
+          </div>
+        )
       )}
 
       <div className="tb-bar">
@@ -197,7 +205,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
               <ul className="tb-toppers">
                 {g.copies.map((c) => (
                   <li key={c.id}>
-                    <Link href={`/${subject}/toppers/${c.id}`} prefetch={false} className={`tb-copy${f.topper === c.topper ? ' hit' : ''}`}>
+                    <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className={`tb-copy${f.topper === c.topper ? ' hit' : ''}`}>
                       <span className="tb-name">{highlight(c.topper, f.q.trim())}</span>
                       <span className="tb-rank">{rankLine(c)}</span>
                       {allowance.opened.has(c.id) && <span className="tb-opened">Opened</span>}
@@ -207,7 +215,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
               </ul>
               {g.copies.length > 1 && (
                 <Link className="tb-compare" prefetch={false}
-                  href={`/${subject}/toppers/compare?a=${g.copies[0].id}&b=${g.copies[1].id}`}>
+                  href={`/${subject}/topper-copies/compare?a=${g.copies[0].id}&b=${g.copies[1].id}`}>
                   Compare {g.copies.length === 2 ? 'the two answers' : `${g.copies.length} answers side by side`}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>

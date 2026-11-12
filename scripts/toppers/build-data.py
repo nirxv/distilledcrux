@@ -67,3 +67,9 @@ for f in sorted(glob.glob(f'{STATE}/*/scan.json')):
 copies.sort(key=lambda c: (c['paper'], c['topic'], c['group'], c['rank'] or 9999))
 json.dump({'subject': SUBJECT, 'copies': copies}, open(OUT, 'w'), indent=0, ensure_ascii=False)
 print(f'{len(copies)} copies -> {os.path.relpath(OUT)} ({os.path.getsize(OUT) // 1024} KB)')
+
+# Counts for client pages (the dashboard, the home page), which must not load the copy list.
+COUNTS = os.path.join(os.path.dirname(OUT), 'counts.json')
+counts = json.load(open(COUNTS)) if os.path.exists(COUNTS) else {}
+counts[SUBJECT] = {'copies': len(copies), 'toppers': len({c['topper'] for c in copies})}
+json.dump(counts, open(COUNTS, 'w'), indent=1)
