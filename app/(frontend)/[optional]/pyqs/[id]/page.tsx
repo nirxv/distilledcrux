@@ -50,7 +50,8 @@ export default async function PyqPage({ params }: { params: Promise<Params> }) {
   const { questions, i, pyq } = found;
 
   // The same topic, nearest years first, leaving this one out.
-  const related = questions.filter((q) => q.topic === pyq.topic && q.id !== pyq.id).slice(0, 5);
+  // Six fill two rows of the cards below the question.
+  const related = questions.filter((q) => q.topic === pyq.topic && q.id !== pyq.id).slice(0, 6);
   // Neighbours in the order the list shows them: newest paper first.
   const peek = (j: number) => (j >= 0 && j < questions.length ? { id: questions[j].id, question: questions[j].question } : null);
 

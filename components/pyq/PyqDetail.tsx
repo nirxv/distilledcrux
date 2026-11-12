@@ -53,6 +53,7 @@ const Lock = () => (
 );
 
 export default function PyqDetail({ subject, subjectName, pyq, related, prev, next, topicCount, toppers }: Props) {
+  const hasToppers = Boolean(toppers && toppers.length > 0);
   const router = useRouter();
   const base = `/${subject}/pyqs`;
 
@@ -190,7 +191,9 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="pd ds" style={tint}>
-        <div className="ds-container pd-grid">
+        {/* The side column holds the topper copies, when there are any. The
+            questions on the same topic run below, across the page. */}
+        <div className={`ds-container pd-grid${hasToppers ? '' : ' solo'}`}>
           <div className="pd-main">
             <Link href={base} className="ds-back" onClick={backToList}>
               <Arrow back />
@@ -371,28 +374,9 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
             )}
           </div>
 
-          <aside className="pd-aside">
-            {related.length > 0 && (
-              <div className="pd-side">
-                <h2 className="pd-side-title">More on {pyq.topic}</h2>
-                <div className="pd-related">
-                  {related.map(q => (
-                    <Link key={q.id} href={`${base}/${q.id}`} className="pd-rel">
-                      <span className="pd-rel-q">{short(q.question)}</span>
-                      <span className="pd-rel-meta">{q.year} · {q.paper}{q.marks ? ` · ${q.marks} marks` : ''}</span>
-                    </Link>
-                  ))}
-                </div>
-                {topicCount > related.length + 1 && (
-                  <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all">
-                    All {topicCount} questions on this topic <Arrow />
-                  </Link>
-                )}
-              </div>
-            )}
-
-            {/* Only where a topper answered it: an empty card on most questions was noise. */}
-            {toppers && toppers.length > 0 && (
+          {/* Only where a topper answered it: an empty card on most questions was noise. */}
+          {toppers && toppers.length > 0 && (
+            <aside className="pd-aside">
               <div className="pd-side">
                 <h2 className="pd-side-title">Topper copies</h2>
                 <p className="pd-side-text">
@@ -412,8 +396,29 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                   </Link>
                 )}
               </div>
-            )}
-          </aside>
+            </aside>
+          )}
+
+          {related.length > 0 && (
+            <section className="pd-more" aria-labelledby="pd-more-title">
+              <div className="pd-sec-head">
+                <h2 id="pd-more-title">More on {pyq.topic}</h2>
+                {topicCount > related.length + 1 && (
+                  <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all pd-more-all">
+                    All {topicCount} questions on this topic <Arrow />
+                  </Link>
+                )}
+              </div>
+              <div className="pd-more-list">
+                {related.map(q => (
+                  <Link key={q.id} href={`${base}/${q.id}`} className="pd-more-card">
+                    <span className="pd-rel-q">{short(q.question)}</span>
+                    <span className="pd-rel-meta">{q.year} · {q.paper}{q.marks ? ` · ${q.marks} marks` : ''}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
     </>
@@ -423,6 +428,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
 const CSS = `
 .pd { background: var(--bg); min-height: var(--page-min-h); padding: clamp(20px, 3.5vh, 36px) 0 clamp(48px, 9vh, 96px); }
 .pd-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-8); align-items: start; }
+.pd-grid.solo { grid-template-columns: minmax(0, 1fr); }
 .pd-main { min-width: 0; }
 
 .pd-qcard { margin: var(--space-4) 0 var(--space-4); padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--elev-1); }
@@ -500,11 +506,12 @@ const CSS = `
 .pd-pager-dir { display: inline-flex; align-items: center; gap: 6px; font-size: 0.84rem; font-weight: 600; color: var(--t); }
 .pd-pager-q { font-size: 0.92rem; line-height: 1.45; color: var(--text); }
 
-.pd-aside { position: sticky; top: 84px; display: flex; flex-direction: column; gap: var(--space-4); padding-top: 50px; }
+.pd-aside { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 84px; display: flex; flex-direction: column; gap: var(--space-4); padding-top: 50px; }
 .pd-side { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card); }
 .pd-side-title { margin: 0 0 var(--space-3); font-size: 1rem; font-weight: 800; line-height: 1.35; }
 .pd-side-text { margin: 0; font-size: 0.9rem; color: var(--text2); }
 .pd-related { display: flex; flex-direction: column; }
+.pd-side-text + .pd-related { margin-top: var(--space-3); }
 .pd-rel { display: flex; flex-direction: column; gap: 4px; padding: var(--space-3) 0; border-top: 1px solid var(--border); text-decoration: none; }
 .pd-rel:first-child { border-top: none; padding-top: 0; }
 .pd-rel-q { font-size: 0.9rem; line-height: 1.5; color: var(--text); }
@@ -512,10 +519,21 @@ const CSS = `
 .pd-rel-meta { font-size: 0.78rem; color: var(--text3); }
 .pd-side-all { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--space-3); font-size: 0.88rem; font-weight: 600; color: var(--accent-text); text-decoration: none; }
 .pd-side-all:hover { text-decoration: underline; text-underline-offset: 3px; }
+.pd-more { grid-column: 1; min-width: 0; }
+.pd-more-all { margin-top: 0; white-space: nowrap; }
+.pd-more-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.pd-more-card {
+  display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-2);
+  padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--ds-card);
+  text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.pd-more-card:hover { border-color: color-mix(in srgb, var(--t) 45%, transparent); box-shadow: var(--elev-1); }
+.pd-more-card:hover .pd-rel-q { color: var(--t); }
 
 @media (max-width: 960px) {
   .pd-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
-  .pd-aside { position: static; padding-top: 0; }
+  .pd-aside { grid-column: auto; grid-row: auto; position: static; padding-top: 0; }
+  .pd-more { grid-column: auto; }
 }
 @media (max-width: 640px) {
   .pd-qcard { padding: var(--space-5) var(--space-4); }
@@ -528,6 +546,14 @@ const CSS = `
   .pd-pager { grid-template-columns: minmax(0, 1fr); }
   .pd-pager-link.next { text-align: left; align-items: flex-start; }
   .pd-sec-head h2 { font-size: 1.08rem; }
+  .pd-sec-head:has(.pd-more-all) { flex-wrap: wrap; }
+  /* A row to swipe through rather than six cards stacked down the page. */
+  .pd-more-list {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin: 0 calc(-1 * var(--space-4)); padding: 0 var(--space-4) var(--space-2); scrollbar-width: none;
+  }
+  .pd-more-list::-webkit-scrollbar { display: none; }
+  .pd-more-card { flex: 0 0 78%; scroll-snap-align: start; scroll-margin-left: var(--space-4); }
 }
 @media (prefers-reduced-motion: reduce) { .pd-dot { animation: none; } }
 `;
