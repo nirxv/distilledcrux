@@ -1,7 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type Razorpay from 'razorpay';
 import {
-  FALLBACK_FEE_RATE, FALLBACK_GST_RATE, FRIEND_DISCOUNT_PAISE, cashoutMilestones, isRefCode, newRefCode, windowCapPaise,
+  FALLBACK_FEE_RATE, FALLBACK_GST_RATE, FRIEND_DISCOUNT_PAISE, cashoutMilestones, isRefCode, newRefCode, normalisePhone, windowCapPaise,
 } from '@/lib/referral';
 
 /**
@@ -99,19 +99,22 @@ export type ReferralSummary = {
   canCashOut: boolean;
   pending: null | { amountPaise: number; requestedAt: string; upi: string };
   lastUpi: string | null;
+  /** The mobile number to offer on the cash-out form: the last one given, or the profile's. */
+  defaultPhone: string | null;
   history: { kind: string; amountPaise: number; at: string }[];
 };
 
 type Ledger = { kind: string; amount_paise: number; window_payment_id: string | null; created_at: string };
-type Payout = { amount_paise: number; upi_id: string; status: string; window_payment_id: string; requested_at: string };
+type Payout = { amount_paise: number; upi_id: string; phone: string; status: string; window_payment_id: string; requested_at: string };
 
 /** Everything the invite page shows, read in one go. The rules match migration 012. */
 export async function referralSummary(db: SupabaseClient, uid: string, code: string): Promise<ReferralSummary> {
-  const [friends, ledger, win, payouts] = await Promise.all([
+  const [friends, ledger, win, payouts, profile] = await Promise.all([
     db.from('referrals').select('id', { count: 'exact', head: true }).eq('referrer_uid', uid),
     db.from('referral_ledger').select('kind, amount_paise, window_payment_id, created_at').eq('firebase_uid', uid).order('created_at', { ascending: false }),
     db.from('plan_purchases').select('payment_id, amount_paise, fee_paise, tax_paise, created_at').eq('firebase_uid', uid).eq('plan', 'yearly').order('created_at', { ascending: false }).limit(1),
-    db.from('referral_payouts').select('amount_paise, upi_id, status, window_payment_id, requested_at').eq('firebase_uid', uid).order('requested_at', { ascending: false }),
+    db.from('referral_payouts').select('amount_paise, upi_id, phone, status, window_payment_id, requested_at').eq('firebase_uid', uid).order('requested_at', { ascending: false }),
+    db.from('user_profiles').select('phone').eq('firebase_uid', uid).maybeSingle(),
   ]);
   const rows = (ledger.data ?? []) as Ledger[];
   const outs = (payouts.data ?? []) as Payout[];
@@ -144,6 +147,7 @@ export async function referralSummary(db: SupabaseClient, uid: string, code: str
     canCashOut,
     pending: pendingRow ? { amountPaise: pendingRow.amount_paise, requestedAt: pendingRow.requested_at, upi: pendingRow.upi_id } : null,
     lastUpi: outs[0]?.upi_id ?? null,
+    defaultPhone: normalisePhone(outs[0]?.phone) ?? normalisePhone(profile.data?.phone) ?? null,
     history: rows.slice(0, 30).map((r) => ({ kind: r.kind, amountPaise: r.amount_paise, at: r.created_at })),
   };
 }

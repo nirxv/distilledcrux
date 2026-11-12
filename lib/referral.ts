@@ -58,6 +58,13 @@ export function newRefCode(): string {
 const UPI_RE = /^[a-zA-Z0-9._-]{2,256}@[a-zA-Z][a-zA-Z0-9.-]{1,64}$/;
 export const isUpiId = (value: unknown): value is string => typeof value === 'string' && UPI_RE.test(value.trim());
 
+/** An Indian mobile number as 10 digits, from what people type (+91, a leading 0, spaces, dashes), or null. */
+export function normalisePhone(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const digits = value.replace(/[\s-]/g, '').replace(/^(\+91|0091|91(?=\d{10}$)|0(?=\d{10}$))/, '');
+  return /^[6-9]\d{9}$/.test(digits) ? digits : null;
+}
+
 export const SITE = 'https://www.distilledcrux.com';
 
 /** A link that carries the code. Any page takes ?ref; see components/RefCapture. */

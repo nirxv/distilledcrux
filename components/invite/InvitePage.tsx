@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { onAuthStateChanged, type User } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { toast } from '@/components/ui/Toast';
-import { FRIEND_DISCOUNT_PAISE, REFERRAL_REWARD_PAISE, formatPaise, inviteLink, isUpiId } from '@/lib/referral';
+import { FRIEND_DISCOUNT_PAISE, REFERRAL_REWARD_PAISE, formatPaise, inviteLink, isUpiId, normalisePhone } from '@/lib/referral';
 import type { ReferralSummary } from '@/lib/referralServer';
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -28,6 +28,7 @@ export default function InvitePage() {
   const [data, setData] = useState<ReferralSummary | null>(null);
   const [failed, setFailed] = useState(false);
   const [upi, setUpi] = useState('');
+  const [phone, setPhone] = useState('');
   const [sending, setSending] = useState(false);
   const [cashErr, setCashErr] = useState<string | null>(null);
 
@@ -44,6 +45,7 @@ export default function InvitePage() {
       const d = (await r.json()) as ReferralSummary;
       setData(d);
       setUpi((v) => v || d.lastUpi || '');
+      setPhone((v) => v || d.defaultPhone || '');
     } catch {
       setFailed(true);
     }
@@ -72,13 +74,14 @@ export default function InvitePage() {
     if (!user || !data) return;
     setCashErr(null);
     if (!isUpiId(upi)) { setCashErr('Enter a UPI id like name@bank.'); return; }
+    if (!normalisePhone(phone)) { setCashErr('Enter your 10-digit mobile number.'); return; }
     setSending(true);
     try {
       const token = await user.getIdToken();
       const r = await fetch('/api/referral/payout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
-        body: JSON.stringify({ upi: upi.trim() }),
+        body: JSON.stringify({ upi: upi.trim(), phone }),
       });
       const d = await r.json();
       if (!r.ok) { setCashErr(d.error ?? 'Could not send the request. Try again.'); return; }
@@ -165,14 +168,22 @@ export default function InvitePage() {
                   <p className="iv-pending">{formatPaise(data.pending.amountPaise)} is on its way to {data.pending.upi}, asked for on {fmtDate(data.pending.requestedAt)}.</p>
                 ) : data.canCashOut ? (
                   <div className="iv-cash">
-                    <label className="iv-label" htmlFor="iv-upi">Cash out {formatPaise(data.balancePaise)} to UPI</label>
-                    <div className="iv-linkrow">
-                      <input id="iv-upi" className="iv-link" value={upi} onChange={(e) => { setUpi(e.target.value); setCashErr(null); }}
-                        placeholder="name@bank" autoComplete="off" autoCapitalize="none" spellCheck={false} inputMode="email" />
-                      <button type="button" className={`ds-btn ds-btn-solid${sending ? ' is-loading' : ''}`} onClick={cashOut} disabled={sending}>
-                        {sending ? 'Sending…' : 'Cash out'}
-                      </button>
+                    <h3 className="iv-label">Cash out {formatPaise(data.balancePaise)} to UPI</h3>
+                    <div className="iv-fields">
+                      <label className="iv-field">
+                        <span>UPI id</span>
+                        <input id="iv-upi" className="iv-link" value={upi} onChange={(e) => { setUpi(e.target.value); setCashErr(null); }}
+                          placeholder="name@bank" autoComplete="off" autoCapitalize="none" spellCheck={false} inputMode="email" />
+                      </label>
+                      <label className="iv-field">
+                        <span>Mobile number</span>
+                        <input id="iv-phone" className="iv-link" value={phone} onChange={(e) => { setPhone(e.target.value); setCashErr(null); }}
+                          placeholder="98765 43210" autoComplete="tel-national" inputMode="tel" />
+                      </label>
                     </div>
+                    <button type="button" className={`ds-btn ds-btn-solid iv-cash-btn${sending ? ' is-loading' : ''}`} onClick={cashOut} disabled={sending}>
+                      {sending ? 'Sending…' : `Cash out ${formatPaise(data.balancePaise)}`}
+                    </button>
                     {cashErr && <p className="iv-err" role="alert">{cashErr}</p>}
                     <p className="iv-muted">Or keep it for your next yearly plan. Check the UPI id: the money goes to whoever it belongs to.</p>
                   </div>
@@ -236,9 +247,12 @@ const CSS = `
 .iv-bar { position: relative; height: 10px; border-radius: var(--radius-full); background: var(--ds-soft); overflow: visible; }
 .iv-bar-fill { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: var(--accent); }
 .iv-tick { position: absolute; top: -3px; width: 2px; height: 16px; margin-left: -1px; border-radius: 1px; background: var(--border2, var(--border)); }
-.iv-tick.on { background: var(--accent-on, #fff); }
+.iv-tick.on { background: var(--accent-on); }
 .iv-pending { margin: 0; padding: 10px 14px; border-radius: var(--radius-lg); background: var(--success-wash); color: var(--success-text); font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600; }
 .iv-cash { display: flex; flex-direction: column; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid var(--border); }
+.iv-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-3); }
+.iv-field { display: flex; flex-direction: column; gap: 4px; font-family: var(--font-ui); font-size: 0.8rem; color: var(--text3); }
+.iv-cash-btn { align-self: flex-start; }
 .iv-err { margin: 0; font-family: var(--font-ui); font-size: 0.86rem; color: var(--danger-text); }
 .iv-hist { padding-top: var(--space-4); border-top: 1px solid var(--border); }
 .iv-hist ul { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-direction: column; }
@@ -257,5 +271,7 @@ const CSS = `
   .iv-card { padding: var(--space-5); }
   .iv-share .ds-btn { flex: 1 1 0; justify-content: center; }
   .iv-meter-head { flex-direction: column; gap: 2px; }
+  .iv-fields { grid-template-columns: minmax(0, 1fr); }
+  .iv-cash-btn { align-self: stretch; justify-content: center; }
 }
 `;

@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
-import { isUpiId } from '@/lib/referral';
+import { isUpiId, normalisePhone } from '@/lib/referral';
 
 /**
  * Asks for the reader's whole invite balance to be sent to a UPI id. The
- * database decides whether a milestone is open (migration 012); the money
- * leaves the balance at once and the user pays it by hand from the admin.
+ * database decides whether a milestone is open (migrations 012 and 013); the
+ * money leaves the balance at once, and the request becomes a row in
+ * referral_payouts, which the user reads in Supabase and pays by hand.
  *
- *   POST /api/referral/payout   { upi: 'name@bank' }
+ *   POST /api/referral/payout   { upi: 'name@bank', phone: '98765 43210' }
  */
 const REFUSED: Record<string, string> = {
   no_window: 'Cash-out opens once you have bought a yearly plan.',
@@ -21,12 +22,16 @@ export async function POST(req: NextRequest) {
   const user = await verifyFirebaseToken(req.headers.get('x-user-token'));
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const { upi } = await req.json().catch(() => ({}));
+  const { upi, phone } = await req.json().catch(() => ({}));
   if (!isUpiId(upi)) return NextResponse.json({ error: 'Enter a UPI id like name@bank.' }, { status: 400 });
+  const mobile = normalisePhone(phone);
+  if (!mobile) return NextResponse.json({ error: 'Enter your 10-digit mobile number.' }, { status: 400 });
 
   const { data, error } = await createServerClient().rpc('request_referral_payout', {
     p_uid: user.uid,
     p_email: user.email ?? '',
+    p_name: user.name ?? '',
+    p_phone: mobile,
     p_upi: String(upi).trim(),
   });
   if (error) {
