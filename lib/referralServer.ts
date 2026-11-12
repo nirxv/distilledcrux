@@ -39,13 +39,17 @@ export async function referralBalance(db: SupabaseClient, uid: string): Promise<
 
 /**
  * Whether this buyer's yearly order gets the friend's ₹100 off, given the code
- * they arrived with: the code is someone else's, they have never been
+ * saved on their account or, failing that, the one their browser holds: the code is someone else's, they have never been
  * referred, and they have never bought a yearly plan here. Checked again,
  * in effect, when the referral is recorded: a friend counts once.
  */
 export async function friendDiscountFor(db: SupabaseClient, uid: string, ref: unknown): Promise<{ code: string; paise: number } | null> {
-  if (!isRefCode(ref)) return null;
-  const code = String(ref).toUpperCase();
+  // The code saved on their account wins: it is the first one they came with,
+  // and it follows them to any device. The browser's code is the fallback.
+  const { data: claim } = await db.from('referral_claims').select('code').eq('firebase_uid', uid).maybeSingle();
+  const raw = claim?.code ?? ref;
+  if (!isRefCode(raw)) return null;
+  const code = String(raw).toUpperCase();
 
   const [owner, referred, purchases, legacy] = await Promise.all([
     db.from('referral_codes').select('firebase_uid').eq('code', code).maybeSingle(),

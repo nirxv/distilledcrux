@@ -10,6 +10,8 @@ import { useAuth } from '@/components/AuthProvider';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
 import { TOPPER_SUBJECTS, isTopperSubject } from '@/lib/toppers/meta';
+import { REFERRAL_REWARD_PAISE, formatPaise } from '@/lib/referral';
+import { cacheBalance, cachedBalance } from '@/lib/referralClient';
 
 // The ⌘K palette carries every note's title; it is fetched the first time
 // it is wanted, not with every page.
@@ -47,6 +49,26 @@ export default function Navbar() {
   const optional = useOptional();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [menuOpen, setMenuOpen] = useState(false);
+  // The invite balance, shown on every page as a nudge to share: the amount,
+  // or "Earn ₹100" at nothing. Kept in the browser for half an hour.
+  const [inviteBalance, setInviteBalance] = useState<number | null>(null);
+  useEffect(() => {
+    if (!user) return;
+    let live = true;
+    (async () => {
+      const cached = cachedBalance(user.uid);
+      if (cached !== null) { if (live) setInviteBalance(cached); return; }
+      try {
+        const token = await user.getIdToken();
+        const res = await fetch('/api/referral/balance', { headers: { 'x-user-token': token } });
+        if (!res.ok) return;
+        const { balancePaise } = await res.json();
+        cacheBalance(user.uid, balancePaise);
+        if (live) setInviteBalance(balancePaise);
+      } catch { /* no chip this time */ }
+    })();
+    return () => { live = false; };
+  }, [user]);
   // Which bar menu is open, by its label. One at a time: Notes and PYQs are
   // both menus, and a single open flag opened them together.
   const [dropOpen, setDropOpen] = useState<string | null>(null);
@@ -271,6 +293,13 @@ export default function Navbar() {
               {theme === 'dark' ? Icon.sun : Icon.moon}
             </button>
 
+            {!loading && user && inviteBalance !== null && (
+              <Link href="/invite" className="nb-invite"
+                aria-label={inviteBalance > 0 ? `Invite balance ${formatPaise(inviteBalance)}` : `Invite friends and earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}>
+                {Icon.gift}<span>{inviteBalance > 0 ? formatPaise(inviteBalance) : `Earn ${formatPaise(REFERRAL_REWARD_PAISE)}`}</span>
+              </Link>
+            )}
+
             {!loading && user && (
               <div ref={menuRef} className="nb-account">
                 <button className="nb-avatar" onClick={() => setMenuOpen((o) => !o)} aria-label="Your account" aria-expanded={menuOpen} aria-haspopup="menu">
@@ -312,6 +341,17 @@ export default function Navbar() {
 
       <div className={`nb-sheet ds${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="nb-sheet-search" onClick={openPalette}>{Icon.search}Search notes, tools, or ask the AI</button>
+        {/* On phones the invite chip lives here, not in the header, so the bar stays uncluttered. */}
+        {user && inviteBalance !== null && (
+          <Link href="/invite" className="nb-sheet-invite">
+            <span className="nb-sheet-invite-icon">{Icon.gift}</span>
+            <span className="nb-sheet-invite-text">
+              <strong>{inviteBalance > 0 ? `Your invite balance: ${formatPaise(inviteBalance)}` : `Invite friends, earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}</strong>
+              <small>{inviteBalance > 0 ? 'Share your link to earn more' : `They pay ${formatPaise(REFERRAL_REWARD_PAISE)} less on their first yearly plan`}</small>
+            </span>
+            {Icon.arrow}
+          </Link>
+        )}
         <div className="nb-sheet-links">
           {sheetLinks.map((l) => (
             <Link key={l.href} href={l.href} className={`nb-sheet-link${isActive(l.href) ? ' on' : ''}${l.accent ? ' accent' : ''}`}>
@@ -394,6 +434,26 @@ const NAV_CSS = `
 .nb-drop-text strong { font-size: 0.92rem; }
 .nb-drop-text small { font-size: 0.8rem; color: var(--text3); }
 .nb-right { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; min-width: 0; }
+.nb-invite {
+  display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; height: 34px; padding: 0 12px;
+  border-radius: var(--radius-full); background: var(--accent-dim); color: var(--accent-text);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  font-family: var(--font-ui); font-size: 0.84rem; font-weight: 700; white-space: nowrap; text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.nb-invite:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.nb-invite svg { width: 15px; height: 15px; }
+@media (max-width: 920px) { .nb-invite { display: none; } }
+.nb-sheet-invite {
+  display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; margin-bottom: var(--space-3); padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  color: var(--text); text-decoration: none;
+}
+.nb-sheet-invite-icon { flex-shrink: 0; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--ds-card); color: var(--accent-text); }
+.nb-sheet-invite-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.nb-sheet-invite-text strong { font-size: 0.95rem; font-weight: 700; color: var(--accent-text); }
+.nb-sheet-invite-text small { font-family: var(--font-ui); font-size: 0.8rem; line-height: 1.4; color: var(--text3); }
+.nb-sheet-invite > svg { flex-shrink: 0; color: var(--accent-text); }
 .nb-search {
   display: inline-flex; align-items: center; gap: var(--space-2);
   height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(200px, 22vw, 320px); min-width: 0;

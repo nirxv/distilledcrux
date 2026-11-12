@@ -7,6 +7,7 @@ import { auth } from '@/lib/firebase';
 import { toast } from '@/components/ui/Toast';
 import { FRIEND_DISCOUNT_PAISE, REFERRAL_REWARD_PAISE, formatPaise, inviteLink, isUpiId, normalisePhone } from '@/lib/referral';
 import type { ReferralSummary } from '@/lib/referralServer';
+import { cacheBalance } from '@/lib/referralClient';
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 
@@ -44,6 +45,7 @@ export default function InvitePage() {
       if (!r.ok) throw new Error(String(r.status));
       const d = (await r.json()) as ReferralSummary;
       setData(d);
+      cacheBalance(u.uid, Math.max(0, d.balancePaise));
       setUpi((v) => v || d.lastUpi || '');
       setPhone((v) => v || d.defaultPhone || '');
     } catch {

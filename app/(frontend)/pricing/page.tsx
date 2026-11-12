@@ -8,7 +8,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
 import Mascot from '@/components/Mascot';
 import { routeSlugForOptional } from '@/lib/optionals';
-import { clearRef, readRef } from '@/lib/referralClient';
+import { clearBalance, clearRef, readRef } from '@/lib/referralClient';
 import { REFERRAL_PLAN, formatPaise } from '@/lib/referral';
 import InvitedNote from '@/components/InvitedNote';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
@@ -190,6 +190,7 @@ export default function PricingPage() {
       // The balance covered it all: the plan is already granted, with nothing to pay.
       if (orderData.granted) {
         clearRef();
+        clearBalance();
         window.location.assign('/dashboard?payment=success');
         return;
       }
@@ -227,6 +228,7 @@ export default function PricingPage() {
             const verifyData = await verifyRes.json();
             if (verifyData.success) {
               clearRef();
+              clearBalance();
               window.location.assign('/dashboard?payment=success');
             } else {
               setError('Payment verification failed. Contact support.');
