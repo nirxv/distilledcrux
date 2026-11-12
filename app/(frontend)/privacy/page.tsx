@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalDoc current="privacy" title="Privacy Policy" updated="Last updated: 8 October 2026 · Effective: 8 October 2026">
+    <LegalDoc current="privacy" title="Privacy Policy" updated="Last updated: 12 November 2026 · Effective: 12 November 2026">
       <p>
         This Privacy Policy describes how Distilled Crux (<strong>distilledcrux.com</strong>,
         &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects information when you use our website
@@ -26,6 +26,7 @@ export default function PrivacyPage() {
         <li>Questions you ask the AI chat</li>
         <li>Your study progress, such as the syllabus topics you tick and the PYQs you attempt</li>
         <li>Payment information, which Razorpay processes. We do not store card details</li>
+        <li>The UPI id you give when you cash out an invite balance</li>
       </ul>
       <h3>Information collected automatically</h3>
       <ul>
@@ -37,6 +38,7 @@ export default function PrivacyPage() {
       <ul>
         <li>To provide and improve our UPSC optional exam preparation platform</li>
         <li>To process payments and manage your subscription</li>
+        <li>To keep your invite balance and send cash-outs to the UPI id you give</li>
         <li>To deliver AI-powered answer evaluation and chat features</li>
         <li>To send important service notifications about your account</li>
         <li>

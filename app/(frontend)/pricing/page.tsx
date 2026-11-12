@@ -9,6 +9,7 @@ import SubjectIcon from '@/components/SubjectIcon';
 import Mascot from '@/components/Mascot';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { clearRef, readRef } from '@/lib/referralClient';
+import { REFERRAL_PLAN, formatPaise } from '@/lib/referral';
 import InvitedNote from '@/components/InvitedNote';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
 import { TOPPER_PASS_RUPEES, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject, type TopperSubject } from '@/lib/toppers/meta';
@@ -52,6 +53,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 const faqs = [
   { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
   ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every Sociology topper copy for a year, side-by-side compare included, paid once. Like a plan, it works while Sociology is the optional on your profile. A Premium plan for Sociology includes them, so there is no need for both.` }] : []),
+  { q: 'How do invites work?', a: 'Share your link from the Invite page. When a friend buys their first yearly plan through it, they pay ₹100 less and you get ₹100 in your balance. The balance comes off your own yearly plan at checkout, and once you have a yearly plan you can also cash it out to UPI.' },
   { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
   { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
@@ -95,6 +97,10 @@ export default function PricingPage() {
   const [signedIn, setSignedIn] = useState(false);
   const [activeUntil, setActiveUntil] = useState<string | null>(null);
   const [passBusy, setPassBusy] = useState<TopperSubject | null>(null);
+  // What invites take off a yearly plan for this reader, from the server, and
+  // whether they want their balance used. The order route works it out again.
+  const [quote, setQuote] = useState<{ friendDiscountPaise: number; balancePaise: number } | null>(null);
+  const [useBalance, setUseBalance] = useState(true);
 
   const buyPass = async (subject: TopperSubject) => {
     setError(null);
@@ -134,6 +140,21 @@ export default function PricingPage() {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    const user = auth.currentUser;
+    if (!user) return;
+    let live = true;
+    (async () => {
+      try {
+        const token = await user.getIdToken();
+        const ref = readRef();
+        const res = await fetch(`/api/referral/quote${ref ? `?ref=${encodeURIComponent(ref)}` : ''}`, { headers: { 'x-user-token': token } });
+        if (res.ok && live) setQuote(await res.json());
+      } catch { /* the plain price shows */ }
+    })();
+    return () => { live = false; };
+  }, [signedIn]);
+
   // Whether the reader already holds a plan for the optional picked, so the
   // page can say that buying again adds time rather than starting over.
   useEffect(() => {
@@ -162,10 +183,16 @@ export default function PricingPage() {
       const orderRes = await fetch('/api/payment/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
-        body: JSON.stringify({ plan: planId, optional: selectedOptional, ref: readRef() }),
+        body: JSON.stringify({ plan: planId, optional: selectedOptional, ref: readRef(), useBalance: planId === REFERRAL_PLAN && useBalance }),
       });
       const orderData = await orderRes.json();
       if (!orderRes.ok) throw new Error(orderData.error ?? 'Order creation failed');
+      // The balance covered it all: the plan is already granted, with nothing to pay.
+      if (orderData.granted) {
+        clearRef();
+        window.location.assign('/dashboard?payment=success');
+        return;
+      }
 
       const optLabel = OPTIONALS.find(o => o.id === selectedOptional)?.label ?? selectedOptional;
       const planLabel = PLANS[planId as PlanId]?.label ?? planId;
@@ -277,6 +304,12 @@ export default function PricingPage() {
               // The sale price while an offer covers this plan, with the list price struck through.
               const sale = offer?.amountPaise[id];
               const price = (sale ?? plan.amountPaise) / 100;
+              // Invite money on the yearly plan: the friend's discount, then the balance.
+              const inv = id === REFERRAL_PLAN && quote && (quote.friendDiscountPaise > 0 || quote.balancePaise > 0) ? (() => {
+                const afterFriend = (sale ?? plan.amountPaise) - quote.friendDiscountPaise;
+                const spend = useBalance ? Math.min(quote.balancePaise, afterFriend) : 0;
+                return { friend: quote.friendDiscountPaise, balance: quote.balancePaise, spend, pay: afterFriend - spend };
+              })() : null;
               return (
                 <article key={id} className={`pr-plan${featured ? ' featured' : ''}`}>
                   <div className="pr-plan-top">
@@ -292,11 +325,27 @@ export default function PricingPage() {
                   </div>
                   <div className="pr-period">{plan.period}{copy.months ? ` · about ₹${Math.round(price / copy.months).toLocaleString('en-IN')} a month` : ''}</div>
                   <p className="pr-blurb">{copy.blurb}</p>
+                  {inv && (
+                    <div className="pr-inv">
+                      {inv.friend > 0 && (
+                        <div className="pr-inv-row"><span>Your friend&rsquo;s invite</span><span>&minus;{formatPaise(inv.friend)}</span></div>
+                      )}
+                      {inv.balance > 0 && (
+                        <label className="pr-inv-row pr-inv-use">
+                          <span><input type="checkbox" checked={useBalance} onChange={(e) => setUseBalance(e.target.checked)} /> Use my {formatPaise(inv.balance)} balance</span>
+                          <span>{inv.spend > 0 ? <>&minus;{formatPaise(inv.spend)}</> : null}</span>
+                        </label>
+                      )}
+                      <div className="pr-inv-row pr-inv-pay"><span>You pay</span><strong>{formatPaise(inv.pay)}</strong></div>
+                    </div>
+                  )}
                   <button type="button"
                     className={`ds-btn ${featured ? 'ds-btn-solid' : 'ds-btn-line'} pr-buy`}
                     onClick={() => handlePurchase(id)}
                     disabled={!!loading || !rzpReady || !selectedOptional}>
-                    {busy ? 'Opening checkout…' : !rzpReady ? 'Loading…' : !selectedOptional ? 'Pick your optional first' : `${copy.cta}${selected ? ` of ${selected.label}` : ''}`}
+                    {busy ? 'Opening checkout…' : !rzpReady ? 'Loading…' : !selectedOptional ? 'Pick your optional first'
+                      : inv?.pay === 0 ? `Get a year of ${selected?.label ?? 'it'} from your balance`
+                      : `${copy.cta}${selected ? ` of ${selected.label}` : ''}`}
                   </button>
                 </article>
               );
@@ -408,6 +457,12 @@ const CSS = `
 
 .pr-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); align-items: stretch; }
 .pr-plan { display: flex; flex-direction: column; padding: var(--space-6); background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.pr-inv { display: flex; flex-direction: column; gap: 6px; margin: calc(-1 * var(--space-2)) 0 var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); background: var(--ds-soft); font-family: var(--font-ui); font-size: 0.9rem; color: var(--text2); }
+.pr-inv-row { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); }
+.pr-inv-use { cursor: pointer; }
+.pr-inv-use input { width: 16px; height: 16px; margin: 0 6px 0 0; vertical-align: -3px; accent-color: var(--accent); }
+.pr-inv-pay { padding-top: 6px; border-top: 1px solid var(--border); color: var(--text); }
+.pr-inv-pay strong { font-size: 1.05rem; }
 .pr-pass { margin-top: var(--space-8); }
 .pr-pass-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 380px)); gap: var(--space-4); margin-top: var(--space-4); }
 .pr-pass .pr-tag-soft { background: var(--ds-soft); color: var(--text2); white-space: nowrap; }

@@ -7,7 +7,7 @@ import Mascot from '@/components/Mascot';
 import OwlLoader from '@/components/OwlLoader';
 import SubjectIcon from '@/components/SubjectIcon';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
-import { REFERRER_DAYS } from '@/lib/referral';
+import { REFERRAL_REWARD_PAISE, formatPaise } from '@/lib/referral';
 import { readLastNote, type LastNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
@@ -407,7 +407,7 @@ export default function Dashboard() {
                     {stats.plan ? `${stats.plan === 'referral' ? 'Invite reward' : `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan`} for ${optLabel}` : `For ${optLabel}`}
                     {fmtDate(stats.expiresAt) ? `, until ${fmtDate(stats.expiresAt)}.` : '.'}
                   </p>
-                  <Link href="/invite" className="db-invite">Invite a friend, get {REFERRER_DAYS} days</Link>
+                  <Link href="/invite" className="db-invite">Invite a friend, earn {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
                 </>
               ) : (
                 <>
@@ -425,7 +425,7 @@ export default function Dashboard() {
                   </div>
                   <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers{isTopperSubject(slug) ? ', every topper copy' : ''} and the chat’s book and mentor modes.</p>
                   <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">See plans</Link>
-                  <Link href="/invite" className="db-invite">Invite a friend, get {REFERRER_DAYS} days</Link>
+                  <Link href="/invite" className="db-invite">Invite a friend, earn {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
                 </>
               )}
             </div>

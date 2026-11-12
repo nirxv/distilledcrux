@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PLANS, PLAN_ORDER, priceNow, type PlanId } from '@/lib/plans';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
-import { isRefCode, isReferralPlan } from '@/lib/referral';
+import { createServerClient } from '@/lib/supabase';
+import { FREE_BALANCE_CAP_PAISE, REFERRAL_PLAN, REFERRAL_REWARD_PAISE } from '@/lib/referral';
+import { friendDiscountFor, referralBalance } from '@/lib/referralServer';
 import Razorpay from 'razorpay';
 
 const razorpay = new Razorpay({
@@ -37,7 +39,7 @@ export async function POST(req: NextRequest) {
   const user = await verifyFirebaseToken(token);
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const { plan, optional, ref } = await req.json();
+  const { plan, optional, ref, useBalance } = await req.json();
 
   const planData = PLAN_AMOUNTS[plan];
   if (!planData) return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
@@ -52,10 +54,56 @@ export async function POST(req: NextRequest) {
   // The price now, which is the sale price while an offer runs. The offer's id
   // goes into the notes, so verify accepts this amount for this order even if
   // it is paid after the offer ends.
-  const { amountPaise, offer } = priceNow(plan as PlanId);
-  // The invite code the buyer arrived with. Only a claim: verify checks the
-  // code, the plan and that this is the buyer's first purchase.
-  const refCode = isReferralPlan(plan as PlanId) && isRefCode(ref) ? String(ref).toUpperCase() : null;
+  const { amountPaise: pricePaise, offer } = priceNow(plan as PlanId);
+
+  // A yearly order can come down twice: ₹100 off for a friend's first yearly
+  // plan through someone's link, and the reader's own invite balance unless
+  // they switched it off. Both are worked out here from the database, never
+  // taken from the request, and written into the notes, which verify checks.
+  let friend: { code: string; paise: number } | null = null;
+  let balanceSpend = 0;
+  if (plan === REFERRAL_PLAN) {
+    const db = createServerClient();
+    friend = await friendDiscountFor(db, user.uid, ref);
+    if (useBalance !== false) {
+      const balance = await referralBalance(db, user.uid);
+      balanceSpend = Math.max(0, Math.min(balance, pricePaise - (friend?.paise ?? 0)));
+    }
+  }
+  const amountPaise = pricePaise - (friend?.paise ?? 0) - balanceSpend;
+
+  // The balance covers it all: nothing to charge, so no Razorpay order. The
+  // plan is granted here, in one transaction with taking the money out.
+  if (amountPaise === 0) {
+    const db = createServerClient();
+    const orderId = `bal_${crypto.randomUUID()}`;
+    const { data: granted, error: grantErr } = await db.rpc('grant_plan_from_balance', {
+      p_uid: user.uid,
+      p_email: user.email ?? '',
+      p_optional: optional,
+      p_plan: plan,
+      p_days: planData.days,
+      p_spend_paise: balanceSpend,
+      p_friend_discount_paise: friend?.paise ?? 0,
+      p_order_id: orderId,
+    });
+    if (grantErr || granted?.result !== 'granted') {
+      console.error('[create-order] balance grant failed:', grantErr?.message ?? granted?.result);
+      return NextResponse.json({ error: 'Your balance changed. Refresh the page and try again.' }, { status: 409 });
+    }
+    if (friend) {
+      const { error: refErr } = await db.rpc('credit_referral', {
+        p_code: friend.code,
+        p_order_id: orderId,
+        p_buyer_uid: user.uid,
+        p_buyer_optional: optional,
+        p_reward_paise: REFERRAL_REWARD_PAISE,
+        p_free_cap_paise: FREE_BALANCE_CAP_PAISE,
+      });
+      if (refErr) console.error('[create-order] referral credit failed:', refErr.message);
+    }
+    return NextResponse.json({ granted: true, plan, optional, expiresAt: granted.expires_at });
+  }
 
   try {
     const order = await razorpay.orders.create({
@@ -69,7 +117,8 @@ export async function POST(req: NextRequest) {
         optional,
         days: String(planData.days),
         ...(offer ? { offer: offer.id } : {}),
-        ...(refCode ? { ref: refCode } : {}),
+        ...(friend ? { ref: friend.code, friend_discount: String(friend.paise) } : {}),
+        ...(balanceSpend > 0 ? { balance_spend: String(balanceSpend) } : {}),
       },
     });
 

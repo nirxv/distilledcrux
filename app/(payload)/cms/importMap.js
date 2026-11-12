@@ -29,6 +29,7 @@ import { default as default_ed96b0620df85d6777cdd2db92d11c75 } from '../../../ap
 import { default as default_32de38366e9589935960065ef79ce430 } from '../../../app/(payload)/views/Sessions.tsx'
 import { default as default_14582a8b7c7c818b1e90d462e7762733 } from '../../../app/(payload)/views/Content.tsx'
 import { default as default_262e620f8725519c5ef63f051582e775 } from '../../../app/(payload)/views/Operations.tsx'
+import { default as default_40e00eac48d859c192d9bff02e8e27d2 } from '../../../app/(payload)/views/Payouts.tsx'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -64,5 +65,6 @@ export const importMap = {
   "/app/(payload)/views/Sessions.tsx#default": default_32de38366e9589935960065ef79ce430,
   "/app/(payload)/views/Content.tsx#default": default_14582a8b7c7c818b1e90d462e7762733,
   "/app/(payload)/views/Operations.tsx#default": default_262e620f8725519c5ef63f051582e775,
+  "/app/(payload)/views/Payouts.tsx#default": default_40e00eac48d859c192d9bff02e8e27d2,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

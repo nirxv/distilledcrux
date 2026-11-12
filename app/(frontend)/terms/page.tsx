@@ -64,7 +64,36 @@ export default function TermsPage() {
         reasonable prior notice.
       </p>
 
-      <h2>5. Refund Policy</h2>
+      <h2>5. Invites</h2>
+      <p>
+        Every signed-in reader gets an invite link. When someone signs up through it and buys their
+        first yearly plan, they pay ₹100 less and the reader who invited them gets ₹100 in an invite
+        balance. Only a friend&apos;s first yearly plan counts, and each friend counts once.
+      </p>
+      <ul>
+        <li>
+          Before you have bought a yearly plan, your balance can grow up to the yearly plan&apos;s list
+          price and can only be used as money off your own yearly plan.
+        </li>
+        <li>
+          Each yearly plan you buy lets you earn up to what that payment brought us after Razorpay&apos;s
+          fee and the GST on it. A yearly plan paid wholly from your balance brought nothing in, so
+          invites earn again from your next paid yearly plan.
+        </li>
+        <li>
+          Once you have a yearly plan, you can cash out your whole balance to a UPI id each time your
+          earnings on that plan reach ₹1,000, ₹2,000 and your limit. We send cash-outs by hand to the
+          UPI id you give, so check it carefully. Money sent to a UPI id you entered wrongly cannot be
+          recovered by us.
+        </li>
+        <li>
+          Your balance cannot be transferred and has no cash value except through these cash-outs. It
+          stays for as long as we run invites. If we end them, we will say here what happens to
+          balances.
+        </li>
+      </ul>
+
+      <h2>6. Refund Policy</h2>
       <p>
         All purchases are final. We do not offer refunds, exchanges, or credits for any
         subscription plan{TOPPER_COPIES_LIVE ? " or topper copy pass" : ""} once payment has been processed. Please review the features
@@ -76,14 +105,14 @@ export default function TermsPage() {
         requests on a case-by-case basis. Contact us within 7 days of the issue.
       </p>
 
-      <h2>6. Intellectual Property</h2>
+      <h2>7. Intellectual Property</h2>
       <p>
         All content on this site including notes, question banks, AI-generated evaluations,
         and design is owned by distilledcrux.com or its licensors. You may not copy,
         redistribute, or sell any content without written permission.
       </p>
 
-      <h2>7. Acceptable Use</h2>
+      <h2>8. Acceptable Use</h2>
       <p>You agree not to:</p>
       <ul>
         <li>Scrape, crawl, or systematically download site content</li>
@@ -92,14 +121,14 @@ export default function TermsPage() {
         <li>Attempt to reverse-engineer or interfere with the platform</li>
       </ul>
 
-      <h2>8. AI Features</h2>
+      <h2>9. AI Features</h2>
       <p>
         AI-powered answer evaluation and chat features are provided as study aids only.
         They do not constitute professional coaching advice. Accuracy of AI responses
         may vary; always cross-reference with official UPSC sources.
       </p>
 
-      <h2>9. Limitation of Liability</h2>
+      <h2>10. Limitation of Liability</h2>
       <p>
         To the maximum extent permitted by law, distilledcrux.com shall not be liable for
         any indirect, incidental, or consequential damages arising from your use of the
@@ -107,13 +136,13 @@ export default function TermsPage() {
         preceding the claim.
       </p>
 
-      <h2>10. Governing Law</h2>
+      <h2>11. Governing Law</h2>
       <p>
         These terms are governed by the laws of India. Any disputes shall be subject to
         the exclusive jurisdiction of courts in India.
       </p>
 
-      <h2>11. Contact</h2>
+      <h2>12. Contact</h2>
       <p>
         Questions about these terms? Contact us at:<br />
         <strong>Distilled Crux Team</strong><br />

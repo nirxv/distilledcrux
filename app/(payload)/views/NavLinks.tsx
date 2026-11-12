@@ -16,6 +16,7 @@ const LINKS = [
   ['/cms/usage', 'Usage'],
   ['/cms/sessions', 'Sessions'],
   ['/cms/content', 'Content'],
+  ['/cms/payouts', 'Payouts'],
   ['/cms/operations', 'Operations'],
 ] as const;
 

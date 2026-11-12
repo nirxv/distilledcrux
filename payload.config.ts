@@ -50,6 +50,7 @@ export default buildConfig({
         sessions:      { Component: '/app/(payload)/views/Sessions.tsx#default',      path: '/sessions' },
         content:       { Component: '/app/(payload)/views/Content.tsx#default',       path: '/content' },
         operations:    { Component: '/app/(payload)/views/Operations.tsx#default',    path: '/operations' },
+        payouts:       { Component: '/app/(payload)/views/Payouts.tsx#default',       path: '/payouts' },
       },
     },
   },

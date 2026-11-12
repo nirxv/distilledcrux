@@ -1,7 +1,7 @@
 'use client';
 import { useSyncExternalStore } from 'react';
 import { readRef } from '@/lib/referralClient';
-import { REFERRED_DAYS } from '@/lib/referral';
+import { FRIEND_DISCOUNT_PAISE, formatPaise } from '@/lib/referral';
 
 const noop = () => () => {};
 
@@ -9,5 +9,5 @@ const noop = () => () => {};
 export default function InvitedNote({ className }: { className?: string }) {
   const code = useSyncExternalStore(noop, readRef, () => null);
   if (!code) return null;
-  return <p className={className}>A friend invited you: get {REFERRED_DAYS} extra days with your first 6-month or yearly plan.</p>;
+  return <p className={className}>A friend invited you: {formatPaise(FRIEND_DISCOUNT_PAISE)} off your first yearly plan.</p>;
 }
