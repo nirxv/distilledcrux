@@ -9,7 +9,7 @@ import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
-import { TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_SUBJECTS, isTopperSubject } from '@/lib/toppers/meta';
 
 // The ⌘K palette carries every note's title; it is fetched the first time
 // it is wanted, not with every page.
@@ -188,10 +188,11 @@ export default function Navbar() {
       ];
   const flatLinks: NavLink[] = links.flatMap((l) => ('items' in l ? l.items.map(({ href, label }) => ({ href, label })) : [l]));
   // The phone sheet lists topper copies for every reader: under the PYQs for
-  // an optional that has them, and by optional for one that has none yet.
+  // an optional that has them, and for one that has none yet, the copies there
+  // are (Sociology so far), under the same plain name.
   const otherToppers: NavLink[] = slug && isTopperSubject(slug)
     ? []
-    : TOPPER_SUBJECTS.map((t) => ({ href: `/${t}/topper-copies`, label: `${TOPPER_SUBJECT_NAME[t]} topper copies` }));
+    : [{ href: `/${TOPPER_SUBJECTS[0]}/topper-copies`, label: 'Topper copies' }];
   const toppersAfter = flatLinks.findIndex((l) => l.href === (slug ? `/${slug}/pyqs` : '/#optionals')) + 1;
   const sheetLinks: NavLink[] = [
     ...flatLinks.slice(0, toppersAfter),
