@@ -137,6 +137,8 @@ const BN_CSS = `
     pointer-events: none;
   }
   .bn-pill, .bn-create, .bn-scrim { pointer-events: auto; }
+  /* The navbar's phone menu has every link this bar has, and the bar would cover its foot. */
+  body.nb-sheet-open .bn { display: none; }
   .bn-pill {
     flex: 1; min-width: 0; display: flex; padding: var(--space-1);
     background: var(--ds-card); border: 1px solid var(--border); border-radius: var(--radius-full);

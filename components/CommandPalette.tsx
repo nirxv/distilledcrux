@@ -184,6 +184,7 @@ export default function CommandPalette({ open, onClose, subject }: { open: boole
             aria-controls="cp-list"
           />
           <kbd onClick={onClose}>esc</kbd>
+          <button type="button" className="cp-x" onClick={onClose} aria-label="Close search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg></button>
         </div>
         <div className="cp-list" id="cp-list" role="listbox" ref={listRef}>
           {items.map((it, i) => {
@@ -270,5 +271,14 @@ const CP_CSS = `
   .cp-foot { display: none; }
 }
 @media (hover: none) { .cp-foot, .cp-input kbd { display: none; } }
+.cp-x { display: none; }
+@media (hover: none) {
+  /* No Esc key on a phone, and the sheet fills the screen: a plain close button. */
+  .cp-x {
+    display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 40px; height: 40px; margin-right: calc(-1 * var(--space-2));
+    border: none; border-radius: 50%; background: var(--ds-soft); color: var(--text2); cursor: pointer;
+  }
+}
 @media (prefers-reduced-motion: reduce) { .cp-scrim, .cp { animation: none; } }
 `;

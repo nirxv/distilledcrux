@@ -9,7 +9,7 @@ import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
-import { isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
 
 // The ⌘K palette carries every note's title; it is fetched the first time
 // it is wanted, not with every page.
@@ -83,9 +83,16 @@ export default function Navbar() {
     };
   }, []);
 
+  // The phone's bottom bar floats over every page (BottomNav), so over the
+  // sheet it covered the last rows, Sign out among them. The sheet has every
+  // link the bar has, so the bar steps aside while it is open.
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.classList.toggle('nb-sheet-open', mobileOpen);
+    return () => {
+      document.body.style.overflow = '';
+      document.body.classList.remove('nb-sheet-open');
+    };
   }, [mobileOpen]);
 
   // A new page closes whatever was open.
@@ -180,6 +187,18 @@ export default function Navbar() {
         { href: '/chat', label: 'AI Chat', accent: true },
       ];
   const flatLinks: NavLink[] = links.flatMap((l) => ('items' in l ? l.items.map(({ href, label }) => ({ href, label })) : [l]));
+  // The phone sheet lists topper copies for every reader: under the PYQs for
+  // an optional that has them, and by optional for one that has none yet.
+  const otherToppers: NavLink[] = slug && isTopperSubject(slug)
+    ? []
+    : TOPPER_SUBJECTS.map((t) => ({ href: `/${t}/topper-copies`, label: `${TOPPER_SUBJECT_NAME[t]} topper copies` }));
+  const toppersAfter = flatLinks.findIndex((l) => l.href === (slug ? `/${slug}/pyqs` : '/#optionals')) + 1;
+  const sheetLinks: NavLink[] = [
+    ...flatLinks.slice(0, toppersAfter),
+    ...otherToppers,
+    ...flatLinks.slice(toppersAfter),
+    ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : []),
+  ];
 
   const initial = (user?.displayName?.[0] ?? user?.email?.[0] ?? '?').toUpperCase();
   const avatar = (size: number) => user?.photoURL
@@ -293,9 +312,9 @@ export default function Navbar() {
       <div className={`nb-sheet ds${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="nb-sheet-search" onClick={openPalette}>{Icon.search}Search notes, tools, or ask the AI</button>
         <div className="nb-sheet-links">
-          {[...flatLinks, ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : [])].map((l) => (
-            <Link key={l.href} href={l.href} className={`nb-sheet-link${isActive(l.href) ? ' on' : ''}${(l as NavLink).accent ? ' accent' : ''}`}>
-              <span>{(l as NavLink).accent && Icon.chat}{l.label}</span>
+          {sheetLinks.map((l) => (
+            <Link key={l.href} href={l.href} className={`nb-sheet-link${isActive(l.href) ? ' on' : ''}${l.accent ? ' accent' : ''}`}>
+              <span>{l.accent && Icon.chat}{l.label}</span>
               {Icon.arrow}
             </Link>
           ))}
@@ -429,7 +448,7 @@ const NAV_CSS = `
 .nb-sheet {
   position: fixed; inset: 60px 0 0 0; z-index: 101;
   background: var(--bg); display: flex; flex-direction: column; overflow-y: auto;
-  padding: var(--space-4);
+  padding: var(--space-4) var(--space-4) max(var(--space-4), env(safe-area-inset-bottom, 0px));
   opacity: 0; visibility: hidden; transform: translateY(-6px); pointer-events: none;
   transition: opacity 0.18s, transform 0.18s, visibility 0s linear 0.18s;
 }
