@@ -1,5 +1,12 @@
 # CMS
 
+> **Removed on 12 November 2026.** The owner asked for the admin panel to be
+> deleted from the site entirely: app/(payload), payload.config.ts, proxy.ts,
+> the Payload migrations and packages. Payload's tables are still in the
+> `payload` schema of the database, untouched. Notes are still read from
+> `note_overrides`, and invite cash-outs are settled in the `referral_payouts`
+> table. This document is kept as history.
+
 Payload 3 runs inside this Next app, against the Supabase Postgres the app
 already uses. There is no second service and no second datastore.
 
