@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import TopperBrowser, { type PyqRef } from '@/components/toppers/TopperBrowser';
 import { TOPPER_BROWSER_CSS, TOPPER_PASS_CSS } from '@/components/toppers/styles';

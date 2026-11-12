@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import PyqBrowser from '@/components/pyq/PyqBrowser';
 import { PYQ_SUBJECT_NAME, isPyqSubject, loadPyqs } from '@/lib/pyqs';

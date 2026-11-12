@@ -1,6 +1,6 @@
 'use client';
 import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
 import { isTopperSubject, rankLine, type TopperCopy } from '@/lib/toppers/meta';
 import { labelForSlug } from '@/lib/optionals';

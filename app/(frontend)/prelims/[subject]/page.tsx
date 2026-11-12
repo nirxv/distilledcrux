@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo, useCallback } from 'react';
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 
 /* ─── Subject config ──────────────────────────────────────────── */
 const SUBJECTS: Record<string, {

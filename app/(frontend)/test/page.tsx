@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import type { User } from 'firebase/auth';

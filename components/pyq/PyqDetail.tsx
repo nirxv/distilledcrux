@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, type MouseEvent } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { sanitizeHtml } from '@/lib/sanitizeHtml';

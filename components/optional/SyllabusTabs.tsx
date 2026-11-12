@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 
 export type SyllabusPaper = {
   paper: 1 | 2;

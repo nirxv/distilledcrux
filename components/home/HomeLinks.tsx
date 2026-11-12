@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useAuth } from '@/components/AuthProvider';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';

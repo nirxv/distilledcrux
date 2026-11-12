@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
+import owlReadingArt from '@/public/mascot/owl-reading.svg';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import HomeAsk from '@/components/home/HomeAsk';
 import SyllabusTabs, { type SyllabusPaper } from '@/components/optional/SyllabusTabs';
@@ -260,7 +261,7 @@ export default async function OptionalPage({ params }: { params: Promise<{ optio
         {first && (
           <section className="op-section op-close">
             <div className="ds-container ds-narrow op-close-inner">
-              <Image src="/mascot/owl-reading.svg" alt="" width={104} height={90} className="op-close-owl" />
+              <Image src={owlReadingArt} alt="" width={104} height={90} className="op-close-owl" />
               <h2 className="ds-h2">Not sure where to begin?</h2>
               <p className="ds-lede">Start at the top, with {first.title}. It sets up the words and ideas the rest of the syllabus keeps coming back to.</p>
               <Link href={`/notes/${slug}/${first.slug}`} className="ds-btn ds-btn-solid ds-btn-lg">Open {first.title}<Arrow /></Link>

@@ -1,6 +1,6 @@
 'use client';
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
 import type { Pyq, PyqTopic } from '@/lib/pyqs';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';

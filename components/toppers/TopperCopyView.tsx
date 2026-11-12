@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { rankLine, type TopperCopy } from '@/lib/toppers/meta';
 import TopperPdf from './TopperPdf';
 import { gateFor, useTopperStatus } from './useTopperStatus';

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { geoMapData, geoMapYears, GEO_CATEGORIES, GeoCategory, GeoMapEntry } from '@/lib/geoMapData';
 import type { MapBase, MapMark, MapPlace } from '@/components/GeoMap';
 import OwlLoader from '@/components/OwlLoader';

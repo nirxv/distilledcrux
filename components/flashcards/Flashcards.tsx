@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback, useMemo, useSyncExternalStore } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import OwlLoader from '@/components/OwlLoader';
 import SessionComplete from '@/components/flashcards/SessionComplete';

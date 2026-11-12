@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { PLANS, PLAN_ORDER, rupees, type PlanId } from '@/lib/plans';
 import { useOffer } from '@/hooks/useOffer';
 import { auth } from '@/lib/firebase';
@@ -8,6 +8,7 @@ import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
 import Mascot from '@/components/Mascot';
 import { routeSlugForOptional } from '@/lib/optionals';
+import { lookupOptional } from '@/components/useOptional';
 import { clearBalance, clearRef, readRef } from '@/lib/referralClient';
 import { REFERRAL_PLAN, formatPaise } from '@/lib/referral';
 import InvitedNote from '@/components/InvitedNote';
@@ -128,21 +129,17 @@ export default function PricingPage() {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser: User | null) => {
       setSignedIn(Boolean(firebaseUser));
       if (!firebaseUser) return;
-      try {
-        const token = await firebaseUser.getIdToken();
-        const res = await fetch('/api/user-profile', { headers: { 'x-user-token': token } });
-        if (res.ok) {
-          const data = await res.json();
-          if (data.optional) { setUserOptional(data.optional); setSelectedOptional(data.optional); }
-        }
-      } catch { /* ignore */ }
+      const optional = await lookupOptional(firebaseUser);
+      if (optional) { setUserOptional(optional); setSelectedOptional(optional); }
     });
     return () => unsubscribe();
   }, []);
 
   useEffect(() => {
+    // After auth has answered: on arrival by a link, auth.currentUser is
+    // already set before signedIn is, and the quote was asked for twice.
     const user = auth.currentUser;
-    if (!user) return;
+    if (!signedIn || !user) return;
     let live = true;
     (async () => {
       try {

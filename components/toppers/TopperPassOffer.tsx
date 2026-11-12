@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { TOPPER_PASS_RUPEES, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
 import { labelForSlug } from '@/lib/optionals';
 import TopperComing from './TopperComing';

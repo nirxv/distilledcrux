@@ -1,6 +1,6 @@
 'use client';
 import { useState, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -8,6 +8,7 @@ import Mascot from '@/components/Mascot';
 import EvalProgress, { ReadProgress, applyEvalStage, applyReadStage, type EvalStages, type ReadStages } from '@/components/EvalProgress';
 import { readProgress } from '@/lib/progressStream';
 import { labelForOptional, routeSlugForOptional } from '@/lib/optionals';
+import { lookupOptional } from '@/components/useOptional';
 import { isPdf, toAnswerPages } from '@/lib/answerImages';
 import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
 import ShareButton from '@/components/evaluate/ShareButton';
@@ -174,13 +175,8 @@ export default function EvaluatePage() {
     const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u)
       if (!u) { setProfileLoading(false); return }
-      try {
-        const token = await u.getIdToken()
-        const res = await fetch('/api/user-profile', { headers: { 'x-user-token': token } })
-        const data = await res.json()
-        setOptionalId(data.optional ?? null)
-      } catch { /* ignore */ }
-      finally { setProfileLoading(false) }
+      setOptionalId((await lookupOptional(u)) ?? null)
+      setProfileLoading(false)
     })
     return () => unsub()
   }, [])

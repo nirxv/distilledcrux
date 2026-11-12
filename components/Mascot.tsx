@@ -1,4 +1,7 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
+import owlArt from '@/public/mascot/owl.svg';
+import owlReadingArt from '@/public/mascot/owl-reading.svg';
+import owlCelebrateArt from '@/public/mascot/owl-celebrate.svg';
 
 /**
  * The site's mascot: the owl, in the poses drawn so far.
@@ -15,10 +18,15 @@ import Image from 'next/image';
  */
 export type MascotPose = 'peek' | 'reading' | 'celebrate';
 
-const ART: Record<MascotPose, { src: string; w: number; h: number }> = {
-  peek:    { src: '/mascot/owl.svg',         w: 180, h: 170 },
-  reading: { src: '/mascot/owl-reading.svg', w: 150, h: 130 },
-  celebrate: { src: '/mascot/owl-celebrate.svg', w: 200, h: 196 },
+/**
+ * Imported rather than linked as /mascot/..., so each file is served from a
+ * hashed address the browser keeps; a public/ file is checked with the server
+ * on every page view, and each check counts against Vercel's CDN requests.
+ */
+const ART: Record<MascotPose, { src: StaticImageData; w: number; h: number }> = {
+  peek:    { src: owlArt,         w: 180, h: 170 },
+  reading: { src: owlReadingArt, w: 150, h: 130 },
+  celebrate: { src: owlCelebrateArt, w: 200, h: 196 },
 };
 
 export default function Mascot({

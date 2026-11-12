@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useRouter } from 'next/navigation';
 import { auth, signInWithGoogle, signInWithGoogleRedirect, googleBlocksThisBrowser, isAndroid } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';

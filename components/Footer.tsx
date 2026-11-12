@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import owlArt from '@/public/mascot/owl.svg';
+import Link from '@/components/Link';
 
 /**
  * The site footer, rendered once by the frontend layout so every route
@@ -34,7 +35,7 @@ export default function Footer() {
       <style>{FOOTER_CSS}</style>
       <div className="ds-footer-inner">
         <Link href="/" className="ds-footer-brand">
-          <Image src="/mascot/owl.svg" alt="" width={26} height={25} />
+          <Image src={owlArt} alt="" width={26} height={25} />
           <span>Distilled Crux</span>
         </Link>
 

@@ -2,7 +2,8 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Link from 'next/link';
+import owlArt from '@/public/mascot/owl.svg';
+import Link from '@/components/Link';
 import { usePathname, useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
@@ -79,7 +80,6 @@ export default function Navbar() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteMounted, setPaletteMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const [isMac, setIsMac] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem('theme') as 'dark' | 'light' | null;
@@ -87,7 +87,6 @@ export default function Navbar() {
     /* eslint-disable-next-line react-hooks/set-state-in-effect */
     setTheme(initial);
     document.documentElement.setAttribute('data-theme', initial);
-    setIsMac(/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent));
   }, []);
 
   useEffect(() => {
@@ -238,7 +237,7 @@ export default function Navbar() {
       <nav className="nb ds" aria-label="Main">
         <div className="nb-inner">
           <Link href="/" className="nb-brand" aria-label="Distilled Crux, home">
-            <Image src="/mascot/owl.svg" alt="" width={30} height={28} priority />
+            <Image src={owlArt} alt="" width={30} height={28} priority />
             <span>Distilled Crux</span>
           </Link>
 
@@ -289,7 +288,6 @@ export default function Navbar() {
             <button className="nb-search" onClick={openPalette} onMouseEnter={loadPalette} onFocus={loadPalette} aria-label="Search the site">
               {Icon.search}
               <span className="nb-search-text">Search</span>
-              <kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
             </button>
 
             <button className="nb-icon nb-theme" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} title={theme === 'dark' ? 'Light mode' : 'Dark mode'}>
@@ -459,17 +457,13 @@ const NAV_CSS = `
 .nb-sheet-invite > svg { flex-shrink: 0; color: var(--accent-text); }
 .nb-search {
   display: inline-flex; align-items: center; gap: var(--space-2);
-  height: 38px; padding: 0 6px 0 var(--space-3); width: clamp(150px, 13vw, 200px); min-width: 0;
+  height: 38px; padding: 0 var(--space-4) 0 var(--space-3); min-width: 0;
   background: var(--ds-soft); color: var(--text3);
   border: 1px solid var(--border2); border-radius: var(--radius-full);
   font-size: 0.86rem; cursor: pointer; transition: border-color 0.15s, color 0.15s;
 }
 .nb-search:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--text2); }
-.nb-search-text { flex: 1; min-width: 0; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nb-search kbd {
-  font-family: var(--font-ui); font-size: 0.7rem; color: var(--text3);
-  padding: 2px 7px; border: 1px solid var(--border2); border-radius: var(--radius-full); background: var(--ds-card);
-}
+.nb-search-text { white-space: nowrap; }
 .nb-icon {
   width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;
   background: none; border: 1px solid transparent; border-radius: var(--radius-md); color: var(--text2); cursor: pointer;
@@ -541,8 +535,8 @@ const NAV_CSS = `
 .nb-sheet-actions > * { flex: 1; }
 
 @media (max-width: 1080px) {
-  .nb-search { width: auto; padding: 0 var(--space-3); }
-  .nb-search-text, .nb-search kbd { display: none; }
+  .nb-search { padding: 0 var(--space-3); }
+  .nb-search-text { display: none; }
   .nb-links { margin-left: var(--space-2); }
   .nb-link { padding: 7px 9px; }
 }

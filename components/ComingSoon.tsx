@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/Link';
 
 /**
  * Placeholder for a route that is linked from the site but not built yet.

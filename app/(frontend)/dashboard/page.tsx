@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState, Suspense, type ReactNode } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useAuth } from '@/components/AuthProvider';
 import Mascot from '@/components/Mascot';
 import OwlLoader from '@/components/OwlLoader';

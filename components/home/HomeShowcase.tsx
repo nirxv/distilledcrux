@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { TOPPER_COUNTS, isTopperSubject } from '@/lib/toppers/meta';

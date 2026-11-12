@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import InvitedNote from '@/components/InvitedNote';
 import { routeSlugForOptional } from '@/lib/optionals';
 import type { ShareCard } from '@/lib/shareCard';

@@ -1,12 +1,8 @@
 import '@fontsource/libre-baskerville/400.css';
 import '@fontsource/libre-baskerville/400-italic.css';
 import '@fontsource/libre-baskerville/700.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/inter/800.css';
 import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 /**
  * Root layout for the public site.
  *
@@ -27,6 +23,13 @@ import { AuthProvider } from '@/components/AuthProvider';
 import BottomNav from '@/components/BottomNav';
 import Toaster from '@/components/ui/Toast';
 import ConfirmHost from '@/components/ui/ConfirmDialog';
+
+/**
+ * Inter as one variable font, every weight in a single file per script, served
+ * from this site. It was five files, one per weight, and each file is a CDN
+ * request on a reader's first visit. latin-ext carries ₹.
+ */
+const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -61,9 +64,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   // The script in <head> sets the saved theme before React loads, so the
   // attribute is expected to differ from the server's.
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" data-theme="light" className={inter.variable} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();` }} />
       </head>
       <body>

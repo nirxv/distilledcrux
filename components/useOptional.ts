@@ -27,8 +27,12 @@ function checkedRecently(uid: string): boolean {
   }
 }
 
-/** The reader's optional from their profile, null for none, undefined if the lookup failed. */
-function lookupOptional(user: User): Promise<string | null | undefined> {
+/**
+ * The reader's optional from their profile, null for none, undefined if the
+ * lookup failed. Pages that need it (pricing, evaluate) ask here too, so a
+ * session looks the profile up once rather than once per page.
+ */
+export function lookupOptional(user: User): Promise<string | null | undefined> {
   if (lookup?.uid === user.uid) return lookup.optional;
   const optional = (async () => {
     try {

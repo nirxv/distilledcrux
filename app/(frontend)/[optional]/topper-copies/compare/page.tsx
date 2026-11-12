@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import TopperCompare from '@/components/toppers/TopperCompare';
 import { TOPPER_COMPARE_CSS, TOPPER_PASS_CSS, TOPPER_PDF_CSS } from '@/components/toppers/styles';
 import { PYQ_SUBJECT_NAME } from '@/lib/pyqs';

@@ -41,10 +41,10 @@
   --glass-bg2:     rgba(255,255,255,0.055);
   --glass-border:  rgba(255,255,255,0.07);
   --glass-border2: rgba(255,255,255,0.13);
-  --font-monument: 'Neue Haas Grotesk', 'Inter', system-ui, sans-serif;
+  --font-monument: 'Neue Haas Grotesk', var(--font-inter), 'Inter', system-ui, sans-serif;
   --font-display:  'Playfair Display', 'Libre Baskerville', Georgia, serif;
   --font-body:     'Libre Baskerville', Georgia, serif;
-  --font-ui:       'Inter', system-ui, sans-serif;
+  --font-ui:       var(--font-inter), 'Inter', system-ui, sans-serif;
   --font-mono:     'Fira Code', 'Consolas', monospace;
   --radius-xs:  4px;
   --radius-sm:  8px;

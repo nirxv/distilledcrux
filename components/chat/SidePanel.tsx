@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import type { RelatedPyq } from './StartFlow';
 import type { SubjectKey } from '@/lib/subjectConfig';
 

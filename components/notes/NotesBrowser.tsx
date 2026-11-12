@@ -1,6 +1,6 @@
 'use client';
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 
 export type BrowserNote = {

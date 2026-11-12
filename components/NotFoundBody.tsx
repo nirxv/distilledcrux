@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import Mascot from '@/components/Mascot';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';

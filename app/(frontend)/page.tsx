@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import owlArt from '@/public/mascot/owl.svg';
+import owlReadingArt from '@/public/mascot/owl-reading.svg';
+import Link from '@/components/Link';
 import Script from 'next/script';
 import SubjectIcon from '@/components/SubjectIcon';
 import HomeAsk from '@/components/home/HomeAsk';
@@ -90,7 +92,7 @@ export default async function Home() {
         {/* ── Hero ── */}
         <section className="hm-hero">
           <div className="ds-container ds-narrow hm-hero-inner">
-            <Image src="/mascot/owl.svg" alt="" width={112} height={106} priority className="hm-owl" />
+            <Image src={owlArt} alt="" width={112} height={106} priority className="hm-owl" />
             <h1 className="ds-h1">
               Your optional, <em className="hm-mark">distilled.<svg viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11c34-6 70-8 108-5 30 2 63 3 106-3" /></svg></em>
             </h1>
@@ -208,7 +210,7 @@ export default async function Home() {
         {/* ── Close ── */}
         <section className="hm-section hm-close">
           <div className="ds-container ds-narrow hm-close-inner">
-            <Image src="/mascot/owl-reading.svg" alt="" width={110} height={95} className="hm-close-owl" />
+            <Image src={owlReadingArt} alt="" width={110} height={95} className="hm-close-owl" />
             <h2 className="ds-h2">Start with tonight’s topic</h2>
             <p className="ds-lede">Open the notes for whatever you are reading today and see if it helps. It is free, and there is no card to enter.</p>
             <HeroActions />

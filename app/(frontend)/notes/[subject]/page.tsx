@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import NotesBrowser, { type BrowserNote } from '@/components/notes/NotesBrowser';
 import { NOTE_SUBJECTS, isNoteSubject, notesForSubject } from '@/lib/notes';

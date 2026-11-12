@@ -58,6 +58,14 @@ const nextConfig: NextConfig = {
   ],
   headers: async () => [
     {
+      // The tab icons are linked with a content hash (/icon.svg?icon.<hash>),
+      // so a changed icon gets a new address and these can be kept for good.
+      // Next serves them with max-age=0, which made every page view check
+      // them again, each check a CDN request.
+      source: '/:icon(favicon.ico|icon.svg|apple-icon.png)',
+      headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+    },
+    {
       // The proxied auth handler is Google's own page — our CSP would break it.
       source: '/((?!__/).*)',
       headers: securityHeaders,

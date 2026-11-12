@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import type { DailyQuestion } from '@/lib/dailyQuestions';
 import type { PyqSubject } from '@/lib/pyqs';
 import { istDay } from '@/lib/istDay';

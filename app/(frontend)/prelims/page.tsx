@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import Script from 'next/script';
 
 export const metadata: Metadata = {

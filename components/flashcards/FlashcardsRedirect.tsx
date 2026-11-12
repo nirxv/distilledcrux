@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useRouter } from 'next/navigation';
 import SubjectIcon from '@/components/SubjectIcon';
 import { useOptional } from '@/components/useOptional';

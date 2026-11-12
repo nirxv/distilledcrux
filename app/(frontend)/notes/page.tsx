@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import ContinueNotes from '@/components/notes/ContinueNotes';
 import { NOTE_SUBJECTS, notesForSubject } from '@/lib/notes';

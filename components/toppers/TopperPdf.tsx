@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { auth } from '@/lib/firebase';
 import TopperPassOffer from './TopperPassOffer';
 

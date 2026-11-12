@@ -2,8 +2,9 @@
 import { sanitizeHtml as sanitize } from '@/lib/sanitizeHtml';
 import { Fragment, useState, useRef, useEffect, Suspense, useCallback, useMemo } from 'react';
 import { preload } from 'react-dom';
+import owlReadingArt from '@/public/mascot/owl-reading.svg';
 import { marked } from 'marked';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { fixSentenceSpacing } from '@/lib/textSpacing';
@@ -484,7 +485,7 @@ function ChatContent() {
   );
   // The reading owl is only drawn once a question is sent; fetched then, it
   // arrived a beat after the checklist it sits beside.
-  preload('/mascot/owl-reading.svg', { as: 'image' });
+  preload(owlReadingArt.src, { as: 'image' });
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState(initialQ);
