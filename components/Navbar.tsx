@@ -52,6 +52,9 @@ export default function Navbar() {
   // The invite balance, shown on every page as a nudge to share: the amount,
   // or "Earn ₹100" at nothing. Kept in the browser for half an hour.
   const [inviteBalance, setInviteBalance] = useState<number | null>(null);
+  // Signed in or not: "Earn ₹100" until there is a balance to show. It does
+  // not wait for the balance request, so a slow or failed one cannot hide it.
+  const chipBalance = loading ? null : user ? (inviteBalance ?? 0) : 0;
   useEffect(() => {
     if (!user) return;
     let live = true;
@@ -293,10 +296,10 @@ export default function Navbar() {
               {theme === 'dark' ? Icon.sun : Icon.moon}
             </button>
 
-            {!loading && user && inviteBalance !== null && (
+            {chipBalance !== null && (
               <Link href="/invite" className="nb-invite"
-                aria-label={inviteBalance > 0 ? `Invite balance ${formatPaise(inviteBalance)}` : `Invite friends and earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}>
-                {Icon.gift}<span>{inviteBalance > 0 ? formatPaise(inviteBalance) : `Earn ${formatPaise(REFERRAL_REWARD_PAISE)}`}</span>
+                aria-label={chipBalance > 0 ? `Invite balance ${formatPaise(chipBalance)}` : `Invite friends and earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}>
+                {Icon.gift}<span>{chipBalance > 0 ? formatPaise(chipBalance) : `Earn ${formatPaise(REFERRAL_REWARD_PAISE)}`}</span>
               </Link>
             )}
 
@@ -342,12 +345,12 @@ export default function Navbar() {
       <div className={`nb-sheet ds${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="nb-sheet-search" onClick={openPalette}>{Icon.search}Search notes, tools, or ask the AI</button>
         {/* On phones the invite chip lives here, not in the header, so the bar stays uncluttered. */}
-        {user && inviteBalance !== null && (
+        {chipBalance !== null && (
           <Link href="/invite" className="nb-sheet-invite">
             <span className="nb-sheet-invite-icon">{Icon.gift}</span>
             <span className="nb-sheet-invite-text">
-              <strong>{inviteBalance > 0 ? `Your invite balance: ${formatPaise(inviteBalance)}` : `Invite friends, earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}</strong>
-              <small>{inviteBalance > 0 ? 'Share your link to earn more' : `They pay ${formatPaise(REFERRAL_REWARD_PAISE)} less on their first yearly plan`}</small>
+              <strong>{chipBalance > 0 ? `Your invite balance: ${formatPaise(chipBalance)}` : `Invite friends, earn ${formatPaise(REFERRAL_REWARD_PAISE)} each`}</strong>
+              <small>{chipBalance > 0 ? 'Share your link to earn more' : `They pay ${formatPaise(REFERRAL_REWARD_PAISE)} less on their first yearly plan`}</small>
             </span>
             {Icon.arrow}
           </Link>
