@@ -98,6 +98,8 @@ export default function PricingPage() {
   const [signedIn, setSignedIn] = useState(false);
   const [activeUntil, setActiveUntil] = useState<string | null>(null);
   const [passBusy, setPassBusy] = useState<TopperSubject | null>(null);
+  // The optional picked on the topper copy card, when the reader picks one there.
+  const [passPick, setPassPick] = useState<TopperSubject | null>(null);
   // What invites take off a yearly plan for this reader, from the server, and
   // whether they want their balance used. The order route works it out again.
   const [quote, setQuote] = useState<{ friendDiscountPaise: number; balancePaise: number } | null>(null);
@@ -243,10 +245,12 @@ export default function PricingPage() {
   };
 
   const selected = OPTIONALS.find(o => o.id === selectedOptional);
-  // The pass follows the optional picked above, as the plans do. Before a
-  // pick, every optional with copies is on offer.
+  // One topper copy card for every optional with copies. It starts on the
+  // optional picked above when that one has copies; the reader can pick
+  // another on the card itself.
   const selectedSlug = routeSlugForOptional(selectedOptional);
-  const passSubjects: TopperSubject[] = !selectedOptional ? [...TOPPER_SUBJECTS] : isTopperSubject(selectedSlug) ? [selectedSlug] : [];
+  const passSubject: TopperSubject = passPick ?? (isTopperSubject(selectedSlug) ? selectedSlug : TOPPER_SUBJECTS[0]);
+  const passName = TOPPER_SUBJECT_NAME[passSubject];
   const profileLabel = OPTIONALS.find(o => o.id === userOptional)?.label;
   const slug = routeSlugForOptional(selectedOptional);
   const tint = slug ? { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` } : undefined;
@@ -275,7 +279,7 @@ export default function PricingPage() {
                 const s = routeSlugForOptional(opt.id);
                 return (
                   <button key={opt.id} type="button" role="radio" aria-checked={on}
-                    onClick={() => { setSelectedOptional(opt.id); setError(null); }}
+                    onClick={() => { setSelectedOptional(opt.id); setPassPick(null); setError(null); }}
                     className={`pr-opt${on ? ' on' : ''}`}
                     style={s ? { ['--t' as string]: `var(--tint-${s})`, ['--w' as string]: `var(--wash-${s})` } : undefined}>
                     <SubjectIcon id={opt.id} size={18} />
@@ -354,35 +358,34 @@ export default function PricingPage() {
           {TOPPER_COPIES_LIVE && (
             <section className="pr-pass">
               <h2 className="pr-h2">Only want the topper copies?</h2>
-              {passSubjects.length === 0 ? (
-                <div className="pr-pass-list">
-                  <article className="pr-plan pr-pass-card">
-                    <div className="pr-plan-top">
-                      <h3 className="pr-plan-name">{selected?.label} topper copies</h3>
-                      <span className="pr-tag pr-tag-soft">Coming</span>
-                    </div>
-                    <p className="pr-blurb">Handwritten answers by {selected?.label} rankers, filed under the UPSC questions they answer, like the {TOPPER_SUBJECTS.map((t) => TOPPER_SUBJECT_NAME[t]).join(' and ')} copies. Premium for {selected?.label} will include them.</p>
-                    <Link href={`/${TOPPER_SUBJECTS[0]}/topper-copies`} className="ds-btn ds-btn-line pr-buy">See the {TOPPER_SUBJECT_NAME[TOPPER_SUBJECTS[0]]} copies</Link>
-                  </article>
-                </div>
-              ) : (
               <div className="pr-pass-list">
-                {passSubjects.map((subject) => (
-                  <article key={subject} className="pr-plan pr-pass-card">
-                    <div className="pr-plan-top">
-                      <h3 className="pr-plan-name">{TOPPER_SUBJECT_NAME[subject]} topper copies</h3>
-                      <span className="pr-tag pr-tag-soft">Paid once</span>
-                    </div>
-                    <div className="pr-price-row"><div className="pr-price"><span>₹</span>{TOPPER_PASS_RUPEES}</div></div>
-                    <div className="pr-period">for a year, paid once</div>
-                    <p className="pr-blurb">Every {TOPPER_SUBJECT_NAME[subject]} topper copy, handwritten answers by rankers, with side-by-side compare, while {TOPPER_SUBJECT_NAME[subject]} is the optional on your profile. Premium for {TOPPER_SUBJECT_NAME[subject]} includes them.</p>
-                    <button type="button" className="ds-btn ds-btn-line pr-buy" onClick={() => buyPass(subject)} disabled={!!passBusy || !!loading}>
-                      {passBusy === subject ? 'Opening checkout…' : `Get ${TOPPER_SUBJECT_NAME[subject]} topper copies`}
-                    </button>
-                  </article>
-                ))}
+                <article className="pr-plan pr-pass-card">
+                  <div className="pr-plan-top">
+                    <h3 className="pr-plan-name">Topper copies</h3>
+                    <span className="pr-tag pr-tag-soft">Paid once</span>
+                  </div>
+                  <div className="pr-price-row"><div className="pr-price"><span>₹</span>{TOPPER_PASS_RUPEES}</div></div>
+                  <div className="pr-period">for a year, per optional, paid once</div>
+                  <div className="pr-opts pr-pass-opts" role="radiogroup" aria-label="Optional for the topper copies">
+                    {TOPPER_SUBJECTS.map((s) => (
+                      <button key={s} type="button" role="radio" aria-checked={s === passSubject}
+                        onClick={() => setPassPick(s)}
+                        className={`pr-opt${s === passSubject ? ' on' : ''}`}
+                        style={{ ['--t' as string]: `var(--tint-${s})`, ['--w' as string]: `var(--wash-${s})` }}>
+                        <SubjectIcon id={s} size={16} />
+                        <span>{TOPPER_SUBJECT_NAME[s]}</span>
+                      </button>
+                    ))}
+                  </div>
+                  <p className="pr-blurb">Every {passName} topper copy, handwritten answers by rankers, with side-by-side compare, while {passName} is the optional on your profile. Premium for {passName} includes them.</p>
+                  {selected && !isTopperSubject(selectedSlug) && (
+                    <p className="pr-pass-soon">Copies for {selected.label} are on their way. Premium for {selected.label} will include them.</p>
+                  )}
+                  <button type="button" className="ds-btn ds-btn-line pr-buy" onClick={() => buyPass(passSubject)} disabled={!!passBusy || !!loading}>
+                    {passBusy ? 'Opening checkout…' : `Get ${passName} topper copies`}
+                  </button>
+                </article>
               </div>
-              )}
             </section>
           )}
 
@@ -465,6 +468,10 @@ const CSS = `
 .pr-pass { margin-top: var(--space-8); }
 .pr-pass-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 380px)); gap: var(--space-4); margin-top: var(--space-4); }
 .pr-pass .pr-tag-soft { background: var(--ds-soft); color: var(--text2); white-space: nowrap; }
+.pr-pass-list:has(.pr-pass-opts) { grid-template-columns: minmax(280px, 440px); }
+.pr-pass-opts { margin-top: var(--space-4); }
+.pr-pass-opts .pr-opt { min-height: 38px; padding: 0 var(--space-3); font-size: 0.9rem; }
+.pr-pass-soon { margin: calc(-1 * var(--space-3)) 0 var(--space-4); font-size: 0.88rem; line-height: 1.5; color: var(--text3); }
 .pr-plan.featured { border: 2px solid var(--accent); box-shadow: var(--elev-2); }
 .pr-plan-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-4); }
 .pr-plan-name { margin: 0; font-size: 1.1rem; font-weight: 800; }
@@ -514,6 +521,8 @@ const CSS = `
   .pr-opts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .pr-opt { justify-content: center; padding: 0 var(--space-2); font-size: 0.9rem; }
   .pr-opt:last-child { grid-column: 1 / -1; }
+  /* The topper card's chips sit side by side; the last-child span is for the five optionals above. */
+  .pr-pass-opts .pr-opt:last-child { grid-column: auto; }
   .pr-plan { padding: var(--space-5) var(--space-4); }
   .pr-row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); padding: var(--space-3) var(--space-4); font-size: 0.88rem; }
   .pr-close { flex-direction: column; text-align: center; }
