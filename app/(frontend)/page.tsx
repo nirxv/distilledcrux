@@ -20,7 +20,7 @@ import DailyAnswer from '@/components/home/DailyAnswer';
 import { DAILY_SUBJECTS, dailyQuestions } from '@/lib/dailyQuestions';
 import { PYQ_SUBJECT_NAME } from '@/lib/pyqs';
 import { istDay } from '@/lib/istDay';
-import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_COUNTS, TOPPER_SUBJECTS, isTopperSubject, topperSubjectList } from '@/lib/toppers/meta';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -186,7 +186,7 @@ export default async function Home() {
               <h2 className="ds-h2">One payment, and nothing renews behind your back</h2>
               <p className="ds-lede">
                 Notes and past questions are free with an account. A plan gets you unlimited AI chat and answer evaluation for your optional
-                {TOPPER_SUBJECTS.length > 0 ? <>, and every topper copy if it is {TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(' or ')}</> : null}.
+                {TOPPER_SUBJECTS.length > 0 ? <>, and every topper copy if it is {topperSubjectList('or')}</> : null}.
               </p>
               <OfferNote />
             </div>

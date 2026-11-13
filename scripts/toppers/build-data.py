@@ -12,6 +12,9 @@ Nothing in the output is secret. The PDFs are, and they are served only as
 short-lived signed URLs after the access check (lib/toppers/access.ts).
 
     python3 scripts/toppers/build-data.py sociology
+
+The subject is the route slug (sociology, anthropology, polsci). PSIR's state
+folder is topper-state-dc/psir, reached through a polsci symlink.
 """
 import glob, json, os, re, sys
 from pypdf import PdfReader
@@ -24,8 +27,8 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
 def code_slug(code):
-    # "Socio 2401" -> "2401", "Anthro 2503A" -> "2503a": the subject is in the URL already.
-    return slug(re.sub(r'^(Socio|Anthro)\s+', '', code))
+    # "Socio 2401" -> "2401", "Anthro 2503A" -> "2503a", "PSIR CC23-1" -> "cc23-1": the subject is in the URL already.
+    return slug(re.sub(r'^(Socio|Anthro|PSIR)\s+', '', code))
 
 def source(s):
     series = re.sub(r'\s*\(presumed\)', '', s.get('series', '')).replace('LevelupIAS', 'LevelUp IAS').strip()

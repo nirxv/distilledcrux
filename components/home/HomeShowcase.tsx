@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import Link from '@/components/Link';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
-import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject, topperSubjectList } from '@/lib/toppers/meta';
 
 /**
  * The tools, one at a time: a row of tabs and one large panel that says what
@@ -212,7 +212,7 @@ export default function HomeShowcase() {
     },
     {
       key: 'toppers', tab: 'Topper copies', title: 'Read how rankers actually wrote it.',
-      text: `Handwritten answers by ${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(' and ')} rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.`,
+      text: `Handwritten answers by ${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : topperSubjectList('and')} rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.`,
       points: [toppersLine(slug), 'Two toppers side by side on the same question', 'Five free with your account'],
       cta: 'Read topper copies', href: `/${slug && isTopperSubject(slug) ? slug : 'sociology'}/topper-copies`, wash: 'var(--wash-geography)', preview: <TopperPreview />,
     },
