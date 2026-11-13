@@ -20,7 +20,7 @@ import DailyAnswer from '@/components/home/DailyAnswer';
 import { DAILY_SUBJECTS, dailyQuestions } from '@/lib/dailyQuestions';
 import { PYQ_SUBJECT_NAME } from '@/lib/pyqs';
 import { istDay } from '@/lib/istDay';
-import { TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME } from '@/lib/toppers/meta';
+import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
 
 export const metadata: Metadata = {
   title: 'Distilled Crux UPSC Optional Preparation',
@@ -130,6 +130,7 @@ export default async function Home() {
                       <span className="hm-opt-meta">
                         {c.topics} topics · {c.pyqs.toLocaleString('en-IN')} PYQs
                         {c.cards ? <>{' '}<span className="hm-opt-cards">{c.cards.toLocaleString('en-IN')} flashcards</span></> : null}
+                        {isTopperSubject(o.id) ? <>{' '}<span className="hm-opt-cards">{TOPPER_COUNTS[o.id].copies.toLocaleString('en-IN')} topper copies</span></> : null}
                       </span>
                     </span>
                     <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
