@@ -24,7 +24,8 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
 def code_slug(code):
-    return slug(re.sub(r'^Socio\s+', '', code))
+    # "Socio 2401" -> "2401", "Anthro 2503A" -> "2503a": the subject is in the URL already.
+    return slug(re.sub(r'^(Socio|Anthro)\s+', '', code))
 
 def source(s):
     series = re.sub(r'\s*\(presumed\)', '', s.get('series', '')).replace('LevelupIAS', 'LevelUp IAS').strip()
@@ -41,6 +42,9 @@ for f in sorted(glob.glob(f'{STATE}/*/scan.json')):
     name = s.get('topper_full') or s['topper']
     for a in s['answers']:
         cid = f"{code_slug(s['test_code'])}-{a['q']}-{slug(name)}"
+        # The same topper answering the same paper twice, in different exam years
+        # (Manan Bhat wrote the anthropology 2301 paper as AIR 231 in 2022 and AIR 88 in 2023).
+        if cid in seen: cid = f"{cid}-{s.get('exam_year')}"
         assert cid not in seen, f'duplicate id {cid}'
         seen.add(cid)
         pdf = os.path.join(folder, 'split', a['pdf'])

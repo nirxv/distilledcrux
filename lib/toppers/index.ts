@@ -31,6 +31,7 @@ type StoredCopy = TopperCopy & {
 
 const LOADERS: Record<TopperSubject, () => Promise<{ default: { copies: StoredCopy[] } }>> = {
   sociology: () => import('./sociology.json') as Promise<{ default: { copies: StoredCopy[] } }>,
+  anthropology: () => import('./anthropology.json') as Promise<{ default: { copies: StoredCopy[] } }>,
 };
 
 const cache = new Map<TopperSubject, StoredCopy[]>();

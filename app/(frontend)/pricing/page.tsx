@@ -43,7 +43,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
   { what: 'Past questions, with search and filters', free: 'Included', premium: 'Included' },
   { what: 'Timed tests', free: 'Included', premium: 'Included' },
   { what: 'Flashcards with spaced repetition', free: '100 answers', premium: 'Unlimited' },
-  ...(TOPPER_COPIES_LIVE ? [{ what: 'Topper answer copies, with side-by-side compare (Sociology)', free: '5 copies', premium: 'Every copy' }] : []),
+  ...(TOPPER_COPIES_LIVE ? [{ what: `Topper answer copies, with side-by-side compare (${TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(' and ')})`, free: '5 copies', premium: 'Every copy' }] : []),
   { what: 'AI chat', free: '3 questions', premium: 'Unlimited' },
   { what: 'Chat modes: books, mentor, brainstorm and your own PDF', free: '—', premium: 'Included' },
   { what: 'Answer evaluation', free: '1 answer', premium: 'Unlimited' },
@@ -53,7 +53,7 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 
 const faqs = [
   { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
-  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every Sociology topper copy for a year, side-by-side compare included, paid once. Like a plan, it works while Sociology is the optional on your profile. A Premium plan for Sociology includes them, so there is no need for both.` }] : []),
+  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every topper copy in one optional (${TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(' or ')}) for a year, side-by-side compare included, paid once. Like a plan, it works while that optional is the one on your profile. A Premium plan for the optional includes them, so there is no need for both.` }] : []),
   { q: 'How do invites work?', a: 'Share your link from the Invite page. When a friend buys their first yearly plan through it, they pay ₹100 less and you get ₹100 in your balance. The balance comes off your own yearly plan at checkout, and once you have a yearly plan you can also cash it out to UPI.' },
   { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
   { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },

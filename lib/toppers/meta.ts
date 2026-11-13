@@ -6,14 +6,14 @@
 import COUNTS from './counts.json';
 
 /** Optionals whose copies are live. One at a time, as each gets enough copies. */
-export const TOPPER_SUBJECTS = ['sociology'] as const;
+export const TOPPER_SUBJECTS = ['sociology', 'anthropology'] as const;
 export type TopperSubject = (typeof TOPPER_SUBJECTS)[number];
 
 /** How many copies and toppers each live optional has, for pages that must not load the list. */
 export const TOPPER_COUNTS = COUNTS as Record<TopperSubject, { copies: number; toppers: number }>;
 
 /** Display names, kept here so client code needs nothing from lib/pyqs. */
-export const TOPPER_SUBJECT_NAME: Record<TopperSubject, string> = { sociology: 'Sociology' };
+export const TOPPER_SUBJECT_NAME: Record<TopperSubject, string> = { sociology: 'Sociology', anthropology: 'Anthropology' };
 
 export function isTopperSubject(value: unknown): value is TopperSubject {
   return typeof value === 'string' && (TOPPER_SUBJECTS as readonly string[]).includes(value);

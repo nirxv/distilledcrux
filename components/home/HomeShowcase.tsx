@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import Link from '@/components/Link';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
-import { TOPPER_COUNTS, isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject } from '@/lib/toppers/meta';
 
 /**
  * The tools, one at a time: a row of tabs and one large panel that says what
@@ -122,6 +122,14 @@ function PyqPreview() {
   );
 }
 
+/** "994 answers by 42 rankers" for the reader's optional, or across every optional with copies. */
+function toppersLine(slug: string | null | undefined): string {
+  const counts = slug && isTopperSubject(slug) ? [TOPPER_COUNTS[slug]] : TOPPER_SUBJECTS.map((s) => TOPPER_COUNTS[s]);
+  const copies = counts.reduce((n, c) => n + c.copies, 0);
+  const toppers = counts.reduce((n, c) => n + c.toppers, 0);
+  return `${copies.toLocaleString('en-IN')} answers by ${toppers} rankers`;
+}
+
 function TopperPreview() {
   const rows = [
     { name: 'Riya Saini', rank: 'AIR 22 · CSE 2024' },
@@ -204,8 +212,8 @@ export default function HomeShowcase() {
     },
     {
       key: 'toppers', tab: 'Topper copies', title: 'Read how rankers actually wrote it.',
-      text: 'Handwritten answers by Sociology rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.',
-      points: [`${TOPPER_COUNTS.sociology.copies.toLocaleString('en-IN')} answers by ${TOPPER_COUNTS.sociology.toppers} rankers`, 'Two toppers side by side on the same question', 'Five free with your account'],
+      text: `Handwritten answers by ${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : TOPPER_SUBJECTS.map((s) => TOPPER_SUBJECT_NAME[s]).join(' and ')} rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.`,
+      points: [toppersLine(slug), 'Two toppers side by side on the same question', 'Five free with your account'],
       cta: 'Read topper copies', href: `/${slug && isTopperSubject(slug) ? slug : 'sociology'}/topper-copies`, wash: 'var(--wash-geography)', preview: <TopperPreview />,
     },
     {
