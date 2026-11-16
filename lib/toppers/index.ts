@@ -34,6 +34,7 @@ const LOADERS: Record<TopperSubject, () => Promise<{ default: { copies: StoredCo
   anthropology: () => import('./anthropology.json') as Promise<{ default: { copies: StoredCopy[] } }>,
   polsci: () => import('./polsci.json') as Promise<{ default: { copies: StoredCopy[] } }>,
   geography: () => import('./geography.json') as Promise<{ default: { copies: StoredCopy[] } }>,
+  'pub-admin': () => import('./pub-admin.json') as Promise<{ default: { copies: StoredCopy[] } }>,
 };
 
 const cache = new Map<TopperSubject, StoredCopy[]>();

@@ -27,14 +27,14 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
 def code_slug(code):
-    # "Socio 2401" -> "2401", "Anthro 2503A" -> "2503a", "PSIR CC23-1" -> "cc23-1", "Geo GD-MT1A" -> "gd-mt1a":
+    # "Socio 2401" -> "2401", "Anthro 2503A" -> "2503a", "PSIR CC23-1" -> "cc23-1", "Geo GD-MT1A" -> "gd-mt1a", "PubAd LK24-5" -> "lk24-5":
     # the subject is in the URL already.
-    return slug(re.sub(r'^(Socio|Anthro|PSIR|Geo)\s+', '', code))
+    return slug(re.sub(r'^(Socio|Anthro|PSIR|Geo|PubAd)\s+', '', code))
 
 def source(s):
     series = re.sub(r'\s*\(presumed\)', '', s.get('series', '')).replace('LevelupIAS', 'LevelUp IAS').strip()
     test = s.get('test', '')
-    m = re.match(r'((?:Modular |Comprehensive )?Test\s+\d+)', test)
+    m = re.match(r'((?:Modular |Comprehensive |Mock )?Test\s+\d+)', test)
     return f'{series}, {m.group(1)}' if m else series
 
 copies, seen = [], set()
@@ -56,7 +56,7 @@ for f in sorted(glob.glob(f'{STATE}/*/scan.json')):
         assert a.get('question'), f'{cid}: no question'
         copies.append({
             'id': cid,
-            'paper': 'Paper II' if s.get('paper') == 'II' else 'Paper I',
+            'paper': 'Paper II' if (a.get('paper') or s.get('paper')) == 'II' else 'Paper I',
             'question': a['question'],
             'marks': a['marks'],
             'topic': a['topic'],

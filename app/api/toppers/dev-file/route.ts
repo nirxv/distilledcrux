@@ -7,6 +7,7 @@ import sociology from '@/lib/toppers/sociology.json';
 import anthropology from '@/lib/toppers/anthropology.json';
 import polsci from '@/lib/toppers/polsci.json';
 import geography from '@/lib/toppers/geography.json';
+import pubAdmin from '@/lib/toppers/pub-admin.json';
 
 /**
  * Serves a topper copy PDF from this machine, for testing a local build
@@ -17,7 +18,7 @@ import geography from '@/lib/toppers/geography.json';
  */
 // Keys are "<subject>/<id>.pdf"; each file sits under <TOPPER_DEV_DIR>/<subject>.
 const FILES = new Map(
-  [sociology, anthropology, polsci, geography].flatMap((list) => (list.copies as { key: string; file: string }[]).map((c) => [c.key, c.file] as const)),
+  [sociology, anthropology, polsci, geography, pubAdmin].flatMap((list) => (list.copies as { key: string; file: string }[]).map((c) => [c.key, c.file] as const)),
 );
 
 export async function GET(req: NextRequest) {
