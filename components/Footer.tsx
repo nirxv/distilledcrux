@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import owlArt from '@/public/mascot/owl.svg';
 import Link from '@/components/Link';
+import { OPEN_EVENT as OPEN_REVIEW } from '@/components/ReviewPrompt';
 
 /**
  * The site footer, rendered once by the frontend layout so every route
@@ -43,6 +44,8 @@ export default function Footer() {
           <Link href="/#optionals">Optionals</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/contact">Contact</Link>
+          {/* Opens the review form in place; the href is for opening it in a new tab. */}
+          <Link href="/?review=1" onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); window.dispatchEvent(new Event(OPEN_REVIEW)); }}>Write a review</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/refund">Refund</Link>
