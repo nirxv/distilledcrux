@@ -7,7 +7,7 @@ import { TOPPER_PASS, isTopperSubject } from '@/lib/toppers/meta';
 
 /**
  * Opens a Razorpay order for a topper pass: every copy in one optional for a
- * year, ₹799 paid once.
+ * year, ₹999 paid once.
  *
  *   POST /api/toppers/pass/order   { subject: 'sociology' }
  *

@@ -33,7 +33,9 @@ export const FREE_TOPPER_LIMIT = 5;
  * readers who want the copies without a subscription. A subscription to the
  * optional includes them anyway. The server bills and checks exactly this.
  */
-export const TOPPER_PASS = { amountPaise: 79900, days: 365 } as const;
+export const TOPPER_PASS = { amountPaise: 99900, days: 365 } as const;
+/** Earlier prices a checkout may have been opened at; the verify route still accepts them. */
+export const TOPPER_PASS_OLD_AMOUNTS_PAISE = [79900] as const;
 export const TOPPER_PASS_RUPEES = TOPPER_PASS.amountPaise / 100;
 
 /** What the pages and the browser may see of a copy. The R2 key and the booklet's source never leave the server. */

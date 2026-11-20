@@ -15,7 +15,7 @@ type Props = {
 };
 
 /**
- * The topper pass on offer: every copy in this optional for a year, ₹799 paid
+ * The topper pass on offer: every copy in this optional for a year, ₹999 paid
  * once, with Premium named as the other way in. On a granted payment the page
  * reloads, so every list and viewer reads the new access from the server.
  *

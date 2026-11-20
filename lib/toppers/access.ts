@@ -9,7 +9,7 @@ import { FREE_TOPPER_LIMIT, type TopperSubject } from './meta';
  *
  * Anyone signed in may open five copies, any five, across every optional.
  * After that a copy needs its optional to be the one on the reader's profile,
- * and a subscription or a topper pass (₹799 for a year, migration 011) for
+ * and a subscription or a topper pass (₹999 for a year, migration 011) for
  * that optional. A sociology subscription or pass opens every sociology copy
  * while sociology is on the profile, and nothing once the reader switches
  * away, the same rule as evaluation (profileOptional in lib/entitlements.ts).

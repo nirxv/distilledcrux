@@ -4,7 +4,7 @@ import Razorpay from 'razorpay';
 import { verifyFirebaseToken } from '@/lib/verifyFirebaseToken';
 import { createServerClient } from '@/lib/supabase';
 import { noStore } from '@/lib/cacheHeaders';
-import { TOPPER_PASS, isTopperSubject } from '@/lib/toppers/meta';
+import { TOPPER_PASS, TOPPER_PASS_OLD_AMOUNTS_PAISE, isTopperSubject } from '@/lib/toppers/meta';
 
 /**
  * Grants a topper pass for a completed payment.
@@ -65,7 +65,8 @@ export async function POST(req: NextRequest) {
   if (status !== 'paid') {
     return NextResponse.json({ error: 'Order is not paid' }, { status: 402, headers: noStore });
   }
-  if (amount !== TOPPER_PASS.amountPaise) {
+  // An order opened at an earlier price still verifies.
+  if (amount !== TOPPER_PASS.amountPaise && !(TOPPER_PASS_OLD_AMOUNTS_PAISE as readonly number[]).includes(amount)) {
     console.error('[api/toppers/pass/verify] amount mismatch', { razorpay_order_id, amount });
     return NextResponse.json({ error: 'Amount does not match the pass' }, { status: 400, headers: noStore });
   }
