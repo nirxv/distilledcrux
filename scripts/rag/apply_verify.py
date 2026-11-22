@@ -27,6 +27,31 @@ COLS = ["kind", "id", "unit", "name", "aliases", "thinker", "start", "end", "pre
 # "<optional>:<id>" -> fields to set. "note" replaces the row's note. "verify": False keeps
 # the row unverified (the books settle one claim but not the other).
 DECISIONS: dict[str, dict] = {
+    # ---- books disagree with the row or with each other (quotes in work/register_sources.csv)
+    "sociology:ghurye": {"tolerance_years": "1",
+                         "note": "IGNOU Sociology Papers 1 and 2 give 1893-1984."},
+    "sociology:dumont_homo_hierarchicus": {"precision": "contested", "tolerance_years": "6",
+                                           "note": "French original 1966; IGNOU Paper 2 gives 1967 and IGNOU Paper 1 cites the 1972 Granada edition."},
+    "anthropology:liminality": {"thinker": "van_gennep", "start": "1909", "precision": "contested",
+                                "note": "IGNOU Paper 1: introduced by Van Gennep (1909) and elaborated by Victor Turner and Edmund Leach; IGNOU Paper 2 credits Turner."},
+    "anthropology:asiatic_society_founded": {"start": "1784", "precision": "year", "tolerance_years": "0",
+                                             "note": "IGNOU and Xaxa give 1784 (Sir William Jones); Hasnain, citing Vidyarthi, prints 1774."},
+    "anthropology:mandal_commission": {"start": "1978", "end": "1980", "precision": "contested", "tolerance_years": "0",
+                                       "note": "IGNOU Paper 2: constituted in 1978 under B.P. Mandal; Hasnain's table gives 1 January 1979; the report is of 1980."},
+    "polsci:sir_syed": {"tolerance_years": "1", "note": "IGNOU gives 1817-1898 in one unit and 1817-99 in another."},
+    "polsci:ambedkar": {"note": "IGNOU gives 14 April 1891; Austin's Constituent Assembly table prints 1893."},
+    "geography:hartshorne": {"note": "Husain's main text gives 1899-1992; his biographic notes print 1935-1992."},
+    "geography:malthus": {"note": "Majid Husain prints 1760-1834 in both the text and the biographic notes.", "verify": False},
+    "geography:dutton": {"tolerance_years": "2", "note": "Husain gives 1841-1912; Savindra Singh gives 1843-1912."},
+    "geography:genre_de_vie": {"note": "Husain makes it central to Vidal de la Blache's work; one passage says Febvre coined the term."},
+    "geography:planning_commission": {"start": "1950", "precision": "year",
+                                      "note": "Khullar: constituted in 1950; another Khullar passage says set up by a Resolution in March 1951."},
+    # ---- partly supported: notes on who else the books credit; rows stay unverified
+    "sociology:demographic_transition": {"note": "Giddens credits Warren Thompson with the 1929 pattern; the geography books date Notestein's model to 1945.",
+                                         "verify": False},
+    "geography:possibilism": {"note": "Husain: advocated by Vidal de la Blache's school; Febvre postulated the term.", "verify": False},
+    "geography:tuan_topophilia": {"note": "Husain's glossary says Tuan introduced the term to geography in 1961.", "verify": False},
+    "pub-admin:public_choice_approach": {"note": "IGNOU names Vincent Ostrom a protagonist of the approach.", "verify": False},
 }
 
 
