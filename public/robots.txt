@@ -20,8 +20,21 @@ User-agent: Google-Extended
 User-agent: Applebot-Extended
 Disallow: /
 
+# Crawlers that made most of DC's CDN requests on 2026-11-22 (about 6 in 10 of
+# a 10,000-request sample) and got the Hobby team paused for going over its 1M
+# requests a month. They bring no visitors. The Vercel Firewall blocks them
+# too; this tells the ones that read robots.txt to stop asking.
+User-agent: Amzn-SearchBot
+User-agent: Reflectionbot
+User-agent: Epochal-Search
+User-agent: KeenableBot
+User-agent: PetalBot
+Disallow: /
+
 User-agent: *
 Disallow: /api/
+# One page per pair of topper copies: no end of URLs for a crawler, nothing to index.
+Disallow: /*/topper-copies/compare
 Disallow: /dashboard/
 Disallow: /chat/
 Disallow: /onboarding/

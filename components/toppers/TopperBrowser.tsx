@@ -223,7 +223,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
                 ))}
               </ul>
               {g.copies.length > 1 && (
-                <Link className="tb-compare" prefetch={false}
+                <Link className="tb-compare" prefetch={false} rel="nofollow"
                   href={`/${subject}/topper-copies/compare?a=${g.copies[0].id}&b=${g.copies[1].id}`}>
                   Compare {g.copies.length === 2 ? 'the two answers' : `${g.copies.length} answers side by side`}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>

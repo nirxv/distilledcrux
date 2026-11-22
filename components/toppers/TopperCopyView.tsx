@@ -70,7 +70,7 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
                     <span className="tv-other-rank">{rankLine(o)}</span>
                     {allowance.opened.has(o.id) && <span className="tv-opened">Opened</span>}
                   </Link>
-                  <Link href={`/${subject}/topper-copies/compare?a=${copy.id}&b=${o.id}`} prefetch={false} className="tv-cmp">Compare</Link>
+                  <Link href={`/${subject}/topper-copies/compare?a=${copy.id}&b=${o.id}`} prefetch={false} rel="nofollow" className="tv-cmp">Compare</Link>
                 </li>
               ))}
             </ul>

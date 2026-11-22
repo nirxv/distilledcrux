@@ -21,7 +21,10 @@ type Search = { a?: string; b?: string; pyq?: string };
 
 export const metadata: Metadata = {
   title: 'Compare topper copies',
-  robots: { index: false },
+  // Every pair of copies is its own URL, so crawlers that follow these links
+  // never run out of pages: on 2026-11-22 bots made over half of DC's CDN
+  // requests here, and the Hobby team was paused. Links to it are nofollow too.
+  robots: { index: false, follow: false },
 };
 
 export default async function ComparePage({ params, searchParams }: { params: Promise<Params>; searchParams: Promise<Search> }) {

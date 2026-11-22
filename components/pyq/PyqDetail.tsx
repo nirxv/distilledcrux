@@ -391,7 +391,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                   ))}
                 </div>
                 {new Set(toppers.map(t => t.topper)).size > 1 && (
-                  <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} className="pd-side-all">
+                  <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} rel="nofollow" className="pd-side-all">
                     Compare two side by side <Arrow />
                   </Link>
                 )}
