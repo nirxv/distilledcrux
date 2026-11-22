@@ -26,7 +26,8 @@ import { OPTIONAL_KEY } from '@/lib/optionals';
 
 /** Fired by the footer's "Write a review" link (and anything else) to open the form. */
 export const OPEN_EVENT = 'open-review';
-const SHOWN_KEY = 'dc_review_shown';
+/** Set for the session once the review pop-up opens; the weekly check-up stays away then. */
+export const SHOWN_KEY = 'dc_review_shown';
 /** Set while a reader who asked for the form signs in, in case sign-in reloads the page. */
 const AFTER_LOGIN_KEY = 'dc_review_after_login';
 const SENT_KEY = 'dc_review_sent';

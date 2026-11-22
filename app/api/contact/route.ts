@@ -38,6 +38,21 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
   if (!body) return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
 
+  // The weekly check-up (components/WeeklyCheckup.tsx): no name or email to
+  // ask for, so it is filed under its own topic with placeholder sender fields.
+  if (body.type === 'weekly_checkup') {
+    const message = text(body.message, 4000);
+    if (!message) return NextResponse.json({ error: 'Empty check-up.' }, { status: 400 });
+    const { error } = await createServerClient()
+      .from('contact_submissions')
+      .insert({ name: 'checkup', email: 'checkup@system', topic: 'Weekly check-up', message });
+    if (error) {
+      console.error('[contact] check-up insert failed:', error.message);
+      return NextResponse.json({ error: 'Could not send your answer.' }, { status: 500 });
+    }
+    return NextResponse.json({ ok: true });
+  }
+
   const name = text(body.name, 100);
   const email = text(body.email, 200);
   const topic = text(body.topic, 60);
