@@ -10,7 +10,10 @@ import { hasActiveSubscription, optionalForSubject } from '@/lib/entitlements';
 import { searchBook, searchDiverse } from '@/lib/vectorStore';
 import { createSentenceGate } from '@/lib/citationGate';
 import { suggestNext } from '@/lib/chatNext';
-import { MAINS_ANSWER_STYLE, mentorSystem } from '@/lib/prompts';
+import { MAINS_ANSWER_STYLE, evidenceRules, mentorSystem } from '@/lib/prompts';
+import { retrieve } from '@/lib/rag/retrieve';
+import { formatFacts, formatPassages, sourcesForClient } from '@/lib/rag/context';
+import { checkFacts } from '@/lib/rag/factCheck';
 import type { SubjectKey } from '@/lib/subjectConfig';
 import {
   SUBJECT_THINKER_BOOKS,
@@ -48,7 +51,8 @@ async function localEmbedBatch(texts: string[]): Promise<number[][]> {
   return data.data.map((d: { embedding: number[] }) => d.embedding);
 }
 
-// ── RAG: fetch book context from Qdrant ──────────────────────
+// ── RAG: the old search, kept as the fallback ────────────────
+// Used when RAG_COLLECTION=off, or when the grounded search (lib/rag) fails.
 // Returns empty string gracefully if:
 //   a) embed service or Qdrant is down
 //   b) no books embedded yet for this subject
@@ -114,8 +118,12 @@ function buildSystemPrompt(opts: {
   mentor: boolean;
   lang: 'en' | 'hi';
   pdfMode: boolean;
+  /** Register rows for the question (lib/rag/register.ts), one per line. */
+  keyFacts?: string;
+  /** Statements the question quotes: claims to examine, not facts. */
+  claims?: string[];
 }): string {
-  const { subject, subjectDisplay, ragContext, bookTitle, style, brainstorm, mentor, lang, pdfMode } = opts;
+  const { subject, subjectDisplay, ragContext, bookTitle, style, brainstorm, mentor, lang, pdfMode, keyFacts = '', claims = [] } = opts;
 
   const whitelistedSurnames = Object.keys(SUBJECT_THINKER_BOOKS[subject] ?? {});
   const broadOnly = SUBJECT_BROAD_ONLY[subject] ?? [];
@@ -162,7 +170,7 @@ ${pdfMode ? '\n\nIMPORTANT: The user has uploaded a PDF. Analyze it carefully. P
 EPISTEMIC INTEGRITY — HIGHEST PRIORITY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CRITICAL RULE ON IRRELEVANT SOURCES: If provided book passages are clearly about a different topic, explicitly state: "The selected book does not cover this topic directly." Then answer from general knowledge — WITHOUT inventing quotes, statistics, or citations.
+${pdfMode ? '' : `${evidenceRules(Boolean(keyFacts))}\n\n`}CRITICAL RULE ON IRRELEVANT SOURCES: If provided book passages are clearly about a different topic, explicitly state: "The selected book does not cover this topic directly." Then answer from general knowledge — WITHOUT inventing quotes, statistics, or citations.
 
 CLASSIFY EVERY CLAIM BEFORE WRITING (internal only: never write "Tier", "CERTAIN", "PROBABLE" or any other confidence label in the answer):
 - TIER 1 CERTAIN: Standard textbook facts → write normally.
@@ -193,7 +201,7 @@ BROAD-ONLY THINKERS (mention only, no specific claims): ${broadOnly.join(', ')}
 RAG CITATION RULE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-${ragContext
+${claims.length ? `CLAIMS IN THE QUESTION (examine them; do not assume them):\n${claims.map((c) => `- ${c}`).join('\n')}\n\n` : ''}${keyFacts ? `KEY FACTS (the site's register of the thinkers, works and concepts in this question; use these rather than your memory, prefer a passage where the two differ, and do not cite them as sources):\n${keyFacts}\n\n` : ''}${ragContext
   ? `CRITICAL OUTPUT RULE: After EVERY sentence where you draw on a book passage below, append the citation in square brackets before the full stop, e.g. "...the division of labour [Source #1]." For two passages write [Source #1, #3]. Never make a source part of the sentence ("Source #2 argues", "according to Source #2"): the brackets render as a small citation chip, so the sentence must read complete without them. If a claim has no supporting passage, write it with no marker at all. This is non-negotiable.
 
 ${bookTitle && bookTitle !== 'all'
@@ -211,6 +219,34 @@ ${bookTitle && bookTitle !== 'all'
 }
 
 type RagSource = { book_title: string; author: string; content: string };
+
+/** What an answer is grounded in: passages, key facts and the question's quoted claims. */
+type Grounding = { ragContext: string; ragSources: RagSource[]; keyFacts: string; claims: string[] };
+
+/**
+ * The grounded search (lib/rag/retrieve.ts): planned, hybrid, reranked, cut
+ * at a relevance floor, with the register's key facts for the question. Falls
+ * back to the old search if it fails, so a Qdrant or Voyage hiccup costs the
+ * grounding, never the answer.
+ */
+async function ground(query: string, subject: SubjectKey, bookTitle?: string): Promise<Grounding> {
+  if (process.env.RAG_COLLECTION !== 'off') {
+    try {
+      const r = await retrieve(query, { subject, bookTitle: bookTitle ?? null, topK: 6 });
+      console.log(`[rag] ${subject} stage=${r.stage} hits=${r.hits.length} facts=${r.facts.length} ms=${r.ms} plan=${r.plan.why.join('; ')}`);
+      return {
+        ragContext: formatPassages(r.hits),
+        ragSources: sourcesForClient(r.hits),
+        keyFacts: formatFacts(r.facts),
+        claims: r.plan.claims,
+      };
+    } catch (e) {
+      console.error('[rag] grounded search failed, using the old search:', (e as Error).message);
+    }
+  }
+  const ragContext = await getBookContext(query, subject, bookTitle);
+  return { ragContext, ragSources: parseSources(ragContext), keyFacts: '', claims: [] };
+}
 
 /** The passages as the page lists them, read back out of the prompt block. */
 function parseSources(ragContext: string): RagSource[] {
@@ -332,16 +368,15 @@ export async function POST(req: NextRequest) {
     // Run inside the stream, not before it. The search takes seconds, and
     // while it ran ahead of the response the page could only show a spinner;
     // now the reader is told it is searching and what it found.
-    const retrieve = async (): Promise<{ ragContext: string; ragSources: RagSource[] }> => {
+    const findBooks = async (): Promise<Grounding> => {
       try {
-        const ragContext = await Promise.race([
-          getBookContext(lastQ, subjectKey, chosenBook),
-          new Promise<string>((_, reject) => setTimeout(() => reject(new Error('RAG timeout')), 10000)),
+        return await Promise.race([
+          ground(lastQ, subjectKey, chosenBook),
+          new Promise<Grounding>((_, reject) => setTimeout(() => reject(new Error('RAG timeout')), 12000)),
         ]);
-        return { ragContext, ragSources: parseSources(ragContext) };
       } catch (e) {
         console.error('RAG skipped:', e);
-        return { ragContext: '', ragSources: [] };
+        return { ragContext: '', ragSources: [], keyFacts: '', claims: [] };
       }
     };
 
@@ -368,9 +403,11 @@ export async function POST(req: NextRequest) {
 
         try {
           let ragContext = '';
+          let keyFacts = '';
+          let claims: string[] = [];
           if (!pdf_base64 && lastQ.length > 3) {
             stage({ id: 'search', book: chosenBook ?? null });
-            ({ ragContext, ragSources } = await retrieve());
+            ({ ragContext, ragSources, keyFacts, claims } = await findBooks());
             stage({ id: 'found', passages: ragSources.length, books: [...new Set(ragSources.map((r) => r.book_title))] });
           } else if (pdf_base64) {
             stage({ id: 'pdf', name: pdf_name ?? null });
@@ -387,6 +424,8 @@ export async function POST(req: NextRequest) {
             mentor,
             lang,
             pdfMode: !!pdf_base64,
+            keyFacts,
+            claims,
           });
 
           // Whether the model ended on its own, not at its length limit.
@@ -493,6 +532,17 @@ export async function POST(req: NextRequest) {
 
           gate.flush(ended);
           const answered = gate.emitted() > 0;
+          // Works, concepts and years checked against the register. Logged for
+          // now, to see how often answers go wrong before anything is shown.
+          if (answered && lang !== 'hi' && !pdf_base64) {
+            try {
+              for (const i of checkFacts(answerText, subjectKey)) {
+                console.warn(`[factcheck] ${i.severity} ${i.kind} ${i.fact.id}: ${i.said} | ${i.sentence.slice(0, 240)}`);
+              }
+            } catch (e) {
+              console.error('[factcheck] failed:', (e as Error).message);
+            }
+          }
           if (!answered) send('Something went wrong. Please try again.');
           else if (stages) {
             // Before the sources, whose JSON runs to the end of the stream.

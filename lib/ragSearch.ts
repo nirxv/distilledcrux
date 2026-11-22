@@ -1,5 +1,7 @@
 import { searchDiverse } from '@/lib/vectorStore';
 import type { SubjectKey } from '@/lib/subjectConfig';
+import { retrieve } from '@/lib/rag/retrieve';
+import { formatPassages } from '@/lib/rag/context';
 
 /**
  * Book passages for the evaluation flow, ported from history-optional.
@@ -39,6 +41,19 @@ async function voyageEmbed(text: string, signal: AbortSignal): Promise<number[]>
  */
 export async function getBookContext(query: string, subject: SubjectKey): Promise<string> {
   if (!query || query.trim().length < 4) return '';
+
+  // The grounded search (lib/rag/retrieve.ts): planned, hybrid, reranked and
+  // cut at a relevance floor. The search below is its fallback.
+  if (process.env.RAG_COLLECTION !== 'off') {
+    try {
+      const signal = AbortSignal.timeout(EMBED_TIMEOUT_MS + 4000);
+      const r = await retrieve(query, { subject, topK: MAX_CHUNKS, signal });
+      console.log(`[rag] evaluate ${subject} stage=${r.stage} hits=${r.hits.length} ms=${r.ms}`);
+      return formatPassages(r.hits);
+    } catch (err) {
+      console.error('[ragSearch] grounded search failed, using the old search:', err);
+    }
+  }
 
   // One deadline for the embedding and the search, so a hung upstream cannot
   // eat the evaluation's time budget.

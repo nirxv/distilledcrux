@@ -40,7 +40,8 @@ function endpoint(path: string): string {
   return `${base.replace(/\/$/, '')}${path}`;
 }
 
-async function qdrant(
+/** POST to Qdrant's REST API. Also used by lib/rag/retrieve.ts. */
+export async function qdrant(
   path: string,
   body: unknown,
   signal?: AbortSignal,

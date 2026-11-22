@@ -1,0 +1,827 @@
+{
+ "sociology": [
+  {
+   "slug": "sociology-the-discipline",
+   "title": "Sociology: The Discipline",
+   "paper": 1
+  },
+  {
+   "slug": "sociology-as-science",
+   "title": "Sociology as a Science",
+   "paper": 1
+  },
+  {
+   "slug": "research-methods",
+   "title": "Research Methods and Analysis",
+   "paper": 1
+  },
+  {
+   "slug": "karl-marx",
+   "title": "Karl Marx",
+   "paper": 1
+  },
+  {
+   "slug": "emile-durkheim",
+   "title": "Emile Durkheim",
+   "paper": 1
+  },
+  {
+   "slug": "max-weber",
+   "title": "Max Weber",
+   "paper": 1
+  },
+  {
+   "slug": "talcott-parsons",
+   "title": "Talcott Parsons",
+   "paper": 1
+  },
+  {
+   "slug": "robert-merton",
+   "title": "Robert K. Merton",
+   "paper": 1
+  },
+  {
+   "slug": "george-mead",
+   "title": "G.H. Mead",
+   "paper": 1
+  },
+  {
+   "slug": "stratification-mobility",
+   "title": "Stratification and Mobility",
+   "paper": 1
+  },
+  {
+   "slug": "works-economic-life",
+   "title": "Works and Economic Life",
+   "paper": 1
+  },
+  {
+   "slug": "politics-and-society",
+   "title": "Politics and Society",
+   "paper": 1
+  },
+  {
+   "slug": "religion-and-society",
+   "title": "Religion and Society",
+   "paper": 1
+  },
+  {
+   "slug": "systems-of-kinship",
+   "title": "Systems of Kinship",
+   "paper": 1
+  },
+  {
+   "slug": "social-change-modern-society",
+   "title": "Social Change in Modern Society",
+   "paper": 1
+  },
+  {
+   "slug": "introducing-indian-society",
+   "title": "Introducing Indian Society",
+   "paper": 2
+  },
+  {
+   "slug": "colonial-rule-indian-society",
+   "title": "Impact of Colonial Rule on Indian Society",
+   "paper": 2
+  },
+  {
+   "slug": "rural-agrarian-structure",
+   "title": "Rural and Agrarian Social Structure",
+   "paper": 2
+  },
+  {
+   "slug": "caste-system",
+   "title": "Caste System",
+   "paper": 2
+  },
+  {
+   "slug": "tribal-communities",
+   "title": "Tribal Communities in India",
+   "paper": 2
+  },
+  {
+   "slug": "social-classes-india",
+   "title": "Social Classes in India",
+   "paper": 2
+  },
+  {
+   "slug": "kinship-systems-india",
+   "title": "Systems of Kinship in India",
+   "paper": 2
+  },
+  {
+   "slug": "religion-society-india",
+   "title": "Religion and Society in India",
+   "paper": 2
+  },
+  {
+   "slug": "visions-social-change-india",
+   "title": "Visions of Social Change in India",
+   "paper": 2
+  },
+  {
+   "slug": "rural-agrarian-transformation",
+   "title": "Rural and Agrarian Transformation in India",
+   "paper": 2
+  },
+  {
+   "slug": "industrialization-urbanisation",
+   "title": "Industrialization and Urbanisation in India",
+   "paper": 2
+  },
+  {
+   "slug": "politics-society-india",
+   "title": "Politics and Society in India",
+   "paper": 2
+  },
+  {
+   "slug": "social-movements-india",
+   "title": "Social Movements in Modern India",
+   "paper": 2
+  },
+  {
+   "slug": "population-dynamics",
+   "title": "Population Dynamics",
+   "paper": 2
+  },
+  {
+   "slug": "challenges-social-transformation",
+   "title": "Challenges of Social Transformation",
+   "paper": 2
+  }
+ ],
+ "anthropology": [
+  {
+   "slug": "meaning-scope-development-anthropology",
+   "title": "Meaning, Scope and Development of Anthropology",
+   "paper": 1
+  },
+  {
+   "slug": "branches-of-anthropology",
+   "title": "Main Branches of Anthropology",
+   "paper": 1
+  },
+  {
+   "slug": "human-evolution",
+   "title": "Human Evolution and Emergence of Man",
+   "paper": 1
+  },
+  {
+   "slug": "biological-basis-of-life",
+   "title": "Biological Basis of Life",
+   "paper": 1
+  },
+  {
+   "slug": "human-genetics",
+   "title": "Human Genetics",
+   "paper": 1
+  },
+  {
+   "slug": "concept-of-race",
+   "title": "Concept of Race and Racism",
+   "paper": 1
+  },
+  {
+   "slug": "human-growth-development",
+   "title": "Concept of Human Growth and Development",
+   "paper": 1
+  },
+  {
+   "slug": "applicability-of-biosocial-perspectives",
+   "title": "Applicability of Biosocial Perspectives",
+   "paper": 1
+  },
+  {
+   "slug": "principles-prehistoric-archaeology",
+   "title": "Principles of Prehistoric Archaeology",
+   "paper": 1
+  },
+  {
+   "slug": "cultural-evolution-prehistoric-cultures",
+   "title": "Cultural Evolution and Prehistoric Cultures",
+   "paper": 1
+  },
+  {
+   "slug": "nature-of-culture",
+   "title": "Nature of Culture",
+   "paper": 1
+  },
+  {
+   "slug": "nature-of-society",
+   "title": "Nature of Society",
+   "paper": 1
+  },
+  {
+   "slug": "marriage-family-kinship",
+   "title": "Marriage, Family and Kinship",
+   "paper": 1
+  },
+  {
+   "slug": "economic-organization",
+   "title": "Economic Organization",
+   "paper": 1
+  },
+  {
+   "slug": "political-organization-social-control",
+   "title": "Political Organization and Social Control",
+   "paper": 1
+  },
+  {
+   "slug": "religion",
+   "title": "Religion",
+   "paper": 1
+  },
+  {
+   "slug": "anthropological-theories",
+   "title": "Anthropological Theories",
+   "paper": 1
+  },
+  {
+   "slug": "culture-language-communication",
+   "title": "Culture, Language and Communication",
+   "paper": 1
+  },
+  {
+   "slug": "research-methods-anthropology",
+   "title": "Research Methods in Anthropology",
+   "paper": 1
+  },
+  {
+   "slug": "applications-of-anthropology",
+   "title": "Applications of Anthropology",
+   "paper": 1
+  },
+  {
+   "slug": "evolution-indian-culture-civilization",
+   "title": "Evolution of Indian Culture and Civilization",
+   "paper": 2
+  },
+  {
+   "slug": "palaeo-anthropological-evidence-india",
+   "title": "Palaeo-Anthropological Evidence in India",
+   "paper": 2
+  },
+  {
+   "slug": "ethnoarchaeology-india",
+   "title": "Ethno-Archaeology in India",
+   "paper": 2
+  },
+  {
+   "slug": "demographic-profile-india",
+   "title": "Demographic Profile of India",
+   "paper": 2
+  },
+  {
+   "slug": "traditional-indian-social-system",
+   "title": "Traditional Indian Social System",
+   "paper": 2
+  },
+  {
+   "slug": "caste-system-india",
+   "title": "Caste System in India",
+   "paper": 2
+  },
+  {
+   "slug": "sacred-complex-nature-man-spirit",
+   "title": "Sacred Complex, Nature-Man-Spirit Complex",
+   "paper": 2
+  },
+  {
+   "slug": "emergence-growth-anthropology-india",
+   "title": "Emergence and Growth of Anthropology in India",
+   "paper": 2
+  },
+  {
+   "slug": "indian-village",
+   "title": "Indian Village",
+   "paper": 2
+  },
+  {
+   "slug": "linguistic-religious-minorities",
+   "title": "Linguistic and Religious Minorities",
+   "paper": 2
+  },
+  {
+   "slug": "socio-cultural-change-india",
+   "title": "Indigenous and Exogenous Processes of Socio-Cultural Change",
+   "paper": 2
+  },
+  {
+   "slug": "tribal-situation-india",
+   "title": "The Tribal Situation in India",
+   "paper": 2
+  },
+  {
+   "slug": "problems-tribal-communities",
+   "title": "Problems of Tribal Communities",
+   "paper": 2
+  },
+  {
+   "slug": "developmental-projects-tribal-displacement",
+   "title": "Developmental Projects and Tribal Displacement",
+   "paper": 2
+  },
+  {
+   "slug": "scheduled-castes-tribes-obcs",
+   "title": "Problems of SC, ST and OBC",
+   "paper": 2
+  },
+  {
+   "slug": "social-change-tribal-societies",
+   "title": "Social Change and Contemporary Tribal Societies",
+   "paper": 2
+  },
+  {
+   "slug": "ethnicity-ethnic-conflicts",
+   "title": "Concept of Ethnicity and Ethnic Conflicts",
+   "paper": 2
+  },
+  {
+   "slug": "religion-tribal-societies",
+   "title": "Impact of World Religions on Tribal Societies",
+   "paper": 2
+  },
+  {
+   "slug": "tribe-and-nation-state",
+   "title": "Tribe and Nation-State",
+   "paper": 2
+  },
+  {
+   "slug": "administration-tribal-areas",
+   "title": "Administration of Tribal Areas and Tribal Policies",
+   "paper": 2
+  },
+  {
+   "slug": "role-of-anthropology-development",
+   "title": "Role of Anthropology in Tribal and Rural Development",
+   "paper": 2
+  }
+ ],
+ "polsci": [
+  {
+   "slug": "political-theory-meaning-approaches",
+   "title": "Political Theory: Meaning and Approaches",
+   "paper": 1
+  },
+  {
+   "slug": "theories-of-state",
+   "title": "Theories of the State",
+   "paper": 1
+  },
+  {
+   "slug": "justice",
+   "title": "Justice",
+   "paper": 1
+  },
+  {
+   "slug": "equality",
+   "title": "Equality",
+   "paper": 1
+  },
+  {
+   "slug": "rights",
+   "title": "Rights",
+   "paper": 1
+  },
+  {
+   "slug": "democracy",
+   "title": "Democracy",
+   "paper": 1
+  },
+  {
+   "slug": "power-hegemony-ideology",
+   "title": "Power, Hegemony and Ideology",
+   "paper": 1
+  },
+  {
+   "slug": "political-ideologies",
+   "title": "Political Ideologies",
+   "paper": 1
+  },
+  {
+   "slug": "indian-political-thought",
+   "title": "Indian Political Thought",
+   "paper": 1
+  },
+  {
+   "slug": "western-political-thought",
+   "title": "Western Political Thought",
+   "paper": 1
+  },
+  {
+   "slug": "indian-nationalism",
+   "title": "Indian Nationalism",
+   "paper": 1
+  },
+  {
+   "slug": "making-of-indian-constitution",
+   "title": "Making of the Indian Constitution",
+   "paper": 1
+  },
+  {
+   "slug": "salient-features-indian-constitution",
+   "title": "Salient Features of the Indian Constitution",
+   "paper": 1
+  },
+  {
+   "slug": "principal-organs-union-state",
+   "title": "Principal Organs of Union & State Governments",
+   "paper": 1
+  },
+  {
+   "slug": "grassroots-democracy",
+   "title": "Grassroots Democracy",
+   "paper": 1
+  },
+  {
+   "slug": "statutory-commissions",
+   "title": "Statutory Institutions and Commissions",
+   "paper": 1
+  },
+  {
+   "slug": "federalism",
+   "title": "Federalism",
+   "paper": 1
+  },
+  {
+   "slug": "planning-economic-development",
+   "title": "Planning and Economic Development",
+   "paper": 1
+  },
+  {
+   "slug": "caste-religion-ethnicity",
+   "title": "Caste, Religion and Ethnicity in Indian Politics",
+   "paper": 1
+  },
+  {
+   "slug": "party-system",
+   "title": "Party System",
+   "paper": 1
+  },
+  {
+   "slug": "social-movements",
+   "title": "Social Movements",
+   "paper": 1
+  },
+  {
+   "slug": "comparative-politics",
+   "title": "Comparative Politics",
+   "paper": 2
+  },
+  {
+   "slug": "state-in-comparative-perspective",
+   "title": "State in Comparative Perspective",
+   "paper": 2
+  },
+  {
+   "slug": "politics-of-representation",
+   "title": "Politics of Representation and Participation",
+   "paper": 2
+  },
+  {
+   "slug": "globalisation-responses",
+   "title": "Globalisation",
+   "paper": 2
+  },
+  {
+   "slug": "approaches-to-ir",
+   "title": "Approaches to International Relations",
+   "paper": 2
+  },
+  {
+   "slug": "key-concepts-ir",
+   "title": "Key Concepts in International Relations",
+   "paper": 2
+  },
+  {
+   "slug": "changing-international-political-order",
+   "title": "Changing International Political Order",
+   "paper": 2
+  },
+  {
+   "slug": "international-economic-system",
+   "title": "Evolution of the International Economic System",
+   "paper": 2
+  },
+  {
+   "slug": "united-nations",
+   "title": "United Nations",
+   "paper": 2
+  },
+  {
+   "slug": "regionalisation-world-politics",
+   "title": "Regionalisation of World Politics",
+   "paper": 2
+  },
+  {
+   "slug": "contemporary-global-concerns",
+   "title": "Contemporary Global Concerns",
+   "paper": 2
+  },
+  {
+   "slug": "indian-foreign-policy",
+   "title": "Indian Foreign Policy",
+   "paper": 2
+  },
+  {
+   "slug": "india-and-nam",
+   "title": "India and the Non-Alignment Movement",
+   "paper": 2
+  },
+  {
+   "slug": "india-and-south-asia",
+   "title": "India and South Asia",
+   "paper": 2
+  },
+  {
+   "slug": "india-and-global-south",
+   "title": "India and the Global South",
+   "paper": 2
+  },
+  {
+   "slug": "india-and-global-centres-of-power",
+   "title": "India and the Global Centres of Power",
+   "paper": 2
+  },
+  {
+   "slug": "india-and-un-system",
+   "title": "India and the UN System",
+   "paper": 2
+  },
+  {
+   "slug": "india-nuclear-question",
+   "title": "India and the Nuclear Question",
+   "paper": 2
+  },
+  {
+   "slug": "recent-developments-indian-foreign-policy",
+   "title": "Recent Developments in Indian Foreign Policy",
+   "paper": 2
+  }
+ ],
+ "geography": [
+  {
+   "slug": "geomorphology-fundamentals",
+   "title": "Geomorphology: Fundamentals",
+   "paper": 1
+  },
+  {
+   "slug": "landforms-fluvial-arid-glacial",
+   "title": "Landforms: Fluvial, Arid and Glacial",
+   "paper": 1
+  },
+  {
+   "slug": "rocks-minerals-volcanoes",
+   "title": "Rocks, Minerals and Volcanism",
+   "paper": 1
+  },
+  {
+   "slug": "climatology-atmosphere",
+   "title": "Climatology: Atmosphere and Energy",
+   "paper": 1
+  },
+  {
+   "slug": "precipitation-humidity-clouds",
+   "title": "Precipitation, Humidity and Clouds",
+   "paper": 1
+  },
+  {
+   "slug": "climate-classification-koppen",
+   "title": "Climatic Classification",
+   "paper": 1
+  },
+  {
+   "slug": "oceanography",
+   "title": "Oceanography",
+   "paper": 1
+  },
+  {
+   "slug": "biogeography-soils",
+   "title": "Biogeography and Soil Geography",
+   "paper": 1
+  },
+  {
+   "slug": "perspectives-human-geography",
+   "title": "Perspectives in Human Geography",
+   "paper": 1
+  },
+  {
+   "slug": "economic-geography",
+   "title": "Economic Geography",
+   "paper": 1
+  },
+  {
+   "slug": "population-settlement-geography",
+   "title": "Population and Settlement Geography",
+   "paper": 1
+  },
+  {
+   "slug": "regional-planning",
+   "title": "Regional Planning",
+   "paper": 1
+  },
+  {
+   "slug": "models-theories-geography",
+   "title": "Models, Theories and Laws in Geography",
+   "paper": 1
+  },
+  {
+   "slug": "physical-setting-india",
+   "title": "Physical Setting of India",
+   "paper": 2
+  },
+  {
+   "slug": "climate-india",
+   "title": "Climate of India",
+   "paper": 2
+  },
+  {
+   "slug": "soils-vegetation-india",
+   "title": "Soils and Vegetation of India",
+   "paper": 2
+  },
+  {
+   "slug": "natural-hazards-disasters-india",
+   "title": "Natural Hazards and Disasters in India",
+   "paper": 2
+  },
+  {
+   "slug": "resources-india",
+   "title": "Resources of India",
+   "paper": 2
+  },
+  {
+   "slug": "agriculture-india",
+   "title": "Agriculture in India",
+   "paper": 2
+  },
+  {
+   "slug": "industry-india",
+   "title": "Industry in India",
+   "paper": 2
+  },
+  {
+   "slug": "population-india",
+   "title": "Population of India",
+   "paper": 2
+  },
+  {
+   "slug": "settlements-urbanization-india",
+   "title": "Settlements and Urbanization in India",
+   "paper": 2
+  },
+  {
+   "slug": "regional-development-planning-india",
+   "title": "Regional Development and Planning in India",
+   "paper": 2
+  },
+  {
+   "slug": "transport-trade-india",
+   "title": "Transport, Communication and Trade in India",
+   "paper": 2
+  },
+  {
+   "slug": "geographical-basis-indian-federalism",
+   "title": "Geographical Basis of Indian Federalism",
+   "paper": 2
+  },
+  {
+   "slug": "india-world-affairs",
+   "title": "India and World Affairs",
+   "paper": 2
+  }
+ ],
+ "pub-admin": [
+  {
+   "slug": "introduction-public-administration",
+   "title": "Introduction to Public Administration",
+   "paper": 1
+  },
+  {
+   "slug": "theories-of-organisation",
+   "title": "Theories of Organisation",
+   "paper": 1
+  },
+  {
+   "slug": "administrative-behaviour",
+   "title": "Administrative Behaviour",
+   "paper": 1
+  },
+  {
+   "slug": "accountability-control",
+   "title": "Accountability and Control",
+   "paper": 1
+  },
+  {
+   "slug": "administrative-law",
+   "title": "Administrative Law",
+   "paper": 1
+  },
+  {
+   "slug": "comparative-public-administration",
+   "title": "Comparative Public Administration",
+   "paper": 1
+  },
+  {
+   "slug": "development-dynamics",
+   "title": "Development Dynamics",
+   "paper": 1
+  },
+  {
+   "slug": "personnel-administration",
+   "title": "Personnel Administration",
+   "paper": 1
+  },
+  {
+   "slug": "financial-administration",
+   "title": "Financial Administration",
+   "paper": 1
+  },
+  {
+   "slug": "new-public-management",
+   "title": "New Public Management",
+   "paper": 1
+  },
+  {
+   "slug": "public-policy",
+   "title": "Public Policy",
+   "paper": 1
+  },
+  {
+   "slug": "techniques-administrative-improvement",
+   "title": "Techniques of Administrative Improvement",
+   "paper": 1
+  },
+  {
+   "slug": "evolution-indian-administration",
+   "title": "Evolution of Indian Administration",
+   "paper": 2
+  },
+  {
+   "slug": "constitutional-framework-administration",
+   "title": "Constitutional Framework of Indian Administration",
+   "paper": 2
+  },
+  {
+   "slug": "public-sector-undertakings",
+   "title": "Public Sector Undertakings",
+   "paper": 2
+  },
+  {
+   "slug": "union-government-administration",
+   "title": "Union Government and Administration",
+   "paper": 2
+  },
+  {
+   "slug": "plans-priorities-administration",
+   "title": "Plans and Priorities in Indian Administration",
+   "paper": 2
+  },
+  {
+   "slug": "state-government-administration",
+   "title": "State Government and Administration",
+   "paper": 2
+  },
+  {
+   "slug": "district-administration",
+   "title": "District Administration in India",
+   "paper": 2
+  },
+  {
+   "slug": "civil-services-india",
+   "title": "Civil Services in India",
+   "paper": 2
+  },
+  {
+   "slug": "local-government-india",
+   "title": "Local Government in India",
+   "paper": 2
+  },
+  {
+   "slug": "law-order-anti-corruption",
+   "title": "Law and Order, Anti-Corruption Measures",
+   "paper": 2
+  },
+  {
+   "slug": "welfare-administration",
+   "title": "Welfare Administration in India",
+   "paper": 2
+  },
+  {
+   "slug": "administrative-reforms-india",
+   "title": "Administrative Reforms in India",
+   "paper": 2
+  },
+  {
+   "slug": "significant-issues-indian-administration",
+   "title": "Significant Issues in Indian Administration",
+   "paper": 2
+  },
+  {
+   "slug": "rural-development-administration",
+   "title": "Rural Development Administration",
+   "paper": 2
+  }
+ ]
+}

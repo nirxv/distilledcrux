@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Book-corpus grounding work files: passage dumps, batches, tags. They hold book
+# text, and this repo is public.
+scripts/rag/work/
+__pycache__/

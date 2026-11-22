@@ -238,3 +238,22 @@ HIGH-VALUE PHRASES (use where appropriate): ${p.phrases}
 
 Be strict. No flattery. No generic advice. 300+ target only.`;
 }
+
+/**
+ * The grounding rules, ported from History Optional's chat. There, answers
+ * took a passage about one event as evidence for another and wrote dates from
+ * memory; here the same failure is a passage about one thinker cited for
+ * another, and a work, a concept or a year moved from where the books put it.
+ * Retrieved passages now say what they are about (lib/rag/context.ts) and
+ * the register supplies KEY FACTS (lib/rag/register.ts), so the model has
+ * something better than memory to take them from.
+ */
+export function evidenceRules(hasFacts: boolean): string {
+  const facts = hasFacts ? ' or from KEY FACTS' : '';
+  return `EVIDENCE RULES (they override everything below where the two differ):
+E1. Each book passage shows its book and, when known, the syllabus units it teaches and a one-line note naming the thinker, concept or case it is about. Use a passage only for a claim about that same thinker, concept or case. A passage about a different thinker is not evidence, however alike the wording: Merton's anomie is not Durkheim's, and Weber's bureaucracy is not Riggs's prismatic model.
+E2. Take every year, every work title and every "who coined or proposed what" from a passage that states it${facts}. If neither gives it, make the point without the year or the title. Never write these from memory, and never move a work or a concept from one thinker to another.
+E3. If the question quotes a statement or a thinker's view, it is a claim to examine, not a fact. Check who said it and what it says against the passages${facts} before you build on it, and say where it is wrong.
+E4. If two passages${hasFacts ? ', or a passage and KEY FACTS,' : ''} disagree, say so in one line and give both.
+E5. Your own knowledge may supply structure, analysis, examples and links across the syllabus. It must not supply new years, statistics, quotations or work titles. If no passage covers the question, say in one line that the books here do not cover it directly, then answer in general terms under the same rules.`;
+}
