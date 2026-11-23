@@ -54,6 +54,8 @@ export type TopperCopy = {
   /** The Civil Services exam the rank was earned in. */
   year: number | null;
   pages: number;
+  /** The copy came already marked by the test series' examiner: a score and remarks on the answer pages. Not UPSC's marks. */
+  evaluated: boolean;
 };
 
 /** "AIR 22 · CSE 2024", or as much of it as is known. */

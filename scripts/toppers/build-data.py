@@ -68,6 +68,9 @@ for f in sorted(glob.glob(f'{STATE}/*/scan.json')):
             'year': s.get('exam_year'),
             'source': source(s),
             'pages': len(PdfReader(pdf).pages),
+            # The booklet came already marked by the test series' examiner (score and
+            # remarks on the answer pages). Set per booklet in scan.json, or per answer.
+            'evaluated': bool(a.get('evaluated', s.get('evaluated', False))),
             'key': f'{SUBJECT}/{cid}.pdf',
             'file': os.path.relpath(pdf, STATE),
         })

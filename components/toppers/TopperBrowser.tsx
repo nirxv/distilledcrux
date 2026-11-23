@@ -8,8 +8,9 @@ import { allowanceLine, useTopperStatus } from './useTopperStatus';
 import TopperComing from './TopperComing';
 import TopperPassOffer from './TopperPassOffer';
 
-type Filters = { q: string; paper: '' | '1' | '2'; topic: string; topper: string; asked: boolean };
-const EMPTY: Filters = { q: '', paper: '', topic: '', topper: '', asked: false };
+/** evaluated: only answers that came already marked by the test series' examiner. */
+type Filters = { q: string; paper: '' | '1' | '2'; topic: string; topper: string; asked: boolean; evaluated: boolean };
+const EMPTY: Filters = { q: '', paper: '', topic: '', topper: '', asked: false, evaluated: false };
 const BATCH = 30;
 
 export type PyqRef = { id: number; year: string; paper: 'Paper I' | 'Paper II'; question: string };
@@ -48,6 +49,7 @@ function BrowserFromUrl(props: Props) {
       topic: sp.get('topic') ?? '',
       topper: sp.get('topper') ?? '',
       asked: sp.get('asked') === '1',
+      evaluated: sp.get('evaluated') === '1',
     }} />
   );
 }
@@ -76,14 +78,23 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
     if (nf.topic) sp.set('topic', nf.topic);
     if (nf.topper) sp.set('topper', nf.topper);
     if (nf.asked) sp.set('asked', '1');
+    if (nf.evaluated) sp.set('evaluated', '1');
     const qs = sp.toString();
     window.history.replaceState(null, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`);
   };
 
   // One card per printed test question; every topper who answered it underneath.
+  // With the evaluated switch on, only the marked answers are listed, so the
+  // cards, counts and topper list all speak of those.
+  const totalEvaluated = useMemo(() => copies.filter((c) => c.evaluated).length, [copies]);
+  // Where every copy came marked (PubAd's are all Lukmaan IAS evaluations), a
+  // switch would filter nothing and a tag on every copy says nothing: one line
+  // above the list says it instead.
+  const allEvaluated = copies.length > 0 && totalEvaluated === copies.length;
+  const pool = useMemo(() => (f.evaluated ? copies.filter((c) => c.evaluated) : copies), [copies, f.evaluated]);
   const groups = useMemo(() => {
     const m = new Map<string, Group>();
-    for (const c of copies) {
+    for (const c of pool) {
       const g = m.get(c.group) ?? { key: c.group, question: c.question, paper: c.paper, marks: c.marks, topic: c.topic, pyqs: c.pyqs, copies: [] };
       g.copies.push(c);
       m.set(c.group, g);
@@ -93,13 +104,13 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
     return [...m.values()].sort((a, b) =>
       a.paper.localeCompare(b.paper) || (order.get(a.topic) ?? 99) - (order.get(b.topic) ?? 99)
       || b.copies.length - a.copies.length);
-  }, [copies, topics]);
+  }, [pool, topics]);
 
   const toppers = useMemo(() => {
     const m = new Map<string, number>();
-    for (const c of copies) if (!m.has(c.topper) || (c.rank ?? 9999) < (m.get(c.topper) ?? 9999)) m.set(c.topper, c.rank ?? 9999);
+    for (const c of pool) if (!m.has(c.topper) || (c.rank ?? 9999) < (m.get(c.topper) ?? 9999)) m.set(c.topper, c.rank ?? 9999);
     return [...m.entries()].sort((a, b) => a[1] - b[1]).map(([name, rank]) => ({ name, rank: rank === 9999 ? null : rank }));
-  }, [copies]);
+  }, [pool]);
 
   const q = f.q.trim().toLowerCase();
   const filtered = useMemo(() => groups.filter((g) =>
@@ -125,7 +136,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
   const note = allowanceLine(allowance, subject);
   // A reader whose own optional has no copies yet is told theirs are coming.
   const comingFor = allowance.own && !isTopperSubject(allowance.own) ? labelForSlug(allowance.own) : null;
-  const filteredAtAll = Boolean(f.q || f.paper || f.topic || f.topper || f.asked);
+  const filteredAtAll = Boolean(f.q || f.paper || f.topic || f.topper || f.asked || f.evaluated);
 
   return (
     <div className="tb">
@@ -178,6 +189,11 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
           <button type="button" className={`tb-toggle${f.asked ? ' on' : ''}`} aria-pressed={f.asked} onClick={() => update({ asked: !f.asked })}>
             Asked by UPSC
           </button>
+          {totalEvaluated > 0 && !allEvaluated && (
+            <button type="button" className={`tb-toggle${f.evaluated ? ' on' : ''}`} aria-pressed={f.evaluated} onClick={() => update({ evaluated: !f.evaluated })}>
+              Evaluated copies <span className="tb-toggle-n">{totalEvaluated.toLocaleString('en-IN')}</span>
+            </button>
+          )}
         </div>
       </div>
 
@@ -188,6 +204,12 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
         </span>
         {filteredAtAll && <button type="button" className="tb-reset" onClick={() => update(EMPTY)}>Clear filters</button>}
       </div>
+      {(f.evaluated || allEvaluated) && (
+        <p className="tb-note">
+          {allEvaluated ? `Every ${subjectName} copy here came marked by the test series' examiner, not by UPSC.` : `These answers were marked by the test series' examiner, not by UPSC.`}
+          {' '}Look for the score at the end of each answer and the remarks in the margins.
+        </p>
+      )}
 
       {filtered.length === 0 ? (
         <p className="tb-empty">No question matches all of that. Try fewer filters, or a shorter search.</p>
@@ -217,6 +239,7 @@ function Browser({ subject, subjectName, copies, topics, pyqs, initial }: Props 
                     <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className={`tb-copy${f.topper === c.topper ? ' hit' : ''}`}>
                       <span className="tb-name">{highlight(c.topper, f.q.trim())}</span>
                       <span className="tb-rank">{rankLine(c)}</span>
+                      {c.evaluated && !allEvaluated && <span className="tb-evaluated">Evaluated</span>}
                       {allowance.opened.has(c.id) && <span className="tb-opened">Opened</span>}
                     </Link>
                   </li>
