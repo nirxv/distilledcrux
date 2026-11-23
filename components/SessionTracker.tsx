@@ -19,6 +19,43 @@ function shouldTrack(): boolean {
 }
 
 // ---------------------------------------------------------------------------
+// Only people
+// ---------------------------------------------------------------------------
+/**
+ * Nothing is recorded until the page sees a real input: a tap, a key, the
+ * mouse wheel or the mouse moving. Only events the browser itself raised count
+ * (event.isTrusted), not ones a script dispatches. On 2026-11-22 about half of
+ * History Optional's new rows were one-page, few-second, "direct" desktop
+ * visits from a different Indian town each time: automated browsers behind
+ * Indian residential proxies, with user agents that read as ordinary Chrome or
+ * Firefox. They load a page and leave without touching it. One input marks
+ * the tab (sessionStorage), so its later pages are tracked as before. The API
+ * refuses pings that don't say so (app/api/track-session/route.ts).
+ */
+const HUMAN_KEY = '_dc_human';
+const HUMAN_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'touchstart', 'wheel'] as const;
+let human = false;
+const waitingForHuman: (() => void)[] = [];
+/** Runs fn now if the visitor has shown they are a person, else on their first input. */
+function whenHuman(fn: () => void) {
+  if (human) fn();
+  else waitingForHuman.push(fn);
+}
+function watchForHuman(): () => void {
+  try { if (sessionStorage.getItem(HUMAN_KEY) === '1') human = true; } catch { /* storage blocked */ }
+  if (human) return () => {};
+  const onEvent = (e: Event) => {
+    if (!e.isTrusted || human) return;
+    human = true;
+    try { sessionStorage.setItem(HUMAN_KEY, '1'); } catch { /* as above */ }
+    for (const name of HUMAN_EVENTS) window.removeEventListener(name, onEvent);
+    for (const fn of waitingForHuman.splice(0)) fn();
+  };
+  for (const name of HUMAN_EVENTS) window.addEventListener(name, onEvent, { passive: true });
+  return () => { for (const name of HUMAN_EVENTS) window.removeEventListener(name, onEvent); };
+}
+
+// ---------------------------------------------------------------------------
 // Visitor ID — triple persistence: localStorage + cookie + FingerprintJS
 // FingerprintJS is loaded lazily, only when no cached ID exists
 // ---------------------------------------------------------------------------
@@ -180,7 +217,7 @@ function postTrack(body: Record<string, unknown>, keepalive: boolean) {
   void fetch('/api/track-session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ ...body, human: true }),
     keepalive,
   }).catch(() => {});
 }
@@ -194,7 +231,7 @@ function pingHeartbeat(visitor_id: string) {
   void fetch('/api/track-session', {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ visitor_id, ...(pages.length ? { pages, ...pageInfo } : {}) }),
+    body: JSON.stringify({ visitor_id, ...(pages.length ? { pages, ...pageInfo, human: true } : {}) }),
     keepalive: true,
   }).catch(() => {});
 }
@@ -210,10 +247,11 @@ export default function SessionTracker() {
   // it if they have been here long enough.
   const pendingFirst = useRef<((keepalive: boolean) => void) | null>(null);
 
-  // Resolve visitor ID once on mount
+  // Resolve visitor ID once on mount, and start watching for a person.
   useEffect(() => {
     if (!shouldTrack()) return;
     getVisitorId().then(id => { visitorIdRef.current = id; });
+    return watchForHuman();
   }, []);
 
   // Fire on every page navigation
@@ -234,6 +272,11 @@ export default function SessionTracker() {
 
       if (!localStorage.getItem(COUNTED_KEY)) {
         pendingFirst.current = (keepalive: boolean) => {
+          // No input yet: wait for one. Leaving without any is not a visit.
+          if (!human) {
+            if (!keepalive) whenHuman(() => pendingFirst.current?.(false));
+            return;
+          }
           const dwell = Math.floor((Date.now() - pageLoadedAt) / 1000);
           if (dwell < MIN_DWELL_SECS) return;
           pendingFirst.current = null;
@@ -246,12 +289,15 @@ export default function SessionTracker() {
         return;
       }
 
-      // A session's first page goes now, the rest with the next beat.
-      if (Date.now() - lastSent() < SESSION_GAP_MS) {
-        queuePage(pathname);
-        return;
-      }
-      postTrack({ ...body, is_first_visit: false }, false);
+      // A session's first page goes as soon as a person is seen, the rest
+      // with the next beat. Checked again then: an earlier page may have gone.
+      whenHuman(() => {
+        if (Date.now() - lastSent() < SESSION_GAP_MS) {
+          queuePage(pathname);
+          return;
+        }
+        postTrack({ ...body, is_first_visit: false }, false);
+      });
     })();
   }, [pathname]);
 
@@ -282,10 +328,10 @@ export default function SessionTracker() {
     };
     const interval = setInterval(() => {
       const now = Date.now();
-      if (document.visibilityState === 'visible' && now - lastInput < HEARTBEAT_MS && now - lastSent() >= HEARTBEAT_MS) void beat();
+      if (human && document.visibilityState === 'visible' && now - lastInput < HEARTBEAT_MS && now - lastSent() >= HEARTBEAT_MS) void beat();
     }, 60 * 1000);
     const onVisibility = () => {
-      if (document.visibilityState !== 'hidden') return;
+      if (!human || document.visibilityState !== 'hidden') return;
       if (startUnbeaten || Date.now() - lastSent() >= HIDE_BEAT_GAP_MS) void beat();
     };
     document.addEventListener('visibilitychange', onVisibility);

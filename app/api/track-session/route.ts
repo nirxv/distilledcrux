@@ -5,7 +5,15 @@ import { checkRateLimit } from '@/lib/rateLimit';
 export const runtime = 'nodejs';
 
 // HeadlessChrome: automated browsers that do not set navigator.webdriver.
-const BOT_UA = /bot|crawler|spider|crawling|headlesschrome|googlebot|bingbot|ahrefsbot|semrushbot|mj12bot|dotbot|rogerbot|facebookexternalhit|python|curl|wget|axios|node-fetch|go-http-client|java|ruby|scrapy/i;
+// Epochal-Search and the like: the crawlers behind the 2026-11-22 Vercel pause.
+const BOT_UA = /bot|crawler|spider|crawling|headless|epochal|perplexity|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|preview|scanner|phantom|selenium|puppeteer|playwright|googlebot|bingbot|ahrefsbot|semrushbot|mj12bot|dotbot|rogerbot|facebookexternalhit|python|curl|wget|axios|node-fetch|okhttp|httpclient|libwww|go-http-client|java|ruby|scrapy/i;
+
+/**
+ * The tracker only calls once the page has seen a real input, and says so
+ * (components/SessionTracker.tsx). A call without the flag comes from a script
+ * or a bot, not the tracker, and creates nothing.
+ */
+const fromPerson = (body: { human?: unknown }) => body?.human === true;
 
 // 3 requests per 10s per visitor. This was an in-memory Map, so it counted
 // per lambda instead of per visitor, and once it held 10,000 entries it evicted
@@ -46,8 +54,10 @@ export async function PATCH(req: NextRequest) {
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
     if (!fromIndia(req)) return NextResponse.json({ ok: false, reason: 'outside_india' });
 
-    const { visitor_id, pages: rawPages, firebase_uid, device, os, browser } = await req.json();
+    const beatBody = await req.json();
+    const { visitor_id, pages: rawPages, firebase_uid, device, os, browser } = beatBody;
     if (!visitor_id) return NextResponse.json({ ok: false });
+    if (Array.isArray(rawPages) && rawPages.length && !fromPerson(beatBody)) return NextResponse.json({ ok: false, reason: 'no_person' });
     const pages: string[] = (Array.isArray(rawPages) ? rawPages : [])
       .slice(0, MAX_BEAT_PAGES)
       .filter((p: unknown): p is string => typeof p === 'string' && p.length > 0 && p.length <= 512);
@@ -120,8 +130,10 @@ export async function POST(req: NextRequest) {
     if (BOT_UA.test(ua)) return NextResponse.json({ ok: false, reason: 'bot' });
     if (!fromIndia(req)) return NextResponse.json({ ok: false, reason: 'outside_india' });
 
-    const { visitor_id, firebase_uid, page, referrer, device, os, browser, dwell: rawDwell } = await req.json();
+    const postBody = await req.json();
+    const { visitor_id, firebase_uid, page, referrer, device, os, browser, dwell: rawDwell } = postBody;
     if (!visitor_id) return NextResponse.json({ ok: false, reason: 'no visitor_id' });
+    if (!fromPerson(postBody)) return NextResponse.json({ ok: false, reason: 'no_person' });
 
     // Seconds the visitor had already spent, sent with a first visit. A new
     // row needs at least one: under that is someone who bounced straight off.
