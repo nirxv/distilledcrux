@@ -4,6 +4,7 @@ import Image from 'next/image';
 import owlArt from '@/public/mascot/owl.svg';
 import Link from '@/components/Link';
 import { OPEN_EVENT as OPEN_REVIEW } from '@/components/ReviewPrompt';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * The site footer, rendered once by the frontend layout so every route
@@ -18,6 +19,7 @@ import { OPEN_EVENT as OPEN_REVIEW } from '@/components/ReviewPrompt';
  * column on a phone.
  */
 export default function Footer() {
+  const { L, langHi } = useLang();
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -41,14 +43,14 @@ export default function Footer() {
         </Link>
 
         <nav className="ds-footer-links" aria-label="Footer">
-          <Link href="/#optionals">Optionals</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/#optionals">{L('Optionals', 'वैकल्पिक विषय')}</Link>
+          <Link href="/pricing">{L('Pricing', 'सदस्यता')}</Link>
+          <Link href="/contact">{L('Contact', 'संपर्क')}</Link>
           {/* Opens the review form in place; the href is for opening it in a new tab. */}
-          <Link href="/?review=1" onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); window.dispatchEvent(new Event(OPEN_REVIEW)); }}>Write a review</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/refund">Refund</Link>
+          <Link href="/?review=1" onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); window.dispatchEvent(new Event(OPEN_REVIEW)); }}>{L('Write a review', 'समीक्षा लिखें')}</Link>
+          <Link href="/privacy">{L('Privacy', 'गोपनीयता')}</Link>
+          <Link href="/terms">{L('Terms', 'नियम')}</Link>
+          <Link href="/refund">{L('Refund', 'धनवापसी')}</Link>
         </nav>
 
         <div className="ds-footer-end">

@@ -22,6 +22,7 @@ import RefCapture from '@/components/RefCapture';
 import ReviewPrompt from '@/components/ReviewPrompt';
 import WeeklyCheckup from '@/components/WeeklyCheckup';
 import { AuthProvider } from '@/components/AuthProvider';
+import { LangProvider } from '@/lib/i18n/LangContext';
 import BottomNav from '@/components/BottomNav';
 import Toaster from '@/components/ui/Toast';
 import ConfirmHost from '@/components/ui/ConfirmDialog';
@@ -68,10 +69,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" data-theme="light" className={inter.variable} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);var l=localStorage.getItem('lang');if(l==='hi'){document.documentElement.lang='hi';document.documentElement.dataset.lang='hi';}})();` }} />
       </head>
       <body>
         <AuthProvider>
+        <LangProvider>
         <Navbar />
         <SessionTracker />
         <ProgressSync />
@@ -87,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BottomNav />
         <Toaster />
         <ConfirmHost />
+        </LangProvider>
         </AuthProvider>
       </body>
     </html>

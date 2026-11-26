@@ -4,6 +4,7 @@ import Link from '@/components/Link';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { TOPPER_COUNTS, TOPPER_SUBJECTS, TOPPER_SUBJECT_NAME, isTopperSubject, topperSubjectList } from '@/lib/toppers/meta';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * The tools, one at a time: a row of tabs and one large panel that says what
@@ -36,85 +37,90 @@ function Frame({ title, children }: { title: string; children: React.ReactNode }
 }
 
 function ChatPreview() {
+  const { L } = useLang();
   return (
-    <Frame title="AI Chat · Sociology">
-      <div className="sw-ask">What did Durkheim mean by anomie?</div>
-      <div className="sw-trace">Researched 6s ›</div>
-      <p className="sw-p"><b>Anomie</b> is normlessness: when society changes faster than its rules, people lose the norms that guide them <span className="sw-cite"><Book />Haralambos</span></p>
-      <p className="sw-p">Durkheim ties it to a rise in <b>anomic suicide</b> in economic booms and slumps alike <span className="sw-cite"><Book />Ritzer</span></p>
+    <Frame title={L('AI Chat · Sociology', 'AI चैट · समाजशास्त्र')}>
+      <div className="sw-ask">{L('What did Durkheim mean by anomie?', 'दुर्खीम का अनोमी से क्या मतलब था?')}</div>
+      <div className="sw-trace">{L('Researched 6s ›', '6 सेकंड तक शोध किया ›')}</div>
+      <p className="sw-p"><b>{L('Anomie', 'अनोमी')}</b> {L('is normlessness: when society changes faster than its rules, people lose the norms that guide them.', 'का अर्थ है मानदंडों का अभाव: जब समाज अपने नियमों से तेज़ी से बदलता है, तो लोग मार्गदर्शन करने वाले मानदंड खो देते हैं।')} <span className="sw-cite"><Book />Haralambos</span></p>
+      <p className="sw-p">{L('Durkheim ties it to a rise in', 'दुर्खीम इसे बढ़ती हुई संख्या से जोड़ते हैं:')} <b>{L('anomic suicide', 'अनोमिक आत्महत्या')}</b> {L('in economic booms and slumps alike.', 'आर्थिक उछाल और मंदी, दोनों के दौरान।')} <span className="sw-cite"><Book />Ritzer</span></p>
       <div className="sw-sources">
-        <span className="sw-sources-n">6 book passages</span>
-        <span className="sw-sources-from">from Haralambos, Ritzer and IGNOU Sociology</span>
+        <span className="sw-sources-n">{L('6 book passages', 'किताबों के 6 अंश')}</span>
+        <span className="sw-sources-from">{L('from Haralambos, Ritzer and IGNOU Sociology', 'Haralambos, Ritzer और IGNOU समाजशास्त्र से')}</span>
       </div>
-      <div className="sw-compose"><span>Ask a follow-up…</span><i>↑</i></div>
+      <div className="sw-compose"><span>{L('Ask a follow-up…', 'आगे का सवाल पूछें…')}</span><i>↑</i></div>
     </Frame>
   );
 }
 
 function EvalPreview() {
+  const { L } = useLang();
   const r = 30, c = 2 * Math.PI * r;
   return (
-    <Frame title="Evaluation · 15 marks">
+    <Frame title={L('Evaluation · 15 marks', 'मूल्यांकन · 15 अंक')}>
       <div className="sw-score">
         <svg width="78" height="78" viewBox="0 0 78 78">
           <circle cx="39" cy="39" r={r} fill="none" stroke="var(--sw-track)" strokeWidth="7" />
           <circle cx="39" cy="39" r={r} fill="none" stroke="var(--success-text)" strokeWidth="7" strokeLinecap="round" strokeDasharray={`${c * (11 / 15)} ${c}`} transform="rotate(-90 39 39)" />
         </svg>
-        <div><strong>11<small>/15</small></strong><span>A good answer</span></div>
+        <div><strong>11<small>/15</small></strong><span>{L('A good answer', 'एक अच्छा उत्तर')}</span></div>
       </div>
       <div className="sw-bars">
-        <div><em>Structure</em><i style={{ width: '82%' }} /></div>
-        <div><em>Content</em><i style={{ width: '74%' }} /></div>
-        <div><em>Examples</em><i style={{ width: '52%' }} /></div>
+        <div><em>{L('Structure', 'संरचना')}</em><i style={{ width: '82%' }} /></div>
+        <div><em>{L('Content', 'विषय-वस्तु')}</em><i style={{ width: '74%' }} /></div>
+        <div><em>{L('Examples', 'उदाहरण')}</em><i style={{ width: '52%' }} /></div>
       </div>
-      <div className="sw-fb ok"><Tick />Clear introduction and conclusion</div>
-      <div className="sw-fb ok"><Tick />Uses Merton&apos;s strain theory well</div>
-      <div className="sw-fb add"><Plus />Add an Indian example to the body</div>
+      <div className="sw-fb ok"><Tick />{L('Clear introduction and conclusion', 'भूमिका और निष्कर्ष स्पष्ट हैं')}</div>
+      <div className="sw-fb ok"><Tick />{L("Uses Merton's strain theory well", 'मर्टन के स्ट्रेन सिद्धांत का अच्छा उपयोग')}</div>
+      <div className="sw-fb add"><Plus />{L('Add an Indian example to the body', 'मुख्य भाग में एक भारतीय उदाहरण जोड़ें')}</div>
     </Frame>
   );
 }
 
 function NotesPreview() {
+  const { L } = useLang();
   return (
-    <Frame title="Notes · Geography">
-      <div className="sw-crumb">Paper I · Geomorphology</div>
-      <div className="sw-h">Plate Tectonics</div>
-      <p className="sw-p">The lithosphere is broken into <mark>rigid plates</mark> that move over the asthenosphere. Where plates meet, mountains, ocean trenches and earthquakes follow.</p>
-      <div className="sw-sub">Plate boundaries</div>
+    <Frame title={L('Notes · Geography', 'नोट्स · भूगोल')}>
+      <div className="sw-crumb">{L('Paper I · Geomorphology', 'पेपर I · भू-आकृति विज्ञान')}</div>
+      <div className="sw-h">{L('Plate Tectonics', 'प्लेट विवर्तनिकी')}</div>
+      <p className="sw-p">{L('The lithosphere is broken into', 'स्थलमंडल')} <mark>{L('rigid plates', 'कठोर प्लेटों')}</mark> {L('that move over the asthenosphere. Where plates meet, mountains, ocean trenches and earthquakes follow.', 'में बँटा है, जो दुर्बलतामंडल के ऊपर खिसकती हैं। जहाँ प्लेटें मिलती हैं, वहाँ पर्वत, महासागरीय गर्त और भूकंप बनते हैं।')}</p>
+      <div className="sw-sub">{L('Plate boundaries', 'प्लेट सीमाएँ')}</div>
       <ul className="sw-list">
-        <li><b>Divergent:</b> plates move apart and new crust forms, as at mid-ocean ridges.</li>
-        <li><b>Convergent:</b> one plate sinks beneath another, building trenches and fold mountains.</li>
-        <li><b>Transform:</b> plates slide past each other, as along the San Andreas fault.</li>
+        <li><b>{L('Divergent:', 'अपसारी:')}</b> {L('plates move apart and new crust forms, as at mid-ocean ridges.', 'प्लेटें एक-दूसरे से दूर जाती हैं और नई भूपर्पटी बनती है, जैसे मध्य-महासागरीय कटक पर।')}</li>
+        <li><b>{L('Convergent:', 'अभिसारी:')}</b> {L('one plate sinks beneath another, building trenches and fold mountains.', 'एक प्लेट दूसरी के नीचे धँसती है, जिससे गर्त और वलित पर्वत बनते हैं।')}</li>
+        <li><b>{L('Transform:', 'रूपांतरित:')}</b> {L('plates slide past each other, as along the San Andreas fault.', 'प्लेटें एक-दूसरे के बगल से खिसकती हैं, जैसे सैन एंड्रियास भ्रंश के साथ।')}</li>
       </ul>
-      <div className="sw-terms"><span>Sea-floor spreading</span><span>Subduction</span><span>Isostasy</span></div>
+      <div className="sw-terms"><span>{L('Sea-floor spreading', 'समुद्र तल का प्रसार')}</span><span>{L('Subduction', 'अधोगमन')}</span><span>{L('Isostasy', 'समस्थिति')}</span></div>
     </Frame>
   );
 }
 
 function CardsPreview() {
+  const { L } = useLang();
   return (
-    <Frame title="Flashcards · Sociology">
-      <div className="sw-progress"><span>4 / 20</span><span className="sw-asked">Asked 2024 and 2018</span></div>
+    <Frame title={L('Flashcards · Sociology', 'फ्लैशकार्ड · समाजशास्त्र')}>
+      <div className="sw-progress"><span>4 / 20</span><span className="sw-asked">{L('Asked 2024 and 2018', '2024 और 2018 में पूछा गया')}</span></div>
       <div className="sw-track"><i style={{ width: '20%' }} /></div>
-      <div className="sw-card"><small>Concept · Emile Durkheim</small><b>What are Durkheim&rsquo;s four types of suicide?</b></div>
-      <div className="sw-card back"><small>Answer</small><b>Egoistic and altruistic, from integration. Anomic and fatalistic, from regulation.</b></div>
-      <div className="sw-rate"><span>Blank</span><span>Hard</span><span className="on">Good</span><span>Easy</span></div>
+      <div className="sw-card"><small>{L('Concept · Emile Durkheim', 'अवधारणा · एमिल दुर्खीम')}</small><b>{L('What are Durkheim’s four types of suicide?', 'दुर्खीम के आत्महत्या के चार प्रकार कौन-से हैं?')}</b></div>
+      <div className="sw-card back"><small>{L('Answer', 'उत्तर')}</small><b>{L('Egoistic and altruistic, from integration. Anomic and fatalistic, from regulation.', 'अहंवादी और परोपकारी—एकीकरण से; अनोमिक और नियतिवादी—नियमन से।')}</b></div>
+      <div className="sw-rate"><span>{L('Blank', 'याद नहीं')}</span><span>{L('Hard', 'मुश्किल')}</span><span className="on">{L('Good', 'आसान')}</span><span>{L('Easy', 'बहुत आसान')}</span></div>
     </Frame>
   );
 }
 
 function PyqPreview() {
+  const { L } = useLang();
   const rows = [
-    { year: 2024, marks: 20, q: 'Riggs’ Prismatic Model has been criticised as overly gloomy and technical complex, but it remains as a useful starting point…' },
-    { year: 2021, marks: 15, q: 'In modern context, Riggsian terms have not altogether disappeared, but have emerged in different forms with newer meanings…' },
-    { year: 2017, marks: 10, q: '“Development Administration and Administrative Development have a chicken and egg kind of relationship” — (Riggs). Elaborate.' },
+    { year: 2024, marks: 20, q: L('Riggs’ Prismatic Model has been criticised as overly gloomy and technical complex, but it remains as a useful starting point…', 'रिग्स के प्रिज़मैटिक मॉडल की अत्यधिक निराशावादी और तकनीकी रूप से जटिल होने के लिए आलोचना की गई है, फिर भी यह एक उपयोगी शुरुआती बिंदु बना हुआ है…') },
+    { year: 2021, marks: 15, q: L('In modern context, Riggsian terms have not altogether disappeared, but have emerged in different forms with newer meanings…', 'आधुनिक संदर्भ में, रिग्स से जुड़े शब्द पूरी तरह लुप्त नहीं हुए हैं, बल्कि नए अर्थों के साथ अलग-अलग रूपों में उभरे हैं…') },
+    { year: 2017, marks: 10, q: L('“Development Administration and Administrative Development have a chicken and egg kind of relationship” — (Riggs). Elaborate.', '“विकास प्रशासन और प्रशासनिक विकास का संबंध मुर्गी और अंडे जैसा है”—(रिग्स)। विस्तार से समझाइए।') },
   ];
   return (
-    <Frame title="PYQs · Public Administration">
-      <div className="sw-filters"><span>Paper I</span><span className="on">Riggs</span><span>All marks</span></div>
+    <Frame title={L('PYQs · Public Administration', 'PYQs · लोक प्रशासन')}>
+      <div className="sw-filters"><span>{L('Paper I', 'पेपर I')}</span><span className="on">Riggs</span><span>{L('All marks', 'सभी अंक')}</span></div>
       {rows.map((r) => (
         <div key={r.year} className="sw-pyq">
-          <div className="sw-pyq-meta"><b>{r.year}</b> · {r.marks} marks</div>
+          <div className="sw-pyq-meta"><b>{r.year}</b> · {r.marks} {L('marks', 'अंक')}</div>
           <div className="sw-pyq-q">{r.q}</div>
         </div>
       ))}
@@ -123,48 +129,50 @@ function PyqPreview() {
 }
 
 /** "994 answers by 42 rankers" for the reader's optional, or across every optional with copies. */
-function toppersLine(slug: string | null | undefined): string {
+function toppersLine(slug: string | null | undefined, L: (en: string, hi: string) => string): string {
   const counts = slug && isTopperSubject(slug) ? [TOPPER_COUNTS[slug]] : TOPPER_SUBJECTS.map((s) => TOPPER_COUNTS[s]);
   const copies = counts.reduce((n, c) => n + c.copies, 0);
   const toppers = counts.reduce((n, c) => n + c.toppers, 0);
-  return `${copies.toLocaleString('en-IN')} answers by ${toppers} rankers`;
+  return L(`${copies.toLocaleString('en-IN')} answers by ${toppers} rankers`, `${copies.toLocaleString('en-IN')} उत्तर ${toppers} रैंकर्स द्वारा`);
 }
 
 function TopperPreview() {
+  const { L } = useLang();
   const rows = [
     { name: 'Riya Saini', rank: 'AIR 22 · CSE 2024' },
     { name: 'Shobhika Pathak', rank: 'AIR 37 · CSE 2024' },
     { name: 'Mudita Bansal', rank: 'AIR 44 · CSE 2024' },
   ];
   return (
-    <Frame title="Topper copies · Sociology">
-      <div className="sw-crumb">Paper I · Sociology as Science · 10 marks</div>
-      <div className="sw-h sw-q">How has the scope of Sociology broadened in the global times?</div>
-      <div className="sw-filters"><span className="on">Asked by UPSC in 2020</span><span>8 toppers</span></div>
+    <Frame title={L('Topper copies · Sociology', 'टॉपर्स के उत्तर · समाजशास्त्र')}>
+      <div className="sw-crumb">{L('Paper I · Sociology as Science · 10 marks', 'पेपर I · विज्ञान के रूप में समाजशास्त्र · 10 अंक')}</div>
+      <div className="sw-h sw-q">{L('How has the scope of Sociology broadened in the global times?', 'वैश्विक समय में समाजशास्त्र का दायरा कैसे व्यापक हुआ है?')}</div>
+      <div className="sw-filters"><span className="on">{L('Asked by UPSC in 2020', 'UPSC ने 2020 में पूछा')}</span><span>{L('8 toppers', '8 टॉपर्स')}</span></div>
       {rows.map((r) => (
         <div key={r.name} className="sw-pyq">
           <div className="sw-pyq-meta"><b>{r.name}</b> · {r.rank}</div>
-          <div className="sw-pyq-q">Handwritten answer, 2 pages</div>
+          <div className="sw-pyq-q">{L('Handwritten answer, 2 pages', 'हस्तलिखित उत्तर, 2 पृष्ठ')}</div>
         </div>
       ))}
       <div className="sw-sources">
-        <span className="sw-sources-n">Compare two side by side</span>
-        <span className="sw-sources-from">the same question, two rankers, page by page</span>
+        <span className="sw-sources-n">{L('Compare two side by side', 'दो उत्तरों की साथ-साथ तुलना करें')}</span>
+        <span className="sw-sources-from">{L('the same question, two rankers, page by page', 'एक ही प्रश्न, दो रैंकर्स, पन्ना-दर-पन्ना')}</span>
       </div>
     </Frame>
   );
 }
 
 function TestPreview() {
+  const { L } = useLang();
   return (
-    <Frame title="Test · Sociology">
-      <div className="sw-progress"><span>Question 4 of 10</span><span className="sw-streak">3 in a row</span></div>
+    <Frame title={L('Test · Sociology', 'टेस्ट · समाजशास्त्र')}>
+      <div className="sw-progress"><span>{L('Question 4 of 10', '10 में से प्रश्न 4')}</span><span className="sw-streak">{L('3 in a row', 'लगातार 3 सही')}</span></div>
       <div className="sw-track"><i style={{ width: '40%' }} /></div>
-      <div className="sw-h sw-q">Who gave us the term Sanskritisation?</div>
+      <div className="sw-h sw-q">{L('Who gave us the term Sanskritisation?', 'संस्कृतिकरण शब्द किसने दिया?')}</div>
       <div className="sw-opt"><i />G.S. Ghurye</div>
       <div className="sw-opt right"><i><Tick size={10} /></i>M.N. Srinivas</div>
       <div className="sw-opt"><i />S.C. Dube</div>
-      <div className="sw-explain">Srinivas introduced it in his study of the Coorgs (1952).</div>
+      <div className="sw-explain">{L('Srinivas introduced it in his study of the Coorgs (1952).', 'श्रीनिवास ने इसे कुर्ग पर अपने अध्ययन (1952) में प्रस्तुत किया।')}</div>
     </Frame>
   );
 }
@@ -175,52 +183,53 @@ type Tab = {
 };
 
 export default function HomeShowcase() {
+  const { L } = useLang();
   const slug = routeSlugForOptional(useOptional());
   const [active, setActive] = useState(0);
   const tabsRef = useRef<HTMLDivElement>(null);
 
   const tabs: Tab[] = [
     {
-      key: 'chat', tab: 'AI Chat', title: 'Stuck on a concept at 11pm? Ask.',
-      text: 'It answers from the standard books for your optional, and puts a small chip next to every line it took from one, so you can open the page and check.',
-      points: ['You can watch it look things up as it goes', 'Ask for a proper Mains answer when you want one', 'Mentor mode, for when you want to be marked hard'],
-      cta: 'Open AI Chat', href: '/chat', wash: 'var(--accent-wash)', preview: <ChatPreview />,
+      key: 'chat', tab: L('AI Chat', 'AI चैट'), title: L('Stuck on a concept at 11pm? Ask.', 'रात 11 बजे किसी अवधारणा पर अटक गए? पूछें।'),
+      text: L('It answers from the standard books for your optional, and puts a small chip next to every line it took from one, so you can open the page and check.', 'यह आपके वैकल्पिक विषय की मानक पुस्तकों से जवाब देता है और उनसे ली गई हर पंक्ति के पास एक छोटा संकेत लगाता है, ताकि आप पन्ना खोलकर उसे जाँच सकें।'),
+      points: [L('You can watch it look things up as it goes', 'आप इसे जानकारी खोजते हुए देख सकते हैं'), L('Ask for a proper Mains answer when you want one', 'जब चाहें, Mains का पूरा उत्तर माँगें'), L('Mentor mode, for when you want to be marked hard', 'जब सख़्त मूल्यांकन चाहिए, तब मेंटर मोड')],
+      cta: L('Open AI Chat', 'AI चैट खोलें'), href: '/chat', wash: 'var(--accent-wash)', preview: <ChatPreview />,
     },
     {
-      key: 'eval', tab: 'Evaluation', title: 'Write the way you would in the exam hall.',
-      text: 'Take a photo of your answer sheet and upload it. You will see the marks, what an examiner would have wanted more of, and a model answer for the same question.',
-      points: ['Feedback on each part of the answer', 'A model answer to set beside yours', 'Your handwriting is fine; it reads it'],
-      cta: 'Evaluate an answer', href: '/evaluate', wash: 'var(--success-wash)', preview: <EvalPreview />,
+      key: 'eval', tab: L('Evaluation', 'मूल्यांकन'), title: L('Write the way you would in the exam hall.', 'वैसे ही लिखें, जैसे परीक्षा कक्ष में लिखते।'),
+      text: L('Take a photo of your answer sheet and upload it. You will see the marks, what an examiner would have wanted more of, and a model answer for the same question.', 'अपनी उत्तर-पुस्तिका की तस्वीर लेकर अपलोड करें। आपको अंक, परीक्षक किस बात को और बेहतर देखना चाहते, और उसी प्रश्न का एक आदर्श उत्तर दिखेगा।'),
+      points: [L('Feedback on each part of the answer', 'उत्तर के हर हिस्से पर प्रतिक्रिया'), L('A model answer to set beside yours', 'आपके उत्तर के साथ रखने के लिए एक आदर्श उत्तर'), L('Your handwriting is fine; it reads it', 'आपकी लिखावट जैसी भी हो, यह उसे पढ़ लेता है')],
+      cta: L('Evaluate an answer', 'उत्तर का मूल्यांकन करें'), href: '/evaluate', wash: 'var(--success-wash)', preview: <EvalPreview />,
     },
     {
-      key: 'notes', tab: 'Notes', title: 'Notes you can finish the night before.',
-      text: 'Every topic in both papers, cut down to what an answer actually uses: the thinkers, the debates and the examples.',
-      points: ['Free with your account', 'Laid out the way the syllabus is', 'Ask the AI about anything you are reading'],
-      cta: 'Read the notes', href: slug ? `/notes/${slug}` : '/notes', wash: 'var(--wash-anthropology)', preview: <NotesPreview />,
+      key: 'notes', tab: L('Notes', 'नोट्स'), title: L('Notes you can finish the night before.', 'ऐसे नोट्स, जिन्हें आप परीक्षा से एक रात पहले पूरा कर सकते हैं।'),
+      text: L('Every topic in both papers, cut down to what an answer actually uses: the thinkers, the debates and the examples.', 'दोनों पेपर के हर विषय में से वही रखा गया है जो उत्तर में सचमुच काम आता है: विचारक, बहसें और उदाहरण।'),
+      points: [L('Free with your account', 'आपके खाते के साथ मुफ़्त'), L('Laid out the way the syllabus is', 'पाठ्यक्रम के क्रम में व्यवस्थित'), L('Ask the AI about anything you are reading', 'जो भी पढ़ रहे हैं, उसके बारे में AI से पूछें')],
+      cta: L('Read the notes', 'नोट्स पढ़ें'), href: slug ? `/notes/${slug}` : '/notes', wash: 'var(--wash-anthropology)', preview: <NotesPreview />,
     },
     {
-      key: 'cards', tab: 'Flashcards', title: 'The thinkers and terms that slip away.',
-      text: 'Short cards for who argued what, the terms and the facts UPSC asks for, each tied to the past questions it helps you answer. The ones you miss come back sooner.',
-      points: ['Every topic in all five optionals', 'Each card shows the years it was asked', 'The first 100 answers are free with your account'],
-      cta: 'Start revising', href: slug ? `/${slug}/flashcards` : '/flashcards', wash: 'var(--wash-polsci)', preview: <CardsPreview />,
+      key: 'cards', tab: L('Flashcards', 'फ्लैशकार्ड'), title: L('The thinkers and terms that slip away.', 'वे विचारक और शब्द, जो याद से फिसल जाते हैं।'),
+      text: L('Short cards for who argued what, the terms and the facts UPSC asks for, each tied to the past questions it helps you answer. The ones you miss come back sooner.', 'किसने क्या तर्क दिया, UPSC किन शब्दों और तथ्यों के बारे में पूछता है—इन पर छोटे कार्ड, हर कार्ड उन पुराने सवालों से जुड़ा है जिनका जवाब देने में वह मदद करता है। जो छूट जाते हैं, वे जल्दी फिर आते हैं।'),
+      points: [L('Every topic in all five optionals', 'सभी पाँचों वैकल्पिक विषयों के हर टॉपिक पर'), L('Each card shows the years it was asked', 'हर कार्ड पर उन वर्षों का ज़िक्र है जिनमें यह पूछा गया'), L('The first 100 answers are free with your account', 'पहले 100 जवाब आपके खाते के साथ मुफ़्त हैं')],
+      cta: L('Start revising', 'दोहराना शुरू करें'), href: slug ? `/${slug}/flashcards` : '/flashcards', wash: 'var(--wash-polsci)', preview: <CardsPreview />,
     },
     {
-      key: 'pyq', tab: 'PYQs', title: 'See what UPSC keeps asking.',
-      text: 'Every past question for your optional, sorted by topic. Pick one, see how a good answer goes, then write your own.',
-      points: ['Filter by year, paper and marks', 'Model answers when you want one', 'Free with your account'],
-      cta: 'Browse PYQs', href: slug ? `/${slug}/pyqs` : '#optionals', wash: 'var(--warning-wash)', preview: <PyqPreview />,
+      key: 'pyq', tab: 'PYQs', title: L('See what UPSC keeps asking.', 'देखें कि UPSC बार-बार क्या पूछता है।'),
+      text: L('Every past question for your optional, sorted by topic. Pick one, see how a good answer goes, then write your own.', 'आपके वैकल्पिक विषय के सभी पुराने प्रश्न, टॉपिक के अनुसार व्यवस्थित। कोई प्रश्न चुनें, अच्छे उत्तर का तरीका देखें, फिर अपना उत्तर लिखें।'),
+      points: [L('Filter by year, paper and marks', 'वर्ष, पेपर और अंकों के अनुसार छाँटें'), L('Model answers when you want one', 'ज़रूरत पड़ने पर आदर्श उत्तर'), L('Free with your account', 'आपके खाते के साथ मुफ़्त')],
+      cta: L('Browse PYQs', 'PYQs देखें'), href: slug ? `/${slug}/pyqs` : '#optionals', wash: 'var(--warning-wash)', preview: <PyqPreview />,
     },
     {
-      key: 'toppers', tab: 'Topper copies', title: 'Read how rankers actually wrote it.',
-      text: `Handwritten answers by ${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : topperSubjectList('and')} rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.`,
-      points: [toppersLine(slug), 'Two toppers side by side on the same question', 'Five free with your account'],
-      cta: 'Read topper copies', href: `/${slug && isTopperSubject(slug) ? slug : 'sociology'}/topper-copies`, wash: 'var(--wash-geography)', preview: <TopperPreview />,
+      key: 'toppers', tab: L('Topper copies', 'टॉपर्स के उत्तर'), title: L('Read how rankers actually wrote it.', 'पढ़ें कि रैंकर्स ने असल में उत्तर कैसे लिखे।'),
+      text: L(`Handwritten answers by ${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : topperSubjectList('and')} rankers, cut into single answers and filed under the UPSC questions they answer. See how they open, divide and close an answer, then write your own.`, `${slug && isTopperSubject(slug) ? TOPPER_SUBJECT_NAME[slug] : topperSubjectList('and')} विषय के रैंकर्स के हस्तलिखित उत्तर, अलग-अलग उत्तरों में बाँटकर उन UPSC प्रश्नों के तहत रखे गए हैं जिनका वे जवाब देते हैं। देखें कि वे उत्तर की शुरुआत, मुख्य भाग और समापन कैसे करते हैं, फिर अपना उत्तर लिखें।`),
+      points: [toppersLine(slug, L), L('Two toppers side by side on the same question', 'एक ही प्रश्न पर दो टॉपर्स के उत्तर साथ-साथ'), L('Five free with your account', 'पाँच आपके खाते के साथ मुफ़्त')],
+      cta: L('Read topper copies', 'टॉपर्स के उत्तर पढ़ें'), href: `/${slug && isTopperSubject(slug) ? slug : 'sociology'}/topper-copies`, wash: 'var(--wash-geography)', preview: <TopperPreview />,
     },
     {
-      key: 'test', tab: 'Tests', title: 'Find out what actually stayed with you.',
-      text: 'Short tests on one topic at a time. You will know straight away whether you were right, and why.',
-      points: ['One topic at a time', 'The answer explained as you go', 'Your scores, kept for you'],
-      cta: 'Take a test', href: '/test', wash: 'var(--wash-sociology)', preview: <TestPreview />,
+      key: 'test', tab: L('Tests', 'टेस्ट'), title: L('Find out what actually stayed with you.', 'जानें कि आपको सचमुच कितना याद रहा।'),
+      text: L('Short tests on one topic at a time. You will know straight away whether you were right, and why.', 'एक बार में एक टॉपिक पर छोटे टेस्ट। आपको तुरंत पता चलेगा कि आपका जवाब सही था या नहीं, और क्यों।'),
+      points: [L('One topic at a time', 'एक बार में एक टॉपिक'), L('The answer explained as you go', 'हर जवाब के साथ उसकी व्याख्या'), L('Your scores, kept for you', 'आपके अंक, आपके लिए सहेजे गए')],
+      cta: L('Take a test', 'टेस्ट दें'), href: '/test', wash: 'var(--wash-sociology)', preview: <TestPreview />,
     },
   ];
 
@@ -237,7 +246,7 @@ export default function HomeShowcase() {
   return (
     <div className="sc">
       <style dangerouslySetInnerHTML={{ __html: SC_CSS }} />
-      <div className="sc-tabs" role="tablist" aria-label="What is inside" ref={tabsRef} onKeyDown={onKey}>
+      <div className="sc-tabs" role="tablist" aria-label={L('What is inside', 'इसमें क्या-क्या है')} ref={tabsRef} onKeyDown={onKey}>
         {tabs.map((x, i) => (
           <button
             key={x.key}

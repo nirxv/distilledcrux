@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import type { FlashCardFront, FlashCardIndexEntry } from '@/lib/flashcardStore';
@@ -43,7 +44,7 @@ type Deck = {
   error: string | null;
   getCard: (id: string) => FlashCardFront | undefined;
   /** The answer, if this reader has it. Undefined means not yet revealed. */
-  getBack: (id: string) => string | undefined;
+  getBack: (id: string, langHi?: boolean) => string | undefined;
   /** Open a card's answer, spending one unit if it is not already unlocked. */
   reveal: (id: string) => Promise<'granted' | 'locked' | 'login' | 'error'>;
   allowance: Allowance | null;
@@ -62,6 +63,8 @@ async function authHeaders(): Promise<Record<string, string>> {
 }
 
 export function useFlashcardDeck(subject: FlashcardSubject): Deck {
+  const { langHi } = useLang();
+  const lang = langHi ? 'hi' : 'en';
   const [index, setIndex] = useState<FlashCardIndexEntry[]>([]);
   const [indexLoading, setIndexLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -69,16 +72,25 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
   // A ref for reads and a counter for renders: the cache is read inside
   // callbacks that must not be re-created on every fetch.
   const cache = useRef(new Map<string, FlashCardFront>());
-  const backs = useRef(new Map<string, string>());
+  const backs = useRef(new Map<string, { en: string; hi?: string | null }>());
   const inFlight = useRef(new Set<string>());
+  const prevLang = useRef(lang);
   const [allowance, setAllowance] = useState<Allowance | null>(null);
   const [, bump] = useState(0);
+
+  // Cards cached in one language lack the other's front; start clean.
+  useEffect(() => {
+    if (prevLang.current !== lang) {
+      cache.current.clear();
+      prevLang.current = lang;
+    }
+  }, [lang]);
 
   useEffect(() => {
     const ac = new AbortController();
     (async () => {
       try {
-        const res = await fetch(`/api/flashcards?subject=${subject}&index=1`, { signal: ac.signal });
+        const res = await fetch(`/api/flashcards?subject=${subject}&index=1&lang=${lang}`, { signal: ac.signal });
         if (!res.ok) throw new Error(`index ${res.status}`);
         const data = await res.json();
         setIndex(data.cards ?? []);
@@ -91,7 +103,7 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
       }
     })();
     return () => ac.abort();
-  }, [subject]);
+  }, [subject, lang]);
 
   const loadAllowance = useCallback(async () => {
     try {
@@ -117,7 +129,7 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
       });
       if (!res.ok) return;
       const data = await res.json();
-      for (const c of (data.cards ?? []) as { id: string; back: string }[]) backs.current.set(c.id, c.back);
+      for (const c of (data.cards ?? []) as { id: string; back: string; back_hi?: string | null }[]) backs.current.set(c.id, { en: c.back, hi: c.back_hi });
       if (data.cards?.length) bump((n) => n + 1);
     } catch {
       // The answer arrives later, when the reader turns the card.
@@ -146,7 +158,7 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
       for (let i = 0; i < missing.length; i += BATCH) {
         const slice = missing.slice(i, i + BATCH);
         try {
-          const res = await fetch(`/api/flashcards?subject=${subject}&ids=${encodeURIComponent(slice.join(','))}&limit=${slice.length}`);
+          const res = await fetch(`/api/flashcards?subject=${subject}&ids=${encodeURIComponent(slice.join(','))}&limit=${slice.length}&lang=${lang}`);
           if (!res.ok) throw new Error(`cards ${res.status}`);
           const data = await res.json();
           for (const card of (data.cards ?? []) as FlashCardFront[]) cache.current.set(card.id, card);
@@ -173,9 +185,9 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
       if (!res.ok) return 'error';
       const data = await res.json();
       setAllowance({ used: data.used ?? 0, limit: data.limit ?? 0, unlimited: data.unlimited === true });
-      const card = (data.cards ?? [])[0] as { back: string } | undefined;
+      const card = (data.cards ?? [])[0] as { back: string; back_hi?: string | null } | undefined;
       if (!card) return 'locked';
-      backs.current.set(id, card.back);
+      backs.current.set(id, { en: card.back, hi: card.back_hi });
       bump((n) => n + 1);
       return 'granted';
     } catch {
@@ -190,7 +202,11 @@ export function useFlashcardDeck(subject: FlashcardSubject): Deck {
   }, [prefetch]);
 
   const getCard = useCallback((id: string) => cache.current.get(id), []);
-  const getBack = useCallback((id: string) => backs.current.get(id), []);
+  const getBack = useCallback((id: string, langHi = false) => {
+    const v = backs.current.get(id);
+    if (!v) return undefined;
+    return langHi ? v.hi ?? v.en : v.en;
+  }, []);
 
   return { index, indexLoading, error, getCard, getBack, reveal, allowance, prefetch, keepAhead };
 }

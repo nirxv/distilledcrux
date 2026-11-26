@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * Short notices at the top of the window: a profile saved, a sign-in that
@@ -39,6 +40,7 @@ const ICON = {
 };
 
 export default function Toaster() {
+  const { L } = useLang();
   const [items, setItems] = useState<Item[]>([]);
   const next = useRef(1);
 
@@ -60,7 +62,7 @@ export default function Toaster() {
         <div key={t.id} className={`toast-item ${t.kind}`}>
           <span className="toast-icon">{ICON[t.kind]}</span>
           <p>{t.message}</p>
-          <button type="button" className="toast-x" onClick={() => setItems((list) => list.filter((x) => x.id !== t.id))} aria-label="Dismiss">
+          <button type="button" className="toast-x" onClick={() => setItems((list) => list.filter((x) => x.id !== t.id))} aria-label={L('Dismiss', 'हटाएँ')}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
           </button>
         </div>

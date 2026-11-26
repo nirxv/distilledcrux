@@ -10,6 +10,7 @@ import { signOut } from 'firebase/auth';
 import { useAuth } from '@/components/AuthProvider';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
+import { useLang } from '@/lib/i18n/LangContext';
 import { TOPPER_SUBJECTS, isTopperSubject } from '@/lib/toppers/meta';
 import { REFERRAL_REWARD_PAISE, formatPaise } from '@/lib/referral';
 import { cacheBalance, cachedBalance } from '@/lib/referralClient';
@@ -48,6 +49,7 @@ export default function Navbar() {
   const router = useRouter();
   const { user, loading } = useAuth();
   const optional = useOptional();
+  const { langHi, toggleLang, L } = useLang();
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [menuOpen, setMenuOpen] = useState(false);
   // The invite balance, shown on every page as a nudge to share: the amount,
@@ -180,35 +182,35 @@ export default function Navbar() {
   const links: NavItem[] = slug
     ? [
         {
-          label: 'Notes',
+          label: L('Notes', 'नोट्स'),
           items: [
-            { href: `/notes/${slug}`, label: 'Notes', note: 'Every topic in the syllabus', icon: Icon.notes },
-            { href: `/${slug}/flashcards`, label: 'Flashcards', note: 'Revise with spaced repetition', icon: Icon.cards },
+            { href: `/notes/${slug}`, label: L('Notes', 'नोट्स'), note: L('Every topic in the syllabus', 'पाठ्यक्रम का हर विषय'), icon: Icon.notes },
+            { href: `/${slug}/flashcards`, label: L('Flashcards', 'फ़्लैशकार्ड'), note: L('Revise with spaced repetition', 'अंतराल-दोहराव से दोहराएँ'), icon: Icon.cards },
           ],
         },
         // Topper copies sit with the PYQs: they are filed by the questions they answer.
         isTopperSubject(slug)
           ? {
-              label: 'PYQs',
+              label: L('PYQs', 'पिछले प्रश्न'),
               items: [
-                { href: `/${slug}/pyqs`, label: 'Past questions', note: 'Every question UPSC has set', icon: Icon.pyq },
-                { href: `/${slug}/topper-copies`, label: 'Topper copies', note: 'Handwritten answers by rankers', icon: Icon.copy },
+                { href: `/${slug}/pyqs`, label: L('Past questions', 'पिछले वर्षों के प्रश्न'), note: L('Every question UPSC has set', 'UPSC द्वारा पूछा गया हर प्रश्न'), icon: Icon.pyq },
+                { href: `/${slug}/topper-copies`, label: L('Topper copies', 'टॉपर प्रतियाँ'), note: L('Handwritten answers by rankers', 'रैंकरों की हस्तलिखित उत्तर पुस्तिकाएँ'), icon: Icon.copy },
               ],
             }
           : { href: `/${slug}/pyqs`, label: 'PYQs' },
-        ...(optional === 'geography' ? [{ href: '/geography/mapping', label: 'Maps' }] : []),
+        ...(optional === 'geography' ? [{ href: '/geography/mapping', label: L('Maps', 'मानचित्र') }] : []),
         // /test reads ?optional=, the profile spelling, not the route slug.
-        { href: `/test?optional=${optional}`, label: 'Tests' },
+        { href: `/test?optional=${optional}`, label: L('Tests', 'टेस्ट') },
         { href: '/evaluate', label: 'Evaluate' },
         { href: '/pricing', label: 'Pricing' },
-        { href: '/chat', label: 'AI Chat', accent: true },
+        { href: '/chat', label: L('AI Chat', 'AI चैट'), accent: true },
       ]
     : [
-        { href: '/#optionals', label: 'Optionals' },
+        { href: '/#optionals', label: L('Optionals', 'वैकल्पिक विषय') },
         { href: '/evaluate', label: 'Evaluate' },
-        { href: '/test', label: 'Tests' },
+        { href: '/test', label: L('Tests', 'टेस्ट') },
         { href: '/pricing', label: 'Pricing' },
-        { href: '/chat', label: 'AI Chat', accent: true },
+        { href: '/chat', label: L('AI Chat', 'AI चैट'), accent: true },
       ];
   const flatLinks: NavLink[] = links.flatMap((l) => ('items' in l ? l.items.map(({ href, label }) => ({ href, label })) : [l]));
   // The phone sheet lists topper copies for every reader: under the PYQs for
@@ -222,7 +224,7 @@ export default function Navbar() {
     ...flatLinks.slice(0, toppersAfter),
     ...otherToppers,
     ...flatLinks.slice(toppersAfter),
-    ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : []),
+    ...(user ? [{ href: '/dashboard', label: L('Dashboard', 'डैशबोर्ड') }] : []),
   ];
 
   const initial = (user?.displayName?.[0] ?? user?.email?.[0] ?? '?').toUpperCase();
@@ -288,6 +290,13 @@ export default function Navbar() {
             <button className="nb-search" onClick={openPalette} onMouseEnter={loadPalette} onFocus={loadPalette} aria-label="Search the site">
               {Icon.search}
               <span className="nb-search-text">Search</span>
+            </button>
+
+            <button className="nb-icon nb-lang" onClick={toggleLang}
+              aria-label={langHi ? 'Switch to English' : 'हिन्दी में देखें'}
+              title={langHi ? 'Switch to English' : 'Switch to Hindi'}>
+              <span className={langHi ? '' : 'on'}>EN</span>
+              <span className={langHi ? 'on' : ''}>हिं</span>
             </button>
 
             <button className="nb-icon nb-theme" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} title={theme === 'dark' ? 'Light mode' : 'Dark mode'}>
@@ -372,6 +381,7 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="nb-sheet-actions">
+                <button className="ds-btn ds-btn-line ds-btn-sm" onClick={toggleLang}>{langHi ? 'English' : 'हिंदी'}</button>
                 <button className="ds-btn ds-btn-line ds-btn-sm" onClick={toggleTheme}>{theme === 'dark' ? Icon.sun : Icon.moon}{theme === 'dark' ? 'Light' : 'Dark'}</button>
                 <Link className="ds-btn ds-btn-line ds-btn-sm" href="/profile">{Icon.user}Profile</Link>
                 <button className="ds-btn ds-btn-line ds-btn-sm nb-danger" onClick={handleSignOut}>{Icon.out}Sign out</button>
@@ -379,6 +389,7 @@ export default function Navbar() {
             </>
           ) : !loading && (
             <div className="nb-sheet-actions">
+              <button className="ds-btn ds-btn-line" onClick={toggleLang}>{langHi ? 'English' : 'हिंदी'}</button>
               <button className="ds-btn ds-btn-line" onClick={toggleTheme}>{theme === 'dark' ? Icon.sun : Icon.moon}{theme === 'dark' ? 'Light mode' : 'Dark mode'}</button>
               <Link className="ds-btn ds-btn-solid" href="/login">Sign in</Link>
             </div>
@@ -470,6 +481,19 @@ const NAV_CSS = `
   transition: background 0.15s, color 0.15s;
 }
 .nb-icon:hover { background: var(--ds-soft); color: var(--text); }
+/* EN | हिं — the one control that changes every page's language. */
+.nb-lang {
+  display: inline-flex; align-items: center; height: 34px; padding: 3px; gap: 2px;
+  width: auto; min-width: 0;
+  background: var(--ds-soft); border: 1px solid var(--border2); border-radius: var(--radius-pill); cursor: pointer;
+}
+.nb-lang span {
+  min-width: 30px; height: 26px; padding: 0 8px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-pill); font-family: var(--font-ui); font-size: 0.76rem; font-weight: 700;
+  color: var(--text3); letter-spacing: 0;
+}
+.nb-lang span.on { background: var(--ds-card); color: var(--text); box-shadow: var(--shadow-xs); }
+.nb-lang:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .nb-account { position: relative; }
 .nb-avatar {
   width: 36px; height: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center;

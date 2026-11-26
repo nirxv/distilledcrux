@@ -6,6 +6,8 @@ import { auth } from '@/lib/firebase';
 import { sanitizeHtml } from '@/lib/sanitizeHtml';
 import type { Pyq } from '@/lib/pyqs';
 import { listKey } from './PyqBrowser';
+import { usePyqHi, hiQuestion, hiTopic } from '@/lib/usePyqHi';
+import { useLang } from '@/lib/i18n/LangContext';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
 
 type AnswerEntry = {
@@ -53,6 +55,10 @@ const Lock = () => (
 );
 
 export default function PyqDetail({ subject, subjectName, pyq, related, prev, next, topicCount, toppers }: Props) {
+  const { L, langHi } = useLang();
+  const bank = usePyqHi(subject);
+  const question = hiQuestion(bank, pyq.id, pyq.question);
+  const topic = hiTopic(bank, pyq.topic);
   const hasToppers = Boolean(toppers && toppers.length > 0);
   const router = useRouter();
   const base = `/${subject}/pyqs`;
@@ -116,7 +122,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
       const res = await fetch('/api/model-answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-user-token': token },
-        body: JSON.stringify({ question: pyq.question, marks: pyq.marks ?? 10, subject, topic: pyq.topic }),
+        body: JSON.stringify({ question, marks: pyq.marks ?? 10, subject, topic, lang: langHi ? 'hi' : 'en' }),
       });
       if (!res.ok) {
         // The route answers 403 for a reader without a subscription, so say
@@ -125,7 +131,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
         if (reason?.error === 'premium_required') {
           setPaywalled(true);
         } else {
-          setModelAnswer(reason?.error || 'Could not write a model answer just now. Please try again.');
+          setModelAnswer(reason?.error || L('Could not write a model answer just now. Please try again.', 'अभी मॉडल उत्तर नहीं लिखा जा सका। कृपया फिर से कोशिश करें।'));
         }
         setGenerating(false);
         return;
@@ -141,7 +147,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
       }
       setGenerated(true);
     } catch {
-      setModelAnswer('Something went wrong. Please try again.');
+      setModelAnswer(L('Something went wrong. Please try again.', 'कुछ गड़बड़ हो गई। कृपया फिर से कोशिश करें।'));
     } finally {
       setGenerating(false);
     }
@@ -149,8 +155,8 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
 
   const handleUpload = async () => {
     setUploadErr(null);
-    if (!file) { setUploadErr('Choose a PDF of your answer first.'); return; }
-    if (!displayName.trim()) { setUploadErr('Add the name to show with it.'); return; }
+    if (!file) { setUploadErr(L('Choose a PDF of your answer first.', 'पहले अपने उत्तर की PDF चुनें।')); return; }
+    if (!displayName.trim()) { setUploadErr(L('Add the name to show with it.', 'दिखाने के लिए नाम जोड़ें।')); return; }
     setUploading(true);
     const form = new FormData();
     form.append('pyq_id', String(pyq.id));
@@ -161,9 +167,9 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
     // the token, so every upload was anonymous. Signed out still works.
     const token = auth.currentUser ? await auth.currentUser.getIdToken().catch(() => '') : '';
     const res = await fetch('/api/pyq-answers', { method: 'POST', body: form, headers: token ? { 'x-user-token': token } : undefined });
-    const data = await res.json().catch(() => ({ error: 'Upload failed.' }));
+    const data = await res.json().catch(() => ({ error: L('Upload failed.', 'अपलोड नहीं हो सका।') }));
     if (!res.ok || data.error) {
-      setUploadErr(data.error ?? 'Upload failed.');
+      setUploadErr(data.error ?? L('Upload failed.', 'अपलोड नहीं हो सका।'));
     } else {
       setAnswers(prev => [data.answer, ...prev]);
       setFile(null);
@@ -183,7 +189,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
     if (saved && saved !== base) { e.preventDefault(); router.push(saved); }
   };
 
-  const evaluateHref = `/evaluate?question=${encodeURIComponent(pyq.question)}${pyq.marks ? `&marks=${pyq.marks}` : ''}`;
+  const evaluateHref = `/evaluate?question=${encodeURIComponent(question)}${pyq.marks ? `&marks=${pyq.marks}` : ''}`;
   const tint = { ['--t' as string]: `var(--tint-${subject})`, ['--w' as string]: `var(--wash-${subject})` };
   const preview = !isPremium && generated;
 
@@ -205,12 +211,12 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 <span className="pd-paper">{pyq.paper}</span>
                 <span>{pyq.year}</span>
                 {pyq.section && <span>{pyq.section}</span>}
-                {pyq.marks && <span className="pd-marks">{pyq.marks} marks</span>}
+                {pyq.marks && <span className="pd-marks">{pyq.marks} {L('marks', 'अंक')}</span>}
               </div>
-              <h1 className="pd-question">{pyq.question}</h1>
+              <h1 className="pd-question">{question}</h1>
               <div className="pd-tags">
-                <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-topic" title={`Every question on ${pyq.topic}`}>
-                  {pyq.topic}
+                <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-topic" title={L(`Every question on ${topic}`, `${topic} के सभी प्रश्न`)}>
+                  {topic}
                 </Link>
                 {pyq.microtheme && pyq.microtheme.toLowerCase() !== pyq.topic.toLowerCase() && <span className="pd-micro">{pyq.microtheme}</span>}
               </div>
@@ -218,14 +224,14 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
 
             <div className="pd-actions">
               <Link href={evaluateHref} className="ds-btn ds-btn-solid">
-                Write an answer
+                {L('Write an answer', 'उत्तर लिखें')}
               </Link>
-              <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(pyq.question)}&topic=${encodeURIComponent(pyq.topic)}`} className="ds-btn ds-btn-line">
-                Ask the AI how to approach it
+              <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(question)}&topic=${encodeURIComponent(topic)}`} className="ds-btn ds-btn-line">
+                {L('Ask the AI how to approach it', 'AI से पूछें कि इसे कैसे हल करें')}
               </Link>
               {!generated && !generating && !paywalled && (
                 <button type="button" className="ds-btn ds-btn-ghost" onClick={generateModelAnswer}>
-                  Show a model answer
+                  {L('Show a model answer', 'मॉडल उत्तर दिखाएँ')}
                 </button>
               )}
             </div>
@@ -236,7 +242,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 <span className="pd-attempt-box" aria-hidden="true">
                   {attempted && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>}
                 </span>
-                <span>{attempted ? 'You’ve attempted this question' : 'I’ve attempted this question'}</span>
+                <span>{attempted ? L('You’ve attempted this question', 'आपने यह प्रश्न हल किया है') : L('I’ve attempted this question', 'मैंने यह प्रश्न हल किया है')}</span>
               </label>
             )}
 
@@ -244,24 +250,24 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
               <div className="pd-card pd-locked">
                 <span className="pd-lock"><Lock /></span>
                 <div>
-                  <div className="pd-card-title">Model answers come with Premium</div>
-                  <p>Premium writes a full answer to any question, at its word limit, with the thinkers and examples it should cite.</p>
+                  <div className="pd-card-title">{L('Model answers come with Premium', 'मॉडल उत्तर Premium के साथ उपलब्ध हैं')}</div>
+                  <p>{L('Premium writes a full answer to any question, at its word limit, with the thinkers and examples it should cite.', 'Premium हर प्रश्न के लिए शब्द-सीमा के भीतर पूरा उत्तर लिखता है, जिसमें ज़रूरी विचारकों और उदाहरणों का उल्लेख होता है।')}</p>
                 </div>
-                <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">See plans</Link>
+                <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">{L('See plans', 'प्लान देखें')}</Link>
               </div>
             )}
 
             {(generating || generated || modelAnswer) && (
               <section className="pd-card pd-model">
                 <div className="pd-card-head">
-                  <h2 className="pd-card-title">Model answer</h2>
-                  <span>{pyq.marks ? `${pyq.marks} marks · ` : ''}{subjectName}</span>
+                  <h2 className="pd-card-title">{L('Model answer', 'मॉडल उत्तर')}</h2>
+                  <span>{pyq.marks ? `${pyq.marks} ${L('marks', 'अंक')} · ` : ''}{subjectName}</span>
                 </div>
 
                 {generating && !modelAnswer && (
                   <div className="pd-writing">
                     <span className="pd-dot" /><span className="pd-dot" /><span className="pd-dot" />
-                    Writing it out
+                    {L('Writing it out', 'उत्तर लिखा जा रहा है')}
                   </div>
                 )}
 
@@ -275,8 +281,8 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                     {preview && (
                       <div className="pd-paywall">
                         <span className="pd-lock"><Lock /></span>
-                        <p>The full answer comes with Premium.</p>
-                        <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">See plans</Link>
+                        <p>{L('The full answer comes with Premium.', 'पूरा उत्तर Premium के साथ उपलब्ध है।')}</p>
+                        <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm">{L('See plans', 'प्लान देखें')}</Link>
                       </div>
                     )}
                   </div>
@@ -287,28 +293,28 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
             <section className="pd-community">
               <div className="pd-sec-head">
                 <h2>
-                  Answers from other aspirants
+                  {L('Answers from other aspirants', 'अन्य अभ्यर्थियों के उत्तर')}
                   {answers.length > 0 && <span>{answers.length}</span>}
                 </h2>
                 {!showUpload && (
                   <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => setShowUpload(true)}>
-                    Share yours
+                    {L('Share yours', 'अपना उत्तर साझा करें')}
                   </button>
                 )}
               </div>
 
-              {uploadOk && <p className="pd-ok" role="status">Thanks, your answer is up.</p>}
+              {uploadOk && <p className="pd-ok" role="status">{L('Thanks, your answer is up.', 'धन्यवाद, आपका उत्तर साझा हो गया है।')}</p>}
 
               {showUpload && (
                 <div className="pd-card pd-upload">
-                  <p className="pd-upload-intro">Upload a PDF of your handwritten or typed answer. Others writing this question will see it with your name.</p>
+                  <p className="pd-upload-intro">{L('Upload a PDF of your handwritten or typed answer. Others writing this question will see it with your name.', 'अपने हस्तलिखित या टाइप किए हुए उत्तर की PDF अपलोड करें। यह प्रश्न हल करने वाले अन्य लोग इसे आपके नाम के साथ देखेंगे।')}</p>
                   <div className="pd-upload-row">
                     <input
                       className="pd-input"
-                      placeholder="Name to show"
+                      placeholder={L('Name to show', 'दिखाने के लिए नाम')}
                       value={displayName}
                       onChange={e => setDisplayName(e.target.value)}
-                      aria-label="Name to show with your answer"
+                      aria-label={L('Name to show with your answer', 'आपके उत्तर के साथ दिखाया जाने वाला नाम')}
                     />
                     <label className={`pd-file${file ? ' chosen' : ''}`}>
                       <input
@@ -318,16 +324,16 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                         onChange={e => setFile(e.target.files?.[0] ?? null)}
                       />
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>
-                      <span>{file ? file.name : 'Choose a PDF, up to 5 MB'}</span>
+                       <span>{file ? file.name : L('Choose a PDF, up to 5 MB', '5 MB तक की PDF चुनें')}</span>
                     </label>
                   </div>
                   {uploadErr && <p className="pd-err" role="alert">{uploadErr}</p>}
                   <div className="pd-upload-actions">
                     <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={handleUpload} disabled={uploading}>
-                      {uploading ? 'Uploading…' : 'Upload answer'}
+                       {uploading ? L('Uploading…', 'अपलोड हो रहा है…') : L('Upload answer', 'उत्तर अपलोड करें')}
                     </button>
                     <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={() => { setShowUpload(false); setUploadErr(null); }}>
-                      Cancel
+                       {L('Cancel', 'रद्द करें')}
                     </button>
                   </div>
                 </div>
@@ -336,7 +342,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
               {loadingAnswers ? (
                 <div className="pd-writing"><span className="pd-dot" /><span className="pd-dot" /><span className="pd-dot" /></div>
               ) : answers.length === 0 ? (
-                !showUpload && <p className="pd-none">Nobody has shared an answer to this one yet.</p>
+                !showUpload && <p className="pd-none">{L('Nobody has shared an answer to this one yet.', 'अभी तक किसी ने इस प्रश्न का उत्तर साझा नहीं किया है।')}</p>
               ) : (
                 <div className="pd-answers">
                   {answers.map(ans => (
@@ -347,7 +353,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                       <span className="pd-answer-text">
                         <span className="pd-answer-name">{ans.display_name}</span>
                         <span className="pd-answer-meta">
-                          Answer {ans.answer_number} · {new Date(ans.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                           {L('Answer', 'उत्तर')} {ans.answer_number} · {new Date(ans.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </span>
                       </span>
                     </a>
@@ -357,16 +363,16 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
             </section>
 
             {(prev || next) && (
-              <nav className="pd-pager" aria-label="More questions">
+              <nav className="pd-pager" aria-label={L('More questions', 'और प्रश्न')}>
                 {prev ? (
                   <Link href={`${base}/${prev.id}`} className="pd-pager-link">
-                    <span className="pd-pager-dir"><Arrow back /> Previous</span>
+                    <span className="pd-pager-dir"><Arrow back /> {L('Previous', 'पिछला')}</span>
                     <span className="pd-pager-q">{short(prev.question, 80)}</span>
                   </Link>
                 ) : <span />}
                 {next ? (
                   <Link href={`${base}/${next.id}`} className="pd-pager-link next">
-                    <span className="pd-pager-dir">Next <Arrow /></span>
+                    <span className="pd-pager-dir">{L('Next', 'अगला')} <Arrow /></span>
                     <span className="pd-pager-q">{short(next.question, 80)}</span>
                   </Link>
                 ) : <span />}
@@ -378,9 +384,9 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
           {toppers && toppers.length > 0 && (
             <aside className="pd-aside">
               <div className="pd-side">
-                <h2 className="pd-side-title">Topper copies</h2>
+                <h2 className="pd-side-title">{L('Topper copies', 'टॉपर की उत्तर-पुस्तिकाएँ')}</h2>
                 <p className="pd-side-text">
-                  {toppers.length === 1 ? 'One topper has' : `${toppers.length} toppers have`} answered this, in their own handwriting.
+                  {L(toppers.length === 1 ? 'One topper has answered this, in their own handwriting.' : `${toppers.length} toppers have answered this, in their own handwriting.`, toppers.length === 1 ? 'एक टॉपर ने अपने हाथों से लिखा हुआ उत्तर दिया है।' : `${toppers.length} टॉपरों ने अपने हाथों से लिखे उत्तर दिए हैं।`)}
                 </p>
                 <div className="pd-related">
                   {toppers.slice(0, 6).map(t => (
@@ -392,7 +398,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 </div>
                 {new Set(toppers.map(t => t.topper)).size > 1 && (
                   <Link href={`/${subject}/topper-copies/compare?pyq=${pyq.id}`} prefetch={false} rel="nofollow" className="pd-side-all">
-                    Compare two side by side <Arrow />
+                  {L('Compare two side by side', 'दो उत्तरों की साथ-साथ तुलना करें')} <Arrow />
                   </Link>
                 )}
               </div>
@@ -402,10 +408,10 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
           {related.length > 0 && (
             <section className="pd-more" aria-labelledby="pd-more-title">
               <div className="pd-sec-head">
-                <h2 id="pd-more-title">More on {pyq.topic}</h2>
+                <h2 id="pd-more-title">{L(`More on ${topic}`, `${topic} पर और सामग्री`)}</h2>
                 {topicCount > related.length + 1 && (
                   <Link href={`${base}?topic=${encodeURIComponent(pyq.topic)}`} className="pd-side-all pd-more-all">
-                    All {topicCount} questions on this topic <Arrow />
+                    {L(`All ${topicCount} questions on this topic`, `इस विषय पर सभी ${topicCount} प्रश्न`)} <Arrow />
                   </Link>
                 )}
               </div>
@@ -413,7 +419,7 @@ export default function PyqDetail({ subject, subjectName, pyq, related, prev, ne
                 {related.map(q => (
                   <Link key={q.id} href={`${base}/${q.id}`} className="pd-more-card">
                     <span className="pd-rel-q">{short(q.question)}</span>
-                    <span className="pd-rel-meta">{q.year} · {q.paper}{q.marks ? ` · ${q.marks} marks` : ''}</span>
+                    <span className="pd-rel-meta">{q.year} · {q.paper}{q.marks ? ` · ${q.marks} ${L('marks', 'अंक')}` : ''}</span>
                   </Link>
                 ))}
               </div>

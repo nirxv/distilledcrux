@@ -12,6 +12,7 @@ import { readLastNote, type LastNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
 import { TOPPER_COUNTS, isTopperSubject } from '@/lib/toppers/meta';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /** Kept in step with CHAT_FREE_LIMIT in app/api/chat/route.ts. */
 const CHAT_FREE_LIMIT = 3;
@@ -54,9 +55,10 @@ function Ring({ value, total }: { value: number; total: number }) {
 }
 
 function Bar({ label, value, total }: { label: string; value: number; total: number }) {
+  const { L } = useLang();
   return (
     <div className="db-pbar">
-      <div className="db-pbar-top"><span>{label}</span><span>{value} of {total}</span></div>
+      <div className="db-pbar-top"><span>{label}</span><span>{value} {L('of', 'में से')} {total}</span></div>
       <div className="db-bar"><span style={{ width: `${total ? (value / total) * 100 : 0}%` }} className="good" /></div>
     </div>
   );
@@ -79,11 +81,11 @@ function readLastChat(slug: string): LastChat | null {
   }
 }
 
-function ago(ms: number) {
+function ago(ms: number, L: (en: string, hi: string) => string) {
   const days = Math.floor((Date.now() - ms) / 86_400_000);
-  if (days <= 0) return 'today';
-  if (days === 1) return 'yesterday';
-  if (days < 30) return `${days} days ago`;
+  if (days <= 0) return L('today', 'आज');
+  if (days === 1) return L('yesterday', 'कल');
+  if (days < 30) return L(`${days} days ago`, `${days} दिन पहले`);
   return new Date(ms).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
 }
 
@@ -119,6 +121,7 @@ function PaymentSuccess({ onShow }: { onShow: () => void }) {
 }
 
 export default function Dashboard() {
+  const { L } = useLang();
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
   const [stats, setStats] = useState<Stats | null>(null);
@@ -166,30 +169,30 @@ export default function Dashboard() {
     })();
   }, [user, authLoading, router, reloadKey]);
 
-  if (loading) return <OwlLoader size="page" label="Loading your dashboard" />;
+  if (loading) return <OwlLoader size="page" label={L('Loading your dashboard', 'आपका डैशबोर्ड लोड हो रहा है')} />;
 
   if (!stats) return (
     <div className="ds" style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-3)', padding: '2rem', textAlign: 'center' }}>
       <Mascot pose="peek" width={110} />
       <div style={{ fontSize: '1.2rem', fontWeight: 800 }}>
-        {failed ? 'Your dashboard didn’t load' : 'Nothing to show yet'}
+        {failed ? L('Your dashboard didn’t load', 'आपका डैशबोर्ड लोड नहीं हुआ') : L('Nothing to show yet', 'अभी दिखाने के लिए कुछ नहीं है')}
       </div>
       <p style={{ margin: 0, maxWidth: '28rem', color: 'var(--text2)', lineHeight: 1.6 }}>
-        {failed ? 'It’s usually the connection. Try again in a moment.' : 'Your study will show up here once you start.'}
+        {failed ? L('It’s usually the connection. Try again in a moment.', 'आमतौर पर यह कनेक्शन की समस्या होती है। थोड़ी देर में फिर कोशिश करें।') : L('Your study will show up here once you start.', 'पढ़ाई शुरू करने के बाद वह यहाँ दिखाई देगी।')}
       </p>
       {failed && (
         <button type="button" className="ds-btn ds-btn-solid" onClick={() => { setLoading(true); setReloadKey(k => k + 1); }}>
-          Try again
+          {L('Try again', 'फिर कोशिश करें')}
         </button>
       )}
     </div>
   );
 
   const slug = routeSlugForOptional(stats.optional) ?? 'sociology';
-  const optLabel = labelForOptional(stats.optional) ?? 'your optional';
-  const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || 'there';
+  const optLabel = labelForOptional(stats.optional) ?? L('your optional', 'आपका वैकल्पिक विषय');
+  const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || L('there', 'दोस्त');
   const hour = new Date().getHours();
-  const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const greeting = hour < 12 ? L('Good morning', 'सुप्रभात') : hour < 17 ? L('Good afternoon', 'नमस्कार') : L('Good evening', 'शुभ संध्या');
   const chatsLeft = Math.max(0, CHAT_FREE_LIMIT - stats.chatCount);
   const tq = stats.todayQuestion;
   const tint = { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` };
@@ -223,32 +226,32 @@ export default function Dashboard() {
     : [];
 
   const syllabusLine = doneNotes.length === 0
-    ? 'Tick topics off on the notes as you finish them, and they add up here.'
+    ? ['Tick topics off on the notes as you finish them, and they add up here.', 'नोट्स में विषय पूरे होने पर उन्हें चिह्नित करें; उनकी गिनती यहाँ जुड़ती जाएगी।']
     : doneNotes.length === syllabus.length
-      ? 'The whole syllabus is done. Time to revise.'
-      : `${syllabus.length - doneNotes.length} topics to go.`;
+      ? ['The whole syllabus is done. Time to revise.', 'पूरा पाठ्यक्रम हो गया। अब दोहराने का समय है।']
+      : [`${syllabus.length - doneNotes.length} topics to go.`, `${syllabus.length - doneNotes.length} विषय बाकी हैं।`];
   const pyqLine = pyqDone === 0
-    ? 'Mark questions as attempted when you answer them, and your coverage shows here.'
+    ? ['Mark questions as attempted when you answer them, and your coverage shows here.', 'प्रश्नों के उत्तर देने के बाद उन्हें हल किया हुआ चिह्नित करें; आपकी प्रगति यहाँ दिखेगी।']
     : untouched.length
-      ? `Not started yet: ${untouched.slice(0, 3).map(t => t.name).join(', ')}.`
-      : 'Every topic has at least one question attempted.';
+      ? [`Not started yet: ${untouched.slice(0, 3).map(t => t.name).join(', ')}.`, `अभी शुरू नहीं किया: ${untouched.slice(0, 3).map(t => t.name).join(', ')}।`]
+      : ['Every topic has at least one question attempted.', 'हर विषय का कम-से-कम एक प्रश्न हल किया जा चुका है।'];
 
   // What the progress suggests doing, after the reader's own resume points.
-  const extras: { key: string; icon: string; title: string; sub: string; href: string }[] = [];
-  if (coldNote) extras.push({ key: 'cold', icon: 'notes', title: `Revise ${coldNote.n.title}`, sub: `You finished it ${coldNote.days} days ago`, href: `/notes/${slug}/${coldNote.n.slug}` });
-  if (nextNote && doneNotes.length > 0) extras.push({ key: 'next', icon: 'notes', title: `Next in the syllabus: ${nextNote.title}`, sub: `Paper ${nextNote.paper === 1 ? 'I' : 'II'}, topic ${nextNote.topic}`, href: `/notes/${slug}/${nextNote.slug}` });
-  if (pyqDone > 0 && untouched[0]) extras.push({ key: 'pyq', icon: 'pyq', title: `Try a question on ${untouched[0].name}`, sub: `${untouched[0].p1.length + untouched[0].p2.length} past questions, none attempted yet`, href: `/${slug}/pyqs?topic=${encodeURIComponent(untouched[0].name)}` });
+  const extras: { key: string; icon: string; title: string; titleHi: string; sub: string; subHi: string; href: string }[] = [];
+  if (coldNote) extras.push({ key: 'cold', icon: 'notes', title: `Revise ${coldNote.n.title}`, titleHi: `${coldNote.n.title} दोहराएँ`, sub: `You finished it ${coldNote.days} days ago`, subHi: `इसे ${coldNote.days} दिन पहले पूरा किया`, href: `/notes/${slug}/${coldNote.n.slug}` });
+  if (nextNote && doneNotes.length > 0) extras.push({ key: 'next', icon: 'notes', title: `Next in the syllabus: ${nextNote.title}`, titleHi: `पाठ्यक्रम में अगला: ${nextNote.title}`, sub: `Paper ${nextNote.paper === 1 ? 'I' : 'II'}, topic ${nextNote.topic}`, subHi: `पेपर ${nextNote.paper === 1 ? 'I' : 'II'}, विषय ${nextNote.topic}`, href: `/notes/${slug}/${nextNote.slug}` });
+  if (pyqDone > 0 && untouched[0]) extras.push({ key: 'pyq', icon: 'pyq', title: `Try a question on ${untouched[0].name}`, titleHi: `${untouched[0].name} पर एक प्रश्न हल करें`, sub: `${untouched[0].p1.length + untouched[0].p2.length} past questions, none attempted yet`, subHi: `${untouched[0].p1.length + untouched[0].p2.length} पिछले प्रश्न, अभी कोई हल नहीं किया`, href: `/${slug}/pyqs?topic=${encodeURIComponent(untouched[0].name)}` });
   const resumeCount = (lastNote ? 1 : 0) + (lastChat ? 1 : 0);
   const shownExtras = extras.slice(0, Math.max(0, 3 - resumeCount));
 
   const tools = [
-    { key: 'notes', title: 'Notes', count: stats.notesCount ? `${stats.notesCount} topics` : null, desc: 'Every topic in the syllabus, cut to what an answer uses.', href: `/notes/${slug}` },
-    { key: 'pyq', title: 'Past questions', count: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} questions` : null, desc: 'By year, paper and topic, each one ready to answer.', href: `/${slug}/pyqs` },
-    ...(isTopperSubject(slug) ? [{ key: 'toppers', title: 'Topper copies', count: `${TOPPER_COUNTS[slug].copies.toLocaleString('en-IN')} answers`, desc: 'Handwritten answers by rankers, with two side by side to compare.', href: `/${slug}/topper-copies` }] : []),
-    { key: 'chat', title: 'AI chat', count: null, desc: 'Ask anything. It answers from the standard books and shows you where.', href: `/chat?subject=${slug}` },
-    { key: 'evaluate', title: 'Evaluate', count: null, desc: 'Upload a handwritten answer and get it marked, part by part.', href: '/evaluate' },
-    { key: 'test', title: 'Tests', count: null, desc: 'Timed papers built from past questions, marked like the real thing.', href: `/test?optional=${stats.optional}` },
-    ...(slug === 'geography' ? [{ key: 'map', title: 'Map practice', count: null, desc: 'Locate the places UPSC asks about, category by category.', href: '/geography/mapping' }] : []),
+    { key: 'notes', title: 'Notes', titleHi: 'नोट्स', count: stats.notesCount ? `${stats.notesCount} topics` : null, countHi: stats.notesCount ? `${stats.notesCount} विषय` : null, desc: 'Every topic in the syllabus, cut to what an answer uses.', descHi: 'पाठ्यक्रम का हर विषय, उत्तर में काम आने वाली बातों तक संक्षिप्त।', href: `/notes/${slug}` },
+    { key: 'pyq', title: 'Past questions', titleHi: 'पिछले प्रश्न', count: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} questions` : null, countHi: stats.pyqCount ? `${stats.pyqCount.toLocaleString('en-IN')} प्रश्न` : null, desc: 'By year, paper and topic, each one ready to answer.', descHi: 'वर्ष, पेपर और विषय के अनुसार; हर प्रश्न उत्तर देने के लिए तैयार।', href: `/${slug}/pyqs` },
+    ...(isTopperSubject(slug) ? [{ key: 'toppers', title: 'Topper copies', titleHi: 'टॉपर उत्तर-पुस्तिकाएँ', count: `${TOPPER_COUNTS[slug].copies.toLocaleString('en-IN')} answers`, countHi: `${TOPPER_COUNTS[slug].copies.toLocaleString('en-IN')} उत्तर`, desc: 'Handwritten answers by rankers, with two side by side to compare.', descHi: 'रैंकर्स के हस्तलिखित उत्तर; तुलना के लिए दो उत्तर साथ-साथ देखें।', href: `/${slug}/topper-copies` }] : []),
+    { key: 'chat', title: 'AI chat', titleHi: 'AI चैट', count: null, countHi: null, desc: 'Ask anything. It answers from the standard books and shows you where.', descHi: 'कुछ भी पूछें। यह मानक पुस्तकों से उत्तर देता है और स्रोत भी दिखाता है।', href: `/chat?subject=${slug}` },
+    { key: 'evaluate', title: 'Evaluate', titleHi: 'मूल्यांकन', count: null, countHi: null, desc: 'Upload a handwritten answer and get it marked, part by part.', descHi: 'हस्तलिखित उत्तर अपलोड करें और हर हिस्से का मूल्यांकन पाएँ।', href: '/evaluate' },
+    { key: 'test', title: 'Tests', titleHi: 'टेस्ट', count: null, countHi: null, desc: 'Timed papers built from past questions, marked like the real thing.', descHi: 'पिछले प्रश्नों से बने समयबद्ध पेपर, जिनका मूल्यांकन असली परीक्षा की तरह होता है।', href: `/test?optional=${stats.optional}` },
+    ...(slug === 'geography' ? [{ key: 'map', title: 'Map practice', titleHi: 'मानचित्र अभ्यास', count: null, countHi: null, desc: 'Locate the places UPSC asks about, category by category.', descHi: 'UPSC में पूछे जाने वाले स्थानों को श्रेणी के अनुसार मानचित्र पर ढूँढ़ें।', href: '/geography/mapping' }] : []),
   ];
 
   return (
@@ -265,16 +268,16 @@ export default function Dashboard() {
               <div className="db-celebrate" role="status">
                 <Mascot pose="celebrate" width={96} />
                 <div className="db-celebrate-text">
-                  <strong>You’re on Premium</strong>
-                  <span>Everything for {optLabel} is open now: unlimited chats and evaluations, model answers{isTopperSubject(slug) ? ', every topper copy' : ''}, and the chat’s book and mentor modes.</span>
+                  <strong>{L('You’re on Premium', 'आपने Premium ले लिया है')}</strong>
+                  <span>{L(`Everything for ${optLabel} is open now: unlimited chats and evaluations, model answers${isTopperSubject(slug) ? ', every topper copy' : ''}, and the chat’s book and mentor modes.`, `${optLabel} के लिए अब सब कुछ उपलब्ध है: असीमित चैट और मूल्यांकन, मॉडल उत्तर${isTopperSubject(slug) ? ', हर टॉपर उत्तर-पुस्तिका' : ''}, और चैट के पुस्तक व मेंटर मोड।`)}</span>
                 </div>
-                <button type="button" className="db-celebrate-x" onClick={() => setCelebrate(false)} aria-label="Dismiss">✕</button>
+                <button type="button" className="db-celebrate-x" onClick={() => setCelebrate(false)} aria-label={L('Dismiss', 'बंद करें')}>✕</button>
               </div>
             )}
             <h1 className="ds-h1 db-h1">{greeting}, {firstName}</h1>
             <div className="db-chips">
-              <span className="db-chip"><SubjectIcon id={slug} size={16} />{optLabel} optional</span>
-              <span className={`db-chip${stats.isPremium ? ' gold' : ''}`}>{stats.isPremium ? 'Premium' : 'Free plan'}</span>
+              <span className="db-chip"><SubjectIcon id={slug} size={16} />{optLabel}{L(' optional', ' वैकल्पिक')}</span>
+              <span className={`db-chip${stats.isPremium ? ' gold' : ''}`}>{stats.isPremium ? 'Premium' : L('Free plan', 'निःशुल्क योजना')}</span>
             </div>
           </div>
         </header>
@@ -284,23 +287,23 @@ export default function Dashboard() {
             {/* What to do, from what is actually here. Nothing pads it out. */}
             {(tq || lastNote || lastChat || shownExtras.length > 0) && (
               <section className="db-section">
-                <h2 className="db-h2">For today</h2>
+                <h2 className="db-h2">{L('For today', 'आज के लिए')}</h2>
 
                 {tq && (
                   <article className="db-today">
                     <div className="db-today-head">
-                      <span className="db-today-label">Today’s question</span>
-                      <span className="db-today-meta">{tq.year} · {tq.paper}{tq.marks ? ` · ${tq.marks} marks` : ''}</span>
+                      <span className="db-today-label">{L('Today’s question', 'आज का प्रश्न')}</span>
+                      <span className="db-today-meta">{tq.year} · {tq.paper}{tq.marks ? ` · ${tq.marks} ${L('marks', 'अंक')}` : ''}</span>
                     </div>
                     <Link href={`/${slug}/pyqs/${tq.id}`} className="db-today-q">{tq.question}</Link>
                     <div className="db-today-actions">
                       <Link href={`/evaluate?question=${encodeURIComponent(tq.question)}${tq.marks ? `&marks=${tq.marks}` : ''}`} className="ds-btn ds-btn-solid ds-btn-sm">
-                        Write an answer
+                        {L('Write an answer', 'उत्तर लिखें')}
                       </Link>
                       <Link href={`/chat?subject=${slug}&q=${encodeURIComponent(tq.question)}`} className="ds-btn ds-btn-line ds-btn-sm">
-                        Ask the AI how to approach it
+                        {L('Ask the AI how to approach it', 'AI से पूछें कि इसे कैसे हल करें')}
                       </Link>
-                      <Link href={`/${slug}#daily-answer`} className="db-more">All five for today</Link>
+                      <Link href={`/${slug}#daily-answer`} className="db-more">{L('All five for today', 'आज के सभी पाँच')}</Link>
                     </div>
                   </article>
                 )}
@@ -311,8 +314,8 @@ export default function Dashboard() {
                       <Link href={`/notes/${lastNote.subject}/${lastNote.slug}`} className="db-resume-item">
                         <span className="db-resume-icon"><Glyph name="notes" /></span>
                         <span className="db-resume-text">
-                          <strong>Pick up {lastNote.title}</strong>
-                          <span>{lastNote.section} · opened {ago(lastNote.at)}</span>
+                          <strong>{L(`Pick up ${lastNote.title}`, `${lastNote.title} आगे पढ़ें`)}</strong>
+                          <span>{lastNote.section} · {L('opened', 'खोला गया')} {ago(lastNote.at, L)}</span>
                         </span>
                         <Arrow />
                       </Link>
@@ -321,8 +324,8 @@ export default function Dashboard() {
                       <Link href={`/chat?c=${encodeURIComponent(lastChat.id)}`} className="db-resume-item">
                         <span className="db-resume-icon"><Glyph name="chat" /></span>
                         <span className="db-resume-text">
-                          <strong>Carry on with “{lastChat.title}”</strong>
-                          <span>Your last chat · {ago(lastChat.updatedAt)}</span>
+                          <strong>{L(`Carry on with “${lastChat.title}”`, `“${lastChat.title === 'Your last chat' ? L('Your last chat', 'आपकी पिछली चैट') : lastChat.title}” बातचीत जारी रखें`)}</strong>
+                          <span>{L('Your last chat', 'आपकी पिछली चैट')} · {ago(lastChat.updatedAt, L)}</span>
                         </span>
                         <Arrow />
                       </Link>
@@ -331,8 +334,8 @@ export default function Dashboard() {
                       <Link key={x.key} href={x.href} className="db-resume-item">
                         <span className="db-resume-icon"><Glyph name={x.icon} /></span>
                         <span className="db-resume-text">
-                          <strong>{x.title}</strong>
-                          <span>{x.sub}</span>
+                          <strong>{L(x.title, x.titleHi)}</strong>
+                          <span>{L(x.sub, x.subHi)}</span>
                         </span>
                         <Arrow />
                       </Link>
@@ -344,34 +347,34 @@ export default function Dashboard() {
 
             {syllabus.length > 0 && (
               <section className="db-section">
-                <h2 className="db-h2">Your progress</h2>
+                <h2 className="db-h2">{L('Your progress', 'आपकी प्रगति')}</h2>
                 <div className="db-progress">
                   <div className="db-pcard">
                     <div className="db-pcard-top">
                       <Ring value={doneNotes.length} total={syllabus.length} />
                       <div>
-                        <h3>Syllabus</h3>
-                        <p className="db-pcard-big">{doneNotes.length} of {syllabus.length} topics done</p>
+                        <h3>{L('Syllabus', 'पाठ्यक्रम')}</h3>
+                        <p className="db-pcard-big">{doneNotes.length} {L('of', 'में से')} {syllabus.length} {L('topics done', 'विषय पूरे')}</p>
                       </div>
                     </div>
-                    <Bar label="Paper I" value={byPaper(1).done} total={byPaper(1).total} />
-                    <Bar label="Paper II" value={byPaper(2).done} total={byPaper(2).total} />
-                    <p className="db-pcard-line">{syllabusLine}</p>
-                    <Link href={`/notes/${slug}`} className="db-change">Open the notes <Arrow /></Link>
+                    <Bar label={L('Paper I', 'पेपर I')} value={byPaper(1).done} total={byPaper(1).total} />
+                    <Bar label={L('Paper II', 'पेपर II')} value={byPaper(2).done} total={byPaper(2).total} />
+                    <p className="db-pcard-line">{L(syllabusLine[0], syllabusLine[1])}</p>
+                    <Link href={`/notes/${slug}`} className="db-change">{L('Open the notes', 'नोट्स खोलें')} <Arrow /></Link>
                   </div>
                   {pyqTotal > 0 && (
                     <div className="db-pcard">
                       <div className="db-pcard-top">
                         <Ring value={pyqDone} total={pyqTotal} />
                         <div>
-                          <h3>Past questions</h3>
-                          <p className="db-pcard-big">{pyqDone.toLocaleString('en-IN')} of {pyqTotal.toLocaleString('en-IN')} attempted</p>
+                          <h3>{L('Past questions', 'पिछले प्रश्न')}</h3>
+                          <p className="db-pcard-big">{pyqDone.toLocaleString('en-IN')} {L('of', 'में से')} {pyqTotal.toLocaleString('en-IN')} {L('attempted', 'हल किए')}</p>
                         </div>
                       </div>
-                      <Bar label="Paper I" value={pyqPaper('p1').done} total={pyqPaper('p1').total} />
-                      <Bar label="Paper II" value={pyqPaper('p2').done} total={pyqPaper('p2').total} />
-                      <p className="db-pcard-line">{pyqLine}</p>
-                      <Link href={`/${slug}/pyqs`} className="db-change">Open the past questions <Arrow /></Link>
+                      <Bar label={L('Paper I', 'पेपर I')} value={pyqPaper('p1').done} total={pyqPaper('p1').total} />
+                      <Bar label={L('Paper II', 'पेपर II')} value={pyqPaper('p2').done} total={pyqPaper('p2').total} />
+                      <p className="db-pcard-line">{L(pyqLine[0], pyqLine[1])}</p>
+                      <Link href={`/${slug}/pyqs`} className="db-change">{L('Open the past questions', 'पिछले प्रश्न खोलें')} <Arrow /></Link>
                     </div>
                   )}
                 </div>
@@ -379,16 +382,16 @@ export default function Dashboard() {
             )}
 
             <section className="db-section">
-              <h2 className="db-h2">Everything for {optLabel}</h2>
+              <h2 className="db-h2">{L(`Everything for ${optLabel}`, `${optLabel} के लिए सब कुछ`)}</h2>
               <div className={`db-tools${tools.length === 5 ? ' five' : ''}`}>
                 {tools.map((t) => (
                   <Link key={t.key} href={t.href} className="db-tool">
                     <span className="db-tool-top">
                       <span className="db-tool-icon"><Glyph name={t.key} /></span>
-                      {t.count && <span className="db-tool-count">{t.count}</span>}
+                      {t.count && <span className="db-tool-count">{L(t.count, t.countHi!)}</span>}
                     </span>
-                    <span className="db-tool-title">{t.title}</span>
-                    <span className="db-tool-desc">{t.desc}</span>
+                    <span className="db-tool-title">{L(t.title, t.titleHi)}</span>
+                    <span className="db-tool-desc">{L(t.desc, t.descHi)}</span>
                   </Link>
                 ))}
               </div>
@@ -401,45 +404,47 @@ export default function Dashboard() {
                 <>
                   <div className="db-plan-row">
                     <h2 className="db-card-title">Premium</h2>
-                    <span className="db-active">Active</span>
+                    <span className="db-active">{L('Active', 'सक्रिय')}</span>
                   </div>
                   <p className="db-card-text">
-                    {stats.plan ? `${stats.plan === 'referral' ? 'Invite reward' : `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan`} for ${optLabel}` : `For ${optLabel}`}
-                    {fmtDate(stats.expiresAt) ? `, until ${fmtDate(stats.expiresAt)}.` : '.'}
+                    {stats.plan
+                      ? `${stats.plan === 'referral' ? L('Invite reward', 'आमंत्रण पुरस्कार') : L(`${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} plan`, `${stats.plan.charAt(0).toUpperCase()}${stats.plan.slice(1)} योजना`)}${L(' for ', ' के लिए ')}${optLabel}`
+                      : L(`For ${optLabel}`, `${optLabel} के लिए`)}
+                    {fmtDate(stats.expiresAt) ? L(`, until ${fmtDate(stats.expiresAt)}.`, `, समाप्ति ${fmtDate(stats.expiresAt)}।`) : '.'}
                   </p>
-                  <Link href="/invite" className="db-invite">Invite a friend, earn {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
+                  <Link href="/invite" className="db-invite">{L('Invite a friend, earn', 'किसी मित्र को आमंत्रित करें, पाएँ')} {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
                 </>
               ) : (
                 <>
-                  <h2 className="db-card-title">Free plan</h2>
+                  <h2 className="db-card-title">{L('Free plan', 'निःशुल्क योजना')}</h2>
                   <div className="db-usage">
                     <div className="db-usage-row">
-                      <span>AI chats</span>
-                      <span>{stats.chatCount >= CHAT_FREE_LIMIT ? 'All used' : `${chatsLeft} of ${CHAT_FREE_LIMIT} left`}</span>
+                      <span>{L('AI chats', 'AI चैट')}</span>
+                      <span>{stats.chatCount >= CHAT_FREE_LIMIT ? L('All used', 'सभी इस्तेमाल हो गईं') : `${chatsLeft} ${L('of', 'में से')} ${CHAT_FREE_LIMIT} ${L('left', 'बाकी')}`}</span>
                     </div>
                     <div className="db-bar"><span style={{ width: `${Math.min(100, (stats.chatCount / CHAT_FREE_LIMIT) * 100)}%` }} className={stats.chatCount >= CHAT_FREE_LIMIT ? 'full' : ''} /></div>
                     <div className="db-usage-row">
-                      <span>Evaluation</span>
-                      <span>{stats.evalCount >= 1 ? 'Used' : '1 free, not used yet'}</span>
+                      <span>{L('Evaluation', 'मूल्यांकन')}</span>
+                      <span>{stats.evalCount >= 1 ? L('Used', 'इस्तेमाल किया गया') : L('1 free, not used yet', '1 निःशुल्क, अभी इस्तेमाल नहीं किया')}</span>
                     </div>
                   </div>
-                  <p className="db-card-text">Premium gives you unlimited chats and evaluations for {optLabel}, with model answers{isTopperSubject(slug) ? ', every topper copy' : ''} and the chat’s book and mentor modes.</p>
-                  <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">See plans</Link>
-                  <Link href="/invite" className="db-invite">Invite a friend, earn {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
+                  <p className="db-card-text">{L(`Premium gives you unlimited chats and evaluations for ${optLabel}, with model answers${isTopperSubject(slug) ? ', every topper copy' : ''} and the chat’s book and mentor modes.`, `Premium में ${optLabel} के लिए असीमित चैट और मूल्यांकन, मॉडल उत्तर${isTopperSubject(slug) ? ', हर टॉपर उत्तर-पुस्तिका' : ''}, और चैट के पुस्तक व मेंटर मोड मिलते हैं।`)}</p>
+                  <Link href="/pricing" className="ds-btn ds-btn-solid db-card-btn">{L('See plans', 'योजनाएँ देखें')}</Link>
+                  <Link href="/invite" className="db-invite">{L('Invite a friend, earn', 'किसी मित्र को आमंत्रित करें, पाएँ')} {formatPaise(REFERRAL_REWARD_PAISE)}</Link>
                 </>
               )}
             </div>
 
             <div className="db-card">
-              <h2 className="db-card-title">Your account</h2>
+              <h2 className="db-card-title">{L('Your account', 'आपका खाता')}</h2>
               <div className="db-facts">
-                <div><span>Optional</span><span>{optLabel}</span></div>
-                {stats.joinedAt && <div><span>Joined</span><span>{fmtDate(stats.joinedAt)}</span></div>}
-                <div><span>Email</span><span className="db-email">{user?.email}</span></div>
+                <div><span>{L('Optional', 'वैकल्पिक विषय')}</span><span>{optLabel}</span></div>
+                {stats.joinedAt && <div><span>{L('Joined', 'जुड़े')}</span><span>{fmtDate(stats.joinedAt)}</span></div>}
+                <div><span>{L('Email', 'ईमेल')}</span><span className="db-email">{user?.email}</span></div>
               </div>
-              <Link href="/profile" className="db-change">Profile and settings <Arrow /></Link>
+              <Link href="/profile" className="db-change">{L('Profile and settings', 'प्रोफ़ाइल और सेटिंग्स')} <Arrow /></Link>
               {stats.isPremium && (
-                <p className="db-card-note">Your plan stays with {optLabel}. A different optional would be on the free plan.</p>
+                <p className="db-card-note">{L(`Your plan stays with ${optLabel}. A different optional would be on the free plan.`, `आपकी योजना ${optLabel} के साथ ही रहेगी। कोई दूसरा वैकल्पिक विषय निःशुल्क योजना पर होगा।`)}</p>
               )}
             </div>
           </aside>

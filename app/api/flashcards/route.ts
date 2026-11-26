@@ -39,7 +39,8 @@ export async function GET(req: NextRequest) {
     const limit = Math.min(Number(p.get('limit')) || 60, MAX_LIMIT);
     const offset = Math.max(Number(p.get('offset')) || 0, 0);
 
-    const { cards, total } = await listCards({ subject, ids, limit, offset });
+    const lang = p.get('lang') === 'hi' ? 'hi' : 'en';
+    const { cards, total } = await listCards({ subject, ids, limit, offset, lang });
     return NextResponse.json({ cards, total, limit, offset }, { headers: cachePublic(60) });
   } catch (e) {
     console.error('[api/flashcards]', e);

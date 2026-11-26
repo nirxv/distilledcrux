@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { allNotes, type SubjectNote } from '@/lib/notes';
 import SubjectIcon from '@/components/SubjectIcon';
 import { isTopperSubject } from '@/lib/toppers/meta';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * ⌘K: jump to any note, page or tool by typing a few letters, or hand the
@@ -87,11 +88,54 @@ function noteScore(n: SubjectNote, q: string): number {
 }
 
 export default function CommandPalette({ open, onClose, subject }: { open: boolean; onClose: () => void; subject: string | null }) {
+  const { L } = useLang();
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [active, setActive] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
+
+  const localizedHint = (hint: string) => {
+    switch (hint) {
+      case 'Ask anything from the syllabus': return L(hint, 'पाठ्यक्रम से कुछ भी पूछें');
+      case 'Every topic in the syllabus': return L(hint, 'पाठ्यक्रम का हर विषय');
+      case 'Past questions, topic by topic': return L(hint, 'हर विषय के पिछले प्रश्न');
+      case 'Revise with spaced repetition': return L(hint, 'अंतराल पर दोहराकर रिविज़न करें');
+      case 'Handwritten answers by rankers': return L(hint, 'रैंक धारकों के हस्तलिखित उत्तर');
+      case 'Pick an optional': return L(hint, 'वैकल्पिक विषय चुनें');
+      case 'Upload a handwritten answer': return L(hint, 'हस्तलिखित उत्तर अपलोड करें');
+      case 'Practice tests': return L(hint, 'अभ्यास परीक्षाएँ');
+      case 'Every map question': return L(hint, 'मानचित्र के सभी प्रश्न');
+      case 'AI chat': return L(hint, 'AI चैट');
+      default: {
+        const subjectName = Object.entries(SUBJECT_NAME).find(([, name]) => hint.startsWith(`${name} · `));
+        if (subjectName) {
+          const [id, name] = subjectName;
+          const hindiName: Record<string, string> = {
+            sociology: 'समाजशास्त्र',
+            anthropology: 'मानवशास्त्र',
+            polsci: 'PSIR',
+            geography: 'भूगोल',
+            'pub-admin': 'लोक प्रशासन',
+          };
+          return `${L(name, hindiName[id])}${hint.slice(name.length)}`;
+        }
+        const chatSubject = Object.entries(SUBJECT_NAME).find(([, name]) => hint === `${name} chat`);
+        if (chatSubject) {
+          const [id, name] = chatSubject;
+          const hindiName: Record<string, string> = {
+            sociology: 'समाजशास्त्र',
+            anthropology: 'मानवशास्त्र',
+            polsci: 'PSIR',
+            geography: 'भूगोल',
+            'pub-admin': 'लोक प्रशासन',
+          };
+          return `${L(name, hindiName[id])} ${L('chat', 'चैट')}`;
+        }
+        return hint;
+      }
+    }
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -176,15 +220,15 @@ export default function CommandPalette({ open, onClose, subject }: { open: boole
               else if (e.key === 'Enter') { e.preventDefault(); go(items[active]); }
               else if (e.key === 'Escape') { e.preventDefault(); onClose(); }
             }}
-            placeholder="Search, or ask the AI…"
-            aria-label="Search"
+            placeholder={L('Search, or ask the AI…', 'खोजें या AI से पूछें…')}
+            aria-label={L('Search', 'खोजें')}
             aria-activedescendant={items[active] ? `cp-${items[active].key}` : undefined}
             role="combobox"
             aria-expanded="true"
             aria-controls="cp-list"
           />
           <kbd onClick={onClose}>esc</kbd>
-          <button type="button" className="cp-x" onClick={onClose} aria-label="Close search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg></button>
+          <button type="button" className="cp-x" onClick={onClose} aria-label={L('Close search', 'खोज बंद करें')}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg></button>
         </div>
         <div className="cp-list" id="cp-list" role="listbox" ref={listRef}>
           {items.map((it, i) => {
@@ -192,7 +236,7 @@ export default function CommandPalette({ open, onClose, subject }: { open: boole
             lastGroup = it.group;
             return (
               <div key={it.key}>
-                {head && <div className="cp-group">{head}</div>}
+                {head && <div className="cp-group">{head === 'Ask' ? L('Ask', 'पूछें') : head === 'Go to' ? L('Go to', 'यहाँ जाएँ') : L('Notes', 'नोट्स')}</div>}
                 <button
                   id={`cp-${it.key}`}
                   data-i={i}
@@ -205,7 +249,7 @@ export default function CommandPalette({ open, onClose, subject }: { open: boole
                   <span className="cp-icon">{it.icon}</span>
                   <span className="cp-text">
                     <span className="cp-label">{it.label}</span>
-                    {it.hint && <span className="cp-hint">{it.hint}</span>}
+                    {it.hint && <span className="cp-hint">{localizedHint(it.hint)}</span>}
                   </span>
                   {i === active && <span className="cp-enter" aria-hidden="true">↵</span>}
                 </button>
@@ -214,9 +258,9 @@ export default function CommandPalette({ open, onClose, subject }: { open: boole
           })}
         </div>
         <div className="cp-foot">
-          <span><kbd>↑</kbd><kbd>↓</kbd> to move</span>
-          <span><kbd>↵</kbd> to open</span>
-          <span><kbd>esc</kbd> to close</span>
+          <span><kbd>↑</kbd><kbd>↓</kbd> {L('to move', 'आगे बढ़ने के लिए')}</span>
+          <span><kbd>↵</kbd> {L('to open', 'खोलने के लिए')}</span>
+          <span><kbd>esc</kbd> {L('to close', 'बंद करने के लिए')}</span>
         </div>
       </div>
     </div>

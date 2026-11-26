@@ -1,6 +1,7 @@
 'use client';
 import { useState, useCallback, useEffect } from 'react';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
 import { useRouter } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -49,12 +50,13 @@ function scoreTone(pct: number) {
 }
 
 function MarksPicker({ marks, setMarks }: { marks: string; setMarks: (m: string) => void }) {
+  const { L } = useLang()
   return (
-    <div className="ev-marks" role="radiogroup" aria-label="Marks">
+    <div className="ev-marks" role="radiogroup" aria-label={L('Marks', 'अंक')}>
       {MARKS_OPTIONS.map(m => (
         <button key={m} type="button" role="radio" aria-checked={marks === m}
           className={`ev-mark${marks === m ? ' on' : ''}`} onClick={() => setMarks(m)}>
-          {m} marks
+          {m} {L('marks', 'अंक')}
         </button>
       ))}
     </div>
@@ -75,6 +77,7 @@ function SectionCard({ label, mark, data }: {
   mark?: SectionMark
   data: { what_was_written?: string; strengths?: string[]; weaknesses?: string[]; analysis?: string; suggestions?: string[] }
 }) {
+  const { L } = useLang()
   const hasPoints = (data.strengths?.length ?? 0) > 0 || (data.weaknesses?.length ?? 0) > 0
   return (
     <section className="ev-block">
@@ -86,19 +89,19 @@ function SectionCard({ label, mark, data }: {
       {hasPoints && (
         <div className="ev-cols">
           <div>
-            <h3 className="ev-col-title good">What worked</h3>
-            <Points items={data.strengths} tone="good" empty="Nothing stood out here yet." />
+            <h3 className="ev-col-title good">{L('What worked', 'क्या अच्छा रहा')}</h3>
+            <Points items={data.strengths} tone="good" empty={L('Nothing stood out here yet.', 'अभी यहाँ कोई खास बात नज़र नहीं आई।')} />
           </div>
           <div>
-            <h3 className="ev-col-title fix">What to fix</h3>
-            <Points items={data.weaknesses} tone="fix" empty="Nothing to fix here." />
+            <h3 className="ev-col-title fix">{L('What to fix', 'क्या सुधारें')}</h3>
+            <Points items={data.weaknesses} tone="fix" empty={L('Nothing to fix here.', 'यहाँ कुछ सुधारने की ज़रूरत नहीं है।')} />
           </div>
         </div>
       )}
       {data.analysis && <p className="ev-analysis">{data.analysis}</p>}
       {(data.suggestions ?? []).length > 0 && (
         <div className="ev-tries">
-          <h3 className="ev-col-title">Try this next time</h3>
+          <h3 className="ev-col-title">{L('Try this next time', 'अगली बार यह आज़माएँ')}</h3>
           {(data.suggestions ?? []).map((s, i) => <p key={i} className="ev-try">{s}</p>)}
         </div>
       )}
@@ -115,6 +118,7 @@ const PdfIcon = () => (
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function EvaluatePage() {
+  const { langHi, L } = useLang();
   const router = useRouter()
   const [user, setUser]               = useState<User | null>(null)
   const [optionalId, setOptionalId]   = useState<string | null>(null)   // from user_profiles (raw)
@@ -197,7 +201,7 @@ export default function EvaluatePage() {
       isPdf(f) ? f.size <= MAX_PDF_SIZE : f.type.startsWith('image/') && f.size <= MAX_IMAGE_SIZE
     )
     if (valid.length < newFiles.length) {
-      setError('Some files were skipped. Photos must be under 8 MB and PDFs under 20 MB.')
+      setError(L('Some files were skipped. Photos must be under 8 MB and PDFs under 20 MB.', 'कुछ फ़ाइलें छोड़ दी गईं। फ़ोटो 8 MB से कम और PDF 20 MB से कम होनी चाहिए।'))
     } else {
       setError(null)
     }
@@ -229,7 +233,7 @@ export default function EvaluatePage() {
       // PDFs become page images; photos are shrunk to a size the route accepts.
       const compressed = await toAnswerPages(files)
       if (!compressed.length) {
-        setError('No readable files found. Upload JPG or PNG photos, or a PDF.')
+        setError(L('No readable files found. Upload JPG or PNG photos, or a PDF.', 'पढ़ने योग्य फ़ाइलें नहीं मिलीं। JPG या PNG फ़ोटो, या PDF अपलोड करें।'))
         return
       }
       setPageImages(compressed)
@@ -251,7 +255,7 @@ export default function EvaluatePage() {
         if (data.error === 'limit_reached') { setLimitReached(true); return }
         console.error('read-answer failed:', status, data)
         // The review screen still opens, so the answer can be typed instead.
-        setError(`${data.error ?? 'We could not read the answer sheet.'} You can type or paste your answer below instead.`)
+        setError(`${data.error ?? L('We could not read the answer sheet.', 'हम उत्तर-पत्र पढ़ नहीं सके।')} ${L('You can type or paste your answer below instead.', 'इसके बजाय आप नीचे अपना उत्तर टाइप या पेस्ट कर सकते हैं।')}`)
         setShowTranscript(true)
         return
       }
@@ -266,7 +270,7 @@ export default function EvaluatePage() {
       setShowTranscript(true)
     } catch (e) {
       console.error('read-answer exception:', e)
-      setError('The connection dropped while reading. You can type or paste your answer below instead.')
+      setError(L('The connection dropped while reading. You can type or paste your answer below instead.', 'पढ़ते समय कनेक्शन टूट गया। इसके बजाय आप नीचे अपना उत्तर टाइप या पेस्ट कर सकते हैं।'))
       setShowTranscript(true)
     } finally {
       setOcrLoading(false)
@@ -285,10 +289,10 @@ export default function EvaluatePage() {
 
   const handleSubmit = async () => {
     if (!user) { goSignIn(); return }
-    if (!question.trim()) { setError('Add the question first.'); return }
-    if (!transcript.trim() && !pageImages.length && !files.length) { setError('Upload your answer, or type it in, first.'); return }
+    if (!question.trim()) { setError(L('Add the question first.', 'पहले प्रश्न जोड़ें।')); return }
+    if (!transcript.trim() && !pageImages.length && !files.length) { setError(L('Upload your answer, or type it in, first.', 'पहले अपना उत्तर अपलोड करें या टाइप करें।')); return }
     if (!subjectId) {
-      setError('We could not tell which optional you take. Finish setting up your profile, or refresh the page.')
+      setError(L('We could not tell which optional you take. Finish setting up your profile, or refresh the page.', 'हम यह पता नहीं लगा सके कि आपने कौन-सा वैकल्पिक विषय चुना है। अपनी प्रोफ़ाइल सेटअप पूरी करें या पेज रीफ़्रेश करें।'))
       return
     }
     setError(null); setResult(null); setLoading(true)
@@ -302,7 +306,7 @@ export default function EvaluatePage() {
       fd.append('question', question.trim())
       fd.append('marks', marks)
       fd.append('subject', subjectId)
-      fd.append('lang', 'en')
+      fd.append('lang', langHi ? 'hi' : 'en')
       if (transcript.trim()) fd.append('extractedText', transcript.trim())
 
       const res = await fetch('/api/evaluate', {
@@ -315,12 +319,12 @@ export default function EvaluatePage() {
 
       if (status >= 400 || !data) {
         if (data?.error === 'limit_reached') { setLimitReached(true); return }
-        setError(data?.error ?? 'The evaluation failed. Please try again.')
+        setError(data?.error ?? L('The evaluation failed. Please try again.', 'मूल्यांकन पूरा नहीं हो सका। कृपया फिर से कोशिश करें।'))
         return
       }
       setResult(data)
     } catch {
-      setError('The connection dropped while marking. Please try again.')
+      setError(L('The connection dropped while marking. Please try again.', 'जाँच के दौरान कनेक्शन टूट गया। कृपया फिर से कोशिश करें।'))
     } finally {
       setLoading(false)
     }
@@ -347,10 +351,10 @@ export default function EvaluatePage() {
           {src === '__pdf__'
             ? <div className="ev-thumb-pdf"><PdfIcon /><span>{files[i]?.name ?? 'PDF'}</span></div>
             // eslint-disable-next-line @next/next/no-img-element
-            : <img src={src} alt={`Page ${i + 1}`} />}
+            : <img src={src} alt={`${L('Page', 'पृष्ठ')} ${i + 1}`} />}
           <span className="ev-thumb-n">{i + 1}</span>
           {!showTranscript && (
-            <button type="button" className="ev-thumb-rm" onClick={() => removeFile(i)} aria-label={`Remove page ${i + 1}`}>×</button>
+            <button type="button" className="ev-thumb-rm" onClick={() => removeFile(i)} aria-label={`${L('Remove page', 'पृष्ठ हटाएँ')} ${i + 1}`}>×</button>
           )}
         </div>
       ))}
@@ -370,11 +374,13 @@ export default function EvaluatePage() {
           <div className="ds-container">
             <div className="ev-limit">
               <Mascot pose="peek" width={120} />
-              <h1 className="ev-limit-title">You&apos;ve used your free evaluation</h1>
-              <p>Premium marks every answer you write, and opens model answers{topperCopies ? ', every topper copy' : ''} and the chat&apos;s book, mentor and brainstorm modes.</p>
+              <h1 className="ev-limit-title">{L("You've used your free evaluation", 'आपका मुफ़्त मूल्यांकन इस्तेमाल हो चुका है')}</h1>
+              <p>{topperCopies
+                ? L("Premium marks every answer you write, and opens model answers, every topper copy and the chat's book, mentor and brainstorm modes.", 'Premium आपके हर लिखे हुए उत्तर की जाँच करता है, मॉडल उत्तर और टॉपर की हर कॉपी उपलब्ध कराता है, और चैट के पुस्तक, मेंटर व विचार-मंथन मोड खोलता है।')
+                : L("Premium marks every answer you write, and opens model answers and the chat's book, mentor and brainstorm modes.", 'Premium आपके हर लिखे हुए उत्तर की जाँच करता है, मॉडल उत्तर उपलब्ध कराता है और चैट के पुस्तक, मेंटर व विचार-मंथन मोड खोलता है।')}</p>
               <div className="ev-limit-actions">
-                <Link href="/pricing" className="ds-btn ds-btn-solid">See plans</Link>
-                <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Back</button>
+                <Link href="/pricing" className="ds-btn ds-btn-solid">{L('See plans', 'प्लान देखें')}</Link>
+                <button type="button" className="ds-btn ds-btn-line" onClick={reset}>{L('Back', 'वापस')}</button>
               </div>
             </div>
           </div>
@@ -383,7 +389,7 @@ export default function EvaluatePage() {
         ) : result ? (
           <div className="ds-container ev-results">
             <div className="ev-qbar">
-              <span>Question{result.marks_out_of ? ` · ${result.marks_out_of} marks` : ''}</span>
+              <span>{L('Question', 'प्रश्न')}{result.marks_out_of ? ` · ${result.marks_out_of} ${L('marks', 'अंक')}` : ''}</span>
               <p>{question}</p>
             </div>
 
@@ -393,7 +399,7 @@ export default function EvaluatePage() {
                   <div className="ev-score-num" style={{ color: scoreTone(pct) }}>
                     {result.marks}<span>/ {result.marks_out_of}</span>
                   </div>
-                  <div className="ev-score-pct">{Math.round(pct * 100)}% of the marks</div>
+                  <div className="ev-score-pct">{Math.round(pct * 100)}% {L('of the marks', 'अंकों में से')}</div>
                   <div className="ev-score-bar"><span style={{ width: `${Math.min(100, pct * 100)}%`, background: scoreTone(pct) }} /></div>
 
                   <div className="ev-sections">
@@ -403,7 +409,7 @@ export default function EvaluatePage() {
                       return (
                         <div key={k} className="ev-sec">
                           <div className="ev-sec-top">
-                            <span className="ev-sec-name">{k}</span>
+                            <span className="ev-sec-name">{L(k, ({ introduction: 'परिचय', body: 'मुख्य भाग', conclusion: 'निष्कर्ष', presentation: 'प्रस्तुति' } as const)[k])}</span>
                             <span className="ev-sec-score">{s.awarded} / {s.out_of}</span>
                           </div>
                           <div className="ev-sec-bar"><span style={{ width: `${Math.min(100, p * 100)}%`, background: scoreTone(p) }} /></div>
@@ -415,41 +421,41 @@ export default function EvaluatePage() {
 
                   <div className="ev-score-actions">
                     <Link href={`/chat?q=${encodeURIComponent(question)}${subjectId ? `&subject=${subjectId}` : ''}`} className="ds-btn ds-btn-solid">
-                      Ask the AI for a model answer
+                      {L('Ask the AI for a model answer', 'AI से मॉडल उत्तर माँगें')}
                     </Link>
                     {result.share_token && (
-                      <ShareButton token={result.share_token} marks={result.marks} outOf={result.marks_out_of} subject={subjectLabel ? `${subjectLabel} optional` : 'Mains'} />
+                      <ShareButton token={result.share_token} marks={result.marks} outOf={result.marks_out_of} subject={subjectLabel ? `${subjectLabel} ${L('optional', 'वैकल्पिक')}` : L('Mains', 'मुख्य परीक्षा')} />
                     )}
-                    <button type="button" className="ds-btn ds-btn-line" onClick={reset}>Check another answer</button>
+                    <button type="button" className="ds-btn ds-btn-line" onClick={reset}>{L('Check another answer', 'एक और उत्तर जाँचें')}</button>
                   </div>
                 </div>
               </aside>
 
               <div className="ev-feedback">
                 <section className="ev-block ev-overall">
-                  <h2>Overall</h2>
+                  <h2>{L('Overall', 'समग्र प्रतिक्रिया')}</h2>
                   <p>{result.overall_feedback}</p>
                   {IDEAL_WORDS[result.marks_out_of] && (
-                    <span className="ev-wc">Ideal length: about {IDEAL_WORDS[result.marks_out_of]} words</span>
+                    <span className="ev-wc">{L('Ideal length: about', 'आदर्श लंबाई: लगभग')} {IDEAL_WORDS[result.marks_out_of]} {L('words', 'शब्द')}</span>
                   )}
                 </section>
 
                 {result.demand_of_question?.length > 0 && (
                   <section className="ev-block">
-                    <h2>What the question asks for</h2>
+                    <h2>{L('What the question asks for', 'प्रश्न में क्या अपेक्षित है')}</h2>
                     <ul className="ev-demand">
                       {result.demand_of_question.map((d, i) => <li key={i}>{d}</li>)}
                     </ul>
                   </section>
                 )}
 
-                <SectionCard label="Introduction" mark={result.section_marks.introduction} data={result.introduction} />
-                <SectionCard label="Body" mark={result.section_marks.body} data={result.body} />
-                <SectionCard label="Conclusion" mark={result.section_marks.conclusion} data={result.conclusion} />
+                <SectionCard label={L('Introduction', 'परिचय')} mark={result.section_marks.introduction} data={result.introduction} />
+                <SectionCard label={L('Body', 'मुख्य भाग')} mark={result.section_marks.body} data={result.body} />
+                <SectionCard label={L('Conclusion', 'निष्कर्ष')} mark={result.section_marks.conclusion} data={result.conclusion} />
 
                 {result.thinkers_to_cite?.length > 0 && (
                   <section className="ev-block">
-                    <h2>Thinkers you could cite</h2>
+                    <h2>{L('Thinkers you could cite', 'जिन विचारकों का उल्लेख कर सकते हैं')}</h2>
                     <div className="ev-thinkers">
                       {result.thinkers_to_cite.map((t, i) => (
                         <div key={i} className="ev-thinker">
@@ -469,39 +475,39 @@ export default function EvaluatePage() {
         ) : showTranscript ? (
           <div className="ds-container ev-grid ev-top">
             <section className="ev-card">
-              <h1 className="ev-card-title">Check what we read</h1>
-              <p className="ev-card-lede">This text is what gets marked. Read it through once and fix any name, date or term the reader got wrong.</p>
+              <h1 className="ev-card-title">{L('Check what we read', 'हमने जो पढ़ा है, उसे जाँचें')}</h1>
+              <p className="ev-card-lede">{L('This text is what gets marked. Read it through once and fix any name, date or term the reader got wrong.', 'इसी टेक्स्ट का मूल्यांकन होगा। इसे एक बार पढ़ें और अगर पढ़ने में किसी नाम, तारीख़ या शब्द की गलती हुई हो, तो उसे ठीक करें।')}</p>
 
               {error && <div className="ev-err" role="alert">{error}</div>}
 
               <label className="ev-field">
-                <span className="ev-label">Question</span>
+                <span className="ev-label">{L('Question', 'प्रश्न')}</span>
                 <textarea className="ev-input" value={question} onChange={e => setQuestion(e.target.value)}
-                  placeholder="Type or paste the question" rows={3} />
+                  placeholder={L('Type or paste the question', 'प्रश्न टाइप या पेस्ट करें')} rows={3} />
               </label>
 
               <div className="ev-field">
-                <span className="ev-label">Marks</span>
+                <span className="ev-label">{L('Marks', 'अंक')}</span>
                 <MarksPicker marks={marks} setMarks={setMarks} />
               </div>
 
               <label className="ev-field">
                 <span className="ev-label-row">
-                  <span className="ev-label">Your answer</span>
-                  <span className="ev-count">About {IDEAL_WORDS[Number(marks)]} words is ideal</span>
+                  <span className="ev-label">{L('Your answer', 'आपका उत्तर')}</span>
+                  <span className="ev-count">{L('About', 'लगभग')} {IDEAL_WORDS[Number(marks)]} {L('words is ideal', 'शब्द आदर्श हैं')}</span>
                 </span>
                 <textarea className="ev-input ev-tall" value={transcript} onChange={e => setTranscript(e.target.value)}
-                  placeholder="Your answer as we read it appears here. You can also type or paste it." />
+                  placeholder={L('Your answer as we read it appears here. You can also type or paste it.', 'जैसा हमने आपका उत्तर पढ़ा, वह यहाँ दिखेगा। आप इसे टाइप या पेस्ट भी कर सकते हैं।')} />
               </label>
 
               <div className="ev-actions">
                 <button type="button" className="ds-btn ds-btn-line"
                   onClick={() => { setShowTranscript(false); setTranscript(''); setFiles([]); setPreviews([]); setPageImages([]); setError(null) }}>
-                  Upload again
+                  {L('Upload again', 'फिर से अपलोड करें')}
                 </button>
                 <button type="button" className="ds-btn ds-btn-solid ev-go" onClick={handleSubmit}
                   disabled={loading || profileLoading || !question.trim()}>
-                  {profileLoading ? 'One moment…' : 'Mark my answer'}
+                  {profileLoading ? L('One moment…', 'एक क्षण…') : L('Mark my answer', 'मेरे उत्तर का मूल्यांकन करें')}
                 </button>
               </div>
             </section>
@@ -509,13 +515,13 @@ export default function EvaluatePage() {
             <aside className="ev-aside">
               {previews.length > 0 && (
                 <div className="ev-side">
-                  <h2>Your pages</h2>
+                  <h2>{L('Your pages', 'आपके पृष्ठ')}</h2>
                   {pagesStrip}
                 </div>
               )}
               <div className="ev-side">
-                <h2>What to check</h2>
-                <p>Names are where handwriting readers slip most, so look at every thinker and scholar first. Then dates and numbers, whose digits can swap, and terms particular to {subjectLabel ?? 'your optional'}.</p>
+                <h2>{L('What to check', 'क्या जाँचें')}</h2>
+                <p>{L('Names are where handwriting readers slip most, so look at every thinker and scholar first. Then dates and numbers, whose digits can swap, and terms particular to', 'हस्तलिखित पाठ पढ़ते समय नामों में सबसे ज़्यादा गलती होती है, इसलिए पहले हर विचारक और विद्वान का नाम जाँचें। फिर तारीख़ें और संख्याएँ देखें, जिनके अंक बदल सकते हैं, और')} {subjectLabel ?? L('your optional', 'आपके वैकल्पिक विषय')}{L('.', 'से जुड़े शब्द जाँचें।')}</p>
               </div>
             </aside>
           </div>
@@ -525,24 +531,24 @@ export default function EvaluatePage() {
           <>
             <header className="ev-hero">
               <div className="ds-container">
-                <h1 className="ds-h1 ev-h1">Get your answer checked</h1>
+                <h1 className="ds-h1 ev-h1">{L('Get your answer checked', 'अपने उत्तर का मूल्यांकन करवाएँ')}</h1>
                 <p className="ds-lede ev-lede">
-                  Upload a photo or PDF of a handwritten answer. You get marks for each part, what worked, what to fix, and the thinkers it could have cited.
+                  {L('Upload a photo or PDF of a handwritten answer. You get marks for each part, what worked, what to fix, and the thinkers it could have cited.', 'हस्तलिखित उत्तर की फ़ोटो या PDF अपलोड करें। आपको हर हिस्से के अंक, क्या अच्छा रहा, क्या सुधारना है और किन विचारकों का उल्लेख किया जा सकता था—यह सब मिलेगा।')}
                 </p>
-                {subjectLabel && <span className="ev-subject"><span />Marked as {subjectLabel} optional</span>}
+                {subjectLabel && <span className="ev-subject"><span />{L('Marked as', 'वैकल्पिक विषय के रूप में')} {subjectLabel} {L('optional', 'चिह्नित')}</span>}
               </div>
             </header>
 
             <div className="ds-container ev-grid">
               <section className="ev-card">
                 <label className="ev-field">
-                  <span className="ev-label">Question</span>
+                  <span className="ev-label">{L('Question', 'प्रश्न')}</span>
                   <textarea className="ev-input" value={question} onChange={e => setQuestion(e.target.value)} rows={3}
-                    placeholder="Type or paste the question. Leave it empty and we'll read it off the top of your page." />
+                    placeholder={L("Type or paste the question. Leave it empty and we'll read it off the top of your page.", 'प्रश्न टाइप या पेस्ट करें। इसे खाली छोड़ें, तो हम आपके पृष्ठ के ऊपर से प्रश्न पढ़ लेंगे।')} />
                 </label>
 
                 <div className="ev-field">
-                  <span className="ev-label">Marks</span>
+                  <span className="ev-label">{L('Marks', 'अंक')}</span>
                   <MarksPicker marks={marks} setMarks={setMarks} />
                 </div>
 
@@ -550,15 +556,15 @@ export default function EvaluatePage() {
                   <div className="ev-signin">
                     <Mascot pose="peek" width={84} />
                     <div className="ev-signin-text">
-                      <strong>Sign in to have your answer checked</strong>
-                      <span>Your first evaluation is free.</span>
+                      <strong>{L('Sign in to have your answer checked', 'अपने उत्तर का मूल्यांकन करवाने के लिए साइन इन करें')}</strong>
+                      <span>{L('Your first evaluation is free.', 'आपका पहला मूल्यांकन मुफ़्त है।')}</span>
                     </div>
-                    <button type="button" className="ds-btn ds-btn-solid" onClick={goSignIn}>Sign in</button>
+                    <button type="button" className="ds-btn ds-btn-solid" onClick={goSignIn}>{L('Sign in', 'साइन इन करें')}</button>
                   </div>
                 ) : (
                   <>
                     <div className="ev-field">
-                      <span className="ev-label">Your answer</span>
+                      <span className="ev-label">{L('Your answer', 'आपका उत्तर')}</span>
                       <label
                         className={`ev-drop${drag ? ' drag' : ''}`}
                         onDragOver={e => { e.preventDefault(); setDrag(true) }}
@@ -566,8 +572,8 @@ export default function EvaluatePage() {
                         onDrop={onDrop}
                       >
                         <span className="ev-drop-icon"><UploadIcon /></span>
-                        <span className="ev-drop-title">Drop your pages here, or <u>choose files</u></span>
-                        <span className="ev-drop-sub">Photos or a PDF, up to 10 pages</span>
+                        <span className="ev-drop-title">{L('Drop your pages here, or', 'अपने पृष्ठ यहाँ छोड़ें, या')} <u>{L('choose files', 'फ़ाइलें चुनें')}</u></span>
+                        <span className="ev-drop-sub">{L('Photos or a PDF, up to 10 pages', 'फ़ोटो या PDF, अधिकतम 10 पृष्ठ')}</span>
                         <input type="file" accept="image/*,application/pdf" multiple className="ev-drop-input"
                           onChange={e => { addFiles(Array.from(e.target.files ?? [])); e.target.value = '' }} />
                       </label>
@@ -577,7 +583,7 @@ export default function EvaluatePage() {
                     {error && <div className="ev-err" role="alert">{error}</div>}
 
                     <button type="button" className="ds-btn ds-btn-solid ev-go ev-go-full" onClick={handleReadAnswer} disabled={!files.length || ocrLoading}>
-                      Read my answer
+                      {L('Read my answer', 'मेरा उत्तर पढ़ें')}
                     </button>
                   </>
                 )}
@@ -585,16 +591,16 @@ export default function EvaluatePage() {
 
               <aside className="ev-aside">
                 <div className="ev-side">
-                  <h2>How it works</h2>
+                  <h2>{L('How it works', 'यह कैसे काम करता है')}</h2>
                   <ol className="ev-how">
-                    <li><span>1</span><div><strong>Upload your pages</strong><p>Photos or a scanned PDF, up to 10 pages.</p></div></li>
-                    <li><span>2</span><div><strong>Check what we read</strong><p>We transcribe the handwriting, and you fix anything it got wrong.</p></div></li>
-                    <li><span>3</span><div><strong>Get it marked</strong><p>Marks for the introduction, body, conclusion and presentation, with feedback on each.</p></div></li>
+                    <li><span>1</span><div><strong>{L('Upload your pages', 'अपने पृष्ठ अपलोड करें')}</strong><p>{L('Photos or a scanned PDF, up to 10 pages.', 'फ़ोटो या स्कैन किया हुआ PDF, अधिकतम 10 पृष्ठ।')}</p></div></li>
+                    <li><span>2</span><div><strong>{L('Check what we read', 'हमने जो पढ़ा है, उसे जाँचें')}</strong><p>{L('We transcribe the handwriting, and you fix anything it got wrong.', 'हम हस्तलिखित उत्तर को टेक्स्ट में बदलेंगे और आप उसमें हुई गलतियाँ ठीक कर सकेंगे।')}</p></div></li>
+                    <li><span>3</span><div><strong>{L('Get it marked', 'मूल्यांकन करवाएँ')}</strong><p>{L('Marks for the introduction, body, conclusion and presentation, with feedback on each.', 'परिचय, मुख्य भाग, निष्कर्ष और प्रस्तुति के अंक, साथ ही हर हिस्से पर प्रतिक्रिया।')}</p></div></li>
                   </ol>
                 </div>
                 <div className="ev-side">
-                  <h2>For a clean read</h2>
-                  <p>Shoot in daylight from straight above, one page to a photo, with the whole page in frame. Blur and shadows are where names get misread.</p>
+                  <h2>{L('For a clean read', 'स्पष्ट पढ़ाई के लिए')}</h2>
+                  <p>{L('Shoot in daylight from straight above, one page to a photo, with the whole page in frame. Blur and shadows are where names get misread.', 'दिन की रोशनी में सीधे ऊपर से फ़ोटो लें। हर फ़ोटो में एक पूरा पृष्ठ रखें। धुंधलापन और परछाइयों से नाम गलत पढ़े जा सकते हैं।')}</p>
                 </div>
               </aside>
             </div>

@@ -12,6 +12,7 @@ import { normalizeIndianMobile } from '@/lib/phone';
 import SubjectIcon from '@/components/SubjectIcon';
 import Mascot from '@/components/Mascot';
 import { toast, toastSignInError } from '@/components/ui/Toast';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * Profile and settings on one page: who the reader is, their optional, the
@@ -33,6 +34,7 @@ const Icon = {
 export default function ProfileSettings() {
   const router = useRouter();
   const { user, loading } = useAuth();
+  const { L } = useLang();
 
   const [saved, setSaved] = useState<{ optional: string | null; phone: string }>({ optional: null, phone: '' });
   const [optional, setOptional] = useState<string | null>(null);
@@ -74,10 +76,10 @@ export default function ProfileSettings() {
     if (!user) return;
     const nextOptional = what === 'optional' ? optional : saved.optional;
     const number = normalizeIndianMobile(what === 'phone' ? phone : saved.phone);
-    if (!nextOptional) { toast('Pick your optional first.', 'error'); return; }
+    if (!nextOptional) { toast(L('Pick your optional first.', 'पहले अपना वैकल्पिक विषय चुनें।'), 'error'); return; }
     if (!number.ok) {
       if (what === 'phone') setPhoneError(number.error);
-      else toast('Add your mobile number below first.', 'error');
+      else toast(L('Add your mobile number below first.', 'पहले नीचे अपना मोबाइल नंबर जोड़ें।'), 'error');
       return;
     }
     setPhoneError(null);
@@ -91,7 +93,7 @@ export default function ProfileSettings() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => null);
-        toast(data?.error ?? 'Could not save. Try again in a moment.', 'error');
+        toast(data?.error ?? L('Could not save. Try again in a moment.', 'सहेजा नहीं जा सका। थोड़ी देर में फिर कोशिश करें।'), 'error');
         return;
       }
       const plain = number.phone.replace(/^\+91/, '');
@@ -99,12 +101,12 @@ export default function ProfileSettings() {
       setPhone(plain);
       if (what === 'optional') {
         publishOptional(nextOptional);
-        toast(`Your optional is now ${labelForOptional(nextOptional)}`);
+        toast(L(`Your optional is now ${labelForOptional(nextOptional)}`, `आपका वैकल्पिक विषय अब ${nextOptional === 'sociology' ? 'समाजशास्त्र' : nextOptional === 'anthropology' ? 'मानवशास्त्र' : nextOptional === 'geography' ? 'भूगोल' : nextOptional === 'political-science' ? 'PSIR' : 'लोक प्रशासन'} है।`));
       } else {
-        toast('Your number is saved');
+        toast(L('Your number is saved', 'आपका नंबर सहेज लिया गया है।'));
       }
     } catch {
-      toast('Could not save. Check your connection.', 'error');
+      toast(L('Could not save. Check your connection.', 'सहेजा नहीं जा सका। अपना इंटरनेट कनेक्शन जाँचें।'), 'error');
     } finally {
       setSaving(null);
     }
@@ -137,21 +139,24 @@ export default function ProfileSettings() {
         <style dangerouslySetInnerHTML={{ __html: PF_CSS }} />
         <div className="pf-wrap pf-signin">
           <Mascot pose="peek" width={120} />
-          <h1>Sign in to continue</h1>
-          <p>Your profile and settings are kept on your account.</p>
-          <button type="button" className="pf-google" onClick={handleSignIn} disabled={signingIn}>
-            {Icon.google}{signingIn ? 'Opening Google…' : 'Sign in with Google'}
+            <h1>{L('Sign in to continue', 'जारी रखने के लिए साइन इन करें')}</h1>
+            <p>{L('Your profile and settings are kept on your account.', 'आपकी प्रोफ़ाइल और सेटिंग्स आपके खाते में सुरक्षित रहती हैं।')}</p>
+            <button type="button" className="pf-google" onClick={handleSignIn} disabled={signingIn}>
+              {Icon.google}{signingIn ? L('Opening Google…', 'Google खुल रहा है…') : L('Sign in with Google', 'Google से साइन इन करें')}
           </button>
         </div>
       </div>
     );
   }
 
-  const name = user.displayName || 'UPSC aspirant';
+  const name = user.displayName || L('UPSC aspirant', 'UPSC अभ्यर्थी');
   const savedLabel = labelForOptional(saved.optional);
   const paidLabel = labelForOptional(sub?.optional);
+  const savedLabelHi = savedLabel ? L(savedLabel, saved.optional === 'sociology' ? 'समाजशास्त्र' : saved.optional === 'anthropology' ? 'मानवशास्त्र' : saved.optional === 'geography' ? 'भूगोल' : saved.optional === 'political-science' ? 'PSIR' : 'लोक प्रशासन') : null;
+  const paidLabelHi = paidLabel ? L(paidLabel, sub?.optional === 'sociology' ? 'समाजशास्त्र' : sub?.optional === 'anthropology' ? 'मानवशास्त्र' : sub?.optional === 'geography' ? 'भूगोल' : sub?.optional === 'political-science' ? 'PSIR' : 'लोक प्रशासन') : null;
   const leavingPaid = Boolean(sub?.optional && optional && optional !== sub.optional);
   const planLabel = sub ? (PLANS[sub.plan as keyof typeof PLANS]?.label ?? (sub.plan === 'referral' ? 'Invite reward' : 'Premium')) : null;
+  const planLabelHi = planLabel ? L(planLabel, planLabel === 'Daily' ? 'दैनिक' : planLabel === '6 Months' ? '6 महीने' : planLabel === 'Yearly' ? 'वार्षिक' : planLabel === 'Invite reward' ? 'आमंत्रण पुरस्कार' : 'प्रीमियम') : null;
   const planDays = sub?.daysLeft ?? 0;
   const initial = (user.displayName?.[0] ?? user.email?.[0] ?? '?').toUpperCase();
 
@@ -160,8 +165,8 @@ export default function ProfileSettings() {
       <style dangerouslySetInnerHTML={{ __html: PF_CSS }} />
       <div className="pf-wrap">
         <div className="pf-top">
-          <Link href="/dashboard" className="pf-back" aria-label="Back to your dashboard">{Icon.back}</Link>
-          <h1>Profile and settings</h1>
+          <Link href="/dashboard" className="pf-back" aria-label={L('Back to your dashboard', 'अपने डैशबोर्ड पर वापस जाएँ')}>{Icon.back}</Link>
+          <h1>{L('Profile and settings', 'प्रोफ़ाइल और सेटिंग्स')}</h1>
         </div>
 
         <header className="pf-who">
@@ -173,17 +178,17 @@ export default function ProfileSettings() {
           </span>
           <div className="pf-who-text">
             <strong>{name}</strong>
-            <span>{savedLabel ? `${savedLabel} optional · ${user.email}` : user.email}</span>
+            <span>{savedLabel ? `${savedLabelHi} ${L('optional', 'वैकल्पिक विषय')} · ${user.email}` : user.email}</span>
           </div>
-          <span className={`pf-plan${sub ? ' premium' : ''}`}>{sub ? `${planLabel}` : 'Free plan'}</span>
+          <span className={`pf-plan${sub ? ' premium' : ''}`}>{sub ? planLabelHi : L('Free plan', 'मुफ़्त प्लान')}</span>
         </header>
 
         <section className="pf-sec">
           <div className="pf-sec-head">
-            <h2>Your optional</h2>
-            <p>Your notes, past questions, chat and evaluations are all set to it.</p>
+            <h2>{L('Your optional', 'आपका वैकल्पिक विषय')}</h2>
+            <p>{L('Your notes, past questions, chat and evaluations are all set to it.', 'आपके नोट्स, पिछले प्रश्न, चैट और मूल्यांकन इसी विषय के लिए हैं।')}</p>
           </div>
-          <div className="pf-opts" role="radiogroup" aria-label="Optional">
+          <div className="pf-opts" role="radiogroup" aria-label={L('Optional', 'वैकल्पिक विषय')}>
             {(Object.keys(OPTIONALS) as OptionalId[]).map((id) => {
               const on = optional === id;
               const slug = routeSlugForOptional(id);
@@ -194,83 +199,83 @@ export default function ProfileSettings() {
                   style={{ ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` }}>
                   <span className="pf-opt-icon"><SubjectIcon id={id} size={20} /></span>
                   <span className="pf-opt-text">
-                    <strong>{OPTIONALS[id].label}</strong>
-                    {saved.optional === id && <span>Current</span>}
+                    <strong>{L(OPTIONALS[id].label, id === 'sociology' ? 'समाजशास्त्र' : id === 'anthropology' ? 'मानवशास्त्र' : id === 'geography' ? 'भूगोल' : id === 'political-science' ? 'PSIR' : 'लोक प्रशासन')}</strong>
+                    {saved.optional === id && <span>{L('Current', 'वर्तमान')}</span>}
                   </span>
                 </button>
               );
             })}
           </div>
           {leavingPaid && paidLabel && (
-            <p className="pf-note">Your Premium plan is for {paidLabel}, and it stays with {paidLabel}. {labelForOptional(optional)} would be on the free plan. Switching back to {paidLabel} brings Premium back.</p>
+            <p className="pf-note">{L(`Your Premium plan is for ${paidLabel}, and it stays with ${paidLabel}. ${labelForOptional(optional)} would be on the free plan. Switching back to ${paidLabel} brings Premium back.`, `आपका प्रीमियम प्लान ${paidLabelHi} के लिए है और उसी के साथ रहेगा। ${optional === 'sociology' ? 'समाजशास्त्र' : optional === 'anthropology' ? 'मानवशास्त्र' : optional === 'geography' ? 'भूगोल' : optional === 'political-science' ? 'PSIR' : 'लोक प्रशासन'} मुफ़्त प्लान पर होगा। ${paidLabelHi} पर वापस जाने से प्रीमियम फिर मिल जाएगा।`)}</p>
           )}
           <div className="pf-save-row">
-            {optional !== saved.optional && <button type="button" className="ds-btn ds-btn-line pf-btn" onClick={() => setOptional(saved.optional)}>Keep {savedLabel ?? 'it'}</button>}
+            {optional !== saved.optional && <button type="button" className="ds-btn ds-btn-line pf-btn" onClick={() => setOptional(saved.optional)}>{L(`Keep ${savedLabel ?? 'it'}`, `${savedLabelHi ?? 'इसे'} बनाए रखें`)}</button>}
             <button type="button" className="ds-btn ds-btn-solid pf-btn" onClick={() => save('optional')} disabled={optional === saved.optional || saving !== null}>
-              {saving === 'optional' ? 'Saving…' : 'Save'}
+              {saving === 'optional' ? L('Saving…', 'सहेजा जा रहा है…') : L('Save', 'सहेजें')}
             </button>
           </div>
         </section>
 
         <section className="pf-sec">
           <div className="pf-sec-head">
-            <h2>Your account</h2>
-            <p>How you sign in, the number we reach you on, and your plan.</p>
+            <h2>{L('Your account', 'आपका खाता')}</h2>
+            <p>{L('How you sign in, the number we reach you on, and your plan.', 'आप कैसे साइन इन करते हैं, आपसे संपर्क करने का नंबर और आपका प्लान।')}</p>
           </div>
           <div className="pf-rows">
             <div className="pf-row">
-              <div><strong>Email</strong><span>{user.email}</span></div>
+              <div><strong>{L('Email', 'ईमेल')}</strong><span>{user.email}</span></div>
             </div>
             <div className="pf-row">
               <div style={{ flex: 1 }}>
-                <strong>Mobile number</strong>
-                <span>So we can reach you about new features, materials, offers and discounts.</span>
+                <strong>{L('Mobile number', 'मोबाइल नंबर')}</strong>
+                <span>{L('So we can reach you about new features, materials, offers and discounts.', 'नई सुविधाओं, अध्ययन सामग्री, ऑफ़र और छूट के बारे में आपसे संपर्क करने के लिए।')}</span>
                 <div className="pf-phone-row">
                   <div className="pf-phone">
                     <span>+91</span>
-                    <input type="tel" inputMode="numeric" autoComplete="tel-national" maxLength={10} placeholder="10-digit mobile number"
-                      value={phone} disabled={!profileReady} aria-label="Mobile number" aria-invalid={phoneError ? true : undefined}
+                    <input type="tel" inputMode="numeric" autoComplete="tel-national" maxLength={10} placeholder={L('10-digit mobile number', '10 अंकों का मोबाइल नंबर')}
+                      value={phone} disabled={!profileReady} aria-label={L('Mobile number', 'मोबाइल नंबर')} aria-invalid={phoneError ? true : undefined}
                       onChange={(e) => { setPhone(e.target.value.replace(/\D/g, '').slice(0, 10)); if (phoneError) setPhoneError(null); }} />
                   </div>
                   {phone !== saved.phone && (
                     <button type="button" className="ds-btn ds-btn-solid pf-btn" onClick={() => save('phone')} disabled={saving !== null}>
-                      {saving === 'phone' ? 'Saving…' : 'Save number'}
+                      {saving === 'phone' ? L('Saving…', 'सहेजा जा रहा है…') : L('Save number', 'नंबर सहेजें')}
                     </button>
                   )}
                 </div>
-                {phoneError && <p className="pf-err" role="alert">{phoneError}</p>}
+                {phoneError && <p className="pf-err" role="alert">{phoneError === 'Enter a 10-digit Indian mobile number.' ? L('Enter a 10-digit Indian mobile number.', '10 अंकों का भारतीय मोबाइल नंबर दर्ज करें।') : phoneError === 'That number is not a real mobile number.' ? L('That number is not a real mobile number.', 'यह वास्तविक मोबाइल नंबर नहीं है।') : phoneError}</p>}
               </div>
             </div>
             <div className="pf-row">
               <div>
-                <strong>Plan</strong>
+                <strong>{L('Plan', 'प्लान')}</strong>
                 <span>
-                  {sub === undefined ? 'Loading…'
-                    : sub ? `${planLabel} for ${paidLabel ?? 'your optional'}, ${planDays} day${planDays === 1 ? '' : 's'} left`
-                      : 'Free plan'}
+                  {sub === undefined ? L('Loading…', 'लोड हो रहा है…')
+                    : sub ? L(`${planLabel} for ${paidLabel ?? 'your optional'}, ${planDays} day${planDays === 1 ? '' : 's'} left`, `${planLabelHi} · ${paidLabelHi ?? 'आपका वैकल्पिक विषय'} के लिए, ${planDays} दिन शेष`)
+                      : L('Free plan', 'मुफ़्त प्लान')}
                 </span>
               </div>
-              <Link href="/pricing" className={`ds-btn pf-btn ${sub ? 'ds-btn-line' : 'ds-btn-premium'}`}>{sub ? 'See plans' : 'Upgrade'}</Link>
+              <Link href="/pricing" className={`ds-btn pf-btn ${sub ? 'ds-btn-line' : 'ds-btn-premium'}`}>{sub ? L('See plans', 'प्लान देखें') : L('Upgrade', 'अपग्रेड करें')}</Link>
             </div>
           </div>
         </section>
 
         <section className="pf-sec">
           <div className="pf-sec-head">
-            <h2>Settings</h2>
-            <p>These apply straight away, on this device.</p>
+            <h2>{L('Settings', 'सेटिंग्स')}</h2>
+            <p>{L('These apply straight away, on this device.', 'ये बदलाव इसी डिवाइस पर तुरंत लागू होते हैं।')}</p>
           </div>
           <div className="pf-rows">
             <div className="pf-row">
-              <div><strong>Theme</strong><span>Paper or dark</span></div>
-              <div className="pf-seg" role="radiogroup" aria-label="Theme">
-                <button type="button" role="radio" aria-checked={!dark} className={!dark ? 'on' : ''} onClick={() => pickTheme(false)}>Light</button>
-                <button type="button" role="radio" aria-checked={dark} className={dark ? 'on' : ''} onClick={() => pickTheme(true)}>Dark</button>
+              <div><strong>{L('Theme', 'थीम')}</strong><span>{L('Paper or dark', 'हल्की या गहरी')}</span></div>
+              <div className="pf-seg" role="radiogroup" aria-label={L('Theme', 'थीम')}>
+                <button type="button" role="radio" aria-checked={!dark} className={!dark ? 'on' : ''} onClick={() => pickTheme(false)}>{L('Light', 'हल्की')}</button>
+                <button type="button" role="radio" aria-checked={dark} className={dark ? 'on' : ''} onClick={() => pickTheme(true)}>{L('Dark', 'गहरी')}</button>
               </div>
             </div>
             <div className="pf-row">
-              <div><strong>Sign out</strong><span>Your notes and progress stay on your account.</span></div>
-              <button type="button" className="ds-btn ds-btn-line pf-btn pf-danger" onClick={handleSignOut}>Sign out</button>
+              <div><strong>{L('Sign out', 'साइन आउट')}</strong><span>{L('Your notes and progress stay on your account.', 'आपके नोट्स और प्रगति आपके खाते में सुरक्षित रहेंगे।')}</span></div>
+              <button type="button" className="ds-btn ds-btn-line pf-btn pf-danger" onClick={handleSignOut}>{L('Sign out', 'साइन आउट')}</button>
             </div>
           </div>
         </section>

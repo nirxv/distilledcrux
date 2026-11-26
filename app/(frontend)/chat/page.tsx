@@ -6,6 +6,7 @@ import owlReadingArt from '@/public/mascot/owl-reading.svg';
 import { marked } from 'marked';
 import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
+import { useLang } from '@/lib/i18n/LangContext';
 import { auth } from '@/lib/firebase';
 import { fixSentenceSpacing } from '@/lib/textSpacing';
 import { notesForSubject } from '@/lib/notes';
@@ -467,7 +468,7 @@ function ChatContent() {
   const initialQ = searchParams.get('q') || '';
   const initialTopic = searchParams.get('topic') || '';
   const rawSubject = searchParams.get('subject') as SubjectKey | null;
-  const langHi = searchParams.get('lang') === 'hi';
+  const { langHi } = useLang();
   // ?subject= when a page links here; otherwise the reader's own optional,
   // read from their profile once sign-in has settled.
   const [subject, setSubject] = useState<SubjectKey>(rawSubject && SUBJECTS.includes(rawSubject) ? rawSubject : 'sociology');

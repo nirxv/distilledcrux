@@ -8,16 +8,18 @@ import SubjectIcon from '@/components/SubjectIcon';
 import OwlLoader from '@/components/OwlLoader';
 import { labelForOptional, publishOptional, routeSlugForOptional } from '@/lib/optionals';
 import SplitShell from '@/components/onboarding/SplitShell';
+import { useLang } from '@/lib/i18n/LangContext';
 
 const optionals = [
-  { id: 'sociology',             label: 'Sociology' },
-  { id: 'anthropology',          label: 'Anthropology' },
-  { id: 'geography',             label: 'Geography' },
-  { id: 'political-science',     label: 'PSIR' },
-  { id: 'public-administration', label: 'Public Administration' },
+  { id: 'sociology',             label: 'Sociology', labelHi: 'समाजशास्त्र' },
+  { id: 'anthropology',          label: 'Anthropology', labelHi: 'मानवशास्त्र' },
+  { id: 'geography',             label: 'Geography', labelHi: 'भूगोल' },
+  { id: 'political-science',     label: 'PSIR', labelHi: 'PSIR' },
+  { id: 'public-administration', label: 'Public Administration', labelHi: 'लोक प्रशासन' },
 ];
 
 function OnboardingInner() {
+  const { L } = useLang();
   const router = useRouter();
   const searchParams = useSearchParams();
   const isChanging = searchParams.get('change') === '1';
@@ -113,16 +115,20 @@ function OnboardingInner() {
         router.push(next ?? '/dashboard');
       } else {
         const data = await res.json().catch(() => null);
-        setPhoneError(data?.error ?? 'Could not save. Please try again.');
+        setPhoneError(
+          data?.error === 'Could not save your profile.'
+            ? L(data.error, 'आपकी प्रोफ़ाइल सेव नहीं हो सकी।')
+            : data?.error ?? L('Could not save. Please try again.', 'सेव नहीं हो सका। कृपया फिर से कोशिश करें।'),
+        );
         setSaving(false);
       }
     } catch {
-      setPhoneError('Could not save. Please check your connection.');
+      setPhoneError(L('Could not save. Please check your connection.', 'सेव नहीं हो सका। कृपया अपना इंटरनेट कनेक्शन जाँचें।'));
       setSaving(false);
     }
   };
 
-  if (loading) return <OwlLoader size="page" label="Getting your profile" />;
+  if (loading) return <OwlLoader size="page" label={L('Getting your profile', 'आपकी प्रोफ़ाइल लोड हो रही है')} />;
 
   // The flow, one question to a screen. Someone changing their optional who
   // already gave a number answers only the first; someone here only for the
@@ -133,19 +139,25 @@ function OnboardingInner() {
   const last = at === steps.length - 1;
   const canNext = screen === 'optional' ? Boolean(selected) : normalizeIndianMobile(phone).ok;
 
-  const paidLabel = labelForOptional(paidFor);
+  const displayOptional = (id: string | null) => {
+    const optional = optionals.find((opt) => opt.id === id);
+    return optional ? L(optional.label, optional.labelHi) : labelForOptional(id);
+  };
+  const paidLabel = displayOptional(paidFor);
+  const currentLabel = displayOptional(current);
+  const selectedLabel = displayOptional(selected);
   const leavingPaid = Boolean(paidFor && selected && selected !== paidFor);
 
   const title = screen === 'phone'
-    ? (phoneOnly ? 'Add your mobile number' : 'Your mobile number')
-    : isChanging ? 'Change your optional' : 'Which optional are you taking?';
+    ? (phoneOnly ? L('Add your mobile number', 'अपना मोबाइल नंबर जोड़ें') : L('Your mobile number', 'आपका मोबाइल नंबर'))
+    : isChanging ? L('Change your optional', 'अपना वैकल्पिक विषय बदलें') : L('Which optional are you taking?', 'आप कौन-सा वैकल्पिक विषय ले रहे हैं?');
   const lede = screen === 'phone'
     ? (phoneOnly
-        ? 'We ask everyone for one now, so we can reach you about new features, materials, offers and discounts. Your optional stays as it is.'
-        : 'So we can reach you about new features, materials, offers and discounts.')
+        ? L('We ask everyone for one now, so we can reach you about new features, materials, offers and discounts. Your optional stays as it is.', 'अब हम सभी से मोबाइल नंबर माँगते हैं, ताकि नई सुविधाओं, सामग्री, ऑफ़र और छूट के बारे में आपसे संपर्क कर सकें। आपका वैकल्पिक विषय पहले जैसा ही रहेगा।')
+        : L('So we can reach you about new features, materials, offers and discounts.', 'ताकि नई सुविधाओं, सामग्री, ऑफ़र और छूट के बारे में आपसे संपर्क कर सकें।'))
     : isChanging
-      ? 'Your notes, past questions, chat and evaluations will all switch to the new one.'
-      : 'Your notes, past questions, chat and evaluations are all set to it. You can change it later from your profile.';
+      ? L('Your notes, past questions, chat and evaluations will all switch to the new one.', 'आपके नोट्स, पिछले प्रश्न, चैट और मूल्यांकन सभी नए वैकल्पिक विषय पर चले जाएँगे।')
+      : L('Your notes, past questions, chat and evaluations are all set to it. You can change it later from your profile.', 'आपके नोट्स, पिछले प्रश्न, चैट और मूल्यांकन इसी वैकल्पिक विषय के लिए हैं। आप इसे बाद में अपनी प्रोफ़ाइल से बदल सकते हैं।');
 
   return (
     <SplitShell pose={screen === 'phone' ? 'celebrate' : 'reading'} tint={routeSlugForOptional(selected)} steps={steps.length} step={at}>
@@ -156,7 +168,7 @@ function OnboardingInner() {
       <div className="sp-content">
         {screen === 'optional' ? (
           <>
-            <div className="ob-opts" role="radiogroup" aria-label="Optional">
+            <div className="ob-opts" role="radiogroup" aria-label={L('Optional', 'वैकल्पिक विषय')}>
               {optionals.map((opt) => {
                 const on = selected === opt.id;
                 const slug = routeSlugForOptional(opt.id);
@@ -167,8 +179,8 @@ function OnboardingInner() {
                     style={slug ? { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` } : undefined}>
                     <span className="ob-opt-icon"><SubjectIcon id={opt.id} size={20} /></span>
                     <span className="ob-opt-text">
-                      <span className="ob-opt-label">{opt.label}</span>
-                      {isChanging && current === opt.id && <span className="ob-opt-now">Current</span>}
+                      <span className="ob-opt-label">{L(opt.label, opt.labelHi)}</span>
+                      {isChanging && current === opt.id && <span className="ob-opt-now">{L('Current', 'वर्तमान')}</span>}
                     </span>
                   </button>
                 );
@@ -176,13 +188,13 @@ function OnboardingInner() {
             </div>
             {leavingPaid && paidLabel && (
               <p className="ob-note">
-                Your Premium plan is for {paidLabel}, and it stays with {paidLabel}. {labelForOptional(selected)} would be on the free plan. Switching back to {paidLabel} brings Premium back.
+                {L('Your Premium plan is for', 'आपका Premium प्लान')} {paidLabel}{L(', and it stays with', ' के लिए है और')} {paidLabel}{L('.', ' के साथ ही रहेगा')} {selectedLabel} {L('would be on the free plan. Switching back to', 'निःशुल्क प्लान पर होगा। वापस')} {paidLabel} {L('brings Premium back.', 'चुनने पर Premium फिर से मिल जाएगा।')}
               </p>
             )}
           </>
         ) : (
           <>
-            <label htmlFor="phone" className="ob-label">Mobile number <i aria-hidden="true">*</i></label>
+            <label htmlFor="phone" className="ob-label">{L('Mobile number', 'मोबाइल नंबर')} <i aria-hidden="true">*</i></label>
             <div className={`ob-phone${phoneError ? ' bad' : ''}`}>
               <span>+91</span>
               <input
@@ -191,7 +203,7 @@ function OnboardingInner() {
                 inputMode="numeric"
                 autoComplete="tel-national"
                 autoFocus
-                placeholder="10-digit mobile number"
+                placeholder={L('10-digit mobile number', '10 अंकों का मोबाइल नंबर')}
                 value={phone}
                 // Ten digits is the whole alphabet of this field, so anything
                 // else is dropped as it is typed rather than rejected afterwards.
@@ -206,9 +218,15 @@ function OnboardingInner() {
               />
             </div>
             {phoneError ? (
-              <p id="phone-error" role="alert" className="ob-hint bad">{phoneError}</p>
+              <p id="phone-error" role="alert" className="ob-hint bad">
+                {phoneError === 'Enter a 10-digit Indian mobile number.'
+                  ? L(phoneError, '10 अंकों का भारतीय मोबाइल नंबर दर्ज करें।')
+                  : phoneError === 'That number is not a real mobile number.'
+                    ? L(phoneError, 'यह एक मान्य मोबाइल नंबर नहीं है।')
+                    : phoneError}
+              </p>
             ) : (
-              <p id="phone-hint" className="ob-hint">Kept private, and never shared with anyone.</p>
+              <p id="phone-hint" className="ob-hint">{L('Kept private, and never shared with anyone.', 'इसे गोपनीय रखा जाएगा और किसी के साथ साझा नहीं किया जाएगा।')}</p>
             )}
           </>
         )}
@@ -216,17 +234,17 @@ function OnboardingInner() {
 
       <div className="sp-nav">
         {at > 0 ? (
-          <button type="button" className="ds-btn ds-btn-line" onClick={() => setStep(at - 1)}>{ARROW_LEFT}Previous</button>
+          <button type="button" className="ds-btn ds-btn-line" onClick={() => setStep(at - 1)}>{ARROW_LEFT}{L('Previous', 'पिछला')}</button>
         ) : isChanging ? (
-          <button type="button" className="ds-btn ds-btn-line" onClick={() => router.push(next ?? '/dashboard')}>Keep {labelForOptional(current) ?? 'my optional'}</button>
+          <button type="button" className="ds-btn ds-btn-line" onClick={() => router.push(next ?? '/dashboard')}>{L('Keep', 'बनाए रखें')} {currentLabel ?? L('my optional', 'मेरा वैकल्पिक विषय')}</button>
         ) : null}
         <div className="sp-right">
           {last ? (
             <button type="button" className="ds-btn ds-btn-solid" onClick={handleContinue} disabled={!canNext || saving}>
-              {saving ? 'Saving…' : isChanging ? 'Save' : 'Continue'}{!saving && ARROW_RIGHT}
+              {saving ? L('Saving…', 'सहेजा जा रहा है…') : isChanging ? L('Save', 'सेव करें') : L('Continue', 'जारी रखें')}{!saving && ARROW_RIGHT}
             </button>
           ) : (
-            <button type="button" className="ds-btn ds-btn-solid" onClick={() => setStep(at + 1)} disabled={!canNext}>Next{ARROW_RIGHT}</button>
+            <button type="button" className="ds-btn ds-btn-solid" onClick={() => setStep(at + 1)} disabled={!canNext}>{L('Next', 'आगे')}{ARROW_RIGHT}</button>
           )}
         </div>
       </div>
@@ -238,8 +256,9 @@ const ARROW_LEFT = <svg width="16" height="16" viewBox="0 0 24 24" fill="none" s
 const ARROW_RIGHT = <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>;
 
 export default function Onboarding() {
+  const { L } = useLang();
   return (
-    <Suspense fallback={<OwlLoader size="page" label="Getting your profile" />}>
+    <Suspense fallback={<OwlLoader size="page" label={L('Getting your profile', 'आपकी प्रोफ़ाइल लोड हो रही है')} />}>
       <OnboardingInner />
     </Suspense>
   );

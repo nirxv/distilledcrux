@@ -3,38 +3,50 @@ import { notFound } from 'next/navigation';
 import Link from '@/components/Link';
 import SubjectIcon from '@/components/SubjectIcon';
 import NotesBrowser, { type BrowserNote } from '@/components/notes/NotesBrowser';
+import { HiText } from '@/components/ui/HiText';
 import { NOTE_SUBJECTS, isNoteSubject, notesForSubject } from '@/lib/notes';
+import { getSubjectCatalogueHi, getSectionsHi } from '@/lib/notesHi';
 
 /**
  * Every note for one optional. This replaces five copies of the same page,
  * one per subject, that had drifted apart in colour and layout.
  */
 
-const SUBJECTS: Record<string, { name: string; description: string; lede: string }> = {
+const SUBJECTS: Record<string, { name: string; description: string; descriptionHi: string; lede: string; ledeHi: string }> = {
   sociology: {
     name: 'Sociology',
     description: 'Free notes for every topic of UPSC Sociology Optional, Papers I and II: the thinkers, research methods, Indian society and social change.',
+    descriptionHi: 'UPSC समाजशास्त्र वैकल्पिक विषय के पेपर I और II के हर विषय के लिए निःशुल्क नोट्स: विचारक, शोध पद्धतियाँ, भारतीय समाज और सामाजिक परिवर्तन।',
     lede: 'From the founding thinkers to caste, kinship and change in India, cut down to what an answer actually uses.',
+    ledeHi: 'प्रमुख विचारकों से लेकर जाति, नातेदारी और भारत में बदलाव तक—सिर्फ़ वही, जिसका उत्तर में सचमुच उपयोग हो।',
   },
   anthropology: {
     name: 'Anthropology',
     description: 'Free notes for every topic of UPSC Anthropology Optional, Papers I and II: human evolution, genetics, archaeology and tribal India.',
+    descriptionHi: 'UPSC मानवशास्त्र वैकल्पिक विषय के पेपर I और II के हर विषय के लिए निःशुल्क नोट्स: मानव विकास, आनुवंशिकी, पुरातत्व और जनजातीय भारत।',
     lede: 'From fossils and genetics to kinship, religion and tribal India, cut down to what an answer actually uses.',
+    ledeHi: 'जीवाश्मों और आनुवंशिकी से लेकर नातेदारी, धर्म और जनजातीय भारत तक—सिर्फ़ वही, जिसका उत्तर में सचमुच उपयोग हो।',
   },
   polsci: {
     name: 'PSIR',
     description: 'Free notes for every topic of UPSC PSIR Optional, Papers I and II: political theory, Indian government, comparative politics and international relations.',
+    descriptionHi: 'UPSC PSIR वैकल्पिक विषय के पेपर I और II के हर विषय के लिए निःशुल्क नोट्स: राजनीतिक सिद्धांत, भारतीय शासन, तुलनात्मक राजनीति और अंतरराष्ट्रीय संबंध।',
     lede: 'From Plato and Rawls to the Constitution and India’s place in the world, cut down to what an answer actually uses.',
+    ledeHi: 'प्लेटो और रॉल्स से लेकर संविधान और दुनिया में भारत की जगह तक—सिर्फ़ वही, जिसका उत्तर में सचमुच उपयोग हो।',
   },
   geography: {
     name: 'Geography',
     description: 'Free notes for every topic of UPSC Geography Optional, Papers I and II: physical, human and Indian geography and regional planning.',
+    descriptionHi: 'UPSC भूगोल वैकल्पिक विषय के पेपर I और II के हर विषय के लिए निःशुल्क नोट्स: भौतिक, मानव और भारतीय भूगोल तथा क्षेत्रीय नियोजन।',
     lede: 'From landforms and climate to India’s resources and regions, cut down to what an answer actually uses.',
+    ledeHi: 'भू-आकृतियों और जलवायु से लेकर भारत के संसाधनों और क्षेत्रों तक—सिर्फ़ वही, जिसका उत्तर में सचमुच उपयोग हो।',
   },
   'pub-admin': {
     name: 'Public Administration',
     description: 'Free notes for every topic of UPSC Public Administration Optional, Papers I and II: administrative theory and Indian administration.',
+    descriptionHi: 'UPSC लोक प्रशासन वैकल्पिक विषय के पेपर I और II के हर विषय के लिए निःशुल्क नोट्स: प्रशासनिक सिद्धांत और भारतीय प्रशासन।',
     lede: 'From Weber and Simon to the district and the CAG, cut down to what an answer actually uses.',
+    ledeHi: 'वेबर और साइमन से लेकर ज़िले और CAG तक—सिर्फ़ वही, जिसका उत्तर में सचमुच उपयोग हो।',
   },
 };
 
@@ -75,15 +87,20 @@ export default async function SubjectNotesPage({ params }: { params: Promise<{ s
             </Link>
             <div className="ni-title">
               <span className="ni-icon" aria-hidden="true"><SubjectIcon id={subject} size={24} /></span>
-              <h1 className="ds-h1">{s.name} notes</h1>
+              <h1 className="ds-h1"><HiText en={`${s.name} notes`} hi={`${s.name} के नोट्स`} /></h1>
             </div>
-            <p className="ds-lede ni-lede">{s.lede} {notes.length} topics, free with your account.</p>
+            <p className="ds-lede ni-lede">
+              <HiText
+                en={<>{s.lede} {notes.length} topics, free with your account.</>}
+                hi={<>{s.ledeHi} {notes.length} विषय, आपके खाते के साथ निःशुल्क।</>}
+              />
+            </p>
           </div>
         </section>
 
         <section className="ni-body">
           <div className="ds-container">
-            <NotesBrowser subject={subject} subjectName={s.name} notes={notes} />
+            <NotesBrowser subject={subject} subjectName={s.name} notes={notes} notesHi={getSubjectCatalogueHi(subject)} sectionsHi={getSectionsHi(subject)} />
           </div>
         </section>
       </div>

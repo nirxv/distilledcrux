@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from '@/components/Link';
 import { PLANS, PLAN_ORDER, rupees, type PlanId } from '@/lib/plans';
 import { useOffer } from '@/hooks/useOffer';
+import { useLang } from '@/lib/i18n/LangContext';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import SubjectIcon from '@/components/SubjectIcon';
@@ -52,14 +53,14 @@ const COMPARE: { what: string; free: string; premium: string }[] = [
 ];
 
 const faqs = [
-  { q: 'Is there a free tier?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.` },
-  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every topper copy in one optional (${topperSubjectList('or')}) for a year, side-by-side compare included, paid once. Like a plan, it works while that optional is the one on your profile. A Premium plan for the optional includes them, so there is no need for both.` }] : []),
-  { q: 'How do invites work?', a: 'Share your link from the Invite page. When a friend buys their first yearly plan through it, they pay ₹100 less and you get ₹100 in your balance. The balance comes off your own yearly plan at checkout, and once you have a yearly plan you can also cash it out to UPI.' },
-  { q: 'Do plans renew on their own?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.' },
-  { q: 'Which optionals are supported?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.' },
-  { q: 'Can I buy for more than one optional?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.' },
-  { q: 'What payment methods are accepted?', a: 'UPI, debit and credit cards, and net banking, through Razorpay.' },
-  { q: 'Is there a refund policy?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages. Contact us within 7 days.' },
+  { q: 'Is there a free tier?', qHi: 'क्या कोई निःशुल्क स्तर है?', a: `Yes. A free account opens every note and past question, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}. No payment card needed.`, aHi: `हाँ। निःशुल्क खाते से हर नोट और हर पिछला प्रश्न, तीन AI चैट, एक उत्तर मूल्यांकन${TOPPER_COPIES_LIVE ? ', 100 फ़्लैशकार्ड उत्तर और पाँच टॉपर प्रतियाँ' : ' और 100 फ़्लैशकार्ड उत्तर'} खुलते हैं। कार्ड की ज़रूरत नहीं।` },
+  ...(TOPPER_COPIES_LIVE ? [{ q: 'Can I buy just the topper copies?', qHi: 'क्या मैं केवल टॉपर प्रतियाँ खरीद सकता हूँ?', a: `Yes. ₹${TOPPER_PASS_RUPEES} opens every topper copy in one optional (${topperSubjectList('or')}) for a year, side-by-side compare included, paid once. Like a plan, it works while that optional is the one on your profile. A Premium plan for the optional includes them, so there is no need for both.`, aHi: `हाँ। ₹${TOPPER_PASS_RUPEES} में एक वैकल्पिक विषय (${topperSubjectList('or')}) की हर टॉपर प्रति एक वर्ष के लिए खुलती है, साथ-साथ तुलना सहित, एक ही भुगतान में। योजना की तरह यह तब तक काम करती है जब तक वही विषय आपकी प्रोफ़ाइल पर है। उस विषय की प्रीमियम योजना में ये शामिल हैं, इसलिए दोनों की ज़रूरत नहीं।` }] : []),
+  { q: 'How do invites work?', qHi: 'आमंत्रण कैसे काम करते हैं?', a: 'Share your link from the Invite page. When a friend buys their first yearly plan through it, they pay ₹100 less and you get ₹100 in your balance. The balance comes off your own yearly plan at checkout, and once you have a yearly plan you can also cash it out to UPI.', aHi: 'आमंत्रण पृष्ठ से अपना लिंक साझा कीजिए। जब कोई मित्र उससे अपनी पहली वार्षिक योजना खरीदता है, तो वह ₹100 कम देता है और आपके बैलेंस में ₹100 आते हैं। भुगतान के समय यह बैलेंस आपकी वार्षिक योजना से घट जाता है, और वार्षिक योजना होने पर आप इसे UPI में निकाल भी सकते हैं।' },
+  { q: 'Do plans renew on their own?', qHi: 'क्या योजनाएँ अपने आप नवीनीकृत होती हैं?', a: 'No. Each plan is a single payment for a fixed time. When it runs out you can pick any plan, and buying while one is active adds the time on top.', aHi: 'नहीं। प्रत्येक योजना निश्चित अवधि के लिए एक ही भुगतान है। अवधि पूरी होने पर आप कोई भी योजना चुन सकते हैं, और चालू योजना के रहते खरीदने पर समय उसके ऊपर जुड़ जाता है।' },
+  { q: 'Which optionals are supported?', qHi: 'कौन-से वैकल्पिक विषय उपलब्ध हैं?', a: 'Sociology, Anthropology, PSIR, Geography and Public Administration. History is at historyoptional.xyz.', aHi: 'समाजशास्त्र, मानवशास्त्र, PSIR, भूगोल और लोक प्रशासन। इतिहास historyoptional.xyz पर है।' },
+  { q: 'Can I buy for more than one optional?', qHi: 'क्या मैं एक से अधिक वैकल्पिक विषय के लिए खरीद सकता हूँ?', a: 'Each optional is a separate purchase, and a plan covers the optional you pick at checkout. If you change your optional later, the plan stays with the one you paid for.', aHi: 'प्रत्येक वैकल्पिक विषय अलग खरीद है, और योजना भुगतान के समय चुने गए विषय को कवर करती है। बाद में विषय बदलने पर योजना उसी के साथ रहती है जिसके लिए भुगतान किया।' },
+  { q: 'What payment methods are accepted?', qHi: 'कौन-से भुगतान तरीके स्वीकार हैं?', a: 'UPI, debit and credit cards, and net banking, through Razorpay.', aHi: 'Razorpay के माध्यम से UPI, डेबिट और क्रेडिट कार्ड तथा नेट बैंकिंग।' },
+  { q: 'Is there a refund policy?', qHi: 'क्या धनवापसी नीति है?', a: 'All purchases are final and non-refundable. Exceptions only for duplicate charges or extended platform outages. Contact us within 7 days.', aHi: 'सभी खरीद अंतिम और अ-वापसी योग्य हैं। अपवाद केवल दोहरे शुल्क या लंबे प्लेटफ़ॉर्म बंद के लिए। 7 दिन के भीतर संपर्क कीजिए।' },
 ];
 
 declare global {
@@ -89,6 +90,7 @@ function loadRazorpay(): Promise<void> {
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 
 export default function PricingPage() {
+  const { L } = useLang();
   const offer = useOffer();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -261,9 +263,9 @@ export default function PricingPage() {
       <div className="pr ds" style={tint}>
         <header className="pr-hero">
           <div className="ds-container">
-            <h1 className="ds-h1 pr-h1">Plans and pricing</h1>
+            <h1 className="ds-h1 pr-h1">{L('Plans and pricing', 'योजनाएँ और मूल्य')}</h1>
             <p className="ds-lede pr-lede">
-              Notes and past questions are free with your account. Premium opens everything else for one optional, for as long as you buy. Nothing renews on its own.
+              {L('Notes and past questions are free with your account. Premium opens everything else for one optional, for as long as you buy. Nothing renews on its own.', 'नोट्स और पिछले प्रश्न आपके खाते के साथ निःशुल्क हैं। प्रीमियम एक वैकल्पिक विषय के लिए बाक़ी सब कुछ उतनी अवधि तक खोलता है जितनी आप खरीदते हैं। कुछ भी अपने आप नवीनीकृत नहीं होता।')}
             </p>
             {offer && <p className="pr-offer">{offer.line}</p>}
             <InvitedNote className="pr-offer" />
@@ -272,7 +274,7 @@ export default function PricingPage() {
 
         <div className="ds-container">
           <section className="pr-step">
-            <h2 className="pr-h2">Which optional is this for?</h2>
+            <h2 className="pr-h2">{L('Which optional is this for?', 'यह किस वैकल्पिक विषय के लिए है?')}</h2>
             <div className="pr-opts" role="radiogroup" aria-label="Optional">
               {OPTIONALS.map((opt) => {
                 const on = selectedOptional === opt.id;
@@ -357,7 +359,7 @@ export default function PricingPage() {
 
           {TOPPER_COPIES_LIVE && (
             <section className="pr-pass">
-              <h2 className="pr-h2">Only want the topper copies?</h2>
+              <h2 className="pr-h2">{L('Only want the topper copies?', 'केवल टॉपर प्रतियाँ चाहिए?')}</h2>
               <div className="pr-pass-list">
                 <article className="pr-plan pr-pass-card">
                   <div className="pr-plan-top">
@@ -394,7 +396,7 @@ export default function PricingPage() {
           </p>
 
           <section className="pr-compare-wrap">
-            <h2 className="pr-h2">What Premium opens</h2>
+            <h2 className="pr-h2">{L('What Premium opens', 'प्रीमियम में क्या मिलता है')}</h2>
             <div className="pr-compare" role="table" aria-label="Free account and Premium compared">
               <div className="pr-row pr-row-head" role="row">
                 <span role="columnheader" />
@@ -412,12 +414,12 @@ export default function PricingPage() {
           </section>
 
           <section className="pr-faq">
-            <h2 className="pr-h2">Common questions</h2>
+            <h2 className="pr-h2">{L('Common questions', 'सामान्य प्रश्न')}</h2>
             <div className="pr-faq-list">
               {faqs.map((f) => (
                 <details key={f.q} className="pr-faq-item">
-                  <summary>{f.q}</summary>
-                  <p>{f.a}</p>
+                  <summary>{L(f.q, f.qHi)}</summary>
+                  <p>{L(f.a, f.aHi)}</p>
                 </details>
               ))}
             </div>
@@ -426,11 +428,11 @@ export default function PricingPage() {
           <section className="pr-close">
             <Mascot pose="peek" width={92} />
             <div className="pr-close-text">
-              <h2>Not sure yet?</h2>
-              <p>Start with the free account: every note, every past question, three chats, one evaluation{TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.</p>
+              <h2>{L('Not sure yet?', 'अभी तय नहीं?')}</h2>
+              <p>{L(`Start with the free account: every note, every past question, three chats, one evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.`, `निःशुल्क खाते से शुरू कीजिए: हर नोट, हर पिछला प्रश्न, तीन चैट, एक मूल्यांकन${TOPPER_COPIES_LIVE ? ', 100 फ़्लैशकार्ड उत्तर और पाँच टॉपर प्रतियाँ' : ' और 100 फ़्लैशकार्ड उत्तर'}।`)}</p>
             </div>
             <Link href={signedIn ? '/dashboard' : '/login?next=/dashboard'} className="ds-btn ds-btn-line">
-              {signedIn ? 'Go to your dashboard' : 'Sign in free'}
+              {signedIn ? L('Go to your dashboard', 'अपने डैशबोर्ड पर जाएँ') : L('Sign in free', 'निःशुल्क साइन इन करें')}
             </Link>
           </section>
         </div>

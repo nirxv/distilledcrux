@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from '@/components/Link';
+import { HiText } from '@/components/ui/HiText';
 
 const DOCS = [
   { id: 'privacy', label: 'Privacy', href: '/privacy' },
@@ -29,6 +30,7 @@ export default function LegalDoc({ current, title, updated, children }: {
         </nav>
         <h1 className="lgd-title">{title}</h1>
         <p className="lgd-meta">{updated}</p>
+        <HiText en={null} hi={<p className="lgd-meta">यह पृष्ठ अंग्रेज़ी में है; कानूनी रूप से अंग्रेज़ी पाठ ही मान्य है।</p>} />
         <article className="lgd-body">{children}</article>
       </div>
     </main>

@@ -1,5 +1,6 @@
 'use client';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
 import { rankLine, type TopperCopy } from '@/lib/toppers/meta';
 import TopperPdf from './TopperPdf';
 import { gateFor, useTopperStatus } from './useTopperStatus';
@@ -20,6 +21,7 @@ type Props = {
  * with.
  */
 export default function TopperCopyView({ subject, subjectName, copy, others, pyqs }: Props) {
+  const { L } = useLang();
   const allowance = useTopperStatus(subject);
   const left = Math.max(0, allowance.limit - allowance.used);
 
@@ -30,7 +32,7 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
           <div className="tv-meta">
             <span className="tv-paper">{copy.paper}</span>
             <Link href={`/${subject}/topper-copies?topic=${encodeURIComponent(copy.topic)}`} className="tv-topic">{copy.topic}</Link>
-            <span className="tv-marks">{copy.marks} marks</span>
+            <span className="tv-marks">{copy.marks} {L('marks', 'अंक')}</span>
           </div>
           <h1 className="tv-q">{copy.question}</h1>
           <p className="tv-who">
@@ -39,7 +41,9 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
           </p>
           {pyqs.length > 0 && (
             <div className="tv-asked">
-              <span className="tv-asked-label">This answer would answer {pyqs.length === 1 ? 'a UPSC question' : `${pyqs.length} UPSC questions`}</span>
+              <span className="tv-asked-label">{pyqs.length === 1
+                ? L('This answer would answer a UPSC question', 'यह उत्तर UPSC के एक प्रश्न का उत्तर देगा')
+                : L(`This answer would answer ${pyqs.length} UPSC questions`, `यह उत्तर UPSC के ${pyqs.length} प्रश्नों का उत्तर देगा`)}</span>
               <ul>
                 {pyqs.map((p) => (
                   <li key={p.id}>
@@ -61,35 +65,35 @@ export default function TopperCopyView({ subject, subjectName, copy, others, pyq
       <aside className="tv-aside">
         {others.length > 0 ? (
           <div className="tv-side">
-            <h2 className="tv-side-title">Other toppers on this question</h2>
+            <h2 className="tv-side-title">{L('Other toppers on this question', 'इस प्रश्न पर अन्य टॉपर')}</h2>
             <ul className="tv-others">
               {others.map((o) => (
                 <li key={o.id}>
                   <Link href={`/${subject}/topper-copies/${o.id}`} prefetch={false} className="tv-other">
                     <span className="tv-other-name">{o.topper}</span>
                     <span className="tv-other-rank">{rankLine(o)}</span>
-                    {allowance.opened.has(o.id) && <span className="tv-opened">Opened</span>}
+                    {allowance.opened.has(o.id) && <span className="tv-opened">{L('Opened', 'खोला गया')}</span>}
                   </Link>
-                  <Link href={`/${subject}/topper-copies/compare?a=${copy.id}&b=${o.id}`} prefetch={false} rel="nofollow" className="tv-cmp">Compare</Link>
+                  <Link href={`/${subject}/topper-copies/compare?a=${copy.id}&b=${o.id}`} prefetch={false} rel="nofollow" className="tv-cmp">{L('Compare', 'तुलना करें')}</Link>
                 </li>
               ))}
             </ul>
           </div>
         ) : (
           <div className="tv-side">
-            <h2 className="tv-side-title">Only one topper so far</h2>
-            <p className="tv-side-text">No other topper&apos;s answer to this question is in the collection yet.</p>
+            <h2 className="tv-side-title">{L('Only one topper so far', 'अभी तक केवल एक टॉपर')}</h2>
+            <p className="tv-side-text">{L('No other topper&apos;s answer to this question is in the collection yet.', 'इस प्रश्न के किसी अन्य टॉपर का उत्तर अभी संग्रह में नहीं है।')}</p>
           </div>
         )}
         <div className="tv-side">
-          <h2 className="tv-side-title">How to read it</h2>
+          <h2 className="tv-side-title">{L('How to read it', 'इसे कैसे पढ़ें')}</h2>
           <p className="tv-side-text">
-            Look at how the answer opens, how it is divided, and where the examples, thinkers and diagrams go.
-            Then write your own and have it checked.
+            {L('Look at how the answer opens, how it is divided, and where the examples, thinkers and diagrams go.', 'देखें कि उत्तर की शुरुआत कैसे होती है, इसे कैसे बाँटा गया है, और उदाहरण, विचारक व आरेख कहाँ दिए गए हैं।')}
+            {' '}{L('Then write your own and have it checked.', 'फिर अपना उत्तर लिखें और उसकी जाँच करवाएँ।')}
           </p>
-          <Link href={`/evaluate?question=${encodeURIComponent(copy.question)}&marks=${copy.marks}`} className="ds-btn ds-btn-line ds-btn-sm">Write your answer</Link>
+          <Link href={`/evaluate?question=${encodeURIComponent(copy.question)}&marks=${copy.marks}`} className="ds-btn ds-btn-line ds-btn-sm">{L('Write your answer', 'अपना उत्तर लिखें')}</Link>
         </div>
-        <Link href={`/${subject}/topper-copies`} className="tv-all">All {subjectName} topper copies</Link>
+        <Link href={`/${subject}/topper-copies`} className="tv-all">{L(`All ${subjectName} topper copies`, `${subjectName} के सभी टॉपर उत्तर`)}</Link>
       </aside>
     </div>
   );

@@ -69,7 +69,9 @@ export async function POST(req: NextRequest) {
   const marks = markBand(body.marks);
   const topic = typeof body.topic === 'string' ? body.topic.slice(0, 120) : '';
 
-  const system = `${writingRules(config)}
+  const hi = body.lang === 'hi';
+  const HINDI_NOTE = "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). The whole model answer, every heading, bullet, the analysis and the conclusion: everything in Hindi. Keep the same format, with the section headings in Hindi too.";
+  const system = `${writingRules(config)}${hi ? HINDI_NOTE : ''}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WRITING THE ANSWER
@@ -95,7 +97,7 @@ with no preamble, no commentary on your own writing, and no marking scheme.`;
 
   const prompt = `QUESTION (${marks} marks): ${body.question}${topic ? `\nTOPIC: ${topic}` : ''}
 
-Write the model answer now:`;
+Write the model answer now${hi ? ', entirely in Hindi (Devanagari script)' : ''}:`;
 
   try {
     const stream = claudeClient().messages.stream(claudeRequest({

@@ -9,9 +9,13 @@ import Mascot from '@/components/Mascot';
 import { rememberNote } from '@/lib/lastNote';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
 import { confirmDialog } from '@/components/ui/ConfirmDialog';
+import { useLang } from '@/lib/i18n/LangContext';
 
 const SUBJECT_NAME: Record<string, string> = {
   sociology: 'Sociology', anthropology: 'Anthropology', polsci: 'PSIR', geography: 'Geography', 'pub-admin': 'Public Administration',
+};
+const SUBJECT_NAME_HI: Record<string, string> = {
+  sociology: 'समाजशास्त्र', anthropology: 'मानवशास्त्र', polsci: 'PSIR', geography: 'भूगोल', 'pub-admin': 'लोक प्रशासन',
 };
 
 // Below this width the sidebar floats over the note instead of sitting beside it.
@@ -97,10 +101,10 @@ function injectHeadingIds(html: string): string {
 type Highlight = { id: string; text: string; color: 'yellow' | 'green' | 'red' | 'blue' };
 
 const HIGHLIGHT_COLORS = [
-  { id: 'yellow', label: 'Gold',  color: '#c9a84c' },
-  { id: 'green',  label: 'Mint',  color: '#4cad7a' },
-  { id: 'red',    label: 'Rose',  color: '#c94c4c' },
-  { id: 'blue',   label: 'Sky',   color: '#4c8bc9' },
+  { id: 'yellow', label: 'Gold',  labelHi: 'सुनहरा', color: '#c9a84c' },
+  { id: 'green',  label: 'Mint',  labelHi: 'पुदीना', color: '#4cad7a' },
+  { id: 'red',    label: 'Rose',  labelHi: 'गुलाबी', color: '#c94c4c' },
+  { id: 'blue',   label: 'Sky',   labelHi: 'आसमानी', color: '#4c8bc9' },
 ];
 
 // ── Note Search Hook ──────────────────────────────────────────
@@ -237,6 +241,7 @@ type NavLink = { slug: string; title: string } | null;
  */
 // ── Table of Contents ─────────────────────────────────────────
 function TableOfContents({ contentHtml }: { contentHtml: string }) {
+  const { L } = useLang();
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
   const [open, setOpen] = useState(false);
 
@@ -260,8 +265,8 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
   return (
     <div className={`nr-toc${open ? ' open' : ''}`}>
       <button type="button" className="nr-toc-toggle" onClick={() => setOpen(o => !o)} aria-expanded={open}>
-        <span>On this page</span>
-        <span className="nr-toc-count">{entries.filter(e => e.level === 2).length} sections</span>
+        <span>{L('On this page', 'इस पेज पर')}</span>
+        <span className="nr-toc-count">{entries.filter(e => e.level === 2).length} {L('sections', 'खंड')}</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nr-toc-chev" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
       </button>
       {open && (
@@ -292,6 +297,7 @@ function TableOfContents({ contentHtml }: { contentHtml: string }) {
 // ── Sidebar contents ──────────────────────────────────────────
 /** The same headings as the inline card, laid out for a 240px column. */
 function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNavigate?: () => void }) {
+  const { L } = useLang();
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
 
   useEffect(() => {
@@ -322,7 +328,7 @@ function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNaviga
   if (!entries.length) return null;
   return (
     <>
-      <div className="sb-section-label as-heading"><span>Contents</span></div>
+      <div className="sb-section-label as-heading"><span>{L('Contents', 'विषय-सूची')}</span></div>
       <nav className="sb-toc" ref={navRef}>
         {entries.map(t => (
           <button
@@ -360,6 +366,7 @@ function SidebarTOC({ contentHtml, onNavigate }: { contentHtml: string; onNaviga
  * ticks would be smaller than a fingertip.
  */
 function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: string }) {
+  const { L } = useLang();
   const [entries, setEntries] = useState<{ id: string; text: string; level: 2 | 3 }[]>([]);
   const [pct, setPct] = useState(0);
   const [open, setOpen] = useState(false);
@@ -429,7 +436,7 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
           type="button"
           className="nr-rail-thumb"
           onClick={() => setOpen(o => !o)}
-          title="Contents"
+          title={L('Contents', 'विषय-सूची')}
           style={{ top: pct * (trackH - THUMB), height: THUMB, background: accent,
                    boxShadow: `0 0 ${open ? 16 : 8}px color-mix(in srgb, ${accent} ${open ? 80 : 45}%, transparent)` }}
         >
@@ -438,11 +445,11 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
       </div>
 
       {open && (
-        <div className="nr-rail-panel" role="dialog" aria-label="Contents">
+          <div className="nr-rail-panel" role="dialog" aria-label={L('Contents', 'विषय-सूची')}>
           <div className="nr-rail-panel-head">
             <span className="nr-rail-dot" style={{ background: accent, boxShadow: `0 0 8px ${accent}` }} />
-            <span className="nr-rail-panel-title" style={{ color: accent }}>On this page</span>
-            <button type="button" className="nr-rail-close" onClick={() => setOpen(false)} aria-label="Close contents">
+            <span className="nr-rail-panel-title" style={{ color: accent }}>{L('On this page', 'इस पेज पर')}</span>
+            <button type="button" className="nr-rail-close" onClick={() => setOpen(false)} aria-label={L('Close contents', 'विषय-सूची बंद करें')}>
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
               </svg>
@@ -453,7 +460,7 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
             <div style={{ width: `${pct * 100}%`, background: accent, boxShadow: `0 0 8px ${accent}` }} />
           </div>
         
-          <nav className="nr-rail-list" aria-label="Headings">
+          <nav className="nr-rail-list" aria-label={L('Headings', 'शीर्षक')}>
             {entries.map(t => {
               const on = activeId === t.id;
               return (
@@ -473,7 +480,7 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
           </nav>
         
           <div className="nr-rail-foot">
-            <span>READ</span>
+            <span>{L('READ', 'पढ़ें')}</span>
             <span style={{ color: accent }}>{Math.round(pct * 100)}%</span>
           </div>
         </div>
@@ -482,12 +489,19 @@ function ScrollRail({ contentHtml, accent }: { contentHtml: string; accent: stri
   );
 }
 
+/**
+ * Hindi bodies already fetched this visit. Toggling language must not refetch
+ * a note the reader has already read, and opening it again should be instant.
+ */
+const hiCache = new Map<string, string>();
+
 export default function NoteReader({
-  slug, subject, initialContent = '', note, prev, next,
+  slug, subject, initialContent = '', note, noteHi, prev, next,
 }: {
   slug: string;
   subject: string;
   initialContent?: string;
+  noteHi?: { title: string; description: string; subtopics: string[]; section: string } | null;
   note: {
     title: string;
     section: string;
@@ -569,7 +583,34 @@ export default function NoteReader({
   const isDone = tracker.ready && tracker.isCompleted(doneKey);
   const [authLoading, setAuthLoading] = useState(true);
 
-  const processedContent = injectHeadingIds(initialContent);
+  // Hindi bodies are fetched per note, not bundled: an English reader must
+  // never download the Hindi corpus to read one English note.
+  const { langHi, L } = useLang();
+  const [hi, setHi] = useState<{ slug: string; html: string } | null>(null);
+  useEffect(() => {
+    if (!langHi) return;
+    const key = `${subject}/${slug}`;
+    const cached = hiCache.get(key);
+    if (cached !== undefined) { setHi({ slug, html: cached }); return; }
+    let alive = true;
+    fetch(`/api/note-content?subject=${encodeURIComponent(subject)}&slug=${encodeURIComponent(slug)}&lang=hi`)
+      .then((r) => (r.ok ? r.json() : { html: '' }))
+      .then((d) => {
+        const html = typeof d.html === 'string' ? d.html : '';
+        hiCache.set(key, html);
+        if (alive) setHi({ slug, html });
+      })
+      .catch(() => { /* keep the loader; a retry happens on the next visit */ });
+    return () => { alive = false; };
+  }, [langHi, subject, slug]);
+
+  const hiLoading = langHi && hi?.slug !== slug;
+  const content = langHi ? (hi?.slug === slug ? hi.html : '') : initialContent;
+  const shownTitle = langHi && noteHi ? noteHi.title : note.title;
+  const shownDescription = langHi && noteHi ? noteHi.description : note.description;
+  const shownSection = langHi && noteHi ? noteHi.section : note.section;
+  const shownSubtopics = langHi && noteHi ? noteHi.subtopics : note.subtopics;
+  const processedContent = injectHeadingIds(content);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, u => { setUser(u); setAuthLoading(false); });
@@ -582,8 +623,8 @@ export default function NoteReader({
 
   // The dashboard offers to pick up here.
   useEffect(() => {
-    rememberNote({ subject, slug, title: note.title, section: note.section, at: Date.now() });
-  }, [subject, slug, note.title, note.section]);
+    rememberNote({ subject, slug, title: shownTitle, section: shownSection, at: Date.now() });
+  }, [subject, slug, shownTitle, shownSection]);
 
   // Persist highlights to localStorage
   useEffect(() => {
@@ -689,14 +730,15 @@ export default function NoteReader({
   if (!note) {
     return (
       <div style={{ maxWidth: 760, margin: '4rem auto', padding: '2rem', textAlign: 'center' }}>
-        <div style={{ color: 'var(--text3)', fontSize: '0.9rem', fontWeight: 500 }}>Note not found.</div>
-        <Link href={`/notes/${subject}`} style={{ color: 'var(--accent)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 500 }}>← Back to {subject}</Link>
+        <div style={{ color: 'var(--text3)', fontSize: '0.9rem', fontWeight: 500 }}>{L('Note not found.', 'नोट नहीं मिला।')}</div>
+        <Link href={`/notes/${subject}`} style={{ color: 'var(--accent)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 500 }}>{L('← Back to', '← वापस जाएँ:')} {subject}</Link>
       </div>
     );
   }
 
   const subjectName = SUBJECT_NAME[subject] ?? subject;
-  const minutes = readingMinutes(initialContent);
+  const shownSubjectName = SUBJECT_NAME[subject] ? L(subjectName, SUBJECT_NAME_HI[subject]) : subjectName;
+  const minutes = readingMinutes(content);
   const tint = { ['--t' as string]: `var(--tint-${subject})`, ['--w' as string]: `var(--wash-${subject})` };
   const gated = !user && !authLoading && Boolean(displayContent);
 
@@ -708,11 +750,11 @@ export default function NoteReader({
       {/* ── Sidebar ── */}
       {/* Tap-anywhere-else to dismiss, which the floating panel never had. */}
       <div className="nr-backdrop" onClick={closeSidebar} aria-hidden="true" />
-      <aside className="nr-sidebar" aria-label="Note sidebar">
+      <aside className="nr-sidebar" aria-label={L('Note sidebar', 'नोट साइडबार')}>
         <div className="nr-sidebar-inner">
           {/* The header toggle scrolls out of reach on a phone, so the panel
               carries its own close control. */}
-          <button type="button" className="nr-sb-close" onClick={closeSidebar} aria-label="Close sidebar">
+          <button type="button" className="nr-sb-close" onClick={closeSidebar} aria-label={L('Close sidebar', 'साइडबार बंद करें')}>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
               <line x1="4" y1="4" x2="12" y2="12" /><line x1="12" y1="4" x2="4" y2="12" />
             </svg>
@@ -721,10 +763,10 @@ export default function NoteReader({
           <div className="sb-head">
             <span className="sb-chip">
               <span className="sb-chip-dot" />
-              {subjectName} · Paper {note.paper === 1 ? 'I' : 'II'}
+              {subjectName} · {L('Paper', 'पेपर')} {note.paper === 1 ? 'I' : 'II'}
             </span>
-            <h2 className="sb-title">{note.title}</h2>
-            <p className="sb-sub">{note.section}</p>
+            <h2 className="sb-title">{shownTitle}</h2>
+            <p className="sb-sub">{shownSection}</p>
           </div>
 
           {processedContent && (
@@ -736,17 +778,17 @@ export default function NoteReader({
 
           {(prev || next) && (
             <>
-              <div className="sb-section-label as-heading"><span>Before and after</span></div>
+              <div className="sb-section-label as-heading"><span>{L('Before and after', 'पहले और बाद में')}</span></div>
               <nav className="sb-related">
                 {prev && (
                   <Link className="sb-rel" href={`/notes/${subject}/${prev.slug}`}>
-                    <span className="sb-rel-dir">Previous</span>
+                    <span className="sb-rel-dir">{L('Previous', 'पिछला')}</span>
                     <span className="sb-rel-title">{prev.title}</span>
                   </Link>
                 )}
                 {next && (
                   <Link className="sb-rel" href={`/notes/${subject}/${next.slug}`}>
-                    <span className="sb-rel-dir">Next</span>
+                    <span className="sb-rel-dir">{L('Next', 'अगला')}</span>
                     <span className="sb-rel-title">{next.title}</span>
                   </Link>
                 )}
@@ -767,28 +809,28 @@ export default function NoteReader({
         <button type="button" className={`nr-pill nr-sb-toggle${sidebarOpen ? ' on' : ''}`}
           onClick={() => (sidebarOpen ?? !floating() ? closeSidebar() : openSidebar())}
           aria-expanded={sidebarOpen ?? undefined}
-          title="Show or hide the contents">
+          title={L('Show or hide the contents', 'विषय-सूची दिखाएँ या छिपाएँ')}>
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="1.8" y="2.5" width="12.4" height="11" rx="1.6" />
             <line x1="6.3" y1="2.5" x2="6.3" y2="13.5" />
           </svg>
-          <span>Contents</span>
+          <span>{L('Contents', 'विषय-सूची')}</span>
         </button>
 
-        <nav className="nr-crumbs" aria-label="Breadcrumb">
-          <Link href="/notes">Notes</Link>
+        <nav className="nr-crumbs" aria-label={L('Breadcrumb', 'ब्रेडक्रंब')}>
+          <Link href="/notes">{L('Notes', 'नोट्स')}</Link>
           <span aria-hidden="true">›</span>
-          <Link href={`/notes/${subject}`}>{subjectName}</Link>
+          <Link href={`/notes/${subject}`}>{shownSubjectName}</Link>
         </nav>
 
         <div className="nr-bar-actions">
           {user && tracker.ready && (
             <button type="button" className={`nr-pill${isDone ? ' on done' : ''}`} onClick={() => tracker.toggle(doneKey)} aria-pressed={isDone}
-              title={isDone ? 'Done. Tap to untick' : 'Mark this topic done'}>
+              title={isDone ? L('Done. Tap to untick', 'हो गया। हटाने के लिए टैप करें') : L('Mark this topic done', 'इस विषय को पूरा चिह्नित करें')}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 {isDone ? <><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.8 2.8L16.5 9.5" /></> : <circle cx="12" cy="12" r="9" />}
               </svg>
-              <span>{isDone ? 'Done' : 'Mark done'}</span>
+              <span>{isDone ? L('Done', 'पूरा हुआ') : L('Mark done', 'पूरा चिह्नित करें')}</span>
             </button>
           )}
           <button type="button"
@@ -799,13 +841,13 @@ export default function NoteReader({
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
             </svg>
-            <span>{annotationMode === 'highlight' ? 'Highlighting' : 'Highlight'}</span>
+            <span>{annotationMode === 'highlight' ? L('Highlighting', 'हाइलाइट कर रहे हैं') : L('Highlight', 'हाइलाइट करें')}</span>
           </button>
-          <Link className="nr-pill accent" href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`}>
+          <Link className="nr-pill accent" href={`/chat?topic=${encodeURIComponent(shownTitle)}&subject=${subject}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
-            <span>Ask the AI</span>
+            <span>{L('Ask the AI', 'AI से पूछें')}</span>
           </Link>
         </div>
       </div>
@@ -813,18 +855,18 @@ export default function NoteReader({
       {/* ── Highlight colours (when highlighting) ── */}
       {annotationMode === 'highlight' && (
         <div className="nr-hlbar">
-          <span className="nr-hlbar-label">Select some text, then pick a colour.</span>
+          <span className="nr-hlbar-label">{L('Select some text, then pick a colour.', 'कुछ टेक्स्ट चुनें, फिर रंग चुनें।')}</span>
           <div className="nr-hlbar-colours">
             {HIGHLIGHT_COLORS.map(c => (
               <button key={c.id} type="button" onClick={() => setSelectedColor(c.id as typeof selectedColor)}
                 className={`nr-swatch${selectedColor === c.id ? ' on' : ''}`}
-                style={{ ['--sw' as string]: c.color }} title={c.label} aria-label={c.label} />
+                style={{ ['--sw' as string]: c.color }} title={L(c.label, c.labelHi)} aria-label={L(c.label, c.labelHi)} />
             ))}
           </div>
-          {highlights.length > 0 && <span className="nr-hlbar-note">Tap a highlight to remove it.</span>}
+          {highlights.length > 0 && <span className="nr-hlbar-note">{L('Tap a highlight to remove it.', 'हाइलाइट हटाने के लिए उस पर टैप करें।')}</span>}
           {highlights.length > 0 && (
-            <button type="button" className="nr-hlbar-clear" onClick={async () => { if (await confirmDialog({ title: 'Clear all your highlights from this note?', confirmLabel: 'Clear all', tone: 'danger' })) setHighlights([]); }}>
-              Clear all
+            <button type="button" className="nr-hlbar-clear" onClick={async () => { if (await confirmDialog({ title: L('Clear all your highlights from this note?', 'क्या इस नोट से आपके सभी हाइलाइट हटाएँ?'), confirmLabel: L('Clear all', 'सभी हटाएँ'), tone: 'danger' })) setHighlights([]); }}>
+              {L('Clear all', 'सभी हटाएँ')}
             </button>
           )}
         </div>
@@ -835,12 +877,12 @@ export default function NoteReader({
         <div className="nr-float" style={{ left: toolbarPos.x, top: toolbarPos.y }}>
           {HIGHLIGHT_COLORS.map(c => (
             <button key={c.id} type="button" onMouseDown={e => e.preventDefault()} onClick={() => applyHighlight(c.id as typeof selectedColor)}
-              title={c.label} aria-label={`Highlight in ${c.label}`} className="nr-float-swatch" style={{ ['--sw' as string]: c.color }} />
+              title={L(c.label, c.labelHi)} aria-label={L(`Highlight in ${c.label}`, `${c.labelHi} रंग से हाइलाइट करें`)} className="nr-float-swatch" style={{ ['--sw' as string]: c.color }} />
           ))}
           {selectionHighlighted && (
             <>
               <span className="nr-float-rule" />
-              <button type="button" onMouseDown={e => e.preventDefault()} onClick={removeHighlight} title="Remove highlight" aria-label="Remove highlight" className="nr-float-btn">
+              <button type="button" onMouseDown={e => e.preventDefault()} onClick={removeHighlight} title={L('Remove highlight', 'हाइलाइट हटाएँ')} aria-label={L('Remove highlight', 'हाइलाइट हटाएँ')} className="nr-float-btn">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 20H9L4 15a2 2 0 0 1 0-3l8-8a2 2 0 0 1 3 0l5 5a2 2 0 0 1 0 3l-7 7"/><path d="M6 13l6 6"/>
                 </svg>
@@ -848,7 +890,7 @@ export default function NoteReader({
             </>
           )}
           <span className="nr-float-rule" />
-          <button type="button" onClick={() => setShowToolbar(false)} className="nr-float-btn" aria-label="Close">
+          <button type="button" onClick={() => setShowToolbar(false)} className="nr-float-btn" aria-label={L('Close', 'बंद करें')}>
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
@@ -861,15 +903,15 @@ export default function NoteReader({
         <article className="nr-article">
           <header className="nr-head">
             <div className="nr-meta">
-              <span className="nr-paper">Paper {note.paper === 1 ? 'I' : 'II'}</span>
-              <span>{note.section}</span>
-              {initialContent && <span>{minutes} min read</span>}
+              <span className="nr-paper">{L('Paper', 'पेपर')} {note.paper === 1 ? 'I' : 'II'}</span>
+              <span>{shownSection}</span>
+              {content && <span>{L(`${minutes} min read`, `${minutes} मिनट पढ़ें`)}</span>}
             </div>
-            <h1 className="nr-title">{note.title}</h1>
-            <p className="nr-desc">{note.description}</p>
-            {note.subtopics && note.subtopics.length > 0 && (
+            <h1 className="nr-title">{shownTitle}</h1>
+            <p className="nr-desc">{shownDescription}</p>
+            {shownSubtopics && shownSubtopics.length > 0 && (
               <div className="nr-subs">
-                {note.subtopics.map(st => <span key={st}>{st}</span>)}
+                {shownSubtopics.map(st => <span key={st}>{st}</span>)}
               </div>
             )}
           </header>
@@ -880,7 +922,12 @@ export default function NoteReader({
           <div className="nr-body">
             <div ref={noteContentRef} className="note-content"
               onClick={handleContentClick}
-              dangerouslySetInnerHTML={{ __html: displayContent || '<p class="nr-empty">These notes are on their way. Check back soon.</p>' }}
+              dangerouslySetInnerHTML={{ __html: hiLoading
+                ? '<p class="nr-empty">लोड हो रहा है…</p>'
+                : displayContent || L(
+                  '<p class="nr-empty">These notes are on their way. Check back soon.</p>',
+                  '<p class="nr-empty">ये नोट्स जल्द आ रहे हैं। बाद में देखिए।</p>',
+                ) }}
               style={gated ? { maxHeight: '140vh', overflow: 'hidden', pointerEvents: 'none', userSelect: 'none' } : undefined}
             />
 
@@ -889,9 +936,9 @@ export default function NoteReader({
               <div className="nr-gate">
                 <div className="nr-gate-card">
                   <Mascot pose="reading" width={76} />
-                  <div className="nr-gate-title">Sign in to keep reading</div>
-                  <p>A free account opens the whole note, and keeps your highlights and notes with you.</p>
-                  <button type="button" onClick={handleSignIn} className="ds-btn ds-btn-solid nr-gate-btn">Sign in free</button>
+                  <div className="nr-gate-title">{L('Sign in to keep reading', 'आगे पढ़ने के लिए साइन इन करें')}</div>
+                  <p>{L('A free account opens the whole note, and keeps your highlights and notes with you.', 'एक मुफ़्त अकाउंट से पूरा नोट खुलता है और आपके हाइलाइट व नोट्स आपके साथ सुरक्षित रहते हैं।')}</p>
+                  <button type="button" onClick={handleSignIn} className="ds-btn ds-btn-solid nr-gate-btn">{L('Sign in free', 'मुफ़्त में साइन इन करें')}</button>
                 </div>
               </div>
             )}
@@ -901,21 +948,21 @@ export default function NoteReader({
           {user && tracker.ready && !gated && displayContent && (
             <div className={`nr-finish${isDone ? ' done' : ''}`}>
               <span className="nr-finish-text">
-                <strong>{isDone ? 'You’ve marked this topic done' : 'Finished this topic?'}</strong>
-                <span>{isDone ? 'It counts towards your syllabus on the dashboard.' : 'Tick it off and it counts towards your syllabus on the dashboard.'}</span>
+                    <strong>{isDone ? L('You’ve marked this topic done', 'आपने इस विषय को पूरा चिह्नित किया है') : L('Finished this topic?', 'क्या आपने यह विषय पूरा कर लिया?')}</strong>
+                    <span>{isDone ? L('It counts towards your syllabus on the dashboard.', 'यह डैशबोर्ड पर आपके पाठ्यक्रम में गिना जाएगा।') : L('Tick it off and it counts towards your syllabus on the dashboard.', 'इसे चिह्नित करें; यह डैशबोर्ड पर आपके पाठ्यक्रम में गिना जाएगा।')}</span>
               </span>
               <button type="button" className={`ds-btn ds-btn-sm ${isDone ? 'ds-btn-ghost' : 'ds-btn-solid'}`} onClick={() => tracker.toggle(doneKey)}>
-                {isDone ? 'Untick' : 'Mark it done'}
+                {isDone ? L('Untick', 'चिह्न हटाएँ') : L('Mark it done', 'पूरा चिह्नित करें')}
               </button>
             </div>
           )}
 
           {/* A way on from the end of the note */}
           {!gated && displayContent && (
-            <Link href={`/chat?topic=${encodeURIComponent(note.title)}&subject=${subject}`} className="nr-ask">
+            <Link href={`/chat?topic=${encodeURIComponent(shownTitle)}&subject=${subject}`} className="nr-ask">
               <span className="nr-ask-text">
-                <strong>Still unsure about something here?</strong>
-                <span>Ask the {subjectName} AI. It answers from the standard books and shows you the page.</span>
+                  <strong>{L('Still unsure about something here?', 'क्या यहाँ किसी बात को लेकर अभी भी उलझन है?')}</strong>
+                  <span>{L(`Ask the ${subjectName} AI. It answers from the standard books and shows you the page.`, `${shownSubjectName} AI से पूछें। यह मानक पुस्तकों के आधार पर जवाब देता है और आपको पेज दिखाता है।`)}</span>
               </span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </Link>
@@ -923,16 +970,16 @@ export default function NoteReader({
 
           {/* Prev / Next */}
           {(prev || next) && (
-            <nav className="nr-pager" aria-label="More notes">
+            <nav className="nr-pager" aria-label={L('More notes', 'और नोट्स')}>
               {prev ? (
                 <Link href={`/notes/${subject}/${prev.slug}`} className="nr-pager-link">
-                  <span className="nr-pager-dir">← Previous</span>
+                  <span className="nr-pager-dir">{L('← Previous', '← पिछला')}</span>
                   <span className="nr-pager-title">{prev.title}</span>
                 </Link>
               ) : <span />}
               {next ? (
                 <Link href={`/notes/${subject}/${next.slug}`} className="nr-pager-link next">
-                  <span className="nr-pager-dir">Next →</span>
+                  <span className="nr-pager-dir">{L('Next →', 'अगला →')}</span>
                   <span className="nr-pager-title">{next.title}</span>
                 </Link>
               ) : <span />}
@@ -950,27 +997,27 @@ export default function NoteReader({
           </svg>
           <input autoFocus value={noteSearch.query} onChange={e => noteSearch.setQuery(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') noteSearch.jump(e.shiftKey ? -1 : 1); if (e.key === 'Escape') noteSearch.close(); }}
-            placeholder="Find in this note"
-            aria-label="Find in this note"
+            placeholder={L('Find in this note', 'इस नोट में खोजें')}
+            aria-label={L('Find in this note', 'इस नोट में खोजें')}
           />
           {noteSearch.total > 0 && (
-            <span className="nr-find-count">{noteSearch.current} of {noteSearch.total}</span>
+            <span className="nr-find-count">{L(`${noteSearch.current} of ${noteSearch.total}`, `${noteSearch.total} में से ${noteSearch.current}`)}</span>
           )}
           {noteSearch.query.length >= 2 && noteSearch.total === 0 && (
-            <span className="nr-find-none">Not found</span>
+            <span className="nr-find-none">{L('Not found', 'नहीं मिला')}</span>
           )}
           <div className="nr-find-nav">
-            <button type="button" onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} title="Previous (Shift+Enter)" aria-label="Previous match" className="nr-find-step">↑</button>
-            <button type="button" onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} title="Next (Enter)" aria-label="Next match" className="nr-find-step">↓</button>
+            <button type="button" onClick={() => noteSearch.jump(-1)} disabled={noteSearch.total === 0} title={L('Previous (Shift+Enter)', 'पिछला (Shift+Enter)')} aria-label={L('Previous match', 'पिछला मिलान')} className="nr-find-step">↑</button>
+            <button type="button" onClick={() => noteSearch.jump(1)} disabled={noteSearch.total === 0} title={L('Next (Enter)', 'अगला (Enter)')} aria-label={L('Next match', 'अगला मिलान')} className="nr-find-step">↓</button>
           </div>
-          <button type="button" onClick={noteSearch.close} className="nr-find-esc" aria-label="Close">✕</button>
+          <button type="button" onClick={noteSearch.close} className="nr-find-esc" aria-label={L('Close', 'बंद करें')}>✕</button>
         </div>
       )}
 
       {!noteSearch.open && !gated && (
-        <button type="button" onClick={() => noteSearch.setOpen(true)} title="Find in this note (⌘F)" className="nr-find-fab">
+        <button type="button" onClick={() => noteSearch.setOpen(true)} title={L('Find in this note (⌘F)', 'इस नोट में खोजें (⌘F)')} className="nr-find-fab">
           <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="2"/><path d="M14.5 14.5L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-          <span>Find</span>
+          <span>{L('Find', 'खोजें')}</span>
           <kbd>⌘F</kbd>
         </button>
       )}

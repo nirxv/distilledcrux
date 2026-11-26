@@ -6,14 +6,20 @@ import { geoMapData, geoMapYears, GEO_CATEGORIES, GeoCategory, GeoMapEntry } fro
 import type { MapBase, MapMark, MapPlace } from '@/components/GeoMap';
 import OwlLoader from '@/components/OwlLoader';
 import { useRefreshSafe } from '@/hooks/useRefreshSafe';
+import { useLang } from '@/lib/i18n/LangContext';
+
+function MapLoading() {
+  const { L } = useLang();
+  return <div className="mp-map-wait"><OwlLoader size="small" label={L('Loading the map', 'नक्शा लोड हो रहा है')} /></div>;
+}
 
 const GeoMap = dynamic(() => import('@/components/GeoMap'), {
   ssr: false,
-  loading: () => <div className="mp-map-wait"><OwlLoader size="small" label="Loading the map" /></div>,
+  loading: () => <MapLoading />,
 });
 
 const idOf = (e: GeoMapEntry) => `${e.year}-${e.number}`;
-const placeOf = (e: GeoMapEntry, num?: number): MapPlace => ({ id: idOf(e), name: e.name, lat: e.lat, lng: e.lng, num, sub: `${e.year} · ${e.category}` });
+const placeOf = (e: GeoMapEntry, L: (en: string, hi: string) => string, num?: number): MapPlace => ({ id: idOf(e), name: e.name, lat: e.lat, lng: e.lng, num, sub: `${e.year} · ${categoryLabel(e.category, L)}` });
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -91,7 +97,7 @@ function grade(e: GeoMapEntry, at: { lat: number; lng: number }): Graded {
   const km = kmBetween(at, e), t = tolerance(e);
   return { km: Math.round(km), tone: km <= t ? 'right' : km <= 3 * t ? 'close' : 'off' };
 }
-const verdict = (g: Graded) => (g === 'shown' ? 'Shown on the map' : g.tone === 'right' ? `Right, ${g.km} km away` : g.tone === 'close' ? `Close, ${g.km} km away` : `Off by ${g.km} km`);
+const verdict = (g: Graded, L: (en: string, hi: string) => string) => (g === 'shown' ? L('Shown on the map', 'नक्शे पर दिखाया गया') : g.tone === 'right' ? L(`Right, ${g.km} km away`, `सही, ${g.km} किमी दूर`) : g.tone === 'close' ? L(`Close, ${g.km} km away`, `करीब, ${g.km} किमी दूर`) : L(`Off by ${g.km} km`, `${g.km} किमी की दूरी से चूके`));
 
 // ─── Small controls ───
 const Switch = ({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) => (
@@ -99,18 +105,21 @@ const Switch = ({ on, onClick, children }: { on: boolean; onClick: () => void; c
     <span className="mp-switch-track" aria-hidden="true"><span /></span>{children}
   </button>
 );
-const BASES: { key: MapBase; label: string }[] = [
-  { key: 'political', label: 'Political' },
-  { key: 'physical', label: 'Physical' },
-  { key: 'outline', label: 'No boundaries' },
+const BASES: { key: MapBase; label: string; labelHi: string }[] = [
+  { key: 'political', label: 'Political', labelHi: 'राजनीतिक' },
+  { key: 'physical', label: 'Physical', labelHi: 'भौतिक' },
+  { key: 'outline', label: 'No boundaries', labelHi: 'सीमाओं के बिना' },
 ];
-const BaseSeg = ({ value, onChange }: { value: MapBase; onChange: (b: MapBase) => void }) => (
-  <div className="mp-seg" role="radiogroup" aria-label="Map type">
-    {BASES.map((b) => (
-      <button key={b.key} type="button" role="radio" aria-checked={value === b.key} className={value === b.key ? 'on' : ''} onClick={() => onChange(b.key)}>{b.label}</button>
-    ))}
-  </div>
-);
+const BaseSeg = ({ value, onChange }: { value: MapBase; onChange: (b: MapBase) => void }) => {
+  const { L } = useLang();
+  return (
+    <div className="mp-seg" role="radiogroup" aria-label={L('Map type', 'नक्शे का प्रकार')}>
+      {BASES.map((b) => (
+        <button key={b.key} type="button" role="radio" aria-checked={value === b.key} className={value === b.key ? 'on' : ''} onClick={() => onChange(b.key)}>{L(b.label, b.labelHi)}</button>
+      ))}
+    </div>
+  );
+};
 
 // ─── Choosing topics ───
 /** The topics a choice stands for: null for every topic or a past paper, else the topics ticked (by index). */
@@ -124,12 +133,27 @@ function placesFor(v: string): GeoMapEntry[] {
   return geoMapData.filter((e) => !cats || cats.has(e.category)).sort((a, b) => b.year - a.year || a.number - b.number);
 }
 const countIn = (cat: GeoCategory) => geoMapData.filter((e) => e.category === cat).length;
+const categoryLabel = (cat: GeoCategory, L: (en: string, hi: string) => string) => ({
+  'Rivers & Water Bodies': L('Rivers & Water Bodies', 'नदियाँ और जल निकाय'),
+  'Mountains, Passes & Plateaus': L('Mountains, Passes & Plateaus', 'पर्वत, दर्रे और पठार'),
+  'Wildlife & Biosphere': L('Wildlife & Biosphere', 'वन्यजीव और जैवमंडल'),
+  'Dams & Hydropower': L('Dams & Hydropower', 'बाँध और जलविद्युत'),
+  'Defence & Strategic': L('Defence & Strategic', 'रक्षा और रणनीतिक'),
+  'Ports & Coastal': L('Ports & Coastal', 'बंदरगाह और तटीय क्षेत्र'),
+  'Nuclear & Space': L('Nuclear & Space', 'परमाणु और अंतरिक्ष'),
+  'Islands & Union Territories': L('Islands & Union Territories', 'द्वीप और केंद्रशासित प्रदेश'),
+  'Minerals & Industry': L('Minerals & Industry', 'खनिज और उद्योग'),
+  'Cultural & Heritage': L('Cultural & Heritage', 'संस्कृति और विरासत'),
+  'International & Border': L('International & Border', 'अंतरराष्ट्रीय और सीमावर्ती क्षेत्र'),
+  'Transport & Connectivity': L('Transport & Connectivity', 'परिवहन और संपर्क'),
+})[cat];
 
 /**
  * What to practise: any mix of topics, all of them, or (for the quiz) one
  * past paper. Choices are a draft until Start, so nothing restarts on every tick.
  */
 function TopicPicker({ value, onChange, papers, action }: { value: string; onChange: (v: string) => void; papers?: boolean; action: (n: number) => string }) {
+  const { L } = useLang();
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState(value);
   const startRef = useRef<HTMLButtonElement>(null);
@@ -142,11 +166,11 @@ function TopicPicker({ value, onChange, papers, action }: { value: string; onCha
 
   const label = (() => {
     if (!value) return '';
-    if (value === 'all') return 'All';
+    if (value === 'all') return L('All', 'सभी');
     const yr = /^y-(\d{4})$/.exec(value);
-    if (yr) return `${yr[1]} paper`;
+    if (yr) return L(`${yr[1]} paper`, `${yr[1]} का प्रश्नपत्र`);
     const keys = topicKeys(value) ?? [];
-    return keys.length === 1 ? GEO_CATEGORIES[keys[0]] : `${keys.length} topics`;
+    return keys.length === 1 ? categoryLabel(GEO_CATEGORIES[keys[0]], L) : L(`${keys.length} topics`, `${keys.length} विषय`);
   })();
 
   useEffect(() => {
@@ -159,45 +183,45 @@ function TopicPicker({ value, onChange, papers, action }: { value: string; onCha
 
   return (
     <>
-      <button type="button" className={`mp-select mp-pick${value && value !== 'all' ? ' set' : ''}`} onClick={() => { setDraft(value); setOpen(true); }} aria-haspopup="dialog" aria-label={label ? `Choose topics: ${label}` : 'Choose topics'}>
+      <button type="button" className={`mp-select mp-pick${value && value !== 'all' ? ' set' : ''}`} onClick={() => { setDraft(value); setOpen(true); }} aria-haspopup="dialog" aria-label={label ? L(`Choose topics: ${label}`, `विषय चुनें: ${label}`) : L('Choose topics', 'विषय चुनें')}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 6l2 2 3-3M3 13l2 2 3-3M3 20l2 2 3-3M12 6h9M12 13h9M12 20h9" /></svg>
-        <span className="mp-pick-t">Choose topics</span>
+        <span className="mp-pick-t">{L('Choose topics', 'विषय चुनें')}</span>
         {label && <span className="mp-pick-sum">{label}</span>}
       </button>
       {open && (
         <div className="ds-overlay" onClick={() => setOpen(false)}>
           <div className="ds-modal mp-cp" role="dialog" aria-modal="true" aria-labelledby="mp-cp-title" onClick={(e) => e.stopPropagation()}>
             <div className="mp-cp-head">
-              <h2 id="mp-cp-title" className="ds-modal-title">Choose what to practise</h2>
-              <p className="ds-modal-text">Tick as many topics as you like, or all of them, and their places go into one {papers ? 'quiz' : 'test'}.</p>
+              <h2 id="mp-cp-title" className="ds-modal-title">{L('Choose what to practise', 'अभ्यास के लिए चुनें')}</h2>
+              <p className="ds-modal-text">{L(`Tick as many topics as you like, or all of them, and their places go into one ${papers ? 'quiz' : 'test'}.`, `जितने चाहें उतने विषय चुनें, या सभी चुनें; उनके स्थान एक ${papers ? 'क्विज़' : 'टेस्ट'} में शामिल होंगे।`)}</p>
             </div>
             <div className="mp-cp-body">
               {papers && (
                 <div className="mp-cp-quick">
-                  <span className="mp-cp-or">Or take a past paper</span>
-                  <select className={`mp-select${draft.startsWith('y-') ? ' set' : ''}`} value={draft.startsWith('y-') ? draft : ''} onChange={(e) => setDraft(e.target.value || 'all')} aria-label="A past paper">
-                    <option value="">Choose a year</option>
-                    {geoMapYears.map((y) => <option key={y} value={`y-${y}`}>{y} paper</option>)}
+                  <span className="mp-cp-or">{L('Or take a past paper', 'या पिछले वर्ष का प्रश्नपत्र चुनें')}</span>
+                  <select className={`mp-select${draft.startsWith('y-') ? ' set' : ''}`} value={draft.startsWith('y-') ? draft : ''} onChange={(e) => setDraft(e.target.value || 'all')} aria-label={L('A past paper', 'पिछले वर्ष का प्रश्नपत्र')}>
+                    <option value="">{L('Choose a year', 'वर्ष चुनें')}</option>
+                    {geoMapYears.map((y) => <option key={y} value={`y-${y}`}>{L(`${y} paper`, `${y} का प्रश्नपत्र`)}</option>)}
                   </select>
                 </div>
               )}
               <label className="mp-cp-row part mp-cp-all">
                 <input type="checkbox" checked={allOn} ref={(el) => { if (el) el.indeterminate = someOn && !allOn; }} onChange={() => setDraft(allOn ? '' : 'all')} />
-                <span>All topics</span>
-                <span className="mp-cp-n">{geoMapData.length} places</span>
+                <span>{L('All topics', 'सभी विषय')}</span>
+                <span className="mp-cp-n">{L(`${geoMapData.length} places`, `${geoMapData.length} स्थान`)}</span>
               </label>
               {GEO_CATEGORIES.map((cat, k) => (
                 <label key={cat} className="mp-cp-row">
                   <input type="checkbox" checked={picked.includes(k)} onChange={() => toggle(k)} />
-                  <span>{cat}</span>
+                   <span>{categoryLabel(cat, L)}</span>
                   <span className="mp-cp-n">{countIn(cat)}</span>
                 </label>
               ))}
             </div>
             <div className="mp-cp-foot">
-              <button type="button" className="ds-btn ds-btn-line" onClick={() => setOpen(false)}>Cancel</button>
+              <button type="button" className="ds-btn ds-btn-line" onClick={() => setOpen(false)}>{L('Cancel', 'रद्द करें')}</button>
               <button type="button" ref={startRef} className="ds-btn ds-btn-solid" disabled={count < 1} onClick={() => { onChange(draft); setOpen(false); }}>
-                {!draft ? 'Tick a topic' : action(count)}
+                {!draft ? L('Tick a topic', 'एक विषय चुनें') : action(count)}
               </button>
             </div>
           </div>
@@ -209,6 +233,7 @@ function TopicPicker({ value, onChange, papers, action }: { value: string; onCha
 
 // ─── The quiz ───
 function QuizPanel({ pool, format, base, grid }: { pool: GeoMapEntry[]; format: 'pick' | 'type'; base: MapBase; grid: boolean }) {
+  const { L } = useLang();
   const [round, setRound] = useState(() => newRound(pool));
   const [answer, setAnswer] = useState<{ right: boolean; said: string } | null>(null);
   const [typed, setTyped] = useState('');
@@ -229,22 +254,22 @@ function QuizPanel({ pool, format, base, grid }: { pool: GeoMapEntry[]; format: 
   return (
     <div className="mp-quiz">
       <div className="mp-quiz-head">
-        <span className="mp-quiz-prompt">Which place is marked on the map?</span>
+         <span className="mp-quiz-prompt">{L('Which place is marked on the map?', 'नक्शे पर कौन-सा स्थान चिह्नित है?')}</span>
         <span className="mp-quiz-score">
-          {streak >= 3 && <span className="mp-streak">{streak} in a row</span>}
-          <span>{score.correct} of {score.total} right{score.total > 0 ? ` · ${accuracy}%` : ''}</span>
+           {streak >= 3 && <span className="mp-streak">{L(`${streak} in a row`, `लगातार ${streak} सही`)}</span>}
+           <span>{L(`${score.correct} of ${score.total} right`, `${score.total} में से ${score.correct} सही`)}{score.total > 0 ? ` · ${accuracy}%` : ''}</span>
           {score.total > 0 && (
-            <button type="button" className="mp-link" onClick={() => { setScore({ correct: 0, total: 0 }); setStreak(0); nextQuestion(); }}>Start over</button>
+             <button type="button" className="mp-link" onClick={() => { setScore({ correct: 0, total: 0 }); setStreak(0); nextQuestion(); }}>{L('Start over', 'फिर से शुरू करें')}</button>
           )}
         </span>
       </div>
 
-      <GeoMap places={[placeOf(site)]} selected={answer ? idOf(site) : null} base={base} grid={grid} fixed quiet />
+      <GeoMap places={[placeOf(site, L)]} selected={answer ? idOf(site) : null} base={base} grid={grid} fixed quiet />
 
       <div className="mp-clue">
         <div className="mp-clue-head">
-          <span>A clue</span>
-          <button type="button" className="mp-link" onClick={() => setHideClue((h) => !h)}>{hideClue ? 'Show' : 'Hide'}</button>
+           <span>{L('A clue', 'एक संकेत')}</span>
+           <button type="button" className="mp-link" onClick={() => setHideClue((h) => !h)}>{hideClue ? L('Show', 'दिखाएँ') : L('Hide', 'छिपाएँ')}</button>
         </div>
         {!hideClue && <p>{clueFor(site)}</p>}
       </div>
@@ -263,21 +288,21 @@ function QuizPanel({ pool, format, base, grid }: { pool: GeoMapEntry[]; format: 
         </div>
       ) : !answer && (
         <form className="pp-try mp-type" onSubmit={(e) => { e.preventDefault(); if (typed.trim()) settle(typedRight(typed, site.name), typed.trim()); }}>
-          <input value={typed} onChange={(e) => setTyped(e.target.value)} placeholder="Type the name" aria-label="Your answer" autoComplete="off" autoFocus />
-          <button type="submit" className="ds-btn ds-btn-solid ds-btn-sm" disabled={!typed.trim()}>Check</button>
-          <button type="button" className="mp-link" onClick={() => settle(false, '')}>Show</button>
+          <input value={typed} onChange={(e) => setTyped(e.target.value)} placeholder={L('Type the name', 'स्थान का नाम लिखें')} aria-label={L('Your answer', 'आपका उत्तर')} autoComplete="off" autoFocus />
+          <button type="submit" className="ds-btn ds-btn-solid ds-btn-sm" disabled={!typed.trim()}>{L('Check', 'जाँचें')}</button>
+          <button type="button" className="mp-link" onClick={() => settle(false, '')}>{L('Show', 'दिखाएँ')}</button>
         </form>
       )}
 
       {answer && (
         <div className={`mp-answer${answer.right ? ' right' : ''}`}>
           <div className="mp-answer-top">
-            <strong>{answer.right ? 'Right' : format === 'type' && !answer.said ? 'Answer' : 'Not quite'}: {site.name}</strong>
-            <span>{site.year} · {site.category}</span>
+            <strong>{L(answer.right ? 'Right' : format === 'type' && !answer.said ? 'Answer' : 'Not quite', answer.right ? 'सही' : format === 'type' && !answer.said ? 'उत्तर' : 'लगभग सही')}: {site.name}</strong>
+            <span>{site.year} · {categoryLabel(site.category, L)}</span>
           </div>
-          {format === 'type' && !answer.right && answer.said && <small className="mp-said">You wrote “{answer.said}”</small>}
+          {format === 'type' && !answer.right && answer.said && <small className="mp-said">{L(`You wrote “${answer.said}”`, `आपने “${answer.said}” लिखा`)}</small>}
           <p>{site.significance}</p>
-          <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={nextQuestion}>Next place</button>
+          <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={nextQuestion}>{L('Next place', 'अगला स्थान')}</button>
         </div>
       )}
     </div>
@@ -290,6 +315,7 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
   /** Show each place's year, when the places come from more than one paper. */
   years?: boolean;
 }) {
+  const { L } = useLang();
   const items = useMemo(() => entries.map((e, i) => ({ n: i + 1, e })), [entries]);
   const [selected, setSelected] = useState<string | null>(null);
   const [active, setActive] = useState<number | null>(view === 'test' && items.length ? 1 : null);
@@ -318,8 +344,8 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
   }, [focus]);
 
   const places: MapPlace[] = view === 'study'
-    ? items.map((it) => placeOf(it.e, it.n))
-    : items.filter((it) => result[it.n]).map((it) => placeOf(it.e, it.n));
+    ? items.map((it) => placeOf(it.e, L, it.n))
+    : items.filter((it) => result[it.n]).map((it) => placeOf(it.e, L, it.n));
   const marks: MapMark[] = view === 'test'
     ? items.filter((it) => guess[it.n]).map((it) => {
         const g = result[it.n];
@@ -340,9 +366,9 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
         {summary}
         {view === 'test' && (
           <span className="pp-score">
-            {rightN} of {total} right{doneN > 0 && doneN < total ? ` · ${doneN} tried` : ''}
-            {doneN < total && <button type="button" className="mp-link" onClick={() => { setResult((r) => Object.fromEntries(items.map((it) => [it.n, r[it.n] ?? 'shown']))); setActive(null); }}>Show all answers</button>}
-            {doneN > 0 && <button type="button" className="mp-link" onClick={() => { setResult({}); setGuess({}); setLast(null); setActive(items.length ? 1 : null); }}>Start over</button>}
+            {L(`${rightN} of ${total} right`, `${total} में से ${rightN} सही`)}{doneN > 0 && doneN < total ? ` · ${L(`${doneN} tried`, `${doneN} प्रयास किए`)}` : ''}
+            {doneN < total && <button type="button" className="mp-link" onClick={() => { setResult((r) => Object.fromEntries(items.map((it) => [it.n, r[it.n] ?? 'shown']))); setActive(null); }}>{L('Show all answers', 'सभी उत्तर दिखाएँ')}</button>}
+            {doneN > 0 && <button type="button" className="mp-link" onClick={() => { setResult({}); setGuess({}); setLast(null); setActive(items.length ? 1 : null); }}>{L('Start over', 'फिर से शुरू करें')}</button>}
           </span>
         )}
       </div>
@@ -351,15 +377,15 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
         // to scroll between tapping the map and checking.
         <div className="pp-prompt" aria-live="polite">
           <p>
-            {last != null && result[last] && (() => { const g = result[last]; return <span className={`pp-last ${g === 'shown' ? 'shown' : g.tone}`}>{last}. {items[last - 1].e.name}: {verdict(g)}. </span>; })()}
+            {last != null && result[last] && (() => { const g = result[last]; return <span className={`pp-last ${g === 'shown' ? 'shown' : g.tone}`}>{last}. {items[last - 1].e.name}: {verdict(g, L)}. </span>; })()}
             {marking != null
-              ? <>Tap the map where <strong>{marking}. {items[marking - 1].e.name}</strong> is{guess[marking] ? ', then Check' : ''}.</>
-              : doneN === total ? `Done: ${rightN} of ${total} right.` : 'Pick a place in the list to mark it.'}
+              ? <>{L('Tap the map where', 'नक्शे पर उस जगह टैप करें जहाँ')} <strong>{marking}. {items[marking - 1].e.name}</strong> {L('is', 'है')}{guess[marking] ? L(', then Check', ', फिर जाँचें') : ''}.</>
+              : doneN === total ? L(`Done: ${rightN} of ${total} right.`, `पूरा हुआ: ${total} में से ${rightN} सही।`) : L('Pick a place in the list to mark it.', 'चिह्नित करने के लिए सूची में से कोई स्थान चुनें।')}
           </p>
           {marking != null && (
             <span className="pp-prompt-actions">
-              <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" disabled={!guess[marking]} onClick={() => check(marking)}>Check</button>
-              <button type="button" className="mp-link" onClick={() => settle(marking, 'shown')}>Show</button>
+              <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" disabled={!guess[marking]} onClick={() => check(marking)}>{L('Check', 'जाँचें')}</button>
+              <button type="button" className="mp-link" onClick={() => settle(marking, 'shown')}>{L('Show', 'दिखाएँ')}</button>
             </span>
           )}
         </div>
@@ -376,7 +402,7 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
                 <button key={id} data-key={id} type="button" className={`mp-place pp-item${on ? ' on' : ''}`} onClick={() => pickPlace(id)} aria-expanded={on}>
                   <span className="mp-place-top">
                     <strong><span className="pp-n">{it.n}</span>{it.e.name}</strong>
-                    <span>{years ? `${it.e.year} · ` : ''}{it.e.category}</span>
+                    <span>{years ? `${it.e.year} · ` : ''}{categoryLabel(it.e.category, L)}</span>
                   </span>
                   {on && <span className="mp-place-sig">{it.e.significance}</span>}
                 </button>
@@ -385,7 +411,7 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
             const g = result[it.n], on = active === it.n;
             return (
               <div key={id} data-key={String(it.n)} className={`mp-place pp-item pp-test${on ? ' on' : ''}${g ? (g === 'shown' ? ' shown' : ` ${g.tone}`) : ''}`}>
-                <button type="button" className="pp-hint-btn" onClick={() => setActive(it.n)} aria-label={`Mark ${it.e.name}`}>
+                <button type="button" className="pp-hint-btn" onClick={() => setActive(it.n)} aria-label={L(`Mark ${it.e.name}`, `${it.e.name} को चिह्नित करें`)}>
                   <span className="mp-place-top">
                     <strong><span className="pp-n">{it.n}</span>{it.e.name}</strong>
                     {years && <span>{it.e.year}</span>}
@@ -393,25 +419,26 @@ function PaperSheet({ entries, summary, view, base, grid, years }: {
                 </button>
                 {g ? (
                   <div className="pp-result">
-                    <strong>{verdict(g)}</strong>
-                    <small>{it.e.category}</small>
+                    <strong>{verdict(g, L)}</strong>
+                    <small>{categoryLabel(it.e.category, L)}</small>
                     {on && <span className="mp-place-sig">{it.e.significance}</span>}
                   </div>
                 ) : on ? (
-                  <span className="pp-tap">{guess[it.n] ? 'Marked. Tap the map again to move it, or Check above the map.' : 'Marking now: tap the map where it is.'}</span>
+                  <span className="pp-tap">{guess[it.n] ? L('Marked. Tap the map again to move it, or Check above the map.', 'चिह्नित हो गया। इसे बदलने के लिए नक्शे पर फिर टैप करें, या नक्शे के ऊपर जाँचें दबाएँ।') : L('Marking now: tap the map where it is.', 'अभी चिह्नित करें: नक्शे पर उसकी जगह टैप करें।')}</span>
                 ) : null}
               </div>
             );
           })}
         </div>
       </div>
-      {view === 'test' && <p className="pp-note pp-rule">Within 50 km counts as right, or 100 km for a river, range or route, which is checked against one point on it.</p>}
+      {view === 'test' && <p className="pp-note pp-rule">{L('Within 50 km counts as right, or 100 km for a river, range or route, which is checked against one point on it.', '50 किमी के भीतर का उत्तर सही माना जाएगा; नदी, पर्वतमाला या मार्ग के लिए 100 किमी की सीमा है, जिसकी जाँच उस पर एक बिंदु के आधार पर होती है।')}</p>}
     </div>
   );
 }
 
 // ─── The places asked twice ───
 function TwiceView({ base, grid }: { base: MapBase; grid: boolean }) {
+  const { L } = useLang();
   const groups = useMemo(() => {
     const by = new Map<string, GeoMapEntry[]>();
     for (const e of geoMapData) { const k = norm(e.name); by.set(k, [...(by.get(k) ?? []), e]); }
@@ -420,16 +447,16 @@ function TwiceView({ base, grid }: { base: MapBase; grid: boolean }) {
   const [selected, setSelected] = useState<string | null>(null);
   return (
     <div className="pp">
-      <div className="pp-summary"><span>Places UPSC has asked twice since {Math.min(...geoMapYears)}, latest first</span></div>
+      <div className="pp-summary"><span>{L(`Places UPSC has asked twice since ${Math.min(...geoMapYears)}, latest first`, `${Math.min(...geoMapYears)} से UPSC द्वारा दो बार पूछे गए स्थान, नवीनतम पहले`)}</span></div>
       <div className="mp-split">
-        <GeoMap places={groups.map((g) => placeOf(g[0]))} selected={selected} onPick={(id) => setSelected((s) => (s === id ? null : id))} base={base} grid={grid} />
+        <GeoMap places={groups.map((g) => placeOf(g[0], L))} selected={selected} onPick={(id) => setSelected((s) => (s === id ? null : id))} base={base} grid={grid} />
         <div className="mp-list pp-list">
           {groups.map((g) => {
             const id = idOf(g[0]), on = selected === id;
             return (
               <button key={id} type="button" className={`mp-place pp-item${on ? ' on' : ''}`} onClick={() => setSelected((s) => (s === id ? null : id))} aria-expanded={on}>
                 <span className="mp-place-top"><strong>{g[0].name}</strong><span className="pp-twice">{g.map((e) => e.year).join(', ')}</span></span>
-                <span className="mp-place-where">{g[0].category}</span>
+                <span className="mp-place-where">{categoryLabel(g[0].category, L)}</span>
                 {on && <span className="mp-place-sig">{g[0].significance}</span>}
               </button>
             );
@@ -481,6 +508,7 @@ type Mode = 'topic' | 'papers' | 'quiz';
 type PaperTab = number | 'twice' | 'topics';
 
 export default function GeoMappingPage() {
+  const { L } = useLang();
   const [mode, setMode] = useState<Mode>('topic');
   const [openSections, setOpenSections] = useState<Set<string>>(new Set());
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -544,7 +572,7 @@ export default function GeoMappingPage() {
   }, [paperTab, mode]);
 
   const first = Math.min(...geoMapYears), last = Math.max(...geoMapYears);
-  const MODES: [Mode, string][] = [['topic', 'By topic'], ['papers', 'Past papers'], ['quiz', 'Quiz']];
+  const MODES: [Mode, string][] = [['topic', L('By topic', 'विषय के अनुसार')], ['papers', L('Past papers', 'पिछले वर्षों के प्रश्नपत्र')], ['quiz', L('Quiz', 'क्विज़')]];
 
   return (
     <div className="mp ds" style={{ ['--t' as string]: 'var(--tint-geography)', ['--w' as string]: 'var(--wash-geography)' }}>
@@ -553,13 +581,13 @@ export default function GeoMappingPage() {
         <div className="ds-container">
           <Link href="/geography" className="ds-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
-            Geography
+            {L('Geography', 'भूगोल')}
           </Link>
-          <h1 className="ds-h1 mp-h1">Map practice</h1>
+          <h1 className="ds-h1 mp-h1">{L('Map practice', 'नक्शा अभ्यास')}</h1>
           <p className="ds-lede mp-lede">
-            Every place UPSC has asked you to mark on the map of India in Paper II, {geoMapData.length} of them from {first} to {last}. Browse them by topic, study or test yourself on each year&rsquo;s paper, or take a quiz.
+            {L(`Every place UPSC has asked you to mark on the map of India in Paper II, ${geoMapData.length} of them from ${first} to ${last}. Browse them by topic, study or test yourself on each year’s paper, or take a quiz.`, `भारत के नक्शे पर Paper II में UPSC द्वारा चिह्नित करने के लिए पूछे गए सभी स्थान—${first} से ${last} तक कुल ${geoMapData.length}। विषय के अनुसार देखें, हर वर्ष के प्रश्नपत्र का अध्ययन करें या खुद को परखें, अथवा क्विज़ खेलें।`)}
           </p>
-          <div className="mp-modes" role="tablist" aria-label="View">
+          <div className="mp-modes" role="tablist" aria-label={L('View', 'दृश्य')}>
             {MODES.map(([m, label]) => (
               <button key={m} type="button" role="tab" aria-selected={mode === m}
                 className={`mp-mode${mode === m ? ' on' : ''}`} onClick={() => setMode(m)}>{label}</button>
@@ -572,59 +600,59 @@ export default function GeoMappingPage() {
         {mode === 'quiz' ? (
           <>
             <div className="mp-filters">
-              <div className="mp-seg" role="radiogroup" aria-label="Answer by">
-                <button type="button" role="radio" aria-checked={quizFormat === 'pick'} className={quizFormat === 'pick' ? 'on' : ''} onClick={() => setQuizFormat('pick')}>Four options</button>
-                <button type="button" role="radio" aria-checked={quizFormat === 'type'} className={quizFormat === 'type' ? 'on' : ''} onClick={() => setQuizFormat('type')}>Type the name</button>
+              <div className="mp-seg" role="radiogroup" aria-label={L('Answer by', 'उत्तर देने का तरीका')}>
+                <button type="button" role="radio" aria-checked={quizFormat === 'pick'} className={quizFormat === 'pick' ? 'on' : ''} onClick={() => setQuizFormat('pick')}>{L('Four options', 'चार विकल्प')}</button>
+                <button type="button" role="radio" aria-checked={quizFormat === 'type'} className={quizFormat === 'type' ? 'on' : ''} onClick={() => setQuizFormat('type')}>{L('Type the name', 'नाम लिखें')}</button>
               </div>
-              <TopicPicker value={quizSource} onChange={setQuizSource} papers action={(n) => `Start quiz, ${n} place${n === 1 ? '' : 's'}`} />
+              <TopicPicker value={quizSource} onChange={setQuizSource} papers action={(n) => L(`Start quiz, ${n} place${n === 1 ? '' : 's'}`, `${n} स्थानों का क्विज़ शुरू करें`)} />
               <BaseSeg value={quizBase} onChange={setQuizBase} />
-              <Switch on={grid} onClick={() => setGrid((v) => !v)}>Grid</Switch>
+              <Switch on={grid} onClick={() => setGrid((v) => !v)}>{L('Grid', 'ग्रिड')}</Switch>
             </div>
             {quizPool.length >= 1
               // A new pool or format is a new quiz.
               ? <QuizPanel key={`${quizSource}-${quizFormat}`} pool={quizPool} format={quizFormat} base={quizBase} grid={grid} />
-              : <p className="mp-few">Choose some topics to start.</p>}
+              : <p className="mp-few">{L('Choose some topics to start.', 'शुरू करने के लिए कुछ विषय चुनें।')}</p>}
           </>
         ) : mode === 'papers' ? (
           <>
-            <div className="mp-parts" ref={tabsRef} role="tablist" aria-label="Paper">
-              <button type="button" role="tab" aria-selected={paperTab === 'twice'} className={`mp-part pp-special${paperTab === 'twice' ? ' on' : ''}`} onClick={() => setPaperTab('twice')}>Asked twice</button>
-              <button type="button" role="tab" aria-selected={paperTab === 'topics'} className={`mp-part pp-special${paperTab === 'topics' ? ' on' : ''}`} onClick={() => setPaperTab('topics')}>By topic</button>
+            <div className="mp-parts" ref={tabsRef} role="tablist" aria-label={L('Paper', 'प्रश्नपत्र')}>
+              <button type="button" role="tab" aria-selected={paperTab === 'twice'} className={`mp-part pp-special${paperTab === 'twice' ? ' on' : ''}`} onClick={() => setPaperTab('twice')}>{L('Asked twice', 'दो बार पूछे गए')}</button>
+              <button type="button" role="tab" aria-selected={paperTab === 'topics'} className={`mp-part pp-special${paperTab === 'topics' ? ' on' : ''}`} onClick={() => setPaperTab('topics')}>{L('By topic', 'विषय के अनुसार')}</button>
               {geoMapYears.map((y) => (
                 <button key={y} type="button" role="tab" aria-selected={paperTab === y} className={`mp-part${paperTab === y ? ' on' : ''}`} onClick={() => setPaperTab(y)}>{y}</button>
               ))}
             </div>
             <div className="mp-bar">
               <div className="mp-switches">
-                {paperTab === 'topics' && <TopicPicker value={paperTopics} onChange={setPaperTopics} action={(n) => `Start, ${n} place${n === 1 ? '' : 's'}`} />}
+                {paperTab === 'topics' && <TopicPicker value={paperTopics} onChange={setPaperTopics} action={(n) => L(`Start, ${n} place${n === 1 ? '' : 's'}`, `${n} स्थानों का अभ्यास शुरू करें`)} />}
                 {paperTab !== 'twice' && (
-                  <div className="mp-seg" role="radiogroup" aria-label="Study or test">
-                    <button type="button" role="radio" aria-checked={paperView === 'study'} className={paperView === 'study' ? 'on' : ''} onClick={() => setPaperView('study')}>Study</button>
-                    <button type="button" role="radio" aria-checked={paperView === 'test'} className={paperView === 'test' ? 'on' : ''} onClick={() => setPaperView('test')}>Test yourself</button>
+                  <div className="mp-seg" role="radiogroup" aria-label={L('Study or test', 'अध्ययन या परीक्षा')}>
+                    <button type="button" role="radio" aria-checked={paperView === 'study'} className={paperView === 'study' ? 'on' : ''} onClick={() => setPaperView('study')}>{L('Study', 'अध्ययन')}</button>
+                    <button type="button" role="radio" aria-checked={paperView === 'test'} className={paperView === 'test' ? 'on' : ''} onClick={() => setPaperView('test')}>{L('Test yourself', 'खुद को परखें')}</button>
                   </div>
                 )}
                 <BaseSeg value={base} onChange={setBase} />
-                <Switch on={grid} onClick={() => setGrid((v) => !v)}>Grid</Switch>
+                <Switch on={grid} onClick={() => setGrid((v) => !v)}>{L('Grid', 'ग्रिड')}</Switch>
               </div>
             </div>
             {paperTab === 'twice'
               ? <TwiceView base={base} grid={grid} />
               : paperTab === 'topics'
                 ? (topicPaper.length === 0
-                  ? <p className="mp-few">Choose topics, say Rivers &amp; Water Bodies and Wildlife &amp; Biosphere, to study every place UPSC has asked from them, or to mark each one on the map yourself.</p>
+                  ? <p className="mp-few">{L('Choose topics, say Rivers &amp; Water Bodies and Wildlife &amp; Biosphere, to study every place UPSC has asked from them, or to mark each one on the map yourself.', 'विषय चुनें, जैसे नदियाँ और जल निकाय तथा वन्यजीव और जैवमंडल, ताकि UPSC द्वारा पूछे गए सभी स्थानों का अध्ययन कर सकें या उन्हें नक्शे पर खुद चिह्नित कर सकें।')}</p>
                   // New topics or a new view start afresh.
                   : <PaperSheet key={`${paperTopics}-${paperView}`} entries={topicPaper} view={paperView} base={base} grid={grid} years
-                      summary={<span>{topicPaper.length} place{topicPaper.length === 1 ? '' : 's'} UPSC has asked from them, newest first</span>} />)
+                       summary={<span>{L(`${topicPaper.length} place${topicPaper.length === 1 ? '' : 's'} UPSC has asked from them, newest first`, `UPSC द्वारा पूछे गए ${topicPaper.length} स्थान, नवीनतम पहले`)}</span>} />)
                 // A new year or view starts the paper afresh.
                 : <PaperSheet key={`${paperTab}-${paperView}`} entries={yearPaper} view={paperView} base={base} grid={grid}
-                    summary={<span>{paperTab}, Paper II, Q1(a): {yearPaper.length} places to mark, 20 marks</span>} />}
+                     summary={<span>{L(`${paperTab}, Paper II, Q1(a): ${yearPaper.length} places to mark, 20 marks`, `${paperTab}, Paper II, Q1(a): चिह्नित करने के लिए ${yearPaper.length} स्थान, 20 अंक`)}</span>} />}
           </>
         ) : (
           <>
             <div className="mp-search-wrap">
               <label className="mp-search">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
-                <input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Find a place, say “Pulicat” or “pass”" aria-label="Find a place" />
+                <input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder={L('Find a place, say “Pulicat” or “pass”', 'कोई स्थान खोजें, जैसे “Pulicat” या “pass”')} aria-label={L('Find a place', 'स्थान खोजें')} />
               </label>
               {searchResults.length > 0 && (
                 <div className="mp-results">
@@ -636,12 +664,12 @@ export default function GeoMappingPage() {
                   ))}
                 </div>
               )}
-              {search.trim().length >= 2 && searchResults.length === 0 && <p className="mp-few">No place matches “{search.trim()}”.</p>}
+              {search.trim().length >= 2 && searchResults.length === 0 && <p className="mp-few">{L(`No place matches “${search.trim()}”.`, `“${search.trim()}” से मेल खाता कोई स्थान नहीं मिला।`)}</p>}
             </div>
             <div className="mp-bar">
               <div className="mp-switches">
                 <BaseSeg value={base} onChange={setBase} />
-                <Switch on={grid} onClick={() => setGrid((v) => !v)}>Grid</Switch>
+                <Switch on={grid} onClick={() => setGrid((v) => !v)}>{L('Grid', 'ग्रिड')}</Switch>
               </div>
             </div>
 
@@ -650,10 +678,10 @@ export default function GeoMappingPage() {
               if (!entries.length) return null;
               const years = [...new Set(entries.map(e => e.year))].sort((a, b) => b - a);
               return (
-                <Section key={cat} id={cat} title={cat} meta={`${entries.length} places`} chips={years}
+                <Section key={cat} id={cat} title={categoryLabel(cat, L)} meta={L(`${entries.length} places`, `${entries.length} स्थान`)} chips={years}
                   open={openSections.has(cat)} onToggle={() => toggleSection(cat)}>
                   <div className="mp-split">
-                    <GeoMap places={entries.map((e) => placeOf(e))} selected={selectedId} onPick={pick} base={base} grid={grid} />
+                    <GeoMap places={entries.map((e) => placeOf(e, L))} selected={selectedId} onPick={pick} base={base} grid={grid} />
                     <PlaceList entries={entries} selectedId={selectedId} onPick={pick} />
                   </div>
                 </Section>

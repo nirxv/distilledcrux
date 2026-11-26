@@ -2,26 +2,28 @@
 import Link from '@/components/Link';
 import Mascot from '@/components/Mascot';
 import { useOptional } from '@/components/useOptional';
+import { useLang } from '@/lib/i18n/LangContext';
 import { routeSlugForOptional } from '@/lib/optionals';
 
 /** The 404: the owl, still searching with its glass, and the ways back in. */
 export default function NotFoundBody() {
+  const { L } = useLang();
   const slug = routeSlugForOptional(useOptional());
   const links = [
-    { href: slug ? `/notes/${slug}` : '/notes', label: 'Notes' },
-    ...(slug ? [{ href: `/${slug}/pyqs`, label: 'Past questions' }] : []),
-    { href: '/chat', label: 'AI chat' },
-    { href: '/evaluate', label: 'Evaluate an answer' },
+    { href: slug ? `/notes/${slug}` : '/notes', label: L('Notes', 'नोट्स') },
+    ...(slug ? [{ href: `/${slug}/pyqs`, label: L('Past questions', 'पिछले वर्षों के प्रश्न') }] : []),
+    { href: '/chat', label: L('AI chat', 'AI चैट') },
+    { href: '/evaluate', label: L('Evaluate an answer', 'उत्तर का मूल्यांकन करें') },
   ];
   return (
     <main className="nf ds">
       <style>{NF_CSS}</style>
       <Mascot pose="peek" width={160} className="nf-owl" preload />
-      <h1>This page isn’t in the syllabus</h1>
-      <p>We searched every paper and couldn’t find it. It may have moved, or the link may have a typo in it.</p>
-      <Link href="/" className="ds-btn ds-btn-solid">Back to the home page</Link>
+      <h1>{L('This page isn’t in the syllabus', 'यह पृष्ठ पाठ्यक्रम में नहीं है')}</h1>
+      <p>{L('We searched every paper and couldn’t find it.', 'हमने हर प्रश्नपत्र में खोजा, लेकिन यह नहीं मिला।')} {L('It may have moved, or the link may have a typo in it.', 'हो सकता है कि यह कहीं और चला गया हो, या लिंक में टाइपिंग की कोई गलती हो।')}</p>
+      <Link href="/" className="ds-btn ds-btn-solid">{L('Back to the home page', 'मुखपृष्ठ पर वापस जाएँ')}</Link>
       <div className="nf-links">
-        <span>Or go straight to</span>
+        <span>{L('Or go straight to', 'या सीधे जाएँ')}</span>
         {links.map(l => <Link key={l.href} href={l.href}>{l.label}</Link>)}
       </div>
     </main>

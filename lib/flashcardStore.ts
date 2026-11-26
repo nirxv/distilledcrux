@@ -26,6 +26,8 @@ export type FlashCardFront = {
   topics: string[];
   type: FlashCardType;
   front: string;
+  /** Hindi font side, null until that card is translated. */
+  front_hi?: string | null;
   questions: number[];
   asked: number[];
 };
@@ -34,13 +36,15 @@ export type FlashCardFront = {
 export type FlashCardIndexEntry = Pick<FlashCardFront, 'id' | 'topic' | 'topics' | 'type'>;
 
 /** Just the answer, for a reader who has been granted it. */
-export type FlashCardBack = { id: string; back: string };
+export type FlashCardBack = { id: string; back: string; back_hi?: string | null };
 
 /**
  * Everything except the answer. This is the column list behind the public,
  * edge-cached route, and a cached response is served to whoever asks next.
  */
 const FRONT_COLUMNS = 'id,subject,topic,topics,type,front,questions,asked';
+/** Hindi readers also get the translated front; English readers never receive it. */
+const FRONT_COLUMNS_HI = `${FRONT_COLUMNS},front_hi`;
 
 function client() {
   return createClient(
@@ -85,8 +89,25 @@ export async function listCards(opts: {
   ids?: string[];
   limit?: number;
   offset?: number;
+  lang?: 'en' | 'hi';
 }): Promise<{ cards: FlashCardFront[]; total: number }> {
-  const { subject, ids, limit = 60, offset = 0 } = opts;
+  const { subject, ids, limit = 60, offset = 0, lang = 'en' } = opts;
+
+  // Two literal queries rather than one with a computed column list: PostgREST's
+  // types (and its payload) then stay exact, and an English request never reads
+  // the Hindi column at all.
+  if (lang === 'hi') {
+    let q = client()
+      .from('flashcards')
+      .select(FRONT_COLUMNS_HI, { count: 'exact' })
+      .eq('status', 'published')
+      .eq('subject', subject);
+    if (ids?.length) q = q.in('id', ids);
+    const { data, error, count } = await q.order('id').range(offset, offset + limit - 1);
+    if (error) throw new Error(`flashcards: ${error.message}`);
+    return { cards: (data ?? []) as FlashCardFront[], total: count ?? 0 };
+  }
+
   let q = client()
     .from('flashcards')
     .select(FRONT_COLUMNS, { count: 'exact' })
@@ -108,7 +129,7 @@ export async function listBacks(subject: FlashcardSubject, ids: string[]): Promi
   if (!ids.length) return [];
   const { data, error } = await privilegedClient()
     .from('flashcards')
-    .select('id,back')
+    .select('id,back,back_hi')
     .eq('status', 'published')
     .eq('subject', subject)
     .in('id', ids);

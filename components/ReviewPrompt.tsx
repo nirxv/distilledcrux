@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/components/AuthProvider';
 import { auth, signInWithGoogle } from '@/lib/firebase';
 import { OPTIONAL_KEY } from '@/lib/optionals';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * Asks a signed-in reader for a review and suggestions, with their name,
@@ -40,13 +41,13 @@ const MIN_WORDS = 5;
 /** Pages where a reader is in the middle of something, signing in, or being sold to. */
 const BUSY = ['/test', '/evaluate', '/prelims', '/geography/mapping', '/pricing', '/subscribe', '/login', '/signup', '/signout', '/onboarding'];
 
-const ATTEMPTS: { id: string; label: string }[] = [
-  { id: '1', label: '1st' },
-  { id: '2', label: '2nd' },
-  { id: '3', label: '3rd' },
-  { id: '4', label: '4th' },
-  { id: '5+', label: '5th or more' },
-  { id: 'none', label: 'Not a candidate' },
+const ATTEMPTS: { id: string; label: string; labelHi: string }[] = [
+  { id: '1', label: '1st', labelHi: 'पहला' },
+  { id: '2', label: '2nd', labelHi: 'दूसरा' },
+  { id: '3', label: '3rd', labelHi: 'तीसरा' },
+  { id: '4', label: '4th', labelHi: 'चौथा' },
+  { id: '5+', label: '5th or more', labelHi: 'पाँचवाँ या उससे अधिक' },
+  { id: 'none', label: 'Not a candidate', labelHi: 'अभ्यर्थी नहीं' },
 ];
 
 const words = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
@@ -74,6 +75,7 @@ const Close = ({ onClick, label }: { onClick: () => void; label: string }) => (
 );
 
 export default function ReviewPrompt() {
+  const { L } = useLang();
   const { user, loading } = useAuth();
   const path = usePathname();
   const pathRef = useRef(path);
@@ -220,7 +222,7 @@ export default function ReviewPrompt() {
       window.setTimeout(() => { setOpen(false); setForced(false); }, 3500);
     } catch (e) {
       sent.current = false;
-      setError((e as Error).message === '429' ? 'Too many submissions. Please wait a moment.' : 'That didn’t send. Please try again.');
+      setError((e as Error).message === '429' ? L('Too many submissions. Please wait a moment.', 'बहुत ज़्यादा सबमिशन हो गए हैं। कृपया थोड़ी देर बाद कोशिश करें।') : L('That didn’t send. Please try again.', 'यह भेजा नहीं जा सका। कृपया फिर से कोशिश करें।'));
     } finally {
       setSending(false);
     }
@@ -234,15 +236,15 @@ export default function ReviewPrompt() {
           <div className="rv-top">
             <Icon />
             <div className="rv-head">
-              <span className="rv-eyebrow">Your review</span>
-              <h2 id="rv-title">Sign in to write a review</h2>
-              <p>It takes one tap, and your review is saved to your account.</p>
+              <span className="rv-eyebrow">{L('Your review', 'आपकी समीक्षा')}</span>
+              <h2 id="rv-title">{L('Sign in to write a review', 'समीक्षा लिखने के लिए साइन इन करें')}</h2>
+              <p>{L('It takes one tap, and your review is saved to your account.', 'बस एक टैप में आपकी समीक्षा आपके खाते में सेव हो जाएगी।')}</p>
             </div>
-            <Close onClick={closeLogin} label="Close" />
+            <Close onClick={closeLogin} label={L('Close', 'बंद करें')} />
           </div>
           <div className="rv-actions">
-            <button type="button" className="ds-btn ds-btn-ghost" onClick={closeLogin}>Not now</button>
-            <button type="button" className="ds-btn rv-send" onClick={signIn} disabled={signingIn}>{signingIn ? 'Signing in…' : 'Continue with Google'}</button>
+            <button type="button" className="ds-btn ds-btn-ghost" onClick={closeLogin}>{L('Not now', 'अभी नहीं')}</button>
+            <button type="button" className="ds-btn rv-send" onClick={signIn} disabled={signingIn}>{signingIn ? L('Signing in…', 'साइन इन हो रहा है…') : L('Continue with Google', 'Google के साथ जारी रखें')}</button>
           </div>
         </div>
       </div>
@@ -258,52 +260,52 @@ export default function ReviewPrompt() {
           <div className="rv-top">
             <Icon />
             <div className="rv-head">
-              <span className="rv-eyebrow">Your review</span>
-              <h2 id="rv-title">How is Distilled Crux working for you?</h2>
-              <p>A few lines from you help other aspirants decide, and tell us what to build next.</p>
+              <span className="rv-eyebrow">{L('Your review', 'आपकी समीक्षा')}</span>
+              <h2 id="rv-title">{L('How is Distilled Crux working for you?', 'Distilled Crux आपके लिए कैसा काम कर रहा है?')}</h2>
+              <p>{L('A few lines from you help other aspirants decide, and tell us what to build next.', 'आपकी कुछ पंक्तियाँ दूसरे अभ्यर्थियों को निर्णय लेने में मदद करती हैं और हमें बताती हैं कि आगे क्या बनाना चाहिए।')}</p>
             </div>
-            <Close onClick={later} label="Not now" />
+            <Close onClick={later} label={L('Not now', 'अभी नहीं')} />
           </div>
 
-          <label className="rv-label" htmlFor="rv-review">What has it changed in your preparation?</label>
+          <label className="rv-label" htmlFor="rv-review">{L('What has it changed in your preparation?', 'इसने आपकी तैयारी में क्या बदलाव किया है?')}</label>
           <textarea id="rv-review" className="rv-input rv-text" rows={4} value={review} onChange={(e) => setReview(e.target.value)}
-            placeholder="The notes, answer checking, topper copies, the AI… whatever helped you most." />
+            placeholder={L('The notes, answer checking, topper copies, the AI… whatever helped you most.', 'नोट्स, उत्तर जाँच, टॉपर की कॉपियाँ, AI… जो भी आपके सबसे ज़्यादा काम आया।')} />
 
-          <label className="rv-label" htmlFor="rv-sugg">Suggestions <span className="rv-opt">optional</span></label>
+          <label className="rv-label" htmlFor="rv-sugg">{L('Suggestions', 'सुझाव')} <span className="rv-opt">{L('optional', 'वैकल्पिक')}</span></label>
           <textarea id="rv-sugg" className="rv-input rv-text" rows={3} value={suggestions} onChange={(e) => setSuggestions(e.target.value)}
-            placeholder="What should we add, change or fix?" />
+            placeholder={L('What should we add, change or fix?', 'हमें क्या जोड़ना, बदलना या ठीक करना चाहिए?')} />
 
-          <label className="rv-label" htmlFor="rv-name">Your name</label>
+          <label className="rv-label" htmlFor="rv-name">{L('Your name', 'आपका नाम')}</label>
           <input id="rv-name" className="rv-input" value={name} onChange={(e) => setName(e.target.value)} maxLength={80} autoComplete="name" />
 
-          <span className="rv-label" id="rv-attempt-label">Which UPSC attempt is this?</span>
+          <span className="rv-label" id="rv-attempt-label">{L('Which UPSC attempt is this?', 'UPSC का आपका कौन-सा प्रयास है?')}</span>
           <div className="rv-chips" role="radiogroup" aria-labelledby="rv-attempt-label">
             {ATTEMPTS.map((a) => (
               <button key={a.id} type="button" role="radio" aria-checked={attempt === a.id} className={`rv-chip${attempt === a.id ? ' on' : ''}`}
-                onClick={() => setAttempt((x) => (x === a.id ? '' : a.id))}>{a.label}</button>
+                onClick={() => setAttempt((x) => (x === a.id ? '' : a.id))}>{L(a.label, a.labelHi)}</button>
             ))}
           </div>
 
-          <label className="rv-label" htmlFor="rv-about">Designation or what you do <span className="rv-opt">optional</span></label>
+          <label className="rv-label" htmlFor="rv-about">{L('Designation or what you do', 'पद या आप क्या करते हैं')} <span className="rv-opt">{L('optional', 'वैकल्पिक')}</span></label>
           <input id="rv-about" className="rv-input" value={about} onChange={(e) => setAbout(e.target.value)} maxLength={120}
-            placeholder="e.g. Student, Working professional" />
+            placeholder={L('e.g. Student, Working professional', 'जैसे: विद्यार्थी, नौकरीपेशा पेशेवर')} />
 
-          <p className="rv-note">Your review may be shown on Distilled Crux with your name, attempt and designation.</p>
+          <p className="rv-note">{L('Your review may be shown on Distilled Crux with your name, attempt and designation.', 'आपकी समीक्षा Distilled Crux पर आपके नाम, प्रयास और पद के साथ दिखाई जा सकती है।')}</p>
 
           {error && <p className="rv-error" role="alert">{error}</p>}
-          {!enough && (review || suggestions) && <p className="rv-hint">A few more words, at least {MIN_WORDS} in one box.</p>}
+          {!enough && (review || suggestions) && <p className="rv-hint">{L(`A few more words, at least ${MIN_WORDS} in one box.`, `कुछ और शब्द लिखें—कम-से-कम एक बॉक्स में ${MIN_WORDS} शब्द।`)}</p>}
 
           <div className="rv-actions">
-            <button type="button" className="ds-btn ds-btn-ghost" onClick={later}>Not now</button>
-            <button type="button" className="ds-btn rv-send" onClick={submit} disabled={!ready}>{sending ? 'Sending…' : 'Send'}</button>
+            <button type="button" className="ds-btn ds-btn-ghost" onClick={later}>{L('Not now', 'अभी नहीं')}</button>
+            <button type="button" className="ds-btn rv-send" onClick={submit} disabled={!ready}>{sending ? L('Sending…', 'भेजा जा रहा है…') : L('Send', 'भेजें')}</button>
           </div>
         </>) : (
           <div className="rv-done">
             <span className="rv-icon big" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            <h2 id="rv-title">Thank you!</h2>
-            <p>We read every review and suggestion.</p>
+            <h2 id="rv-title">{L('Thank you!', 'धन्यवाद!')}</h2>
+            <p>{L('We read every review and suggestion.', 'हम हर समीक्षा और सुझाव पढ़ते हैं।')}</p>
           </div>
         )}
       </div>

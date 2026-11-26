@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 import { auth } from '@/lib/firebase';
 import { toast } from '@/components/ui/Toast';
 
@@ -13,6 +14,7 @@ import { toast } from '@/components/ui/Toast';
 export default function ShareButton({ token, marks, outOf, subject }: {
   token: string; marks: number; outOf: number; subject: string;
 }) {
+  const { L } = useLang();
   const [shared, setShared] = useState<{ id: string; url: string } | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -61,13 +63,13 @@ export default function ShareButton({ token, marks, outOf, subject }: {
 
   return (
     <div className="ev-share">
-      <button type="button" className="ds-btn ds-btn-line" onClick={share} disabled={busy}>Share your score</button>
+      <button type="button" className="ds-btn ds-btn-line" onClick={share} disabled={busy}>{L('Share your score', 'अपना स्कोर साझा करें')}</button>
       {shared && (
         <p className="ev-share-note">
           Shows the question, marks and feedback, not your answer.{' '}
-          <button type="button" className="ev-share-link" onClick={() => copy(shared.url)} disabled={busy}>Copy link</button>
+          <button type="button" className="ev-share-link" onClick={() => copy(shared.url)} disabled={busy}>{L('Copy link', 'लिंक कॉपी करें')}</button>
           {' · '}
-          <button type="button" className="ev-share-link" onClick={stop} disabled={busy}>Stop sharing</button>
+          <button type="button" className="ev-share-link" onClick={stop} disabled={busy}>{L('Stop sharing', 'साझा करना बंद करें')}</button>
         </p>
       )}
     </div>

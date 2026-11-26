@@ -3,6 +3,7 @@ import Link from '@/components/Link';
 import { useAuth } from '@/components/AuthProvider';
 import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional, labelForOptional } from '@/lib/optionals';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * The hero's buttons, which change with who is reading. The page itself is
@@ -16,6 +17,7 @@ const Arrow = () => (
 
 /** The hero's two buttons: start, or carry on with your optional. */
 export function HeroActions() {
+  const { L } = useLang();
   const { user } = useAuth();
   const optional = useOptional();
   const slug = routeSlugForOptional(optional);
@@ -24,15 +26,15 @@ export function HeroActions() {
   if (slug && label) {
     return (
       <div className="hm-actions">
-        <Link href={`/notes/${slug}`} className="ds-btn ds-btn-solid ds-btn-lg">Continue with {label}<Arrow /></Link>
-        <Link href="/dashboard" className="ds-btn ds-btn-ghost">Your dashboard</Link>
+        <Link href={`/notes/${slug}`} className="ds-btn ds-btn-solid ds-btn-lg">{L(`Continue with ${label}`, `${label} के साथ जारी रखें`)}<Arrow /></Link>
+        <Link href="/dashboard" className="ds-btn ds-btn-ghost">{L('Your dashboard', 'आपका डैशबोर्ड')}</Link>
       </div>
     );
   }
   return (
     <div className="hm-actions">
-      <Link href={user ? '/onboarding' : '/login'} className="ds-btn ds-btn-solid ds-btn-lg">Start studying, it’s free<Arrow /></Link>
-      <Link href="#optionals" className="ds-btn ds-btn-ghost">Pick your optional first</Link>
+      <Link href={user ? '/onboarding' : '/login'} className="ds-btn ds-btn-solid ds-btn-lg">{L('Start studying, it’s free', 'पढ़ाई शुरू करें, यह मुफ़्त है')}<Arrow /></Link>
+      <Link href="#optionals" className="ds-btn ds-btn-ghost">{L('Pick your optional first', 'पहले अपना वैकल्पिक विषय चुनें')}</Link>
     </div>
   );
 }

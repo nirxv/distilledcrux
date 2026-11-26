@@ -462,3 +462,35 @@ img[src*="mascot"] {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
 }
+
+/* ── Hindi mode ──────────────────────────────────────────────────────────────
+   Devanagari is not Latin with different letters: matras sit above and below
+   the line, so tight tracking and 1.5 line heights clip and collide. These
+   rules only fire when the switch is on, so English rendering is untouched. */
+html[data-lang="hi"] body {
+  font-family: 'Noto Serif Devanagari', 'Noto Sans Devanagari', 'Kohinoor Devanagari',
+    'Devanagari Sangam MN', 'Nirmala UI', 'Mangal', var(--font-body);
+  line-height: 1.85;
+}
+html[data-lang="hi"] h1,
+html[data-lang="hi"] h2,
+html[data-lang="hi"] h3,
+html[data-lang="hi"] h4,
+html[data-lang="hi"] .ds-h1,
+html[data-lang="hi"] .ds-h2,
+html[data-lang="hi"] .ds-h3 {
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+html[data-lang="hi"] .ds-kicker,
+html[data-lang="hi"] .ds-meta,
+html[data-lang="hi"] .nb-lang,
+html[data-lang="hi"] button,
+html[data-lang="hi"] input,
+html[data-lang="hi"] textarea,
+html[data-lang="hi"] select {
+  letter-spacing: 0;
+}
+html[data-lang="hi"] .note-content { line-height: 1.95; }
+html[data-lang="hi"] .note-content li { margin-bottom: 0.55em; }
+html[data-lang="hi"] table { line-height: 1.75; }

@@ -31,6 +31,9 @@ WRITING FOR THE STUDENT
 - Any book passages you were given are for your own checking. Never refer to them as "Source 1", "स्रोत 1", "passage 2" or by any number; name the book or the ${thinker} instead.`;
 
 /** Mostly Devanagari: the answer was written in Hindi. */
+/** Added to every model call when the verdict is in Hindi, as the history site does. */
+const HINDI_NOTE = "\n\nIMPORTANT: Write your ENTIRE response in Hindi (Devanagari script). All feedback, analysis, model answer — everything in Hindi.";
+
 const writtenInHindi = (t: string) => {
   const letters = (t.match(/\p{L}/gu) ?? []).length;
   return letters > 40 && (t.match(/[\u0900-\u097F]/g) ?? []).length / letters > 0.5;
@@ -556,7 +559,7 @@ Return ONLY the JSON object, no preamble, no markdown fences.`;
     const response = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: ASSEMBLED_PROMPT },
+          { role: "system", content: ASSEMBLED_PROMPT + (outLang === "hi" ? HINDI_NOTE : "") },
           { role: "user", content: cotPrompt },
           { role: "assistant", content: cotReasoning },
           { role: "user", content: jsonPrompt },
@@ -711,7 +714,7 @@ Be brutally specific. Name exactly which ${subjectConfig.thinkerTerm}s were miss
       const pass3Res = await callWithFallback({
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: ASSEMBLED_PROMPT },
+          { role: "system", content: ASSEMBLED_PROMPT + (outLang === "hi" ? HINDI_NOTE : "") },
           { role: "user", content: pass3Prompt },
         ],
         temperature: 0.2,

@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * Scratch notes for one note page, kept in this browser only.
@@ -49,6 +50,7 @@ const newId = () =>
     : `n_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
 export default function SidebarNotes({ subject, slug }: { subject: string; slug: string }) {
+  const { L } = useLang();
   const [notes, setNotes] = useState<ScratchNote[]>([]);
   const [mounted, setMounted] = useState(false);
   const [confirmingId, setConfirmingId] = useState<string | null>(null);
@@ -131,8 +133,8 @@ export default function SidebarNotes({ subject, slug }: { subject: string; slug:
                 <span>{new Date(n.updatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</span>
                 {confirmingId === n.id ? (
                   <span className="sb-note-confirm">
-                    <button type="button" onClick={() => remove(n.id)}>Delete</button>
-                    <button type="button" onClick={() => setConfirmingId(null)}>Cancel</button>
+                    <button type="button" onClick={() => remove(n.id)}>{L('Delete', 'हटाएँ')}</button>
+                    <button type="button" onClick={() => setConfirmingId(null)}>{L('Cancel', 'रद्द करें')}</button>
                   </span>
                 ) : (
                   <button type="button" onClick={() => setConfirmingId(n.id)} aria-label="Delete note">

@@ -5,10 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096\" next dev",
-    "build": "next build",
+    "build": "node scripts/i18n/guard.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx tests/pyqNotes.test.mts && tsx tests/progressMerge.test.mts && tsx tests/chatStart.test.mts && tsx tests/chatStream.test.mts && tsx tests/chatMentor.test.mts && tsx tests/chatSuggestions.test.mts && tsx tests/citationGate.test.mts && tsx tests/chatCitations.test.mts && tsx tests/detectTopic.test.mts"
+    "test": "tsx tests/pyqNotes.test.mts && tsx tests/progressMerge.test.mts && tsx tests/chatStart.test.mts && tsx tests/chatStream.test.mts && tsx tests/chatMentor.test.mts && tsx tests/chatSuggestions.test.mts && tsx tests/citationGate.test.mts && tsx tests/chatCitations.test.mts && tsx tests/detectTopic.test.mts",
+    "hindi:coverage": "node scripts/i18n/coverage.mjs",
+    "hindi:pyq": "node scripts/i18n/pyq-coverage.mjs",
+    "hindi:assemble": "node scripts/i18n/assemble.mjs && node scripts/i18n/pyq-assemble.mjs && node scripts/i18n/cards-assemble.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",

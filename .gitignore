@@ -44,3 +44,6 @@ next-env.d.ts
 # text, and this repo is public.
 scripts/rag/work/
 __pycache__/
+
+# Hindi translation scratch (English extracts, regenerable)
+scripts/i18n/work/

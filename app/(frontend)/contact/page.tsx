@@ -3,18 +3,20 @@ import { useEffect, useState } from 'react';
 import { SUPPORT_EMAIL, SUPPORT_MAILTO } from '@/lib/contact';
 import { useAuth } from '@/components/AuthProvider';
 import Mascot from '@/components/Mascot';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /** Kept in step with TOPICS in app/api/contact/route.ts, which rejects anything else. */
 const topics = [
-  'Technical Issue',
-  'Subscription / Payment',
-  'Refund Request',
-  'Feature Request',
-  'Content Feedback',
-  'Other',
+  { en: 'Technical Issue', hi: 'तकनीकी समस्या' },
+  { en: 'Subscription / Payment', hi: 'सदस्यता / भुगतान' },
+  { en: 'Refund Request', hi: 'रिफ़ंड का अनुरोध' },
+  { en: 'Feature Request', hi: 'नई सुविधा का सुझाव' },
+  { en: 'Content Feedback', hi: 'सामग्री पर प्रतिक्रिया' },
+  { en: 'Other', hi: 'अन्य' },
 ];
 
 export default function ContactPage() {
+  const { L } = useLang();
   const { user } = useAuth();
   const [form, setForm] = useState({ name: '', email: '', topic: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -65,8 +67,8 @@ export default function ContactPage() {
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <header className="ct-hero">
         <div className="ds-container">
-          <h1 className="ds-h1 ct-h1">Get in touch</h1>
-          <p className="ds-lede ct-lede">A bug, a payment, a refund, or a topic you want covered: write to us and a person reads it. We usually reply within one or two working days.</p>
+          <h1 className="ds-h1 ct-h1">{L('Get in touch', 'हमसे संपर्क करें')}</h1>
+          <p className="ds-lede ct-lede">{L('A bug, a payment, a refund, or a topic you want covered: write to us and a person reads it. We usually reply within one or two working days.', 'कोई बग, भुगतान, रिफ़ंड या ऐसा विषय जिस पर आप जानकारी चाहते हैं—हमें लिखें, आपका संदेश कोई व्यक्ति पढ़ेगा। हम आमतौर पर एक या दो कार्यदिवसों में जवाब देते हैं।')}</p>
         </div>
       </header>
 
@@ -75,41 +77,41 @@ export default function ContactPage() {
           {status === 'success' ? (
             <div className="ct-done">
               <Mascot pose="celebrate" width={110} />
-              <h2>Thanks, your message is on its way</h2>
-              <p>We’ll reply to {form.email || 'your email'} within one or two working days.</p>
-              <button type="button" className="ds-btn ds-btn-line" onClick={() => setStatus('idle')}>Send another message</button>
+              <h2>{L('Thanks, your message is on its way', 'धन्यवाद, आपका संदेश भेज दिया गया है')}</h2>
+              <p>{L('We’ll reply to', 'हम जवाब भेजेंगे:')} {form.email || L('your email', 'आपके ईमेल पते')} {L('within one or two working days.', 'एक या दो कार्यदिवसों के भीतर।')}</p>
+              <button type="button" className="ds-btn ds-btn-line" onClick={() => setStatus('idle')}>{L('Send another message', 'एक और संदेश भेजें')}</button>
             </div>
           ) : (
             <form className="ct-form" onSubmit={handleSubmit} noValidate>
-              <h2 className="ct-form-title">Send us a message</h2>
+              <h2 className="ct-form-title">{L('Send us a message', 'हमें संदेश भेजें')}</h2>
               {status === 'error' && (
                 <p className="ct-error" role="alert">
-                  {errorText || 'Something went wrong.'} You can also email us at <a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a>.
+                  {errorText || L('Something went wrong.', 'कुछ गड़बड़ हो गई।')} {L('You can also email us at', 'आप हमें इस पते पर ईमेल भी कर सकते हैं')} <a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a>.
                 </p>
               )}
               <div className="ct-row">
                 <label className="ct-field">
-                  <span className="ct-label">Name</span>
-                  <input className="ct-input" autoComplete="name" placeholder="Your name" value={form.name} onChange={set('name')} />
+                  <span className="ct-label">{L('Name', 'नाम')}</span>
+                  <input className="ct-input" autoComplete="name" placeholder={L('Your name', 'आपका नाम')} value={form.name} onChange={set('name')} />
                 </label>
                 <label className="ct-field">
-                  <span className="ct-label">Email</span>
+                  <span className="ct-label">{L('Email', 'ईमेल')}</span>
                   <input className="ct-input" type="email" autoComplete="email" placeholder="you@email.com" value={form.email} onChange={set('email')} />
                 </label>
               </div>
               <label className="ct-field">
-                <span className="ct-label">What is it about?</span>
+                <span className="ct-label">{L('What is it about?', 'यह किस बारे में है?')}</span>
                 <select className="ct-input ct-select" value={form.topic} onChange={set('topic')}>
-                  <option value="">Pick a topic</option>
-                  {topics.map(t => <option key={t} value={t}>{t}</option>)}
+                  <option value="">{L('Pick a topic', 'कोई विषय चुनें')}</option>
+                  {topics.map(t => <option key={t.en} value={t.en}>{L(t.en, t.hi)}</option>)}
                 </select>
               </label>
               <label className="ct-field">
-                <span className="ct-label">Message</span>
-                <textarea className="ct-input ct-textarea" placeholder="Tell us what happened, or what you’d like" value={form.message} onChange={set('message')} />
+                <span className="ct-label">{L('Message', 'संदेश')}</span>
+                <textarea className="ct-input ct-textarea" placeholder={L('Tell us what happened, or what you’d like', 'हमें बताएं कि क्या हुआ या आप क्या चाहते हैं')} value={form.message} onChange={set('message')} />
               </label>
               <button type="submit" className="ds-btn ds-btn-solid ct-send" disabled={status === 'sending' || !ready}>
-                {status === 'sending' ? 'Sending…' : 'Send message'}
+                {status === 'sending' ? L('Sending…', 'भेजा जा रहा है…') : L('Send message', 'संदेश भेजें')}
               </button>
             </form>
           )}
@@ -121,9 +123,9 @@ export default function ContactPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3" /><path d="m2 7 10 7 10-7" /></svg>
             </span>
             <div>
-              <h3>Email</h3>
+              <h3>{L('Email', 'ईमेल')}</h3>
               <a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a>
-              <p>For anything about your account, a payment or a refund.</p>
+              <p>{L('For anything about your account, a payment or a refund.', 'अपने खाते, भुगतान या रिफ़ंड से जुड़ी किसी भी बात के लिए।')}</p>
             </div>
           </div>
           <div className="ct-way">
@@ -133,7 +135,7 @@ export default function ContactPage() {
             <div>
               <h3>Telegram</h3>
               <a href="https://t.me/distilledcrux" target="_blank" rel="noopener noreferrer">t.me/distilledcrux</a>
-              <p>Updates, discussion and quick questions.</p>
+              <p>{L('Updates, discussion and quick questions.', 'अपडेट, चर्चा और तुरंत पूछे जाने वाले सवाल।')}</p>
             </div>
           </div>
           <div className="ct-way">
@@ -141,9 +143,9 @@ export default function ContactPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
             </span>
             <div>
-              <h3>When we’re around</h3>
-              <span className="ct-way-value">Monday to Saturday, 10 am to 7 pm IST</span>
-              <p>We’re a small team, so thank you for your patience.</p>
+              <h3>{L('When we’re around', 'हम कब उपलब्ध रहते हैं')}</h3>
+              <span className="ct-way-value">{L('Monday to Saturday, 10 am to 7 pm IST', 'सोमवार से शनिवार, सुबह 10 बजे से शाम 7 बजे तक IST')}</span>
+              <p>{L('We’re a small team, so thank you for your patience.', 'हमारी टीम छोटी है, इसलिए आपके धैर्य के लिए धन्यवाद।')}</p>
             </div>
           </div>
         </aside>

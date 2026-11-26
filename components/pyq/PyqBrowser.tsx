@@ -1,6 +1,8 @@
 'use client';
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import Link from '@/components/Link';
+import { usePyqHi, hiQuestion, hiTopic } from '@/lib/usePyqHi';
+import { useLang } from '@/lib/i18n/LangContext';
 import { useSearchParams } from 'next/navigation';
 import type { Pyq, PyqTopic } from '@/lib/pyqs';
 import { pyqKey, useAttemptedPyqs } from '@/hooks/useAttemptedPyqs';
@@ -64,6 +66,9 @@ function highlight(text: string, q: string): ReactNode {
 }
 
 function Browser({ subject, subjectName, questions, topics, initial }: Props & { initial: Filters }) {
+  const { L } = useLang();
+  // Hindi question text and topic labels, fetched once per subject per visit.
+  const bank = usePyqHi(subject);
   const [f, setF] = useState<Filters>(initial);
   const [shown, setShown] = useState(BATCH);
   const listRef = useRef<HTMLDivElement>(null);
@@ -122,8 +127,8 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
     (!f.topic || x.topic === f.topic) &&
     (!f.year || x.year === f.year) &&
     (!f.marks || String(x.marks) === f.marks) &&
-    (!q || x.question.toLowerCase().includes(q) || x.topic.toLowerCase().includes(q) || (x.microtheme ?? '').toLowerCase().includes(q)),
-  ), [questions, f.paper, f.topic, f.year, f.marks, q]);
+    (!q || hiQuestion(bank, x.id, x.question).toLowerCase().includes(q) || hiTopic(bank, x.topic).toLowerCase().includes(q) || (x.microtheme ?? '').toLowerCase().includes(q)),
+  ), [questions, bank, f.paper, f.topic, f.year, f.marks, q]);
 
   const years = useMemo(() => [...new Set(questions.map((x) => x.year))].filter(Boolean).sort((a, b) => b.localeCompare(a)), [questions]);
   const marksOptions = useMemo(() => [...new Set(questions.map((x) => x.marks).filter((m): m is number => m !== null))].sort((a, b) => a - b), [questions]);
@@ -161,7 +166,7 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
   const topicOptions = f.paper
     ? topics.filter((t) => (f.paper === '1' ? t.p1 : t.p2) > 0)
     : topics;
-  const topicLabel = (t: PyqTopic) => `${t.name} (${f.paper === '1' ? t.p1 : f.paper === '2' ? t.p2 : t.p1 + t.p2})`;
+  const topicLabel = (t: PyqTopic) => `${hiTopic(bank, t.name)} (${f.paper === '1' ? t.p1 : f.paper === '2' ? t.p2 : t.p1 + t.p2})`;
 
   const pickTopic = (name: string) => {
     update({ topic: name });
@@ -178,60 +183,60 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
             type="search"
             value={f.q}
             onChange={(e) => update({ q: e.target.value })}
-            placeholder={`Search, say “${SEARCH_EXAMPLE[subject] ?? 'a thinker'}”`}
-            aria-label={`Search ${subjectName} past questions`}
+            placeholder={L(`Search, say “${SEARCH_EXAMPLE[subject] ?? 'a thinker'}”`, `खोजें, जैसे “${SEARCH_EXAMPLE[subject] ?? 'a thinker'}”`)}
+            aria-label={L(`Search ${subjectName} past questions`, `${subjectName} के पिछले प्रश्न खोजें`)}
           />
-          {f.q && <button type="button" className="pq-clear" onClick={() => update({ q: '' })} aria-label="Clear search">✕</button>}
+          {f.q && <button type="button" className="pq-clear" onClick={() => update({ q: '' })} aria-label={L('Clear search', 'खोज मिटाएँ')}>✕</button>}
         </label>
-        <div className="pq-tabs" role="tablist" aria-label="Paper">
+        <div className="pq-tabs" role="tablist" aria-label={L('Paper', 'प्रश्नपत्र')}>
           {([['', 'Both papers'], ['1', 'Paper I'], ['2', 'Paper II']] as const).map(([v, label]) => (
             <button key={v} type="button" role="tab" aria-selected={f.paper === v}
               className={`pq-tab${f.paper === v ? ' on' : ''}`} onClick={() => update({ paper: v })}>
-              {label}{v && <span>{paperCount(v)}</span>}
+              {L(label, label === 'Both papers' ? 'दोनों प्रश्नपत्र' : label === 'Paper I' ? 'प्रश्नपत्र I' : 'प्रश्नपत्र II')}{v && <span>{paperCount(v)}</span>}
             </button>
           ))}
         </div>
         <div className="pq-selects">
-          <select className={`pq-select pq-select-topic${f.topic ? ' set' : ''}`} value={f.topic} onChange={(e) => update({ topic: e.target.value })} aria-label="Topic">
-            <option value="">Every topic</option>
+          <select className={`pq-select pq-select-topic${f.topic ? ' set' : ''}`} value={f.topic} onChange={(e) => update({ topic: e.target.value })} aria-label={L('Topic', 'विषय')}>
+            <option value="">{L('Every topic', 'सभी विषय')}</option>
             {f.paper
               ? topicOptions.map((t) => <option key={t.name} value={t.name}>{topicLabel(t)}</option>)
               : (['Paper I', 'Paper II'] as const).map((p) => (
-                <optgroup key={p} label={p}>
+                <optgroup key={p} label={L(p, p === 'Paper I' ? 'प्रश्नपत्र I' : 'प्रश्नपत्र II')}>
                   {topics.filter((t) => t.paper === p).map((t) => <option key={t.name} value={t.name}>{topicLabel(t)}</option>)}
                 </optgroup>
               ))}
           </select>
-          <select className={`pq-select${f.year ? ' set' : ''}`} value={f.year} onChange={(e) => update({ year: e.target.value })} aria-label="Year">
-            <option value="">Every year</option>
+          <select className={`pq-select${f.year ? ' set' : ''}`} value={f.year} onChange={(e) => update({ year: e.target.value })} aria-label={L('Year', 'वर्ष')}>
+            <option value="">{L('Every year', 'सभी वर्ष')}</option>
             {years.map((y) => <option key={y} value={y}>{y}</option>)}
           </select>
-          <select className={`pq-select${f.marks ? ' set' : ''}`} value={f.marks} onChange={(e) => update({ marks: e.target.value })} aria-label="Marks">
-            <option value="">Any marks</option>
-            {marksOptions.map((m) => <option key={m} value={String(m)}>{m} marks</option>)}
+          <select className={`pq-select${f.marks ? ' set' : ''}`} value={f.marks} onChange={(e) => update({ marks: e.target.value })} aria-label={L('Marks', 'अंक')}>
+            <option value="">{L('Any marks', 'कोई भी अंक')}</option>
+            {marksOptions.map((m) => <option key={m} value={String(m)}>{L(`${m} marks`, `${m} अंक`)}</option>)}
           </select>
         </div>
       </div>
 
       <div className="pq-status" aria-live="polite">
         <span>
-          {filtered.length.toLocaleString('en-IN')} {filtered.length === 1 ? 'question' : 'questions'}
-          {f.topic && <> on <strong>{f.topic}</strong></>}
+          {filtered.length.toLocaleString('en-IN')} {filtered.length === 1 ? L('question', 'प्रश्न') : L('questions', 'प्रश्न')}
+          {f.topic && <>{L(' on ', ' — ')}<strong>{hiTopic(bank, f.topic)}</strong></>}
           {attempts.ready && (() => {
             const n = filtered.filter(wasAttempted).length;
-            return n > 0 ? <span className="pq-status-done"> · {n.toLocaleString('en-IN')} attempted</span> : null;
+            return n > 0 ? <span className="pq-status-done"> · {L(`${n.toLocaleString('en-IN')} attempted`, `${n.toLocaleString('en-IN')} प्रश्नों का प्रयास किया`)}</span> : null;
           })()}
         </span>
-        {filteredAtAll && <button type="button" className="pq-reset" onClick={() => update(EMPTY)}>Clear filters</button>}
+        {filteredAtAll && <button type="button" className="pq-reset" onClick={() => update(EMPTY)}>{L('Clear filters', 'फ़िल्टर हटाएँ')}</button>}
       </div>
 
       {filtered.length === 0 ? (
         <div className="pq-empty">
-          <p>No question matches all of that. Try fewer filters, or a shorter search.</p>
+          <p>{L('No question matches all of that. Try fewer filters, or a shorter search.', 'इन सभी शर्तों से कोई प्रश्न नहीं मिला। कम फ़िल्टर लगाएँ या छोटा खोज शब्द आज़माएँ।')}</p>
           {f.q.trim() && (
             <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(f.q.trim())}`} className="pq-empty-ask ds-card ds-card-link">
-              <strong>Ask the {subjectName} AI about “{f.q.trim()}”</strong>
-              <span>It answers from the standard books and shows you where.</span>
+              <strong>{L(`Ask the ${subjectName} AI about “${f.q.trim()}”`, `${subjectName} के AI से “${f.q.trim()}” के बारे में पूछें`)}</strong>
+              <span>{L('It answers from the standard books and shows you where.', 'यह मानक पुस्तकों से उत्तर देता है और स्रोत भी दिखाता है।')}</span>
             </Link>
           )}
         </div>
@@ -241,31 +246,31 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
             <section key={g.year} className="pq-year">
               <h2 className="pq-year-head">
                 {g.year}
-                <span>{perYear.get(g.year)} {perYear.get(g.year) === 1 ? 'question' : 'questions'}</span>
+                 <span>{perYear.get(g.year)} {perYear.get(g.year) === 1 ? L('question', 'प्रश्न') : L('questions', 'प्रश्न')}</span>
               </h2>
               <div className="pq-cards">
                 {g.items.map((x) => (
                   <article key={x.id} className={`pq-card${wasAttempted(x) ? ' done' : ''}`}>
                     <div className="pq-meta">
-                      <span className="pq-paper">{x.paper}</span>
-                      {wasAttempted(x) && <span className="pq-done">Attempted</span>}
-                      {x.section && <span>{x.section}</span>}
-                      {x.marks && <span className="pq-marks">{x.marks} marks</span>}
+                       <span className="pq-paper">{L(x.paper, x.paper === 'Paper I' ? 'प्रश्नपत्र I' : 'प्रश्नपत्र II')}</span>
+                       {wasAttempted(x) && <span className="pq-done">{L('Attempted', 'प्रयास किया')}</span>}
+                       {x.section && <span>{x.section}</span>}
+                       {x.marks && <span className="pq-marks">{L(`${x.marks} marks`, `${x.marks} अंक`)}</span>}
                     </div>
                     <h3 className="pq-q">
                       {/* No prefetch: each question page is built on the server the first time
                           it is asked for, so prefetching every question in view cost a render each,
                           again after every deploy. One opened is built then. */}
-                      <Link href={`/${subject}/pyqs/${x.id}`} prefetch={false} onClick={rememberPlace}>{highlight(x.question, q)}</Link>
+                      <Link href={`/${subject}/pyqs/${x.id}`} prefetch={false} onClick={rememberPlace}>{highlight(hiQuestion(bank, x.id, x.question), q)}</Link>
                     </h3>
                     <div className="pq-foot">
                       <button type="button" className={`pq-topic${f.topic === x.topic ? ' on' : ''}`} onClick={() => pickTopic(x.topic)}
-                        title={`Every question on ${x.topic}`}>
-                        {x.topic}
+                         title={L(`Every question on ${hiTopic(bank, x.topic)}`, `${hiTopic(bank, x.topic)} के सभी प्रश्न`)}>
+                        {hiTopic(bank, x.topic)}
                       </button>
                       <Link className="pq-write" onClick={rememberPlace}
                         href={`/evaluate?question=${encodeURIComponent(x.question)}${x.marks ? `&marks=${x.marks}` : ''}`}>
-                        Write an answer
+                         {L('Write an answer', 'उत्तर लिखें')}
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                       </Link>
                     </div>
@@ -277,7 +282,7 @@ function Browser({ subject, subjectName, questions, topics, initial }: Props & {
           {shown < filtered.length && (
             <div ref={sentinel} className="pq-more">
               <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => setShown((s) => s + BATCH)}>
-                Show more ({(filtered.length - shown).toLocaleString('en-IN')} left)
+                 {L(`Show more (${(filtered.length - shown).toLocaleString('en-IN')} left)`, `और दिखाएँ (${(filtered.length - shown).toLocaleString('en-IN')} शेष)`)}
               </button>
             </div>
           )}

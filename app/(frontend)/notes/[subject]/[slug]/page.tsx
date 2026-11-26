@@ -1,5 +1,6 @@
 import { NOTE_SUBJECTS, notesForSubject, getNote, getNoteNeighbours } from '@/lib/notes';
 import NoteReader from './NoteReader';
+import { getNoteHi, getSectionHi } from '@/lib/notesHi';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -39,6 +40,7 @@ export default async function NotePage(
   if (!note) notFound();
 
   const { prev, next } = getNoteNeighbours(subject, slug);
+  const noteHiCatalog = getNoteHi(subject, slug);
 
   let initialContent = '';
 
@@ -99,6 +101,7 @@ export default async function NotePage(
         slug={slug}
         subject={subject}
         initialContent={initialContent}
+        noteHi={noteHiCatalog ? { ...noteHiCatalog, section: getSectionHi(subject, note.section) ?? note.section } : null}
         note={{
           title: note.title,
           section: note.section,

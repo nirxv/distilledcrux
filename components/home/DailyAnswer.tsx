@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 import TodayPractice from '@/components/TodayPractice';
 import SubjectIcon from '@/components/SubjectIcon';
 import { useOptional } from '@/components/useOptional';
@@ -16,6 +17,7 @@ export default function DailyAnswer({ sets, names, day }: {
   names: Record<PyqSubject, string>;
   day: string;
 }) {
+  const { L } = useLang();
   const mine = routeSlugForOptional(useOptional()) as PyqSubject | null;
   const [picked, setPicked] = useState<PyqSubject | null>(null);
   const subject = picked ?? (mine && sets.some((s) => s.subject === mine) ? mine : sets[0].subject);
@@ -24,7 +26,7 @@ export default function DailyAnswer({ sets, names, day }: {
   return (
     <div className="da">
       <style>{DA_CSS}</style>
-      <div className="da-tabs" role="tablist" aria-label="Optional">
+      <div className="da-tabs" role="tablist" aria-label={L('Optional', 'वैकल्पिक विषय')}>
         {sets.map((s) => (
           <button key={s.subject} type="button" role="tab" aria-selected={s.subject === subject}
             className={`da-tab${s.subject === subject ? ' on' : ''}`} style={{ ['--t' as string]: `var(--tint-${s.subject})`, ['--w' as string]: `var(--wash-${s.subject})` }}

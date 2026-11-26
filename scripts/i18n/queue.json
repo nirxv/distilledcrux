@@ -1,0 +1,968 @@
+[
+ {
+  "subject": "sociology",
+  "slug": "karl-marx",
+  "chars": 28968,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "emile-durkheim",
+  "chars": 24118,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "max-weber",
+  "chars": 35363,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "talcott-parsons",
+  "chars": 19249,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "robert-merton",
+  "chars": 25686,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "george-mead",
+  "chars": 23051,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "sociology-the-discipline",
+  "chars": 30664,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "sociology-as-science",
+  "chars": 36031,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "research-methods",
+  "chars": 45625,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "stratification-mobility",
+  "chars": 45882,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "religion-and-society",
+  "chars": 45556,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "works-economic-life",
+  "chars": 38080,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "politics-and-society",
+  "chars": 52844,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "systems-of-kinship",
+  "chars": 34533,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "social-change-modern-society",
+  "chars": 40005,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "introducing-indian-society",
+  "chars": 40073,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "colonial-rule-indian-society",
+  "chars": 43129,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "rural-agrarian-structure",
+  "chars": 29584,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "caste-system",
+  "chars": 42829,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "tribal-communities",
+  "chars": 20867,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "social-classes-india",
+  "chars": 35778,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "kinship-systems-india",
+  "chars": 23103,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "religion-society-india",
+  "chars": 38139,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "visions-social-change-india",
+  "chars": 30398,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "rural-agrarian-transformation",
+  "chars": 30303,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "industrialization-urbanisation",
+  "chars": 40862,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "politics-society-india",
+  "chars": 43565,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "social-movements-india",
+  "chars": 35503,
+  "done": false
+ },
+ {
+  "subject": "sociology",
+  "slug": "population-dynamics",
+  "chars": 23988,
+  "done": true
+ },
+ {
+  "subject": "sociology",
+  "slug": "challenges-social-transformation",
+  "chars": 27163,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "meaning-scope-development-anthropology",
+  "chars": 21887,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "branches-of-anthropology",
+  "chars": 18115,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "human-evolution",
+  "chars": 59756,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "biological-basis-of-life",
+  "chars": 53164,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "human-genetics",
+  "chars": 54624,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "concept-of-race",
+  "chars": 35444,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "human-growth-development",
+  "chars": 39682,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "applicability-of-biosocial-perspectives",
+  "chars": 43518,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "principles-prehistoric-archaeology",
+  "chars": 24491,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "cultural-evolution-prehistoric-cultures",
+  "chars": 34586,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "nature-of-culture",
+  "chars": 39364,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "nature-of-society",
+  "chars": 36295,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "marriage-family-kinship",
+  "chars": 52563,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "economic-organization",
+  "chars": 27419,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "political-organization-social-control",
+  "chars": 32331,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "religion",
+  "chars": 57888,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "anthropological-theories",
+  "chars": 112953,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "culture-language-communication",
+  "chars": 34022,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "research-methods-anthropology",
+  "chars": 47152,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "applications-of-anthropology",
+  "chars": 24360,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "evolution-indian-culture-civilization",
+  "chars": 66478,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "palaeo-anthropological-evidence-india",
+  "chars": 25241,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "ethnoarchaeology-india",
+  "chars": 23753,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "demographic-profile-india",
+  "chars": 37168,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "traditional-indian-social-system",
+  "chars": 36488,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "palaeoanthropological-evidence-india",
+  "chars": 22397,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "caste-system-india",
+  "chars": 41714,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "emergence-growth-anthropology-india",
+  "chars": 43944,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "indian-village",
+  "chars": 37805,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "linguistic-religious-minorities",
+  "chars": 29654,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "socio-cultural-change-india",
+  "chars": 37239,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "tribal-situation-india",
+  "chars": 38286,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "problems-tribal-communities",
+  "chars": 37207,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "scheduled-castes-tribes-obcs",
+  "chars": 39711,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "social-change-tribal-societies",
+  "chars": 23742,
+  "done": true
+ },
+ {
+  "subject": "anthropology",
+  "slug": "ethnicity-ethnic-conflicts",
+  "chars": 27959,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "religion-tribal-societies",
+  "chars": 29313,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "role-of-anthropology-development",
+  "chars": 25451,
+  "done": false
+ },
+ {
+  "subject": "anthropology",
+  "slug": "developmental-projects-tribal-displacement",
+  "chars": 33949,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "political-theory-meaning-approaches",
+  "chars": 33800,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "theories-of-state",
+  "chars": 45382,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "justice",
+  "chars": 49077,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "equality",
+  "chars": 39259,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "rights",
+  "chars": 43924,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "democracy",
+  "chars": 58850,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "power-hegemony-ideology",
+  "chars": 44605,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "political-ideologies",
+  "chars": 154243,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "indian-political-thought",
+  "chars": 125472,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "western-political-thought",
+  "chars": 89131,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "indian-nationalism",
+  "chars": 40290,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "making-of-indian-constitution",
+  "chars": 31680,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "salient-features-indian-constitution",
+  "chars": 71744,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "principal-organs-union-state",
+  "chars": 96927,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "grassroots-democracy",
+  "chars": 37350,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "statutory-commissions",
+  "chars": 62010,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "federalism",
+  "chars": 46820,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "planning-economic-development",
+  "chars": 37232,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "caste-religion-ethnicity",
+  "chars": 60710,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "party-system",
+  "chars": 57032,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "social-movements",
+  "chars": 63730,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "comparative-politics",
+  "chars": 36447,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "state-in-comparative-perspective",
+  "chars": 28827,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "politics-of-representation",
+  "chars": 49537,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "globalisation-responses",
+  "chars": 32525,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "approaches-to-ir",
+  "chars": 57444,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "key-concepts-ir",
+  "chars": 50173,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "changing-international-political-order",
+  "chars": 82716,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "international-economic-system",
+  "chars": 25397,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "united-nations",
+  "chars": 72489,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "regionalisation-world-politics",
+  "chars": 29770,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "contemporary-global-concerns",
+  "chars": 40703,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "indian-foreign-policy",
+  "chars": 96420,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-and-nam",
+  "chars": 26869,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-and-south-asia",
+  "chars": 42836,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-and-global-south",
+  "chars": 35090,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-and-global-centres-of-power",
+  "chars": 37578,
+  "done": false
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-and-un-system",
+  "chars": 22800,
+  "done": true
+ },
+ {
+  "subject": "polsci",
+  "slug": "india-nuclear-question",
+  "chars": 18648,
+  "done": true
+ },
+ {
+  "subject": "polsci",
+  "slug": "recent-developments-indian-foreign-policy",
+  "chars": 40174,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "geomorphology-fundamentals",
+  "chars": 33032,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "rocks-minerals-volcanoes",
+  "chars": 23755,
+  "done": true
+ },
+ {
+  "subject": "geography",
+  "slug": "landforms-fluvial-arid-glacial",
+  "chars": 41717,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "climatology-atmosphere",
+  "chars": 46093,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "climate-classification-koppen",
+  "chars": 44341,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "precipitation-humidity-clouds",
+  "chars": 46479,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "oceanography",
+  "chars": 55276,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "biogeography-soils",
+  "chars": 69068,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "perspectives-human-geography",
+  "chars": 53185,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "economic-geography",
+  "chars": 72815,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "population-settlement-geography",
+  "chars": 56185,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "regional-planning",
+  "chars": 50928,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "models-theories-geography",
+  "chars": 61752,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "physical-setting-india",
+  "chars": 57668,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "climate-india",
+  "chars": 33950,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "soils-vegetation-india",
+  "chars": 36045,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "resources-india",
+  "chars": 78441,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "agriculture-india",
+  "chars": 59802,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "natural-hazards-disasters-india",
+  "chars": 39002,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "industry-india",
+  "chars": 51311,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "population-india",
+  "chars": 54032,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "settlements-urbanization-india",
+  "chars": 58481,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "regional-development-planning-india",
+  "chars": 59356,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "transport-trade-india",
+  "chars": 53088,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "geographical-basis-indian-federalism",
+  "chars": 26400,
+  "done": false
+ },
+ {
+  "subject": "geography",
+  "slug": "india-world-affairs",
+  "chars": 43804,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "introduction-public-administration",
+  "chars": 41740,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "theories-of-organisation",
+  "chars": 67203,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "administrative-behaviour",
+  "chars": 66329,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "accountability-control",
+  "chars": 43197,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "administrative-law",
+  "chars": 44380,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "comparative-public-administration",
+  "chars": 50959,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "development-dynamics",
+  "chars": 48642,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "personnel-administration",
+  "chars": 65371,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "financial-administration",
+  "chars": 51402,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "new-public-management",
+  "chars": 52739,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "techniques-administrative-improvement",
+  "chars": 37661,
+  "done": true
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "public-policy",
+  "chars": 52156,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "evolution-indian-administration",
+  "chars": 52247,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "constitutional-framework-administration",
+  "chars": 64353,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "public-sector-undertakings",
+  "chars": 39883,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "union-government-administration",
+  "chars": 49445,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "plans-priorities-administration",
+  "chars": 46412,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "state-government-administration",
+  "chars": 40554,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "district-administration",
+  "chars": 41501,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "civil-services-india",
+  "chars": 55153,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "local-government-india",
+  "chars": 44895,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "law-order-anti-corruption",
+  "chars": 69401,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "welfare-administration",
+  "chars": 41627,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "administrative-reforms-india",
+  "chars": 50245,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "significant-issues-indian-administration",
+  "chars": 48896,
+  "done": false
+ },
+ {
+  "subject": "pub-admin",
+  "slug": "rural-development-administration",
+  "chars": 40414,
+  "done": false
+ }
+]

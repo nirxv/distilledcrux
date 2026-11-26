@@ -5,6 +5,7 @@ import { useOptional } from '@/components/useOptional';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { suggestions, graphemes } from '@/lib/chatSuggestions';
 import type { SubjectKey } from '@/lib/subjectConfig';
+import { useLang } from '@/lib/i18n/LangContext';
 
 const SUBJECTS: SubjectKey[] = ['sociology', 'anthropology', 'polsci', 'geography', 'pub-admin'];
 
@@ -20,6 +21,7 @@ const SUBJECTS: SubjectKey[] = ['sociology', 'anthropology', 'polsci', 'geograph
  */
 export default function HomeAsk({ subject }: { subject?: SubjectKey } = {}) {
   const router = useRouter();
+  const { L, langHi } = useLang();
   const optional = useOptional();
   const own = subject ?? (routeSlugForOptional(optional) as SubjectKey | null);
   const [value, setValue] = useState('');
@@ -28,13 +30,13 @@ export default function HomeAsk({ subject }: { subject?: SubjectKey } = {}) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const pool = useMemo(() => {
-    if (own) return suggestions(own, false).map((q) => ({ q, subject: own }));
+    if (own) return suggestions(own, langHi).map((q) => ({ q, subject: own }));
     // Round-robin across the optionals, so the mix never runs one subject.
-    const lists = SUBJECTS.map((s) => suggestions(s, false).slice(0, 8).map((q) => ({ q, subject: s })));
+    const lists = SUBJECTS.map((s) => suggestions(s, langHi).slice(0, 8).map((q) => ({ q, subject: s })));
     const out: { q: string; subject: SubjectKey }[] = [];
     for (let i = 0; i < 8; i++) for (const l of lists) if (l[i]) out.push(l[i]);
     return out;
-  }, [own]);
+  }, [own, langHi]);
 
   // Drawn after mount, so the server's HTML and the first render agree.
   useEffect(() => {
@@ -96,14 +98,14 @@ export default function HomeAsk({ subject }: { subject?: SubjectKey } = {}) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Escape' && !value) { e.preventDefault(); take(); } }}
-          aria-label="Ask the AI a question from your syllabus"
+          aria-label={L('Ask the AI a question from your syllabus', 'अपने पाठ्यक्रम से AI से कोई प्रश्न पूछें')}
           aria-describedby="ha-desc"
           enterKeyHint="send"
         />
-        <span id="ha-desc" className="ha-sr">{current ? `Suggestion: ${current.q}. Press Escape to use it.` : ''}</span>
+        <span id="ha-desc" className="ha-sr">{current ? L(`Suggestion: ${current.q}. Press Escape to use it.`, `सुझाव: ${current.q}। इस्तेमाल करने के लिए Escape दबाएँ।`) : ''}</span>
       </div>
-      {!value && current && <button type="button" className="ha-esc" onClick={take} tabIndex={-1} title="Use this suggestion (Esc)">esc</button>}
-      <button type="submit" className={`ha-send${value.trim() ? ' ready' : ''}`} aria-label="Ask" disabled={!value.trim()}>
+      {!value && current && <button type="button" className="ha-esc" onClick={take} tabIndex={-1} title={L('Use this suggestion (Esc)', 'इस सुझाव का इस्तेमाल करें (Esc)')}>esc</button>}
+      <button type="submit" className={`ha-send${value.trim() ? ' ready' : ''}`} aria-label={L('Ask', 'पूछें')} disabled={!value.trim()}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
       </button>
     </form>

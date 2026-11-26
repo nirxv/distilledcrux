@@ -1,10 +1,16 @@
 'use client';
 import Link from '@/components/Link';
 import InvitedNote from '@/components/InvitedNote';
+import { useLang } from '@/lib/i18n/LangContext';
 import { routeSlugForOptional } from '@/lib/optionals';
 import type { ShareCard } from '@/lib/shareCard';
 
-const SECTION_NAME = { introduction: 'Introduction', body: 'Body', conclusion: 'Conclusion', presentation: 'Presentation' } as const;
+const SECTION_NAME = {
+  introduction: { en: 'Introduction', enHi: 'परिचय' },
+  body: { en: 'Body', enHi: 'मुख्य भाग' },
+  conclusion: { en: 'Conclusion', enHi: 'निष्कर्ष' },
+  presentation: { en: 'Presentation', enHi: 'प्रस्तुति' },
+} as const;
 
 function scoreTone(pct: number) {
   if (pct >= 0.7) return 'var(--success-text)';
@@ -14,6 +20,7 @@ function scoreTone(pct: number) {
 
 /** The public card for a shared answer check. The question and feedback stay in the language they were marked in. */
 export default function SharedCheckView({ check }: { check: ShareCard & { date: string } }) {
+  const { L } = useLang();
   const pct = check.outOf ? check.marks / check.outOf : 0;
   const slug = routeSlugForOptional(check.optional);
   const tint = slug ? { ['--t' as string]: `var(--tint-${slug})`, ['--w' as string]: `var(--wash-${slug})` } : undefined;
@@ -22,11 +29,11 @@ export default function SharedCheckView({ check }: { check: ShareCard & { date: 
     <div className="shc-page ds" style={tint}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="ds-container shc-wrap">
-        <p className="shc-eyebrow">Answer check · UPSC {check.subject} optional</p>
+        <p className="shc-eyebrow">{L('Answer check · UPSC', 'उत्तर-जाँच · UPSC')} {check.subject} {L('optional', 'वैकल्पिक विषय')}</p>
 
         <article className="shc-card ds-card">
           <div className="shc-q">
-            <span>Question · {check.outOf} marks</span>
+            <span>{L('Question ·', 'प्रश्न ·')} {check.outOf} {L('marks', 'अंक')}</span>
             <p lang={check.lang}>{check.question}</p>
           </div>
 
@@ -40,7 +47,7 @@ export default function SharedCheckView({ check }: { check: ShareCard & { date: 
                     const p = s.outOf ? s.awarded / s.outOf : 0;
                     return (
                       <div key={s.key} className="shc-sec">
-                        <div className="shc-sec-top"><span>{SECTION_NAME[s.key]}</span><span>{s.awarded} / {s.outOf}</span></div>
+                        <div className="shc-sec-top"><span>{L(SECTION_NAME[s.key].en, SECTION_NAME[s.key].enHi)}</span><span>{s.awarded} / {s.outOf}</span></div>
                         <div className="shc-sec-bar"><span style={{ width: `${Math.min(100, p * 100)}%`, background: scoreTone(p) }} /></div>
                       </div>
                     );
@@ -52,28 +59,28 @@ export default function SharedCheckView({ check }: { check: ShareCard & { date: 
             <div className="shc-notes" lang={check.lang}>
               {check.worked.length > 0 && (
                 <section>
-                  <h2>What worked</h2>
+                  <h2>{L('What worked', 'क्या अच्छा रहा')}</h2>
                   <ul>{check.worked.map((l, i) => <li key={i}>{l}</li>)}</ul>
                 </section>
               )}
               {check.improve.length > 0 && (
                 <section>
-                  <h2>To improve</h2>
+                  <h2>{L('To improve', 'सुधार के लिए')}</h2>
                   <ul>{check.improve.map((l, i) => <li key={i}>{l}</li>)}</ul>
                 </section>
               )}
-              <p className="shc-private">The answer itself is not shown.</p>
+              <p className="shc-private">{L('The answer itself is not shown.', 'उत्तर स्वयं यहाँ नहीं दिखाया गया है।')}</p>
             </div>
           </div>
         </article>
 
         <aside className="shc-cta ds-card-soft">
-          <h2>Get your own answer checked</h2>
-          <p>Photograph a handwritten answer and get marks for each part, with feedback on what to add. Sign in, and your first check is free.</p>
+          <h2>{L('Get your own answer checked', 'अपने उत्तर की जाँच करवाएँ')}</h2>
+          <p>{L('Photograph a handwritten answer and get marks for each part, with feedback on what to add. Sign in, and your first check is free.', 'हस्तलिखित उत्तर की तस्वीर लें और हर हिस्से के अंक व उसमें क्या जोड़ना है, इस पर सुझाव पाएँ। साइन इन करें—आपकी पहली जाँच मुफ़्त है।')}</p>
           <InvitedNote className="shc-invited" />
           <div className="shc-cta-btns">
-            <Link href="/evaluate" className="ds-btn ds-btn-solid">Check an answer</Link>
-            <Link href="/pricing" className="ds-btn ds-btn-line">See the plans</Link>
+            <Link href="/evaluate" className="ds-btn ds-btn-solid">{L('Check an answer', 'उत्तर जाँचें')}</Link>
+            <Link href="/pricing" className="ds-btn ds-btn-line">{L('See the plans', 'योजनाएँ देखें')}</Link>
           </div>
         </aside>
       </div>

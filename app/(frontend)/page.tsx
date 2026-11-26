@@ -8,6 +8,7 @@ import SubjectIcon from '@/components/SubjectIcon';
 import HomeAsk from '@/components/home/HomeAsk';
 import { HeroActions } from '@/components/home/HomeLinks';
 import HomeShowcase from '@/components/home/HomeShowcase';
+import { HiText } from '@/components/ui/HiText';
 import { PLANS, PLAN_ORDER } from '@/lib/plans';
 import { OfferNote, PlanPrice } from '@/components/home/PlanOffer';
 import { notesForSubject } from '@/lib/notes';
@@ -46,9 +47,9 @@ const PLAN_NOTE: Record<string, string> = {
 };
 
 const STEPS = [
-  { title: 'Read a topic in the evening', text: 'Open the notes for whatever you are on today. Ask the AI about the bits that don’t click.' },
-  { title: 'Look at what UPSC has asked on it', text: 'The past questions on that topic show you which way the examiners tend to come at it.' },
-  { title: 'Write one answer and get it marked', text: 'Take a photo of it, upload it, and see where the marks went and where they didn’t.' },
+  { title: 'Read a topic in the evening', titleHi: 'शाम को एक विषय पढ़ें', text: 'Open the notes for whatever you are on today. Ask the AI about the bits that don’t click.', textHi: 'आज जो विषय पढ़ रहे हैं उसके नोट्स खोलिए। जो समझ न आए उसके बारे में AI से पूछिए।' },
+  { title: 'Look at what UPSC has asked on it', titleHi: 'देखें UPSC ने उस पर क्या पूछा है', text: 'The past questions on that topic show you which way the examiners tend to come at it.', textHi: 'उस विषय के पिछले प्रश्न दिखाते हैं कि परीक्षक किस दिशा से पूछते हैं।' },
+  { title: 'Write one answer and get it marked', titleHi: 'एक उत्तर लिखें और जाँचवाएँ', text: 'Take a photo of it, upload it, and see where the marks went and where they didn’t.', textHi: 'उसकी फ़ोटो लेकर अपलोड कीजिए और देखिए अंक कहाँ मिले और कहाँ नहीं।' },
 ];
 
 const Arrow = () => (
@@ -94,11 +95,10 @@ export default async function Home() {
           <div className="ds-container ds-narrow hm-hero-inner">
             <Image src={owlArt} alt="" width={112} height={106} priority className="hm-owl" />
             <h1 className="ds-h1">
-              Your optional, <em className="hm-mark">distilled.<svg viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11c34-6 70-8 108-5 30 2 63 3 106-3" /></svg></em>
+              <HiText en={<>Your optional, <em className="hm-mark">distilled.<svg viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11c34-6 70-8 108-5 30 2 63 3 106-3" /></svg></em></>} hi={<>आपका वैकल्पिक विषय, <em className="hm-mark">सार-संक्षेप में।</em></>} />
             </h1>
             <p className="ds-lede hm-lede">
-              Notes for every topic, every past question, and an AI that has read your standard books and shows
-              you the page it is quoting. For Sociology, Anthropology, PSIR, Geography and Public Administration.
+              <HiText en={<>Notes for every topic, every past question, and an AI that has read your standard books and shows you the page it is quoting. For Sociology, Anthropology, PSIR, Geography and Public Administration.</>} hi={<>हर विषय के नोट्स, हर पिछला प्रश्न, और एक AI जिसने आपकी मानक पुस्तकें पढ़ी हैं और जिस पृष्ठ से उद्धृत करता है वह दिखाता है। समाजशास्त्र, मानवशास्त्र, PSIR, भूगोल और लोक प्रशासन के लिए।</>} />
             </p>
             <HomeAsk />
             <HeroActions />
@@ -107,7 +107,7 @@ export default async function Home() {
             <HomeShowcase />
           </div>
           <p className="hm-proof ds-container">
-            Right now there are <b>{round(totalPyqs)} past questions</b>, <b>{totalTopics} topics</b> and <b>{totalBooks} standard books</b> in here.
+            <HiText en={<>Right now there are <b>{round(totalPyqs)} past questions</b>, <b>{totalTopics} topics</b> and <b>{totalBooks} standard books</b> in here.</>} hi={<>अभी यहाँ <b>{round(totalPyqs)} पिछले प्रश्न</b>, <b>{totalTopics} विषय</b> और <b>{totalBooks} मानक पुस्तकें</b> हैं।</>} />
           </p>
         </section>
 
@@ -115,8 +115,8 @@ export default async function Home() {
         <section id="optionals" className="hm-section">
           <div className="ds-container">
             <div className="hm-head">
-              <h2 className="ds-h2">Which optional is yours?</h2>
-              <p className="ds-lede">Everything after this is about that one subject: its notes, its past questions, its books.</p>
+              <h2 className="ds-h2"><HiText en="Which optional is yours?" hi="आपका वैकल्पिक विषय कौन-सा है?" /></h2>
+              <p className="ds-lede"><HiText en="Everything after this is about that one subject: its notes, its past questions, its books." hi="इसके बाद सब कुछ उसी एक विषय के बारे में है: उसके नोट्स, उसके पिछले प्रश्न, उसकी पुस्तकें।" /></p>
             </div>
             <div className="hm-opts">
               {OPTIONALS.map((o) => {
@@ -154,8 +154,8 @@ export default async function Home() {
         <section id="daily-answer" className="hm-section">
           <div className="ds-container ds-narrow">
             <div className="hm-head">
-              <h2 className="ds-h2">A question a day</h2>
-              <p className="ds-lede">Five past questions a day from your optional, the same for everyone. Do one when you have ten minutes, or all five on the clock.</p>
+              <h2 className="ds-h2"><HiText en="A question a day" hi="हर दिन एक प्रश्न" /></h2>
+              <p className="ds-lede"><HiText en="Five past questions a day from your optional, the same for everyone. Do one when you have ten minutes, or all five on the clock." hi="आपके वैकल्पिक विषय से हर दिन पाँच पिछले प्रश्न, सबके लिए एक जैसे। दस मिनट हों तो एक कीजिए, या समय लेकर पाँचों।" /></p>
             </div>
             <DailyAnswer sets={dailySets} names={PYQ_SUBJECT_NAME} day={day} />
           </div>
@@ -165,14 +165,14 @@ export default async function Home() {
         <section className="hm-section">
           <div className="ds-container">
             <div className="hm-head">
-              <h2 className="ds-h2">A good way to use it</h2>
+              <h2 className="ds-h2"><HiText en="A good way to use it" hi="इसका उपयोग करने का अच्छा तरीक़ा" /></h2>
             </div>
             <ol className="hm-steps">
               {STEPS.map((s, i) => (
                 <li key={s.title} className="hm-step">
                   <span className="hm-step-n">{i + 1}</span>
-                  <span className="ds-h3">{s.title}</span>
-                  <span className="hm-step-text">{s.text}</span>
+                  <span className="ds-h3"><HiText en={s.title} hi={s.titleHi} /></span>
+                  <span className="hm-step-text"><HiText en={s.text} hi={s.textHi} /></span>
                 </li>
               ))}
             </ol>
@@ -183,10 +183,9 @@ export default async function Home() {
         <section className="hm-section">
           <div className="ds-container">
             <div className="hm-head">
-              <h2 className="ds-h2">One payment, and nothing renews behind your back</h2>
+              <h2 className="ds-h2"><HiText en="One payment, and nothing renews behind your back" hi="एक बार भुगतान, पीठ पीछे कोई नवीनीकरण नहीं" /></h2>
               <p className="ds-lede">
-                Notes and past questions are free with an account. A plan gets you unlimited AI chat and answer evaluation for your optional
-                {TOPPER_SUBJECTS.length > 0 ? <>, and every topper copy if it is {topperSubjectList('or')}</> : null}.
+                <HiText en={<>Notes and past questions are free with an account. A plan gets you unlimited AI chat and answer evaluation for your optional{TOPPER_SUBJECTS.length > 0 ? <>, and every topper copy if it is {topperSubjectList('or')}</> : null}.</>} hi={<>नोट्स और पिछले प्रश्न खाते के साथ निःशुल्क हैं। योजना लेने पर आपके वैकल्पिक विषय के लिए असीमित AI चैट और उत्तर मूल्यांकन मिलता है{TOPPER_SUBJECTS.length > 0 ? <>, और यदि यह {topperSubjectList('or')} है तो हर टॉपर प्रतिलिपि भी</> : null}।</>} />
               </p>
               <OfferNote />
             </div>
@@ -195,7 +194,7 @@ export default async function Home() {
                 const p = PLANS[id];
                 return (
                   <Link key={id} href="/pricing" className={`hm-plan ds-card ds-card-link${id === 'yearly' ? ' featured' : ''}`}>
-                    {id === 'yearly' && <span className="ds-tag">Most chosen</span>}
+                    {id === 'yearly' && <span className="ds-tag"><HiText en="Most chosen" hi="सबसे लोकप्रिय" /></span>}
                     <span className="hm-plan-name">{p.label}</span>
                     <span className="hm-plan-price-row"><PlanPrice id={id} /></span>
                     <span className="hm-plan-period">{p.period}</span>
@@ -204,7 +203,7 @@ export default async function Home() {
                 );
               })}
             </div>
-            <div className="hm-plans-more"><Link href="/pricing" className="ds-btn ds-btn-ghost">See what each plan includes<Arrow /></Link></div>
+            <div className="hm-plans-more"><Link href="/pricing" className="ds-btn ds-btn-ghost"><HiText en="See what each plan includes" hi="देखें हर योजना में क्या शामिल है" /><Arrow /></Link></div>
           </div>
         </section>
 
@@ -212,8 +211,8 @@ export default async function Home() {
         <section className="hm-section hm-close">
           <div className="ds-container ds-narrow hm-close-inner">
             <Image src={owlReadingArt} alt="" width={110} height={95} className="hm-close-owl" />
-            <h2 className="ds-h2">Start with tonight’s topic</h2>
-            <p className="ds-lede">Open the notes for whatever you are reading today and see if it helps. It is free, and there is no card to enter.</p>
+            <h2 className="ds-h2"><HiText en="Start with tonight’s topic" hi="आज रात के विषय से शुरू कीजिए" /></h2>
+            <p className="ds-lede"><HiText en="Open the notes for whatever you are reading today and see if it helps. It is free, and there is no card to enter." hi="आज जो पढ़ रहे हैं उसके नोट्स खोलिए और देखिए कि काम आते हैं या नहीं। यह निःशुल्क है, कार्ड डालने की ज़रूरत नहीं।" /></p>
             <HeroActions />
           </div>
         </section>

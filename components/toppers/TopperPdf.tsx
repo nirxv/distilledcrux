@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from '@/components/Link';
 import { auth } from '@/lib/firebase';
+import { useLang } from '@/lib/i18n/LangContext';
 import TopperPassOffer from './TopperPassOffer';
 
 /**
@@ -70,7 +71,7 @@ function loadPdfjs() {
 }
 
 /** Draws every page into `el`, one canvas each, sharp on high-density screens. */
-async function drawPages(el: HTMLDivElement, pdf: PdfDoc, zoom: number, isCancelled: () => boolean) {
+async function drawPages(el: HTMLDivElement, pdf: PdfDoc, zoom: number, isCancelled: () => boolean, L: (en: string, hi: string) => string) {
   // The page box, not the pages div: that one is hidden until the first draw.
   const width = Math.max(240, (el.parentElement?.clientWidth ?? 600) - 22);
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -87,7 +88,7 @@ async function drawPages(el: HTMLDivElement, pdf: PdfDoc, zoom: number, isCancel
     canvas.width = Math.floor(viewport.width);
     canvas.height = Math.floor(viewport.height);
     canvas.style.width = `${Math.floor(base.width * cssScale)}px`;
-    canvas.setAttribute('aria-label', `Page ${n} of ${pdf.numPages}`);
+    canvas.setAttribute('aria-label', L(`Page ${n} of ${pdf.numPages}`, `पृष्ठ ${n} / ${pdf.numPages}`));
     canvas.setAttribute('role', 'img');
     frag.appendChild(canvas);
     jobs.push(async () => { await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise; });
@@ -124,6 +125,7 @@ type Props = {
 };
 
 export default function TopperPdf({ subject, copyId, height, onOpened, next, gate, freeLeft, own }: Props) {
+  const { L } = useLang();
   const [state, setState] = useState<'auth' | 'opening' | 'drawing' | 'ready' | 'login' | 'limit' | 'error' | 'pdf-error'>('auth');
   const [confirmed, setConfirmed] = useState(false);
   const go = gate === 'go' || confirmed;
@@ -158,7 +160,7 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
         if (cancelled || !boxRef.current) return;
         pdfRef.current = pdf;
         setPages(pdf.numPages);
-        await drawPages(boxRef.current, pdf, 1, () => cancelled);
+        await drawPages(boxRef.current, pdf, 1, () => cancelled, L);
         if (!cancelled) setState('ready');
       } catch (err) {
         console.error('[TopperPdf] PDF failed:', err);
@@ -174,7 +176,7 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
     const ratio = el.scrollTop / Math.max(1, el.scrollHeight);
     setZoom(to);
     setState('drawing');
-    await drawPages(el, pdfRef.current, to, () => false);
+    await drawPages(el, pdfRef.current, to, () => false, L);
     el.scrollTop = ratio * el.scrollHeight;
     setState('ready');
   };
@@ -187,45 +189,45 @@ export default function TopperPdf({ subject, copyId, height, onOpened, next, gat
   return (
     <div className="tp">
       <div className="tp-bar">
-        <span className="tp-count">{pages ? `${pages} ${pages === 1 ? 'page' : 'pages'}` : ' '}</span>
-        <div className="tp-zoom" aria-label="Zoom">
-          <button type="button" onClick={() => rezoom(Math.max(0.6, +(zoom - 0.2).toFixed(1)))} disabled={state !== 'ready' || zoom <= 0.6} aria-label="Zoom out">−</button>
+        <span className="tp-count">{pages ? `${pages} ${pages === 1 ? L('page', 'पृष्ठ') : L('pages', 'पृष्ठ')}` : ' '}</span>
+        <div className="tp-zoom" aria-label={L('Zoom', 'ज़ूम')}>
+          <button type="button" onClick={() => rezoom(Math.max(0.6, +(zoom - 0.2).toFixed(1)))} disabled={state !== 'ready' || zoom <= 0.6} aria-label={L('Zoom out', 'ज़ूम कम करें')}>−</button>
           <span>{Math.round(zoom * 100)}%</span>
-          <button type="button" onClick={() => rezoom(Math.min(2.4, +(zoom + 0.2).toFixed(1)))} disabled={state !== 'ready' || zoom >= 2.4} aria-label="Zoom in">+</button>
+          <button type="button" onClick={() => rezoom(Math.min(2.4, +(zoom + 0.2).toFixed(1)))} disabled={state !== 'ready' || zoom >= 2.4} aria-label={L('Zoom in', 'ज़ूम बढ़ाएँ')}>+</button>
         </div>
       </div>
       {/* Fixed height only once there are pages to scroll; a message alone gets a box its own size. */}
       <div className={`tp-box${showBox ? '' : ' msg'}`} style={showBox ? { height } : undefined}>
         <div ref={boxRef} className="tp-pages" hidden={!showBox} />
         {(view === 'auth' || view === 'opening' || view === 'drawing') && (
-          <div className="tp-msg" aria-live="polite"><span className="tp-spin" aria-hidden="true" />{view === 'drawing' ? 'Drawing the pages' : 'Opening the copy'}</div>
+          <div className="tp-msg" aria-live="polite"><span className="tp-spin" aria-hidden="true" />{view === 'drawing' ? L('Drawing the pages', 'पृष्ठ तैयार किए जा रहे हैं') : L('Opening the copy', 'कॉपी खोली जा रही है')}</div>
         )}
         {view === 'confirm' && (
           <div className="tp-msg">
-            <strong>Open this copy?</strong>
-            <span>It uses one of your free copies{typeof freeLeft === 'number' ? `, ${freeLeft} left` : ''}. Once opened, it stays free to open again.</span>
-            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={() => setConfirmed(true)}>Open this copy</button>
+            <strong>{L('Open this copy?', 'यह कॉपी खोलें?')}</strong>
+            <span>{L(`It uses one of your free copies${typeof freeLeft === 'number' ? `, ${freeLeft} left` : ''}.`, `यह आपकी एक मुफ़्त कॉपी में गिनी जाएगी${typeof freeLeft === 'number' ? `; ${freeLeft} मुफ़्त कॉपी बाकी हैं` : ''}।`)} {L('Once opened, it stays free to open again.', 'एक बार खोलने के बाद, इसे दोबारा मुफ़्त में खोला जा सकता है।')}</span>
+            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={() => setConfirmed(true)}>{L('Open this copy', 'यह कॉपी खोलें')}</button>
           </div>
         )}
         {view === 'login' && (
           <div className="tp-msg">
-            <strong>Sign in to open topper copies</strong>
-            <span>Your first five are free.</span>
-            <Link href={loginHref} className="ds-btn ds-btn-solid ds-btn-sm">Sign in</Link>
+            <strong>{L('Sign in to open topper copies', 'टॉपर की कॉपियाँ खोलने के लिए साइन इन करें')}</strong>
+            <span>{L('Your first five are free.', 'आपकी पहली पाँच कॉपियाँ मुफ़्त हैं।')}</span>
+            <Link href={loginHref} className="ds-btn ds-btn-solid ds-btn-sm">{L('Sign in', 'साइन इन करें')}</Link>
           </div>
         )}
         {view === 'limit' && (
           <div className="tp-msg">
-            <strong>You have opened your {limit} free copies</strong>
-            <span>{own !== undefined && own !== subject ? 'They stay open to you.' : 'They stay open to you. To open the rest:'}</span>
+            <strong>{L(`You have opened your ${limit} free copies`, `आप अपनी ${limit} मुफ़्त कॉपियाँ खोल चुके हैं`)}</strong>
+            <span>{own !== undefined && own !== subject ? L('They stay open to you.', 'वे आपके लिए खुली रहेंगी।') : L('They stay open to you. To open the rest:', 'वे आपके लिए खुली रहेंगी। बाकी कॉपियाँ खोलने के लिए:')}</span>
             <TopperPassOffer subject={subject} own={own} />
           </div>
         )}
         {(view === 'error' || view === 'pdf-error') && (
           <div className="tp-msg">
-            <strong>This copy would not open just now</strong>
-            <span>Please try again in a minute. Nothing was used up.</span>
-            <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => window.location.reload()}>Try again</button>
+            <strong>{L('This copy would not open just now', 'यह कॉपी अभी नहीं खुल सकी')}</strong>
+            <span>{L('Please try again in a minute.', 'कृपया एक मिनट बाद फिर कोशिश करें।')} {L('Nothing was used up.', 'आपकी कोई मुफ़्त कॉपी खर्च नहीं हुई।')}</span>
+            <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => window.location.reload()}>{L('Try again', 'फिर कोशिश करें')}</button>
           </div>
         )}
       </div>

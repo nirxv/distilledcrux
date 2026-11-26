@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react';
 import Link from '@/components/Link';
 import { topicKey, useSyllabusTracker } from '@/hooks/useSyllabusTracker';
+import { useLang } from '@/lib/i18n/LangContext';
 
 export type BrowserNote = {
   slug: string; title: string; topic: number; paper: 1 | 2; section: string;
@@ -13,7 +14,19 @@ export type BrowserNote = {
  * as tabs, each section a row of topic cards. Typing searches both papers at
  * once; with nothing typed, the tabs decide what shows.
  */
-export default function NotesBrowser({ subject, subjectName, notes }: { subject: string; subjectName: string; notes: BrowserNote[] }) {
+export default function NotesBrowser({ subject, subjectName, notes: notesProp, notesHi, sectionsHi }: {
+  subject: string;
+  subjectName: string;
+  notes: BrowserNote[];
+  notesHi?: Record<string, { title: string; description: string; subtopics: string[] }>;
+  sectionsHi?: Record<string, string>;
+}) {
+  const { L, langHi } = useLang();
+  const notes = useMemo<BrowserNote[]>(() => notesProp.map((n) => {
+    const hi = langHi ? notesHi?.[n.slug] : undefined;
+    if (!hi) return n;
+    return { ...n, title: hi.title, description: hi.description, subtopics: hi.subtopics, section: sectionsHi?.[n.section] ?? n.section };
+  }), [notesProp, notesHi, sectionsHi, langHi]);
   const [paper, setPaper] = useState<1 | 2>(1);
   const [query, setQuery] = useState('');
   const q = query.trim().toLowerCase();
@@ -52,17 +65,17 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Find a topic, a thinker or an idea"
-            aria-label={`Search ${subjectName} notes`}
+            placeholder={L('Find a topic, a thinker or an idea', 'किसी विषय, विचारक या विचार को खोजें')}
+            aria-label={L(`Search ${subjectName} notes`, `${subjectName} के नोट्स खोजें`)}
             type="search"
           />
-          {query && <button type="button" className="nb2-clear" onClick={() => setQuery('')} aria-label="Clear search">✕</button>}
+          {query && <button type="button" className="nb2-clear" onClick={() => setQuery('')} aria-label={L('Clear search', 'खोज साफ़ करें')}>✕</button>}
         </label>
         {!q && papers.length > 1 && (
-          <div className="nb2-tabs" role="tablist" aria-label="Papers">
+          <div className="nb2-tabs" role="tablist" aria-label={L('Papers', 'पेपर')}>
             {papers.map((p) => (
               <button key={p} role="tab" aria-selected={paper === p} className={`nb2-tab${paper === p ? ' on' : ''}`} onClick={() => setPaper(p)}>
-                Paper {p === 1 ? 'I' : 'II'}<span>{count(p)}</span>
+                {L(`Paper ${p === 1 ? 'I' : 'II'}`, `पेपर ${p === 1 ? 'I' : 'II'}`)}<span>{count(p)}</span>
               </button>
             ))}
           </div>
@@ -71,7 +84,10 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
 
       {!q && doneCount > 0 && (
         <div className="nb2-progress">
-          <span><strong>{doneCount} of {notes.length}</strong> topics done{doneCount === notes.length ? ', the whole syllabus' : ''}</span>
+          <span>{L(
+            `${doneCount} of ${notes.length} topics done${doneCount === notes.length ? ', the whole syllabus' : ''}`,
+            `${notes.length} में से ${doneCount} विषय पूरे${doneCount === notes.length ? ', पूरा पाठ्यक्रम' : ''}`,
+          )}</span>
           <span className="nb2-progress-bar"><span style={{ width: `${(doneCount / notes.length) * 100}%` }} /></span>
         </div>
       )}
@@ -79,15 +95,21 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
       {q && (
         <p className="nb2-found" aria-live="polite">
           {shown.length
-            ? `${shown.length} ${shown.length === 1 ? 'topic mentions' : 'topics mention'} “${query.trim()}”`
-            : `No topic mentions “${query.trim()}”.`}
+            ? L(
+              `${shown.length} ${shown.length === 1 ? 'topic mentions' : 'topics mention'} “${query.trim()}”`,
+              `${query.trim()} का उल्लेख ${shown.length} ${shown.length === 1 ? 'विषय में' : 'विषयों में'}`,
+            )
+            : L(`No topic mentions “${query.trim()}”.`, `“${query.trim()}” का किसी विषय में उल्लेख नहीं मिला।`)}
         </p>
       )}
 
       {q && !shown.length && (
         <Link href={`/chat?subject=${subject}&q=${encodeURIComponent(query.trim())}`} className="nb2-ask ds-card ds-card-link">
-          <span className="nb2-ask-title">Ask the {subjectName} AI instead</span>
-          <span className="nb2-ask-text">It will look for “{query.trim()}” in the standard books and show you where it found it.</span>
+          <span className="nb2-ask-title">{L(`Ask the ${subjectName} AI instead`, `इसके बजाय ${subjectName} AI से पूछें`)}</span>
+          <span className="nb2-ask-text">{L(
+            `It will look for “${query.trim()}” in the standard books and show you where it found it.`,
+            `यह मानक पुस्तकों में “${query.trim()}” खोजेगा और बताएगा कि यह कहाँ मिला।`,
+          )}</span>
         </Link>
       )}
 
@@ -97,15 +119,15 @@ export default function NotesBrowser({ subject, subjectName, notes }: { subject:
             <div className="nb2-section-head">
               <h2 className="nb2-section-name">{sec.name}</h2>
               <span className="nb2-section-meta">
-                {q ? `Paper ${sec.paper === 1 ? 'I' : 'II'} · ` : ''}{sec.notes.length} {sec.notes.length === 1 ? 'topic' : 'topics'}
-                {doneCount > 0 && sec.notes.some(done) ? ` · ${sec.notes.filter(done).length} done` : ''}
+                {q ? L(`Paper ${sec.paper === 1 ? 'I' : 'II'} · `, `पेपर ${sec.paper === 1 ? 'I' : 'II'} · `) : ''}{sec.notes.length} {L(sec.notes.length === 1 ? 'topic' : 'topics', 'विषय')}
+                {doneCount > 0 && sec.notes.some(done) ? L(` · ${sec.notes.filter(done).length} done`, ` · ${sec.notes.filter(done).length} पूरे`) : ''}
               </span>
             </div>
             <div className="nb2-cards">
               {sec.notes.map((n) => (
                 <Link key={n.slug} href={`/notes/${subject}/${n.slug}`} className={`nb2-card${done(n) ? ' done' : ''}`}>
                   <span className="nb2-card-top">
-                    <span className="nb2-n" aria-label={done(n) ? `Topic ${n.topic}, done` : undefined}>
+                    <span className="nb2-n" aria-label={done(n) ? L(`Topic ${n.topic}, done`, `विषय ${n.topic}, पूरा`) : undefined}>
                       {done(n)
                         ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
                         : n.topic}

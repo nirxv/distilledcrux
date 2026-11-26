@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { TOPPER_COPIES_LIVE } from '@/lib/features';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
 import { useRouter } from 'next/navigation';
 import { auth, signInWithGoogle, signInWithGoogleRedirect, googleBlocksThisBrowser, isAndroid } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -26,13 +27,27 @@ function destination(next: string | null): string | null {
   return null;
 }
 
+/** The same destinations in Hindi, for the reader who chose Hindi. */
+function destinationHi(next: string | null): string {
+  if (!next) return '';
+  const path = next.split('?')[0];
+  if (path.startsWith('/chat')) return 'आप सीधे AI चैट पर लौटेंगे।';
+  if (path.startsWith('/evaluate')) return 'आप सीधे अपना उत्तर जँचवाने पर लौटेंगे।';
+  if (path.startsWith('/pricing')) return 'आप सीधे योजनाओं पर लौटेंगे।';
+  if (path.startsWith('/notes')) return 'आप सीधे अपने नोट्स पर लौटेंगे।';
+  if (path.startsWith('/test')) return 'आप सीधे अपने टेस्ट पर लौटेंगे।';
+  return '';
+}
+
 export default function LoginPage() {
+  const { L } = useLang();
   const router = useRouter();
   const [signingIn, setSigningIn] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [popupFailed, setPopupFailed] = useState(false);
   const [checking, setChecking] = useState(true);
   const [headed, setHeaded] = useState<string | null>(null);
+  const [headedHi, setHeadedHi] = useState('');
   // Telegram, WhatsApp and other apps open links in a built-in browser where
   // Google refuses to sign anyone in. The server can't know, but it only ever
   // renders the loader, and the card appears after the client's auth check.
@@ -54,6 +69,7 @@ export default function LoginPage() {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (!firebaseUser) {
         setHeaded(destination(safeNext()));
+        setHeadedHi(destinationHi(safeNext()));
         setChecking(false);
         return;
       }
@@ -127,10 +143,10 @@ export default function LoginPage() {
     <SplitShell pose="peek">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="lg-card">
-        <h1 className="sp-title">Sign in to continue</h1>
+        <h1 className="sp-title">{L('Sign in to continue', 'जारी रखने के लिए साइन इन करें')}</h1>
         <p className="sp-lede lg-lede">
-          {headed ? `${headed} ` : ''}
-          New here? Signing in with Google makes your free account.
+          {headed ? `${L(headed, headedHi)} ` : ''}
+          {L('New here? Signing in with Google makes your free account.', 'नए हैं? Google से साइन इन करने पर आपका निःशुल्क खाता बन जाता है।')}
         </p>
 
         {inApp && (
@@ -148,7 +164,7 @@ export default function LoginPage() {
 
         <button type="button" className={`lg-google${inApp ? ' lg-google-quiet' : ''}`} onClick={handleGoogleSignIn} disabled={signingIn}>
           {signingIn ? (
-            <><span className="lg-spin" aria-hidden="true" />Signing in…</>
+            <><span className="lg-spin" aria-hidden="true" />{L('Signing in…', 'साइन इन हो रहा है…')}</>
           ) : (
             <>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -157,7 +173,7 @@ export default function LoginPage() {
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              Continue with Google
+              {L('Continue with Google', 'Google से जारी रखें')}
             </>
           )}
         </button>
@@ -172,12 +188,12 @@ export default function LoginPage() {
         {error && <p className="lg-error" role="alert">{error}</p>}
 
         <div className="lg-free">
-          <strong>A free account opens</strong>
-          <span>every note and past question for your optional, three AI chats, one answer evaluation{TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.</span>
+          <strong>{L('A free account opens', 'निःशुल्क खाते में मिलता है')}</strong>
+          <span>{L(`every note and past question for your optional, three AI chats, one answer evaluation${TOPPER_COPIES_LIVE ? ', 100 flashcard answers and five topper copies' : ' and 100 flashcard answers'}.`, `आपके वैकल्पिक विषय के हर नोट और पिछले प्रश्न, तीन AI चैट, एक उत्तर मूल्यांकन${TOPPER_COPIES_LIVE ? ', 100 फ़्लैशकार्ड उत्तर और पाँच टॉपर प्रतियाँ' : ' और 100 फ़्लैशकार्ड उत्तर'}।`)}</span>
         </div>
 
         <p className="lg-legal">
-          By continuing, you agree to our <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>.
+          {L('By continuing, you agree to our', 'जारी रखकर आप हमारी')} <Link href="/terms">{L('Terms', 'नियम')}</Link> {L('and', 'और')} <Link href="/privacy">{L('Privacy Policy', 'गोपनीयता नीति')}</Link>{L('.', ' से सहमत होते हैं।')}
         </p>
       </div>
     </SplitShell>

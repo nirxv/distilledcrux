@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * A yes-or-no question in the site's own modal, in place of window.confirm(),
@@ -32,6 +33,7 @@ export function confirmDialog(opts: ConfirmOptions): Promise<boolean> {
 }
 
 export default function ConfirmHost() {
+  const { L } = useLang();
   const [pending, setPending] = useState<Pending | null>(null);
   const pendingRef = useRef<Pending | null>(null);
   const confirmRef = useRef<HTMLButtonElement>(null);
@@ -70,7 +72,7 @@ export default function ConfirmHost() {
   return (
     <div className="ds ds-overlay" onClick={() => answer(false)}>
       <div className="ds-modal ds-modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="cd-title" aria-describedby={pending.text ? 'cd-text' : undefined} onClick={(e) => e.stopPropagation()}>
-        <button className="ds-x ds-modal-x" onClick={() => answer(false)} aria-label="Close">
+        <button className="ds-x ds-modal-x" onClick={() => answer(false)} aria-label={L('Close', 'बंद करें')}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
         </button>
         <span className={`ds-modal-icon${danger ? ' danger' : ''}`} aria-hidden="true">
@@ -81,8 +83,8 @@ export default function ConfirmHost() {
         <h2 id="cd-title" className="ds-modal-title">{pending.title}</h2>
         {pending.text && <p id="cd-text" className="ds-modal-text">{pending.text}</p>}
         <div className="ds-modal-actions">
-          <button className="ds-btn ds-btn-line" onClick={() => answer(false)}>{pending.cancelLabel ?? 'Cancel'}</button>
-          <button ref={confirmRef} className={`ds-btn ${danger ? 'ds-btn-danger' : 'ds-btn-solid'}`} onClick={() => answer(true)}>{pending.confirmLabel ?? 'Confirm'}</button>
+          <button className="ds-btn ds-btn-line" onClick={() => answer(false)}>{pending.cancelLabel ?? L('Cancel', 'रद्द करें')}</button>
+          <button ref={confirmRef} className={`ds-btn ${danger ? 'ds-btn-danger' : 'ds-btn-solid'}`} onClick={() => answer(true)}>{pending.confirmLabel ?? L('Confirm', 'पुष्टि करें')}</button>
         </div>
       </div>
     </div>

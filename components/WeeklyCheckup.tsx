@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { SHOWN_KEY as REVIEW_SHOWN } from '@/components/ReviewPrompt';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * Once a week, fifteen minutes into a visit, asks whether everything works,
@@ -14,16 +15,16 @@ import { SHOWN_KEY as REVIEW_SHOWN } from '@/components/ReviewPrompt';
  * on any page opens it straight away.
  */
 const FEATURES = [
-  'Answer checking',
-  'Reading my handwriting',
-  'AI chat',
-  'Notes',
-  'PYQs',
-  'Topper copies',
-  'Flashcards',
-  'Test series',
-  'Prelims practice',
-  'Geography map practice',
+  { en: 'Answer checking', enHi: 'उत्तर जाँचना' },
+  { en: 'Reading my handwriting', enHi: 'मेरी लिखावट पढ़ना' },
+  { en: 'AI chat', enHi: 'AI चैट' },
+  { en: 'Notes', enHi: 'नोट्स' },
+  { en: 'PYQs', enHi: 'PYQs' },
+  { en: 'Topper copies', enHi: 'टॉपर की कॉपियाँ' },
+  { en: 'Flashcards', enHi: 'फ्लैशकार्ड' },
+  { en: 'Test series', enHi: 'टेस्ट सीरीज़' },
+  { en: 'Prelims practice', enHi: 'प्रारंभिक परीक्षा का अभ्यास' },
+  { en: 'Geography map practice', enHi: 'भूगोल के नक्शे का अभ्यास' },
 ];
 const MIN_WORDS = 10;
 const ONE_WEEK = 7 * 24 * 60 * 60 * 1000;
@@ -48,6 +49,7 @@ function send(message: string, keepalive = false) {
 }
 
 export default function WeeklyCheckup() {
+  const { L } = useLang();
   const pathname = usePathname() ?? '';
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState<'ask' | 'issues' | 'done'>('ask');
@@ -127,38 +129,38 @@ export default function WeeklyCheckup() {
         {step === 'ask' && (<>
           <div className="ds-modal-head">
             <div>
-              <h2 id="wc-title">Is everything working for you?</h2>
-              <p>We ask once a week. It helps us catch problems before they spread.</p>
+              <h2 id="wc-title">{L('Is everything working for you?', 'क्या आपके लिए सब कुछ ठीक से काम कर रहा है?')}</h2>
+              <p>{L('We ask once a week. It helps us catch problems before they spread.', 'हम हफ़्ते में एक बार पूछते हैं। इससे समस्याएँ बढ़ने से पहले हमें उनका पता चल जाता है।')}</p>
             </div>
-            <button type="button" className="ds-x" onClick={dismiss} aria-label="Ask me later">
+            <button type="button" className="ds-x" onClick={dismiss} aria-label={L('Ask me later', 'मुझसे बाद में पूछें')}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
             </button>
           </div>
           <div className="wc-actions">
-            <button type="button" className="ds-btn ds-btn-solid" onClick={allGood}>Yes, all good</button>
-            <button type="button" className="ds-btn ds-btn-line" onClick={() => setStep('issues')}>Something’s not right</button>
+            <button type="button" className="ds-btn ds-btn-solid" onClick={allGood}>{L('Yes, all good', 'हाँ, सब ठीक है')}</button>
+            <button type="button" className="ds-btn ds-btn-line" onClick={() => setStep('issues')}>{L('Something’s not right', 'कुछ ठीक नहीं है')}</button>
           </div>
-          <button type="button" className="wc-later" onClick={dismiss}>Ask me later</button>
+          <button type="button" className="wc-later" onClick={dismiss}>{L('Ask me later', 'मुझसे बाद में पूछें')}</button>
         </>)}
 
         {step === 'issues' && (<>
           <div className="ds-modal-head">
             <div>
-              <h2 id="wc-title">What’s not working?</h2>
-              <p>Pick the parts that gave you trouble, then tell us what happened.</p>
+              <h2 id="wc-title">{L('What’s not working?', 'क्या ठीक से काम नहीं कर रहा है?')}</h2>
+              <p>{L('Pick the parts that gave you trouble, then tell us what happened.', 'जिन चीज़ों में आपको परेशानी हुई, उन्हें चुनें और फिर बताएँ कि क्या हुआ।')}</p>
             </div>
           </div>
-          <div className="wc-features" role="group" aria-label="Parts of the site">
+          <div className="wc-features" role="group" aria-label={L('Parts of the site', 'साइट के हिस्से')}>
             {FEATURES.map((f) => (
-              <button key={f} type="button" aria-pressed={selected.includes(f)} className={`wc-feature${selected.includes(f) ? ' on' : ''}`} onClick={() => toggle(f)}>{f}</button>
+              <button key={f.en} type="button" aria-pressed={selected.includes(f.en)} className={`wc-feature${selected.includes(f.en) ? ' on' : ''}`} onClick={() => toggle(f.en)}>{L(f.en, f.enHi)}</button>
             ))}
           </div>
-          <label className="wc-label" htmlFor="wc-details">What happened?</label>
-          <textarea id="wc-details" className="wc-text" placeholder="A few lines on what you saw and where." value={details} onChange={(e) => setDetails(e.target.value)} rows={4} />
-          <div className={`wc-count${words >= MIN_WORDS ? ' ok' : ''}`}>{words >= MIN_WORDS ? 'That’s enough to go on' : `${left} more ${left === 1 ? 'word' : 'words'} at least`}</div>
+          <label className="wc-label" htmlFor="wc-details">{L('What happened?', 'क्या हुआ?')}</label>
+          <textarea id="wc-details" className="wc-text" placeholder={L('A few lines on what you saw and where.', 'आपने क्या और कहाँ देखा, इसके बारे में कुछ पंक्तियाँ लिखें।')} value={details} onChange={(e) => setDetails(e.target.value)} rows={4} />
+          <div className={`wc-count${words >= MIN_WORDS ? ' ok' : ''}`}>{words >= MIN_WORDS ? L('That’s enough to go on', 'आगे बढ़ने के लिए इतना काफ़ी है') : L(`${left} more ${left === 1 ? 'word' : 'words'} at least`, `कम-से-कम ${left} और शब्द लिखें`)}</div>
           <div className="wc-actions">
-            <button type="button" className="ds-btn ds-btn-ghost" onClick={() => { setStep('ask'); setSelected([]); setDetails(''); }}>Back</button>
-            <button type="button" className="ds-btn ds-btn-solid" onClick={submitIssues} disabled={!canSend}>{submitting ? 'Sending…' : 'Send'}</button>
+            <button type="button" className="ds-btn ds-btn-ghost" onClick={() => { setStep('ask'); setSelected([]); setDetails(''); }}>{L('Back', 'वापस')}</button>
+            <button type="button" className="ds-btn ds-btn-solid" onClick={submitIssues} disabled={!canSend}>{submitting ? L('Sending…', 'भेजा जा रहा है…') : L('Send', 'भेजें')}</button>
           </div>
         </>)}
 
@@ -167,7 +169,7 @@ export default function WeeklyCheckup() {
             <span className="wc-mark" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            <h2 id="wc-title">Thanks, that helps</h2>
+            <h2 id="wc-title">{L('Thanks, that helps', 'धन्यवाद, इससे मदद मिलेगी')}</h2>
           </div>
         )}
       </div>

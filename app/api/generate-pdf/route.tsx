@@ -21,6 +21,63 @@ Font.register({
   ],
 });
 
+// ── Devanagari line breaks ──
+// react-pdf breaks lines by string position and maps each position to a glyph
+// by the code points fontkit says each glyph stands for. For Devanagari those
+// counts are wrong (a vowel sign can claim none or the wrong one, and ऐ claims
+// two), so a line ending on a joined sign such as ें was cut through it and
+// printed the sign on a dotted circle. Giving each word's glyphs that word's
+// characters again keeps every break between words. Ported from History
+// Optional.
+type FkGlyph = { codePoints: number[] };
+type FkRun = { glyphs: FkGlyph[] };
+type FkFont = { layout: (text: string, ...rest: unknown[]) => FkRun; __wordsFixed?: boolean };
+const GAP = new Set([0x20, 0x0a, 0x09, 0xa0]);
+
+function refitCodePoints(run: FkRun, text: string): FkRun {
+  if (!/[\u0900-\u097F]/.test(text)) return run;
+  const words = text.split(/[ \n\t\u00a0]/);
+  const segs: number[][] = [[]];
+  run.glyphs.forEach((g, i) => {
+    if (g.codePoints.length === 1 && GAP.has(g.codePoints[0])) segs.push([]);
+    else segs[segs.length - 1].push(i);
+  });
+  if (segs.length !== words.length) return run;
+  const glyphs = run.glyphs.slice();
+  segs.forEach((seg, k) => {
+    const chars = Array.from(words[k]).map((c) => c.codePointAt(0)!);
+    const lens = seg.map((i) => glyphs[i].codePoints.length);
+    let have = lens.reduce((a, b) => a + b, 0);
+    for (let j = lens.length - 1; have > chars.length && j >= 0; j--) {
+      const d = Math.min(lens[j], have - chars.length);
+      lens[j] -= d; have -= d;
+    }
+    if (have < chars.length && lens.length) lens[lens.length - 1] += chars.length - have;
+    let at = 0;
+    seg.forEach((i, j) => {
+      const g = glyphs[i];
+      glyphs[i] = Object.assign(Object.create(Object.getPrototypeOf(g)), g, { codePoints: chars.slice(at, at + lens[j]) });
+      at += lens[j];
+    });
+  });
+  return { ...run, glyphs } as FkRun;
+}
+
+let fitted: Promise<void> | null = null;
+async function fitDevanagari(): Promise<void> {
+  type Source = { load: () => Promise<void>; data: FkFont | null };
+  const sources = (Font.getRegisteredFonts() as unknown as Record<string, { sources: Source[] } | undefined>).NotoSans?.sources ?? [];
+  fitted ??= Promise.all(sources.map(async (source) => {
+    await source.load();
+    const font = source.data;
+    if (!font || font.__wordsFixed) return;
+    const layout = font.layout.bind(font);
+    font.layout = (text: string, ...rest: unknown[]) => refitCodePoints(layout(text, ...rest), text);
+    font.__wordsFixed = true;
+  })).then(() => undefined, (err) => { fitted = null; throw err; });
+  return fitted;
+}
+
 // The site's --accent. A PDF has no stylesheet, so the token cannot be used
 // here: var(--accent) would reach react-pdf as an unknown colour and every
 // rule and bar would print black.
@@ -210,7 +267,8 @@ function ChatPDF({ markdownText, questionText, dateStr }: { markdownText: string
  * so building one inside the try catches nothing. The await on the render
  * is what can throw, and that stays inside it.
  */
-function renderChat(markdownText: string, questionText: string | undefined, dateStr: string) {
+async function renderChat(markdownText: string, questionText: string | undefined, dateStr: string) {
+  await fitDevanagari();
   return renderToBuffer(<ChatPDF markdownText={markdownText} questionText={questionText} dateStr={dateStr} />);
 }
 

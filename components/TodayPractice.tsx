@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
+import { usePyqHi, hiQuestion } from '@/lib/usePyqHi';
 import type { DailyQuestion } from '@/lib/dailyQuestions';
 import type { PyqSubject } from '@/lib/pyqs';
 import { istDay } from '@/lib/istDay';
@@ -26,6 +28,8 @@ export default function TodayPractice({ subject, questions: built, day, open = f
   /** Show all five at once, rather than one with the rest on request. */
   open?: boolean;
 }) {
+  const { L } = useLang();
+  const bank = usePyqHi(subject);
   // A new optional remounts the panel (its key), so this only follows the day.
   const [questions, setQuestions] = useState(built);
   useEffect(() => {
@@ -74,17 +78,17 @@ export default function TodayPractice({ subject, questions: built, day, open = f
       <style>{TP_CSS}</style>
       <div className="tp-head">
         <div>
-          <h3>{all ? 'Today’s five questions' : 'Today’s question'}</h3>
-          <p>{all ? `The same set for everyone today. About ${totalMins} minutes for all five.` : 'One of five set for everyone today. Write it, and get it checked.'}</p>
+          <h3>{all ? L('Today’s five questions', 'आज के पाँच प्रश्न') : L('Today’s question', 'आज का प्रश्न')}</h3>
+          <p>{all ? L(`The same set for everyone today. About ${totalMins} minutes for all five.`, `आज सभी के लिए यही प्रश्न हैं। पाँचों के लिए लगभग ${totalMins} मिनट।`) : L('One of five set for everyone today. Write it, and get it checked.', 'आज सभी के लिए पाँच में से एक प्रश्न। इसका उत्तर लिखें और जाँच करवाएँ।')}</p>
         </div>
         {!all ? null : started ? (
           <div className={`tp-clock${low ? ' low' : ''}`} role="timer" aria-live="off">
-            {finished ? 'Time up' : `${pad(Math.floor(secsLeft / 60))}:${pad(secsLeft % 60)}`}
+            {finished ? L('Time up', 'समय पूरा हुआ') : `${pad(Math.floor(secsLeft / 60))}:${pad(secsLeft % 60)}`}
           </div>
         ) : (
           <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={() => { setSecsLeft(totalMins * 60); setStarted(true); }}>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2 2M9 2h6" /></svg>
-            Start a {totalMins}-minute timer
+            {L(`Start a ${totalMins}-minute timer`, `${totalMins} मिनट का टाइमर शुरू करें`)}
           </button>
         )}
       </div>
@@ -95,22 +99,22 @@ export default function TodayPractice({ subject, questions: built, day, open = f
           <li key={q.id} className="tp-q">
             <span className="tp-n">{i + 1}</span>
             <div className="tp-body">
-              <Link href={`/${subject}/pyqs/${q.id}`} className="tp-text">{q.question}</Link>
+              <Link href={`/${subject}/pyqs/${q.id}`} className="tp-text">{hiQuestion(bank, q.id, q.question)}</Link>
               <span className="tp-meta">
                 <span className="tp-dot" aria-hidden="true" />
-                <span>{q.paper} · {q.year} · {q.marks} marks · {q.topic}</span>
+                <span>{q.paper} · {q.year} · {q.marks} {L('marks', 'अंक')} · {q.topic}</span>
               </span>
             </div>
             {/* ?question= and &marks= are what the evaluate page reads; it starts a fresh answer with them filled in. */}
-            <Link className="tp-write" href={`/evaluate?question=${encodeURIComponent(q.question)}${q.marks ? `&marks=${q.marks}` : ''}`} aria-label={`Write an answer to question ${i + 1}`}>
-              Write
+            <Link className="tp-write" href={`/evaluate?question=${encodeURIComponent(hiQuestion(bank, q.id, q.question))}${q.marks ? `&marks=${q.marks}` : ''}`} aria-label={L(`Write an answer to question ${i + 1}`, `प्रश्न ${i + 1} का उत्तर लिखें`)}>
+              {L('Write', 'लिखें')}
             </Link>
           </li>
         ))}
       </ol>
       {!all && questions.length > 1 && (
         <button type="button" className="tp-more" onClick={() => setAll(true)}>
-          Show all five, with a timer
+          {L('Show all five, with a timer', 'टाइमर के साथ पाँचों प्रश्न देखें')}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
         </button>
       )}

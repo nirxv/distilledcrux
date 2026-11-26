@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
 import { useRouter } from 'next/navigation';
 import SubjectIcon from '@/components/SubjectIcon';
 import { useOptional } from '@/components/useOptional';
@@ -21,6 +22,7 @@ const NAMES: Record<string, string> = {
  * are offered instead of a spinner that might never end.
  */
 export default function FlashcardsRedirect() {
+  const { L } = useLang();
   const optional = useOptional();
   const router = useRouter();
   useEffect(() => {
@@ -32,8 +34,8 @@ export default function FlashcardsRedirect() {
     <div className="fr ds">
       <style>{FR_CSS}</style>
       <div className="ds-container">
-        <h1 className="ds-h1">Flashcards</h1>
-        <p className="ds-lede">Pick an optional to start revising.</p>
+        <h1 className="ds-h1">{L('Flashcards', 'फ़्लैशकार्ड')}</h1>
+        <p className="ds-lede">{L('Pick an optional to start revising.', 'दोहराना शुरू करने के लिए वैकल्पिक विषय चुनिए।')}</p>
         <div className="fr-grid">
           {FLASHCARD_SUBJECTS.map((s) => (
             <Link key={s} href={`/${s}/flashcards`} className="fr-deck ds-card ds-card-link" style={{ ['--t' as string]: `var(--tint-${s})` }}>

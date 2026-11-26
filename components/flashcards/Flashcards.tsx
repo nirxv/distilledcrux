@@ -5,6 +5,7 @@ import SubjectIcon from '@/components/SubjectIcon';
 import OwlLoader from '@/components/OwlLoader';
 import SessionComplete from '@/components/flashcards/SessionComplete';
 import { useFlashcardDeck } from '@/hooks/useFlashcardDeck';
+import { useLang } from '@/lib/i18n/LangContext';
 import { useRefreshSafe } from '@/hooks/useRefreshSafe';
 import { FLASHCARD_SR_KEY, FLASHCARD_TYPES, type FlashcardSubject } from '@/lib/flashcardMeta';
 import type { FlashCardFront } from '@/lib/flashcardStore';
@@ -53,29 +54,29 @@ function sm2(card: SRData | undefined, grade: Grade): SRData {
   return { interval, easeFactor: newEF, nextDue, reps: grade >= 2 ? reps + 1 : 0, lastGrade: grade };
 }
 
-const TYPE: Record<string, { label: string; tone: string }> = {
-  thinker: { label: 'Thinker', tone: 'accent' },
-  concept: { label: 'Concept', tone: 'info' },
-  comparison: { label: 'Comparison', tone: 'premium' },
-  critique: { label: 'Critique', tone: 'warning' },
-  study: { label: 'Study', tone: 'success' },
-  fact: { label: 'Fact', tone: 'neutral' },
+const TYPE: Record<string, { label: string; labelHi: string; tone: string }> = {
+  thinker: { label: 'Thinker', labelHi: 'विचारक', tone: 'accent' },
+  concept: { label: 'Concept', labelHi: 'अवधारणा', tone: 'info' },
+  comparison: { label: 'Comparison', labelHi: 'तुलना', tone: 'premium' },
+  critique: { label: 'Critique', labelHi: 'आलोचना', tone: 'warning' },
+  study: { label: 'Study', labelHi: 'अध्ययन', tone: 'success' },
+  fact: { label: 'Fact', labelHi: 'तथ्य', tone: 'neutral' },
 };
-const GRADES: { grade: Grade; label: string; sub: string; tone: string }[] = [
-  { grade: 1, label: 'Blank', sub: 'No recall', tone: 'danger' },
-  { grade: 2, label: 'Hard', sub: 'With effort', tone: 'warning' },
-  { grade: 3, label: 'Good', sub: 'Recalled', tone: 'accent' },
-  { grade: 4, label: 'Easy', sub: 'Perfect', tone: 'success' },
+const GRADES: { grade: Grade; label: string; labelHi: string; sub: string; subHi: string; tone: string }[] = [
+  { grade: 1, label: 'Blank', labelHi: 'याद नहीं', sub: 'No recall', subHi: 'कुछ याद नहीं आया', tone: 'danger' },
+  { grade: 2, label: 'Hard', labelHi: 'मुश्किल', sub: 'With effort', subHi: 'काफी कोशिश से', tone: 'warning' },
+  { grade: 3, label: 'Good', labelHi: 'अच्छा', sub: 'Recalled', subHi: 'याद आ गया', tone: 'accent' },
+  { grade: 4, label: 'Easy', labelHi: 'आसान', sub: 'Perfect', subHi: 'बिल्कुल सही', tone: 'success' },
 ];
 
 /** "Asked 2024, 2021 and 2018", or with a count of the rest when there are more. */
-function askedLine(years: number[]): string | null {
+function askedLine(years: number[], L: (en: string, hi: string) => string): string | null {
   if (!years?.length) return null;
   const shown = years.slice(0, 3);
   const rest = years.length - shown.length;
-  if (rest > 0) return `Asked ${shown.join(', ')} and ${rest} more year${rest === 1 ? '' : 's'}`;
-  if (shown.length === 1) return `Asked ${shown[0]}`;
-  return `Asked ${shown.slice(0, -1).join(', ')} and ${shown[shown.length - 1]}`;
+  if (rest > 0) return L(`Asked ${shown.join(', ')} and ${rest} more year${rest === 1 ? '' : 's'}`, `${shown.join(', ')} और ${rest} अन्य वर्षों में पूछा गया`);
+  if (shown.length === 1) return L(`Asked ${shown[0]}`, `${shown[0]} में पूछा गया`);
+  return L(`Asked ${shown.slice(0, -1).join(', ')} and ${shown[shown.length - 1]}`, `${shown.slice(0, -1).join(', ')} और ${shown[shown.length - 1]} में पूछा गया`);
 }
 
 function parse(search: string) {
@@ -88,10 +89,11 @@ const BACK = <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 
 /** A ring with the count beside it. */
 function ProgressRing({ done, total, noun }: { done: number; total: number; noun: string }) {
+  const { L } = useLang();
   const pct = total ? done / total : 0;
   const R = 30, C = 2 * Math.PI * R;
   return (
-    <div className="sr" role="img" aria-label={`${done} of ${total} ${noun}`}>
+    <div className="sr" role="img" aria-label={L(`${done} of ${total} ${noun}`, `${total} में से ${done} ${L('cards studied', 'अध्ययन किए गए कार्ड')}`)}>
       <svg width="76" height="76" viewBox="0 0 76 76" aria-hidden="true">
         <circle cx="38" cy="38" r={R} fill="none" stroke="var(--sr-track)" strokeWidth="7" />
         <circle cx="38" cy="38" r={R} fill="none" stroke="var(--success-text)" strokeWidth="7" strokeLinecap="round"
@@ -99,8 +101,8 @@ function ProgressRing({ done, total, noun }: { done: number; total: number; noun
         <text x="38" y="38" textAnchor="middle" dominantBaseline="central" className="sr-pct">{Math.round(pct * 100)}%</text>
       </svg>
       <div className="sr-text">
-        <strong>{done.toLocaleString('en-IN')} of {total.toLocaleString('en-IN')}</strong>
-        <span>{noun}</span>
+        <strong>{L(`${done.toLocaleString('en-IN')} of ${total.toLocaleString('en-IN')}`, `${total.toLocaleString('en-IN')} में से ${done.toLocaleString('en-IN')}`)}</strong>
+        <span>{L(noun, 'अध्ययन किए गए कार्ड')}</span>
       </div>
     </div>
   );
@@ -116,7 +118,7 @@ function ProgressRing({ done, total, noun }: { done: number; total: number; noun
  */
 export default function Flashcards({ subject, subjectName, notes }: { subject: FlashcardSubject; subjectName: string; notes: NoteMeta[] }) {
   const note = useMemo(() => new Map(notes.map((n) => [n.slug, n])), [notes]);
-  const typeLabel = (type: string) => TYPE[type]?.label ?? type;
+  const typeLabel = (type: string) => TYPE[type] ? L(TYPE[type].label, TYPE[type].labelHi) : type;
   const topicTitle = (slug: string) => note.get(slug)?.title ?? slug;
 
   const [sr, setSR] = useState<Record<string, SRData>>({});
@@ -153,6 +155,7 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
   const [filterDue, setFilterDue] = useState(false);
   const [view, setView] = useState<'all' | 'studied' | 'due' | 'session'>('all');
 
+  const { langHi, L } = useLang();
   const { index, indexLoading, error: deckError, getCard, getBack, reveal, allowance, prefetch, keepAhead } = useFlashcardDeck(subject);
   const [revealState, setRevealState] = useState<'idle' | 'loading' | 'locked' | 'login' | 'error'>('idle');
   const [queueIds, setQueueIds] = useState<string[]>([]);
@@ -245,7 +248,7 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
     const id = queueIds[idx];
     if (!id) return;
     if (flipped) { setFlipped(false); return; }
-    if (getBack(id)) { setRevealState('idle'); setFlipped(true); return; }
+    if (getBack(id, langHi)) { setRevealState('idle'); setFlipped(true); return; }
     setRevealState('loading');
     setFlipped(true);
     const outcome = await reveal(id);
@@ -274,7 +277,7 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
 
   const currentCard = getCard(queueIds[idx]);
   // A locked card is turned over and shows the paywall, and must not be graded.
-  const answerVisible = currentCard ? getBack(currentCard.id) !== undefined : false;
+  const answerVisible = currentCard ? getBack(currentCard.id, langHi) !== undefined : false;
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -310,18 +313,19 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
   const topicGroups = useMemo(() => {
     const counts = new Map<string, number>();
     for (const c of index) for (const t of c.topics) counts.set(t, (counts.get(t) ?? 0) + 1);
-    const groups: { label: string; topics: (NoteMeta & { count: number })[] }[] = [];
+    const groups: { label: string; labelHi: string; topics: (NoteMeta & { count: number })[] }[] = [];
     for (const n of notes) {
       if (!counts.has(n.slug) || (filterPaper && String(n.paper) !== filterPaper)) continue;
       const label = `Paper ${n.paper === 1 ? 'I' : 'II'}: ${n.section}`;
+      const labelHi = `पेपर ${n.paper === 1 ? 'I' : 'II'}: ${n.section}`;
       let g = groups.find((x) => x.label === label);
-      if (!g) { g = { label, topics: [] }; groups.push(g); }
+      if (!g) { g = { label, labelHi, topics: [] }; groups.push(g); }
       g.topics.push({ ...n, count: counts.get(n.slug) ?? 0 });
     }
     return groups;
   }, [index, notes, filterPaper]);
 
-  const scopeName = filterTopic ? topicTitle(filterTopic) : filterPaper ? `Paper ${filterPaper === '1' ? 'I' : 'II'}` : `all of ${subjectName}`;
+  const scopeName = filterTopic ? topicTitle(filterTopic) : filterPaper ? L(`Paper ${filterPaper === '1' ? 'I' : 'II'}`, `पेपर ${filterPaper === '1' ? 'I' : 'II'}`) : L(`all of ${subjectName}`, `${subjectName} के सभी`);
   const tone = currentCard ? TYPE[currentCard.type]?.tone ?? 'accent' : 'accent';
   const out = allowance && !allowance.unlimited && allowance.used >= allowance.limit;
 
@@ -335,17 +339,17 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
             <Link href={`/${subject}`} className="ds-back">{BACK}{subjectName}</Link>
             <div className="fc-title">
               <span className="fc-icon" aria-hidden="true"><SubjectIcon id={subject} size={24} /></span>
-              <h1 className="ds-h1">{subjectName} flashcards</h1>
+              <h1 className="ds-h1">{L(`${subjectName} flashcards`, `${subjectName} फ़्लैशकार्ड`)}</h1>
             </div>
             <p className="ds-lede fc-lede">
-              Short cards for what slips away: who argued what, the terms and the facts UPSC asks for, each tied to the past questions it helps you answer. Every card comes back just before you’d forget it.
+              {L('Short cards for what slips away: who argued what, the terms and the facts UPSC asks for, each tied to the past questions it helps you answer. Every card comes back just before you’d forget it.', 'जो बातें भूल जाती हैं, उनके लिए छोटे कार्ड: किसने क्या तर्क दिया, वे शब्द और तथ्य जो UPSC पूछता है—हर कार्ड उन पिछले प्रश्नों से जुड़ा है जिनके उत्तर देने में यह आपकी मदद करता है। हर कार्ड आपके भूलने से ठीक पहले फिर सामने आता है।')}
             </p>
             {allowance && !allowance.unlimited && !allowance.requiresLogin && (
               <p className={`fc-allowance${out ? ' out' : ''}`}>
                 {out
-                  ? `Your ${allowance.limit} free answers are used.`
-                  : `${allowance.limit - allowance.used} of ${allowance.limit} free answers left`}
-                {out && <Link href="/pricing">See plans</Link>}
+                  ? L(`Your ${allowance.limit} free answers are used.`, `आपके ${allowance.limit} मुफ़्त उत्तर इस्तेमाल हो चुके हैं।`)
+                  : L(`${allowance.limit - allowance.used} of ${allowance.limit} free answers left`, `${allowance.limit} में से ${allowance.limit - allowance.used} मुफ़्त उत्तर बाकी`)}
+                {out && <Link href="/pricing">{L('See plans', 'प्लान देखें')}</Link>}
               </p>
             )}
           </div>
@@ -360,14 +364,14 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
           <div className="fc-today">
             <div className="fc-today-text">
               <strong>
-                {!mounted || indexLoading ? 'Getting your cards'
-                  : filteredDue.length ? `${filteredDue.length.toLocaleString('en-IN')} ${filteredDue.length === 1 ? 'card is' : 'cards are'} due`
-                  : 'Nothing due right now'}
+                {!mounted || indexLoading ? L('Getting your cards', 'आपके कार्ड लोड हो रहे हैं')
+                  : filteredDue.length ? L(`${filteredDue.length.toLocaleString('en-IN')} ${filteredDue.length === 1 ? 'card is' : 'cards are'} due`, `${filteredDue.length.toLocaleString('en-IN')} कार्ड समीक्षा के लिए बाकी हैं`)
+                  : L('Nothing due right now', 'अभी कुछ भी समीक्षा के लिए बाकी नहीं है')}
               </strong>
-              <span>From {scopeName}</span>
+              <span>{L(`From ${scopeName}`, `${scopeName} से`)}</span>
             </div>
             <button type="button" className="ds-btn ds-btn-solid fc-start" disabled={!startCount} onClick={buildQueue}>
-              {filteredDue.length ? 'Start reviewing' : 'Review anyway'}
+              {filteredDue.length ? L('Start reviewing', 'समीक्षा शुरू करें') : L('Review anyway', 'फिर भी समीक्षा करें')}
               {startCount > 0 && <span>{startCount.toLocaleString('en-IN')}</span>}
             </button>
           </div>
@@ -375,10 +379,10 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
           {mounted && (
             <div className="fc-tiles">
               {([
-                { key: 'all', label: 'All cards', value: scope.length },
-                { key: 'studied', label: 'Studied', value: studiedCount },
-                { key: 'due', label: 'Due today', value: dueCount },
-                { key: 'session', label: 'Last session', value: lastSessionCount },
+                { key: 'all', label: 'All cards', labelHi: 'सभी कार्ड', value: scope.length },
+                { key: 'studied', label: 'Studied', labelHi: 'अध्ययन किए', value: studiedCount },
+                { key: 'due', label: 'Due today', labelHi: 'आज समीक्षा के लिए', value: dueCount },
+                { key: 'session', label: 'Last session', labelHi: 'पिछला सत्र', value: lastSessionCount },
               ] as const).map((t) => {
                 const active = view === t.key;
                 const enabled = t.key === 'all' || t.value > 0;
@@ -386,7 +390,7 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
                   <button key={t.key} type="button" className={`fc-tile ${t.key}${active ? ' on' : ''}`} disabled={!enabled} aria-pressed={active}
                     onClick={() => { setView(active ? 'all' : t.key); resetList(); }}>
                     <span className="fc-tile-n">{t.value.toLocaleString('en-IN')}</span>
-                    <span className="fc-tile-l">{t.label}</span>
+                    <span className="fc-tile-l">{L(t.label, t.labelHi)}</span>
                   </button>
                 );
               })}
@@ -395,36 +399,36 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
 
           <div className="fc-bar">
             {papers.length > 1 && (
-              <div className="fc-tabs" role="tablist" aria-label="Paper">
-                <button type="button" role="tab" aria-selected={!filterPaper} className={`fc-tab${!filterPaper ? ' on' : ''}`} onClick={() => { setPlace({ paper: '', topic: '' }); resetList(); }}>Both papers</button>
+              <div className="fc-tabs" role="tablist" aria-label={L('Paper', 'पेपर')}>
+                <button type="button" role="tab" aria-selected={!filterPaper} className={`fc-tab${!filterPaper ? ' on' : ''}`} onClick={() => { setPlace({ paper: '', topic: '' }); resetList(); }}>{L('Both papers', 'दोनों पेपर')}</button>
                 {papers.map((p) => (
                   <button key={p} type="button" role="tab" aria-selected={filterPaper === String(p)}
                     className={`fc-tab${filterPaper === String(p) ? ' on' : ''}`} onClick={() => { setPlace({ paper: String(p), topic: '' }); resetList(); }}>
-                    Paper {p === 1 ? 'I' : 'II'}
+                    {L(`Paper ${p === 1 ? 'I' : 'II'}`, `पेपर ${p === 1 ? 'I' : 'II'}`)}
                   </button>
                 ))}
               </div>
             )}
             <div className="fc-selects">
-              <select className={`fc-select fc-select-topic${filterTopic ? ' set' : ''}`} value={filterTopic} onChange={(e) => { setPlace({ topic: e.target.value }); resetList(); }} aria-label="Topic">
-                <option value="">Every topic</option>
+              <select className={`fc-select fc-select-topic${filterTopic ? ' set' : ''}`} value={filterTopic} onChange={(e) => { setPlace({ topic: e.target.value }); resetList(); }} aria-label={L('Topic', 'विषय')}>
+                <option value="">{L('Every topic', 'सभी विषय')}</option>
                 {topicGroups.map((g) => (
-                  <optgroup key={g.label} label={g.label}>
+                  <optgroup key={g.label} label={L(g.label, g.labelHi)}>
                     {g.topics.map((t) => <option key={t.slug} value={t.slug}>{t.title} ({t.count})</option>)}
                   </optgroup>
                 ))}
               </select>
-              <select className={`fc-select${filterType ? ' set' : ''}`} value={filterType} onChange={(e) => { setFilterType(e.target.value); resetList(); }} aria-label="Kind of card">
-                <option value="">Every kind</option>
+              <select className={`fc-select${filterType ? ' set' : ''}`} value={filterType} onChange={(e) => { setFilterType(e.target.value); resetList(); }} aria-label={L('Kind of card', 'कार्ड का प्रकार')}>
+                <option value="">{L('Every kind', 'सभी प्रकार')}</option>
                 {FLASHCARD_TYPES.map((t) => <option key={t} value={t}>{typeLabel(t)}</option>)}
               </select>
-              <select className={`fc-select${filterGrade ? ' set' : ''}`} value={filterGrade} onChange={(e) => { setFilterGrade(e.target.value); resetList(); }} aria-label="Last rating">
-                <option value="">Any last rating</option>
-                {GRADES.map((g) => <option key={g.grade} value={g.grade}>{g.label}</option>)}
+              <select className={`fc-select${filterGrade ? ' set' : ''}`} value={filterGrade} onChange={(e) => { setFilterGrade(e.target.value); resetList(); }} aria-label={L('Last rating', 'पिछली रेटिंग')}>
+                <option value="">{L('Any last rating', 'कोई भी पिछली रेटिंग')}</option>
+                {GRADES.map((g) => <option key={g.grade} value={g.grade}>{L(g.label, g.labelHi)}</option>)}
               </select>
               <label className={`fc-due${filterDue ? ' on' : ''}`}>
                 <input type="checkbox" checked={filterDue} onChange={(e) => setFilterDue(e.target.checked)} />
-                Only due cards in a session
+                {L('Only due cards in a session', 'सत्र में केवल समीक्षा के लिए बाकी कार्ड')}
               </label>
             </div>
           </div>
@@ -435,12 +439,12 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
           )}
           {sessionDone > 0 && !sessionFinished && (
             <div className="fc-stopped">
-              <span>Session stopped after <strong>{sessionDone} {sessionDone === 1 ? 'card' : 'cards'}</strong>.</span>
-              <button type="button" onClick={() => setSessionDone(0)}>Dismiss</button>
+              <span>{L(`Session stopped after ${sessionDone} ${sessionDone === 1 ? 'card' : 'cards'}.`, `${sessionDone} कार्ड के बाद सत्र रोक दिया गया।`)}</span>
+              <button type="button" onClick={() => setSessionDone(0)}>{L('Dismiss', 'हटाएँ')}</button>
             </div>
           )}
 
-          <div className="fc-count">{filteredIndex.length.toLocaleString('en-IN')} {filteredIndex.length === 1 ? 'card' : 'cards'}</div>
+          <div className="fc-count">{L(`${filteredIndex.length.toLocaleString('en-IN')} ${filteredIndex.length === 1 ? 'card' : 'cards'}`, `${filteredIndex.length.toLocaleString('en-IN')} कार्ड`)}</div>
           <div className="fc-list">
             {visibleIds.map((id) => getCard(id)).filter((c): c is FlashCardFront => !!c).map((card) => {
               const s = sr[card.id];
@@ -450,26 +454,26 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
                 <button key={card.id} type="button" className={`fc-row${mounted && due && s ? ' due' : ''}`} onClick={() => openFrom(card.id)}>
                   <span className={`fc-type t-${t}`}>{typeLabel(card.type)}</span>
                   <span className="fc-row-text">
-                    <span className="fc-row-front">{card.front}</span>
+                    <span className="fc-row-front">{langHi ? card.front_hi ?? card.front : card.front}</span>
                     <span className="fc-row-topic">
                       {cardTopic(card)}
-                      {card.asked?.length > 0 && <> · asked {card.asked.length === 1 ? 'once' : `${card.asked.length} times`}</>}
+                       {card.asked?.length > 0 && <> · {L(`asked ${card.asked.length === 1 ? 'once' : `${card.asked.length} times`}`, `${card.asked.length === 1 ? 'एक बार पूछा गया' : `${card.asked.length} बार पूछा गया`}`)}</>}
                     </span>
                   </span>
                   {mounted && (
                     <span className="fc-row-meta">
                       {s?.lastGrade && <span className={`fc-grade g-${GRADES[s.lastGrade - 1].tone}`}>{GRADES[s.lastGrade - 1].label}</span>}
-                      <span className={`fc-when${due ? ' due' : ''}`}>{due ? (s ? 'Due' : 'New') : `In ${s.interval}d`}</span>
+                      <span className={`fc-when${due ? ' due' : ''}`}>{due ? (s ? L('Due', 'समीक्षा बाकी') : L('New', 'नया')) : L(`In ${s.interval}d`, `${s.interval} दिनों में`)}</span>
                     </span>
                   )}
                 </button>
               );
             })}
             {deckError && <p className="fc-error">{deckError}</p>}
-            {indexLoading && !deckError && <OwlLoader label="Loading flashcards" />}
+            {indexLoading && !deckError && <OwlLoader label={L('Loading flashcards', 'फ़्लैशकार्ड लोड हो रहे हैं')} />}
             {!indexLoading && !deckError && filteredIndex.length > browseLimit && (
               <button type="button" className="ds-btn ds-btn-line ds-btn-sm fc-more" onClick={() => setBrowseLimit((n) => n + 60)}>
-                Show more ({filteredIndex.length - browseLimit} left)
+                {L(`Show more (${filteredIndex.length - browseLimit} left)`, `और दिखाएँ (${filteredIndex.length - browseLimit} बाकी)`)}
               </button>
             )}
           </div>
@@ -477,48 +481,48 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
       </section>
 
       {modalOpen && currentCard && (
-        <div className="fc-review" role="dialog" aria-modal="true" aria-label="Flashcard session"
+        <div className="fc-review" role="dialog" aria-modal="true" aria-label={L('Flashcard session', 'फ़्लैशकार्ड सत्र')}
           onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}>
           <div className="fc-review-inner">
             <div className="fc-review-top">
               <span className="fc-review-count">{idx + 1} / {queueIds.length}</span>
               <span className="fc-review-bar"><span style={{ width: `${(idx / queueIds.length) * 100}%` }} /></span>
-              <button type="button" className="fc-review-close" onClick={closeModal} aria-label="Close">
+              <button type="button" className="fc-review-close" onClick={closeModal} aria-label={L('Close', 'बंद करें')}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12" /></svg>
               </button>
             </div>
 
-            <div className="fc-flip" onClick={() => flipCard()} role="button" tabIndex={0} aria-label={flipped ? 'Show the question' : 'Show the answer'}>
+            <div className="fc-flip" onClick={() => flipCard()} role="button" tabIndex={0} aria-label={flipped ? L('Show the question', 'प्रश्न दिखाएँ') : L('Show the answer', 'उत्तर दिखाएँ')}>
               <div className={`fc-flip-inner${flipped ? ' flipped' : ''}`}>
                 <div className={`fc-face front t-${tone}`}>
                   <div className="fc-face-head">
                     <span className={`fc-type t-${tone}`}>{typeLabel(currentCard.type)}</span>
                     <span className="fc-face-topic">{cardTopic(currentCard)}</span>
                   </div>
-                  <div className="fc-face-text">{currentCard.front}</div>
-                  {askedLine(currentCard.asked) && <div className="fc-face-asked">{askedLine(currentCard.asked)}</div>}
-                  <div className="fc-face-hint">Tap to see the answer</div>
+                  <div className="fc-face-text">{langHi ? currentCard.front_hi ?? currentCard.front : currentCard.front}</div>
+                  {askedLine(currentCard.asked, L) && <div className="fc-face-asked">{askedLine(currentCard.asked, L)}</div>}
+                  <div className="fc-face-hint">{L('Tap to see the answer', 'उत्तर देखने के लिए टैप करें')}</div>
                 </div>
                 <div className={`fc-face back t-${tone}`}>
-                  <div className="fc-face-head"><span className="fc-answer-label">Answer</span></div>
+                  <div className="fc-face-head"><span className="fc-answer-label">{L('Answer', 'उत्तर')}</span></div>
                   <div className="fc-face-answer">
                     {(() => {
-                      const answer = getBack(currentCard.id);
+                      const answer = getBack(currentCard.id, langHi);
                       if (answer) return answer;
                       if (revealState === 'locked') return (
                         <span className="fc-locked">
-                          {`You’ve used all ${allowance?.limit ?? 100} free answers. The questions stay free to read, and a ${subjectName} subscription keeps the answers opening.`}
-                          <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm" onClick={(e) => e.stopPropagation()}>See plans</Link>
+                          {L(`You’ve used all ${allowance?.limit ?? 100} free answers. The questions stay free to read, and a ${subjectName} subscription keeps the answers opening.`, `आपके सभी ${allowance?.limit ?? 100} मुफ़्त उत्तर इस्तेमाल हो चुके हैं। प्रश्न पढ़ना मुफ़्त है; ${subjectName} की सदस्यता लेने पर उत्तर खुलते रहेंगे।`)}
+                          <Link href="/pricing" className="ds-btn ds-btn-solid ds-btn-sm" onClick={(e) => e.stopPropagation()}>{L('See plans', 'प्लान देखें')}</Link>
                         </span>
                       );
                       if (revealState === 'login') return (
                         <span className="fc-locked">
-                          Sign in again to see the answer.
-                          <Link href="/login" className="ds-btn ds-btn-solid ds-btn-sm" onClick={(e) => e.stopPropagation()}>Sign in</Link>
+                          {L('Sign in again to see the answer.', 'उत्तर देखने के लिए फिर से साइन इन करें।')}
+                          <Link href="/login" className="ds-btn ds-btn-solid ds-btn-sm" onClick={(e) => e.stopPropagation()}>{L('Sign in', 'साइन इन करें')}</Link>
                         </span>
                       );
-                      if (revealState === 'error') return <span className="fc-err">Could not load the answer. Turn the card again to retry.</span>;
-                      return <span className="fc-muted">Opening the answer…</span>;
+                      if (revealState === 'error') return <span className="fc-err">{L('Could not load the answer. Turn the card again to retry.', 'उत्तर लोड नहीं हो सका। फिर से कोशिश करने के लिए कार्ड पलटें।')}</span>;
+                      return <span className="fc-muted">{L('Opening the answer…', 'उत्तर खोला जा रहा है…')}</span>;
                     })()}
                   </div>
                 </div>
@@ -530,12 +534,12 @@ export default function Flashcards({ subject, subjectName, notes }: { subject: F
             <div className={`fc-rate${flipped && answerVisible ? ' on' : ''}`}>
               {GRADES.map((g) => (
                 <button key={g.grade} type="button" className={`fc-rate-btn g-${g.tone}`} onClick={(e) => { e.stopPropagation(); rate(g.grade); }} tabIndex={flipped && answerVisible ? 0 : -1}>
-                  <strong>{g.label}</strong>
-                  <span>{g.sub}</span>
+                  <strong>{L(g.label, g.labelHi)}</strong>
+                  <span>{L(g.sub, g.subHi)}</span>
                 </button>
               ))}
             </div>
-            <p className="fc-keys">Space turns the card · → marks it Good · Esc closes</p>
+            <p className="fc-keys">{L('Space turns the card · → marks it Good · Esc closes', 'Space से कार्ड पलटें · → से अच्छा चिह्नित करें · Esc से बंद करें')}</p>
           </div>
         </div>
       )}

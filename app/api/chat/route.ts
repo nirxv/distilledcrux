@@ -212,8 +212,8 @@ ${bookTitle && bookTitle !== 'all'
 }`;
 
   const langSuffix = lang === 'hi'
-    ? '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in Hindi (Devanagari script). Every single word in Hindi. Transliterate technical terms. Thinker names and concepts use Hindi equivalents. The one exception is citation markers: write them exactly as [Source #1] or [Source #1, #3], in English with Western digits, never translated, so they can be linked to their passages.'
-    : '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in English.';
+    ? '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in Hindi (Devanagari script) regardless of the language of the question. Every single word of your response must be in Hindi. Do NOT use English even for technical terms — transliterate them. Names, dates, and places should use their Hindi equivalents. The one exception is citation markers: write them exactly as [Source #1] or [Source #1, #3], in English with Western digits, never translated, so they can be linked to their passages.'
+    : '\n\nCRITICAL INSTRUCTION: You MUST respond ENTIRELY in English regardless of the language of the question.';
 
   return basePrompt + langSuffix;
 }

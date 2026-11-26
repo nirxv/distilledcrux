@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { auth, signInWithGoogle } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import { useLang } from '@/lib/i18n/LangContext';
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
+  const { L } = useLang();
   const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -87,14 +89,14 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
               color: 'var(--text)', letterSpacing: '-0.02em',
               marginBottom: '0.4rem',
             }}>
-              Sign in to continue
+              {L('Sign in to continue', 'जारी रखने के लिए साइन इन करें')}
             </h2>
             <p style={{
               color: 'var(--text3)',
               fontSize: '0.875rem', fontWeight: 500,
               lineHeight: 1.55,
             }}>
-              Access notes, PYQs, AI evaluation and more with a free account.
+              {L('Access notes, PYQs, AI evaluation and more with a free account.', 'मुफ़्त खाते से नोट्स, PYQ, AI मूल्यांकन और अन्य सुविधाएँ पाएँ।')}
             </p>
           </div>
 
@@ -125,7 +127,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
                   display: 'inline-block',
                   animation: 'spin 0.7s linear infinite',
                 }} />
-                Signing in…
+                {L('Signing in…', 'साइन इन हो रहा है…')}
               </>
             ) : (
               <>
@@ -135,7 +137,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
                   <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                 </svg>
-                Continue with Google
+                {L('Continue with Google', 'Google के साथ जारी रखें')}
               </>
             )}
           </button>
@@ -146,7 +148,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
             textDecoration: 'none',
             transition: 'color 0.15s',
           }}>
-            ← Back to home
+            {L('← Back to home', '← होम पर वापस जाएँ')}
           </a>
         </div>
       </div>

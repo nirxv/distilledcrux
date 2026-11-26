@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { routeSlugForOptional } from '@/lib/optionals';
 import { useOptional } from '@/components/useOptional';
+import { useLang } from '@/lib/i18n/LangContext';
 
 /**
  * The tab bar on phones: a floating pill of four places a thumb reaches
@@ -40,6 +41,7 @@ const Icons = {
 };
 
 export default function BottomNav() {
+  const { L } = useLang();
   const pathname = usePathname();
   const router = useRouter();
   const optional = useOptional();
@@ -62,10 +64,10 @@ export default function BottomNav() {
 
   const home = slug ? `/${slug}` : '/';
   const tabs: Tab[] = [
-    { href: home, label: 'Home', icon: Icons.home, match: (p) => p === '/' || p === home },
-    { href: slug ? `/notes/${slug}` : '/#optionals', label: 'Notes', icon: Icons.notes, match: (p) => p.startsWith('/notes') },
-    { href: '/chat', label: 'AI Chat', icon: Icons.chat, match: (p) => p.startsWith('/chat') },
-    { href: '/dashboard', label: 'Profile', icon: Icons.you, match: (p) => p.startsWith('/dashboard') || p.startsWith('/profile') },
+    { href: home, label: L('Home', 'होम'), icon: Icons.home, match: (p) => p === '/' || p === home },
+    { href: slug ? `/notes/${slug}` : '/#optionals', label: L('Notes', 'नोट्स'), icon: Icons.notes, match: (p) => p.startsWith('/notes') },
+    { href: '/chat', label: L('AI Chat', 'AI चैट'), icon: Icons.chat, match: (p) => p.startsWith('/chat') },
+    { href: '/dashboard', label: L('Profile', 'प्रोफ़ाइल'), icon: Icons.you, match: (p) => p.startsWith('/dashboard') || p.startsWith('/profile') },
   ];
 
   const newChat = () => {
@@ -94,19 +96,19 @@ export default function BottomNav() {
           <div ref={menuRef} className="bn-menu" role="menu" aria-label="Start something">
             <button type="button" className="bn-menu-item" role="menuitem" onClick={newChat}>
               <span className="bn-menu-icon">{Icons.chat}</span>
-              <span><strong>New chat</strong><span>Ask anything from your optional</span></span>
+              <span><strong>{L('New chat', 'नई चैट')}</strong><span>{L('Ask anything from your optional', 'अपने वैकल्पिक विषय से कुछ भी पूछें')}</span></span>
             </button>
             <Link href="/evaluate" className="bn-menu-item" role="menuitem">
               <span className="bn-menu-icon">{Icons.evaluate}</span>
-              <span><strong>Evaluate</strong><span>Get an answer checked</span></span>
+              <span><strong>{L('Evaluate', 'मूल्यांकन')}</strong><span>{L('Get an answer checked', 'अपना उत्तर जाँचवाएँ')}</span></span>
             </Link>
             <Link href={slug ? `/${slug}#daily-answer` : '/#daily-answer'} className="bn-menu-item" role="menuitem">
               <span className="bn-menu-icon">{Icons.today}</span>
-              <span><strong>Today’s questions</strong><span>Five PYQs a day, on the clock</span></span>
+              <span><strong>{L('Today’s questions', 'आज के प्रश्न')}</strong><span>{L('Five PYQs a day, on the clock', 'हर दिन पाँच PYQ, समयबद्ध')}</span></span>
             </Link>
             <Link href={optional ? `/test?optional=${optional}` : '/test'} className="bn-menu-item" role="menuitem">
               <span className="bn-menu-icon">{Icons.test}</span>
-              <span><strong>Test paper</strong><span>A full paper against the clock</span></span>
+              <span><strong>{L('Test paper', 'टेस्ट पेपर')}</strong><span>{L('A full paper against the clock', 'समय के साथ पूरा प्रश्नपत्र')}</span></span>
             </Link>
           </div>
         )}

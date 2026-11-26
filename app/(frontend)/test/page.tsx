@@ -9,6 +9,7 @@ import SubjectIcon from '@/components/SubjectIcon';
 import OwlLoader from '@/components/OwlLoader';
 import { toAnswerPages } from '@/lib/answerImages';
 import { clearRefreshSafe, useRefreshSafe } from '@/hooks/useRefreshSafe';
+import { useLang } from '@/lib/i18n/LangContext';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -45,12 +46,12 @@ interface RubricState {
 
 // ─── Subject meta ─────────────────────────────────────────────────────────────
 
-const SUBJECTS: Record<SubjectId, { label: string; optional: string; dataFile: string }> = {
-  sociology:    { label: 'Sociology',             optional: 'sociology',             dataFile: '/data/sociology-pyqs.json' },
-  anthropology: { label: 'Anthropology',          optional: 'anthropology',          dataFile: '/data/anthropology-pyqs.json' },
-  polsci:       { label: 'PSIR',                  optional: 'political-science',     dataFile: '/data/psir-pyqs.json' },
-  geography:    { label: 'Geography',             optional: 'geography',             dataFile: '/data/geography-pyqs.json' },
-  'pub-admin':  { label: 'Public Administration', optional: 'public-administration', dataFile: '/data/pubad-pyqs.json' },
+const SUBJECTS: Record<SubjectId, { label: string; labelHi: string; optional: string; dataFile: string }> = {
+  sociology:    { label: 'Sociology', labelHi: 'समाजशास्त्र', optional: 'sociology', dataFile: '/data/sociology-pyqs.json' },
+  anthropology: { label: 'Anthropology', labelHi: 'मानवशास्त्र', optional: 'anthropology', dataFile: '/data/anthropology-pyqs.json' },
+  polsci:       { label: 'PSIR', labelHi: 'PSIR', optional: 'political-science', dataFile: '/data/psir-pyqs.json' },
+  geography:    { label: 'Geography', labelHi: 'भूगोल', optional: 'geography', dataFile: '/data/geography-pyqs.json' },
+  'pub-admin':  { label: 'Public Administration', labelHi: 'लोक प्रशासन', optional: 'public-administration', dataFile: '/data/pubad-pyqs.json' },
 };
 
 const OPTIONAL_TO_SUBJECT: Record<string, SubjectId> = {
@@ -145,19 +146,20 @@ function RubricScorer({ marks, value, onChange }: {
   value?: RubricState;
   onChange: (r: RubricState) => void;
 }) {
+  const { L } = useLang();
   const out = rubricOutOf(marks);
   const cur = value ?? { intro: 0, body: 0, conc: 0, pres: 0 };
   const total = rubricTotal(cur);
   const criteria = [
-    { key: 'intro' as const, label: 'Introduction', desc: 'A framing and a named thinker', max: out.intro },
-    { key: 'body'  as const, label: 'Body',          desc: 'Arguments, evidence, thinkers cited', max: out.body  },
-    { key: 'conc'  as const, label: 'Conclusion',    desc: 'A synthesis and a clear position', max: out.conc  },
-    { key: 'pres'  as const, label: 'Presentation',  desc: 'Structure, length, legibility', max: out.pres  },
+    { key: 'intro' as const, label: L('Introduction', 'भूमिका'), desc: L('A framing and a named thinker', 'विषय की रूपरेखा और किसी विचारक का उल्लेख'), max: out.intro },
+    { key: 'body'  as const, label: L('Body', 'मुख्य भाग'), desc: L('Arguments, evidence, thinkers cited', 'तर्क, प्रमाण और उद्धृत विचारक'), max: out.body  },
+    { key: 'conc'  as const, label: L('Conclusion', 'निष्कर्ष'), desc: L('A synthesis and a clear position', 'समन्वित और स्पष्ट निष्कर्ष'), max: out.conc  },
+    { key: 'pres'  as const, label: L('Presentation', 'प्रस्तुति'), desc: L('Structure, length, legibility', 'संरचना, लंबाई और पठनीयता'), max: out.pres  },
   ];
   return (
     <div className="ts-rubric">
       <div className="ts-rubric-head">
-        <span>Mark it yourself</span>
+        <span>{L('Mark it yourself', 'खुद अंक दें')}</span>
         <span className="ts-rubric-total">{total.toFixed(1)} / {marks}</span>
       </div>
       {criteria.map(c => (
@@ -168,7 +170,7 @@ function RubricScorer({ marks, value, onChange }: {
           </span>
           <input type="range" min={0} max={c.max} step={0.5} value={cur[c.key]}
             onChange={e => onChange({ ...cur, [c.key]: parseFloat(e.target.value) })}
-            aria-label={`${c.label}, out of ${c.max}`} />
+            aria-label={`${c.label}, ${L('out of', 'में से')} ${c.max}`} />
           <span className="ts-rubric-val">{cur[c.key].toFixed(1)} / {c.max}</span>
         </label>
       ))}
@@ -184,6 +186,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
   question: string; marks: number; subjectId: SubjectId;
   isPremium: boolean; user: User | null; onSignIn: () => void;
 }) {
+  const { L } = useLang();
   const fileRef = useRef<HTMLInputElement>(null);
   const [step, setStep] = useState<OcrStep>('idle');
   const [images, setImages] = useState<File[]>([]);
@@ -218,11 +221,11 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
       pages.forEach((f, i) => fd.append('files', f, `page-${i + 1}.jpg`));
       const r = await fetch('/api/ocr', { method: 'POST', headers: { 'x-user-token': token }, body: fd });
       const data = await r.json();
-      if (!r.ok || data.error) throw new Error(data.error || 'We could not read the page.');
+      if (!r.ok || data.error) throw new Error(data.error || L('We could not read the page.', 'हम पृष्ठ पढ़ नहीं सके।'));
       setTranscript(data.text ?? '');
       setStep('transcript');
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'We could not read the page.');
+      setError(e instanceof Error ? e.message : L('We could not read the page.', 'हम पृष्ठ पढ़ नहीं सके।'));
       setStep('error');
     }
   }
@@ -241,9 +244,9 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
       fd.append('subject', subjectId);
       const r = await fetch('/api/evaluate', { method: 'POST', headers: { 'x-user-token': token }, body: fd });
       const data = await r.json();
-      if (!r.ok || data.error) { setError(data.error === 'limit_reached' ? 'Your free evaluation is used. Premium checks every answer.' : data.error || 'The evaluation failed.'); setStep('error'); return; }
+      if (!r.ok || data.error) { setError(data.error === 'limit_reached' ? L('Your free evaluation is used. Premium checks every answer.', 'आपका निःशुल्क मूल्यांकन इस्तेमाल हो चुका है। Premium हर उत्तर की जाँच करता है।') : data.error || L('The evaluation failed.', 'मूल्यांकन नहीं हो सका।')); setStep('error'); return; }
       setEvalData(data); setStep('done');
-    } catch { setError('The connection dropped. Please try again.'); setStep('error'); }
+    } catch { setError(L('The connection dropped. Please try again.', 'कनेक्शन टूट गया। कृपया फिर से कोशिश करें।')); setStep('error'); }
   }
 
   const reset = () => { setStep('idle'); setImages([]); setTranscript(''); setEvalData(null); setError(''); };
@@ -261,29 +264,29 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
       {step === 'idle' && (
         <button type="button" className={`ds-btn ds-btn-sm ${isPremium ? 'ds-btn-line' : 'ds-btn-ghost'} ts-mentor-btn`} onClick={handleUpload}>
           {isPremium ? (
-            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" /></svg>Have this answer checked</>
+            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" /></svg>{L('Have this answer checked', 'इस उत्तर की जाँच करवाएँ')}</>
           ) : (
-            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>Have it checked with Premium</>
+            <><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>{L('Have it checked with Premium', 'Premium से इसकी जाँच करवाएँ')}</>
           )}
         </button>
       )}
 
       {(step === 'ocr' || step === 'evaluating') && (
         <div className="ts-mentor-wait">
-          <OwlLoader size="small" label={step === 'ocr' ? 'Reading your page' : 'Marking your answer'} />
-          <span>{step === 'ocr' ? 'Reading your page…' : 'Marking your answer, usually under a minute…'}</span>
+          <OwlLoader size="small" label={step === 'ocr' ? L('Reading your page', 'आपका पृष्ठ पढ़ा जा रहा है') : L('Marking your answer', 'आपके उत्तर का मूल्यांकन हो रहा है')} />
+          <span>{step === 'ocr' ? L('Reading your page…', 'आपका पृष्ठ पढ़ा जा रहा है…') : L('Marking your answer, usually under a minute…', 'आपके उत्तर का मूल्यांकन हो रहा है, आमतौर पर एक मिनट से कम समय में…')}</span>
         </div>
       )}
 
       {(step === 'transcript' || (step === 'error' && transcript)) && (
         <div className="ts-mentor-card">
           {error && <p className="ts-err">{error}</p>}
-          <div className="ts-mentor-title">Check what we read</div>
-          <p className="ts-mentor-sub">Fix any name or date the reader got wrong; this text is what gets marked.</p>
+          <div className="ts-mentor-title">{L('Check what we read', 'पढ़े गए पाठ की जाँच करें')}</div>
+          <p className="ts-mentor-sub">{L('Fix any name or date the reader got wrong; this text is what gets marked.', 'अगर कोई नाम या तारीख गलत पढ़ी गई है, तो उसे ठीक करें; इसी पाठ का मूल्यांकन होगा।')}</p>
           <textarea value={transcript} onChange={e => setTranscript(e.target.value)} rows={8} className="ts-textarea" />
           <div className="ts-mentor-actions">
-            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>Upload again</button>
-            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={runEval}>Mark this answer</button>
+            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>{L('Upload again', 'फिर से अपलोड करें')}</button>
+            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={runEval}>{L('Mark this answer', 'इस उत्तर का मूल्यांकन करें')}</button>
           </div>
         </div>
       )}
@@ -291,7 +294,7 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
       {step === 'error' && !transcript && (
         <div className="ts-mentor-card">
           <p className="ts-err">{error}</p>
-          <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={reset}>Try again</button>
+          <button type="button" className="ds-btn ds-btn-line ds-btn-sm" onClick={reset}>{L('Try again', 'फिर से कोशिश करें')}</button>
         </div>
       )}
 
@@ -311,23 +314,23 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
                 </div>
               )}
             </div>
-            <p className="ts-mentor-note">The number is a guide; the feedback is the useful part.</p>
+            <p className="ts-mentor-note">{L('The number is a guide; the feedback is the useful part.', 'अंक केवल एक संकेत हैं; उपयोगी हिस्सा प्रतिक्रिया है।')}</p>
             {d.overall_feedback && <p className="ts-mentor-feedback">{String(d.overall_feedback)}</p>}
             {body && (
               <div className="ts-cols">
                 <div>
-                  <div className="ts-col-title good">What worked</div>
+                  <div className="ts-col-title good">{L('What worked', 'क्या अच्छा रहा')}</div>
                   <ul className="ts-points good">{(body.strengths ?? []).map((s, i) => <li key={i}>{s}</li>)}</ul>
                 </div>
                 <div>
-                  <div className="ts-col-title fix">What to fix</div>
+                  <div className="ts-col-title fix">{L('What to fix', 'क्या सुधारें')}</div>
                   <ul className="ts-points fix">{(body.weaknesses ?? []).map((w, i) => <li key={i}>{w}</li>)}</ul>
                 </div>
               </div>
             )}
             {thinkers.length > 0 && (
               <div className="ts-thinkers">
-                <div className="ts-col-title">Thinkers you could cite</div>
+                <div className="ts-col-title">{L('Thinkers you could cite', 'जिन विचारकों का उल्लेख कर सकते हैं')}</div>
                 {thinkers.map((h, i) => (
                   <div key={i} className="ts-thinker"><strong>{h.name}</strong>{h.work && <span> · {h.work}</span>}<p>{h.argument}</p></div>
                 ))}
@@ -335,13 +338,13 @@ function AIMentorPanel({ question, marks, subjectId, isPremium, user, onSignIn }
             )}
             {ma && (ma.introduction || ma.body?.length) && (
               <details className="ts-model">
-                <summary>See a model answer</summary>
+                <summary>{L('See a model answer', 'आदर्श उत्तर देखें')}</summary>
                 {ma.introduction && <p>{ma.introduction}</p>}
                 {Array.isArray(ma.body) && ma.body.map((b, i) => <p key={i} className="ts-model-point">{b}</p>)}
                 {ma.conclusion && <p>{ma.conclusion}</p>}
               </details>
             )}
-            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>Check a different answer</button>
+            <button type="button" className="ds-btn ds-btn-ghost ds-btn-sm" onClick={reset}>{L('Check a different answer', 'किसी दूसरे उत्तर की जाँच करें')}</button>
           </div>
         );
       })()}
@@ -356,18 +359,19 @@ function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPrem
   rubric?: RubricState; onRubric: (r: RubricState) => void;
   subjectId: SubjectId; isPremium: boolean; user: User | null; onSignIn: () => void;
 }) {
+  const { L } = useLang();
   const words = q.marks === 10 ? 150 : 250;
   return (
     <div className="ts-q">
       <div className="ts-q-top">
         <span className="ts-q-label">({label})</span>
-        <span className="ts-q-marks">{q.marks} marks</span>
+        <span className="ts-q-marks">{q.marks} {L('marks', 'अंक')}</span>
       </div>
       <p className="ts-q-text">{q.question}</p>
       <div className="ts-q-meta">
         <span className="ts-q-topic">{q.topic}</span>
         <span>{q.year}</span>
-        {!isResults && <span>Write on paper, about {words} words</span>}
+        {!isResults && <span>{L('Write on paper, about', 'कागज़ पर लगभग')} {words} {L('words', 'शब्द लिखें')}</span>}
       </div>
       {isResults && (
         <>
@@ -382,6 +386,7 @@ function QuestionCard({ q, label, isResults, rubric, onRubric, subjectId, isPrem
 function MapPart({ entries, isResults, score, onScore }: {
   entries: GeoMapEntry[]; isResults: boolean; score: number; onScore: (n: number) => void;
 }) {
+  const { L } = useLang();
   const [revealed, setRevealed] = useState<Set<number>>(new Set());
   const toggle = (i: number) => setRevealed(prev => {
     const n = new Set(prev);
@@ -393,9 +398,9 @@ function MapPart({ entries, isResults, score, onScore }: {
     <div className="ts-q">
       <div className="ts-q-top">
         <span className="ts-q-label">(a)</span>
-        <span className="ts-q-marks">20 marks</span>
+        <span className="ts-q-marks">20 {L('marks', 'अंक')}</span>
       </div>
-      <p className="ts-q-text">On the outline map of India, mark the location of the following places and write their significance in not more than 30 words each:</p>
+      <p className="ts-q-text">{L('On the outline map of India, mark the location of the following places and write their significance in not more than 30 words each:', 'भारत के रेखा-मानचित्र पर निम्नलिखित स्थानों को चिह्नित करें और प्रत्येक का महत्व अधिकतम 30 शब्दों में लिखें:')}</p>
       <div className="ts-places">
         {entries.map((e, i) => (
           <div key={i} className={`ts-place${revealed.has(i) ? ' open' : ''}`}>
@@ -416,8 +421,8 @@ function MapPart({ entries, isResults, score, onScore }: {
       </div>
       {isResults && (
         <label className="ts-map-score">
-          <span>Your map mark <small>1 for each place marked right, 1 for each note</small></span>
-          <input type="range" min={0} max={20} step={1} value={score} onChange={e => onScore(Number(e.target.value))} aria-label="Map mark out of 20" />
+          <span>{L('Your map mark', 'मानचित्र के अंक')} <small>{L('1 for each place marked right, 1 for each note', 'हर सही स्थान के लिए 1 अंक और हर टिप्पणी के लिए 1 अंक')}</small></span>
+          <input type="range" min={0} max={20} step={1} value={score} onChange={e => onScore(Number(e.target.value))} aria-label={L('Map mark out of 20', '20 में से मानचित्र के अंक')} />
           <strong>{score} / 20</strong>
         </label>
       )}
@@ -431,21 +436,22 @@ function QBlock({ block, isResults, rubrics, onRubric, subjectId, isPremium, use
   subjectId: SubjectId; isPremium: boolean; user: User | null; onSignIn: () => void;
   mapEntries?: GeoMapEntry[]; mapScore: number; onMapScore: (n: number) => void;
 }) {
+  const { L } = useLang();
   const withMap = Boolean(mapEntries && mapEntries.length);
   const totalPossible = block.questions.reduce((s, q) => s + q.marks, 0) + (withMap ? 20 : 0);
   const totalScored = block.questions.reduce((s, q) => s + (rubrics[q.id] ? rubricTotal(rubrics[q.id]) : 0), 0) + (withMap ? mapScore : 0);
   return (
     <section className="ts-block">
       <div className="ts-block-head">
-        <h3>Question {block.qNum}</h3>
-        {block.compulsory && <span className="ts-chip">Compulsory</span>}
-        <span className="ts-block-marks">{isResults ? `${totalScored.toFixed(1)} / ${totalPossible}` : `${totalPossible} marks`}</span>
+        <h3>{L('Question', 'प्रश्न')} {block.qNum}</h3>
+        {block.compulsory && <span className="ts-chip">{L('Compulsory', 'अनिवार्य')}</span>}
+        <span className="ts-block-marks">{isResults ? `${totalScored.toFixed(1)} / ${totalPossible}` : `${totalPossible} ${L('marks', 'अंक')}`}</span>
       </div>
       {block.shortNotes && (
-        <p className="ts-block-lead">{withMap ? 'Answer all parts.' : 'Write short notes on the following in about 150 words each:'}</p>
+        <p className="ts-block-lead">{withMap ? L('Answer all parts.', 'सभी भागों के उत्तर दें।') : L('Write short notes on the following in about 150 words each:', 'निम्नलिखित पर लगभग 150 शब्दों में संक्षिप्त टिप्पणियाँ लिखें:')}</p>
       )}
       {withMap && <MapPart entries={mapEntries!} isResults={isResults} score={mapScore} onScore={onMapScore} />}
-      {withMap && <p className="ts-block-lead">Write short notes on the following in about 150 words each:</p>}
+      {withMap && <p className="ts-block-lead">{L('Write short notes on the following in about 150 words each:', 'निम्नलिखित पर लगभग 150 शब्दों में संक्षिप्त टिप्पणियाँ लिखें:')}</p>}
       {block.questions.map((q, i) => (
         <QuestionCard key={q.id} q={q} label={String.fromCharCode((withMap ? 98 : 97) + i)}
           isResults={isResults} rubric={rubrics[q.id]} onRubric={r => onRubric(q.id, r)}
@@ -458,32 +464,33 @@ function QBlock({ block, isResults, rubrics, onRubric, subjectId, isPremium, use
 function PaperHeader({ subject, mode, paper, totalMins, maxMarks }: {
   subject: SubjectId; mode: TestMode; paper: PaperChoice; totalMins: number; maxMarks: number;
 }) {
+  const { L } = useLang();
   const s = SUBJECTS[subject];
   const hrs = Math.floor(totalMins / 60);
   const mins = totalMins % 60;
-  const timeStr = hrs > 0 ? `${hrs} hour${hrs > 1 ? 's' : ''}${mins > 0 ? ` ${mins} minutes` : ''}` : `${totalMins} minutes`;
+  const timeStr = hrs > 0 ? `${hrs} ${L('hours', 'घंटे')}${mins > 0 ? ` ${mins} ${L('minutes', 'मिनट')}` : ''}` : `${totalMins} ${L('minutes', 'मिनट')}`;
   const isFull = mode === 'full';
-  const paperLabel = paper === 'both' ? 'Paper I and II' : paper;
+  const paperLabel = paper === 'both' ? L('Paper I and II', 'पेपर I और II') : paper;
   return (
     <div className="ts-paper">
-      <div className="ts-paper-title">{s.label} optional · {isFull ? 'Full test' : 'Sectional test'} · {paperLabel}</div>
+      <div className="ts-paper-title">{L(s.label, s.labelHi)} {L('optional', 'वैकल्पिक विषय')} · {isFull ? L('Full test', 'पूर्ण टेस्ट') : L('Sectional test', 'खंडीय टेस्ट')} · {paperLabel}</div>
       <div className="ts-paper-facts">
-        <span>Time allowed: <strong>{timeStr}</strong></span>
-        <span>Maximum marks: <strong>{maxMarks}</strong></span>
+        <span>{L('Time allowed:', 'समय सीमा:')} <strong>{timeStr}</strong></span>
+        <span>{L('Maximum marks:', 'अधिकतम अंक:')} <strong>{maxMarks}</strong></span>
       </div>
       <ul className="ts-paper-rules">
         {isFull ? (
           <>
-            <li>There are <strong>eight</strong> questions in <strong>two sections</strong>. Attempt <strong>five</strong> in all.</li>
-            <li>Questions <strong>1 and 5 are compulsory</strong>. Of the rest, attempt <strong>three</strong>, at least one from each section.</li>
+            <li>{L('There are', 'इसमें')} <strong>{L('eight', 'आठ')}</strong> {L('questions in', 'प्रश्न और')} <strong>{L('two sections', 'दो खंड')}</strong>{L('. Attempt', ' हैं। कुल')} <strong>{L('five', 'पाँच')}</strong> {L('in all.', 'प्रयास करें।')}</li>
+            <li>{L('Questions', 'प्रश्न')} <strong>{L('1 and 5 are compulsory', '1 और 5 अनिवार्य हैं')}</strong>. {L('Of the rest, attempt', 'बाकी में से')} <strong>{L('three', 'तीन')}</strong>{L(', at least one from each section.', ', हर खंड से कम-से-कम एक।')}</li>
           </>
         ) : (
           <>
-            <li>There are <strong>four</strong> questions. Attempt <strong>three</strong> in all.</li>
-            <li>Question <strong>1 is compulsory</strong>. Of the rest, attempt <strong>two</strong>.</li>
+            <li>{L('There are', 'इसमें')} <strong>{L('four', 'चार')}</strong> {L('questions. Attempt', 'प्रश्न हैं। कुल')} <strong>{L('three', 'तीन')}</strong> {L('in all.', 'प्रयास करें।')}</li>
+            <li>{L('Question', 'प्रश्न')} <strong>{L('1 is compulsory', '1 अनिवार्य है')}</strong>. {L('Of the rest, attempt', 'बाकी में से')} <strong>{L('two', 'दो')}</strong>.</li>
           </>
         )}
-        <li>The marks for each question or part are shown against it. Keep to the word limits.</li>
+        <li>{L('The marks for each question or part are shown against it. Keep to the word limits.', 'हर प्रश्न या भाग के अंक उसके साथ दिए गए हैं। शब्द-सीमा का पालन करें।')}</li>
       </ul>
     </div>
   );
@@ -492,6 +499,7 @@ function PaperHeader({ subject, mode, paper, totalMins, maxMarks }: {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 function TestPageInner() {
+  const { L } = useLang();
   const router = useRouter();
   const searchParams = useSearchParams();
   const { user, loading: authLoading } = useAuth();
@@ -631,7 +639,7 @@ function TestPageInner() {
     const sectionB = blocks.findIndex(b => b.qNum === 5);
     return blocks.map((b, i) => (
       <div key={b.qNum}>
-        {mode === 'full' && (i === 0 || i === sectionB) && <h2 className={`ts-section${i === 0 ? ' first' : ''}`}>Section {i === 0 ? 'A' : 'B'}</h2>}
+        {mode === 'full' && (i === 0 || i === sectionB) && <h2 className={`ts-section${i === 0 ? ' first' : ''}`}>{L('Section', 'खंड')} {i === 0 ? 'A' : 'B'}</h2>}
         <QBlock block={b} isResults={isResults} rubrics={rubrics} onRubric={onRubric}
           subjectId={subject} isPremium={isPremium} user={user} onSignIn={goSignIn}
           mapEntries={b.qNum === 1 && mapEntries.length ? mapEntries : undefined}
@@ -648,44 +656,44 @@ function TestPageInner() {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <header className="ts-hero">
           <div className="ds-container">
-            <h1 className="ds-h1 ts-h1">Attempt a practice paper</h1>
-            <p className="ds-lede ts-lede">Real past questions in the Mains format, against the clock. Write on paper, then mark yourself against the rubric, or have answers checked.</p>
+            <h1 className="ds-h1 ts-h1">{L('Attempt a practice paper', 'अभ्यास प्रश्नपत्र हल करें')}</h1>
+            <p className="ds-lede ts-lede">{L('Real past questions in the Mains format, against the clock. Write on paper, then mark yourself against the rubric, or have answers checked.', 'मुख्य परीक्षा के प्रारूप में वास्तविक पिछले प्रश्न समय-सीमा के साथ हल करें। कागज़ पर लिखें, फिर रूब्रिक के अनुसार स्वयं अंक दें या उत्तरों की जाँच करवाएँ।')}</p>
           </div>
         </header>
 
         <div className="ds-container ts-grid">
           <section className="ts-card">
             <div className="ts-field">
-              <span className="ts-label">Optional</span>
-              <div className="ts-pills" role="radiogroup" aria-label="Optional">
+              <span className="ts-label">{L('Optional', 'वैकल्पिक विषय')}</span>
+              <div className="ts-pills" role="radiogroup" aria-label={L('Optional', 'वैकल्पिक विषय')}>
                 {(Object.keys(SUBJECTS) as SubjectId[]).map(id => (
                   <button key={id} type="button" role="radio" aria-checked={subject === id}
                     className={`ts-pill${subject === id ? ' on' : ''}`} onClick={() => { subjectChosen.current = true; setSubject(id); }}
                     style={{ ['--t' as string]: `var(--tint-${id})`, ['--w' as string]: `var(--wash-${id})` }}>
-                    <SubjectIcon id={id} size={16} />{SUBJECTS[id].label}
+                    <SubjectIcon id={id} size={16} />{L(SUBJECTS[id].label, SUBJECTS[id].labelHi)}
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="ts-field">
-              <span className="ts-label">Paper</span>
-              <div className="ts-seg" role="radiogroup" aria-label="Paper">
+              <span className="ts-label">{L('Paper', 'पेपर')}</span>
+              <div className="ts-seg" role="radiogroup" aria-label={L('Paper', 'पेपर')}>
                 {(['Paper I', 'Paper II', 'both'] as PaperChoice[]).map(p => (
                   <button key={p} type="button" role="radio" aria-checked={paper === p}
                     className={`ts-seg-btn${paper === p ? ' on' : ''}`} onClick={() => setPaper(p)}>
-                    {p === 'both' ? 'Both papers' : p}
+                    {p === 'both' ? L('Both papers', 'दोनों पेपर') : L(p, p === 'Paper I' ? 'पेपर I' : 'पेपर II')}
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="ts-field">
-              <span className="ts-label">Format</span>
-              <div className="ts-formats" role="radiogroup" aria-label="Format">
+              <span className="ts-label">{L('Format', 'प्रारूप')}</span>
+              <div className="ts-formats" role="radiogroup" aria-label={L('Format', 'प्रारूप')}>
                 {([
-                  { id: 'sectional' as TestMode, title: 'Sectional', facts: '1 hr 45 min · 150 marks', desc: 'Section A: four questions, attempt three.' },
-                  { id: 'full' as TestMode, title: 'Full paper', facts: '3 hours · 250 marks', desc: 'Both sections: eight questions, attempt five.' },
+                  { id: 'sectional' as TestMode, title: L('Sectional', 'खंडीय'), facts: `1 ${L('hr', 'घंटा')} 45 ${L('min', 'मिनट')} · 150 ${L('marks', 'अंक')}`, desc: L('Section A: four questions, attempt three.', 'खंड A: चार प्रश्न, तीन हल करें।') },
+                  { id: 'full' as TestMode, title: L('Full paper', 'पूर्ण प्रश्नपत्र'), facts: `3 ${L('hours', 'घंटे')} · 250 ${L('marks', 'अंक')}`, desc: L('Both sections: eight questions, attempt five.', 'दोनों खंड: आठ प्रश्न, पाँच हल करें।') },
                 ]).map(m => (
                   <button key={m.id} type="button" role="radio" aria-checked={mode === m.id}
                     className={`ts-format${mode === m.id ? ' on' : ''}`} onClick={() => setMode(m.id)}>
@@ -702,24 +710,24 @@ function TestPageInner() {
                 <input type="checkbox" checked={includeMapQ} onChange={e => setIncludeMapQ(e.target.checked)} />
                 <span className="ts-switch-track" aria-hidden="true" />
                 <span className="ts-switch-text">
-                  <strong>Include the map question</strong>
-                  <span>Ten places to mark on India’s outline, 20 marks, as Question 1(a) of Paper II.</span>
+                  <strong>{L('Include the map question', 'मानचित्र वाला प्रश्न शामिल करें')}</strong>
+                  <span>{L('Ten places to mark on India’s outline, 20 marks, as Question 1(a) of Paper II.', 'भारत के रेखा-मानचित्र पर चिह्नित करने के लिए दस स्थान, 20 अंक; पेपर II के प्रश्न 1(a) के रूप में।')}</span>
                 </span>
               </label>
             )}
 
             <button type="button" className="ds-btn ds-btn-solid ts-start" onClick={startTest} disabled={!canStart && !!user}>
-              {loading ? 'Loading questions…' : !user && !authLoading ? 'Sign in to start' : 'Start the paper'}
+              {loading ? L('Loading questions…', 'प्रश्न लोड हो रहे हैं…') : !user && !authLoading ? L('Sign in to start', 'शुरू करने के लिए साइन इन करें') : L('Start the paper', 'प्रश्नपत्र शुरू करें')}
             </button>
           </section>
 
           <aside className="ts-aside">
             <div className="ts-side">
-              <h2>How it works</h2>
+              <h2>{L('How it works', 'यह कैसे काम करता है')}</h2>
               <ol className="ts-how">
-                <li><span>1</span><div><strong>Write on paper</strong><p>The questions appear with a timer. Answer by hand, as in the hall.</p></div></li>
-                <li><span>2</span><div><strong>Mark it</strong><p>When time is up, or you finish, mark each answer against the rubric.</p></div></li>
-                <li><span>3</span><div><strong>Have answers checked</strong><p>Upload a photo of any answer and the AI marks it. That part is Premium.</p></div></li>
+                <li><span>1</span><div><strong>{L('Write on paper', 'कागज़ पर लिखें')}</strong><p>{L('The questions appear with a timer. Answer by hand, as in the hall.', 'प्रश्न टाइमर के साथ दिखेंगे। परीक्षा-कक्ष की तरह हाथ से उत्तर लिखें।')}</p></div></li>
+                <li><span>2</span><div><strong>{L('Mark it', 'अंक दें')}</strong><p>{L('When time is up, or you finish, mark each answer against the rubric.', 'समय पूरा होने पर या समाप्त करने के बाद, रूब्रिक के अनुसार हर उत्तर को अंक दें।')}</p></div></li>
+                <li><span>3</span><div><strong>{L('Have answers checked', 'उत्तर जाँच करवाएँ')}</strong><p>{L('Upload a photo of any answer and the AI marks it. That part is Premium.', 'किसी भी उत्तर की फ़ोटो अपलोड करें और AI उसका मूल्यांकन करेगा। यह सुविधा Premium में है।')}</p></div></li>
               </ol>
             </div>
           </aside>
@@ -737,9 +745,9 @@ function TestPageInner() {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <div className="ts-bar">
           <div className="ds-container ts-bar-in">
-            <span className="ts-bar-what"><SubjectIcon id={subject} size={16} />{SUBJECTS[subject].label} · {mode === 'full' ? 'Full paper' : 'Sectional'}</span>
+            <span className="ts-bar-what"><SubjectIcon id={subject} size={16} />{L(SUBJECTS[subject].label, SUBJECTS[subject].labelHi)} · {mode === 'full' ? L('Full paper', 'पूर्ण प्रश्नपत्र') : L('Sectional', 'खंडीय')}</span>
             <span className={`ts-clock${urgency ? ' late' : ''}`} aria-live="off">{display}</span>
-            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={handleSubmit}>I’m done</button>
+            <button type="button" className="ds-btn ds-btn-solid ds-btn-sm" onClick={handleSubmit}>{L('I’m done', 'मैं पूरा कर चुका/चुकी हूँ')}</button>
           </div>
           <div className="ts-bar-progress"><span style={{ width: `${progressPct}%` }} className={urgency ? 'late' : ''} /></div>
         </div>
@@ -747,7 +755,7 @@ function TestPageInner() {
           <PaperHeader subject={subject} mode={mode} paper={paper} totalMins={totalMins} maxMarks={maxMarks} />
           {renderBlocks(false)}
           <div className="ts-end">
-            <button type="button" className="ds-btn ds-btn-solid" onClick={handleSubmit}>I’m done, mark my paper</button>
+            <button type="button" className="ds-btn ds-btn-solid" onClick={handleSubmit}>{L('I’m done, mark my paper', 'मैं पूरा कर चुका/चुकी हूँ, मेरे प्रश्नपत्र का मूल्यांकन करें')}</button>
           </div>
         </div>
       </div>
@@ -765,20 +773,20 @@ function TestPageInner() {
     <div className="ts ds" style={tint}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="ds-container ts-paper-wrap ts-results">
-        <h1 className="ts-results-title">Mark your paper</h1>
-        <p className="ts-results-lede">Mark only the questions you attempted. Slide each part of the rubric to what your answer earned{isPremium ? ', or upload a photo of it to have it checked.' : '.'}</p>
+        <h1 className="ts-results-title">{L('Mark your paper', 'अपने प्रश्नपत्र का मूल्यांकन करें')}</h1>
+        <p className="ts-results-lede">{L('Mark only the questions you attempted. Slide each part of the rubric to what your answer earned', 'केवल उन्हीं प्रश्नों को अंक दें जिन्हें आपने हल किया। रूब्रिक के हर भाग का स्लाइडर अपने उत्तर के अनुसार सेट करें')}{isPremium ? L(', or upload a photo of it to have it checked.', ' या जाँच करवाने के लिए उसकी फ़ोटो अपलोड करें।') : '.'}</p>
 
         <div className="ts-summary">
           <div>
-            <span className="ts-summary-label">Your mark</span>
+            <span className="ts-summary-label">{L('Your mark', 'आपके अंक')}</span>
             <span className="ts-summary-num">{written.toFixed(1)}<small> / {maxMarks}</small></span>
           </div>
           <div>
-            <span className="ts-summary-label">Time used</span>
-            <span className="ts-summary-num">{used}<small> min</small></span>
+            <span className="ts-summary-label">{L('Time used', 'लगा समय')}</span>
+            <span className="ts-summary-num">{used}<small> {L('min', 'मिनट')}</small></span>
           </div>
           <div className="ts-summary-bar">
-            <span className="ts-summary-label">{Math.min(pct, 100)}% of the marks</span>
+            <span className="ts-summary-label">{Math.min(pct, 100)}% {L('of the marks', 'अंकों में से')}</span>
             <div className="ts-meter"><span style={{ width: `${Math.min(pct, 100)}%` }} /></div>
           </div>
         </div>
@@ -786,8 +794,8 @@ function TestPageInner() {
         {renderBlocks(true)}
 
         <div className="ts-end">
-          <button type="button" className="ds-btn ds-btn-solid" onClick={() => { clearRefreshSafe('dc_test_v1'); setDeadline(null); setEndedAt(null); setPhase('config'); }}>Attempt another paper</button>
-          <Link href={`/${subject}`} className="ds-btn ds-btn-line">Back to {SUBJECTS[subject].label}</Link>
+          <button type="button" className="ds-btn ds-btn-solid" onClick={() => { clearRefreshSafe('dc_test_v1'); setDeadline(null); setEndedAt(null); setPhase('config'); }}>{L('Attempt another paper', 'एक और प्रश्नपत्र हल करें')}</button>
+          <Link href={`/${subject}`} className="ds-btn ds-btn-line">{L('Back to', 'वापस जाएँ:')} {L(SUBJECTS[subject].label, SUBJECTS[subject].labelHi)}</Link>
         </div>
       </div>
     </div>
@@ -795,8 +803,9 @@ function TestPageInner() {
 }
 
 export default function TestPage() {
+  const { L } = useLang();
   return (
-    <Suspense fallback={<OwlLoader size="page" label="Loading the test" />}>
+    <Suspense fallback={<OwlLoader size="page" label={L('Loading the test', 'टेस्ट लोड हो रहा है')} />}>
       <TestPageInner />
     </Suspense>
   );

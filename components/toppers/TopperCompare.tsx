@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from '@/components/Link';
+import { useLang } from '@/lib/i18n/LangContext';
 import type { TopperCopy } from '@/lib/toppers/meta';
 import TopperPdf from './TopperPdf';
 import { allowanceLine, gateFor, useTopperStatus } from './useTopperStatus';
@@ -23,6 +24,7 @@ type Props = {
  * behind a switch; both stay mounted, so switching back does not reload.
  */
 export default function TopperCompare({ subject, pool, a, b }: Props) {
+  const { L } = useLang();
   const [ids, setIds] = useState<[string, string]>([a, b]);
   const [front, setFront] = useState<0 | 1>(0);
   const allowance = useTopperStatus(subject);
@@ -40,7 +42,7 @@ export default function TopperCompare({ subject, pool, a, b }: Props) {
   return (
     <div className="tc">
       {note && <p className="tc-note">{note}</p>}
-      <div className="tc-switch" role="tablist" aria-label="Which answer">
+      <div className="tc-switch" role="tablist" aria-label={L('Which answer', 'कौन-सा उत्तर')}>
         {[0, 1].map((i) => {
           const c = byId.get(ids[i])!;
           return (
@@ -55,19 +57,19 @@ export default function TopperCompare({ subject, pool, a, b }: Props) {
           const c = byId.get(ids[i])!;
           const other = ids[1 - i];
           return (
-            <section key={i} className={`tc-pane${front === i ? ' front' : ''}`} aria-label={`${c.topper}'s answer`}>
+            <section key={i} className={`tc-pane${front === i ? ' front' : ''}`} aria-label={L(`${c.topper}'s answer`, `${c.topper} का उत्तर`)}>
               <div className="tc-head">
                 <label className="tc-pick">
-                  <span className="tc-pick-label">Topper</span>
-                  <select value={c.id} onChange={(e) => setPane(i, e.target.value)} aria-label={`Answer ${i + 1}`}>
+                  <span className="tc-pick-label">{L('Topper', 'टॉपर')}</span>
+                  <select value={c.id} onChange={(e) => setPane(i, e.target.value)} aria-label={L(`Answer ${i + 1}`, `उत्तर ${i + 1}`)}>
                     {pool.filter((p) => p.id === c.id || p.id !== other).map((p) => (
                       <option key={p.id} value={p.id}>{p.topper}{p.rank ? `, AIR ${p.rank}` : ''}</option>
                     ))}
                   </select>
                 </label>
                 {c.year && <p className="tc-rank">CSE {c.year}</p>}
-                <p className="tc-q"><span>{c.paper} · {c.marks} marks</span>{c.question}</p>
-                <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className="tc-open">Open on its own page</Link>
+                <p className="tc-q"><span>{c.paper} · {c.marks} {L('marks', 'अंक')}</span>{c.question}</p>
+                <Link href={`/${subject}/topper-copies/${c.id}`} prefetch={false} className="tc-open">{L('Open on its own page', 'इसे अलग पेज पर खोलें')}</Link>
               </div>
               <TopperPdf key={c.id} subject={subject} copyId={c.id} height="min(76vh, 980px)"
                 gate={gateFor(allowance, c.id)} freeLeft={left} own={allowance.own} onOpened={allowance.noteOpened} />
