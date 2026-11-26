@@ -40,6 +40,14 @@ const OPTIONALS: Optional[] = [
   { id: 'pub-admin', optional: 'public-administration', name: 'Public Administration', sub: 'Weber to the district collector' },
 ];
 
+/**
+ * History Optional is served from its own site, so its counts cannot be read
+ * from this repo's data at build time. They were counted from that project on
+ * 26 November 2026 (notes catalogue 51, PYQ bank 1,619, flashcards 1,200,
+ * topper copies 5,631) and should be refreshed here when that site changes.
+ */
+const HISTORY_STATS = { topics: 51, pyqs: 1619, flashcards: 1200, copies: 5631 } as const;
+
 const PLAN_NOTE: Record<string, string> = {
   daily: 'For the last few days before the exam.',
   sixmonth: 'For the months leading up to Mains.',
@@ -142,6 +150,11 @@ export default async function Home() {
                 <span className="hm-opt-body">
                   <span className="hm-opt-name">History</span>
                   <span className="hm-opt-sub">Harappa to the Cold War, on its own site</span>
+                  <span className="hm-opt-meta">
+                    {HISTORY_STATS.topics} topics · {HISTORY_STATS.pyqs.toLocaleString('en-IN')} PYQs{' '}
+                    <span className="hm-opt-cards">{HISTORY_STATS.flashcards.toLocaleString('en-IN')} flashcards</span>{' '}
+                    <span className="hm-opt-cards">{HISTORY_STATS.copies.toLocaleString('en-IN')} topper copies</span>
+                  </span>
                   <span className="hm-opt-meta">historyoptional.xyz ↗</span>
                 </span>
                 <span className="hm-opt-go" aria-hidden="true"><Arrow /></span>
